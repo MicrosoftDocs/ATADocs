@@ -1,15 +1,15 @@
 # ATA Content
 ## [Microsoft Advanced Threat Analytics](Microsoft-Advanced-Threat-Analytics.md)
-### [Understand and explore]
+### [Understand and explore](ATA-understand-and-explore.md)
 #### [ATA Architecture](ATA-Architecture.md)
 #### [Working with the ATA Console](Working-with-the-ATA-Console.md)
-### [Plan and design]
+### [Plan and design](ATA-plan-and-design.md)
 #### [Plan your ATA capacity](ATA-Capacity-Planning.md)
 #### [ATA Prerequisites](ATA-Prerequisites.md)
-##### [Configure port mirroring](Configure-Port-Mirroring.md)
-##### [Validate port mirroring](Validate-Port-Mirroring.md)
-##### [Configure event collection](Configure-Event-Collection.md)
-### [Deploy and use]
+#### [Configure port mirroring](Configure-Port-Mirroring.md)
+#### [Validate port mirroring](Validate-Port-Mirroring.md)
+#### [Configure event collection](Configure-Event-Collection.md)
+### [Deploy and use](ATA-Deployment-Guide.md)
 #### [Install ATA](Install-ATA.md)
 #### [Changing ATA configuration](Modifying-ATA-Configuration.md)
 #### [Setting ATA alerts](Setting-ATA-Alerts.md)
@@ -22,3 +22,9 @@
 #### [Troubleshooting using the performance counters](Troubleshooting-ATA-using-the-performance-counters.md)
 #### [Troubleshooting using the database](Troubleshooting-ATA-using-the-ATA-database.md)
 #### [Frequently asked questions](ATA-technical-FAQ.md)
+
+### [ATA Release Notes](ATA-Release-Notes.md)
+#### [What's new in ATA version 1.4](What-s-new-in-ATA-version-1.4.md)
+#### [What's new in ATA version 1.5](What-s-new-in-ATA-version-1.5.md)
+##### [ATA update to 1.5 migration guide](ATA-update-to-1.5-migration-guide.md)
+#### [Working with ATA Detection Settings](Working-with-ATA-Detection-Settings.md)
