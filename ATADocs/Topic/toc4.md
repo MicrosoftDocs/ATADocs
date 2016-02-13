@@ -1,0 +1,5 @@
+# [Troubleshoot](ATA-Troubleshooting.md)
+## [Troubleshoot using the logs](Troubleshooting-ATA-using-the-ATA-logs.md)
+## [Troubleshooting using the performance counters](Troubleshooting-ATA-using-the-performance-counters.md)
+## [Troubleshooting using the database](Troubleshooting-ATA-using-the-ATA-database.md)
+## [Frequently asked questions](ATA-technical-FAQ.md)
