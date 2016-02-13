@@ -1,9 +1,9 @@
-[Understand & explore](toc1.md)
+# [Understand & explore](toc1.md)
 
-[Plan & design](toc2.md)
+# [Plan & design](toc2.md)
 
-[Deploy & use](toc3.md)
+# [Deploy & use](toc3.md)
 
-[Troubleshoot](toc4.md)
+# [Troubleshoot](toc4.md)
 
-[Release notes](toc5.md)
+# [Release notes](toc5.md)
