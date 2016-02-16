@@ -34,8 +34,6 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 ### Windows event forwarding
 If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATA. Windows Event ID 4776 provides data regarding NTLM authentications.
 
-For more information see:  [Configuring Windows event forwarding](configuring-windows-event-forwarding.md).
-
 ## Configuring the ATA Gateway to listen for SIEM events
 
 1.  On the ATA Gateway configuration, enable **Syslog Listener UDP**.

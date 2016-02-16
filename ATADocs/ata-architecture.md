@@ -51,7 +51,7 @@ The ATA Gateway receives the mirrored network traffic and Windows Events from yo
 
 |||
 |-|-|
-|Network Listener|The Network Listener is responsible for capturing network traffic and parsing the traffic. This is a CPU-heavy task, so  it is especially important to check [ATA Prerequisites](../Topic/ATA-Prerequisites.md) when planning your ATA Gateway.|
+|Network Listener|The Network Listener is responsible for capturing network traffic and parsing the traffic. This is a CPU-heavy task, so  it is especially important to check [ATA Prerequisites](ata-prerequisites.md) when planning your ATA Gateway.|
 |Event Listener|The Event Listener is responsible for capturing and parsing Windows Events forwarded from a SIEM server on your network.|
 |Windows Event Log Reader|The Windows Event Log Reader is responsible for reading and parsing Windows Events forwarded to the ATA Gateway's Windows Event Log from the domain controllers.|
 |Network Activity Translator | Translates the parsed traffic inot ATA's logical representation of the traffic (NetworkActivity).
