@@ -1,11 +1,11 @@
 ---
 title: Working with ATA Detection Settings
-ms.custom: 
+ms.custom:
   - ATA
 ms.prod: identity-ata
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -29,7 +29,6 @@ You can exclude IP addresses from the following detections. If you enter an IP a
 -   Pass-the-Ticket IP address exclusions
 
 ## See Also
-[Working with Suspicious Activities](../Topic/Working-with-Suspicious-Activities.md)
- [Modifying ATA Configuration](../Topic/Modifying-ATA-Configuration.md)
+[Working with suspicious activities](working-with-suspicious-activities.md)
+ [Modifying ATA configuration](modifying-ata-configuration.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-

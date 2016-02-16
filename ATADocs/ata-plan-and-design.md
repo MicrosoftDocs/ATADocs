@@ -11,15 +11,15 @@ author: Rkarlin
 
 # Planning and design tasks
 
--   [Plan your ATA capacity](../Topic/ATA-Capacity-Planning.md)
+-   [Plan your ATA capacity](ata-capacity-planning.md)
 
--   [ATA Prerequisites](../Topic/ATA-Prerequisites.md)
+-   [ATA prerequisites](ata-prerequisites.md)
 
--   [Configure port mirroring](../Topic/Configure-Port-Mirroring.md)
+-   [Configure port mirroring](configure-port-mirroring.md)
 
--   [Validate port mirroring](../Topic/Validate-Port-Mirroring.md)
+-   [Validate port mirroring](validate-port-mirroring.md)
 
--   [Configure event collection](../Topic/Configure-Event-Collection.md)
+-   [Configure event collection](configure-event-collection.md)
 
 ## Additional requirements
 
@@ -66,7 +66,7 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 > -   The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
 > -   The ATA Gateway cannot be installed on a domain controller.
 
-For information on using virtual machines with the ATA Gateway, see [Configure Port Mirroring](../Topic/Configure-Port-Mirroring.md).
+For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
 > If you run the ATA Gateway as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
@@ -81,7 +81,7 @@ An ATA Gateway can support monitoring multiple domain controllers, depending on 
 
 -   Storage - Enough for the OS + 10GB for ATA + crash dumps = at least 100 GB
 
-For more information, see [ATA Capacity Planning](../Topic/ATA-Capacity-Planning.md).
+For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
 ### Power settings
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
@@ -102,7 +102,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 
     -   The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![](../Image/ATA-DNS-Suffix.png)
+        ![](Image/ATA-DNS-Suffix.png)
 
         > [!NOTE]
         > If the ATA Gateway is a member of the domain, this is configured automatically.
@@ -110,7 +110,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 -   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure Port Mirroring](../Topic/Configure-Port-Mirroring.md)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
+    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
     > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This will ensure that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
@@ -130,6 +130,7 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   IIS IP Address|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
+
 > [!NOTE]
 > As part of the resolution process done by the ATA Gateway, the following ports need to be open inbound on devices on the network from the ATA Gateways.
 >
@@ -154,6 +155,6 @@ Access to the ATA Console is via a browser, supporting the following:
 -   Minimum screen width resolution of 1700 pixels
 
 ## See Also
-[ATA Architecture](../Topic/ATA-Architecture.md)
- [Install ATA](../Topic/Install-ATA.md)
+[ATA architecture](ata-architecture.md)
+ [Install ATA](install-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

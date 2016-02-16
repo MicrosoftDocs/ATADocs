@@ -1,18 +1,21 @@
 ---
-title: Pre-Installation Steps
-ms.custom: na
+title: ATA Prerequisites
+ms.custom:
+  - ATA
+ms.prod: identity-ata
 ms.reviewer: na
 ms.suite: na
+ms.technology:
+  - security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 12bbdcc0-9ac2-4bad-8f26-06ee498351fa
+ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 author: Rkarlin
-robots: noindex,nofollow
 ---
-# Pre-Installation Steps
+# ATA Prerequisites
 This article describes the requirements for a successful deployment of ATA in your environment.
 
-ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA Architecture](../Topic/ATA-Architecture.md).
+ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
 
 [Before you start](#ATAbeforeyoustart): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
@@ -22,7 +25,7 @@ ATA is comprised of two components, the ATA Center and the ATA Gateway. For more
 
 [ATA Console](#ATAconsole): This section lists browser requirements for running the ATA Console.
 
-![](../Image/ATA-architecture-topology.jpg)
+![](Image/ATA-architecture-topology.jpg)
 
 ## <a name="ATAbeforeyoustart"></a>Before you start
 This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
@@ -40,33 +43,25 @@ This section lists information you should gather and accounts and network entiti
 
 -   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by  setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
--   It may be useful for you to have a list of all subnets used on your network for VPN and Wi-Fi, which reassign IP addresses between devices within a very short period of time (seconds or minutes).  You will want to identify these short-term lease subnets so that ATA can reduce their cache lifetime to accommodate the fast re-assignment between devices. See [Install ATA](../Topic/Install-ATA.md) for short-term lease subnet configuration.
+-   It may be useful for you to have a list of all subnets used on your network for VPN and Wi-Fi, which reassign IP addresses between devices within a very short period of time (seconds or minutes).  You will want to identify these short-term lease subnets so that ATA can reduce their cache lifetime to accommodate the fast re-assignment between devices. See [Install ATA](install-ata.md) for short-term lease subnet configuration.
 
 ## <a name="ATAcenter"></a>ATA Center requirements
 This section lists the requirements for the ATA Center.
 
-The ATA Center supports installation on a server running Windows Server 2012 R2. Run Windows Update and make sure all important updates are installed. 
+The ATA Center supports installation on a server running Windows Server 2012 R2. Run Windows Update and make sure all important updates are installed.
  The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the hardware requirements.
 
-Installation of the ATA Center as a virtual machine is supported. For more information see [Configure Port Mirroring](../Topic/Configure-Port-Mirroring.md).
+Installation of the ATA Center as a virtual machine is supported. For more information see [Configure port mirroring](configure-port-mirroring.md).
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 
 > [!NOTE]
-> The ATA Center can be installed on a server that is a member of a domain or workgroup.
+> - The ATA Center can be installed on a server that is a member of a domain or workgroup.
+>
+> - The ATA Center requires a minimum of 21 days of data for user behavioral analytics.
+>
+> - For more information on hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 
-**Minimum requirements**
-
--   CPU -  8 cores
-
--   Memory - 48 GB
-
--   Storage - 1000 GB per month to monitor 2 lightly loaded domain controllers
-
-The ATA Center requires a minimum of 21 days of data for user behavioral analytics. For more information on hardware requirements, see [ATA Capacity Planning](../Topic/ATA-Capacity-Planning.md).
-
-> [!NOTE]
-> If you want to install ATA in a lab with a few VMs, it is recommended that you have at least 2 cores, 4 GB of RAM and 100GB of storage to allow you to interact with the ATA Console without support for production deployment.
 
 ### Time synchronization
 The ATA Center server,  the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
@@ -120,7 +115,7 @@ The ATA Center requires certificates for the following services:
 ## <a name="ATAgateway"></a>ATA Gateway requirements
 The ATA Gateway supports installation on a server running Windows Server 2012 R2.
 
-Run Windows Update and make sure all **Important** updates have been installed. 
+Run Windows Update and make sure all **Important** updates have been installed.
 Before installing ATA Gateway confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
 
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
@@ -129,22 +124,13 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 > -   The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
 > -   The ATA Gateway cannot be installed on a domain controller.
 
-For information on using virtual machines with the ATA Gateway, see [Configure Port Mirroring](../Topic/Configure-Port-Mirroring.md).
+For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
 > If you run the ATA Gateway as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
-
-**Minimum requirements:**
-
--   CPU - 4 cores
-
--   Memory - 8 GB
-
--   Storage - Enough for the OS + 10GB for ATA + crash dumps = at least 100 GB
-
-For more information, see [ATA Capacity Planning](../Topic/ATA-Capacity-Planning.md).
+For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
 ### Power settings
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
@@ -165,7 +151,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 
     -   The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![](../Image/ATA-DNS-Suffix.png)
+        ![](Image/ATA-DNS-Suffix.png)
 
         > [!NOTE]
         > If the ATA Gateway is a member of the domain, this is configured automatically.
@@ -173,7 +159,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 -   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure Port Mirroring](../Topic/Configure-Port-Mirroring.md)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
+    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
     > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This will ensure that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
@@ -193,9 +179,10 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   IIS IP Address|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
+
 > [!NOTE]
 > As part of the resolution process done by the ATA Gateway, the following ports need to be open inbound on devices on the network from the ATA Gateways.
-> 
+>
 > -   NTLM over RPC
 > -   NetBIOS
 
@@ -217,7 +204,6 @@ Access to the ATA Console is via a browser, supporting the following:
 -   Minimum screen width resolution of 1700 pixels
 
 ## See Also
-[ATA Architecture](../Topic/ATA-Architecture.md)
- [Install ATA](../Topic/Install-ATA.md)
+[ATA architecture](ata-architecture.md)
+ [Install ATA](install-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-

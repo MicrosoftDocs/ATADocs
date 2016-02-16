@@ -1,11 +1,11 @@
 ---
 title: Configure Event Collection
-ms.custom: 
+ms.custom:
   - ATA
 ms.prod: identity-ata
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -29,12 +29,12 @@ For ATA to be able to consume data from a Syslog server, you need to do the foll
 > -   Do not forward all the Syslog data to the ATA Gateway.
 > -   ATA supports UDP traffic from the SIEM/Syslog server.
 
-Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. For more information about the events forwarded to ATA, see [Configure Event Collection](../Topic/Configure-Event-Collection.md).
+Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. For more information about the events forwarded to ATA, see [Configure event collection](configure-event-collection.md).
 
 ### Windows event forwarding
 If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATA. Windows Event ID 4776 provides data regarding NTLM authentications.
 
-For more information see:  [Configuring Windows Event Forwarding](../Topic/Configuring-Windows-Event-Forwarding.md).
+For more information see:  [Configuring Windows event forwarding](configuring-windows-event-forwarding.md).
 
 ## Configuring the ATA Gateway to listen for SIEM events
 
@@ -42,7 +42,7 @@ For more information see:  [Configuring Windows Event Forwarding](../Topic/Confi
 
     Set the Listening IP Address as described in the picture, below. The default port is 514.
 
-    ![](../Image/ATA-enable-siem-forward-events.png)
+    ![](Image/ATA-enable-siem-forward-events.png)
 
 2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address selected above. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
@@ -149,7 +149,7 @@ Error Code:         0x0
 ## <a name="ATA_event_WEF"></a>Configuring Windows Event Forwarding
 If you do not have a SIEM server you can configure your domain controllers to forward Windows Event ID 4776 directly to one of your ATA Gateways.
 
-1.  Log on to all domain controllers and ATA Gateway machines using a domain account with administrator privileges. 
+1.  Log on to all domain controllers and ATA Gateway machines using a domain account with administrator privileges.
 2. Make sure all the domain controllers and ATA Gateways you are connecting are joined to the same domain.
 3.	On each domain controller, type the following at an elevated command prompt:
 
@@ -163,22 +163,22 @@ winrm quickconfig
 wecutil qc
 ```
 
-5.	On each domain controller, in **Active Directory Users and Computers**, navigate to the **Builtin** folder and double click on the **Event Log Readers** group. 
-![wef_ad_eventlogreaders](/Image/wef_ad_eventlogreaders.png)
-Right click on it and select **Properties**. On the **Members** tab, add the computer account of each ATA Gateway. 
-![wef_ad event log reader popup](/Image/wef_ad-event-log-reader-popup.png)
+5.	On each domain controller, in **Active Directory Users and Computers**, navigate to the **Builtin** folder and double click on the **Event Log Readers** group.
+![wef_ad_eventlogreaders](Image/wef_ad_eventlogreaders.png)
+Right click on it and select **Properties**. On the **Members** tab, add the computer account of each ATA Gateway.
+![wef_ad event log reader popup](Image/wef_ad-event-log-reader-popup.png)
 6.	On the ATA Gateway, open the Event Viewer and right click on **Subscriptions** and select **Create Subscription**.  
 
     a.	Under **Subscription type and source computers**, click **Select Computers** and add the domain controllers and test connectivity.
-    ![wef_subscription prop](/Image/wef_subscription-prop.png)
-    
+    ![wef_subscription prop](Image/wef_subscription-prop.png)
+
     b.	Under **Events to collect**, click **Select Events**. Select **By log** and scroll down to select **Security**. Then, In the **Includes/Excludes Event IDs**, type **4776**.
-    ![wef_4776](/Image/wef_4776.png)
-    
-    c. Under **Change user account or configure advanced settings**, click **Advanced**. 
+    ![wef_4776](Image/wef_4776.png)
+
+    c. Under **Change user account or configure advanced settings**, click **Advanced**.
         Set the **Protocol** to **HTTP** and the **Port** to **5985**.
-    ![wef_http](/Image/wef_http.png)
-    
+    ![wef_http](Image/wef_http.png)
+
  7.	[Optional] If you want a shorter poling interval, on the ATA Gateway, set the subscription heartbeat to 5 seconds for faster polling rate.
 
 ```
@@ -190,9 +190,9 @@ wecutil ss <CollectionName> /hi:5000
 
     > [!NOTE]
     > When you enable this setting the ATA Gateway will look in the Forwarded Events log for Windows Events that have been forwarded to it from the domain controllers.
-For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/en-us/library/cc748890)
-   
-## See Also
-[Install ATA](../Topic/Install-ATA.md)
- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
+For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/en-us/library/cc748890)
+
+## See Also
+[Install ATA](install-ata.md)
+ [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

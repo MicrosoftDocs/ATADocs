@@ -17,9 +17,9 @@ author: Rkarlin
 Microsoft Advanced Threat Analytics (ATA) is an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks by automatically analyzing, learning, and identifying normal and abnormal behavior among entities (users, devices, and resources).  ATA also helps identify known malicious attacks, security issues and risks using world-class, cutting edge research in behavioral analytics to help enterprises identify security breaches before they cause damage.
 
 ## What does ATA do?
-ATA is comprised of two separate components that sit in your network - the ATA Center and the ATA Gateways. You use port mirroring from your domain controllers to your ATA Gateways to enable ATA to review your network traffic and perform its advanced algorithms and behavioral analytics on your traffic. Once ATA studies your "normal" network traffic, it can start alerting you when something out of the ordinary is detected. In order to provide ATA with even more information about what goes on in your network, you can also enable event forwarding from your SIEM or by using Windows Event Forwarding to the ATA Gateways as well. For more information about how ATA works inside your network, see [ATA Architecture](../Topic/ATA-Architecture.md).
+ATA is comprised of two separate components that sit in your network - the ATA Center and the ATA Gateways. You use port mirroring from your domain controllers to your ATA Gateways to enable ATA to review your network traffic and perform its advanced algorithms and behavioral analytics on your traffic. Once ATA studies your "normal" network traffic, it can start alerting you when something out of the ordinary is detected. In order to provide ATA with even more information about what goes on in your network, you can also enable event forwarding from your SIEM or by using Windows Event Forwarding to the ATA Gateways as well. For more information about how ATA works inside your network, see [ATA architecture](ata-architecture.md).
 
-![](../Image/ATA-architecture-topology.jpg)
+![](Image/ATA-architecture-topology.jpg)
 
 ## What threats does ATA look for?
 ATA collects information from several data sources and analyzes, learns, and identifies normal behavior on your network, alerting you to possible security concerns, including:
@@ -96,9 +96,9 @@ ATA collects information from several data sources and analyzes, learns, and ide
 
 ## What next?
 
--   For more information about how ATA fits into your network check out:[ATA Architecture](../Topic/ATA-Architecture.md)
+-   For more information about how ATA fits into your network check out:[ATA architecture](ata-architecture.md)
 
--   To get started deploying ATA: [ATA Deployment Guide](../Topic/ATA-Deployment-Guide.md)
+-   To get started deploying ATA: [Install ATA](install-ata.md)
 
 ## See Also
 [For ATA support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

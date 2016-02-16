@@ -1,5 +1,5 @@
 ---
-title: Understand and explore Advanced Threat Analytics 
+title: Understand and explore Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata
@@ -17,11 +17,11 @@ You can set up Microsoft Advanced Threat Analytics Operations Guide so that you 
 
 This content provides the following information:
 
--   [What is Microsoft Advanced Threat Analytics (ATA)?](../Topic/what-is-ata.md)
+-   [What is Microsoft Advanced Threat Analytics (ATA)?](what-is-ata.md)
 
--   [Working with the ATA Console](../Topic/Working-with-the-ATA-Console.md)
+-   [Working with the ATA Console](working-with-ata-console.md)
 
--   [ATA Architecture](../Topic/ATA-Architecture.md).
+-   [ATA architecture](ata-architecture.md).
 
 ## See Also
 [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

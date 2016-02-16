@@ -61,6 +61,6 @@ To stop collecting and sending telemetry data to Microsoft follow the following 
 2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
 
 ## See Also
-[ATA Release Notes](../Topic/ATA-Release-Notes.md)
+[What's new in version 1.5](whats-new-version-1.5.md)
+ [What's new in version 1.4](whats-new-version-1.4.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-
