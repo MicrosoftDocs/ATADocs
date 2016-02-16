@@ -9,7 +9,7 @@
 ### [Configure port mirroring](configure-port-mirroring.md)
 ### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
-## [Deploy and use](ata-deployment-guide.md)
+## [Deploy and use](ata-deploy-and-use.md)
 ### [Install ATA](install-ata.md)
 #### [What's new in version 1.5](whats-new-version-1.5.md)
 #### [Migrating to version 1.5](ata-update-1.5-migration-guide.md)
