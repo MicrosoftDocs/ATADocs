@@ -23,6 +23,6 @@
 ## [Troubleshoot](ata-troubleshooting.md)
 ### [Troubleshoot using the logs](troubleshooting-ata-using-logs.md)
 ### [Troubleshooting using the performance counters](troubleshooting-ata-using-perf-counters.md)
-### [Troubleshooting using the database](troubleshooting-ata-using-the-ata-database.md)
+### [Troubleshooting using the database](troubleshooting-ata-using-ata-database.md)
 ### [Troubleshooting ATA monitoring alerts](troubleshooting-ata-monitoring-alerts.md)
 ### [Frequently asked questions](ata-technical-faq.md)
