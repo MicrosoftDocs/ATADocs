@@ -1,11 +1,11 @@
 ---
 title: Configure Port Mirroring
-ms.custom: 
+ms.custom:
   - ATA
 ms.prod: identity-ata
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -55,7 +55,6 @@ Your domain controllers and ATA Gateways can be either physical or virtual. The 
 After configuring port mirroring, validate that port mirroring is working before installing the ATA Gateway.
 
 ## See Also
-[Validate Port Mirroring](../Topic/Validate-Port-Mirroring.md)
- [Install ATA](../Topic/Install-ATA.md)
+[Validate port mirroring](validate-port-mirroring.md)
+ [Install ATA](install-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-

@@ -1,11 +1,11 @@
 ---
 title: Validate Port Mirroring
-ms.custom: 
+ms.custom:
   - ATA
 ms.prod: identity-ata
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -28,22 +28,21 @@ The following steps walk you through the process for validating that port mirror
 
     3.  Click **New Capture**.
 
-        ![](../Image/ATA-Port-Mirroring-Capture.jpg)
+        ![](Image/ATA-Port-Mirroring-Capture.jpg)
 
 3.  In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then click **Apply**.
 
-    ![](../Image/ATA-Port-Mirroring-filter-settings.jpg)
+    ![](Image/ATA-Port-Mirroring-filter-settings.jpg)
 
 4.  Click **Start** to start the capture session. If you do not see traffic to and from the domain controller, review your port mirroring configuration.
 
     > [!NOTE]
     > It is important to make sure you see traffic to and from the domain controllers.
-    > 
-    > ![](../Image/ATA-Port-Mirroring-Capture-traffic.jpg)
+    >
+    > ![](Image/ATA-Port-Mirroring-Capture-traffic.jpg)
 
 5.  If you only see traffic in one direction, you should work with your networking or virtualization teams to help troubleshoot your port mirroring configuration.
 
 ## See Also
-[Configure Port Mirroring](../Topic/Configure-Port-Mirroring.md)
+[Configure port mirroring](configure-port-mirroring.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-

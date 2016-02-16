@@ -1,11 +1,11 @@
 ---
 title: Modifying ATA Configuration
-ms.custom: 
+ms.custom:
   - ATA
 ms.prod: identity-ata
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -48,7 +48,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](../Image/ATA-config-icon.JPG)
+    ![](Image/ATA-config-icon.JPG)
 
 3.  Select **ATA Center**.
 
@@ -58,7 +58,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 6.  You will see a notification of how many ATA Gateways have synced to the latest configuration.
 
-    ![](../Image/ATA-chge-IP-after-clicking-save.png)
+    ![](Image/ATA-chge-IP-after-clicking-save.png)
 
 7.  After all the ATA Gateways have synced, click **Activate** to activate the new IP address.
 
@@ -83,7 +83,7 @@ If your certificates expire and need to be renewed or replaced after installing 
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](../Image/ATA-config-icon.JPG)
+    ![](Image/ATA-config-icon.JPG)
 
 3.  Select **ATA Center**.
 
@@ -123,11 +123,11 @@ If you need to modify the IP address used by IIS for the ATA Console, follow the
 
 4.  Select the Microsoft ATA Console site and in the **Actions** pane click **Bindings**.
 
-    ![](../Image/ATA-console-change-IP-bindings.jpg)
+    ![](Image/ATA-console-change-IP-bindings.jpg)
 
 5.  Select **HTTP** and click **Edit** to select the new IP address. Do the same for **HTTPS** selecting the same IP address.
 
-    ![](../Image/ATA-change-console-IP.jpg)
+    ![](Image/ATA-change-console-IP.jpg)
 
 6.  In the **Action** pane click **Restart**  under **Mange Website**.
 
@@ -161,7 +161,7 @@ If you need to modify the certificate used by IIS for the ATA Center, follow the
 
 4.  Select the Microsoft ATA Console site and in the **Actions** pane click **Bindings**.
 
-    ![](../Image/ATA-console-change-IP-bindings.jpg)
+    ![](Image/ATA-console-change-IP-bindings.jpg)
 
 5.  Select **HTTPS** and click **Edit**.
 
@@ -181,11 +181,11 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](../Image/ATA-config-icon.JPG)
+    ![](Image/ATA-config-icon.JPG)
 
 3.  Select **ATA Gateway**.
 
-    ![](../Image/ATA-GW-change-DC-password.JPG)
+    ![](Image/ATA-GW-change-DC-password.JPG)
 
 4.  Under **Domain Connectivity Settings**, change the password.
 
@@ -209,7 +209,6 @@ If you renamed your network adapter without following this process, your ATA Gat
 To correct this problem, rename the network adapter  back to the name it was originally called when you set up ATA, and then go through the process described above for changing the name.
 
 ## See Also
-[Working with the ATA Console](../Topic/Working-with-the-ATA-Console.md)
- [Install ATA](../Topic/Install-ATA.md)
+[Working with the ATA Console](working-with-ata-console.md)
+ [Install ATA](install-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-

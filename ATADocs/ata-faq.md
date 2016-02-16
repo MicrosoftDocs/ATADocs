@@ -1,11 +1,11 @@
 ---
 title: ATA FAQ
-ms.custom: 
+ms.custom:
   - ATA
 ms.prod: identity-ata
 ms.reviewer: na
 ms.suite: na
-ms.technology: 
+ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
@@ -82,7 +82,7 @@ The Kerberos authentication protocol enables the transparent Single Sign-On (SSO
 
 The Kerberos Authentication protocol works in the following manner:
 
-![](../Image/ATA-Kerberos-background.jpg)
+![](Image/ATA-Kerberos-background.jpg)
 
 1.  The user provides the Domain Name, user, and password to access their computer.
 
@@ -104,7 +104,7 @@ Brute Force is an attack where attackers attempt to guess a user’s password by
 To protect against Brute Force attacks users who authenticate with passwords should set strong passwords or passphrases that include characters from multiple sets that are as long as your users can easily remember.
 
 ## What is Reconnaissance?
-Reconnaissance is the scanning of networks to discover valid information that can be used to map out the environment to assist the hacker in their attack.  Some types of information that an attacker might be interested in are: IP addresses being used, domain name system (DNS) names, user account names, and computer account names. Reconnaissance does no harm itself. Reconnaissance is somewhat analogous to a thief staking out a home before the actual burglary. 
+Reconnaissance is the scanning of networks to discover valid information that can be used to map out the environment to assist the hacker in their attack.  Some types of information that an attacker might be interested in are: IP addresses being used, domain name system (DNS) names, user account names, and computer account names. Reconnaissance does no harm itself. Reconnaissance is somewhat analogous to a thief staking out a home before the actual burglary.
 Investigating a reconnaissance event can assist in stopping a more harmful attack from taking place.
 
 ## What is broken trust?
@@ -150,7 +150,4 @@ If the customer covers only some of their users with one of the three license su
 Technical support for Advanced Threat Analytics is available through [discussion forums](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata).
 
 ## See Also
-[ATA Release Notes](../Topic/ATA-Release-Notes.md)
- [ATA Architecture](../Topic/ATA-Architecture.md)
- [ATA Deployment Guide](../Topic/ATA-Deployment-Guide.md)
-
+ [ATA architecture](ata-architecture.md)

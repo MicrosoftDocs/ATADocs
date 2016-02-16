@@ -20,13 +20,13 @@ The ATA performance counters provide insight into how well each component of ATA
 3.  This happens all the way back to the initial NetworkListener component which will drop traffic when it can no longer forward entities.
 
     This means that the in order to remedy the chain reaction that causes dropped traffic, you have to fix the problem at the end of the chain.
-    Refer to [ATA Architecture](../Topic/ATA-Architecture.md) to understand the flow of internal ATA components.
+    Refer to [ATA architecture](ata-architecture.md) to understand the flow of internal ATA components.
 
 ## ATA Gateway performance counters
 You can observe the real time performance status of the ATA Gateway by adding the ATA Gateway's performance counters.
 This is done by opening "Performance Monitor" and adding all counters for the ATA Gateway. The name of the performance counter object is: "Microsoft ATA Gateway".
 
-![](../Image/ATA-performance-counters.png)
+![](Image/ATA-performance-counters.png)
 
 Here is the list of the main ATA Gateway counters to pay attention to:
 
@@ -41,6 +41,7 @@ Here is the list of the main ATA Gateway counters to pay attention to:
 |EntityResolver Activity Block Size|The amount of Network Activities (NAs) queued for resolution.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
 |EntitySender Entity Batch Block Size|The amount of Network Activities (NAs) queued to be sent to the ATA Center.|Should be less than the maximum-1 (default maximum: 1,000,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
 |EntitySender Batch Send Time|The amount of time it took to send the last batch.|Should be less than 1000 milliseconds most of the time|Check if there are any networking issues between the ATA Gateway and the ATA Center.|
+
 > [!NOTE]
 > -   Timed counters are in milliseconds.
 > -   It is sometimes more convenient to monitor the full list of the counters by using the "Report" graph type (example: real time monitoring of all the counters)
@@ -50,7 +51,7 @@ You can observer the real-time performance status of the ATA Center by adding th
 
 This is done by opening "Performance Monitor" and adding all counters for the ATA Center. The name of the performance counter object is: "Microsoft ATA Center".
 
-![](../Image/ATA-Gateway-perf-counters.png)
+![](Image/ATA-Gateway-perf-counters.png)
 
 Here is the list of the main ATA Center counters to pay attention to:
 
@@ -61,6 +62,7 @@ Here is the list of the main ATA Center counters to pay attention to:
 |EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
 |CenterDatabaseClient &#42; Block Size|The number of Network Activities, of a specific type, queued to be written to the database.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
 |DetectionEngine Detection Time|The total amount of time the last full cycle of deterministic detections took.|Should be less than 900,000 (15 minutes)|Check that there is no issue with the CPU, memory or storage.|
+
 > [!NOTE]
 > -   Timed counters are in milliseconds
 > -   It is sometimes more convenient to monitor the full list of the counters using the graph type for Report (example: real time monitoring of all the counters).
