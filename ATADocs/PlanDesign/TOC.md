@@ -1,2 +1,6 @@
-#Sample
-## [Sample](Sample.md)
+# [Plan and design](ata-plan-and-design.md)
+## [Plan your ATA capacity](ata-capacity-planning.md)
+## [ATA Prerequisites](ata-prerequisites.md)
+## [Configure port mirroring](configure-port-mirroring.md)
+## [Validate port mirroring](validate-port-mirroring.md)
+## [Configure event collection](configure-event-collection.md)

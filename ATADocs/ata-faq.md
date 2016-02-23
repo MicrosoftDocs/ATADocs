@@ -150,4 +150,4 @@ If the customer covers only some of their users with one of the three license su
 Technical support for Advanced Threat Analytics is available through [discussion forums](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata).
 
 ## See Also
- [ATA architecture](ata-architecture.md)
+ [ATA architecture](understand/ata-architecture.md)
