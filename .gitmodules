@@ -6,15 +6,15 @@
 	path = ATADocs/Understand/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
-[submodule "ThemeATAPlanDesign"]
-	path = ATADocs/PlanDesign/_themes
+[submodule "ThemeATADeployUse"]
+	path = ATADocs/DeployUse/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
 [submodule "ThemeATATroubleshoot"]
 	path = ATADocs/Troubleshoot/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
-[submodule "ThemeATADeployUse"]
-	path = ATADocs/DeployUse/_themes
+[submodule "ThemeATAPlanDesign"]
+	path = ATADocs/PlanDesign/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
