@@ -1,4 +1,4 @@
----
+﻿---
 title: Pre-Installation Steps
 ms.custom: na
 ms.reviewer: na
@@ -11,7 +11,7 @@ robots: noindex,nofollow
 ---
 # Pre-Installation Steps
 This article describes the requirements for a successful deployment of ATA in your environment.
-
+ 
 ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](/understand/ata-architecture.md).
 
 [Before you start](#ATAbeforeyoustart): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
