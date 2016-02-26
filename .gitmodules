@@ -14,3 +14,7 @@
 	path = ATADocs/PlanDesign/_themes
 	url = https://github.com/Microsoft/templates.docs.msft
 	branch = master
+[submodule "docs shared themes"]
+	path = ATADocs/_themes
+	url = https://github.com/Microsoft/templates.docs.msft
+	branch = master
