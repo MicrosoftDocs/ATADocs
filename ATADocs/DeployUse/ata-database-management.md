@@ -46,5 +46,6 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 ## See Also
 [ATA architecture](../understand/ata-architecture.md)
- [ATA prerequisites](../plandesign/ata-prerequisites.md)
+ [ATA prerequisites](./plandesign/ata-prerequisites.md)
+ [ATA test](/understand/what-is-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
