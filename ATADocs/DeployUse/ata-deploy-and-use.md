@@ -97,7 +97,7 @@ To deploy ATA, follow these steps:
 
     -   [Configure port mirroring](/plandesign/configure-port-mirroring.md)
 
-    -   [Validate port mirroring](.plandesign/validate-port-mirroring.md)
+    -   [Validate port mirroring](/plandesign/validate-port-mirroring.md)
 
     -   Optional: [Configure event collection](/plandesign/configure-event-collection.md)
 
