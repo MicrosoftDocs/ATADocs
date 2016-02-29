@@ -57,13 +57,13 @@ Perform the following steps on the ATA Center server.
     |Field|Description|Comments|
     |---------|---------------|------------|
     |Installation Path|This is the location where the ATA Center will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
-    |Database Data Path|This is the location where the MongoDB database files will be located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](ata-capacity-planning.md) for sizing information.|
+    |Database Data Path|This is the location where the MongoDB database files will be located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](./PlanDesign/ata-capacity-planning.md) for sizing information.|
     |Database Journal Path|This is the location where the database journal files will be located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data\journal|For large deployments, the Database Journal should be on a separate physical disk from the database and the system drive. Change the location to a place where you have room for your Database Journal.|
     |ATA Center Service IP address: Port|This is the IP address that the ATA Center service will listen on for communication from the ATA Gateways.<br /><br />**Default port:** 443|Click the down arrow to select the IP address to be used by the ATA Center service.<br /><br />The IP address and port of the ATA Center service cannot be the same as the IP address and port of the ATA Console. Make sure to change the port of the ATA Console.|
     |ATA Center Service SSL Certificate|This is the certificate that will be used by the ATA Center service.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment.|
     |ATA Console IP address|This is the IP address that will be used by IIS for the ATA Console.|Click the down arrow to select the IP address used by the ATA Console. **Note:** Make a note of this IP address to make it easier to access the ATA Console from the ATA Gateway.|
     |ATA Console SSL certificate|This is the certificate to be used by IIS.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment.|
-    ![](./Image/ATA-Center-Configuration.JPG)
+    ![](../Image/ATA-Center-Configuration.JPG)
 
 7.  Click **Install** to install ATA and its components and create the connection between the ATA Center and the ATA Console.
 
@@ -101,7 +101,7 @@ To configure the Domain connectivity settings perform the following on the ATA C
 
 2.  The first time you log into the ATA Console after the ATA Center has been installed, you will automatically be taken to the ATA Gateways configuration page. If you need to modify any of the settings afterwards, click the Settings icon and select **Configuration**.
 
-    ![](./Image/ATA-config-icon.JPG)
+    ![](../Image/ATA-config-icon.JPG)
 
 3.  On the **Gateways** page, click on **Domain connectivity settings**, enter the following information and click **Save**.
 
@@ -110,7 +110,7 @@ To configure the Domain connectivity settings perform the following on the ATA C
     |**Username** (required)|Enter the read-only user name, for example: **user1**.|
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**. **Note:** Make sure this password is correct. If you save the wrong password, the ATA Service will stop running on the ATA Gateway servers.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
-    ![](./Image/ATA-Domain-Connectivity-User.JPG)
+    ![](../Image/ATA-Domain-Connectivity-User.JPG)
 
 ## <a name="DownloadATA"></a>Step 3. Download the ATA Gateway setup package
 After configuring the domain connectivity settings you can download the ATA Gateway setup package.
@@ -119,7 +119,7 @@ To download the ATA Gateway package:
 
 1.  On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
 
-    ![](./Image/ATA-config-icon.JPG)
+    ![](../Image/ATA-config-icon.JPG)
 
 2.  In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
 
@@ -149,7 +149,7 @@ Perform the following steps on the ATA Gateway server.
 
 4.  Under  **ATA Gateway Configuration**, enter the following information based on your environment:
 
-    ![](./Image/ATA-Gateway-Configuration.JPG)
+    ![](../Image/ATA-Gateway-Configuration.JPG)
 
     |Field|Description|Comments|
     |---------|---------------|------------|
@@ -182,9 +182,9 @@ After the ATA Gateway was installed, perform the following steps to configure th
     |Field|Description|Comments|
     |---------|---------------|------------|
     |Description|Enter a description of the ATA Gateway (optional).||
-    |**Domain controllers** (required)<br /><br />See below for additional information about the list of controllers.|Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**<br /><br />![](./Image/ATAGWDomainController.png)|The objects in the first domain controller in the list will sync via LDAP queries. Depending on the size of the domain, this might take some time. **Note:** <ul><li>Make sure that the first domain controller is **not** read-only.    Read only domain controllers should be added only after the initial sync completes.</li></ul>|
+    |**Domain controllers** (required)<br /><br />See below for additional information about the list of controllers.|Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**<br /><br />![](../Image/ATAGWDomainController.png)|The objects in the first domain controller in the list will sync via LDAP queries. Depending on the size of the domain, this might take some time. **Note:** <ul><li>Make sure that the first domain controller is **not** read-only.    Read only domain controllers should be added only after the initial sync completes.</li></ul>|
     |**Capture Network adapters** (required)|Select the network adapters that are connected to the switch that are configured as the destination mirror port to receive the domain controller traffic.|Select the Capture network adapter.|
-    ![](./Image/ATA-Config-GW-Settings.jpg)
+    ![](../Image/ATA-Config-GW-Settings.jpg)
 
 3.  Click **Save**.
 
@@ -226,14 +226,14 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
 
     Open Performance Monitor. In the Performance tree, click on **Performance Monitor** and then click the plus icon to **Add a Counter**. Expand **Microsoft ATA Gateway** and scroll down to **Network Listener Captured Messages per Second** and add it. Then, make sure you see activity on the graph.
 
-    ![](Image/ATA-performance-monitoring-add-counters.png)
+    ![](../Image/ATA-performance-monitoring-add-counters.png)
 
 ### <a name="ATAvpnHoneytokensetting"></a>Step 6. Configure short-term lease subnets and Honeytoken user
 Short-term lease subnets are subnets in which the IP address assignment changes very rapidly - within seconds or minutes. For example, IP addresses used for your VPNs and Wi-Fi IP addresses. To enter the list of short-term lease subnets used in your organization, follow these steps:
 
 1.  From the ATA Console on the ATA Gateway machine, click on the settings icon and select **Configuration**.
 
-    ![](Image/ATA-config-icon.JPG)
+    ![](../Image/ATA-config-icon.JPG)
 
 2.  Under **Detection**, enter the following for short-term lease subnets. Enter the short-term lease subnets using slash notation format, for example:  `192.168.0.0/24` and click the plus sign.
 
@@ -242,11 +242,11 @@ Short-term lease subnets are subnets in which the IP address assignment changes 
     > [!NOTE]
     > To find the SID for a user, run the following Windows PowerShell cmdlet `Get-ADUser UserName`.
 
-4.  Configure exclusions: You can configure IP addresses to be excluded from specific suspicious activities. See [Working with ATA detection settings](./working-with-detection-settings.md) for more information.
+4.  Configure exclusions: You can configure IP addresses to be excluded from specific suspicious activities. See [Working with ATA detection settings](working-with-detection-settings.md) for more information.
 
 5.  Click **Save**.
 
-![](./Image/ATA-VPN-Subnets.JPG)
+![](../Image/ATA-VPN-Subnets.JPG)
 
 Congratulations, you have successfully deployed Microsoft Advanced Threat Analytics!
 
