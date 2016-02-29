@@ -82,7 +82,7 @@ The Kerberos authentication protocol enables the transparent Single Sign-On (SSO
 
 The Kerberos Authentication protocol works in the following manner:
 
-![](../Image/ATA-Kerberos-background.jpg)
+![](/Image/ATA-Kerberos-background.jpg)
 
 1.  The user provides the Domain Name, user, and password to access their computer.
 

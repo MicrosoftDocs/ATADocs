@@ -48,7 +48,7 @@ This section lists the requirements for the ATA Center.
 The ATA Center supports installation on a server running Windows Server 2012 R2. Run Windows Update and make sure all important updates are installed.
  The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the hardware requirements.
 
-Installation of the ATA Center as a virtual machine is supported. For more information see [configure port mirroring](/deployuse/configure-port-mirroring.md).
+Installation of the ATA Center as a virtual machine is supported. For more information see [configure port mirroring](/PlanDesign/configure-port-mirroring.md).
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 

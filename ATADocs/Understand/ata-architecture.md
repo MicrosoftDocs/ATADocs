@@ -15,7 +15,7 @@ author: Rkarlin
 # ATA Architecture
 The Advanced Threat Analytics architecture is detailed in this diagram:
 
-![](../Image/ATA-architecture-topology.jpg)
+![](/Image/ATA-architecture-topology.jpg)
 
 ATA has two main components - the ATA Gateway and the ATA Center.
 
@@ -23,7 +23,7 @@ These connect to your existing network by mirroring the network traffic to and f
 
 This section describes the flow of network and event capturing and drills down into the main components of the ATA Gateway and the ATA Center and their functionality.
 
-![](../Image/ATA-traffic-flow.jpg)
+![](/Image/ATA-traffic-flow.jpg)
 
 ## ATA Components
 ATA consists of the following:
@@ -122,7 +122,7 @@ To enhance ATA detection of Pass-the-Hash, ATA needs Windows Event log ID 4776. 
 
 -   Configuring Windows Event Forwarding
 
-    Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#ATA_event_WEF).
+    Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](/PlanDesign/configure-event-collection.md#ATA_event_WEF).
 
 ## See Also
 [ATA prerequisites](/PlanDesign/ata-prerequisites.md)
