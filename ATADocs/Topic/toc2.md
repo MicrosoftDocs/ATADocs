@@ -1,6 +1,0 @@
-# [Plan and design](ATA-plan-and-design.md)
-## [Plan your ATA capacity](ATA-Capacity-Planning.md)
-## [ATA Prerequisites](ATA-Prerequisites.md)
-## [Configure port mirroring](Configure-Port-Mirroring.md)
-## [Validate port mirroring](Validate-Port-Mirroring.md)
-## [Configure event collection](Configure-Event-Collection.md)

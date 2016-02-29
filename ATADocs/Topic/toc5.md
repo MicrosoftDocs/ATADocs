@@ -1,5 +1,0 @@
-# [ATA Release Notes](ATA-Release-Notes.md)
-## [What's new in ATA version 1.4](What-s-new-in-ATA-version-1.4.md)
-## [What's new in ATA version 1.5](What-s-new-in-ATA-version-1.5.md)
-### [ATA update to 1.5 migration guide](ATA-update-to-1.5-migration-guide.md)
-## [Working with ATA Detection Settings](Working-with-ATA-Detection-Settings.md)

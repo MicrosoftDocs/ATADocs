@@ -1,8 +1,0 @@
-# [Deploy and use](ATA-Deployment-Guide.md)
-## [Install ATA](Install-ATA.md)
-## [Changing ATA configuration](Modifying-ATA-Configuration.md)
-## [Setting ATA alerts](Setting-ATA-Alerts.md)
-## [ATA Health Center](ATA-Health-Center.md)
-## [ATA suspicious activities](Working-with-Suspicious-Activities.md)
-## [ATA database management](ATA-Database-Management.md)
-## [Manage ATA telemetry](Manage-Telemetry-Settings.md)

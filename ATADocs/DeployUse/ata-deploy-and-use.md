@@ -24,7 +24,7 @@ ATA is comprised of two components, the ATA Center and the ATA Gateway. For more
 
 [ATA Console](#ATAconsole): This section lists browser requirements for running the ATA Console.
 
-![](./Image/ATA-architecture-topology.jpg)
+![](../Image/ATA-architecture-topology.jpg)
 
 ## <a name="ATAbeforeyoustart"></a>Before you start
 This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
