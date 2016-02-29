@@ -82,7 +82,7 @@ The Kerberos authentication protocol enables the transparent Single Sign-On (SSO
 
 The Kerberos Authentication protocol works in the following manner:
 
-![](Image/ATA-Kerberos-background.jpg)
+![](../Image/ATA-Kerberos-background.jpg)
 
 1.  The user provides the Domain Name, user, and password to access their computer.
 
@@ -150,4 +150,4 @@ If the customer covers only some of their users with one of the three license su
 Technical support for Advanced Threat Analytics is available through [discussion forums](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata).
 
 ## See Also
- [ATA architecture](understand/ata-architecture.md)
+ [ATA architecture](/understand/ata-architecture.md)

@@ -19,7 +19,7 @@ Microsoft Advanced Threat Analytics (ATA) is an on-premises product that helps I
 ## What does ATA do?
 ATA is comprised of two separate components that sit in your network - the ATA Center and the ATA Gateways. You use port mirroring from your domain controllers to your ATA Gateways to enable ATA to review your network traffic and perform its advanced algorithms and behavioral analytics on your traffic. Once ATA studies your "normal" network traffic, it can start alerting you when something out of the ordinary is detected. In order to provide ATA with even more information about what goes on in your network, you can also enable event forwarding from your SIEM or by using Windows Event Forwarding to the ATA Gateways as well. For more information about how ATA works inside your network, see [ATA architecture](ata-architecture.md).
 
-![](Image/ATA-architecture-topology.jpg)
+![](../Image/ATA-architecture-topology.jpg)
 
 ## What threats does ATA look for?
 ATA collects information from several data sources and analyzes, learns, and identifies normal behavior on your network, alerting you to possible security concerns, including:
@@ -98,7 +98,7 @@ ATA collects information from several data sources and analyzes, learns, and ide
 
 -   For more information about how ATA fits into your network check out:[ATA architecture](ata-architecture.md)
 
--   To get started deploying ATA: [Install ATA](install-ata.md)
+-   To get started deploying ATA: [Install ATA](/DeployUse/install-ata.md)
 
 ## See Also
 [For ATA support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
