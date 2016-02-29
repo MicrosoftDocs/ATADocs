@@ -14,7 +14,7 @@ author: Rkarlin
 # Pre-Installation Steps
 This article describes the requirements for a successful deployment of ATA in your environment.
 
-ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](./understand/ata-architecture.md).
+ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](/understand/ata-architecture.md).
 
 [Before you start](#ATAbeforeyoustart): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
@@ -50,7 +50,7 @@ This section lists the requirements for the ATA Center.
 The ATA Center supports installation on a server running Windows Server 2012 R2. Run Windows Update and make sure all important updates are installed.
  The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the hardware requirements.
 
-Installation of the ATA Center as a virtual machine is supported. For more information see [Configure port mirroring](./plandesign/configure-port-mirroring.md).
+Installation of the ATA Center as a virtual machine is supported. For more information see [Configure port mirroring](/plandesign/configure-port-mirroring.md).
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 
@@ -65,7 +65,7 @@ If you run the ATA Center as a virtual machine, shut down the server before crea
 
 -   Storage - 1000 GB per month to monitor 2 lightly loaded domain controllers
 
-The ATA Center requires a minimum of 21 days of data for user behavioral analytics. For more information on hardware requirements, see [ATA capacity planning](./plandesign/ata-capacity-planning.md).
+The ATA Center requires a minimum of 21 days of data for user behavioral analytics. For more information on hardware requirements, see [ATA capacity planning](/plandesign/ata-capacity-planning.md).
 
 > [!NOTE]
 > If you want to install ATA in a lab with a few VMs, it is recommended that you have at least 2 cores, 4 GB of RAM and 100GB of storage to allow you to interact with the ATA Console without support for production deployment.
@@ -91,15 +91,15 @@ Communication between the ATA Center and the ATA Gateway is encrypted using SSL 
 ## ATA Deployment Guide
 To deploy ATA, follow these steps:
 
-1.  Prepare your network and servers according to the guidelines in [ATA prerequisites](./plandesign/ata-prerequisites.md).
+1.  Prepare your network and servers according to the guidelines in [ATA prerequisites](/plandesign/ata-prerequisites.md).
 
 2.  Perform pre-installation steps: [Install ATA](install-ata.md)
 
-    -   [Configure port mirroring](./plandesign/configure-port-mirroring.md)
+    -   [Configure port mirroring](/plandesign/configure-port-mirroring.md)
 
-    -   [Validate port mirroring](./plandesign/validate-port-mirroring.md)
+    -   [Validate port mirroring](.plandesign/validate-port-mirroring.md)
 
-    -   Optional: [Configure event collection](./plandesign/configure-event-collection.md)
+    -   Optional: [Configure event collection](/plandesign/configure-event-collection.md)
 
 3.  [Install ATA](install-ata.md)
 
