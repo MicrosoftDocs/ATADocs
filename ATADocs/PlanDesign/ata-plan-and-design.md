@@ -102,7 +102,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 
     -   The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![](Image/ATA-DNS-Suffix.png)
+        ![](../Image/ATA-DNS-Suffix.png)
 
         > [!NOTE]
         > If the ATA Gateway is a member of the domain, this is configured automatically.
@@ -155,6 +155,6 @@ Access to the ATA Console is via a browser, supporting the following:
 -   Minimum screen width resolution of 1700 pixels
 
 ## See Also
-[ATA architecture](ata-architecture.md)
- [Install ATA](install-ata.md)
+[ATA architecture](Understand/ata-architecture.md)
+ [Install ATA](/DeployUse/install-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
