@@ -15,7 +15,7 @@ author: Rkarlin
 # ATA Architecture
 The Advanced Threat Analytics architecture is detailed in this diagram:
 
-![](/Image/ATA-architecture-topology.jpg)
+![](media/ATA-architecture-topology.jpg)
 
 ATA has two main components - the ATA Gateway and the ATA Center.
 
@@ -23,7 +23,7 @@ These connect to your existing network by mirroring the network traffic to and f
 
 This section describes the flow of network and event capturing and drills down into the main components of the ATA Gateway and the ATA Center and their functionality.
 
-![](/Image/ATA-traffic-flow.jpg)
+![](media/ATA-traffic-flow.jpg)
 
 ## ATA Components
 ATA consists of the following:
