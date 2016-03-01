@@ -29,7 +29,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
     You have to log in with a user who is a member of the local administrator group OR of the  Microsoft Advanced Threat Analytics Administrators group.
 
-    ![](/Image/ATA-log-in-screen.jpg)
+    ![](media/ATA-log-in-screen.jpg)
 
 ## ATA Console elements
 
@@ -53,13 +53,13 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
     On the top of the screen you will find a search bar. You can search for a specific user, computer or groups in ATA. To give it a try, just start typing.
 
-    ![](/Image/ATA-console-search.png)
+    ![](media/ATA-console-search.png)
 
 -   **Health Center**
 
     The Health Center provides you with alerts when something isn't working properly in your ATA network.
 
-    Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon will let you know by displaying a red dot. ![](/Image/ATA-Health-Center-Alert-red-dot.png)
+    Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon will let you know by displaying a red dot. ![](media/ATA-Health-Center-Alert-red-dot.png)
 
     Like suspicious activities, Health Center alerts can be dismissed or resolved and are categorized High, Medium or Low depending on their severity. If you resolve an alert that the ATA service detects as still active, it will automatically be moved to the Open list of alerts. If the system detects that there is no longer cause for an alert (the situation has been fixed), it will automatically be moved to the resolved list.
 
@@ -67,7 +67,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
     Modifying and viewing the ATA Configuration is accomplished by clicking the settings icon (three dots) on the menu bar, followed by Configuration.
 
-    ![](/Image/ATA-config-icon.JPG)
+    ![](media/ATA-config-icon.JPG)
 
 -   **User and computer profiles**
 
@@ -80,7 +80,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
     Anywhere in the console where there is a single entity presented, such as a user or computer, if you hover you mouse over the entity a mini profile will automatically open displaying the following information if available:
 
-    ![](/Image/ATA-mini-profile.jpg)
+    ![](media/ATA-mini-profile.jpg)
 
     -   Name
 
