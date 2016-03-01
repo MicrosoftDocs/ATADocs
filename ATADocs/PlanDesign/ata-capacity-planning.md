@@ -59,21 +59,21 @@ To determine packets per second, perform the following on each domain controller
 
 1.  Open Performance Monitor.
 
-    ![](/Image/ATA-traffic-estimation-1.png)
+    ![](media/ATA-traffic-estimation-1.png)
 
 2.  Expand **Data Collector Sets**.
 
-    ![](/Image/ATA-traffic-estimation-2.png)
+    ![](media/ATA-traffic-estimation-2.png)
 
 3.  Right click **User Defined** and select **New** &gt; **Data Collector Set**.
 
-    ![](/Image/ATA-traffic-estimation-3.png)
+    ![](media/ATA-traffic-estimation-3.png)
 
 4.  Enter a name for the collector set and select **Create Manually (Advanced)**.
 
 5.  Under **What type of data do you want to include?**, select  **Create data logs and Performance counter**.
 
-    ![](/Image/ATA-traffic-estimation-5.png)
+    ![](media/ATA-traffic-estimation-5.png)
 
 6.  Under **Which performance counters would you like to log** click **Add**.
 
@@ -82,7 +82,7 @@ To determine packets per second, perform the following on each domain controller
     > [!NOTE]
     > To do this, in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
 
-    ![](/Image/ATA-traffic-estimation-7.png)
+    ![](media/ATA-traffic-estimation-7.png)
 
 8.  Change the **Sample interval** to **1 second**.
 
@@ -94,13 +94,13 @@ To determine packets per second, perform the following on each domain controller
 
 11. After 24 hours, stop the data collector set, by right clicking the data collector set and selecting **Stop**
 
-    ![](/Image/ATA-traffic-estimation-12.png)
+    ![](media/ATA-traffic-estimation-12.png)
 
 12. In File Explorer, browse to the folder where the .blg file was saved and double click it to open it in Performance Monitor.
 
 13. Select the Packets/sec counter, and record the average and maximum values.
 
-    ![](/Image/ATA-traffic-estimation-14.png)
+    ![](media/ATA-traffic-estimation-14.png)
 
 ## See Also
 [ATA prerequisites](ata-prerequisites.md)

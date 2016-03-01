@@ -43,7 +43,7 @@ Each suspicious activity has the following information:
 > -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
 > -   If you click on an entity, it will take you to the entity profile of the user or computer.
 
-![](/Image/ATA-Suspicious-Activity-Timeline.JPG)
+![](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## Filter suspicious activities list
 To filter the suspicious activities list:
@@ -88,7 +88,7 @@ To enable ATA to learn about your network with you, some suspicious activities (
 
 1.  For suspicious activities that enable you to provide input, the input question opens automatically. You will be asked to answer questions about activities on your network and whether or not they should be considered suspicious. In the below example, you are being asked if running scanning tools is allowed from a specific computer.
 
-    ![](/Image/ATA-Input.JPG)
+    ![](media/ATA-Input.JPG)
 
 2.  If you answer no, this activity will be considered suspicious and any time ATA encounters this activity from this computer, you will be alerted.
 
