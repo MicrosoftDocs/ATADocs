@@ -30,7 +30,7 @@ The **Frequency** setting applies only to notifications sent to the Syslog serve
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](../Image/ATA-config-icon.JPG)
+    ![](/Image/ATA-config-icon.JPG)
 
 3.  Select **Alerts**.
 
@@ -38,7 +38,7 @@ The **Frequency** setting applies only to notifications sent to the Syslog serve
 
 5.  Under **Frequency**, select **Low frequency** if you want to receive a brief notification only when a new alert is generated. Select **High frequency** if you want to receive a detailed notification when a new alert is generated as well as when existing alerts are modified.
 
-    ![](../Image/ATA-alerts-verbosity-language.png)
+    ![](/Image/ATA-alerts-verbosity-language.png)
 
 6.  Click **Save**.
 
@@ -51,7 +51,7 @@ ATA can alert you when it detects a suspicious activity. If you enable email ale
 
 3.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](../Image/ATA-config-icon.JPG)
+    ![](/Image/ATA-config-icon.JPG)
 
 4.  Select **Alerts**.
 
@@ -84,7 +84,7 @@ ATA can alert you when it detects a suspicious activity by sending the alert to 
 
 4.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](../Image/ATA-config-icon.JPG)
+    ![](/Image/ATA-config-icon.JPG)
 
 5.  Select **Alerts**.
 

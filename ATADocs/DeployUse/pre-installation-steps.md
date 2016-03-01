@@ -22,7 +22,7 @@ ATA is comprised of two components, the ATA Center and the ATA Gateway. For more
 
 [ATA Console](#ATAconsole): This section lists browser requirements for running the ATA Console.
 
-![](../Image/ATA-architecture-topology.jpg)
+![](/Image/ATA-architecture-topology.jpg)
 
 ## <a name="ATAbeforeyoustart"></a>Before you start
 This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
@@ -165,7 +165,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 
     -   The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![](../Image/ATA-DNS-Suffix.png)
+        ![](/Image/ATA-DNS-Suffix.png)
 
         > [!NOTE]
         > If the ATA Gateway is a member of the domain, this is configured automatically.
@@ -173,7 +173,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 -   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](./PlanDesign/configure-port-mirroring.md)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
+    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](/PlanDesign/configure-port-mirroring.md)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
     > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This will ensure that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports

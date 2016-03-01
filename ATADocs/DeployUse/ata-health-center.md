@@ -18,10 +18,10 @@ The ATA Health Center lets you know how your ATA service is performing and alert
 ## Working with the ATA Health Center
 The ATA Health Center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
 
-![](../Image/ATA-Health-Center-Alert-red-dot.png)
+![](/Image/ATA-Health-Center-Alert-red-dot.png)
 
 ### Managing ATA health
-To check up on your system's overall health, click the Health Center icon in the menu bar ![](../Image/ATA-red-dot.png).
+To check up on your system's overall health, click the Health Center icon in the menu bar ![](/Image/ATA-red-dot.png).
 
 -   All open alerts can be managed by setting them to **Resolved** or **Dismissed**. In the Alert, click **Open** and scroll down to either **Resolved** or **Dismissed**.
 
@@ -29,7 +29,7 @@ To check up on your system's overall health, click the Health Center icon in the
 
 -   **Dismissed** issues are issues that you do not want ATA to continue to check - for example, if you are alerted to an issue that you know exists and you do not plan to resolve the issue but do not want to continue to get notifications about it and you no longer want to see it in your **Open** issues list, you can set it to **Dismissed**.
 
-![](../Image/ATA-Health-Issue.JPG)
+![](/Image/ATA-Health-Issue.JPG)
 
 ## See Also
 [Working with ATA detection settings](working-with-detection-settings.md)

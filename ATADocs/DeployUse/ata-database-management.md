@@ -32,7 +32,7 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 5.  Change the `dbPath` parameter inside the mongo configuration file to the new folder path and save and close the file.
 
-    ![](../Image/ATA-mongoDB-moveDB.png)
+    ![](/Image/ATA-mongoDB-moveDB.png)
 
 6.  Start the **MongoDB** service.
 

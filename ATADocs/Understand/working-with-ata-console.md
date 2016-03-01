@@ -74,7 +74,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
     ATA builds a profile for each user and computer in the domain. In the user profile ATA will display general information about the user and will provide additional information on the following pages: Summary, Activities, and Suspicious activities.
 
     > [!NOTE]
-    > A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.![](../Image/ATA-Unresolved-Profile.jpg)
+    > A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.![](/Image/ATA-Unresolved-Profile.jpg)
 
 -   **Mini profile**
 
