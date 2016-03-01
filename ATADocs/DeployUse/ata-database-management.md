@@ -32,7 +32,7 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 5.  Change the `dbPath` parameter inside the mongo configuration file to the new folder path and save and close the file.
 
-    ![](Image/ATA-mongoDB-moveDB.png)
+    ![](/Image/ATA-mongoDB-moveDB.png)
 
 6.  Start the **MongoDB** service.
 
@@ -45,6 +45,7 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 9. Start the **Microsoft Advanced Threat Analytics Center** service.
 
 ## See Also
-[ATA architecture](./understand/ata-architecture.md)
- [ATA prerequisites](./plandesign/ata-prerequisites.md)
+[ATA architecture](/understand/ata-architecture.md)
+ [ATA prerequisites](/plandesign/ata-prerequisites.md)
+ [ATA test](/understand/what-is-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

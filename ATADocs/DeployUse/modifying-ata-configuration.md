@@ -48,7 +48,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](./Image/ATA-config-icon.JPG)
+    ![](/Image/ATA-config-icon.JPG)
 
 3.  Select **ATA Center**.
 
@@ -58,7 +58,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 6.  You will see a notification of how many ATA Gateways have synced to the latest configuration.
 
-    ![](./Image/ATA-chge-IP-after-clicking-save.png)
+    ![](/Image/ATA-chge-IP-after-clicking-save.png)
 
 7.  After all the ATA Gateways have synced, click **Activate** to activate the new IP address.
 
@@ -72,7 +72,7 @@ If your certificates expire and need to be renewed or replaced after installing 
 
 -   First stage – Update the certificate you want the ATA Center service to use. At this point the ATA Center service is still bound to the original certificate. When the ATA Gateways sync their configuration they will have two potential certificates that will be valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it will not try the new one.
 
--   Second stage – After all the ATA Gateways synced with the updated configuration, you can activate”the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service will bind to the certificate. ATA Gateways will not be able to properly mutually authenticate the ATA Center service and will attempt to authenticate the second certificate. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have a single certificate for the ATA Center. (Unless you  started the process again.)
+-   Second stage – After all the ATA Gateways synced with the updated configuration, you can activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service will bind to the certificate. ATA Gateways will not be able to properly mutually authenticate the ATA Center service and will attempt to authenticate the second certificate. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have a single certificate for the ATA Center. (Unless you  started the process again.)
 
 > [!NOTE]
 > -   If an ATA Gateway was offline during the first stage and never got the updated configuration, you will need to manually update the configuration JSON file on the ATA Gateway.
@@ -83,7 +83,7 @@ If your certificates expire and need to be renewed or replaced after installing 
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](./Image/ATA-config-icon.JPG)
+    ![](/Image/ATA-config-icon.JPG)
 
 3.  Select **ATA Center**.
 
@@ -123,11 +123,11 @@ If you need to modify the IP address used by IIS for the ATA Console, follow the
 
 4.  Select the Microsoft ATA Console site and in the **Actions** pane click **Bindings**.
 
-    ![](./Image/ATA-console-change-IP-bindings.jpg)
+    ![](/Image/ATA-console-change-IP-bindings.jpg)
 
 5.  Select **HTTP** and click **Edit** to select the new IP address. Do the same for **HTTPS** selecting the same IP address.
 
-    ![](./Image/ATA-change-console-IP.jpg)
+    ![](/Image/ATA-change-console-IP.jpg)
 
 6.  In the **Action** pane click **Restart**  under **Mange Website**.
 
@@ -161,7 +161,7 @@ If you need to modify the certificate used by IIS for the ATA Center, follow the
 
 4.  Select the Microsoft ATA Console site and in the **Actions** pane click **Bindings**.
 
-    ![](./Image/ATA-console-change-IP-bindings.jpg)
+    ![](/Image/ATA-console-change-IP-bindings.jpg)
 
 5.  Select **HTTPS** and click **Edit**.
 
@@ -181,11 +181,11 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](./Image/ATA-config-icon.JPG)
+    ![](/Image/ATA-config-icon.JPG)
 
 3.  Select **ATA Gateway**.
 
-    ![](./Image/ATA-GW-change-DC-password.JPG)
+    ![](/Image/ATA-GW-change-DC-password.JPG)
 
 4.  Under **Domain Connectivity Settings**, change the password.
 
@@ -202,13 +202,13 @@ If you change the name of the network adapter that is currently configured as a 
 
 3.  Then, go back into the ATA console's ATA Gateway configuration page. You may have to refresh the page, and then you should see the network adapter with the new name in the list. Unselect the adapter you selected in step 1, and select the newly named adapter. Finally, save the new configuration.
 
-If you renamed your network adapter without following this process, your ATA Gateway won’t start and you will get this error on the ATA Gateway inMicrosoft.Tri.Gateway-Errors.log log file. In the example below, **Capture** would be the original name of the network adapter you set:
+If you renamed your network adapter without following this process, your ATA Gateway won’t start and you will get this error on the ATA Gateway in Microsoft.Tri.Gateway-Errors.log log file. In the example below, **Capture** would be the original name of the network adapter you set:
 
 `Error [NetworkListener] Microsoft.Tri.Infrastructure.ExtendedException: Unavailable network adapters [UnavailableCaptureNetworkAdapterNames=Capture]`
 
 To correct this problem, rename the network adapter  back to the name it was originally called when you set up ATA, and then go through the process described above for changing the name.
 
 ## See Also
-[Working with the ATA Console](./understand/working-with-ata-console.md)
+[Working with the ATA Console](/understand/working-with-ata-console.md)
  [Install ATA](install-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

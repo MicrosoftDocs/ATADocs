@@ -40,7 +40,7 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 
     Set the Listening IP Address as described in the picture, below. The default port is 514.
 
-    ![](Image/ATA-enable-siem-forward-events.png)
+    ![](/Image/ATA-enable-siem-forward-events.png)
 
 2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address selected above. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
@@ -162,20 +162,20 @@ wecutil qc
 ```
 
 5.	On each domain controller, in **Active Directory Users and Computers**, navigate to the **Builtin** folder and double click on the **Event Log Readers** group.
-![wef_ad_eventlogreaders](Image/wef_ad_eventlogreaders.png)
+![wef_ad_eventlogreaders](/Image/wef_ad_eventlogreaders.png)
 Right click on it and select **Properties**. On the **Members** tab, add the computer account of each ATA Gateway.
-![wef_ad event log reader popup](Image/wef_ad-event-log-reader-popup.png)
+![wef_ad event log reader popup](/Image/wef_ad-event-log-reader-popup.png)
 6.	On the ATA Gateway, open the Event Viewer and right click on **Subscriptions** and select **Create Subscription**.  
 
     a.	Under **Subscription type and source computers**, click **Select Computers** and add the domain controllers and test connectivity.
-    ![wef_subscription prop](Image/wef_subscription-prop.png)
+    ![wef_subscription prop](/Image/wef_subscription-prop.png)
 
     b.	Under **Events to collect**, click **Select Events**. Select **By log** and scroll down to select **Security**. Then, In the **Includes/Excludes Event IDs**, type **4776**.
-    ![wef_4776](Image/wef_4776.png)
+    ![wef_4776](/Image/wef_4776.png)
 
     c. Under **Change user account or configure advanced settings**, click **Advanced**.
         Set the **Protocol** to **HTTP** and the **Port** to **5985**.
-    ![wef_http](Image/wef_http.png)
+    ![wef_http](/Image/wef_http.png)
 
  7.	[Optional] If you want a shorter poling interval, on the ATA Gateway, set the subscription heartbeat to 5 seconds for faster polling rate.
 
@@ -192,5 +192,5 @@ wecutil ss <CollectionName> /hi:5000
 For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/en-us/library/cc748890)
 
 ## See Also
-[Install ATA](install-ata.md)
+[Install ATA](/DeployUse/install-ata.md)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

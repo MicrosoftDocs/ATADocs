@@ -35,7 +35,7 @@ The following known issues exist in this version.
 After updating your ATA deployment to ATA version 1.5, you get the following error when installing a new ATA Gateway:
 Microsoft Advanced Threat Analytics Gateway is not installed
 
-![ATA GW error](Image/ATA-GW-error.png)
+![ATA GW error](/Image/ATA-GW-error.png)
 
 <b>Workaround:</b> Send an email to <ataeval@microsoft.com> to request workaround steps.
 ### Deployment
