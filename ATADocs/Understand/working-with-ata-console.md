@@ -23,6 +23,8 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
 -   In the ATA Center server, click the **Microsoft ATA Console**  icon on the desktop or open a browser and browse to the ATA Console.
 
+    ![](media/ata-server-icon.png)
+
 > [!NOTE]
 > Alternatively, you can open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
