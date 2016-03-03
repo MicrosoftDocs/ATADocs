@@ -68,8 +68,8 @@ These are the key elements of the ATA console.
     ATA provides additional information on the following pages: Summary, Activities, and Suspicious activities.
 
 
-    > [!NOTE]
-    > A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.![](media/ATA-Unresolved-Profile.jpg)
+> [!NOTE]
+> A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.![](media/ATA-Unresolved-Profile.jpg)
 
 -   **Mini profile**
 
