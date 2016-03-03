@@ -27,7 +27,7 @@ These are the key elements of the ATA console.
 
     ![](media/attack-timeline.png)
 
-    For more information, see [Working with suspicious activities](/DeployUse/working-with-suspicious-activities.md).
+    For more information, see [Working with suspicious activities](/ATA/DeployUse/working-with-suspicious-activities.html).
 
 -   **Notification bar**
 

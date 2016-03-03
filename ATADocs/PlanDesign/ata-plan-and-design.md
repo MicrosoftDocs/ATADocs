@@ -155,6 +155,6 @@ Access to the ATA Console is via a browser, supporting the following:
 -   Minimum screen width resolution of 1700 pixels
 
 ## See Also
-[ATA architecture](/Understand/ata-architecture.md)
- [Install ATA](/DeployUse/install-ata.md)
+[ATA architecture](/ATA/Understand/ata-architecture.html)
+ [Install ATA](/ATA/DeployUse/install-ata.html)
  [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
