@@ -98,7 +98,7 @@ ATA collects information from several data sources and analyzes, learns, and ide
 
 -   For more information about how ATA fits into your network check out:[ATA architecture](ata-architecture.md)
 
--   To get started deploying ATA: [Install ATA](/DeployUse/install-ata.md)
+-   To get started deploying ATA: [Install ATA](/ATA/DeployUse/install-ata.html)
 
 ## See Also
 [For ATA support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

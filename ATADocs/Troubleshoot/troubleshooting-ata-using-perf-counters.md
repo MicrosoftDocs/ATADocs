@@ -20,7 +20,7 @@ The ATA performance counters provide insight into how well each component of ATA
 3.  This happens all the way back to the initial NetworkListener component which will drop traffic when it can no longer forward entities.
 
     This means that the in order to remedy the chain reaction that causes dropped traffic, you have to fix the problem at the end of the chain.
-    Refer to [ATA architecture](/Understand/ata-architecture.md) to understand the flow of internal ATA components.
+    Refer to [ATA architecture](/ATA/Understand/ata-architecture.html) to understand the flow of internal ATA components.
 
 ## ATA Gateway performance counters
 You can observe the real time performance status of the ATA Gateway by adding the ATA Gateway's performance counters.

@@ -30,10 +30,11 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
 -   Enter your username and password and click **Log in**.
 
+    ![](media/ATA-log-in-screen.jpg)
+
 > [!NOTE]
 > You have to log in with a user who is a member of the local administrator group OR of the  Microsoft Advanced Threat Analytics Administrators group.
 
-    ![](media/ATA-log-in-screen.jpg)
 
 >[!div class="step-by-step"]
 [Next](https://docsmsftstage.azurewebsites.net/ATA/Understand/ata-console-elements.html)

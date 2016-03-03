@@ -27,7 +27,7 @@ These are the key elements of the ATA console.
 
     ![](media/attack-timeline.png)
 
-    For more information, see [Working with suspicious activities](/DeployUse/working-with-suspicious-activities.md).
+    For more information, see [Working with suspicious activities](/ATA/DeployUse/working-with-suspicious-activities.html).
 
 -   **Notification bar**
 
@@ -68,8 +68,8 @@ These are the key elements of the ATA console.
     ATA provides additional information on the following pages: Summary, Activities, and Suspicious activities.
 
 
-    > [!NOTE]
-    > A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.![](media/ATA-Unresolved-Profile.jpg)
+> [!NOTE]
+> A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.![](media/ATA-Unresolved-Profile.jpg)
 
 -   **Mini profile**
 
