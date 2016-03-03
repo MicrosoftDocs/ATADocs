@@ -88,6 +88,7 @@ These are the key elements of the ATA console.
     -   Number of suspicious activities by severity
 
     >[!div class="step-by-step"]
+    **Working with ATA console**
     [Previous](https://docsmsftstage.azurewebsites.net/ATA/Understand/working-with-ata-console.html)
 
 ## See Also
