@@ -4,7 +4,7 @@ ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: get-started-article
 ms.assetid: 12bbdcc0-9ac2-4bad-8f26-06ee498351fa
 author: Rkarlin
 robots: noindex,nofollow
