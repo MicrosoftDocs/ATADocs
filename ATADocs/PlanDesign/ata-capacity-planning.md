@@ -8,7 +8,7 @@ ms.suite: na
 ms.technology:
   - security
 ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: get-started-article
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 author: Rkarlin
 ---
