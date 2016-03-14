@@ -13,90 +13,79 @@ ms.assetid:
 author: Rkarlin
 ---
 
-# What is ATA?
-Microsoft Advanced Threat Analytics (ATA) is an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks by automatically analyzing, learning, and identifying normal and abnormal behavior among entities (users, devices, and resources).  ATA also helps identify known malicious attacks, security issues and risks using world-class, cutting edge research in behavioral analytics to help enterprises identify security breaches before they cause damage.
+## What is ATA?
+Microsoft Advanced Threat Analytics (ATA) is a security solution that helps IT security professionals protect their organization from advanced targeted attacks and insider threats. By automatically analyzing, learning, and identifying normal and abnormal entity (user, devices, and resources) behavior, ATA helps identify known malicious attacks and techniques, security issues, and risks. Using world-class security researcher intelligence and insight, this innovative technology is designed to help enterprises focus on identifying security breaches before they cause damage.
 
 ## What does ATA do?
-ATA is comprised of two separate components that sit in your network - the ATA Center and the ATA Gateways. You use port mirroring from your domain controllers to your ATA Gateways to enable ATA to review your network traffic and perform its advanced algorithms and behavioral analytics on your traffic. Once ATA studies your "normal" network traffic, it can start alerting you when something out of the ordinary is detected. In order to provide ATA with even more information about what goes on in your network, you can also enable event forwarding from your SIEM or by using Windows Event Forwarding to the ATA Gateways as well. For more information about how ATA works inside your network, see [ATA architecture](ata-architecture.md).
+ATA detects:
 
-![](media/ATA-architecture-topology.jpg)
+  - Advanced persistent threats (APTs) early in the attack kill-chain, before they cause damage
+
+  - Insider threats
+  
+  ATA also allows you to separate the signal from the noise to focus on what is critical.
+  
+ATA’s detection engine leverages machine learning, entity-contextual deep packet inspection, log analysis, and information from Active Directory (AD) to analyze user and entity behavior. 
+ATA runs deep analysis on your organization's traffic, and leverages machine learning to build a map of what normal activities, traffic and use look like in your organization. Then, ATA watches for and notifies you when abnormal things happen. This is accomplished by running Microsoft's deep packet inspection technology (DPI), which enables entity-contextual packet inspection for a deeper level of network traffic parsing, enabling ATA to analyze all levels of your network traffic. 
+ATA also collects relevant events from SIEM systems and Domain Controllers. After analysis, ATA builds a dynamic, continuously-updated view of all the people, devices, and resources within an organization. Using this comprehensive view, ATA is able to detect known malicious attacks such as pass-the-hash, pass-the-ticket, reconnaissance attacks and others as well as look for any abnormalities in the behavior of entities on your network.  
+Once a suspicious activity is detected, ATA raises an alert--minimizing the number of false positives you receive by using advanced algorithms for aggregation and context verification.
+
+
+
 
 ## What threats does ATA look for?
-ATA collects information from several data sources and analyzes, learns, and identifies normal behavior on your network, alerting you to possible security concerns, including:
 
--   **Reconnaissance and brute force suspicious activities:**
+ATA provides detection for the following various phases of an advanced attack: reconnaissance, credential compromise, lateral movement, privilege escalation, domain dominance and others. These detections are aimed at detecting advanced attacks and insider threats before they cause damage to your organization. 
+The detection of each phase results in several suspicious activities relevant for the phase in question, where each suspicious activity correlates to different flavors of possible attacks. 
 
-    -   Reconnaissance using DNS
 
-        Reconnaissance attacks are attacks in which an attacker attempts to discover lists of machines in your organization from your domain name server, for example, performing a zone transfer on your domain name server (DNS). Ordinarily a zone transfer is performed when a DNS requests a list of IP addresses that serve a specific zone (for example, news.contoso.com). In the event of an attack, the attacker queries the DNS for the IP addresses that run your web sites. A DNS reconnaissance attack can also come in the form of a query of SRV records to get information about which IP addresses provide services, or MX records to find the IP address of the mail server.  
+### Reconnaissance
+ATA provides multiple reconnaissance detections. For example, the suspicious activity **Reconnaissance using account enumeration** detects attempts by attackers using the Kerberos protocol to discover if a users exists, even if the activity was not logged as an event on the domain controller.
 
-    -   Reconnaissance using account enumeration
+### Credential comporomise
 
-        Reconnaissance attacks in which an attacker attempts to discover user names using the Kerberos protocol to discover if the users exist, even if the activity was not logged as an event on the domain controller.
+To provide detection of compromised credentials, ATA leverages both machine-learning based behavioral analytics as well as known malicious attacks and technique detection.  
+Using behavioral analytics and machine learning, ATA is able to detect suspicious activities such as anomalous logins, abnormal resource access, and abnormal working hours which would point to credential compromise. 
+To protect agains comproimised credentials, ATA detects the following known malicious attacks and techniques:
+ - Brute force
+	In brute-force attacks, attackers try guess user credentials by trying multiple users and pairing them with multiple password attempts, often using complex algorithms or dictionaries to try as many values as a system allows.
+    
+- Sensitive account exposed in plain text authentication
+	If high privileged account credentials are sent in plain text, ATA alerts you so that you can update the computer's configuration.
+- Service exposing accounts in plain text authentication
+	If a service on a computer is sending multiple account credentials in plain text, ATA alerts you so that you can update the service's configuration.
+- Honey Token account suspicious activities
+Honey Token accounts are dummy accounts set up for the purpose of trapping, identifying and tracking malicious activity that attempts to use these dummy accounts.
 
-    -   Brute force
+### Lateral movement
+To provide detection of lateral movement, when users take advantage of credentials that provide access to some resources to gain access resources that they are not meant to have access to, ATA leverages both machine-learning based behavioral analytics as well as known malicious attacks and technique detection.  
+Using behavioral analytics and machine learning, ATA detects abnormal resource access, abnormal devices used and other indicators that are evidence of lateral movement.
+In addition, ATA is able to detect lateral movement by detecting the techniques used by attackers to perform lateral movement, such as:
+- Pass the ticket
+	In pass the ticket attacks, attackers steal a Kerberos ticket from one computer and use it to gain access to another computer by impersonating an entity on your network.
+- Pass the hash
+	In pass the hash attacks, attackers steal the NTLM hash of an entity, and use it to authenticate with NTLM and impersonate the entity and gain access to resources on your network.
+- Over-pass the hash
+	Over-pass the hash are attacks in which the attacker uses a stolen NTLM hash to authenticate with Kerberos, and obtain a valid Kerberos TGT ticket which is then used to authenticate as a valid user and gain access to resources on your network.
 
-        Brute-force are attacks in which attackers try guess user credentials by trying multiple users and pairing them with multiple password attempts, often using complex algorithms or dictionaries to try as many values as a system allows.
+### Privilege escalation 
+ATA detects successful and attempted privilege escalation attacks, in which attackers attempt to increase existing privileges and use them multiple times in order to eventually gain full control over the victim’s environment. ATA enables privilege escalation detection by combining behavioral analytics to detect anomalous behavior of privileged accounts as well as detecting known and malicious attacks and techniques that are often used to escalate privileges such as:
+- MS14-068 exploit (Forged PAC)
+	Forged PAC are attacks in which the attacker plants authorization data in their valid TGT ticket in the form of a forged authorization header that grants them additional permissions that they weren't granted by their organization.
+    - The use of previously compromised credentials, or credentials harvested during lateral movement operations.
+### Domain dominance
+ATA detects attackers attempting or successfully achieving total control and dominance over the victim’s environment by performing detection over known techniques used by attackers, which include:
+- Skeleton key malware
+	 In skeleton key attacks, malware is installed on your domain controller that allows attackers to authenticate as any user, while still enabling legitimate users to log on.
+- Golden ticket
+	 In golden ticket attacks, an attacker steals the KBTGT's credentials, the Kerberos Golden Ticket, which enables the attacker to create a TGT ticket offline, to be used to gain access to resources in the network.
+- Remote execution
+	 Attackers can attempt to control your network by running code remotely on your domain controller.
 
--   **Identity theft suspicious activities**:
-
-    -   Pass the ticket
-
-        Pass the ticket are attacks in which the attacker steals a Kerberos ticket from one computer and uses it to gain access from another computer by impersonating an entity on your network.
-
-    -   Pass the hash
-
-        Pass the hash are attacks in which the attacker steals the NTLM hash of an entity, and uses it to authenticate with NTLM and impersonate the entity and gain access to resources on your network.
-
-    -   Over-pass the hash
-
-        Over-pass the hash are attacks in which the attacker uses a stolen NTLM hash to authenticate with Kerberos, and obtain a valid Kerberos TGT ticket and authenticate as a valid user and gain access to resources on your network.
-
-    -   Skeleton key
-
-        Skeleton key are attacks when malware is installed on your domain controller to allow attackers to authenticate as any user while all users continue to have regular access,  in addition to the regular logons of your users.
-
-    -   MS14-068 exploit (Forged PAC)
-
-        Forged PAC are attacks in which the attacker plants authorization data in their valid TGT ticket  in the form of a forged authorization header which grants them additional permissions that they weren't granted by their organization.
-
-    -   Golden ticket
-
-        Golden ticket are attacks in which an attacker steals the KBTGT's credentials, the Kerberos Golden Ticket, which enables the attacker to create a TGT ticket offline, which can be used to gain access to resources in the network.
-
-    -   Remote execution
-
-        Attackers can attempt to control your network by running code remotely on your domain controller.
-
--   **Honey Token account suspicious activities**
-
-    Attackers can attempts to attack your network by monitoring accounts set up for the purpose of identifying and tracking malicious activity in dummy accounts.
-
--   **Abnormal behavior**
-
-    ATA uses behavioral analytics and machine learning to monitor your network constantly learning your users' normal patterns so that when something anomalous occurs, it is immediately noticed. Abnormal behavior monitors activities such as anomalous logins, abnormal resource access, abnormal working hours, unknown threats and  password sharing.
-
--   **Massive object deletion**
-
-    ATA monitors your network for deletion of large number of entities from your Active Directory. The number of entities varies relative to the number of entities in your network.
-
--   **Security issues and risks**: ATA identifies and alerts you to known security issues, such as broken trust, weak protocols and known protocol vulnerabilities.
-
-    -   Sensitive account exposed in plain text authentication
-
-        If high privileged accounts' credentials are sent in plain text, ATA alerts you so that you can update the computer's configuration.
-
-    -   Service exposing accounts in plain text authentication
-
-        If a service on a computer is sending multiple account credentials in plain text, ATA alerts you so that you can update the service's configuration.
-
-    -   Broken trust
-
-        Broken trust occurs when something happens to the computer that causes it to fail at authenticating with the domain controller, for example if the computer is off line for an extended period of time, the computer ceases to be managed and policies can no longer be run on it. ATA alerts you of these situations of broken trust devices in your network.
 
 ## What next?
 
--   For more information about how ATA fits into your network check out:[ATA architecture](ata-architecture.md)
+-   For more information about how ATA fits into your network check out: [ATA architecture](ata-architecture.md)
 
 -   To get started deploying ATA: [Install ATA](/ATA/DeployUse/install-ata.html)
 
