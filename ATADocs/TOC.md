@@ -1,7 +1,4 @@
-# [Understand and explore](/understand/ata-understand-and-explore.md)
-# [Plan and design](/plandesign/ata-plan-and-design.md)
-# [Deploy and use](/deployuse/ata-deploy-and-use.md)
-# [Troubleshoot](/troubleshoot/ata-troubleshooting.md)
-
-
-
+# [Understand and explore](/understand/what-is-ata.md)
+# [Plan and design](/plandesign/ata-capacity-planning.md)
+# [Deploy and use](/deployuse/install-ata.md)
+# [Troubleshoot](/troubleshoot/troubleshooting-ata-using-logs.md)
