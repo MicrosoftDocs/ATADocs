@@ -125,8 +125,8 @@ To enhance ATA detection of Pass-the-Hash, ATA needs Windows Event log ID 4776. 
     Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](/ATA/PlanDesign/configure-event-collection.html#ATA_event_WEF).
 
 ## See Also
-[ATA prerequisites](/ATA/PlanDesign/ata-prerequisites.html)
-[ATA capacity planning](/ATA/PlanDesign/ata-capacity-planning.html)
-[Configure event collection](/ATA/PlanDesign/configure-event-collection.html)
-[Configuring Windows event forwarding](/ATA/PlanDesign/configure-event-collection.html#ATA_event_WEF)
-[For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA prerequisites](/ATA/PlanDesign/ata-prerequisites.html)
+- [ATA capacity planning](/ATA/PlanDesign/ata-capacity-planning.html)
+- [Configure event collection](/ATA/PlanDesign/configure-event-collection.html)
+- [Configuring Windows event forwarding](/ATA/PlanDesign/configure-event-collection.html#ATA_event_WEF)
+- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
