@@ -103,6 +103,8 @@ To determine packets per second, perform the following on each domain controller
     ![](media/ATA-traffic-estimation-14.png)
 
 ## See Also
-[ATA prerequisites](ata-prerequisites.md)
-[ATA architecture](/ATA/Understand/ata-architecture.html)
-[For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA prerequisites](ata-prerequisites.md)
+
+- [ATA architecture](/ATA/Understand/ata-architecture.html)
+
+- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

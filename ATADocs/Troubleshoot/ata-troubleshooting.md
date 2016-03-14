@@ -14,4 +14,5 @@ The main sources of information for troubleshooting ATA are as follows:
  - [The ATA logs](troubleshooting-ata-using-logs.md)
  - [The ATA performance counters](troubleshooting-ata-using-perf-counters.md)
  - [The ATA database](troubleshooting-ata-using-ata-database.md)
+ 
  You can also take a look at [ATA Frequently Asked Questions](ata-technical-faq.md) to find answers to common ATA issues.
