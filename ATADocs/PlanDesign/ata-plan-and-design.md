@@ -1,10 +1,10 @@
 ---
-title: Plan and design for Advanced Threat Analytics
+title: Plan and design for Advanced Threat Analytics | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
-ms.topic: get-started-article 
+ms.topic: get-started-article
 author: Rkarlin
 
 ---

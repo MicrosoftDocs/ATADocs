@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting ATA Monitoring Alerts
+title: Troubleshooting ATA Monitoring Alerts | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na

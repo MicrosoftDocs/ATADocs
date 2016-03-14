@@ -1,5 +1,5 @@
 ---
-title: Validate Port Mirroring
+title: Validate Port Mirroring | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata
@@ -44,5 +44,7 @@ The following steps walk you through the process for validating that port mirror
 5.  If you only see traffic in one direction, you should work with your networking or virtualization teams to help troubleshoot your port mirroring configuration.
 
 ## See Also
-[Configure port mirroring](configure-port-mirroring.md)
- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+
+- [Configure port mirroring](configure-port-mirroring.md)
+
+- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

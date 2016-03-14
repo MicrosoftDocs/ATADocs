@@ -1,5 +1,5 @@
 ---
-title: ATA update to 1.5 migration guide
+title: ATA update to 1.5 migration guide | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na

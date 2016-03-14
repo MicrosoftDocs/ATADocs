@@ -1,5 +1,5 @@
 ---
-title: Modifying ATA Configuration
+title: Modifying ATA Configuration | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata
@@ -209,6 +209,6 @@ If you renamed your network adapter without following this process, your ATA Gat
 To correct this problem, rename the network adapter  back to the name it was originally called when you set up ATA, and then go through the process described above for changing the name.
 
 ## See Also
-[Working with the ATA Console](/ATA/understand/working-with-ata-console.html)
- [Install ATA](install-ata.md)
- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Working with the ATA Console](/ATA/understand/working-with-ata-console.html)
+- [Install ATA](install-ata.md)
+- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

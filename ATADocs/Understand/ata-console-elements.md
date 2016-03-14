@@ -1,5 +1,5 @@
 ---
-title: ATA Console elements
+title: ATA Console elements | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

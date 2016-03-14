@@ -1,5 +1,5 @@
 ---
-title: Setting ATA Alerts
+title: Setting ATA Alerts | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

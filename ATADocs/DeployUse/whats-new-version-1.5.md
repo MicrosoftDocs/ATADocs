@@ -1,5 +1,5 @@
 ---
-title: What's new in ATA version 1.5
+title: What's new in ATA version 1.5 | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na

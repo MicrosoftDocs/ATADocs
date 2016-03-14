@@ -1,5 +1,5 @@
 ---
-title: What is Microsoft Advanced Threat Analytics (ATA)?
+title: What is Microsoft Advanced Threat Analytics (ATA)? | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

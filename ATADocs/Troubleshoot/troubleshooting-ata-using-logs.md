@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting ATA using the ATA logs
+title: Troubleshooting ATA using the ATA logs | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -85,7 +85,7 @@ The ATA deployment logs (installation) are located in the temp directory for the
 
 ATA Center deployment logs:
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213.log** - This log lists the steps in the process of the deployment of the ATA Center. 
+-   **Microsoft Advanced Threat Analytics Center_20150601104213.log** - This log lists the steps in the process of the deployment of the ATA Center.
 Main user: Tracking the ATA Center deployment process.
 
 -   **Microsoft Advanced Threat Analytics Center_20150601104213_0_MongoDBPackage.log** - This log lists the steps in the process of MongoDB deployment on the ATA Center.
@@ -96,9 +96,8 @@ Main use: Tracking the deployment of the ATA Center binaries.
 
 ATA Gateway deployment logs:
 
--   **Microsoft Advanced Threat Analytics Gateway_20151214014801.log** - This log lists the steps in the process of the deployment of the ATA Gateway. 
+-   **Microsoft Advanced Threat Analytics Gateway_20151214014801.log** - This log lists the steps in the process of the deployment of the ATA Gateway.
 Main user: Tracking the ATA Gateway deployment process.
 
 -   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** - This log file lists the steps in the process of the deployment of the ATA Gateway binaries.
 Main use: Tracking the deployment of the ATA Gateway binaries.
-

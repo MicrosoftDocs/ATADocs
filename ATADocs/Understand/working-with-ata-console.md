@@ -1,5 +1,5 @@
 ---
-title: Working with the ATA Console
+title: Working with the ATA Console | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata
