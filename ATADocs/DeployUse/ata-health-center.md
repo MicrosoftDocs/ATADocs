@@ -1,5 +1,5 @@
 ---
-title: ATA Health Center
+title: ATA Health Center | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

@@ -1,5 +1,5 @@
 ---
-title: Working with ATA Detection Settings
+title: Working with ATA Detection Settings | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

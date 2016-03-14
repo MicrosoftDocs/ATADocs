@@ -1,5 +1,5 @@
 ---
-title: Configure Event Collection
+title: Configure Event Collection | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

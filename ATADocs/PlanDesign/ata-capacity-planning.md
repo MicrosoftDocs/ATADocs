@@ -1,5 +1,5 @@
 ---
-title: ATA Capacity Planning
+title: ATA Capacity Planning | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

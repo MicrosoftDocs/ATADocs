@@ -1,5 +1,5 @@
 ---
-title: Install ATA
+title: Install ATA | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

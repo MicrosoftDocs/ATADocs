@@ -1,5 +1,5 @@
 ---
-title: ATA Database Management
+title: ATA Database Management | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.prod: identity-ata
 ms.reviewer: na

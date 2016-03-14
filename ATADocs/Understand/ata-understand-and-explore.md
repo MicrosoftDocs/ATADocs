@@ -1,5 +1,5 @@
 ---
-title: Understand and explore Advanced Threat Analytics
+title: Understand and explore Advanced Threat Analytics | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

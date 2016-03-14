@@ -1,5 +1,5 @@
 ---
-title: Deploy and use Advanced Threat Analytics
+title: Deploy and use Advanced Threat Analytics | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

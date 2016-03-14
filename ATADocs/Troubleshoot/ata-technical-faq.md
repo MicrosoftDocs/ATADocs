@@ -1,5 +1,5 @@
 ---
-title: ATA technical FAQ
+title: ATA technical FAQ | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na

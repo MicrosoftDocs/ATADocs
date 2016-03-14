@@ -1,5 +1,5 @@
 ---
-title: ATA Troubleshooting
+title: ATA Troubleshooting | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na

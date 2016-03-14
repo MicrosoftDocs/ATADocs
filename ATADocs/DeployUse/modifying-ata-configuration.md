@@ -1,5 +1,5 @@
 ---
-title: Modifying ATA Configuration
+title: Modifying ATA Configuration | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

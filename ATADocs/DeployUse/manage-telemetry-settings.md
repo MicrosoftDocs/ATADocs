@@ -1,5 +1,5 @@
 ---
-title: Manage Telemetry Settings
+title: Manage Telemetry Settings | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.prod: identity-ata
 ms.reviewer: na

@@ -1,5 +1,5 @@
 ---
-title: ATA Architecture
+title: ATA Architecture | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

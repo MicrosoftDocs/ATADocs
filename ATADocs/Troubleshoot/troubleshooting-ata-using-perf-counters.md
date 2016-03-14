@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting ATA using the performance counters
+title: Troubleshooting ATA using the performance counters | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na

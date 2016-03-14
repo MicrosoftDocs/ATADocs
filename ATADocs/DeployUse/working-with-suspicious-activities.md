@@ -1,5 +1,5 @@
 ---
-title: Working with Suspicious Activities
+title: Working with Suspicious Activities | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata

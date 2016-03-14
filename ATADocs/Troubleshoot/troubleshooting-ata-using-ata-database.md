@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting ATA using the ATA database
+title: Troubleshooting ATA using the ATA database | Microsoft Advanced Threat Analytics
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -34,4 +34,3 @@ This collection is backed up every hour by the ATA Center service to a file call
 It is possible to restore all the settings by running the following command:
 
 `mongoimport.exe --db ATA --collection SystemProfiles --file "<SystemProfiles.json backup file>" --upsert`
-
