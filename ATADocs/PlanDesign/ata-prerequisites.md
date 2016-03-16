@@ -25,7 +25,7 @@ ATA is comprised of two components, the ATA Center and the ATA Gateway. For more
 
 [ATA Console](#ATAconsole): This section lists browser requirements for running the ATA Console.
 
-![](media/ATA-architecture-topology.jpg)
+![ATA architecture diagram](media/ATA-architecture-topology.jpg)
 
 ## <a name="ATAbeforeyoustart"></a>Before you start
 This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
@@ -151,7 +151,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 
     -   The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![](media/ATA-DNS-Suffix.png)
+        ![Configure DNS suffix in advanced TCP/IP settings](media/ATA-DNS-Suffix.png)
 
         > [!NOTE]
         > If the ATA Gateway is a member of the domain, this is configured automatically.

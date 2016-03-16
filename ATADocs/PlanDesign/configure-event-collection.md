@@ -40,7 +40,7 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 
     Set the Listening IP Address as described in the picture, below. The default port is 514.
 
-    ![](media/ATA-enable-siem-forward-events.png)
+    ![Enable syslog listener UDP image](media/ATA-enable-siem-forward-events.png)
 
 2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address selected above. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
@@ -150,17 +150,13 @@ If you do not have a SIEM server you can configure your domain controllers to fo
 1.  Log on to all domain controllers and ATA Gateway machines using a domain account with administrator privileges.
 2. Make sure all the domain controllers and ATA Gateways you are connecting are joined to the same domain.
 3.	On each domain controller, type the following at an elevated command prompt:
-
 ```
 winrm quickconfig
 ```
-
 4.	On the ATA Gateway, type the following at an elevated command prompt:
-
 ```
 wecutil qc
 ```
-
 5.	On each domain controller, in **Active Directory Users and Computers**, navigate to the **Builtin** folder and double click on the **Event Log Readers** group.
 ![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)
 Right click on it and select **Properties**. On the **Members** tab, add the computer account of each ATA Gateway.

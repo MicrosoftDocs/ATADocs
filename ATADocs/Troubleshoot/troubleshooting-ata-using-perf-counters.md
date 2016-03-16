@@ -26,7 +26,7 @@ The ATA performance counters provide insight into how well each component of ATA
 You can observe the real time performance status of the ATA Gateway by adding the ATA Gateway's performance counters.
 This is done by opening "Performance Monitor" and adding all counters for the ATA Gateway. The name of the performance counter object is: "Microsoft ATA Gateway".
 
-![](media/ATA-performance-counters.png)
+![Add performance counters image](media/ATA-performance-counters.png)
 
 Here is the list of the main ATA Gateway counters to pay attention to:
 
@@ -51,7 +51,7 @@ You can observer the real-time performance status of the ATA Center by adding th
 
 This is done by opening "Performance Monitor" and adding all counters for the ATA Center. The name of the performance counter object is: "Microsoft ATA Center".
 
-![](media/ATA-Gateway-perf-counters.png)
+![ATA Center add performance counters](media/ATA-Gateway-perf-counters.png)
 
 Here is the list of the main ATA Center counters to pay attention to:
 

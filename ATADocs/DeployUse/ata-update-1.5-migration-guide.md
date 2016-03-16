@@ -63,7 +63,7 @@ Follow these steps to update to ATA version 1.5:
 
     3.  Select whether you want to run the full (default) or partial migration.
 
-        ![](media/ATA-center-fullpartial.png)
+        ![Choose full or partial migration](media/ATA-center-fullpartial.png)
 
         -   If you select **Partial** migration, any network traffic collected and forwarded Windows events analyzed by ATA will be deleted and user behavioral profiles will have to be re-learned; this takes a minimum of three weeks. If you are running low on disk space then it is helpful to run a **Partial** migration.
 
@@ -73,7 +73,7 @@ Follow these steps to update to ATA version 1.5:
 
 4.  After updating the ATA Center, the ATA Gateways will report that they are now outdated.
 
-    ![](media/ATA-center-outdated.png)
+    ![Outdated gateways image](media/ATA-center-outdated.png)
 
 > [!IMPORTANT]
 > - Update all the ATA Gateways to make sure ATA functions properly.
@@ -87,7 +87,7 @@ To download the ATA Gateway package:
 
 2.  On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
 
-    ![](media/ATA-config-icon.JPG)
+    ![Configuration settings icon](media/ATA-config-icon.JPG)
 
 3.  In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
 
@@ -115,4 +115,4 @@ The zip file includes the following:
 
 You will know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they are successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
 
-![](media/ATA-gw-updated.png)
+![Updated gateways image](media/ATA-gw-updated.png)
