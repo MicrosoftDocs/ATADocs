@@ -48,7 +48,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
 3.  Select **ATA Center**.
 
@@ -58,7 +58,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 6.  You will see a notification of how many ATA Gateways have synced to the latest configuration.
 
-    ![](media/ATA-chge-IP-after-clicking-save.png)
+    ![ATA Center synchronized gateways image](media/ATA-chge-IP-after-clicking-save.png)
 
 7.  After all the ATA Gateways have synced, click **Activate** to activate the new IP address.
 
@@ -83,7 +83,7 @@ If your certificates expire and need to be renewed or replaced after installing 
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
 3.  Select **ATA Center**.
 
@@ -123,11 +123,11 @@ If you need to modify the IP address used by IIS for the ATA Console, follow the
 
 4.  Select the Microsoft ATA Console site and in the **Actions** pane click **Bindings**.
 
-    ![](media/ATA-console-change-IP-bindings.jpg)
+    ![ATA Console bindings action image](media/ATA-console-change-IP-bindings.jpg)
 
 5.  Select **HTTP** and click **Edit** to select the new IP address. Do the same for **HTTPS** selecting the same IP address.
 
-    ![](media/ATA-change-console-IP.jpg)
+    ![Edit site binding image](media/ATA-change-console-IP.jpg)
 
 6.  In the **Action** pane click **Restart**  under **Mange Website**.
 
@@ -155,13 +155,13 @@ If you need to modify the certificate used by IIS for the ATA Center, follow the
 
 1.  Install the new certificate on the ATA Center server.
 
-2.  Open Internet Information Services (IIS) Manager.
+2.  Open Internet Information Services (IIS) Manager.A
 
 3.  Expand the name of the server and expand **Sites**.
 
 4.  Select the Microsoft ATA Console site and in the **Actions** pane click **Bindings**.
 
-    ![](media/ATA-console-change-IP-bindings.jpg)
+    ![ATA Console bindings actions](media/ATA-console-change-IP-bindings.jpg)
 
 5.  Select **HTTPS** and click **Edit**.
 
@@ -181,11 +181,11 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
 3.  Select **ATA Gateway**.
 
-    ![](media/ATA-GW-change-DC-password.JPG)
+    ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.JPG)
 
 4.  Under **Domain Connectivity Settings**, change the password.
 
