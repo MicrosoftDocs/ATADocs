@@ -22,14 +22,14 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
 ## Logging into the ATA Console
 
--   In the ATA Center server, click the **Microsoft ATA Console**  icon on the desktop or open a browser and browse to the ATA Console.
+1. In the ATA Center server, click the **Microsoft ATA Console**  icon on the desktop or open a browser and browse to the ATA Console.
 
     ![ATA server icon](media/ata-server-icon.png)
 
 > [!NOTE]
 > Alternatively, you can open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
--   Enter your username and password and click **Log in**.
+2.  Enter your username and password and click **Log in**.
 
     ![ATA login screen image](media/ATA-log-in-screen.jpg)
 
