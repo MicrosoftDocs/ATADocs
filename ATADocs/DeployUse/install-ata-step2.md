@@ -1,5 +1,5 @@
 ---
-title: Install ATA - Complete | Microsoft Advanced Threat Analytics
+title: Install ATA - Step 2 | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata
@@ -24,19 +24,11 @@ Jump to:
 - [Step 6](install-ata-step6.md)
 - [Full article](install-ata.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-preinstall-include.md)]
-
-[!INCLUDE[ata_1](../includes/install-ata-step1-include.md)]
-
 [!INCLUDE[ata_1](../includes/install-ata-step2-include.md)]
 
-[!INCLUDE[ata_1](../includes/install-ata-step3-include.md)]
-
-[!INCLUDE[ata_1](../includes/install-ata-step4-include.md)]
-
-[!INCLUDE[ata_1](../includes/install-ata-step5-include.md)]
-
-[!INCLUDE[ata_1](../includes/install-ata-step6-include.md)]
+>[!div class="step-by-step"]
+[« Step 1](install-ata-step1.md)
+[Step 3 »](install-ata-step3.md)
 
 
 ## See Also
