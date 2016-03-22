@@ -13,7 +13,8 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 author: Rkarlin
 ---
 # Working with the ATA Console
-This section describes the ATA Console.
+
+Use the ATA console to monitor and respond to suspicious activity detected by ATA.
 
 ## Enabling access to the ATA Console
 Any user who is a member of the local Administrators group on the ATA Center server has permission to log in to the ATA Console and manage ATA settings.
