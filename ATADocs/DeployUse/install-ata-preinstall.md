@@ -1,5 +1,5 @@
 ---
-title: Install ATA - prerequisites | Microsoft Advanced Threat Analytics
+title: Install ATA - Pre-install steps | Microsoft Advanced Threat Analytics
 ms.custom:
   - ATA
 ms.prod: identity-ata
@@ -13,17 +13,11 @@ author: Rkarlin
 ---
 # Install ATA
 
-Jump to:
-> [!div class="op_single_selector"]
-- [Step 1](install-ata-step1.md)
-- [Step 2](install-ata-step2.md)
-- [Step 3](install-ata-step3.md)
-- [Step 4](install-ata-step4.md)
-- [Step 5](install-ata-step5.md)
-- [Step 6](install-ata-step6.md)
-- [Full article](install-ata.md)
+## <a name="Preinstallsteps"></a>Pre-installation steps
 
-[!INCLUDE[ata_1](../includes/install-ata-preinstall-include.md)]
+1.  If you installed the ATA public preview version, see [What's new in version 1.5](whats-new-version-1.5.md) or [What's new in version 1.4](whats-new-version-1.4.md) for help uninstalling the ATA Preview version.
+
+2.  Install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation will install this update and will require a restart in the middle of the ATA installation.
 
 >[!div class="step-by-step"]
 [Step 1 »](install-ata-step1.md)

@@ -13,17 +13,29 @@ author: Rkarlin
 ---
 # Install ATA
 
-Jump to:
-> [!div class="op_single_selector"]
-- [Step 1](install-ata-step1.md)
-- [Step 2](install-ata-step2.md)
-- [Step 3](install-ata-step3.md)
-- [Step 4](install-ata-step4.md)
-- [Step 5](install-ata-step5.md)
-- [Step 6](install-ata-step6.md)
-- [Full article](install-ata.md)
+>[!div class="step-by-step"]
+[« Step 2](install-ata-step2.md)
+[Step 4 »](install-ata-step4.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-step3-include.md)]
+## <a name="DownloadATA"></a>Step 3. Download the ATA Gateway setup package
+After configuring the domain connectivity settings you can download the ATA Gateway setup package.
+
+To download the ATA Gateway package:
+
+1.  On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
+
+    ![ATA gateway configuration settings](media/ATA-config-icon.JPG)
+
+2.  In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
+
+3.  Save the package locally.
+
+The zip file includes the following:
+
+-   ATA Gateway installer
+
+-   Configuration setting file with the required information to connect to the ATA Center
+
 
 >[!div class="step-by-step"]
 [« Step 2](install-ata-step2.md)

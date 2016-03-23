@@ -14,17 +14,30 @@ author: Rkarlin
 ---
 # Install ATA
 
-Jump to:
-> [!div class="op_single_selector"]
-- [Step 1](install-ata-step1.md)
-- [Step 2](install-ata-step2.md)
-- [Step 3](install-ata-step3.md)
-- [Step 4](install-ata-step4.md)
-- [Step 5](install-ata-step5.md)
-- [Step 6](install-ata-step6.md)
-- [Full article](install-ata.md)
+>[!div class="step-by-step"]
+[« Step 1](install-ata-step1.md)
+[Step 3 »](install-ata-step3.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-step2-include.md)]
+## <a name="ConfigConSettings"></a>Step 2. Configure ATA Gateway domain connectivity settings
+The settings in the domain connectivity settings section apply to all ATA Gateways managed by the ATA Center.
+
+To configure the Domain connectivity settings perform the following on the ATA Center server.
+
+1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](/ATA/understand/working-with-ata-console.html).
+
+2.  The first time you log into the ATA Console after the ATA Center has been installed, you will automatically be taken to the ATA Gateways configuration page. If you need to modify any of the settings afterwards, click the Settings icon and select **Configuration**.
+
+    ![ATA gateway configuration settings](media/ATA-config-icon.JPG)
+
+3.  On the **Gateways** page, click on **Domain connectivity settings**, enter the following information and click **Save**.
+
+    |Field|Comments|
+    |---------|------------|
+    |**Username** (required)|Enter the read-only user name, for example: **user1**.|
+    |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**. **Note:** Make sure this password is correct. If you save the wrong password, the ATA Service will stop running on the ATA Gateway servers.|
+    |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
+    ![ATA Domain connectivity settings image](media/ATA-Domain-Connectivity-User.JPG)
+
 
 >[!div class="step-by-step"]
 [« Step 1](install-ata-step1.md)
