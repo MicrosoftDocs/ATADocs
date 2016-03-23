@@ -1,5 +1,5 @@
-# [Understand and explore](/ATA/understand/what-is-ata.html)
-# [Plan and design](/ATA/plandesign/ata-capacity-planning.html)
+# [Understand and explore](/ATA/understand/what-is-ata)
+# [Plan and design](/ATA/plandesign/ata-capacity-planning)
 # [Deploy and use](install-ata.md)
 ## [Install ATA](install-ata.md)
 ### [What's new in version 1.5](whats-new-version-1.5.md)
@@ -11,4 +11,4 @@
 ## [ATA suspicious activities](working-with-suspicious-activities.md)
 ## [ATA database management](ata-database-management.md)
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
-# [Troubleshoot](/ATA/troubleshoot/troubleshooting-ata-using-logs.html)
+# [Troubleshoot](/ATA/troubleshoot/troubleshooting-ata-using-logs)

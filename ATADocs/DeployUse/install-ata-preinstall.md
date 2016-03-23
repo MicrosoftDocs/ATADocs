@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 author: Rkarlin
 ---
-# Install ATA
+# Install ATA - Pre-install steps
 
 ## <a name="Preinstallsteps"></a>Pre-installation steps
 
@@ -26,5 +26,5 @@ author: Rkarlin
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/ATA/plandesign/configure-event-collection.html)
-- [ATA prerequisites](/ATA/plandesign/ata-prerequisites.html)
+- [Configure event collection](/ATA/plandesign/configure-event-collection)
+- [ATA prerequisites](/ATA/plandesign/ata-prerequisites)

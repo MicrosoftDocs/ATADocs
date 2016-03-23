@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 author: Rkarlin
 ---
-# Install ATA
+# Install ATA - Step 2
 
 >[!div class="step-by-step"]
 [« Step 1](install-ata-step1.md)
@@ -23,7 +23,7 @@ The settings in the domain connectivity settings section apply to all ATA Gatewa
 
 To configure the Domain connectivity settings perform the following on the ATA Center server.
 
-1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](/ATA/understand/working-with-ata-console.html).
+1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](/ATA/understand/working-with-ata-console).
 
 2.  The first time you log into the ATA Console after the ATA Center has been installed, you will automatically be taken to the ATA Gateways configuration page. If you need to modify any of the settings afterwards, click the Settings icon and select **Configuration**.
 
@@ -47,5 +47,5 @@ To configure the Domain connectivity settings perform the following on the ATA C
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/ATA/plandesign/configure-event-collection.html)
-- [ATA prerequisites](/ATA/plandesign/ata-prerequisites.html)
+- [Configure event collection](/ATA/plandesign/configure-event-collection)
+- [ATA prerequisites](/ATA/plandesign/ata-prerequisites)

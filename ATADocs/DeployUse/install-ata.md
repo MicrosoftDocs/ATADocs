@@ -14,33 +14,27 @@ author: Rkarlin
 ---
 # Install ATA
 
-Jump to:
-> [!div class="op_single_selector"]
-- [Step 1](install-ata-step1.md)
-- [Step 2](install-ata-step2.md)
-- [Step 3](install-ata-step3.md)
-- [Step 4](install-ata-step4.md)
-- [Step 5](install-ata-step5.md)
-- [Step 6](install-ata-step6.md)
-- [Full article](install-ata.md)
+The following are the steps required to get ATA deployed, configured, and running.
 
-[!INCLUDE[ata_1](../includes/install-ata-preinstall-include.md)]
+To configure ATA, follow these steps:
 
-[!INCLUDE[ata_1](../includes/install-ata-step1-include.md)]
+-   [Pre-installation steps](install-ata-preinstall.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-step2-include.md)]
+-   [Step 1. Download and Install the ATA Center](install-ata-step1.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-step3-include.md)]
+-   [Step 2. Configure ATA Gateway domain connectivity settings](install-ata-step2.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-step4-include.md)]
+-   [Step 3. Download the ATA Gateway setup package](install-ata-step3.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-step5-include.md)]
+-   [Step 4. Install the ATA Gateway](install-ata-step4.md)
 
-[!INCLUDE[ata_1](../includes/install-ata-step6-include.md)]
+-   [Step 5. Configure the ATA Gateway settings](install-ata-step5.md)
+
+-   [Step 6. Configure short-term lease subnets and Honeytoken user](install-ata-step6.md)
 
 
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/ATA/plandesign/configure-event-collection.html)
-- [ATA prerequisites](/ATA/plandesign/ata-prerequisites.html)
+- [Configure event collection](/ATA/plandesign/configure-event-collection)
+- [ATA prerequisites](/ATA/plandesign/ata-prerequisites)

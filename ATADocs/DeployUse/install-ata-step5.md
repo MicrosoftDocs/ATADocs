@@ -11,7 +11,7 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 author: Rkarlin
 ---
-# Install ATA
+# Install ATA - Step 5
 
 >[!div class="step-by-step"]
 [« Step 4](install-ata-step4.md)
@@ -82,5 +82,5 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/ATA/plandesign/configure-event-collection.html)
-- [ATA prerequisites](/ATA/plandesign/ata-prerequisites.html)
+- [Configure event collection](/ATA/plandesign/configure-event-collection)
+- [ATA prerequisites](/ATA/plandesign/ata-prerequisites)

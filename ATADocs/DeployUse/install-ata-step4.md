@@ -12,14 +12,14 @@ ms.topic: get-started-article
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 author: Rkarlin
 ---
-# Install ATA
+# Install ATA - Step 4
 
 >[!div class="step-by-step"]
 [« Step 3](install-ata-step3.md)
 [Step 5 »](install-ata-step5.md)
 
 ## <a name="InstallATAGW"></a>Step 4. Install the ATA Gateway
-Before installing the ATA Gateway, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](/ATA/plandesign/validate-port-mirroring.html) for more information.
+Before installing the ATA Gateway, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](/ATA/plandesign/validate-port-mirroring) for more information.
 
 > [!IMPORTANT]
 > Make sure that [KB2919355](http://support.microsoft.com/kb/2919355/) has been installed.  Run the following PowerShell cmdlet to check if the hotfix is installed:
@@ -67,5 +67,5 @@ Perform the following steps on the ATA Gateway server.
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/ATA/plandesign/configure-event-collection.html)
-- [ATA prerequisites](/ATA/plandesign/ata-prerequisites.html)
+- [Configure event collection](/ATA/plandesign/configure-event-collection)
+- [ATA prerequisites](/ATA/plandesign/ata-prerequisites)
