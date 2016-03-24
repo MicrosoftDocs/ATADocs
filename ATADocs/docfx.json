@@ -47,5 +47,5 @@
     "theme": "hyde",
     "dest": "_output"
   },
-  "basepath": "/ATA"
+  "basepath": "/advanced-threat-analytics"
 }
