@@ -15,7 +15,7 @@ author: Rkarlin
 # Change ATA configuration - ATA Center IP address
 
 >[!div class="step-by-step"]
-[Change the ATA Center certificate »](modifying-ata-config-centercert.md)
+[ATA Center certificate »](modifying-ata-config-centercert.md)
 
 After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the IP address and port or the certificate.
 
