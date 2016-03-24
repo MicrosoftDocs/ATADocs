@@ -8,7 +8,7 @@
         "exclude": [
           "**/obj/**",
           "Understand/**",
-          "DeployUser/**",
+          "DeployUse/**",
           "PlanDesign/**",
           "Troubleshoot/**"      
         ]
@@ -29,7 +29,7 @@
           "**/obj/**",
           "_themes/DocPacker/**",
           "Understand/**",
-          "DeployUser/**",
+          "DeployUse/**",
           "PlanDesign/**",
           "Troubleshoot/**"
         ]
