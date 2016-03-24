@@ -54,5 +54,6 @@
         }
     ],
     "notification_subscribers": [""],
-    "branches_to_filter": ["live"]
+    "branches_to_filter": ["live"],
+	"package_version": "latest-prerelease"
 }
