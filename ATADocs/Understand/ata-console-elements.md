@@ -65,7 +65,6 @@ In the computer profile, ATA displays general information about the computer, su
 
 ATA provides additional information on the following pages: Summary, Activities, and Suspicious activities.
 
-
 > [!NOTE]
 > A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.
 
