@@ -69,7 +69,7 @@ Consider the following when deciding how many ATA Gateways to deploy on your net
 
 -   Capacity
 
-    Each ATA Gateway can parse and send a certain amount of traffic per second. If the domain controllers that you are monitoring are sending and receiving more traffic than the ATA Gateway can handle, you will need to add additional ATA Gateways according to your traffic volume. For more information see [ATA capacity planning](/ATA/PlanDesign/ata-capacity-planning.html).
+    Each ATA Gateway can parse and send a certain amount of traffic per second. If the domain controllers that you are monitoring are sending and receiving more traffic than the ATA Gateway can handle, you will need to add additional ATA Gateways according to your traffic volume. For more information see [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning).
 
 ## ATA Center
 The **ATA Center** performs the following functions:
@@ -101,7 +101,7 @@ Consider the following when deciding how many ATA Centers to deploy on your netw
 
 -   One ATA Center can monitor a single Active Directory forest. If you have more than one Active Directory forest you will need a minimum of one ATA Center per Active Directory forest.
 
-    In large Active Directory deployments, a single ATA Center might not be able to handle all of the traffic of all your domain controllers. In this case, multiple ATA Centers will be required and ATA detections will be less effective. The number of ATA Centers should be dictated by [ATA capacity planning](/ATA/PlanDesign/ata-capacity-planning.html).
+    In large Active Directory deployments, a single ATA Center might not be able to handle all of the traffic of all your domain controllers. In this case, multiple ATA Centers will be required and ATA detections will be less effective. The number of ATA Centers should be dictated by [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning).
 
 ## Your network components
 In order to work with ATA, you will need to make very minimal changes to your existing network, but you need to make sure of the following.
@@ -111,22 +111,22 @@ For ATA to work, you have to enable port mirroring for all of your domain contro
 
 Set up port mirroring from your domain controllers to the ATA Gateway. While this mirrors all the domain controller network traffic to the ATA Gateway, only a very small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
 
-Your domain controllers and the ATA Gateways can be physical or virtual, see [Configure port mirroring](/ATA/PlanDesign/configure-port-mirroring.html) for more information.
+Your domain controllers and the ATA Gateways can be physical or virtual, see [Configure port mirroring](/advanced-threat-analytics/PlanDesign/configure-port-mirroring) for more information.
 
 ### Events
 To enhance ATA detection of Pass-the-Hash, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by using Windows Event Forwarding.
 
 -   Configuring the ATA Gateway to listen for SIEM events
 
-    Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](/ATA/PlanDesign/configure-event-collection.html).
+    Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection).
 
 -   Configuring Windows Event Forwarding
 
-    Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](/ATA/PlanDesign/configure-event-collection.html#ATA_event_WEF).
+    Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection#ATA_event_WEF).
 
 ## See Also
-- [ATA prerequisites](/ATA/PlanDesign/ata-prerequisites.html)
-- [ATA capacity planning](/ATA/PlanDesign/ata-capacity-planning.html)
-- [Configure event collection](/ATA/PlanDesign/configure-event-collection.html)
-- [Configuring Windows event forwarding](/ATA/PlanDesign/configure-event-collection.html#ATA_event_WEF)
+- [ATA prerequisites](/advanced-threat-analytics/PlanDesign/ata-prerequisites)
+- [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning)
+- [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection#ATA_event_WEF)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

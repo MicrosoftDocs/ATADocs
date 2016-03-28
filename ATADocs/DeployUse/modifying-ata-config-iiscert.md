@@ -15,7 +15,7 @@ author: Rkarlin
 
 >[!div class="step-by-step"]
 [« ATA Console IP address](modifying-ata-config-consoleip.md)
-[Domain connectivity password »](modifying-ata-config-dcpassword)
+[Domain connectivity password »](modifying-ata-config-dcpassword.md)
 
 ## <a name="ATA_modify_IIScert"></a>Change the IIS certificate
 In the console, you can select and change the certificate for the ATA Center service, but you can't change the certificate used by IIS.
@@ -45,9 +45,9 @@ If you need to modify the certificate used by IIS for the ATA Center, follow the
 
 >[!div class="step-by-step"]
 [« ATA Console IP address](modifying-ata-config-consoleip.md)
-[Domain connectivity password »](modifying-ata-config-dcpassword)
+[Domain connectivity password »](modifying-ata-config-dcpassword.md)
 
 ## See Also
-- [Working with the ATA Console](/ATA/understand/working-with-ata-console)
+- [Working with the ATA Console](/advanced-threat-analytics/understand/working-with-ata-console)
 - [Install ATA](install-ata.md)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

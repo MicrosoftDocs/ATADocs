@@ -69,6 +69,6 @@ If you need to modify the IP address used by IIS for the ATA Console, follow the
 
 
 ## See Also
-- [Working with the ATA Console](/ATA/understand/working-with-ata-console)
+- [Working with the ATA Console](/advanced-threat-analytics/understand/working-with-ata-console)
 - [Install ATA](install-ata.md)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

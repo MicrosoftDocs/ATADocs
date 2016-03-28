@@ -83,7 +83,7 @@ Domain dominance occurs when attackers attempt or succeed at achieving total con
 
 -   For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)
 
--   To get started deploying ATA: [Install ATA](/ATA/DeployUse/install-ata.html)
+-   To get started deploying ATA: [Install ATA](/advanced-threat-analytics/DeployUse/install-ata)
 
 ## See Also
 [For ATA support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

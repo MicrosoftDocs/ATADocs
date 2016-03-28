@@ -25,7 +25,7 @@ This is the default page you are taken to when you log in to the ATA Console. By
 
 ![ATA attack timeline image](media/attack-timeline.png)
 
-For more information, see [Working with suspicious activities](/ATA/DeployUse/working-with-suspicious-activities.html).
+For more information, see [Working with suspicious activities](/advanced-threat-analytics/DeployUse/working-with-suspicious-activities).
 
 ## Notification bar
 
@@ -88,7 +88,7 @@ Anywhere in the console where there is a single entity presented, such as a user
 
 >[!div class="step-by-step"]
 **Working with ATA console**
-[Previous](https://docsmsftstage.azurewebsites.net/ATA/Understand/working-with-ata-console.html)
+[Previous](working-with-ata-console.md)
 
 ## See Also
 [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
