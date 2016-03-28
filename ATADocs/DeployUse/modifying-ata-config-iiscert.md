@@ -48,6 +48,6 @@ If you need to modify the certificate used by IIS for the ATA Center, follow the
 [Domain connectivity password »](modifying-ata-config-dcpassword.md)
 
 ## See Also
-- [Working with the ATA Console](/ATA/understand/working-with-ata-console)
+- [Working with the ATA Console](/advanced-threat-analytics/understand/working-with-ata-console)
 - [Install ATA](install-ata.md)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
