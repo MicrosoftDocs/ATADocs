@@ -29,6 +29,6 @@ You can exclude IP addresses from the following detections. If you enter an IP a
 -   Pass-the-Ticket IP address exclusions
 
 ## See Also
-[Working with suspicious activities](working-with-suspicious-activities.md)
- [Modifying ATA configuration](modifying-ata-configuration.md)
- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Working with suspicious activities](working-with-suspicious-activities.md)
+- [Modifying ATA configuration](modifying-ata-configuration.md)
+- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

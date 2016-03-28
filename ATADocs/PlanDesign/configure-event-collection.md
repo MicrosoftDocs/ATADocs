@@ -188,5 +188,5 @@ wecutil ss <CollectionName> /hi:5000
 For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/en-us/library/cc748890)
 
 ## See Also
-- [Install ATA](/ATA/DeployUse/install-ata.html)
+- [Install ATA](/advanced-threat-analytics/DeployUse/install-ata)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

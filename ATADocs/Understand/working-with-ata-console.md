@@ -38,7 +38,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
 
 >[!div class="step-by-step"]
-[Next](https://docsmsftstage.azurewebsites.net/ATA/Understand/ata-console-elements.html)
+[Next](ata-console-elements.md)
 **ATA console elements**
 
 ## See Also
