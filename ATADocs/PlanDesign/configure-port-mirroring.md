@@ -13,12 +13,10 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 author: Rkarlin
 ---
 # Configure Port Mirroring
-The ATA Gateway needs to see all the network traffic to and from each domain controller being monitored. Configure **port mirroring** for each domain controller to be monitored, as the **source** of the network traffic. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
+The main data source used by ATA is deep packet inspection of the network traffic to and from your domain controllers. For ATA to see the network traffic, you must either configure port mirroring, or use a Network TAP.
 
-The main data source used by ATA is deep packet inspection of the network traffic to and from your domain controllers. For ATA to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic on one port, known as the source port, to another port, known as the destination port.  ATA works with most solutions that can mirror traffic - if the traffic can be port mirrored to ATA, it can be used to analyze threats to your system. To configure port mirroring, refer to your vendor's documentation.
-
-> [!NOTE]
-> ATA supports some scenarios using third party Network Visibility Solutions, such as a network TAP.
+For port mirroring, configure **port mirroring** for each domain controller to be monitored, as the **source** of the network traffic. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
+For more information, refer to your vendor's documentation.
 
 Your domain controllers and ATA Gateways can be either physical or virtual. The following are common methods for port mirroring and some considerations. Refer to your switch or virtualization server product documentation for additional information. Your switch manufacturer might use different terminology.
 
