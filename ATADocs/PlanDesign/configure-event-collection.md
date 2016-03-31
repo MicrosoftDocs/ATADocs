@@ -44,7 +44,7 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 
 2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address selected above. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
-### SIEM support
+### <a name="SIEMsupport"></a>SIEM support
 ATA supports SIEM events in the following formats:
 
 #### RSA Security Analytics
