@@ -9,7 +9,7 @@ ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
+ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 author: Rkarlin
 ---
 # Install ATA - Step 4

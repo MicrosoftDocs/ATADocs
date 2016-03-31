@@ -9,7 +9,7 @@ ms.technology:
   - security
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
+ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 author: Rkarlin
 ---
 # Change ATA configuration - ATA Center IP address
