@@ -1,13 +1,30 @@
 ---
+# required metadata
+
 title: What&#39;s new in ATA version 1.4 | Microsoft Advanced Threat Analytics
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # What&#39;s new in ATA version 1.4
 These release notes provide information about known issues in version 1.4 of  Advanced Threat Analytics.
 

@@ -1,14 +1,30 @@
 ---
+# required metadata
+
 title: ATA Database Management | Microsoft Advanced Threat Analytics
-ms.custom: na
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # ATA Database Management
 If you need to move, backup or restore the ATA database, use these procedures for working with MongoDB.
 
