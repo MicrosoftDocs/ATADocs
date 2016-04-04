@@ -1,17 +1,30 @@
 ---
+# required metadata
+
 title: Change ATA configuration | Microsoft Advanced Threat Analytics
-ms.custom:
-  - ATA
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Change ATA configuration
 
 If you need to update or change your configuration after initial installation and deployment of ATA, use this topic for guidance before modifying the following:

@@ -1,17 +1,30 @@
 ---
+# required metadata
+
 title: Validate Port Mirroring | Microsoft Advanced Threat Analytics
-ms.custom:
-  - ATA
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: get-started-article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Validate Port Mirroring
 The following steps walk you through the process for validating that port mirroring is properly configured. For ATA to work properly, the ATA Gateway must be able to see the traffic to and from the domain controller. The main data source used by ATA is deep packet inspection of the network traffic to and from your domain controllers. For ATA to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 

@@ -1,17 +1,30 @@
 ---
+# required metadata
+
 title: Working with ATA Detection Settings | Microsoft Advanced Threat Analytics
-ms.custom:
-  - ATA
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Working with ATA Detection Settings
 The **Detection** configuration page lets you set a list of IP addresses and subnets that have unusual circumstances and should be handled slightly differently than other entities on your network.
 

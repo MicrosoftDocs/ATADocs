@@ -1,15 +1,31 @@
-﻿---
-title: Pre-Installation Steps | Microsoft Advanced Threat Analytics
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
-ms.assetid: 12bbdcc0-9ac2-4bad-8f26-06ee498351fa
-author: Rkarlin
-robots: noindex,nofollow
 ---
-# Pre-Installation Steps
+# required metadata
+
+title: Pre-Installation Steps | Microsoft Advanced Threat Analytics
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.assetid: 12bbdcc0-9ac2-4bad-8f26-06ee498351fa
+
+# optional metadata
+
+ROBOTS: noindex,nofollow
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+﻿# Pre-Installation Steps
 This article describes the requirements for a successful deployment of ATA in your environment.
 
 ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](/advanced=threat-analytics/understand/ata-architecture).

@@ -1,14 +1,30 @@
 ---
+# required metadata
+
 title: Troubleshooting ATA Monitoring Alerts | Microsoft Advanced Threat Analytics
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: 51bedf1f-b267-4e68-b12c-2d43db17e82d
-author: Rkarlin
-robots: noindex,nofollow
+
+# optional metadata
+
+ROBOTS: noindex,nofollow
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Troubleshooting ATA Monitoring Alerts
 This article lists the ATA monitoring alerts with a resolution process for each.
 

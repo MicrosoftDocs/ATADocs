@@ -1,17 +1,30 @@
 ---
+# required metadata
+
 title: Setting ATA Alerts | Microsoft Advanced Threat Analytics
-ms.custom:
-  - ATA
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Setting ATA Alerts
 ATA can alert you when it detects a suspicious activity, either by email or by using ATA event forwarding and forwarding the event to your SIEM/syslog server. If you enable either or both of these types of alerts, you can set the following for them.
 
