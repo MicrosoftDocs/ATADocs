@@ -1,16 +1,30 @@
 ---
+# required metadata
+
 title: Change ATA configuration - name of the capture network adapter | Microsoft Advanced Threat Analytics
-ms.custom:
-  - ATA
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
-author: Rkarlin
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.assetid: 3225a81e-0395-43ca-9a48-0cbe7171e5de
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Change ATA configuration - name of the capture network adapter
 
 >[!div class="step-by-step"]

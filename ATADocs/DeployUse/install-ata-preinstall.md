@@ -1,16 +1,30 @@
 ---
+# required metadata
+
 title: Install ATA - Pre-install steps | Microsoft Advanced Threat Analytics
-ms.custom:
-  - ATA
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: get-started-article
-author: Rkarlin
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.assetid: 6a8e18e9-f4f9-4ac3-98c9-0a0fd7f082f3
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Install ATA - Pre-install steps
 
 ## <a name="Preinstallsteps"></a>Pre-installation steps

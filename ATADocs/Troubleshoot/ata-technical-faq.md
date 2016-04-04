@@ -1,13 +1,30 @@
 ---
+# required metadata
+
 title: ATA technical FAQ | Microsoft Advanced Threat Analytics
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # ATA technical FAQ
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
 

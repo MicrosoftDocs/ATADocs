@@ -1,13 +1,30 @@
 ---
+# required metadata
+
 title: Troubleshooting ATA using the ATA database | Microsoft Advanced Threat Analytics
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Troubleshooting ATA using the ATA database
 ATA uses MongoDB as its database.
 You can interact with the database using the default command line or using a user interface tool that you download  to perform advanced tasks and troubleshooting.

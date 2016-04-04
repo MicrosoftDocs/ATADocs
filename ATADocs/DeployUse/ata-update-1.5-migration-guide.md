@@ -1,13 +1,30 @@
 ---
+# required metadata
+
 title: ATA update to 1.5 migration guide | Microsoft Advanced Threat Analytics
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
-author: Rkarlin
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # ATA update to 1.5 migration guide
 The update to ATA 1.5 provides improvements in the following areas:
 

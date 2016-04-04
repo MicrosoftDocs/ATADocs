@@ -1,17 +1,30 @@
 ---
+# required metadata
+
 title: ATA Console elements | Microsoft Advanced Threat Analytics
-ms.custom:
-  - ATA
-ms.prod: identity-ata
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-  - security
-ms.tgt_pltfrm: na
+description:
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
 ms.topic: article
-ms.assetid:
-author: Rkarlin
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.assetid: 83eee7df-a25f-4f12-8c5c-dd3b3b8a9ebd
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # ATA Console elements
 
 The ATA Console provides you a quick view of all suspicious activities in chronological order and enables you to drill into details of any activity or perform actions such as adding additional notes to the activity. The console also displays alerts and notifications to highlight problems with the ATA network or new activities that are deemed suspicious.
