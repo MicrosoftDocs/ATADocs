@@ -31,7 +31,7 @@ ms.suite: ems
 [« Step 3](install-ata-step3.md)
 [Step 5 »](install-ata-step5.md)
 
-## <a name="InstallATAGW"></a>Step 4. Install the ATA Gateway
+## Step 4. Install the ATA Gateway
 Before installing the ATA Gateway, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](/advanced-threat-analytics/plandesign/validate-port-mirroring) for more information.
 
 > [!IMPORTANT]

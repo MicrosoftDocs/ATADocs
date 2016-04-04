@@ -30,7 +30,7 @@ ms.suite: ems
 >[!div class="step-by-step"]
 [« Domain connectivity password](modifying-ata-config-dcpassword.md)
 
-## <a name="ATA_modify_nicname"></a>Change the name of the ATA Gateway capture network adapter
+## Change the name of the ATA Gateway capture network adapter
 If you change the name of the network adapter that is currently configured as a Capture network adapter, this will cause the ATA Gateway server not to start. In order to smoothly change the name without ending ATA Gateway connectivity, follow this process:
 
 1.  In the ATA Gateway configuration page, unselect the network adapter  you want to rename, and select another network adapter as the capture network adapter in its place. This can be an interim network adapter or even the management network adapter. During this time, ATA will not capture the domain controller's port-mirrored traffic. Save the new configuration.

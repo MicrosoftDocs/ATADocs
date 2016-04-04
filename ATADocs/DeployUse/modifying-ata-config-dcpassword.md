@@ -31,7 +31,7 @@ ms.suite: ems
 [« IIS certificate](modifying-ata-config-iiscert.md)
 [Name of the capture network adapter »](modifying-ata-config-nicname.md)
 
-## <a name="ATA_modify_dcpassword"></a>Change the domain connectivity password
+## Change the domain connectivity password
 If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Service will stop running on the ATA Gateways.
 
 If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following:

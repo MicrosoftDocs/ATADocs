@@ -31,7 +31,7 @@ ms.suite: ems
 [« Step 2](install-ata-step2.md)
 [Step 4 »](install-ata-step4.md)
 
-## <a name="DownloadATA"></a>Step 3. Download the ATA Gateway setup package
+## Step 3. Download the ATA Gateway setup package
 After configuring the domain connectivity settings you can download the ATA Gateway setup package.
 
 To download the ATA Gateway package:

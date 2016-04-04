@@ -30,7 +30,7 @@ ms.suite: ems
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
 
-## <a name="ATAvpnHoneytokensetting"></a>Step 6. Configure short-term lease subnets and Honeytoken user
+## Step 6. Configure short-term lease subnets and Honeytoken user
 Short-term lease subnets are subnets in which the IP address assignment changes very rapidly - within seconds or minutes. For example, IP addresses used for your VPNs and Wi-Fi IP addresses. To enter the list of short-term lease subnets used in your organization, follow these steps:
 
 1.  From the ATA Console on the ATA Gateway machine, click on the settings icon and select **Configuration**.

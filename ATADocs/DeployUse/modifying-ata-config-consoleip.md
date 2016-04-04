@@ -31,7 +31,7 @@ ms.suite: ems
 [« ATA Center certificate](modifying-ata-config-centercert.md)
 [IIS certificate »](modifying-ata-config-iiscert.md)
 
-### <a name="ATA_modify_consoleIP"></a>Change the ATA Console IP address
+## Change the ATA Console IP address
 By default, the ATA Console URL is the IP address selected for the ATA Console IP address when you installed the ATA Center.
 
 The URL is used in the following scenarios:

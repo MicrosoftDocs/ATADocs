@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Install ATA - Pre-install steps
 
-## <a name="Preinstallsteps"></a>Pre-installation steps
+## Pre-installation steps
 
 1.  If you installed the ATA public preview version, see [What's new in version 1.5](whats-new-version-1.5.md) or [What's new in version 1.4](whats-new-version-1.4.md) for help uninstalling the ATA Preview version.
 

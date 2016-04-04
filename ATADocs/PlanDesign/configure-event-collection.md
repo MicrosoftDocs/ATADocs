@@ -26,9 +26,9 @@ ms.suite: ems
 ---
 
 # Configure Event Collection
-To enhance ATA detection of Pass-the-Hash, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#ATA_event_WEF).
+To enhance ATA detection of Pass-the-Hash, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
 
-## <a name="ATASIEM"></a>Event collection
+## Event collection
 In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by  setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
 ### SIEM/Syslog
@@ -57,7 +57,7 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 
 2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address selected above. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
-### <a name="SIEMsupport"></a>SIEM support
+### SIEM support
 ATA supports SIEM events in the following formats:
 
 #### RSA Security Analytics
@@ -157,7 +157,7 @@ Error Code:         0x0
 
 -   The order is not important for the key=value pairs.
 
-## <a name="ATA_event_WEF"></a>Configuring Windows Event Forwarding
+## Configuring Windows Event Forwarding
 If you do not have a SIEM server you can configure your domain controllers to forward Windows Event ID 4776 directly to one of your ATA Gateways.
 
 1.  Log on to all domain controllers and ATA Gateway machines using a domain account with administrator privileges.
