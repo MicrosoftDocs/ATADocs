@@ -2,7 +2,7 @@
 # required metadata
 
 title: ATA update to 1.5 migration guide | Microsoft Advanced Threat Analytics
-description:
+description: Procedures to update ATA to version 1.5
 keywords:
 author: rkarlin
 manager: stevenpo

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Working with ATA Detection Settings | Microsoft Advanced Threat Analytics
-description:
+description: Describes how to configure a list of IP addresses and subnets that have unusual circumstances and that should be handle differently than other entities on your network
 keywords:
 author: rkarlin
 manager: stevenpo

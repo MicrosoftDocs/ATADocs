@@ -2,7 +2,7 @@
 # required metadata
 
 title: Troubleshooting ATA using the ATA database | Microsoft Advanced Threat Analytics
-description:
+description: Describes how you can use the ATA database to help troubleshoot issues 
 keywords:
 author: rkarlin
 manager: stevenpo

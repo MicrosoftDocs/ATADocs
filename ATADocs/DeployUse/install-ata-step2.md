@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install ATA - Step 2 | Microsoft Advanced Threat Analytics
-description:
+description: Step two of installing ATA helps you configure the domain connectivity settings on your ATA Center server
 keywords:
 author: rkarlin
 manager: stevenpo

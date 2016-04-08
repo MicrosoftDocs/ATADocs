@@ -2,7 +2,7 @@
 # required metadata
 
 title: Working with Suspicious Activities | Microsoft Advanced Threat Analytics
-description:
+description: Describes how to review suspicious activities identified by ATA
 keywords:
 author: rkarlin
 manager: stevenpo

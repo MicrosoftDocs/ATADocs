@@ -2,7 +2,7 @@
 # required metadata
 
 title: Setting ATA Alerts | Microsoft Advanced Threat Analytics
-description:
+description: Describes how to have ATA alert you (by email or by ATA event forwarding) when it detects suspicious activities 
 keywords:
 author: rkarlin
 manager: stevenpo

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Troubleshooting ATA Monitoring Alerts | Microsoft Advanced Threat Analytics
-description:
+description: Lists the ATA monitoring alerts and the process you follow to resolve each type of alert
 keywords:
 author: rkarlin
 manager: stevenpo

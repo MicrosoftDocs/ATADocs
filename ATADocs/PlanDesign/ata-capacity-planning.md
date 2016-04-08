@@ -2,7 +2,7 @@
 # required metadata
 
 title: ATA Capacity Planning | Microsoft Advanced Threat Analytics
-description:
+description: Helps you determine how many ATA servers will be needed to support your network
 keywords:
 author: rkarlin
 manager: stevenpo

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install ATA - Pre-install steps | Microsoft Advanced Threat Analytics
-description:
+description: Steps to perform before you start installing Microsoft Advanced Threat Analytics
 keywords:
 author: rkarlin
 manager: stevenpo

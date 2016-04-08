@@ -2,7 +2,7 @@
 # required metadata
 
 title: Validate Port Mirroring | Microsoft Advanced Threat Analytics
-description:
+description: Describes how to validate that port mirroring is configured correctly
 keywords:
 author: rkarlin
 manager: stevenpo
