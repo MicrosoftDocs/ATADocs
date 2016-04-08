@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install ATA | Microsoft Advanced Threat Analytics
-description:
+description: In the final step of installing ATA, you configure the short-term lease subnets and the Honeytoken user.
 keywords:
 author: rkarlin
 manager: stevenpo

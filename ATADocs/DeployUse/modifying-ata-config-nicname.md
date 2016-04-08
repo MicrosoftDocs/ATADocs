@@ -2,7 +2,7 @@
 # required metadata
 
 title: Change ATA configuration - name of the capture network adapter | Microsoft Advanced Threat Analytics
-description:
+description: Describes how to change the name of the network adapter that is configured as a Capture network adapter without ending ATA Gateway connectivity
 keywords:
 author: rkarlin
 manager: stevenpo

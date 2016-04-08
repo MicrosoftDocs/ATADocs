@@ -2,7 +2,7 @@
 # required metadata
 
 title: Troubleshooting ATA using the ATA logs | Microsoft Advanced Threat Analytics
-description:
+description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: rkarlin
 manager: stevenpo

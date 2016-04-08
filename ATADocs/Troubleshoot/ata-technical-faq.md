@@ -2,7 +2,7 @@
 # required metadata
 
 title: ATA technical FAQ | Microsoft Advanced Threat Analytics
-description:
+description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: rkarlin
 manager: stevenpo

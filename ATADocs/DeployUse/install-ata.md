@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install ATA - Complete | Microsoft Advanced Threat Analytics
-description:
+description: Walks you through the necessary steps to get ATA deployed, configured, and running.
 keywords:
 author: rkarlin
 manager: stevenpo

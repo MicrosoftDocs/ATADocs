@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure Event Collection | Microsoft Advanced Threat Analytics
-description:
+description: Describes your options for configuring event collection with ATA
 keywords:
 author: rkarlin
 manager: stevenpo

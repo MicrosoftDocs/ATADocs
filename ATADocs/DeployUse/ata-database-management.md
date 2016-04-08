@@ -2,7 +2,7 @@
 # required metadata
 
 title: ATA Database Management | Microsoft Advanced Threat Analytics
-description:
+description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -54,7 +54,7 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 7.  Open a command prompt and run the Mongo shell by running `mongo.exe ATA` .
 
-    By default, the mongo.exe will be located in: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin
+    By default, the mongo.exe is found in: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin
 
 8.  Run the following command: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>` where &lt;New DB Location&gt; is the new folder path.
 
