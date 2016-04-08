@@ -2,7 +2,7 @@
 # required metadata
 
 title: Change ATA configuration - ATA Center certificate  | Microsoft Advanced Threat Analytics
-description:
+description: Describes the two-stage process for renewing or replacing the certificate in the local computer store on the ATA Center server. 
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -31,7 +31,7 @@ ms.suite: ems
 [« ATA Center server IP address](modifying-ata-config-centerip.md)
 [ATA Console IP address »](modifying-ata-config-consoleip.md)
 
-## <a name="ATA_modify_centercert"></a>Change the ATA Center certificate
+## Change the ATA Center certificate
 If your certificates expire and need to be renewed or replaced after installing the new certificate in the local computer store on the ATA Center server, replace the certificate by following this two stage process:
 
 -   First stage – Update the certificate you want the ATA Center service to use. At this point the ATA Center service is still bound to the original certificate. When the ATA Gateways sync their configuration they will have two potential certificates that will be valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it will not try the new one.

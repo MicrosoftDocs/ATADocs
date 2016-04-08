@@ -31,7 +31,7 @@ ms.suite: ems
 [« Step 1](install-ata-step1.md)
 [Step 3 »](install-ata-step3.md)
 
-## <a name="ConfigConSettings"></a>Step 2. Configure ATA Gateway domain connectivity settings
+## Step 2. Configure ATA Gateway domain connectivity settings
 The settings in the domain connectivity settings section apply to all ATA Gateways managed by the ATA Center.
 
 To configure the Domain connectivity settings perform the following on the ATA Center server.

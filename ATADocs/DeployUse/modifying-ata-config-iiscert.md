@@ -31,7 +31,7 @@ ms.suite: ems
 [« ATA Console IP address](modifying-ata-config-consoleip.md)
 [Domain connectivity password »](modifying-ata-config-dcpassword.md)
 
-## <a name="ATA_modify_IIScert"></a>Change the IIS certificate
+## Change the IIS certificate
 In the console, you can select and change the certificate for the ATA Center service, but you can't change the certificate used by IIS.
 
 If you want to change it, use the following procedure:

@@ -32,7 +32,7 @@ ms.suite: ems
 
 After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the IP address and port or the certificate.
 
-## <a name="ATA_modify_centerIP"></a>Change the IP address used by the ATA Center server
+## Change the IP address used by the ATA Center server
 If you need to change the ATA Center IP address and port or certificate, take the following into consideration.
 
 The ATA Gateways locally store the IP address of the ATA Center to which they need to connect. On a regular basis, they connect to the ATA Center and pull down configuration changes. Making a change to how the ATA Gateways connect to the ATA Center is done is two stages.

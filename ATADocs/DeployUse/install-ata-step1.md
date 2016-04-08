@@ -31,7 +31,7 @@ ms.suite: ems
 [« Pre-install](install-ata-preinstall.md)
 [Step 2 »](install-ata-step2.md)
 
-## <a name="InstallATACtr"></a>Step 1. Download and Install the ATA Center
+## Step 1. Download and Install the ATA Center
 After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
 
 Perform the following steps on the ATA Center server.

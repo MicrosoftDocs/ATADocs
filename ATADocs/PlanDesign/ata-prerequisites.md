@@ -30,17 +30,17 @@ This article describes the requirements for a successful deployment of ATA in yo
 
 ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](/advanced-threat-analytics/Understand/ata-architecture).
 
-[Before you start](#ATAbeforeyoustart): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
+[Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
-[ATA Center](#ATAcenter): This section lists ATA Center hardware, software requirements as well as settings  you need to configure on your ATA Center server.
+[ATA Center](#ata-center-requirements): This section lists ATA Center hardware, software requirements as well as settings  you need to configure on your ATA Center server.
 
-[ATA Gateway](#ATAgateway): This section lists ATA Gateway hardware, software requirements as well as settings  you need to configure on your ATA Gateway servers.
+[ATA Gateway](#ata-gateway-requirements): This section lists ATA Gateway hardware, software requirements as well as settings  you need to configure on your ATA Gateway servers.
 
-[ATA Console](#ATAconsole): This section lists browser requirements for running the ATA Console.
+[ATA Console](#ata-console): This section lists browser requirements for running the ATA Console.
 
 ![ATA architecture diagram](media/ATA-architecture-topology.jpg)
 
-## <a name="ATAbeforeyoustart"></a>Before you start
+## Before you start
 This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
 -   **Domain controllers** running on Windows Server 2008 and later.
@@ -58,7 +58,7 @@ This section lists information you should gather and accounts and network entiti
 
 -   It may be useful for you to have a list of all subnets used on your network for VPN and Wi-Fi, which reassign IP addresses between devices within a very short period of time (seconds or minutes).  You will want to identify these short-term lease subnets so that ATA can reduce their cache lifetime to accommodate the fast re-assignment between devices. See [Install ATA](/advanced-threat-analytics/DeployUse/install-ata) for short-term lease subnet configuration.
 
-## <a name="ATAcenter"></a>ATA Center requirements
+## ATA Center requirements
 This section lists the requirements for the ATA Center.
 
 The ATA Center supports installation on a server running Windows Server 2012 R2. Run Windows Update and make sure all important updates are installed.
@@ -125,7 +125,7 @@ The ATA Center requires certificates for the following services:
 > [!NOTE]
 > If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by IIS otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
 
-## <a name="ATAgateway"></a>ATA Gateway requirements
+## ATA Gateway requirements
 The ATA Gateway supports installation on a server running Windows Server 2012 R2.
 
 Run Windows Update and make sure all **Important** updates have been installed.
@@ -207,7 +207,7 @@ To ease installation of the ATA Center, you can install self-signed certificates
 
 A certificate supporting **Server Authentication** is required to be installed in the Computer store of the ATA Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
-## <a name="ATAconsole"></a>ATA Console
+## ATA Console
 Access to the ATA Console is via a browser, supporting the following:
 
 -   Internet Explorer version 10 and above
