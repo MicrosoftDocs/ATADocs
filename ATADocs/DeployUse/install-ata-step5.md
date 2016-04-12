@@ -39,11 +39,14 @@ After the ATA Gateway was installed, perform the following steps to configure th
 
 2.  Enter the following information.
 
-    |Field|Description|Comments|
-    |---------|---------------|------------|
-    |Description|Enter a description of the ATA Gateway (optional).||
-    |**Domain controllers** (required)<br /><br />See below for additional information about the list of controllers.|Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**<br /><br />![Example FDQN image](media/ATAGWDomainController.png)|The objects in the first domain controller in the list will sync via LDAP queries. Depending on the size of the domain, this might take some time. **Note:** <ul><li>Make sure that the first domain controller is **not** read-only.    Read only domain controllers should be added only after the initial sync completes.</li></ul>|
-    |**Capture Network adapters** (required)|Select the network adapters that are connected to the switch that are configured as the destination mirror port to receive the domain controller traffic.|Select the Capture network adapter.|
+
+
+  - **Description**: <br>Enter a description of the ATA Gateway (optional).
+  - **Domain controllers** (required): <br>See below for additional information about the list of controllers.<br>Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**<br /><br />![Example FDQN image](media/ATAGWDomainController.png)<br>The objects in the first domain controller in the list will sync via LDAP queries. Depending on the size of the domain, this might take some time.<br>
+  **Note:** <br>Make sure that the first domain controller is **not** read-only. Read only domain controllers should be added only after the initial sync completes.<br>
+
+
+ - **Capture Network adapters** (required):<br>Select the network adapters that are connected to the switch that are configured as the destination mirror port to receive the domain controller traffic.|Select the Capture network adapter.
     ![Configure gateway settings image](media/ATA-Config-GW-Settings.jpg)
 
 3.  Click **Save**.
