@@ -26,14 +26,14 @@ ms.suite: ems
 ---
 
 # Manage Telemetry Settings
-Advanced Threat Analytics (ATA) collects anonymous telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
+Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
 
 ## Data collected
 Collected data includes the following:
 
 -   Performance counters from both the ATA Center    and the ATA Gateway
 
--   Product ID after ATA has been licensed
+-   Product ID from licensed copies of ATA
 
 -   Deployment date of the ATA Center
 
@@ -70,9 +70,9 @@ Collected data includes the following:
     -   Input provided
 
 ### Disable data collection
-To stop collecting and sending telemetry data to Microsoft follow the following steps.
+Perform the following steps to stop collecting and sending telemetry data to Microsoft:
 
-1.  Log in to the ATA Console    click the three dots in the toolbar and select **About**.
+1.  Log in to the ATA Console, click the three dots in the toolbar and select **About**.
 
 2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
 

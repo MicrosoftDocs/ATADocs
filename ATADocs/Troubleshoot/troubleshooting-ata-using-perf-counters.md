@@ -26,7 +26,8 @@ ms.suite: ems
 ---
 
 # Troubleshooting ATA using the performance counters
-The ATA performance counters provide insight into how well each component of ATA is performing.
+The ATA performance counters provide insight into how well each component of ATA is performing. The components in ATA process data sequentially, so that when there's a problem, it causes a chain reaction that causes dropped traffic. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain.
+    Refer to [ATA architecture](/advanced-threat-analytics/Understand/ata-architecture) to understand the flow of internal ATA components.
 
 **ATA component process**:
 
@@ -36,8 +37,7 @@ The ATA performance counters provide insight into how well each component of ATA
 
 3.  This happens all the way back to the initial NetworkListener component which will drop traffic when it can no longer forward entities.
 
-    This means that the in order to remedy the chain reaction that causes dropped traffic, you have to fix the problem at the end of the chain.
-    Refer to [ATA architecture](/advanced-threat-analytics/Understand/ata-architecture) to understand the flow of internal ATA components.
+4. Use the data found in the performance counters to understand how each component is functioning.
 
 ## ATA Gateway performance counters
 You can observe the real time performance status of the ATA Gateway by adding the ATA Gateway's performance counters.
@@ -84,7 +84,8 @@ Here is the list of the main ATA Center counters to pay attention to:
 > -   Timed counters are in milliseconds
 > -   It is sometimes more convenient to monitor the full list of the counters using the graph type for Report (example: real time monitoring of all the counters).
 
-Here is the list of main operating system counters to pay attention to:
+## Operating system counters
+The following is the list of main operating system counters to pay attention to:
 
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
