@@ -34,7 +34,7 @@ ATA has two main components - the ATA Gateway and the ATA Center.
 
 These connect to your existing network by mirroring the network traffic to and from your domain controllers, and by looking at Windows events (forwarded directly from the domain controllers or from a SIEM server) and analyzing the data for attacks and threats.
 
-This section describes the flow of network and event capturing and drills down into the main components of the ATA Gateway and the ATA Center and their functionality.
+This section describes traffic flow and drills down into the main components of the ATA Gateway and the ATA Center and their functionality.
 
 ![ATA traffic flow diagram](media/ATA-traffic-flow.jpg)
 
@@ -67,14 +67,14 @@ The ATA Gateway receives the mirrored network traffic and Windows Events from yo
 |Network Listener|The Network Listener is responsible for capturing network traffic and parsing the traffic. This is a CPU-heavy task, so  it is especially important to check [ATA Prerequisites](/advanced-threat-analytics/PlanDesign/ata-prerequisites) when planning your ATA Gateway.|
 |Event Listener|The Event Listener is responsible for capturing and parsing Windows Events forwarded from a SIEM server on your network.|
 |Windows Event Log Reader|The Windows Event Log Reader is responsible for reading and parsing Windows Events forwarded to the ATA Gateway's Windows Event Log from the domain controllers.|
-|Network Activity Translator | Translates the parsed traffic inot ATA's logical representation of the traffic (NetworkActivity).
-|Entity Resolver|The Entity Resolver takes the parsed data (network traffic and events) and resolves the data with Active Directory to find account and identity information and match it with the IP addresses found in the parsed data.  Additionally, the Entity Resolver inspects the packet headers efficiently, enables parsing of authentication packets for machine names, properties, and identities and combines it with the data in the actual packet.|
+|Network Activity Translator | Translates parsed traffic into a logical representation of the traffic used by ATA (NetworkActivity).
+|Entity Resolver|The Entity Resolver takes the parsed data (network traffic and events) and resolves it data with Active Directory to find account and identity information. It is then matched with the IP addresses found in the parsed data. The Entity Resolver inspects the packet headers efficiently, to enable parsing of authentication packets for machine names, properties, and identities. The Entity Resolver combines the parsed authentication packets with the data in the actual packet.|
 |Entity Sender|The Entity Sender is responsible for sending the parsed and matched data to the ATA Center.|
 Consider the following when deciding how many ATA Gateways to deploy on your network:
 
 -   Active Directory forests and domains
 
-    ATA Gateways can monitor traffic from multiple domains from a single Active Directory forest.   Monitoring multiple Active Directory forests requires separate ATA Deployments. ATA Gateways should not be configured to monitor network traffic from domain controllers from different forests.
+    ATA Gateways can monitor traffic from multiple domains from a single Active Directory forest.   Monitoring multiple Active Directory forests requires separate ATA Deployments. ATA Gateways connected to the same ATA Center should not be configured to monitor network traffic from domain controllers from different forests.
 
 -   Port Mirroring
 
@@ -93,7 +93,7 @@ The **ATA Center** performs the following functions:
 
 -   Detects suspicious activities
 
--   Runs various behavioral machine learning engines
+-   Runs ATA behavioral machine learning engines
 
 -   Runs the ATA Console
 
@@ -114,15 +114,15 @@ Consider the following when deciding how many ATA Centers to deploy on your netw
 
 -   One ATA Center can monitor a single Active Directory forest. If you have more than one Active Directory forest you will need a minimum of one ATA Center per Active Directory forest.
 
-    In large Active Directory deployments, a single ATA Center might not be able to handle all of the traffic of all your domain controllers. In this case, multiple ATA Centers will be required and ATA detections will be less effective. The number of ATA Centers should be dictated by [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning).
+    In large Active Directory deployments, a single ATA Center might not be able to handle all of the traffic of all your domain controllers. In this case, multiple ATA Centers will be required or else ATA detections will be less effective. The number of ATA Centers should be dictated by [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning).
 
 ## Your network components
-In order to work with ATA, you will need to make very minimal changes to your existing network, but you need to make sure of the following.
+In order to work with ATA, make sure of the following:
 
 ### Port mirroring
-For ATA to work, you have to enable port mirroring for all of your domain controllers in the Active Directory forest being monitored. ATA will work if some but not all of your domain controllers have port mirroring enabled to ATA, but detection will be less effective.
+Set up port mirroring from your domain controllers to the ATA Gateway. For ATA to work, you have to enable port mirroring for all of your domain controllers in the Active Directory forest being monitored. If only some, but not all, of your domain controllers have port mirroring enabled to ATA, detection will be less effective.
 
-Set up port mirroring from your domain controllers to the ATA Gateway. While this mirrors all the domain controller network traffic to the ATA Gateway, only a very small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
+While port mirroring sends all the domain controller network traffic to the ATA Gateway, only a very small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
 
 Your domain controllers and the ATA Gateways can be physical or virtual, see [Configure port mirroring](/advanced-threat-analytics/PlanDesign/configure-port-mirroring) for more information.
 

@@ -40,7 +40,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
     ![ATA server icon](media/ata-server-icon.png)
 
     > [!NOTE]
-    > Alternatively, you can open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
+    > You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
 2.  Enter your username and password and click **Log in**.
 
@@ -49,16 +49,16 @@ To allow a user to log in to the ATA Console without making them a local adminis
     > [!NOTE]
     > You have to log in with a user who is a member of the local administrator group OR of the  Microsoft Advanced Threat Analytics Administrators group.
 
-## ATA Console elements
+## The ATA Console
 
-The ATA Console provides you a quick view of all suspicious activities in chronological order and enables you to drill into details of any activity or perform actions such as adding additional notes to the activity. The console also displays alerts and notifications to highlight problems with the ATA network or new activities that are deemed suspicious.
+The ATA Console provides you a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The console also displays alerts and notifications to highlight problems with the ATA network or new activities that are deemed suspicious.
 
 These are the key elements of the ATA console.
 
 
 ### Attack time line
 
-This is the default page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Resolved suspicious activities. You can also see the severity assigned to each activity.
+This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Resolved suspicious activities. You can also see the severity assigned to each activity.
 
 ![ATA attack timeline image](media/attack-timeline.png)
 
@@ -66,7 +66,7 @@ For more information, see [Working with suspicious activities](/advanced-threat-
 
 ### Notification bar
 
-When a new suspicious activity is detected, the notification bar will open automatically on the right hand side. If there are new suspicious activities since the last time you logged in, the notification bar will open after you have successfully logged in. To access it, you can click the arrow on the right at any time.
+When a new suspicious activity is detected, the notification bar will open automatically on the right hand side. If there are new suspicious activities since the last time you logged in, the notification bar will open after you have successfully logged in. You can click the arrow on the right at any time to access the notification bar.
 
 ![ATA notification bar image](media/notification-bar.png)
 
@@ -76,7 +76,7 @@ You can filter which suspicious activities are displayed in the attack time line
 
 ### Search bar
 
-On the top of the screen you will find a search bar. You can search for a specific user, computer or groups in ATA. To give it a try, just start typing.
+In the top menu, you will find a search bar. You can search for a specific user, computer or groups in ATA. To give it a try, just start typing.
 
 ![ATA console search image](media/ATA-console-search.png)
 
@@ -88,22 +88,22 @@ The Health Center provides you with alerts when something isn't working properly
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon will let you know by displaying a red dot. ![ATA health center red dot image](media/ATA-Health-Center-Alert-red-dot.png)
 
-Like suspicious activities, Health Center alerts can be dismissed or resolved and are categorized High, Medium or Low depending on their severity. If you resolve an alert that the ATA service detects as still active, it will automatically be moved to the Open list of alerts. If the system detects that there is no longer cause for an alert (the situation has been fixed), it will automatically be moved to the resolved list.
+Health Center alerts can be dismissed or resolved and are categorized High, Medium or Low depending on their severity. If you resolve an alert that the ATA service detects as still active, it will automatically be moved to the Open list of alerts. If the system detects that there is no longer cause for an alert (the situation has been fixed), it will automatically be moved to the resolved list.
 
 ### User and computer profiles
 
-ATA builds a profile for each user and computer in the domain. In the user profile ATA displays general information about the user, such as group membership, recent logins, and recently accessed resources.
+ATA builds a profile for each user and computer in the domain. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources.
 
 ![User profile](media/user-profile.png)
 
-In the computer profile, ATA displays general information about the computer, such as recently logins and recently accessed resources.
+In the computer profile, ATA displays general information, such as recently logins and recently accessed resources.
 
 ![Computer profile](media/computer-profile.png)
 
-ATA provides additional information on the following pages: Summary, Activities, and Suspicious activities.
+ATA provides additional information about entities (computers, devices, users) on the following pages: Summary, Activities, and Suspicious activities.
 
-> [!NOTE]
-> A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.
+A profile that ATA has not been able to fully resolve will be identified with half-filled circle icon next to it.
+
 
 ![ATA unresolved profile image](media/ATA-Unresolved-Profile.jpg)
 
