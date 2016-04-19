@@ -7,9 +7,6 @@ layout: HubPage
     <section id="hero-content">
       <h1>Microsoft Advanced Threat Analytics</h1>
       <h2>Microsoft Advanced Threat Analytics (ATA) is an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks</h2>
-      <ol id="actions" class="action-list">
-        <li><a href="" class="button button-bordered">Learn More</a></li>
-      </ol>
       <h3>New to ATA? <a href="https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/">Visit our product page &rarr;</a></h3>
     </section>
 
@@ -24,11 +21,11 @@ layout: HubPage
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/understand/what-is-ata">What is Advanced Threat Analytics?</a></li>
-          <li><a href="/advanced-threat-analytics/deployuse/install-ata">Installing ATA</a></li>
+          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">What is Advanced Threat Analytics?</a></li>
+          <li><a href="/advanced-threat-analytics/deploy-use/install-ata">Installing ATA</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/deployuse/manage-telemetry-settings">Managing ATA telemetry</a></li>
+          <li><a href="/advanced-threat-analytics/deploy-use/manage-telemetry-settings">Managing ATA telemetry</a></li>
         </ul>
       </div>
     </section>
@@ -158,6 +155,10 @@ layout: HubPage
                     <h4>Read</h4>
                   </a>
                 </li>
+              <a href="" class="see-more">See More</a>
+            </section>
+
+          </li>
 
           <li class="journey-step">
 
@@ -201,7 +202,6 @@ layout: HubPage
             </section>
 
           </li>
-
         </ul>
       </section>
     </div>
