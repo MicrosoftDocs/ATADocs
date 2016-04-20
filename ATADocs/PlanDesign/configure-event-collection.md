@@ -157,6 +157,29 @@ Error Code:         0x0
 
 -   The order is not important for the key=value pairs.
 
+#### QRadar
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because ATA necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+    <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+The fields needed are:
+
+The agent type for the collection
+
+The windows event log provider name
+
+The windows event log source
+
+The DC fully qualified domain name
+
+The windows event ID
+
+TimeGenerated = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is very important.
+
+Message = the original event text from the Windows event
+
+Make sure to have \t between the key=value pairs.
+
+**NOTE**: Using WinCollect for Windows event collection is not supported.
+
 ## Configuring Windows Event Forwarding
 If you do not have a SIEM server you can configure your domain controllers to forward Windows Event ID 4776 directly to one of your ATA Gateways.
 
@@ -170,8 +193,8 @@ winrm quickconfig
 ```
 wecutil qc
 ```
-5.	On each domain controller, in **Active Directory Users and Computers**, navigate to the **Builtin** folder and double click on the **Event Log Readers** group.
-![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)
+5.	On each domain controller, in **Active Directory Users and Computers**, navigate to the **Builtin** folder and double click on the **Event Log Readers** group.<br>
+![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
 Right click on it and select **Properties**. On the **Members** tab, add the computer account of each ATA Gateway.
 ![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
 6.	On the ATA Gateway, open the Event Viewer and right click on **Subscriptions** and select **Create Subscription**.  
@@ -179,11 +202,11 @@ Right click on it and select **Properties**. On the **Members** tab, add the com
     a.	Under **Subscription type and source computers**, click **Select Computers** and add the domain controllers and test connectivity.
     ![wef_subscription prop](media/wef_subscription-prop.png)
 
-    b.	Under **Events to collect**, click **Select Events**. Select **By log** and scroll down to select **Security**. Then, In the **Includes/Excludes Event IDs**, type **4776**.
+    b.	Under **Events to collect**, click **Select Events**. Select **By log** and scroll down to select **Security**. Then, In the **Includes/Excludes Event IDs**, type **4776**.<br>
     ![wef_4776](media/wef_4776.png)
 
     c. Under **Change user account or configure advanced settings**, click **Advanced**.
-        Set the **Protocol** to **HTTP** and the **Port** to **5985**.
+        Set the **Protocol** to **HTTP** and the **Port** to **5985**.<br>
     ![wef_http](media/wef_http.png)
 
  7.	[Optional] If you want a shorter poling interval, on the ATA Gateway, set the subscription heartbeat to 5 seconds for faster polling rate.

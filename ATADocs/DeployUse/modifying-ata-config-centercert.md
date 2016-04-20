@@ -36,7 +36,7 @@ If your certificates expire and need to be renewed or replaced after installing 
 
 -   First stage – Update the certificate you want the ATA Center service to use. At this point the ATA Center service is still bound to the original certificate. When the ATA Gateways sync their configuration they will have two potential certificates that will be valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it will not try the new one.
 
--   Second stage – After all the ATA Gateways synced with the updated configuration, you can activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service will bind to the certificate. ATA Gateways will not be able to properly mutually authenticate the ATA Center service and will attempt to authenticate the second certificate. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have a single certificate for the ATA Center. (Unless you  started the process again.)
+-   Second stage – After all the ATA Gateways synced with the updated configuration, you can activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service will bind to the certificate. ATA Gateways will not be able to properly mutually authenticate the ATA Center service and will attempt to authenticate the second certificate. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have a single certificate for the ATA Center. (Unless you started the process again.)
 
 > [!NOTE]
 > -   If an ATA Gateway was offline during the first stage and never got the updated configuration, you will need to manually update the configuration JSON file on the ATA Gateway.
@@ -58,6 +58,10 @@ If your certificates expire and need to be renewed or replaced after installing 
 6.  You will see a notification of how many ATA Gateways synced to the latest configuration.
 
 7.  After all the ATA Gateways synced, click **Activate** to activate the new certificate.
+	>[!IMPORTANT]
+	>Before activating the new configuration, validate that all the ATA Gateways are synced with the latest configuration. Activating the new configuration before all the ATA Gateways are synced may cause the ATA Gateway to stop functioning as expected. If any of the ATA Gateways are not synced, you will get this error when you click Activate:
+	>
+	>    ![ATA Gateway sync error](media/ataGW-not-synced.png)
 
 8.  Ensure that all the ATA Gateways are able to sync their configurations after the change was activated.
 
