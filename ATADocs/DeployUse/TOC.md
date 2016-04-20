@@ -1,5 +1,5 @@
-# [Understand and explore](/advanced-threat-analytics/understand/what-is-ata)
-# [Plan and design](/advanced-threat-analytics/plandesign/ata-capacity-planning)
+# [Understand and explore](/advanced-threat-analytics/understand-explore/what-is-ata)
+# [Plan and design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 # [Deploy and use](install-ata.md)
 ## [Install ATA](install-ata.md)
 ### [Pre-install steps](install-ata-preinstall.md)
