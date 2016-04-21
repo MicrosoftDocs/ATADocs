@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: ATA FAQ | Microsoft Advanced Threat Analytics
-description: Provides answers to frequently asked questions about Microsoft Advanced Threat Analytics
+title: Common questions about ATA | Microsoft Advanced Threat Analytics
+description: Provides answers to commonly asked questions about Microsoft Advanced Threat Analytics
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -25,8 +25,8 @@ ms.suite: ems
 
 ---
 
-# ATA FAQ
-This section provides answers to frequently asked questions about Microsoft Advanced Threat Analytics.
+# ATA commonly asked questions
+This section provides answers to commonly asked questions about the capabilities and features of Microsoft Advanced Threat Analytics. The [technical FAQ](/advanced-threat-analytics/troubleshoot/ata-technical-faq) is a separate article.
 
 ## What is Microsoft Advanced Threat Analytics?
 Microsoft Advanced Threat Analytics (ATA) is an on-premises product to help IT security professionals protect their enterprise from advanced targeted attacks by automatically analyzing, learning, and identifying normal and abnormal entity (user, devices, and resources) behavior.  ATA also helps to identify known malicious attacks, security issues, and risks using world-class security researchers’ work regionally and globally. Leveraging user and entity behavioral analytics (UEBA), this innovative technology is designed to help enterprises focus on what is important and to identify security breaches before they cause damage.
