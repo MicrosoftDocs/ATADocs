@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Troubleshooting ATA using the ATA logs
-The ATA logs provide insight into what each component of ATA is doing at any giving point in time.
+The ATA logs provide insight into what each component of ATA is doing at any given point in time.
 
 ## ATA Gateway logs
 The ATA Gateway logs are located in a subfolder called **Logs** . In the default installation location, it can be found at: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.

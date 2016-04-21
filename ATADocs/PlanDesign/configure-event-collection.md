@@ -34,7 +34,7 @@ In addition to collecting and analyzing network traffic to and from the domain c
 ### SIEM/Syslog
 For ATA to be able to consume data from a Syslog server, you need to do the following:
 
--   Configure one of your ATA Gateway servers to listen to and accept events forwarded from the SIEM/Sylog server.
+-   Configure one of your ATA Gateway servers to listen to and accept events forwarded from the SIEM/Syslog server.
 
 -   Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
 
