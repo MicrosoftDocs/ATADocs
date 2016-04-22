@@ -181,7 +181,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 
     -   The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![](media/ATA-DNS-Suffix.png)
+        ![DNA Suffix diagram](media/ATA-DNS-Suffix.png)
 
         > [!NOTE]
         > If the ATA Gateway is a member of the domain, this is configured automatically.
