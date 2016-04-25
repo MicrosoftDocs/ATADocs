@@ -141,5 +141,5 @@ To enhance ATA detection of Pass-the-Hash, ATA needs Windows Event log ID 4776. 
 - [ATA prerequisites](/advanced-threat-analytics/PlanDesign/ata-prerequisites)
 - [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](../PlanDesign/configure-event-collection.md#configuring-windows-event-forwarding)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
