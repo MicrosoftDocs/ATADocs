@@ -99,5 +99,5 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Configure event collection](../plandesign/configure-event-collection.md)
+- [ATA prerequisites](../plandesign/ata-prerequisites.md)
