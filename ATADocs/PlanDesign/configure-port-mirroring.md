@@ -67,5 +67,5 @@ After configuring port mirroring, validate that port mirroring is working before
 
 ## See Also
 - [Validate port mirroring](validate-port-mirroring.md)
-- [Install ATA](/advanced-threat-analytics/DeployUse/install-ata)
+- [Install ATA](../DeployUse/install-ata.md)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

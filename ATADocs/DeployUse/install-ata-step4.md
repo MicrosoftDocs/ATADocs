@@ -32,7 +32,7 @@ ms.suite: ems
 [Step 5 »](install-ata-step5.md)
 
 ## Step 4. Install the ATA Gateway
-Before installing the ATA Gateway, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](/advanced-threat-analytics/plandesign/validate-port-mirroring) for more information.
+Before installing the ATA Gateway, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](../plandesign/validate-port-mirroring.md) for more information.
 
 > [!IMPORTANT]
 > Make sure that [KB2919355](http://support.microsoft.com/kb/2919355/) has been installed.  Run the following PowerShell cmdlet to check if the hotfix is installed:
@@ -80,5 +80,5 @@ Perform the following steps on the ATA Gateway server.
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Configure event collection](../plandesign/configure-event-collection.md)
+- [ATA prerequisites](../plandesign/ata-prerequisites.md)
