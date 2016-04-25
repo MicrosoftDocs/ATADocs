@@ -32,7 +32,7 @@ layout: HubPage
 
     <div id="journeys">
       <section class="container">
-        <h2 class="section-heading"><span class="icon icon-inheritance"></span> Stages</h2>
+    
         <ul class="journeys-list">
 
           <li class="journey-step">
