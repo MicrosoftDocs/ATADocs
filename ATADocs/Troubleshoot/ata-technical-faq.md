@@ -60,4 +60,4 @@ We recommend fast storage (not 7200 RPM disks) with low latency numbers (less th
 The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the ATA Center<br>2. A NIC to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the Lightweight Gateway
 ### What kind of integration does ATA have with SIEMs?
 ATA has a bi-directional integration with SIEMs as follows:<br>
-1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server that supports CEF format.<br>2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from [these SIEMs](/advanced-threat-analytics/PlanDesign/configure-event-collection#SIEMsupport).
+1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server that supports CEF format.<br>2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from [these SIEMs](/advanced-threat-analytics/PlanDesign/configure-event-collection.md#configuring-the-ata-gateway-to-listen-for-siem-events).
