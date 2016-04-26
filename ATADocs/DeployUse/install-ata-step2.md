@@ -36,7 +36,7 @@ The settings in the domain connectivity settings section apply to all ATA Gatewa
 
 To configure the Domain connectivity settings perform the following on the ATA Center server.
 
-1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](../understand/working-with-ata-console.md).
+1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console).
 
 2.  The first time you log into the ATA Console after the ATA Center has been installed, you will automatically be taken to the ATA Gateways configuration page. If you need to modify any of the settings afterwards, click the Settings icon and select **Configuration**.
 
@@ -60,5 +60,5 @@ To configure the Domain connectivity settings perform the following on the ATA C
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](../plandesign/configure-event-collection.md)
-- [ATA prerequisites](../plandesign/ata-prerequisites.md)
+- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)

@@ -64,5 +64,5 @@ Remember that it takes a minimum of three weeks for ATA to build behavioral prof
 ## See Also
 
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](../plandesign/configure-event-collection.md)
-- [ATA prerequisites](../plandesign/ata-prerequisites.md)
+- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
