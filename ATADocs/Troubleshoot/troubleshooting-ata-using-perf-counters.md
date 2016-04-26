@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Troubleshooting ATA using the performance counters
 The ATA performance counters provide insight into how well each component of ATA is performing. The components in ATA process data sequentially, so that when there's a problem, it causes a chain reaction that causes dropped traffic. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain.
-    Refer to [ATA architecture](../Understand/ata-architecture.md) to understand the flow of internal ATA components.
+    Refer to [ATA architecture](/advanced-threat-analytics/understand-explore/ata-architecture) to understand the flow of internal ATA components.
 
 **ATA component process**:
 
