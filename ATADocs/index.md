@@ -5,7 +5,7 @@ layout: HubPage
 title: Advanced Threat Analytics Documentation
 description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
 keywords: Advanced Threat Analytics Documentation, ATA documentation
-author: stevenpo
+author: msstevenpo
 manager: stevenpo
 ms.date: 04/28/2016
 ms.topic: hubpage
