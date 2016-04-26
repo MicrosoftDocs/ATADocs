@@ -60,6 +60,6 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 [Name of the capture network adapter »](modifying-ata-config-nicname.md)
 
 ## See Also
-- [Working with the ATA Console](../understand/working-with-ata-console.md)
+- [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console)
 - [Install ATA](install-ata.md)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

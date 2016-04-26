@@ -28,7 +28,7 @@ ms.suite: ems
 # ATA Prerequisites
 This article describes the requirements for a successful deployment of ATA in your environment.
 
-ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](../Understand/ata-architecture.md).
+ATA is comprised of two components, the ATA Center and the ATA Gateway. For more information about the ATA components, see [ATA architecture](/advanced-threat-analytics/understand-explore/ata-architecture).
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
@@ -56,7 +56,7 @@ This section lists information you should gather and accounts and network entiti
 
 -   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by  setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
--   It may be useful for you to have a list of all subnets used on your network for VPN and Wi-Fi, which reassign IP addresses between devices within a very short period of time (seconds or minutes).  You will want to identify these short-term lease subnets so that ATA can reduce their cache lifetime to accommodate the fast re-assignment between devices. See [Install ATA](../DeployUse/install-ata.md) for short-term lease subnet configuration.
+-   It may be useful for you to have a list of all subnets used on your network for VPN and Wi-Fi, which reassign IP addresses between devices within a very short period of time (seconds or minutes).  You will want to identify these short-term lease subnets so that ATA can reduce their cache lifetime to accommodate the fast re-assignment between devices. See [Install ATA](/advanced-threat-analytics/deploy-useinstall-ata) for short-term lease subnet configuration.
 
 ## ATA Center requirements
 This section lists the requirements for the ATA Center.
@@ -217,6 +217,6 @@ Access to the ATA Console is via a browser, supporting the following:
 -   Minimum screen width resolution of 1700 pixels
 
 ## See Also
-- [ATA architecture](../Understand/ata-architecture.md)
-- [Install ATA](../DeployUse/install-ata.md)
+- [ATA architecture](/advanced-threat-analytics/understand-explore/ata-architecture)
+- [Install ATA](/advanced-threat-analytics/deploy-useinstall-ata)
 - [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
