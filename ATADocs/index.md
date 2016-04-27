@@ -1,12 +1,26 @@
 ---
 asset_id: c4a97980-6e19-4d10-bf69-f0b338266efa
 layout: HubPage
+
+title: Advanced Threat Analytics Documentation
+description: Technical documentation for Microsoft Intune - Mobile Device and Application Management
+keywords: Advanced Threat Analytics Documentation, ATA documentation
+author: msstevenpo
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: hubpage
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.suite: ems
+ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
+
 ---
 # Microsoft Advanced Threat Analytics Documentation
 <article id="main">
     <section id="hero-content">
       <h1>Microsoft Advanced Threat Analytics Documentation</h1>
-      <h2>Microsoft Advanced Threat Analytics (ATA) is an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks</h2>
+      <h2>Learn how to deploy and manage Microsoft Advanced Threat Analytics (ATA), an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks.</h2>
       <h3>New to ATA? <a href="https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/">Visit our product page &rarr;</a></h3>
     </section>
 
