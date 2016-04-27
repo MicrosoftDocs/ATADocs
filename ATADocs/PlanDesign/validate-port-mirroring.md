@@ -51,7 +51,7 @@ The following steps walk you through the process for validating that port mirror
 
     > [!NOTE]
     > It is important to make sure you see traffic to and from the domain controllers.
-    >
+    
     > ![Start capture session image](media/ATA-Port-Mirroring-Capture-traffic.jpg)
 
 5.  If you only see traffic in one direction, you should work with your networking or virtualization teams to help troubleshoot your port mirroring configuration.
