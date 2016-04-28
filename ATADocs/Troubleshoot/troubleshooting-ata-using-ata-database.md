@@ -47,7 +47,8 @@ The default and most basic way to query the database is using the Mongo shell:
 
 The following example provides sample code using the syntax provided above. If you are investigating a suspicious activity that occurred on 20/10/2015 and want to learn more about the NTLM activities that "John Doe" performed on that day:<br /><br />First, find the ID of "John Doe"
 
-`db.UniqueEntity.find({Name: "John Doe"})`<br>Take a note of his ID as indicated by the value of "`_id`" For our example, let's assume the ID is "`123bdd24-b269-h6e1-9c72-7737as875351`"<br>Then, search for the collection with the closest date that is before the date you are looking for, in our example 20/10/2015.<br>Then, search for John Doe's account NTLM activities:<br>
+`db.UniqueEntity.find({Name: "John Doe"})`<br>Take a note of his ID as indicated by the value of "`_id`" For our example, let's assume the ID is "`123bdd24-b269-h6e1-9c72-7737as875351`"<br>Then, search for the collection with the closest date that is before the date you are looking for, in our example 20/10/2015.<br>Then, search for John Doe's account NTLM activities: 
+
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 ## ATA Configuration file
 The configuration of ATA is stored in the "SystemProfile" collection in the database.
