@@ -73,7 +73,7 @@ If your virtual domain controllers move between hosts, you need to perform one o
 -   There are some virtual switches that can send traffic between hosts.
 ### How do I back up ATA?
 There are 2 things to back up:
--   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](/advanced-threat-analytics/deploy-useata-database-management). 
+-   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](/advanced-threat-analytics/deploy-use/ata-database-management). 
 -   The configuration of ATA, which is stored in the database and is automatically backed up every hour. 
 ### What can ATA detect?
 ATA detects known malicious attacks and techniques, security issues, and risks.
