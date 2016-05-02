@@ -1,0 +1,82 @@
+---
+# required metadata
+
+title: Manage Telemetry Settings | Microsoft Advanced Threat Analytics
+description: Describes the data collected by ATA and provides steps to turn off data collection.
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# Manage Telemetry Settings
+Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
+
+## Data collected
+Collected data includes the following:
+
+-   Performance counters from both the ATA Center    and the ATA Gateway
+
+-   Product ID from licensed copies of ATA
+
+-   Deployment date of the ATA Center
+
+-   Number of deployed ATA Gateways
+
+-   The following Active Directory information:
+
+    -   Domain ID for the domain whose name would be the first domain when sorted alphabetically
+
+    -   Number of domain controllers
+
+    -   Number of domain controllers monitored by ATA via port mirroring
+
+    -   Number of Sites
+
+    -   Number of Computers
+
+    -   Number of Groups
+
+    -   Number of Users
+
+-   Suspicious Activities  – The following data is collected for each suspicious activity:
+
+    (Computer names, user names, and IP addresses are **not** collected)
+
+    -   Suspicious activity type
+
+    -   Suspicious activity ID
+
+    -   Status
+
+    -   Start and End Time
+
+    -   Input provided
+
+### Disable data collection
+Perform the following steps to stop collecting and sending telemetry data to Microsoft:
+
+1.  Log in to the ATA Console, click the three dots in the toolbar and select **About**.
+
+2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
+
+## See Also
+- [What's new in version 1.5](whats-new-version-1.5.md)
+- [What's new in version 1.4](whats-new-version-1.4.md)
+- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
