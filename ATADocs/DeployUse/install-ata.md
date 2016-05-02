@@ -1,0 +1,53 @@
+---
+# required metadata
+
+title: Install ATA - Complete | Microsoft Advanced Threat Analytics
+description: Walks you through the necessary steps to get ATA deployed, configured, and running.
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# Install ATA
+
+The following are the steps required to get ATA deployed, configured, and running.
+
+To configure ATA, follow these steps:
+
+-   [Pre-installation steps](install-ata-preinstall.md)
+
+-   [Step 1. Download and Install the ATA Center](install-ata-step1.md)
+
+-   [Step 2. Configure ATA Gateway domain connectivity settings](install-ata-step2.md)
+
+-   [Step 3. Download the ATA Gateway setup package](install-ata-step3.md)
+
+-   [Step 4. Install the ATA Gateway](install-ata-step4.md)
+
+-   [Step 5. Configure the ATA Gateway settings](install-ata-step5.md)
+
+-   [Step 6. Configure short-term lease subnets and Honeytoken user](install-ata-step6.md)
+
+
+## See Also
+
+- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
