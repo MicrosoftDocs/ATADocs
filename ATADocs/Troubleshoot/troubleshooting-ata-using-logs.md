@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Troubleshooting ATA using the ATA logs
-The ATA logs provide insight into what each component of ATA is doing at any giving point in time.
+The ATA logs provide insight into what each component of ATA is doing at any given point in time.
 
 ## ATA Gateway logs
 In this section, every reference to the ATA Gateway is relevant also for the ATA Lightweight Gateway. 

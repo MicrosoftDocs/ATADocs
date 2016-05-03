@@ -42,6 +42,6 @@ If you need to update or change your configuration after initial installation an
 -   [Change the name of the capture network adapter](modifying-ata-config-nicname.md)
 
 ## See Also
-- [Working with the ATA Console](/advanced-threat-analytics/understand/working-with-ata-console)
+- [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console)
 - [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

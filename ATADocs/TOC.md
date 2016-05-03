@@ -1,4 +1,4 @@
-# [Understand and explore](/understand/what-is-ata.md)
-# [Plan and design](/plandesign/ata-capacity-planning.md)
-# [Deploy and use](/deployuse/install-ata.md)
-# [Troubleshoot](/troubleshoot/troubleshooting-ata-using-logs.md)
+# [Understand and Explore](/understand-explore/what-is-ata)
+# [Plan and Design](/plan-design/ata-capacity-planning)
+# [Deploy and Use](/deploy-use/install-ata)
+# [Troubleshoot](/troubleshoot/troubleshooting-ata-using-logs)
