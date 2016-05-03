@@ -29,7 +29,7 @@ ms.suite: ems
 Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
 
 ## Data collected
-Collected data includes the following:
+Collected anonymized data includes the following:
 
 -   Performance counters from both the ATA Center    and the ATA Gateway
 
@@ -39,7 +39,7 @@ Collected data includes the following:
 
 -   Number of deployed ATA Gateways
 
--   The following Active Directory information:
+-   The following anonymized Active Directory information:
 
     -   Domain ID for the domain whose name would be the first domain when sorted alphabetically
 
@@ -55,7 +55,7 @@ Collected data includes the following:
 
     -   Number of Users
 
--   Suspicious Activities  – The following data is collected for each suspicious activity:
+-   Suspicious Activities  – The following anonymized data is collected for each suspicious activity:
 
     (Computer names, user names, and IP addresses are **not** collected)
 
