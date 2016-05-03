@@ -52,3 +52,11 @@ Refer to the ATA Performance counters guide to understand how to locate the bott
 |System.DirectoryServices.Protocols.LdapException: The LDAP server is unavailable.||AD Permissions on objects|
 |System.ServiceModel.FaultException: An error occurred when verifying security for the message.||Time sync between ATA Gateway and ATA Center|
 |Microsoft.Tri.Infrastructure.ContractException: Contract exception||Finish the configuration|
+
+
+## See Also
+- [ATA prerequisites](/advanced-threat-analytics/PlanDesign/ata-prerequisites)
+- [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning)
+- [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection#ATA_event_WEF)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

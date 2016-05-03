@@ -126,4 +126,4 @@ Anywhere in the console where there is a single entity presented, such as a user
 
 
 ## See Also
-[For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

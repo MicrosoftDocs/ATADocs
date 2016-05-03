@@ -133,3 +133,8 @@ The zip file includes the following:
 You will know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they are successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
 
 ![Updated gateways image](media/ATA-gw-updated.png)
+
+
+## See Also
+
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

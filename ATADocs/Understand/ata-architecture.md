@@ -30,11 +30,24 @@ The Advanced Threat Analytics architecture is detailed in this diagram:
 
 ![ATA architcture topology diagram](media/ATA-architecture-topology.jpg)
 
-ATA monitors your domain controller traffic by utilizing port mirroring to an ATA Gateway or by deploying the ATA Lightweight Gateway on the domain controller, as well as by looking at Windows events (forwarded directly from the domain controllers or from a SIEM server) and analyzing the data for attacks and threats.
+ATA monitors your domain controller network traffic by utilizing port mirroring to an ATA Gateway using physical or virtual switches, or by deploying the ATA Lightweight Gateway directly on your domain controllers, which removes the requirement for port mirroring. In addition, ATA can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats.
+This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATA: the ATA Gateway, ATA Lightweight Gateway (which has the same core functionality as the ATA Gateway) and the ATA Center.
 
-This section describes traffic flow and drills down into the main components of ATA: the ATA Gateway, the ATA Lightweight Gateway (which has the same core functionality as the ATA Gateway), and the ATA Center.
 
 ![ATA traffic flow diagram](media/ATA-traffic-flow.jpg)
+
+## Deployment options
+You can deploy ATA using the following combination of gateways:
+
+-	**Using only ATA Gateways** <br>
+If your ATA deployment contains only ATA Gateways, without any ATA Lightweight Gateways, all the domain controllers must be configured to enable port mirroring to an ATA Gateway or network TAPs must be in place.
+-	**Using only ATA Lightweight Gateways**<br>
+If your ATA deployment contains only ATA Lightweight Gateways, the ATA Lightweight Gateways are deployed on each domain controller and no additional servers or port mirroring configuration is necessary.
+-	**Using both ATA Gateways and ATA Lightweight Gateways**<br>
+If your ATA deployment includes both ATA Gateways and ATA Lightweight Gateways, where the ATA Lightweight Gateway is installed on some of your domain controllers (for example, all domain controllers in your branch sites) while other domain controllers are monitored by ATA Gateways (for example, the larger domain controllers in your main data centers).
+
+In all 3 scenarios, all the gateways send their data to the ATA Center.
+
 
 ## ATA Components
 ATA consists of the following:
@@ -112,6 +125,12 @@ The ATA Gateway receives network traffic and Windows Events from your network an
 |Entity Sender|The Entity Sender is responsible for sending the parsed and matched data to the ATA Center.|
 
 ### Gateway differences
+When deciding whether to use and ATA Gateway or ATA Lightweight Gateway, consider the following:
+
+-	You can depoloy the ATA Lightweight Gateway directly on domain controllers in your branch sites, without the need for additional hardware and port-mirroring configuration.
+-	You can deploy the ATA Lightweight Gateway directly on virtual domain controllers from any IaaS vendor.
+
+
 The following features work differently depending on whether you are running an ATA Gateway or an ATA Lightweight Gateway.
 
 -	**Domain synchronizer candidate**<br>
@@ -145,9 +164,9 @@ If Active Directory needs more compute, the quota needed by the ATA Lightweight 
 In order to work with ATA, make sure of the following:
 
 ### Port mirroring
-If you are using ATA Gateways, set up port mirroring from each of your domain controllers in the Active Directory forest being monitored, or use a network TAP. If only some, but not all, of your domain controllers have port mirroring enabled to ATA, detection will be less effective.
+If you are using ATA Gateways, you have to setup port mirroring for the domain controllers that will be monitored and set the ATA Gateway as the destination using the physical or virtual switches. Another option is to use network TAPs. ATA will work if some but not all of your domain controllers are monitored, but detections will be less effective.
 
-While port mirroring sends all the domain controller network traffic to the ATA Gateway, only a very small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
+While port mirroring mirrors all the domain controller network traffic to the ATA Gateway, only a very small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
 
 Your domain controllers and the ATA Gateways can be physical or virtual. For more information, see [Configure port mirroring](/advanced-threat-analytics/Plan-Design/configure-port-mirroring) .
 
@@ -167,4 +186,4 @@ To enhance ATA detection of Pass-the-Hash, Brute Force and Honey Tokens, ATA nee
 - [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection)
 - [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection#ATA_event_WEF)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

@@ -80,4 +80,4 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
 
 
 ## See Also
-[For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

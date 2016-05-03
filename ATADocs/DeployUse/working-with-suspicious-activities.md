@@ -113,6 +113,6 @@ To enable ATA to learn about your network with you, some suspicious activities (
 You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Resolved** or **Dismissed**.
 
 ## See Also
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Working with ATA detection settings](working-with-detection-settings.md)
 - [Modifying ATA configuration](modifying-ata-configuration.md)

@@ -59,4 +59,4 @@ The following steps walk you through the process for validating that port mirror
 ## See Also
 
 - [Configure port mirroring](configure-port-mirroring.md)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

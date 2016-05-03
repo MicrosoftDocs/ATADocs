@@ -61,3 +61,10 @@ This collection is backed up every hour by the ATA Center service to a file call
 It is possible to restore all the settings by running the following command:
 
 `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
+
+## See Also
+- [ATA prerequisites](/advanced-threat-analytics/PlanDesign/ata-prerequisites)
+- [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning)
+- [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection#ATA_event_WEF)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

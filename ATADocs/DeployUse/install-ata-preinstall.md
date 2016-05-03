@@ -39,6 +39,6 @@ ms.suite: ems
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
 - [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)

@@ -25,38 +25,8 @@ ms.suite: ems
 
 ---
 
-# ATA Planning
+# ATA Capacity Planning
 This topic helps you determine how many ATA servers will be needed to support your network, including understanding how many ATA Gateways and ATA Lightweight Gateways you need and server capacity for your ATA Center and ATA Gateways.
-
-## Deployment options
-You can deploy ATA using the following combination of gateways:
-
--	**Using only ATA Gateways** <br>
-If your ATA deployment contains only ATA Gateways, without any ATA Lightweight Gateways, all the domain controllers must be configured to enable port mirroring to an ATA Gateway or network TAPs must be in place.
--	**Using only ATA Lightweight Gateways**<br>
-If your ATA deployment contains only ATA Lightweight Gateways, the ATA Lightweight Gateways are deployed on each domain controller and no additional servers or port mirroring configuration is necessary.
--	**Using both ATA Gateways and ATA Lightweight Gateways**<br>
-If your ATA deployment includes both ATA Gateways and ATA Lightweight Gateways, where the ATA Lightweight Gateway is installed on some of your domain controllers (for example, all domain controllers in your branch sites) while other domain controllers are monitored by ATA Gateways (for example, the larger domain controllers in your main data centers).
-
-When deciding whether to use and ATA Gateway or ATA Lightweight Gateway, consider the following:
-
--	You can depoloy the ATA Lightweight Gateway directly on domain controllers in your branch sites, without the need for additional hardware and port-mirroring configuration.
--	You can deploy the ATA Lightweight Gateway directly on virtual domain controllers from any IaaS vendor.
-
-Consider the following when deciding how many ATA Gateways and ATA Lightweight Gateways to deploy on your network:<br>
-
--	**Active Directory forests and domains**<br>
-	ATA can monitor traffic from multiple domains within a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. A single ATA deployment should not be configured to monitor network traffic of domain controllers from different forests.
-
--	**Port Mirroring**<br>
-If your domain controllers cannot be covered with the ATA Lightweight Gateway due to the sizing requirements described below, port mirroring considerations will probably require you to deploy at least one ATA Gateway per data center or branch site.
-
--	**Capacity**<br>
-	Each ATA Gateway can parse and send a certain amount of traffic per second. If the domain controllers that you are monitoring are sending and receiving more traffic than the ATA Gateway can handle, you will need to add additional ATA Gateways according to your traffic volume.<br>
-
-
-Any domain controller that does not fit into the sizing requirements of the ATA Lightweight Gateway will require an ATA Gateway using port mirroring for that domain controller, as described below.
-
 
 ## ATA Center Sizing
 The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics. The required disk space for the ATA database on a per domain controller basis is defined below. If you have multiple domain controllers, sum up the required disk space per domain controller to calculate the full amount of space required for the ATA database.
@@ -81,6 +51,24 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > -  The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
 
 ## ATA Gateway Sizing
+
+Consider the following when deciding how many ATA Gateways to deploy.
+
+Most domain controllers can be covered by an ATA Lightweight Gateway, which should be planned according to the ATA Lightweight Gateway sizing table, below.
+
+If ATA Gateways are still required, the following are the considerations for how many ATA Gateways are required:<br>
+
+-	**Active Directory forests and domains**<br>
+	ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. A single ATA deployment should not be configured to monitor network traffic of domain controllers from different forests.
+
+-	**Port Mirroring**<br>
+Port mirroring considerations might require you to deploy multiple ATA Gateways per data center or branch site.
+
+-	**Capacity**<br>
+	Each ATA Gateway can parse and send a certain amount of traffic per second. If the domain controllers that you are monitoring are sending and receiving more traffic than the ATA Gateway can handle, you will need to add additional ATA Gateways according to your traffic volume.<br>
+
+
+Any domain controller that does not fit into the sizing requirements of the ATA Lightweight Gateway will require an ATA Gateway using port mirroring for that domain controller, as described below.
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored.
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|
@@ -107,7 +95,7 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 &#42;Total number of packets-per-second on the domain controller being monitored by the specific ATA Lightweight Gateway.
 &#42;&#42;Total amount of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
 &#42;&#42;&#42;Total amount of memory that this domain controller has installed.
-> [!NOTE]	If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway will not operate as expected and will monitor only partial traffic.
+> [!NOTE]	If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
 
 
 ## Domain controller traffic estimation
@@ -163,4 +151,4 @@ To determine packets per second, perform the following on each domain controller
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA architecture](/advanced-threat-analytics/Understand/ata-architecture)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

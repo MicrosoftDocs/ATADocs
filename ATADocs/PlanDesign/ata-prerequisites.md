@@ -249,4 +249,4 @@ Access to the ATA Console is via a browser, supporting the following:
 ## See Also
 - [ATA architecture](/advanced-threat-analytics/Understand/ata-architecture)
 - [Install ATA](/advanced-threat-analytics/DeployUse/install-ata)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
