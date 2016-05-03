@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: ATA Capacity Planning | Microsoft Advanced Threat Analytics
-description: Helps you determine how many ATA servers will be needed to support your network
+title: Planning your ATA Deployment | Microsoft Advanced Threat Analytics
+description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -25,45 +25,90 @@ ms.suite: ems
 
 ---
 
-# ATA Capacity Planning
-This topic helps you determine how many ATA servers will be needed to support your network.
+# ATA Planning
+This topic helps you determine how many ATA servers will be needed to support your network, including understanding how many ATA Gateways and ATA Lightweight Gateways you need and server capacity for your ATA Center and ATA Gateways.
+
+## Deployment options
+You can deploy ATA using the following combination of gateways:
+
+-	**Using only ATA Gateways** <br>
+If your ATA deployment contains only ATA Gateways, without any ATA Lightweight Gateways, all the domain controllers must be configured to enable port mirroring to an ATA Gateway or network TAPs must be in place.
+-	**Using only ATA Lightweight Gateways**<br>
+If your ATA deployment contains only ATA Lightweight Gateways, the ATA Lightweight Gateways are deployed on each domain controller and no additional servers or port mirroring configuration is necessary.
+-	**Using both ATA Gateways and ATA Lightweight Gateways**<br>
+If your ATA deployment includes both ATA Gateways and ATA Lightweight Gateways, where the ATA Lightweight Gateway is installed on some of your domain controllers (for example, all domain controllers in your branch sites) while other domain controllers are monitored by ATA Gateways (for example, the larger domain controllers in your main data centers).
+
+When deciding whether to use and ATA Gateway or ATA Lightweight Gateway, consider the following:
+
+-	You can depoloy the ATA Lightweight Gateway directly on domain controllers in your branch sites, without the need for additional hardware and port-mirroring configuration.
+-	You can deploy the ATA Lightweight Gateway directly on virtual domain controllers from any IaaS vendor.
+
+Consider the following when deciding how many ATA Gateways and ATA Lightweight Gateways to deploy on your network:<br>
+
+-	**Active Directory forests and domains**<br>
+	ATA can monitor traffic from multiple domains within a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. A single ATA deployment should not be configured to monitor network traffic of domain controllers from different forests.
+
+-	**Port Mirroring**<br>
+If your domain controllers cannot be covered with the ATA Lightweight Gateway due to the sizing requirements described below, port mirroring considerations will probably require you to deploy at least one ATA Gateway per data center or branch site.
+
+-	**Capacity**<br>
+	Each ATA Gateway can parse and send a certain amount of traffic per second. If the domain controllers that you are monitoring are sending and receiving more traffic than the ATA Gateway can handle, you will need to add additional ATA Gateways according to your traffic volume.<br>
+
+
+Any domain controller that does not fit into the sizing requirements of the ATA Lightweight Gateway will require an ATA Gateway using port mirroring for that domain controller, as described below.
+
 
 ## ATA Center Sizing
 The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics. The required disk space for the ATA database on a per domain controller basis is defined below. If you have multiple domain controllers, sum up the required disk space per domain controller to calculate the full amount of space required for the ATA database.
 
-|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|OS Storage (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;&#42;|
-|---------------------------|-------------------------|---------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1,000|4|48|200|1.5|45|30 (100)
-|10,000|4|48|200|15|450|200 (300)
-|40,000|8|64|200|60|1,800|500 (1,000)
-|100,000|12|96|200|150|4,500|1,000 (1,500)
-|200,000|16|128|200|300|9,000|2,000 (2,500)
+|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;&#42;|
+|---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
+|1,000|42|38|0.3|9|30 (100)
+|10,000|4|48|3|90|200 (300)
+|40,000|8|64|12|360|500 (1,000)
+|100,000|12|96|30|900|1,000 (1,500)
+|400,000|40|128|120|1,800|2,000 (2,500)
 &#42;Total daily average number of packets-per-second from all domain controllers being monitored by all ATA Gateways.
 
 &#42;&#42;This includes physical cores, not hyper-threaded cores.
 
 &#42;&#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
-> -   The ATA Center can handle an aggregated maximum of 200,000 frames per second (FPS) from all the monitored domain controllers.
-> -   For large deployments (starting at around 100,000 packets per second) we require that the journal of the database will be located on a different disk then the database.
+> -   The ATA Center can handle an aggregated maximum of 400,000 frames per second (FPS) from all the monitored domain controllers.
 > -   The amounts of storage dictated here are net values, you should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
-> -   If your free space reaches a minimum of either 20% or 100 GB, the oldest 24 hours of data will be deleted. This will continue to occur until either only two days of data or either 5% or 50 GB of free space remains at which point data collection will stop working.
+> -   If your free space reaches a minimum of either 20% or 100 GB, the oldest collection of data will be deleted. This will continue to occur until either only two days of data or either 5% or 50 GB of free space remains at which point data collection will stop working.
 > -  The storage latency for read and write activities should be below 10 ms.
 > -  The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
 
 ## ATA Gateway Sizing
-An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of  the domain controllers being monitored.
+An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored.
 
-|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|OS storage (GB)|
-|---------------------------|-------------------------|---------------|-------------------|
-|10,000|4|12|80|
-|20,000|8|24|100|
-|40,000|16|64|200|
+|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|
+|---------------------------|-------------------------|---------------|
+|1,000|1|6|
+|5,000|2|10|
+|10,000|3|12|
+|20,000|6|24|
+|50,000|16|48|
 &#42;Total number of packets-per-second from all domain controllers being monitored by the specific ATA Gateway.
 
 &#42;The total amount of domain controller port-mirrored traffic cannot exceed the capacity of the capture NIC on the ATA Gateway.
 
 &#42;&#42;Hyper-threading must be disabled.
+
+## ATA Lightweight Gateway Sizing
+An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates.
+
+|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)&#42;&#42;&#42;|
+|---------------------------|-------------------------|---------------|
+|1,000|2|6|
+|5,000|6|16|
+|10,000|10|24|
+&#42;Total number of packets-per-second on the domain controller being monitored by the specific ATA Lightweight Gateway.
+&#42;&#42;Total amount of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
+&#42;&#42;&#42;Total amount of memory that this domain controller has installed.
+> [!NOTE]	If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway will not operate as expected and will monitor only partial traffic.
+
 
 ## Domain controller traffic estimation
 There are various tools that you can use to discover the average packets per second of your domain controllers. If you do not have any tools that track this counter, you can use Performance Monitor to gather the required information.

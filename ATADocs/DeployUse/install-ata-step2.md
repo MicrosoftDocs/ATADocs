@@ -48,7 +48,8 @@ To configure the General ATA Gateway settings perform the following:
     |---------|------------|
     |**Username** (required)|Enter the read-only user name, for example: **user1**.|
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**. **Note:** Make sure this password is correct. If you save the wrong password, the ATA Service will stop running on the ATA Gateway servers.|
-    |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com||Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
+    |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
+	|Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
     ![ATA Domain connectivity settings image](media/ATA-Domain-Connectivity-User.JPG)
 
 
@@ -59,6 +60,6 @@ To configure the General ATA Gateway settings perform the following:
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
 - [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)

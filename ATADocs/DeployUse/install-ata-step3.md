@@ -32,17 +32,18 @@ ms.suite: ems
 [Step 4 »](install-ata-step4.md)
 
 ## Step 3. Download the ATA Gateway setup package
-After configuring the domain connectivity settings you can download the ATA Gateway setup package.
+After configuring the domain connectivity settings you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it will be installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see. 
 
 To download the ATA Gateway package:
 
-1.  On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
+1.  From the ATA Console, click on the settings icon and select **Configuration**.
 
     ![ATA gateway configuration settings](media/ATA-config-icon.JPG)
 
 2.  In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
 
 3.  Save the package locally.
+4.  Copy the package to the dedicated server or domain controller onto which you are installing the ATA Gateway. Alternatively, you can open the ATA Console from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following:
 
@@ -57,6 +58,6 @@ The zip file includes the following:
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
 - [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)

@@ -32,7 +32,7 @@ ms.suite: ems
 [Step 5 »](install-ata-step5.md)
 
 ## Step 4. Install the ATA Gateway
-Before installing the ATA Gateway, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](/advanced-threat-analytics/plandesign/validate-port-mirroring) for more information.
+Before installing the ATA Gateway on a dedicated server, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](/advanced-threat-analytics/plandesign/validate-port-mirroring) for more information.
 
 > [!IMPORTANT]
 > Make sure that [KB2919355](http://support.microsoft.com/kb/2919355/) has been installed.  Run the following PowerShell cmdlet to check if the hotfix is installed:
@@ -61,7 +61,7 @@ Perform the following steps on the ATA Gateway server.
     -   KB 3047154
 
         > [!IMPORTANT]
-        > -   Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
+        > -   Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
         > -   Do not install Message Analyzer, Wireshark, or other network capture software on the ATA Gateway. If you need to capture network traffic, install and use Microsoft Network Monitor 3.4.
 
     -   ATA Gateway service
@@ -70,7 +70,7 @@ Perform the following steps on the ATA Gateway server.
 
     -   Custom Performance Monitor data collection set
 
-5.  After the installation completes, click **Launch**  to open your browser and log in to the ATA Console.
+5.  After the installation completes, for the ATA Gateway, click **Launch**  to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
 
 
 >[!div class="step-by-step"]
@@ -79,6 +79,6 @@ Perform the following steps on the ATA Gateway server.
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
 - [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)

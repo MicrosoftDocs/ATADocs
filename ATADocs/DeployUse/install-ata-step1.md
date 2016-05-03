@@ -36,23 +36,23 @@ After you have verified that the server meets the requirements, you can proceed 
 
 Perform the following steps on the ATA Center server.
 
-1.  Download ATA from the [TechNet Evaluation Center](http://www.microsoft.com/en-us/evalcenter/).
+1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](http://www.microsoft.com/en-us/evalcenter/) or from [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads).
 
 2.  Log in to the computer onto which you are installing the ATA Center with a user who is a member of the local administrators group.
 
-3.  From an elevated command prompt, run Microsoft ATA Center Setup.EXE and follow the setup wizard.
+3.  Run Microsoft ATA Center Setup.EXE and follow the setup wizard.
 
-4.  If Microsoft .Net Framework is not installed, you will be prompted to install it when you start installation.
+4.  If Microsoft .Net Framework is not installed, you will be prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
 5.  On the **Welcome** page, select the language to be used for the ATA installation screens and click **Next**.
 
-6.  Read the Microsoft Software License Terms and if you accept the terms, click **Next**.
+6.  Read the Microsoft Software License Terms and if you accept the terms, click the check box and then click **Next**.
 
 7.  It is recommended that you set ATA to update automatically. If Windows isn't set to do this on your computer, you will get the **Use Microsoft Update to help keep your computer secure and up to date** screen. 
     ![Keep ATA up to date image](media/ata_ms_update.png)
 Select **Use Microsoft Update when I check for updates (recommended)**. This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
     ![Windows auto-update image](media/ata_installupdatesautomatically.png)
 
-9.  On the **Center Configuration** page, enter the following information based on your environment:
+8.  On the **ATA Center Configuration** page, enter the following information based on your environment:
 
     |Field|Description|Comments|
     |---------|---------------|------------|
@@ -64,7 +64,7 @@ Select **Use Microsoft Update when I check for updates (recommended)**. This wil
     |ATA Console SSL certificate|This is the certificate to be used by IIS.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment.|
     ![ATA center configuration image](media/ATA-Center-Configuration.JPG)
 
-10.  Click **Install** to install the ATA Center and its components and create the connection between the ATA Center and the ATA Console.
+10.  Click **Install** to install the ATA Center and its components.
     The following components are installed and configured during the installation of ATA Center:
 
     -   Internet Information Services (IIS)
@@ -79,16 +79,9 @@ Select **Use Microsoft Update when I check for updates (recommended)**. This wil
 
 11.  When the installation completes, click **Launch**  to connect to the ATA Console.
 At this point you will be brought automatically to the **General** settings page to continue the configuration and the deployment of the ATA Gateways.
+Because you are logging into the site using an IP address, you will receive a warning related to the certificate, this is normal and you should click **Continue to this website**.
 
 
-
-### Validate installation
-
-1.  Check to see that the service **Microsoft Advanced Threat Analytics Center** is running.
-
-2.  On the desktop click the Microsoft Advanced Threat Analytics shortcut to connect to the ATA Console. Log in with the same user credentials that you used to install the ATA Center. 
-
-3.  Review the error file in the **Microsoft.Tri.Center-Errors.log** file which can be found in the following default location: %programfiles%\Microsoft Advanced Threat Analytics\Center\Logs.
 
 >[!div class="step-by-step"]
 [« Pre-install](install-ata-preinstall.md)
@@ -96,6 +89,6 @@ At this point you will be brought automatically to the **General** settings page
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
 - [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)
