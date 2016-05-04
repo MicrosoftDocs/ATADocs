@@ -5,4 +5,4 @@
 ## [Troubleshoot using the logs](troubleshooting-ata-using-logs.md)
 ## [Troubleshooting using the performance counters](troubleshooting-ata-using-perf-counters.md)
 ## [Troubleshooting using the database](troubleshooting-ata-using-ata-database.md)
-## [Troubleshooting using known errors](troubleshooting-ata-using-known-errors.md)
+## [Troubleshooting using known errors](troubleshooting-ata-known-errors.md)
