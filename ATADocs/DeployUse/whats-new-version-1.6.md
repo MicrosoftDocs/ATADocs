@@ -73,6 +73,8 @@ ATA 1.6 includes improved detection logic that reduces false-positive and false-
 
 ### The ATA Lightweight Gateway
 This version of ATA introduces a new deployment option for the ATA Gateway, which allows an ATA Gateway to be installed directly on the Domain Controller. This deployment option removes non-critical functionality of the ATA Gateway and introduces dynamic resource management based on available resources on the DC, which makes sure the existing operations of the DC are not affected. The ATA Lightweight Gateway reduces the cost of ATA deployment. At the same time it makes deployment easier in branch sites, in which there is limited hardware resource capacity or inability to set up port-mirroring support.
+For more information about the ATA Lightweight Gateway, see [ATA architecture](/advanced-threat-analytics/understand-explore/ata-architecture#ATA Gateway and ATA Lightweight Gateway)
+For more information about deployment considerations and choosing the right type of gateways for you, see [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing the right gateways for your deployment)
 
 ### Automatic updates
 Starting with version 1.6, it is possible to update the ATA Center using Microsoft Update. In addition, the ATA Gateways can now be automatically updated using their standard communication channel to the ATA Center.
@@ -100,6 +102,24 @@ In deployments in which the database path is manually moved, ATA deployment does
     ![Failed readiness check](media/ata_failed_readinesschecks.png)
 	>[!Important]
 Before updating ATA to version 1.6, update the following registry key with the correct database path:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
+
+### Migration failure when updating from ATA 1.5
+When updating to ATA 1.6, the update process may fail with the following error code:
+
+    ![Migration error](media/migrationerror.png)
+
+If you see this error, review the deployment log in: **C:\Users\<User>\AppData\Local\Temp**, and look for the following exception:
+
+    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
+      E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.
+      E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
+
+**Workaround**: Send an email to ataeval@microsoft.com to request workaround steps.
+
+### Net Framework 4.6.1 requires restarting the server
+
+In some cases, the installation of .Net Framework 4.6.1 may require you to restart the server. Notice that clicking OK in the in the **Microsoft Advanced Threat Analytics Center Setup** dialog will automatically restart the server. This is especially important when installing the ATA Lightweight Gateway on a domain controller, as you may want to plan a maintenance window before the installation.
+    ![.Net Framework restart](media/ata-net-framework-restart.png)
 
 ### Historical network activities no longer migrated
 This version of ATA delivers an improved detection engine, which provides more accurate detection and reduces many false positive scenarios, especially for Pass-the-Hash.

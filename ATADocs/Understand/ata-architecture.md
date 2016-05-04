@@ -36,6 +36,19 @@ This section describes the flow of network and event capturing and drills down t
 
 ![ATA traffic flow diagram](media/ATA-traffic-flow.jpg)
 
+## ATA Components
+ATA consists of the following:
+
+-   **ATA Center** <br>
+The ATA Center receives data from any ATA Gateways and/or ATA Lightweight Gateways you deploy.
+-   **ATA Gateway**<br>
+The ATA Gateway is installed on a dedicated server that monitors the traffic from your domain controllers using either port mirroring or a network TAP.
+-   **ATA Lightweight Gateway**<br>
+The ATA Lightweight Gateway is installed directly on your domain controllers and monitors their traffic directly, without the need for a dedicated server or configuration of port mirroring. It is an alternative to the ATA Gateway.
+
+An ATA deployment can consist of a single ATA Center connected to all ATA Gateways, all ATA Lightweight Gateways or a combination of ATA Gateways and ATA Lightweight Gateways.
+
+
 ## Deployment options
 You can deploy ATA using the following combination of gateways:
 
@@ -49,17 +62,6 @@ If your ATA deployment includes both ATA Gateways and ATA Lightweight Gateways, 
 In all 3 scenarios, all the gateways send their data to the ATA Center.
 
 
-## ATA Components
-ATA consists of the following:
-
--   **ATA Center** <br>
-The ATA Center receives data from ATA Gateways and ATA Lightweight Gateways.
--   **ATA Gateway**<br>
-The ATA Gateway is installed on a dedicated computer that monitors the traffic from your domain controllers using either port mirroring or a network TAP.
--   **ATA Lightweight Gateway**<br>
-The ATA Lightweight Gateway is installed directly on your domain controllers and monitors their traffic directly, without the need for a dedicated server or configuration of port mirroring. It is an alternative to the ATA Gateway.
-
-An ATA deployment can consist of a single ATA Center connected to all ATA Gateways, all ATA Lightweight Gateways or a combination of ATA Gateways and ATA Lightweight Gateways.
 
 
 ## ATA Center
@@ -124,40 +126,34 @@ The ATA Gateway receives network traffic and Windows Events from your network an
 |Entity Resolver|The Entity Resolver takes the parsed data (network traffic and events) and resolves it data with Active Directory to find account and identity information. It is then matched with the IP addresses found in the parsed data. The Entity Resolver inspects the packet headers efficiently, to enable parsing of authentication packets for machine names, properties, and identities. The Entity Resolver combines the parsed authentication packets with the data in the actual packet.|
 |Entity Sender|The Entity Sender is responsible for sending the parsed and matched data to the ATA Center.|
 
-### Gateway differences
-When deciding whether to use and ATA Gateway or ATA Lightweight Gateway, consider the following:
-
--	You can deploy the ATA Lightweight Gateway directly on domain controllers in your branch sites, without the need for additional hardware and port-mirroring configuration.
--	You can deploy the ATA Lightweight Gateway directly on virtual domain controllers from any IaaS vendor.
-
--    Each ATA Gateway can parse and send a certain amount of traffic per second. If the domain controllers that you are monitoring are sending and receiving more traffic than the ATA Gateway can handle, you will need to add additional ATA Gateways according to your traffic volume. For more information see [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning).
-
-
+## ATA Lightweight Gateway features
 
 The following features work differently depending on whether you are running an ATA Gateway or an ATA Lightweight Gateway.
 
 -	**Domain synchronizer candidate**<br>
-The domain synchronizer gateway is responsible for synchronizing all entities from a specific Active 
-Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One gateway is chosen randomly, from the list of candidates, to serve as the domain synchronizer.
-If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, ATA will not be able to proactively synchronize entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results will be displayed.
-By default, all ATA Gateways are synchronizer candidates.
+The domain synchronizer gateway is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One gateway is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
+If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, ATA will not be able to proactively synchronize entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
+<br>If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results will be displayed.<br><br>
+By default, all ATA Gateways are synchronizer candidates.<br><br>
 Because all ATA Lightweight Gateways are more likely to be deployed in branch sites and on small domain controllers, they are not synchronizer candidates by default.
 
 
 -	**Resource limitations**<br>
-The ATA Lightweight Gateway includes a monitoring component which evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the ATA Lightweight Gateway process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.
-No matter what happens on the domain controller, this process always frees up resources to make sure the domain controller's core functionality is not affected.
+The ATA Lightweight Gateway includes a monitoring component which evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the ATA Lightweight Gateway process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
+No matter what happens on the domain controller, this process always frees up resources to make sure the domain controller's core functionality is not affected.<br><br>
 If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" will appear in the Health page.
 
 The following table provides an example of a domain controller with enough compute resource available to allow for a larger quota then is currently needed, so that all traffic is monitored:
 
-|------------|--------------|--------|---------|----------|
+||||||
+|-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Miscellaneous (other processes) |ATA Lightweight Gateway Quota|Gateway dropping|
 |30%|20%|10%|45%|No|
 
 If Active Directory needs more compute, the quota needed by the ATA Lightweight Gateway is reduced. In the following example, The ATA Lightweight Gateway needs more than the allocated quota and drops some of the traffic (monitoring only partial traffic):
 
-|------------|--------------|--------|---------|----------|
+||||||
+|-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Miscellaneous (other processes) |ATA Lightweight Gateway Quota|Is gateway dropping|
 |60%|15%|10%|15%|Yes|
 

@@ -45,7 +45,7 @@ Perform the following steps on the ATA Gateway server.
 
 1.  Extract the files from the zip file.
 
-2.  From an elevated command prompt, run Microsoft ATA Gateway Setup.exe and follow the setup wizard.
+2.  From an elevated command prompt, run **Microsoft ATA Gateway Setup.exe** and follow the setup wizard.
 
 3.  On the **Welcome** page, select your language and click **Next**.
 
@@ -72,7 +72,7 @@ Perform the following steps on the ATA Gateway server.
 
     -   Custom Performance Monitor data collection set
 
-5.  After the installation completes, for the ATA Gateway, click **Launch**  to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
+5.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
 
 
 >[!div class="step-by-step"]

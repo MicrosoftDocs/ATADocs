@@ -50,7 +50,9 @@ To configure the General ATA Gateway settings perform the following:
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**. **Note:** Make sure this password is correct. If you save the wrong password, the ATA Service will stop running on the ATA Gateway servers.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 	|Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
-    ![ATA Domain connectivity settings image](media/ATA-Domain-Connectivity-User.JPG)
+
+
+    ![ATA Domain connectivity settings image](media/ata-domain-connectivity-user.JPG)
 
 
 >[!div class="step-by-step"]

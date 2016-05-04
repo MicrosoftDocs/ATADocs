@@ -3,6 +3,7 @@
 ## [ATA Architecture](ata-architecture.md)
 ## [Working with the ATA console](working-with-ata-console.md)
 ## [Commonly asked questions about ATA](ata-common-questions.md)
+## [Technical FAQ](ata-technical-faq.md)
 # [Plan and Design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 # [Deploy and Use](/advanced-threat-analytics/deploy-use/install-ata)
 # [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
