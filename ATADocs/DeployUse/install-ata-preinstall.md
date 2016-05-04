@@ -29,7 +29,7 @@ ms.suite: ems
 
 ## Pre-installation steps
 
-1.  If you installed the ATA public preview version, see [What's new in version 1.5](whats-new-version-1.5.md) or [What's new in version 1.4](whats-new-version-1.4.md) for help uninstalling the ATA Preview version.
+1.  This procedure provides instructions for performing a fresh installation of ATA 1.6. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.6](ata-update-1.6-migration-guide.md).
 
 2.  Install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation will install this update and will require a restart in the middle of the ATA installation.
 
@@ -39,6 +39,6 @@ ms.suite: ems
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)

@@ -58,9 +58,12 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 8.  Run the following command: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>` where &lt;New DB Location&gt; is the new folder path.
 
+9.  Update HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath to the new folder path.
+
 9. Start the **Microsoft Advanced Threat Analytics Center** service.
 
 ## See Also
 - [ATA architecture](/advanced-threat-analytics/understand-explore/ata-architecture)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [FCheck out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+

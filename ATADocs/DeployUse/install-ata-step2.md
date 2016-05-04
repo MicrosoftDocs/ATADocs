@@ -31,25 +31,28 @@ ms.suite: ems
 [« Step 1](install-ata-step1.md)
 [Step 3 »](install-ata-step3.md)
 
-## Step 2. Configure ATA Gateway domain connectivity settings
-The settings in the domain connectivity settings section apply to all ATA Gateways managed by the ATA Center.
+## Step 2. Configure ATA Gateway general settings
+The settings in the **General** settings tab apply to all ATA Gateways managed by the ATA Center.
 
-To configure the Domain connectivity settings perform the following on the ATA Center server.
+To configure the General ATA Gateway settings perform the following:
 
 1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console).
 
-2.  The first time you log into the ATA Console after the ATA Center has been installed, you will automatically be taken to the ATA Gateways configuration page. If you need to modify any of the settings afterwards, click the Settings icon and select **Configuration**.
+2.  Click the Settings icon and select **Configuration**.
 
     ![ATA gateway configuration settings](media/ATA-config-icon.JPG)
 
-3.  On the **Gateways** page, click on **Domain connectivity settings**, enter the following information and click **Save**.
+3.  On the **General** tab, under **ATA Gateways**, enter the following information and click **Save**.
 
     |Field|Comments|
     |---------|------------|
     |**Username** (required)|Enter the read-only user name, for example: **user1**.|
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**. **Note:** Make sure this password is correct. If you save the wrong password, the ATA Service will stop running on the ATA Gateway servers.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
-    ![ATA Domain connectivity settings image](media/ATA-Domain-Connectivity-User.JPG)
+	|Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
+
+
+    ![ATA Domain connectivity settings image](media/ata-domain-connectivity-user.JPG)
 
 
 >[!div class="step-by-step"]
@@ -59,6 +62,6 @@ To configure the Domain connectivity settings perform the following on the ATA C
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)

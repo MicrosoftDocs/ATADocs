@@ -163,3 +163,5 @@ Technical support for Advanced Threat Analytics is available through [discussion
 
 ## See Also
  [ATA architecture](ata-architecture.md)
+
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Working with the ATA Console | Microsoft Advanced Threat Analytics
-description: Describes hwo to log into the ATA console and the components of the console
+description: Describes how to log into the ATA console and the components of the console
 keywords:
 author: rkarlin
 manager: stevenpo
@@ -35,7 +35,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
 ## Logging into the ATA Console
 
-1. In the ATA Center server, click the **Microsoft ATA Console**  icon on the desktop or open a browser and browse to the ATA Console.
+1. In the ATA Center server, click the **Microsoft ATA Console** icon on the desktop or open a browser and browse to the ATA Console.
 
     ![ATA server icon](media/ata-server-icon.png)
 
@@ -47,7 +47,7 @@ To allow a user to log in to the ATA Console without making them a local adminis
     ![ATA login screen image](media/ATA-log-in-screen.jpg)
 
     > [!NOTE]
-    > You have to log in with a user who is a member of the local administrator group OR of the  Microsoft Advanced Threat Analytics Administrators group.
+    > You have to log in with a user who is a member of the local administrator group OR of the Microsoft Advanced Threat Analytics Administrators group.
 
 ## The ATA Console
 
@@ -82,7 +82,7 @@ In the top menu, you will find a search bar. You can search for a specific user,
 
 ### Health Center
 
-The Health Center provides you with alerts when something isn't working properly in your ATA network.
+The Health Center provides you with alerts when something isn't working properly in your ATA deployment.
 
 ![ATA health center image](media/health-center.png)
 
@@ -92,7 +92,7 @@ Health Center alerts can be dismissed or resolved and are categorized High, Medi
 
 ### User and computer profiles
 
-ATA builds a profile for each user and computer in the domain. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources.
+ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources.
 
 ![User profile](media/user-profile.png)
 
@@ -126,4 +126,4 @@ Anywhere in the console where there is a single entity presented, such as a user
 
 
 ## See Also
-[For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
