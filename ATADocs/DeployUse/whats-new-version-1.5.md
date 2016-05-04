@@ -72,4 +72,4 @@ On the ATA Gateway, the only supported network capture software you can install 
 Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
 
 ## See Also
-[For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
