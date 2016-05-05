@@ -53,6 +53,5 @@
             }
         }
     ],
-    "notification_subscribers": [""],
-    "branches_to_filter": ["live"]
+    "notification_subscribers": [""]
 }
