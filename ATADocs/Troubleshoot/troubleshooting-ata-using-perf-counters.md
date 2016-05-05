@@ -102,8 +102,8 @@ The following is the list of main operating system counters to pay attention to:
 |\LogicalDisk(&#42;)\Disk Write Bytes/sec|The number of bytes per second that are being written to the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
 
 ## See Also
-- [ATA prerequisites](/advanced-threat-analytics/PlanDesign/ata-prerequisites)
-- [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning)
-- [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection#ATA_event_WEF)
+- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection.md#ATA_event_WEF)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

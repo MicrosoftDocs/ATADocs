@@ -33,7 +33,7 @@ ms.suite: ems
 
 ## Step 4. Install the ATA Gateway
 
-Before installing the ATA Gateway on a dedicated server, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](/advanced-threat-analytics/plan-design/validate-port-mirroring) for more information.
+Before installing the ATA Gateway on a dedicated server, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](validate-port-mirroring.md) for more information.
 
 
 > [!IMPORTANT]
@@ -43,7 +43,8 @@ Before installing the ATA Gateway on a dedicated server, validate that port mirr
 
 Perform the following steps on the ATA Gateway server.
 
-1.  Extract the files from the zip file.
+1.  Extract the files from the zip file. 
+> [!NOTE] Installing directly from the zip file will fail.
 
 2.  From an elevated command prompt, run **Microsoft ATA Gateway Setup.exe** and follow the setup wizard.
 
@@ -82,6 +83,6 @@ Perform the following steps on the ATA Gateway server.
 ## See Also
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 

@@ -38,7 +38,7 @@ Perform the following steps on the ATA Center server.
 
 1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](http://www.microsoft.com/en-us/evalcenter/) or from [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads).
 
-2.  Log in to the computer onto which you are installing the ATA Center with a user who is a member of the local administrators group.
+2.  Log in to the computer onto which you are installing the ATA Center as a user who is a member of the local administrators group.
 
 3.  Run **Microsoft ATA Center Setup.EXE** and follow the setup wizard.
 
@@ -83,15 +83,20 @@ Perform the following steps on the ATA Center server.
 At this point you will be brought automatically to the **General** settings page to continue the configuration and the deployment of the ATA Gateways.
 Because you are logging into the site using an IP address, you will receive a warning related to the certificate, this is normal and you should click **Continue to this website**.
 
+### Validate installation
+
+1.  Check to see that the service named **Microsoft Advanced Threat Analytics Center** is running.
+2.  On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the same user credentials that you used to install the ATA Center.
+
 
 
 >[!div class="step-by-step"]
-[« Pre-install](install-ata-preinstall.md)
+[« Pre-install](preinstall-ata.md)
 [Step 2 »](install-ata-step2.md)
 
 ## See Also
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 

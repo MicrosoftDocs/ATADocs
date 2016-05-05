@@ -28,8 +28,11 @@ ms.suite: ems
 # ATA Prerequisites
 This article describes the requirements for a successful deployment of ATA in your environment.
 
+>[!NOTE]
+>For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
 
-ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](/advanced-threat-analytics/Understand/ata-architecture).
+
+ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
 
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
@@ -47,12 +50,8 @@ ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight G
 ## Before you start
 This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
--   **Domain controllers** running Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2.
-Read only domain controllers (RODC) are supported.
-Server core is not supported.
 
-
--   **User account and password** with read access to **all objects** in the domains that will be monitored.
+-   User account and password with read access to all objects in the domains that will be monitored.
 
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
@@ -75,9 +74,7 @@ Installation of the ATA Center as a virtual machine is supported.
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 ### Server specifications
-The ATA database requires that you disable Non-uniform memory access (NUMA).
-This is done in the BIOS setting of the server.
-Your system may refer to NUMA as Node Interleaving, in which case you will have to enable Node Interleaving. See your BIOS documentation for more information.<br>
+The ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information.<br>
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed see [ATA capacity planning](ata-capacity-planning.md) for more details.
 
@@ -114,7 +111,8 @@ In this table, IP address 1 is bound to the ATA Center service and IP address 2 
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/en-us/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
 To ease the installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
-The certificate's Provider Type must be Cryptographic Service Provider (CSP).
+> [!NOTE]
+> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
 
 
 The ATA Center requires certificates for the following services:
@@ -136,7 +134,7 @@ Before installing ATA Gateway confirm that the following update has been install
 
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
-For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
+For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
@@ -197,14 +195,19 @@ The following table lists the minimum ports that the ATA Gateway requires config
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways do not have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.<br>
 To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
 
+> [!NOTE]
 The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
+
 A certificate supporting **Server Authentication** is required to be installed in the Computer store of the ATA Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
 ### General
-The ATA Lightweight Gateway supports installation on domain controllers running Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2.
-These domain controllers can be read only domain controllers (RODC).
+The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2.
+
+The domain controller can be a read only domain controller (RODC).
+
+The domain controller cannot be Server Core.
 
 ### Server specifications
 
@@ -236,7 +239,9 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 ### Certificates
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.
 To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
-The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
+> [!NOTE]
+The certificate's Provider Type must be Cryptographic Service Provider (CSP).
+
 A certificate supporting Server Authentication is required to be installed in the Computer store of the ATA Lightweight Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
 ## ATA Console
@@ -250,7 +255,7 @@ Access to the ATA Console is via a browser, supporting the following:
 
 ## See Also
 
-- [ATA architecture](/advanced-threat-analytics/Understand/ata-architecture)
+- [ATA architecture](ata-architecture.md)
 - [Install ATA](/advanced-threat-analytics/deploy-use/install-ata)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 

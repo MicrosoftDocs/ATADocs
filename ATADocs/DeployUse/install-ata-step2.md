@@ -36,7 +36,7 @@ The settings in the **General** settings tab apply to all ATA Gateways managed b
 
 To configure the General ATA Gateway settings perform the following:
 
-1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console).
+1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](working-with-ata-console.md).
 
 2.  Click the Settings icon and select **Configuration**.
 
@@ -52,7 +52,7 @@ To configure the General ATA Gateway settings perform the following:
 	|Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
 
 
-    ![ATA Domain connectivity settings image](media/ata-domain-connectivity-user.JPG)
+    ![ATA Domain connectivity settings image](media/ata-domain-connectivity-user.png)
 
 
 >[!div class="step-by-step"]
@@ -63,5 +63,5 @@ To configure the General ATA Gateway settings perform the following:
 ## See Also
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)

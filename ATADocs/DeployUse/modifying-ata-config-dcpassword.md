@@ -57,9 +57,8 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 >[!div class="step-by-step"]
 [« IIS certificate](modifying-ata-config-iiscert.md)
-[Name of the capture network adapter »](modifying-ata-config-nicname.md)
 
 ## See Also
-- [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

@@ -128,7 +128,7 @@ In Active Directory (AD) environments replication happens regularly between Doma
 
 ## What's next?
 
--   For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)
+-   For more information about how ATA fits into your network: [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture)
 
 -   To get started deploying ATA: [Install ATA](/advanced-threat-analytics/deploy-use/install-ata)
 

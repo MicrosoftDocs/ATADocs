@@ -63,7 +63,7 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 9. Start the **Microsoft Advanced Threat Analytics Center** service.
 
 ## See Also
-- [ATA architecture](/advanced-threat-analytics/understand-explore/ata-architecture)
+- [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [FCheck out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
