@@ -106,7 +106,7 @@ Before updating ATA to version 1.6, update the following registry key with the c
 ### Migration failure when updating from ATA 1.5
 When updating to ATA 1.6, the update process may fail with the following error code:
 
-    ![Migration error](media/migrationerror.png)
+    ![Migration error](media/ATA-GW-error.png)
 
 If you see this error, review the deployment log in: **C:\Users\<User>\AppData\Local\Temp**, and look for the following exception:
 
@@ -128,4 +128,5 @@ The ATA update procedure exports the data, in case you want it for future invest
 
 ## See Also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
