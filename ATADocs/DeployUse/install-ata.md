@@ -31,7 +31,6 @@ The following are the steps required to get ATA deployed, configured, and runnin
 
 To configure ATA, follow these steps:
 
--   [Pre-installation steps](install-ata-preinstall.md)
 
 -   [Step 1. Download and Install the ATA Center](install-ata-step1.md)
 
@@ -49,6 +48,6 @@ To configure ATA, follow these steps:
 ## See Also
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 

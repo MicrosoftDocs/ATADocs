@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA technical FAQ | Microsoft Advanced Threat Analytics
+title: ATA Frequently asked questions | Microsoft Advanced Threat Analytics
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: rkarlin
@@ -25,8 +25,12 @@ ms.suite: ems
 
 ---
 
-# ATA technical FAQ
+# ATA frequently asked questions
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
+
+
+## How is ATA licensed?
+For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
 
 
 ## What should I do if the ATA Gateway won’t start?
@@ -50,13 +54,13 @@ Encrypted traffic will not be analyzed (for example: LDAPS, IPSEC ESP).
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
 ## How many ATA Gateways do I need?
 
-First, it is recommended that you use ATA Lightweight Gateways on any domain controllers that can accommodate it; to determine this, see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA Lightweight Gateway Sizing). 
+First, it is recommended that you use ATA Lightweight Gateways on any domain controllers that can accommodate it; to determine this, see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning.md#ATA Lightweight Gateway Sizing). 
 
 If all domain controllers can be covered by ATA Lightweight Gateways then no ATA Gateways are needed.
 
 For any domain controllers that can't be covered by the ATA Lightweight Gateway, consider the following when deciding how many ATA Gateways you need:
 
- - The total amount of traffic your domain controllers produce, as well as the network architecture (in order to configure port-mirroring). To read more on how to determine how much traffic your domain controllers produce see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain controller traffic estimation).
+ - The total amount of traffic your domain controllers produce, as well as the network architecture (in order to configure port-mirroring). To read more on how to determine how much traffic your domain controllers produce see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning.md#Domain controller traffic estimation).
  - The operational limitations of port mirroring also determine how many ATA Gateways you need to support your domain controllers, for example: per switch, per datacenter, per region - each environment has its own considerations. 
 
 ## How much storage do I need for ATA?
@@ -85,7 +89,7 @@ There are 2 things to back up:
 
 ## What can ATA detect?
 ATA detects known malicious attacks and techniques, security issues, and risks.
-For the full list of ATA detections, see [What is Microsoft Advanced Threat Analytics?](/advanced-threat-analytics/understand-explore/what-is-ata).
+For the full list of ATA detections, see [What is Microsoft Advanced Threat Analytics?](what-is-ata.md).
 
 ## What kind of storage do I need for ATA?
 We recommend fast storage (7200 RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
@@ -97,18 +101,47 @@ The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect 
 ATA has a bi-directional integration with SIEMs as follows:
 
 1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
-2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from [these SIEMs](/advanced-threat-analytics/plan-design/configure-event-collection#SIEMsupport).
+2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from [these SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection.md#SIEMsupport).
 
 ## Can ATA monitor domain controllers visualized on your IaaS solution?
 
 Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.
 
+## Is this an on-premises or in-cloud offering?
+Microsoft Advanced Threat Analytics is an on-premises product.
+
+## Is this going to be a part of Azure Active Directory or on-premises Active Directory?
+This solution is currently a standalone offering—it is not a part of Azure Active Directory or on-premises Active Directory.
+
+## Do you have to write your own rules and create a threshold/baseline?
+With Microsoft Advanced Threat Analytics, there is no need to create rules, thresholds, or baselines and then fine-tune. ATA analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, ATA starts to detect behavioral suspicious activities. On the other hand, ATA will start detecting known malicious attacks and security issues immediately after deployment.
+
+## If you are already breached, will Microsoft Advanced Threat Analytics be able to identify abnormal behavior?
+Yes, even when ATA is installed after you have been breached, ATA can still detect suspicious activities of the hacker. ATA is not only looking at the user’s behavior but also against the other users in the organization security map. During the initial analysis time, if the attacker’s behavior is abnormal, then it is identified as an “outlier” and ATA keeps reporting on the abnormal behavior. Additionally ATA can detect the suspicious activity if the hacker attempts to steal another users credentials, such as Pass-the-Ticket, or attempts to perform a remote execution on one of the domain controllers.
+
+## Does this only leverage traffic from Active Directory?
+In addition to analyzing Active Directory traffic using deep packet inspection technology, ATA can also collect relevant events from your Security Information and Event Management (SIEM) and create entity profiles based on information from Active Directory Domain Services. ATA can also collect events from the event logs if the organization configures Windows Event Log forwarding.
+
+## What is port mirroring?
+Also known as SPAN (Switched Port Analyzer), port mirroring is a method of monitoring network traffic. With port mirroring enabled, the switch sends a copy of all network packets seen on one port (or an entire VLAN) to another port, where the packet can be analyzed.
+
+## Does ATA monitor only domain-joined devices?
+No. ATA monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
+
+## Does ATA monitor computer accounts as well as user accounts?
+Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities ATA monitors all computer accounts behavior and all other entities in the environment.
+
+## Can ATA support multi-domain and multi-forest?
+At general availability, Microsoft Advanced Threat Analytics will support multi-domain with the same forest boundary. The forest itself is the actual “security boundary”, so that providing multi-domain support will allow our customers to have 100% coverage of their environments with ATA.
+
+## Can you see the overall health of the deployment?
+Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you will be alerted as they occur.
 
 
 ## See Also
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/plan-design/configure-event-collection#ATA_event_WEF)
+- [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection.md#ATA_event_WEF)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 

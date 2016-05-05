@@ -67,7 +67,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 	>
 	>    ![ATA Gateway sync error](media/ataGW-not-synced.png)
 
-	>
+
 7.  After all the ATA Gateways have synced, click **Activate** to activate the new IP address.
 
     > [!NOTE]
@@ -80,6 +80,6 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 
 ## See Also
-- [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
