@@ -33,7 +33,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1,000|42|38|0.3|9|30 (100)
+|1,000|2|32|0.3|9|30 (100)
 |10,000|4|48|3|90|200 (300)
 |40,000|8|64|12|360|500 (1,000)
 |100,000|12|96|30|900|1,000 (1,500)
@@ -52,7 +52,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 
 ## Choosing the right gateways for your deployment
 It is recommended that you use an ATA Lightweight Gateway rather than an ATA Gateway whenever possible, as long as your domain controllers comply with the sizing table listed below.
-Most domain controllers can and should be covered with the ATA Lightweight Gateway unless your domain controllers don't fit with the requirements in the [ATA Lightweight Gateway sizing table](#ATA Lightweight Gateway Sizing).
+Most domain controllers can and should be covered with the ATA Lightweight Gateway unless your domain controllers don't fit with the requirements in the [ATA Lightweight Gateway sizing table](#ata-lightweight-gateway-sizing).
 The following are examples of scenarios in which all domain controllers should be covered by ATA Lightweight Gateways:
 •	Branch sites
 •	Virtual domain controllers from any IaaS vendor
@@ -67,7 +67,7 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 |---------------------------|-------------------------|---------------|
 |1,000|2|6|
 |5,000|6|16|
-|10,000|10|24|
+	|10,000|10|24|
 
 &#42;Total number of packets-per-second on the domain controller being monitored by the specific ATA Lightweight Gateway.
 
@@ -162,5 +162,5 @@ To determine packets per second, perform the following on each domain controller
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
-- [ATA architecture](/advanced-threat-analytics/understand-explore/ata-architecture)
+- [ATA architecture](ata-architecture.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

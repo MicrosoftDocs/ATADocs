@@ -33,8 +33,9 @@ Microsoft ATA v1.6 requires the installation of Microsoft .NET Framework 4.6.1.
 
 When you install or update ATA, .Net Framework 4.6.1 will be automatically installed as part of the deployment of Microsoft ATA.
 
-	[!Note]: The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
+> [!Note] The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
 When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). To avoid restarting the server as part of the installation, use the `-NoRestart` flag. When using the `-NoRestart` flag and restart will be required as part of the installation, the installer will pause until the server is restarted. To track the progress of the deployment, monitor ATA installer logs which are located in **%AppData%\Local\Temp**.
+
 
 ## Install the ATA Center
 
@@ -56,21 +57,16 @@ Use the following command to install the ATA Center:
 |LicenseAccepted|--LicenseAccepted|Yes|Indicates that the license was read and approved. Must be set on silent installation.|
 
 **Installation parameters**:
+
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-
-|InstallationPath|InstallationPath=“<InstallPath>”|No|Sets the path for the installation of ATA binaries. 
-Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-|DatabaseDataPath|DatabaseDataPath= “<DBPath>”|No|Sets the path for the ATA Database data folder.
-Default path:
-C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
+|InstallationPath|InstallationPath=“<InstallPath>”|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
+|DatabaseDataPath|DatabaseDataPath= “<DBPath>”|No|Sets the path for the ATA Database data folder. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Yes|Sets the IP address of the ATA Center Service|
 |CenterPort|CenterPort=<CenterPort>|Yes|Sets the network port of the ATA Center Service|
-|CenterCertificateThumbprint|CenterCertificateThumbprint=“<CertThumbprint>”|No|Sets the certificate thumbprint for the ATA Center Service. This Certificate is used to secure communication between the ATA Center and the ATA Gateway. 
-If not set, the installation will generate a self-signed certificate.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint=“<CertThumbprint>”|No|Sets the certificate thumbprint for the ATA Center Service. This Certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation will generate a self-signed certificate.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Yes|Sets the IP address of the ATA Console|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=”<CertThumbprint >”|No|Specifies the certificate thumbprint for the ATA Console. This Certificate is used to validate the identity of the ATA Console website.
-If not specified, the installation will generate a self-signed certificate|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=”<CertThumbprint >”|No|Specifies the certificate thumbprint for the ATA Console. This Certificate is used to validate the identity of the ATA Console website.If not specified, the installation will generate a self-signed certificate|
 
 **Examples**:
 To install the ATA Center with default installation paths and a single IP address:
@@ -93,6 +89,7 @@ Use the following command to update the ATA Center:
 
 
 **Installation options**:
+
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -117,6 +114,7 @@ Use the following command to perform a silent uninstall of the ATA Center:
      [--DeleteExistingDatabaseData]
 
 **Installation options**:
+
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
@@ -125,9 +123,11 @@ Use the following command to perform a silent uninstall of the ATA Center:
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Installation parameters**:
+
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
-|DeleteExistingDatabaseData|--<br>DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
+|DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
+
 **Examples**:
 To silently uninstall the ATA Center from the server, removing all existing database data:
 
@@ -154,11 +154,11 @@ Use the following command to silently install the ATA Gateway:
 |LicenseAccepted|--LicenseAccepted|Yes|Indicates that the license was read and approved. Must be set on silent installation.|
 
 **Installation parameters**:
+
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|No|Sets the certificate thumbprint for the ATA Center service. This certificate is used to secure communication between the ATA Center and the ATA Gateway. 
-If not set, the installation will generate a self-signed certificate.|
+|GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|No|Sets the certificate thumbprint for the ATA Center service. This certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation will generate a self-signed certificate.|
 |ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 
@@ -179,6 +179,7 @@ Use the following command to silently update the ATA Gateway:
 
 
 **Installation options**:
+
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -200,6 +201,7 @@ Use the following command to perform a silent uninstall of the ATA Gateway:
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/NoRestart] [/Help]
     
 **Installation options**:
+
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
@@ -225,5 +227,5 @@ To silently uninstall the ATA Gateway from the server:
 ## See Also
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [ATA prerequisites](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [Configure event collection](configure-event-collection.md)
+- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)

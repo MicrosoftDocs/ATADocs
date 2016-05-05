@@ -31,7 +31,7 @@ Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and
 ## Data collected
 Collected anonymized data includes the following:
 
--   Performance counters from both the ATA Center    and the ATA Gateway
+-   Performance counters from both the ATA Center and the ATA Gateway
 
 -   Product ID from licensed copies of ATA
 
@@ -77,6 +77,5 @@ Perform the following steps to stop collecting and sending telemetry data to Mic
 2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
 
 ## See Also
-- [What's new in version 1.5](whats-new-version-1.5.md)
-- [What's new in version 1.4](whats-new-version-1.4.md)
-- [heck out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [What's new in version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6.md)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

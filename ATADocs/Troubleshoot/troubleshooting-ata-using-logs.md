@@ -99,8 +99,8 @@ ATA Gateway and ATA Lightweight Gateway deployment logs:
 -   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** - This log file lists the steps in the process of the deployment of the ATA Gateway binaries. Its main use is tracking the deployment of the ATA Gateway binaries.
 
 ## See Also
-- [ATA prerequisites](/advanced-threat-analytics/PlanDesign/ata-prerequisites)
-- [ATA capacity planning](/advanced-threat-analytics/PlanDesign/ata-capacity-planning)
-- [Configure event collection](/advanced-threat-analytics/PlanDesign/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/PlanDesign/configure-event-collection#ATA_event_WEF)
+- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA capacity planning](/advanced-threat-analytics/deploy-use/ata-capacity-planning)
+- [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection.md#ATA_event_WEF)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
