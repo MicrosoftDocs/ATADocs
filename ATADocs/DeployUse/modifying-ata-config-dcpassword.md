@@ -29,7 +29,7 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« IIS certificate](modifying-ata-config-iiscert.md)
-[Name of the capture network adapter »](modifying-ata-config-nicname.md)
+
 
 ## Change the domain connectivity password
 If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service will stop running on the ATA Gateways.

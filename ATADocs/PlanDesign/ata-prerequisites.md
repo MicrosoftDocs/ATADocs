@@ -164,7 +164,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 -   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
+    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
     > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This will ensure that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports

@@ -28,7 +28,7 @@ ms.suite: ems
 # Install ATA - Step 1
 
 >[!div class="step-by-step"]
-[« Pre-install](install-ata-preinstall.md)
+
 [Step 2 »](install-ata-step2.md)
 
 ## Step 1. Download and Install the ATA Center

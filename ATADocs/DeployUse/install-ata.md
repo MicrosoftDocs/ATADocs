@@ -31,7 +31,6 @@ The following are the steps required to get ATA deployed, configured, and runnin
 
 To configure ATA, follow these steps:
 
--   [Pre-installation steps](install-ata-preinstall.md)
 
 -   [Step 1. Download and Install the ATA Center](install-ata-step1.md)
 

@@ -14,7 +14,6 @@
 ### [Step 5](install-ata-step5.md)
 ### [Step 6](install-ata-step6.md)
 ### [Silent installation](ata-silent-installation.md)
-### [Update to ATA 1.6 - migration guide](ata-update-1.6-migration-guide.md)
 ## [Operate ATA](operate-ata.md)
 ### [Change ATA configuration](modifying-ata-configuration.md)
 #### [Change ATA Center IP address](modifying-ata-config-centerip.md)
