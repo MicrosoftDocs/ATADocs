@@ -73,7 +73,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 2.  Run the installation file, Microsoft ATA Center Setup.exe, and follow the instructions on the screen to install the update.
 
 	1.  ATA 1.6 requires .Net Framework 4.6.1 to be installed. If not already installed, ATA installation will install .Net Framework 4.6.1 as part of the installation<br>
-	[!NOTE]The installation of .Net Framework 4.6.1 may require restarting the server. ATA installation will proceed only after the server was restarted.
+	> [!NOTE]The installation of .Net Framework 4.6.1 may require restarting the server. ATA installation will proceed only after the server was restarted.
 	5.  On the **Welcome** page, select your language and click **Next**.
 
 	6.  Read the End User License Agreement and if you accept the terms, click **Next**.

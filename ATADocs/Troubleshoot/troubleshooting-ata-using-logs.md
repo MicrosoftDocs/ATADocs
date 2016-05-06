@@ -102,5 +102,5 @@ ATA Gateway and ATA Lightweight Gateway deployment logs:
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA capacity planning](/advanced-threat-analytics/deploy-use/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection.md#ATA_event_WEF)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

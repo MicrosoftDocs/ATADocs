@@ -48,12 +48,12 @@ This section details possible errors in the deployments of ATA and the steps req
 |-------------|----------|---------|
 |.Net Framework 4.6.1 installation fails with error 0x800713ec|The pre-requisites for .Net Framework 4.6.1 are not installed on the server. |Before installing ATA, verify that the windows updates [KB2919442](https://www.microsoft.com/en-us/download/details.aspx?id=42135) and [KB2919355](https://support.microsoft.com/en-us/kb/2919355) are installed on the server.|
 
-    ![ATA .NET installation error image](media/ATA-NET-install-error.png)
+    ![ATA .NET installation error image](media/netinstallerror.png)
 
 
 ## See Also
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection.md#ATA_event_WEF)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

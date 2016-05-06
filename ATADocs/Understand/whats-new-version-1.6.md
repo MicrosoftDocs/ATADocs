@@ -74,7 +74,9 @@ ATA 1.6 includes improved detection logic that reduces false-positive and false-
 ### The ATA Lightweight Gateway
 This version of ATA introduces a new deployment option for the ATA Gateway, which allows an ATA Gateway to be installed directly on the Domain Controller. This deployment option removes non-critical functionality of the ATA Gateway and introduces dynamic resource management based on available resources on the DC, which makes sure the existing operations of the DC are not affected. The ATA Lightweight Gateway reduces the cost of ATA deployment. At the same time it makes deployment easier in branch sites, in which there is limited hardware resource capacity or inability to set up port-mirroring support.
 For more information about the ATA Lightweight Gateway, see [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-gateway-and-ata-lightweight-gateway)
-For more information about deployment considerations and choosing the right type of gateways for you, see [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateways-for-your-deployment)
+
+For more information about deployment considerations and choosing the right type of gateways for you, see [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)
+
 
 ### Automatic updates
 Starting with version 1.6, it is possible to update the ATA Center using Microsoft Update. In addition, the ATA Gateways can now be automatically updated using their standard communication channel to the ATA Center.
@@ -106,7 +108,7 @@ Before updating ATA to version 1.6, update the following registry key with the c
 ### Migration failure when updating from ATA 1.5
 When updating to ATA 1.6, the update process may fail with the following error code:
 
-    ![Migration error](media/migrationerror.png)
+    ![Migration error](media/ata-install-error.png)
 
 If you see this error, review the deployment log in: **C:\Users\<User>\AppData\Local\Temp**, and look for the following exception:
 
@@ -128,4 +130,5 @@ The ATA update procedure exports the data, in case you want it for future invest
 
 ## See Also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
