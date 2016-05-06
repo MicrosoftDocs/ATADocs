@@ -50,7 +50,7 @@ If you already have ATA version 1.5 deployed, this procedure will walk you throu
 
 Follow these steps to update to ATA version 1.6:
 
-1.  [Download update 1.6](http://aka.ms/ata1_6update)<br>
+1.  [Download update 1.6](http://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 In this version of, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
 
 2.  Update the ATA Center
