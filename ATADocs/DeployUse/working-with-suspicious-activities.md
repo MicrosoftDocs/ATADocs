@@ -42,7 +42,7 @@ Each suspicious activity has the following information:
 
 -   Ability to
 
-    -   Send the suspicious activity to other people in your organization via email. This requires an email client to be installed on the computer from which you are browsing.
+    -   Share the suspicious activity with other people in your organization via email.
 
     -   Export the suspicious activity to Excel.
 
@@ -97,7 +97,7 @@ To filter the suspicious activities list:
     Are activities that you manually dismissed. If ATA detects a similar suspicious activity a new detection will be created.
 
 ## Provide input on a suspicious activity
-To enable ATA to learn about your network with you, some suspicious activities (DNS reconnaissance, Pass the Ticket, Abnormal Behavior and Remote Execution) request your input to will enhance the detection of suspicious activities going forward.
+To enable ATA to learn about your network with you, some suspicious activities (DNS reconnaissance, Pass the Ticket, SMB Session Enumeration, Abnormal Behavior and Remote Execution) request your input to will enhance the detection of suspicious activities going forward.
 
 1.  For suspicious activities that enable you to provide input, the input question opens automatically. You will be asked to answer questions about activities on your network and whether or not they should be considered suspicious. In the below example, you are being asked if running scanning tools is allowed from a specific computer.
 
@@ -113,6 +113,6 @@ To enable ATA to learn about your network with you, some suspicious activities (
 You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Resolved** or **Dismissed**.
 
 ## See Also
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Working with ATA detection settings](working-with-detection-settings.md)
 - [Modifying ATA configuration](modifying-ata-configuration.md)
