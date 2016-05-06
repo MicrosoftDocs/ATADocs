@@ -50,7 +50,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > -  The storage latency for read and write activities should be below 10 ms.
 > -  The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
 
-## Choosing the right gateways for your deployment
+## Choosing the right gateway type for your deployment
 It is recommended that you use an ATA Lightweight Gateway rather than an ATA Gateway whenever possible, as long as your domain controllers comply with the sizing table listed below.
 Most domain controllers can and should be covered with the ATA Lightweight Gateway unless your domain controllers don't fit with the requirements in the [ATA Lightweight Gateway sizing table](#ata-lightweight-gateway-sizing).
 The following are examples of scenarios in which all domain controllers should be covered by ATA Lightweight Gateways:
@@ -82,7 +82,7 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 
 Consider the following when deciding how many ATA Gateways to deploy.
 
-Most domain controllers can be covered by an ATA Lightweight Gateway, which should be planned according to the ATA Lightweight Gateway sizing table, below.
+Most domain controllers can be covered by an ATA Lightweight Gateway, which should be planned according to the ATA Lightweight Gateway sizing table, above.
 
 If ATA Gateways are still required, the following are the considerations for how many ATA Gateways are required:<br>
 
