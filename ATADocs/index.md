@@ -108,13 +108,13 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">
-                    <h3>ATA prerequisites</h3>
+                    <h3>Capacity planning</h3>
                     <p>Determine how many ATA servers will be needed to support your network.</p>
                   </a>
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>ATA prerequisites/h3>
+                    <h3>ATA prerequisites<h3>
                     <p>Plan the requirements for a successful deployment of ATA in your environment.</p>
                   </a>
                 </li>
@@ -139,7 +139,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
-                    <h3>Installing ATA</h3>
+                    <h3>Pre-installing ATA</h3>
                     <p>Follow the steps before installing ATA.</p>
                   </a>
                 </li>

@@ -54,8 +54,9 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 It is recommended that you use an ATA Lightweight Gateway rather than an ATA Gateway whenever possible, as long as your domain controllers comply with the sizing table listed below.
 Most domain controllers can and should be covered with the ATA Lightweight Gateway unless your domain controllers don't fit with the requirements in the [ATA Lightweight Gateway sizing table](#ata-lightweight-gateway-sizing).
 The following are examples of scenarios in which all domain controllers should be covered by ATA Lightweight Gateways:
-•	Branch sites
-•	Virtual domain controllers from any IaaS vendor
+
+-	Branch sites
+-	Virtual domain controllers from any IaaS vendor
 
 
 ## ATA Lightweight Gateway Sizing

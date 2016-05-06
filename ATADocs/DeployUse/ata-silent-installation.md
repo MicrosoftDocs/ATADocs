@@ -157,7 +157,6 @@ Use the following command to silently install the ATA Gateway:
 
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-
 |GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|No|Sets the certificate thumbprint for the ATA Center service. This certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation will generate a self-signed certificate.|
 |ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
