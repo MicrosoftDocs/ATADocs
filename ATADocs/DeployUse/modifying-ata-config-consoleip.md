@@ -36,7 +36,7 @@ By default, the ATA Console URL is the IP address selected for the ATA Console I
 
 The URL is used in the following scenarios:
 
--   Installation of ATA Gateways – When an ATA Gateway is installed, it registers itself with the ATA Center. This registration process is accomplished by connecting to the ATA Console. If you enter an FQDN for the ATA Console URL, you need to ensure that the ATA Gateway can resolve the FQDN to the IP address that the ATA Console is bound to an IIS. Additionally, the URL is used to create the shortcut to the ATA Console on the ATA Gateways.
+-   Installation of ATA Gateways – When an ATA Gateway is installed, it registers itself with the ATA Center. This registration process is accomplished by connecting to the ATA Console. If you enter an FQDN for the ATA Console URL, you need to ensure that the ATA Gateway can resolve the FQDN to the IP address that the ATA Console is bound to in IIS. Additionally, the URL is used to create the shortcut to the ATA Console on the ATA Gateways.
 
 -   Alerts – When ATA sends out a SIEM or email alert, it includes a link to the suspicious activity. The host portion of the link is the ATA Console URL setting.
 
@@ -63,7 +63,7 @@ If you need to modify the IP address used by IIS for the ATA Console, follow the
 
     ![Edit site binding image](media/ATA-change-console-IP.jpg)
 
-6.  In the **Action** pane click **Restart**  under **Mange Website**.
+6.  In the **Action** pane click **Restart** under **Mange Website**.
 
 7.  Open an Administrator command prompt and type the following commands to update the HTTP.SYS driver:
 
@@ -83,6 +83,6 @@ If you need to modify the IP address used by IIS for the ATA Console, follow the
 
 
 ## See Also
-- [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

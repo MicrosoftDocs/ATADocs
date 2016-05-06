@@ -42,7 +42,7 @@ Short-term lease subnets are subnets in which the IP address assignment changes 
 3.  For the Honeytoken account SIDs, enter the SID for the user account that will have no network activity, and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
 
     > [!NOTE]
-    > To find the SID for a user, run the following Windows PowerShell cmdlet `Get-ADUser UserName`.
+    > To find the SID for a user, search for the user in the ATA Console, and then click on the **Account Info** tab. 
 
 4.  Configure exclusions: You can configure IP addresses to be excluded from specific suspicious activities. See [Working with ATA detection settings](working-with-detection-settings.md) for more information.
 
@@ -54,7 +54,7 @@ Congratulations, you have successfully deployed Microsoft Advanced Threat Analyt
 
 Check the attack time line to view detected suspicious activities and search for users or computers and view their profiles.
 
-Remember that it takes a minimum of three weeks for ATA to build behavioral profiles, so during the first three weeks you will not see any  suspicious behavior activities.
+ATA will start scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, will not be available until ATA has had time to build behavioral profiles (minimum of three weeks).
 
 
 >[!div class="step-by-step"]
@@ -63,6 +63,7 @@ Remember that it takes a minimum of three weeks for ATA to build behavioral prof
 
 ## See Also
 
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+
