@@ -1,7 +1,7 @@
 # [Understand and Explore](/advanced-threat-analytics/understand-explore/what-is-ata)
 # [Plan and Design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 # [Deploy and Use](install-ata.md)
-## [Pre-install steps](preinstall-ata.md)
+## [Before you install ATA](preinstall-ata.md)
 ### [Configure port mirroring](configure-port-mirroring.md)
 ### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)

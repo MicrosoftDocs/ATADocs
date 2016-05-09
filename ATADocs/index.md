@@ -139,8 +139,8 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               <ul class="row">
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
-                    <h3>Pre-installing ATA</h3>
-                    <p>Follow the steps before installing ATA.</p>
+                    <h3>Before you install ATA</h3>
+                    <p>Follow these steps before installing ATA.</p>
                   </a>
                 </li>
                 <li class="column-third">
