@@ -139,7 +139,7 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
-For more information, see [ATA capacity planning](ata-capacity-planning.md).
+For more information, see [ATA Lightweight Gateway requirements](/advanced-threat-analytics/plan-design/ata-prerequisites#ata-gateway-requirements).
 
 
 ### Time synchronization
@@ -211,10 +211,12 @@ The domain controller cannot be Server Core.
 
 ### Server specifications
 
-For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
-The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller, for more information see [ATA capacity planning](ata-capacity-planning.md).
+The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
+For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
+The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller, for more information see [ATA Lightweight Gateway requirements](/advanced-threat-analytics/plan-design/ata-prerequisites#ata-lightweight-gateway-requirements).
+
 ### Time synchronization
-The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
+The ATA Center server, the ATA Lightweight Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
 ### Network adapters
 The ATA Lightweight Gateway monitors the local traffic on all of the domain controller's network adapters. <br>
 After deployment, you can use the ATA Console if you ever want to modify which network adapters are monitored.
@@ -231,14 +233,14 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
 > [!NOTE]
-> As part of the resolution process performed by the ATA Lightweight Gateway, the following ports need to be open inbound on devices on the network from the ATA Gateways.
+> As part of the resolution process performed by the ATA Lightweight Gateway, the following ports need to be open inbound on devices on the network from the ATA Lightweight Gateways.
 >
 > -   NTLM over RPC
 > -   NetBIOS
 
 ### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.
-To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
+Make sure the ATA Center has access to your CRL distribution point. If the ATA Lightweight Gateways don't have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.
+To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Lightweight Gateway.
 > [!NOTE]
 The certificate's Provider Type must be Cryptographic Service Provider (CSP).
 

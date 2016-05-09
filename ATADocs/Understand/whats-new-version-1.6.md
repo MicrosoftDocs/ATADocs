@@ -108,15 +108,29 @@ Before updating ATA to version 1.6, update the following registry key with the c
 ### Migration failure when updating from ATA 1.5
 When updating to ATA 1.6, the update process may fail with the following error code:
 
-    ![Migration error](media/ata-install-error.png)
-
+![Update ATA to 1.6 error](http://i.imgur.com/QrLSApr.png)
 If you see this error, review the deployment log in: **C:\Users\<User>\AppData\Local\Temp**, and look for the following exception:
 
-    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error.
-      E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.
-      E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
+    System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
-**Workaround**: Send an email to ataeval@microsoft.com to request workaround steps.
+
+**Workaround**: 
+
+1.	Move the folder "data_old" to a temporary folder (usually located in %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
+2.	Uninstall the ATA Center v1.5, and delete all database data.
+![Uninstall ATA 1.5](http://i.imgur.com/x4nJycx.png)
+3.	Re-install ATA Center v1.5. Make sure to use the same configuration as the previous ATA 1.5 installation (Certificates, IP addresses, DB path, etc.).
+4.	Stop these services in the following order:
+	1.	Microsoft Advanced Threat Analytics Center
+	2.	MongoDB
+5.	Replace the MongoDB database files with the files in the “data_old” folder.
+6.	Start these services in the following order:
+	1.	MongoDB
+	2.	Microsoft Advanced Threat Analytics Center
+7.	Review the logs to verify that the product is running without errors.
+8.	[Download](http://aka.ms/ataremoveduplicateprofiles "Download") the "RemoveDuplicateProfiles.exe" tool and copy it to the main installation path (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+9.	From an elevated command prompt, run “RemoveDuplicateProfiles.exe” and wait until it completes successfully.
+10.	Update ATA to v1.6.
 
 ### Net Framework 4.6.1 requires restarting the server
 
