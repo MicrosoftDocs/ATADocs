@@ -10,7 +10,8 @@
           "Understand/**",
           "DeployUse/**",
           "PlanDesign/**",
-          "Troubleshoot/**"      
+          "Troubleshoot/**",
+          "**/Token/**"
         ]
       }
     ],
