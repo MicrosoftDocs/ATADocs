@@ -173,18 +173,14 @@ Your domain controllers and the ATA Gateways can be physical or virtual, see [Co
 ### Events
 To enhance ATA detection of Pass-the-Hash, Brute Force and Honey Tokens, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by using Windows Event Forwarding.
 
--   Configuring the ATA Gateway to listen for SIEM events
+-   Configuring the ATA Gateway to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection).
 
-    Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](/advanced-threat-analytics/plan-design/configure-event-collection).
-
--   Configuring Windows Event Forwarding
-
-    Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](/advanced-threat-analytics/plan-design/configure-event-collection#configuring-windows-event-forwarding.md).
+-   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding).
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
