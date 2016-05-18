@@ -23,14 +23,12 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
       <h2>Learn how to deploy and manage Microsoft Advanced Threat Analytics (ATA), an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks.</h2>
       <h3>New to ATA? <a href="https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/" target="_blank">Visit our product page &rarr;</a></h3>
     </section>
-
     <aside class="alert section-border">
       <p>Ready to get hands-on?</p>
       <ol class="action-list">
         <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Try Now</a></li>
       </ol>
     </aside>
-
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
@@ -43,14 +41,10 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
           <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">ATA capacity planning</a></li>        </ul>
       </div>
     </section>
-
     <div id="journeys">
       <section class="container">
-    
         <ul class="journeys-list">
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
                 <div class="title column-third">
@@ -84,9 +78,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
               </ul>
             </section>
           </li>
-
           <li class="journey-step">
-
             <header class="journey-step-header row">
               <a href="/advanced-threat-analytics/plan-design/ata-architecture">
                 <div class="title column-third">
@@ -97,7 +89,6 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
@@ -120,9 +111,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                 </li>
               </ul>
             </section>
-
           </li>
-
           <li class="journey-step">
             <header class="journey-step-header row">
               <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
@@ -134,7 +123,6 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                 </p>
               </a>
             </header>
-
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
