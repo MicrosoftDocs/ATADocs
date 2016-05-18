@@ -10,7 +10,8 @@
           "Understand/**",
           "DeployUse/**",
           "PlanDesign/**",
-          "Troubleshoot/**"      
+          "Troubleshoot/**",
+          "**/Token/**"
         ]
       }
     ],
@@ -22,12 +23,11 @@
           "**/*.jpg",
           "**/*.gif",
           "**/*.bmp",
-          "**/*.html",
-          "_themes/**"
+          "**/*.html"
           ],
         "exclude": [
           "**/obj/**",
-          "_themes/DocPacker/**",
+          "_themes/**",
           "Understand/**",
           "DeployUse/**",
           "PlanDesign/**",

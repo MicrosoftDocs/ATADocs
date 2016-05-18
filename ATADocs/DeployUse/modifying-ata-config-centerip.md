@@ -52,7 +52,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
     ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-3.  Select **ATA Center**.
+3.  Select **General**.
 
 4.  Under **ATA Center Service IP address: port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
 
@@ -61,6 +61,12 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 6.  You will see a notification of how many ATA Gateways have synced to the latest configuration.
 
     ![ATA Center synchronized gateways image](media/ATA-chge-IP-after-clicking-save.png)
+
+	>[!IMPORTANT]
+	>Before activating the new configuration, validate that all the ATA Gateways are synced with the latest configuration. Activating the new configuration before all the ATA Gateways are synced may cause the ATA Gateway to stop functioning as expected. If any of the ATA Gateways are not synced, you will get this error when you click Activate:
+	>
+	>    ![ATA Gateway sync error](media/ataGW-not-synced.png)
+
 
 7.  After all the ATA Gateways have synced, click **Activate** to activate the new IP address.
 
@@ -74,6 +80,6 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 
 ## See Also
-- [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)

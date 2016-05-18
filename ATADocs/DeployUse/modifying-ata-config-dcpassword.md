@@ -29,10 +29,10 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« IIS certificate](modifying-ata-config-iiscert.md)
-[Name of the capture network adapter »](modifying-ata-config-nicname.md)
+
 
 ## Change the domain connectivity password
-If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Service will stop running on the ATA Gateways.
+If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service will stop running on the ATA Gateways.
 
 If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following:
 `The supplied credential is invalid.`
@@ -45,11 +45,11 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
     ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-3.  Select **ATA Gateway**.
+3.  Select **General**.
 
     ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.JPG)
 
-4.  Under **Domain Connectivity Settings**, change the password.
+4.  Under **General**, change the password.
 
 5.  Click **Save**.
 
@@ -57,9 +57,8 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 >[!div class="step-by-step"]
 [« IIS certificate](modifying-ata-config-iiscert.md)
-[Name of the capture network adapter »](modifying-ata-config-nicname.md)
 
 ## See Also
-- [Working with the ATA Console](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [For support, check out our forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
