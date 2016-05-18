@@ -139,7 +139,6 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
-For more information, see [ATA Lightweight Gateway requirements](/advanced-threat-analytics/plan-design/ata-prerequisites#ata-gateway-requirements).
 
 
 ### Time synchronization
@@ -213,7 +212,7 @@ The domain controller cannot be Server Core.
 
 The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller, for more information see [ATA Lightweight Gateway requirements](/advanced-threat-analytics/plan-design/ata-prerequisites#ata-lightweight-gateway-requirements).
+The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
 ### Time synchronization
 The ATA Center server, the ATA Lightweight Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.

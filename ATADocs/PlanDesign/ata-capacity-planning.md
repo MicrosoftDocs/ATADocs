@@ -103,7 +103,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 |10,000|3|12|
 |20,000|6|24|
 |50,000|16|48|
-&#42;Total number of packets-per-second from all domain controllers being monitored by the specific ATA Gateway.
+&#42;Total average number of packets-per-second from all domain controllers being monitored by the specific ATA Gateway during their busiest hour of the day.
 
 &#42;The total amount of domain controller port-mirrored traffic cannot exceed the capacity of the capture NIC on the ATA Gateway.
 
@@ -151,7 +151,7 @@ To determine packets per second, perform the following on each domain controller
 
     You should now see the data collector set you just created with a green triangle indicating that it is working.
 
-11. After 24 hours, stop the data collector set, by right clicking the data collector set and selecting **Stop**
+11. After 24 hours, stop the data collector set, by right clicking the data collector set and selecting **Stop**.
 
     ![Stop data collector set image](media/ATA-traffic-estimation-12.png)
 
