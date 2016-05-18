@@ -48,7 +48,7 @@ This section details possible errors in the deployments of ATA and the steps req
 |-------------|----------|---------|
 |.Net Framework 4.6.1 installation fails with error 0x800713ec|The pre-requisites for .Net Framework 4.6.1 are not installed on the server. |Before installing ATA, verify that the windows updates [KB2919442](https://www.microsoft.com/en-us/download/details.aspx?id=42135) and [KB2919355](https://support.microsoft.com/en-us/kb/2919355) are installed on the server.|
 
-    ![ATA .NET installation error image](media/netinstallerror.png)
+![ATA .NET installation error image](media/netinstallerror.png)
 
 
 ## See Also

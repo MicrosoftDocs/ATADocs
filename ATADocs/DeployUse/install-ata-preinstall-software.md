@@ -25,11 +25,11 @@ ms.suite: ems
 
 ---
 
-# Install ATA - Pre-install steps
+# Configure software on your servers
 
-## Pre-installation steps
+## Steps to configure software on your servers
 
-1.  This procedure provides instructions for performing a fresh installation of ATA 1.6. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
+1.  The installation procedure provides instructions for performing a fresh installation of ATA 1.6. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
 
 2.  Install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation will install this update and will require a restart in the middle of the ATA installation.
 

@@ -52,7 +52,7 @@ The following known issues exist in this version.
 After updating your ATA deployment to ATA version 1.5, you get the following error when installing a new ATA Gateway:
 Microsoft Advanced Threat Analytics Gateway is not installed
 
-![ATA GW error](media/ATA-GW-error.png)
+![ATA GW error](media/ata-install-error.png)
 
 <b>Workaround:</b> Send an email to <ataeval@microsoft.com> to request workaround steps.
 ### Deployment
@@ -72,6 +72,9 @@ On the ATA Gateway, the only supported network capture software you can install 
 Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+
 [Update ATA to version 1.5 - migration guide](ata-update-1.5-migration-guide.md)
+
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
+
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
