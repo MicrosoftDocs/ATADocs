@@ -151,7 +151,7 @@ To determine packets per second, perform the following on each domain controller
 
     You should now see the data collector set you just created with a green triangle indicating that it is working.
 
-11. After 24 hours, stop the data collector set, by right clicking the data collector set and selecting **Stop**
+11. After 24 hours, stop the data collector set, by right clicking the data collector set and selecting **Stop**.
 
     ![Stop data collector set image](media/ATA-traffic-estimation-12.png)
 

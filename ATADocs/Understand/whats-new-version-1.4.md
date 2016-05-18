@@ -101,5 +101,7 @@ If you have more than one ATA Gateway and have Disconnected ATA Gateway alerts, 
 Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
+
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
