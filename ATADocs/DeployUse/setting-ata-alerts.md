@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Setting ATA Notifications
-ATA can notify you when it detects a suspicious activity, either by email or by using ATA event forwarding and forwarding the event to your SIEM/syslog server. Before selecting which notifications you want to receive, you have to [set up your email server and your Syslog server](#setting-syslog-email-server-settings).
+ATA can notify you when it detects a suspicious activity, either by email or by using ATA event forwarding and forwarding the event to your SIEM/syslog server. Before selecting which notifications you want to receive, you have to [set up your email server and your Syslog server](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
 > -   Email notifications include a link that will take the user directly to the suspicious activity that was detected. The host name portion of the link is taken from the setting of the ATA Console URL on the ATA Center page. By default, the ATA Console URL is the IP address selected during the installation of the ATA Center.  If you are going to configure email notifications it is recommended to use an FQDN as the ATA Console URL.

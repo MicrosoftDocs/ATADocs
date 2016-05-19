@@ -54,13 +54,13 @@ Encrypted traffic will not be analyzed (for example: LDAPS, IPSEC ESP).
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
 ## How many ATA Gateways do I need?
 
-First, it is recommended that you use ATA Lightweight Gateways on any domain controllers that can accommodate it; to determine this, see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
+First, it is recommended that you use ATA Lightweight Gateways on any domain controllers that can accommodate it; to determine this, see [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
 
 If all domain controllers can be covered by ATA Lightweight Gateways then no ATA Gateways are needed.
 
 For any domain controllers that can't be covered by the ATA Lightweight Gateway, consider the following when deciding how many ATA Gateways you need:
 
- - The total amount of traffic your domain controllers produce, as well as the network architecture (in order to configure port-mirroring). To read more on how to determine how much traffic your domain controllers produce see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation).
+ - The total amount of traffic your domain controllers produce, as well as the network architecture (in order to configure port-mirroring). To read more on how to determine how much traffic your domain controllers produce see [Domain controller traffic estimation](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation).
  - The operational limitations of port mirroring also determine how many ATA Gateways you need to support your domain controllers, for example: per switch, per datacenter, per region - each environment has its own considerations. 
 
 ## How much storage do I need for ATA?
@@ -75,7 +75,7 @@ To understand why an account is sensitive you can review its group membership to
 ## How do I monitor a virtual domain controller using ATA?
 Most virtual domain controllers can be covered by the ATA Lightweight Gateway, to determine whether the ATA Lightweight Gateway is appropriate for your environment, see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning).
 
-If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateways as described in [Configure port mirroring](/advanced-threat-analytics/plan-design/configure-port-mirroring).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following:
+If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateways as described in [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following:
 
 -   When the virtual domain controller moves to another host, preconfigure the ATA Gateway in that host to receive the traffic from the recently moved virtual domain controller.
 -   Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it is moved, the ATA Gateway moves with it.
