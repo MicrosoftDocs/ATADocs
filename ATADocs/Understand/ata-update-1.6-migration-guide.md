@@ -44,12 +44,16 @@ The update to ATA 1.6 provides improvements in the following areas:
 
 ## Updating ATA to version 1.6
 > [!NOTE]
-> If ATA is not installed in your environment, download the full version of ATA which includes version 1.6  and follow the standard installation procedure described in [Install ATA](/advanced-threat-analytics/deploy-use/install-ata).
+> If ATA is not installed in your environment, download the full version of ATA which includes version 1.6 and follow the standard installation procedure described in [Install ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
 If you already have ATA version 1.5 deployed, this procedure will walk you through the steps necessary to update your deployment.
 
+> [!NOTE] You cannot install ATA version 1.6 directly on top of ATA version 1.4. You must install ATA version 1.5 first. If you accidentally attempted to install ATA 1.6 without installing ATA 1.5, you will get an error telling you that **A newer version is already installed on your machine.** You must uninstall the remnants of ATA 1.6 that will remain on your computer - even though the installation failed - before you install ATA version 1.5.
+
 Follow these steps to update to ATA version 1.6:
 
+1. Make sure that before you start the upgrade process, you follow the procedure for handling the [Migration failure when updating to ATA version 1.6](whats-new-version-1.6#Migration-failure-when-updating-from-ATA-1.5)
+2. Make sure you have the necessary free space to complete the upgrade. You can perform the installation up to the readiness check to get an estimate of how much free space is needed, and then restart the upgrade after allocating the  necessary disk space. The upgrade will use at least 2% of the database size, see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning) for more information.
 1.  [Download update 1.6](http://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 In this version of, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
 
@@ -123,7 +127,7 @@ The zip file includes the following:
     > [!NOTE]
     > You can also use this ATA Gateway package to install new ATA Gateways.
 
-2.  Your previous settings will be preserved, but it may take a few minutes until for the service to restart.
+2.  Your previous settings will be preserved, but it may take a few minutes for the service to restart.
 
 3.  Repeat this step for all other ATA Gateways deployed.
 
