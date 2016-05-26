@@ -31,6 +31,10 @@ ms.suite: ems
 
 [Step 2 »](install-ata-step2.md)
 
+This installation procedure provides instructions for performing a fresh installation of ATA 1.6. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
+
+> [!IMPORTANT] Install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation will install this update and will require a restart in the middle of the ATA installation.
+
 ## Step 1. Download and Install the ATA Center
 After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
 
