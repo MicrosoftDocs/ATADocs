@@ -5,7 +5,6 @@
 ### [Configure port mirroring](configure-port-mirroring.md)
 ### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
-### [Configure software on your servers](install-ata-preinstall-software.md)
 ## [Install ATA](install-ata.md)
 ### [Step 1](install-ata-step1.md)
 ### [Step 2](install-ata-step2.md)
