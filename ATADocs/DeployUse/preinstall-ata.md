@@ -32,7 +32,7 @@ The following steps should be completed before installing ATA:
 1. [Configure port mirroring](configure-port-mirroring.md)
 2. [Validate port mirroring](validate-port-mirroring.md)
 3. [Configure event collection](configure-event-collection.md)
-4. [Configure software on your servers](install-ata-preinstall-software.md)
+
 
 
 ## See Also
