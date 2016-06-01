@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 # Troubleshooting ATA using the performance counters
-The ATA performance counters provide insight into how well each component of ATA is performing. The components in ATA process data sequentially, so that when there's a problem, it causes a chain reaction that causes dropped traffic. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain.
+The ATA performance counters provide insight into how well each component of ATA is performing. The components in ATA process data sequentially, so that when there's a problem, it might cause partial dropped traffic somewhere along the chain of components. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain. Use the data found in the performance counters to understand how each component is functioning.
     Refer to [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture) to understand the flow of internal ATA components.
 
 **ATA component process**:
@@ -37,7 +37,6 @@ The ATA performance counters provide insight into how well each component of ATA
 
 3.  This happens all the way back to the initial NetworkListener component which will drop traffic when it can no longer forward entities.
 
-4. Use the data found in the performance counters to understand how each component is functioning.
 
 ## ATA Gateway performance counters
 
@@ -65,7 +64,7 @@ Here is the list of the main ATA Gateway counters to pay attention to:
 > -   It is sometimes more convenient to monitor the full list of the counters by using the "Report" graph type (example: real time monitoring of all the counters)
 
 ## ATA Center performance counters
-You can observer the real-time performance status of the ATA Center by adding the ATA Center's performance counters.
+You can observe the real-time performance status of the ATA Center by adding the ATA Center's performance counters.
 
 This is done by opening "Performance Monitor" and adding all counters for the ATA Center. The name of the performance counter object is: "Microsoft ATA Center".
 
@@ -98,7 +97,7 @@ The following is the list of main operating system counters to pay attention to:
 |LogicalDisk(&#42;)\Avg. Disk sec/Write|The average latency for writing data to the disk (you should choose the database drive as the instance).|Should be less than 10 milliseconds|Check if there is a specific process that is utilizing the database drive more than it should.<br /><br />Consult with your storage team/vendor if this drive can deliver the current workload while having less than 10ms of latency. The current workload can be determined by using the disk utilization counters.|
 |\LogicalDisk(&#42;)\Disk Reads/sec|The rate of performing read operations to the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
 |\LogicalDisk(&#42;)\Disk Read Bytes/sec|The number of bytes per second that are being read from the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
-|\LogicalDisk(&#42;)\Disk Writes/sec|The rate of performing write operations to the disk.|No threshold|Disk utilization counters (can add insights when troubleshooting the storage latency)|
+|\LogicalDisk&#42;\Disk Writes/sec|The rate of performing write operations to the disk.|No threshold|Disk utilization counters (can add insights when troubleshooting the storage latency)|
 |\LogicalDisk(&#42;)\Disk Write Bytes/sec|The number of bytes per second that are being written to the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
 
 ## See Also
