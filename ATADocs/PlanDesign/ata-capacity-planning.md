@@ -59,8 +59,8 @@ In an ATA deployment any combination of the ATA Gateway types is supported:
 
 When deciding the Gateway deployment type, consider the following:
 
-|Benefits|Cost|Deployment topology|Domain controller use|
-|----|----|----|----|
+|Gateway type|Benefits|Cost|Deployment topology|Domain controller use|
+|----|----|----|----|-----|
 |ATA Gateway|The Out of band deployment makes it harder for attackers to discover ATA is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 50,000 packets per second|
 |ATA Lightweight Gateway|Doesn't require a dedicated server and port-mirroring configuration|Lower|Installed on the domain controller|Supports up to 10,000 packets per second|
 
