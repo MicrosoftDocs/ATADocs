@@ -71,6 +71,10 @@ This section lists the requirements for the ATA Center.
 The ATA Center supports installation on a server running Windows Server 2012 R2. 
 The ATA Center can be installed on a server that is a member of a domain or workgroup.
 
+Before installing ATA Center confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+
+You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
+
 Installation of the ATA Center as a virtual machine is supported. 
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
@@ -203,11 +207,14 @@ A certificate supporting **Server Authentication** is required to be installed i
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
 ### General
-The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2.
+The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2.
 
 The domain controller can be a read only domain controller (RODC).
 
 The domain controller cannot be Server Core.
+
+Before installing ATA Lightweight Gateway on a domain controller running Windows Server R2 SP1, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
 ### Server specifications
 
