@@ -51,16 +51,34 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > -  The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
 
 ## Choosing the right gateway type for your deployment
-It is recommended that you use an ATA Lightweight Gateway rather than an ATA Gateway whenever possible, as long as your domain controllers comply with the sizing table listed below.
-Most domain controllers can and should be covered with the ATA Lightweight Gateway unless your domain controllers don't fit with the requirements in the [ATA Lightweight Gateway sizing table](#ata-lightweight-gateway-sizing).
-The following are examples of scenarios in which all domain controllers should be covered by ATA Lightweight Gateways:
+In an ATA deployment any combination of the ATA Gateway types is supported:
 
--	Branch sites
--	Virtual domain controllers from any IaaS vendor
+- Only ATA Gateway(s)
+- Only ATA Lightweight Gateway(s)
+- A combination of both
+
+When deciding the Gateway deployment type, consider the following:
+
+|Gateway type|Benefits|Cost|Deployment topology|Domain controller use|
+|----|----|----|----|-----|
+|ATA Gateway|The Out of band deployment makes it harder for attackers to discover ATA is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 50,000 packets per second|
+|ATA Lightweight Gateway|Doesn't require a dedicated server and port-mirroring configuration|Lower|Installed on the domain controller|Supports up to 10,000 packets per second|
+
+The following are examples of scenarios in which domain controllers should be covered by the ATA Lightweight Gateway:
+
+
+- Branch sites
+
+- Virtual domain controllers deployed in the cloud (IaaS)
+
+
+The following are examples of scenarios in which domain controllers should be covered by the ATA Gateway:
+
+
+- Headquarter data centers (having domain controllers with more than 10,000 packets per seconds)
 
 
 ## ATA Lightweight Gateway Sizing
-It is recommended that you use an ATA Lightweight Gateway rather than an ATA Gateway whenever possible, as long as your domain controllers comply with the sizing table listed here.
 
 An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
 
@@ -81,10 +99,6 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 ## ATA Gateway Sizing
 
 Consider the following when deciding how many ATA Gateways to deploy.
-
-Most domain controllers can be covered by an ATA Lightweight Gateway, which should be planned according to the ATA Lightweight Gateway sizing table, above.
-
-If ATA Gateways are still required, the following are the considerations for how many ATA Gateways are required:<br>
 
 -	**Active Directory forests and domains**<br>
 	ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. A single ATA deployment should not be configured to monitor network traffic of domain controllers from different forests.
