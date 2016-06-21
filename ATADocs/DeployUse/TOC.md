@@ -19,7 +19,7 @@
 #### [Change ATA Center certificate](modifying-ata-config-centercert.md)
 #### [Change ATA console IP address](modifying-ata-config-consoleip.md)
 #### [Change IIS certificate](modifying-ata-config-iiscert.md)
-#### [Change domain controller password](modifying-ata-config-dcpassword.md)
+#### [Change domain connectivity password](modifying-ata-config-dcpassword.md)
 ### [Working with the ATA Console](working-with-ata-console.md)
 ### [Set ATA alerts](setting-ata-alerts.md)
 ### [Set Syslog and Email server settings](setting-syslog-email-server-settings.md)
