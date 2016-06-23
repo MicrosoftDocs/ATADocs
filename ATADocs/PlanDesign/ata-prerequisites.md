@@ -83,7 +83,7 @@ The ATA database necessitates that you **disable** Non-uniform memory access (NU
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed see [ATA capacity planning](ata-capacity-planning.md) for more details.
 
->[NOTE!] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+>[!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 ### Time synchronization
 The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
@@ -147,7 +147,7 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
->[NOTE!] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+>[!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 ### Time synchronization
 TThe ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
@@ -225,7 +225,7 @@ The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM instal
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
->[NOTE!] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+>[!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 
 ### Time synchronization
