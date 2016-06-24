@@ -54,7 +54,7 @@ Encrypted traffic will not be analyzed (for example: LDAPS, IPSEC ESP).
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
 ## How many ATA Gateways do I need?
 
-First, it is recommended that you use ATA Lightweight Gateways on any domain controllers that can accommodate it; to determine this, see [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
+First, it is recommended that you use ATA Lightweight Gateways on any domain controllers that can accommodate it; to determine this, see [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 If all domain controllers can be covered by ATA Lightweight Gateways then no ATA Gateways are needed.
 
@@ -101,7 +101,7 @@ The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect 
 ATA has a bi-directional integration with SIEMs as follows:
 
 1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
-2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from [these SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#SIEM-support).
+2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from [these SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
 
 ## Can ATA monitor domain controllers visualized on your IaaS solution?
 
