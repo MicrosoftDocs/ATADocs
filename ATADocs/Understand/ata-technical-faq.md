@@ -30,7 +30,7 @@ This article provides a list of frequently asked questions about ATA and provide
 
 
 ## How is ATA licensed?
-For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
+For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
 
 
 ## What should I do if the ATA Gateway won’t start?
@@ -143,5 +143,5 @@ Yes, you can view the overall health of the deployment as well as specific issue
 - [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

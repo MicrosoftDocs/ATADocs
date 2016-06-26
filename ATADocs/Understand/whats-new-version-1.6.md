@@ -154,6 +154,6 @@ The new and improved detection engine utilizes inline detection technology enabl
 The ATA update procedure exports the data, in case you want it for future investigation, to `<Center Installation Path>\Migration` as a JSON file.
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
