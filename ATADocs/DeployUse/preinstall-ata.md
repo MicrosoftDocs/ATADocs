@@ -37,7 +37,7 @@ The following steps should be completed before installing ATA:
 
 ## See Also
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 

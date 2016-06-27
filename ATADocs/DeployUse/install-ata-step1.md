@@ -40,7 +40,7 @@ After you have verified that the server meets the requirements, you can proceed 
 
 Perform the following steps on the ATA Center server.
 
-1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](http://www.microsoft.com/en-us/evalcenter/) or from [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads).
+1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](http://www.microsoft.com/evalcenter/) or from [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
 2.  Log in to the computer onto which you are installing the ATA Center as a user who is a member of the local administrators group.
 
@@ -100,7 +100,8 @@ Because you are logging into the site using an IP address, you will receive a wa
 
 ## See Also
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
