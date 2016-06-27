@@ -35,6 +35,6 @@ The following versions are available:
 - [What's new in ATA version 1.4](whats-new-version-1.4.md)
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Install the latest version of ATA from scratch](/advanced-threat-analytics/deploy-use/install-ata)

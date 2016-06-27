@@ -78,4 +78,4 @@ Perform the following steps to stop collecting and sending telemetry data to Mic
 
 ## See Also
 - [What's new in version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

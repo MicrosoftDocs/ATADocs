@@ -47,7 +47,7 @@ The ATA Gateway has the following logs:
 > [!NOTE]
 > The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed.
 
-### ATA Center logs
+## ATA Center logs
 The ATA Center logs are located in a subfolder called **Logs**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**".
 
 The ATA Center has the following logs:
@@ -64,7 +64,7 @@ The ATA Center has the following logs:
 > [!NOTE]
 > The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed.
 
-### ATA Console logs
+## ATA Console logs
 The ATA console logs (the management API logs) are located in a subfolder called  **Logs**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Management\Logs**.
 
 The ATA Console has the following logs:
@@ -81,7 +81,7 @@ The ATA Console has the following logs:
 > [!NOTE]
 > The first two log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed.
 
-### ATA Deployment logs
+## ATA Deployment logs
 The ATA deployment logs are located in the temp directory for the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above %temp%).
 
 ATA Center deployment logs:
@@ -103,4 +103,4 @@ ATA Gateway and ATA Lightweight Gateway deployment logs:
 - [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

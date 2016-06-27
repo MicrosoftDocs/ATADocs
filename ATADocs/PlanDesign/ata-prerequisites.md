@@ -71,7 +71,7 @@ This section lists the requirements for the ATA Center.
 The ATA Center supports installation on a server running Windows Server 2012 R2. 
 The ATA Center can be installed on a server that is a member of a domain or workgroup.
 
-Before installing ATA Center confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+Before installing ATA Center confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
@@ -115,7 +115,7 @@ In this table, IP address 1 is bound to the ATA Center service and IP address 2 
 |**Syslog** (optional)|TCP|514|Syslog server|Outbound|IP address 2|
 
 ### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/en-us/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
+Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
 To ease the installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
 > [!NOTE]
@@ -137,7 +137,7 @@ This section lists the requirements for the ATA Gateway.
 The ATA Gateway supports installation on a server running Windows Server 2012 R2.
 The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
 
-Before installing ATA Gateway confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+Before installing ATA Gateway confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
@@ -216,7 +216,7 @@ The domain controller can be a read only domain controller (RODC).
 
 The domain controller cannot be Server Core.
 
-Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2 SP1, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2 SP1, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
 ### Server specifications
@@ -272,5 +272,5 @@ Access to the ATA Console is via a browser, supporting the following:
 
 - [ATA architecture](ata-architecture.md)
 - [Install ATA](/advanced-threat-analytics/deploy-use/install-ata)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

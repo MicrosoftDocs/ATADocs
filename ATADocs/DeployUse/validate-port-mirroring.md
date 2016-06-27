@@ -225,4 +225,4 @@ Sample for how to run the script:
 ## See Also
 
 - [Configure port mirroring](configure-port-mirroring.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

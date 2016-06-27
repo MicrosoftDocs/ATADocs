@@ -66,7 +66,7 @@ When installing the ATA Gateway, make sure to extract the files from the zip fil
 After the configuration for an ATA Gateway is set, when the ATA Gateway starts for the first time, the "Not Synced" label is displayed until the service is fully started which may take up to 10 minutes the first time the service starts.
 
 ### Network Capture Software
-On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
+On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
 
 ### KB on virtualization host
 Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
@@ -77,4 +77,4 @@ Do not install KB 3047154 on a virtualization host. This may cause port mirrorin
 
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
 
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
