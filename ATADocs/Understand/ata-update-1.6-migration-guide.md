@@ -52,9 +52,9 @@ If you already have ATA version 1.5 deployed, this procedure will walk you throu
 
 Follow these steps to update to ATA version 1.6:
 
-1. To avoid upgrade issues, make sure you follow steps 8 to 10 of [Migration failure when updating to ATA version 1.6](whats-new-version-1.6#Migration-failure-when-updating-from-ATA-1.5)
+1. To avoid upgrade issues, make sure you follow steps 8 to 10 of **Migration failure when updating to ATA version 1.6** described in [What's new in ATA version 1.6](whats-new-version-1.6).
 2. Make sure you have the necessary free space to complete the upgrade. You can perform the installation up to the readiness check to get an estimate of how much free space is needed, and then restart the upgrade after allocating the  necessary disk space.
-1.  [Download update 1.6](http://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+1.  [Download update 1.6](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 In this version of, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
 
 2.  Update the ATA Center
@@ -141,4 +141,4 @@ You will know that all the ATA Gateways have been successfully updated when all 
 
 ## See Also
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
