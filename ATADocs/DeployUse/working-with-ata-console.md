@@ -39,15 +39,15 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
     ![ATA server icon](media/ata-server-icon.png)
 
-    > [!NOTE]
-    > You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
+>[!NOTE]
+> You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
 2.  Enter your username and password and click **Log in**.
 
 ![ATA login screen image](media/ATA-log-in-screen.jpg)
 
-    > [!NOTE]
-    > You have to log in with a user who is a member of the local administrator group OR of the Microsoft Advanced Threat Analytics Administrators group.
+> [!NOTE]
+> You have to log in with a user who is a member of the local administrator group OR of the Microsoft Advanced Threat Analytics Administrators group.
 
 ## The ATA Console
 
@@ -126,4 +126,4 @@ Anywhere in the console where there is a single entity presented, such as a user
 
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

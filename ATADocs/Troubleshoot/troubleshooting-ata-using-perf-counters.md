@@ -105,4 +105,4 @@ The following is the list of main operating system counters to pay attention to:
 - [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

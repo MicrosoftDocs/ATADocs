@@ -216,7 +216,7 @@ Set the **Protocol** to **HTTP** and the **Port** to **5985**.<br>
 > [!NOTE]
 When you enable this setting the ATA Gateway will look in the Forwarded Events log for Windows Events that have been forwarded to it from the domain controllers.
 
-For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/en-us/library/cc748890)
+For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
 
 ## See Also
 - [Install ATA](install-ata.md)

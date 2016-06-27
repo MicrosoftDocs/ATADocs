@@ -42,4 +42,4 @@ If you need to update or change your configuration after initial installation an
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

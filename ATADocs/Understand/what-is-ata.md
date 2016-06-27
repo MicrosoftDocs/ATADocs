@@ -133,4 +133,4 @@ In Active Directory (AD) environments replication happens regularly between Doma
 -   To get started deploying ATA: [Install ATA](/advanced-threat-analytics/deploy-use/install-ata)
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

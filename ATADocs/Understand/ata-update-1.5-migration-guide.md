@@ -136,4 +136,4 @@ You will know that all the ATA Gateways have been successfully updated when all 
 
 ## See Also
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
