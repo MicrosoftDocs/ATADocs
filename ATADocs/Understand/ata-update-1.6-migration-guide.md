@@ -43,8 +43,7 @@ The update to ATA 1.6 provides improvements in the following areas:
 -   Support for IBM QRadar
 
 ## Updating ATA to version 1.6
-> [!NOTE]
-> If ATA is not installed in your environment, download the full version of ATA which includes version 1.6 and follow the standard installation procedure described in [Install ATA](/advanced-threat-analytics/deploy-use/install-ata).
+> [!NOTE] If ATA is not installed in your environment, download the full version of ATA which includes version 1.6 and follow the standard installation procedure described in [Install ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
 If you already have ATA version 1.5 deployed, this procedure will walk you through the steps necessary to update your deployment.
 
@@ -52,7 +51,7 @@ If you already have ATA version 1.5 deployed, this procedure will walk you throu
 
 Follow these steps to update to ATA version 1.6:
 
-1. To avoid upgrade issues, make sure you follow steps 8 to 10 of **Migration failure when updating to ATA version 1.6** described in [What's new in ATA version 1.6](whats-new-version-1.6).
+1. To avoid upgrade issues, make sure you follow steps 8 to 10 of **Migration failure when updating to ATA version 1.6** described in [What's new in ATA version 1.6](whats-new-version-1.6.md).
 2. Make sure you have the necessary free space to complete the upgrade. You can perform the installation up to the readiness check to get an estimate of how much free space is needed, and then restart the upgrade after allocating the  necessary disk space.
 1.  [Download update 1.6](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 In this version of, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
@@ -96,8 +95,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
     ![Outdated gateways image](media/ATA-center-outdated.png)
 
-> [!IMPORTANT]
-> - Update all the ATA Gateways to make sure ATA functions properly.
+> [!IMPORTANT] Update all the ATA Gateways to make sure ATA functions properly.
 
 ### Step 2. Download the ATA Gateway setup package
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package.
@@ -124,15 +122,13 @@ The zip file includes the following:
 
 1.  On each ATA Gateway, extract the files from the ATA Gateway package and run the file **Microsoft ATA Gateway Setup.exe**.
 
-    > [!NOTE]
-    > You can also use this ATA Gateway package to install new ATA Gateways.
+    > [!NOTE] You can also use this ATA Gateway package to install new ATA Gateways.
 
 2.  Your previous settings will be preserved, but it may take a few minutes for the service to restart.
 
 3.  Repeat this step for all other ATA Gateways deployed.
 
-> [!NOTE]
-> After successfully updating an ATA Gateway, the outdated notification for the specific ATA Gateway will be resolved.
+> [!NOTE] After successfully updating an ATA Gateway, the outdated notification for the specific ATA Gateway will be resolved.
 
 You will know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they are successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
 
