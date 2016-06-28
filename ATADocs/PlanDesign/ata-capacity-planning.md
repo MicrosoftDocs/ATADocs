@@ -30,7 +30,8 @@ This topic helps you determine how many ATA servers will be needed to support yo
 
 ## ATA Center Sizing
 The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics. The required disk space for the ATA database on a per domain controller basis is defined below. If you have multiple domain controllers, sum up the required disk space per domain controller to calculate the full amount of space required for the ATA database.
-> [!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+> [!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -82,8 +83,9 @@ The following are examples of scenarios in which domain controllers should be co
 ## ATA Lightweight Gateway Sizing
 
 An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
-> [!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-> 
+> [!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
 |1,000|2|6|
@@ -95,7 +97,8 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 &#42;&#42;Total amount of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
 
 &#42;&#42;&#42;Total amount of memory that this domain controller has installed.
-> [!NOTE]	If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
+> [!NOTE]	
+> If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
 
 
 ## ATA Gateway Sizing
@@ -112,8 +115,9 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 	An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored. 
 <br>
 
-> [!NOTE] Dynamic memory is not supported.
-> 
+> [!NOTE] 
+> Dynamic memory is not supported.
+
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|
 |---------------------------|-------------------------|---------------|
 |1,000|1|6|

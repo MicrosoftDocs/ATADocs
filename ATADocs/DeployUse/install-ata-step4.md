@@ -44,7 +44,8 @@ Before installing the ATA Gateway on a dedicated server, validate that port mirr
 Perform the following steps on the ATA Gateway server.
 
 1.  Extract the files from the zip file. 
-> [!NOTE] Installing directly from the zip file will fail.
+> [!NOTE] 
+> Installing directly from the zip file will fail.
 
 2.  From an elevated command prompt, run **Microsoft ATA Gateway Setup.exe** and follow the setup wizard.
 

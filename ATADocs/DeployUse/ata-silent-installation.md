@@ -33,7 +33,8 @@ Microsoft ATA v1.6 requires the installation of Microsoft .NET Framework 4.6.1.
 
 When you install or update ATA, .Net Framework 4.6.1 will be automatically installed as part of the deployment of Microsoft ATA.
 
-> [!Note] The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
+> [!Note] 
+> The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
 When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). To avoid restarting the server as part of the installation, use the `-NoRestart` flag. When using the `-NoRestart` flag and restart will be required as part of the installation, the installer will pause until the server is restarted. To track the progress of the deployment, monitor ATA installer logs which are located in **%AppData%\Local\Temp**.
 
 
