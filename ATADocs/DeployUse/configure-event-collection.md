@@ -176,7 +176,8 @@ Message is the original event text from the Windows event
 
 Make sure to have \t between the key=value pairs.
 
->[!NOTE] Using WinCollect for Windows event collection is not supported.
+>[!NOTE] 
+> Using WinCollect for Windows event collection is not supported.
 
 ## Configuring Windows Event Forwarding
 If you do not have a SIEM server you can configure your domain controllers to forward Windows Event ID 4776 directly to one of your ATA Gateways.
@@ -214,7 +215,7 @@ Set the **Protocol** to **HTTP** and the **Port** to **5985**.<br>
 8. On the ATA Gateway configuration page, enable **Windows Event Forwarding Collection**.
 
 > [!NOTE]
-When you enable this setting the ATA Gateway will look in the Forwarded Events log for Windows Events that have been forwarded to it from the domain controllers.
+> When you enable this setting the ATA Gateway will look in the Forwarded Events log for Windows Events that have been forwarded to it from the domain controllers.
 
 For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
 
