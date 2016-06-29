@@ -105,7 +105,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>ATA prerequisites<h3>
+                    <h3>ATA prerequisites</h3>
                     <p>Plan the requirements for a successful deployment of ATA in your environment.</p>
                   </a>
                 </li>
