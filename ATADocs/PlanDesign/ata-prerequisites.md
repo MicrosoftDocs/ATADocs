@@ -29,7 +29,7 @@ ms.suite: ems
 This article describes the requirements for a successful deployment of ATA in your environment.
 
 >[!NOTE]
->For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
+> For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
 
 
 ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
@@ -79,11 +79,12 @@ Installation of the ATA Center as a virtual machine is supported.
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 ### Server specifications
-The ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information.<br>
+When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.<br>
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed see [ATA capacity planning](ata-capacity-planning.md) for more details.
 
->[!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+>[!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 ### Time synchronization
 The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
@@ -147,10 +148,11 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
->[!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+>[!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 ### Time synchronization
-TThe ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
+The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
 
 ### Network adapters
 The ATA Gateway requires at least one Management adapter and at least one Capture adapter:
@@ -203,7 +205,7 @@ Make sure the ATA Center has access to your CRL distribution point. If the ATA G
 To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
 
 > [!NOTE]
-The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
+> The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
 
 A certificate supporting **Server Authentication** is required to be installed in the Computer store of the ATA Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
@@ -225,7 +227,8 @@ The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM instal
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
->[!NOTE] When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+>[!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 
 ### Time synchronization
@@ -255,7 +258,7 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Lightweight Gateways don't have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.
 To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Lightweight Gateway.
 > [!NOTE]
-The certificate's Provider Type must be Cryptographic Service Provider (CSP).
+> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
 
 A certificate supporting Server Authentication is required to be installed in the Computer store of the ATA Lightweight Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
