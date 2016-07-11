@@ -1,57 +1,69 @@
 {
   "build_entry_point": "docs.ps1",
-    "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/ATADocs",
-    "docsets_to_publish": [
-        {
-            "docset_name": "ATADocs",
-            "build_output_subfolder": "ATADocs",
-            "locale": "en-us",
-            "version": 0,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "docsets_to_publish": [
+    {
+      "docset_name": "ATADocs",
+      "build_output_subfolder": "ATADocs",
+      "locale": "en-us",
+      "version": 0,
       "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-                {
-            "docset_name": "ATAUnderstand",
-            "build_output_subfolder": "ATADocs/Understand",
-            "locale": "en-us",
-            "version": 0,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "ATAUnderstand",
+      "build_output_subfolder": "ATADocs/Understand",
+      "locale": "en-us",
+      "version": 0,
       "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-                {
-            "docset_name": "ATAPlanDesign",
-            "build_output_subfolder": "ATADocs/PlanDesign",
-            "locale": "en-us",
-            "version": 0,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "ATAPlanDesign",
+      "build_output_subfolder": "ATADocs/PlanDesign",
+      "locale": "en-us",
+      "version": 0,
       "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-                {
-            "docset_name": "ATADeployUse",
-            "build_output_subfolder": "ATADocs/DeployUse",
-            "locale": "en-us",
-            "version": 0,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "ATADeployUse",
+      "build_output_subfolder": "ATADocs/DeployUse",
+      "locale": "en-us",
+      "version": 0,
       "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-                {
-            "docset_name": "ATATroubleshoot",
-            "build_output_subfolder": "ATADocs/Troubleshoot",
-            "locale": "en-us",
-            "version": 0,
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    },
+    {
+      "docset_name": "ATATroubleshoot",
+      "build_output_subfolder": "ATADocs/Troubleshoot",
+      "locale": "en-us",
+      "version": 0,
       "open_to_public_contributors": true,
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        }
-    ],
-    "notification_subscribers": [""]
+      "type_mapping": {
+        "Conceptual": "Content"
+      }
+    }
+  ],
+  "notification_subscribers": [
+    ""
+  ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/ATADocs",
+  "skip_source_output_uploading": false,
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master"
+    }
+  ]
 }
