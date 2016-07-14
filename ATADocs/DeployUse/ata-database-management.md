@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Database Management | Microsoft Advanced Threat Analytics
+title: ATA Database Management | Microsoft ATA
 description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
 author: rkarlin

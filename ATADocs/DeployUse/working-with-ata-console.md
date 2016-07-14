@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Working with the ATA Console | Microsoft Advanced Threat Analytics
+title: Working with the ATA Console | Microsoft ATA
 description: Describes how to log into the ATA console and the components of the console
 keywords:
 author: rkarlin

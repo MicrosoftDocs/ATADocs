@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA - Step 1 | Microsoft Advanced Threat Analytics
+title: Install ATA - Step 1 | Microsoft ATA
 description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
 keywords:
 author: rkarlin

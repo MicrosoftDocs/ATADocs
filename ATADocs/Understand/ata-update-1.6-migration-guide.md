@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA update to 1.6 migration guide | Microsoft Advanced Threat Analytics
+title: ATA update to 1.6 migration guide | Microsoft ATA
 description: Procedures to update ATA to version 1.6
 keywords:
 author: rkarlin

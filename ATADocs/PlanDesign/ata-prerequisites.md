@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Prerequisites | Microsoft Advanced Threat Analytics
+title: ATA Prerequisites | Microsoft ATA
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
 author: rkarlin
