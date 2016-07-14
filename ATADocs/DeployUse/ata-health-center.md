@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Health Center | Microsoft Advanced Threat Analytics
+title: ATA Health Center | Microsoft ATA
 description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
 keywords:
 author: rkarlin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Change ATA configuration - IIS certificate | Microsoft Advanced Threat Analytics
+title: Change ATA configuration - IIS certificate | Microsoft ATA
 description: Describes how to change certificate used by IIS for the ATA Center.
 keywords:
 author: rkarlin

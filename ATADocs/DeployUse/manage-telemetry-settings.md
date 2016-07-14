@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage Telemetry Settings | Microsoft Advanced Threat Analytics
+title: Manage Telemetry Settings | Microsoft ATA
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
 author: rkarlin

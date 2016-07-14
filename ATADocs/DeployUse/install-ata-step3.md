@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA - Step 3 | Microsoft Advanced Threat Analytics
+title: Install ATA - Step 3 | Microsoft ATA
 description: Step three of installing ATA helps you download the ATA Gateway setup package.
 keywords:
 author: rkarlin
