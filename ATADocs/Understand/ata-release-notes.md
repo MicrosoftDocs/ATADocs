@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Release Notes | Microsoft Advanced Threat Analytics
+title: ATA Release Notes | Microsoft ATA
 description: Lists what was updated in each version along with known issues and migration guides
 keywords:
 author: rkarlin

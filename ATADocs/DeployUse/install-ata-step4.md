@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA - Step 4 | Microsoft Advanced Threat Analytics
+title: Install ATA - Step 4 | Microsoft ATA
 description: Step four of installing ATA helps you to install the ATA Gateway.
 keywords:
 author: rkarlin
