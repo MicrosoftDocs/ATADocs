@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What&#39;s new in ATA version 1.4 | Microsoft Advanced Threat Analytics
+title: What&#39;s new in ATA version 1.4 | Microsoft ATA
 description: Lists what was new in ATA version 1.4 along with known issues
 keywords:
 author: rkarlin

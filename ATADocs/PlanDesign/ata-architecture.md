@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Architecture | Microsoft Advanced Threat Analytics
+title: ATA Architecture | Microsoft ATA
 description: Describes the architecture of Microsoft Advance Threat Analytics (ATA)
 keywords:
 author: rkarlin

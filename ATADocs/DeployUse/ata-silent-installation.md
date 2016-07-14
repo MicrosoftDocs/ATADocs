@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA Silently | Microsoft Advanced Threat Analytics
+title: Install ATA Silently | Microsoft ATA
 description: This describes how to silently install ATA.
 keywords:
 author: rkarlin
