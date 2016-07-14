@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Port Mirroring | Microsoft Advanced Threat Analytics
+title: Configure Port Mirroring | Microsoft ATA
 description: Describes port mirroring options and how to configure them for ATA
 keywords:
 author: rkarlin

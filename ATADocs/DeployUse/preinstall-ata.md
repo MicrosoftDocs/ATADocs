@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Before you install ATA - Complete steps | Microsoft Advanced Threat Analytics
+title: Before you install ATA - Complete steps | Microsoft ATA
 description: Walks you through the necessary steps you must complete before ATA deployment.
 keywords:
 author: rkarlin

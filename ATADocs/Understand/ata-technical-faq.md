@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Frequently asked questions | Microsoft Advanced Threat Analytics
+title: ATA Frequently asked questions | Microsoft ATA
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: rkarlin
