@@ -57,6 +57,7 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
     By default, the mongo.exe is found in: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin
 
 8.  Run the following command: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+
    Instead of <New DB Location> where `&lt;New DB Location&gt;` is the new folder path.
 
 9.  Update HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath to the new folder path.
