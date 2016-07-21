@@ -47,5 +47,4 @@ To check up on your system's overall health, click the Health Center icon in the
 ## See Also
 - [Working with ATA detection settings](working-with-detection-settings.md)
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
