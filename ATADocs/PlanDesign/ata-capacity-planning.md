@@ -8,7 +8,6 @@ author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
@@ -37,7 +36,7 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 - ATA Gateway: Match the **Busy Packets/sec** field in the ATA Gateway table in the results file to the **PACKETS PER SECOND** field in the [ATA Gateway table](#ata-gateway-sizing) or the [ATA Lightweight Gateway table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
 
 
-![Sample capcity planning tool](http://i.imgur.com/cST0ruO.png)
+![Sample capacity planning tool](media/capacity tool.png)
 
 
 
