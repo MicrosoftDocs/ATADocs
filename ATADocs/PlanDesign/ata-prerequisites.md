@@ -8,7 +8,7 @@ author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
