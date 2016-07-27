@@ -5,11 +5,11 @@ title: Planning your ATA Deployment | Microsoft ATA
 description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod:
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 
 # optional metadata

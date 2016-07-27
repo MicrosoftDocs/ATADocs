@@ -5,12 +5,12 @@ title: What&#39;s new in ATA version 1.4 | Microsoft ATA
 description: Lists what was new in ATA version 1.4 along with known issues
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 
 # optional metadata

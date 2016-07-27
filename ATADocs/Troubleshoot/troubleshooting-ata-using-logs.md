@@ -5,12 +5,12 @@ title: Troubleshooting ATA using the ATA logs | Microsoft ATA
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 
 # optional metadata
