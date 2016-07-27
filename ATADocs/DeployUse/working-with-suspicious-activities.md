@@ -5,12 +5,12 @@ title: Working with Suspicious Activities | Microsoft ATA
 description: Describes how to review suspicious activities identified by ATA
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 
 # optional metadata

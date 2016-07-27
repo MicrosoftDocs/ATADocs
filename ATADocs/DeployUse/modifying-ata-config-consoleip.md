@@ -5,12 +5,12 @@ title: Change ATA configuration - ATA Console IP address | Microsoft ATA
 description: Describes how to change the IP address of the ATA Console, used to create a shortcut to the ATA Console on the ATA Gateways.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 
 # optional metadata

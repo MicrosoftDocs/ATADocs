@@ -5,12 +5,12 @@ title: ATA Release Notes | Microsoft ATA
 description: Lists what was updated in each version along with known issues and migration guides
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 
 # optional metadata

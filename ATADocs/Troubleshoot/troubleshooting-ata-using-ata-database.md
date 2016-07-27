@@ -5,12 +5,12 @@ title: Troubleshooting ATA using the ATA database | Microsoft ATA
 description: Describes how you can use the ATA database to help troubleshoot issues 
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 
 # optional metadata

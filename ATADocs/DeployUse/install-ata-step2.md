@@ -5,12 +5,12 @@ title: Install ATA - Step 2 | Microsoft ATA
 description: Step two of installing ATA helps you configure the domain connectivity settings on your ATA Center server
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 
 # optional metadata

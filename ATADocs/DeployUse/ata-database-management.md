@@ -5,12 +5,12 @@ title: ATA Database Management | Microsoft ATA
 description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 
 # optional metadata
