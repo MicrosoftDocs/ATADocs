@@ -5,12 +5,11 @@ title: Planning your ATA Deployment | Microsoft ATA
 description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod:
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 
 # optional metadata
@@ -26,9 +25,27 @@ ms.suite: ems
 ---
 
 # ATA Capacity Planning
-This topic helps you determine how many ATA servers will be needed to support your network, including understanding how many ATA Gateways and ATA Lightweight Gateways you need and server capacity for your ATA Center and ATA Gateways.
+This topic helps you determine how many ATA servers will be needed to monitor your network, including understanding how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
 
-## ATA Center Sizing
+##Using the sizing tool
+The recommended and simplest way to determine capacity for your ATA deployment is to use the [ATA Sizing Tool](http://aka.ms/atasizingtool). Run the ATA Sizing Tool and from the Excel file results, use the following fields to determine the ATA capacity you need:
+
+- ATA Center CPU and Memory: Match the **Busy Packets/sec** field in the ATA Center table in the results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
+
+- ATA Center Storage: Match the **Avg Packets/sec** field in the ATA Center table in the results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
+- ATA Gateway: Match the **Busy Packets/sec** field in the ATA Gateway table in the results file to the **PACKETS PER SECOND** field in the [ATA Gateway table](#ata-gateway-sizing) or the [ATA Lightweight Gateway table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
+
+
+![Sample capacity planning tool](media/capacity tool.png)
+
+
+
+If for some reason you cannot use the ATA Sizing Tool, you need to manually gather the packet/sec counter information from all your Domain Controllers for a period of 24 hours with a very low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
+The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
+
+
+
+### ATA Center Sizing
 The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics. The required disk space for the ATA database on a per domain controller basis is defined below. If you have multiple domain controllers, sum up the required disk space per domain controller to calculate the full amount of space required for the ATA database.
 > [!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
@@ -80,7 +97,7 @@ The following are examples of scenarios in which domain controllers should be co
 - Headquarter data centers (having domain controllers with more than 10,000 packets per seconds)
 
 
-## ATA Lightweight Gateway Sizing
+### ATA Lightweight Gateway Sizing
 
 An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
 > [!NOTE] 
@@ -101,7 +118,7 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 > If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
 
 
-## ATA Gateway Sizing
+### ATA Gateway Sizing
 
 Consider the following when deciding how many ATA Gateways to deploy.
 

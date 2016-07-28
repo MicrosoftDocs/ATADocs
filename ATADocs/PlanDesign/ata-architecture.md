@@ -5,12 +5,12 @@ title: ATA Architecture | Microsoft ATA
 description: Describes the architecture of Microsoft Advance Threat Analytics (ATA)
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 
 # optional metadata
