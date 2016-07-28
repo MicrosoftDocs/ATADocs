@@ -5,12 +5,12 @@ title: Configure Port Mirroring | Microsoft ATA
 description: Describes port mirroring options and how to configure them for ATA
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 
 # optional metadata

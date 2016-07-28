@@ -5,12 +5,12 @@ title: Troubleshooting ATA using the performance counters | Microsoft ATA
 description: Describes how you can use performance counters to troubleshoot issues with ATA
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 
 # optional metadata
