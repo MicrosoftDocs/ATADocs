@@ -5,12 +5,12 @@ title: Before you install ATA - Complete steps | Microsoft ATA
 description: Walks you through the necessary steps you must complete before ATA deployment.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 
 # optional metadata

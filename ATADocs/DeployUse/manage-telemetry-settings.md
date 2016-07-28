@@ -5,12 +5,12 @@ title: Manage Telemetry Settings | Microsoft ATA
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 
 # optional metadata
