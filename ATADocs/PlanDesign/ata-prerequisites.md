@@ -34,6 +34,8 @@ This article describes the requirements for a successful deployment of ATA in yo
 
 ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
 
+The ATA System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
+
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
@@ -76,15 +78,14 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 
 Installation of the ATA Center as a virtual machine is supported. 
 
+>[!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 ### Server specifications
 When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.<br>
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed see [ATA capacity planning](ata-capacity-planning.md) for more details.
-
->[!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-
 
 
 ### Time synchronization
@@ -124,6 +125,9 @@ To ease the installation of the ATA Center, you can install self-signed certific
 > The certificate's Provider Type must be Cryptographic Service Provider (CSP).
 
 
+> Using of automatic certificate renewal is not supported.
+
+
 > [!NOTE]
 > If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
 
@@ -132,6 +136,7 @@ This section lists the requirements for the ATA Gateway.
 ### General
 The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
 The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
+The ATA Gateway can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
 Before installing ATA Gateway running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
