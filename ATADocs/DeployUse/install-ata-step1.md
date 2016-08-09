@@ -68,7 +68,7 @@ Perform the following steps on the ATA Center server.
     |Center Service SSL Certificate|This is the certificate that will be used by the ATA Console and ATA Center service.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment.|
     |Console IP address|This is the IP address that will be used for the ATA Console.|Click the down arrow to select the IP address used by the ATA Console. **Note:** Make a note of this IP address to make it easier to access the ATA Console from the ATA Gateway.|
     
-    ![ATA center configuration image](media/ATA-Center-Configuration_1.7.jpg)
+    ![ATA center configuration image](media/ATA-Center-Configuration.JPG)
 
 10.  Click **Install** to install the ATA Center and its components.
     The following components are installed and configured during the installation of ATA Center:
