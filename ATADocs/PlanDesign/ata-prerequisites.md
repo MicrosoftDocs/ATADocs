@@ -94,7 +94,7 @@ The ATA Center server, the ATA Gateway servers and the domain controllers must h
 
 ### Network adapters
 You should have the following:
--   At least one network adapter (if using physical server in VLAN enviroment, it is recommended to use two network adapters)
+-   At least one network adapter (if using physical server in VLAN environment, it is recommended to use two network adapters)
 
 -   Two IP addresses (recommended but not required)
 
