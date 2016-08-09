@@ -67,8 +67,8 @@ Perform the following steps on the ATA Center server.
     |Center Service IP address: Port|This is the IP address that the ATA Center service will listen on for communication from the ATA Gateways.<br /><br />**Default port:** 443|Click the down arrow to select the IP address to be used by the ATA Center service.<br /><br />The IP address and port of the ATA Center service cannot be the same as the IP address and port of the ATA Console. Make sure to change the port of the ATA Console.|
     |Center Service SSL Certificate|This is the certificate that will be used by the ATA Console and ATA Center service.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment.|
     |Console IP address|This is the IP address that will be used for the ATA Console.|Click the down arrow to select the IP address used by the ATA Console. **Note:** Make a note of this IP address to make it easier to access the ATA Console from the ATA Gateway.|
-           
-![ATA center configuration image](media/ATA-Center-Configuration_1.7.jpg)
+    
+    ![ATA center configuration image](media/ATA-Center-Configuration_1.7.jpg)
 
 10.  Click **Install** to install the ATA Center and its components.
     The following components are installed and configured during the installation of ATA Center:
