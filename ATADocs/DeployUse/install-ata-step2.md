@@ -35,7 +35,7 @@ ms.suite: ems
 
 The first time you open the ATA Console, the following screen appears:
 
-![ATA welcome stage 1](media\ATA-welcome-provide-username.PNG)
+![ATA welcome stage 1](media\ATA-welcome-provide-username.png)
 
 Enter the following information and click **Save**.
 
@@ -47,7 +47,7 @@ Enter the following information and click **Save**.
 	|Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
 
 Once saved, the welcome message in the Console will change to the following:
-![ATA welcome stage 1 finished](media\ATA-welcome-provide-username-finished.PNG)
+![ATA welcome stage 1 finished](media\ATA-welcome-provide-username-finished.png)
 
 In the Console, click "Download Gateway setup and install the first Gateway" to continue.
 
