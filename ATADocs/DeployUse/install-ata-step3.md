@@ -36,7 +36,7 @@ After configuring the domain connectivity settings you can download the ATA Gate
 
 If it's your first time to download a Gateway, you will get the following screen:
 
-![ATA gateway configuration settings](media/ATA-welcome-download-gateway.PNG)
+![ATA gateway configuration settings](media/ATA_1.7-welcome-download-gateway.PNG)
 
 If it's not your first time to download a Gateway, this welcome message will not appear.
 
