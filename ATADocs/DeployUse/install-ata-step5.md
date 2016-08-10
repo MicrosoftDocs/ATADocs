@@ -35,22 +35,30 @@ ms.suite: ems
 ## Step 5. Configure the ATA Gateway settings
 After the ATA Gateway was installed, perform the following steps to configure the settings for the ATA Gateway.
 
-1.  In the ATA Console, click on the **Configuration** and select the **ATA Gateways** page.
+1.  In the ATA Console, go to the **Configuration** page and select **Gateways** which is found inside the **System** category.
+   
+    ![ATA configuration settings](media/ATA-config-icon.JPG)
+    
+    ![Configure gateway settings image](media/ATA-Gateways-config-0.png)
 
-2.  Enter the following information.
+    Which should get you to a screen like this:
+![Configure gateway settings image](media/ATA-Gateways-config-1.png)
 
-  - **Description**: <br>Enter a description of the ATA Gateway (optional).
-  - **Port Mirrored Domain Controllers (FQDN)** (required for the ATA Gateway, this cannot be set for the ATA Lightweight Gateway): <br>Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**<br /><br />![Example FDQN image](media/ATAGWDomainController.png)
+
+2.  Click the name of the Gateway you would like to configure and then enter the following information:
+    ![Configure gateway settings image](media/ATA-Gateways-config-2.png)
+
+  - **Description**: <br>Enter a description for the ATA Gateway (optional).
+  - **Port Mirrored Domain Controllers (FQDN)** (required for the ATA Gateway, this cannot be set for the ATA Lightweight Gateway): <br>Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**<br /><br />
 
 The following information applies to the servers you enter in the **Domain Controllers** list:
-     -   All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-     -   At least one domain controller in the list be a global catalog server. This will enable ATA to resolve computer and user objects in other domains in the forest.
+ - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.<br>
+ - At least one domain controller in the list be a global catalog server. This will enable ATA to resolve computer and user objects in other domains in the forest.<br>
 
  - **Capture Network adapters** (required):<br>
 	 - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These will receive the mirrored domain controller traffic.
 	 - For an ATA Lightweight Gateway, this should be all the network adapters that are used for communication with other computers in your organization.
 
-![Configure gateway settings image](media/ATA-Config-GW-Settings.jpg)
 
  - **Domain synchronizer candidate**<br>
 Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource intensive.By default, only ATA Gateways are set as Domain synchronizer candidates. <br>It is recommended to disable any remote site ATA Gateways from being Domain synchronizer candidates.<br>If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features)

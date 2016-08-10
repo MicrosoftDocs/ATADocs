@@ -47,22 +47,31 @@ Perform the following steps on the ATA Gateway server.
 > [!NOTE] 
 > Installing directly from the zip file will fail.
 
-2.  From an elevated command prompt, run **Microsoft ATA Gateway Setup.exe** and follow the setup wizard.
+2.  Run **Microsoft ATA Gateway Setup.exe** and follow the setup wizard.
 
 3.  On the **Welcome** page, select your language and click **Next**.
 
-4.  Under  **ATA Gateway Configuration**, enter the following information based on your environment:
+4.  The installation wizard will automatically check if the server is a domain controller or not. The result of this check whether an ATA Gateway or Lightweight Gateway (on a domain controller) will be installed. 
+    
+    For example, in the case of a Lightweight Gateway you will see:
+    ![ATA full gateway chosen](media/ATA-lightweight-gateway-install-selected.png)
+    Click **Next**.
 
-    ![ATA gateway configuration image](media/ATA-Gateway-Configuration.JPG)
+> [!NOTE] 
+> If the domain controller does not meet the minimum hardware requirements for the Lightweight Gateway, a yellow text message will appear. This message does not prevent you from clicking **Next**, for example if you wish to test ATA in a small lab environment. For production environments, it is highly recommended to work with ATA's [capacity planning](PlanDesign\ata-capacity-planning.md) guide.
+
+4.  Under **ATA Gateway Configuration**, enter the following information based on your environment:
+
+    ![ATA gateway configuration image](media/ATA-Gateway-Configuration.png)
 
     |Field|Description|Comments|
     |---------|---------------|------------|
     |Installation Path|This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway|Leave the default value|
-    |ATA Gateway Service SSL certificate|This is the certificate that will be used by the ATA Gateway.|Use a self-signed certificate for lab environments only.|
-    |ATA Gateway Registration|Enter the Username and Password of the ATA administrator.|For the ATA Gateway to register with the ATA Center, enter the user name and password of the user who installed the ATA Center. This user must be a member of one of the following local groups on the ATA Center.<br /><br />-   Administrators<br />-   Microsoft Advanced Threat Analytics Administrators **Note:** These credentials are used only for registration and are not stored in ATA.|
+    |Gateway Service SSL Certificate|This is the certificate that will be used by the ATA Gateway.|Use a self-signed certificate for lab environments only.|
+    |Gateway Registration|Enter the Username and Password of the ATA administrator.|For the ATA Gateway to register with the ATA Center, enter the user name and password of the user who installed the ATA Center. This user must be a member of one of the following local groups on the ATA Center.<br /><br />-   Administrators<br />-   Microsoft Advanced Threat Analytics Administrators **Note:** These credentials are used only for registration and are not stored in ATA.|
     The following components are installed and configured during the installation of the ATA Gateway:
 
-    -   KB 3047154
+    -   KB 3047154 (for Windows Server 2012 R2 only)
 
         > [!IMPORTANT]
         > -   Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
