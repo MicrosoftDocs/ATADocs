@@ -49,7 +49,7 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 
 ## Configuring the ATA Gateway to listen for SIEM events
 
-1.  On the ATA Gateway configuration, under "Events" tab enable **Syslog** and press **Save**.
+1.  On the ATA configuration, under "Events" tab enable **Syslog** and press **Save**.
 
     ![Enable syslog listener UDP image](media/ATA-enable-siem-forward-events.png)
 
