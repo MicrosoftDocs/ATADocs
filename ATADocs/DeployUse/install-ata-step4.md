@@ -54,6 +54,7 @@ Perform the following steps on the ATA Gateway server.
 4.  The installation wizard will automatically check if the server is a domain controller or not. The result of this check whether an ATA Gateway or Lightweight Gateway (on a domain controller) will be installed. 
     
     For example, in the case of a Lightweight Gateway you will see:
+    
     ![ATA full gateway chosen](media/ATA-lightweight-gateway-install-selected.png)
     Click **Next**.
 

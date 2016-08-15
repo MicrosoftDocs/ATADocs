@@ -31,21 +31,21 @@ ms.suite: ems
 [« Step 5](install-ata-step5.md)
 
 ## Step 6. Configure  IP address exclusions and Honeytoken user
-ATA enables the exclusion of specific IP addresses and/or IP subnets from two types of detections: DNS Reconnaissance and Pass-the-Ticket. 
+ATA enables the exclusion of specific IP addresses and/or IP subnets from two types of detections: *DNS Reconnaissance* and *Pass-the-Ticket*. 
 
-The thought behind the DNS Reconnaissance exclusion by IP is that some organizations are using security scanners that use DNS as a scanning mechanism. The exclusion helps ATA to ignore those scannners, which are usually using static IP addresses.
+An example of *DNS Reconnaissance exclusion* would be a security scanners that use DNS as a scanning mechanism. The exclusion helps ATA to ignore those scannners.
 
-The rational for the Pass-the-Ticket exclusion by IP is that some subnets are short-term lease, in which the IP address assignment changes very rapidly - within seconds or minutes. For example, IP addresses used for your VPNs and Wi-Fi IP addresses. 
+An example for the *Pass-the-Ticket* exclusion would be NAT devices.    
 
-ATA also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any network activity associated with this (normally dormant) account will trigger an alert.
+ATA also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account will trigger an alert.
 
 To configure the above, follow these steps:
 
-1.  From the ATA Console on the ATA Gateway machine, click on the settings icon and select **Configuration**.
+1.  From the ATA Console, click on the settings icon and select **Configuration**.
 
     ![ATA configuration settings](media/ATA-config-icon.JPG)
 
-2.  Under **Exclusions** (in the *Detection* category), enter the following for either the DNS Reconnaissance or the Pass-the-Ticket IP addresses. Use slash notation format, for example:  `192.168.0.0/24` and click the *plus* sign.
+2.  Under **Exclusions** (in the *Detection* category), enter the following for either the *DNS Reconnaissance* or the *Pass-the-Ticket* IP addresses. Use CIDR format, for example:  `192.168.1.0/24` and click the *plus* sign.
 
     ![Save changes](media/ATA-exclusions.png)
 
