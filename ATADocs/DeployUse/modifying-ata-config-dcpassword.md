@@ -28,7 +28,7 @@ ms.suite: ems
 # Change ATA configuration - domain connectivity password
 
 >[!div class="step-by-step"]
-[« IIS certificate](modifying-ata-config-iiscert.md)
+[« ATA Console URL](modifying-ata-config-consoleurl.md)
 
 
 ## Change the domain connectivity password
@@ -37,26 +37,28 @@ If you modify the Domain Connectivity Password, make sure that the password you 
 If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following:
 `The supplied credential is invalid.`
 
-To correct this, follow this procedure to update the Domain Connectivity password on the ATA Gateway:
+To correct this, follow this procedure to update the Domain Connectivity password on the ATA Center:
 
-1.  Open the ATA Console on the ATA Gateway.
+1.  Open the ATA Console on the ATA Center.
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
     ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-3.  Select **General**.
+3.  Select **Directory Services**.
 
-    ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.JPG)
+    ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.png)
 
-4.  Under **General**, change the password.
+4.  Under **Password**, change the password.
+
+    If the ATA Center have connectivity to the domain, use the **Test Connection** button to validate the credentials
 
 5.  Click **Save**.
 
 6.  After changing the password, manually check that the ATA Gateway service is running on the ATA Gateway servers.
 
 >[!div class="step-by-step"]
-[« IIS certificate](modifying-ata-config-iiscert.md)
+[« ATA Console URL](modifying-ata-config-consoleurl.md)
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)

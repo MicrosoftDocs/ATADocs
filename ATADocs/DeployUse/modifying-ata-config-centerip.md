@@ -52,9 +52,9 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
     ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-3.  Select **General**.
+3.  Select **Center**.
 
-4.  Under **ATA Center Service IP address: port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
+4.  Under **Center service IP address : port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
 
 5.  Click **Save**.
 
@@ -82,4 +82,4 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the ATA forum!](https://aka.ms/ata-forum)
