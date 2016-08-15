@@ -46,7 +46,7 @@ The first time you open the ATA Console, the following screen appears:
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 	|Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
 
-    Once saved, the welcome message in the Console will change to the following:
+    After it is saved, the welcome message in the Console will change to the following:
 ![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
 2. In the Console, click **Download Gateway setup and install the first Gateway** to continue.
