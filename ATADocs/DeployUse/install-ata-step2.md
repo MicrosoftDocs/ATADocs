@@ -31,28 +31,25 @@ ms.suite: ems
 [« Step 1](install-ata-step1.md)
 [Step 3 »](install-ata-step3.md)
 
-## Step 2. Configure ATA Gateway general settings
-The settings in the **General** settings tab apply to all ATA Gateways managed by the ATA Center.
+## Step 2. Provide a Username and Password to connect to your Active Directory Forest
 
-To configure the General ATA Gateway settings perform the following:
+The first time you open the ATA Console, the following screen appears:
 
-1.  Open the ATA Console and log in. For instructions see [Working with the ATA Console](working-with-ata-console.md).
+![ATA welcome stage 1](media/ATA_1.7-welcome-provide-username.png)
 
-2.  Click the Settings icon and select **Configuration**.
-
-    ![ATA gateway configuration settings](media/ATA-config-icon.JPG)
-
-3.  On the **General** tab, under **ATA Gateways**, enter the following information and click **Save**.
+1.  Enter the following information and click **Save**:
 
     |Field|Comments|
     |---------|------------|
-    |**Username** (required)|Enter the read-only user name, for example: **user1**.|
-    |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**. **Note:** Make sure this password is correct. If you save the wrong password, the ATA Service will stop running on the ATA Gateway servers.|
+    |**Username** (required)|Enter the read-only user name, for example: **ATAuser**.|
+    |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 	|Update all ATA Gateways automatically |If you enable this setting, in upcoming version releases when you update the ATA Center, all ATA Gateways will be automatically updated.|
 
-    ![ATA Domain connectivity settings image](media/ata-domain-connectivity-user.jpg)
+    After it is saved, the welcome message in the Console will change to the following:
+![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
+2. In the Console, click **Download Gateway setup and install the first Gateway** to continue.
 
 
 >[!div class="step-by-step"]
