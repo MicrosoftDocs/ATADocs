@@ -34,7 +34,7 @@ In addition to collecting and analyzing network traffic to and from the domain c
 ### SIEM/Syslog
 For ATA to be able to consume data from a Syslog server, you need to do the following:
 
--   Configure one of your ATA Gateway servers to listen to and accept events forwarded from the SIEM/Syslog server.
+-   Configure your ATA Gateway servers to listen to and accept events forwarded from the SIEM/Syslog server.
 
 -   Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
 
@@ -49,13 +49,11 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 
 ## Configuring the ATA Gateway to listen for SIEM events
 
-1.  On the ATA Gateway configuration, enable **Syslog Listener UDP**.
-
-    Set the Listening IP Address as described in the picture, below. The default port is 514.
+1.  On the ATA configuration, under "Events" tab enable **Syslog** and press **Save**.
 
     ![Enable syslog listener UDP image](media/ATA-enable-siem-forward-events.png)
 
-2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address selected above. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATA Gateways. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
 ### SIEM support
 ATA supports SIEM events in the following formats:

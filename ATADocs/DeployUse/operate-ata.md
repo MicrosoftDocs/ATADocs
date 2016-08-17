@@ -32,8 +32,7 @@ The following are operations you can perform with ATA:
 - [Change ATA configuration](modifying-ata-configuration.md)
   - [Change ATA Center IP address](modifying-ata-config-centerip.md)
   - [Change ATA Center certificate](modifying-ata-config-centercert.md)
-  - [Change ATA console IP address](modifying-ata-config-consoleip.md)
-  - [Change IIS certificate](modifying-ata-config-iiscert.md)
+  - [Change ATA console URL](modifying-ata-config-consoleurl.md)
   - [Change domain controller password](modifying-ata-config-dcpassword.md)
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Set ATA alerts](setting-ata-alerts.md)
@@ -47,7 +46,7 @@ The following are operations you can perform with ATA:
 
 ## See Also
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the ATA forum!](https://aka.ms/ata-forum)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 

@@ -33,13 +33,11 @@ If you need to update or change your configuration after initial installation an
 
 -   [Change the ATA Center certificate](modifying-ata-config-centercert.md)
 
--   [Change the ATA Console IP address](modifying-ata-config-consoleip.md)
-
--   [Change the IIS certificate](modifying-ata-config-iiscert.md)
+-   [Change the ATA Console URL](modifying-ata-config-consoleurl.md)
 
 -   [Change the domain connectivity password](modifying-ata-config-dcpassword.md)
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the ATA forum!](https://aka.ms/ata-forum)

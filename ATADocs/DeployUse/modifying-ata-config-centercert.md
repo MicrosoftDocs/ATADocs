@@ -29,10 +29,10 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« ATA Center server IP address](modifying-ata-config-centerip.md)
-[ATA Console IP address »](modifying-ata-config-consoleip.md)
+[ATA Console URL»](modifying-ata-config-consoleurl.md)
 
 ## Change the ATA Center certificate
-If your certificates expire and need to be renewed or replaced after installing the new certificate in the local computer store on the ATA Center server, replace the certificate by following this two stage process:
+If your certificate is about to expire and need to be renewed or replaced after installing the new certificate in the local computer store on the ATA Center server, replace the certificate by following this two stage process:
 
 -   First stage – Update the certificate you want the ATA Center service to use. At this point the ATA Center service is still bound to the original certificate. When the ATA Gateways sync their configuration they will have two potential certificates that will be valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it will not try the new one.
 
@@ -41,6 +41,7 @@ If your certificates expire and need to be renewed or replaced after installing 
 > [!NOTE]
 > -   If an ATA Gateway was offline during the first stage and never got the updated configuration, you will need to manually update the configuration JSON file on the ATA Gateway.
 > -   The certificate that you are using must be trusted by the ATA Gateways.
+> -   The certificate is also used for the ATA Console, so it should match the ATA Console address to avoid browser warnings
 > -   If you need to deploy a new ATA Gateway after activating the new certificate, you need to download the ATA Gateway Setup package again.
 
 1.  Open the ATA Console.
@@ -49,7 +50,7 @@ If your certificates expire and need to be renewed or replaced after installing 
 
     ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-3.  Select **ATA Center**.
+3.  Select **Center**.
 
 4.  Under **Certificate**, select one of the certificates in the list.
 
@@ -67,9 +68,9 @@ If your certificates expire and need to be renewed or replaced after installing 
 
 >[!div class="step-by-step"]
 [« ATA Center server IP address](modifying-ata-config-centerip.md)
-[ATA Console IP address »](modifying-ata-config-consoleip.md)
+[ATA Console URL»](modifying-ata-config-consoleurl.md)
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the ATA forum!](https://aka.ms/ata-forum)
