@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Change ATA configuration | Microsoft Advanced Threat Analytics
+title: Change ATA configuration | Microsoft ATA
 description: Provides a list of the ways in which you can update your ATA configuration.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
 
 # optional metadata

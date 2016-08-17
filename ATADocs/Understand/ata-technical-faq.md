@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: ATA Frequently asked questions | Microsoft Advanced Threat Analytics
+title: ATA Frequently asked questions | Microsoft ATA
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 
 # optional metadata
@@ -30,7 +30,7 @@ This article provides a list of frequently asked questions about ATA and provide
 
 
 ## How is ATA licensed?
-For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
+For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/cloud-platform/advanced-threat-analytics-pricing)
 
 
 ## What should I do if the ATA Gateway won’t start?

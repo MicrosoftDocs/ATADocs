@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Install ATA - Step 1 | Microsoft Advanced Threat Analytics
+title: Install ATA - Step 1 | Microsoft ATA
 description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 
 # optional metadata
@@ -28,7 +28,6 @@ ms.suite: ems
 # Install ATA - Step 1
 
 >[!div class="step-by-step"]
-
 [Step 2 »](install-ata-step2.md)
 
 This installation procedure provides instructions for performing a fresh installation of ATA 1.6. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
@@ -101,8 +100,7 @@ Because you are logging into the site using an IP address, you will receive a wa
 
 ## See Also
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 

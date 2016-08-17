@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Setting ATA Notifications | Microsoft Advanced Threat Analytics
+title: Setting ATA Notifications | Microsoft ATA
 description: Describes how to set ATA alerts so you are notified when suspicious activities are detected.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 
 # optional metadata
