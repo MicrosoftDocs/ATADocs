@@ -6,7 +6,7 @@ description: Helps you plan your deployment and decide how many ATA servers will
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/21/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -47,8 +47,7 @@ The following sections present the instruction for how to collect the packets/se
 
 ### ATA Center Sizing
 The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics. The required disk space for the ATA database on a per domain controller basis is defined below. If you have multiple domain controllers, sum up the required disk space per domain controller to calculate the full amount of space required for the ATA database.
-> [!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+ 
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -65,10 +64,12 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > [!NOTE]
 > -   The ATA Center can handle an aggregated maximum of 400,000 frames per second (FPS) from all the monitored domain controllers.
 > -   The amounts of storage dictated here are net values, you should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
-> -   If your free space reaches a minimum of either 20% or 100 GB, the oldest collection of data will be deleted. This will continue to occur until either only two days of data or either 5% or 50 GB of free space remains at which point data collection will stop working.
-> -  The storage latency for read and write activities should be below 10 ms.
-> -  The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
-
+> -   If your free space reaches a minimum of either 20% or 100 GB, the oldest collection of data will be deleted. This will continue to occur until 5% or 50 GB of free space remains at which point data collection will stop working.
+> -   The storage latency for read and write activities should be below 10 ms.
+> -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
+> -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+> -   For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
+> -   When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.
 ## Choosing the right gateway type for your deployment
 In an ATA deployment any combination of the ATA Gateway types is supported:
 
@@ -100,8 +101,7 @@ The following are examples of scenarios in which domain controllers should be co
 ### ATA Lightweight Gateway Sizing
 
 An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
-> [!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -114,10 +114,10 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 &#42;&#42;Total amount of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
 
 &#42;&#42;&#42;Total amount of memory that this domain controller has installed.
-> [!NOTE]	
-> If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
-
-
+> [!NOTES]	
+> -   If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
+> -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+> -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 ### ATA Gateway Sizing
 
 Consider the following when deciding how many ATA Gateways to deploy.
@@ -132,8 +132,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 	An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored. 
 <br>
 
-> [!NOTE] 
-> Dynamic memory is not supported.
+
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|
 |---------------------------|-------------------------|---------------|
@@ -148,7 +147,9 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 
 &#42;&#42;Hyper-threading must be disabled.
 
-
+> [!NOTES] 
+> -   Dynamic memory is not supported.
+> -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
 
 ## Domain controller traffic estimation
 There are various tools that you can use to discover the average packets per second of your domain controllers. If you do not have any tools that track this counter, you can use Performance Monitor to gather the required information.
