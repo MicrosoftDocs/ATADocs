@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # ATA Prerequisites
 This article describes the requirements for a successful deployment of ATA in your environment.
 

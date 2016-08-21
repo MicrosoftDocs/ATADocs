@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Operate ATA
 
 The following are operations you can perform with ATA:

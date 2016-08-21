@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Change ATA configuration - ATA Console URL
 
 >[!div class="step-by-step"]

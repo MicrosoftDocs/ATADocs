@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Working with Suspicious Activities
 This topic explains the basics of how to work with Advanced Threat Analytics.
 

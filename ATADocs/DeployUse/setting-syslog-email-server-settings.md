@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 ## Provide ATA with up your email server settings
 ATA can notify you when it detects a suspicious activity. For ATA to be able to send email notifications, you must first configure the **Email server settings**.
 

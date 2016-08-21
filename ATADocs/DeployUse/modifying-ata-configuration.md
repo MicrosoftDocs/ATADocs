@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Change ATA configuration
 
 If you need to update or change your configuration after initial installation and deployment of ATA, use this topic for guidance before modifying the following:

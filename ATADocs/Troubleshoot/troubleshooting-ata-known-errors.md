@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Troubleshooting the ATA error log
 This section details possible errors in the deployments of ATA and the steps required for troubleshooting them.
 ## ATA Gateway errors

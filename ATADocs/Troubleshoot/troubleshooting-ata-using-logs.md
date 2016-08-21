@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Troubleshooting ATA using the ATA logs
 The ATA logs provide insight into what each component of ATA is doing at any given point in time.
 

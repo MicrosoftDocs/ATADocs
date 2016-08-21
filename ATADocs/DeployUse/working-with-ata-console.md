@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Working with the ATA Console
 
 Use the ATA console to monitor and respond to suspicious activity detected by ATA.

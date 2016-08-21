@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # Install ATA
 
 The following are the steps required to get ATA deployed, configured, and running.

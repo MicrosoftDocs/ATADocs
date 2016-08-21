@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+Applies to: Advanced Threat Analytics version 1.7
+
+
+
 # ATA Database Management
 If you need to move, backup or restore the ATA database, use these procedures for working with MongoDB.
 
