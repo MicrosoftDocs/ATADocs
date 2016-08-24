@@ -41,7 +41,7 @@ The update to ATA 1.7 provides improvements in the following areas:
 If you already have ATA version 1.6 deployed, this procedure will walk you through the steps necessary to update your deployment.
 
 > [!NOTE] 
-> You cannot install ATA version 176 directly on top of ATA version 1.4 or 1.5. You must install ATA version 1.6 first. If you accidentally attempted to install ATA 1.7 without installing ATA 1.6, you will get an error telling you that **A newer version is already installed on your machine.** You must uninstall the remnants of ATA 1.7 that will remain on your computer - even though the installation failed - before you install ATA version 1.6.
+> You cannot install ATA version 1.7 directly on top of ATA version 1.4 or 1.5. You must install ATA version 1.6 first. 
 
 Follow these steps to update to ATA version 1.7:
 
@@ -63,16 +63,16 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
     -   If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
-2.  Run the installation file, Microsoft ATA Center Setup.exe, and follow the instructions on the screen to install the update.
+2.  Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
 
-	5.  On the **Welcome** page, select your language and click **Next**.
+	    5.  On the **Welcome** page, select your language and click **Next**.
 
-		7.  It is now possible to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
+		7.  If you didn't enable automatic updates in version 1.6, you will be prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
     ![Keep ATA up to date image](media/ata_ms_update.png)
      This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
     ![Windows auto-update image](media/ata_installupdatesautomatically.png)
 
-	8.  In the **Data migration** screen, select whether you want to migrate all or partial data. If you choose to migrate only partial data, your previously captured network traffic and behavior profiles will not be migrated. This means that it will take three weeks before the abnormal behavior detection has a complete profile to enable anomalous activity detection. During those three weeks, all other ATA detections will function properly. The **Partial** data migration necessitates less available disk space on your ATA Center server. If you select **Full** data migration, you will need more disk space for the installation. The required disk space, which is listed on the **Data Migration** screen, depends on the amount of previously captured network traffic you had saved in previous versions of ATA. Before selecting **Partial** or **Full**, make sure that you have the necessary amount of available disk space as listed on the screen.  
+	8.  In the **Data migration** screen, select whether you want to migrate all or partial data. If you choose to migrate only partial data, your previously captured network traffic and behavior profiles will not be migrated. This means that it will take three weeks before the abnormal behavior detection has a complete profile to enable anomalous activity detection. During those three weeks, all other ATA detections will function properly. The **Partial** data migration takes much less time to install. If you select **Full** data migration, it may take a significant amount of time for the installation to complete. The estimated amount of time and the required disk space, which are listed on the **Data Migration** screen, depend on the amount of previously captured network traffic you had saved in previous versions of ATA. Before selecting **Partial** or **Full**, make sure to check these requirements.  
     ![ATA data migration](media/migration data migration.png)
 
 	3.  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
