@@ -65,17 +65,18 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
 2.  Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
 
-	    5.  On the **Welcome** page, select your language and click **Next**.
+	-  On the **Welcome** page, select your language and click **Next**.
 
-		7.  If you didn't enable automatic updates in version 1.6, you will be prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
+	-  If you didn't enable automatic updates in version 1.6, you will be prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
     ![Keep ATA up to date image](media/ata_ms_update.png)
      This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
     ![Windows auto-update image](media/ata_installupdatesautomatically.png)
 
-	8.  In the **Data migration** screen, select whether you want to migrate all or partial data. If you choose to migrate only partial data, your previously captured network traffic and behavior profiles will not be migrated. This means that it will take three weeks before the abnormal behavior detection has a complete profile to enable anomalous activity detection. During those three weeks, all other ATA detections will function properly. The **Partial** data migration takes much less time to install. If you select **Full** data migration, it may take a significant amount of time for the installation to complete. The estimated amount of time and the required disk space, which are listed on the **Data Migration** screen, depend on the amount of previously captured network traffic you had saved in previous versions of ATA. Before selecting **Partial** or **Full**, make sure to check these requirements.  
+	-  In the **Data migration** screen, select whether you want to migrate all or partial data. If you choose to migrate only partial data, your previously captured network traffic and behavior profiles will not be migrated. This means that it will take three weeks before the abnormal behavior detection has a complete profile to enable anomalous activity detection. During those three weeks, all other ATA detections will function properly. The **Partial** data migration takes much less time to install. If you select **Full** data migration, it may take a significant amount of time for the installation to complete. The estimated amount of time and the required disk space, which are listed on the **Data Migration** screen, depend on the amount of previously captured network traffic you had saved in previous versions of ATA. Before selecting **Partial** or **Full**, make sure to check these requirements.  
+    
     ![ATA data migration](media/migration data migration.png)
 
-	3.  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
+	-  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
 
 4.  After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
     ![Update success screen](media/migration center success.png)
@@ -90,7 +91,6 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
     > [!NOTE] 
     > To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](/advanced-threat-analytics/deploy-use/install-ata-step4) .
 
-You will know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they are successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
 
 
 ## See Also
