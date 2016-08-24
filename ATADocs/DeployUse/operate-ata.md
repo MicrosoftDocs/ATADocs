@@ -6,7 +6,7 @@ description: Walks you through working with ATA and daily activities.
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-Applies to: Advanced Threat Analytics version 1.7
+*Applies to: Advanced Threat Analytics version 1.7*
 
 
 

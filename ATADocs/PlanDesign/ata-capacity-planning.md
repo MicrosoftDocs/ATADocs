@@ -6,7 +6,7 @@ description: Helps you plan your deployment and decide how many ATA servers will
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/21/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -24,7 +24,7 @@ ms.suite: ems
 
 ---
 
-Applies to: Advanced Threat Analytics version 1.7
+*Applies to: Advanced Threat Analytics version 1.7*
 
 
 

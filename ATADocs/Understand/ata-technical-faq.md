@@ -6,7 +6,7 @@ description: Provides a list of frequently asked questions about ATA and the ass
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -24,6 +24,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
+*Applies to: Advanced Threat Analytics version 1.7*
 
 # ATA frequently asked questions
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
