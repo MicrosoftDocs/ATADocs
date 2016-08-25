@@ -39,6 +39,7 @@ The following are operations you can perform with ATA:
   - [Change ATA console URL](modifying-ata-config-consoleurl.md)
   - [Change domain controller password](modifying-ata-config-dcpassword.md)
 - [Working with the ATA Console](working-with-ata-console.md)
+- [Working with ATA role groups](ata-role-groups.md)
 - [Set ATA alerts](setting-ata-alerts.md)
 - [Set Syslog and Email server settings](setting-syslog-email-server-settings.md)
 - [Working with detection settings](working-with-detection-settings.md)

@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: What is Microsoft Advanced Threat Analytics (ATA)? | Microsoft ATA
-description: Explains what Microsoft Advanced Threat Analytics (ATA) is and what kinds of suspicious activities it can detect
+title: What threats does ATA detect? | Microsoft ATA
+description: Lists the threats that Advanced Threat Analytics detects 
 keywords:
 author: rkarlin
 manager: mbaldwin
@@ -33,6 +33,9 @@ ATA provides detection for the following various phases of an advanced attack: r
 The detection of each phase results in several suspicious activities relevant for the phase in question, where each suspicious activity correlates to different flavors of possible attacks.
 These phases in the kill-chain where ATA currently provides detections are highlighted in the image below.
 
+![ATA focus on lateral activity in attack kill chain](media/attack kill chain.png)
+
+
 ### Reconnaissance
 ATA provides multiple reconnaissance detections. These detections include:
 -	**Reconnaissance using account enumeration**
@@ -41,6 +44,10 @@ Detects attempts by attackers using the Kerberos protocol to discover if a user 
 As part of the reconnaissance phase, attackers may query the DC for all active SMB sessions on the server, allowing them to gain access to all the users and IP addresses associated with those SMB sessions. SMB session enumeration can be used by attackers for targeting sensitive accounts, helping them move laterally across the network.
 -	**Reconnaissance using DNS**
 DNS information in the target network is often very useful reconnaissance information. DNS information contains a list of all the servers and often all the clients and the mapping to their IP addresses. Viewing DNS information may provide attackers with a detailed view of these entities in your environment allowing attackers to focus their efforts on the relevant entities for the campaign.
+-   **Reconnaissance using directory services enumeration**
+Detecting reconnaissance for entities (users, groups, etc.) performed using the SAM-remote protocol to run queries against the domain controllers. This reconnaissance method is prevalent in many types of malware seen in real-world attack scenarios. 
+
+
 ### Compromised credentials
 To provide detection of compromised credentials, ATA leverages both machine-learning based behavioral analytics as well as known malicious attacks and technique detection.
 Using behavioral analytics and machine learning, ATA is able to detect suspicious activities such as anomalous logins, abnormal resource access, and abnormal working hours which would point to credential compromise. To protect against compromised credentials, ATA detects the following known malicious attacks and techniques: :
