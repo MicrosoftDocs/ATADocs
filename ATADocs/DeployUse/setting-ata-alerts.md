@@ -36,32 +36,30 @@ ATA can notify you when it detects a suspicious activity, either by email or by 
 > -   Email notifications include a link that will take the user directly to the suspicious activity that was detected. The host name portion of the link is taken from the setting of the ATA Console URL on the ATA Center page. By default, the ATA Console URL is the IP address selected during the installation  of the ATA Center.  If you are going to configure email notifications it is recommended to use an FQDN as the ATA Console URL.
 > -   Notifications are sent from the ATA Center to either the SMTP server and the Syslog server.
 
-**Mail notifications**
+## Mail notifications
 To receive mail notifications, set the following:
 
 
 1. In the ATA Console, select the settings option on the toolbar and select **Configuration**.
 ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-2. Under the **Notifications** tab, select **Settings**.
-3. Under **Mail notifications**, use the toggles to select to which notifications should be sent:
+2. Under the **Notifications** section, select **Settings**.
+3. Under **Mail recipients**, Specify the recipients who will receive the notifications via email.
 
+	[!Note:] Email alerts for suspicious activities are only sent when the suspicious activity is created.
+
+4. Under **Notify when:**, use the toggles to select to which notifications should be sent:
 
 	- New suspicious activity is detected
 	- New health issue is detected
 	- New software update is available
-
-4. Specify the recipients who will receive the notifications via email.
-
-	[!Note:] Email alerts for suspicious activities are only sent when the suspicious activity is created.
-
 
 5. Click **Save**.
 
 ![ATA mail notification settings image](media/ATA-mail-notification-settings-1.7.png)
 
 
-**Syslog notification**
+## Syslog notification
 
 To receive Syslog notifications, set the following:
 
@@ -69,7 +67,7 @@ To receive Syslog notifications, set the following:
 1. In the ATA Console, select the settings option on the toolbar and select **Configuration**.
 ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-2. Under the **Notifications** tab, select **Settings**.
+2. Under the **Notifications** section, select **Settings**.
 3. Under **Syslog notifications**, use the toggles to select to which notifications should be sent:
 
 

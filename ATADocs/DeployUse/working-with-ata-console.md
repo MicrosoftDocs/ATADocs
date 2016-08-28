@@ -48,7 +48,7 @@ For more information about role based access control (RBAC) in ATA, see [Working
 
 2.  Enter your username and password and click **Log in**.
 
-![ATA login screen image](media/ATA-log-in-screen.jpg)
+![ATA login screen image](media/ATA-log-in-screen.png)
 
 
 ## The ATA Console
