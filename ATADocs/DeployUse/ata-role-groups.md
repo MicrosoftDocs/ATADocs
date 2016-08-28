@@ -45,7 +45,6 @@ ATA introduces 3 types of Role group: ATA Administrators, ATA Users and ATA View
 |Share/Export suspicious activity via email/get link|Available|Available|Not available|
 |Add/Edit notes for Suspicious Activities|Available|Available|Not available|
 |Change status of Monitoring Alerts|Available|Available|Not available|
-|Update ATA Detection configuration (HoneyToken SIDs/High substitution subnets/etc).|Available|Not available|Not available|
 |Update ATA Configuration|Available|Not available|Not available|
 |Gateway – Add|Available|Not available|Not available|
 |Gateway – Delete |Available|Not available|Not available|
