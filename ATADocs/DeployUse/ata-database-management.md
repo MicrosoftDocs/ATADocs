@@ -60,7 +60,7 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 ## ATA Configuration file
 The configuration of ATA is stored in the "SystemProfile" collection in the database.
-This collection is backed up every hour by the ATA Center service to files called: "SystemProfile_*timestamp*.json" and last 10 copies are remain each time.
+This collection is backed up every hour by the ATA Center service to files called: "SystemProfile_*timestamp*.json". The most recent 10 versions are stored.
 This is located in a subfolder called "Backup". In the default ATA installed location it can be found here:  *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
 
 **Note**: It is recommended that you back up this file somewhere when making major changes to ATA.
