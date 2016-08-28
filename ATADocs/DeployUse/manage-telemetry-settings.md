@@ -73,6 +73,21 @@ Collected anonymized data includes the following:
 
     -   Input provided
 
+- Health issues – The following anonymized data is collected for each health issue:
+
+    (Computer names, user names, and IP addresses are not collected)
+
+    -   Health issue type
+
+    -   Health issue ID
+
+    -   Status
+
+    -   Start and End Time
+
+- ATA Console URL addresses - URL addresses when using the ATA Console i.e. which pages in the ATA Console are visited.
+
+
 ### Disable data collection
 Perform the following steps to stop collecting and sending telemetry data to Microsoft:
 
