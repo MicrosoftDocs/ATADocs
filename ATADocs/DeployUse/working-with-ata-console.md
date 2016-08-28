@@ -35,7 +35,7 @@ Use the ATA console to monitor and respond to suspicious activity detected by AT
 
 ## Enabling access to the ATA Console
 To successfully login to the ATA Console, you have to log in with a user who was assigned the proper ATA role to access the ATA Console. 
-For more information about role based access control (RBAC) in ATA, refer to the ATA role article [LINK TO ROLES ARTICLE].
+For more information about role based access control (RBAC) in ATA, refer to the ATA role article [ATA Role Groups](ata-role-groups.md).
 
 ## Logging into the ATA Console
 
