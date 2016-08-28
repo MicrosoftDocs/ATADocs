@@ -1,5 +1,6 @@
 # [Understand and Explore](what-is-ata.md)
 ## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
+## [What threats does ATA detect?](ata-threats.md)
 ## [ATA Release notes](ata-release-notes.md)
 ### [What's new in ATA version 1.7](whats-new-version-1.7.md)
 #### [Update to ATA 1.7 - migration guide](ata-update-1.7-migration-guide.md)

@@ -1,6 +1,6 @@
 # [Understand and Explore](/advanced-threat-analytics/understand-explore/what-is-ata)
 # [Plan and Design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Deploy and Use](/advanced-threat-analytics/deploy-use/install-ata)
+# [Deploy and Use](/advanced-threat-analytics/deploy-use/preinstall-ata)
 # [Troubleshoot](troubleshooting-ata-using-logs.md)
 ## [Troubleshooting using known errors](troubleshooting-ata-known-errors.md)
 ## [Troubleshoot using the logs](troubleshooting-ata-using-logs.md)

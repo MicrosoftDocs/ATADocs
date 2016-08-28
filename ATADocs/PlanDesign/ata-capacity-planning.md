@@ -74,6 +74,8 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 > -   When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.
+
+
 ## Choosing the right gateway type for your deployment
 In an ATA deployment any combination of the ATA Gateway types is supported:
 
@@ -118,10 +120,13 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 &#42;&#42;Total amount of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
 
 &#42;&#42;&#42;Total amount of memory that this domain controller has installed.
+
 > [!NOTES]	
 > -   If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
+
+
 ### ATA Gateway Sizing
 
 Consider the following when deciding how many ATA Gateways to deploy.
@@ -154,6 +159,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 > [!NOTES] 
 > -   Dynamic memory is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
+
 
 ## Domain controller traffic estimation
 There are various tools that you can use to discover the average packets per second of your domain controllers. If you do not have any tools that track this counter, you can use Performance Monitor to gather the required information.
