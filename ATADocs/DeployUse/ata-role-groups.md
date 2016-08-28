@@ -52,9 +52,10 @@ ATA introduces 3 types of Role group: ATA Administrators, ATA Users and ATA View
 |Monitored DC – Add |Available|Not available|Not available|
 |Monitored DC – Delete|Available|Not available|Not available|
 
-When users try to access a page that is not available for their role group, they will be redirected to the ATA unauthorized page: 
-Add \ Remove users - ATA Role Groups 
+When users try to access a page that is not available for their role group, they will be redirected to the ATA unauthorized page. 
+
+## Add \ Remove users - ATA Role Groups 
 
 ATA uses the local Windows groups as a basis for role groups. 
-To add or remove users, use the **Local Users and Groups** MMC (Lusrmgr.msc), on a domain joined machine, you can add domain accounts as well as local accounts. 
+To add or remove users, use the **Local Users and Groups** MMC (Lusrmgr.msc). On a domain joined machine, you can add domain accounts as well as local accounts. 
 
