@@ -71,7 +71,7 @@ The ATA Center has the following logs:
     This file starts out empty each time the ATA Center service starts and is updated every minute. Its main use is understanding if there are any new errors or issues with the ATA Center - because the errors are grouped it is easier to quickly understand if there is a new errors or issues.
 
 > [!NOTE]
-> The first three log files have a maximum size of up to 50 MB. WWhen that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
+> The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
 
 
 ## ATA Deployment logs
@@ -90,6 +90,7 @@ ATA Gateway and ATA Lightweight Gateway deployment logs:
 -   **Microsoft Advanced Threat Analytics Gateway_20151214014801.log** - This log lists the steps in the process of the deployment of the ATA Gateway. Its main use is tracking the ATA Gateway deployment process.
 
 -   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** - This log file lists the steps in the process of the deployment of the ATA Gateway binaries. Its main use is tracking the deployment of the ATA Gateway binaries.
+
 
 ## See Also
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
