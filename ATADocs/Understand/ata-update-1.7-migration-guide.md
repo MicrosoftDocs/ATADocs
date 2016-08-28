@@ -84,9 +84,10 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 5.  In the **Updates** screen, if you already set your ATA Gateways to automatically update, they will update at this point, if not, click **Update** next to each ATA Gateway.
   ![Update gateways image](media/migration update gw.png)
 
+  
 > [!IMPORTANT] 
 > Update all the ATA Gateways to make sure ATA functions properly.
-
+> The configured Syslog listener port on all Gateways will be changed to 514.
  
     > [!NOTE] 
     > To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](/advanced-threat-analytics/deploy-use/install-ata-step4) .
