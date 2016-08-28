@@ -182,42 +182,103 @@ Make sure to have \t between the key=value pairs.
 > Using WinCollect for Windows event collection is not supported.
 
 ## Configuring Windows Event Forwarding
-If you do not have a SIEM server you can configure your domain controllers to forward Windows Event ID 4776 directly to one of your ATA Gateways.
 
-1.  Log on to all domain controllers and ATA Gateway machines using a domain account with administrator privileges.
-2. Make sure all the domain controllers and ATA Gateways you are connecting are joined to the same domain.
-3.	On each domain controller, type the following at an elevated command prompt:
-```
-winrm quickconfig
-```
-4.	On the ATA Gateway, type the following at an elevated command prompt:
-```
-wecutil qc
-```
-5.	On each domain controller, in **Active Directory Users and Computers**, navigate to the **Builtin** folder and double click on the **Event Log Readers** group.<br>
-![wef_ad_eventlogreaders](media/wef_ad_eventlogreaders.png)<br>
-Right click on it and select **Properties**. On the **Members** tab, add the computer account of each ATA Gateway.
-![wef_ad event log reader popup](media/wef_ad-event-log-reader-popup.png)
-6.	On the ATA Gateway, open the Event Viewer and right click on **Subscriptions** and select **Create Subscription**.  
+### WEF configuration for the ATA Gateway
 
-	a. Under **Subscription type and source computers**, click **Select Computers** and add the domain controllers and test connectivity.
-    ![wef_subscription prop](media/wef_subscription-prop.png)
+To set up your domain controllers to mirror traffic to the ATA Gateway via port mirroring, follow the instructions below to configure Windows Event forwarding using Source Initiated configuration. 
 
-	b. Under **Events to collect**, click **Select Events**. Select **By log** and scroll down to select **Security**. Then, In the **Includes/Excludes Event IDs**, type **4776**.<br>
-	![wef_4776](media/wef_4776.png)
+**Step 1: Add the network service account to the domain Event Log Readers Group.** 
 
-	c. Under **Change user account or configure advanced settings**, click **Advanced**.
-Set the **Protocol** to **HTTP** and the **Port** to **5985**.<br>
-	![wef_http](media/wef_http.png)
+1.	Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double click **Event Log Readers**. 
+2.	Select **Members**.
+4.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
 
-7.	[Optional] If you want a shorter polling interval, on the ATA Gateway, set the subscription heartbeat to 5 seconds for faster polling rate.
-    wecutil ss <CollectionName>/cm:custom
-    wecutil ss <CollectionName> /hi:5000
+**Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
+> [!Note] You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below are modifying the local policy of the domain controller. 	
 
-8. On the ATA Gateway configuration page, enable **Windows Event Forwarding Collection**.
+1.	From a command prompt type *gpedit.msc*.
+2.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
-> [!NOTE]
-> When you enable this setting the ATA Gateway will look in the Forwarded Events log for Windows Events that have been forwarded to it from the domain controllers.
+ ![Local policy group editor image](media/wef 1 local group policy editor.png)
+
+4.	Double click **Configure target Subscription Manager**.
+   
+    1.	Select **Enabled**.
+    2.	Under **Options** click **Show**.
+    3.	Under **SubscriptionManagers** enter the following value and click **OK**:	*Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+ 
+   ![Configure target subscription image](media/wef 2 config target sub manager.png)
+   
+    5.	Click **OK**.
+    6.	From an elevated command prompt type *gpupdate /force*. 
+
+**Step 3: Perform the following steps on the ATA Gateway** 
+
+1.	Open an elevated command prompt and type *wecutil qc*
+2.	Open **Event Viewer**. 
+3.	Right click **Subscriptions** and select **Create Subscription**. 
+
+   1.	Enter a name and description for the subscription. 
+   2.	For **Destination Log** confirm that **Forwarded Events** is selected. For ATA to read the events, the destination log must be **Forwarded Events**. 
+   3.	Select **Source computer initiated** and click **Select Computers Groups**.
+        1.	Click **Add Domain Computer**.
+        2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**. 
+       
+        ![Event Viewer image](media/wef3 event viewer.png)
+   
+        
+        3.	Click **OK**.
+   4.	Click **Select Events**.
+
+        1. Click **By log** and select **Security**.
+        2. In the **Includes/Excludes Event ID** field type **4776** and click **OK**. 
+
+ ![Query filter image](media/wef 4 query filter.png)
+
+   5.	Right click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
+   6.	After a few minutes, check to see that event 4776 is showing up in the Forwarded Events on the ATA Gateway.
+
+
+### WEF configuration for the ATA Lightweight Gateway
+When you install the ATA Lightweight Gateway on your domain controllers, you have to set up your domain controllers to forward the events to itself. 
+Perform the following steps to configure the Window Event Forwarding when using the ATA Lightweight Gateway. 
+
+**Step 1: Add the network service account to the domain Event Log Readers Group** 
+
+1.	Open Active Directory Users and Computer, navigate to the **BuiltIn** folder and double click **Event Log Readers**. 
+2.	Select **Members**.
+3.	If **Network Service** is not listed, click **Add** and type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
+
+**Step 2: Perform the following steps on the domain controller after the ATA Lightweight Gateway is installed** 
+
+1.	Open an elevated command prompt and type *winrm quickconfig and wecutil qc and* 
+2.	Open **Event Viewer**. 
+3.	Right click **Subscriptions** and select **Create Subscription**. 
+
+   1.	Enter a name and description for the subscription. 
+   2.	For **Destination Log** confirm that **Forwarded Events** is selected. For ATA to read the events the destination log must be Forwarded Events.
+
+        1.	Select **Collector initiated** and click **Select Computers**. Then click **Add Domain Computer**.
+        2.	Enter the name of the domain controller in the **Enter the object name to select**. Then click **Check Names** and click **OK**.
+
+            ![Subscription properties image](media/wef 5 sub properties computers.png)
+
+        3.	Click **OK**.
+   3.	Click **Select Events**.
+
+        1.	Click **By log** and select **Security**.
+        2.	In the **Includes/Excludes Event ID** type *4776* and click **OK**. 
+
+![Query filter image](media/wef 4 query filter.png)
+
+
+  4.	Right click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
+
+> [!Note] You may need to reboot the domain controller before the setting take effect. 
+
+After a few minutes, check to see that event 4776 is showing up in the Forwarded Events on the ATA Gateway.
+
+
 
 For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
 
