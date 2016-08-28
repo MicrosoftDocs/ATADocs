@@ -44,7 +44,7 @@ To receive mail notifications, set the following:
 ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
 2. Under the **Notifications** section, select **Settings**.
-3. Under **Mail recipients**, Specify the recipients who will receive the notifications via email.
+3. Under **Mail recipients**, specify the recipients who will receive the notifications via email.
 
 	[!Note:] Email alerts for suspicious activities are only sent when the suspicious activity is created.
 
