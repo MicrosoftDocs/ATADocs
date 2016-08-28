@@ -46,7 +46,9 @@ You can simulate suspicious activities which is an end to end test by doing one 
 This needs to run remotely against the domain controller being monitored and not from the ATA Gateway.
 
 ## How do I verify Windows Event Forwarding?
-You can run the following from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
+You can place the the following code into a file and then execute it from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** as follows:
+
+mongo.exe ATA filename
 
         db.getCollectionNames().forEach(function(collection) {
         if (collection.substring(0,10)=="NtlmEvent_") {
