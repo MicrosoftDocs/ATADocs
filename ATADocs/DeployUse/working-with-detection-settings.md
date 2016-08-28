@@ -38,7 +38,7 @@ In the **Detection** section you can define the following items:
 -   **Honeytoken account SIDs** – This is a user account that should have no network activities. This account will be configured as the ATA Honeytoken user. If someone attempts to use this user account ATA will create a suspicious activity and is an indication of malicious activity. To configure the Honeytoken user you will need the SID of the user account, not the user name.
 
 >[!NOTE]
-> You can find the SID of the user under the *Account Info* tab of the user's profile in the ATA console 
+> You can find the SID of the user on the *Account Info* tab of the user's profile in the ATA console.
 
 
 ![ATA detection settings honeytoken](media/ata-detection-settings-honeytoken-1.7.png)
