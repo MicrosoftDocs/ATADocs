@@ -6,7 +6,7 @@ description: Describes how to change the IP address of the ATA Console, used to 
 keywords:
 author: rkarlin
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Change ATA configuration - ATA Console URL
 

@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Validate Port Mirroring | Microsoft Advanced Threat Analytics
+title: Validate Port Mirroring | Microsoft ATA
 description: Describes how to validate that port mirroring is configured correctly
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Validate Port Mirroring
 > [!NOTE] 

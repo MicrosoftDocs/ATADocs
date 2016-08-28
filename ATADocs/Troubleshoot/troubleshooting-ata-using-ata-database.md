@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Troubleshooting ATA using the ATA database | Microsoft Advanced Threat Analytics
+title: Troubleshooting ATA using the ATA database | Microsoft ATA
 description: Describes how you can use the ATA database to help troubleshoot issues 
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Troubleshooting ATA using the ATA database
 ATA uses MongoDB as its database.

@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: ATA Health Center | Microsoft Advanced Threat Analytics
+title: ATA Health Center | Microsoft ATA
 description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # ATA Health Center
 The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.
@@ -47,5 +51,4 @@ To check up on your system's overall health, click the Health Center icon in the
 ## See Also
 - [Working with ATA detection settings](working-with-detection-settings.md)
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

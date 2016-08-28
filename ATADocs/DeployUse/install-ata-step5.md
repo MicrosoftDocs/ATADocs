@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Install ATA - Step 5 | Microsoft Advanced Threat Analytics
+title: Install ATA - Step 5 | Microsoft ATA
 description: Step five of installing ATA helps you configure settings for your ATA Gateway.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Install ATA - Step 5
 
@@ -48,23 +52,26 @@ After the ATA Gateway was installed, perform the following steps to configure th
 
     ![Configure gateway settings image](media/ATA-Gateways-config-2.png)
 
-  - **Description**: <br>Enter a description for the ATA Gateway (optional).
-  - **Port Mirrored Domain Controllers (FQDN)** (required for the ATA Gateway, this cannot be changed for the ATA Lightweight Gateway): <br>Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**<br /><br />
+  - **Description**: Enter a description for the ATA Gateway (optional).
+  - **Port Mirrored Domain Controllers (FQDN)** (required for the ATA Gateway, this cannot be changed for the ATA Lightweight Gateway): Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**
 
 The following information applies to the servers you enter in the **Domain Controllers** list:
- - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.<br>
- - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.<br>
+- All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
+ - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.
 
- - **Capture Network adapters** (required):<br>
-	 - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These will receive the mirrored domain controller traffic.
-	 - For an ATA Lightweight Gateway, this should be all the network adapters that are used for communication with other computers in your organization.
+- All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
+- At least one domain controller in the list be a global catalog server. This will enable ATA to resolve computer and user objects in other domains in the forest.
+- **Capture Network adapters** (required):
+  - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These will receive the mirrored domain controller traffic.
+  - For an ATA Lightweight Gateway, this should be all the network adapters that are used for communication with other computers in your organization.
 
 
- - **Domain synchronizer candidate**<br>
-Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource intensive. By default, only ATA Gateways are set as Domain synchronizer candidates. <br>It is recommended to disable any remote site ATA Gateways from being Domain synchronizer candidates.<br>If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features)
+ - **Domain synchronizer candidate**: Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource intensive. By default, only ATA Gateways are set as Domain synchronizer candidates.
+   It is recommended to disable any remote site ATA Gateways from being Domain synchronizer candidates.
+   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features)
 
 > [!NOTE] 
-> It will take a few minutes for the ATA Gateway service to start the first time after installation because it builds the cache of the network capture parsers.<br>
+> It will take a few minutes for the ATA Gateway service to start the first time after installation because it builds the cache of the network capture parsers.
 > The configuration changes will be applied to the ATA Gateway on the next scheduled sync between the ATA Gateway and the ATA Center.
 
 

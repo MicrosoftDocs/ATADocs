@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Troubleshooting ATA using the ATA logs | Microsoft Advanced Threat Analytics
+title: Troubleshooting ATA using the ATA logs | Microsoft ATA
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Troubleshooting ATA using the ATA logs
 The ATA logs provide insight into what each component of ATA is doing at any given point in time.

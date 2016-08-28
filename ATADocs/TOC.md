@@ -1,4 +1,5 @@
 # [Understand and Explore](/understand-explore/what-is-ata)
+# [What threats does ATA detect?](understand-explore/ata-threats)
 # [Plan and Design](/plan-design/ata-architecture)
 # [Deploy and Use](/deploy-use/preinstall-ata)
 # [Troubleshoot](/troubleshoot/troubleshooting-ata-known-errors)

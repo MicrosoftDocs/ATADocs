@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: ATA Frequently asked questions | Microsoft Advanced Threat Analytics
+title: ATA Frequently asked questions | Microsoft ATA
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 
 # optional metadata
@@ -24,13 +24,14 @@ ms.suite: ems
 #ms.custom:
 
 ---
+*Applies to: Advanced Threat Analytics version 1.7*
 
 # ATA frequently asked questions
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 
 ## How is ATA licensed?
-For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)
+For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/cloud-platform/advanced-threat-analytics-pricing)
 
 
 ## What should I do if the ATA Gateway won’t start?
@@ -47,21 +48,22 @@ This needs to run remotely against the domain controller being monitored and not
 ## How do I verify Windows Event Forwarding?
 You can run the following from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
 
-        mongo ATA --eval "printjson(db.getCollectionNames())" | find /C "NtlmEvents"`
+        db.getCollectionNames().forEach(function(collection) {
+        if (collection.substring(0,10)=="NtlmEvent_") {
+                if (db[collection].count() > 0) {
+                                  print ("Found "+db[collection].count()+" NTLM events") 
+                                }
+                }
+        });
+
 ## Does ATA work with encrypted traffic?
-Encrypted traffic will not be analyzed (for example: LDAPS, IPSEC ESP).
+ATA relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding so that even though encrypted traffic will not be analyzed (for example, LDAPS and IPSEC ESP) ATA will still work and most of the detections will not be affected
+
 ## Does ATA work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
 ## How many ATA Gateways do I need?
 
-First, it is recommended that you use ATA Lightweight Gateways on any domain controllers that can accommodate it; to determine this, see [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
-
-If all domain controllers can be covered by ATA Lightweight Gateways then no ATA Gateways are needed.
-
-For any domain controllers that can't be covered by the ATA Lightweight Gateway, consider the following when deciding how many ATA Gateways you need:
-
- - The total amount of traffic your domain controllers produce, as well as the network architecture (in order to configure port-mirroring). To read more on how to determine how much traffic your domain controllers produce see [Domain controller traffic estimation](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation).
- - The operational limitations of port mirroring also determine how many ATA Gateways you need to support your domain controllers, for example: per switch, per datacenter, per region - each environment has its own considerations. 
+The number of ATA Gateways depend on your network layout, volume of packets and volume of events captured by ATA. To determine the exact number, see [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 ## How much storage do I need for ATA?
 For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about ATA Center sizing see, [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning).
@@ -85,11 +87,10 @@ If a virtual domain controller can't be covered by the ATA Lightweight Gateway, 
 There are 2 things to back up:
 
 -   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   The configuration of ATA, which is stored in the database and is automatically backed up every hour. 
-
+-   The configuration of ATA. This is stored in the database and is automatically backed up every hour in the **Backup** folder in the ATA Center deployment location.  See [ATA database management](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management) for more information.
 ## What can ATA detect?
 ATA detects known malicious attacks and techniques, security issues, and risks.
-For the full list of ATA detections, see [What is Microsoft Advanced Threat Analytics?](what-is-ata.md).
+For the full list of ATA detections, see [What detections does ATA perform?](ata-threats.md).
 
 ## What kind of storage do I need for ATA?
 We recommend fast storage (7200 RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
@@ -101,9 +102,9 @@ The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect 
 ATA has a bi-directional integration with SIEMs as follows:
 
 1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
-2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from [these SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
+2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from  [these SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
 
-## Can ATA monitor domain controllers visualized on your IaaS solution?
+## Can ATA monitor domain controllers virtualized on your IaaS solution?
 
 Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.
 
@@ -132,8 +133,7 @@ No. ATA monitors all devices in the network performing authentication and author
 Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities ATA monitors all computer accounts behavior and all other entities in the environment.
 
 ## Can ATA support multi-domain and multi-forest?
-At general availability, Microsoft Advanced Threat Analytics will support multi-domain with the same forest boundary. The forest itself is the actual “security boundary”, so that providing multi-domain support will allow our customers to have 100% coverage of their environments with ATA.
-
+Microsoft Advanced Threat Analytics supports multi-domain environments within the same forest boundary. Multiple forests require an ATA deployment for each forest.
 ## Can you see the overall health of the deployment?
 Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you will be alerted as they occur.
 
