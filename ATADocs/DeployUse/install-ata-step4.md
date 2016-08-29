@@ -55,15 +55,15 @@ Perform the following steps on the ATA Gateway server.
 
 3.  On the **Welcome** page, select your language and click **Next**.
 
-4.  The installation wizard will automatically check if the server is a domain controller or not. The result of this check whether an ATA Gateway or Lightweight Gateway (on a domain controller) will be installed. 
+4.  The installation wizard will automatically check if the server is a domain controller or not. The result of this test will determine whether an ATA Gateway or an ATA Lightweight Gateway (on a domain controller) will be installed. 
     
-    For example, in the case of a Lightweight Gateway you will see:
+    For example, in the case of an ATA Lightweight Gateway, the following screen will be displayed to let you know that an ATA Lightweight Gateway will be installed on your domain controller:
     
-    ![ATA full gateway chosen](media/ATA-lightweight-gateway-install-selected.png)
+    ![ATA Lightweight Gateway installation](media/ATA-lightweight-gateway-install-selected.png)
     Click **Next**.
 
-> [!NOTE] 
-> If the domain controller does not meet the minimum hardware requirements for the Lightweight Gateway, a yellow text message will appear. This message does not prevent you from clicking **Next**, for example if you wish to test ATA in a small lab environment. For production environments, it is highly recommended to work with ATA's [capacity planning](PlanDesign\ata-capacity-planning.md) guide.
+    > [!NOTE] 
+    > If the domain controller does not meet the minimum hardware requirements for the Lightweight Gateway installation, you will receive a warning. This does not prevent you from clicking **Next** and installing the ATA Lightweight Gateway anyway. This might be the right option for installation of ATA in a small lab test environment in which you won't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](PlanDesign\ata-capacity-planning.md) guide to make sure your domain controllers meet the necessary requirements.
 
 4.  Under **ATA Gateway Configuration**, enter the following information based on your environment:
 
@@ -74,7 +74,8 @@ Perform the following steps on the ATA Gateway server.
     |Installation Path|This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway|Leave the default value|
     |Gateway Service SSL Certificate|This is the certificate that will be used by the ATA Gateway.|Use a self-signed certificate for lab environments only.|
     |Gateway Registration|Enter the Username and Password of the ATA administrator.|For the ATA Gateway to register with the ATA Center, enter the user name and password of the user who installed the ATA Center. This user must be a member of one of the following local groups on the ATA Center.<br /><br />-   Administrators<br />-   Microsoft Advanced Threat Analytics Administrators **Note:** These credentials are used only for registration and are not stored in ATA.|
-    The following components are installed and configured during the installation of the ATA Gateway:
+    
+5. Click **Install**. The following components are installed and configured during the installation of the ATA Gateway:
 
     -   KB 3047154 (for Windows Server 2012 R2 only)
 
