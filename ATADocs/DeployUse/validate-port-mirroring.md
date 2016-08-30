@@ -38,7 +38,7 @@ The following steps walk you through the process for validating that port mirror
 ## Validate port mirroring using a Windows PowerShell script
 
 1. Save the text of this script into a file called ATAdiag.ps1.
-2. Run this script from the ATA Gateway.
+2. Run this script on the ATA Gateway that you want to validate.
 The script generates ICMP traffic from the ATA Gateway to the domain controller and looks for that traffic on the Capture NIC on the domain controller.
 If the ATA Gateway sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the ATA Console, it deems port mirroring configured. 
 
@@ -198,7 +198,7 @@ Sample for how to run the script:
     
     
 ## Validate port mirroring using Net Mon
-1.  Install [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865).
+1.  Install [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) on the ATA Gateway that you want to validate..
 
     > [!IMPORTANT]
     > Do not install Microsoft Message Analyzer, or any other traffic capture software on the ATA Gateway.

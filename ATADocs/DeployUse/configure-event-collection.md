@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.6 and 1.7*
 
 
 
@@ -183,21 +183,24 @@ Make sure to have \t between the key=value pairs.
 
 ## Configuring Windows Event Forwarding
 
-### WEF configuration for the ATA Gateway
+### WEF configuration for ATA Gateway's with port mirroring
 
-To set up your domain controllers to mirror traffic to the ATA Gateway via port mirroring, follow the instructions below to configure Windows Event forwarding using Source Initiated configuration. 
+After you configured port mirroring from the domain controllers to the ATA Gateway, follow the instructions below to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
 
 **Step 1: Add the network service account to the domain Event Log Readers Group.** 
+
+In this scenario we are assuming that the ATA Gateway is a member of the domain.
 
 1.	Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double click **Event Log Readers**. 
 2.	Select **Members**.
 4.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
-> [!Note] You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below are modifying the local policy of the domain controller. 	
+> [!Note] You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below modify the local policy of the domain controller. 	
 
-1.	From a command prompt type *gpedit.msc*.
-2.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
+1.	Run the following command on each domain controller: *winrm quickconfig*
+2.  From a command prompt type *gpedit.msc*.
+3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
  ![Local policy group editor image](media/wef 1 local group policy editor.png)
 
@@ -240,8 +243,8 @@ To set up your domain controllers to mirror traffic to the ATA Gateway via port 
 
 
 ### WEF configuration for the ATA Lightweight Gateway
-When you install the ATA Lightweight Gateway on your domain controllers, you have to set up your domain controllers to forward the events to itself. 
-Perform the following steps to configure the Window Event Forwarding when using the ATA Lightweight Gateway. 
+When you install the ATA Lightweight Gateway on your domain controllers, you can set up your domain controllers to forward the events to itself. 
+Perform the following steps to configure the Window Event Forwarding when using the ATA Lightweight Gateway. This is one way to configure Windows Event forwarding.  
 
 **Step 1: Add the network service account to the domain Event Log Readers Group** 
 
@@ -251,7 +254,7 @@ Perform the following steps to configure the Window Event Forwarding when using 
 
 **Step 2: Perform the following steps on the domain controller after the ATA Lightweight Gateway is installed** 
 
-1.	Open an elevated command prompt and type *winrm quickconfig and wecutil qc and* 
+1.	Open an elevated command prompt and type *winrm quickconfig* and *wecutil qc* 
 2.	Open **Event Viewer**. 
 3.	Right click **Subscriptions** and select **Create Subscription**. 
 
