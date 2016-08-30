@@ -25,11 +25,15 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # ATA Silent Installation
 This article provides instructions for silently installing ATA.
 ## Prerequisites
 
-Microsoft ATA v1.6 requires the installation of Microsoft .NET Framework 4.6.1. 
+Microsoft ATA v1.7 requires the installation of Microsoft .NET Framework 4.6.1. 
 
 When you install or update ATA, .Net Framework 4.6.1 will be automatically installed as part of the deployment of Microsoft ATA.
 
