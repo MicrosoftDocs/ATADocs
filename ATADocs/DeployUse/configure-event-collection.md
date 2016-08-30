@@ -196,7 +196,8 @@ In this scenario we are assuming that the ATA Gateway is a member of the domain.
 4.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
-> [!Note] You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below modify the local policy of the domain controller. 	
+> [!Note] 
+> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below modify the local policy of the domain controller. 	
 
 1.	Run the following command on each domain controller: *winrm quickconfig*
 2.  From a command prompt type *gpedit.msc*.
@@ -277,7 +278,8 @@ Perform the following steps to configure the Window Event Forwarding when using 
 
   4.	Right click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
 
-> [!Note] You may need to reboot the domain controller before the setting take effect. 
+> [!Note] 
+> You may need to reboot the domain controller before the setting take effect. 
 
 After a few minutes, check to see that event 4776 is showing up in the Forwarded Events on the ATA Gateway.
 
