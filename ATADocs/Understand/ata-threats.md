@@ -50,7 +50,7 @@ Detecting reconnaissance for entities (users, groups, etc.) performed using the 
 
 ### Compromised credentials
 To provide detection of compromised credentials, ATA leverages both machine-learning based behavioral analytics as well as known malicious attacks and technique detection.
-Using behavioral analytics and machine learning, ATA is able to detect suspicious activities such as anomalous logins, abnormal resource access, and abnormal working hours which would point to credential compromise. To protect against compromised credentials, ATA detects the following known malicious attacks and techniques: :
+Using behavioral analytics and machine learning, ATA is able to detect suspicious activities such as anomalous logins, abnormal resource access, and abnormal working hours which would point to credential compromise. To protect against compromised credentials, ATA detects the following known malicious attacks and techniques:
 -	**Brute force**
 In brute-force attacks, attackers try to guess user credentials by trying multiple users and pairing them with multiple password attempts. The attackers often use complex algorithms or dictionaries to try as many values as a system allows.
 -	**Sensitive account exposed in plain text authentication**
@@ -65,6 +65,7 @@ Authentication requests (Kerberos or NTLM) are usually performed using a normal 
 Data Protection API (DPAPI) is a password-based data protection service. This protection service is used by various applications that stores user’s secrets, such as website passwords and file share credentials. In order to support password-loss scenarios, users can decrypt protected data by using a recovery key which does not involve their password. In a domain environment, attackers may remotely steal the recovery key and use it to decrypt protected data in all the domain joined computers.
 -	**Abnormal Behavior**
 Often in cases of insider threats, as well as advanced attacks, the account credentials may be compromised using social engineering methods or new and not-yet-known methods and techniques. ATA is able to detect these types of compromises by analyzing the entity’s behavior and detecting and alerting on abnormalities of the operations performed by the entity.
+
 ### Lateral movement
 To provide detection of lateral movement, when users take advantage of credentials that provide access to some resources to gain access resources that they are not meant to have access to, ATA leverages both machine-learning based behavioral analytics as well as known malicious attacks and technique detection.
 Using behavioral analytics and machine learning, ATA detects abnormal resource access, abnormal devices used and other indicators that are evidence of lateral movement.
@@ -77,6 +78,7 @@ In pass the hash attacks, attackers steal the NTLM hash of an entity, and use it
 Over-pass the hash are attacks in which the attacker uses a stolen NTLM hash to authenticate with Kerberos, and obtain a valid Kerberos TGT ticket, which is then used to authenticate as a valid user and gain access to resources on your network.
 -	**Abnormal behavior**
 Lateral movement is a technique often used by attackers, to move between devices and areas in the victim’s network to gain access to privileged credentials or sensitive information of interest to the attacker. ATA is able to detect lateral movement by analyzing the behavior of users, devices and their relationship inside the corporate network, and detect on any abnormal access patterns which may indicate a lateral movement performed by an attacker.
+
 ### Privilege escalation
 ATA detects successful and attempted privilege escalation attacks, in which attackers attempt to increase existing privileges and use them multiple times in order to eventually gain full control over the victim’s environment.
 ATA enables privilege escalation detection by combining behavioral analytics to detect anomalous behavior of privileged accounts as well as detecting known and malicious attacks and techniques that are often used to escalate privileges such as:
@@ -84,6 +86,7 @@ ATA enables privilege escalation detection by combining behavioral analytics to 
 Forged PAC are attacks in which the attacker plants authorization data in their valid TGT ticket in the form of a forged authorization header that grants them additional permissions that they weren't granted by their organization. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
 -	**MS11-013 exploit (Silver PAC)**
 MS11-013 exploit attacks are an elevation of privilege vulnerability in Kerberos which allows for certain aspects of a Kerberos service ticket to be forged. A malicious user or attacker who successfully exploited this vulnerability could obtain a token with elevated privileges on the Domain Controller. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
+
 ### Domain dominance
 ATA detects attackers attempting or successfully achieving total control and dominance over the victim’s environment by performing detection over known techniques used by attackers, which include:
 -	**Skeleton key malware**

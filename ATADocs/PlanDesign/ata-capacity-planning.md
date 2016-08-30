@@ -121,7 +121,7 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 
 &#42;&#42;&#42;Total amount of memory that this domain controller has installed.
 
-> [!NOTES]	
+> [!NOTE]	
 > -   If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
@@ -156,7 +156,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 
 &#42;&#42;Hyper-threading must be disabled.
 
-> [!NOTES] 
+> [!NOTE] 
 > -   Dynamic memory is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
 

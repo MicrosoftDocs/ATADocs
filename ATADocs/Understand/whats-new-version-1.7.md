@@ -79,7 +79,7 @@ The following known issues exist in this version.
 In the ATA Console, the ATA Gateway will have the status of "Updating (downloading package)" for a long amount of time and it eventually fails.
 **Workaround:** To work around this issue, download the latest ATA Gateway package from the ATA Console, and update the ATA Gateway manually.
 
- [!IMPORTANT]
+ > [!IMPORTANT]
  Automatic certificate renewal for the certificates used by ATA is not supported. The use of these certificates may cause ATA to stop functioning when the certificate is automatically renewed. 
 
 

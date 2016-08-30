@@ -56,9 +56,10 @@ ATA technology detects multiple suspicious activities, focusing on several phase
 - 	Lateral movement cycle, during which an attacker invests time and effort in spreading their attack surface inside your network.
 - 	Domain dominance (persistence), during which an attacker captures the information allowing them to resume their campaign using various set of entry points, credentials and techniques. 
 
-These phases of a cyber attack including internal reconnaissance, lateral movement, domain dominance (persistence), abnormal asset access and others, which are similar and predictable, no matter what type of company is under attack or what type of information is being targeted.
+These phases of a cyber attack are similar and predictable, no matter what type of company is under attack or what type of information is being targeted.
 ATA searches for three main types of attacks: Malicious attacks, abnormal behavior and security issues and risks.
-Malicious attacks are detected deterministically, by looking for the full list of known attack types including:
+
+**Malicious attacks** are detected deterministically, by looking for the full list of known attack types including:
 
 - 	Pass-the-Ticket (PtT)
 - 	Pass-the-Hash (PtH)
@@ -75,7 +76,7 @@ ATA detects these suspicious activities and surfaces the information in the ATA 
 
  ![sample ATA screen pass-the-hash](media/sample screen pth.png)
 
-Abnormal behavior is detected by ATA using behavioral analytics and leveraging Machine Learning to uncover questionable activities and abnormal behavior in users and devices in your network, including:
+**Abnormal behavior** is detected by ATA using behavioral analytics and leveraging Machine Learning to uncover questionable activities and abnormal behavior in users and devices in your network, including:
 
 - 	Anomalous logins
 - 	Unknown threats
@@ -87,7 +88,7 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
  ![sample ATA screen abnormal behavior](media/sample screen abnormal behavior.png) 
 
-Examples of security issues and risks identified by ATA are:
+ATA also detects **security issues and risks**, including:
 
 - 	Broken trust
 - 	Weak protocols

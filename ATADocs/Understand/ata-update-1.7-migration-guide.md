@@ -31,8 +31,7 @@ The update to ATA 1.7 provides improvements in the following areas:
 -   New detections
 
 -   Improvements to existing detections
-
--  
+  
 
 ## Updating ATA to version 1.7
 > [!NOTE] 

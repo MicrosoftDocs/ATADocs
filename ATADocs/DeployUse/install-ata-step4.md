@@ -55,7 +55,7 @@ Perform the following steps on the ATA Gateway server.
 
 3.  On the **Welcome** page, select your language and click **Next**.
 
-4.  The installation wizard will automatically check if the server is a domain controller or not. The result of this test will determine whether an ATA Gateway or an ATA Lightweight Gateway (on a domain controller) will be installed. 
+4.  The installation wizard will automatically check if the server is a domain controller or a dedicated server. If it is a domain controller, the ATA Lightweight Gateway will be installed, if it is a dedicated server, the ATA Gateway will be installed. 
     
     For example, in the case of an ATA Lightweight Gateway, the following screen will be displayed to let you know that an ATA Lightweight Gateway will be installed on your domain controller:
     
@@ -63,7 +63,7 @@ Perform the following steps on the ATA Gateway server.
     Click **Next**.
 
     > [!NOTE] 
-    > If the domain controller does not meet the minimum hardware requirements for the Lightweight Gateway installation, you will receive a warning. This does not prevent you from clicking **Next** and installing the ATA Lightweight Gateway anyway. This might be the right option for installation of ATA in a small lab test environment in which you won't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](PlanDesign\ata-capacity-planning.md) guide to make sure your domain controllers meet the necessary requirements.
+    > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you will receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of ATA in a small lab test environment in which you won't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](PlanDesign\ata-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
 4.  Under **ATA Gateway Configuration**, enter the following information based on your environment:
 

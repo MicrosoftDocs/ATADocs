@@ -6,7 +6,7 @@ description: In the final step of installing ATA, you configure the short-term l
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/28/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -35,11 +35,9 @@ ms.suite: ems
 [« Step 5](install-ata-step5.md)
 
 ## Step 6. Configure  IP address exclusions and Honeytoken user
-ATA enables the exclusion of specific IP addresses and/or IP subnets from two types of detections: *DNS Reconnaissance* and *Pass-the-Ticket*. 
+ATA enables the exclusion of specific IP addresses and IP subnets from two types of detections: **DNS Reconnaissance** and **Pass-the-Ticket**. 
 
-An example of *DNS Reconnaissance exclusion* would be a security scanners that use DNS as a scanning mechanism. The exclusion helps ATA to ignore those scannners.
-
-An example for the *Pass-the-Ticket* exclusion would be NAT devices.    
+For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
 
 ATA also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account will trigger an alert.
 
@@ -49,11 +47,11 @@ To configure the above, follow these steps:
 
     ![ATA configuration settings](media/ATA-config-icon.JPG)
 
-2.  Under **Exclusions** (in the *Detection* category), enter the following for either the *DNS Reconnaissance* or the *Pass-the-Ticket* IP addresses. Use CIDR format, for example:  `192.168.1.0/24` and click the *plus* sign.
+2.  Under **Detection exclusions**, enter the following for either *DNS Reconnaissance* or *Pass-the-Ticket* IP addresses. Use CIDR format, for example:  `192.168.1.0/24` and click the *plus* sign.
 
     ![Save changes](media/ATA-exclusions.png)
 
-3.  For the Honeytoken account SIDs, under **Settings** (in the *Detection* category), enter the SID and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+3.  Under **Detection settings** enter the Honeytoken account SIDs and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
 
     ![ATA configuration settings](media/ATA-honeytoken.png)
 

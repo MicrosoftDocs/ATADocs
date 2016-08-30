@@ -1,5 +1,5 @@
 # [Understand and Explore](/advanced-threat-analytics/understand-explore/what-is-ata)
-# [Plan and Design](ata-capacity-planning.md)
+# [Plan and Design](ata-architecture.md)
 ## [ATA Architecture](ata-architecture.md)
 ## [Plan your ATA capacity](ata-capacity-planning.md)
 ## [ATA Prerequisites](ata-prerequisites.md)
