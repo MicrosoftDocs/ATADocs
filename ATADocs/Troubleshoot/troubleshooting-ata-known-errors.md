@@ -50,7 +50,7 @@ This section details possible errors in the deployments of ATA and the steps req
 |System.ApplicationException: Unable to start ETW session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|There is an host entry in the HOSTS file pointing to the machine's shortname|Remove the host entry from C:\Windows\System32\drivers\etc\HOSTS file or change it to an FQDN.|
 
 
-## ATA IIS errors (Does not applicable for ATA v1.7 and above)
+## ATA IIS errors (Not applicable for ATA v1.7 and above)
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |HTTP Error 500.19 – Internal Server Error|The IIS URL Rewrite module failed to install correctly.|Uninstall and reinstall the IIS URL Rewrite module.<br>[Download the IIS URL Rewrite module](http://go.microsoft.com/fwlink/?LinkID=615137)|
