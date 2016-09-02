@@ -6,7 +6,7 @@ description: Provides a list of the ways in which you can update your ATA config
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # Change ATA configuration
 
 If you need to update or change your configuration after initial installation and deployment of ATA, use this topic for guidance before modifying the following:
@@ -33,13 +37,11 @@ If you need to update or change your configuration after initial installation an
 
 -   [Change the ATA Center certificate](modifying-ata-config-centercert.md)
 
--   [Change the ATA Console IP address](modifying-ata-config-consoleip.md)
-
--   [Change the IIS certificate](modifying-ata-config-iiscert.md)
+-   [Change the ATA Console URL](modifying-ata-config-consoleurl.md)
 
 -   [Change the domain connectivity password](modifying-ata-config-dcpassword.md)
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the ATA forum!](https://aka.ms/ata-forum)

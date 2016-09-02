@@ -28,6 +28,8 @@ ms.suite: ems
 # Release notes
 The following versions are available:
 
+- [What's new in ATA version 1.7](whats-new-version-1.7.md)
+   - [Update to ATA 1.7 - migration guide](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide)
 - [What's new in ATA version 1.6](whats-new-version-1.6.md)
    - [Update to ATA 1.6 - migration guide](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide)
 - [What's new in ATA version 1.5](whats-new-version-1.5.md)
