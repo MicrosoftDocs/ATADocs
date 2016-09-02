@@ -6,7 +6,7 @@ description: Describes how you can use the ATA database to help troubleshoot iss
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Troubleshooting ATA using the ATA database
 ATA uses MongoDB as its database.
@@ -51,15 +55,6 @@ The following example provides sample code using the syntax provided above. If y
 `db.UniqueEntity.find({Name: "John Doe"})`<br>Take a note of his ID as indicated by the value of "`_id`" For our example, let's assume the ID is "`123bdd24-b269-h6e1-9c72-7737as875351`"<br>Then, search for the collection with the closest date that is before the date you are looking for, in our example 20/10/2015.<br>Then, search for John Doe's account NTLM activities: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## ATA Configuration file
-The configuration of ATA is stored in the "SystemProfile" collection in the database.
-This collection is backed up every hour by the ATA Center service to a file called: "SystemProfile.json". This is located in a subfolder called "Backup". In the default ATA installed location it can be found here:  **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json**. 
-
-**Note**: It is recommended that you back up this file somewhere when making major changes to ATA.
-
-It is possible to restore all the settings by running the following command:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## See Also
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
