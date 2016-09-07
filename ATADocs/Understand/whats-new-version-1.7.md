@@ -104,7 +104,7 @@ To run the appropriate script, follow the following steps.
 
 ![ATA Mongo Script](media/ATA-mongoDB-script.png)
 
-4.	Rerun the ATA 1.7 migration.
+At this point you should be able to restart the upgrade.
 
 ### ATA reports a large number of “*Reconnaissance using directory services enumerations*” suspicious activities:
  
