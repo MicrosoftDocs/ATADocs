@@ -106,7 +106,7 @@ To run the appropriate script, follow the following steps.
 
 4.	Rerun the ATA 1.7 migration.
 
- ### ATA reports a large number of “*Reconnaissance using directory services enumerations*” suspicious activities:
+### ATA reports a large number of “*Reconnaissance using directory services enumerations*” suspicious activities:
  
 This is most likely happening if there is a network scanning tool running on all (or a lot) of client machines in the
 organization. If you are seeing this problem:
