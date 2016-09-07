@@ -77,8 +77,48 @@ The following known issues exist in this version.
 ### Gateway automatic update may fail
 **Symptoms:** In environments with slow WAN links, the ATA Gateway update may reach the timeout for the update (100 seconds) and fail to complete successfully.
 In the ATA Console, the ATA Gateway will have the status of "Updating (downloading package)" for a long amount of time and it eventually fails.
+
 **Workaround:** To work around this issue, download the latest ATA Gateway package from the ATA Console, and update the ATA Gateway manually.
 
+### Migration failure when updating from ATA 1.6
+When updating to ATA 1.7, the update process may fail with the error code *0x80070643*:
+
+![Update ATA to 1.7 error](media/ata-update-error.png)
+
+This is a generic error, and may indicate several root-causes for the failure. Some of those issues can be fixed on the database level.
+In order to fix the specific scenario, you will need to find the exact exception in the installation log and run a special *mongo script* to fix the issue in the database.
+In order to run a *mongo script*, use the following procedure:
+
+1.	From the **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** directory execute:
+**Mongo ATA**
+
+2.	In the prompt, paste the *mongo script*, for example:
+
+![ATA Mongo Script](media/ATA-mongoDB-script.png)
+
+
+In order to locate the relevant *mongo script* for the specific issue, open the installation log file located in: **%temp%/../Microsoft Advanced Threat Analytics Center_{date_stamp}_MsiPackage.log** and look for one of the following exceptions:
+
+| Error in MsiPackge.log                                                                                                                                                                                                                                                                       | mongo script to fix the issue                                                                                                                                                                        |
+|---|---|
+| System.FormatException: Size {size},is larger than MaxDocumentSize 16777216 <br> And later:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
+| System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown<br>And later:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
+|System.Security.Cryptography.CryptographicException: Bad Length<br>And later:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
+
+  
+ ### ATA reports too many suspicious activities of the type “*Reconnaissance using directory services enumeration*”:
+ 
+This is most likely happening if there is some kind of network scanning tool running on all (or a lot) of client machines in the organization.
+If you are seeing this problem:
+
+1.	Please email to ATAEval at Microsoft.com any information you can find about an application that running on those machines that may explain the SAM-R activity
+2.	Use the following *mongo script* to dismiss all the events on those types at once (see above how to execute the *mongo script*):
+
+db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
+
+### Users getting notification for dismissed suspicious activities:
+After upgrade to v1.7, ATA may keep send notification (Email/Event logs/Etc) for suspicious activities that are in “Dismiss” status.
+ 
  > [!IMPORTANT]
  Automatic certificate renewal for the certificates used by ATA is not supported. The use of these certificates may cause ATA to stop functioning when the certificate is automatically renewed. 
 
