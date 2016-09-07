@@ -106,7 +106,7 @@ In order to locate the relevant *mongo script* for the specific issue, open the 
 |System.Security.Cryptography.CryptographicException: Bad Length<br>And later:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
 
   
- ### ATA reports too many suspicious activities of the type “*Reconnaissance using directory services enumeration*”:
+### ATA reports too many suspicious activities of the type “*Reconnaissance using directory services enumeration*”:
  
 This is most likely happening if there is some kind of network scanning tool running on all (or a lot) of client machines in the organization.
 If you are seeing this problem:
