@@ -119,9 +119,12 @@ db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set
 ### ATA sends notifications for dismissed suspicious activities:
 If notifications have been configured, ATA may keep sending notifications (email, syslog and event logs) for dismissed suspicious activities.
 There is no workaround for this issue now. 
- 
+
+### ATA Gateway may fail to register with the ATA Center if TLS 1.0 and TLS 1.1 are disbaled:
+If TLS 1.0 and TLS 1.1 disabled on the ATA Gateway (or Lightweight Gateway), the gateway may fail to register itself on the ATA Center
+
 ### Automatic certificate renewal for the certificates used by ATA is not supported
-The use of these certificates may cause ATA to stop functioning when the certificate is automatically renewed. 
+The use of automatic certificate renewal may cause ATA to stop functioning when the certificate is automatically renewed. 
 
 
 ## See Also
