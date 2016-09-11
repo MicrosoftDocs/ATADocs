@@ -33,7 +33,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><mark><b>NEW</b></mark> <a href="/understand-explore/whats-new-version-1.7">Release of ATA version 1.7</a></li>
+          <li><mark><b>NEW</b></mark> <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">Release of ATA version 1.7</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">What is Advanced Threat Analytics?</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Frequently asked questions</a></li>
         </ul>
