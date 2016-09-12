@@ -77,10 +77,54 @@ The following known issues exist in this version.
 ### Gateway automatic update may fail
 **Symptoms:** In environments with slow WAN links, the ATA Gateway update may reach the timeout for the update (100 seconds) and fail to complete successfully.
 In the ATA Console, the ATA Gateway will have the status of "Updating (downloading package)" for a long amount of time and it eventually fails.
+
 **Workaround:** To work around this issue, download the latest ATA Gateway package from the ATA Console, and update the ATA Gateway manually.
 
- > [!IMPORTANT]
- Automatic certificate renewal for the certificates used by ATA is not supported. The use of these certificates may cause ATA to stop functioning when the certificate is automatically renewed. 
+### Migration failure when updating from ATA 1.6
+When updating to ATA 1.7, the update process may fail with the following error code *0x80070643*:
+
+![Update ATA to 1.7 error](media/ata-update-error.png)
+
+Review the deployment log to find the cause of the failure. The deployment log is located in the following location, **%temp%\..\Microsoft Advanced Thread Analytics Center_{date_stamp}_MsiPackage.log**. 
+
+In the table below lists the errors to look for and the corresponding Mongo script to fix the error. See example below the table on how to run the Mongo script:
+
+| Error in deployment log file                                                                                                                  | Mongo script                                                                                                                                                                         |
+|---|---|
+| System.FormatException: Size {size},is larger than MaxDocumentSize 16777216 <br>Further down in the file:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
+| System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown<br>Further down in the file:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
+|System.Security.Cryptography.CryptographicException: Bad Length<br>Further down in the file:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
+
+
+To run the appropriate script, follow the following steps. 
+
+1.	From an elevated command prompt, browse to the following location: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
+2.	Type – **Mongo.exe ATA**   (*Note*: ATA must be capitalized.)
+3.	Paste the script that matches the error in the deployment log from the table above.
+
+![ATA Mongo Script](media/ATA-mongoDB-script.png)
+
+At this point you should be able to restart the upgrade.
+
+### ATA reports a large number of “*Reconnaissance using directory services enumerations*” suspicious activities:
+ 
+This is most likely happening if there is a network scanning tool running on all (or a lot) of client machines in the
+organization. If you are seeing this problem:
+
+1. In case you can identify the reason or the specific application that running on the client machines, send an email to ATAEval at Microsoft.com with the information.
+2. Use the following mongo script to dismiss all these events (see above how to execute the mongo script):
+
+db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
+
+### ATA sends notifications for dismissed suspicious activities:
+If notifications have been configured, ATA may keep sending notifications (email, syslog and event logs) for dismissed suspicious activities.
+There is no workaround for this issue now. 
+
+### ATA Gateway may fail to register with the ATA Center if TLS 1.0 and TLS 1.1 are disbaled:
+If TLS 1.0 and TLS 1.1 disabled on the ATA Gateway (or Lightweight Gateway), the gateway may fail to register itself on the ATA Center
+
+### Automatic certificate renewal for the certificates used by ATA is not supported
+The use of automatic certificate renewal may cause ATA to stop functioning when the certificate is automatically renewed. 
 
 
 ## See Also
