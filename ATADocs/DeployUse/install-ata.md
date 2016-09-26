@@ -6,7 +6,7 @@ description: Walks you through the necessary steps to get ATA deployed, configur
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/20/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -46,7 +46,7 @@ To configure ATA, follow these steps:
 
 -   [Step 5. Configure the ATA Gateway settings](install-ata-step5.md)
 
--   [Step 6. Configure short-term lease subnets and Honeytoken user](install-ata-step6.md)
+-   [Step 6. Configure a Honeytoken user](install-ata-step6.md)
 
 
 ## See Also
