@@ -6,7 +6,7 @@ description: Walks you through working with ATA role groups.
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/20/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -35,9 +35,9 @@ ms.suite: ems
 Role groups enables access management for ATA. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and ATA role authorization, and helps you get up and running with role groups in ATA.
 ## Types of ATA Role Groups 
 
-ATA introduces 3 types of Role group: ATA Administrators, ATA Users and ATA Viewers. The following table describes the type of access in ATA available per role. Depending on which role you assign, various screens and menu options in ATA will not be available, as follows:
+ATA introduces 3 types of Role group: ATA Administrator, ATA Analyst and ATA Executive. The following table describes the type of access in ATA available per role. Depending on which role you assign, various screens and menu options in ATA will not be available, as follows:
 
-|Activity |Microsoft Advanced Threat Analytics Administrators|Microsoft Advanced Threat Analytics Users|Microsoft Advanced Threat Analytics Viewers|
+|Activity |Microsoft Advanced Threat Analytics Administrator|Microsoft Advanced Threat Analytics Analyst|Microsoft Advanced Threat Analytics Executive|
 |----|----|----|----|
 |Login|Available|Available|Available|
 |Provide Input for Suspicious Activities|Available|Available|Not available|

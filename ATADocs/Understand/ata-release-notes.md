@@ -6,7 +6,7 @@ description: Lists what was updated in each version along with known issues and 
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
