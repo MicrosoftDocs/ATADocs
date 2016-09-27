@@ -89,7 +89,7 @@ If a virtual domain controller can't be covered by the ATA Lightweight Gateway, 
 There are 2 things to back up:
 
 -   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   The configuration of ATA. This is stored in the database and is automatically backed up every hour in the **Backup** folder in the ATA Center deployment location.  See [ATA database management](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management) for more information.
+-   The configuration of ATA. This is stored in the database and is automatically backed up every hour in the **Backup** folder in the ATA Center deployment location.  See [ATA database management](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) for more information.
 ## What can ATA detect?
 ATA detects known malicious attacks and techniques, security issues, and risks.
 For the full list of ATA detections, see [What detections does ATA perform?](ata-threats.md).
