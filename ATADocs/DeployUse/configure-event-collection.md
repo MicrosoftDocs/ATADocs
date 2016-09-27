@@ -60,7 +60,7 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATA Gateways. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
 ### SIEM support
-ATA supports SIEM events in the following formats:
+ATA supports SIEM events in the following formats:  
 
 #### RSA Security Analytics
 &lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
@@ -289,4 +289,4 @@ For more information see: [Configure the computers to forward and collect events
 
 ## See Also
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
