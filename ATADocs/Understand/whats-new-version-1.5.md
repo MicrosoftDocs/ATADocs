@@ -5,12 +5,12 @@ title: What's new in ATA version 1.5 | Microsoft ATA
 description: Lists what was new in ATA version 1.5 along with known issues
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 
 # optional metadata

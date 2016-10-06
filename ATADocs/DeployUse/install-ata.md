@@ -5,12 +5,12 @@ title: Install ATA - Complete | Microsoft ATA
 description: Walks you through the necessary steps to get ATA deployed, configured, and running.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 09/20/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Install ATA
 
@@ -42,7 +46,7 @@ To configure ATA, follow these steps:
 
 -   [Step 5. Configure the ATA Gateway settings](install-ata-step5.md)
 
--   [Step 6. Configure short-term lease subnets and Honeytoken user](install-ata-step6.md)
+-   [Step 6. Configure a Honeytoken user](install-ata-step6.md)
 
 
 ## See Also

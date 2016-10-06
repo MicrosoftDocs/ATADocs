@@ -5,12 +5,12 @@ title: Manage Telemetry Settings | Microsoft ATA
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Manage Telemetry Settings
 Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
@@ -68,6 +72,21 @@ Collected anonymized data includes the following:
     -   Start and End Time
 
     -   Input provided
+
+- Health issues – The following anonymized data is collected for each health issue:
+
+    (Computer names, user names, and IP addresses are not collected)
+
+    -   Health issue type
+
+    -   Health issue ID
+
+    -   Status
+
+    -   Start and End Time
+
+- ATA Console URL addresses - URL addresses when using the ATA Console i.e. which pages in the ATA Console are visited.
+
 
 ### Disable data collection
 Perform the following steps to stop collecting and sending telemetry data to Microsoft:

@@ -5,12 +5,12 @@ title: Change ATA configuration - ATA Center IP address | Microsoft ATA
 description: Describes how to change the IP address, port, or certificate of your ATA Center.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Change ATA configuration - ATA Center IP address
 
@@ -52,9 +56,9 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
     ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-3.  Select **General**.
+3.  Select **Center**.
 
-4.  Under **ATA Center Service IP address: port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
+4.  Under **Center service IP address : port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
 
 5.  Click **Save**.
 
@@ -82,4 +86,4 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the ATA forum!](https://aka.ms/ata-forum)

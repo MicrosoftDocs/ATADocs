@@ -5,13 +5,13 @@ layout: HubPage
 title: Advanced Threat Analytics Documentation
 description: Technical documentation for Advanced Threat Analytics, a Microsoft security service.
 keywords: Advanced Threat Analytics Documentation, ATA documentation
-author: msstevenpo
-manager: stevenpo
+author: msmbaldwin
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: hubpage
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 
@@ -33,6 +33,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
       <h2 class="section-heading"><span class="icon icon-warning"></span> Featured Content</h2>
       <div class="features row">
         <ul class="column column-half">
+          <li><mark><b>NEW</b></mark> <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">Release of ATA version 1.7</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">What is Advanced Threat Analytics?</a></li>
           <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Frequently asked questions</a></li>
         </ul>

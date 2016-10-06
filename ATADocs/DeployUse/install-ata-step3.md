@@ -5,12 +5,12 @@ title: Install ATA - Step 3 | Microsoft ATA
 description: Step three of installing ATA helps you download the ATA Gateway setup package.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 
 # optional metadata
@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # Install ATA - Step 3
 
 >[!div class="step-by-step"]
@@ -34,16 +38,18 @@ ms.suite: ems
 ## Step 3. Download the ATA Gateway setup package
 After configuring the domain connectivity settings you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it will be installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see [ATA Architecture](/advanced-threat-analytics/plan-design/ata-architecture). 
 
-To download the ATA Gateway package:
+If this is the first time you are downloading an ATA Gateway, you will get the following screen:
 
-1.  From the ATA Console, click on the settings icon and select **Configuration**.
+![ATA gateway configuration settings](media/ATA_1.7-welcome-download-gateway.PNG)
 
-    ![ATA gateway configuration settings](media/ATA-config-icon.JPG)
+If this is not your first time downloading an ATA Gateway, this welcome message will not appear.
 
-2.  In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
+> [!NOTE] 
+> To reach the configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Gateways**.  
 
-3.  Save the package locally.
-4.  Copy the package to the dedicated server or domain controller onto which you are installing the ATA Gateway. Alternatively, you can open the ATA Console from the dedicated server or domain controller and skip this step.
+1.  Click **"Download Gateway Setup"**.
+2.  Save the package locally.
+3.  Copy the package to the dedicated server or domain controller onto which you are installing the ATA Gateway. Alternatively, you can open the ATA Console from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following:
 

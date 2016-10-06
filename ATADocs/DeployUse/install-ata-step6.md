@@ -2,15 +2,15 @@
 # required metadata
 
 title: Install ATA | Microsoft ATA
-description: In the final step of installing ATA, you configure the short-term lease subnets and the Honeytoken user.
+description: In the final step of installing ATA, you configure the Honeytoken user.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 09/20/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 
 # optional metadata
@@ -25,30 +25,41 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # Install ATA - Step 6
 
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
 
-## Step 6. Configure short-term lease subnets and Honeytoken user
-Short-term lease subnets are subnets in which the IP address assignment changes very rapidly - within seconds or minutes. For example, IP addresses used for your VPNs and Wi-Fi IP addresses. To enter the list of short-term lease subnets used in your organization, follow these steps:
+## Step 6. Configure  IP address exclusions and Honeytoken user
+ATA enables the exclusion of specific IP addresses and IP subnets from two types of detections: **DNS Reconnaissance** and **Pass-the-Ticket**. 
 
-1.  From the ATA Console on the ATA Gateway machine, click on the settings icon and select **Configuration**.
+For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
+
+ATA also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account will trigger an alert.
+
+To configure the above, follow these steps:
+
+1.  From the ATA Console, click on the settings icon and select **Configuration**.
 
     ![ATA configuration settings](media/ATA-config-icon.JPG)
 
-2.  Under **Detection**, enter the following for short-term lease subnets. Enter the short-term lease subnets using slash notation format, for example:  `192.168.0.0/24` and click the plus sign.
+2.  Under **Detection exclusions**, enter the following for either *DNS Reconnaissance* or *Pass-the-Ticket* IP addresses. Use CIDR format, for example:  `192.168.1.0/24` and click the *plus* sign.
 
-3.  For the Honeytoken account SIDs, enter the SID for the user account that will have no network activity, and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+    ![Save changes](media/ATA-exclusions.png)
+
+3.  Under **Detection settings** enter the Honeytoken account SIDs and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+
+    ![ATA configuration settings](media/ATA-honeytoken.png)
 
     > [!NOTE]
     > To find the SID for a user, search for the user in the ATA Console, and then click on the **Account Info** tab. 
 
-4.  Configure exclusions: You can configure IP addresses to be excluded from specific suspicious activities. See [Working with ATA detection settings](working-with-detection-settings.md) for more information.
+4.  Click **Save**.
 
-5.  Click **Save**.
-
-![Save changes](media/ATA-VPN-Subnets.JPG)
 
 Congratulations, you have successfully deployed Microsoft Advanced Threat Analytics!
 
