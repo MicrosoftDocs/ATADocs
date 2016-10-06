@@ -77,24 +77,26 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
 2.  Run the installation file, Microsoft ATA Center Setup.exe, and follow the instructions on the screen to install the update.
 
-	1.  ATA 1.6 requires .Net Framework 4.6.1 to be installed. If not already installed, ATA installation will install .Net Framework 4.6.1 as part of the installation<br>
-	> [!NOTE]
-    > The installation of .Net Framework 4.6.1 may require restarting the server. ATA installation will proceed only after the server was restarted.
-	5.  On the **Welcome** page, select your language and click **Next**.
+	1.  ATA 1.6 requires .Net Framework 4.6.1 to be installed. If not already installed, ATA installation will install .Net Framework 4.6.1 as part of the installation.
+	
+		> [!NOTE] 
+    		The installation of .Net Framework 4.6.1 may require restarting the server. ATA installation will proceed only after the server was restarted.
+    
+	2.  On the **Welcome** page, select your language and click **Next**.
 
-	6.  Read the End User License Agreement and if you accept the terms, click **Next**.
+	3.  Read the End User License Agreement and if you accept the terms, click **Next**.
 
-	7.  It is now possible to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
+	4.  It is now possible to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
     ![Keep ATA up to date image](media/ata_ms_update.png)
      This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
     ![Windows auto-update image](media/ata_installupdatesautomatically.png)
 
-	8.  Before installation begins, ATA will perform a readiness check. Review the results of the check to make sure the prerequisites are configured successfully and that you have the at least the minimum amount of disk space. 
+	5.  Before installation begins, ATA will perform a readiness check. Review the results of the check to make sure the prerequisites are configured successfully and that you have the at least the minimum amount of disk space. 
     ![ATA readiness check image](media/ata_install_readinesschecks.png)
 
-	3.  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
+	6.  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
 
-4.  After updating the ATA Center, the ATA Gateways will report that they are now outdated.
+3.  After updating the ATA Center, the ATA Gateways will report that they are now outdated.
 
     ![Outdated gateways image](media/ATA-center-outdated.png)
 
