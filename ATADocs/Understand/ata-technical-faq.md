@@ -30,10 +30,6 @@ ms.suite: ems
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 
-## How is ATA licensed?
-For licensing information, see [How to buy Advanced Threat Analytics](https://www.microsoft.com/cloud-platform/advanced-threat-analytics-pricing)
-
-
 ## What should I do if the ATA Gateway won’t start?
 Look at the most recent error in the current error log (Where ATA is installed under the "Logs" folder).
 ## How can I test ATA?
