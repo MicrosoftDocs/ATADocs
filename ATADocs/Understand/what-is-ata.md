@@ -6,7 +6,7 @@ description: Explains what Microsoft Advanced Threat Analytics (ATA) is and what
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/28/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -44,9 +44,6 @@ In addition, ATA leverages a proprietary network parsing engine to capture and p
 - 	Deploying an ATA Lightweight Gateway (LGW) directly on Domain Controllers
 
 For more information on ATA architecture see [ATA Architecture](/advanced-threat-analytics/plan-design/ata-architecture).
-
-Check out our ATA introductory video!
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0nA9FeTRZFw" frameborder="0" allowfullscreen></iframe>
 
 ## What does ATA do?
 
