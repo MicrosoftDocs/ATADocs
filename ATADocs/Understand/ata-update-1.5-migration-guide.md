@@ -50,7 +50,7 @@ If you already have ATA version 1.4 deployed, this procedure will walk you throu
 
 Follow these steps to update to ATA version 1.5:
 
-1.  [Download update 1.5](http://aka.ms/ata1_5update)
+1.  Download ATA v1.5 from VLSC or MSDN.
       > [!NOTE]
          You can also use the updated full version of ATA to perform the update to version 1.5.
 
