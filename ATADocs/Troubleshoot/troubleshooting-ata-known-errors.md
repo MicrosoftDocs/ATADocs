@@ -6,7 +6,7 @@ description: Describes how you can troubleshoot common errors in ATA
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
