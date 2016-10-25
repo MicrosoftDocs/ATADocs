@@ -6,7 +6,7 @@ description: Lists what was new in ATA version 1.7 along with known issues
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -101,7 +101,9 @@ When updating from ATA 1.7 to ATA 1.7 update 1, both the automatic ATA Gateway u
 This issue will occur if the certificate used by the ATA Center was changed prior to updating ATA.
 To verify this issue, review the **Microsoft.Tri.Gateway.Updater.log** on the ATA Gateway and look for the following exceptions:
 **System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
+
 ![ATA update gateway bug](media/17update_gatewaybug.png)
+
 In order to resolve this issue, after changing the certificate, from an elevated command prompt, browse to the following location: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 
 and run the following:
 a. Mongo.exe ATA (ATA must be capitalized) 
