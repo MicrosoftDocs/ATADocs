@@ -6,7 +6,7 @@ description: First step to install ATA involves downloading and installing the A
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -49,6 +49,9 @@ Perform the following steps on the ATA Center server.
 2.  Log in to the computer onto which you are installing the ATA Center as a user who is a member of the local administrators group.
 
 3.  Run **Microsoft ATA Center Setup.EXE** and follow the setup wizard.
+
+> [!NOTE]   
+> Make sure to run the installation file from a local drive and not from a mounted ISO file to avoid issues in case a reboot is required as part of the installation.   
 
 4.  If Microsoft .Net Framework is not installed, you will be prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
 5.  On the **Welcome** page, select the language to be used for the ATA installation screens and click **Next**.
