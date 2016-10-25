@@ -95,6 +95,20 @@ Dropped port mirror traffic alerts when using lightweight gateway on VMware
 If you are using domain controllers on VMware virtual machines, you might receive alerts about **Dropped port mirrored network traffic**. This might happens because of a configuration mismatch in VMware. 
 To avoid these alerts, you can check that the following settings are set to 0 or Disabled:  TsoEnable, LargeSendOffload, IPv4, TSO Offload. Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.
 
+### Automatic Gateway update fail when updating to 1.7 update 1
+
+When updating from ATA 1.7 to ATA 1.7 update 1, both the automatic ATA Gateway update process and the manual installation of Gateways using the Gateway package may not work as expected.
+This issue will occur if the certificate used by the ATA Center was changed prior to updating ATA.
+To verify this issue, review the **Microsoft.Tri.Gateway.Updater.log** on the ATA Gateway and look for the following exceptions:
+**System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
+![ATA update gateway bug](media/17update_gatewaybug.png)
+In order to resolve this issue, after changing the certificate, from an elevated command prompt, browse to the following location: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 
+and run the following:
+a. Mongo.exe ATA (ATA must be capitalized) 
+b. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
+c. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
+
+
 ## Minor changes
 
 - ATA is now using OWIN instead of IIS for the ATA Console.
