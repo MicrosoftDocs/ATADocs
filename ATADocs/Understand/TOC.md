@@ -10,7 +10,7 @@
 #### [Update to ATA 1.5 - migration guide](ata-update-1.5-migration-guide.md)
 ### [What's new in ATA version 1.4](whats-new-version-1.4.md)
 ## [Frequently asked questions](ata-technical-faq.md)
-# [Plan and Design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+# [Plan and Design](/advanced-threat-analytics/plan-design/ata-architecture)
 # [Deploy](/advanced-threat-analytics/deploy-use/preinstall-ata)
 # [Use](/advanced-threat-analytics/deploy-use/operate-ata)
 # [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
