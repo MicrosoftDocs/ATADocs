@@ -50,6 +50,15 @@ This section details possible errors in the deployments of ATA and the steps req
 |System.ApplicationException: Unable to start ETW session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|There is a host entry in the HOSTS file pointing to the machine's shortname|Remove the host entry from C:\Windows\System32\drivers\etc\HOSTS file or change it to an FQDN.|
 
 
+
+## ATA Lightweight Gateway errors
+
+**Error**: Dropped port mirror traffic alerts when using Lightweight Gateway on VMware
+
+**Description**: If you are using DCs on VMware virtual machines, you might receive alerts about **Dropped port mirrored network traffic**. This might be due to a configuration mismatch in VMware. 
+**Resolution**: To avoid these alerts, you can check that the following settings are set to 0 or Disabled:  TsoEnable, LargeSendOffload, IPv4, TSO Offload. Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.
+
+
 ## ATA IIS errors (Not applicable for ATA v1.7 and above)
 |Error|Description|Resolution|
 |-------------|----------|---------|
