@@ -6,7 +6,7 @@ description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -57,17 +57,6 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 6.  Start the **MongoDB** service.
 
 7. Start the **Microsoft Advanced Threat Analytics Center** service.
-
-## ATA Configuration file
-The configuration of ATA is stored in the "SystemProfile" collection in the database.
-This collection is backed up every hour by the ATA Center service to files called: "SystemProfile_*timestamp*.json". The most recent 10 versions are stored.
-This is located in a subfolder called "Backup". In the default ATA installed location it can be found here:  *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 
-
-**Note**: It is recommended that you back up this file somewhere when making major changes to ATA.
-
-It is possible to restore all the settings by running the following command:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## See Also
 - [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture)
