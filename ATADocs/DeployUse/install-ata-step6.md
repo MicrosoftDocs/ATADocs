@@ -35,7 +35,7 @@ ms.suite: ems
 [« Step 5](install-ata-step5.md)
 
 ## Step 6. Configure  IP address exclusions and Honeytoken user
-ATA enables the exclusion of specific IP addresses and IP subnets from two types of detections: **DNS Reconnaissance** and **Pass-the-Ticket**. 
+ATA enables the exclusion of specific IP addresses from two types of detections: **DNS Reconnaissance** and **Pass-the-Ticket**. 
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
 
@@ -47,7 +47,7 @@ To configure the above, follow these steps:
 
     ![ATA configuration settings](media/ATA-config-icon.JPG)
 
-2.  Under **Detection exclusions**, enter the following for either *DNS Reconnaissance* or *Pass-the-Ticket* IP addresses. Use CIDR format, for example:  `192.168.1.0/24` and click the *plus* sign.
+2.  Under **Detection exclusions**, enter an IP address for either *DNS Reconnaissance* or *Pass-the-Ticket* and click the *plus* sign.
 
     ![Save changes](media/ATA-exclusions.png)
 
