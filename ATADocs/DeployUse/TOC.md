@@ -26,6 +26,6 @@
 ## [ATA Health Center](ata-health-center.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [ATA database management](ata-database-management.md)
-## [ATA configuration file](ata-configuration-file.md)
+## [Export/Import ATA configuration](ata-configuration-file.md)
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
 # [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
