@@ -66,6 +66,9 @@ If you need to modify the URL for the ATA Console, follow these steps on the ATA
 5.  Under **Console URL**, modify the URL as needed:
 
     ![ATA Console URL](media/ATA-chge-center-URL.png)
+> [!NOTE]
+> Do not include a slash / at the end of the URL.
+
 6.  Click **Save**.
 
 >[!div class="step-by-step"]

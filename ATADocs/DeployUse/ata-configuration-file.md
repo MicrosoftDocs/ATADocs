@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: ATA Configuration File | Microsoft ATA
-description: Backing up the ATA configuration.
+title: Export and Import ATA Configuration | Microsoft ATA
+description: How to export and import the ATA configuration.
 keywords:
 author: rkarlin
 manager: mbaldwin
@@ -29,7 +29,7 @@ ms.suite: ems
 
 
 
-# ATA Configuration file
+# Export and Import the ATA Configuration
 The configuration of ATA is stored in the "SystemProfile" collection in the database.
 This collection is backed up every hour by the ATA Center service to files called: "SystemProfile_*timestamp*.json". The most recent 10 versions are stored.
 This is located in a subfolder called "Backup". In the default ATA installed location it can be found here:  *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*. 

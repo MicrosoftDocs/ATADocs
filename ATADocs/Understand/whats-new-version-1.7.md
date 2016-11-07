@@ -90,10 +90,16 @@ In the ATA Console, the ATA Gateway will have the status of "Updating (downloadi
  
 ### Dropped port mirror traffic when using VMware
 
-Dropped port mirror traffic alerts when using lightweight gateway on VMware
+Dropped port mirror traffic alerts when using lightweight gateway on VMware.
 
 If you are using domain controllers on VMware virtual machines, you might receive alerts about **Dropped port mirrored network traffic**. This might happens because of a configuration mismatch in VMware. 
-To avoid these alerts, you can check that the following settings are set to 0 or Disabled:  TsoEnable, LargeSendOffload, IPv4, TSO Offload. Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.
+To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:  
+
+- TsoEnable
+- LargeSendOffload(IPv4)
+- IPv4 TSO Offload
+
+Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.
 
 ### Automatic Gateway update fail when updating to 1.7 update 1
 
