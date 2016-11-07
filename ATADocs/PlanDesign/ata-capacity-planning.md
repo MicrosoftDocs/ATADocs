@@ -6,7 +6,7 @@ description: Helps you plan your deployment and decide how many ATA servers will
 keywords:
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/6/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -50,21 +50,20 @@ The following sections present the instruction for how to collect the packets/se
 
 
 ### ATA Center Sizing
-The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics. The required disk space for the ATA database on a per domain controller basis is defined below. If you have multiple domain controllers, sum up the required disk space per domain controller to calculate the full amount of space required for the ATA database.
+The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics.
  
 
-|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;&#42;|
+|Packets per second from all DCs|CPU (cores&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0.3|9|30 (100)
 |10,000|4|48|3|90|200 (300)
 |40,000|8|64|12|360|500 (1,000)
 |100,000|12|96|30|900|1,000 (1,500)
 |400,000|40|128|120|1,800|2,000 (2,500)
-&#42;Total daily average number of packets-per-second from all domain controllers being monitored by all ATA Gateways.
 
-&#42;&#42;This includes physical cores, not hyper-threaded cores.
+&#42;This includes physical cores, not hyper-threaded cores.
 
-&#42;&#42;&#42;Average numbers (Peak numbers)
+&#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
 > -   The ATA Center can handle an aggregated maximum of 400,000 frames per second (FPS) from all the monitored domain controllers.
 > -   The amounts of storage dictated here are net values, you should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.

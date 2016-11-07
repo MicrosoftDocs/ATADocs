@@ -42,6 +42,9 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 1.  Stop the **Microsoft Advanced Threat Analytics Center** service.
 
+> [!Important] 
+> Make sure the ATA Center service stopped before moving on to the next step.
+
 2.  Stop the **MongoDB** service.
 
 3.  Open the Mongo configuration file located by default at: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg.
