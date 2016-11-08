@@ -46,7 +46,8 @@ To receive mail notifications, set the following:
 2. Under the **Notifications** section, select **Settings**.
 3. Under **Mail recipients**, specify the recipients who will receive the notifications via email.
 
-	[!Note:] Email alerts for suspicious activities are only sent when the suspicious activity is created.
+>	[!NOTE]
+>    Email alerts for suspicious activities are only sent when the suspicious activity is created.
 
 4. Under **Notify when:**, use the toggles to select to which notifications should be sent:
 
