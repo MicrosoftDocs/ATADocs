@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Install ATA Silently | Microsoft Advanced Threat Analytics
+title: Install ATA Silently | Microsoft ATA
 description: This describes how to silently install ATA.
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 
 # optional metadata
@@ -25,15 +25,20 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # ATA Silent Installation
 This article provides instructions for silently installing ATA.
 ## Prerequisites
 
-Microsoft ATA v1.6 requires the installation of Microsoft .NET Framework 4.6.1. 
+Microsoft ATA v1.7 requires the installation of Microsoft .NET Framework 4.6.1. 
 
 When you install or update ATA, .Net Framework 4.6.1 will be automatically installed as part of the deployment of Microsoft ATA.
 
-> [!Note] The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
+> [!Note] 
+> The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
 When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). To avoid restarting the server as part of the installation, use the `-NoRestart` flag. When using the `-NoRestart` flag and restart will be required as part of the installation, the installer will pause until the server is restarted. To track the progress of the deployment, monitor ATA installer logs which are located in **%AppData%\Local\Temp**.
 
 
@@ -225,6 +230,6 @@ To silently uninstall the ATA Gateway from the server:
 
 ## See Also
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)

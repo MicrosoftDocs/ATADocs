@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: What's new in ATA version 1.6 | Microsoft Advanced Threat Analytics
+title: What's new in ATA version 1.6 | Microsoft ATA
 description: Lists what was new in ATA version 1.6 along with known issues
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 
 # optional metadata
@@ -113,6 +113,10 @@ If you see this error, review the deployment log in: **C:\Users\<User>\AppData\L
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
+You may also see this error: 
+    System.ArgumentNullException: Value cannot be null.
+    
+If you see either of these errors, run the following workaround.
 
 **Workaround**: 
 
@@ -130,7 +134,14 @@ If you see this error, review the deployment log in: **C:\Users\<User>\AppData\L
 7.	Review the logs to verify that the product is running without errors.
 8.	[Download](http://aka.ms/ataremoveduplicateprofiles "Download") the "RemoveDuplicateProfiles.exe" tool and copy it to the main installation path (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 9.	From an elevated command prompt, run “RemoveDuplicateProfiles.exe” and wait until it completes successfully.
-10.	Update ATA to v1.6.
+10.	From here:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**, type the following command:
+
+    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+
+![Update workaround](http://i.imgur.com/Nj99X2f.png)
+
+This should return a WriteResult({ "nRemoved" : XX }) where “XX” is the number of Suspicious Activities that were deleted. If the number is greater than 0, exit the command prompt, and continue with the update process.
+
 
 ### Net Framework 4.6.1 requires restarting the server
 
@@ -143,6 +154,6 @@ The new and improved detection engine utilizes inline detection technology enabl
 The ATA update procedure exports the data, in case you want it for future investigation, to `<Center Installation Path>\Migration` as a JSON file.
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)

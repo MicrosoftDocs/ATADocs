@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Working with the ATA Console | Microsoft Advanced Threat Analytics
+title: Working with the ATA Console | Microsoft ATA
 description: Describes how to log into the ATA console and the components of the console
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 
 # optional metadata
@@ -25,13 +25,17 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # Working with the ATA Console
 
 Use the ATA console to monitor and respond to suspicious activity detected by ATA.
 
 ## Enabling access to the ATA Console
-Any user who is a member of the local Administrators group on the ATA Center server has permission to log in to the ATA Console and manage ATA settings.
-To allow a user to log in to the ATA Console without making them a local administrator, add them to the local group: **Microsoft Advanced Threat Analytics Administrators**.
+To successfully login to the ATA Console, you have to log in with a user who was assigned the proper ATA role to access the ATA Console. 
+For more information about role based access control (RBAC) in ATA, see [Working with ATA role groups](ata-role-groups.md).
 
 ## Logging into the ATA Console
 
@@ -39,15 +43,13 @@ To allow a user to log in to the ATA Console without making them a local adminis
 
     ![ATA server icon](media/ata-server-icon.png)
 
-    > [!NOTE]
-    > You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
+>[!NOTE]
+> You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
 2.  Enter your username and password and click **Log in**.
 
-    ![ATA login screen image](media/ATA-log-in-screen.jpg)
+![ATA login screen image](media/ATA-log-in-screen.png)
 
-    > [!NOTE]
-    > You have to log in with a user who is a member of the local administrator group OR of the Microsoft Advanced Threat Analytics Administrators group.
 
 ## The ATA Console
 
@@ -60,7 +62,7 @@ These are the key elements of the ATA console.
 
 This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Resolved suspicious activities. You can also see the severity assigned to each activity.
 
-![ATA attack timeline image](media/attack-timeline.png)
+![ATA attack timeline image](media/attack-timeline-1.7.png)
 
 For more information, see [Working with suspicious activities](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities).
 
@@ -68,7 +70,7 @@ For more information, see [Working with suspicious activities](/advanced-threat-
 
 When a new suspicious activity is detected, the notification bar will open automatically on the right hand side. If there are new suspicious activities since the last time you logged in, the notification bar will open after you have successfully logged in. You can click the arrow on the right at any time to access the notification bar.
 
-![ATA notification bar image](media/notification-bar.png)
+![ATA notification bar image](media/notification-bar-1.7.png)
 
 ### Filtering panel
 
@@ -84,7 +86,7 @@ In the top menu, you will find a search bar. You can search for a specific user,
 
 The Health Center provides you with alerts when something isn't working properly in your ATA deployment.
 
-![ATA health center image](media/health-center.png)
+![ATA health center image](media/ATA-Health-Issue.jpg)
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon will let you know by displaying a red dot. ![ATA health center red dot image](media/ATA-Health-Center-Alert-red-dot.png)
 
@@ -126,4 +128,4 @@ Anywhere in the console where there is a single entity presented, such as a user
 
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

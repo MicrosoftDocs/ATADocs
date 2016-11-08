@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Change ATA configuration - ATA Center IP address | Microsoft Advanced Threat Analytics
+title: Change ATA configuration - ATA Center IP address | Microsoft ATA
 description: Describes how to change the IP address, port, or certificate of your ATA Center.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 
 # optional metadata
@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # Change ATA configuration - ATA Center IP address
 
 >[!div class="step-by-step"]
@@ -37,7 +41,7 @@ If you need to change the ATA Center IP address and port or certificate, take th
 
 The ATA Gateways locally store the IP address of the ATA Center to which they need to connect. On a regular basis, they connect to the ATA Center and pull down configuration changes. Making a change to how the ATA Gateways connect to the ATA Center is done is two stages.
 
--   First stage – Update the IP address and port that the ATA Center service you want the ATA Center service to use. At this point the ATA Center is still listening on the original IP address and the next time the ATA Gateway syncs its configuration it will have two IP addresses for the ATA Center. As long as the ATA Gateway can connect using the original (first) IP address it will not try the new IP address and port.
+-   First stage – Update the IP address and port that you want the ATA Center service to use. At this point the ATA Center is still listening on the original IP address and the next time the ATA Gateway syncs its configuration it will have two IP addresses for the ATA Center. As long as the ATA Gateway can connect using the original (first) IP address it will not try the new IP address and port.
 
 -   Second stage – After all the ATA Gateways have synced with the updated configuration, activate the new IP address and port that the ATA Center listens on. When you activate the new IP address the ATA Center service will bind to the new IP address. ATA Gateways will not be able to connect to the original address and now will attempt to connect with the second (new) IP address they have for the ATA Center. After connecting to the ATA Center with the new IP address the ATA Gateway will pull down the latest configuration and will have a single IP address for the ATA Center. (Unless you started the process again.)
 
@@ -52,9 +56,9 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
     ![ATA configuration settings icon](media/ATA-config-icon.JPG)
 
-3.  Select **General**.
+3.  Select **Center**.
 
-4.  Under **ATA Center Service IP address: port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
+4.  Under **Center service IP address : port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
 
 5.  Click **Save**.
 
@@ -82,4 +86,4 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
 - [Install ATA](install-ata.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://aka.ms/ata-forum)

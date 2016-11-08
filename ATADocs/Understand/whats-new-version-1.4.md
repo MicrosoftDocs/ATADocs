@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: What&#39;s new in ATA version 1.4 | Microsoft Advanced Threat Analytics
+title: What&#39;s new in ATA version 1.4 | Microsoft ATA
 description: Lists what was new in ATA version 1.4 along with known issues
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 
 # optional metadata
@@ -64,7 +64,7 @@ These release notes provide information about known issues in version 1.4 of  Ad
 The following known issues exist in this version.
 
 ### Network Capture Software
-On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
+On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
 
 ### Installation from Zip file
 When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Do not install the ATA Gateway directly from within the zip file or the installation will fail.
@@ -101,5 +101,7 @@ If you have more than one ATA Gateway and have Disconnected ATA Gateway alerts, 
 Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
+
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

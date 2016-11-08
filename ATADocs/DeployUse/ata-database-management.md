@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: ATA Database Management | Microsoft Advanced Threat Analytics
+title: ATA Database Management | Microsoft ATA
 description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 10/31/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 
 # optional metadata
@@ -25,6 +25,10 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # ATA Database Management
 If you need to move, backup or restore the ATA database, use these procedures for working with MongoDB.
 
@@ -37,6 +41,9 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 ## Moving the ATA database to another drive
 
 1.  Stop the **Microsoft Advanced Threat Analytics Center** service.
+
+> [!Important] 
+> Make sure the ATA Center service stopped before moving on to the next step.
 
 2.  Stop the **MongoDB** service.
 
@@ -52,18 +59,10 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 
 6.  Start the **MongoDB** service.
 
-7.  Open a command prompt and run the Mongo shell by running `mongo.exe ATA` .
-
-    By default, the mongo.exe is found in: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin
-
-8.  Run the following command: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>` where &lt;New DB Location&gt; is the new folder path.
-
-9.  Update HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath to the new folder path.
-
-9. Start the **Microsoft Advanced Threat Analytics Center** service.
+7. Start the **Microsoft Advanced Threat Analytics Center** service.
 
 ## See Also
 - [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture)
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [FCheck out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: What's new in ATA version 1.5 | Microsoft Advanced Threat Analytics
+title: What's new in ATA version 1.5 | Microsoft ATA
 description: Lists what was new in ATA version 1.5 along with known issues
 keywords:
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 
 # optional metadata
@@ -52,7 +52,7 @@ The following known issues exist in this version.
 After updating your ATA deployment to ATA version 1.5, you get the following error when installing a new ATA Gateway:
 Microsoft Advanced Threat Analytics Gateway is not installed
 
-![ATA GW error](media/ATA-GW-error.png)
+![ATA GW error](media/ata-install-error.png)
 
 <b>Workaround:</b> Send an email to <ataeval@microsoft.com> to request workaround steps.
 ### Deployment
@@ -66,12 +66,15 @@ When installing the ATA Gateway, make sure to extract the files from the zip fil
 After the configuration for an ATA Gateway is set, when the ATA Gateway starts for the first time, the "Not Synced" label is displayed until the service is fully started which may take up to 10 minutes the first time the service starts.
 
 ### Network Capture Software
-On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
+On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
 
 ### KB on virtualization host
 Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
 
 ## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+
 [Update ATA to version 1.5 - migration guide](ata-update-1.5-migration-guide.md)
+
 [Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
+
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

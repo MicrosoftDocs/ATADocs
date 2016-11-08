@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: ATA Architecture | Microsoft Advanced Threat Analytics
+title: ATA Architecture | Microsoft ATA
 description: Describes the architecture of Microsoft Advance Threat Analytics (ATA)
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 
 # optional metadata
@@ -24,6 +24,11 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 
 # ATA Architecture
 The Advanced Threat Analytics architecture is detailed in this diagram:
@@ -182,5 +187,5 @@ To enhance ATA detection of Pass-the-Hash, Brute Force and Honey Tokens, ATA nee
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

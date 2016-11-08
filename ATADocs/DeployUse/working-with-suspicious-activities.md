@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Working with Suspicious Activities | Microsoft Advanced Threat Analytics
+title: Working with Suspicious Activities | Microsoft ATA
 description: Describes how to review suspicious activities identified by ATA
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Working with Suspicious Activities
 This topic explains the basics of how to work with Advanced Threat Analytics.
@@ -113,6 +117,6 @@ To enable ATA to learn about your network with you, some suspicious activities (
 You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Resolved** or **Dismissed**.
 
 ## See Also
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with ATA detection settings](working-with-detection-settings.md)
 - [Modifying ATA configuration](modifying-ata-configuration.md)

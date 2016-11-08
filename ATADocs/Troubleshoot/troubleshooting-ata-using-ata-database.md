@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: Troubleshooting ATA using the ATA database | Microsoft Advanced Threat Analytics
+title: Troubleshooting ATA using the ATA database | Microsoft ATA
 description: Describes how you can use the ATA database to help troubleshoot issues 
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 
 # optional metadata
@@ -24,6 +24,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
 
 # Troubleshooting ATA using the ATA database
 ATA uses MongoDB as its database.
@@ -51,19 +55,10 @@ The following example provides sample code using the syntax provided above. If y
 `db.UniqueEntity.find({Name: "John Doe"})`<br>Take a note of his ID as indicated by the value of "`_id`" For our example, let's assume the ID is "`123bdd24-b269-h6e1-9c72-7737as875351`"<br>Then, search for the collection with the closest date that is before the date you are looking for, in our example 20/10/2015.<br>Then, search for John Doe's account NTLM activities: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## ATA Configuration file
-The configuration of ATA is stored in the "SystemProfile" collection in the database.
-This collection is backed up every hour by the ATA Center service to a file called: "SystemProfile.json". This is located in a subfolder called "Backup". In the default ATA installed location it can be found here:  **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json**. 
-
-**Note**: It is recommended that you back up this file somewhere when making major changes to ATA.
-
-It is possible to restore all the settings by running the following command:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## See Also
 - [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

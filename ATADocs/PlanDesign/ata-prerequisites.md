@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: ATA Prerequisites | Microsoft Advanced Threat Analytics
+title: ATA Prerequisites | Microsoft ATA
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
 author: rkarlin
-manager: stevenpo
-ms.date: 04/28/2016
+manager: mbaldwin
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod:
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 
 # optional metadata
@@ -25,14 +25,20 @@ ms.suite: ems
 
 ---
 
+*Applies to: Advanced Threat Analytics version 1.7*
+
+
+
 # ATA Prerequisites
 This article describes the requirements for a successful deployment of ATA in your environment.
 
 >[!NOTE]
->For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
+> For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
 
 
 ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
+
+The ATA System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
 
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
@@ -56,10 +62,10 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Have a list of all subnets used on your network for VPN and Wi-Fi, which reassign IP addresses between devices within a very short period of time (seconds or minutes).  You will want to identify these short-term lease subnets so that ATA can reduce their cache lifetime to accommodate the fast re-assignment between devices. See [Install ATA](/advanced-threat-analytics/deploy-use/install-ata) for short-term lease subnet configuration.
--    Optional: User should have read only permissions on the Deleted Objects container. This will allow ATA to detect bulk deletion of objects in the domain. For information about configuring read only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
+-   Make sure that Message Analyzer and WireShark are not installed on the ATA Gateway.
+-    Recommended: User should have read only permissions on the Deleted Objects container. This will allow ATA to detect bulk deletion of objects in the domain. For information about configuring read only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
 
--   Optional: A user account of a user who has no network activities. This account will be configured as the ATA Honeytoken user. To configure the Honeytoken user you will need the SID of the user account, not the username.
+-   Optional: A user account of a user who has no network activities. This account will be configured as the ATA Honeytoken user. To configure the Honeytoken user you will need the SID of the user account, not the username. For more information see [Working with ATA Detection Settings](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) topic.
 
 -   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by  setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
@@ -67,16 +73,24 @@ This section lists information you should gather and accounts and network entiti
 ## ATA Center requirements
 This section lists the requirements for the ATA Center.
 ### General
-The ATA Center supports installation on a server running Windows Server 2012 R2. 
+The ATA Center supports installation on a server running Windows Server 2012 R2 or Windows Server 2016. 
 The ATA Center can be installed on a server that is a member of a domain or workgroup.
+
+Before installing ATA Center running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
+
+You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
 Installation of the ATA Center as a virtual machine is supported. 
 
+>[!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 ### Server specifications
-The ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information.<br>
+When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.<br>
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed see [ATA capacity planning](ata-capacity-planning.md) for more details.
+
 
 ### Time synchronization
 The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
@@ -84,11 +98,11 @@ The ATA Center server, the ATA Gateway servers and the domain controllers must h
 
 ### Network adapters
 You should have the following:
--   At least one network adapter
+-   At least one network adapter (if using physical server in VLAN environment, it is recommended to use two network adapters)
 
 -   Two IP addresses (recommended but not required)
 
-Communication between the ATA Center and the ATA Gateway is encrypted using SSL on port 443. Additionally, the ATA Console runs on IIS and is secured using SSL on port 443. **Two IP addresses** are recommended. The ATA Center service will bind port 443 to the first IP address and IIS will bind port 443 to the second IP address.
+Communication between the ATA Center and the ATA Gateway is encrypted using SSL on port 443. Additionally, the ATA Console is also using SSL on port 443. **Two IP addresses** are recommended. The ATA Center service will bind port 443 to the first IP address and ATA Console will bind port 443 to the second IP address.
 
 > [!NOTE]
 > A single IP address with two different ports can be used, but two IP addresses are recommended.
@@ -96,7 +110,7 @@ Communication between the ATA Center and the ATA Gateway is encrypted using SSL 
 ### Ports
 The following table lists the minimum ports that have to be opened for the ATA Center to work properly.
 
-In this table, IP address 1 is bound to the ATA Center service and IP address 2 is bound to the IIS service for the ATA Console:
+In this table, IP address 1 is bound to the ATA Center service and IP address 2 is bound to the ATA Console:
 
 |Protocol|Transport|Port|To/From|Direction|IP Address|
 |------------|-------------|--------|-----------|-------------|--------------|
@@ -108,29 +122,27 @@ In this table, IP address 1 is bound to the ATA Center service and IP address 2 
 |**Syslog** (optional)|TCP|514|Syslog server|Outbound|IP address 2|
 
 ### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/en-us/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
+Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
-To ease the installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
+To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
 > [!NOTE]
 > The certificate's Provider Type must be Cryptographic Service Provider (CSP).
 
 
-The ATA Center requires certificates for the following services:
+> Using of automatic certificate renewal is not supported.
 
--   Internet Information Services (IIS) – Web server certificate
-
--   ATA Center service – Server authentication certificate
 
 > [!NOTE]
-> If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by IIS otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
+> If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
 
 ## ATA Gateway requirements
 This section lists the requirements for the ATA Gateway.
 ### General
-The ATA Gateway supports installation on a server running Windows Server 2012 R2.
+The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
 The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
+The ATA Gateway can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
-Before installing ATA Gateway confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+Before installing ATA Gateway running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
@@ -139,11 +151,14 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
-For more information, see [ATA Lightweight Gateway requirements](/advanced-threat-analytics/plan-design/ata-prerequisites#ata-gateway-requirements).
 
+>[!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+
+For more information about the ATA Gateway hardware requirements see [ATA capacity planning](ata-capacity-planning.md).
 
 ### Time synchronization
-TThe ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
+The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
 
 ### Network adapters
 The ATA Gateway requires at least one Management adapter and at least one Capture adapter:
@@ -159,7 +174,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
         ![Configure DNS suffix in advanced TCP/IP settings](media/ATA-DNS-Suffix.png)
 
         > [!NOTE]
-        > If the ATA Gateway is a member of the domain, this is configured automatically.
+        > If the ATA Gateway is a member of the domain, this may be configured automatically.
 
 -   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
 
@@ -182,38 +197,44 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   IIS IP Address|Outbound|
+|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   Console IP Address|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
 > [!NOTE]
 > As part of the resolution process done by the ATA Gateway, the following ports need to be open inbound on devices on the network from the ATA Gateways.
 >
-> -   NTLM over RPC
-> -   NetBIOS
+> -   NTLM over RPC (TCP Port 135)
+> -   NetBIOS (UDP port 137)
 
 ### Certificates
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways do not have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.<br>
-To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
+To ease installation of the ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
 
 > [!NOTE]
-The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
+> The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
 
 A certificate supporting **Server Authentication** is required to be installed in the Computer store of the ATA Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
 ### General
-The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2.
+The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (include Core but not Nano).
 
 The domain controller can be a read only domain controller (RODC).
 
-The domain controller cannot be Server Core.
+Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2 SP1, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
+You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
 ### Server specifications
 
 The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller, for more information see [ATA Lightweight Gateway requirements](/advanced-threat-analytics/plan-design/ata-prerequisites#ata-lightweight-gateway-requirements).
+The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
+
+>[!NOTE] 
+> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+
+For more information about the ATA Lightweight Gateway hardware requirements see [ATA capacity planning](ata-capacity-planning.md).
 
 ### Time synchronization
 The ATA Center server, the ATA Lightweight Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
@@ -229,7 +250,7 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   IIS IP Address|Outbound|
+|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   Console IP Address|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
 > [!NOTE]
@@ -240,9 +261,9 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 
 ### Certificates
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Lightweight Gateways don't have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.
-To ease installation of the ATA Center, you can install self-signed certificates during the installation of the ATA Center. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Lightweight Gateway.
+To ease installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Lightweight Gateway.
 > [!NOTE]
-The certificate's Provider Type must be Cryptographic Service Provider (CSP).
+> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
 
 A certificate supporting Server Authentication is required to be installed in the Computer store of the ATA Lightweight Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
@@ -250,6 +271,8 @@ A certificate supporting Server Authentication is required to be installed in th
 Access to the ATA Console is via a browser, supporting the following:
 
 -   Internet Explorer version 10 and above
+
+-   Microsoft Edge
 
 -   Google Chrome 40 and above
 
@@ -259,5 +282,6 @@ Access to the ATA Console is via a browser, supporting the following:
 
 - [ATA architecture](ata-architecture.md)
 - [Install ATA](/advanced-threat-analytics/deploy-use/install-ata)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
 
