@@ -5,6 +5,7 @@ title: ATA Frequently asked questions | Microsoft ATA
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article

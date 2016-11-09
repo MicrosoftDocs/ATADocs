@@ -5,6 +5,7 @@ title: Install ATA - Step 5 | Microsoft ATA
 description: Step five of installing ATA helps you configure settings for your ATA Gateway.
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article

@@ -5,6 +5,7 @@ title: Change ATA configuration - ATA Center certificate  | Microsoft ATA
 description: Describes the two-stage process for renewing or replacing the certificate in the local computer store on the ATA Center server. 
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article

@@ -5,6 +5,7 @@ title: Install ATA - Step 1 | Microsoft ATA
 description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: get-started-article

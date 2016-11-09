@@ -5,6 +5,7 @@ title: Change ATA configuration | Microsoft ATA
 description: Provides a list of the ways in which you can update your ATA configuration.
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article

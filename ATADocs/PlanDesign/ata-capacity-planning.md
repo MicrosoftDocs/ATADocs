@@ -5,6 +5,7 @@ title: Planning your ATA Deployment | Microsoft ATA
 description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 11/6/2016
 ms.topic: get-started-article

@@ -5,6 +5,7 @@ title: ATA Prerequisites | Microsoft ATA
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article

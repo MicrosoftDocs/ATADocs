@@ -5,6 +5,7 @@ title: Operate ATA - Complete | Microsoft ATA
 description: Walks you through working with ATA and daily activities.
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article

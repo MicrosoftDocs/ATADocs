@@ -5,6 +5,7 @@ title: Validate Port Mirroring | Microsoft ATA
 description: Describes how to validate that port mirroring is configured correctly
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article

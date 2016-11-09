@@ -5,6 +5,7 @@ title: ATA update to 1.6 migration guide | Microsoft ATA
 description: Procedures to update ATA to version 1.6
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article

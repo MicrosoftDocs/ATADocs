@@ -5,6 +5,7 @@ title: What's new in ATA version 1.7 | Microsoft ATA
 description: Lists what was new in ATA version 1.7 along with known issues
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
