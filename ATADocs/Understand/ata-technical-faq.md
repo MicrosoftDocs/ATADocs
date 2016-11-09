@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Frequently asked questions | Microsoft ATA
+title: ATA Frequently asked questions | Microsoft Docs
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: rkarlin

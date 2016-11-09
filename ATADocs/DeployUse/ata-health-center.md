@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Health Center | Microsoft ATA
+title: ATA Health Center | Microsoft Docs
 description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
 keywords:
 author: rkarlin

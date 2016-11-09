@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Event Collection | Microsoft ATA
+title: Configure Event Collection | Microsoft Docs
 description: Describes your options for configuring event collection with ATA
 keywords:
 author: rkarlin

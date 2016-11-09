@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA - Step 4 | Microsoft ATA
+title: Install ATA - Step 4 | Microsoft Docs
 description: Step four of installing ATA helps you to install the ATA Gateway.
 keywords:
 author: rkarlin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Change ATA configuration - domain connectivity password | Microsoft ATA
+title: Change ATA configuration - domain connectivity password | Microsoft Docs
 description: Describes how to change the Domain Connectivity Password on the ATA Gateway.
 keywords:
 author: rkarlin

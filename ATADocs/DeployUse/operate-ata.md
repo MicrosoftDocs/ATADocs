@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Operate ATA - Complete | Microsoft ATA
+title: Operate ATA - Complete | Microsoft Docs
 description: Walks you through working with ATA and daily activities.
 keywords:
 author: rkarlin

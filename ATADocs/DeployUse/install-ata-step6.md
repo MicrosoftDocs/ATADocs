@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA | Microsoft ATA
+title: Install ATA | Microsoft Docs
 description: In the final step of installing ATA, you configure the Honeytoken user.
 keywords:
 author: rkarlin

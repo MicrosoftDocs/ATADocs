@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Setting ATA Notifications | Microsoft ATA
+title: Setting ATA Notifications | Microsoft Docs
 description: Describes how to set ATA alerts so you are notified when suspicious activities are detected.
 keywords:
 author: rkarlin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage Telemetry Settings | Microsoft ATA
+title: Manage Telemetry Settings | Microsoft Docs
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
 author: rkarlin

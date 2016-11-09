@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Before you install ATA - Complete steps | Microsoft ATA
+title: Before you install ATA - Complete steps | Microsoft Docs
 description: Walks you through the necessary steps you must complete before ATA deployment.
 keywords:
 author: rkarlin

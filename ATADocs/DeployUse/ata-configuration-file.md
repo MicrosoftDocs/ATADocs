@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Export and Import ATA Configuration | Microsoft ATA
+title: Export and Import ATA Configuration | Microsoft Docs
 description: How to export and import the ATA configuration.
 keywords:
 author: rkarlin

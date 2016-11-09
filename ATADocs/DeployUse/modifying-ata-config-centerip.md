@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Change ATA configuration - ATA Center IP address | Microsoft ATA
+title: Change ATA configuration - ATA Center IP address | Microsoft Docs
 description: Describes how to change the IP address, port, or certificate of your ATA Center.
 keywords:
 author: rkarlin

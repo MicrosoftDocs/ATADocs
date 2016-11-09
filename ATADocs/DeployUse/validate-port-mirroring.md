@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Validate Port Mirroring | Microsoft ATA
+title: Validate Port Mirroring | Microsoft Docs
 description: Describes how to validate that port mirroring is configured correctly
 keywords:
 author: rkarlin

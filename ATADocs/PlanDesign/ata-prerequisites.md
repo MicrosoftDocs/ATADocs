@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA Prerequisites | Microsoft ATA
+title: ATA Prerequisites | Microsoft Docs
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
 author: rkarlin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Change ATA configuration | Microsoft ATA
+title: Change ATA configuration | Microsoft Docs
 description: Provides a list of the ways in which you can update your ATA configuration.
 keywords:
 author: rkarlin

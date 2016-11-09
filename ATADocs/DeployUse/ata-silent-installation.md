@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA Silently | Microsoft ATA
+title: Install ATA Silently | Microsoft Docs
 description: This describes how to silently install ATA.
 keywords:
 author: rkarlin

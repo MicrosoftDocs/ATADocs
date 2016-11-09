@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install ATA - Step 5 | Microsoft ATA
+title: Install ATA - Step 5 | Microsoft Docs
 description: Step five of installing ATA helps you configure settings for your ATA Gateway.
 keywords:
 author: rkarlin
