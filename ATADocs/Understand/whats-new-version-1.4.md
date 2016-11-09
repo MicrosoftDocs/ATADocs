@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: What&#39;s new in ATA version 1.4 | Microsoft ATA
+title: What&#39;s new in ATA version 1.4 | Microsoft Docs
 description: Lists what was new in ATA version 1.4 along with known issues
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article

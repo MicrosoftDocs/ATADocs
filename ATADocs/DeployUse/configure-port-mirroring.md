@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Configure Port Mirroring | Microsoft ATA
+title: Configure Port Mirroring | Microsoft Docs
 description: Describes port mirroring options and how to configure them for ATA
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/28/2016
 ms.topic: get-started-article

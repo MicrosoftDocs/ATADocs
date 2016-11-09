@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Working with Suspicious Activities | Microsoft ATA
+title: Working with Suspicious Activities | Microsoft Docs
 description: Describes how to review suspicious activities identified by ATA
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article

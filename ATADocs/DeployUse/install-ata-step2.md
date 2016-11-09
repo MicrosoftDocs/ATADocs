@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Install ATA - Step 2 | Microsoft ATA
+title: Install ATA - Step 2 | Microsoft Docs
 description: Step two of installing ATA helps you configure the domain connectivity settings on your ATA Center server
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
