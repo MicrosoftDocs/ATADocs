@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Working with ATA Detection Settings | Microsoft ATA
+title: Working with ATA Detection Settings | Microsoft Docs
 description: Describes how to configure a list of IP addresses and subnets that have unusual circumstances and that should be handle differently than other entities on your network
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
