@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Troubleshooting ATA using the ATA logs | Microsoft ATA
+title: Troubleshooting ATA using the ATA logs | Microsoft Docs
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article

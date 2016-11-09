@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: ATA Database Management | Microsoft ATA
+title: ATA Database Management | Microsoft Docs
 description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article
