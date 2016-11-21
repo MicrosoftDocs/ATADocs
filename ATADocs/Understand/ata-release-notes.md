@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: ATA Release Notes | Microsoft ATA
+title: ATA Release Notes | Microsoft Docs
 description: Lists what was updated in each version along with known issues and migration guides
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/20/2016
 ms.topic: article

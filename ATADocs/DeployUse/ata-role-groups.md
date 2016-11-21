@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Working with role groups - Complete | Microsoft ATA
+title: Working with role groups - Complete | Microsoft Docs
 description: Walks you through working with ATA role groups.
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/20/2016
 ms.topic: get-started-article

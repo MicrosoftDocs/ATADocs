@@ -1,10 +1,11 @@
 ---
 # required metadata
 
-title: Troubleshooting the ATA error log | Microsoft ATA
+title: Troubleshooting the ATA error log | Microsoft Docs
 description: Describes how you can troubleshoot common errors in ATA 
 keywords:
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
