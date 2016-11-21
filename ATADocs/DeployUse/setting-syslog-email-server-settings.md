@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Setting ATA Notifications | Microsoft ATA
+title: Setting ATA email settings | Microsoft ATA
 description: Describes how to have ATA notify you (by email or by ATA event forwarding) when it detects suspicious activities 
 keywords:
 author: rkarlin
@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
+ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 
 # optional metadata
 

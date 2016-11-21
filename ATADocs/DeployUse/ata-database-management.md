@@ -11,7 +11,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
+ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 
 # optional metadata
 
