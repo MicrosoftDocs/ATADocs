@@ -196,6 +196,8 @@ In this scenario we are assuming that the ATA Gateway is a member of the domain.
 2.	Select **Members**.
 4.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
 
+Note that after adding the **Network Service** to the **Event Log Readers** group you need to reboot the domain controllers for the change to take effect.
+
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
 > [!Note] 
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below modify the local policy of the domain controller. 	
