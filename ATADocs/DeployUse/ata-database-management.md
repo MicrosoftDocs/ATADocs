@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -42,7 +42,6 @@ Refer to the [relevant MongoDB documentation](http://docs.mongodb.org/manual/adm
 ## Moving the ATA database to another drive
 
 1.  Stop the **Microsoft Advanced Threat Analytics Center** service.
-
 > [!Important] 
 > Make sure the ATA Center service stopped before moving on to the next step.
 
