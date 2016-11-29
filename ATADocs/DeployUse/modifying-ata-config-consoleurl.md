@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: stevenpo
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics
@@ -79,5 +79,4 @@ If you need to modify the URL for the ATA Console, follow these steps on the ATA
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
-- [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://aka.ms/ata-forum)

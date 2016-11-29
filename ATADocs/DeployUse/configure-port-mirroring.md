@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -77,5 +77,4 @@ After configuring port mirroring, validate that port mirroring is working before
 
 ## See Also
 - [Validate port mirroring](validate-port-mirroring.md)
-- [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

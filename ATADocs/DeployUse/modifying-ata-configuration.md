@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -44,5 +44,4 @@ If you need to update or change your configuration after initial installation an
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
-- [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://aka.ms/ata-forum)

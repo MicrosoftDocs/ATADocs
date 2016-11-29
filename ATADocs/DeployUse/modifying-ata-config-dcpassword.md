@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -67,5 +67,4 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
-- [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
