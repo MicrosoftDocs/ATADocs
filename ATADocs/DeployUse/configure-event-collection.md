@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -289,5 +289,5 @@ After a few minutes, check to see that event 4776 is showing up in the Forwarded
 For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
 
 ## See Also
-- [Install ATA](install-ata.md)
+- [Install ATA](install-ata-step1.md)
 - [Check out the ATA forum!!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
