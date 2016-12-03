@@ -68,9 +68,9 @@ Here is the list of the main ATA Gateway counters to pay attention to:
 
 ## ATA Lightweight Gateway performance counters
 The performance counters can be used for quota management in the Lightweight Gateway, to make sure that ATA doesn't drain too many resources from the domain controllers on which it is installed.
-To measure the resource limitations that ATA enforces on the Lightweight Gateway, add the following counters:
+To measure the resource limitations that ATA enforces on the Lightweight Gateway, add these counters.
 
-Open "Performance Monitor" and adding all counters for the ATA Lightweight Gateway. The name of the performance counter objects are: "Microsoft ATA Gateway" and "Microsoft ATA Gateway Updater".
+This is done by opening "Performance Monitor" and adding all counters for the ATA Lightweight Gateway. The name of the performance counter objects are: "Microsoft ATA Gateway" and "Microsoft ATA Gateway Updater".
 
 
 |Counter|Description|Threshold|Troubleshooting|
