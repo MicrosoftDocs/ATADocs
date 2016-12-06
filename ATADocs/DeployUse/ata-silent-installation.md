@@ -157,7 +157,6 @@ Use the following command to silently install the ATA Gateway:
 |NoRestart|/norestart|No|Suppresses any attempts to restart. By default, UI will prompt before restart.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
-|LicenseAccepted|--LicenseAccepted|Yes|Indicates that the license was read and approved. Must be set on silent installation.|
 
 **Installation parameters**:
 
