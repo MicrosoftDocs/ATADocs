@@ -38,7 +38,7 @@ The following are operations you can perform with ATA:
   - [Change ATA Center IP address](modifying-ata-config-centerip.md)
   - [Change ATA Center certificate](modifying-ata-config-centercert.md)
   - [Change ATA console URL](modifying-ata-config-consoleurl.md)
-  - [Change domain controller password](modifying-ata-config-dcpassword.md)
+  - [Change domain connectivity password](modifying-ata-config-dcpassword.md)
 - [Working with the ATA Console](working-with-ata-console.md)
 - [ATA role groups](ata-role-groups.md)
 - [Set ATA notifications](setting-ata-alerts.md)
