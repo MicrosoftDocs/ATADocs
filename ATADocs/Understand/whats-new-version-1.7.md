@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,7 +36,7 @@ The update to ATA 1.7 provides improvements in the following areas:
 
 -   Role-based access control
 
--   Support for Windows Server 2016 and Windows Server Core
+-   Support for Windows Server 2016 and Windows Server 2016 Core
 
 -   User experience improvements
 
@@ -68,7 +68,7 @@ ATA now detects unusual protocol implementation in the Kerberos protocol, along 
 Role-Based Access Control (RBAC) capability. ATA 1.7 includes three roles: ATA Administrator, ATA Analyst and ATA Executive.
 
 - **Support for Windows Server 2016 and Windows Server Core**
-ATA 1.7 supports the deployment of Lightweight Gateways on domain controllers running Server Core for Windows Server 2012 and Server Core for Windows Server 2012 R2. Additionally, this release supports Windows Server 2016 both for the ATA Center and ATA Gateway components.
+ATA 1.7 supports the deployment of Lightweight Gateways on domain controllers running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano). Additionally, this release supports Windows Server 2016 both for the ATA Center and ATA Gateway components.
 
 ### User Experience
 - **Configuration Experience**
