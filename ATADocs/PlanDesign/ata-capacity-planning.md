@@ -125,7 +125,7 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 > -   If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
 ### ATA Gateway Sizing
@@ -160,7 +160,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 > [!NOTE] 
 > -   Dynamic memory is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
 ## Domain controller traffic estimation
@@ -170,7 +170,7 @@ To determine packets per second, perform the following on each domain controller
 
 1.  Open Performance Monitor.
 
-    ![Performance monitor image](media/ATA-traffic-estimation-1.png)
+    ![Performance monitor image](media/advanced-threat-analytics/troubleshoot/ATA-traffic-estimation-1.png)
 
 2.  Expand **Data Collector Sets**.
 
