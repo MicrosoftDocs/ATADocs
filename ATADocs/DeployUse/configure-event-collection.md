@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 12/08/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -34,13 +34,14 @@ ms.suite: ems
 To enhance detection capabilities, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
 
 ## Event collection
-In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by  setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
 ### SIEM/Syslog
 For ATA to be able to consume data from a Syslog server, you need to do the following:
 
 -   Configure your ATA Gateway servers to listen to and accept events forwarded from the SIEM/Syslog server.
-
+> [!NOTE]
+> ATA only listens on IPv4 and not IPv6. 
 -   Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
 
 > [!IMPORTANT]

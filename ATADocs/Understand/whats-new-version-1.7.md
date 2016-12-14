@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,7 +36,7 @@ The update to ATA 1.7 provides improvements in the following areas:
 
 -   Role-based access control
 
--   Support for Windows Server 2016 and Windows Server Core
+-   Support for Windows Server 2016 and Windows Server 2016 Core
 
 -   User experience improvements
 
@@ -68,7 +68,7 @@ ATA now detects unusual protocol implementation in the Kerberos protocol, along 
 Role-Based Access Control (RBAC) capability. ATA 1.7 includes three roles: ATA Administrator, ATA Analyst and ATA Executive.
 
 - **Support for Windows Server 2016 and Windows Server Core**
-ATA 1.7 supports the deployment of Lightweight Gateways on domain controllers running Server Core for Windows Server 2012 and Server Core for Windows Server 2012 R2. Additionally, this release supports Windows Server 2016 both for the ATA Center and ATA Gateway components.
+ATA 1.7 supports the deployment of Lightweight Gateways on domain controllers running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano). Additionally, this release supports Windows Server 2016 both for the ATA Center and ATA Gateway components.
 
 ### User Experience
 - **Configuration Experience**
@@ -120,6 +120,13 @@ and run the following:
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
+### Export suspicious activity details to Excel may fail
+When trying to export suspicious activity details to an Excel file, the operation may fail with the following error:
+*Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+
+To resolve this issue, from an elevated command prompt, browse to the following location: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** and run the following:
+1.	**Mongo.exe ATA** (ATA must be capitalized)
+2.	**db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## Minor changes
 

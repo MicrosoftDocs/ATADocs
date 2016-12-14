@@ -133,7 +133,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
                     <h3>Install ATA</h3>
                     <p>Follow the detailed step-by-step installation guide.</p>
                   </a>
