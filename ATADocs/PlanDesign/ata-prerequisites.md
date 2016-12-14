@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 12/14/2016
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -149,6 +149,9 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 
 For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
+> [!NOTE]
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
+
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
@@ -219,12 +222,15 @@ A certificate supporting **Server Authentication** is required to be installed i
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
 ### General
-The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (include Core but not Nano).
+The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
 
 The domain controller can be a read only domain controller (RODC).
 
 Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2 SP1, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
+
+> [!NOTE]
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 
