@@ -170,7 +170,7 @@ To determine packets per second, perform the following on each domain controller
 
 1.  Open Performance Monitor.
 
-    ![Performance monitor image](media/advanced-threat-analytics/troubleshoot/ATA-traffic-estimation-1.png)
+    ![Performance monitor image](media/ATA-traffic-estimation-1.png)
 
 2.  Expand **Data Collector Sets**.
 
