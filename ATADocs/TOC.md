@@ -1,5 +1,5 @@
-# [Understand and Explore]
-# [Plan and Design]
-# [Deploy]
-# [Use]
-# [Troubleshoot]
+# Understand and Explore
+# Plan and Design
+# Deploy
+# Use
+# Troubleshoot

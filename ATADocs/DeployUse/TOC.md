@@ -1,11 +1,11 @@
-# [Understand and Explore]
-# [Plan and Design]
-# [Deploy]
-## [Preinstallation steps]
+# Understand and Explore
+# Plan and Design
+# Deploy
+## Preinstallation steps
 ### [1. Configure port mirroring](configure-port-mirroring.md)
 ### [2. Validate port mirroring](validate-port-mirroring.md)
 ### [3. Configure event collection](configure-event-collection.md)
-## [Install ATA]
+## Install ATA
 ### [Step 1](install-ata-step1.md)
 ### [Step 2](install-ata-step2.md)
 ### [Step 3](install-ata-step3.md)
@@ -13,7 +13,7 @@
 ### [Step 5](install-ata-step5.md)
 ### [Step 6](install-ata-step6.md)
 ### [Silent installation](ata-silent-installation.md)
-# [Use]
+# Use
 ## [Change ATA Center IP address](modifying-ata-config-centerip.md)
 ## [Change ATA Center certificate](modifying-ata-config-centercert.md)
 ## [Change ATA console URL](modifying-ata-config-consoleurl.md)
@@ -28,4 +28,4 @@
 ## [ATA database management](ata-database-management.md)
 ## [Export/Import ATA configuration](ata-configuration-file.md)
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
-# [Troubleshoot]
+# Troubleshoot
