@@ -28,7 +28,7 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.7*
 
-## What threats does ATA look for?
+# What threats does ATA look for?
 
 ATA provides detection for the following various phases of an advanced attack: reconnaissance, credential compromise, lateral movement, privilege escalation, domain dominance and others. These detections are aimed at detecting advanced attacks and insider threats before they cause damage to your organization.
 The detection of each phase results in several suspicious activities relevant for the phase in question, where each suspicious activity correlates to different flavors of possible attacks.
