@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 1/9/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -100,7 +100,7 @@ Because you are logging into the site using an IP address, you will receive a wa
 
 
 >[!div class="step-by-step"]
-[« Pre-install](preinstall-ata.md)
+[« Pre-install](configure-port-mirroring.md)
 [Step 2 »](install-ata-step2.md)
 
 ## See Also
