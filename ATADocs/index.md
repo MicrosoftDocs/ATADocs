@@ -71,9 +71,9 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
+                  <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
                     <h3>ATA release notes</h3>
-                    <p>See a list of what was updated in the latest versions along with known issues and migration guides.</p>
+                    <p>Check out what's new in the latest versions along with known issues and migration guides.</p>
                   </a>
                 </li>
               </ul>
@@ -115,7 +115,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
           </li>
           <li class="journey-step">
             <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
+              <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
                 <div class="title column-third">
                   <span class="step-number">3</span>
                   <p>Deploy &amp; Use</p>
@@ -127,7 +127,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
             <section class="journey-step-elements content">
               <ul class="row">
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
                     <h3>Before you install ATA</h3>
                     <p>Follow these steps before installing ATA.</p>
                   </a>
@@ -139,7 +139,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/operate-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip">
                     <h3>Operate ATA</h3>
                     <p>Modify ATA configuration and perform daily monitoring using ATA.</p>
                   </a>
