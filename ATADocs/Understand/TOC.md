@@ -1,7 +1,7 @@
-# [Understand and Explore](what-is-ata.md)
+# Understand and Explore
 ## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [What threats does ATA detect?](ata-threats.md)
-## [ATA Release notes](ata-release-notes.md)
+## ATA Release notes
 ### [What's new in ATA version 1.7](whats-new-version-1.7.md)
 #### [Update to ATA 1.7 - migration guide](ata-update-1.7-migration-guide.md)
 ### [What's new in ATA version 1.6](whats-new-version-1.6.md)
@@ -10,7 +10,41 @@
 #### [Update to ATA 1.5 - migration guide](ata-update-1.5-migration-guide.md)
 ### [What's new in ATA version 1.4](whats-new-version-1.4.md)
 ## [Frequently asked questions](ata-technical-faq.md)
-# [Plan and Design](/advanced-threat-analytics/plan-design/ata-architecture)
-# [Deploy](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Use](/advanced-threat-analytics/deploy-use/operate-ata)
-# [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+# Plan and Design
+## [ATA Architecture](/advanced-threat-analytics/plan-design/ata-architecture)
+## [Plan your ATA capacity](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+## [ATA Prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+# Deploy
+## Preinstallation steps
+### [1. Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
+### [2. Validate port mirroring](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
+### [3. Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
+## Install ATA
+### [Step 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
+### [Step 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
+### [Step 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
+### [Step 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
+### [Step 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
+### [Step 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Silent installation](/advanced-threat-analytics/deploy-use/ata-silent-installation)
+# Use
+## [Change ATA Center IP address](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
+## [Change ATA Center certificate](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)
+## [Change ATA console URL](/advanced-threat-analytics/deploy-use/modifying-ata-config-consoleurl)
+## [Change domain connectivity password](/advanced-threat-analytics/deploy-use/modifying-ata-config-dcpassword)
+## [Working with the ATA Console](/advanced-threat-analytics/deploy-use/working-with-ata-console)
+## [ATA role groups](/advanced-threat-analytics/deploy-use/ata-role-groups)
+## [Set Syslog and Email server settings](/advanced-threat-analytics/deploy-use/setting-syslog-email-server-settings)
+## [Set ATA notifications](/advanced-threat-analytics/deploy-use/setting-ata-alerts)
+## [Working with detection settings](/advanced-threat-analytics/deploy-use/working-with-detection-settings)
+## [ATA Health Center](/advanced-threat-analytics/deploy-use/ata-health-center)
+## [Working with suspicious activities](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities)
+## [ATA database management](/advanced-threat-analytics/deploy-use/ata-database-management)
+## [Export/Import ATA configuration](/advanced-threat-analytics/deploy-use/ata-configuration-file)
+## [Manage ATA telemetry](/advanced-threat-analytics/deploy-use/manage-telemetry-settings)
+# Troubleshoot
+## [Troubleshooting using known errors](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+## [Troubleshoot using the logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+## [Troubleshooting using the performance counters](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
+## [Troubleshooting using the database](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
+
