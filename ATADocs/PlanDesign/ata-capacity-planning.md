@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Planning your ATA Deployment | Microsoft Docs
+title: Planning your Advanced Threat Analytics deployment | Microsoft Docs
 description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
