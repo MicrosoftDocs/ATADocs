@@ -101,7 +101,7 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
 -   For more information about how ATA fits into your network: [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture)
 
--   To get started deploying ATA: [Install ATA](/advanced-threat-analytics/deploy-use/install-ata)
+-   To get started deploying ATA: [Install ATA](/advanced-threat-analytics/deploy-use/install-ata-step1)
 
 ## See Also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
