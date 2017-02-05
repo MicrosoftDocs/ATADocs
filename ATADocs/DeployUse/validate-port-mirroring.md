@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Validate Port Mirroring | Microsoft Docs
+title: Validate port mirroring in Advanced Threat Analytics | Microsoft Docs
 description: Describes how to validate that port mirroring is configured correctly
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
