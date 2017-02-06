@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Change ATA configuration - domain connectivity password | Microsoft Docs
+title: Change Advanced Threat Analytics config - domain connectivity password | Microsoft Docs
 description: Describes how to change the Domain Connectivity Password on the ATA Gateway.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: ATA Health Center | Microsoft Docs
+title: Monitor Advanced Threat Analytics Health Center alerts | Microsoft Docs
 description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics

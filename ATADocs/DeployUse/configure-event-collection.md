@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure Event Collection | Microsoft Docs
+title: Configure event collection in Advanced Threat Analytics | Microsoft Docs
 description: Describes your options for configuring event collection with ATA
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/08/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics

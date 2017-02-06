@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: ATA update to 1.7 migration guide | Microsoft Docs
+title: Advanced Threat Analytics update to 1.7 migration guide | Microsoft Docs
 description: Procedures to update ATA to version 1.7
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics

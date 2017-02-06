@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: ATA Prerequisites | Microsoft Docs
+title: Advanced Threat Analytics prerequisites | Microsoft Docs
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics

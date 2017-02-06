@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Troubleshooting ATA using the ATA database | Microsoft Docs
+title: Troubleshooting Advanced Threat Analytics using the database | Microsoft Docs
 description: Describes how you can use the ATA database to help troubleshoot issues 
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
