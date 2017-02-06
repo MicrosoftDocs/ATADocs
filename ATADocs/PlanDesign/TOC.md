@@ -20,12 +20,12 @@
 ### [2. Validate port mirroring](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
 ### [3. Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
 ## Install ATA
-### [Step 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
-### [Step 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
-### [Step 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
-### [Step 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
-### [Step 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [Step 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Step 1 Download & install Center](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
+### [Step 2 Connect to AD](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
+### [Step 3 Download the GW package](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
+### [Step 4 Install the GW](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
+### [Step 5 Configure the GW](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
+### [Step 6 Exclusinos and Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
 ### [Silent installation](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # Use
 ## [Change ATA Center IP address](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)

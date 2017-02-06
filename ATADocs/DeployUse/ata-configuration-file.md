@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Export and Import ATA Configuration | Microsoft Docs
+title: Export and Import Advanced Threat Analytics Configuration | Microsoft Docs
 description: How to export and import the ATA configuration.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics

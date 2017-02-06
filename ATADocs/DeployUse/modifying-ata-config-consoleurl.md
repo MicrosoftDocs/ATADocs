@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Change ATA configuration - ATA Console IP address | Microsoft Advanced Threat Analytics
+title: Change Advanced Threat Analytics config - Console IP address | Microsoft Advanced Threat Analytics
 description: Describes how to change the IP address of the ATA Console, used to create a shortcut to the ATA Console on the ATA Gateways.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: stevenpo
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Change ATA configuration - ATA Center certificate  | Microsoft Docs
+title: Change Advanced Threat Analytics config - Center certificate  | Microsoft Docs
 description: Describes the two-stage process for renewing or replacing the certificate in the local computer store on the ATA Center server. 
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/24/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics

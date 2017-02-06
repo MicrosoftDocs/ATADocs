@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure Port Mirroring | Microsoft Docs
+title: Configure Port Mirroring when deploying Advanced Threat Analytics | Microsoft Docs
 description: Describes port mirroring options and how to configure them for ATA
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
