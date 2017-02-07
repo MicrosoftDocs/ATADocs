@@ -29,7 +29,7 @@ ms.suite: ems
 *Applies to: Advanced Threat Analytics version 1.7*
 
 
-## What is Advanced Threat Analytics?
+# What is Advanced Threat Analytics?
 Advanced Threat Analytics (ATA) is an on-premises platform that helps protect your enterprise from multiple types of advanced targeted cyber attacks and insider threats.
 
 ## How ATA works
