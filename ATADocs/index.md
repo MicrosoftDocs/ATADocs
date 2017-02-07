@@ -8,7 +8,7 @@ Control and help secure email, documents, and sensitive data that you share outs
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
+        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -126,7 +126,7 @@ Control and help secure email, documents, and sensitive data that you share outs
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <p><a href="/evalcenter/evaluate-microsoft-advanced-threat-analytics">Evaluate</a></p>
+                        <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Evaluate</a></p>
                     </div>
                 </div>
             </div>
