@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -33,6 +33,7 @@ This article provides a list of frequently asked questions about ATA and provide
 
 ## What should I do if the ATA Gateway won’t start?
 Look at the most recent error in the current error log (Where ATA is installed under the "Logs" folder).
+
 ## How can I test ATA?
 You can simulate suspicious activities which is an end to end test by doing one of the following:
 
@@ -60,6 +61,7 @@ ATA relies on analyzing multiple network protocols, as well as events collected 
 
 ## Does ATA work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
+
 ## How many ATA Gateways do I need?
 
 The number of ATA Gateways depend on your network layout, volume of packets and volume of events captured by ATA. To determine the exact number, see [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
@@ -87,6 +89,7 @@ There are 2 things to back up:
 
 -   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](/advanced-threat-analytics/deploy-use/ata-database-management). 
 -   The configuration of ATA. This is stored in the database and is automatically backed up every hour in the **Backup** folder in the ATA Center deployment location.  See [ATA database management](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) for more information.
+
 ## What can ATA detect?
 ATA detects known malicious attacks and techniques, security issues, and risks.
 For the full list of ATA detections, see [What detections does ATA perform?](ata-threats.md).
@@ -104,7 +107,6 @@ ATA has a bi-directional integration with SIEMs as follows:
 2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from  [these SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
 
 ## Can ATA monitor domain controllers virtualized on your IaaS solution?
-
 Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.
 
 ## Is this an on-premises or in-cloud offering?
@@ -133,6 +135,7 @@ Yes. Since computer accounts (as well as any other entities) can be used to perf
 
 ## Can ATA support multi-domain and multi-forest?
 Microsoft Advanced Threat Analytics supports multi-domain environments within the same forest boundary. Multiple forests require an ATA deployment for each forest.
+
 ## Can you see the overall health of the deployment?
 Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you will be alerted as they occur.
 
