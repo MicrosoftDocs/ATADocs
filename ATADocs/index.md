@@ -98,7 +98,7 @@ Control and help secure email, documents, and sensitive data that you share outs
         </a>
     </li>
     <li>
-        <a href="/enterprisemobility/?product=microsoft-advanced-threat-analytics"> 
+        <a href="https://blogs.technet.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/"> 
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
