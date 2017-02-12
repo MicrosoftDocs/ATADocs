@@ -1,8 +1,8 @@
---
+---
 # required metadata
 
 title: Disaster recovery for Advanced Threat Analytics | Microsoft Docs
-description: Describes how you can restore ATA data after a disaster
+description: Describes how you can quickly recover ATA functionality after disaster
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -31,14 +31,14 @@ ms.suite: ems
 
 
 # ATA disaster recovery
-This article describes how to quickly recover ATA data when the ATA Center functionality is lost but the ATA Gateways are still working. 
+This article describes how to quickly recover your ATA Center and restore ATA functionality when the ATA Center functionality is lost but the ATA Gateways are still working. 
 
 >[!NOTE]
 > The process described does not recover previously detected suspicious activities but does return the ATA Center to full functionality. Additionally, the learning period needed for some behavioral detections will restart, but most of the detection that ATA offers is operational after the ATA Center is restored. 
 
 ## How to recovery your ATA Center after disaster
 
-1. The ATA Center configuration is backed up to a file every hour. Locate the latest backup copy of the ATA Center configuration. For a full explanation of how to locate these files, see [Export and import the ATA configuration](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
+1. The ATA Center configuration is backed up to a file every hour. Locate the latest backup copy of the ATA Center configuration and save it on a separate computer. For a full explanation of how to locate these files, see [Export and import the ATA configuration](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. Export the ATA Center certificate.
     1. In the certificate manager, navigate to **Certificates (Local Computer)** -> **Personal** ->**Certificates**, and select **ATA Center**.
     2. Right click **ATA Center** and select **All Tasks** followed by **Export**. 
