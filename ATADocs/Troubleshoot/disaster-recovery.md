@@ -1,4 +1,4 @@
---
+---
 # required metadata
 
 title: Disaster recovery for Advanced Threat Analytics | Microsoft Docs
