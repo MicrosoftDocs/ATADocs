@@ -1,4 +1,4 @@
----
+--
 # required metadata
 
 title: Disaster recovery Advanced Threat Analytics | Microsoft Docs
@@ -33,7 +33,8 @@ ms.suite: ems
 # ATA disaster recovery
 This article describes how to quickly recovery ATA data when the ATA Center functionality is lost but the ATA Gateways are still working. 
 
->[!NOTE] The process described does not recover previously detected suspicious activities but does return the ATA Center to full functionality. Additionally, the learning period needed for some behavioral detections will restart, but most of the detection that ATA offers is operational after the ATA Center is restored. 
+>[!NOTE]
+> The process described does not recover previously detected suspicious activities but does return the ATA Center to full functionality. Additionally, the learning period needed for some behavioral detections will restart, but most of the detection that ATA offers is operational after the ATA Center is restored. 
 
 ## How to recovery your ATA Center after disaster
 
@@ -43,7 +44,10 @@ This article describes how to quickly recovery ATA data when the ATA Center func
     2. Right click **ATA Center** and select **All Tasks** followed by **Export**. 
      ![ATA Center Certificate](media/ata-center-cert.png)
     3. Follow the instructions to export the certificate, making sure to export the private key as well.
-    > [!NOTE] If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert), and then export it. 
+
+    > [!NOTE] 
+    > If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert), and then export it. 
+
     4. Back up the exported certificate file on a separate computer.
 3. Create a new Windows Server machine using the same IP address and computer name as the previous ATA Center machine.
 4. Import the certificate you backed up in step 2 to the new server.
