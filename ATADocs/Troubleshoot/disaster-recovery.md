@@ -1,7 +1,7 @@
 --
 # required metadata
 
-title: Disaster recovery Advanced Threat Analytics | Microsoft Docs
+title: Disaster recovery for Advanced Threat Analytics | Microsoft Docs
 description: Describes how you can restore ATA data after a disaster
 keywords:
 author: rkarlin
@@ -31,7 +31,7 @@ ms.suite: ems
 
 
 # ATA disaster recovery
-This article describes how to quickly recovery ATA data when the ATA Center functionality is lost but the ATA Gateways are still working. 
+This article describes how to quickly recover ATA data when the ATA Center functionality is lost but the ATA Gateways are still working. 
 
 >[!NOTE]
 > The process described does not recover previously detected suspicious activities but does return the ATA Center to full functionality. Additionally, the learning period needed for some behavioral detections will restart, but most of the detection that ATA offers is operational after the ATA Center is restored. 
