@@ -47,3 +47,4 @@
 ## [Troubleshoot using the logs](troubleshooting-ata-using-logs.md)
 ## [Troubleshooting using the performance counters](troubleshooting-ata-using-perf-counters.md)
 ## [Troubleshooting using the database](troubleshooting-ata-using-ata-database.md)
+## [Disaster recovery](/advanced-threat-analytics/troubleshoot/disaster-recovery.md)
