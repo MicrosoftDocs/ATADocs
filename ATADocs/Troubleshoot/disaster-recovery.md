@@ -36,7 +36,7 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
 >[!NOTE]
 > The process described does not recover previously detected suspicious activities but does return the ATA Center to full functionality. Additionally, the learning period needed for some behavioral detections will restart, but most of the detection that ATA offers is operational after the ATA Center is restored. 
 
-## How to recovery your ATA Center after disaster
+## How to recover your ATA Center after a disaster
 
 1. The ATA Center configuration is backed up to a file every hour. Locate the latest backup copy of the ATA Center configuration and save it on a separate computer. For a full explanation of how to locate these files, see [Export and import the ATA configuration](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. Export the ATA Center certificate.
