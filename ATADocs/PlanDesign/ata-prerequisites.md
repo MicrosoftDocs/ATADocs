@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/7/2017
+ms.date: 2/16/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -226,9 +226,15 @@ The ATA Lightweight Gateway supports installation on a domain controller running
 
 The domain controller can be a read only domain controller (RODC).
 
-Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2 SP1, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/) and [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1,-windows-8.1,-and-windows-server-2012-r2) (in this order). 
+Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2,
+ confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
-You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355] [Get-HotFix -Id KB3000850]`.
+You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`
+
+If the installation is for Windows server 2012 R2 Server Core, the following update should also be installed:
+ [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
+
+ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb3000850]`
 
 > [!NOTE]
 > A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
