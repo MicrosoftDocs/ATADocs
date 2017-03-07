@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshooting the Advanced Threat Analytics error log | Microsoft Docs
+title: Troubleshooting the Advanced Threat Analytics error log | Microsoft Docs 
 description: Describes how you can troubleshoot common errors in ATA 
 keywords:
 author: rkarlin
@@ -19,9 +19,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
-ms.suite: ems
-#ms.tgt_pltfrm:
+ms.reviewer: arzinger
+ms.suite: ems#ms.tgt_pltfrm:
 #ms.custom:
 
 ---
