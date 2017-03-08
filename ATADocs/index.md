@@ -20,7 +20,8 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 <article id="main">
     <section id="hero-content">
       <h1>Microsoft Advanced Threat Analytics Documentation</h1>
-      <h2>Learn how to deploy and manage Microsoft Advanced Threat Analytics (ATA), an on-premises product that helps IT security professionals protect their enterprise from advanced targeted attacks.</h2>
+      <h2>Microsoft Advanced Threat Analytics (ATA) provides a simple and fast way to understand what is happening within your network by identifying suspicious user and device activity with built-in intelligence and providing clear and relevant threat information on a simple attack timeline.<br>
+Microsoft Advanced Threat Analytics leverages deep packet inspection technology, as well as information from additional data sources (Security Information and Event Management and Active Directory) to build an Organizational Security Graph and detect advanced attacks in near real time.</h2>
       <h3>New to ATA? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Visit our product page &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
