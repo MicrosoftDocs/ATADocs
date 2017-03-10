@@ -69,6 +69,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > -   The ATA Center can handle an aggregated maximum of 400,000 frames per second (FPS) from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 400,000. Please contact askcesec@microsoft.com for assistance with such environments.
 > -   The amounts of storage dictated here are net values, you should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
 > -   If your free space reaches a minimum of either 20% or 100 GB, the oldest collection of data will be deleted. This will continue to occur until 5% or 50 GB of free space remains at which point data collection will stop working.
+> - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
 > -   The storage latency for read and write activities should be below 10 ms.
 > -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
