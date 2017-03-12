@@ -4,7 +4,7 @@ description: Learn how to use Advanced Threat Analytics.
 ---
 # Advanced Threat Analytics Documentation
 
-Control and help secure email, documents, and sensitive data that you share outside your company walls. From easy classification to embedded labels and permissions, enhance data protection at all times with Azure Information Protection—no matter where it’s stored or who it’s shared with.
+Advanced Threat Analytics (ATA) is an on-premises platform that helps protect your enterprise from multiple types of advanced targeted cyber attacks and insider threats by using information from multiple data-sources in your network to learn the behavior of users and other entities in the organization and build a behavioral profile about them and by leveraging ATA's proprietary network parsing engine to capture and parse network traffic of multiple protocols.
 
 <ul class="panelContent cardsFTitle">
     <li>
