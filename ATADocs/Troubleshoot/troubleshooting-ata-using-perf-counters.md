@@ -43,6 +43,16 @@ The ATA performance counters provide insight into how well each component of ATA
 3.  This happens all the way back to the NetworkListener component which will drop traffic when it can no longer forward entities.
 
 
+## Retrieving performance monitor files for troubleshooting
+
+To retrieve the performance monitor files (BLG) from the various ATA components:
+1.  Open perfmon.
+2.  Stop the data collector set named: "Microsoft ATA Gateway " or “Microsoft ATA Center”.
+3.  Go to the data collector set folder (by default, this is "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" or “C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets”).
+4.  Copy the BLG file that was most recently modified.
+5.  Restart the data collector set named: "Microsoft ATA Gateway" or “Microsoft ATA Center”.
+
+
 ## ATA Gateway performance counters
 
 In this section, every reference to ATA Gateway refers also to the ATA Lightweight Gateway.
