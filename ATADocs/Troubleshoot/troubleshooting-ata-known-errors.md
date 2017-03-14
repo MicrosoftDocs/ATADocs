@@ -25,7 +25,6 @@ ms.suite: ems#ms.tgt_pltfrm:
 
 ---
 
-
 *Applies to: Advanced Threat Analytics version 1.7*
 
 
