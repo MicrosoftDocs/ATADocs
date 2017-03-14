@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 3/14/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -25,6 +25,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
 
 *Applies to: Advanced Threat Analytics version 1.7*
 
