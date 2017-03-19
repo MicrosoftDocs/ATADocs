@@ -1,4 +1,4 @@
---
+---
 # required metadata
 
 title: Troubleshooting the Advanced Threat Analytics error log | Microsoft Docs 
@@ -32,8 +32,11 @@ ms.suite: ems
 
 
 # Troubleshooting the ATA error log
+
 This section details possible errors in the deployments of ATA and the steps required for troubleshooting them.
+
 ## ATA Gateway errors
+
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: A local error occurred|The ATA Gateway failed to authenticate against the domain controller.|1. Confirm that the domain controller’s DNS record is configured properly in the DNS server. <br>2. Verify that the time of the ATA Gateway is synchronized with the time of the domain controller.|
