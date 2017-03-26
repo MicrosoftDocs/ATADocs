@@ -68,6 +68,8 @@ Check the attack time line to view detected suspicious activities and search for
 
 ATA will start scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, will not be available until ATA has had time to build behavioral profiles (minimum of three weeks).
 
+To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
+
 
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
