@@ -127,6 +127,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
                 <div class="card">
                     <div class="cardText">
                         <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Evaluate</a></p>
+                        <p><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook">Check out the ATA attack simulation playbook</a></p>
                     </div>
                 </div>
             </div>
