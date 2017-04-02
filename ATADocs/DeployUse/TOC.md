@@ -25,7 +25,7 @@
 ### [Step 3 Download the GW package](install-ata-step3.md)
 ### [Step 4 Install the GW](install-ata-step4.md)
 ### [Step 5 Configure the GW](install-ata-step5.md)
-### [Step 6 Exclusinos and Honeytoken](install-ata-step6.md)
+### [Step 6 Exclusions and Honeytoken](install-ata-step6.md)
 ### [Silent installation](ata-silent-installation.md)
 # Use
 ## [Change ATA Center IP address](modifying-ata-config-centerip.md)

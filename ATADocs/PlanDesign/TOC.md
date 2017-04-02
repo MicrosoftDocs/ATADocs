@@ -25,7 +25,7 @@
 ### [Step 3 Download the GW package](/advanced-threat-analytics/deploy-use/install-ata-step3)
 ### [Step 4 Install the GW](/advanced-threat-analytics/deploy-use/install-ata-step4)
 ### [Step 5 Configure the GW](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [Step 6 Exclusion and Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Step 6 Exclusions and Honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [Silent installation](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # Use
 ## [Change ATA Center IP address](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
