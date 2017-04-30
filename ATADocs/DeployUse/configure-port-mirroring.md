@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -49,6 +49,7 @@ Your domain controllers and ATA Gateways can be either physical or virtual. The 
 
 > [!NOTE]
 > If the domain controller being port mirrored is connected over a WAN link, make sure the WAN link can handle the additional load of the ERSPAN traffic.
+> ATA only supports traffic monitoring when the traffic reaches the NIC and the domain controller in the same manner. ATA does not support traffic monitoring when the traffic is broken out to different ports.
 
 ## Supported port mirroring options
 
