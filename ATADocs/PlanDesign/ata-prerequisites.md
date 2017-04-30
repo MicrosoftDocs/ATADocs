@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/16/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -147,6 +147,7 @@ Before installing ATA Gateway running Windows 2012 R2, confirm that the followin
 
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
+
 For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
 > [!NOTE]
@@ -235,6 +236,10 @@ If the installation is for Windows server 2012 R2 Server Core, the following upd
  [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
 
  You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb3000850]`
+
+
+During installation, the .Net Framework 4.6.1 is installed and might cause a reboot of the domain controller.
+
 
 > [!NOTE]
 > A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
