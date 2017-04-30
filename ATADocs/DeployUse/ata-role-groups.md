@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/7/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,7 +36,7 @@ ms.suite: ems
 Role groups enables access management for ATA. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and ATA role authorization, and helps you get up and running with role groups in ATA.
 
 > [!NOTE]
-> Any local administrator on the ATA Center is automatically a Microsoft Advanced Threat Aalytics Administrator.
+> Any local administrator on the ATA Center is automatically a Microsoft Advanced Threat Analytics Administrator.
 
 ## Types of ATA Role Groups 
 
@@ -55,11 +55,13 @@ ATA introduces 3 types of Role group: ATA Administrators, ATA Users and ATA View
 |Gateway – Delete |Available|Not available|Not available|
 |Monitored DC – Add |Available|Not available|Not available|
 |Monitored DC – Delete|Available|Not available|Not available|
+|View alerts and suspicious activities|Available|Available|Available|
+
 
 When users try to access a page that is not available for their role group, they will be redirected to the ATA unauthorized page. 
 
 ## Add \ Remove users - ATA Role Groups 
 
-ATA uses the local Windows groups as a basis for role groups. 
+ATA uses the local Windows groups as a basis for role groups. The role groups must be managed on the ATA Center server.
 To add or remove users, use the **Local Users and Groups** MMC (Lusrmgr.msc). On a domain joined machine, you can add domain accounts as well as local accounts. 
 
