@@ -39,7 +39,7 @@ The Privilege Attribute Certificate (PAC) is the Data Structure in the Kerberos 
 
 The PAC Data Structure is used by authentication protocols (protocols that verify identities) to transport authorization information, which controls access to resources.
 
-## PAC validation
+### PAC validation
 
 PAC validation is a security feature to prevent an attacker from gaining unauthorized access to a system or its resources with a man-in-the-middle attack, especially in applications where user impersonation is used. Impersonation involves a trusted identity, such as a service account that is granted elevated privileges to access resources and execute tasks. PAC validation reinforces a more secure authorization environment in Kerberos authentication settings where impersonation occurs. PAC validation ensures that a user presents exact authorization data as it was granted in the [Kerberos ticket](https://blogs.msdn.microsoft.com/openspecification/2009/04/24/understanding-microsoft-kerberos-pac-validation/) and that the ticket's privileges have not been modified.
 When the PAC validation occurs, the server encodes a request message containing the PAC signature type and length and transmits it to the DC. The DC decodes the request and extracts the server checksum and the KDC checksum values. If the checksum verification succeeds, the DC returns a success code to the server. An unsuccessful return code indicates that the PAC has been altered. 
@@ -50,7 +50,7 @@ The Kerberos PAC content is [signed twice](http://searchwindowsserver.techtarget
 - Once with the master key of the KDC to prevent malicious server-side services from changing authorization data
 - Once with the master key of the destination resource server account to prevent a user from modifying the PAC content and adding their own authorization data
 
-## PAC vulnerability
+### PAC vulnerability
 Security bulletins [MS14-068](https://technet.microsoft.com/library/security/MS14-068.aspx) and [MS11-013(https://technet.microsoft.com/library/security/ms11-013.aspx)] address vulnerabilities in the Kerberos KDC that might allow an attacker to manipulate the PAC field in a valid Kerberos Ticket, granting themselves additional privileges.
 
 ## Forged PAC attack
