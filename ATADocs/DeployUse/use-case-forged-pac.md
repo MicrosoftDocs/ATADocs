@@ -86,7 +86,7 @@ The following chart helps determine which steps you should take:
 
 
 2.	If the detected Forged PAC attack was successful:
-    -	If the DC on which the alert was raised is properly patched, it is a false positive. In this case, you should dismiss the alert and post it in the ATA blog so we can continuously improve our detections. 
+    -	If the DC on which the alert was raised is properly patched, it is a false positive. In this case, you should dismiss the alert and send an email notifying the ATA team at ATAeval@microsoft.com so we can continuously improve our detections. 
     -	If the DC in the alert is not properly patched:
         -	If the service listed in the alert does not have its own authorization mechanism, this is a true positive and you should run your organization’s Incident Response (IR) on the computer. 
         -	If the service listed in the alert internal authorization mechanism that requests authorization data, it might be falsely identified as a forged PAC. 
