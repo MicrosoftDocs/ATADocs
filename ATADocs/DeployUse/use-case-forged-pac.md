@@ -2,12 +2,12 @@
 # required metadata
 
 title: Investigating Forged PAC attacks | Microsoft Docs
-description: This article describes the forged PAC attack and provides investigation instructions when this threat is detected on your network.
+description: This article describes the Forged PAC attack and provides investigation instructions when this threat is detected on your network.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/9/2017
+ms.date: 5/16/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -33,7 +33,7 @@ ms.suite: ems
 Microsoft constantly improves its security detection capabilities and the ability to provide near-real-time, actionable intelligence to security analysts. Microsoft’s Advanced Threat Analytics (ATA) helps to lead this change. 
 If ATA detects a Forged PAC suspicious activity on your network and alerts you about it, this article will help you understand and investigate it.
 
-## What is Privileged Access Certificate (PAC)?
+## What is a Privileged Access Certificate (PAC)?
 
 The Privilege Attribute Certificate (PAC) is the Data Structure in the Kerberos Ticket which holds authorization information, including group memberships, security identifiers and user profile information. In an Active Directory domain, this enables authorization data provided by the Domain Controller (DC) to be passed to other member servers and workstations for authentication and authorization purposes. In addition to membership information, the PAC includes additional credential information, profile and policy information, and supporting security metadata. 
 
@@ -50,14 +50,14 @@ The Kerberos PAC content is signed twice:
 - Once with the master key of the destination resource server account to prevent a user from modifying the PAC content and adding their own authorization data
 
 ### PAC vulnerability
-Security bulletins [MS14-068](https://technet.microsoft.com/library/security/MS14-068.aspx) and [MS11-013](https://technet.microsoft.com/library/security/ms11-013.aspx)] address vulnerabilities in the Kerberos KDC that might allow an attacker to manipulate the PAC field in a valid Kerberos Ticket, granting themselves additional privileges.
+Security bulletins [MS14-068](https://technet.microsoft.com/library/security/MS14-068.aspx) and [MS11-013](https://technet.microsoft.com/library/security/ms11-013.aspx) address vulnerabilities in the Kerberos KDC that might allow an attacker to manipulate the PAC field in a valid Kerberos Ticket, granting themselves additional privileges.
 
 ## Forged PAC attack
 
-A Forged PAC is an attempt by an attacker to take advantage of these vulnerabilities to elevate their privileges in your Active Directory Forest or Domain. To perform this attack, the attacker must:
+A Forged PAC attack is an attempt by an attacker to take advantage of these vulnerabilities to elevate their privileges in your Active Directory Forest or Domain. To perform this attack, the attacker must:
 -	Have credentials to a domain user.
 -	Have network connectivity to a Domain Controller that can be used to authenticate against the compromised domain credentials.
--	Have the right tools. Python Kerberos Exploitation Kit (PyKEK) is a known tool which will Forge PACs.
+-	Have the right tools. Python Kerberos Exploitation Kit (PyKEK) is a known tool which will forge PACs.
 
 If the attacker has the necessary credentials and connectivity, they can then modify or forge the Privileged Access Certificate (PAC) of an existing Kerberos user logon token (TGT). The attacker changes the group membership claim to include a higher-privileged group (for example, “Domain Administrators” or “Enterprise Administrators”). The attacker then includes the modified PAC in the Kerberos Ticket. This Kerberos Ticket is then used to request a Service ticket from an unpatched Domain Controller (DC), giving the attacker elevated permissions in the domain and authorization to perform actions they are not meant to perform. 
 An attacker can present the modified user logon token (TGT) to gain access to any resource in the domain by requesting resource access tokens (TGS). This means that an attacker can bypass all configured resource ACLs which limit access on the network by spoofing authorization data (PAC) for any user in Active Directory.
@@ -72,8 +72,8 @@ ATA will indicate in the suspicious activity alert whether the Forged PAC was su
 ## Investigating
 After you receive the Forged PAC alert in ATA, you need to determine what needs to be done to mitigate the attack. To do this, you must first classify the alert as one of the following: 
 -	True positive: A malicious action detected by ATA
--	False positive: A false alert – the Forged PAC didn’t really happen (this is an event that ATA mistook for a forged PAC attack)
--	Benign true positive: An action detected by ATA that is real but not malicious, such as a such as a penetration test
+-	False positive: A false alert – the Forged PAC didn’t really happen (this is an event that ATA mistook for a Forged PAC attack)
+-	Benign true positive: An action detected by ATA that is real but not malicious, such as a penetration test
 
 The following chart helps determine which steps you should take:
 
@@ -88,7 +88,7 @@ The following chart helps determine which steps you should take:
     -	If the DC on which the alert was raised is properly patched, it is a false positive. In this case, you should dismiss the alert and send an email notifying the ATA team at ATAEval@microsoft.com so we can continuously improve our detections. 
     -	If the DC in the alert is not properly patched:
         -	If the service listed in the alert does not have its own authorization mechanism, this is a true positive and you should run your organization’s Incident Response (IR) process. 
-        -	If the service listed in the alert has an internal authorization mechanism that requests authorization data, it might be falsely identified as a forged PAC. 
+        -	If the service listed in the alert has an internal authorization mechanism that requests authorization data, it might be falsely identified as a Forged PAC. 
 
 3.	If the detected attack failed:
     -	If the operating system or the application is known to modify the PAC, then this is likely a benign true positive and you should work with the application or operating system owner to fix this behavior.
@@ -96,7 +96,7 @@ The following chart helps determine which steps you should take:
     -	If the operating system or the application is not known to modify the PAC: 
 
         -	If the service listed does not have its own authorization service, this is a true positive, and you should run your organization’s Incident Response (IR) process. Even though the attacker was not successful in elevating their privileges in the domain, you can assume there is an attacker in your network and you will want to find them as quickly as possible before they attempt other known advanced persistent attacks to elevate their privileges. 
-        -	If the service listed in the alert has its own authorization mechanism that requests authorization data, it might be falsely identified as a forged PAC.
+        -	If the service listed in the alert has its own authorization mechanism that requests authorization data, it might be falsely identified as a Forged PAC.
 
 
 Microsoft recommends using a professional Incident Response & Recovery team, that can be reached via your Microsoft Account Team, to help detect whether an attacker has deployed methods of persistence in your network. These can be via the use of malicious software as well as through identity breaches, such as stolen credentials and Golden Tickets.
