@@ -300,7 +300,7 @@ Access to the ATA Console is via a browser, supporting the following:
 ## See Also
 
 - [ATA architecture](ata-architecture.md)
-- [Install ATA](install-ata.md)
+- [Install ATA](install-ata-step1.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 

@@ -103,7 +103,7 @@ Attackers can attempt to control your network by running code remotely on your d
 
 -   For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)
 
--   To get started deploying ATA: [Install ATA](install-ata.md)
+-   To get started deploying ATA: [Install ATA](install-ata-step1.md)
 
 ## See Also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
