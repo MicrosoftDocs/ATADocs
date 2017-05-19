@@ -79,8 +79,8 @@ This section details possible errors in the deployments of ATA and the steps req
 
 
 ## See Also
-- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [ATA prerequisites](ata-prerequisites.md)
+- [ATA capacity planning](ata-capacity-planning.md)
+- [Configure event collection](configure-event-collection.md)
+- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -74,9 +74,9 @@ ATA 1.6 includes improved detection logic that reduces false-positive and false-
 
 ### The ATA Lightweight Gateway
 This version of ATA introduces a new deployment option for the ATA Gateway, which allows an ATA Gateway to be installed directly on the Domain Controller. This deployment option removes non-critical functionality of the ATA Gateway and introduces dynamic resource management based on available resources on the DC, which makes sure the existing operations of the DC are not affected. The ATA Lightweight Gateway reduces the cost of ATA deployment. At the same time it makes deployment easier in branch sites, in which there is limited hardware resource capacity or inability to set up port-mirroring support.
-For more information about the ATA Lightweight Gateway, see [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-gateway-and-ata-lightweight-gateway)
+For more information about the ATA Lightweight Gateway, see [ATA architecture](ata-architecture.md#ata-gateway-and-ata-lightweight-gateway)
 
-For more information about deployment considerations and choosing the right type of gateways for you, see [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)
+For more information about deployment considerations and choosing the right type of gateways for you, see [ATA capacity planning](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment)
 
 
 ### Automatic updates

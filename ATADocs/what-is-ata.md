@@ -44,7 +44,7 @@ In addition, ATA leverages a proprietary network parsing engine to capture and p
 - 	Port mirroring from Domain Controllers and DNS servers to the ATA Gateway
 - 	Deploying an ATA Lightweight Gateway (LGW) directly on Domain Controllers
 
-For more information on ATA architecture see [ATA Architecture](/advanced-threat-analytics/plan-design/ata-architecture).
+For more information on ATA architecture see [ATA Architecture](ata-architecture.md).
 
 ## What does ATA do?
 
@@ -99,9 +99,9 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
 ## What's next?
 
--   For more information about how ATA fits into your network: [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture)
+-   For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)
 
--   To get started deploying ATA: [Install ATA](/advanced-threat-analytics/deploy-use/install-ata-step1)
+-   To get started deploying ATA: [Install ATA](install-ata-step1.md)
 
 ## See Also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

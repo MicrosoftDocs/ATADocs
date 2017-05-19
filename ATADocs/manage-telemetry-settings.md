@@ -97,5 +97,5 @@ Perform the following steps to stop collecting and sending telemetry data to Mic
 2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
 
 ## See Also
-- [What's new in version 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
+- [What's new in version 1.6](whats-new-version-1.6.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

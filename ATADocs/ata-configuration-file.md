@@ -42,7 +42,7 @@ It is possible to restore all the settings by running the following command:
 `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## See Also
-- [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture)
-- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA architecture](ata-architecture.md)
+- [ATA prerequisites](ata-prerequisites.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

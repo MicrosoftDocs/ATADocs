@@ -63,7 +63,7 @@ After the ATA Gateway was installed, perform the following steps to configure th
 
  - **Domain synchronizer candidate**: Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource intensive. By default, only ATA Gateways are set as Domain synchronizer candidates.
    It is recommended to disable any remote site ATA Gateways from being Domain synchronizer candidates.
-   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features).
+   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [ATA architecture](ata-architecture.md#ata-lightweight-gateway-features).
 
 > [!NOTE] 
 > It will take a few minutes for the ATA Gateway service to start the first time after installation because it builds the cache of the network capture parsers.
@@ -79,7 +79,7 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
 
 1.  Check that the service named **Microsoft Advanced Threat Analytics Gateway** is running. After you save the ATA Gateway settings, it might take a few minutes for the service to start.
 
-2.  If the service does not start, review the “Microsoft.Tri.Gateway-Errors.log” file located in the following default folder, “%programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs” and Check [ATA Troubleshooting](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors) for help.
+2.  If the service does not start, review the “Microsoft.Tri.Gateway-Errors.log” file located in the following default folder, “%programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs” and Check [ATA Troubleshooting](troubleshooting-ata-known-errors.md) for help.
 
 3.  If this is the first ATA Gateway installed, after a few minutes, log into the ATA Console and open the notification pane by swiping the right side of the screen open. You should see a list of **Entities Recently Learned** in the notification bar on the right side of the console.
 
@@ -98,5 +98,5 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA prerequisites](ata-prerequisites.md)
 

@@ -79,5 +79,5 @@ To check that ATA is up and running and catching breaches in your network, you c
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA prerequisites](ata-prerequisites.md)
 

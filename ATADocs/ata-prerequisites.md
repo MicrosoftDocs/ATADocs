@@ -148,10 +148,10 @@ Before installing ATA Gateway running Windows 2012 R2, confirm that the followin
 You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
 
 
-For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
+For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
@@ -184,7 +184,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 -   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring)  for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
+    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md) for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
     > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This will ensure that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
@@ -242,7 +242,7 @@ During installation, the .Net Framework 4.6.1 is installed and might cause a reb
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) and [performance logs](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 
@@ -300,7 +300,7 @@ Access to the ATA Console is via a browser, supporting the following:
 ## See Also
 
 - [ATA architecture](ata-architecture.md)
-- [Install ATA](/advanced-threat-analytics/deploy-use/install-ata)
+- [Install ATA](install-ata.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 

@@ -64,7 +64,7 @@ Perform the following steps on the ATA Gateway server.
     Click **Next**.
 
     > [!NOTE] 
-    > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you will receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of ATA in a small lab test environment in which you won't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
+    > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you will receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of ATA in a small lab test environment in which you won't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](ata-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
 4.  Under **ATA Gateway Configuration**, enter the following information based on your environment:
 
@@ -101,5 +101,5 @@ Perform the following steps on the ATA Gateway server.
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA prerequisites](ata-prerequisites.md)
 

@@ -37,7 +37,7 @@ The update to ATA 1.7 provides improvements in the following areas:
 ## Updating ATA to version 1.7
 
 > [!NOTE] 
-> If ATA is not installed in your environment, download the full version of ATA which includes version 1.7 and follow the standard installation procedure described in [Install ATA](/advanced-threat-analytics/deploy-use/install-ata).
+> If ATA is not installed in your environment, download the full version of ATA which includes version 1.7 and follow the standard installation procedure described in [Install ATA](install-ata.md).
 
 If you already have ATA version 1.6 deployed, this procedure will walk you through the steps necessary to update your deployment.
 
@@ -91,7 +91,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 > The configured Syslog listener port on all Gateways will be changed to 514.
  
 > [!NOTE] 
-> To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](/advanced-threat-analytics/deploy-use/install-ata-step4) .
+> To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md) .
 
 
 

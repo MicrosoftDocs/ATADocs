@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Troubleshooting ATA using the performance counters
 The ATA performance counters provide insight into how well each component of ATA is performing. The components in ATA process data sequentially, so that when there's a problem, it might cause partial dropped traffic somewhere along the chain of components. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain. Use the data found in the performance counters to understand how each component is functioning.
-    Refer to [ATA architecture](/advanced-threat-analytics/plan-design/ata-architecture) to understand the flow of internal ATA components.
+    Refer to [ATA architecture](ata-architecture.md) to understand the flow of internal ATA components.
 
 **ATA component process**:
 
@@ -137,8 +137,8 @@ The following is the list of main operating system counters to pay attention to:
 |\LogicalDisk(&#42;)\Disk Write Bytes\sec|The number of bytes per second that are being written to the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
 
 ## See Also
-- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [ATA prerequisites](ata-prerequisites.md)
+- [ATA capacity planning](ata-capacity-planning.md)
+- [Configure event collection](configure-event-collection.md)
+- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

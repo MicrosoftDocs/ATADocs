@@ -65,7 +65,7 @@ This is the default landing page you are taken to when you log in to the ATA Con
 
 ![ATA attack timeline image](media/attack-timeline-1.7.png)
 
-For more information, see [Working with suspicious activities](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities).
+For more information, see [Working with suspicious activities](working-with-suspicious-activities.md).
 
 ### Notification bar
 

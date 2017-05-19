@@ -64,10 +64,10 @@ Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneli
 
 ## How many ATA Gateways do I need?
 
-The number of ATA Gateways depend on your network layout, volume of packets and volume of events captured by ATA. To determine the exact number, see [ATA Lightweight Gateway Sizing](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
+The number of ATA Gateways depend on your network layout, volume of packets and volume of events captured by ATA. To determine the exact number, see [ATA Lightweight Gateway Sizing](ata-capacity-planning.md#ata-lightweight-gateway-sizing). 
 
 ## How much storage do I need for ATA?
-For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about ATA Center sizing see, [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning).
+For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about ATA Center sizing see, [ATA Capacity Planning](ata-capacity-planning.md).
 
 
 ## Why are certain accounts considered sensitive?
@@ -76,9 +76,9 @@ This happens when an account is a member of certain groups which we designate as
 To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group).
 
 ## How do I monitor a virtual domain controller using ATA?
-Most virtual domain controllers can be covered by the ATA Lightweight Gateway, to determine whether the ATA Lightweight Gateway is appropriate for your environment, see [ATA Capacity Planning](/advanced-threat-analytics/plan-design/ata-capacity-planning).
+Most virtual domain controllers can be covered by the ATA Lightweight Gateway, to determine whether the ATA Lightweight Gateway is appropriate for your environment, see [ATA Capacity Planning](ata-capacity-planning.md).
 
-If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateways as described in [Configure port mirroring](/advanced-threat-analytics/deploy-use/configure-port-mirroring).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following:
+If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateways as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following:
 
 -   When the virtual domain controller moves to another host, preconfigure the ATA Gateway in that host to receive the traffic from the recently moved virtual domain controller.
 -   Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it is moved, the ATA Gateway moves with it.
@@ -87,7 +87,7 @@ If a virtual domain controller can't be covered by the ATA Lightweight Gateway, 
 ## How do I back up ATA?
 There are 2 things to back up:
 
--   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](/advanced-threat-analytics/deploy-use/ata-database-management). 
+-   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](ata-database-management.md). 
 -   The configuration of ATA. This is stored in the database and is automatically backed up every hour in the **Backup** folder in the ATA Center deployment location.  See [ATA database management](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) for more information.
 
 
@@ -107,7 +107,7 @@ The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect 
 ATA has a bi-directional integration with SIEMs as follows:
 
 1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
-2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from  [these SIEMs](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support).
+2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from  [these SIEMs](configure-event-collection.md#siem-support).
 
 ## Can ATA monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.
@@ -144,9 +144,9 @@ Yes, you can view the overall health of the deployment as well as specific issue
 
 
 ## See Also
-- [ATA prerequisites](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [ATA capacity planning](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Configure event collection](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Configuring Windows event forwarding](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
+- [ATA prerequisites](ata-prerequisites.md)
+- [ATA capacity planning](ata-capacity-planning.md)
+- [Configure event collection](configure-event-collection.md)
+- [Configuring Windows event forwarding](configure-event-collection.md#Configuring-Windows-Event-Forwarding)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
