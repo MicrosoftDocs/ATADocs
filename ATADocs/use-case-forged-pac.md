@@ -1,4 +1,3 @@
----
 # required metadata
 
 title: Investigating Forged PAC attacks | Microsoft Docs
@@ -7,7 +6,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2017
+ms.date: 5/21/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -33,7 +32,7 @@ ms.suite: ems
 Microsoft constantly improves its security detection capabilities and the ability to provide near-real-time, actionable intelligence to security analysts. Microsoft’s Advanced Threat Analytics (ATA) helps to lead this change. 
 If ATA detects a Forged PAC suspicious activity on your network and alerts you about it, this article will help you understand and investigate it.
 
-## What is a Privileged Access Certificate (PAC)?
+## What is a Privileged Attribute Certificate (PAC)?
 
 The Privilege Attribute Certificate (PAC) is the Data Structure in the Kerberos Ticket which holds authorization information, including group memberships, security identifiers and user profile information. In an Active Directory domain, this enables authorization data provided by the Domain Controller (DC) to be passed to other member servers and workstations for authentication and authorization purposes. In addition to membership information, the PAC includes additional credential information, profile and policy information, and supporting security metadata. 
 
@@ -59,7 +58,7 @@ A Forged PAC attack is an attempt by an attacker to take advantage of these vuln
 -	Have network connectivity to a Domain Controller that can be used to authenticate against the compromised domain credentials.
 -	Have the right tools. Python Kerberos Exploitation Kit (PyKEK) is a known tool which will forge PACs.
 
-If the attacker has the necessary credentials and connectivity, they can then modify or forge the Privileged Access Certificate (PAC) of an existing Kerberos user logon token (TGT). The attacker changes the group membership claim to include a higher-privileged group (for example, “Domain Administrators” or “Enterprise Administrators”). The attacker then includes the modified PAC in the Kerberos Ticket. This Kerberos Ticket is then used to request a Service ticket from an unpatched Domain Controller (DC), giving the attacker elevated permissions in the domain and authorization to perform actions they are not meant to perform. 
+If the attacker has the necessary credentials and connectivity, they can then modify or forge the Privileged Attribute Certificate (PAC) of an existing Kerberos user logon token (TGT). The attacker changes the group membership claim to include a higher-privileged group (for example, “Domain Administrators” or “Enterprise Administrators”). The attacker then includes the modified PAC in the Kerberos Ticket. This Kerberos Ticket is then used to request a Service ticket from an unpatched Domain Controller (DC), giving the attacker elevated permissions in the domain and authorization to perform actions they are not meant to perform. 
 An attacker can present the modified user logon token (TGT) to gain access to any resource in the domain by requesting resource access tokens (TGS). This means that an attacker can bypass all configured resource ACLs which limit access on the network by spoofing authorization data (PAC) for any user in Active Directory.
 
 ## Discovering the attack
