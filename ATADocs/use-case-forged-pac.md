@@ -1,3 +1,4 @@
+---
 # required metadata
 
 title: Investigating Forged PAC attacks | Microsoft Docs
