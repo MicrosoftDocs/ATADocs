@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/19/2017
+ms.date: 05/24/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -149,6 +149,10 @@ Use the following command to silently install the ATA Gateway:
     [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
+> [!NOTE]
+> If you are working on a domain joined computer and have logged in using your ATA admin username and password, it is unnecessary to provide your credentials here.
+
+
 **Installation options**:
 
 |Name|Syntax|Mandatory for silent installation?|Description|
@@ -167,7 +171,7 @@ Use the following command to silently install the ATA Gateway:
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 
 **Examples**:
-To silently install the ATA Gateway and register it with the ATA Center using the specified credentials:
+To silently install the ATA Gateway log into the domain joined computer with your ATA admin credentials and you will not need to specify credentials. Otherwise, register it with the ATA Center using the specified credentials:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"

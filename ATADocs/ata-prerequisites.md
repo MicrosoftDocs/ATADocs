@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2017
+ms.date: 5/24/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -127,7 +127,7 @@ Make sure the ATA Center has access to your CRL distribution point. If the ATA G
 
 To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
 > [!NOTE]
-> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
+> The certificate's Provider Type can be Cryptographic Service Provider (CSP) or Key Storage Provider (KSP).
 
 
 > Using of automatic certificate renewal is not supported.

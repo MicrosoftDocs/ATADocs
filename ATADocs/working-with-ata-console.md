@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 5/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -34,6 +34,8 @@ ms.suite: ems
 
 Use the ATA console to monitor and respond to suspicious activity detected by ATA.
 
+Typing the ? key will provide keyboard shortcuts for ATA Portal accessibility. 
+
 ## Enabling access to the ATA Console
 To successfully login to the ATA Console, you have to log in with a user who was assigned the proper ATA role to access the ATA Console. 
 For more information about role based access control (RBAC) in ATA, see [Working with ATA role groups](ata-role-groups.md).
@@ -47,10 +49,12 @@ For more information about role based access control (RBAC) in ATA, see [Working
 >[!NOTE]
 > You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
-2.  Enter your username and password and click **Log in**.
+2.  If the computer on which the ATA Center is installed and the computer from which you are trying to access the ATA Console are both domain joined, ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Your permissions in ATA will correspond with your [administrator role](ata-role-groups.md).
+> [!NOTE]
+> Make sure to log onto the computer from which you want to access the ATA Console using your ATA admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your ATA admin user.
+To prompt the ATA Console to ask for credentials, access the console using an IP address and you will be prompted to enter credentials.
 
-![ATA login screen image](media/ATA-log-in-screen.png)
-
+To log in using SSO, make sure the ATA console site is defined as a local intranet site in your browser and that you access it using a shortname or an localhost.
 
 ## The ATA Console
 
