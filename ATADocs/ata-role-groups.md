@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2017
+ms.date: 6/1/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -65,3 +65,25 @@ When users try to access a page that is not available for their role group, they
 ATA uses the local Windows groups as a basis for role groups. The role groups must be managed on the ATA Center server.
 To add or remove users, use the **Local Users and Groups** MMC (Lusrmgr.msc). On a domain joined machine, you can add domain accounts as well as local accounts. 
 
+## Sensitive role groups
+
+The following list of groups are considered **Sensitive** by ATA. These are groups that will be flagged as having administrative privileges and raise alerts that correspond to sensitive accounts:
+
+- Enterprise Read Only Domain Controllers 
+- Domain Admins 
+- Domain Controllers 
+- Schema Admins,
+- Enterprise Admins 
+- Group Policy Creator Owners 
+- Read Only Domain Controllers 
+- Administrators  
+- Power Users  
+- Account Operators  
+- Server Operators   
+- Print Operators,
+- Backup Operators,
+- Replicators 
+- Remote Desktop Users 
+- Network Configuration Operators 
+- Incoming Forest Trust Builders 
+- DNS Admins 

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/7/2017
+ms.date: 06/1/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -42,6 +42,17 @@ You can simulate suspicious activities which is an end to end test by doing one 
 
 
 This needs to run remotely against the domain controller being monitored and not from the ATA Gateway.
+
+## Which ATA build corresponds to each version?
+
+|Version|Build #|
+|----|----|
+|1.6|1.6.4103|
+|1.6 Update 1|1.6.4317|
+|1.7|1.7.5402| 
+|1.7 Update 1|1.7.5647|
+|1.7 Update 2|1.7.5757|
+
 
 ## How do I verify Windows Event Forwarding?
 You can place the the following code into a file and then execute it from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** as follows:
