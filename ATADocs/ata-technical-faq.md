@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/1/2017
+ms.date: 06/5/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -53,7 +53,6 @@ This needs to run remotely against the domain controller being monitored and not
 |1.7 Update 1|1.7.5647|
 |1.7 Update 2|1.7.5757|
 
-
 ## How do I verify Windows Event Forwarding?
 You can place the the following code into a file and then execute it from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** as follows:
 
@@ -68,7 +67,7 @@ mongo.exe ATA filename
         });
 
 ## Does ATA work with encrypted traffic?
-ATA relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding so that even though encrypted traffic will not be analyzed (for example, LDAPS and IPSEC ESP) ATA will still work and most of the detections will not be affected
+ATA relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding so that even though encrypted traffic will not be analyzed (for example, LDAPS and IPSEC ESP) ATA will still work and most of the detections will not be affected.
 
 ## Does ATA work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
