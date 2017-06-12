@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: stevenpo
-ms.date: 1/23/2017
+ms.date: 6/12/2017
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics
@@ -62,9 +62,7 @@ If you need to modify the URL for the ATA Console, follow these steps on the ATA
 
 3.  Select **Center**.
 
-4.  Under **Console IP Address**, select one of the existing IP addresses
-
-5.  Under **Console URL**, modify the URL as needed:
+5.  Under **URL**, modify the URL as needed:
 
     ![ATA Console URL](media/ATA-chge-center-URL.png)
 > [!NOTE]

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/12/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -48,11 +48,11 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.png)
 
 3.  Select **Directory Services**.
 
-    ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.png)
+    ![ATA Gateway change password image](media/ATA-GW-change-DC-password.png)
 
 4.  Under **Password**, change the password.
 

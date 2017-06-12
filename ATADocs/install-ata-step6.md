@@ -59,8 +59,8 @@ To configure the above, follow these steps:
     ![Exclusions](media/exclusions.png)
 
 
-    > [!NOTE]
-    > To find the SID for a user, search for the user in the ATA Console, and then click on the **Account Info** tab. 
+  > [!NOTE]
+  > To find the SID for a user, search for the user in the ATA Console, and then click on the **Account Info** tab. 
 
 4.  Click **Save**.
 

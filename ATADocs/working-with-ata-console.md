@@ -67,7 +67,7 @@ These are the key elements of the ATA console.
 
 This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Resolved suspicious activities. You can also see the severity assigned to each activity.
 
-![ATA attack timeline image](media/attack-timeline-1.7.png)
+![ATA attack timeline image](media/ATA-Suspicious-Activity-Timeline.jpg)
 
 For more information, see [Working with suspicious activities](working-with-suspicious-activities.md).
 
@@ -103,7 +103,7 @@ ATA builds a profile for each user and computer in the network. In the user prof
 
 ![User profile](media/user-profile.png)
 
-In the computer profile, ATA displays general information, such as recently logins and recently accessed resources.
+In the computer profile, ATA displays general information, such as recent logins and recently accessed resources.
 
 ![Computer profile](media/computer-profile.png)
 

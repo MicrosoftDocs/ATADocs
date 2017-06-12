@@ -43,7 +43,7 @@ Each suspicious activity has the following information:
 
 -   Severity of the suspicious activity, High, Medium, or Low.
 
--   Status: Open, resolved, or dismissed.
+-   Status: Open, closed, or suppressed.
 
 -   Ability to
 
@@ -88,18 +88,29 @@ To filter the suspicious activities list:
 
 -   **Open**
 
-    All new suspicious activities appear in this list
+    All new suspicious activities appear in this list.
 
--   **Resolved**
+-   **Closed**
 
     Is used to track suspicious activities which you identified, researched and fixed for mitigated.
 
     > [!NOTE]
     > ATA may reopen a resolved activity if it the same activity is detected again within a short period of time.
 
--   **Dismissed**
+-   **Suppressed**
 
-    Are activities that you manually dismissed. If ATA detects a similar suspicious activity a new detection will be created.
+    Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert ATA won't reopen it. But if the alert stops for 7 days, and is then seen again, you will be alerted again.
+
+- **Delete** 
+
+    If you Delete an alert, it will be deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
+
+- **Exclude** 
+
+The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set ATA to exclude a specific entity (user or computer) from alerting again for a certain type of suspicious activity, such as a specific admin who runs remote code or a security scanner that does DNS recon. In addition to being able to add exclusions directly on the Suspicious activity as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each suspicious activity you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket). 
+> [!NOTE]
+> The configuration pages can only be modified by ATA admins.
+
 
 ## Provide input on a suspicious activity
 To enable ATA to learn about your network with you, some suspicious activities (DNS reconnaissance, Pass the Ticket, SMB Session Enumeration, Abnormal Behavior and Remote Execution) request your input to will enhance the detection of suspicious activities going forward.
@@ -115,7 +126,10 @@ To enable ATA to learn about your network with you, some suspicious activities (
 4.  If you do not know, you can click **Cancel**.
 
 ## Change the status of a suspicious activity
-You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Resolved** or **Dismissed**.
+You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Suppressed**, **Closed** or **Deleted**.
+To do this, click the three dots at the top right corner of a specific suspicious activity to reveal the list of available actions.
+
+![ATA Actions for suspicious activities](./media/sa-actions.png)
 
 ## See Also
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

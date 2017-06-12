@@ -55,7 +55,7 @@ The ATA Gateways locally store the IP address of the ATA Center to which they ne
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.png)
 
 3.  Select **Center**.
 
