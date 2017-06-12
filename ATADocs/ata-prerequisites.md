@@ -63,7 +63,8 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Make sure that Message Analyzer and WireShark are not installed on the ATA Gateway.
+-   Do not install Microsoft Message Analyzer on a ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway will no longer capture any traffic. Note that running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
+
 -    Recommended: User should have read only permissions on the Deleted Objects container. This will allow ATA to detect bulk deletion of objects in the domain. For information about configuring read only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
 
 -   Optional: A user account of a user who has no network activities. This account will be configured as the ATA Honeytoken user. To configure the Honeytoken user you will need the SID of the user account, not the username. For more information see [Working with ATA Detection Settings](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) topic.
