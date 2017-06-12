@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/12/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -42,10 +42,10 @@ After the ATA Gateway was installed, perform the following steps to configure th
 
 1.  In the ATA Console, go to **Configuration** and, under **System**, select **Gateways**.
    
-     ![Configure gateway settings image](media/ATA-Gateways-config-1.png)
+     ![Configure gateway settings image](media/ata-gw-config-1.png)
 
 
-2.  Select the Gateway you want to configure and then enter the following information:
+2.  Click on the Gateway you want to configure and enter the following information:
 
     ![Configure gateway settings image](media/ATA-Gateways-config-2.png)
 

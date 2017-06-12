@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/12/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -35,7 +35,7 @@ ms.suite: ems
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
 
-## Step 6. Configure  IP address exclusions and Honeytoken user
+## Step 6. Configure IP address exclusions and Honeytoken user
 ATA enables the exclusion of specific IP addresses from two types of detections: **DNS Reconnaissance** and **Pass-the-Ticket**. 
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
@@ -48,13 +48,16 @@ To configure the above, follow these steps:
 
     ![ATA configuration settings](media/ATA-config-icon.JPG)
 
-2.  Under **Detection exclusions**, enter an IP address for either *DNS Reconnaissance* or *Pass-the-Ticket* and click the *plus* sign.
+2.  Under **Detection**, click **General**.
 
-    ![Save changes](media/ATA-exclusions.png)
+2. Under **Honeytoken accounts** enter the Honeytoken account SIDs and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
 
-3.  Under **Detection settings** enter the Honeytoken account SIDs and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+   ![Honeytoken](media/honeytoken.png)
 
-    ![ATA configuration settings](media/ATA-honeytoken.png)
+3. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign.
+
+    ![Exclusions](media/exclusions.png)
+
 
     > [!NOTE]
     > To find the SID for a user, search for the user in the ATA Console, and then click on the **Account Info** tab. 
