@@ -70,9 +70,9 @@ ATA searches for three main types of attacks: Malicious attacks, abnormal behavi
 - 	Remote execution
 
 For a complete list of the detections and their descriptions please see [What Suspicious Activities Can ATA detect?](ata-threats.md)
-ATA detects these suspicious activities and surfaces the information in the ATA Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that ATA suspects that a Pass-the-Hash attack was attempted on Client 1 and Client 2 computers in your network.
+ATA detects these suspicious activities and surfaces the information in the ATA Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that ATA suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
- ![sample ATA screen pass-the-hash](media/sample screen pth.png)
+ ![sample ATA screen pass-the-hash](media/pass-the-ticket-sa.png)
 
 **Abnormal behavior** is detected by ATA using behavioral analytics and leveraging Machine Learning to uncover questionable activities and abnormal behavior in users and devices in your network, including:
 
@@ -84,7 +84,7 @@ ATA detects these suspicious activities and surfaces the information in the ATA 
 
 You can view suspicious activities of this type in the ATA Dashboard. In the following example, ATA alerts you when a user accesses 4 computers that are not ordinarily accessed by this user, which could be a cause for alarm.
 
- ![sample ATA screen abnormal behavior](media/sample screen abnormal behavior.png) 
+ ![sample ATA screen abnormal behavior](media/abnormal-behavior-sa.png) 
 
 ATA also detects **security issues and risks**, including:
 
@@ -94,7 +94,7 @@ ATA also detects **security issues and risks**, including:
 
 You can view suspicious activities of this type in the ATA Dashboard. In the following example, ATA is letting you know that there is a broken trust relationship between a computer in your network and the domain.
 
-  ![sample ATA screen broken trust](media/sample screen broken trust.png)
+  ![sample ATA screen broken trust](media/broken-trust-sa.png)
 
 
 ## What's next?

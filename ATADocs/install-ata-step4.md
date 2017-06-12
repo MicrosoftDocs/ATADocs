@@ -74,9 +74,7 @@ Perform the following steps on the ATA Gateway server.
     > When you deploy the ATA Gateway, you will not have to provide credentials. If the ATA Gateway installation fails to retreive your credentials using single sign-on (for example, this may happen if the ATA Center is not in the domain, if the ATA Gateway isn't in the domain, you do not have ATA admin credentials), you will be prompted to provide credentials. 
 
 
-    |Field|Description|Comments|
-    |---------|---------------|------------|
-    |Installation Path|This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway|Leave the default value|
+- Installation Path: This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Leave the default value.
     
     
 5. Click **Install**. The following components are installed and configured during the installation of the ATA Gateway:

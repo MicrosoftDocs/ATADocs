@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/14/2017
+ms.date: 6/12/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -77,6 +77,11 @@ This section details possible errors in the deployments of ATA and the steps req
 
 ![ATA .NET installation error image](media/netinstallerror.png)
 
+## Task cancelled error
+
+Error|Description|Resolution|
+|-------------|----------|---------|
+|Error [\[]TaskAwaiter[\]] System.Threading.Tasks.TaskCanceledException: A task was canceled.|The deployment process timed out as it could not reach the ATA Center.|1.	Check network connectivity to the ATA Center by browsing to it using its IP address. <br></br>2.	Check for proxy of firewall configuration.|
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)

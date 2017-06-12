@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Monitor Advanced Threat Analytics Health Center alerts | Microsoft Docs
-description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
+title: Monitor Advanced Threat Analytics System Health and Events | Microsoft Docs
+description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems and view system events in the Event viewer.
 keywords:
 author: rkarlin
 ms.author: rkarlin
