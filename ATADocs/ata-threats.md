@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 # What threats does ATA look for?
 
@@ -44,6 +44,7 @@ Detects attempts by attackers using the Kerberos protocol to discover if a user 
 -	**Net Session Enumeration**
 As part of the reconnaissance phase, attackers may query the DC for all active SMB sessions on the server, allowing them to gain access to all the users and IP addresses associated with those SMB sessions. SMB session enumeration can be used by attackers for targeting sensitive accounts, helping them move laterally across the network.
 -	**Reconnaissance using DNS**
+
 DNS information in the target network is often very useful reconnaissance information. DNS information contains a list of all the servers and often all the clients and the mapping to their IP addresses. Viewing DNS information may provide attackers with a detailed view of these entities in your environment allowing attackers to focus their efforts on the relevant entities for the campaign.
 -   **Reconnaissance using directory services enumeration**
 Detecting reconnaissance for entities (users, groups, etc.) performed using the SAM-remote protocol to run queries against the domain controllers. This reconnaissance method is prevalent in many types of malware seen in real-world attack scenarios. 
@@ -87,6 +88,8 @@ ATA enables privilege escalation detection by combining behavioral analytics to 
 Forged PAC are attacks in which the attacker plants authorization data in their valid TGT ticket in the form of a forged authorization header that grants them additional permissions that they weren't granted by their organization. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
 -	**MS11-013 exploit (Silver PAC)**
 MS11-013 exploit attacks are an elevation of privilege vulnerability in Kerberos which allows for certain aspects of a Kerberos service ticket to be forged. A malicious user or attacker who successfully exploited this vulnerability could obtain a token with elevated privileges on the Domain Controller. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
+-   **Abnormal modification of sensitive groups**  
+As part of the privilege escalation phase, attackers modify groups with high privileges to gain access to sensitive resources. ATA now detects when there’s an abnormal change in an elevated group.
 
 ### Domain dominance
 ATA detects attackers attempting or successfully achieving total control and dominance over the victim’s environment by performing detection over known techniques used by attackers, which include:

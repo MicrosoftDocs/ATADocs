@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/14/2017
+ms.date: 6/12/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -27,7 +27,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -54,6 +54,7 @@ This section details possible errors in the deployments of ATA and the steps req
 |System.InvalidOperationException: Category does not exist.|Counters might be disabled in the registry|Use [KB2554336](https://support.microsoft.com/en-us/kb/2554336) to rebuild Performance Counters|
 |System.ApplicationException: Unable to start ETW session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|There is a host entry in the HOSTS file pointing to the machine's shortname|Remove the host entry from C:\Windows\System32\drivers\etc\HOSTS file or change it to an FQDN.|
 |System.IO.IOException: Authentication failed because the remote party has closed the transport stream.|TLS 1.0 is disabled on the ATA Gatewau but .Net is set to use TLS 1.2|Use one of the following options: </br> Enable TLS 1.0 on the ATA Gateway </br>Enable TLS 1.2 on .Net by setting the registry keys to use the operating system defaults for LLS and TLS, as follows: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
+|System.TypeLoadException: Could not load type 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' from assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|ATA Gateway failed to load required parsing files.|Check to see if Microsoft Message Analyzer is currently installed. Message Analyzer is not supported to be installed with the ATA Gateway / Lightweight Gateway. Uninstall Message Analyzer and restart the Gateway service.|
 
 
 
@@ -77,6 +78,11 @@ This section details possible errors in the deployments of ATA and the steps req
 
 ![ATA .NET installation error image](media/netinstallerror.png)
 
+## Task cancelled error
+
+Error|Description|Resolution|
+|-------------|----------|---------|
+|Error [\[]TaskAwaiter[\]] System.Threading.Tasks.TaskCanceledException: A task was canceled.|The deployment process timed out as it could not reach the ATA Center.|1.	Check network connectivity to the ATA Center by browsing to it using its IP address. <br></br>2.	Check for proxy of firewall configuration.|
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)

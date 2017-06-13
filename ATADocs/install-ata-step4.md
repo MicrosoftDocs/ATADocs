@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/12/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -58,23 +58,24 @@ Perform the following steps on the ATA Gateway server.
 
 4.  The installation wizard will automatically check if the server is a domain controller or a dedicated server. If it is a domain controller, the ATA Lightweight Gateway will be installed, if it is a dedicated server, the ATA Gateway will be installed. 
     
-    For example, in the case of an ATA Lightweight Gateway, the following screen will be displayed to let you know that an ATA Lightweight Gateway will be installed on your domain controller:
+    For example, in the case of an ATA Gateway, the following screen will be displayed to let you know that an ATA Gateway will be installed on your dedicated server:
     
-    ![ATA Lightweight Gateway installation](media/ATA-lightweight-gateway-install-selected.png)
+    ![ATA Gateway installation](media/ata-gw-install.png)
     Click **Next**.
 
     > [!NOTE] 
     > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you will receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of ATA in a small lab test environment in which you won't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](ata-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
-4.  Under **ATA Gateway Configuration**, enter the following information based on your environment:
+4.  Under **Configure the Gateway**, enter the following information based on your environment:
 
-    ![ATA gateway configuration image](media/ATA-Gateway-Configuration.png)
+    ![ATA gateway configuration image](media/ata-gw-configure.png)
 
-    |Field|Description|Comments|
-    |---------|---------------|------------|
-    |Installation Path|This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway|Leave the default value|
-    |Gateway Service SSL Certificate|This is the certificate that will be used by the ATA Gateway.|Use a self-signed certificate for lab environments only.|
-    |Gateway Registration|Enter the Username and Password of the ATA administrator.|For the ATA Gateway to register with the ATA Center, enter the user name and password of the user who installed the ATA Center. This user must be a member of one of the following local groups on the ATA Center.<br /><br />-   Administrators<br />-   Microsoft Advanced Threat Analytics Administrators **Note:** These credentials are used only for registration and are not stored in ATA.|
+    > [!NOTE]
+    > When you deploy the ATA Gateway, you will not have to provide credentials. If the ATA Gateway installation fails to retreive your credentials using single sign-on (for example, this may happen if the ATA Center is not in the domain, if the ATA Gateway isn't in the domain, you do not have ATA admin credentials), you will be prompted to provide credentials, as in the following screen. 
+
+  ![ATA gateway provide credentials](media/ata-install-credentials.png)
+
+   - Installation Path: This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Leave the default value.
     
 5. Click **Install**. The following components are installed and configured during the installation of the ATA Gateway:
 
@@ -85,9 +86,7 @@ Perform the following steps on the ATA Gateway server.
         > -   Do not install Message Analyzer, Wireshark, or other network capture software on the ATA Gateway. If you need to capture network traffic, install and use Microsoft Network Monitor 3.4.
 
     -   ATA Gateway service
-
     -   Microsoft Visual C++ 2013 Redistributable
-
     -   Custom Performance Monitor data collection set
 
 5.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/13/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -136,6 +136,8 @@ The ATA Gateway receives network traffic and Windows Events from your network an
 
 The following features work differently depending on whether you are running an ATA Gateway or an ATA Lightweight Gateway.
 
+-	The ATA Lightweight Gateway can read events locally, without the need to configure event forwarding.
+
 -	**Domain synchronizer candidate**<br>
 The domain synchronizer gateway is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One gateway is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
 If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, ATA will not be able to proactively synchronize entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
@@ -181,7 +183,7 @@ To enhance ATA detection of Pass-the-Hash, Brute Force and Honey Tokens, ATA nee
 
 -   Configuring the ATA Gateway to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
 
--   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding).
+-   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). Note that this only applies to physical ATA Gateways - not to the ATA Lightweight Gateway.
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)

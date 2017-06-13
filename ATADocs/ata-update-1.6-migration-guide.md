@@ -113,7 +113,7 @@ To download the ATA Gateway package:
 
 2.  On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
 
-    ![Configuration settings icon](media/ATA-config-icon.JPG)
+    ![Configuration settings icon](media/ATA-config-icon.png)
 
 3.  In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
 
