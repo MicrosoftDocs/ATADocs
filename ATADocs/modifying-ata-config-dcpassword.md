@@ -32,8 +32,6 @@ ms.suite: ems
 
 # Change ATA configuration - domain connectivity password
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
 
 
 ## Change the domain connectivity password
@@ -62,8 +60,7 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 6.  After changing the password, manually check that the ATA Gateway service is running on the ATA Gateway servers.
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
+
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)

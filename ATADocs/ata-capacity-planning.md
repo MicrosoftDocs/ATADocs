@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 # ATA Capacity Planning
-This topic helps you determine how many ATA servers will be needed to monitor your network, including understanding how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
+This topic helps you determine how many ATA servers are needed to monitor your network. It will also help you figure out how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
 
 > [!NOTE] 
 > The ATA Center can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
@@ -38,9 +38,9 @@ This topic helps you determine how many ATA servers will be needed to monitor yo
 ##Using the sizing tool
 The recommended and simplest way to determine capacity for your ATA deployment is to use the [ATA Sizing Tool](http://aka.ms/atasizingtool). Run the ATA Sizing Tool and from the Excel file results, use the following fields to determine the ATA capacity you need:
 
-- ATA Center CPU and Memory: Match the **Busy Packets/sec** field in the ATA Center table in the results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
+- ATA Center CPU and Memory: Match the **Busy Packets/sec** field in the ATA Center table results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
 
-- ATA Center Storage: Match the **Avg Packets/sec** field in the ATA Center table in the results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
+- ATA Center Storage: Match the **Avg Packets/sec** field in the ATA Center table results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
 - ATA Gateway: Match the **Busy Packets/sec** field in the ATA Gateway table in the results file to the **PACKETS PER SECOND** field in the [ATA Gateway table](#ata-gateway-sizing) or the [ATA Lightweight Gateway table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
 
 
@@ -48,7 +48,7 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 
 
 
-If for some reason you cannot use the ATA Sizing Tool, you need to manually gather the packet/sec counter information from all your Domain Controllers for a period of 24 hours with a very low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
+If for some reason you cannot use the ATA Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
 The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
 
 
@@ -70,25 +70,25 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 
 &#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
-> -   The ATA Center can handle an aggregated maximum of 400,000 frames per second (FPS) from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 400,000. Please contact askcesec@microsoft.com for assistance with such environments.
-> -   The amounts of storage dictated here are net values, you should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
-> -   If your free space reaches a minimum of either 20% or 100 GB, the oldest collection of data will be deleted. This will continue to occur until 5% or 50 GB of free space remains at which point data collection will stop working.
+> -   The ATA Center can handle an aggregated maximum of 400,000 frames per second (FPS) from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 400,000. Contact askcesec@microsoft.com for assistance with such environments.
+> -   The amount of storage dictated here are net values. You should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
+> -   If your free space reaches a minimum of either 20% or 100 GB, the oldest collection of data is deleted. Deletion continues to occur until 5% or 50 GB of free space remains at which point data collection stops working.
 > - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
 > -   The storage latency for read and write activities should be below 10 ms.
 > -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
-> -   When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.
+> -   When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
 
 
 ## Choosing the right gateway type for your deployment
 In an ATA deployment any combination of the ATA Gateway types is supported:
 
-- Only ATA Gateway(s)
-- Only ATA Lightweight Gateway(s)
+- Only ATA Gateways
+- Only ATA Lightweight Gateways
 - A combination of both
 
-When deciding the Gateway deployment type, consider the following:
+When deciding the Gateway deployment type, consider the following benefits:
 
 |Gateway type|Benefits|Cost|Deployment topology|Domain controller use|
 |----|----|----|----|-----|
@@ -122,23 +122,23 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 
 &#42;Total number of packets-per-second on the domain controller being monitored by the specific ATA Lightweight Gateway.
 
-&#42;&#42;Total amount of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
+&#42;&#42;Total number of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
 
 &#42;&#42;&#42;Total amount of memory that this domain controller has installed.
 
 > [!NOTE]	
-> -   If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
+> -   If the domain controller does not have the resources required by the ATA Lightweight Gateway, domain controller performance is not effected, but the ATA Lightweight Gateway might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 
 ### ATA Gateway Sizing
 
-Consider the following when deciding how many ATA Gateways to deploy.
+Consider the following issues when deciding how many ATA Gateways to deploy.
 
 -	**Active Directory forests and domains**<br>
-	ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. A single ATA deployment should not be configured to monitor network traffic of domain controllers from different forests.
+	ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. Do not configure a single ATA deployment to monitor network traffic of domain controllers from different forests.
 
 -	**Port Mirroring**<br>
 Port mirroring considerations might require you to deploy multiple ATA Gateways per data center or branch site.
@@ -165,13 +165,13 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 > [!NOTE] 
 > -   Dynamic memory is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 
 ## Domain controller traffic estimation
 There are various tools that you can use to discover the average packets per second of your domain controllers. If you do not have any tools that track this counter, you can use Performance Monitor to gather the required information.
 
-To determine packets per second, perform the following on each domain controller:
+To determine packets per second, perform the following steps on each domain controller:
 
 1.  Open Performance Monitor.
 
@@ -187,16 +187,16 @@ To determine packets per second, perform the following on each domain controller
 
 4.  Enter a name for the collector set and select **Create Manually (Advanced)**.
 
-5.  Under **What type of data do you want to include?**, select  **Create data logs and Performance counter**.
+5.  Under **What type of data do you want to include?** select  **Create data logs, and Performance counter**.
 
     ![Type of data for new data collector set image](media/ATA-traffic-estimation-5.png)
 
-6.  Under **Which performance counters would you like to log** click **Add**.
+6.  Under **Which performance counters would you like to log**, click **Add**.
 
 7.  Expand **Network Adapter** and select **Packets/sec** and select the proper instance. If you are not sure, you can select **&lt;All instances&gt;** and click **Add** and **OK**.
 
     > [!NOTE]
-    > To do this, in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
+    > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
 
     ![Add performance counters image](media/ATA-traffic-estimation-7.png)
 
@@ -204,15 +204,15 @@ To determine packets per second, perform the following on each domain controller
 
 9. Set the location where you want the data to be saved.
 
-10. Under **Create the data collector set**  select **Start this data collector set now** and click **Finish**.
+10. Under **Create the data collector set**,  select **Start this data collector set now** and click **Finish**.
 
-    You should now see the data collector set you just created with a green triangle indicating that it is working.
+    You should now see the data collector set you created with a green triangle indicating that it is working.
 
-11. After 24 hours, stop the data collector set, by right clicking the data collector set and selecting **Stop**.
+11. After 24 hours, stop the data collector set, by right-clicking the data collector set and selecting **Stop**.
 
     ![Stop data collector set image](media/ATA-traffic-estimation-12.png)
 
-12. In File Explorer, browse to the folder where the .blg file was saved and double click it to open it in Performance Monitor.
+12. In File Explorer, browse to the folder where the .blg file was saved and double-click it to open it in Performance Monitor.
 
 13. Select the Packets/sec counter, and record the average and maximum values.
 

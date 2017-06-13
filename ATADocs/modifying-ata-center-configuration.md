@@ -105,8 +105,7 @@ If your certificate is about to expire and need to be renewed or replaced after 
 
 8.  Ensure that all the ATA Gateways are able to sync their configurations after the change was activated. The notification bar will indicate how many ATA Gateways successfully synced their configuration.
 
->[!div class="step-by-step"]
-[Change the ATA Center certificate »](modifying-ata-config-centercert.md)
+
 
 
 ## See Also
