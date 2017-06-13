@@ -75,8 +75,7 @@ Perform the following steps on the ATA Gateway server.
 
   ![ATA gateway provide credentials](media/ata-install-credentials.png)
 
-- Installation Path: This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Leave the default value.
-    
+   - Installation Path: This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Leave the default value.
     
 5. Click **Install**. The following components are installed and configured during the installation of the ATA Gateway:
 
@@ -87,9 +86,7 @@ Perform the following steps on the ATA Gateway server.
         > -   Do not install Message Analyzer, Wireshark, or other network capture software on the ATA Gateway. If you need to capture network traffic, install and use Microsoft Network Monitor 3.4.
 
     -   ATA Gateway service
-
     -   Microsoft Visual C++ 2013 Redistributable
-
     -   Custom Performance Monitor data collection set
 
 5.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.

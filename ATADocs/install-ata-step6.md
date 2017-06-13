@@ -56,7 +56,7 @@ To configure the above, follow these steps:
 
 3. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The add entity (user or computer) field is searchable and will autofill with entities in your network.
 
-    ![Exclusions](media/exclusions.png)
+   ![Exclusions](media/exclusions.png)
 
 
   > [!NOTE]

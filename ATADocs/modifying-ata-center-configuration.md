@@ -63,7 +63,7 @@ The URL is used in the following scenarios:
 > [!NOTE]
 > After modifying the ATA Console URL, you should download the ATA Gateway Setup package before installing new ATA Gateways.
 
-## Changing the ATA Center certificate
+## The ATA Center certificate
 If your certificate is about to expire and need to be renewed or replaced after installing the new certificate in the local computer store on the ATA Center server, replace the certificate by following this two stage process:
 
 -   First stage – Update the certificate you want the ATA Center service to use. At this point the ATA Center service is still bound to the original certificate. When the ATA Gateways sync their configuration they will have two potential certificates that will be valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it will not try the new one.
@@ -86,21 +86,19 @@ If your certificate is about to expire and need to be renewed or replaced after 
 
 3.  Select **Center**.
 
-4.  Under **Center service IP address : port**, select one of the existing IP addresses or select **Add custom IP address** and enter an IP address.
+  ![Change ATA configuration](media/change-center-config.png)
+
+4.  Under **URL**, select **Add custom DNS name / IP address** and the new DNS or IP address, or under **Certificate** select the new certificate.
 
 5.  Click **Save**.
 
 6.  You will see a notification of how many ATA Gateways have synced to the latest configuration.
 
-    ![ATA Center synchronized gateways image](media/ATA-chge-IP-after-clicking-save.png)
-
-	>[!IMPORTANT]
+   	>[!IMPORTANT]
 	>Before activating the new configuration, validate that all the ATA Gateways are synced with the latest configuration. Activating the new configuration before all the ATA Gateways are synced may cause the ATA Gateway to stop functioning as expected. If any of the ATA Gateways are not synced, you will get this error when you click Activate:
-	>
-	>    ![ATA Gateway sync error](media/ataGW-not-synced.png)
 
 
-7.  After all the ATA Gateways have synced, click **Activate** to activate the new IP address.
+7.  After all the ATA Gateways have synced, click **Activate** to activate the new IP address or certificate.
 
     > [!NOTE]
     > If you entered a custom IP address, you will not be to click **Activate** until you installed the IP address on the ATA Center.

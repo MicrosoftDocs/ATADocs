@@ -51,11 +51,11 @@ To set a scheduled report:
  
 1. In the **Reports** page, click **Set scheduled reports**, or in the ATA Console configuration page, under Notifications and Reports, click **Scheduled reports**.
 
-![Schedule reports](./media/ata-sched-reports.png)
+   ![Schedule reports](./media/ata-sched-reports.png)
 
 2. Click **Schedule** next to **Summary** or **Modification to sensitive groups** to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 
-![Schedule report frequency and email](./media/sched-report1.png)
+   ![Schedule report frequency and email](./media/sched-report1.png)
 
 
 > [!NOTE]

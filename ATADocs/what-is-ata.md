@@ -75,7 +75,7 @@ ATA searches for three main types of attacks: Malicious attacks, abnormal behavi
 For a complete list of the detections and their descriptions please see [What Suspicious Activities Can ATA detect?](ata-threats.md)
 ATA detects these suspicious activities and surfaces the information in the ATA Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that ATA suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
- ![sample ATA screen pass-the-hash](media/pass-the-ticket-sa.png)
+ ![sample ATA screen pass-the-hash](media/pass_the_ticket_sa.png)
 
 **Abnormal behavior** is detected by ATA using behavioral analytics and leveraging Machine Learning to uncover questionable activities and abnormal behavior in users and devices in your network, including:
 

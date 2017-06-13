@@ -66,6 +66,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
 	-  If you didn't enable automatic updates in version 1.7, you will be prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
     ![Keep ATA up to date image](media/ata_ms_update.png)
+     
      This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
     ![Windows auto-update image](media/ata_installupdatesautomatically.png)
 

@@ -2,7 +2,7 @@
 ## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [What threats does ATA detect?](ata-threats.md)
 ## ATA Release notes
-### [What's new in ATA version 1.8](/advanced-threat-analytics/understand-explore/whats-new-version-1.8)
+### [What's new in ATA version 1.8](whats-new-version-1.8.md)
 #### [Update to ATA 1.8 - migration guide](ata-update-1.8-migration-guide.md)
 ### [What's new in ATA version 1.7](whats-new-version-1.7.md)
 #### [Update to ATA 1.7 - migration guide](ata-update-1.7-migration-guide.md)
@@ -30,9 +30,7 @@
 ### [Step 6 Exclusions and Honeytoken](install-ata-step6.md)
 ### [Silent installation](ata-silent-installation.md)
 # Use
-## [Change ATA Center IP address](modifying-ata-config-centerip.md)
-## [Change ATA Center certificate](modifying-ata-config-centercert.md)
-## [Change ATA console URL](modifying-ata-config-consoleurl.md)
+## [Change ATA Center configuration](modifying-ata-center-configuration.md)
 ## [Change domain connectivity password](modifying-ata-config-dcpassword.md)
 ## [Working with the ATA Console](working-with-ata-console.md)
 ## [ATA role groups](ata-role-groups.md)
@@ -46,7 +44,6 @@
 ## [Export/Import ATA configuration](ata-configuration-file.md)
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
 ## [Investigate Forged PAC attacks](use-case-forged-pac.md)
-## [Investigate elevated group modification](use-case-elevated-group.md)
 # Troubleshoot
 ## [Troubleshooting using known errors](troubleshooting-ata-known-errors.md)
 ## [Troubleshoot using the logs](troubleshooting-ata-using-logs.md)
