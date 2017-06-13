@@ -46,7 +46,7 @@ To configure the above, follow these steps:
 
 1.  From the ATA Console, click on the settings icon and select **Configuration**.
 
-    ![ATA configuration settings](media/ATA-config-icon.JPG)
+    ![ATA configuration settings](media/ATA-config-icon.png)
 
 2.  Under **Detection**, click **General**.
 

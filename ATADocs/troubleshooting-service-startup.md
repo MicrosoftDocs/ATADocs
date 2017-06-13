@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
+ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 
 # optional metadata
 

@@ -70,7 +70,7 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
 
 4.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.png)
 
 5.  Under Notifications section, Select **Syslog server** and enter the following information:
 
