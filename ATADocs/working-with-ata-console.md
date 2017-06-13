@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/23/2017
+ms.date: 6/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -99,7 +99,7 @@ Health Center alerts can be dismissed or resolved and are categorized High, Medi
 
 ### User and computer profiles
 
-ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources.
+ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources. For a list of group memberships that ATA considers sensitive, see below.
 
 ![User profile](media/user-profile.png)
 
@@ -113,6 +113,30 @@ A profile that ATA has not been able to fully resolve will be identified with ha
 
 
 ![ATA unresolved profile image](media/ATA-Unresolved-Profile.jpg)
+
+### Sensitive groups
+
+The following list of groups are considered **Sensitive** by ATA. These are groups that will be flagged as having administrative privileges and raise alerts that correspond to sensitive accounts:
+
+- Enterprise Read Only Domain Controllers 
+- Domain Admins 
+- Domain Controllers 
+- Schema Admins,
+- Enterprise Admins 
+- Group Policy Creator Owners 
+- Read Only Domain Controllers 
+- Administrators  
+- Power Users  
+- Account Operators  
+- Server Operators   
+- Print Operators,
+- Backup Operators,
+- Replicators 
+- Remote Desktop Users 
+- Network Configuration Operators 
+- Incoming Forest Trust Builders 
+- DNS Admins 
+
 
 ### Mini profile
 
