@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 06/18/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -55,7 +55,7 @@ To provide detection of compromised credentials, ATA leverages both machine-lear
 Using behavioral analytics and machine learning, ATA is able to detect suspicious activities such as anomalous logins, abnormal resource access, and abnormal working hours which would point to credential compromise. To protect against compromised credentials, ATA detects the following known malicious attacks and techniques:
 -	**Brute force**
 In brute-force attacks, attackers try to guess user credentials by trying multiple users and pairing them with multiple password attempts. The attackers often use complex algorithms or dictionaries to try as many values as a system allows.
--	**Sensitive account exposed in plain text authentication**
+- **Suspicious authentication failures** (Behavioral brute force) – Attackers attempt to use brute force on credentials to compromise accounts. ATA raises an alert when abnormal failed authentication behavior is detected.   -	**Sensitive account exposed in plain text authentication**
 If high-privileged account credentials are sent in plain text, ATA alerts you so that you can update the computer configuration.
 -	**Service exposing accounts in plain text authentication** 
 If a service on a computer is sending multiple account credentials in plain text, ATA alerts you so that you can update the service configuration.
@@ -99,6 +99,7 @@ In skeleton key attacks, malware is installed on your domain controller that all
 In golden ticket attacks, an attacker steals the KBTGT's credentials, the Kerberos Golden Ticket. That ticket enables the attacker to create a TGT ticket offline, to be used to gain access to resources in the network.
 -	**Remote execution**
 Attackers can attempt to control your network by running code remotely on your domain controller.
+**Remote execution attempt – WMI exec**  - Attackers can attempt to control your network by running code remotely on your domain controller. ATA detects remote execution leveraging WMI methods to run code remotely.
 -	**Malicious replication requests** In Active Directory (AD) environments replication happens regularly between Domain Controllers. An attacker can spoof AD replication request (sometimes impersonating as a Domain Controller) allowing the attacker to retrieve the data stored in AD, including password hashes, without utilizing more intrusive techniques like Volume Shadow Copy.
 
 
