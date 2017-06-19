@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/18/2017
+ms.date: 06/19/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -209,4 +209,5 @@ Domain dominance
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
 - [Investigating Forged PAC attacks](use-case-forged-pac.md)
+- [Troubleshooting ATA known errors](troubleshooting-ata-known-errors.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
