@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/24/2017
+ms.date: 6/18/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -47,7 +47,7 @@ These release notes provide information about updates, new features, bug fixes a
     - **Exclude entities** from raising future suspicious activities to prevent ATA from alerting when it detects benign true positives (such as an admin running remote code or using nslookup).
     - **Suppress recurring** suspicious activities from alerting.
     - **Delete suspicious activities** from the attack time line.
--	The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line has was redesigned. In ATA 1.8, you will be able to many more suspicious activities on a single screen, containing better information for triage and investigation purposes. 
+-	The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line was redesigned. In ATA 1.8, you will be able to many more suspicious activities on a single screen, containing better information for triage and investigation purposes. 
 
 - The Directory Service Enumeration feature was improved in version 1.8. If you disabled SAM-R as a result of version 1.7, installing version 1.8 will automatically enable it now that it functions properly.
 

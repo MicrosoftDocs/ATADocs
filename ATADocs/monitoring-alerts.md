@@ -55,11 +55,11 @@ This article describes all the monitoring alerts for each component, listing the
 ### ATA Center certificate is about to expire
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Center certificate will expire in less than 3 weeks.|After the certificate expires: Connectivity from ATA Gateways to ATA Center will fail. The ATA Center process will crash and all ATA functionality will stop.|[Replace the ATA Center certificate](modifying-ata-config-centercert.md)|Medium|
+|The ATA Center certificate will expire in less than 3 weeks.|After the certificate expires: Connectivity from ATA Gateways to ATA Center will fail. The ATA Center process will crash and all ATA functionality will stop.|[Replace the ATA Center certificate](modifying-ata-center-configuration.md)|Medium|
 ### ATA Center certificate expired
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Center certificate expired.|After the certificate expires: Connectivity from the ATA Gateways to the ATA Center will fail. The ATA Center process will crash and all ATA functionality will stop.|[Replace the ATA Center certificate](modifying-ata-config-centercert.md)|High|
+|The ATA Center certificate expired.|After the certificate expires: Connectivity from the ATA Gateways to the ATA Center will fail. The ATA Center process will crash and all ATA functionality will stop.|[Replace the ATA Center certificate](modifying-ata-center-configuration.md)|High|
 ## ATA Gateway issues
 ### Read-only user password is about to expire
 |Alert|Description|Resolution|Severity|

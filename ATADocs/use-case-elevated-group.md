@@ -72,5 +72,5 @@ This detection is based on event forwarding - the learning period starts after e
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
+- [Modifying ATA configuration](modifying-ata-center-configuration.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

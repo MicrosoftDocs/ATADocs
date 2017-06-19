@@ -114,4 +114,4 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 ## See Also
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with ATA detection settings](working-with-detection-settings.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
+- [Modifying ATA configuration](modifying-ata-center-configuration.md)
