@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/12/2017
+ms.date: 6/21/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -75,14 +75,9 @@ This section details possible errors in the deployments of ATA and the steps req
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |.Net Framework 4.6.1 installation fails with error 0x800713ec|The pre-requisites for .Net Framework 4.6.1 are not installed on the server. |Before installing ATA, verify that the windows updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) and [KB2919355](https://support.microsoft.com/kb/2919355) are installed on the server.|
+|Error [\[]TaskAwaiter[\]] System.Threading.Tasks.TaskCanceledException: A task was canceled.|The deployment process timed out as it could not reach the ATA Center.|1.	Check network connectivity to the ATA Center by browsing to it using its IP address. <br></br>2.	Check for proxy or firewall configuration.|
+|4DEC:6434][2017-06-13T08:43:41]i000: 2017-06-13 15:43:41.5583 19948 5   Error [\[]TaskAwaiter[\]] System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.|During Lightweight Gateway installation, the Gateway needs to sync with your browser. If there is a proxy in between the Gateway and your browser, authentication might fail.|Disable the proxy configuration from your browser before Lightweight Gateway setup. After the Gateway is installed,you can re-enable the proxy configuration, and the Gateway service was still restart. Alternatively, you can configure local exceptions in the proxy.|
 
-![ATA .NET installation error image](media/netinstallerror.png)
-
-## Task cancelled error
-
-Error|Description|Resolution|
-|-------------|----------|---------|
-|Error [\[]TaskAwaiter[\]] System.Threading.Tasks.TaskCanceledException: A task was canceled.|The deployment process timed out as it could not reach the ATA Center.|1.	Check network connectivity to the ATA Center by browsing to it using its IP address. <br></br>2.	Check for proxy of firewall configuration.|
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
