@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/19/2017
+ms.date: 06/21/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -35,10 +35,12 @@ ATA provides detection for the following various phases of an advanced attack:
 reconnaissance, credential compromise, lateral movement, privilege escalation,
 domain dominance and others.
 
-The following chapters detail all suspicious activities per phase.
+The phases in the kill-chain where ATA currently provides detections are highlighted in the image below.
 
-Please refer to the official [ATA website for additional information on the
-suspicious activities](https://docs.microsoft.com/advanced-threat-analytics/understand-explore/ata-threats).
+![ATA focus on lateral activity in attack kill chain](media/attack-kill-chain-small.jpg)
+
+This article provides details about each suspicious activity per phase.
+
 
 ## Reconnaissance
 
@@ -128,7 +130,7 @@ suspicious activities](https://docs.microsoft.com/advanced-threat-analytics/unde
 
 | Description|Investigation|Recommendation|Severity|
 |------|----|------|----------|
-| In a pass the hash attack the attacker authenticates to a remote server or service by using the underlying NTLM hash of a user's password, instead of the associated plaintext password as is normally the case. | Understand why the account is failing to authenticate with Kerberos and successfully authenticate using NTLM over a very short period. | Implement the recommendations described in [Pass the Hash](http://aka.ms/PtH). Follow the Security Tiered Framework and restrict access across tiers to prevent privilege escalation. | High     |
+| In a pass the hash attack the attacker authenticates to a remote server or service by using the underlying NTLM hash of a user's password, instead of the associated plaintext password as is normally the case. | See if the account performed any abnormal activities in the timeperiod around this alert. | Implement the recommendations described in [Pass the Hash](http://aka.ms/PtH). Follow the Security Tiered Framework and restrict access across tiers to prevent privilege escalation. | High|
 
 ### Over-pass the hash
 
