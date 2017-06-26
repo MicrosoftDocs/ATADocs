@@ -24,9 +24,9 @@
 ## Install ATA
 ### [Step 1 Download & install Center](install-ata-step1.md)
 ### [Step 2 Connect to AD](install-ata-step2.md)
-### [Step 3 Download the GW package](install-ata-step3.md)
-### [Step 4 Install the GW](install-ata-step4.md)
-### [Step 5 Configure the GW](install-ata-step5.md)
+### [Step 3 Download the ATA Gateway package](install-ata-step3.md)
+### [Step 4 Install the ATA Gateway](install-ata-step4.md)
+### [Step 5 Configure the ATA Gateway](install-ata-step5.md)
 ### [Step 6 Exclusions and Honeytoken](install-ata-step6.md)
 ### [Silent installation](ata-silent-installation.md)
 # Use

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 06/26/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -50,7 +50,7 @@ To configure the above, follow these steps:
 
 2.  Under **Detection**, click **General**.
 
-2. Under **Honeytoken accounts** enter the Honeytoken account SIDs and click the plus sign. For example: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+2. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and will automatically display entities in your network.
 
    ![Honeytoken](media/honeytoken.png)
 

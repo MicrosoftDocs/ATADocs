@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/10/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -38,12 +38,12 @@ The update to ATA 1.8 provides
 If you already have ATA version 1.7 deployed, this procedure will walk you through the steps necessary to update your deployment.
 
 > [!NOTE] 
-> You cannot install ATA version 1.8 directly on top of ATA version 1.4, 1.5 or 1.6. You must install ATA version 1.7 first. 
+>  Only ATA version 1.7 Update 1 and 1.7 Update 2 can be updated to ATA version 1.8, any earlier version of ATA can't be directly updated to ATA version 1.8.
 
 Follow these steps to update to ATA version 1.8:
 
 1.  [Download update 1.8](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
-In this version of, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
+In this version, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
 
 2.  Update the ATA Center
 
@@ -58,7 +58,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
     -   If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut the virtual machine down first.
 
-    -   If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://docs.mongodb.org/manual/core/backups/).
+    -   If the ATA Center is running on a physical server, see the [Disaster recovery](disaster-recovery.md) article for information about backing up the database.
 
 2.  Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
 
@@ -87,10 +87,9 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
   
 > [!IMPORTANT] 
 > Update all the ATA Gateways to make sure ATA functions properly.
-> The configured Syslog listener port on all Gateways will be changed to 514.
  
 > [!NOTE] 
-> To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.8 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md).
+> To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.8 Gateway installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md).
 
 
 

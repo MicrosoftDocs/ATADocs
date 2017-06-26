@@ -112,16 +112,14 @@ Communication between the ATA Center and the ATA Gateway is encrypted using SSL 
 ### Ports
 The following table lists the minimum ports that have to be opened for the ATA Center to work properly.
 
-In this table, IP address 1 is bound to the ATA Center service and IP address 2 is bound to the ATA Console:
-
-|Protocol|Transport|Port|To/From|Direction|IP Address|
-|------------|-------------|--------|-----------|-------------|--------------|
-|**SSL** (ATA Communications)|TCP|443, or configurable|ATA Gateway|Inbound|IP address 1|
-|**HTTP** (optional)|TCP|80|Company Network|Inbound|IP address 2|
-|**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|IP address 2|
-|**SMTP** (optional)|TCP|25|SMTP Server|Outbound|IP address 2|
-|**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|IP address 2|
-|**Syslog** (optional)|TCP|514|Syslog server|Outbound|IP address 2|
+|Protocol|Transport|Port|To/From|Direction|
+|------------|-------------|--------|-----------|-------------|
+|**SSL** (ATA Communications)|TCP|443, or configurable|ATA Gateway|Inbound|
+|**HTTP** (optional)|TCP|80|Company Network|Inbound|
+|**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|
+|**SMTP** (optional)|TCP|25|SMTP Server|Outbound|
+|**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|
+|**Syslog** (optional)|TCP|514|Syslog server|Outbound|
 |**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
 |**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
 |**DNS**|TCP and UDP|53|DNS servers|Outbound|
