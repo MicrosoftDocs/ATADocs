@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/13/2017
+ms.date: 06/26/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -34,7 +34,7 @@ ms.suite: ems
 This article provides instructions for silently installing ATA.
 ## Prerequisites
 
-Microsoft ATA v1.7 requires the installation of Microsoft .NET Framework 4.6.1. 
+ATA version 1.8 requires the installation of Microsoft .NET Framework 4.6.1. 
 
 When you install or update ATA, .Net Framework 4.6.1 will be automatically installed as part of the deployment of Microsoft ATA.
 
