@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/26/2017
+ms.date: 06/28/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -40,7 +40,9 @@ When you install or update ATA, .Net Framework 4.6.1 will be automatically insta
 
 > [!Note] 
 > The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
-When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). To avoid restarting the server as part of the installation, use the `-NoRestart` flag. When using the `-NoRestart` flag and restart will be required as part of the installation, the installer will pause until the server is restarted. To track the progress of the deployment, monitor ATA installer logs which are located in **%AppData%\Local\Temp**.
+When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server won't restart, so make sure to only run silent installation during a maintenance window.
+
+To track the progress of the deployment, monitor ATA installer logs which are located in **%AppData%\Local\Temp**.
 
 
 ## Install the ATA Center
@@ -49,7 +51,7 @@ Use the following command to install the ATA Center:
 
 **Syntax**:
 
-    "Microsoft ATA Center Setup.exe" [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
 **Installation options**:
@@ -57,7 +59,6 @@ Use the following command to install the ATA Center:
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, UI will prompt before restart.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 |LicenseAccepted|--LicenseAccepted|Yes|Indicates that the license was read and approved. Must be set on silent installation.|
@@ -91,7 +92,7 @@ Use the following command to update the ATA Center:
 
 **Syntax**:
 
-    "Microsoft ATA Center Setup.exe" [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
+    "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installation options**:
@@ -99,7 +100,6 @@ Use the following command to update the ATA Center:
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
@@ -116,7 +116,7 @@ To update the ATA Center silently. In large environments, the ATA Center update 
 Use the following command to perform a silent uninstall of the ATA Center:
 **Syntax**:
 
-    Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/NoRestart] [/Help]
+    Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/Help]
      [--DeleteExistingDatabaseData]
 
 **Installation options**:
@@ -125,7 +125,6 @@ Use the following command to perform a silent uninstall of the ATA Center:
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
 |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Center from the server.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Installation parameters**:
@@ -145,7 +144,7 @@ Use the following command to silently install the ATA Gateway:
 
 **Syntax**:
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
     [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
@@ -158,7 +157,6 @@ Use the following command to silently install the ATA Gateway:
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, UI will prompt before restart.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
@@ -183,7 +181,7 @@ Use the following command to silently update the ATA Gateway:
 
 **Syntax**:
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installation options**:
@@ -191,7 +189,6 @@ Use the following command to silently update the ATA Gateway:
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
@@ -206,7 +203,7 @@ To update the ATA Gateway silently:
 Use the following command to perform a silent uninstall of the ATA Gateway:
 **Syntax**:
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/NoRestart] [/Help]
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
     
 **Installation options**:
 
@@ -214,7 +211,6 @@ Use the following command to perform a silent uninstall of the ATA Gateway:
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
 |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Gateway from the server.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Examples**:
