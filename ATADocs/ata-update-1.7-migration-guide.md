@@ -75,15 +75,15 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
 	-  In the **Data migration** screen, select whether you want to migrate all or partial data. If you choose to migrate only partial data, your previously captured network traffic and behavior profiles will not be migrated. This means that it will take three weeks before the abnormal behavior detection has a complete profile to enable anomalous activity detection. During those three weeks, all other ATA detections will function properly. The **Partial** data migration takes much less time to install. If you select **Full** data migration, it may take a significant amount of time for the installation to complete. The estimated amount of time and the required disk space, which are listed on the **Data Migration** screen, depend on the amount of previously captured network traffic you had saved in previous versions of ATA. Before selecting **Partial** or **Full**, make sure to check these requirements.  
     
-    ![ATA data migration](media/migration data migration.png)
+    ![ATA data migration](media/migration-data-migration17.png)
 
 	-  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
 
 4.  After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
-    ![Update success screen](media/migration center success.png)
+    ![Update success screen](media/migration-center-success17.png)
 
 5.  In the **Updates** screen, if you already set your ATA Gateways to automatically update, they will update at this point, if not, click **Update** next to each ATA Gateway.
-  ![Update gateways image](media/migration update gw.png)
+  ![Update gateways image](media/migration-update-gw-17.png)
 
   
 > [!IMPORTANT] 

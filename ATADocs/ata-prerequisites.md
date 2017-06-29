@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2017
+ms.date: 6/12/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -63,7 +63,8 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Make sure that Message Analyzer and WireShark are not installed on the ATA Gateway.
+-   Do not install Microsoft Message Analyzer on a ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway will no longer capture any traffic. Note that running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
+
 -    Recommended: User should have read only permissions on the Deleted Objects container. This will allow ATA to detect bulk deletion of objects in the domain. For information about configuring read only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
 
 -   Optional: A user account of a user who has no network activities. This account will be configured as the ATA Honeytoken user. To configure the Honeytoken user you will need the SID of the user account, not the username. For more information see [Working with ATA Detection Settings](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) topic.
@@ -111,23 +112,27 @@ Communication between the ATA Center and the ATA Gateway is encrypted using SSL 
 ### Ports
 The following table lists the minimum ports that have to be opened for the ATA Center to work properly.
 
-In this table, IP address 1 is bound to the ATA Center service and IP address 2 is bound to the ATA Console:
-
-|Protocol|Transport|Port|To/From|Direction|IP Address|
-|------------|-------------|--------|-----------|-------------|--------------|
-|**SSL** (ATA Communications)|TCP|443, or configurable|ATA Gateway|Inbound|IP address 1|
-|**HTTP**|TCP|80|Company Network|Inbound|IP address 2|
-|**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|IP address 2|
-|**SMTP** (optional)|TCP|25|SMTP Server|Outbound|IP address 2|
-|**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|IP address 2|
-|**Syslog** (optional)|TCP|514|Syslog server|Outbound|IP address 2|
+|Protocol|Transport|Port|To/From|Direction|
+|------------|-------------|--------|-----------|-------------|
+|**SSL** (ATA Communications)|TCP|443, or configurable|ATA Gateway|Inbound|
+|**HTTP** (optional)|TCP|80|Company Network|Inbound|
+|**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|
+|**SMTP** (optional)|TCP|25|SMTP Server|Outbound|
+|**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|
+|**Syslog** (optional)|TCP|514|Syslog server|Outbound|
+|**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
+|**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
+|**DNS**|TCP and UDP|53|DNS servers|Outbound|
+|**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Oubbound|
+|**Netlogon** (optional if domain joined)|TCP and UDP|445|Domain controllers|Outbound|
+|**Windows Time** (optional if domain jolined)|UDP|123|Domain controllers|Outbound|
 
 ### Certificates
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
 To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
 > [!NOTE]
-> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
+> The certificate's Provider Type can be Cryptographic Service Provider (CSP) or Key Storage Provider (KSP).
 
 
 > Using of automatic certificate renewal is not supported.

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Monitor Advanced Threat Analytics Health Center alerts | Microsoft Docs
-description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
+title: Monitor Advanced Threat Analytics System Health and Events | Microsoft Docs
+description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems and view system events in the Event viewer.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/13/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,11 +26,12 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
+# Working with ATA system health and events
 
-# ATA Health Center
+## ATA Health Center
 The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.
 
 ## Working with the ATA Health Center
@@ -48,6 +49,15 @@ To check up on your system's overall health, click the Health Center icon in the
 -   **Dismissed** issues are issues that you do not want ATA to continue to check - for example, if you are alerted to an issue that you know exists and you do not plan to resolve the issue but do not want to continue to get notifications about it and you no longer want to see it in your **Open** issues list, you can set it to **Dismissed**.
 
 ![ATA Health Center issues image](media/ATA-Health-Issue.JPG)
+
+## Event logging
+
+You can view ATA events in the Windows Event Log viewer, under Microsoft ATA. 
+- For the ATA Center you can see a list of Suspicious activities and Health Issues, as well as Audit log events that detail every change made in the system, and every log in by a user. For example, if someone deletes a Suspicious Activity or suppresses it, it will show up as an event in the log. 
+- For the ATA Gateway, the event log contains an audit trail in the log of changes to the ATA Gateway configuration, for example if someone updates the certificate.
+
+
+
 
 ## See Also
 - [Working with ATA detection settings](working-with-detection-settings.md)
