@@ -29,11 +29,16 @@ ms.suite: ems
 # What's new in ATA version 1.8
 These release notes provide information about updates, new features, bug fixes and known issues in this version of Advanced Threat Analytics.
 
+## Unusual protocol implementation was improved to be able to detect WannaCry malware.
+
 ## New & updated detections
 - NEW! **Abnormal modification of sensitive groups**  – As part of the privilege escalation phase, attackers modify groups with high privileges to gain access to sensitive resources. ATA now detects when there’s an abnormal change in an elevated group.
 - NEW! **Suspicious authentication failures** (Behavioral brute force) – Attackers attempt to use brute force on credentials to compromise accounts. ATA now raises an alert when abnormal failed authentication behavior is detected.   
-- NEW! **Remote execution attempt – WMI exec**  - Attackers can attempt to control your network by running code remotely on your domain controller. ATA added detection for remote execution leveraging WMI methods to run code remotely.
-- Reconnaissance using directory service queries– In ATA 1.8, a machine learning algorithm was added to this detection allowing ATA to detect reconnaissance attempts against a single sensitive entity and improve the results for generic reconnaissance. 
+
+- **Remote execution attempt – WMI exec**  - Attackers can attempt to control your network by running code remotely on your domain controller. ATA has enhanced the remote execution detection to include detection of WMI methods to run code remotely.
+
+- Reconnaissance using directory service queries – This detection was enhanced to be able to catch queries against a single sensitive entity and to reduce the number of false positives that were generated in the previous version. If you disabled this in version 1.7, installing version 1.8 will now automatically enable it.
+
 - Kerberos Golden Ticket activity – ATA 1.8 includes an additional technique to detect golden ticket attacks.
 - Enhancements were made to the following detections to remove known false positives:  
     - Privilege escalation detection  (forged PAC) 
@@ -44,12 +49,10 @@ These release notes provide information about updates, new features, bug fixes a
 ## Improved triage of suspicious activities
 
 -	NEW! ATA 1.8 enables you to run the following actions suspicious activities during the triage process: 
-    - **Exclude entities** from raising future suspicious activities to prevent ATA from alerting when it detects benign true positives (such as an admin running remote code or using nslookup).
+    - **Exclude entities** from raising future suspicious activities to prevent ATA from alerting when it detects benign true positives (such as an admin running remote code or detecting security scanners).
     - **Suppress recurring** suspicious activities from alerting.
     - **Delete suspicious activities** from the attack time line.
 -	The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line was redesigned. In ATA 1.8, you will be able to many more suspicious activities on a single screen, containing better information for triage and investigation purposes. 
-
-- The Directory Service Enumeration feature was improved in version 1.8. If you disabled SAM-R as a result of version 1.7, installing version 1.8 will automatically enable it now that it functions properly.
 
 - ATA now detects suspicious activities in which the Golden ticket lifetime has expired. If a Kerberos ticket is used for more than the allowed lifetime, ATA will detect it as a suspicious activity that a Golden ticket has likely been created.
 
@@ -68,7 +71,7 @@ These release notes provide information about updates, new features, bug fixes a
 
 ## Security improvements
 
--	NEW! **Single-sign-on for ATA management**. Silent installation scripts for the ATA Gateway and ATA Lightweight Gateway now use the logged on user’s context, without the need to provide credentials.
+-	NEW! **Single-sign-on for ATA management**. ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Silent installation scripts for the ATA Gateway and ATA Lightweight Gateway now use the logged on user’s context, without the need to provide credentials.
 -	Local System privileges were removed from the ATA Gateway process, so you can now use virtual accounts (available on stand-alone ATA Gateways only), managed service accounts and group managed service accounts to run the ATA Gateway process.   
 -	Auditing logs for ATA Center and Gateways were added and all actions are now logged in the event viewer.
 -	Support was added for KSP Certificates.
