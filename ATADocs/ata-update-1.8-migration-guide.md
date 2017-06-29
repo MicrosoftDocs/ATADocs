@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/26/2017
+ms.date: 06/29/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,11 +26,7 @@ ms.suite: ems
 
 ---
 
-# ATA update to 1.8 migration guide
-The update to ATA 1.8 provides 
-  
-
-## Updating ATA to version 1.8
+# Updating ATA to version 1.8
 
 > [!NOTE] 
 > If ATA is not installed in your environment, download the full version of ATA which includes version 1.8 and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).

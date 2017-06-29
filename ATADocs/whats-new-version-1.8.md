@@ -29,9 +29,12 @@ ms.suite: ems
 # What's new in ATA version 1.8
 These release notes provide information about updates, new features, bug fixes and known issues in this version of Advanced Threat Analytics.
 
-## Unusual protocol implementation was improved to be able to detect WannaCry malware.
+
 
 ## New & updated detections
+
+- Unusual protocol implementation was improved to be able to detect WannaCry malware.
+
 - NEW! **Abnormal modification of sensitive groups**  – As part of the privilege escalation phase, attackers modify groups with high privileges to gain access to sensitive resources. ATA now detects when there’s an abnormal change in an elevated group.
 - NEW! **Suspicious authentication failures** (Behavioral brute force) – Attackers attempt to use brute force on credentials to compromise accounts. ATA now raises an alert when abnormal failed authentication behavior is detected.   
 
