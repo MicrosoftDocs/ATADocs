@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/26/2017
+ms.date: 6/29/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics

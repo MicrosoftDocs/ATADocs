@@ -40,7 +40,6 @@
 ## [ATA reports](reports.md)
 ## [ATA Health Center](ata-health-center.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
-### [Suspicious activity guide](suspicious-activity-guide.md)
 ## [ATA database management](ata-database-management.md)
 ## [Export/Import ATA configuration](ata-configuration-file.md)
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
