@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/18/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 # What threats does ATA look for?
 
@@ -44,6 +44,7 @@ Detects attempts by attackers using the Kerberos protocol to discover if a user 
 -	**Net Session Enumeration**
 As part of the reconnaissance phase, attackers may query the DC for all active SMB sessions on the server, allowing them to gain access to all the users and IP addresses associated with those SMB sessions. SMB session enumeration can be used by attackers for targeting sensitive accounts, helping them move laterally across the network.
 -	**Reconnaissance using DNS**
+
 DNS information in the target network is often very useful reconnaissance information. DNS information contains a list of all the servers and often all the clients and the mapping to their IP addresses. Viewing DNS information may provide attackers with a detailed view of these entities in your environment allowing attackers to focus their efforts on the relevant entities for the campaign.
 -   **Reconnaissance using directory services enumeration**
 Detecting reconnaissance for entities (users, groups, etc.) performed using the SAM-remote protocol to run queries against the domain controllers. This reconnaissance method is prevalent in many types of malware seen in real-world attack scenarios. 
@@ -54,7 +55,7 @@ To provide detection of compromised credentials, ATA leverages both machine-lear
 Using behavioral analytics and machine learning, ATA is able to detect suspicious activities such as anomalous logins, abnormal resource access, and abnormal working hours which would point to credential compromise. To protect against compromised credentials, ATA detects the following known malicious attacks and techniques:
 -	**Brute force**
 In brute-force attacks, attackers try to guess user credentials by trying multiple users and pairing them with multiple password attempts. The attackers often use complex algorithms or dictionaries to try as many values as a system allows.
--	**Sensitive account exposed in plain text authentication**
+- **Suspicious authentication failures** (Behavioral brute force) – Attackers attempt to use brute force on credentials to compromise accounts. ATA raises an alert when abnormal failed authentication behavior is detected.   -	**Sensitive account exposed in plain text authentication**
 If high-privileged account credentials are sent in plain text, ATA alerts you so that you can update the computer configuration.
 -	**Service exposing accounts in plain text authentication** 
 If a service on a computer is sending multiple account credentials in plain text, ATA alerts you so that you can update the service configuration.
@@ -87,6 +88,8 @@ ATA enables privilege escalation detection by combining behavioral analytics to 
 Forged PAC are attacks in which the attacker plants authorization data in their valid TGT ticket in the form of a forged authorization header that grants them additional permissions that they weren't granted by their organization. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
 -	**MS11-013 exploit (Silver PAC)**
 MS11-013 exploit attacks are an elevation of privilege vulnerability in Kerberos which allows for certain aspects of a Kerberos service ticket to be forged. A malicious user or attacker who successfully exploited this vulnerability could obtain a token with elevated privileges on the Domain Controller. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
+-   **Abnormal modification of sensitive groups**  
+As part of the privilege escalation phase, attackers modify groups with high privileges to gain access to sensitive resources. ATA now detects when there’s an abnormal change in an elevated group.
 
 ### Domain dominance
 ATA detects attackers attempting or successfully achieving total control and dominance over the victim’s environment by performing detection over known techniques used by attackers, which include:
@@ -96,6 +99,7 @@ In skeleton key attacks, malware is installed on your domain controller that all
 In golden ticket attacks, an attacker steals the KBTGT's credentials, the Kerberos Golden Ticket. That ticket enables the attacker to create a TGT ticket offline, to be used to gain access to resources in the network.
 -	**Remote execution**
 Attackers can attempt to control your network by running code remotely on your domain controller.
+**Remote execution attempt – WMI exec**  - Attackers can attempt to control your network by running code remotely on your domain controller. ATA detects remote execution leveraging WMI methods to run code remotely.
 -	**Malicious replication requests** In Active Directory (AD) environments replication happens regularly between Domain Controllers. An attacker can spoof AD replication request (sometimes impersonating as a Domain Controller) allowing the attacker to retrieve the data stored in AD, including password hashes, without utilizing more intrusive techniques like Volume Shadow Copy.
 
 

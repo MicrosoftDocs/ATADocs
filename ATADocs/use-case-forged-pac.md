@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2017
+ms.date: 6/21/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 # Investigating Forged PAC attacks
 
@@ -104,5 +104,5 @@ Microsoft recommends using a professional Incident Response & Recovery team, tha
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
+- [Modifying ATA configuration](modifying-ata-center-configuration.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

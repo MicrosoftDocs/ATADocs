@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/14/2017
+ms.date: 6/21/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -27,7 +27,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -54,6 +54,7 @@ This section details possible errors in the deployments of ATA and the steps req
 |System.InvalidOperationException: Category does not exist.|Counters might be disabled in the registry|Use [KB2554336](https://support.microsoft.com/en-us/kb/2554336) to rebuild Performance Counters|
 |System.ApplicationException: Unable to start ETW session MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|There is a host entry in the HOSTS file pointing to the machine's shortname|Remove the host entry from C:\Windows\System32\drivers\etc\HOSTS file or change it to an FQDN.|
 |System.IO.IOException: Authentication failed because the remote party has closed the transport stream.|TLS 1.0 is disabled on the ATA Gatewau but .Net is set to use TLS 1.2|Use one of the following options: </br> Enable TLS 1.0 on the ATA Gateway </br>Enable TLS 1.2 on .Net by setting the registry keys to use the operating system defaults for LLS and TLS, as follows: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
+|System.TypeLoadException: Could not load type 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' from assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|ATA Gateway failed to load required parsing files.|Check to see if Microsoft Message Analyzer is currently installed. Message Analyzer is not supported to be installed with the ATA Gateway / Lightweight Gateway. Uninstall Message Analyzer and restart the Gateway service.|
 
 
 
@@ -74,8 +75,8 @@ This section details possible errors in the deployments of ATA and the steps req
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |.Net Framework 4.6.1 installation fails with error 0x800713ec|The pre-requisites for .Net Framework 4.6.1 are not installed on the server. |Before installing ATA, verify that the windows updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) and [KB2919355](https://support.microsoft.com/kb/2919355) are installed on the server.|
-
-![ATA .NET installation error image](media/netinstallerror.png)
+|Error [\[]TaskAwaiter[\]] System.Threading.Tasks.TaskCanceledException: A task was canceled.|The deployment process timed out as it could not reach the ATA Center.|1.	Check network connectivity to the ATA Center by browsing to it using its IP address. <br></br>2.	Check for proxy or firewall configuration.|
+|4DEC:6434][2017-06-13T08:43:41]i000: 2017-06-13 15:43:41.5583 19948 5   Error [\[]TaskAwaiter[\]] System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.|During Lightweight Gateway installation, the Gateway needs to sync with your browser. If there is a proxy in between the Gateway and your browser, authentication might fail.|Disable the proxy configuration from your browser before Lightweight Gateway setup. After the Gateway is installed,you can re-enable the proxy configuration, and the Gateway service was still restart. Alternatively, you can configure local exceptions in the proxy.|
 
 
 ## See Also

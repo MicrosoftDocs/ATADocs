@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/5/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -25,7 +25,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 # ATA frequently asked questions
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
@@ -52,6 +52,7 @@ This needs to run remotely against the domain controller being monitored and not
 |1.7|1.7.5402| 
 |1.7 Update 1|1.7.5647|
 |1.7 Update 2|1.7.5757|
+|1.8|1.8.6645|
 
 ## How do I verify Windows Event Forwarding?
 You can place the the following code into a file and then execute it from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** as follows:
@@ -95,10 +96,8 @@ If a virtual domain controller can't be covered by the ATA Lightweight Gateway, 
 -   There are some virtual switches that can send traffic between hosts.
 
 ## How do I back up ATA?
-There are 2 things to back up:
 
--   The traffic and events stored by ATA, which can be backed using any supported database backup procedure, for more information see [ATA database management](ata-database-management.md). 
--   The configuration of ATA. This is stored in the database and is automatically backed up every hour in the **Backup** folder in the ATA Center deployment location.  See [ATA database management](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management) for more information.
+Refer to [ATA disaster recovery](disaster-recovery.md)
 
 
 

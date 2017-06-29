@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/29/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,12 +26,16 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.6 and 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
 # Configure Event Collection
-To enhance detection capabilities, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
+To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
+
+> [!NOTE]
+> For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
+
 
 ## Event collection
 In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
@@ -55,7 +59,7 @@ If you do not use a SIEM/Syslog server, you can configure your Windows domain co
 
 ## Configuring the ATA Gateway to listen for SIEM events
 
-1.  On the ATA configuration, under "Events" tab enable **Syslog** and press **Save**.
+1.  In ATA Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
 
     ![Enable syslog listener UDP image](media/ATA-enable-siem-forward-events.png)
 
@@ -245,48 +249,6 @@ Note that after adding the **Network Service** to the **Event Log Readers** grou
 
    5.	Right click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
    6.	After a few minutes, check to see that event 4776 is showing up in the Forwarded Events on the ATA Gateway.
-
-
-### WEF configuration for the ATA Lightweight Gateway
-When you install the ATA Lightweight Gateway on your domain controllers, you can set up your domain controllers to forward the events to itself. 
-Perform the following steps to configure the Window Event Forwarding when using the ATA Lightweight Gateway. This is one way to configure Windows Event forwarding.  
-
-**Step 1: Add the network service account to the domain Event Log Readers Group** 
-
-1.	Open Active Directory Users and Computer, navigate to the **BuiltIn** folder and double click **Event Log Readers**. 
-2.	Select **Members**.
-3.	If **Network Service** is not listed, click **Add** and type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
-
-**Step 2: Perform the following steps on the domain controller after the ATA Lightweight Gateway is installed** 
-
-1.	Open an elevated command prompt and type *winrm quickconfig* and *wecutil qc* 
-2.	Open **Event Viewer**. 
-3.	Right click **Subscriptions** and select **Create Subscription**. 
-
-   1.	Enter a name and description for the subscription. 
-   2.	For **Destination Log** confirm that **Forwarded Events** is selected. For ATA to read the events the destination log must be Forwarded Events.
-
-        1.	Select **Collector initiated** and click **Select Computers**. Then click **Add Domain Computer**.
-        2.	Enter the name of the domain controller in the **Enter the object name to select**. Then click **Check Names** and click **OK**.
-
-            ![Subscription properties image](media/wef 5 sub properties computers.png)
-
-        3.	Click **OK**.
-   3.	Click **Select Events**.
-
-        1.	Click **By log** and select **Security**.
-        2.	In the **Includes/Excludes Event ID** type *4776* and click **OK**. 
-
-![Query filter image](media/wef 4 query filter.png)
-
-
-  4.	Right click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
-
-> [!Note] 
-> You may need to reboot the domain controller before the setting take effect. 
-
-After a few minutes, check to see that event 4776 is showing up in the Forwarded Events on the ATA Gateway.
-
 
 
 For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)

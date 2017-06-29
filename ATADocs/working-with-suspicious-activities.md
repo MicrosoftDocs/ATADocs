@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -43,7 +43,7 @@ Each suspicious activity has the following information:
 
 -   Severity of the suspicious activity, High, Medium, or Low.
 
--   Status: Open, resolved, or dismissed.
+-   Status: Open, closed, or suppressed.
 
 -   Ability to
 
@@ -84,40 +84,34 @@ To filter the suspicious activities list:
 
     Indicates suspicious activities that can lead to identity theft, privilege escalation or other high-impact attacks
 
+
+
+
+## Remediating suspicious activities
+You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Suppressed**, **Closed** or **Deleted**.
+To do this, click the three dots at the top right corner of a specific suspicious activity to reveal the list of available actions.
+
+![ATA Actions for suspicious activities](./media/sa-actions.png)
+
 **Suspicious activity status**
 
--   **Open**
+-   **Open**: All new suspicious activities appear in this list.
 
-    All new suspicious activities appear in this list
-
--   **Resolved**
-
-    Is used to track suspicious activities which you identified, researched and fixed for mitigated.
+-   **Close**: Is used to track suspicious activities which you identified, researched and fixed for mitigated.
 
     > [!NOTE]
     > ATA may reopen a resolved activity if it the same activity is detected again within a short period of time.
 
--   **Dismissed**
+-   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert ATA won't reopen it. But if the alert stops for 7 days, and is then seen again, you will be alerted again.
 
-    Are activities that you manually dismissed. If ATA detects a similar suspicious activity a new detection will be created.
+- **Delete**: If you Delete an alert, it will be deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
 
-## Provide input on a suspicious activity
-To enable ATA to learn about your network with you, some suspicious activities (DNS reconnaissance, Pass the Ticket, SMB Session Enumeration, Abnormal Behavior and Remote Execution) request your input to will enhance the detection of suspicious activities going forward.
+- **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set ATA to exclude a specific entity (user or computer) from alerting again for a certain type of suspicious activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the Suspicious activity as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each suspicious activity you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket). 
+> [!NOTE]
+> The configuration pages can only be modified by ATA admins.
 
-1.  For suspicious activities that enable you to provide input, the input question opens automatically. You will be asked to answer questions about activities on your network and whether or not they should be considered suspicious. In the below example, you are being asked if running scanning tools is allowed from a specific computer.
-
-    ![ATA provide input for suspicious activities image](media/ATA-Input.JPG)
-
-2.  If you answer no, this activity will be considered suspicious and any time ATA encounters this activity from this computer, you will be alerted.
-
-3.  However, if you answer yes, the suspicious activity may be dismissed and future activities of this type from this computer may not generate a suspicious activity or will generate an activity that is automatically dismissed.
-
-4.  If you do not know, you can click **Cancel**.
-
-## Change the status of a suspicious activity
-You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Resolved** or **Dismissed**.
 
 ## See Also
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with ATA detection settings](working-with-detection-settings.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
+- [Modifying ATA configuration](modifying-ata-center-configuration.md)

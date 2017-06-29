@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/23/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,13 +26,15 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
 # Working with the ATA Console
 
 Use the ATA console to monitor and respond to suspicious activity detected by ATA.
+
+Typing the ? key will provide keyboard shortcuts for ATA Portal accessibility. 
 
 ## Enabling access to the ATA Console
 To successfully login to the ATA Console, you have to log in with a user who was assigned the proper ATA role to access the ATA Console. 
@@ -47,10 +49,12 @@ For more information about role based access control (RBAC) in ATA, see [Working
 >[!NOTE]
 > You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
-2.  Enter your username and password and click **Log in**.
+2.  If the computer on which the ATA Center is installed and the computer from which you are trying to access the ATA Console are both domain joined, ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Your permissions in ATA will correspond with your [administrator role](ata-role-groups.md).
 
-![ATA login screen image](media/ATA-log-in-screen.png)
+> [!NOTE]
+> Make sure to log onto the computer from which you want to access the ATA Console using your ATA admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your ATA admin user. To prompt the ATA Console to ask for credentials, access the console using an IP address and you will be prompted to enter credentials.
 
+To log in using SSO, make sure the ATA console site is defined as a local intranet site in your browser and that you access it using a shortname or an localhost.
 
 ## The ATA Console
 
@@ -63,7 +67,7 @@ These are the key elements of the ATA console.
 
 This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Resolved suspicious activities. You can also see the severity assigned to each activity.
 
-![ATA attack timeline image](media/attack-timeline-1.7.png)
+![ATA attack timeline image](media/ATA-Suspicious-Activity-Timeline.jpg)
 
 For more information, see [Working with suspicious activities](working-with-suspicious-activities.md).
 
@@ -95,11 +99,11 @@ Health Center alerts can be dismissed or resolved and are categorized High, Medi
 
 ### User and computer profiles
 
-ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources.
+ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources. For a list of group memberships that ATA considers sensitive, see below.
 
 ![User profile](media/user-profile.png)
 
-In the computer profile, ATA displays general information, such as recently logins and recently accessed resources.
+In the computer profile, ATA displays general information, such as recent logins and recently accessed resources.
 
 ![Computer profile](media/computer-profile.png)
 
@@ -109,6 +113,30 @@ A profile that ATA has not been able to fully resolve will be identified with ha
 
 
 ![ATA unresolved profile image](media/ATA-Unresolved-Profile.jpg)
+
+### Sensitive groups
+
+The following list of groups are considered **Sensitive** by ATA. These are groups that will be flagged as having administrative privileges and raise alerts that correspond to sensitive accounts:
+
+- Enterprise Read Only Domain Controllers 
+- Domain Admins 
+- Domain Controllers 
+- Schema Admins,
+- Enterprise Admins 
+- Group Policy Creator Owners 
+- Read Only Domain Controllers 
+- Administrators  
+- Power Users  
+- Account Operators  
+- Server Operators   
+- Print Operators,
+- Backup Operators,
+- Replicators 
+- Remote Desktop Users 
+- Network Configuration Operators 
+- Incoming Forest Trust Builders 
+- DNS Admins 
+
 
 ### Mini profile
 

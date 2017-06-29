@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/12/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,14 +26,12 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
 # Change ATA configuration - domain connectivity password
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
 
 
 ## Change the domain connectivity password
@@ -48,11 +46,11 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.png)
 
 3.  Select **Directory Services**.
 
-    ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.png)
+    ![ATA Gateway change password image](media/ATA-GW-change-DC-password.png)
 
 4.  Under **Password**, change the password.
 
@@ -62,8 +60,7 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 6.  After changing the password, manually check that the ATA Gateway service is running on the ATA Gateway servers.
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
+
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)
