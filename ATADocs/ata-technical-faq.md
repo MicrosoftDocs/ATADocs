@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/26/2017
+ms.date: 07/3/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -31,6 +31,12 @@ ms.suite: ems
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 
+## Where can I get a license for Advanced Threat Analytics (ATA)?
+
+If you have an active Enterprise Agreement, you can download the software from the Microsoft Volume Licensing Center (VLSC).
+
+If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
+
 ## What should I do if the ATA Gateway won’t start?
 Look at the most recent error in the current error log (Where ATA is installed under the "Logs" folder).
 
@@ -53,6 +59,11 @@ This needs to run remotely against the domain controller being monitored and not
 |1.7 Update 1|1.7.5647|
 |1.7 Update 2|1.7.5757|
 |1.8|1.8.6645|
+
+## What version should I use to upgrade my current ATA deployment to the latest version?
+
+![ATA version upgrade matrix](./media/version-matrix.png)
+
 
 ## How do I verify Windows Event Forwarding?
 You can place the the following code into a file and then execute it from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** as follows:
@@ -116,7 +127,7 @@ The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect 
 ATA has a bi-directional integration with SIEMs as follows:
 
 1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
-2. ATA can be configured to receive Syslog messages for each Windows event with the ID 4776, from  [these SIEMs](configure-event-collection.md#siem-support).
+2. ATA can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-ata-step6.md).
 
 ## Can ATA monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.

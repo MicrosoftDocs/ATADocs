@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/13/2017
+ms.date: 07/3/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -97,5 +97,5 @@ Perform the following steps to stop collecting and sending telemetry data to Mic
 2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
 
 ## See Also
-- [What's new in version 1.6](whats-new-version-1.6.md)
+- [Troubleshooting ATA using the event log](troubleshooting-ata-using-logs.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

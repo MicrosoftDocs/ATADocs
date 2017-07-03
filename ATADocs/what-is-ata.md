@@ -101,6 +101,13 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
   ![sample ATA screen broken trust](media/broken-trust-sa.png)
 
 
+## Known issues
+
+- If you update to ATA 1.7 and immediately to ATA 1.8, without first updating the ATA Gateways, you will not be able to migrate to ATA 1.8. It is necessary to first update all of the Gateways to version 1.7.1 or 1.7.2 before updating the ATA Center to version 1.8.
+
+- If you select the option to perform a full migration, it may take a very long time, depending on the database size. When you are selecting your migration options, the estimated time is displayed - please make note of this before you decide which option to select. 
+
+
 ## What's next?
 
 -   For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)

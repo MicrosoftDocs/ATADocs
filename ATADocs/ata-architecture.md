@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/13/2017
+ms.date: 07/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -179,11 +179,11 @@ Your domain controllers and the ATA Gateways can be physical or virtual, see [Co
 
 
 ### Events
-To enhance ATA detection of Pass-the-Hash, Brute Force and Honey Tokens, To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
+To enhance ATA detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
 
 -   Configuring the ATA Gateway to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
 
--   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). Note that this only applies to physical ATA Gateways - not to the ATA Lightweight Gateway.
+-   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows events events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). Note that this only applies to physical ATA Gateways - not to the ATA Lightweight Gateway.
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
