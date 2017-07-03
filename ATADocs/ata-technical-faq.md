@@ -127,7 +127,7 @@ The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect 
 ATA has a bi-directional integration with SIEMs as follows:
 
 1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
-2. ATA can be configured to receive Syslog messages for Windows events from  [these SIEMs](configure-event-collection.md#siem-support).
+2. ATA can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-ata-step6.md).
 
 ## Can ATA monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.
