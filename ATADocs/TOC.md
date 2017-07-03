@@ -20,13 +20,14 @@
 ## Preinstallation steps
 ### [1. Configure port mirroring](configure-port-mirroring.md)
 ### [2. Validate port mirroring](validate-port-mirroring.md)
-### [3. Configure event collection](configure-event-collection.md)
+### [3. Configure Windows Event Forwarding](configure-event-collection.md)
 ## Install ATA
 ### [Step 1 Download & install Center](install-ata-step1.md)
 ### [Step 2 Connect to AD](install-ata-step2.md)
 ### [Step 3 Download the ATA Gateway package](install-ata-step3.md)
 ### [Step 4 Install the ATA Gateway](install-ata-step4.md)
 ### [Step 5 Configure the ATA Gateway](install-ata-step5.md)
+### [Step 6 Event collection and VPN](install-ata-step6.md)
 ### [Step 6 Exclusions and Honeytoken](install-ata-step6.md)
 ### [Silent installation](ata-silent-installation.md)
 # Use

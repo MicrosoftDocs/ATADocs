@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/23/2017
+ms.date: 07/3/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,22 +36,33 @@ The **Detection** configuration page lets you set a list of IP addresses and sub
 ## Setting up detection
 In the **Detection** section you can define the following items:
 
--   **Honeytoken account SIDs** – This is a user account that should have no network activities. This account will be configured as the ATA Honeytoken user. If someone attempts to use this user account ATA will create a suspicious activity and is an indication of malicious activity. To configure the Honeytoken user you will need the SID of the user account, not the user name.
+-   **General** – Enables you to set your **Honeytoken account SIDs**. This is a user account that should have no network activities. This account will be configured as the ATA Honeytoken user. If someone attempts to use this user account ATA will create a suspicious activity and is an indication of malicious activity. To configure the Honeytoken user you will need the SID of the user account, not the user name.
 
 >[!NOTE]
 > You can find the SID of the user on the *Account Info* tab of the user's profile in the ATA console.
 
 
-![ATA detection settings honeytoken](media/ata-detection-settings-honeytoken-1.7.png)
+![ATA detection settings honeytoken](media/ata-detection-settings-honeytoken.png)
 
 
-**Detection Exclusions** - You can exclude IP addresses from the following detections. If you enter an IP address in one of these lists, ATA will exclude that IP address from this specific type of detected activity.
+**Detection Exclusions** - You can exclude IP addresses, users and computers (depending on which are relevant) from the following detections. If you enter an exclusion in one of these lists, ATA will exclude that IP address, user or computer from this specific type of detected activity.
 
--   DNS Reconnaissance IP address exclusions
+-   Abnormal modification of sensitive groups
+- Identity using pass-the-ticket attack
+- Kerberos Golden Ticket activity 
+- Malicious Data Protection Private Information Request
+- Malicious replication of directory services
+- Reconnaissance using account renumeration
+- Reconnaissance using directory services queries
+- Reconnaissance using DNS
+Reconnaissance using SMB Session Enumeration
+- Remote execution attempt detected
+Suspicion of identity theft based on abnormal behavior
+Unusual protocol implementation
 
--   Pass-the-Ticket IP address exclusions
 
-![ATA detection settings exclusions](media/ata-detection-settings-exclusions-1.7.png)
+
+![ATA detection settings exclusions](media/ata-detection-settings-exclusions.png)
 
 
 ## See Also

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/29/2017
+ms.date: 07/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -86,7 +86,6 @@ In this version, the same installation file (Microsoft ATA Center Setup.exe) is 
  
 > [!NOTE] 
 > To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.8 Gateway installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md).
-
 
 
 ## See Also

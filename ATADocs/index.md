@@ -8,7 +8,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
+        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.8">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
