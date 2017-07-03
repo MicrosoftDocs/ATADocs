@@ -51,7 +51,7 @@ Microsoft plans to release ATA updates a few times a year with each update versi
 |1.7|1.7.5402|31-AUG-2016|30-AUG-2017|
 |1.7.1|1.7.5647|06-OCT-2016|05-OCT-2017|
 |1.7.2|1.7.5757|15-NOV-2016|14-NOV-2017|
-|1.8|1.8.6645|
+
 
 
 
