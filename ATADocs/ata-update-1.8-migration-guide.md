@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/29/2017
+ms.date: 07/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -38,8 +38,8 @@ If you already have ATA version 1.7 deployed, this procedure will walk you throu
 
 Follow these steps to update to ATA version 1.8:
 
-1.  [Download update 1.8](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
-In this version, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
+1.  [Download the update version of ATA 1.8 from the Download Center](https://www.microsoft.com/download/details.aspx?id=55536)  or the full version from the [Eval center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
+In the migration version, the file can be used only for updating from ATA 1.7. In the version from the Eval center, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
 
 2.  Update the ATA Center
 
@@ -86,7 +86,6 @@ In this version, the same installation file (Microsoft ATA Center Setup.exe) is 
  
 > [!NOTE] 
 > To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.8 Gateway installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md).
-
 
 
 ## See Also
