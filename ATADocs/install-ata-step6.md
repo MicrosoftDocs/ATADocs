@@ -195,7 +195,7 @@ Make sure to have \t between the key=value pairs.
 
 ATA collects VPN data that helps in profiling the locations from which computers connect to the network.
 
-To configure VPN data, go to Configuration > VPN, and enter the Radius Account shared secret of your VPN.
+To configure VPN data, go to **Configuration** > **VPN**, and enter the **Radius Account shared secret** of your VPN.
 
 ![Configure VPN](./media/vpn.png)
 
