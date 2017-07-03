@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/23/2017
+ms.date: 7/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -56,6 +56,11 @@ For more information about role based access control (RBAC) in ATA, see [Working
 
 To log in using SSO, make sure the ATA console site is defined as a local intranet site in your browser and that you access it using a shortname or an localhost.
 
+> [!NOTE]
+> In addition to logging each suspicious activity and health alert, every configuration change you make in the ATA Console is audited in the Windows Event Log on the ATA Center machine, under **Applications and services log** and then **Microsoft ATA**. Each login to the ATA console is audited as well.<br></br>  Configuration affecting the ATA Gateway is also logged in the Windows Event Log of the ATA Gateway machine. 
+
+
+
 ## The ATA Console
 
 The ATA Console provides you a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The console also displays alerts and notifications to highlight problems with the ATA network or new activities that are deemed suspicious.
@@ -99,7 +104,7 @@ Health Center alerts can be dismissed or resolved and are categorized High, Medi
 
 ### User and computer profiles
 
-ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources. For a list of group memberships that ATA considers sensitive, see below.
+ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources. It also provides a list o locations where the user connected via VPN. For a list of group memberships that ATA considers sensitive, see below.
 
 ![User profile](media/user-profile.png)
 

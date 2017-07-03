@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/13/2017
+ms.date: 07/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -50,11 +50,7 @@ To check up on your system's overall health, click the Health Center icon in the
 
 ![ATA Health Center issues image](media/ATA-Health-Issue.JPG)
 
-## Event logging
 
-You can view ATA events in the Windows Event Log viewer, under Microsoft ATA. 
-- For the ATA Center you can see a list of Suspicious activities and Health Issues, as well as Audit log events that detail every change made in the system, and every log in by a user. For example, if someone deletes a Suspicious Activity or suppresses it, it will show up as an event in the log. 
-- For the ATA Gateway, the event log contains an audit trail in the log of changes to the ATA Gateway configuration, for example if someone updates the certificate.
 
 
 

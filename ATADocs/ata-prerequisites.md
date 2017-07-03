@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/12/2017
+ms.date: 7/2/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -69,7 +69,7 @@ This section lists information you should gather and accounts and network entiti
 
 -   Optional: A user account of a user who has no network activities. This account will be configured as the ATA Honeytoken user. To configure the Honeytoken user you will need the SID of the user account, not the username. For more information see [Working with ATA Detection Settings](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) topic.
 
--   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by  setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+-   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to further enhance ATA Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens detections. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
 
 ## ATA Center requirements

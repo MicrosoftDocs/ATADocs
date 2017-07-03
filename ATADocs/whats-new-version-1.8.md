@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/18/2017
+ms.date: 7/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -43,6 +43,7 @@ These release notes provide information about updates, new features, bug fixes a
 - Reconnaissance using directory service queries – This detection was enhanced to be able to catch queries against a single sensitive entity and to reduce the number of false positives that were generated in the previous version. If you disabled this in version 1.7, installing version 1.8 will now automatically enable it.
 
 - Kerberos Golden Ticket activity – ATA 1.8 includes an additional technique to detect golden ticket attacks.
+- ATA now detects suspicious activities in which the Golden ticket lifetime has expired. If a Kerberos ticket is used for more than the allowed lifetime, ATA will detect it as a suspicious activity that a Golden ticket has likely been created.
 - Enhancements were made to the following detections to remove known false positives:  
     - Privilege escalation detection  (forged PAC) 
     - Encryption downgrade activity (Skeleton Key)
@@ -57,12 +58,9 @@ These release notes provide information about updates, new features, bug fixes a
     - **Delete suspicious activities** from the attack time line.
 -	The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line was redesigned. In ATA 1.8, you will be able to many more suspicious activities on a single screen, containing better information for triage and investigation purposes. 
 
-- ATA now detects suspicious activities in which the Golden ticket lifetime has expired. If a Kerberos ticket is used for more than the allowed lifetime, ATA will detect it as a suspicious activity that a Golden ticket has likely been created.
-
-
 ## New reports to help you investigate 
 -	NEW! The **Summary report** was added to enable you to see all the summarized data from ATA, including suspicious activities, health issues and more. You can even  define a customized report that is automatically generated on a recurring basis.
--	NEW! The **Sensitive groups report** was improved to enable you to see all the changes made in sensitive groups over a certain period.
+-	NEW! The **Sensitive groups report** was added to enable you to see all the changes made in sensitive groups over a certain period.
 
 
 ## Infrastructure improvements
@@ -76,8 +74,8 @@ These release notes provide information about updates, new features, bug fixes a
 
 -	NEW! **Single-sign-on for ATA management**. ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Silent installation scripts for the ATA Gateway and ATA Lightweight Gateway now use the logged on user’s context, without the need to provide credentials.
 -	Local System privileges were removed from the ATA Gateway process, so you can now use virtual accounts (available on stand-alone ATA Gateways only), managed service accounts and group managed service accounts to run the ATA Gateway process.   
--	Auditing logs for ATA Center and Gateways were added and all actions are now logged in the event viewer.
--	Support was added for KSP Certificates.
+-	Auditing logs for ATA Center and Gateways were added and all actions are now logged in the Windows Event Log.
+-	Support was added for KSP Certificates for the ATA Center.
 
 
 
