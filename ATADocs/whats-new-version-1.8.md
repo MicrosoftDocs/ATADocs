@@ -43,7 +43,7 @@ These release notes provide information about updates, new features, bug fixes a
 - Reconnaissance using directory service queries – This detection was enhanced to be able to catch queries against a single sensitive entity and to reduce the number of false positives that were generated in the previous version. If you disabled this in version 1.7, installing version 1.8 will now automatically enable it.
 
 - Kerberos Golden Ticket activity – ATA 1.8 includes an additional technique to detect golden ticket attacks.
-- ATA now detects suspicious activities in which the Golden ticket lifetime has expired. If a Kerberos ticket is used for more than the allowed lifetime, ATA will detect it as a suspicious activity that a Golden ticket has likely been created.
+    - ATA now detects suspicious activities in which the Golden ticket lifetime has expired. If a Kerberos ticket is used for more than the allowed lifetime, ATA will detect it as a suspicious activity that a Golden ticket has likely been created.
 - Enhancements were made to the following detections to remove known false positives:  
     - Privilege escalation detection  (forged PAC) 
     - Encryption downgrade activity (Skeleton Key)
@@ -83,5 +83,5 @@ These release notes provide information about updates, new features, bug fixes a
 ## See Also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-[Update ATA to version 1.7 - migration guide](ata-update-1.7-migration-guide.md)
+[Update ATA to version 1.8 - migration guide](ata-update-1.8-migration-guide.md)
 

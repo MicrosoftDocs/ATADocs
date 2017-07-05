@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 07/5/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -42,7 +42,7 @@ To enhance detection capabilities, ATA needs the following Windows events: 4776,
 > [!NOTE]
 > For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events to further enhance detections. It uses event 4776 for NTLM which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
 #### SIEM/Syslog
 For ATA to be able to consume data from a Syslog server, you need to do the following:
@@ -200,13 +200,11 @@ To configure VPN data, go to **Configuration** > **VPN**, and enter the **Radius
 ![Configure VPN](./media/vpn.png)
 
 To get the shared secret, refer to your VPN Documentation. 
-The supported VPN servers are:
+The supported VPN vendors are:
 
-- MS-VPN
-- F5-BIGIP
+- Microsoft
+- F5
 - Check Point
-- McAfee
-- Qrada
 - Cisco ASA
 
 
