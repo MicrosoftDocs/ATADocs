@@ -93,5 +93,4 @@ Securing an internal DNS server to prevent reconnaissance using DNS from occurri
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

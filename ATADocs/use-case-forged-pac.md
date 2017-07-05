@@ -109,5 +109,4 @@ Apply security bulletins [MS14-068](https://technet.microsoft.com/library/securi
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
