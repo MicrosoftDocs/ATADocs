@@ -216,15 +216,6 @@ The following table lists the minimum ports that the ATA Gateway requires config
 > -   NTLM over RPC (TCP Port 135)
 > -   NetBIOS (UDP port 137)
 
-### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways do not have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.<br>
-To ease installation of the ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
-
-> [!NOTE]
-> The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
-
-A certificate supporting **Server Authentication** is required to be installed in the Computer store of the ATA Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
-
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
 ### General
@@ -282,14 +273,6 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 >
 > -   NTLM over RPC
 > -   NetBIOS
-
-### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Lightweight Gateways don't have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.
-To ease installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Lightweight Gateway.
-> [!NOTE]
-> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
-
-A certificate supporting Server Authentication is required to be installed in the Computer store of the ATA Lightweight Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
 
 ## ATA Console
 Access to the ATA Console is via a browser, supporting the following:

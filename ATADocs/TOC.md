@@ -48,6 +48,7 @@
 ## [Privilege escalation using forged authorization data attacks](use-case-forged-pac.md)
 ## [Reconnaissance using DNS](use-case-dns.md)
 # Troubleshoot
+## [Working with audit logs](troubleshoot-audit.md)
 ## [Troubleshooting known issues](troubleshooting-ata-known-errors.md)
 ## [Troubleshoot using the logs](troubleshooting-ata-using-logs.md)
 ## [Troubleshooting using the performance counters](troubleshooting-ata-using-perf-counters.md)
