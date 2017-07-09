@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2017
+ms.date: 7/9/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -60,11 +60,11 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 |Packets per second from all DCs|CPU (cores&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
 |1,000|2|32|0.3|9|30 (100)
-|10,000|4|48|3|90|200 (300)
-|40,000|8|64|12|360|500 (1,000)
-|100,000|12|96|30|900|1,000 (1,500)
-|200,000|24|112|60|1,800|2,000 (3,000)
-|400,000|40|128|120|3,600|4,000 (5,000)
+|40,000|4|48|12|360|500 (750)
+|200,000|8|64|60|1,800|1,000 (1,500)
+|400,000|12|96|120|3,600|2,000 (2,500)
+|750,000|24|112|225|6,750|2,500 (3,000)
+|1,000,000|40|128|300|9,000|4,000 (5,000)
 
 &#42;This includes physical cores, not hyper-threaded cores.
 
