@@ -64,5 +64,4 @@ When you have the possibility of exclusing an IP address or a computer,you can e
 
 ## See Also
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Working with ATA detection settings](working-with-detection-settings.md)
 - [Modifying ATA configuration](modifying-ata-center-configuration.md)
