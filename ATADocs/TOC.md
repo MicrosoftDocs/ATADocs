@@ -28,7 +28,7 @@
 ### [Step 4 Install the ATA Gateway](install-ata-step4.md)
 ### [Step 5 Configure the ATA Gateway](install-ata-step5.md)
 ### [Step 6 Event collection and VPN](install-ata-step6.md)
-### [Step 6 Exclusions and Honeytoken](install-ata-step6.md)
+### [Step 7 Exclusions and Honeytoken](install-ata-step6.md)
 ### [Silent installation](ata-silent-installation.md)
 # Use
 ## [Working with the ATA Console](working-with-ata-console.md)
