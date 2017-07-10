@@ -57,7 +57,7 @@ ATA displays the name of the source machine as well as additional details about 
 To investigate reconnaissance using DNS, you first have to determine the cause of the queries. These can be identified in one of the following categories: 
 -	True positives – There is an attacker or malicious malware on your network. This could be an attacker who has breached the network perimeter, or an insider threat.
 -	Benign true positives – These could be alerts triggered by pen testing, red-team activity, security scanners, next-generation firewall, or IT administrators performing sanctioned activities.
--	False positives – You might get alerts that occur due to a misconfiguration, for example, if port 53 is blocked between the ATA Gateway and your DNS server (or any other network problem).
+-	False positives – You might get alerts that occur due to a misconfiguration, for example, if UDP port 53 is blocked between the ATA Gateway and your DNS server (or any other network problem).
 
 The following chart helps determine the investigation steps you should take:
 
@@ -68,7 +68,7 @@ The following chart helps determine the investigation steps you should take:
     ![View DNS reconnaissance suspicious activity in ATA](./media/dns-recon-2.png)
 2.	Identify what this machine is. Is it a workstation, server, admin workstation, pen-testing station, etc.?
 3.	If the computer is a DNS server and has legitimate rights to request a secondary copy of the zone, then it is a false positive. When you find a false positive, use the **Exclude** option so that you won't get this specific alert for this machine anymore.
-4. Make sure port 53 is open between the ATA Gateway and your DNS server.
+4. Make sure UDP port 53 is open between the ATA Gateway and your DNS server.
 4.	If the machine is used for admin work or pen testing, it is a benign true positive, and the involved machine can also be configured as an exception.
 5.	If it is not used for pen testing, check to see if the machine is running a security scanner or next-generation firewall, which can issue DNS requests of the AXFR type.
 6.	Finally, if none of these criteria are met, it is possible that the machine is compromised, and it must be fully investigated. 

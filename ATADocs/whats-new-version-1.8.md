@@ -27,6 +27,9 @@ ms.suite: ems
 ---
 
 # What's new in ATA version 1.8
+
+The latest update version of ATA can be[downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=55536)  or the full version can be downloaded from the [Eval center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
+
 These release notes provide information about updates, new features, bug fixes and known issues in this version of Advanced Threat Analytics.
 
 
@@ -67,7 +70,6 @@ These release notes provide information about updates, new features, bug fixes a
 
 -	ATA Center performance was enhanced. In ATA 1.8 the ATA Center can handle more than 1M packets per second.
 -	The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
--	Accessibility ramp up – ATA now stands with Microsoft in providing a product that is accessible to everyone. 
 -	You can now separately configure email for monitoring alerts and suspicious activities.
 
 ## Security improvements
