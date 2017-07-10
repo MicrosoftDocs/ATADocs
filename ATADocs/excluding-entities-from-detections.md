@@ -37,15 +37,15 @@ For example, if you have a security scanner that does DNS recon or an admin who 
 
 To exclude entities from raising alerts in ATA:
 
-1. In the Suspicious activity timeline, when you receive an alert on an activity for a user or computer or IP address that is allowed to perform the particular activity and may do so frequently, right click the three dots at the end of the row for the suspicious activity on that entity, and select **Close and exclude**. <br></br>This will add the user, computer or IP address to the exclusions list for that suspicious activity. It will also close the suspicious activity and it will no longer be listed in the **Open** events list in the **Suspicious activity timeline**.
+In the Suspicious activity timeline, when you receive an alert on an activity for a user or computer or IP address that is allowed to perform the particular activity and may do so frequently, right click the three dots at the end of the row for the suspicious activity on that entity, and select **Close and exclude**. <br></br>This will add the user, computer or IP address to the exclusions list for that suspicious activity. It will also close the suspicious activity and it will no longer be listed in the **Open** events list in the **Suspicious activity timeline**.
 
     ![Exclude entity](./media/exclude-in-sa.png)
 
-3. To review or modify any exclusions you set, under **Configuration** click **Exclusions** and then select the suspicious activity, such as **Sensitive account credentials exposed**.
+To review or modify any exclusions you set: under **Configuration** click **Exclusions** and then select the suspicious activity, such as **Sensitive account credentials exposed**.
 
     ![Exclusion configuration](./media/exclusions-config-page.png)
 
-4. To remove an entity from the **Exclusions** configuration, click the minus next to the entity name and then click **Save** at the bottom of the page.
+To remove an entity from the **Exclusions** configuration: click the minus next to the entity name and then click **Save** at the bottom of the page.
 
 It is recommended that you add exclusions to detections only after  you get alerts of the type and determine that they are true benign positives. 
 
