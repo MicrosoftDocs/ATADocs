@@ -65,7 +65,7 @@ The following chart helps determine the investigation steps you should take:
  
 1.	The first step is to identify the machine the alert originates from, as depicted below:
  
-    ![View DNS reconnaissance suspicious activity in ATA](./media/dns-recon-2.png)
+    ![View DNS reconnaissance suspicious activity in ATA](./media/dns-recon.png)
 2.	Identify what this machine is. Is it a workstation, server, admin workstation, pen-testing station, etc.?
 3.	If the computer is a DNS server and has legitimate rights to request a secondary copy of the zone, then it is a false positive. When you find a false positive, use the **Exclude** option so that you won't get this specific alert for this machine anymore.
 4. Make sure UDP port 53 is open between the ATA Gateway and your DNS server.
