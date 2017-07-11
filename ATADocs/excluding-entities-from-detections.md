@@ -37,17 +37,19 @@ For example, if you have a security scanner that does DNS recon or an admin who 
 
 To exclude entities from raising alerts in ATA:
 
-In the Suspicious activity timeline, when you receive an alert on an activity for a user or computer or IP address that is allowed to perform the particular activity and may do so frequently, right click the three dots at the end of the row for the suspicious activity on that entity, and select **Close and exclude**. <br></br>This will add the user, computer or IP address to the exclusions list for that suspicious activity. It will also close the suspicious activity and it will no longer be listed in the **Open** events list in the **Suspicious activity timeline**.
+There are two ways in which you can exclude entities, from the suspicious activity itself, or from the **Exclusions** tab on the **Configuration** page.
+
+- **From the suspicious activity**: In the Suspicious activity timeline, when you receive an alert on an activity for a user or computer or IP address that is allowed to perform the particular activity and may do so frequently, right click the three dots at the end of the row for the suspicious activity on that entity, and select **Close and exclude**. <br></br>This will add the user, computer or IP address to the exclusions list for that suspicious activity. It will also close the suspicious activity and it will no longer be listed in the **Open** events list in the **Suspicious activity timeline**.
 
     ![Exclude entity](./media/exclude-in-sa.png)
 
-To review or modify any exclusions you set: under **Configuration** click **Exclusions** and then select the suspicious activity, such as **Sensitive account credentials exposed**.
+- **From the Configuration page**:  To review or modify any exclusions you set: under **Configuration** click **Exclusions** and then select the suspicious activity, such as **Sensitive account credentials exposed**.
 
     ![Exclusion configuration](./media/exclusions-config-page.png)
 
 To remove an entity from the **Exclusions** configuration: click the minus next to the entity name and then click **Save** at the bottom of the page.
 
-It is recommended that you add exclusions to detections only after  you get alerts of the type and determine that they are true benign positives. 
+It is recommended that you add exclusions to detections only after you get alerts of the type and determine that they are true benign positives. 
 
 > [!NOTE]
 > For your protection, not all detections provide the possibility to set exclusions. 
@@ -56,7 +58,7 @@ Some of the detections provide tips that help you decide what to exclude.
 
 Each exclusion depends on the context,in some you can set users while for others you can set computers or IP addresses. 
 
-When you have the possibility of exclusing an IP address or a computer,you can exclude one or the other - you don’t need to provide both.
+When you have the possibility of excluding an IP address or a computer,you can exclude one or the other - you don’t need to provide both.
 
 > [!NOTE]
 > The configuration pages can only be modified by ATA admins.
