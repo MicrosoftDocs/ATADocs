@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 7/16/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -79,6 +79,10 @@ These release notes provide information about updates, new features, bug fixes a
 -	Auditing logs for ATA Center and Gateways were added and all actions are now logged in the Windows Event Log.
 -	Support was added for KSP Certificates for the ATA Center.
 
+## Additional changes
+
+- The option to add notes was removed from Suspicious Activities
+- Recommendations for mitigating Suspicious Activities were removed from the Suspicious Activities time line.
 
 
 
