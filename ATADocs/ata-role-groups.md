@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/13/2017
+ms.date: 7/16/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -48,7 +48,6 @@ ATA introduces 3 types of Role group: ATA Administrators, ATA Users and ATA View
 |Provide Input for Suspicious Activities|Available|Available|Not available|
 |Change status of Suspicious Activities|Available|Available|Not available|
 |Share/Export suspicious activity via email/get link|Available|Available|Not available|
-|Add/Edit notes for Suspicious Activities|Available|Available|Not available|
 |Change status of Monitoring Alerts|Available|Available|Not available|
 |Update ATA Configuration|Available|Not available|Not available|
 |Gateway – Add|Available|Not available|Not available|

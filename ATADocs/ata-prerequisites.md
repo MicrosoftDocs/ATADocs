@@ -102,12 +102,7 @@ The ATA Center server, the ATA Gateway servers and the domain controllers must h
 You should have the following:
 -   At least one network adapter (if using physical server in VLAN environment, it is recommended to use two network adapters)
 
--   Two IP addresses (recommended but not required)
-
-Communication between the ATA Center and the ATA Gateway is encrypted using SSL on port 443. Additionally, the ATA Console is also using SSL on port 443. **Two IP addresses** are recommended. The ATA Center service will bind port 443 to the first IP address and ATA Console will bind port 443 to the second IP address.
-
-> [!NOTE]
-> A single IP address with two different ports can be used, but two IP addresses are recommended.
+-   An IP address for communication between the ATA Center and the ATA Gateway which is encrypted using SSL on port 443. 
 
 ### Ports
 The following table lists the minimum ports that have to be opened for the ATA Center to work properly.
