@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/3/2017
+ms.date: 7/20/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -56,7 +56,8 @@ This section details possible errors in the deployments of ATA and the steps req
 |System.IO.IOException: Authentication failed because the remote party has closed the transport stream.|TLS 1.0 is disabled on the ATA Gatewau but .Net is set to use TLS 1.2|Use one of the following options: </br> Enable TLS 1.0 on the ATA Gateway </br>Enable TLS 1.2 on .Net by setting the registry keys to use the operating system defaults for LLS and TLS, as follows: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
 |System.TypeLoadException: Could not load type 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' from assembly 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'|ATA Gateway failed to load required parsing files.|Check to see if Microsoft Message Analyzer is currently installed. Message Analyzer is not supported to be installed with the ATA Gateway / Lightweight Gateway. Uninstall Message Analyzer and restart the Gateway service.|
 |Dropped port mirror traffic alerts when using Lightweight Gateway on VMware|If you are using DCs on VMware virtual machines, you might receive alerts about **Dropped port mirrored network traffic**. This might be due to a configuration mismatch in VMware. |To avoid these alerts, you can check that the following settings are set to 0 or Disabled:  TsoEnable, LargeSendOffload, IPv4, TSO Offload. Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.|
-
+|System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required|The ATA Gateway communication with the ATA Center is being disrupted by a proxy server.|Disable the proxy on the ATA Gateway machine. Note that proxy settings may be per-account.|
+|System.IO.DirectoryNotFoundException: The system cannot find the path specified. (Exception from HRESULT: 0x80070003)|One or more of the services needed to operate ATA did not start.|Start the following services: Performance Logs and Alerts (PLA), Task Scheduler (Schedule).|
 
 ## Deployment errors
 |Error|Description|Resolution|
