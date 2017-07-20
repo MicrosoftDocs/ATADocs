@@ -89,7 +89,9 @@ These release notes provide information about updates, new features, bug fixes a
 ### ATA Gateway on Windows Server Core
 
 **Symptoms**: Upgrading an ATA Gateway to 1.8 on Windows Server 2012R2 Core with .Net framework 4.7 may fail with the error: *Microsoft Advanced Threat Analytics Gateway has stopped working*. 
+
 ![Gateway core error](./media/gateway-core-error.png)
+
 On Windows Server 2016 Core you may not see the error, but the process will fail when you try to install, and events 1000 and 1001 (process crash) will be logged in the application Event Log on the server.
 
 **Description**: There is a problem with the .NET framework 4.7 that causes applications that uses WPF technology (such as ATA) to fail to load. [See KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on) for more information. 
@@ -126,6 +128,7 @@ On Windows Server 2016 Core you may not see the error, but the process will fail
 *System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.*
 
 **Description**: Starting from ATA 1.8, the ATA Gateway communicates with the ATA Center using the http protocol. If the machine on which you installed the ATA Gateway uses a proxy server to connect to the ATA Center, it can break this communication. 
+
 **Workaround**: Disable the use of a proxy server on the ATA Gateway service account. There will be an update to correct this problem in a future release.
 
 
