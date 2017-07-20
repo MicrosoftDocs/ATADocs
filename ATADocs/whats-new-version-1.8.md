@@ -88,19 +88,20 @@ These release notes provide information about updates, new features, bug fixes a
 
 ### ATA Gateway on Windows Server Core
 
-**Symptoms**: If you enabled feature that automatically updates ATA Gateways after an update to the ATA Center, the ATA Gateways will continuously download the installation file and fail to install it until the disk is full and the ATA Gateway crashes.
+**Symptoms**: If you try to manually upgrade an ATA 1.7 Gateway to 1.8 it will fail. If you enabled the feature that automatically updates ATA Gateways after an update to the ATA Center, the ATA Gateways will continuously download the installation file and fail to install it until the disk is full and the ATA Gateway crashes.
 
-**Description**: Because ATA 1.8 runs on .net, and .net 4.7 has a critical bug when running WPF functionality on a Windows Server Core, ATA 1.8 installation to fail on Windows Server Core machines. If you try to manually upgrade an ATA 1.7 Gateway to 1.8 it will fail.  
+**Description**: ATA 1.8 runs on the latest version of .NET, and .NET 4.7 has a critical bug when running WPF functionality on a Windows Server Core. During the ATA 1.8 installation, .NET updates to version 4.7 which will cause the ATA installation to fail on Windows Server Core machines.  
 
-**Workaround**: [Uninstall .net 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) to revert the .net version to .net 4.6.2 and then update your ATA Gateway to version 1.8. There will be an update to correct this problem in a future release.
+**Workaround**: [Uninstall .NET 4.7](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) to revert the .NET version to .NET 4.6.2 and then update your ATA Gateway to version 1.8. There will be an update to correct this problem in a future release.
 
 ### Lightweight Gateway event log permissions
 
-**Symptoms**: When you upgrade ATA to version 1.8, all apps or services that were previously granted permissions to access the security event log will lose the permissions. 
+**Symptoms**: When you upgrade ATA to version 1.8, all apps or services that were previously granted permissions to access the Security Event Log will lose the permissions. 
 
-**Description**: In order to make ATA easier to deploy, ATA 1.8 enables installation of a Lightweight Gateway directly on the domain controller without the need to perform Windows Event Forwarding. At the same time, ATA 1.8 enables ATA to be run as a low-permission local service to maintain tighter security. In order to provide access for ATA to your security event log, the ATA service grants itself permissions to access the security event log, at the same time deleting those permissions for any other services previously set.
+**Description**: In order to make ATA easier to deploy, ATA 1.8 accesses your Security Event Log directly, without necessitating Windows Event Forwarding configuration. At the same time, ATA runs as a low-permission local service to maintain tighter security. In order to provide access for ATA to your events, ATA service grants itself permissions to the Security Event Log. When this happens, permissions for any for any other services previously set are deleted.
 
-**Workaround**: Run the following script to remove the added permissions from ATA. This may restore permissions for other apps. If it does not, they will need to be restored manually. There will be an update to correct this problem in a future release. 
+**Workaround**: Run the following script. This removes the incorrectly added permissions from ATA, and adds them properly. This may restore permissions for other apps. If it does not, they will need to be restored manually. There will be an update to correct this problem in a future release. 
+
        $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
         try {
 	    $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
@@ -121,7 +122,7 @@ These release notes provide information about updates, new features, bug fixes a
 
 **Symptoms**: You might see this error: System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.
 **Description**: Starting from ATA 1.8, the ATA Gateway communicates with the ATA Center using http. If the machine on which you installed the ATA Gateway works with a web proxy server, it can break this communication.
-**Workaround**: Set the ATA Gateway machine browser settings to NOT work with a proxy. There will be an update to correct this problem in a future release.
+**Workaround**: Set the ATA Gateway machine browser settings to NOT work with a proxy. This might need to be performed for all users accounts running the machine. There will be an update to correct this problem in a future release.
 
 
 ## See Also
