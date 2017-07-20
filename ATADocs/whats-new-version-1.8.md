@@ -102,7 +102,7 @@ On Windows Server 2016 Core you may not see the error, but the process will fail
 
 **Symptoms**: When you upgrade ATA to version 1.8, apps or services that were previously granted permissions to access the Security Event Log may lose the permissions. 
 
-**Description**: In order to make ATA easier to deploy, ATA 1.8 accesses your Security Event Log directly, without necessitating Windows Event Forwarding configuration. At the same time, ATA runs as a low-permission local service to maintain tighter security. In order to provide access for ATA to read the events, the ATA service grants itself permissions to the Security Event Log. When this happens, permissions previously set for other services may deleted.
+**Description**: In order to make ATA easier to deploy, ATA 1.8 accesses your Security Event Log directly, without necessitating Windows Event Forwarding configuration. At the same time, ATA runs as a low-permission local service to maintain tighter security. In order to provide access for ATA to read the events, the ATA service grants itself permissions to the Security Event Log. When this happens, permissions previously set for other services may be deleted.
 
 **Workaround**: Run the following Windows PowerShell script. This removes the incorrectly added permissions in the registry from ATA, and adds them via a different API. This may restore permissions for other apps. If it does not, they will need to be restored manually. There will be an update to correct this problem in a future release. 
 
