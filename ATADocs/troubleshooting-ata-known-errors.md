@@ -37,6 +37,7 @@ This section details possible errors in the deployments of ATA and the steps req
 
 ## ATA Gateway and Lightweight Gateway errors
 
+> [!div class="mx-tableFixed"]
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: A local error occurred|The ATA Gateway failed to authenticate against the domain controller.|1. Confirm that the domain controller’s DNS record is configured properly in the DNS server. <br>2. Verify that the time of the ATA Gateway is synchronized with the time of the domain controller.|

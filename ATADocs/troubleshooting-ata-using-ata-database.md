@@ -41,6 +41,7 @@ The default and most basic way to query the database is using the Mongo shell:
 
 2.  Run: `mongo.exe ATA`. Make sure to type ATA with all capital letters.
 
+> [!div class="mx-tableFixed"]
 |How to...|Syntax|Notes|
 |-------------|----------|---------|
 |Check for collections in the database.|`show collections`|Useful as an end-to-end test to see that traffic is being written to the database and that event 4776 is being received by ATA.|

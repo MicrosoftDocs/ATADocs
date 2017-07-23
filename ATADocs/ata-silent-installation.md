@@ -56,6 +56,7 @@ Use the following command to install the ATA Center:
     
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -65,6 +66,7 @@ Use the following command to install the ATA Center:
 
 **Installation parameters**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
@@ -97,6 +99,7 @@ Use the following command to update the ATA Center:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -121,6 +124,7 @@ Use the following command to perform a silent uninstall of the ATA Center:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
@@ -129,6 +133,7 @@ Use the following command to perform a silent uninstall of the ATA Center:
 
 **Installation parameters**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
@@ -154,6 +159,7 @@ Use the following command to silently install the ATA Gateway:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -162,6 +168,7 @@ Use the following command to silently install the ATA Gateway:
 
 **Installation parameters**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
@@ -185,6 +192,7 @@ Use the following command to silently update the ATA Gateway:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -206,6 +214,7 @@ Use the following command to perform a silent uninstall of the ATA Gateway:
     
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
