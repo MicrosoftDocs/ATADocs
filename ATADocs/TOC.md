@@ -1,7 +1,7 @@
 # Understand and Explore
 ## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [What threats does ATA detect?](ata-threats.md)
-## ATA Release notes
+## What's new in ATA?
 ### [What's new in ATA version 1.8](whats-new-version-1.8.md)
 #### [Update to ATA 1.8 - migration guide](ata-update-1.8-migration-guide.md)
 ### [What's new in ATA version 1.7](whats-new-version-1.7.md)
