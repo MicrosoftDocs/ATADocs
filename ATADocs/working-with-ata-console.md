@@ -42,19 +42,22 @@ For more information about role based access control (RBAC) in ATA, see [Working
 
 ## Logging into the ATA Console
 
+>[!NOTE]
+ > Starting with ATA 1.8, the log in process to the ATA Console is accomplished using single sign-on.
+
 1. In the ATA Center server, click the **Microsoft ATA Console** icon on the desktop or open a browser and browse to the ATA Console.
 
     ![ATA server icon](media/ata-server-icon.png)
 
->[!NOTE]
-> You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
+ >[!NOTE]
+ > You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
 
 2.  If the computer on which the ATA Center is installed and the computer from which you are trying to access the ATA Console are both domain joined, ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Your permissions in ATA will correspond with your [administrator role](ata-role-groups.md).
 
-> [!NOTE]
-> Make sure to log onto the computer from which you want to access the ATA Console using your ATA admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your ATA admin user. To prompt the ATA Console to ask for credentials, access the console using an IP address and you will be prompted to enter credentials.
+ > [!NOTE]
+ > Make sure to log onto the computer from which you want to access the ATA Console using your ATA admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your ATA admin user. To prompt the ATA Console to ask for credentials, access the console using an IP address and you will be prompted to enter credentials.
 
-To log in using SSO, make sure the ATA console site is defined as a local intranet site in your browser and that you access it using a shortname or an localhost.
+3. To log in using SSO, make sure the ATA console site is defined as a local intranet site in your browser and that you access it using a shortname or an localhost.
 
 > [!NOTE]
 > In addition to logging each suspicious activity and health alert, every configuration change you make in the ATA Console is audited in the Windows Event Log on the ATA Center machine, under **Applications and services log** and then **Microsoft ATA**. Each login to the ATA console is audited as well.<br></br>  Configuration affecting the ATA Gateway is also logged in the Windows Event Log of the ATA Gateway machine. 
@@ -121,7 +124,7 @@ A profile that ATA has not been able to fully resolve will be identified with ha
 
 ### Sensitive groups
 
-The following list of groups are considered **Sensitive** by ATA. These are groups that will be flagged as having administrative privileges and raise alerts that correspond to sensitive accounts:
+The following list of groups are considered **Sensitive** by ATA. Any entity that is a member of these groups is considered sensitive:
 
 - Enterprise Read Only Domain Controllers 
 - Domain Admins 
