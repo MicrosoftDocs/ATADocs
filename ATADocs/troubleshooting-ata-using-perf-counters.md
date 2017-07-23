@@ -62,6 +62,7 @@ This is done by opening "Performance Monitor" and adding all counters for the AT
 
 Here is the list of the main ATA Gateway counters to pay attention to:
 
+> [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway\NetworkListener PEF Parsed Messages\Sec|The amount of traffic being processed by the ATA Gateway every second.|No threshold|Helps you understand the amount of traffic that is being parsed by the ATA Gateway.|
@@ -82,7 +83,7 @@ To measure the resource limitations that ATA enforces on the Lightweight Gateway
 
 This is done by opening "Performance Monitor" and adding all counters for the ATA Lightweight Gateway. The name of the performance counter objects are: "Microsoft ATA Gateway" and "Microsoft ATA Gateway Updater".
 
-
+> [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|The maximum amount of CPU time (in percentage) that the Lightweight Gateway process can consume. |No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATA Lightweight Gateway. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller..|
@@ -94,7 +95,7 @@ This is done by opening "Performance Monitor" and adding all counters for the AT
 In order to see your actual consumption, refer to the following counters:
 
 
-
+> [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
 |Process(Microsoft.Tri.Gateway)\%Processor Time|The amount of CPU time (in percentage) that the Lightweight Gateway process is actually consuming. |No threshold. | Compare the results of this counter to the limit found in GatewayUpdaterResourceManager CPU Time Max %. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Lightweight Gateway.|
@@ -108,6 +109,7 @@ This is done by opening "Performance Monitor" and adding all counters for the AT
 
 Here is the list of the main ATA Center counters to pay attention to:
 
+> [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|The number of entity batches queued by the ATA Center.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener.  Refer to the **ATA Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
@@ -123,6 +125,7 @@ Here is the list of the main ATA Center counters to pay attention to:
 ## Operating system counters
 The following is the list of main operating system counters to pay attention to:
 
+> [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
 |Processor(_Total)\% Processor Time|The percentage of elapsed time that the processor spends to execute a non-Idle thread.|Less than 80% on average|Check if there is a specific process that is taking a lot more processor time than it should.<br /><br />Add more processors.<br /><br />Reduce the amount of traffic per server.<br /><br />The "Processor(_Total)\% Processor Time" counter may be less accurate on virtual servers, in which case the more accurate way to measure the lack of processor power is through the "System\Processor Queue Length" counter.|
