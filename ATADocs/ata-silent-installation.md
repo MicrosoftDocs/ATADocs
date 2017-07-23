@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/28/2017
+ms.date: 07/20/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -56,6 +56,7 @@ Use the following command to install the ATA Center:
     
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -65,6 +66,7 @@ Use the following command to install the ATA Center:
 
 **Installation parameters**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
@@ -97,6 +99,7 @@ Use the following command to update the ATA Center:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -121,6 +124,7 @@ Use the following command to perform a silent uninstall of the ATA Center:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
@@ -129,6 +133,7 @@ Use the following command to perform a silent uninstall of the ATA Center:
 
 **Installation parameters**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
@@ -145,7 +150,7 @@ Use the following command to silently install the ATA Gateway:
 **Syntax**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
 > [!NOTE]
@@ -154,6 +159,7 @@ Use the following command to silently install the ATA Gateway:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -162,9 +168,9 @@ Use the following command to silently install the ATA Gateway:
 
 **Installation parameters**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|No|Sets the certificate thumbprint for the ATA Center service. This certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation will generate a self-signed certificate.|
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 
@@ -186,6 +192,7 @@ Use the following command to silently update the ATA Gateway:
 
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -207,6 +214,7 @@ Use the following command to perform a silent uninstall of the ATA Gateway:
     
 **Installation options**:
 
+> [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
