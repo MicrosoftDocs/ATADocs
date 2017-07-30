@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 7/30/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -59,6 +59,7 @@ This section details possible errors in the deployments of ATA and the steps req
 |Dropped port mirror traffic alerts when using Lightweight Gateway on VMware|If you are using DCs on VMware virtual machines, you might receive alerts about **Dropped port mirrored network traffic**. This might be due to a configuration mismatch in VMware. |To avoid these alerts, you can check that the following settings are set to 0 or Disabled:  TsoEnable, LargeSendOffload, IPv4, TSO Offload. Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.|
 |System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required|The ATA Gateway communication with the ATA Center is being disrupted by a proxy server.|Disable the proxy on the ATA Gateway machine. <br></br>Note that proxy settings may be per-account.|
 |System.IO.DirectoryNotFoundException: The system cannot find the path specified. (Exception from HRESULT: 0x80070003)|One or more of the services needed to operate ATA did not start.|Start the following services: <br></br>Performance Logs and Alerts (PLA), Task Scheduler (Schedule).|
+|System.Net.WebException: The remote server returned an error: (403) Forbidden|The ATA Gateway or Lightweight Gateway could was forbidden from establishing an HTTP connection because the ATA Center is not trusted.|Add the NetBIOS name and FQDN of the ATA Center to the trusted websites list and clear the cache on Interne Explorer (or the name of the ATA Center as specified in the configuration if the configured is different than the NetBIOS/FQDN).|
 
 ## Deployment errors
 > [!div class="mx-tableFixed"]
