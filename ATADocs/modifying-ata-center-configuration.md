@@ -33,22 +33,15 @@ ms.suite: ems
 # Modifying the ATA Center configuration
 
 
-After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the IP address and port, the console URL, and the certificate.
+After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the the console URL, and the certificate.
 
-## The ATA Center IP address
+Any time you want to make a change in the ATA Center configuration, the console URL or the certificate, it must be performed in three stages:
 
-The ATA Gateways locally store the IP address of the ATA Center to which they need to connect. On a regular basis, they connect to the ATA Center and pull down configuration changes. Making a change to how the ATA Gateways connect to the ATA Center is done in two stages.
+1. First, make the configuration change in the ATA Center.
+2. Sync the change with all the connected ATA Gateways.
+3. Only after you receive the message that all the ATA Gateways were synced with the new configuration change, click the Activate button to start using the new certificate or URL. 
 
--   First stage – Update the IP address and port that you want the ATA Center service to use. At this point, the ATA Center still listens on the original IP address. The next time the ATA Gateway syncs its configuration, it will have two IP addresses for the ATA Center. As long as the ATA Gateway can connect using the original (first) IP address, it does not try the new IP address and port.
-
--   Second stage – After all the ATA Gateways have synced with the updated configuration, activate the new IP address and port that the ATA Center listens on. When you activate the new IP address, the ATA Center service binds to the new IP address. ATA Gateways will not be able to connect to the original address and attempt to connect with the second (new) IP address listed for the ATA Center. After connecting to the ATA Center with the new IP address, the ATA Gateway pulls down the latest configuration and has a single IP address for the ATA Center. (Unless you started the process again.)
-
-> [!NOTE]
-> -   If an ATA Gateway was offline during the first stage and never got the updated configuration, manually update the configuration JSON file on the ATA Gateway.
-> -   If the new IP address is installed on the ATA Center server, you can select it from the list of IP addresses when making the change. However, if for some reason you cannot install the IP address on the ATA Center server, select custom IP address and add it manually. You cannot activate the new IP address until the IP address is installed on the server.
-> -   If you need to deploy a new ATA Gateway after activating the new IP address, you need to download the ATA Gateway Setup package again.
-
-## The Console URL
+## Modifying the ATA Console URL
 
 The URL is used in the following scenarios:
 
@@ -67,9 +60,13 @@ The URL is used in the following scenarios:
 
 After a certificate is installed in the ATA Center's local computer store, you may need to renew or replace the certificate. Replace the certificate by following this process:
 
--   First stage – Before the current certificate expires, create a new certificate. Add the new certificate to the ATA Center service to use. The ATA Center service is still bound to the original certificate. When the ATA Gateways sync their configuration, they have two potential certificates that are valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it does not try the new one.
+1. Before the current certificate expires, create a new certificate. 
 
--   Second stage – After all the ATA Gateways synced with the updated configuration, you can activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service binds to the new certificate. ATA Gateways will not be able to properly mutually authenticate the ATA Center service and attempts to authenticate the second certificate. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have a single certificate for the ATA Center. (Unless you started the process again.)
+2. Add the new certificate to the ATA Center service to use. At this point, the ATA Center service is still bound to the original certificate. 
+
+3. Sync the ATA Gateways. At this point, they have two potential certificates that are valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it does not try the new one.
+
+4. After all the ATA Gateways synced with the updated configuration, you can activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service binds to the new certificate. ATA Gateways will now use the second certificate to authenticate with the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have a single certificate for the ATA Center. 
 
 > [!NOTE]
 > -   If an ATA Gateway was offline during the first stage and never got the updated configuration, manually update the configuration JSON file on the ATA Gateway.

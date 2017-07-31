@@ -128,7 +128,7 @@ Make sure the ATA Center has access to your CRL distribution point. If the ATA G
 To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
 
 > [!WARNING]
-> - Using of automatic certificate renewal is not supported.
+> - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
 
 
 > [!NOTE]
