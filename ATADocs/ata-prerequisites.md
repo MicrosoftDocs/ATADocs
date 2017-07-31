@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/30/2017
+ms.date: 7/31/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -37,7 +37,7 @@ This article describes the requirements for a successful deployment of ATA in yo
 > For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
 
 
-ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
+ATA is composed of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
 
 The ATA System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
 
@@ -58,12 +58,12 @@ The ATA System works on active directory forest boundary and supports Forest Fun
 This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
 
 
--   User account and password with read access to all objects in the domains that will be monitored.
+-   User account and password with read access to all objects in the monitored domains.
 
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Do not install Microsoft Message Analyzer on a ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway will no longer capture any traffic. Note that running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
+-   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Note that running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
 
 -    Recommended: User should have read only permissions on the Deleted Objects container. This will allow ATA to detect bulk deletion of objects in the domain. For information about configuring read only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
 
@@ -126,9 +126,13 @@ The following table lists the minimum ports that have to be opened for the ATA C
 Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
 To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
+
+> [!WARNING]
+> - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
+
+
 > [!NOTE]
 > - The certificate's Provider Type can be Cryptographic Service Provider (CSP) or Key Storage Provider (KSP).
-> - Using of automatic certificate renewal is not supported.
 > - The ATA Center certificate SHOULD NOT be renewe. Before it expires, the correct way to renew it is to create a new certificate and choose the new certificate. 
 > - If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
 
