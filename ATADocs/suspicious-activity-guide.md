@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/2/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -92,7 +92,7 @@ irectory services reconnaissance is a technique used by attackers to map the dir
 
 
 > [!div class="mx-tableFixed"]
-|D|Description|Investigation|Recommendation|Severity|
+|Description|Investigation|Recommendation|Severity|
 |------|----|------|----------|
 | Honey Token accounts are decoy accounts set up to trap, identify, and track malicious activity in the network that involves these accounts. These are accounts that are unused and dormant on your network, and if there is suddenly activity from a honey token account, it can indicate that a malicious user is attempting to use this account. | Understand why a honey token account be authenticating from this computer. | Browse through the ATA profile pages of other sensitive (privileged) accounts in your environment to see if there are potentially suspicious activities. | Medium   |
 
@@ -100,7 +100,7 @@ irectory services reconnaissance is a technique used by attackers to map the dir
 
 
 > [!div class="mx-tableFixed"]
-|D|Description|Investigation|Recommendation|Severity|
+|Description|Investigation|Recommendation|Severity|
 |------|----|------|----------|
 |Attackers can use tools that implement SMB/Kerberos protocols in certain ways that enable them to achieve capabilities over your network. This is indicative of malicious techniques used for over-pass-the-hash or brute force attacks. | Understand why the computer in question would use an authentication protocol or SMB in an unusual way. <br></br>To determine whether this is a WannaCry attack, do this:<br></br> 1.	Download the Excel export of the suspicious activity.<br></br>2.	Open the network activity tab and go to the "Json" field to copy the related Smb1SessionSetup & Ntlm JSONs<br></br>3.	If the Smb1SessionSetup.OperatingSystem is "Windows 2000 2195" & the Smb1SessionSetup.IsEmbeddedNtlm is "true" and if the Ntlm.SourceAccountId is "null" then this is WannaCry.<br></br><br></br>**Exceptions:** This detection might be triggered in rare cases when legitimate tools are used that implement the protocols in a non-standard way. Some pen testing applications are known to do this. | Capture network traffic and identify which process is generating traffic with the unusual protocol implementation.| Medium|
 

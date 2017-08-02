@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/3/2017
+ms.date: 08/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -79,7 +79,7 @@ mongo.exe ATA filename
         });
 
 ## Does ATA work with encrypted traffic?
-ATA relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding so that even though encrypted traffic will not be analyzed (for example, LDAPS and IPSEC ESP) ATA will still work and most of the detections will not be affected.
+ATA relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding so that even though encrypted traffic will not be analyzed (for example, LDAPS and IPSEC) ATA will still work and most of the detections will not be affected.
 
 ## Does ATA work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATA, with the exception of over-pass the hash detection which will not work.
