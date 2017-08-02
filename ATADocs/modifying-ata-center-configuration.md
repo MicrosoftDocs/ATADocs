@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/31/2017
+ms.date: 8/2/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -68,6 +68,10 @@ The URL is used in the following scenarios:
 
 
 ## The ATA Center certificate
+
+> [!WARNING]
+> - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
+
 
 Replace the certificate by following this process:
 
