@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/7/2017
+ms.date: 8/6/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -59,7 +59,7 @@ ATA Gateways again. When prompted for a certificate, provide the certificate you
 6. Import the backed up ATA Center configuration:
     1. Remove the default ATA Center System Profile document from the MongoDB: 
         1. Go to **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
-        2. Run `mongo.exe` 
+        2. Run `mongo.exe ATA` 
         3. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
     2. Run the command: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` using the backup file from step 1.</br>
     For a full explanation of how to locate and import backup files, see [Export and import the ATA configuration](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
