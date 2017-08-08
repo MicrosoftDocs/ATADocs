@@ -87,7 +87,7 @@ These release notes provide information about updates, new features, bug fixes a
 ## Known issues
 
 > [!WARNING]
-> In order to avoid these known issues please update or deploy using the 1.8 update 1 bits.
+> In order to avoid these known issues please update or deploy using the 1.8 update 1.
 
 ### ATA Gateway on Windows Server Core
 
