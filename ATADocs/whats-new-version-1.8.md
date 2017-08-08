@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/8/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -85,6 +85,9 @@ These release notes provide information about updates, new features, bug fixes a
 - Recommendations for mitigating Suspicious Activities were removed from the Suspicious Activities time line.
 
 ## Known issues
+
+> [!WARNING]
+> In order to avoid these known issues please update or deploy using the 1.8 update 1 bits.
 
 ### ATA Gateway on Windows Server Core
 
