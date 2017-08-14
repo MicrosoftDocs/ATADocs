@@ -126,9 +126,12 @@ The following table lists the minimum ports that have to be opened for the ATA C
 > LDAP is required to test the credentials to be used between the ATA Gateways and the domain controllers. The test is performed from the ATA Center to a domain controller to test the validity of these credentials, after which the ATA Gateway uses LDAP as part of its normal resolution process.
 
 ### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
-To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
+To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you should replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Center.
+
+
+Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If the they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
+
 
 > [!WARNING]
 > - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
@@ -136,8 +139,8 @@ To ease the installation of ATA, you can install self-signed certificates during
 
 > [!NOTE]
 > - The certificate's Provider Type can be Cryptographic Service Provider (CSP) or Key Storage Provider (KSP).
-> - The ATA Center certificate SHOULD NOT be renewe. Before it expires, the correct way to renew it is to create a new certificate and choose the new certificate. 
 > - If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
+> - Starting with ATA version 1.8 the ATA Gateways and Lightweight Gateways are managing their own certificates and need no administrator interaction to manage them.
 
 ## ATA Gateway requirements
 This section lists the requirements for the ATA Gateway.

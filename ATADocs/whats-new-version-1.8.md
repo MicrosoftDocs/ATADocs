@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/8/2017
+ms.date: 8/14/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -83,6 +83,7 @@ These release notes provide information about updates, new features, bug fixes a
 
 - The option to add notes was removed from Suspicious Activities
 - Recommendations for mitigating Suspicious Activities were removed from the Suspicious Activities time line.
+- Starting with ATA version 1.8 the ATA Gateways and Lightweight Gateways are managing their own certificates and need no administrator interaction to manage them.
 
 ## Known issues
 
