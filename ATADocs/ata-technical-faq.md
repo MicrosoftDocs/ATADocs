@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/2/2017
+ms.date: 08/15/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -59,6 +59,7 @@ This needs to run remotely against the domain controller being monitored and not
 |1.7 Update 1|1.7.5647|
 |1.7 Update 2|1.7.5757|
 |1.8|1.8.6645|
+|1.8 Update 1|1.8.6765|
 
 ## What version should I use to upgrade my current ATA deployment to the latest version?
 
