@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -61,7 +61,9 @@ This section details possible errors in the deployments of ATA and the steps req
 |System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required|The ATA Gateway communication with the ATA Center is being disrupted by a proxy server.|Disable the proxy on the ATA Gateway machine. <br></br>Note that proxy settings may be per-account.|
 |System.IO.DirectoryNotFoundException: The system cannot find the path specified. (Exception from HRESULT: 0x80070003)|One or more of the services needed to operate ATA did not start.|Start the following services: <br></br>Performance Logs and Alerts (PLA), Task Scheduler (Schedule).|
 |System.Net.WebException: The remote server returned an error: (403) Forbidden|The ATA Gateway or Lightweight Gateway could was forbidden from establishing an HTTP connection because the ATA Center is not trusted.|Add the NetBIOS name and FQDN of the ATA Center to the trusted websites list and clear the cache on Interne Explorer (or the name of the ATA Center as specified in the configuration if the configured is different than the NetBIOS/FQDN).|
+|System.Net.Http.HttpRequestException: PostAsync failed [requestTypeName=StopNetEventSessionRequest]|The ATA Gateway or ATA Lightweight Gateway can't stop and start the ETW session that collects network traffic due to a WMI issue|Follow the instructions in [WMI: Rebuilding the WMI Repository](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) to fix the WMI issue|
 
+ 
 ## Deployment errors
 > [!div class="mx-tableFixed"]
 |Error|Description|Resolution|
