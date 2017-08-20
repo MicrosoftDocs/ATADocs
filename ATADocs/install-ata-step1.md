@@ -104,7 +104,9 @@ Because you are logging into the site using an IP address, you will receive a wa
 [« Pre-install](configure-port-mirroring.md)
 [Step 2 »](install-ata-step2.md)
 
-## See Also
+## Related Videos
+- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
 
 ## See Also
 - [ATA POC deployment guide](http://aka.ms/atapoc)
