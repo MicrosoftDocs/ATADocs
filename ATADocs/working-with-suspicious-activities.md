@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/23/2017
+ms.date: 08/20/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -111,6 +111,11 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 > The configuration pages can only be modified by ATA admins.
 
 
+## Related Videos
+- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
 ## See Also
+- [ATA suspicious activity playbook](http://aka.ms/ataplaybook)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modifying ATA configuration](modifying-ata-center-configuration.md)
