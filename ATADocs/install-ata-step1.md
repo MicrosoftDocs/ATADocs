@@ -106,6 +106,9 @@ Because you are logging into the site using an IP address, you will receive a wa
 
 ## See Also
 
+## See Also
+- [ATA POC deployment guide](http://aka.ms/atapoc)
+- [ATA sizing tool](http://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)

@@ -218,7 +218,13 @@ To determine packets per second, perform the following steps on each domain cont
 
     ![Packets per second counter image](media/ATA-traffic-estimation-14.png)
 
+
+## Related Videos
+- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
 ## See Also
+- [ATA sizing tool](http://aka.ms/atasizingtool)
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA architecture](ata-architecture.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

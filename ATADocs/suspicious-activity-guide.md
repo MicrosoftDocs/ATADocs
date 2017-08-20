@@ -213,7 +213,13 @@ irectory services reconnaissance is a technique used by attackers to map the dir
 |------|----|------|----------|
 | ATA raises this alert when more than 5% of all accounts are deleted. This requires read access to the deleted item container. | Understand why 5% of all your accounts were suddenly deleted. | Remove permissions for users who can delete accounts in Active Directory. For more details, see [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx). | Low |
 
+## Related Videos
+- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
 ## See Also
+- [ATA suspicious activity playbook](http://aka.ms/ataplaybook)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with suspicious activities](working-with-suspicious-activities.md)
 - [Investigating Forged PAC attacks](use-case-forged-pac.md)
 - [Troubleshooting ATA known errors](troubleshooting-ata-known-errors.md)

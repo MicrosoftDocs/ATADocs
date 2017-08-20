@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -95,8 +95,15 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
 [« Step 4](install-ata-step4.md)
 [Step 6 »](install-ata-step6.md)
 
-## See Also
 
+
+## Related Videos
+- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
+## See Also
+- [ATA POC deployment guide](http://aka.ms/atapoc)
+- [ATA sizing tool](http://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)

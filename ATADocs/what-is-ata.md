@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/26/2017
+ms.date: 08/20/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -114,5 +114,10 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
 -   To get started deploying ATA: [Install ATA](install-ata-step1.md)
 
+## Related Videos
+- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
 ## See Also
+[ATA suspicious activity playbook](http://aka.ms/ataplaybook)
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
