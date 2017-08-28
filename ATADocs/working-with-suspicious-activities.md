@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -66,7 +66,7 @@ Each suspicious activity has the following information:
 ## Filter suspicious activities list
 To filter the suspicious activities list:
 
-1.  In the **Filter by** pane on the left side of the screen, select one of the following: **All**, **Open**, **Resolved**, or **Suppressed**.
+1.  In the **Filter by** pane on the left side of the screen, select one of the following: **All**, **Open**, **Closed**, or **Suppressed**.
 
 2.  To further filter the list, select **High**, **Medium** or **Low**.
 
@@ -100,7 +100,7 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 -   **Close**: Is used to track suspicious activities which you identified, researched and fixed for mitigated.
 
     > [!NOTE]
-    > ATA may reopen a resolved activity if it the same activity is detected again within a short period of time.
+    > ATA may reopen a closed activity if it the same activity is detected again within a short period of time.
 
 -   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert ATA won't reopen it. But if the alert stops for 7 days, and is then seen again, you will be alerted again.
 

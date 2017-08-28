@@ -49,7 +49,7 @@ To check up on your system's overall health, click the Health Center icon in the
 -   **Close**: Is used to track suspicious activities which you identified, researched and fixed for mitigated.
 
     > [!NOTE]
-    > ATA may reopen a resolved activity if it the same activity is detected again within a short period of time.
+    > ATA may reopen a closed activity if it the same activity is detected again within a short period of time.
 
 -   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert ATA won't reopen it. But if the alert stops for 7 days, and is then seen again, you will be alerted again.
 
