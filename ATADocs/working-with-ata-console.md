@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/28/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -73,7 +73,7 @@ These are the key elements of the ATA console.
 
 ### Attack time line
 
-This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Resolved suspicious activities. You can also see the severity assigned to each activity.
+This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
 ![ATA attack timeline image](media/ATA-Suspicious-Activity-Timeline.jpg)
 
@@ -102,8 +102,6 @@ The Health Center provides you with alerts when something isn't working properly
 ![ATA health center image](media/ATA-Health-Issue.jpg)
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon will let you know by displaying a red dot. ![ATA health center red dot image](media/ATA-Health-Center-Alert-red-dot.png)
-
-Health Center alerts can be dismissed or resolved and are categorized High, Medium or Low depending on their severity. If you resolve an alert that the ATA service detects as still active, it will automatically be moved to the Open list of alerts. If the system detects that there is no longer cause for an alert (the situation has been fixed), it will automatically be moved to the resolved list.
 
 ### User and computer profiles
 
