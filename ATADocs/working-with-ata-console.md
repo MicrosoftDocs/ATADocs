@@ -103,8 +103,6 @@ The Health Center provides you with alerts when something isn't working properly
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon will let you know by displaying a red dot. ![ATA health center red dot image](media/ATA-Health-Center-Alert-red-dot.png)
 
-Health Center alerts can be dismissed or resolved and are categorized High, Medium or Low depending on their severity. If you resolve an alert that the ATA service detects as still active, it will automatically be moved to the Open list of alerts. If the system detects that there is no longer cause for an alert (the situation has been fixed), it will automatically be moved to the resolved list.
-
 ### User and computer profiles
 
 ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources. It also provides a list o locations where the user connected via VPN. For a list of group memberships that ATA considers sensitive, see below.

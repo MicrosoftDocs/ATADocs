@@ -66,7 +66,7 @@ Each suspicious activity has the following information:
 ## Filter suspicious activities list
 To filter the suspicious activities list:
 
-1.  In the **Filter by** pane on the left side of the screen, select one of the following: **All**, **Open**, **Resolved**, or **Dismissed**.
+1.  In the **Filter by** pane on the left side of the screen, select one of the following: **All**, **Open**, **Resolved**, or **Suppressed**.
 
 2.  To further filter the list, select **High**, **Medium** or **Low**.
 
