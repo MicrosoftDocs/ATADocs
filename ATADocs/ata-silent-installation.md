@@ -29,13 +29,8 @@ ms.suite: ems
 *Applies to: Advanced Threat Analytics version 1.8*
 
 
-
 # ATA Silent Installation
 This article provides instructions for silently installing ATA.
-
->[!NOTE]
-> When silently deploying the ATA Lightweight Gateway via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.6.1 including rebooting the domain controller</br>- ATA Gateway. </br>Make the ATA Gateway package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
-
 
 ## Prerequisites
 
@@ -150,6 +145,11 @@ To silently uninstall the ATA Center from the server, removing all existing data
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## ATA Gateway Silent Installation
+
+> [!NOTE]
+> When silently deploying the ATA Lightweight Gateway via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.6.1 including rebooting the domain controller</br>- ATA Gateway. </br>Make the ATA Gateway package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
+
+
 Use the following command to silently install the ATA Gateway:
 
 **Syntax**:
