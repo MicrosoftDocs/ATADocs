@@ -25,7 +25,7 @@
 ## [6 Event collection and VPN](install-ata-step6.md)
 ## [7 Exclusions and Honeytoken](install-ata-step7.md)
 ## [Silent installation](ata-silent-installation.md)
-## [ATA Gateway additional steps]
+## ATA Gateway additional steps
 ### [1. Configure port mirroring](configure-port-mirroring.md)
 ### [2. Validate port mirroring](validate-port-mirroring.md)
 ### [3. Configure Windows Event Forwarding](configure-event-collection.md)
