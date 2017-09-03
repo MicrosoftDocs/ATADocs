@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 9/3/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -132,13 +132,18 @@ To ease the installation of ATA, you can install self-signed certificates during
 
 Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If the they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
+The certificate must have:
+-	A private key
+-	A provider typ of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
+-	A public key length of 2048 bits
+-	A value set for KeyEncipherment and ServerAuthentication usage flags
+
 
 > [!WARNING]
 > - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
 
 
 > [!NOTE]
-> - The certificate's Provider Type can be Cryptographic Service Provider (CSP) or Key Storage Provider (KSP).
 > - If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
 > - Starting with ATA version 1.8 the ATA Gateways and Lightweight Gateways are managing their own certificates and need no administrator interaction to manage them.
 

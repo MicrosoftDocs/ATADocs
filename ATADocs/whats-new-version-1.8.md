@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 9/03/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -134,6 +134,12 @@ On Windows Server 2016 Core you may not see the error, but the process will fail
 **Description**: Starting from ATA 1.8, the ATA Gateway communicates with the ATA Center using the http protocol. If the machine on which you installed the ATA Gateway uses a proxy server to connect to the ATA Center, it can break this communication. 
 
 **Workaround**: Disable the use of a proxy server on the ATA Gateway service account. There will be an update to correct this problem in a future release.
+
+### Report settings reset
+
+**Symptoms**: Any settings that were made to the scheduled reports are cleared when you update to 1.8 update 1.
+**Description**: Updating to 1.8 update 1 from 1.8 resets the reports schedule settings.
+**Workaround**: Before updating to 1.8 update 1, make a copy of the report settings and reenter them, this can also be done be done via a script, for more information, see [Export and Import the ATA Configuration](ata-configuration-file.md).
 
 
 ## See Also
