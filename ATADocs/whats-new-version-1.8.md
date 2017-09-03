@@ -138,7 +138,9 @@ On Windows Server 2016 Core you may not see the error, but the process will fail
 ### Report settings reset
 
 **Symptoms**: Any settings that were made to the scheduled reports are cleared when you update to 1.8 update 1.
+
 **Description**: Updating to 1.8 update 1 from 1.8 resets the reports schedule settings.
+
 **Workaround**: Before updating to 1.8 update 1, make a copy of the report settings and reenter them, this can also be done be done via a script, for more information, see [Export and Import the ATA Configuration](ata-configuration-file.md).
 
 
