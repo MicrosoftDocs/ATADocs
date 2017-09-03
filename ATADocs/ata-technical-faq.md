@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/15/2017
+ms.date: 09/03/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -51,19 +51,11 @@ This needs to run remotely against the domain controller being monitored and not
 
 ## Which ATA build corresponds to each version?
 
-|Version|Build #|
-|----|----|
-|1.6|1.6.4103|
-|1.6 Update 1|1.6.4317|
-|1.7|1.7.5402| 
-|1.7 Update 1|1.7.5647|
-|1.7 Update 2|1.7.5757|
-|1.8|1.8.6645|
-|1.8 Update 1|1.8.6765|
+For version upgrade information, see [ATA upgrade path](ata-upgrade-path.md).
 
 ## What version should I use to upgrade my current ATA deployment to the latest version?
 
-![ATA version upgrade matrix](./media/version-matrix.png)
+For the ATA version upgrade matrix, see [ATA upgrade path](ata-upgrade-path.md).
 
 
 ## How do I verify Windows Event Forwarding?

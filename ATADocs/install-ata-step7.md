@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 09/03/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -57,10 +57,6 @@ To configure the above, follow these steps:
 3. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
 
    ![Exclusions](media/exclusions.png)
-
-
-  > [!NOTE]
-  > To find the SID for a user, search for the user in the ATA Console, and then click on the **Account Info** tab. 
 
 4.  Click **Save**.
 
