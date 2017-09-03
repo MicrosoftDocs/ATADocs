@@ -16,7 +16,7 @@
 ## [ATA Architecture](ata-architecture.md)
 ## [Plan your ATA capacity](ata-capacity-planning.md)
 ## [ATA Prerequisites](ata-prerequisites.md)
-## [ATA upgrade path](ata-upgrade-path.md)
+## [ATA upgrade path](upgrade-path.md)
 # Deploy
 ## [1 Download & install Center](install-ata-step1.md)
 ## [2 Connect to AD](install-ata-step2.md)
