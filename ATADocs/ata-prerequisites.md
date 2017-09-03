@@ -134,10 +134,11 @@ Make sure the ATA Center and ATA Gateways have access to your CRL distribution p
 
 The certificate must have:
 -	A private key
--	A provider typ of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
+-	A provider type of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
 -	A public key length of 2048 bits
 -	A value set for KeyEncipherment and ServerAuthentication usage flags
 
+For example, you can use the standard **Web server** or **Computer** templates.
 
 > [!WARNING]
 > - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
