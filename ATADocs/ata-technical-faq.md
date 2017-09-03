@@ -51,11 +51,11 @@ This needs to run remotely against the domain controller being monitored and not
 
 ## Which ATA build corresponds to each version?
 
-For version upgrade information, see [ATA upgrade path](ata-upgrade-path.md).
+For version upgrade information, see [ATA upgrade path](upgrade-path.md).
 
 ## What version should I use to upgrade my current ATA deployment to the latest version?
 
-For the ATA version upgrade matrix, see [ATA upgrade path](ata-upgrade-path.md).
+For the ATA version upgrade matrix, see [ATA upgrade path](upgrade-path.md).
 
 
 ## How do I verify Windows Event Forwarding?
