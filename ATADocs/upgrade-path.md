@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics upgrade path | Microsoft Docs
+title: Advanced Threat Analytics recommended upgrade path | Microsoft Docs
 description: Provides instructions for upgrading your Advanced Threat Analytics (ATA) version.
 keywords:
 author: rkarlin
@@ -27,7 +27,7 @@ ms.suite: ems
 ---
 *Applies to: Advanced Threat Analytics version 1.8*
 
-# ATA upgrade path
+# Recommended upgrade path for ATA
 This article provides information about available Advanced Threat Analytics versions and how to upgrade ATA depending on which version you have running.
 
 
