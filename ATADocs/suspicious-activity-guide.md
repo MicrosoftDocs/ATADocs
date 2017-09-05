@@ -58,11 +58,9 @@ Use the tool referenced in [ATA Auditing (AuditPol, Advanced Audit Settings Enfo
 
 **Investigation**
 
-Is the group modification legitimate? 
+1. Is the group modification legitimate? </br>Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive.
 
-Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive.
-
-In case the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in ATA to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
+2. If the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in ATA to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
 
 **Remediation**
 
@@ -98,11 +96,11 @@ In this detection, an alert is triggered when ATA detects many different passwor
 
 **Investigation**
 
-If there are many accounts involved, click **Download details** to view the list in an Excel spreadsheet.
+1. If there are many accounts involved, click **Download details** to view the list in an Excel spreadsheet.
 
-Click on the alert to go to its dedicated page. Check if any login attempts ended with a successful authentication. The attempts would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress" the suspicious activity.
+2. Click on the alert to go to its dedicated page. Check if any login attempts ended with a successful authentication. The attempts would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
 
-If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes,**Suppress" the suspicious activity.
+3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes,**Suppress** the suspicious activity.
 
 **Remediation**
 
@@ -129,9 +127,9 @@ First check the description of the alert, to see which of the above three detect
 1.  Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the ATA team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
     If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
-2.  Golden Ticket – there are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
+2.  Golden Ticket – there are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppress**d.
 
-3.  Overpass-the-Hash – there are cases in which this alert might be triggered when users configured with smart cards are required for interactive login, and this setting is disabled and then enabled. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
+3.  Overpass-the-Hash – there are cases in which this alert might be triggered when users configured with smart cards are required for interactive login, and this setting is disabled and then enabled. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppress**d.
 
 **Remediation**
 
@@ -155,11 +153,11 @@ security policy.
 
 **Investigation**
 
-Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
+1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
 
-Is the ATA Gateway involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
+2. Is the ATA Gateway involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
 
-If the answer to the above questions is no, assume this is malicious.
+3. If the answer to the above questions is no, assume this is malicious.
 
 **Remediation**
 
@@ -175,7 +173,7 @@ Also, because creating a Golden Ticket requires domain admin rights, implement 
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused, while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Install ATA - Step 7.
+For more information on honeytoken accounts, see [Install ATA - Step 7](install-ata-step7).
 
 **Investigation**
 
@@ -203,8 +201,9 @@ Was the hash used from a computer that the targeted user owns or regularly uses?
 
 **Remediation**
 
-If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they
-expire. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See
+1. If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they
+expire. 
+2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See
 the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Identity theft using Pass-the-Ticket attack
@@ -215,14 +214,15 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Investigation**
 
-Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? If the answer to any of these questions is yes, then it is a false positive.
+1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? If the answer to any of these questions is yes, then it is a false positive.
 
-Is there a custom application that forwards tickets on behalf of users? If so, it is a benign true positive.
+2. Is there a custom application that forwards tickets on behalf of users? If so, it is a benign true positive.
 
 **Remediation**
 
-If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire.  
-If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
+1. If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire.  
+
+2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Malicious Data Protection Private Information Request
@@ -235,11 +235,11 @@ In this detection, an alert will be triggered when the DPAPI is used to retrieve
 
 **Investigation**
 
-Is the source computer running an organization-approved advanced security scanner against Active Directory?
+1. Is the source computer running an organization-approved advanced security scanner against Active Directory?
 
-If yes and it should always be doing so, **Close and exclude** the suspicious activity.
+2. If yes and it should always be doing so, **Close and exclude** the suspicious activity.
 
-If yes and it should not do this, **Close** the suspicious activity.
+3. If yes and it should not do this, **Close** the suspicious activity.
 
 **Remediation**
 
@@ -256,8 +256,9 @@ In this detection, an alert will be triggered when a replication request is init
 
 **Investigation**
 
-Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close and exclude** the suspicious activity.  
-Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close and exclude** the suspicious activity.  
+
+2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
 
 **Remediation**
 
@@ -293,13 +294,13 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 
 **Investigation**
 
-Click on the alert to get to its details page.
+1. Click on the alert to get to its details page.
 
-Is the destination computer (under the **ACCESSED** column) patched with MS14-068 (domain controller) or MS11-013 (server)? If yes, **Close** the suspicious activity (it is a false positive).
+2. Is the destination computer (under the **ACCESSED** column) patched with MS14-068 (domain controller) or MS11-013 (server)? If yes, **Close** the suspicious activity (it is a false positive).
 
-If not, does the source computer (under the **FROM** column) an OS/application known to modify the PAC? If yes, **Suppress** the suspicious activity (it is a benign true positive).
+3. If not, does the source computer (under the **FROM** column) an OS/application known to modify the PAC? If yes, **Suppress*** the suspicious activity (it is a benign true positive).
 
-If the answer was no to the above two questions, assume this is malicious.
+4. If the answer was no to the above two questions, assume this is malicious.
 
 **Remediation**
 
@@ -316,21 +317,21 @@ In this detection, no alerts would be triggered in the first month after ATA is 
 
 **Investigation**
 
-Click on the alert to get to its details page. Check which queries were performed (for example, Enterprise admins, or Administrator) and whether or not they were successful.
+1. Click on the alert to get to its details page. Check which queries were performed (for example, Enterprise admins, or Administrator) and whether or not they were successful.
 
-Are such queries supposed to be made from the source computer in question?
+2. Are such queries supposed to be made from the source computer in question?
 
-If yes and the alert gets updated, **Suppress** the suspicious activity.
+3. If yes and the alert gets updated, **Suppress*** the suspicious activity.
 
-If yes and it should not do this anymore, **Close** the suspicious activity.
+4. If yes and it should not do this anymore, **Close** the suspicious activity.
 
-If there’s information on the involved account: are such queries supposed to be made by that account or does that account normally log in to the source computer?
+5. If there’s information on the involved account: are such queries supposed to be made by that account or does that account normally log in to the source computer?
 
-If yes and the alert gets updated, **Suppress** the suspicious activity.
+ - If yes and the alert gets updated, **Suppress*** the suspicious activity.
 
-If yes and it should not do this anymore, **Close** the suspicious activity.
+ - If yes and it should not do this anymore, **Close** the suspicious activity.
 
-If the answer was no to all of the above, assume this is malicious.
+ - If the answer was no to all of the above, assume this is malicious.
 
 **Remediation**
 
@@ -346,11 +347,11 @@ There are several query types in the DNS protocol. ATA detects the AXFR (Transfe
 
 **Investigation**
 
-Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between ATA Gateways and the source computer to prevent future false positives.
+1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between ATA Gateways and the source computer to prevent future false positives.
 
-Is the source machine running a security scanner? If yes, **Exclude the entities** in ATA, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for ATA admins).
+2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATA, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for ATA admins).
 
-If the answer to all the above is no, assume this is malicious.
+3. If the answer to all the above is no, assume this is malicious.
 
 **Remediation**
 
@@ -368,17 +369,17 @@ In this detection, an alert will be triggered when an SMB session enumeration is
 
 **Investigation**
 
-Click on the alert to get to its details page. Check which account/s performed the operation and which accounts were exposed, if any.
+1. Click on the alert to get to its details page. Check which account/s performed the operation and which accounts were exposed, if any.
 
-Is there some kind of security scanner running on the source computer? If yes, **Close and exclude** the suspicious activity.
+ - Is there some kind of security scanner running on the source computer? If yes, **Close and exclude** the suspicious activity.
 
-Check which involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
+2. Check which involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
 
-If yes and the alert gets updated, **Suppress** the suspicious activity.  
+3. If yes and the alert gets updated, **Suppress*** the suspicious activity.  
 
-If yes and it should not do this anymore, **Close** the suspicious activity.
+4. If yes and it should not do this anymore, **Close** the suspicious activity.
 
-If the answer to all the above is no, assume this is malicious.
+5. If the answer to all the above is no, assume this is malicious.
 
 **Remediation**
 
@@ -392,21 +393,21 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **Investigation**
 
-This is common for administrative workstations and IT team members and service accounts that perform administrative tasks against the domain controllers. If this is this the case, and the alert gets updated since the same admin and/or computer are performing the task, then Suppress the alert.
+1. This is common for administrative workstations and IT team members and service accounts that perform administrative tasks against the domain controllers. If this is this the case, and the alert gets updated since the same admin and/or computer are performing the task, then **Suppress**the alert.
 
-Is the **computer** in question allowed to perform this remote execution against your domain controller?
+2. Is the **computer** in question allowed to perform this remote execution against your domain controller?
 
-Is the **account** in question allowed to perform this remote execution against your domain controller?
+ - Is the **account** in question allowed to perform this remote execution against your domain controller?
 
-If the answer to both questions is *yes*, then **Close** the alert.
+ - If the answer to both questions is *yes*, then **Close** the alert.
 
-If the answer to either questions is *no*, then this should be considered a true positive.
+3. If the answer to either questions is *no*, then this should be considered a true positive.
 
 **Remediation**
 
-Restrict remote access to domain controllers from non-Tier 0 machines.
+1. Restrict remote access to domain controllers from non-Tier 0 machines.
 
-Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
+2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
 
 ## Sensitive account credentials exposed & Services exposing account credentials
 
@@ -434,11 +435,11 @@ In this detection, an alert will be triggered when many authentication failures 
 
 **Investigation**
 
-If there are many accounts involved, click **Download details** to view the list in an Excel spreadsheet.
+1. If there are many accounts involved, click **Download details** to view the list in an Excel spreadsheet.
 
-Click on the alert to go to its details page. Check if any login attempts ended with a successful authentication, these would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
+2. Click on the alert to go to its details page. Check if any login attempts ended with a successful authentication, these would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress*** the suspicious activity.
 
-If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
+3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes, **Suppress*** the suspicious activity.
 
 **Remediation**
 
@@ -452,9 +453,9 @@ ATA learns the entity behavior for users, computers, and resources over a slidin
 
 **Investigation**
 
-Is the user in question supposed to be performing these operations?
+1. Is the user in question supposed to be performing these operations?
 
-Consider the following cases as potential false positives: a user who returned from vacation, IT personnel who perform excess access as part of their duty (for example a spike in help-desk support in a given day or week), remote desktop applications.+ 
+2. Consider the following cases as potential false positives: a user who returned from vacation, IT personnel who perform excess access as part of their duty (for example a spike in help-desk support in a given day or week), remote desktop applications.+ 
 If you **Close and exclude** the alert, the user will no longer be part of the detection
 
 
@@ -471,9 +472,9 @@ Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in no
 
 **Investigation**
 
-First, identify the protocol that is unusual – from the Suspicious activity time line,  click on the suspicious activity to get to its details page; the protocol appears above the arrow: Kerberos or NTLM.
+Identify the protocol that is unusual – from the Suspicious activity time line,  click on the suspicious activity to get to its details page; the protocol appears above the arrow: Kerberos or NTLM.
 
-- **Kerberos**: This will often be triggered if a hacking tool such as Mimikatz has been used, potentially performing an Overpass-the-Hash attack. Check if the source computer is running an application that implements its own Kerberos stack, not in accordance with the Kerberos RFC. If that is the case, it is a benign true positive and you can **Close** the alert. If the alert keeps being triggered, and it is still the case, you can **Suppress** the alert.
+- **Kerberos**: This will often be triggered if a hacking tool such as Mimikatz has been used, potentially performing an Overpass-the-Hash attack. Check if the source computer is running an application that implements its own Kerberos stack, not in accordance with the Kerberos RFC. If that is the case, it is a benign true positive and you can **Close** the alert. If the alert keeps being triggered, and it is still the case, you can **Suppress*** the alert.
 
 - **NTLM**: Could be either WannaCry or tools such as Metasploit, Medusa, and Hydra.  
 
