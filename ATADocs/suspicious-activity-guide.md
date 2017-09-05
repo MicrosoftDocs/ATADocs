@@ -50,7 +50,7 @@ For questions or feedback, contact us at [ATAEval@microsoft.com](mailto:ATAEval@
 
 Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATA. The minimum period before an alert can be triggered is one month per each domain controller.
 
-For a definition of sensitive groups in ATA, see [Working with the ATA console](working-with-the-ata-console.md#sensitive-groups).
+For a definition of sensitive groups in ATA, see [Working with the ATA console](working-with-ata-console#sensitive-groups).
 
 
 The detection relies on [events audited on domain controllers](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
