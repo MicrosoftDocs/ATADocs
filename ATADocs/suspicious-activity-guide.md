@@ -173,7 +173,7 @@ Also, because creating a Golden Ticket requires domain admin rights, implement 
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused, while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Install ATA - Step 7](install-ata-step7).
+For more information on honeytoken accounts, see [Install ATA - Step 7](install-ata-step7.md).
 
 **Investigation**
 
