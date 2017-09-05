@@ -203,6 +203,7 @@ Was the hash used from a computer that the targeted user owns or regularly uses?
 
 1. If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they
 expire. 
+
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See
 the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
 
@@ -263,7 +264,9 @@ In this detection, an alert will be triggered when a replication request is init
 **Remediation**
 
 Validate the following permissions: 
+
 - Replicate directory changes   
+
 - Replicate directory changes all  
 
 For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
