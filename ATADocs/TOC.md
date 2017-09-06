@@ -45,8 +45,7 @@
 ## [Export/Import ATA configuration](ata-configuration-file.md)
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
 # Investigate
-## [Privilege escalation using forged authorization data attacks](use-case-forged-pac.md)
-## [Reconnaissance using DNS](use-case-dns.md)
+## [Suspicious activity guide](suspicious-activity-guide.md)
 # Troubleshoot
 ## [Working with audit logs](troubleshoot-audit.md)
 ## [Troubleshooting known issues](troubleshooting-ata-known-errors.md)
