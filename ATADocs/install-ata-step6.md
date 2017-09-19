@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 09/2919/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -191,27 +191,10 @@ Make sure to have \t between the key=value pairs.
 > Using WinCollect for Windows event collection is not supported.
 
 
-### Configuring VPN
-
-ATA collects VPN data that helps in profiling the locations from which computers connect to the network.
-
-To configure VPN data, go to **Configuration** > **VPN**, and enter the **Radius Account shared secret** of your VPN.
-
-![Configure VPN](./media/vpn.png)
-
-To get the shared secret, refer to your VPN Documentation. 
-The supported VPN vendors are:
-
-- Microsoft
-- F5
-- Check Point
-- Cisco ASA
-
-
 
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
-[Step 7 »](install-ata-step7.md)
+[Step 7 »](vpn-integration-install-step.md)
 
 
 

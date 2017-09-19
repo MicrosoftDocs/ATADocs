@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install Advanced Threat Analytics - Step 7 | Microsoft Docs
+title: Install Advanced Threat Analytics - Step 8 | Microsoft Docs
 description: In the final step of installing ATA, you configure the Honeytoken user.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -30,12 +30,12 @@ ms.suite: ems
 
 
 
-# Install ATA - Step 7
+# Install ATA - Step 8
 
 >[!div class="step-by-step"]
-[« Step 6](install-ata-step6.md)
+[« Step 7](vpn-integration-install-step.md)
 
-## Step 7. Configure IP address exclusions and Honeytoken user
+## Step 8. Configure IP address exclusions and Honeytoken user
 ATA enables the exclusion of specific IP addresses or users from a number of detections. 
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
@@ -71,7 +71,7 @@ To check that ATA is up and running and catching breaches in your network, you c
 
 
 >[!div class="step-by-step"]
-[« Step 6](install-ata-step6.md)
+[« Step 7](vpn-integration-install-step.md)
 
 
 
