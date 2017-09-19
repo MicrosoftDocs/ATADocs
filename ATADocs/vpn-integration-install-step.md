@@ -34,6 +34,7 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
+[Step 8 »](install-ata-step7.md)
 
 ## Step 7. Integrate VPN
 
