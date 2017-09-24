@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/3/2017
+ms.date: 9/24/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -67,9 +67,9 @@ This section lists information you should gather and accounts and network entiti
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
 
--   Optional: A user account of a user who has no network activities. This account is configured as the ATA Honeytoken user. To configure the Honeytoken user you need the SID of the user account, not the username. For more information, see [Working with ATA Detection Settings](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) topic.
+-   Optional: A user account of a user who has no network activities. This account is configured as the ATA Honeytoken user. To configure the Honeytoken user, you need the SID of the user account, not the username. For more information, see [Working with ATA Detection Settings](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) topic.
 
--   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to further enhance ATA Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens detections. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+-   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to further enhance ATA Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens detections. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
 
 ## ATA Center requirements
@@ -89,20 +89,20 @@ Installation of the ATA Center as a virtual machine is supported.
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 ### Server specifications
-When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.<br>
+When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving in order to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.<br>
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
-The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed see [ATA capacity planning](ata-capacity-planning.md) for more details.
+The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
 
 ### Time synchronization
-The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
+The ATA Center server, the ATA Gateway servers, and the domain controllers must have time synchronized to within five minutes of each other.
 
 
 ### Network adapters
-You should have the following:
+You should have the following set:
 -   At least one network adapter (if using physical server in VLAN environment, it is recommended to use two network adapters)
 
--   An IP address for communication between the ATA Center and the ATA Gateway which is encrypted using SSL on port 443. (The ATA service binds to all IP addresses that the ATA Center has on port 443.)
+-   An IP address for communication between the ATA Center and the ATA Gateway that is encrypted using SSL on port 443. (The ATA service binds to all IP addresses that the ATA Center has on port 443.)
 
 ### Ports
 The following table lists the minimum ports that have to be opened for the ATA Center to work properly.
@@ -118,9 +118,9 @@ The following table lists the minimum ports that have to be opened for the ATA C
 |**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
 |**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
 |**DNS**|TCP and UDP|53|DNS servers|Outbound|
-|**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Oubbound|
+|**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Outbound|
 |**Netlogon** (optional if domain joined)|TCP and UDP|445|Domain controllers|Outbound|
-|**Windows Time** (optional if domain jolined)|UDP|123|Domain controllers|Outbound|
+|**Windows Time** (optional if domain joined)|UDP|123|Domain controllers|Outbound|
 
 > [!NOTE]
 > LDAP is required to test the credentials to be used between the ATA Gateways and the domain controllers. The test is performed from the ATA Center to a domain controller to test the validity of these credentials, after which the ATA Gateway uses LDAP as part of its normal resolution process.
@@ -130,7 +130,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you should replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Center.
 
 
-Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If the they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
+Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
 
 The certificate must have:
 -	A private key
@@ -145,7 +145,7 @@ For example, you can use the standard **Web server** or **Computer** templates.
 
 
 > [!NOTE]
-> - If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
+> - If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you get a warning page that there is a problem with the website's security certificate before getting to the log in page.
 > - Starting with ATA version 1.8 the ATA Gateways and Lightweight Gateways are managing their own certificates and need no administrator interaction to manage them.
 
 ## ATA Gateway requirements
@@ -163,7 +163,7 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
@@ -172,15 +172,15 @@ An ATA Gateway can support monitoring multiple domain controllers, depending on 
 >[!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
-For more information about the ATA Gateway hardware requirements see [ATA capacity planning](ata-capacity-planning.md).
+For more information about the ATA Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 
 ### Time synchronization
-The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
+The ATA Center server, the ATA Gateway servers, and the domain controllers must have time synchronized to within five minutes of each other.
 
 ### Network adapters
 The ATA Gateway requires at least one Management adapter and at least one Capture adapter:
 
--   **Management adapter** - will be used for communications on your corporate network. This adapter should be configured with the following:
+-   **Management adapter** - used for communications on your corporate network. This adapter should be configured with the following settings:
 
     -   Static IP address including default gateway
 
@@ -196,8 +196,8 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
 -   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md) for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
-    > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This will ensure that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
+    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md) for additional information. Typically, you need to work with the networking or virtualization team to configure port mirroring.
+    > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
 The following table lists the minimum ports that the ATA Gateway requires configured on the management adapter:
@@ -228,7 +228,7 @@ This section lists the requirements for the ATA Lightweight Gateway.
 ### General
 The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
 
-The domain controller can be a read only domain controller (RODC).
+The domain controller can be a read-only domain controller (RODC).
 
 Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2,
  confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
@@ -245,21 +245,21 @@ During installation, the .Net Framework 4.6.1 is installed and might cause a reb
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 
-The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
+The ATA Lightweight Gateway requires a minimum of two cores and 6 GB of RAM installed on the domain controller.
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
 >[!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
-For more information about the ATA Lightweight Gateway hardware requirements see [ATA capacity planning](ata-capacity-planning.md).
+For more information about the ATA Lightweight Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 
 ### Time synchronization
-The ATA Center server, the ATA Lightweight Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
+The ATA Center server, the ATA Lightweight Gateway servers, and the domain controllers must have time synchronized to within five minutes of each other.
 ### Network adapters
 The ATA Lightweight Gateway monitors the local traffic on all of the domain controller's network adapters. <br>
 After deployment, you can use the ATA Console if you ever want to modify which network adapters are monitored.
@@ -282,7 +282,7 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 > -   NetBIOS
 
 ## ATA Console
-Access to the ATA Console is via a browser, supporting the following:
+Access to the ATA Console is via a browser, supporting the  browsers and settings:
 
 -   Internet Explorer version 10 and above
 
