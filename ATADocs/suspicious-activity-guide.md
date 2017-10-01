@@ -301,7 +301,7 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 
 2. Is the destination computer (under the **ACCESSED** column) patched with MS14-068 (domain controller) or MS11-013 (server)? If yes, **Close** the suspicious activity (it is a false positive).
 
-3. If not, does the source computer (under the **FROM** column) an OS/application known to modify the PAC? If yes, **Suppress** the suspicious activity (it is a benign true positive).
+3. If not, does the source computer run (under the **FROM** column) an OS/application known to modify the PAC? If yes, **Suppress** the suspicious activity (it is a benign true positive).
 
 4. If the answer was no to the above two questions, assume this is malicious.
 
