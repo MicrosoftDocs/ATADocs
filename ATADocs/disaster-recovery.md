@@ -64,7 +64,7 @@ ATA Gateways again. When prompted for a certificate, provide the certificate you
     2. Run the command: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` using the backup file from step 1.</br>
     For a full explanation of how to locate and import backup files, see [Export and import the ATA configuration](ata-configuration-file.md). 
     3. Open the ATA Console. You should see all the ATA Gateways linked under the Configuration/Gateways tab. 
-    5. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5,md). 
+    5. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5.md). 
 
 
 
