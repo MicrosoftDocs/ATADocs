@@ -75,5 +75,5 @@ ATA Gateways again. When prompted for a certificate, provide the certificate you
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection#configuring-windows-event-forwarding.md)
+- [Configuring Windows event forwarding](configure-event-collection#configuring-windows-event-forwarding)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
