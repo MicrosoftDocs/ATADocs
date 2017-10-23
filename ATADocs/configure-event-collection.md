@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/29/2017
+ms.date: 10/23/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -94,7 +94,7 @@ Note that after adding the **Network Service** to the **Event Log Readers** grou
    4.	Click **Select Events**.
 
         1. Click **By log** and select **Security**.
-        2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. 
+        2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
 
  ![Query filter image](media/wef 4 query filter.png)
 
