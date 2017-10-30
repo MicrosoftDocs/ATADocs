@@ -43,9 +43,10 @@
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
 ## [Set ATA notifications](setting-ata-alerts.md)
 ## [Set Syslog and Email server settings](setting-syslog-email-server-settings.md)
+## [VPN integration](vpn-integration.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Working with the ATA Console](working-with-ata-console.md)
-## [ATA Reference information]
+## ATA reference information
 ### [SIEM log reference](cef-format-sa.md)
 ### [Event ID reference](event-id-reference.md)
 # Investigate
