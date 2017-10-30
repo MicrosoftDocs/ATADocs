@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 10/30/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -38,31 +38,67 @@ ms.suite: ems
 
 ## Step 7. Integrate VPN
 
+Microsoft Advanced Threat Analytics (ATA) version 1.8 can collect accounting information from VPN solutions. When configured, the user's profile page will include information from the VPN connections, such as the IP addresses and locations where connections originated. This will complement the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+
+ATA integrates with your VPN solution by listening to RADIUS accounting events forwarded to the ATA Gateways. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
+
+-	Microsoft
+-	F5
+-	Check Point
+-	Cisco ASA
+
+## Prerequisites
+
+To enable VPN integration make sure you set the following:
+
+-	Open port UDP 1813 on your ATA Gateways and ATA Lightweight Gateways.
+
+-	Connect the ATA Center to the Internet so that it can query the location of incoming IP addresses.
+
+In the example below, we use Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
+
+If you’re using a 3rd party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
+
+## Step 1: Configure RADIUS Accounting on the VPN system
+
+Perform the following on your RRAS server.
+ 
+1.	Open the Routing and Remote Access console.
+2.	Right-click the server name and click **Properties**.
+3.	In the **Security** tab, under **Accounting provider**, select **RADIUS Accounting** and click **Configure**.
+
+    ![RADIUS setup](./media/radius-setup.png)
+
+4.	Type the name of the closest ATA Gateway or ATA Lightweight Gateway, and make sure the default port, 1813, is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You will need to fill it out later in your ATA Configuration.
+
+5.	In the **Add RADIUS Server** window, check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
+ 
+     ![VPN setup](./media/vpn-set-accounting.png)
+     
 ### Configuring VPN
 
 ATA collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect abnormal VPN connections.
 
 To configure VPN data in ATA:
 
-1. Go to **Configuration** and then click the  **VPN** tab.
+1.	In the ATA console, open the ATA Configuration page and go to **VPN**.
+ 
+      ![ATA config menu](./media/config-menu.png)
 
-2. Enter the **Account shared secret** of your RADIUS server. To get the shared secret, refer to your VPN documentation.
+2.	Turn **Radius Accounting** on, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
+ 
 
- ![Configure ATA VPN](media/vpn.png)
+     ![Configure ATA VPN](media/vpn.png)
 
-3.	Once this is enabled, all ATA Gateways and Lightweight Gateways listen on port 1813 for RADIUS accounting events. 
 
-4.	The VPN's RADIUS accounting events should be forwarded to any ATA Gateway or ATA Lightweight Gateway after this is configured.
+After this is enabled, all ATA Gateways and Lightweight Gateways listen on port 1813 for RADIUS accounting events. 
 
-5.	After the ATA Gateway receives the VPN events and sends them to the ATA Center for processing, the ATA Center needs Internet connectivity for HTTPS port 443 to be able to resolve the external IP addresses in the VPN events to their geolocation.
+Your setup is complete, and you will now see VPN activity in the users' profile page:
+ 
+   ![VPN setup](./media/vpn-user.png)
 
-The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+After the ATA Gateway receives the VPN events and sends them to the ATA Center for processing, the ATA Center needs Internet connectivity for HTTPS port 443 to be able to resolve the external IP addresses in the VPN events to their geolocation.
 
-The supported VPN vendors are:
-- Microsoft
-- F5
-- Check Point
-- Cisco ASA
 
 
 
