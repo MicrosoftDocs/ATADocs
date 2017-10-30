@@ -88,7 +88,7 @@ To configure VPN data in ATA:
 2.	Turn **Radius Accounting** on, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
  
 
-     ![Configure ATA VPN](media/vpn.png)
+     ![Configure ATA VPN](./media/vpn.png)
 
 
 After this is enabled, all ATA Gateways and Lightweight Gateways listen on port 1813 for RADIUS accounting events. 
