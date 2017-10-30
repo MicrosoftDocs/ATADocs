@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -74,6 +74,6 @@ ATA Gateways again. When prompted for a certificate, provide the certificate you
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection#configuring-windows-event-forwarding)
+- [Configure event collection](install-ata-step6.md)
+- [Configuring Windows event forwarding](configure-event-collection.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
