@@ -59,7 +59,7 @@ In the example below, we use Microsoft Routing and Remote Access Server (RRAS) t
 
 If you’re using a 3rd party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
 
-## Step 1: Configure RADIUS Accounting on the VPN system
+## Configure RADIUS Accounting on the VPN system
 
 Perform the following on your RRAS server.
  
@@ -75,7 +75,7 @@ Perform the following on your RRAS server.
  
      ![VPN setup](./media/vpn-set-accounting.png)
      
-### Configuring VPN
+### Configure VPN in ATA
 
 ATA collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect abnormal VPN connections.
 
@@ -83,12 +83,12 @@ To configure VPN data in ATA:
 
 1.	In the ATA console, open the ATA Configuration page and go to **VPN**.
  
-      ![ATA config menu](./media/config-menu.png)
+  ![ATA config menu](./media/config-menu.png)
 
 2.	Turn **Radius Accounting** on, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
  
 
-     ![Configure ATA VPN](./media/vpn.png)
+  ![Configure ATA VPN](./media/vpn.png)
 
 
 After this is enabled, all ATA Gateways and Lightweight Gateways listen on port 1813 for RADIUS accounting events. 
