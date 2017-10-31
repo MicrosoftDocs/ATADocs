@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 10/31/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -69,9 +69,7 @@ Perform the following on your RRAS server.
 
     ![RADIUS setup](./media/radius-setup.png)
 
-4.	Type the name of the closest ATA Gateway or ATA Lightweight Gateway, and make sure the default port, 1813, is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You will need to fill it out later in your ATA Configuration.
-
-5.	In the **Add RADIUS Server** window, check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
+4.	In the **Add RADIUS Server** window, type the **Server name** of the closest ATA Gateway or ATA Lightweight Gateway. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You will need to fill it out later in your ATA Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
  
      ![VPN setup](./media/vpn-set-accounting.png)
      
