@@ -124,6 +124,8 @@ The events can be found here:
 
 2023 – Brute force suspicious activity 
 
+2024 - Abnormal sensitive group membership change suspicious activity  
+
 ## ATA auditing events
 
 3001 – Change to ATA configuration 
