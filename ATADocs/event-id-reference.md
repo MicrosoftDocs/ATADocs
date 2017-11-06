@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -121,8 +121,6 @@ The events can be found here:
 2021 – SAMR reconnaissance suspicious activity 
 
 2022 – Golden ticket suspicious activity 
-
-2023 – Abnormal sensitive group membership change suspicious activity 
 
 2023 – Brute force suspicious activity 
 
