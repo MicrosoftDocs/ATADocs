@@ -82,7 +82,7 @@ The events can be found here:
 
 1022 – ATA Center external IP address resolution failure health alert 
  
-## ATA suspicious ctivity events
+## ATA suspicious activity events
 
 2001 – Abnormal behavior suspicious activity 
 
@@ -92,7 +92,7 @@ The events can be found here:
 
 2004 – LDAP brute force suspicious activity 
 
-2005 – Computer preauthentication failed suspicious activity 
+2005 – Computer pre-authentication failed suspicious activity 
 
 2006 – Directory services replication suspicious activity 
 
@@ -106,7 +106,7 @@ The events can be found here:
 
 2014 – Honeytoken activity suspicious activity 
 
-2015 – LDAP cleartext password suspicious activity 
+2015 – LDAP clear text password suspicious activity 
 
 2016 – Massive object deletion suspicious activity 
 
