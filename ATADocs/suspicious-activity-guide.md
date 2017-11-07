@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -41,7 +41,7 @@ Following proper investigation, any suspicious activity can be classified as:
 
 For more information on how to work with ATA alerts, see [Working with suspicious activities](working-with-suspicious-activities.md).
 
-For questions or feedback, contact us at [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
+For questions or feedback, contact the ATA team at [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
 
 ## Abnormal Sensitive Group Modification
 
@@ -54,7 +54,7 @@ For a definition of sensitive groups in ATA, see [Working with the ATA console](
 
 
 The detection relies on [events audited on domain controllers](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-Use the tool referenced in [ATA Auditing (AuditPol, Advanced Audit Settings Enforcement, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog) to make sure your domain controllers audit the needed events.
+To make sure your domain controllers audit the needed events, use the tool referenced in [ATA Auditing (AuditPol, Advanced Audit Settings Enforcement, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog).
 
 **Investigation**
 
@@ -116,7 +116,7 @@ There are three detection types:
 
 1.  Skeleton Key – is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to encipher the user's passwords on the domain  controller. In this detection, the encryption method of the KRB_ERR message from the source computer was downgraded compared to the previously learned behavior.
 
-2.  Golden Ticket – In a [Golden Ticket](#golden-ticket) alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. Note that this is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the above service request detected by ATA.
+2.  Golden Ticket – In a [Golden Ticket](#golden-ticket) alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the previous service request detected by ATA.
 
 3.  Overpass-the-Hash – The AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
 
@@ -139,7 +139,7 @@ First check the description of the alert, to see which of the above three detect
 2.  Golden Ticket – Follow the instructions of the [Golden Ticket](#golden-ticket) suspicious activities.   
     Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
 
-3.  Overpass-the-Hash – If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys
+3.  Overpass-the-Hash – If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys
     tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Golden Ticket<a name="golden-ticket"></a>
@@ -148,7 +148,7 @@ First check the description of the alert, to see which of the above three detect
 
 Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve persistency in the network.
 
-In this detection, an alert will be triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
+In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
 security policy.
 
 **Investigation**
@@ -162,7 +162,7 @@ security policy.
 **Remediation**
 
 Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so.  
+tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so.  
 Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Honeytoken activity
@@ -201,10 +201,10 @@ Was the hash used from a computer that the targeted user owns or regularly uses?
 
 **Remediation**
 
-1. If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they
+1. If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they
 expire. 
 
-2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See
+2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See
 the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Identity theft using Pass-the-Ticket attack
@@ -221,9 +221,9 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Remediation**
 
-1. If the involved account is not sensitive, then reset the password of that account. This will prevent the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire.  
+1. If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire.  
 
-2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice will invalidate all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
+2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Malicious Data Protection Private Information Request
@@ -232,7 +232,7 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 
 The Data Protection API (DPAPI) is used by Windows to securely protect passwords saved by browsers, encrypted files, and other sensitive data. Domain controllers hold a backup master key that can be used to decrypt all secrets encrypted with
 DPAPI on domain-joined Windows machines. Attackers can use that master key to decrypt any secrets protected by DPAPI on all domain-joined machines.
-In this detection, an alert will be triggered when the DPAPI is used to retrieve the backup master key.
+In this detection, an alert is triggered when the DPAPI is used to retrieve the backup master key.
 
 **Investigation**
 
@@ -253,7 +253,7 @@ To use DPAPI, an attacker needs domain admin rights. Implement [Pass the hash r
 
 Active Directory replication is the process by which changes that are made on one domain controller are synchronized with all other domain controllers. Given necessary permissions, attackers can initiate a replication request, allowing them to retrieve the data stored in Active Directory, including password hashes.
 
-In this detection, an alert will be triggered when a replication request is initiated from a computer that is not a domain controller.
+In this detection, an alert is triggered when a replication request is initiated from a computer that is not a domain controller.
 
 **Investigation**
 
@@ -278,7 +278,7 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepla
 
 In some scenarios, attackers perform a denial of service (DoS) rather than just stealing information. Deleting a large number of accounts is one DoS technique.
 
-In this detection, an alert will be triggered when more than 5% of all accounts are deleted. The detection requires read access to the deleted object container.  
+In this detection, an alert is triggered when more than 5% of all accounts are deleted. The detection requires read access to the deleted object container.  
 For information about configuring read-only permissions on the deleted object container, see **Changing permissions on a deleted object container** in [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 **Investigation**
@@ -368,7 +368,7 @@ Modifying zone transfers is one task among a checklist that should be addressed 
 
 Server Message Block (SMB) enumeration enables attackers to get information about where users recently logged on. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
 
-In this detection, an alert will be triggered when an SMB session enumeration is performed against a domain controller, because this should not happen.
+In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller, because this should not happen.
 
 **Investigation**
 
@@ -416,7 +416,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **Description**
 
-Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account will trigger the alert, while for non-sensitive accounts the alert is triggered if five or more different accounts  send clear text passwords from the same source computer. 
+Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account triggers the alert, while for non-sensitive accounts the alert is triggered if five or more different accounts  send clear text passwords from the same source computer. 
 
 **Investigation**
 
@@ -434,7 +434,7 @@ Verify the configuration on the source computers and make sure not to use LDAP s
 
 In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert will be triggered when many authentication failures occurred, this can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options.
+In this detection, an alert is triggered when many authentication failures occurred, this can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options.
 
 **Investigation**
 
@@ -452,7 +452,7 @@ In this detection, an alert will be triggered when many authentication failures 
 
 **Description**
 
-ATA learns the entity behavior for users, computers, and resources over a sliding three week period. The behavior model is based on the following activities: the machines the entities logged in to, the resources the entity requested access to, and the time these operations took place. ATA sends an alert when there is a deviation from the entity’s behavior based on machine learning algorithms. 
+ATA learns the entity behavior for users, computers, and resources over a sliding three-week period. The behavior model is based on the following activities: the machines the entities logged in to, the resources the entity requested access to, and the time these operations took place. ATA sends an alert when there is a deviation from the entity’s behavior based on machine learning algorithms. 
 
 **Investigation**
 
@@ -471,7 +471,7 @@ Depending on what caused this abnormal behavior to occur, different actions shou
 
 **Description**
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is generally accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
 
 **Investigation**
 

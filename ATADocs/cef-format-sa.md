@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -42,7 +42,7 @@ The following fields and their values are forwarded to your SIEM:
 -	shost – the source machine for this alert
 -	outcome – for alerts that there is a success/failure of the activity performed in that alert  
 -	msg – the description for the alert
--	cnt – for alerts that has a count of times that alert happened (for example brute force that has an amount of guessed passwords)
+-	cnt – for alerts that have a count of times that alert happened (for example brute force that has an amount of guessed passwords)
 -	app – the protocol used in this alert
 -	externalId – the event ID ATA writes to the event log that corresponds to this alert
 -	cs#label & cs# – these are the customer strings that CEF allows to use the cs#label is the name of the new field and cs# is the value, for example:

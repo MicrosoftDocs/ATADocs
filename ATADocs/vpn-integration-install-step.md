@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -38,7 +38,7 @@ ms.suite: ems
 
 ## Step 7. Integrate VPN
 
-Microsoft Advanced Threat Analytics (ATA) version 1.8 can collect accounting information from VPN solutions. When configured, the user's profile page will include information from the VPN connections, such as the IP addresses and locations where connections originated. This will complement the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+Microsoft Advanced Threat Analytics (ATA) version 1.8 can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
 
 ATA integrates with your VPN solution by listening to RADIUS accounting events forwarded to the ATA Gateways. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
 
@@ -49,19 +49,19 @@ ATA integrates with your VPN solution by listening to RADIUS accounting events f
 
 ## Prerequisites
 
-To enable VPN integration make sure you set the following:
+To enable VPN integration, make sure you set the following parameters:
 
 -	Open port UDP 1813 on your ATA Gateways and ATA Lightweight Gateways.
 
 -	Connect the ATA Center to the Internet so that it can query the location of incoming IP addresses.
 
-In the example below, we use Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
+The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 
-If you’re using a 3rd party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
+If you’re using a third party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
 
 ## Configure RADIUS Accounting on the VPN system
 
-Perform the following on your RRAS server.
+Perform the following steps on your RRAS server.
  
 1.	Open the Routing and Remote Access console.
 2.	Right-click the server name and click **Properties**.
@@ -69,7 +69,7 @@ Perform the following on your RRAS server.
 
     ![RADIUS setup](./media/radius-setup.png)
 
-4.	In the **Add RADIUS Server** window, type the **Server name** of the closest ATA Gateway or ATA Lightweight Gateway. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You will need to fill it out later in your ATA Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
+4.	In the **Add RADIUS Server** window, type the **Server name** of the closest ATA Gateway or ATA Lightweight Gateway. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You need to fill it out later in your ATA Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
  
      ![VPN setup](./media/vpn-set-accounting.png)
      
@@ -83,7 +83,7 @@ To configure VPN data in ATA:
  
   ![ATA config menu](./media/config-menu.png)
 
-2.	Turn **Radius Accounting** on, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
+2.	Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
  
 
   ![Configure ATA VPN](./media/vpn.png)
@@ -91,7 +91,7 @@ To configure VPN data in ATA:
 
 After this is enabled, all ATA Gateways and Lightweight Gateways listen on port 1813 for RADIUS accounting events. 
 
-Your setup is complete, and you will now see VPN activity in the users' profile page:
+Your setup is complete, and you can now see VPN activity in the users' profile page:
  
    ![VPN setup](./media/vpn-user.png)
 

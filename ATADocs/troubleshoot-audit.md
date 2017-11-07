@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -43,7 +43,7 @@ The ATA Gateway audit log contains:
 
 (All ATA Gateway configuration changes are configured on the ATA Center but are still audited on the Gateway machine itself.)
 
-*The configuration change audit log will contain both the previous configuration and the new configuration.
+*The configuration change audit log contains both the previous configuration and the new configuration.
 
 
 ## See Also

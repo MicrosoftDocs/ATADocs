@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -93,7 +93,7 @@ To understand why an account is sensitive you can review its group membership to
 ## How do I monitor a virtual domain controller using ATA?
 Most virtual domain controllers can be covered by the ATA Lightweight Gateway, to determine whether the ATA Lightweight Gateway is appropriate for your environment, see [ATA Capacity Planning](ata-capacity-planning.md).
 
-If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateways as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following:
+If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateway as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
 -   When the virtual domain controller moves to another host, preconfigure the ATA Gateway in that host to receive the traffic from the recently moved virtual domain controller.
 -   Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it is moved, the ATA Gateway moves with it.
@@ -111,15 +111,15 @@ ATA detects known malicious attacks and techniques, security issues, and risks.
 For the full list of ATA detections, see [What detections does ATA perform?](ata-threats.md).
 
 ## What kind of storage do I need for ATA?
-We recommend fast storage (7200 RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
+We recommend fast storage (7200-RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
 
 ## How many NICs does the ATA Gateway require?
-The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the ATA Center<br>2. A NIC that will be used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the ATA Lightweight Gateway, which natively uses all of the network adapters that the domain controller uses.
+The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the ATA Center<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the ATA Lightweight Gateway, which natively uses all of the network adapters that the domain controller uses.
 
 ## What kind of integration does ATA have with SIEMs?
 ATA has a bi-directional integration with SIEMs as follows:
 
-1. ATA can be configured to send a Syslog alert in the event of a suspicious activity to any SIEM server using the CEF format.
+1. ATA can be configured to send a Syslog alert, to any SIEM server using the CEF format, when a suspicious activity is detected.
 2. ATA can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-ata-step6.md).
 
 ## Can ATA monitor domain controllers virtualized on your IaaS solution?
@@ -134,7 +134,7 @@ This solution is currently a standalone offering—it is not a part of Azure Act
 ## Do you have to write your own rules and create a threshold/baseline?
 With Microsoft Advanced Threat Analytics, there is no need to create rules, thresholds, or baselines and then fine-tune. ATA analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, ATA starts to detect behavioral suspicious activities. On the other hand, ATA will start detecting known malicious attacks and security issues immediately after deployment.
 
-## If you are already breached, will Microsoft Advanced Threat Analytics be able to identify abnormal behavior?
+## If you are already breached, can Microsoft Advanced Threat Analytics identify abnormal behavior?
 Yes, even when ATA is installed after you have been breached, ATA can still detect suspicious activities of the hacker. ATA is not only looking at the user’s behavior but also against the other users in the organization security map. During the initial analysis time, if the attacker’s behavior is abnormal, then it is identified as an “outlier” and ATA keeps reporting on the abnormal behavior. Additionally ATA can detect the suspicious activity if the hacker attempts to steal another users credentials, such as Pass-the-Ticket, or attempts to perform a remote execution on one of the domain controllers.
 
 ## Does this only leverage traffic from Active Directory?
@@ -147,13 +147,13 @@ Also known as SPAN (Switched Port Analyzer), port mirroring is a method of monit
 No. ATA monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
 
 ## Does ATA monitor computer accounts as well as user accounts?
-Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities ATA monitors all computer accounts behavior and all other entities in the environment.
+Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, ATA monitors all computer accounts behavior and all other entities in the environment.
 
 ## Can ATA support multi-domain and multi-forest?
 Microsoft Advanced Threat Analytics supports multi-domain environments within the same forest boundary. Multiple forests require an ATA deployment for each forest.
 
 ## Can you see the overall health of the deployment?
-Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you will be alerted as they occur.
+Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur.
 
 
 ## See Also

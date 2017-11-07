@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -40,9 +40,9 @@ ATA enables the exclusion of specific IP addresses or users from a number of det
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
 
-ATA also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account will trigger an alert.
+ATA also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account triggers an alert.
 
-To configure the above, follow these steps:
+To configure this, follow these steps:
 
 1.  From the ATA Console, click on the settings icon and select **Configuration**.
 
@@ -50,7 +50,7 @@ To configure the above, follow these steps:
 
 2.  Under **Detection**, click **General**.
 
-2. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and will automatically display entities in your network.
+2. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network.
 
    ![Honeytoken](media/honeytoken.png)
 
@@ -65,7 +65,7 @@ Congratulations, you have successfully deployed Microsoft Advanced Threat Analyt
 
 Check the attack time line to view detected suspicious activities and search for users or computers and view their profiles.
 
-ATA will start scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, will not be available until ATA has had time to build behavioral profiles (minimum of three weeks).
+ATA starts scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, is not available until ATA has had time to build behavioral profiles (minimum of three weeks).
 
 To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 
