@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -32,24 +32,25 @@ ms.suite: ems
 
 # Troubleshooting ATA Center service startup
 
-If your ATA Center does not start, perfrom the following troubleshooting procedure:
+If your ATA Center does not start, perform the following troubleshooting procedure:
 
 1.	Run the following Windows PowerShell command:
-    Get-Service Pla | Select Status
+    `Get-Service Pla | Select Status`
 to make sure the Performance counter service is running. If it's not, then it's a platform issue, and you need to make sure you get this service running again.
 2.	If it was running, Try to restart it, and see if it resolves the issue:
-Restart-Service Pla
+    `Restart-Service Pla`
 3.	Try to create a new data collector manually (any will suffice, even just collect machine CPU for example).
-If it can start, platform is probably OK, if not, it is still a platform issue.
+If it can start, the platform is probably fine. If not, it is still a platform issue.
 
 4.	Try to manually recreate the ATA data collector, using an elevated prompt, running these commands:
-sc stop ATACenter
-logman stop "Microsoft ATA Center"
-logman export "Microsoft ATA Center" -xml c:\center.xml
-logman delete "Microsoft ATA Center"
-logman import "Microsoft ATA Center" -xml c:\center.xml
-logman start "Microsoft ATA Center"
-sc start ATACenter
+
+        sc stop ATACenter
+        logman stop "Microsoft ATA Center"
+        logman export "Microsoft ATA Center" -xml c:\center.xml
+        logman delete "Microsoft ATA Center"
+        logman import "Microsoft ATA Center" -xml c:\center.xml
+        logman start "Microsoft ATA Center"
+        sc start ATACenter
 
 
 

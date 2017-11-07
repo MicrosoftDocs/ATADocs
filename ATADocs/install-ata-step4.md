@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -38,7 +38,7 @@ ms.suite: ems
 
 ## Step 4. Install the ATA Gateway
 
-Before installing the ATA Gateway on a dedicated server, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. See [Validate port mirroring](validate-port-mirroring.md) for more information.
+Before installing the ATA Gateway on a dedicated server, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. For more information, see [Validate port mirroring](validate-port-mirroring.md).
 
 
 > [!IMPORTANT]
@@ -50,32 +50,32 @@ Perform the following steps on the ATA Gateway server.
 
 1.  Extract the files from the zip file. 
 > [!NOTE] 
-> Installing directly from the zip file will fail.
+> Installing directly from the zip file fails.
 
 2.  Run **Microsoft ATA Gateway Setup.exe** and follow the setup wizard.
 
 3.  On the **Welcome** page, select your language and click **Next**.
 
-4.  The installation wizard will automatically check if the server is a domain controller or a dedicated server. If it is a domain controller, the ATA Lightweight Gateway will be installed, if it is a dedicated server, the ATA Gateway will be installed. 
+4.  The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it is a domain controller, the ATA Lightweight Gateway is installed, if it is a dedicated server, the ATA Gateway is installed. 
     
-    For example, in the case of an ATA Gateway, the following screen will be displayed to let you know that an ATA Gateway will be installed on your dedicated server:
+    For example, for an ATA Gateway, the following screen is displayed to let you know that an ATA Gateway will be installed on your dedicated server:
     
     ![ATA Gateway installation](media/ata-gw-install.png)
     Click **Next**.
 
     > [!NOTE] 
-    > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you will receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of ATA in a small lab test environment in which you won't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](ata-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
+    > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of ATA in a small lab test environment in which you don't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](ata-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
 4.  Under **Configure the Gateway**, enter the following information based on your environment:
 
     ![ATA gateway configuration image](media/ata-gw-configure.png)
 
     > [!NOTE]
-    > When you deploy the ATA Gateway, you will not have to provide credentials. If the ATA Gateway installation fails to retreive your credentials using single sign-on (for example, this may happen if the ATA Center is not in the domain, if the ATA Gateway isn't in the domain, you do not have ATA admin credentials), you will be prompted to provide credentials, as in the following screen. 
+    > When you deploy the ATA Gateway, you do not have to provide credentials. If the ATA Gateway installation fails to retrieve your credentials using single sign-on (for example, this may happen if the ATA Center is not in the domain, if the ATA Gateway isn't in the domain, you do not have ATA admin credentials), you are prompted to provide credentials, as in the following screen: 
 
-  ![ATA gateway provide credentials](media/ata-install-credentials.png)
+  ![Provide ATA gateway credentials](media/ata-install-credentials.png)
 
-   - Installation Path: This is the location where the ATA Gateway will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Leave the default value.
+   - Installation Path: This is the location where the ATA Gateway is installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Leave the default value.
     
 5. Click **Install**. The following components are installed and configured during the installation of the ATA Gateway:
 

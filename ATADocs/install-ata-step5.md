@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -54,29 +54,29 @@ After the ATA Gateway was installed, perform the following steps to configure th
 
       The following information applies to the servers you enter in the **Domain Controllers** list:
       - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-      - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.
+      - At least one domain controller in the list should be a global catalog. This enables ATA to resolve computer and user objects in other domains in the forest.
 
   - **Capture Network adapters** (required):
-  - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These will receive the mirrored domain controller traffic.
+  - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These receive the mirrored domain controller traffic.
   - For an ATA Lightweight Gateway, this should be all the network adapters that are used for communication with other computers in your organization.
 
 
-  - **Domain synchronizer candidate**: Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource intensive. By default, only ATA Gateways are set as Domain synchronizer candidates.
-   It is recommended to disable any remote site ATA Gateways from being Domain synchronizer candidates.
+  - **Domain synchronizer candidate**: Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only ATA Gateways are set as Domain synchronizer candidates.
+   It is recommended that you disable any remote site ATA Gateways from being Domain synchronizer candidates.
    If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [ATA architecture](ata-architecture.md#ata-lightweight-gateway-features).
 
   > [!NOTE] 
   > It will take a few minutes for the ATA Gateway service to start the first time after installation because it builds the cache of the network capture parsers.
-  > The configuration changes will be applied to the ATA Gateway on the next scheduled sync between the ATA Gateway and the ATA Center.
+  > The configuration changes are applied to the ATA Gateway on the next scheduled sync between the ATA Gateway and the ATA Center.
 
 3. Optionally, you can set the [Syslog listener and Windows Event Forwarding Collection](configure-event-collection.md). 
-4. Enable **Update ATA Gateway automatically** so that in upcoming version releases when you update the ATA Center, this ATA Gateway will be automatically updated.
+4. Enable **Update ATA Gateway automatically** so that in upcoming version releases when you update the ATA Center, this ATA Gateway is automatically updated.
 
 5. Click **Save**.
 
 
 ## Validate installations
-To validate that the ATA Gateway has been successfully deployed, check the following:
+To validate that the ATA Gateway has been successfully deployed, check the following steps:
 
 1.  Check that the service named **Microsoft Advanced Threat Analytics Gateway** is running. After you save the ATA Gateway settings, it might take a few minutes for the service to start.
 

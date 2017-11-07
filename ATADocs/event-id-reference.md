@@ -72,7 +72,7 @@ The events can be found here:
 
 1017 – Center not receiving traffic health alert 
 
-1018 – ATA Gateway start failure health alert 
+1018 – ATA Gateway start-failure health alert 
 
 1019 – ATA Gateway low memory health alert 
 
@@ -136,7 +136,7 @@ The events can be found here:
 
 3004 - ATA license activated
 
-3005 – Login to ATA console
+3005 – Log in to ATA console
 
 3006 – Manual change to health activity status 
 

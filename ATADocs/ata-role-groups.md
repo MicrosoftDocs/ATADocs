@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -33,14 +33,14 @@ ms.suite: ems
 
 # ATA Role Groups
 
-Role groups enables access management for ATA. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and ATA role authorization, and helps you get up and running with role groups in ATA.
+Role groups enable access management for ATA. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and ATA role authorization, and helps you get up and running with role groups in ATA.
 
 > [!NOTE]
 > Any local administrator on the ATA Center is automatically a Microsoft Advanced Threat Analytics Administrator.
 
 ## Types of ATA Role Groups 
 
-ATA introduces 3 types of Role group: ATA Administrators, ATA Users and ATA Viewers. The following table describes the type of access in ATA available per role. Depending on which role you assign, various screens and menu options in ATA will not be available, as follows:
+ATA introduces three types of Role group: ATA Administrators, ATA Users, and ATA Viewers. The following table describes the type of access in ATA available per role. Depending on which role you assign, various screens and menu options in ATA are not available, as follows:
 
 |Activity |Microsoft Advanced Threat Analytics Administrators|Microsoft Advanced Threat Analytics Users|Microsoft Advanced Threat Analytics Viewers|
 |----|----|----|----|
@@ -57,7 +57,7 @@ ATA introduces 3 types of Role group: ATA Administrators, ATA Users and ATA View
 |View alerts and suspicious activities|Available|Available|Available|
 
 
-When users try to access a page that is not available for their role group, they will be redirected to the ATA unauthorized page. 
+When users try to access a page that is not available for their role group, they are redirected to the ATA unauthorized page. 
 
 ## Add \ Remove users - ATA Role Groups 
 

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -34,7 +34,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
 
 ## How ATA works
 
-ATA leverages a proprietary network parsing engine to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM and others) for authentication, authorization and information gathering. This information is collected by ATA via either:
+ATA leverages a proprietary network parsing engine to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM, and others) for authentication, authorization, and information gathering. This information is collected by ATA via either:
 
 - 	Port mirroring from Domain Controllers and DNS servers to the ATA Gateway and/or
 - 	Deploying an ATA Lightweight Gateway (LGW) directly on Domain Controllers
@@ -47,18 +47,18 @@ ATA can receive events and logs from:
 -   Directly from the Windows Event Collector (for the Lightweight Gateway)
 
 
-For more information on ATA architecture see [ATA Architecture](ata-architecture.md).
+For more information on ATA architecture, see [ATA Architecture](ata-architecture.md).
 
 ## What does ATA do?
 
 ATA technology detects multiple suspicious activities, focusing on several phases of the cyber-attack kill chain including:
 
-- 	Reconnaissance, during which attackers are gathering information on how the environment is built, what are the different assets and entities which exist and are generally building their plan for the next phases of the attack.
+- 	Reconnaissance, during which attackers gather information on how the environment is built, what the different assets are, and which entities exist. They generally building their plan for the next phases of the attack.
 - 	Lateral movement cycle, during which an attacker invests time and effort in spreading their attack surface inside your network.
-- 	Domain dominance (persistence), during which an attacker captures the information allowing them to resume their campaign using various set of entry points, credentials and techniques. 
+- 	Domain dominance (persistence), during which an attacker captures the information allowing them to resume their campaign using various sets of entry points, credentials, and techniques. 
 
 These phases of a cyber attack are similar and predictable, no matter what type of company is under attack or what type of information is being targeted.
-ATA searches for three main types of attacks: Malicious attacks, abnormal behavior and security issues and risks.
+ATA searches for three main types of attacks: Malicious attacks, abnormal behavior, and security issues and risks.
 
 **Malicious attacks** are detected deterministically, by looking for the full list of known attack types including:
 
@@ -72,7 +72,8 @@ ATA searches for three main types of attacks: Malicious attacks, abnormal behavi
 - 	Brute Force
 - 	Remote execution
 
-For a complete list of the detections and their descriptions please see [What Suspicious Activities Can ATA detect?](ata-threats.md)
+For a complete list of the detections and their descriptions, see [What Suspicious Activities Can ATA detect?](ata-threats.md). 
+
 ATA detects these suspicious activities and surfaces the information in the ATA Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that ATA suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
  ![sample ATA screen pass-the-ticket](media/pass_the_ticket_sa.png)
@@ -86,7 +87,7 @@ ATA detects these suspicious activities and surfaces the information in the ATA 
 -   Modification of sensitive groups
 
 
-You can view suspicious activities of this type in the ATA Dashboard. In the following example, ATA alerts you when a user accesses 4 computers that are not ordinarily accessed by this user, which could be a cause for alarm.
+You can view suspicious activities of this type in the ATA Dashboard. In the following example, ATA alerts you when a user accesses four computers that are not ordinarily accessed by this user, which could be a cause for alarm.
 
  ![sample ATA screen abnormal behavior](media/abnormal-behavior-sa.png) 
 
@@ -103,9 +104,9 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
 ## Known issues
 
-- If you update to ATA 1.7 and immediately to ATA 1.8, without first updating the ATA Gateways, you will not be able to migrate to ATA 1.8. It is necessary to first update all of the Gateways to version 1.7.1 or 1.7.2 before updating the ATA Center to version 1.8.
+- If you update to ATA 1.7 and immediately to ATA 1.8, without first updating the ATA Gateways, you cannot migrate to ATA 1.8. It is necessary to first update all of the Gateways to version 1.7.1 or 1.7.2 before updating the ATA Center to version 1.8.
 
-- If you select the option to perform a full migration, it may take a very long time, depending on the database size. When you are selecting your migration options, the estimated time is displayed - please make note of this before you decide which option to select. 
+- If you select the option to perform a full migration, it may take a very long time, depending on the database size. When you are selecting your migration options, the estimated time is displayed - make note of this before you decide which option to select. 
 
 
 ## What's next?

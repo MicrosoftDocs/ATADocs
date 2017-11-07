@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -102,7 +102,7 @@ Consider the following criteria when deciding how many ATA Centers to deploy on 
 
 -   One ATA Center can monitor a single Active Directory forest. If you have more than one Active Directory forest, you need a minimum of one ATA Center per Active Directory forest.
 
--    In very large Active Directory deployments, a single ATA Center might not be able to handle all the traffic of all your domain controllers. In this case, multiple ATA Centers are required. The number of ATA Centers should be dictated by [ATA capacity planning](ata-capacity-planning.md).
+-    In large Active Directory deployments, a single ATA Center might not be able to handle all the traffic of all your domain controllers. In this case, multiple ATA Centers are required. The number of ATA Centers should be dictated by [ATA capacity planning](ata-capacity-planning.md).
 
 ## ATA Gateway and ATA Lightweight Gateway
 
@@ -140,16 +140,16 @@ The following features work differently depending on whether you are running an 
 
 -	**Domain synchronizer candidate**<br>
 The domain synchronizer gateway is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One gateway is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
-If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, ATA will not be able to proactively synchronize entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
-<br>If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results will be displayed.<br><br>
+If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, ATA is able to proactively synchronize entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
+<br>If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.<br><br>
 By default, all ATA Gateways are synchronizer candidates.<br><br>
 Because all ATA Lightweight Gateways are more likely to be deployed in branch sites and on small domain controllers, they are not synchronizer candidates by default.
 
 
 -	**Resource limitations**<br>
-The ATA Lightweight Gateway includes a monitoring component which evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the ATA Lightweight Gateway process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
+The ATA Lightweight Gateway includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the ATA Lightweight Gateway process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
 No matter what happens on the domain controller, this process always frees up resources to make sure the domain controller's core functionality is not affected.<br><br>
-If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" will appear in the Health page.
+If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Health page.
 
 The following table provides an example of a domain controller with enough compute resource available to allow for a larger quota then is currently needed, so that all traffic is monitored:
 
@@ -168,14 +168,13 @@ If Active Directory needs more compute, the quota needed by the ATA Lightweight 
 |60%|15%|10%|15%|Yes|
 
 
-
 ## Your network components
-In order to work with ATA, make sure of the following:
+In order to work with ATA, make sure to check that the following components are set up.
 
 ### Port mirroring
-If you are using ATA Gateways, you have to set up port mirroring for the domain controllers that will be monitored and set the ATA Gateway as the destination using the physical or virtual switches. Another option is to use network TAPs. ATA will work if some but not all of your domain controllers are monitored, but detections will be less effective.
+If you are using ATA Gateways, you have to set up port mirroring for the domain controllers that are monitored and set the ATA Gateway as the destination using the physical or virtual switches. Another option is to use network TAPs. ATA works if some but not all of your domain controllers are monitored, but detections are less effective.
 
-While port mirroring mirrors all the domain controller network traffic to the ATA Gateway, only a very small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
+While port mirroring mirrors all the domain controller network traffic to the ATA Gateway, only a small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
 
 Your domain controllers and the ATA Gateways can be physical or virtual, see [Configure port mirroring](configure-port-mirroring.md) for more information.
 
@@ -185,7 +184,7 @@ To enhance ATA detection of Pass-the-Hash, Brute Force, Modification to sensitiv
 
 -   Configuring the ATA Gateway to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
 
--   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows events events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). Note that this only applies to physical ATA Gateways - not to the ATA Lightweight Gateway.
+-   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). This only applies to physical ATA Gateways - not to the ATA Lightweight Gateway.
 
 ## Related Videos
 - [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

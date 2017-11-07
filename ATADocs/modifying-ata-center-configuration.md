@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -33,7 +33,7 @@ ms.suite: ems
 # Modifying the ATA Center configuration
 
 
-After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the the console URL, and the certificate.
+After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the console URL, and the certificate.
 
 ## The ATA Console URL
 
@@ -51,7 +51,7 @@ The URL is used in the following scenarios:
 
 1. Make sure the new URL you want to use resolves to the IP address of the ATA Console.
 
-2. In the ATA settings, under **Center**, enter the new URL. At this point, the ATA Center service will still use the original URL. 
+2. In the ATA settings, under **Center**, enter the new URL. At this point, the ATA Center service still uses the original URL. 
 
  ![Change ATA configuration](media/change-center-config.png)
 
@@ -75,7 +75,7 @@ The URL is used in the following scenarios:
 
 Replace the certificate by following this process:
 
-1. Before the current certificate expires, create a new certificate and make sure it's installed on the ATA Center server. <br></br>It is recommended to choose a certificate from an internal certificate authority, but it is also possible to create a new self-signed certificate. For more information see [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Before the current certificate expires, create a new certificate and make sure it's installed on the ATA Center server. <br></br>It is recommended that you choose a certificate from an internal certificate authority, but it is also possible to create a new self-signed certificate. For more information, see [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. In the ATA settings, under **Center**, select this newly created certificate. At this point, the ATA Center service is still bound to the original certificate. 
 
@@ -83,7 +83,7 @@ Replace the certificate by following this process:
 
 3. Wait for the ATA Gateways to sync. They now have two potential certificates that are valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it does not try the new one.
 
-4. After all the ATA Gateways synced with the updated configuration, activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service binds to the new certificate. ATA Gateways will now use the new certificate to authenticate with the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new certificate for the ATA Center. 
+4. After all the ATA Gateways synced with the updated configuration, activate the new certificate that the ATA Center service is bound to. When you activate the new certificate, the ATA Center service binds to the new certificate. ATA Gateways now use the new certificate to authenticate with the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new certificate for the ATA Center. 
 
 > [!NOTE]
 > -   If an ATA Gateway was offline while you activated the new certificate, and never got the updated configuration, manually update the configuration JSON file on the ATA Gateway.

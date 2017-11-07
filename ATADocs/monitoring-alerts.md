@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -37,16 +37,16 @@ This article describes all the monitoring alerts for each component, listing the
 ### Center running out of disk space
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The free space on the ATA Center machine drive that is used for storing the ATA database is getting low.|This means that the hard drive has less than 200 GB of free space or that there is less than 20% free space, whichever is smaller. When ATA recognizes that the drive is running low on space, it starts to delete old data from the database. If it cannot delete old data because it still needs the data for the detection engine, you will receive this alert. When you receive this alert, ATA stops keeping track of new activities.|Increase the drive size or free up space from that drive.|High|
+|The free space on the ATA Center machine drive that is used for storing the ATA database is getting low.|This means that the hard drive has less than 200 GB of free space or that there is less than 20% free space, whichever is smaller. When ATA recognizes that the drive is running low on space, it starts to delete old data from the database. If it cannot delete old data because it still needs the data for the detection engine, you receive this alert. When you receive this alert, ATA stops keeping track of new activities.|Increase the drive size or free up space from that drive.|High|
 ### Failure sending mail
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|ATA Failed to send an email notification to the specified mail server.|No email messages will be sent from ATA.|Verify the SMTP server configuration.|Low|
+|ATA Failed to send an email notification to the specified mail server.|No email messages are sent from ATA.|Verify the SMTP server configuration.|Low|
 
 ### Center overloaded
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. |The ATA Center will stop analyzing new network traffic and events. This means that the accuracy of the detections and profiles is reduced while this monitoring alert is active.|Make sure that you provided enough resources for the ATA Center. See [ATA capacity planning](ata-capacity-planning.md) for more details on how to properly plan for ATA Center capacity. Investigate the performance of the ATA Center using [Troubleshooting ATA using the performance counters](troubleshooting-ata-using-perf-counters.md).|High|
+|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. |The ATA Center stops analyzing new network traffic and events. This means that the accuracy of the detections and profiles is reduced while this monitoring alert is active.|Make sure that you provided enough resources for the ATA Center. For more details on how to properly plan for ATA Center capacity, see [ATA capacity planning](ata-capacity-planning.md). Investigate the performance of the ATA Center using [Troubleshooting ATA using the performance counters](troubleshooting-ata-using-perf-counters.md).|High|
 
 ### Failure connecting to the SIEM server using Syslog
 |Alert|Description|Resolution|Severity|
@@ -55,37 +55,37 @@ This article describes all the monitoring alerts for each component, listing the
 ### Center certificate is about to expire
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Center certificate will expire in less than 3 weeks.|After the certificate expires: Connectivity from ATA Gateways to ATA Center will fail. The ATA Center process will crash and all ATA functionality will stop.|[Replace the ATA Center certificate](modifying-ata-center-configuration.md)|Medium|
+|The ATA Center certificate will expire in less than 3 weeks.|After the certificate expires: Connectivity from ATA Gateways to ATA Center will fail. The ATA Center process will crash and all ATA functionality will stops.|[Replace the ATA Center certificate](modifying-ata-center-configuration.md)|Medium|
 ### ATA Center certificate expired
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Center certificate expired.|After the certificate expires: Connectivity from the ATA Gateways to the ATA Center will fail. The ATA Center process will crash and all ATA functionality will stop.|[Replace the ATA Center certificate](modifying-ata-center-configuration.md)|High|
+|The ATA Center certificate expired.|After the certificate expires: Connectivity from the ATA Gateways to the ATA Center fails. The ATA Center process crashes and all ATA functionality stops.|[Replace the ATA Center certificate](modifying-ata-center-configuration.md)|High|
 ## ATA Gateway issues
 ### Read-only user password to expire shortly
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the ATA Gateways will stop running and no new data will be collected.|[Change the domain connectivity password](modifying-ata-config-dcpassword.md) and then update the password in the ATA Console.|Medium|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the ATA Gateways stop running and no new data is collected.|[Change the domain connectivity password](modifying-ata-config-dcpassword.md) and then update the password in the ATA Console.|Medium|
 ### Read-only user password expired
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the ATA Gateways will stop running (or will top running soon) and no new data will be collected.|[Change the domain connectivity password](modifying-ata-config-dcpassword.md) and then update the password in the ATA Console.|High|
+|The read-only user password, used to get directory data, expired.|All the ATA Gateways stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-ata-config-dcpassword.md) and then update the password in the ATA Console.|High|
 ### Gateway certificate about to expire
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Gateway certificate will expire in less than 3 weeks.|Connectivity from the specific ATA Gateway to the ATA Center will fail. No data from that ATA Gateway will be sent.|The ATA Gateway certificate should have been renewed automatically. Read the ATA Gateway and ATA Center logs to understand why that Certificate did not renew automatically.|Medium|
+|The ATA Gateway certificate will expire in less than 3 weeks.|Connectivity from the specific ATA Gateway to the ATA Center fails. No data from that ATA Gateway is sent.|The ATA Gateway certificate should have been renewed automatically. Read the ATA Gateway and ATA Center logs to understand why that Certificate did not renew automatically.|Medium|
 
 ### Gateway certificate expired
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Gateway certificate expired.|There is no connectivity from this ATA Gateway to the ATA Center. No data from that ATA Gateway will be sent.|[Uninstall and reinstall the ATA Gateway](install-ata-step3.md).|High|
+|The ATA Gateway certificate expired.|There is no connectivity from this ATA Gateway to the ATA Center. No data from that ATA Gateway is sent.|[Uninstall and reinstall the ATA Gateway](install-ata-step3.md).|High|
 ### Domain synchronizer not assigned
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|No domain synchronizer is assigned to any ATA Gateway. This may happen if there is no ATA Gateway configured as domain synchronizer candidate.|When the domain is not synchronized, changes to entities might cause entity information in ATA to become out of date or missing but will not affect any detection.|Make sure that at least one ATA Gateway is set as a [Domain synchronizer](install-ata-step5.md).|Low|
+|No domain synchronizer is assigned to any ATA Gateway. This may happen if there is no ATA Gateway configured as domain synchronizer candidate.|When the domain is not synchronized, changes to entities might cause entity information in ATA to become out of date or missing but does not affect any detection.|Make sure that at least one ATA Gateway is set as a [Domain synchronizer](install-ata-step5.md).|Low|
 ### All/Some of the capture network adapters on a Gateway are not available
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|All/Some of the selected capture network adapters on the ATA Gateway are disabled or disconnected.|Network traffic for some/all of the domain controllers is no longer captured by the ATA Gateway. This will impact the ability to detect suspicious activities, related to those domain controllers.|Make sure these selected capture network adapters on the ATA Gateway are enabled and connected.|Medium|
+|All/Some of the selected capture network adapters on the ATA Gateway are disabled or disconnected.|Network traffic for some/all of the domain controllers is no longer captured by the ATA Gateway. This impacts the ability to detect suspicious activities, related to those domain controllers.|Make sure these selected capture network adapters on the ATA Gateway are enabled and connected.|Medium|
 ### Some domain controllers are unreachable by a Gateway
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
@@ -93,11 +93,11 @@ This article describes all the monitoring alerts for each component, listing the
 ### All domain controllers are unreachable by a Gateway
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers.|This will impact ATA’s ability to detect suspicious activities related to domain controllers monitored by this ATA Gateway.| Make sure the domain controllers are up and running and that this ATA Gateway can open LDAP connections to them.|Medium|
+|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers.|This impacts ATA’s ability to detect suspicious activities related to domain controllers monitored by this ATA Gateway.| Make sure the domain controllers are up and running and that this ATA Gateway can open LDAP connections to them.|Medium|
 ### Gateway stopped communicating
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|There has been no communication from the ATA Gateway. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the ATA Gateway. This will impact ATA’s ability to detect suspicious activities, since network traffic will not be able to reach the ATA Center.|Check that the port used for the communication between the ATA Gateway and ATA Center service is not blocked by any routers or firewalls.|Medium|
+|There has been no communication from the ATA Gateway. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the ATA Gateway. This impacts ATA’s ability to detect suspicious activities, since network traffic will not be able to reach the ATA Center.|Check that the port used for the communication between the ATA Gateway and ATA Center service is not blocked by any routers or firewalls.|Medium|
 ### No traffic received from domain controller
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
@@ -109,7 +109,7 @@ This article describes all the monitoring alerts for each component, listing the
 ### Some network traffic is not being analyzed
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Gateway is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this ATA Gateway.|Consider [adding additional processors and memory](ata-capacity-planning.md) as required. If this is a standalone ATA Gateway, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information consult your VMware documentation.|Medium|
+|The ATA Gateway is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this ATA Gateway.|Consider [adding additional processors and memory](ata-capacity-planning.md) as required. If this is a standalone ATA Gateway, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, consult your VMware documentation.|Medium|
 
 ### Gateway version outdated
 |Alert|Description|Resolution|Severity|

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -50,9 +50,9 @@ The first time you open the ATA Console, the following screen appears:
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-2. You can click **Test connection** to test connectivity to the domain and check that the credentials supplied provide access. This will only work if the ATA Center has connectivity to the domain. 	
+2. You can click **Test connection** to test connectivity to the domain and check that the credentials supplied provide access. This works if the ATA Center has connectivity to the domain. 	
 
-    After it is saved, the welcome message in the Console will change to the following:
+    After it is saved, the welcome message in the Console will change to the following message:
 ![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. In the Console, click **Download Gateway setup and install the first Gateway** to continue.

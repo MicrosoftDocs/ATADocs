@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -63,13 +63,13 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Note that running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
+-   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
 
--    Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
+-    Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
 -   Optional: A user account of a user who has no network activities. This account is configured as the ATA Honeytoken user. To configure the Honeytoken user, you need the SID of the user account, not the username. For more information, see [Configure IP address exclusions and Honeytoken user](install-ata-step7.md).
 
--   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to further enhance ATA Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens detections. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+-   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to further enhance ATA Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
 
 ## ATA Center requirements
@@ -193,10 +193,10 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
         > [!NOTE]
         > If the ATA Gateway is a member of the domain, this may be configured automatically.
 
--   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
+-   **Capture adapter** - used to capture traffic to and from the domain controllers.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md) for additional information. Typically, you need to work with the networking or virtualization team to configure port mirroring.
+    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. For more information, see [Configure port mirroring](configure-port-mirroring.md). Typically, you need to work with the networking or virtualization team to configure port mirroring.
     > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
@@ -249,7 +249,7 @@ During installation, the .Net Framework 4.6.1 is installed and might cause a reb
 
 ### Server specifications
 
-The ATA Lightweight Gateway requires a minimum of two cores and 6 GB of RAM installed on the domain controller.
+The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 

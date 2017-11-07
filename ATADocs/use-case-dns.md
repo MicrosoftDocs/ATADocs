@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -37,7 +37,7 @@ If ATA detects **Reconnaissance using DNS** on your network and alerts you about
 The **Reconnaissance using DNS** alert indicates that suspicious Domain Name System (DNS) queries are being made from an unusual host to perform reconnaissance on your internal network.
 
 The Domain Name System (DNS) is a service implemented as a hierarchical, distributed database that provides resolution of host names and domain names. The names in a DNS database form a hierarchical tree structure called the domain namespace.
-For an adversary, your DNS contains valuable information for mapping an internal network, including a list of all the servers and often all the clients mapped to their IP addresses. Furthermore, this information is of value because it lists host names which are often descriptive in a given network environment. By retrieving this information, an adversary can better prioritize their efforts on the relevant entities during a campaign. Tools such as [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce), and built-in tools like [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx), provide capabilities for host discovery using DNS reconnaissance.
+For an adversary, your DNS contains valuable information for mapping an internal network, including a list of all the servers and often all the clients mapped to their IP addresses. Furthermore, this information is of value because it lists host names, which are often descriptive in a given network environment. By retrieving this information, an adversary can better prioritize their efforts on the relevant entities during a campaign. Tools such as [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce), and built-in tools like [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx), provide capabilities for host discovery using DNS reconnaissance.
 Detection of reconnaissance using DNS queries from an internal host is a cause for concern and indicative of the possibility of an existing host compromise, a wider network compromise, or the possibility of an insider threat.
 
 ## DNS query types
@@ -63,7 +63,7 @@ The following chart helps determine the investigation steps you should take:
 
 ![Resolving DNS reconnaissance with ATA](./media/dns-recon-diagram.png)
  
-1.	The first step is to identify the machine the alert originates from, as depicted below:
+1.	The first step is to identify the machine the alert originates from, as depicted in the following screen:
  
     ![View DNS reconnaissance suspicious activity in ATA](./media/dns-recon.png)
 2.	Identify what this machine is. Is it a workstation, server, admin workstation, pen-testing station, etc.?
@@ -87,7 +87,7 @@ Microsoft recommends using a professional Incident Response & Recovery team, tha
 
 ## Mitigation
 
-Securing an internal DNS server to prevent reconnaissance using DNS from occurring can be accomplished by disabling or restricting zone transfers only to specified IP addresses. For additional information on restricting zone transfers, see the Windows Server Technet article; [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Restricted zone transfers can further be locked down by [securing zone transfers with IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Modifying Zone Transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Securing an internal DNS server to prevent reconnaissance using DNS from occurring can be accomplished by disabling or restricting zone transfers only to specified IP addresses. For more information on restricting zone transfers, see  [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Restricted zone transfers can further be locked down by [securing zone transfers with IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Modifying Zone Transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 
 

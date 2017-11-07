@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,13 +36,13 @@ This article provides instructions for silently installing ATA.
 
 ATA version 1.8 requires the installation of Microsoft .NET Framework 4.6.1. 
 
-When you install or update ATA, .Net Framework 4.6.1 will be automatically installed as part of the deployment of Microsoft ATA.
+When you install or update ATA, .Net Framework 4.6.1 is automatically installed as part of the deployment of Microsoft ATA.
 
 > [!Note] 
 > The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
-When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server won't restart, so make sure to only run silent installation during a maintenance window.
+When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
 
-To track the progress of the deployment, monitor ATA installer logs which are located in **%AppData%\Local\Temp**.
+To track the progress of the deployment, monitor ATA installer logs, which are located in **%AppData%\Local\Temp**.
 
 
 ## Install the ATA Center
@@ -73,9 +73,9 @@ Use the following command to install the ATA Center:
 |DatabaseDataPath|DatabaseDataPath= "<DBPath>"|No|Sets the path for the ATA Database data folder. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Yes|Sets the IP address of the ATA Center Service|
 |CenterPort|CenterPort=<CenterPort>|Yes|Sets the network port of the ATA Center Service|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the ATA Center Service. This Certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation will generate a self-signed certificate.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the ATA Center Service. This Certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation generates a self-signed certificate.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Yes|Sets the IP address of the ATA Console|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|No|Specifies the certificate thumbprint for the ATA Console. This Certificate is used to validate the identity of the ATA Console website.If not specified, the installation will generate a self-signed certificate|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|No|Specifies the certificate thumbprint for the ATA Console. This Certificate is used to validate the identity of the ATA Console website. If not specified, the installation generates a self-signed certificate|
 
 **Examples**:
 To install the ATA Center with default installation paths and a single IP address:
@@ -180,7 +180,7 @@ Use the following command to silently install the ATA Gateway:
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 
 **Examples**:
-To silently install the ATA Gateway log into the domain joined computer with your ATA admin credentials and you will not need to specify credentials. Otherwise, register it with the ATA Center using the specified credentials:
+To silently install the ATA Gateway, log into the domain joined computer with your ATA admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the ATA Center using the specified credentials:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
