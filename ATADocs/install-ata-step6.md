@@ -43,10 +43,10 @@ To enhance detection capabilities, ATA needs the following Windows events: 4776,
 > [!NOTE]
 > For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events to further enhance detections. It uses event 4776 for NTLM which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
 #### SIEM/Syslog
-For ATA to be able to consume data from a Syslog server, you need to do the following:
+For ATA to be able to consume data from a Syslog server, you need to perform the following steps:
 
 -   Configure your ATA Gateway servers to listen to and accept events forwarded from the SIEM/Syslog server.
 > [!NOTE]
@@ -68,7 +68,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 
     ![Enable syslog listener UDP image](media/ATA-enable-siem-forward-events.png)
 
-2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATA Gateways. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATA Gateways. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
 ATA supports SIEM events in the following formats:  
 
@@ -83,7 +83,7 @@ ATA supports SIEM events in the following formats:
 
     1.  RsaSA constant (must appear).
 
-    2.  The timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). Preferably  in milliseconds accuracy, this is very important.
+    2.  The timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). Preferably in milliseconds accuracy, this is important.
 
     3.  The Windows event ID
 
@@ -114,7 +114,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 
     -   externalId = the Windows event ID
 
-    -   rt = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to us). Preferably  in milliseconds accuracy, this is very important.
+    -   rt = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). Preferably  in milliseconds accuracy, this is important.
 
     -   cat = the Windows event log name
 
@@ -151,7 +151,7 @@ Error Code:         0x0
 
 -   The fields are in key=value format.
 
--   The following keys must exists and have a value:
+-   The following keys must exist and have a value:
 
     -   EventCode = the Windows event ID
 
@@ -159,7 +159,7 @@ Error Code:         0x0
 
     -   SourceName = The Windows event provider name
 
-    -   TimeGenerated = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is very important.
+    -   TimeGenerated = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
 
     -   ComputerName = the source host name
 
@@ -182,7 +182,7 @@ The fields needed are:
 - The DC fully qualified domain name
 - The Windows event ID
 
-TimeGenerated is the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is very important.
+TimeGenerated is the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
 
 Message is the original event text from the Windows event
 

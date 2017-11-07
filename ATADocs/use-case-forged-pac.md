@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -31,11 +31,11 @@ ms.suite: ems
 # Investigating Privilege escalation using forged authorization data attacks
 
 Microsoft constantly improves its security detection capabilities and the ability to provide near-real-time, actionable intelligence to security analysts. Microsoft’s Advanced Threat Analytics (ATA) helps to lead this change. 
-If ATA detects a Privilege escalation using forged authorization data suspicious activity on your network and alerts you about it, this article will help you understand and investigate it.
+If ATA detects a Privilege escalation using forged authorization data suspicious activity on your network and alerts you about it, this article helps you understand and investigate it.
 
 ## What is a Privileged Attribute Certificate (PAC)?
 
-The Privilege Attribute Certificate (PAC) is the Data Structure in the Kerberos Ticket which holds authorization information, including group memberships, security identifiers and user profile information. In an Active Directory domain, this enables authorization data provided by the Domain Controller (DC) to be passed to other member servers and workstations for authentication and authorization purposes. In addition to membership information, the PAC includes additional credential information, profile and policy information, and supporting security metadata. 
+The Privilege Attribute Certificate (PAC) is the Data Structure in the Kerberos Ticket, which holds authorization information, including group memberships, security identifiers, and user profile information. In an Active Directory domain, this enables authorization data provided by the Domain Controller (DC) to be passed to other member servers and workstations for authentication and authorization purposes. In addition to membership information, the PAC includes additional credential information, profile and policy information, and supporting security metadata. 
 
 The PAC Data Structure is used by authentication protocols (protocols that verify identities) to transport authorization information, which controls access to resources.
 
@@ -57,20 +57,20 @@ Security bulletins [MS14-068](https://technet.microsoft.com/library/security/MS1
 A Privilege escalation using forged authorization data attack is an attempt by an attacker to take advantage of PAC vulnerabilities to elevate their privileges in your Active Directory Forest or Domain. To perform this attack, the attacker must:
 -	Have credentials to a domain user.
 -	Have network connectivity to a Domain Controller that can be used to authenticate against the compromised domain credentials.
--	Have the right tools. Python Kerberos Exploitation Kit (PyKEK) is a known tool which will forge PACs.
+-	Have the right tools. Python Kerberos Exploitation Kit (PyKEK) is a known tool that forges PACs.
 
 If the attacker has the necessary credentials and connectivity, they can then modify or forge the Privileged Attribute Certificate (PAC) of an existing Kerberos user logon token (TGT). The attacker changes the group membership claim to include a higher-privileged group (for example, “Domain Administrators” or “Enterprise Administrators”). The attacker then includes the modified PAC in the Kerberos Ticket. This Kerberos Ticket is then used to request a Service ticket from an unpatched Domain Controller (DC), giving the attacker elevated permissions in the domain and authorization to perform actions they are not meant to perform. 
-An attacker can present the modified user logon token (TGT) to gain access to any resource in the domain by requesting resource access tokens (TGS). This means that an attacker can bypass all configured resource ACLs which limit access on the network by spoofing authorization data (PAC) for any user in Active Directory.
+An attacker can present the modified user logon token (TGT) to gain access to any resource in the domain by requesting resource access tokens (TGS). This means that an attacker can bypass all configured resource ACLs, which limit access on the network by spoofing authorization data (PAC) for any user in Active Directory.
 
 ## Discovering the attack
-When the attacker attempts to elevate their privileges, ATA will detect it and mark it as a high severity alert.
+When the attacker attempts to elevate their privileges, ATA detects it and mark it as a high severity alert.
 
 ![Forged PAC suspicious activity](./media/forged-pac.png)
 
-ATA will indicate in the suspicious activity alert whether the Privilege escalation using forged authorization data was successful or if it failed. Both successful and failed alerts should be investigated, since failed attempts can still indicate an attacker’s presence in your environment.
+ATA indicates in the suspicious activity alert whether the Privilege escalation using forged authorization data was successful or if it failed. Both successful and failed alerts should be investigated, since failed attempts can still indicate an attacker’s presence in your environment.
 
 ## Investigating
-After you receive the Privilege escalation using forged authorization data alert in ATA, you need to determine what needs to be done to mitigate the attack. To do this, you must first classify the alert as one of the following: 
+After you receive the Privilege escalation using forged authorization data alert in ATA, you need to determine what needs to be done to mitigate the attack. To do this, you must first classify the alert as one of the following alert types: 
 -	True positive: A malicious action detected by ATA
 -	False positive: A false alert – the Privilege escalation using forged authorization data didn’t really happen (this is an event that ATA mistook for a Privilege escalation using forged authorization data attack)
 -	Benign true positive: An action detected by ATA that is real but not malicious, such as a penetration test
@@ -85,7 +85,7 @@ The following chart helps determine which steps you should take:
 
 
 2.	If the detected Privilege escalation using forged authorization data attack was successful:
-    -	If the DC on which the alert was raised is properly patched, it is a false positive. In this case, you should dismiss the alert and send an email notifying the ATA team at ATAEval@microsoft.com so we can continuously improve our detections. 
+    -	If the DC on which the alert was raised is properly patched, it is a false positive. In this case, you should dismiss the alert and send an email notifying the ATA team at ATAEval@microsoft.com so ATA can continuously improve its detections. 
     -	If the DC in the alert is not properly patched:
         -	If the service listed in the alert does not have its own authorization mechanism, this is a true positive and you should run your organization’s Incident Response (IR) process. 
         -	If the service listed in the alert has an internal authorization mechanism that requests authorization data, it might be falsely identified as a Privilege escalation using forged authorization data attack. 
@@ -95,7 +95,7 @@ The following chart helps determine which steps you should take:
 
     -	If the operating system or the application is not known to modify the PAC: 
 
-        -	If the service listed does not have its own authorization service, this is a true positive, and you should run your organization’s Incident Response (IR) process. Even though the attacker was not successful in elevating their privileges in the domain, you can assume there is an attacker in your network and you will want to find them as quickly as possible before they attempt other known advanced persistent attacks to elevate their privileges. 
+        -	If the service listed does not have its own authorization service, this is a true positive, and you should run your organization’s Incident Response (IR) process. Even though the attacker was not successful in elevating their privileges in the domain, you can assume there is an attacker in your network and you want to find them as quickly as possible before they attempt other known advanced persistent attacks to elevate their privileges. 
         -	If the service listed in the alert has its own authorization mechanism that requests authorization data, it might be falsely identified as a Privilege escalation using forged authorization data attack.
 
 ## Post investigation

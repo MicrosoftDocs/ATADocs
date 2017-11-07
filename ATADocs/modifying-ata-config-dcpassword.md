@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -35,9 +35,9 @@ ms.suite: ems
 
 
 ## Change the domain connectivity password
-If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service will stop running on the ATA Gateways.
+If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service stops running on the ATA Gateways.
 
-If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following:
+If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following errors:
 `The supplied credential is invalid.`
 
 To correct this, follow this procedure to update the Domain Connectivity password on the ATA Center:
@@ -54,7 +54,7 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 4.  Under **Password**, change the password.
 
-    If the ATA Center have connectivity to the domain, use the **Test Connection** button to validate the credentials
+    If the ATA Center has connectivity to the domain, use the **Test Connection** button to validate the credentials
 
 5.  Click **Save**.
 

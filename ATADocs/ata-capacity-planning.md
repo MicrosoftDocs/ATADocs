@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/19/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 # ATA Capacity Planning
-This topic helps you determine how many ATA servers are needed to monitor your network. It will also help you figure out how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
+This article helps you determine how many ATA servers are needed to monitor your network. It helps you figure out how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
 
 > [!NOTE] 
 > The ATA Center can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
@@ -78,7 +78,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
-> -   When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
+> -   When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
 
 
 ## Choosing the right gateway type for your deployment
@@ -130,7 +130,7 @@ An ATA Lightweight Gateway can support the monitoring of one domain controller b
 > -   If the domain controller does not have the resources required by the ATA Lightweight Gateway, domain controller performance is not effected, but the ATA Lightweight Gateway might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 
 ### ATA Gateway Sizing
@@ -165,7 +165,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 > [!NOTE] 
 > -   Dynamic memory is not supported.
 > -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 
 ## Domain controller traffic estimation
@@ -204,7 +204,7 @@ To determine packets per second, perform the following steps on each domain cont
 
 9. Set the location where you want the data to be saved.
 
-10. Under **Create the data collector set**,  select **Start this data collector set now** and click **Finish**.
+10. Under **Create the data collector set**,  select **Start this data collector set now**, and click **Finish**.
 
     You should now see the data collector set you created with a green triangle indicating that it is working.
 

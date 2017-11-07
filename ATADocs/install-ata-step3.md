@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -37,9 +37,9 @@ ms.suite: ems
 [Step 4 »](install-ata-step4.md)
 
 ## Step 3. Download the ATA Gateway setup package
-After configuring the domain connectivity settings you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it will be installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see [ATA Architecture](ata-architecture.md). 
+After configuring the domain connectivity settings, you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see [ATA Architecture](ata-architecture.md). 
 
-Click Download Gateway Setup in the list of steps at the top of the page to go to the Gateways page.:
+Click **Download Gateway Setup** in the list of steps at the top of the page to go to the **Gateways** page.
 
 ![ATA gateway configuration settings](media/ATA_1.7-welcome-download-gateway.PNG)
 
@@ -51,7 +51,7 @@ Click Download Gateway Setup in the list of steps at the top of the page to go t
 2.  Save the package locally.
 3.  Copy the package to the dedicated server or domain controller onto which you are installing the ATA Gateway. Alternatively, you can open the ATA Console from the dedicated server or domain controller and skip this step.
 
-The zip file includes the following:
+The zip file includes the following files:
 
 -   ATA Gateway installer
 

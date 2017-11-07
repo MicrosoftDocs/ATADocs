@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -46,14 +46,14 @@ To check up on your system's overall health, click the Health Center icon in the
 
 -   **Open**: All new suspicious activities appear in this list.
 
--   **Close**: Is used to track suspicious activities which you identified, researched and fixed for mitigated.
+-   **Close**: Is used to track suspicious activities that you identified, researched, and fixed for mitigated.
 
     > [!NOTE]
-    > ATA may reopen a closed activity if it the same activity is detected again within a short period of time.
+    > ATA may reopen a closed activity if the same activity is detected again within a short period of time.
 
--   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert ATA won't reopen it. But if the alert stops for 7 days, and is then seen again, you will be alerted again.
+-   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert ATA doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
 
-- **Delete**: If you Delete an alert, it will be deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
+- **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
 
 
 
