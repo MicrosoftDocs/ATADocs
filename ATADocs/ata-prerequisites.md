@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -109,7 +109,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (ATA Communications)|TCP|443, or configurable|ATA Gateway|Inbound|
+|**SSL** (ATA Communications)|TCP|443|ATA Gateway|Inbound|
 |**HTTP** (optional)|TCP|80|Company Network|Inbound|
 |**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|
 |**SMTP** (optional)|TCP|25|SMTP Server|Outbound|
@@ -214,7 +214,7 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   Console IP Address|Outbound|
+|SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
 > [!NOTE]
@@ -272,7 +272,7 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   Console IP Address|Outbound|
+|SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
 > [!NOTE]
