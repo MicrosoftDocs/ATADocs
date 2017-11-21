@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/112017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -54,8 +54,6 @@ Each suspicious activity has the following information:
     -   Add a note to the suspicious activity.
 
     -   Provide input on the suspicious activity.
-
--   Provides recommendations for how to respond to the suspicious activity.
 
 > [!NOTE]
 > -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
