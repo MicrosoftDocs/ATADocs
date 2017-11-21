@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -52,19 +52,21 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
 ## Recover your ATA Center
 
 1. Create a new Windows Server machine using the same IP address and computer name as the previous ATA Center machine.
-4. Import the certificate you backed up earlier, to the new server.
-5. Follow the instructions to [Deploy the ATA Center](install-ata-step1.md) on the newly created Windows Server. There is no need to deploy the 
+2. Import the certificate you backed up earlier, to the new server.
+3. Follow the instructions to [Deploy the ATA Center](install-ata-step1.md) on the newly created Windows Server. There is no need to deploy the 
 ATA Gateways again. When prompted for a certificate, provide the certificate you exported when backing up the ATA Center configuration. 
  ![ATA Center restore](media/disaster-recovery-deploymentss.png)
-6. Import the backed-up ATA Center configuration:
+4. Stop the ATA Center service.
+5. Import the backed-up ATA Center configuration:
     1. Remove the default ATA Center System Profile document from the MongoDB: 
         1. Go to **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Run `mongo.exe ATA` 
-        3. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
+        3. Start the ATA Center service.
+        4. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
     2. Run the command: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` using the backup file from step 1.</br>
     For a full explanation of how to locate and import backup files, see [Export and import the ATA configuration](ata-configuration-file.md). 
     3. Open the ATA Console. You should see all the ATA Gateways linked under the Configuration/Gateways tab. 
-    5. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5.md). 
+    4. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5.md). 
 
 
 
