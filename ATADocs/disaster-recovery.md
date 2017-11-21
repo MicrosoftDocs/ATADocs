@@ -47,7 +47,7 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
     4. Back up the exported certificate file on a separate computer.
 
   > [!NOTE] 
-  > If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](modifying-ata-center-configuration#the-ata-center-certificate), and then export it. 
+  > If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](modifying-ata-center-configuration.md), and then export it. 
 
 ## Recover your ATA Center
 
