@@ -1,65 +1,80 @@
 {
   "build_entry_point": "docs.ps1",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
+    {
+      "docset_name": "ATADeployUse",
+      "build_output_subfolder": "ATADocs/DeployUse",
+      "locale": "en-us",
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "version": 0
+    },
     {
       "docset_name": "ATADocs",
       "build_output_subfolder": "ATADocs",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
-    },
-    {
-      "docset_name": "ATAUnderstand",
-      "build_output_subfolder": "ATADocs/Understand",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      }
+      },
+      "version": 0
     },
     {
       "docset_name": "ATAPlanDesign",
       "build_output_subfolder": "ATADocs/PlanDesign",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
-    },
-    {
-      "docset_name": "ATADeployUse",
-      "build_output_subfolder": "ATADocs/DeployUse",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      }
+      },
+      "version": 0
     },
     {
       "docset_name": "ATATroubleshoot",
       "build_output_subfolder": "ATADocs/Troubleshoot",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
-      }
+      },
+      "version": 0
+    },
+    {
+      "docset_name": "ATAUnderstand",
+      "build_output_subfolder": "ATADocs/Understand",
+      "locale": "en-us",
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "version": 0
+    },
+    {
+      "docset_name": "ATPDocs",
+      "build_source_folder": "ATPDocs",
+      "build_output_subfolder": "ATPDocs",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
     ""
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/ATADocs",
-  "git_repository_branch_open_to_public_contributors" : "master",
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -67,5 +82,7 @@
       "branch": "master"
     }
   ],
-  "need_preview_pull_request": "true"
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false
 }
