@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/13/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -309,6 +309,34 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 
 Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) and
 all member servers and domain controllers up to 2012 R2 are up-to-date with KB2496930. For more information, see [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) and [Forged PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+
+## Reconnaissance using account enumeration
+
+**Description**
+
+In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess to attempt to guess user names in your domain. The attacker makes Kerberos requests using these names in order to try to find a valid username in your domain. If a guess successfully determines a username, the attacker will get the Kerberos error **Preauthentication required** instead of **Security principal unknown**. 
+
+In this detection, ATA can detect where the attack came from, the total number of guess attempts and how many were matched. If there are too many unknown users, ATA will detect it as a suspicious activity. 
+
+**Investigation**
+
+1. Click on the alert to get to its details page. 
+
+2. Should this host machine query the domain controller as to whether accounts exist (for example, Exchange servers)? <br></br>
+Is there a script or application running on the host that could generate this behavior? <br></br>
+If the answer to either of these questions is yes, **Close** the suspicious activity (it is a false positive) and exclude that host from the suspicious activity.
+
+3. Download the details of the alert in an Excel spreadsheet to conveniently see the list of account attempts, divided into existing and non-existing accounts. If you look at the non existing accounts sheet in the spreadsheet and the accounts look familiar, they may be disabled accounts or employees who left the company. In this case, it is unlikely that the attempt is coming from a dictionary. Most likely, it's an application or script that is checking to see which accounts still exist in Active Directory. It's a Benign true positive.
+
+3. If the names are largely unfamiliar, did any of the guess attempts match existing account names in Active Directory? If there are no matches, the attempt was futile, but you should pay attention to the alert to see if it gets updated over time.
+
+4. If any of the guess attempts match existing account names, you should consider this a high priority alert. The attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names. Check the guessed account names for additional suspicious activities. Check to see if any of the matched accounts are sensitive accounts.
+
+
+**Remediation**
+
+[Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+
 
 ## Reconnaissance using directory services queries
 
