@@ -367,6 +367,9 @@ In this detection, no alerts would be triggered in the first month after ATA is 
 **Remediation**
 
 Use the [SAMRi10 tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) to harden your environment against this technique.
+If the tool is not applicable to your DC:
+1. Is the computer running a vulnerability scanning tool?  
+2. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (i.e. CEO, CFO, IT management, etc.).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
 
 ## Reconnaissance using DNS
 

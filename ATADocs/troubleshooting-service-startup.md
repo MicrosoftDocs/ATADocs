@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Troubleshooting Advanced Threat Analytics using the logs | Microsoft Docs
-description: Describes how you can use the ATA logs to troubleshoot issues
+title: Troubleshooting Advanced Threat Analytics service startup | Microsoft Docs
+description: Describes how you can troubleshoot ATA startup issues
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/20/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -30,7 +30,9 @@ ms.suite: ems
 
 
 
-# Troubleshooting ATA Center service startup
+# Troubleshooting service startup
+
+## Troubleshooting ATA Center service startup
 
 If your ATA Center does not start, perform the following troubleshooting procedure:
 
@@ -52,6 +54,24 @@ If it can start, the platform is probably fine. If not, it is still a platform i
         logman start "Microsoft ATA Center"
         sc start ATACenter
 
+## Troubleshooting ATA Lightweight Gateway startup
+
+**Symptom**
+
+Your ATA Gateway does not start and you get this error:<br></br>
+*System.Net.Http.HttpRequestException: Response status code does not indicate success: 500 (Internal Server Error)*
+
+**Description**
+
+This happens because as part of the Lightweight Gateway installation process, ATA allocates a CPU threshold that enables the Lightweight Gateway to utilize CPU with a buffer of 15%. If you have independently set a threshold using the registry key: this conflict will prevent the Lightweight Gateway from starting. 
+
+**Resolution**
+
+1. Under the registry keys, if there is a DWORD value called **Disable Performance Counters** make sure it is set to **0**:
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+ 
+2. Then restart the Pla service. The ATA Lightweight Gateway will automatically detect the change and restart the service.
 
 
 ## See Also
