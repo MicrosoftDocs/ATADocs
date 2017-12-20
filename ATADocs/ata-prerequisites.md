@@ -259,8 +259,11 @@ The ATA Lightweight Gateway can be deployed on domain controllers of various loa
 For more information about the ATA Lightweight Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 
 ### Time synchronization
+
 The ATA Center server, the ATA Lightweight Gateway servers, and the domain controllers must have time synchronized to within five minutes of each other.
+
 ### Network adapters
+
 The ATA Lightweight Gateway monitors the local traffic on all of the domain controller's network adapters. <br>
 After deployment, you can use the ATA Console if you ever want to modify which network adapters are monitored.
 
