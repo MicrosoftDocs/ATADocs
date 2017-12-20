@@ -58,7 +58,7 @@ If it can start, the platform is probably fine. If not, it is still a platform i
 
 **Symptom**
 
-Your ATA Gateway does not start and you get this error:
+Your ATA Gateway does not start and you get this error:<br></br>
 *System.Net.Http.HttpRequestException: Response status code does not indicate success: 500 (Internal Server Error)*
 
 **Description**
@@ -67,11 +67,10 @@ This happens because as part of the Lightweight Gateway installation process, AT
 
 **Resolution**
 
-1. Under the  registry keys:
+1. Under the registry keys, if there is a DWORD value called **Disable Performance Counters** make sure it is set to **0**:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
- If there is a DWORD value called **Disable Performance Counters** make sure it is set to **0**.
-
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`<br></br>
+ 
 2. Then restart the Pla service. The ATA Lightweight Gateway will automatically detect the change and restart the service.
 
 
