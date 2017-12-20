@@ -69,7 +69,7 @@ This happens because as part of the Lightweight Gateway installation process, AT
 
 1. Under the registry keys, if there is a DWORD value called **Disable Performance Counters** make sure it is set to **0**:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`<br></br>
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Then restart the Pla service. The ATA Lightweight Gateway will automatically detect the change and restart the service.
 
