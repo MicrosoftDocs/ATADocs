@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -50,9 +50,9 @@ The first time you open the ATA Console, the following screen appears:
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-2. Optionally, you can click **Test connection** which will test connectivity to the domain and check that the credentials supplied provide access. This will only work if the ATA Center has connectivity to the domain. 	
+2. You can click **Test connection** to test connectivity to the domain and check that the credentials supplied provide access. This works if the ATA Center has connectivity to the domain. 	
 
-    After it is saved, the welcome message in the Console will change to the following:
+    After it is saved, the welcome message in the Console will change to the following message:
 ![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. In the Console, click **Download Gateway setup and install the first Gateway** to continue.
@@ -64,7 +64,14 @@ The first time you open the ATA Console, the following screen appears:
 
 
 ## See Also
+## Related Videos
+- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
+- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
+
+## See Also
+- [ATA POC deployment guide](http://aka.ms/atapoc)
+- [ATA sizing tool](http://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)

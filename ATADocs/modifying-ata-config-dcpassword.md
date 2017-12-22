@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,20 +26,18 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
 # Change ATA configuration - domain connectivity password
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
 
 
 ## Change the domain connectivity password
-If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service will stop running on the ATA Gateways.
+If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service stops running on the ATA Gateways.
 
-If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following:
+If you suspect that this happened, on the ATA Gateway, look at the Microsoft.Tri.Gateway-Errors.log file for the following errors:
 `The supplied credential is invalid.`
 
 To correct this, follow this procedure to update the Domain Connectivity password on the ATA Center:
@@ -48,22 +46,21 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.png)
 
 3.  Select **Directory Services**.
 
-    ![ATAA Gateway change password image](media/ATA-GW-change-DC-password.png)
+    ![ATA Gateway change password image](media/ATA-GW-change-DC-password.png)
 
 4.  Under **Password**, change the password.
 
-    If the ATA Center have connectivity to the domain, use the **Test Connection** button to validate the credentials
+    If the ATA Center has connectivity to the domain, use the **Test Connection** button to validate the credentials
 
 5.  Click **Save**.
 
 6.  After changing the password, manually check that the ATA Gateway service is running on the ATA Gateway servers.
 
->[!div class="step-by-step"]
-[« ATA Console URL](modifying-ata-config-consoleurl.md)
+
 
 ## See Also
 - [Working with the ATA Console](working-with-ata-console.md)

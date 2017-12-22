@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -39,17 +39,17 @@ ATA can notify you when it detects a suspicious activity. For ATA to be able to 
 
 3.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.png)
 
 4.  In the **notifications** section, under **Mail server**, enter the following information:
 
     |Field|Description|Value|
     |---------|---------------|---------|
     |SMTP server endpoint (required)|Enter the FQDN of your SMTP server and optionally change the port number (default 25).|For example:<br />smtp.contoso.com|
-    |SSL|Toggle SSL if the SMTP server required SSL. **Note:** If you enable SSL you will also need to change the Port number.|Default is disabled|
-    |Authentication|Enable if your SMTP server requires authentication. **Note:** If you enable authentication you must provide a user name and password of an email account that has permission to connect to the SMTP server.|Default is disabled|
+    |SSL|Toggle SSL if the SMTP server required SSL. **Note:** If you enable SSL, you also need to change the Port number.|Default is disabled|
+    |Authentication|Enable if your SMTP server requires authentication. **Note:** If you enable authentication, you must provide a user name and password of an email account that has permission to connect to the SMTP server.|Default is disabled|
     |Send from (required)|Enter an email address from whom the email will be sent from.|For example:<br />ATA@contoso.com|
-    ![ATA email server settings image](media/ATA-email-server-1.7.png)
+    ![ATA email server settings image](media/ata-email-server.png)
 
 ## Provide ATA with your Syslog server settings
 ATA can notify you when it detects a suspicious activity by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
@@ -60,7 +60,7 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
 
     -   Port on which the SIEM server is listening
 
-    -   What transport to use: UDP, TCP or TLS (Secured Syslog)
+    -   What transport to use: UDP, TCP, or TLS (Secured Syslog)
 
     -   Format in which to send the data RFC 3164 or 5424
 
@@ -70,17 +70,17 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
 
 4.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA configuration settings icon](media/ATA-config-icon.png)
 
 5.  Under Notifications section, Select **Syslog server** and enter the following information:
 
     |Field|Description|
     |---------|---------------|
     |Syslog server endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
-    |Transport|Can be UDP, TCP or TLS (Secured Syslog)|
+    |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
     |Format|This is the format that ATA uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
 
- ![ATA Syslog server settings image](media/ata-syslog-server-settings-1.7.png)
+ ![ATA Syslog server settings image](media/ata-syslog-server-settings.png)
 
 
 

@@ -45,9 +45,9 @@ The update to ATA 1.5 provides improvements in the following areas:
 
 ## Updating ATA to version 1.5
 > [!NOTE]
-> If ATA is not installed in your environment, download the full version of ATA which includes version 1.5  and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
+> If ATA is not installed in your environment, download the full version of ATA, which includes version 1.5  and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
 
-If you already have ATA version 1.4 deployed, this procedure will walk you through the steps necessary to update your installation.
+If you already have ATA version 1.4 deployed, this procedure walks you through the steps necessary to update your installation.
 
 Follow these steps to update to ATA version 1.5:
 
@@ -69,7 +69,7 @@ Follow these steps to update to ATA version 1.5:
 
 1.  Back up your database: (optional)
 
-    -   If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut the virtual machine down first.
+    -   If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut down the virtual machine first.
 
     -   If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
@@ -77,15 +77,15 @@ Follow these steps to update to ATA version 1.5:
 
     1.  In the **Welcome** page, select your language and click **Next**.
 
-    2.  Read the End User License Agreement and if you accept the terms, click the checkbox and click **Next**.
+    2.  Read the End-User License Agreement and if you accept the terms, click the checkbox, and click **Next**.
 
     3.  Select whether you want to run the full (default) or partial migration.
 
         ![Choose full or partial migration](media/ATA-center-fullpartial.png)
 
-        -   If you select **Partial** migration, any network traffic collected and forwarded Windows events analyzed by ATA will be deleted and user behavioral profiles will have to be re-learned; this takes a minimum of three weeks. If you are running low on disk space then it is helpful to run a **Partial** migration.
+        -   If you select **Partial** migration, any network traffic collected and forwarded Windows events analyzed by ATA are deleted and user behavioral profiles have to be relearned; this takes a minimum of three weeks. If you are running low on disk space, then it is helpful to run a **Partial** migration.
 
-        -   If you run a **Full** migration, you will need additional disk space, as calculated for you on the upgrade page, and the migration may take longer, depending on the network traffic. The full migration retains all previously collected data and user behavioral profiles are maintained, meaning that it will not take additional time for ATA to learn behavior profiles and anomalous behavior can be detected immediately after update.
+        -   If you run a **Full** migration, you need additional disk space, as calculated for you on the upgrade page, and the migration may take longer, depending on the network traffic. The full migration retains all previously collected data and user behavioral profiles are maintained, meaning that it will not take additional time for ATA to learn behavior profiles and anomalous behavior can be detected immediately after update.
 
 3.  Click **Update**. Once you click Update, ATA is offline until the update procedure is complete.
 
@@ -97,7 +97,7 @@ Follow these steps to update to ATA version 1.5:
 > - Update all the ATA Gateways to make sure ATA functions properly.
 
 ### Step 2. Download the ATA Gateway setup package
-After configuring the domain connectivity settings you can download the ATA Gateway setup package.
+After configuring the domain connectivity settings, you can download the ATA Gateway setup package.
 
 To download the ATA Gateway package:
 
@@ -105,13 +105,13 @@ To download the ATA Gateway package:
 
 2.  On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
 
-    ![Configuration settings icon](media/ATA-config-icon.JPG)
+    ![Configuration settings icon](media/ATA-config-icon.png)
 
 3.  In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
 
 4.  Save the package locally.
 
-The zip file includes the following:
+The zip file includes the following files:
 
 -   ATA Gateway installer
 
@@ -124,7 +124,7 @@ The zip file includes the following:
     > [!NOTE]
     > You can also use this ATA Gateway package to install new ATA Gateways.
 
-2.  Your previous settings will be preserved, but it may take a few minutes until for the service to restart.
+2.  Your previous settings are preserved, but it may take a few minutes until for the service to restart.
 
 3.  Repeat this step for all other ATA Gateways deployed.
 

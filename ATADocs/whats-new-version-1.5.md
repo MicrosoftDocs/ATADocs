@@ -58,10 +58,10 @@ Microsoft Advanced Threat Analytics Gateway is not installed
 <b>Workaround:</b> Send an email to <ataeval@microsoft.com> to request workaround steps.
 ### Deployment
 The folder specified for the "Database data path" and "Database journal path" has to be empty (no files or subfolders).
-If it is not empty, the deployment will not progress.
+If it is not empty, the deployment does not progress.
 
 ### Installation from Zip file
-When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Do not install the ATA Gateway directly from within the zip file or the installation will fail.
+When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Do not install the ATA Gateway directly from within the zip file or the installation fails.
 
 ### Configuration
 After the configuration for an ATA Gateway is set, when the ATA Gateway starts for the first time, the "Not Synced" label is displayed until the service is fully started which may take up to 10 minutes the first time the service starts.

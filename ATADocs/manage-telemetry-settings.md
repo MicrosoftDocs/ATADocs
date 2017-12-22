@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.7*
+*Applies to: Advanced Threat Analytics version 1.8*
 
 
 
@@ -34,7 +34,7 @@ ms.suite: ems
 Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
 
 ## Data collected
-Collected anonymized data includes the following:
+Collected anonymized data includes the following parameters:
 
 -   Performance counters from both the ATA Center and the ATA Gateway
 
@@ -86,7 +86,7 @@ Collected anonymized data includes the following:
 
     -   Start and End Time
 
-- ATA Console URL addresses - URL addresses when using the ATA Console i.e. which pages in the ATA Console are visited.
+- ATA Console URL addresses - URL addresses when using the ATA Console, that is, which pages in the ATA Console are visited.
 
 
 ### Disable data collection
@@ -97,5 +97,5 @@ Perform the following steps to stop collecting and sending telemetry data to Mic
 2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
 
 ## See Also
-- [What's new in version 1.6](whats-new-version-1.6.md)
+- [Troubleshooting ATA using the event log](troubleshooting-ata-using-logs.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

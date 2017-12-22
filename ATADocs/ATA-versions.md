@@ -6,7 +6,7 @@ description: Explains the different support options for Microsoft Advanced Threa
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -25,19 +25,20 @@ ms.suite: ems
 #ms.custom:
 
 ---
+*Applies to: Advanced Threat Analytics version 1.8*
 
 # Support for Microsoft Advanced Threat Analytics (ATA) versions
 
-Microsoft plans to release updates for ATA a few times per year with each update version supported for twelve (12) months from its general availability (GA) release date. Technical support will be provided for the entire twelve (12) months. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest version.
+Microsoft plans to release ATA updates a few times a year with each update version supported for 12 months from its general availability (GA) release date. Technical support is provided for the entire 12 months. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest version.
 
--	Security and Critical Updates servicing phase - When running the latest version of ATA, you will receive both Security and Critical updates.
+-	Security and Critical Updates servicing phase - When running the latest version of ATA, you receive both Security and Critical updates.
 
--	Security Updates (Only) servicing phase - After a new ATA version is released, support for older versions will reduce to Security updates only for the remainder of the twelve (12) month support lifecycle (shown in the below example of verions servicing support).
+-	Security Updates (Only) servicing phase - After a new ATA version is released, support for older versions will be reduced to Security updates only, for the remainder of the 12-month support lifecycle (shown in the following example of versions servicing support).
  
-![Example of verions servicing support](media/versions.png)
+![Example of versions servicing support](media/versions.png)
 
 > [!Note]
-> The latest ATA version is always in the Security and Critical Updates servicing phase. This means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed to receive a fix. All other supported versions will only be eligible to receive security updates. All support ends after the twelve (12) month lifecycle for a version has expired. At that time, customers must update to a supported version.
+> The latest ATA version is always in the Security and Critical Updates servicing phase. This means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed to receive a fix. All other supported versions are only eligible to receive security updates. All support ends after the 12-month lifecycle for a version has expired. At that time, customers must update to a supported version.
 
 ## Version History
 
