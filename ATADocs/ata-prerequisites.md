@@ -217,6 +217,7 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
+
 > [!NOTE]
 > As part of the resolution process done by the ATA Gateway, the following ports need to be open inbound on devices on the network from the ATA Gateways.
 >
@@ -267,6 +268,7 @@ The ATA Center server, the ATA Lightweight Gateway servers, and the domain contr
 The ATA Lightweight Gateway monitors the local traffic on all of the domain controller's network adapters. <br>
 After deployment, you can use the ATA Console if you ever want to modify which network adapters are monitored.
 
+[!NOTE]
 The Lightweight Gateway is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
 ### Ports
