@@ -85,6 +85,10 @@ When a new suspicious activity is detected, the notification bar opens automatic
 
 ![ATA notification bar image](media/notification-bar-1.7.png)
 
+### What's new
+
+After a new version of ATA is released, the **What's new** window appears in the top right to let you know what was added in the latest version. It also provides you with a link to the version download.
+
 ### Filtering panel
 
 You can filter which suspicious activities are displayed in the attack time line or displayed in the entity profile suspicious activities tab based on Status and Severity.

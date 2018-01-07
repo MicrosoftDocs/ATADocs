@@ -42,7 +42,8 @@
 ## [Export/Import ATA configuration](ata-configuration-file.md)
 ## [Manage ATA telemetry](manage-telemetry-settings.md)
 ## [Set ATA notifications](setting-ata-alerts.md)
-## [Set Syslog and Email server settings](setting-syslog-email-server-settings.md)
+## [Set syslog and email server settings](setting-syslog-email-server-settings.md)
+## [Tag sensitive accounts](tag-sensitive-accounts.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Working with the ATA Console](working-with-ata-console.md)
 ## ATA reference information
