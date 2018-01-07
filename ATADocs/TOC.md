@@ -58,5 +58,4 @@
 ## [Troubleshooting using the database](troubleshooting-ata-using-ata-database.md)
 ## [Troubleshooting service startup](troubleshooting-service-startup.md)
 ## [Disaster recovery](disaster-recovery.md)
-# Reference
-## ATA resources
+# [Resources](ata-resources.md)
