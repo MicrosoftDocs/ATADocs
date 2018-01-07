@@ -46,7 +46,7 @@ ms.suite: ems
 
 [ATA POC playbook](http://aka.ms/atapoc) - Guide to all the steps necessary to do a successful POC deployment of ATA
 
-[ATA sizing tool](http://aka.ms/atasizing) - The sizing tool automates collection of the amount of traffic ATA would need to monitor and automatically provides supportability and resource recommendations for both the ATA Center and ATA Lightweight Gateways.
+[ATA sizing tool](http://aka.ms/atasizing) - The sizing tool automates collection of the amount of traffic ATA needs. It automatically provides supportability and resource recommendations for both the ATA Center and ATA Lightweight Gateways.
 
 [ATA capacity planning](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
 
