@@ -28,11 +28,11 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.8*
 
-# ATA reasources 
+# ATA resources 
 
 [ATA introduction video - short](https://aka.ms/ATAShort)
 
-[Full introductory video](https://aka.ms/ATAVideo) 
+[ATA introductory video - full](https://aka.ms/ATAVideo) 
 
 [ATA overview] (https://aka.ms/ATAOverview)
 
@@ -44,19 +44,19 @@ ms.suite: ems
 
 ## Deploy ATA
 
-[ATA POC Playbook](http://aka.ms/atapoc) - Guide to all the steps necessary to do a successful POC deployment of ATA
+[ATA POC playbook](http://aka.ms/atapoc) - Guide to all the steps necessary to do a successful POC deployment of ATA
 
-[ATA Sizing Tool](http://aka.ms/atasizing) - The sizing tool automates collection of the amount of traffic ATA would need to monitor and automatically provides supportability and resource recommendations for both the ATA Center and ATA Lightweight Gateways.
+[ATA sizing tool](http://aka.ms/atasizing) - The sizing tool automates collection of the amount of traffic ATA would need to monitor and automatically provides supportability and resource recommendations for both the ATA Center and ATA Lightweight Gateways.
 
-[ATA Capacity Planning](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
+[ATA capacity planning](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
 
-[Audit Settings](https://aka.ms/ataauditingblog) – Audit your Domain controllers' health before and after an ATA deployment
+[Audit settings](https://aka.ms/ataauditingblog) – Audit your Domain controllers' health before and after an ATA deployment
 
 [ATA general documentation](https://docs.microsoft.com/en-us/advanced-threat-analytics/)
 
 ## Work with ATA
 
-[ATA suspicious activity playbook](http://aka.ms/ataplaybook) - This article walks you through credential theft attack techniques using readily available research tools on the Internet. At each point of the attack you can see how ATA helps you gain visibility into these threats.
+[ATA suspicious activity playbook](http://aka.ms/ataplaybook) - This article walks you through credential theft attack techniques using readily available research tools on the Internet. At each point of the attack, you can see how ATA helps you gain visibility into these threats.
 
 [ATA suspicious activity guide](http://aka.ms/atasaguide)
 
@@ -76,8 +76,6 @@ ms.suite: ems
 [ATA frequently asked questions](http://aka.ms/atafaq) - This article provides a list of frequently asked questions about ATA and provides insight and answers
 
 ## Additional resources
-
-[ATA Best Practices](https://aka.ms/atasecbestpractices) - Best practices for securing ATA
 
 [Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
