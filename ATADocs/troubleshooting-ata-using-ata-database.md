@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/31/2017
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -45,7 +45,7 @@ The default and most basic way to query the database is using the Mongo shell:
 |How to...|Syntax|Notes|
 |-------------|----------|---------|
 |Check for collections in the database.|`show collections`|Useful as an end-to-end test to see that traffic is being written to the database and that event 4776 is being received by ATA.|
-|Get the details of a user/computer/group (UniqueEntity), such as user ID.|`db.UniqueEntity.find({SearchNames: "<name of entity in lower case>"})`||
+|Get the details of a user/computer/group (UniqueEntity), such as user ID.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
 |Find Kerberos authentication traffic originating from a specific computer on a specific day.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|To get the &lt;ID of the source computer&gt; you can query the UniqueEntity collections, as shown in the example.<br /><br />Each network activity type, for example Kerberos authentications, has its own collection per UTC date.|
 |Find NTLM traffic originating from a specific computer related to a specific account on a specific day.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|To get the &lt;ID of the source computer&gt; and &lt;ID of the account&gt; you can query the UniqueEntity collections, as shown in the example.<br /><br />Each network activity type, for example NTLM authentications, has its own collection per UTC date.|
 |Make advanced configuration changes. In this example, change the send queue size for all ATA Gateways to 10,000.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
