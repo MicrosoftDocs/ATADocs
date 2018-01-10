@@ -2,6 +2,8 @@
 ## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [What threats does ATA detect?](ata-threats.md)
 ## What's new in ATA?
+### [What's new in ATA version 1.9](whats-new-version-1.9.md)
+#### [Update to ATA 1.9 - migration guide](ata-update-1.9-migration-guide.md)
 ### [What's new in ATA version 1.8](whats-new-version-1.8.md)
 #### [Update to ATA 1.8 - migration guide](ata-update-1.8-migration-guide.md)
 ### [What's new in ATA version 1.7](whats-new-version-1.7.md)
@@ -46,6 +48,8 @@
 ## [Tag sensitive accounts](tag-sensitive-accounts.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Working with the ATA Console](working-with-ata-console.md)
+### [User profiles](user-profiles.md)
+##[Preventing lateral movement paths](use-case-lateral-movement-path.md)
 ## ATA reference information
 ### [SIEM log reference](cef-format-sa.md)
 ### [Event ID reference](event-id-reference.md)

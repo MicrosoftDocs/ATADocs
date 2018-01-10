@@ -43,7 +43,6 @@ The reports that are available are:
 
 - **Passwords exposed in cleartext**: Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. This report lists all passwords that are exposed by being sent in clear text. 
 
-
 - **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. 
 
 There are two ways to generate a report: either on demand or by scheduling a report to be sent to your email periodically.
@@ -51,8 +50,9 @@ There are two ways to generate a report: either on demand or by scheduling a rep
 To generate a report on demand:
 
 1. In the ATA console menu bar, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
+
 2. Under either your selected report type, set the **From** and **To** dates and click **Download**. 
-![reports](./media/reports.png)
+ ![reports](./media/reports.png)
 
 To set a scheduled report:
  

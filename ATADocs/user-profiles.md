@@ -1,0 +1,74 @@
+---
+# required metadata
+
+title: Working with user profiles in the Advanced Threat Analytics console | Microsoft Docs
+description: Describes how to investigate users from the user profiles screen in the ATA console
+keywords:
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 1/9/2018
+ms.topic: article
+ms.prod:
+ms.service: advanced-threat-analytics
+ms.technology:
+ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+*Applies to: Advanced Threat Analytics version 1.8*
+
+
+
+# Investigating user profiles
+
+The user profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they have access to and their history. 
+
+To access a user profile page, click on the name of the user in the suspicious activity timeline.
+
+The left menu provides you with all the Active Directory information available on the user - email address, domain, first seen date. If the user is sensitive it will tell you why. For example, is the user tagged as sensitive or the member of a sensitive group?
+If it's a sensitive user you'll see the icon under the users's name.
+
+## View user activities
+
+To view all the activities performed by the user, click on the **Activities** tab. 
+
+ ![user profile activities](media/user-profile-activities.png)
+
+By default, the main pane of the user profile displays a timeline of the user's activities up to 6 months back, from which you can also drill down into the entities accessed by the user.
+
+The user profile takes advantage of the new ATA logical activity translator which can look at a group of activities occurring simultaneously (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+
+At the top, you can view the summary tiles that give you a quick overview of what you need to understand in a glance about your users - how many machines the user logged in to, how many resources were accessed, and locations from which a user logged into VPN. 
+
+Using the **Filter by** button above the activity timeline, you can filter the activities by activity type, or entity. You can also filter out a specific (noisy) type of activity. This is really helpful for investigation when you want to understand the basics of what an entity is doing in the network rather than scanning the event log and trying to extrapolate what happened. You can also go to a specific date, and you can export the activities as filtered to Excel. The exported file provides a page for directory services changes (things that changed in Active Directory for the account) and a separate page for activities. 
+
+## View user directory data
+
+The user profile also includes directory data. This is the advanced static information available from Active Directory, including user access control security flags. ATA also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, ATA lists members of the group.
+
+ ![user profile directory data](media/user-profile-directory-data.png)
+
+In the **User access control** section, you can see important flags about the user, such as can the user press enter to bypass the password, does the user have a password that never expires, etc. 
+
+## View lateral movement paths
+
+By clicking the **Lateral movement paths** tab you can view a fully dynamic and clickable map that provides you with a visual picture of how complex or simple it would be to use lateral movement paths from this user as a means to infiltrate your network.
+
+The map provides you with a list of how many hops between computers or users an attacker would have to make from this user to the target sensitive account, and if the user themselves has a sensitive account, you can see how many resources and accounts are directly connected.
+
+ ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
+
+
+## See Also
+[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

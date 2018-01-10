@@ -47,5 +47,5 @@ You can manually tag groups or accounts as sensitive to enhance detections. It i
 4. Click **Save**.
 
     
-## See Also
+## See also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

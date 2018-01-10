@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 1/10/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -67,21 +67,6 @@ To make sure your domain controllers audit the needed events, use the tool refer
 Minimize the number of users who are authorized to modify sensitive groups.
 
 Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
-
-## Broken trust between computers and domain
-
-**Description**
-
-Broken trust means that Active Directory security requirements may not be in effect for the computers in question. This is often considered a baseline security and compliance failure and a soft target for attackers. In this detection, an alert is triggered if more than 5 Kerberos authentication failures are seen from a computer account in 24 hours.
-
-**Investigation**
-
-Is the computer in question allowing domain users to log on? 
-- If yes, you may ignore this computer in the remediation steps.
-
-**Remediation**
-
-Rejoin the machine back to the domain if necessary or reset the machine's password.
 
 ## Brute force attack using LDAP simple bind
 
@@ -447,13 +432,11 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **Description**
 
-Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account triggers the alert, while for non-sensitive accounts the alert is triggered if five or more different accounts  send clear text passwords from the same source computer. 
+Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account will be logged in the **Passwords exposed in cleartext** report, while for non-sensitive accounts the service is only listed in the report if five or more different accounts send clear text passwords from the same source computer. 
 
 **Investigation**
 
-Click on the alert to get to its details page. See which accounts were exposed. If there are many such accounts, click **Download details** to view the list in an Excel spreadsheet.
-
-Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
+This suspicious activity can be viewed by accessing the **Reports** page and downloading the report for the necessary dates. See which accounts were exposed. Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
 
 **Remediation**
 
@@ -478,6 +461,32 @@ In this detection, an alert is triggered when many authentication failures occur
 **Remediation**
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+
+## Suspicious service creation
+
+**Description**
+
+A suspicious service has been created on an endpoint in your organization. This is a new service that wasn't previously identified in your organization. ATA has identified this service as suspicious. This alert relies on event 7045 and can be collected from all endpoints in your network, it does not have to bypass a domain controller.
+
+**Investigation**
+
+1. If the computer in question is an administrative workstation, or a computer on which IT team members and service accounts perform administrative tasks, this may be a false positive and you may need to **Suppress** the alert.
+
+2. Is the service something you recognize on this computer?
+
+ - Is the **account** in question allowed to install this service?
+
+ - If the answer to both questions is *yes*, then **Close** the alert.
+
+3. If the answer to either questions is *no*, then this should be considered a true positive.
+
+**Remediation**
+
+1. Restrict remote access to any computers that don't .
+
+2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
+
+
 
 ## Suspicion of identity theft based on abnormal behavior
 
