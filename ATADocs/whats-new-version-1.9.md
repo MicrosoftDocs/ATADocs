@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/10/2018
+ms.date: 1/11/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,20 +36,20 @@ These release notes provide information about updates, new features, bug fixes a
 
 ## New & updated detections
 
-- NEW! **Suspicious service creation** – Attackers attempt to use run suspicous services on your network. ATA now raises an alert when it identifies that someone on a specific computer runs a new service that seems suspicious. This detection is based on events (not network traffic) and is detected on any endpoint in your network forwarding event 7045.   
+- NEW! **Suspicious service creation** – Attackers attempt to use run suspicous services on your network. ATA now raises an alert when it identifies that someone on a specific computer runs a new service that seems suspicious. This detection is based on events (not network traffic) and is detected on any endpoint in your network forwarding event 7045. For more information see the [Suspicious activity guide](suspicious-activity-guide.md).
 
 
 ## Improved investigation
 
-- NEW! ATA 1.9 includes a new and improved user profile. he user profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they have access to and their history. The user profile also enables you to identify sensitive users who are accessible via lateral movement paths. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
+- NEW! ATA 1.9 includes a new and improved [user profile](user-profiles.md). he user profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they have access to and their history. The user profile also enables you to identify sensitive users who are accessible via lateral movement paths. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
 
--	NEW! ATA 1.9 enables you to manually tag groups or accounts as sensitive to enhance detections. This tagging informs many ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
+-	NEW! ATA 1.9 enables you to [manually tag groups](tag-sensitive-accounts.md) or accounts as sensitive to enhance detections. This tagging informs many ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
 
 ## New reports to help you investigate 
 
--	NEW! The **Passwords exposed in cleartext** enables you to detect when services send account credentials in plain text and lists all passwords that are exposed by being sent in clear text so that you can investigate and enforce password best practices. This replaces the cleartext suspicious activity alerts.
+-	NEW! The [**Passwords exposed in cleartext**](reports.md) enables you to detect when services send account credentials in plain text and lists all passwords that are exposed by being sent in clear text so that you can investigate and enforce password best practices. This replaces the cleartext suspicious activity alerts.
 
--  NEW! The **Lateral movement paths to sensitive accounts** lists the sensitive accounts that are exposed via lateral movement paths and enables you to mitigate these paths and harden your network to minimize exposure. 
+-  NEW! The [**Lateral movement paths to sensitive accounts**](reports.md) lists the sensitive accounts that are exposed via lateral movement paths and enables you to mitigate these paths and harden your network to minimize exposure. 
 
 
 ## Infrastructure improvements
@@ -61,9 +61,13 @@ These release notes provide information about updates, new features, bug fixes a
 
 ## Additional changes
 
-- After a new version of ATA is released, the **What's new** window appears in the top right to let you know what was added in the latest version. It also provides you with a link to the version download.
+- After a new version of ATA is released, the [**What's new**](working-with-ata-console.md) window appears in the top right to let you know what was added in the latest version. It also provides you with a link to the version download.
+
+
+## Removed and depricated features
 
 - The broken trust suspicious activity alert was removed.
+- The passwords exposed in clear text suspicious activity was removed. It was replaced by the [**Passwords exposed in clear text report**](reports.md).
 
 ## Known issues
 
