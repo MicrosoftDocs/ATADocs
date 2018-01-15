@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/7/2018
+ms.date: 1/15/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Tag sensitive accounts
 
-You can manually tag groups or accounts as sensitive to enhance detections. It is important to make sure this is updated because some ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
+You can manually tag groups or accounts as sensitive to enhance detections. It is important to make sure this is updated because some ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. Previously, ATA only considered an entity to be sensitive if it was a member of a specific list of groups. Customers can now tag other users or groups as sensitive, such as board members, company executives, director of sales, etc, and ATA will consider them sensitive.
 
 1.  In the ATA console, click the **Configuration** cog in the menu bar.
 

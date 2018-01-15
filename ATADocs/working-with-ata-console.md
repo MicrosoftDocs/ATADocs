@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 1/15/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -106,23 +106,6 @@ The Health Center provides you with alerts when something isn't working properly
 ![ATA health center image](media/ATA-Health-Issue.jpg)
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon lets you know by displaying a red dot. ![ATA health center red dot image](media/ATA-Health-Center-Alert-red-dot.png)
-
-### User and computer profiles
-
-ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources. It also provides a list of locations where the user connected via VPN. For a list of group memberships that ATA considers sensitive, see the list that follows.
-
-![User profile](media/user-profile.png)
-
-In the computer profile, ATA displays general information, such as recent logins and recently accessed resources.
-
-![Computer profile](media/computer-profile.png)
-
-ATA provides additional information about entities (computers, devices, users) on the following pages: Summary, Activities, and Suspicious activities.
-
-A profile that ATA has not been able to fully resolve is identified by a half-filled circle icon next to it.
-
-
-![ATA unresolved profile image](media/ATA-Unresolved-Profile.jpg)
 
 ### Sensitive groups
 

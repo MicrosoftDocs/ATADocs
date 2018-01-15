@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/10/2018
+ms.date: 1/15/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -34,7 +34,7 @@ ATA can help you prevent attacks that use lateral movement paths. Even when you 
 
 ## What is a lateral movement path?
 
-Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts. They can use any of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md) to gain the initial non-sensitive password and then use a too, like Bloodhound, to understand who the administrators are in your network and where they have access. They can then take advantage of the data available to attackers on your domain controllers to know who has which accounts and access to which resources and files, and can steal the credentials of other users (sometimes sensitive users) stored on the computers they have already accessed, and then laterally move to more and more users and resources until they attain admin privileges in your network. 
+Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts. They can use any of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md) to gain the initial non-sensitive password and then use a tool, like Bloodhound, to understand who the administrators are in your network and where they have access. They can then take advantage of the data available to attackers on your domain controllers to know who has which accounts and access to which resources and files, and can steal the credentials of other users (sometimes sensitive users) stored on the computers they have already accessed, and then laterally move to more and more users and resources until they attain admin privileges in your network. 
 
 ATA enables you to take preemptive action on your network to prevent attackers from succeeding at lateral movement.
 
@@ -67,11 +67,7 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATA
  ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
 
 
-## Mitigate
-
-Microsoft recommends using a professional Incident Response & Recovery team, that can be reached via your Microsoft Account Team, to help detect whether an attacker has deployed methods of persistence in your network.
-
-**Preventative best practices:**
+## Preventative best practices
 
 - The best way to prevent lateral movement is to make sure that sensitive users only log into hardened computers with their administrator credentials. In our example, make sure that if Samira needs access to REDMOND-WA-DEV, she logs in with a username and password other than her admin credentials.
 

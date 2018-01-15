@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/10/2018
+ms.date: 1/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -427,20 +427,6 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 1. Restrict remote access to domain controllers from non-Tier 0 machines.
 
 2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
-
-## Sensitive account credentials exposed & Services exposing account credentials
-
-**Description**
-
-Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account will be logged in the **Passwords exposed in cleartext** report, while for non-sensitive accounts the service is only listed in the report if five or more different accounts send clear text passwords from the same source computer. 
-
-**Investigation**
-
-This suspicious activity can be viewed by accessing the **Reports** page and downloading the report for the necessary dates. See which accounts were exposed. Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
-
-**Remediation**
-
-Verify the configuration on the source computers and make sure not to use LDAP simple bind. Instead of using LDAP simple binds you can use LDAP SALS or LDAPS.
 
 ## Suspicious authentication failures
 
