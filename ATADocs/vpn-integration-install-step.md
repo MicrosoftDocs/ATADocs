@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 1/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -53,7 +53,7 @@ To enable VPN integration, make sure you set the following parameters:
 
 -	Open port UDP 1813 on your ATA Gateways and ATA Lightweight Gateways.
 
--	Connect the ATA Center to the Internet so that it can query the location of incoming IP addresses.
+-	The ATA Center must be able to access *ti.ata.azure.com* using HTTPS (port 443) so that it can query the location of incoming IP addresses.
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 
@@ -95,8 +95,7 @@ Your setup is complete, and you can now see VPN activity in the users' profile p
  
    ![VPN setup](./media/vpn-user.png)
 
-After the ATA Gateway receives the VPN events and sends them to the ATA Center for processing, the ATA Center needs Internet connectivity for HTTPS port 443 to be able to resolve the external IP addresses in the VPN events to their geolocation.
-
+After the ATA Gateway receives the VPN events and sends them to the ATA Center for processing, the ATA Center needs access to *ti.ata.azure.com* using HTTPS (port 443) to be able to resolve the external IP addresses in the VPN events to their geographic location.
 
 
 
