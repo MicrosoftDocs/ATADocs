@@ -42,7 +42,7 @@ ATA enables you to take preemptive action on your network to prevent attackers f
 
 To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, follow these steps. To secure your network from lateral movement attacks, ATA works from the end forward, meaning that ATA gives you a map that starts from your privileged accounts and than shows you which users and devices are in the lateral path of these users and their credentials.
 
-1. In the ATA console menu, click the reports icon ![reports icon](./media/reports-icon.png).
+1. In the ATA console menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is greyed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. 
 

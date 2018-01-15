@@ -55,7 +55,7 @@ Using the **Filter by** button above the activity timeline, you can filter the a
 
 The entity profile also includes directory data. This is the advanced static information available from Active Directory, including user access control security flags. ATA also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, ATA lists members of the group.
 
- ![user profile directory data](media/user-profile-directory-data.png)
+ ![user profile directory data](media/user-profile-dir-data.png)
 
 In the **User access control** section, you can see important flags about the user, such as can the user press enter to bypass the password, does the user have a password that never expires, etc. 
 
