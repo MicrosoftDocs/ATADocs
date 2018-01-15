@@ -44,7 +44,6 @@ ATA integrates with your VPN solution by listening to RADIUS accounting events f
 
 -	Microsoft
 -	F5
--	Check Point
 -	Cisco ASA
 
 ## Prerequisites
@@ -75,7 +74,7 @@ Perform the following steps on your RRAS server.
      
 ### Configure VPN in ATA
 
-ATA collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect abnormal VPN connections.
+ATA collects VPN data and identifies when and where credentials are being used via VPN and integrates that data into your investigation. This provides additional information to help you investigate alerts reported by ATA.
 
 To configure VPN data in ATA:
 
