@@ -56,7 +56,8 @@ To discover which sensitive accounts in your network are vulnerable because of t
 ## Investigate
 
 Now that you know which sensitive accounts are at risk, you can deep dive in ATA to learn more and take preventative measures.
-1. In the ATA console, search for the sensitive user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. 
+
+1. In the ATA console, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You an also search for the Lateral movement badge that's added to the picture of a user when the user is in a lateral movement path.
 
 2. In the user profile page that opens, click the **Lateral movement paths** tab.
 
