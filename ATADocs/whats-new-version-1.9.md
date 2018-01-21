@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/15/2018
+ms.date: 1/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,43 +36,39 @@ These release notes provide information about updates, new features, bug fixes a
 
 ## New & updated detections
 
-- NEW! **Suspicious service creation** – Attackers attempt to use run suspicous services on your network. ATA now raises an alert when it identifies that someone on a specific computer runs a new service that seems suspicious. This detection is based on events (not network traffic) and is detected on any endpoint in your network forwarding event 7045. For more information see the [Suspicious activity guide](suspicious-activity-guide.md).
+-  **Suspicious service creation** – Attackers attempt to use run suspicious services on your network. ATA now raises an alert when it identifies that someone on a specific computer runs a new service that seems suspicious. This detection is based on events (not network traffic) and is detected on any endpoint in your network forwarding event 7045. For more information see the [Suspicious activity guide](suspicious-activity-guide.md).
 
 
 ## Improved investigation
 
-- NEW! ATA 1.9 includes a new and improved [user profile](user-profiles.md). he user profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they have access to and their history. The user profile also enables you to identify sensitive users who are accessible via lateral movement paths. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
+-  ATA 1.9 includes a new and improved [entity profile](user-profiles.md). The entity profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they accessed and their history. The entity profile also enables you to identify sensitive users who are accessible via lateral movement paths. 
 
--	NEW! ATA 1.9 enables you to [manually tag groups](tag-sensitive-accounts.md) or accounts as sensitive to enhance detections. This tagging informs many ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
+-	ATA 1.9 enables you to [manually tag groups](tag-sensitive-accounts.md) or accounts as sensitive to enhance detections. This tagging impacts many ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
 
 ## New reports to help you investigate 
 
--	NEW! The [**Passwords exposed in cleartext**](reports.md) enables you to detect when services send account credentials in plain text and lists all passwords that are exposed by being sent in clear text so that you can investigate and enforce password best practices. This replaces the cleartext suspicious activity alerts.
+-	The [**Passwords exposed in cleartext**](reports.md) enables you to detect when services send account credentials in plain text. This allows you to investigate services and improve your network security level. This report replaces the cleartext suspicious activity alerts.
 
--  NEW! The [**Lateral movement paths to sensitive accounts**](reports.md) lists the sensitive accounts that are exposed via lateral movement paths and enables you to mitigate these paths and harden your network to minimize exposure. 
+- The [**Lateral movement paths to sensitive accounts**](reports.md) lists the sensitive accounts that are exposed via lateral movement paths. This enables you to mitigate these paths and harden your network to minimize the attack surface risk. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
 
 
-## Infrastructure improvements
+## Performance improvements
 
 - The ATA Center infrastructure was improved for performance: the aggregated view of the traffic enables optimization of CPU and packet pipeline, and reuses sockets to the domain controllers to minimize SSL sessions to the DC. 
-- The ATA Gateway cache sizes were increased to improve performance
-- SAM-R querying was introduced on the ATA Gateway to enable periodic update for purposes of detecting data necessary for lateral movement paths.
+
 
 
 ## Additional changes
 
-- After a new version of ATA is released, the [**What's new**](working-with-ata-console.md) window appears in the top right to let you know what was added in the latest version. It also provides you with a link to the version download.
+- After a new version of ATA is installed, the [**What's new**](working-with-ata-console.md) icon appears in the toolbar to let you know what was changed in the latest version. It also provides you with a link to the in-depth version changelog.
 
 
-## Removed and depricated features
+## Removed and deprecated features
 
-- The broken trust suspicious activity alert was removed.
+- The **Broken trust suspicious activity** alert was removed.
 - The passwords exposed in clear text suspicious activity was removed. It was replaced by the [**Passwords exposed in clear text report**](reports.md).
 
 ## Known issues
-
-> [!WARNING]
-> In order to avoid these known issues please update or deploy using the 1.9 update 1.
 
 ### ATA Gateway on Windows Server Core
 
