@@ -68,6 +68,25 @@ Minimize the number of users who are authorized to modify sensitive groups.
 
 Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
 
+## Broken trust between computers and domain
+
+> ![NOTE]
+> This suspicious activity was deprecated and only appears in ATA versions prior to 1.9.
+
+**Description**
+
+Broken trust means that Active Directory security requirements may not be in effect for the computers in question. This is often considered a baseline security and compliance failure and a soft target for attackers. In this detection, an alert is triggered if more than 5 Kerberos authentication failures are seen from a computer account in 24 hours.
+
+**Investigation**
+
+Is the computer in question allowing domain users to log on? 
+- If yes, you may ignore this computer in the remediation steps.
+
+**Remediation**
+
+Rejoin the machine back to the domain if necessary or reset the machine's password.
+
+
 ## Brute force attack using LDAP simple bind
 
 **Description**
@@ -429,6 +448,25 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 1. Restrict remote access to domain controllers from non-Tier 0 machines.
 
 2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
+
+## Sensitive account credentials exposed & Services exposing account credentials
+
+> ![NOTE]
+> This suspicious activity was deprecated and only appears in ATA versions prior to 1.9. For ATA 1.9 and later, see [Reports](reports.md).
+
+**Description**
+
+Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account triggers the alert, while for non-sensitive accounts the alert is triggered if five or more different accounts  send clear text passwords from the same source computer. 
+
+**Investigation**
+
+Click on the alert to get to its details page. See which accounts were exposed. If there are many such accounts, click **Download details** to view the list in an Excel spreadsheet.
+
+Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
+
+**Remediation**
+
+Verify the configuration on the source computers and make sure not to use LDAP simple bind. Instead of using LDAP simple binds you can use LDAP SALS or LDAPS.
 
 ## Suspicious authentication failures
 
