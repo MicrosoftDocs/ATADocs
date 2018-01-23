@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 1/23/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -114,7 +114,7 @@ In this detection, an alert is triggered when ATA detects a massive number of si
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
 
 There are three detection types:
 
@@ -492,7 +492,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Description**
 
-A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 and can be collected from all endpoints in your network, by configuring your SIEM. In order to identify this suspicious activity on your client machines (not domain controllers), [configure your SIEM](install-ata-step6.md) as a data source to get relevant events in ATA.
+A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 and can be collected from all endpoints in your network. In order to identify this suspicious activity on your endpoints, [configure your SIEM](install-ata-step6.md) as a data source that forwards events to ATA.
 
 **Investigation**
 
