@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: df162a62-f273-4465-9887-94271f5000d2
+ms.assetid: 79c59b97-a717-46a5-acc5-02c8f8b9caf4
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -47,48 +47,48 @@ The ATP performance counters provide insight into how well each component of ATP
 
 To retrieve the performance monitor files (BLG) from the various ATP components:
 1.  Open perfmon.
-2.  Stop the data collector set named: "Microsoft ATP Gateway " or “Microsoft ATP Center”.
+2.  Stop the data collector set named: "Microsoft ATP Standalone Sensor " or “Microsoft ATP Center”.
 3.  Go to the data collector set folder (by default, this is "C:\Program Files\Microsoft Azure Threat Protection\Gateway\Logs\DataCollectorSets" or “C:\Program Files\Microsoft Azure Threat Protection\Center\Logs\DataCollectorSets”).
 4.  Copy the BLG file that was most recently modified.
-5.  Restart the data collector set named: "Microsoft ATP Gateway" or “Microsoft ATP Center”.
+5.  Restart the data collector set named: "Microsoft ATP Standalone Sensor" or “Microsoft ATP Center”.
 
 
-## ATP Gateway performance counters
+## ATP Standalone Sensor performance counters
 
-In this section, every reference to ATP Gateway refers also to the ATP Lightweight Gateway.
+In this section, every reference to ATP Standalone Sensor refers also to the ATP Sensor.
 
-You can observe the real time performance status of the ATP Gateway by adding the ATP Gateway's performance counters.
-This is done by opening "Performance Monitor" and adding all counters for the ATP Gateway. The name of the performance counter object is: "Microsoft ATP Gateway".
+You can observe the real time performance status of the ATP Standalone Sensor by adding the ATP Standalone Sensor's performance counters.
+This is done by opening "Performance Monitor" and adding all counters for the ATP Standalone Sensor. The name of the performance counter object is: "Microsoft ATP Standalone Sensor".
 
-Here is the list of the main ATP Gateway counters to pay attention to:
+Here is the list of the main ATP Standalone Sensor counters to pay attention to:
 
 > [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATP Gateway\NetworkListener PEF Parsed Messages\Sec|The amount of traffic being processed by the ATP Gateway every second.|No threshold|Helps you understand the amount of traffic that is being parsed by the ATP Gateway.|
-|NetworkListener PEF Dropped Events\Sec|The amount of traffic being dropped by the ATP Gateway every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Gateway\NetworkListener ETW Dropped Events\Sec|The amount of traffic being dropped by the ATP Gateway every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Gateway\NetworkActivityTranslator Message Data # Block Size|The amount of traffic queued for translation to Network Activities (NAs).|Should be less than the maximum-1 (default maximum: 100,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Gateway\EntityResolver Activity Block Size|The amount of Network Activities (NAs) queued for resolution.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Gateway\EntitySender Entity Batch Block Size|The amount of Network Activities (NAs) queued to be sent to the ATP Center.|Should be less than the maximum-1 (default maximum: 1,000,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Gateway\EntitySender Batch Send Time|The amount of time it took to send the last batch.|Should be less than 1000 milliseconds most of the time|Check if there are any networking issues between the ATP Gateway and the ATP Center.|
+|Microsoft ATP Standalone Sensor\NetworkListener PEF Parsed Messages\Sec|The amount of traffic being processed by the ATP Standalone Sensor every second.|No threshold|Helps you understand the amount of traffic that is being parsed by the ATP Standalone Sensor.|
+|NetworkListener PEF Dropped Events\Sec|The amount of traffic being dropped by the ATP Standalone Sensor every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft ATP Standalone Sensor\NetworkListener ETW Dropped Events\Sec|The amount of traffic being dropped by the ATP Standalone Sensor every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft ATP Standalone Sensor\NetworkActivityTranslator Message Data # Block Size|The amount of traffic queued for translation to Network Activities (NAs).|Should be less than the maximum-1 (default maximum: 100,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft ATP Standalone Sensor\EntityResolver Activity Block Size|The amount of Network Activities (NAs) queued for resolution.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft ATP Standalone Sensor\EntitySender Entity Batch Block Size|The amount of Network Activities (NAs) queued to be sent to the Azure ATP cloud service.|Should be less than the maximum-1 (default maximum: 1,000,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft ATP Standalone Sensor\EntitySender Batch Send Time|The amount of time it took to send the last batch.|Should be less than 1000 milliseconds most of the time|Check if there are any networking issues between the ATP Standalone Sensor and the Azure ATP cloud service.|
 
 > [!NOTE]
 > -   Timed counters are in milliseconds.
 > -   It is sometimes more convenient to monitor the full list of the counters by using the "Report" graph type (example: real time monitoring of all the counters)
 
-## ATP Lightweight Gateway performance counters
-The performance counters can be used for quota management in the Lightweight Gateway, to make sure that ATP doesn't drain too many resources from the domain controllers on which it is installed.
-To measure the resource limitations that ATP enforces on the Lightweight Gateway, add these counters.
+## ATP Sensor performance counters
+The performance counters can be used for quota management in the Sensor, to make sure that ATP doesn't drain too many resources from the domain controllers on which it is installed.
+To measure the resource limitations that ATP enforces on the Sensor, add these counters.
 
-This is done by opening "Performance Monitor" and adding all counters for the ATP Lightweight Gateway. The name of the performance counter objects are: "Microsoft ATP Gateway" and "Microsoft ATP Gateway Updater".
+This is done by opening "Performance Monitor" and adding all counters for the ATP Sensor. The name of the performance counter objects are: "Microsoft ATP Standalone Sensor" and "Microsoft ATP Standalone Sensor Updater".
 
 > [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATP Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|The maximum amount of CPU time (in percentage) that the Lightweight Gateway process can consume. |No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Lightweight Gateway. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller..|
-|Microsoft ATP Gateway Updater\GatewayUpdaterResourceManager Commit Memory Max Size|The maximum amount of committed memory (in bytes) that the Lightweight Gateway process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Lightweight Gateway. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.| 
-|Microsoft ATP Gateway Updater\GatewayUpdaterResourceManager Working Set Limit Size|The Maximum amount of physical memory (in bytes) that the Lightweight Gateway process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Lightweight Gateway. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.|
+|Microsoft ATP Standalone Sensor Updater\GatewayUpdaterResourceManager CPU Time Max %|The maximum amount of CPU time (in percentage) that the Sensor process can consume. |No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller..|
+|Microsoft ATP Standalone Sensor Updater\GatewayUpdaterResourceManager Commit Memory Max Size|The maximum amount of committed memory (in bytes) that the Sensor process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.| 
+|Microsoft ATP Standalone Sensor Updater\GatewayUpdaterResourceManager Working Set Limit Size|The Maximum amount of physical memory (in bytes) that the Sensor process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.|
 
 
 
@@ -98,24 +98,24 @@ In order to see your actual consumption, refer to the following counters:
 > [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
-|Process(Microsoft.Tri.Gateway)\%Processor Time|The amount of CPU time (in percentage) that the Lightweight Gateway process is actually consuming. |No threshold. | Compare the results of this counter to the limit found in GatewayUpdaterResourceManager CPU Time Max %. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Lightweight Gateway.|
-|Process(Microsoft.Tri.Gateway)\Private Bytes|The amount of committed memory (in bytes) that the Lightweight Gateway process is actually consuming.|No threshold. | Compare the results of this counter to the limit found in GatewayUpdaterResourceManager Commit Memory Max Size. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Lightweight Gateway.| 
-|Process(Microsoft.Tri.Gateway)\Working Set|The amount of physical memory (in bytes) that the Lightweight Gateway process is actually consuming.|No threshold. |Compare the results of this counter to the limit found in GatewayUpdaterResourceManager Working Set Limit Size. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Lightweight Gateway.|
+|Process(Microsoft.Tri.Gateway)\%Processor Time|The amount of CPU time (in percentage) that the Sensor process is actually consuming. |No threshold. | Compare the results of this counter to the limit found in GatewayUpdaterResourceManager CPU Time Max %. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Sensor.|
+|Process(Microsoft.Tri.Gateway)\Private Bytes|The amount of committed memory (in bytes) that the Sensor process is actually consuming.|No threshold. | Compare the results of this counter to the limit found in GatewayUpdaterResourceManager Commit Memory Max Size. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Sensor.| 
+|Process(Microsoft.Tri.Gateway)\Working Set|The amount of physical memory (in bytes) that the Sensor process is actually consuming.|No threshold. |Compare the results of this counter to the limit found in GatewayUpdaterResourceManager Working Set Limit Size. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to dedicate more resources to the Sensor.|
 
-## ATP Center performance counters
-You can observe the real-time performance status of the ATP Center by adding the ATP Center's performance counters.
+## Azure ATP cloud service performance counters
+You can observe the real-time performance status of the Azure ATP cloud service by adding the Azure ATP cloud service's performance counters.
 
-This is done by opening "Performance Monitor" and adding all counters for the ATP Center. The name of the performance counter object is: "Microsoft ATP Center".
+This is done by opening "Performance Monitor" and adding all counters for the Azure ATP cloud service. The name of the performance counter object is: "Microsoft Azure ATP cloud service".
 
-Here is the list of the main ATP Center counters to pay attention to:
+Here is the list of the main Azure ATP cloud service counters to pay attention to:
 
 > [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATP Center\EntityReceiver Entity Batch Block Size|The number of entity batches queued by the ATP Center.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener.  Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Center\NetworkActivityProcessor Network Activity Block Size|The number of Network Activities (NAs) queued for processing.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Center\EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Center\Database &#42; Block Size|The number of Network Activities, of a specific type, queued to be written to the database.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\EntityReceiver Entity Batch Block Size|The number of entity batches queued by the Azure ATP cloud service.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener.  Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\NetworkActivityProcessor Network Activity Block Size|The number of Network Activities (NAs) queued for processing.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\Database &#42; Block Size|The number of Network Activities, of a specific type, queued to be written to the database.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
 
 
 > [!NOTE]

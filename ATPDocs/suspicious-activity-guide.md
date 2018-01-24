@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
+ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 # Azure Threat Protection suspicious activity guide
@@ -54,7 +54,7 @@ For a definition of sensitive groups in ATP, see [Working with the ATP console](
 
 
 The detection relies on [events audited on domain controllers](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-To make sure your domain controllers audit the needed events, use the tool referenced in [ATP Auditing (AuditPol, Advanced Audit Settings Enforcement, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog).
+To make sure your domain controllers audit the needed events, use the tool referenced in [ATP Auditing (AuditPol, Advanced Audit Settings Enforcement, Sensor Service discovery)](https://aka.ms/ataauditingblog).
 
 **Investigation**
 
@@ -159,7 +159,7 @@ security policy.
 
 1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
 
-2. Is the ATP Gateway involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
+2. Is the ATP Standalone Sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
 
 3. If the answer to the above questions is no, assume this is malicious.
 
@@ -387,7 +387,7 @@ There are several query types in the DNS protocol. ATP detects the AXFR (Transfe
 
 **Investigation**
 
-1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between ATP Gateways and the source computer to prevent future false positives.
+1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between ATP Standalone Sensors and the source computer to prevent future false positives.
 
 2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for ATP admins).
 

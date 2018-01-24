@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
+ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 
 # optional metadata
 
@@ -26,14 +26,14 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
 # Provide ATP with your email server settings
 ATP can notify you when it detects a suspicious activity. For ATP to be able to send email notifications, you must first configure the **Email server settings**.
 
-1.  On the ATP Center server, click the **Microsoft Azure Threat Protection Management** icon on the desktop.
+1.  On the Azure ATP cloud service server, click the **Microsoft Azure Threat Protection Management** icon on the desktop.
 
 2.  Enter your user name and password and click **Log in**.
 
@@ -64,13 +64,13 @@ ATP can notify you when it detects a suspicious activity by sending the notifica
 
     -   Format in which to send the data RFC 3164 or 5424
 
-2.  On the ATP Center server, click the **Microsoft Azure Threat Protection Management** icon on the desktop.
+2.  On the Azure ATP cloud service server, click the **Microsoft Azure Threat Protection Management** icon on the desktop.
 
 3.  Enter your user name and password and click **Log in**.
 
 4.  Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATP configuration settings icon](media/ATP-config-icon.png)
+    ![ATP configuration settings icon](media/ATP-config-menu.png)
 
 5.  Under Notifications section, Select **Syslog server** and enter the following information:
 
@@ -80,7 +80,7 @@ ATP can notify you when it detects a suspicious activity by sending the notifica
     |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
     |Format|This is the format that ATP uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
 
- ![ATP Syslog server settings image](media/ata-syslog-server-settings.png)
+ ![ATP Syslog server settings image](media/atp-syslog.png)
 
 
 

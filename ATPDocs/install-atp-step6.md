@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
+ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -38,23 +38,23 @@ ms.suite: ems
 
 ## Step 6. Configure event collection
 ### Configure Event Collection
-To enhance detection capabilities, ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the ATP Lightweight Gateway or in case the ATP Lightweight Gateway is not deployed, it can be forwarded to the ATP Gateway in one of two ways, by configuring the ATP Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
+To enhance detection capabilities, ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the ATP Sensor or in case the ATP Sensor is not deployed, it can be forwarded to the ATP Standalone Sensor in one of two ways, by configuring the ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
 
 > [!NOTE]
-> For ATP versions 1.8 and higher, event collection configuration is no longer necessary for ATP Lightweight Gateways. The ATP Lightweight Gateway can now read events locally, without the need to configure event forwarding.
+> For ATP versions 1.8 and higher, event collection configuration is no longer necessary for ATP Sensors. The ATP Sensor can now read events locally, without the need to configure event forwarding.
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATP with additional information that is not available via the domain controller network traffic.
 
 #### SIEM/Syslog
 For ATP to be able to consume data from a Syslog server, you need to perform the following steps:
 
--   Configure your ATP Gateway servers to listen to and accept events forwarded from the SIEM/Syslog server.
+-   Configure your ATP Standalone Sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
 > [!NOTE]
 > ATP only listens on IPv4 and not IPv6. 
--   Configure your SIEM/Syslog server to forward specific events to the ATP Gateway.
+-   Configure your SIEM/Syslog server to forward specific events to the ATP Standalone Sensor.
 
 > [!IMPORTANT]
-> -   Do not forward all the Syslog data to the ATP Gateway.
+> -   Do not forward all the Syslog data to the ATP Standalone Sensor.
 > -   ATP supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. 
@@ -62,13 +62,13 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 > [!NOTE]
 >If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATP. Windows Event ID 4776 provides data regarding NTLM authentications.
 
-#### Configuring the ATP Gateway to listen for SIEM events
+#### Configuring the ATP Standalone Sensor to listen for SIEM events
 
 1.  In ATP Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
 
-    ![Enable syslog listener UDP image](media/ATP-enable-siem-forward-events.png)
+    ![Enable syslog listener UDP image](media/atp-siem-config.png)
 
-2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATP Gateways. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATP Standalone Sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
 ATP supports SIEM events in the following formats:  
 
@@ -201,7 +201,7 @@ Make sure to have \t between the key=value pairs.
 
 ## Related Videos
 - [ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right ATP Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also

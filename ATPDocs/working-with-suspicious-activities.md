@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
+ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -59,7 +59,7 @@ Each suspicious activity has the following information:
 > -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
 > -   If you click on an entity, it takes you to the entity profile of the user or computer.
 
-![ATP suspicious activities timeline image](media/ATP-Suspicious-Activity-Timeline.JPG)
+![ATP suspicious activities timeline image](media/atp-sa-timeline.JPG)
 
 ## Filter suspicious activities list
 To filter the suspicious activities list:
@@ -89,7 +89,7 @@ To filter the suspicious activities list:
 You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific suspicious activity to reveal the list of available actions.
 
-![ATP Actions for suspicious activities](./media/sa-actions.png)
+![ATP Actions for suspicious activities](./media/atp-sa-actions.png)
 
 **Suspicious activity status**
 
@@ -105,6 +105,7 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 - **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
 
 - **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set ATP to exclude a specific entity (user or computer) from alerting again for a certain type of suspicious activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the Suspicious activity as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each suspicious activity you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket). 
+
 > [!NOTE]
 > The configuration pages can only be modified by ATP admins.
 

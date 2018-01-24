@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
+ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 
 # optional metadata
 
@@ -33,20 +33,20 @@ ms.suite: ems
 # Configuring Windows Event Forwarding
 
 > [!NOTE]
-> For ATP versions 1.8 and higher, event collection configuration is no longer necessary for ATP Lightweight Gateways. The ATP Lightweight Gateway can now read events locally, without the need to configure event forwarding.
+> For ATP versions 1.8 and higher, event collection configuration is no longer necessary for ATP Sensors. The ATP Sensor can now read events locally, without the need to configure event forwarding.
 
 
-To enhance detection capabilities, ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the ATP Lightweight Gateway or in case the ATP Lightweight Gateway is not deployed, it can be forwarded to the ATP Gateway in one of two ways, by configuring the ATP Gateway to listen for SIEM events or by configuring Windows Event Forwarding.
+To enhance detection capabilities, ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the ATP Sensor or in case the ATP Sensor is not deployed, it can be forwarded to the ATP Standalone Sensor in one of two ways, by configuring the ATP Standalone Sensor to listen for SIEM events or by configuring Windows Event Forwarding.
 
 
 
-### WEF configuration for ATP Gateway's with port mirroring
+### WEF configuration for ATP Standalone Sensor's with port mirroring
 
-After you configured port mirroring from the domain controllers to the ATP Gateway, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
+After you configured port mirroring from the domain controllers to the ATP Standalone Sensor, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
 
 **Step 1: Add the network service account to the domain Event Log Readers Group.** 
 
-In this scenario, assume that the ATP Gateway is a member of the domain.
+In this scenario, assume that the ATP Standalone Sensor is a member of the domain.
 
 1.	Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**. 
 2.	Select **Members**.
@@ -56,7 +56,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
 > [!Note] 
-> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATP Gateway. The steps below modify the local policy of the domain controller. 	
+> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATP Standalone Sensor. The steps below modify the local policy of the domain controller. 	
 
 1.	Run the following command on each domain controller: *winrm quickconfig*
 2.  From a command prompt type *gpedit.msc*.
@@ -75,7 +75,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     5.	Click **OK**.
     6.	From an elevated command prompt type *gpupdate /force*. 
 
-**Step 3: Perform the following steps on the ATP Gateway** 
+**Step 3: Perform the following steps on the ATP Standalone Sensor** 
 
 1.	Open an elevated command prompt and type *wecutil qc*
 2.	Open **Event Viewer**. 
@@ -99,7 +99,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
  ![Query filter image](media/wef 4 query filter.png)
 
    5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
-   6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATP Gateway.
+   6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATP Standalone Sensor.
 
 
 For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)

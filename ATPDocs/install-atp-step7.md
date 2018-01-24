@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
+ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -46,13 +46,13 @@ To configure this, follow these steps:
 
 1.  From the ATP Console, click on the settings icon and select **Configuration**.
 
-    ![ATP configuration settings](media/ATP-config-icon.png)
+    ![ATP configuration settings](media/atp-config-menu.png)
 
-2.  Under **Detection**, click **General**.
+2.  Under **Detection**, click **Entity tags**.
 
-2. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network.
+2. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network. Click **Save**.
 
-   ![Honeytoken](media/honeytoken.png)
+   ![Honeytoken](media/honeytoken-sensitive.png)
 
 3. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
 
@@ -77,7 +77,7 @@ To check that ATP is up and running and catching breaches in your network, you c
 
 ## Related Videos
 - [ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right ATP Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also

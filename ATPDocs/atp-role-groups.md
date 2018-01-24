@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
+ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 
 # optional metadata
 
@@ -26,19 +26,19 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
 
-# ATP Role Groups
+# ATP role groups
 
 Role groups enable access management for ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and ATP role authorization, and helps you get up and running with role groups in ATP.
 
 > [!NOTE]
-> Any local administrator on the ATP Center is automatically a Microsoft Azure Threat Protection Administrator.
+> Any local administrator on the Azure ATP cloud service is automatically a Microsoft Azure Threat Protection Administrator.
 
-## Types of ATP Role Groups 
+## Types of ATP role groups 
 
 ATP introduces three types of Role group: ATP Administrators, ATP Users, and ATP Viewers. The following table describes the type of access in ATP available per role. Depending on which role you assign, various screens and menu options in ATP are not available, as follows:
 
@@ -59,8 +59,8 @@ ATP introduces three types of Role group: ATP Administrators, ATP Users, and ATP
 
 When users try to access a page that is not available for their role group, they are redirected to the ATP unauthorized page. 
 
-## Add \ Remove users - ATP Role Groups 
+## Add and remove users 
 
-ATP uses the local Windows groups as a basis for role groups. The role groups must be managed on the ATP Center server.
+ATP uses the local Windows groups as a basis for role groups. The role groups must be managed on the Azure ATP cloud service server.
 To add or remove users, use the **Local Users and Groups** MMC (Lusrmgr.msc). On a domain joined machine, you can add domain accounts as well as local accounts. 
 

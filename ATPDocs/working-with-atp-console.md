@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
+ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -45,14 +45,14 @@ For more information about role-based access control (RBAC) in ATP, see [Working
 >[!NOTE]
  > Starting with ATP 1.8, the log in process to the ATP Console is accomplished using single sign-on.
 
-1. In the ATP Center server, click the **Microsoft ATP Console** icon on the desktop or open a browser and browse to the ATP Console.
+1. In the Azure ATP cloud service server, click the **Microsoft ATP Console** icon on the desktop or open a browser and browse to the ATP Console.
 
     ![ATP server icon](media/ata-server-icon.png)
 
  >[!NOTE]
- > You can also open a browser from either the ATP Center or the ATP Gateway and browse to the IP address you configured in the ATP Center installation for the ATP Console.    
+ > You can also open a browser from either the Azure ATP cloud service or the ATP Standalone Sensor and browse to the IP address you configured in the Azure ATP cloud service installation for the ATP Console.    
 
-2.  If the computer on which the ATP Center is installed and the computer from which you are trying to access the ATP Console are both domain joined, ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, ATP uses that token to log you into the ATP Console. You can also log in using a smartcard. Your permissions in ATP correspond with your [administrator role](ata-role-groups.md).
+2.  If the computer on which the Azure ATP cloud service is installed and the computer from which you are trying to access the ATP Console are both domain joined, ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, ATP uses that token to log you into the ATP Console. You can also log in using a smartcard. Your permissions in ATP correspond with your [administrator role](ata-role-groups.md).
 
  > [!NOTE]
  > Make sure to log on to the computer from which you want to access the ATP Console using your ATP admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your ATP admin user. To prompt the ATP Console to ask for credentials, access the console using an IP address and you are prompted to enter credentials.
@@ -60,7 +60,7 @@ For more information about role-based access control (RBAC) in ATP, see [Working
 3. To log in using SSO, make sure the ATP console site is defined as a local intranet site in your browser and that you access it using a shortname or a localhost.
 
 > [!NOTE]
-> In addition to logging each suspicious activity and health alert, every configuration change you make in the ATP Console is audited in the Windows Event Log on the ATP Center machine, under **Applications and services log** and then **Microsoft ATP**. Each login to the ATP console is audited as well.<br></br>  Configuration affecting the ATP Gateway is also logged in the Windows Event Log of the ATP Gateway machine. 
+> In addition to logging each suspicious activity and health alert, every configuration change you make in the ATP Console is audited in the Windows Event Log on the Azure ATP cloud service machine, under **Applications and services log** and then **Microsoft ATP**. Each login to the ATP console is audited as well.<br></br>  Configuration affecting the ATP Standalone Sensor is also logged in the Windows Event Log of the ATP Standalone Sensor machine. 
 
 
 
@@ -75,15 +75,9 @@ These are the key elements of the ATP console.
 
 This is the default landing page you are taken to when you log in to the ATP Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
-![ATP attack timeline image](media/ATP-Suspicious-Activity-Timeline.jpg)
+![ATP attack timeline image](media/atp-sa-timeline.png)
 
 For more information, see [Working with suspicious activities](working-with-suspicious-activities.md).
-
-### Notification bar
-
-When a new suspicious activity is detected, the notification bar opens automatically on the right-hand side. If there are new suspicious activities since the last time you logged in, the notification bar will open after you have successfully logged in. You can click the arrow on the right at any time to access the notification bar.
-
-![ATP notification bar image](media/notification-bar-1.7.png)
 
 ### What's new
 
@@ -103,9 +97,11 @@ In the top menu, you can find a search bar. You can search for a specific user, 
 
 The Health Center provides you with alerts when something isn't working properly in your ATP deployment.
 
-![ATP health center image](media/ATP-Health-Issue.jpg)
+![ATP health center image](media/atp-health-center.png)
 
-Any time your system encounters a problem, such as a connectivity error or a disconnected ATP Gateway, the Health Center icon lets you know by displaying a red dot. ![ATP health center red dot image](media/ATP-Health-Center-Alert-red-dot.png)
+Any time your system encounters a problem, such as a connectivity error or a disconnected ATP Standalone Sensor, the Health Center icon lets you know by displaying a red dot. 
+
+![ATP health center red dot image](media/atp-health-bar.png)
 
 ### Sensitive groups
 
@@ -135,7 +131,7 @@ The following list of groups are considered **Sensitive** by ATP. Any entity tha
 
 If you hover your mouse over an entity, anywhere in the console where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information if available:
 
-![ATP mini profile image](media/ATP-mini-profile.jpg)
+![ATP mini profile image](media/atp-mini-profile.png)
 
 -   Name
 

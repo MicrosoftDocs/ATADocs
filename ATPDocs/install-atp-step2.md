@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install Azure Threat Protection - Step 2 | Microsoft Docs
-description: Step two of installing ATP helps you configure the domain connectivity settings on your ATP Center server
+description: Step two of installing ATP helps you configure the domain connectivity settings on your Azure ATP cloud service server
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
+ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -40,7 +40,7 @@ ms.suite: ems
 
 The first time you open the ATP Console, the following screen appears:
 
-![ATP welcome stage 1](media/ATA_1.7-welcome-provide-username.png)
+![ATP welcome stage 1](media/directory-services.png)
 
 1.  Enter the following information and click **Save**:
 
@@ -50,7 +50,7 @@ The first time you open the ATP Console, the following screen appears:
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-2. You can click **Test connection** to test connectivity to the domain and check that the credentials supplied provide access. This works if the ATP Center has connectivity to the domain. 	
+2. You can click **Test connection** to test connectivity to the domain and check that the credentials supplied provide access. This works if the Azure ATP cloud service has connectivity to the domain. 	
 
     After it is saved, the welcome message in the Console will change to the following message:
 ![ATP welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
@@ -66,7 +66,7 @@ The first time you open the ATP Console, the following screen appears:
 ## See Also
 ## Related Videos
 - [ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right ATP Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also
