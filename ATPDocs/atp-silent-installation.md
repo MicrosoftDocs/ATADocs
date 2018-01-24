@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
+ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 # ATP Silent Installation
@@ -39,19 +39,19 @@ ATP  requires the installation of Microsoft .NET Framework 4.6.1.
 When you install or update ATP, .Net Framework 4.6.1 is automatically installed as part of the deployment of Microsoft ATP.
 
 > [!Note] 
-> The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATP Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
+> The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATP Standalone Sensor on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
 When using ATP silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
 
 To track the progress of the deployment, monitor ATP installer logs, which are located in **%AppData%\Local\Temp**.
 
 
-## Install the ATP Center
+## Install the Azure ATP cloud service
 
-Use the following command to install the ATP Center:
+Use the following command to install the Azure ATP cloud service:
 
 **Syntax**:
 
-    "Microsoft ATP Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    "Microsoft Azure ATP cloud service Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
 **Installation options**:
@@ -71,30 +71,30 @@ Use the following command to install the ATP Center:
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATP binaries. Default path: C:\Program Files\Microsoft Azure Threat Protection\Center|
 |DatabaseDataPath|DatabaseDataPath= "<DBPath>"|No|Sets the path for the ATP Database data folder. Default path: C:\Program Files\Microsoft Azure Threat Protection\Center\MongoDB\bin\data|
-|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Yes|Sets the IP address of the ATP Center Service|
-|CenterPort|CenterPort=<CenterPort>|Yes|Sets the network port of the ATP Center Service|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the ATP Center Service. This Certificate is used to secure communication between the ATP Center and the ATP Gateway. If not set, the installation generates a self-signed certificate.|
+|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Yes|Sets the IP address of the Azure ATP cloud service Service|
+|CenterPort|CenterPort=<CenterPort>|Yes|Sets the network port of the Azure ATP cloud service Service|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the Azure ATP cloud service Service. This Certificate is used to secure communication between the Azure ATP cloud service and the ATP Standalone Sensor. If not set, the installation generates a self-signed certificate.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Yes|Sets the IP address of the ATP Console|
 |ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|No|Specifies the certificate thumbprint for the ATP Console. This Certificate is used to validate the identity of the ATP Console website. If not specified, the installation generates a self-signed certificate|
 
 **Examples**:
-To install the ATP Center with default installation paths and a single IP address:
+To install the Azure ATP cloud service with default installation paths and a single IP address:
 
-    "Microsoft ATP Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
+    "Microsoft Azure ATP cloud service Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
 
-To install the ATP Center with default installation paths, two IP addresses, and user-defined certificate thumbprints:
+To install the Azure ATP cloud service with default installation paths, two IP addresses, and user-defined certificate thumbprints:
 
-    "Microsoft ATP Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
+    "Microsoft Azure ATP cloud service Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-## Update the ATP Center
+## Update the Azure ATP cloud service
 
-Use the following command to update the ATP Center:
+Use the following command to update the Azure ATP cloud service:
 
 **Syntax**:
 
-    "Microsoft ATP Center Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+    "Microsoft Azure ATP cloud service Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installation options**:
@@ -110,16 +110,16 @@ Use the following command to update the ATP Center:
 When updating ATP, the installer automatically detects that ATP is already installed on the server, and no update installation option is required.
 
 **Examples**:
-To update the ATP Center silently. In large environments, the ATP Center update can take a while to complete. Monitor ATP logs to track the progress of the update.
+To update the Azure ATP cloud service silently. In large environments, the Azure ATP cloud service update can take a while to complete. Monitor ATP logs to track the progress of the update.
 
-    	"Microsoft ATP Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
+    	"Microsoft Azure ATP cloud service Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-## Uninstall the ATP Center silently
+## Uninstall the Azure ATP cloud service silently
 
-Use the following command to perform a silent uninstall of the ATP Center:
+Use the following command to perform a silent uninstall of the Azure ATP cloud service:
 **Syntax**:
 
-    Microsoft ATP Center Setup.exe [/quiet] [/Uninstall] [/Help]
+    Microsoft Azure ATP cloud service Setup.exe [/quiet] [/Uninstall] [/Help]
      [--DeleteExistingDatabaseData]
 
 **Installation options**:
@@ -128,7 +128,7 @@ Use the following command to perform a silent uninstall of the ATP Center:
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATP Center from the server.|
+|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Azure ATP cloud service from the server.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Installation parameters**:
@@ -139,22 +139,22 @@ Use the following command to perform a silent uninstall of the ATP Center:
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
 
 **Examples**:
-To silently uninstall the ATP Center from the server, removing all existing database data:
+To silently uninstall the Azure ATP cloud service from the server, removing all existing database data:
 
 
-    "Microsoft ATP Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
+    "Microsoft Azure ATP cloud service Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## ATP Gateway Silent Installation
+## ATP Standalone Sensor Silent Installation
 
 > [!NOTE]
-> When silently deploying the ATP Lightweight Gateway via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.6.1 including rebooting the domain controller</br>- ATP Gateway. </br>Make the ATP Gateway package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
+> When silently deploying the ATP Sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.6.1 including rebooting the domain controller</br>- ATP Standalone Sensor. </br>Make the ATP Standalone Sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
 
 
-Use the following command to silently install the ATP Gateway:
+Use the following command to silently install the ATP Standalone Sensor:
 
 **Syntax**:
 
-    Microsoft ATP Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Microsoft ATP Standalone Sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
     [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
@@ -176,23 +176,23 @@ Use the following command to silently install the ATP Gateway:
 > [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATP Gateway with the ATP Center.|
-|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATP Gateway with the ATP Center.|
+|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATP Standalone Sensor with the Azure ATP cloud service.|
+|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATP Standalone Sensor with the Azure ATP cloud service.|
 
 **Examples**:
-To silently install the ATP Gateway, log into the domain joined computer with your ATP admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the ATP Center using the specified credentials:
+To silently install the ATP Standalone Sensor, log into the domain joined computer with your ATP admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the Azure ATP cloud service using the specified credentials:
 
-    "Microsoft ATP Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
+    "Microsoft ATP Standalone Sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-## Update the ATP Gateway
+## Update the ATP Standalone Sensor
 
-Use the following command to silently update the ATP Gateway:
+Use the following command to silently update the ATP Standalone Sensor:
 
 **Syntax**:
 
-    Microsoft ATP Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+    Microsoft ATP Standalone Sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installation options**:
@@ -206,16 +206,16 @@ Use the following command to silently update the ATP Gateway:
 
 
 **Examples**:
-To update the ATP Gateway silently:
+To update the ATP Standalone Sensor silently:
 
-    	Microsoft ATP Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+    	Microsoft ATP Standalone Sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Uninstall the ATP Gateway silently
+## Uninstall the ATP Standalone Sensor silently
 
-Use the following command to perform a silent uninstall of the ATP Gateway:
+Use the following command to perform a silent uninstall of the ATP Standalone Sensor:
 **Syntax**:
 
-    Microsoft ATP Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
+    Microsoft ATP Standalone Sensor Setup.exe [/quiet] [/Uninstall] [/Help]
     
 **Installation options**:
 
@@ -223,14 +223,14 @@ Use the following command to perform a silent uninstall of the ATP Gateway:
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATP Gateway from the server.|
+|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATP Standalone Sensor from the server.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Examples**:
-To silently uninstall the ATP Gateway from the server:
+To silently uninstall the ATP Standalone Sensor from the server:
 
 
-    Microsoft ATP Gateway Setup.exe /quiet /uninstall
+    Microsoft ATP Standalone Sensor Setup.exe /quiet /uninstall
     
 
 

@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
+ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 
 # optional metadata
 
@@ -27,7 +27,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 # ATP SIEM log reference

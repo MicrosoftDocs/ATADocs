@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
+ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 
 # optional metadata
 
@@ -26,21 +26,21 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 # Working with ATP system health and events
 
 ## ATP Health Center
-The ATP Health Center lets you know how your ATP service is performing and alerts you to problems.
+The ATP Health Center lets you know how your ATP service is performing and alerts you when there are problems.
 
 ## Working with the ATP Health Center
 The ATP Health Center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
 
-![ATP Health Center red dot toolbar](media/ATP-Health-Center-Alert-red-dot.png)
+![ATP Health Center red dot toolbar](media/atp-health-bar.png)
 
 ### Managing ATP health
-To check up on your system's overall health, click the Health Center icon in the menu bar ![ATP Health Center icon](media/ATP-red-dot.png)
+To check up on your system's overall health, click the Health Center icon in the menu bar ![ATP Health Center icon](media/atp-red-dot.png)
 
 -   All open alerts can be managed by setting them to **Close**, **Suppress**, or **Delete** by clicking the three dots in the corner of the alert and making your selection.
 
@@ -57,7 +57,7 @@ To check up on your system's overall health, click the Health Center icon in the
 
 
 
-![ATP Health Center issues image](media/ATP-Health-Issue.JPG)
+![ATP Health Center issues image](media/atp-health-issue.JPG)
 
 
 

@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
+ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -45,7 +45,7 @@ There are two ways in which you can exclude entities, from the suspicious activi
 
 - **From the Configuration page**:  To review or modify any exclusions: under **Configuration**, click **Exclusions** and then select the suspicious activity, such as **Sensitive account credentials exposed**.
 
-    ![Exclusion configuration](./media/exclusions-config-page.png)
+    ![Exclusion configuration](./media/exclusions.png)
 
 To remove an entity from the **Exclusions** configuration: click the minus next to the entity name and then click **Save** at the bottom of the page.
 

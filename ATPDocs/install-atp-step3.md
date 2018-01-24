@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install Azure Threat Protection - Step 3 | Microsoft Docs
-description: Step three of installing ATP helps you download the ATP Gateway setup package.
+description: Step three of installing ATP helps you download the ATP Standalone Sensor setup package.
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -12,7 +12,7 @@ ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
+ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 
 # optional metadata
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
@@ -36,26 +36,25 @@ ms.suite: ems
 [« Step 2](install-ata-step2.md)
 [Step 4 »](install-ata-step4.md)
 
-## Step 3. Download the ATP Gateway setup package
-After configuring the domain connectivity settings, you can download the ATP Gateway setup package. The ATP Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an ATP Lightweight Gateway. For more information on the ATP Lightweight Gateway, see [ATP Architecture](ata-architecture.md). 
+## Step 3. Download the ATP Standalone Sensor setup package
+After configuring the domain connectivity settings, you can download the ATP Standalone Sensor setup package. The ATP Standalone Sensor can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an ATP Sensor. For more information on the ATP Sensor, see [ATP Architecture](ata-architecture.md). 
 
-Click **Download Gateway Setup** in the list of steps at the top of the page to go to the **Gateways** page.
+Click **Download** in the list of steps at the top of the page to go to the **Sensors** page.
 
-![ATP gateway configuration settings](media/ATA_1.7-welcome-download-gateway.PNG)
+![ATP Standalone Sensor configuration settings](media/atp-sensor-config.png)
 
 > [!NOTE] 
-> To reach the Gateway configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Gateways**.  
+> To reach the Sensor configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Standalone Sensors**.  
 
-1.  Click **Gateway Setup**.
-  ![Download ATP Gateway Setup](media/download-gateway-setup.png)
+1.  Click **Sensors**.
 2.  Save the package locally.
-3.  Copy the package to the dedicated server or domain controller onto which you are installing the ATP Gateway. Alternatively, you can open the ATP Console from the dedicated server or domain controller and skip this step.
+3.  Copy the package to the dedicated server or domain controller onto which you are installing the ATP Standalone Sensor. Alternatively, you can open the ATP Console from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following files:
 
--   ATP Gateway installer
+-   ATP Standalone Sensor installer
 
--   Configuration setting file with the required information to connect to the ATP Center
+-   Configuration setting file with the required information to connect to the Azure ATP cloud service
 
 
 >[!div class="step-by-step"]
@@ -65,7 +64,7 @@ The zip file includes the following files:
 
 ## Related Videos
 - [ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right ATP Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 ## See Also
 - [ATP POC deployment guide](http://aka.ms/atapoc)

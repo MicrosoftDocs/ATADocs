@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
+ms.assetid: 36bcc9c5-2790-4af2-8da5-6b1e788c96d8
 
 # optional metadata
 
@@ -26,15 +26,15 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 
 # Troubleshooting service startup
 
-## Troubleshooting ATP Center service startup
+## Troubleshooting Azure ATP cloud service startup
 
-If your ATP Center does not start, perform the following troubleshooting procedure:
+If your Azure ATP cloud service does not start, perform the following troubleshooting procedure:
 
 1.	Run the following Windows PowerShell command:
     `Get-Service Pla | Select Status`
@@ -47,23 +47,23 @@ If it can start, the platform is probably fine. If not, it is still a platform i
 4.	Try to manually recreate the ATP data collector, using an elevated prompt, running these commands:
 
         sc stop ATACenter
-        logman stop "Microsoft ATP Center"
-        logman export "Microsoft ATP Center" -xml c:\center.xml
-        logman delete "Microsoft ATP Center"
-        logman import "Microsoft ATP Center" -xml c:\center.xml
-        logman start "Microsoft ATP Center"
+        logman stop "Microsoft Azure ATP cloud service"
+        logman export "Microsoft Azure ATP cloud service" -xml c:\center.xml
+        logman delete "Microsoft Azure ATP cloud service"
+        logman import "Microsoft Azure ATP cloud service" -xml c:\center.xml
+        logman start "Microsoft Azure ATP cloud service"
         sc start ATACenter
 
-## Troubleshooting ATP Lightweight Gateway startup
+## Troubleshooting ATP Sensor startup
 
 **Symptom**
 
-Your ATP Gateway does not start and you get this error:<br></br>
+Your ATP Standalone Sensor does not start and you get this error:<br></br>
 *System.Net.Http.HttpRequestException: Response status code does not indicate success: 500 (Internal Server Error)*
 
 **Description**
 
-This happens because as part of the Lightweight Gateway installation process, ATP allocates a CPU threshold that enables the Lightweight Gateway to utilize CPU with a buffer of 15%. If you have independently set a threshold using the registry key: this conflict will prevent the Lightweight Gateway from starting. 
+This happens because as part of the Sensor installation process, ATP allocates a CPU threshold that enables the Sensor to utilize CPU with a buffer of 15%. If you have independently set a threshold using the registry key: this conflict will prevent the Sensor from starting. 
 
 **Resolution**
 
@@ -71,7 +71,7 @@ This happens because as part of the Lightweight Gateway installation process, AT
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
-2. Then restart the Pla service. The ATP Lightweight Gateway will automatically detect the change and restart the service.
+2. Then restart the Pla service. The ATP Sensor will automatically detect the change and restart the service.
 
 
 ## See Also

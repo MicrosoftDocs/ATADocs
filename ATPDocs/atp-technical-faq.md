@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
+ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 
 # optional metadata
 
@@ -25,7 +25,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 # ATP frequently asked questions
 This article provides a list of frequently asked questions about ATP and provides insight and answers.
@@ -37,7 +37,7 @@ If you have an active Enterprise Agreement, you can download the software from t
 
 If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATP through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Azure Threat Protection (ATP).
 
-## What should I do if the ATP Gateway won’t start?
+## What should I do if the ATP Standalone Sensor won’t start?
 Look at the most recent error in the current error log (Where ATP is installed under the "Logs" folder).
 
 ## How can I test ATP?
@@ -47,7 +47,7 @@ You can simulate suspicious activities which is an end to end test by doing one 
 2.  Remote execution by using psexec.exe
 
 
-This needs to run remotely against the domain controller being monitored and not from the ATP Gateway.
+This needs to run remotely against the domain controller being monitored and not from the ATP Standalone Sensor.
 
 ## Which ATP build corresponds to each version?
 
@@ -78,12 +78,12 @@ ATP relies on analyzing multiple network protocols, as well as events collected 
 ## Does ATP work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATP, with the exception of over-pass the hash detection which will not work.
 
-## How many ATP Gateways do I need?
+## How many ATP Standalone Sensors do I need?
 
-The number of ATP Gateways depend on your network layout, volume of packets and volume of events captured by ATP. To determine the exact number, see [ATP Lightweight Gateway Sizing](ata-capacity-planning.md#ata-lightweight-gateway-sizing). 
+The number of ATP Standalone Sensors depend on your network layout, volume of packets and volume of events captured by ATP. To determine the exact number, see [ATP Sensor Sizing](ata-capacity-planning.md#ata-lightweight-gateway-sizing). 
 
 ## How much storage do I need for ATP?
-For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about ATP Center sizing see, [ATP Capacity Planning](ata-capacity-planning.md).
+For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about Azure ATP cloud service sizing see, [ATP Capacity Planning](ata-capacity-planning.md).
 
 
 ## Why are certain accounts considered sensitive?
@@ -92,12 +92,12 @@ This happens when an account is a member of certain groups which we designate as
 To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group).
 
 ## How do I monitor a virtual domain controller using ATP?
-Most virtual domain controllers can be covered by the ATP Lightweight Gateway, to determine whether the ATP Lightweight Gateway is appropriate for your environment, see [ATP Capacity Planning](ata-capacity-planning.md).
+Most virtual domain controllers can be covered by the ATP Sensor, to determine whether the ATP Sensor is appropriate for your environment, see [ATP Capacity Planning](ata-capacity-planning.md).
 
-If a virtual domain controller can't be covered by the ATP Lightweight Gateway, you can have either a virtual or physical ATP Gateway as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual ATP Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following steps:
+If a virtual domain controller can't be covered by the ATP Sensor, you can have either a virtual or physical ATP Standalone Sensor as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual ATP Standalone Sensor on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
--   When the virtual domain controller moves to another host, preconfigure the ATP Gateway in that host to receive the traffic from the recently moved virtual domain controller.
--   Make sure that you affiliate the virtual ATP Gateway with the virtual domain controller so that if it is moved, the ATP Gateway moves with it.
+-   When the virtual domain controller moves to another host, preconfigure the ATP Standalone Sensor in that host to receive the traffic from the recently moved virtual domain controller.
+-   Make sure that you affiliate the virtual ATP Standalone Sensor with the virtual domain controller so that if it is moved, the ATP Standalone Sensor moves with it.
 -   There are some virtual switches that can send traffic between hosts.
 
 ## How do I back up ATP?
@@ -114,8 +114,8 @@ For the full list of ATP detections, see [What detections does ATP perform?](ata
 ## What kind of storage do I need for ATP?
 We recommend fast storage (7200-RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
 
-## How many NICs does the ATP Gateway require?
-The ATP Gateway needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the ATP Center<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the ATP Lightweight Gateway, which natively uses all of the network adapters that the domain controller uses.
+## How many NICs does the ATP Standalone Sensor require?
+The ATP Standalone Sensor needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the Azure ATP cloud service<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the ATP Sensor, which natively uses all of the network adapters that the domain controller uses.
 
 ## What kind of integration does ATP have with SIEMs?
 ATP has a bi-directional integration with SIEMs as follows:
@@ -124,13 +124,13 @@ ATP has a bi-directional integration with SIEMs as follows:
 2. ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-ata-step6.md).
 
 ## Can ATP monitor domain controllers virtualized on your IaaS solution?
-Yes, you can use the ATP Lightweight Gateway to monitor domain controllers that are in any IaaS solution.
+Yes, you can use the ATP Sensor to monitor domain controllers that are in any IaaS solution.
 
 ## Is this an on-premises or in-cloud offering?
 Microsoft Azure Threat Protection is an on-premises product.
 
 ## Is this going to be a part of Azure Active Directory or on-premises Active Directory?
-This solution is currently a standalone offering—it is not a part of Azure Active Directory or on-premises Active Directory.
+This solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
 
 ## Do you have to write your own rules and create a threshold/baseline?
 With Microsoft Azure Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. ATP analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, ATP starts to detect behavioral suspicious activities. On the other hand, ATP will start detecting known malicious attacks and security issues immediately after deployment.

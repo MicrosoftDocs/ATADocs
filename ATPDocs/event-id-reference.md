@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
+ms.assetid: e06040b3-00be-49e8-8658-9d49dbada124
 
 # optional metadata
 
@@ -27,12 +27,12 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 # ATP event ID reference
 
-The ATP Center event viewer logs events for ATP. This article provides a list of event IDs and provides a description of each.
+The Azure ATP cloud service event viewer logs events for ATP. This article provides a list of event IDs and provides a description of each.
 
 The events can be found here:
 
@@ -40,47 +40,47 @@ The events can be found here:
 
 ## ATP Health events
 
-1001 – ATP Center database data drive free space health alert 
+1001 – Azure ATP cloud service database data drive free space health alert 
 
-1003 – ATP Center overloaded health alert 
+1003 – Azure ATP cloud service overloaded health alert 
 
 1004 – Certificate expiry health alert 
 
 1005 – Center database disconnected health alert 
 
-1006 – ATP Gateway directory services client account password expiry health alert 
+1006 – ATP Standalone Sensor directory services client account password expiry health alert 
 
-1007 – ATP Gateway domain synchronizer not assigned health alert 
+1007 – ATP Standalone Sensor domain synchronizer not assigned health alert 
 
-1008 – ATP Gateway capture network adapter faulted health alert 
+1008 – ATP Standalone Sensor capture network adapter faulted health alert 
 
-1009 – ATP Gateway capture network adapter missing health alert 
+1009 – ATP Standalone Sensor capture network adapter missing health alert 
 
-1010 – ATP Gateway directory services client connectivity health alert 
+1010 – ATP Standalone Sensor directory services client connectivity health alert 
 
-1011 – ATP Gateway disconnected health alert 
+1011 – ATP Standalone Sensor disconnected health alert 
 
-1012 – ATP Gateway overloaded event activities health alert 
+1012 – ATP Standalone Sensor overloaded event activities health alert 
 
-1013 – ATP Gateway overloaded network activities health alert 
+1013 – ATP Standalone Sensor overloaded network activities health alert 
 
 1014 – Center mail health alert 
 
 1015 – Center Syslog health alert 
 
-1016 – ATP Gateways outdated health alert 
+1016 – ATP Standalone Sensors outdated health alert 
 
 1017 – Center not receiving traffic health alert 
 
-1018 – ATP Gateway start-failure health alert 
+1018 – ATP Standalone Sensor start-failure health alert 
 
-1019 – ATP Gateway low memory health alert 
+1019 – ATP Standalone Sensor low memory health alert 
 
-1020 – ATP Gateway RADIUS event listener health alert 
+1020 – ATP Standalone Sensor RADIUS event listener health alert 
 
-1021 – ATP Gateway Syslog event listener health alert 
+1021 – ATP Standalone Sensor Syslog event listener health alert 
 
-1022 – ATP Center external IP address resolution failure health alert 
+1022 – Azure ATP cloud service external IP address resolution failure health alert 
  
 ## ATP suspicious activity events
 
@@ -130,9 +130,9 @@ The events can be found here:
 
 3001 – Change to ATP configuration 
 
-3002 – ATP Gateway added
+3002 – ATP Standalone Sensor added
 
-3003 – ATP Gateway deleted
+3003 – ATP Standalone Sensor deleted
 
 3004 - ATP license activated
 

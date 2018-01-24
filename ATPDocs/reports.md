@@ -12,7 +12,7 @@ ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
+ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 
 
 # optional metadata
@@ -27,7 +27,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection *
+*Applies to: Azure Threat Protection*
 
 
 # ATP Reports
