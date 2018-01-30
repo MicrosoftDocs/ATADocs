@@ -67,21 +67,21 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
 1. Set the workspace you want to integrate as **Primary**. Only one workspace can be the Primary workspace and only a primary workspace can integrate with other services. If, at some point in the future, you should want to make this workspace no longer the primary workspace, you will first have to remove the integration before you can set it as non-primary.
 
- ![primary workspace](primary-workspace.png)
+ ![primary workspace](./media/primary-workspace.png)
 
 2. Click **Configuration**, and under **Data sources** select **Windows Defender ATP**. Then click the link to **Workspace management**. This is only available if you have a license for Windows Defender ATP and you already performed the on-boarding process for Windows Defender ATP. 
 
 3. In your primary workspace, click the settings cog.
 
- ![workspace integration](edit-workspace.png)
+ ![workspace integration](./media/edit-workspace.png)
  
 3. Set the integration to **On**. 
 
- ![enable integration](enable-integration.png)
+ ![enable integration](./media/enable-integration.png)
 
 4. In the [Windows Defender ATP portal](https://beta.securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**. 
 
- ![Windows Defender ATP enable integration](wd-atp-enable.png)
+ ![Windows Defender ATP enable integration](./media/wd-atp-enable.png)
 
 5. To check the status of the integration, in the Azure ATP console, go to **Settings** and then **Windows Defender ATP integration**. You can see the status of the integration; if something is wrong you see an error. You can also see which Workspace is integrated with Windows Defender ATP.
 
@@ -89,19 +89,19 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
 After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes an icon to show that it is integrated with Windows Defender ATP. 
 
- ![Windows Defender ATP alerts](profile-alerts-wd.png)
+ ![Windows Defender ATP alerts](./media/profile-alerts-wd.png)
 
 If the entity contains alerts in Windows Defender ATP, there is a number next to the icon to let you know how many alerts were raised.
 
- ![Azure ATP alerts](atp-integrated-wd-icon-alerts.png)
+ ![Azure ATP alerts](./media/atp-integrated-wd-icon-alerts.png)
 
 If you click on the icon, you are brought to the Windows Defender ATP portal where you can view and mitigate the alerts. If the entity is not recognized by Windows Defender ATP, the icon is grayed out. 
 
- ![Windows Defender ATP grey](wd-grey.png)
+ ![Windows Defender ATP grey](./media/wd-grey.png)
 
 In the Windows Defender ATP portal, when you click on an endpoint, you can view Azure ATP alerts. If you click on the alerts for this entity in Windows Defender ATP, the entity's profile page opens in Azure ATP. 
 
- ![Windows Defender ATP alerts](wd-atp-alerts.png)
+ ![Windows Defender ATP alerts](./media/wd-atp-alerts.png)
 
 
 ## See Also
