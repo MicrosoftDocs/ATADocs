@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 1/28/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -36,61 +36,30 @@ This article helps you determine how many ATP servers are needed to monitor your
 > The Azure ATP cloud service can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
 
 ## Using the sizing tool
-The recommended and simplest way to determine capacity for your ATP deployment is to use the [ATP Sizing Tool](http://aka.ms/atasizingtool). Run the ATP Sizing Tool and from the Excel file results, use the following fields to determine the ATP capacity you need:
+The recommended and simplest way to determine capacity for your ATP deployment is to use the [ATP Sizing Tool](http://aka.ms/atpsizingtool). Run the ATP Sizing Tool and from the Excel file results, use the following fields to determine the ATP capacity you need:
 
-- Azure ATP cloud service CPU and Memory: Match the **Busy Packets/sec** field in the Azure ATP cloud service table results file to the **PACKETS PER SECOND** field in the [Azure ATP cloud service table](#ata-center-sizing).
+- Azure ATP cloud service CPU and Memory: Match the **Busy Packets/sec** field in the Azure ATP cloud service table results file to the **PACKETS PER SECOND** field in the [Azure ATP cloud service table](#atp-center-sizing).
 
-- Azure ATP cloud service Storage: Match the **Avg Packets/sec** field in the Azure ATP cloud service table results file to the **PACKETS PER SECOND** field in the [Azure ATP cloud service table](#ata-center-sizing).
-- ATP Standalone Sensor: Match the **Busy Packets/sec** field in the ATP Standalone Sensor table in the results file to the **PACKETS PER SECOND** field in the [ATP Standalone Sensor table](#ata-gateway-sizing) or the [ATP Sensor table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
+- Azure ATP cloud service Storage: Match the **Avg Packets/sec** field in the Azure ATP cloud service table results file to the **PACKETS PER SECOND** field in the [Azure ATP cloud service table](#atp-center-sizing).
+- ATP Standalone Sensor: Match the **Busy Packets/sec** field in the ATP Standalone Sensor table in the results file to the **PACKETS PER SECOND** field in the [ATP Standalone Sensor table](#atp-sensor-sizing) or the [ATP Sensor table](#atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Sample capacity planning tool](media/capacity tool.png)
 
 
-
 If for some reason you cannot use the ATP Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
 The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
 
-
-
-### ATP center sizing
-The Azure ATP cloud service requires a recommended minimum of 30 days of data for user behavioral analytics.
- 
-
-|Packets per second from all DCs|CPU (cores&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;|
-|---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1,000|2|32|0.3|9|30 (100)
-|40,000|4|48|12|360|500 (750)
-|200,000|8|64|60|1,800|1,000 (1,500)
-|400,000|12|96|120|3,600|2,000 (2,500)
-|750,000|24|112|225|6,750|2,500 (3,000)
-|1,000,000|40|128|300|9,000|4,000 (5,000)
-
-&#42;This includes physical cores, not hyper-threaded cores.
-
-&#42;&#42;Average numbers (Peak numbers)
-> [!NOTE]
-> -   The Azure ATP cloud service can handle an aggregated maximum of 1M packets per second from all the monitored domain controllers. In some environments, the same Azure ATP cloud service can handle overall traffic that is higher than 1M. Contact askcesec@microsoft.com for assistance with such environments.
-> -   The amount of storage dictated here are net values. You should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
-> -   If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. Deletion continues to occur until 5% or 50 GB of free space remains at which point data collection stops working.
-> - It's possible to deploy the Azure ATP cloud service on any IaaS vendor as long as the performance requirements that are described in this article are met.
-> -   The storage latency for read and write activities should be below 10 ms.
-> -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
-> -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-> -   For optimal performance, set the **Power Option** of the Azure ATP cloud service to **High Performance**.<br>
-> -   When working on a physical server, the ATP database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the Azure ATP cloud service is running on a virtual server.
-
-
-## Choosing the right gateway type for your deployment
+## Choosing the right sensor type for your deployment
 In an ATP deployment any combination of the ATP Standalone Sensor types is supported:
 
 - Only ATP Standalone Sensors
 - Only ATP Sensors
 - A combination of both
 
-When deciding the Gateway deployment type, consider the following benefits:
+When deciding the sensor deployment type, consider the following benefits:
 
-|Gateway type|Benefits|Cost|Deployment topology|Domain controller use|
+|Sensor type|Benefits|Cost|Deployment topology|Domain controller use|
 |----|----|----|----|-----|
 |ATP Standalone Sensor|The Out of band deployment makes it harder for attackers to discover ATP is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 50,000 packets per second|
 |ATP Sensor|Doesn't require a dedicated server and port-mirroring configuration|Lower|Installed on the domain controller|Supports up to 10,000 packets per second|
@@ -109,16 +78,20 @@ The following are examples of scenarios in which domain controllers should be co
 - Headquarter data centers (having domain controllers with more than 10,000 packets per seconds)
 
 
-### ATP Sensor Sizing
+## ATP Sensor Sizing
 
 An ATP Sensor can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
 
 
-|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)&#42;&#42;&#42;|
-|---------------------------|-------------------------|---------------|
-|1,000|2|6|
-|5,000|6|16|
-	|10,000|10|24|
+|Packets per second*|CPU (cores)|
+|----|----|
+|0-1k|0.25|
+|1k-5k|0.75|k
+|5k-10k|1.00|
+|10k-20k|2.00|
+|20k-50k|3.50|
+|50k-75k (*)|3.50|
+|75k-100k (*)|3.50 |
 
 &#42;Total number of packets-per-second on the domain controller being monitored by the specific ATP Sensor.
 
@@ -130,10 +103,10 @@ An ATP Sensor can support the monitoring of one domain controller based on the a
 > -   If the domain controller does not have the resources required by the ATP Sensor, domain controller performance is not effected, but the ATP Sensor might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the ATP Sensor to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATP binaries, [ATP logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATP binaries, [ATP logs](troubleshooting-atp-using-logs.md), and [performance logs](troubleshooting-atp-using-perf-counters.md).
 
 
-### ATP Standalone Sensor Sizing
+## ATP Standalone Sensor Sizing
 
 Consider the following issues when deciding how many ATP Standalone Sensors to deploy.
 
@@ -165,7 +138,7 @@ Port mirroring considerations might require you to deploy multiple ATP Standalon
 > [!NOTE] 
 > -   Dynamic memory is not supported.
 > -   For optimal performance, set the **Power Option** of the ATP Standalone Sensor to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATP binaries, [ATP logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATP binaries, [ATP logs](troubleshooting-atp-using-logs.md), and [performance logs](troubleshooting-atp-using-perf-counters.md).
 
 
 ## Domain controller traffic estimation
@@ -219,12 +192,9 @@ To determine packets per second, perform the following steps on each domain cont
     ![Packets per second counter image](media/ATP-traffic-estimation-14.png)
 
 
-## Related Videos
-- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
-
 
 ## See Also
-- [ATP sizing tool](http://aka.ms/atasizingtool)
-- [ATP prerequisites](ata-prerequisites.md)
-- [ATP architecture](ata-architecture.md)
+- [ATP sizing tool](http://aka.ms/atpsizingtool)
+- [ATP prerequisites](atp-prerequisites.md)
+- [ATP architecture](atp-architecture.md)
 - [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
