@@ -48,8 +48,8 @@ The Azure ATP Standalone Sensor has the following logs:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – This log groups all similar errors and exceptions, and measures their count.
     This file starts out  empty each time the Azure ATP Standalone Sensor service starts and is updated every minute. Its main use is understanding if there are any new errors or issues with the Azure ATP Standalone Sensor (because the errors are grouped it is easier to read and quickly understand if there are any new issues).
--	**Microsoft.Tri.Gateway.Updater.log** - This log is used for the gateway updater process, which is responsible for updating the Azure ATP Standalone Sensor if configured to do so automatically. 
-For the Azure ATP Sensor, the gateway updater process is also responsible  for the resource limitations of the Azure ATP Sensor.
+-	**Microsoft.Tri.Gateway.Updater.log** - This log is used for the sensor updater process, which is responsible for updating the Azure ATP Standalone Sensor if configured to do so automatically. 
+For the Azure ATP Sensor, the sensor updater process is also responsible  for the resource limitations of the Azure ATP Sensor.
 -	**Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** - This log groups all similar errors and exceptions together, and measures their count. This file starts out empty each time the Azure ATP Updater service starts and is updated every minute. It enables you to understand if there are any new errors or issues with the Azure ATP Updater. The errors are grouped to make it easier to quickly understand if any new errors or issues are detected.
 
 > [!NOTE]

@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Validate Port Mirroring
 > [!NOTE] 
-> This article is relevant only if you deploy Azure ATP Standalone Sensors instead of Azure ATP Sensors. To determine if you need to use Azure ATP Standalone Sensors, see [Choosing the right gateways for your deployment](atp-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
+> This article is relevant only if you deploy Azure ATP Standalone Sensors instead of Azure ATP Sensors. To determine if you need to use Azure ATP Standalone Sensors, see [Choosing the right gateways for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
 The following steps walk you through the process for validating that port mirroring is properly configured. For Azure ATP to work properly, the Azure ATP Standalone Sensor must be able to see the traffic to and from the domain controller. The main data source used by Azure ATP is deep packet inspection of the network traffic to and from your domain controllers. For Azure ATP to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 
