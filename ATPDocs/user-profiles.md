@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Working with user profiles in the Azure Threat Protection console | Microsoft Docs
-description: Describes how to investigate users from the user profiles screen in the ATP console
+title: Working with user profiles in the Azure Advanced Threat Protection console | Microsoft Docs
+description: Describes how to investigate users from the user profiles screen in the Azure ATP console
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 1/21/2018
 ms.topic: article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 
@@ -26,13 +26,13 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
 # Investigating entity profiles
 
-The entity profile provides you with a dashboard designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new ATP logical activity translator which can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a dashboard designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new Azure ATP logical activity translator which can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
 To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline.
 
@@ -53,11 +53,11 @@ Using the **Filter by** button above the activity timeline, you can filter the a
 
 ## View directory data
 
-The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. ATP also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, ATP lists members of the group.
+The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. Azure ATP also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, Azure ATP lists members of the group.
 
  ![user profile directory data](media/user-profile-dir-data.png)
 
-In the **User access control** section, ATP surfaces security settings that may need your attentions. You can see important flags about the user, such as can the user press enter to bypass the password, does the user have a password that never expires, etc. 
+In the **User access control** section, Azure ATP surfaces security settings that may need your attentions. You can see important flags about the user, such as can the user press enter to bypass the password, does the user have a password that never expires, etc. 
 
 ## View lateral movement paths
 
@@ -69,4 +69,4 @@ The map provides you with a list of how many hops between computers or users an 
 
 
 ## See Also
-[Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Threat Protection - Step 7 | Microsoft Docs
+title: Install Azure Advanced Threat Protection - Step 7 | Microsoft Docs
 description: In this step of installing ATP, you integrate your VPN.
 keywords:
 author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 1/21/2018
 ms.topic: get-started-article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 
@@ -26,11 +26,11 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
-# Install ATP - Step 7
+# Install Azure ATP - Step 7
 
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
@@ -38,9 +38,9 @@ ms.suite: ems
 
 ## Step 7. Integrate VPN
 
-Microsoft Azure Threat Protection (ATP)  can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+Microsoft Azure Advanced Threat Protection (ATP)  can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
 
-ATP integrates with your VPN solution by listening to RADIUS accounting events forwarded to the ATP Standalone Sensors. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
+Azure ATP integrates with your VPN solution by listening to RADIUS accounting events forwarded to the Azure ATP Standalone Sensors. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
 
 -	Microsoft
 -	F5
@@ -51,7 +51,7 @@ ATP integrates with your VPN solution by listening to RADIUS accounting events f
 
 To enable VPN integration, make sure you set the following parameters:
 
--	Open port UDP 1813 on your ATP Standalone Sensors and ATP Sensors.
+-	Open port UDP 1813 on your Azure ATP Standalone Sensors and Azure ATP Sensors.
 
 -	Connect the Azure ATP cloud service to the Internet so that it can query the location of incoming IP addresses.
 
@@ -69,32 +69,32 @@ Perform the following steps on your RRAS server.
 
     ![RADIUS setup](./media/radius-setup.png)
 
-4.	In the **Add RADIUS Server** window, type the **Server name** of the closest ATP Standalone Sensor or ATP Sensor. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You need to fill it out later in your ATP Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
+4.	In the **Add RADIUS Server** window, type the **Server name** of the closest Azure ATP Standalone Sensor or Azure ATP Sensor. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You need to fill it out later in your Azure ATP Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
  
      ![VPN setup](./media/vpn-set-accounting.png)
      
 ### Configure VPN in ATP
 
-ATP collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect abnormal VPN connections.
+Azure ATP collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect abnormal VPN connections.
 
 To configure VPN data in ATP:
 
-1.	In the ATP console, click on the configuration cog and then **VPN**.
+1.	In the Azure ATP console, click on the configuration cog and then **VPN**.
  
 
 2.	Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
  
 
-  ![Configure ATP VPN](./media/atp-vpn-radius.png)
+  ![Configure Azure ATP VPN](./media/atp-vpn-radius.png)
 
 
-After this is enabled, all ATP Standalone Sensors and Sensors listen on port 1813 for RADIUS accounting events. 
+After this is enabled, all Azure ATP Standalone Sensors and Sensors listen on port 1813 for RADIUS accounting events. 
 
 Your setup is complete, and you can now see VPN activity in the users' profile page:
  
    ![VPN setup](./media/vpn-user.png)
 
-After the ATP Standalone Sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the Azure ATP cloud service needs Internet connectivity for HTTPS port 443 to be able to resolve the external IP addresses in the VPN events to their geolocation.
+After the Azure ATP Standalone Sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the Azure ATP cloud service needs Internet connectivity for HTTPS port 443 to be able to resolve the external IP addresses in the VPN events to their geolocation.
 
 
 
@@ -107,14 +107,14 @@ After the ATP Standalone Sensor receives the VPN events and sends them to the Az
 
 
 ## Related Videos
-- [ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
+- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also
-- [ATP POC deployment guide](http://aka.ms/atapoc)
-- [ATP sizing tool](http://aka.ms/atasizingtool)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
+- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](ata-prerequisites.md)
 

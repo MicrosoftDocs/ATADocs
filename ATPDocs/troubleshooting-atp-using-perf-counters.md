@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshooting Azure Threat Protection with performance counters | Microsoft Docs
+title: Troubleshooting Azure Advanced Threat Protection with performance counters | Microsoft Docs
 description: Describes how you can use performance counters to troubleshoot issues with ATP
 keywords:
 author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: 79c59b97-a717-46a5-acc5-02c8f8b9caf4
 
@@ -26,15 +26,15 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
-# Troubleshooting ATP using the performance counters
-The ATP performance counters provide insight into how well each component of ATP is performing. The components in ATP process data sequentially, so that when there's a problem, it might cause partial dropped traffic somewhere along the chain of components. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain. Use the data found in the performance counters to understand how each component is functioning.
-    Refer to [ATP architecture](ata-architecture.md) to understand the flow of internal ATP components.
+# Troubleshooting Azure ATP using the performance counters
+The Azure ATP performance counters provide insight into how well each component of Azure ATP is performing. The components in Azure ATP process data sequentially, so that when there's a problem, it might cause partial dropped traffic somewhere along the chain of components. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain. Use the data found in the performance counters to understand how each component is functioning.
+    Refer to [Azure ATP architecture](ata-architecture.md) to understand the flow of internal Azure ATP components.
 
-**ATP component process**:
+**Azure ATP component process**:
 
 1.  When a component reaches its maximum size, it blocks the previous component from sending more entities to it.
 
@@ -45,50 +45,50 @@ The ATP performance counters provide insight into how well each component of ATP
 
 ## Retrieving performance monitor files for troubleshooting
 
-To retrieve the performance monitor files (BLG) from the various ATP components:
+To retrieve the performance monitor files (BLG) from the various Azure ATP components:
 1.  Open perfmon.
-2.  Stop the data collector set named: "Microsoft ATP Standalone Sensor " or “Microsoft ATP Center”.
-3.  Go to the data collector set folder (by default, this is "C:\Program Files\Microsoft Azure Threat Protection\Gateway\Logs\DataCollectorSets" or “C:\Program Files\Microsoft Azure Threat Protection\Center\Logs\DataCollectorSets”).
+2.  Stop the data collector set named: "Microsoft Azure ATP Standalone Sensor " or “Microsoft Azure ATP Center”.
+3.  Go to the data collector set folder (by default, this is "C:\Program Files\Microsoft Azure Advanced Threat Protection\Gateway\Logs\DataCollectorSets" or “C:\Program Files\Microsoft Azure Advanced Threat Protection\Center\Logs\DataCollectorSets”).
 4.  Copy the BLG file that was most recently modified.
-5.  Restart the data collector set named: "Microsoft ATP Standalone Sensor" or “Microsoft ATP Center”.
+5.  Restart the data collector set named: "Microsoft Azure ATP Standalone Sensor" or “Microsoft Azure ATP Center”.
 
 
-## ATP Standalone Sensor performance counters
+## Azure ATP Standalone Sensor performance counters
 
-In this section, every reference to ATP Standalone Sensor refers also to the ATP Sensor.
+In this section, every reference to Azure ATP Standalone Sensor refers also to the Azure ATP Sensor.
 
-You can observe the real time performance status of the ATP Standalone Sensor by adding the ATP Standalone Sensor's performance counters.
-This is done by opening "Performance Monitor" and adding all counters for the ATP Standalone Sensor. The name of the performance counter object is: "Microsoft ATP Standalone Sensor".
+You can observe the real time performance status of the Azure ATP Standalone Sensor by adding the Azure ATP Standalone Sensor's performance counters.
+This is done by opening "Performance Monitor" and adding all counters for the Azure ATP Standalone Sensor. The name of the performance counter object is: "Microsoft Azure ATP Standalone Sensor".
 
-Here is the list of the main ATP Standalone Sensor counters to pay attention to:
+Here is the list of the main Azure ATP Standalone Sensor counters to pay attention to:
 
 > [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATP Standalone Sensor\NetworkListener PEF Parsed Messages\Sec|The amount of traffic being processed by the ATP Standalone Sensor every second.|No threshold|Helps you understand the amount of traffic that is being parsed by the ATP Standalone Sensor.|
-|NetworkListener PEF Dropped Events\Sec|The amount of traffic being dropped by the ATP Standalone Sensor every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Standalone Sensor\NetworkListener ETW Dropped Events\Sec|The amount of traffic being dropped by the ATP Standalone Sensor every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Standalone Sensor\NetworkActivityTranslator Message Data # Block Size|The amount of traffic queued for translation to Network Activities (NAs).|Should be less than the maximum-1 (default maximum: 100,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Standalone Sensor\EntityResolver Activity Block Size|The amount of Network Activities (NAs) queued for resolution.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Standalone Sensor\EntitySender Entity Batch Block Size|The amount of Network Activities (NAs) queued to be sent to the Azure ATP cloud service.|Should be less than the maximum-1 (default maximum: 1,000,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATP Standalone Sensor\EntitySender Batch Send Time|The amount of time it took to send the last batch.|Should be less than 1000 milliseconds most of the time|Check if there are any networking issues between the ATP Standalone Sensor and the Azure ATP cloud service.|
+|Microsoft Azure ATP Standalone Sensor\NetworkListener PEF Parsed Messages\Sec|The amount of traffic being processed by the Azure ATP Standalone Sensor every second.|No threshold|Helps you understand the amount of traffic that is being parsed by the Azure ATP Standalone Sensor.|
+|NetworkListener PEF Dropped Events\Sec|The amount of traffic being dropped by the Azure ATP Standalone Sensor every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size and is blocking previous components all the way to the NetworkListener. Refer to the **Azure ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP Standalone Sensor\NetworkListener ETW Dropped Events\Sec|The amount of traffic being dropped by the Azure ATP Standalone Sensor every second.|This number should be zero all of the time (rare short burst of drops are acceptable).|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **Azure ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP Standalone Sensor\NetworkActivityTranslator Message Data # Block Size|The amount of traffic queued for translation to Network Activities (NAs).|Should be less than the maximum-1 (default maximum: 100,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **Azure ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP Standalone Sensor\EntityResolver Activity Block Size|The amount of Network Activities (NAs) queued for resolution.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **Azure ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP Standalone Sensor\EntitySender Entity Batch Block Size|The amount of Network Activities (NAs) queued to be sent to the Azure ATP cloud service.|Should be less than the maximum-1 (default maximum: 1,000,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the **Azure ATP Component Process** above.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP Standalone Sensor\EntitySender Batch Send Time|The amount of time it took to send the last batch.|Should be less than 1000 milliseconds most of the time|Check if there are any networking issues between the Azure ATP Standalone Sensor and the Azure ATP cloud service.|
 
 > [!NOTE]
 > -   Timed counters are in milliseconds.
 > -   It is sometimes more convenient to monitor the full list of the counters by using the "Report" graph type (example: real time monitoring of all the counters)
 
-## ATP Sensor performance counters
-The performance counters can be used for quota management in the Sensor, to make sure that ATP doesn't drain too many resources from the domain controllers on which it is installed.
-To measure the resource limitations that ATP enforces on the Sensor, add these counters.
+## Azure ATP Sensor performance counters
+The performance counters can be used for quota management in the Sensor, to make sure that Azure ATP doesn't drain too many resources from the domain controllers on which it is installed.
+To measure the resource limitations that Azure ATP enforces on the Sensor, add these counters.
 
-This is done by opening "Performance Monitor" and adding all counters for the ATP Sensor. The name of the performance counter objects are: "Microsoft ATP Standalone Sensor" and "Microsoft ATP Standalone Sensor Updater".
+This is done by opening "Performance Monitor" and adding all counters for the Azure ATP Sensor. The name of the performance counter objects are: "Microsoft Azure ATP Standalone Sensor" and "Microsoft Azure ATP Standalone Sensor Updater".
 
 > [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATP Standalone Sensor Updater\GatewayUpdaterResourceManager CPU Time Max %|The maximum amount of CPU time (in percentage) that the Sensor process can consume. |No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller..|
-|Microsoft ATP Standalone Sensor Updater\GatewayUpdaterResourceManager Commit Memory Max Size|The maximum amount of committed memory (in bytes) that the Sensor process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.| 
-|Microsoft ATP Standalone Sensor Updater\GatewayUpdaterResourceManager Working Set Limit Size|The Maximum amount of physical memory (in bytes) that the Sensor process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.|
+|Microsoft Azure ATP Standalone Sensor Updater\GatewayUpdaterResourceManager CPU Time Max %|The maximum amount of CPU time (in percentage) that the Sensor process can consume. |No threshold. | This is the limitation that protects the domain controller resources from being used up by the Azure ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller..|
+|Microsoft Azure ATP Standalone Sensor Updater\GatewayUpdaterResourceManager Commit Memory Max Size|The maximum amount of committed memory (in bytes) that the Sensor process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the Azure ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.| 
+|Microsoft Azure ATP Standalone Sensor Updater\GatewayUpdaterResourceManager Working Set Limit Size|The Maximum amount of physical memory (in bytes) that the Sensor process can consume.|No threshold. | This is the limitation that protects the domain controller resources from being used up by the Azure ATP Sensor. If you see that the process reaches the maximum limit often over a period of time (the process reaches the limit and then starts to drop traffic) it means that you need to add more resources to the server running the domain controller.|
 
 
 
@@ -112,10 +112,10 @@ Here is the list of the main Azure ATP cloud service counters to pay attention t
 > [!div class="mx-tableFixed"]
 |Counter|Description|Threshold|Troubleshooting|
 |-----------|---------------|-------------|-------------------|
-|Microsoft Azure ATP cloud service\EntityReceiver Entity Batch Block Size|The number of entity batches queued by the Azure ATP cloud service.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener.  Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft Azure ATP cloud service\NetworkActivityProcessor Network Activity Block Size|The number of Network Activities (NAs) queued for processing.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft Azure ATP cloud service\EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft Azure ATP cloud service\Database &#42; Block Size|The number of Network Activities, of a specific type, queued to be written to the database.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\EntityReceiver Entity Batch Block Size|The number of entity batches queued by the Azure ATP cloud service.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener.  Refer to the preceding **Azure ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\NetworkActivityProcessor Network Activity Block Size|The number of Network Activities (NAs) queued for processing.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **Azure ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **Azure ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft Azure ATP cloud service\Database &#42; Block Size|The number of Network Activities, of a specific type, queued to be written to the database.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **Azure ATP Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
 
 
 > [!NOTE]
@@ -140,8 +140,8 @@ The following table lists the main operating system counters to pay attention to
 |\LogicalDisk(&#42;)\Disk Write Bytes\sec|The number of bytes per second that are being written to the disk.|No threshold|Disk utilization counters can add insight when troubleshooting storage latency.|
 
 ## See Also
-- [ATP prerequisites](ata-prerequisites.md)
-- [ATP capacity planning](ata-capacity-planning.md)
+- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

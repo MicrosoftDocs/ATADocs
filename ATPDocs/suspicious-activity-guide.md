@@ -1,16 +1,16 @@
 ---
 # required metadata
 
-title: ATP suspicious activity guide | Microsoft Docs
-d|Description: This article provides a list of the suspicious activities ATP can detect and steps for remediation.
+title: Azure ATP suspicious activity guide | Microsoft Docs
+d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2018
+ms.date: 2/2/2018
 ms.topic: get-started-article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 
@@ -26,22 +26,22 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
-# Azure Threat Protection suspicious activity guide
+# Azure Advanced Threat Protection suspicious activity guide
 
 Following proper investigation, any suspicious activity can be classified as:
 
 -   **True positive**: A malicious action detected by ATP.
 
--   **Benign true positive**: An action detected by ATP that is real but not malicious, such as a penetration test.
+-   **Benign true positive**: An action detected by Azure ATP that is real but not malicious, such as a penetration test.
 
 -   **False positive**: A false alarm, meaning the activity didn’t happen.
 
-For more information on how to work with ATP alerts, see [Working with suspicious activities](working-with-suspicious-activities.md).
+For more information on how to work with Azure ATP alerts, see [Working with suspicious activities](working-with-suspicious-activities.md).
 
-For questions or feedback, contact the ATP team at [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
+For questions or feedback, contact the Azure ATP team at [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
 
 ## Abnormal Sensitive Group Modification
 
@@ -50,17 +50,17 @@ For questions or feedback, contact the ATP team at [ATAEval@microsoft.com](mailt
 
 Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATP. The minimum period before an alert can be triggered is one month per each domain controller.
 
-For a definition of sensitive groups in ATP, see [Working with the ATP console](working-with-ata-console.md#sensitive-groups).
+For a definition of sensitive groups in ATP, see [Working with the Azure ATP console](working-with-ata-console.md#sensitive-groups).
 
 
 The detection relies on [events audited on domain controllers](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-To make sure your domain controllers audit the needed events, use the tool referenced in [ATP Auditing (AuditPol, Advanced Audit Settings Enforcement, Sensor Service discovery)](https://aka.ms/ataauditingblog).
+To make sure your domain controllers audit the needed events, use the tool referenced in [Azure ATP Auditing (AuditPol, Advanced Audit Settings Enforcement, Sensor Service discovery)](https://aka.ms/ataauditingblog).
 
 **Investigation**
 
 1. Is the group modification legitimate? </br>Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive.
 
-2. If the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in ATP to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
+2. If the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in Azure ATP to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
 
 **Remediation**
 
@@ -71,7 +71,7 @@ Set up [Privileged Access Management for Active Directory](https://docs.microsof
 ## Broken trust between computers and domain
 
 > ![NOTE]
-> This suspicious activity was deprecated and only appears in ATP versions prior to 1.9.
+> This suspicious activity was deprecated and only appears in Azure ATP versions prior to 1.9.
 
 **Description**
 
@@ -92,11 +92,11 @@ Rejoin the machine back to the domain if necessary or reset the machine's passwo
 **Description**
 
 >[!NOTE]
-> The main difference between **Suspicious authentication failures** and this detection is that in this detection, ATP can determine whether different passwords were in use.
+> The main difference between **Suspicious authentication failures** and this detection is that in this detection, Azure ATP can determine whether different passwords were in use.
 
 In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when ATP detects a massive number of simple bind authentications. This can be either *horizontally* with a small set of passwords across many users; or *vertically”* with a large set of passwords on just a few users; or any combination of these two options.
+In this detection, an alert is triggered when Azure ATP detects a massive number of simple bind authentications. This can be either *horizontally* with a small set of passwords across many users; or *vertically”* with a large set of passwords on just a few users; or any combination of these two options.
 
 **Investigation**
 
@@ -114,7 +114,7 @@ In this detection, an alert is triggered when ATP detects a massive number of si
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
 
 There are three detection types:
 
@@ -128,7 +128,7 @@ There are three detection types:
 
 First check the description of the alert, to see which of the above three detection types you’re dealing with.
 
-1.  Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
+1.  Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
     If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
 2.  Golden Ticket – there are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
@@ -159,7 +159,7 @@ security policy.
 
 1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
 
-2. Is the ATP Standalone Sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
+2. Is the Azure ATP Standalone Sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
 
 3. If the answer to the above questions is no, assume this is malicious.
 
@@ -177,7 +177,7 @@ Also, because creating a Golden Ticket requires domain admin rights, implement 
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused, while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Install ATP - Step 7](install-ata-step7.md).
+For more information on honeytoken accounts, see [Install Azure ATP - Step 7](install-ata-step7.md).
 
 **Investigation**
 
@@ -320,7 +320,7 @@ all member servers and domain controllers up to 2012 R2 are up-to-date with KB24
 
 In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess to attempt to guess user names in your domain. The attacker makes Kerberos requests using these names in order to try to find a valid username in your domain. If a guess successfully determines a username, the attacker will get the Kerberos error **Preauthentication required** instead of **Security principal unknown**. 
 
-In this detection, ATP can detect where the attack came from, the total number of guess attempts and how many were matched. If there are too many unknown users, ATP will detect it as a suspicious activity. 
+In this detection, Azure ATP can detect where the attack came from, the total number of guess attempts and how many were matched. If there are too many unknown users, Azure ATP will detect it as a suspicious activity. 
 
 **Investigation**
 
@@ -348,7 +348,7 @@ If the answer to either of these questions is yes, **Close** the suspicious acti
 
 Directory services reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in an attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform such mapping.
 
-In this detection, no alerts would be triggered in the first month after ATP is deployed. During the learning period, ATP profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts.
+In this detection, no alerts would be triggered in the first month after Azure ATP is deployed. During the learning period, Azure ATP profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts.
 
 **Investigation**
 
@@ -383,13 +383,13 @@ If the tool is not applicable to your DC:
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack.
 
-There are several query types in the DNS protocol. ATP detects the AXFR (Transfer) request originating from non-DNS servers.
+There are several query types in the DNS protocol. Azure ATP detects the AXFR (Transfer) request originating from non-DNS servers.
 
 **Investigation**
 
-1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between ATP Standalone Sensors and the source computer to prevent future false positives.
+1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between Azure ATP Standalone Sensors and the source computer to prevent future false positives.
 
-2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for ATP admins).
+2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for Azure ATP admins).
 
 3. If the answer to all the above is no, assume this is malicious.
 
@@ -429,7 +429,7 @@ Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blockin
 
 **Description**
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. ATP detects PSexec and Remote WMI connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Azure ATP detects PSexec and Remote WMI connections.
 
 **Investigation**
 
@@ -452,7 +452,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 ## Sensitive account credentials exposed & Services exposing account credentials
 
 > ![NOTE]
-> This suspicious activity was deprecated and only appears in ATP versions prior to 1.9. For ATP 1.9 and later, see [Reports](reports.md).
+> This suspicious activity was deprecated and only appears in Azure ATP versions prior to 1.9. For Azure ATP 1.9 and later, see [Reports](reports.md).
 
 **Description**
 
@@ -508,17 +508,13 @@ A suspicious service has been created on an endpoint in your organization. This 
 
 **Remediation**
 
-1. Restrict remote access to any computers that don't .
-
-2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
-
-
+- Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
 ## Suspicion of identity theft based on abnormal behavior
 
 **Description**
 
-ATP learns the entity behavior for users, computers, and resources over a sliding three-week period. The behavior model is based on the following activities: the machines the entities logged in to, the resources the entity requested access to, and the time these operations took place. ATP sends an alert when there is a deviation from the entity’s behavior based on machine learning algorithms. 
+Azure ATP learns the entity behavior for users, computers, and resources over a sliding three-week period. The behavior model is based on the following activities: the machines the entities logged in to, the resources the entity requested access to, and the time these operations took place. Azure ATP sends an alert when there is a deviation from the entity’s behavior based on machine learning algorithms. 
 
 **Investigation**
 
@@ -537,7 +533,7 @@ Depending on what caused this abnormal behavior to occur, different actions shou
 
 **Description**
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
 
 **Investigation**
 
@@ -576,6 +572,6 @@ Patch all your machines, especially applying security updates.
 
 
 ## See Also
-- [ATP suspicious activity playbook](http://aka.ms/ataplaybook)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Azure ATP suspicious activity playbook](http://aka.ms/ataplaybook)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with suspicious activities](working-with-suspicious-activities.md)

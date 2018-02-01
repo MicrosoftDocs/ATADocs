@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: ATP event ID reference | Microsoft Docs 
-description: Provides a list of ATP events IDs and their descriptions. 
+title: Azure ATP event ID reference | Microsoft Docs 
+description: Provides a list of Azure ATP events IDs and their descriptions. 
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 11/6/2017
 ms.topic: article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: e06040b3-00be-49e8-8658-9d49dbada124
 
@@ -27,10 +27,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
-# ATP event ID reference
+# Azure ATP event ID reference
 
 The Azure ATP cloud service event viewer logs events for ATP. This article provides a list of event IDs and provides a description of each.
 
@@ -38,7 +38,7 @@ The events can be found here:
 
 ![event ID location](./media/event-id-location.png)
 
-## ATP Health events
+## Azure ATP Health events
 
 1001 – Azure ATP cloud service database data drive free space health alert 
 
@@ -48,41 +48,41 @@ The events can be found here:
 
 1005 – Center database disconnected health alert 
 
-1006 – ATP Standalone Sensor directory services client account password expiry health alert 
+1006 – Azure ATP Standalone Sensor directory services client account password expiry health alert 
 
-1007 – ATP Standalone Sensor domain synchronizer not assigned health alert 
+1007 – Azure ATP Standalone Sensor domain synchronizer not assigned health alert 
 
-1008 – ATP Standalone Sensor capture network adapter faulted health alert 
+1008 – Azure ATP Standalone Sensor capture network adapter faulted health alert 
 
-1009 – ATP Standalone Sensor capture network adapter missing health alert 
+1009 – Azure ATP Standalone Sensor capture network adapter missing health alert 
 
-1010 – ATP Standalone Sensor directory services client connectivity health alert 
+1010 – Azure ATP Standalone Sensor directory services client connectivity health alert 
 
-1011 – ATP Standalone Sensor disconnected health alert 
+1011 – Azure ATP Standalone Sensor disconnected health alert 
 
-1012 – ATP Standalone Sensor overloaded event activities health alert 
+1012 – Azure ATP Standalone Sensor overloaded event activities health alert 
 
-1013 – ATP Standalone Sensor overloaded network activities health alert 
+1013 – Azure ATP Standalone Sensor overloaded network activities health alert 
 
 1014 – Center mail health alert 
 
 1015 – Center Syslog health alert 
 
-1016 – ATP Standalone Sensors outdated health alert 
+1016 – Azure ATP Standalone Sensors outdated health alert 
 
 1017 – Center not receiving traffic health alert 
 
-1018 – ATP Standalone Sensor start-failure health alert 
+1018 – Azure ATP Standalone Sensor start-failure health alert 
 
-1019 – ATP Standalone Sensor low memory health alert 
+1019 – Azure ATP Standalone Sensor low memory health alert 
 
-1020 – ATP Standalone Sensor RADIUS event listener health alert 
+1020 – Azure ATP Standalone Sensor RADIUS event listener health alert 
 
-1021 – ATP Standalone Sensor Syslog event listener health alert 
+1021 – Azure ATP Standalone Sensor Syslog event listener health alert 
 
 1022 – Azure ATP cloud service external IP address resolution failure health alert 
  
-## ATP suspicious activity events
+## Azure ATP suspicious activity events
 
 2001 – Abnormal behavior suspicious activity 
 
@@ -126,17 +126,17 @@ The events can be found here:
 
 2024 - Abnormal sensitive group membership change suspicious activity  
 
-## ATP auditing events
+## Azure ATP auditing events
 
-3001 – Change to ATP configuration 
+3001 – Change to Azure ATP configuration 
 
-3002 – ATP Standalone Sensor added
+3002 – Azure ATP Standalone Sensor added
 
-3003 – ATP Standalone Sensor deleted
+3003 – Azure ATP Standalone Sensor deleted
 
-3004 - ATP license activated
+3004 - Azure ATP license activated
 
-3005 – Log in to ATP console
+3005 – Log in to Azure ATP console
 
 3006 – Manual change to health activity status 
 
@@ -144,8 +144,8 @@ The events can be found here:
 
 
 ## See Also
-- [ATP prerequisites](ata-prerequisites.md)
-- [ATP capacity planning](ata-capacity-planning.md)
+- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

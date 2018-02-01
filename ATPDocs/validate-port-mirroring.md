@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Validate port mirroring in Azure Threat Protection | Microsoft Docs
+title: Validate port mirroring in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to validate that port mirroring is configured correctly
 keywords:
 author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: c4dae61e-f102-4f13-a475-fcc09aa870fc
 
@@ -26,22 +26,22 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
 # Validate Port Mirroring
 > [!NOTE] 
-> This article is relevant only if you deploy ATP Standalone Sensors instead of ATP Sensors. To determine if you need to use ATP Standalone Sensors, see [Choosing the right gateways for your deployment](atp-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
+> This article is relevant only if you deploy Azure ATP Standalone Sensors instead of Azure ATP Sensors. To determine if you need to use Azure ATP Standalone Sensors, see [Choosing the right gateways for your deployment](atp-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
-The following steps walk you through the process for validating that port mirroring is properly configured. For ATP to work properly, the ATP Standalone Sensor must be able to see the traffic to and from the domain controller. The main data source used by ATP is deep packet inspection of the network traffic to and from your domain controllers. For ATP to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
+The following steps walk you through the process for validating that port mirroring is properly configured. For Azure ATP to work properly, the Azure ATP Standalone Sensor must be able to see the traffic to and from the domain controller. The main data source used by Azure ATP is deep packet inspection of the network traffic to and from your domain controllers. For Azure ATP to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 
 ## Validate port mirroring using a Windows PowerShell script
 
 1. Save the text of this script into a file called *ATAdiag.ps1*.
-2. Run this script on the ATP Standalone Sensor that you want to validate.
-The script generates ICMP traffic from the ATP Standalone Sensor to the domain controller and looks for that traffic on the Capture NIC on the domain controller.
-If the ATP Standalone Sensor sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the ATP Console, it deems port mirroring configured. 
+2. Run this script on the Azure ATP Standalone Sensor that you want to validate.
+The script generates ICMP traffic from the Azure ATP Standalone Sensor to the domain controller and looks for that traffic on the Capture NIC on the domain controller.
+If the Azure ATP Standalone Sensor sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the Azure ATP Console, it deems port mirroring configured. 
 
 Sample for how to run the script:
 
@@ -166,8 +166,8 @@ Sample for how to run the script:
     	#Ping the DC at the end after starting the capture
     	Test-Connection -Count 1 -ComputerName $DCIP -ea SilentlyContinue | Out-Null
     		
-    	# This is the match logic - check to see if Destination IP from the Ping sent matches the DCIP entered by in the ATP Console  
-    	# The only way the ATP Standalone Sensor should see a destination of the DC is if Port Spanning is configured
+    	# This is the match logic - check to see if Destination IP from the Ping sent matches the DCIP entered by in the Azure ATP Console  
+    	# The only way the Azure ATP Standalone Sensor should see a destination of the DC is if Port Spanning is configured
     	
     		if ($DestinationIPAddressP -eq $DCIPP)  # is the destination IP eq to the DC IP? 
     		{
@@ -199,10 +199,10 @@ Sample for how to run the script:
     
     
 ## Validate port mirroring using Net Mon
-1.  Install [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) on the ATP Standalone Sensor that you want to validate.
+1.  Install [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) on the Azure ATP Standalone Sensor that you want to validate.
 
     > [!IMPORTANT]
-    > Do not install Microsoft Message Analyzer, or any other traffic capture software on the ATP Standalone Sensor.
+    > Do not install Microsoft Message Analyzer, or any other traffic capture software on the Azure ATP Standalone Sensor.
 
 2.  Open Network Monitor and create a new capture tab.
 
@@ -231,4 +231,4 @@ Sample for how to run the script:
 ## See Also
 
 - [Configure port mirroring](configure-port-mirroring.md)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

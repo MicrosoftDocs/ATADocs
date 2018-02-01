@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Threat Protection - Step 8 | Microsoft Docs
+title: Install Azure Advanced Threat Protection - Step 8 | Microsoft Docs
 description: In the final step of installing ATP, you configure the Honeytoken user.
 keywords:
 author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 
@@ -26,27 +26,27 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
-# Install ATP - Step 8
+# Install Azure ATP - Step 8
 
 >[!div class="step-by-step"]
 [« Step 7](vpn-integration-install-step.md)
 
 ## Step 8. Configure IP address exclusions and Honeytoken user
-ATP enables the exclusion of specific IP addresses or users from a number of detections. 
+Azure ATP enables the exclusion of specific IP addresses or users from a number of detections. 
 
-For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATP ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
+For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps Azure ATP ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
 
-ATP also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account triggers an alert.
+Azure ATP also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account triggers an alert.
 
 To configure this, follow these steps:
 
-1.  From the ATP Console, click on the settings icon and select **Configuration**.
+1.  From the Azure ATP Console, click on the settings icon and select **Configuration**.
 
-    ![ATP configuration settings](media/atp-config-menu.png)
+    ![Azure ATP configuration settings](media/atp-config-menu.png)
 
 2.  Under **Detection**, click **Entity tags**.
 
@@ -61,13 +61,13 @@ To configure this, follow these steps:
 4.  Click **Save**.
 
 
-Congratulations, you have successfully deployed Microsoft Azure Threat Protection!
+Congratulations, you have successfully deployed Microsoft Azure Advanced Threat Protection!
 
 Check the attack time line to view detected suspicious activities and search for users or computers and view their profiles.
 
-ATP starts scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, is not available until ATP has had time to build behavioral profiles (minimum of three weeks).
+Azure ATP starts scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, is not available until Azure ATP has had time to build behavioral profiles (minimum of three weeks).
 
-To check that ATP is up and running and catching breaches in your network, you can check out the [ATP attack simulation playbook](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
+To check that Azure ATP is up and running and catching breaches in your network, you can check out the [Azure ATP attack simulation playbook](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 
 
 >[!div class="step-by-step"]
@@ -76,14 +76,14 @@ To check that ATP is up and running and catching breaches in your network, you c
 
 
 ## Related Videos
-- [ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
+- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also
-- [ATP POC deployment guide](http://aka.ms/atapoc)
-- [ATP sizing tool](http://aka.ms/atasizingtool)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
+- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](ata-prerequisites.md)
 
