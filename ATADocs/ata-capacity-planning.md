@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -46,6 +46,9 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 
 ![Sample capacity planning tool](media/capacity tool.png)
 
+
+> [!NOTE]
+> Because different environments vary and have multiple special and unexpected network traffic characteristics, after you initially deploy ATA and run the sizing tool, you may need to adjust and fine tune your deployment for capacity.
 
 
 If for some reason you cannot use the ATA Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
