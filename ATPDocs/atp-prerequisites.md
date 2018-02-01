@@ -46,9 +46,9 @@ The Azure ATP System works on active directory forest boundary and supports Fore
 
 [Azure ATP cloud service](#ata-center-requirements): This section lists Azure ATP cloud service hardware, software requirements as well as settings  you need to configure on your Azure ATP cloud service server.
 
-[Azure ATP Standalone Sensor](#ata-gateway-requirements): This section lists Azure ATP Standalone Sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP Standalone Sensor servers.
+[Azure ATP Standalone Sensor](#ata-sensor-requirements): This section lists Azure ATP Standalone Sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP Standalone Sensor servers.
 
-[Azure ATP Sensor](#ata-lightweight-gateway-requirements): This section lists Azure ATP Sensor hardware, and software requirements.
+[Azure ATP Sensor](#ata-lightweight-sensor-requirements): This section lists Azure ATP Sensor hardware, and software requirements.
 
 [Azure ATP Console](#ata-console): This section lists browser requirements for running the Azure ATP Console.
 
@@ -186,7 +186,7 @@ The Azure ATP Standalone Sensor requires at least one Management adapter and at 
 
 -   **Management adapter** - used for communications on your corporate network. This adapter should be configured with the following settings:
 
-    -   Static IP address including default gateway
+    -   Static IP address including default sensor
 
     -   Preferred and alternate DNS servers
 
@@ -201,7 +201,7 @@ The Azure ATP Standalone Sensor requires at least one Management adapter and at 
 
     > [!IMPORTANT]
     > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. For more information, see [Configure port mirroring](configure-port-mirroring.md). Typically, you need to work with the networking or virtualization team to configure port mirroring.
-    > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
+    > -   Configure a static non-routable IP address for your environment with no default sensor and no DNS server addresses. For example, 1.1.1.1/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
 The following table lists the minimum ports that the Azure ATP Standalone Sensor requires configured on the management adapter:
