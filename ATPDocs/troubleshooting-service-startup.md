@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Troubleshooting Azure Threat Protection service startup | Microsoft Docs
-description: Describes how you can troubleshoot ATP startup issues
+title: Troubleshooting Azure Advanced Threat Protection service startup | Microsoft Docs
+description: Describes how you can troubleshoot Azure ATP startup issues
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 12/20/2017
 ms.topic: article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: 36bcc9c5-2790-4af2-8da5-6b1e788c96d8
 
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
@@ -44,7 +44,7 @@ to make sure the Performance counter service is running. If it's not, then it's 
 3.	Try to create a new data collector manually (any will suffice, even just collect machine CPU for example).
 If it can start, the platform is probably fine. If not, it is still a platform issue.
 
-4.	Try to manually recreate the ATP data collector, using an elevated prompt, running these commands:
+4.	Try to manually recreate the Azure ATP data collector, using an elevated prompt, running these commands:
 
         sc stop ATACenter
         logman stop "Microsoft Azure ATP cloud service"
@@ -54,16 +54,16 @@ If it can start, the platform is probably fine. If not, it is still a platform i
         logman start "Microsoft Azure ATP cloud service"
         sc start ATACenter
 
-## Troubleshooting ATP Sensor startup
+## Troubleshooting Azure ATP Sensor startup
 
 **Symptom**
 
-Your ATP Standalone Sensor does not start and you get this error:<br></br>
+Your Azure ATP Standalone Sensor does not start and you get this error:<br></br>
 *System.Net.Http.HttpRequestException: Response status code does not indicate success: 500 (Internal Server Error)*
 
 **Description**
 
-This happens because as part of the Sensor installation process, ATP allocates a CPU threshold that enables the Sensor to utilize CPU with a buffer of 15%. If you have independently set a threshold using the registry key: this conflict will prevent the Sensor from starting. 
+This happens because as part of the Sensor installation process, Azure ATP allocates a CPU threshold that enables the Sensor to utilize CPU with a buffer of 15%. If you have independently set a threshold using the registry key: this conflict will prevent the Sensor from starting. 
 
 **Resolution**
 
@@ -71,12 +71,12 @@ This happens because as part of the Sensor installation process, ATP allocates a
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
-2. Then restart the Pla service. The ATP Sensor will automatically detect the change and restart the service.
+2. Then restart the Pla service. The Azure ATP Sensor will automatically detect the change and restart the service.
 
 
 ## See Also
-- [ATP prerequisites](ata-prerequisites.md)
-- [ATP capacity planning](ata-capacity-planning.md)
+- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

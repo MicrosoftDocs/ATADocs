@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Excluding entities from detections in Azure Threat Protection | Microsoft Docs
-description: Describes how to stop ATP from detecting specific entity activities as suspicious
+title: Excluding entities from detections in Azure Advanced Threat Protection | Microsoft Docs
+description: Describes how to stop Azure ATP from detecting specific entity activities as suspicious
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 11/7/2017
 ms.topic: article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 
@@ -26,12 +26,12 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
 # Excluding entities from detections
-This article explains how to exclude entities from triggering alerts in order to minimize true benign positives but at the same time, make sure you catch the true positives. In order to keep ATP from being noisy about activities that, from specific users, may be part of your normal rhythm of business, you can quiet - or exclude - specific entities from raising alerts.
+This article explains how to exclude entities from triggering alerts in order to minimize true benign positives but at the same time, make sure you catch the true positives. In order to keep Azure ATP from being noisy about activities that, from specific users, may be part of your normal rhythm of business, you can quiet - or exclude - specific entities from raising alerts.
 
 For example, if you have a security scanner that does DNS recon or an admin who remotely runs scripts on the domain controller - and these are sanctioned activities whose intent is part of the normal IT operations in your organization.
 
@@ -61,9 +61,9 @@ Each exclusion depends on the context, in some you can set users while for other
 When you have the possibility of excluding an IP address or a computer, you can exclude one or the other - you don’t need to provide both.
 
 > [!NOTE]
-> The configuration pages can only be modified by ATP admins.
+> The configuration pages can only be modified by Azure ATP admins.
 
 
 ## See Also
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Modifying ATP configuration](modifying-ata-center-configuration.md)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Modifying Azure ATP configuration](modifying-ata-center-configuration.md)

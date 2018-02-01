@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Investigating lateral movement path attacks with ATP | Microsoft Docs
-description: This article describes how to detect lateral movement path attacks with Azure Threat Protection (ATP).
+title: Investigating lateral movement path attacks with Azure ATP | Microsoft Docs
+description: This article describes how to detect lateral movement path attacks with Azure Advanced Threat Protection (ATP).
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 1/21/2018
 ms.topic: article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 
@@ -26,23 +26,23 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection version 1.9*
+*Applies to: Azure Advanced Threat Protection version 1.9*
 
 # Investigating lateral movement paths with ATP
 
-ATP can help you prevent attacks that use lateral movement paths. Even when you do your best to protect your sensitive users, your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths, moving across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
+Azure ATP can help you prevent attacks that use lateral movement paths. Even when you do your best to protect your sensitive users, your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths, moving across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
 
 ## What is a lateral movement path?
 
 Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts. They can use any of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md) to gain the initial non-sensitive password and then use a tool, like Bloodhound, to understand who the administrators are in your network and which machines they accessed. They can then take advantage of the data available to attackers on your domain controllers to know who has which accounts and access to which resources and files, and can steal the credentials of other users (sometimes sensitive users) stored on the computers they have already accessed, and then laterally move to more and more users and resources until they attain admin privileges in your network. 
 
-ATP enables you to take pre-emptive action on your network to prevent attackers from succeeding at lateral movement.
+Azure ATP enables you to take pre-emptive action on your network to prevent attackers from succeeding at lateral movement.
 
 ## Discovery your at-risk sensitive accounts
 
-To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, follow these steps. To secure your network from lateral movement attacks, ATP works from the end backward, meaning that ATP gives you a map that starts from your privileged accounts and then shows you which users and devices are in the lateral path of these users and their credentials.
+To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, follow these steps. To secure your network from lateral movement attacks, Azure ATP works from the end backward, meaning that Azure ATP gives you a map that starts from your privileged accounts and then shows you which users and devices are in the lateral path of these users and their credentials.
 
-1. In the ATP console menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
+1. In the Azure ATP console menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. 
 
@@ -55,9 +55,9 @@ To discover which sensitive accounts in your network are vulnerable because of t
 
 ## Investigate
 
-Now that you know which sensitive accounts are at risk, you can deep dive in ATP to learn more and take preventative measures.
+Now that you know which sensitive accounts are at risk, you can deep dive in Azure ATP to learn more and take preventative measures.
 
-1. In the ATP console, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You an also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png).
+1. In the Azure ATP console, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You an also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png).
 
 2. In the user profile page that opens, click the **Lateral movement paths** tab.
 
@@ -79,4 +79,4 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATP
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

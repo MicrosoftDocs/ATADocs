@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Threat Protection - Step 6 | Microsoft Docs
+title: Install Azure Advanced Threat Protection - Step 6 | Microsoft Docs
 description: In this step of installing ATP, you configure data sources.
 keywords:
 author: rkarlin
@@ -10,7 +10,7 @@ manager: mbaldwin
 ms.date: 10/9/2017
 ms.topic: get-started-article
 ms.prod:
-ms.service: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.technology:
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 
@@ -26,11 +26,11 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Threat Protection*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
-# Install ATP - Step 6
+# Install Azure ATP - Step 6
 
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
@@ -38,39 +38,39 @@ ms.suite: ems
 
 ## Step 6. Configure event collection
 ### Configure Event Collection
-To enhance detection capabilities, ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the ATP Sensor or in case the ATP Sensor is not deployed, it can be forwarded to the ATP Standalone Sensor in one of two ways, by configuring the ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
+To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
 
 > [!NOTE]
-> For ATP versions 1.8 and higher, event collection configuration is no longer necessary for ATP Sensors. The ATP Sensor can now read events locally, without the need to configure event forwarding.
+> For Azure ATP versions 1.8 and higher, event collection configuration is no longer necessary for Azure ATP Sensors. The Azure ATP Sensor can now read events locally, without the need to configure event forwarding.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATP with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 #### SIEM/Syslog
-For ATP to be able to consume data from a Syslog server, you need to perform the following steps:
+For Azure ATP to be able to consume data from a Syslog server, you need to perform the following steps:
 
--   Configure your ATP Standalone Sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
+-   Configure your Azure ATP Standalone Sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
 > [!NOTE]
-> ATP only listens on IPv4 and not IPv6. 
--   Configure your SIEM/Syslog server to forward specific events to the ATP Standalone Sensor.
+> Azure ATP only listens on IPv4 and not IPv6. 
+-   Configure your SIEM/Syslog server to forward specific events to the Azure ATP Standalone Sensor.
 
 > [!IMPORTANT]
-> -   Do not forward all the Syslog data to the ATP Standalone Sensor.
-> -   ATP supports UDP traffic from the SIEM/Syslog server.
+> -   Do not forward all the Syslog data to the Azure ATP Standalone Sensor.
+> -   Azure ATP supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. 
 
 > [!NOTE]
 >If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATP. Windows Event ID 4776 provides data regarding NTLM authentications.
 
-#### Configuring the ATP Standalone Sensor to listen for SIEM events
+#### Configuring the Azure ATP Standalone Sensor to listen for SIEM events
 
-1.  In ATP Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
+1.  In Azure ATP Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
 
     ![Enable syslog listener UDP image](media/atp-siem-config.png)
 
-2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATP Standalone Sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the Azure ATP Standalone Sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
-ATP supports SIEM events in the following formats:  
+Azure ATP supports SIEM events in the following formats:  
 
 #### RSA Security Analytics
 &lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
@@ -170,7 +170,7 @@ Error Code:         0x0
 -   The order is not important for the key=value pairs.
 
 #### QRadar
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because ATP necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because Azure ATP necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -200,14 +200,14 @@ Make sure to have \t between the key=value pairs.
 
 
 ## Related Videos
-- [ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
+- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also
-- [ATP POC deployment guide](http://aka.ms/atapoc)
-- [ATP sizing tool](http://aka.ms/atasizingtool)
-- [Check out the ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
+- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](ata-prerequisites.md)
 
