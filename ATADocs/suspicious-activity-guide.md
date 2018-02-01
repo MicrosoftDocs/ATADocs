@@ -508,9 +508,7 @@ A suspicious service has been created on an endpoint in your organization. This 
 
 **Remediation**
 
-1. Restrict remote access to any computers that don't .
-
-2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
+- Implement less privileged access on domain machines to allow only specific users the right to create new services.
 
 
 

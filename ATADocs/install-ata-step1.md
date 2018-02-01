@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/2/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -97,6 +97,11 @@ Because you are logging into the site using an IP address, you receive a warning
 
 1.  Check to see that the service named **Microsoft Advanced Threat Analytics Center** is running.
 2.  On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the same user credentials that you used to install the ATA Center.
+
+### Set anti-virus exclusions
+
+After installing the ATA Center you should exclude the MongoDB database directory from being continuously scanned by your anti-virus application. The default location in the database is:
+**C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 
 
