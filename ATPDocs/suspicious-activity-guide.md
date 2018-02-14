@@ -69,7 +69,7 @@ Set up [Privileged Access Management for Active Directory](https://docs.microsof
 
 ## Broken trust between computers and domain
 
-> ![NOTE]
+> [!NOTE]
 > This suspicious activity was deprecated and only appears in Azure ATP versions prior to 1.9.
 
 **Description**
@@ -450,7 +450,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 ## Sensitive account credentials exposed & Services exposing account credentials
 
-> ![NOTE]
+> [!NOTE]
 > This suspicious activity was deprecated and only appears in Azure ATP versions prior to 1.9. For Azure ATP 1.9 and later, see [Reports](reports.md).
 
 **Description**
