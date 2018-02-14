@@ -39,7 +39,7 @@ NIC Teaming is a solution commonly employed to solve network availability and pe
 - Protection against NIC failures by automatically moving the traffic to remaining operational members of the team, i.e., Failover, and
 - Increased throughput by combining the bandwidth of the team members as though they were a single larger bandwidth interface, i.e., bandwidth aggregation.
 
-Azure ATP is composed of the Azure ATP cloud service, the Azure ATP Standalone Sensor and the Azure ATP Sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture).
+Azure ATP is composed of the Azure ATP cloud service, the Azure ATP Standalone Sensor and the Azure ATP Sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
 
 The Azure ATP Sensor is installed directly on the domain controller, thus analyzing the network traffic coming in/out of the domain controller.
 
