@@ -50,7 +50,7 @@ The Azure ATP System works on active directory forest boundary and supports Fore
 
 [Azure ATP Sensor](#ata-lightweight-sensor-requirements): This section lists Azure ATP Sensor hardware, and software requirements.
 
-[Azure ATP Console](#ata-console): This section lists browser requirements for running the Azure ATP Console.
+[Azure ATP worksapce portal](#ata-console): This section lists browser requirements for running the Azure ATP workspace portal.
 
 ![Azure ATP architecture diagram](media/ATP-architecture-topology.jpg)
 
@@ -63,7 +63,7 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Do not install Microsoft Message Analyzer on an Azure ATP Standalone Sensor or Sensor. The Message Analyzer driver conflicts with the Azure ATP Standalone Sensor and  Sensor drivers. If you run Wireshark on Azure ATP Standalone Sensor, you will need to restart the Microsoft Azure Advanced Threat Protection Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an Azure ATP Sensor does not interfere with the Azure ATP Sensor.
+-   Do not install Microsoft Message Analyzer on an Azure ATP Standalone Sensor or Sensor. The Message Analyzer driver conflicts with the Azure ATP Standalone Sensor and  Sensor drivers. If you run Wireshark on Azure ATP Standalone Sensor, you will need to restart the Azure Advanced Threat Protection Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an Azure ATP Sensor does not interfere with the Azure ATP Sensor.
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
@@ -149,7 +149,7 @@ For example, you can use the standard **Web server** or **Computer** templates.
 
 
 > [!NOTE]
-> - If you are going to access the Azure ATP Console from other computers, ensure that those computers trust the certificate being used by Azure ATP cloud service otherwise you get a warning page that there is a problem with the website's security certificate before getting to the log in page.
+> - If you are going to access the Azure ATP workspace portal from other computers, ensure that those computers trust the certificate being used by Azure ATP cloud service otherwise you get a warning page that there is a problem with the website's security certificate before getting to the log in page.
 > - Starting with Azure ATP  the Azure ATP Standalone Sensors and Sensors are managing their own certificates and need no administrator interaction to manage them.
 
 ## Azure ATP Standalone Sensor requirements
@@ -269,7 +269,7 @@ The Azure ATP cloud service server, the Azure ATP Sensor servers, and the domain
 ### Network adapters
 
 The Azure ATP Sensor monitors the local traffic on all of the domain controller's network adapters. <br>
-After deployment, you can use the Azure ATP Console if you ever want to modify which network adapters are monitored.
+After deployment, you can use the Azure ATP workspace portal if you ever want to modify which network adapters are monitored.
 
 The Sensor is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
@@ -290,8 +290,8 @@ The following table lists the minimum ports that the Azure ATP Sensor requires:
 > -   NTLM over RPC
 > -   NetBIOS
 
-## Azure ATP Console
-Access to the Azure ATP Console is via a browser, supporting the  browsers and settings:
+## Azure ATP workspace portal
+Access to the Azure ATP workspace portal is via a browser, supporting the  browsers and settings:
 
 -   Internet Explorer version 10 and above
 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Install Azure Advanced Threat Protection - Step 8 | Microsoft Docs
-description: In the final step of installing ATP, you configure the Honeytoken user.
+description: In the final step of installing Azure ATP, you configure the Honeytoken user.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -44,7 +44,7 @@ Azure ATP also enables the configuration of a Honeytoken user, which is used as 
 
 To configure this, follow these steps:
 
-1.  From the Azure ATP Console, click on the settings icon and select **Configuration**.
+1.  From the Azure ATP workspace portal, click on the settings icon and select **Configuration**.
 
     ![Azure ATP configuration settings](media/atp-config-menu.png)
 
@@ -61,7 +61,7 @@ To configure this, follow these steps:
 4.  Click **Save**.
 
 
-Congratulations, you have successfully deployed Microsoft Azure Advanced Threat Protection!
+Congratulations, you have successfully deployed  Azure Advanced Threat Protection!
 
 Check the attack time line to view detected suspicious activities and search for users or computers and view their profiles.
 

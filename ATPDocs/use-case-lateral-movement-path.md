@@ -28,7 +28,7 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection version 1.9*
 
-# Investigating lateral movement paths with ATP
+# Investigating lateral movement paths with Azure ATP
 
 Azure ATP can help you prevent attacks that use lateral movement paths. Even when you do your best to protect your sensitive users, your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths, moving across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
 
@@ -42,7 +42,7 @@ Azure ATP enables you to take pre-emptive action on your network to prevent atta
 
 To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, follow these steps. To secure your network from lateral movement attacks, Azure ATP works from the end backward, meaning that Azure ATP gives you a map that starts from your privileged accounts and then shows you which users and devices are in the lateral path of these users and their credentials.
 
-1. In the Azure ATP console menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
+1. In the Azure ATP workspace portal menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. 
 
@@ -57,7 +57,7 @@ To discover which sensitive accounts in your network are vulnerable because of t
 
 Now that you know which sensitive accounts are at risk, you can deep dive in Azure ATP to learn more and take preventative measures.
 
-1. In the Azure ATP console, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You an also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png).
+1. In the Azure ATP workspace portal, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You an also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png).
 
 2. In the user profile page that opens, click the **Lateral movement paths** tab.
 

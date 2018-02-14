@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,7 +38,7 @@ ms.suite: ems
 
 ## Step 2. Provide a Username and Password to connect to your Active Directory Forest
 
-The first time you open the Azure ATP Console, the following screen appears:
+The first time you open the Azure ATP workspace portal, the following screen appears:
 
 ![Azure ATP welcome stage 1](media/directory-services.png)
 
@@ -46,16 +46,14 @@ The first time you open the Azure ATP Console, the following screen appears:
 
     |Field|Comments|
     |---------|------------|
-    |**Username** (required)|Enter the read-only user name, for example: **ATAuser**.|
+    |**Username** (required)|Enter the read-only Active Directory user name, for example: **ATPuser**.|
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-2. You can click **Test connection** to test connectivity to the domain and check that the credentials supplied provide access. This works if the Azure ATP cloud service has connectivity to the domain. 	
+   After it is saved, the welcome message in the workspace portal will change to the following message:
+  ![Azure ATP welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
 
-    After it is saved, the welcome message in the Console will change to the following message:
-![Azure ATP welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
-
-3. In the Console, click **Download Gateway setup and install the first Gateway** to continue.
+3. In the workspace portal, click **Download Sensor setup and install the first Sensor** to continue.
 
 
 >[!div class="step-by-step"]
@@ -64,13 +62,6 @@ The first time you open the Azure ATP Console, the following screen appears:
 
 
 ## See Also
-## Related Videos
-- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
-
-
-## See Also
-- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
 - [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 2/14/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,7 +38,7 @@ ms.suite: ems
 
 ## Step 7. Integrate VPN
 
-Microsoft Azure Advanced Threat Protection (ATP)  can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+Azure Advanced Threat Protection (ATP)  can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
 
 Azure ATP integrates with your VPN solution by listening to RADIUS accounting events forwarded to the Azure ATP Standalone Sensors. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
 
@@ -79,7 +79,7 @@ Azure ATP collects VPN data that helps profile the locations from which computer
 
 To configure VPN data in ATP:
 
-1.	In the Azure ATP console, click on the configuration cog and then **VPN**.
+1.	In the Azure ATP workspace portal, click on the configuration cog and then **VPN**.
  
 
 2.	Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
@@ -94,7 +94,7 @@ Your setup is complete, and you can now see VPN activity in the users' profile p
  
    ![VPN setup](./media/vpn-user.png)
 
-After the Azure ATP Standalone Sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the Azure ATP cloud service needs Internet connectivity for HTTPS port 443 to be able to resolve the external IP addresses in the VPN events to their geolocation.
+After the Azure ATP Standalone Sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, it will be added to the user profile.
 
 
 
@@ -103,12 +103,6 @@ After the Azure ATP Standalone Sensor receives the VPN events and sends them to 
 >[!div class="step-by-step"]
 [« Step 6](install-ata-step5.md)
 [Step 8 »](install-ata-step7.md)
-
-
-
-## Related Videos
-- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also

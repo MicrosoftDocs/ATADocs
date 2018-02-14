@@ -35,7 +35,7 @@ This article explains how to exclude entities from triggering alerts in order to
 
 For example, if you have a security scanner that does DNS recon or an admin who remotely runs scripts on the domain controller - and these are sanctioned activities whose intent is part of the normal IT operations in your organization.
 
-To exclude entities from raising alerts in ATP:
+To exclude entities from raising alerts in Azure ATP:
 
 There are two ways in which you can exclude entities, from the suspicious activity itself, or from the **Exclusions** tab on the **Configuration** page.
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Advanced Threat Protection architecture | Microsoft Docs
-description: Describes the architecture of Microsoft Advance Threat Analytics (ATP)
+description: Describes the architecture of Azure Advanced Threat Analytics (ATP)
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -95,7 +95,7 @@ The Azure ATP workspace portal performs the following functions:
 
 -   Runs various deterministic algorithms to detect advanced attacks based on the attack kill chain
 
--   Runs the Azure ATP Console
+-   Runs the Azure ATP workspace portal
 
 -   Optional: The Azure ATP cloud service can be configured to send emails and events when a suspicious activity is detected.
 
@@ -182,7 +182,7 @@ If Active Directory needs more computing power, the quota needed by the Azure AT
 
 
 ## Your network components
-In order to work with ATP, make sure to check that the following components are set up.
+In order to work with Azure ATP, make sure to check that the following components are set up.
 
 ### Port mirroring
 If you are using Azure ATP standalone sensors, you have to set up port mirroring for the domain controllers that are monitored and set the Azure ATP Standalone Sensor as the destination using the physical or virtual switches. Another option is to use network TAPs. Azure ATP works if some but not all of your domain controllers are monitored, but detections are less effective.

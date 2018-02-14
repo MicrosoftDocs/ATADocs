@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,23 +36,23 @@ ms.suite: ems
 [« Step 2](install-ata-step2.md)
 [Step 4 »](install-ata-step4.md)
 
-## Step 3. Download the Azure ATP Standalone Sensor setup package
-After configuring the domain connectivity settings, you can download the Azure ATP Standalone Sensor setup package. The Azure ATP Standalone Sensor can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an Azure ATP Sensor. For more information on the Azure ATP Sensor, see [Azure ATP Architecture](ata-architecture.md). 
+## Step 3. Download the Azure ATP Sensor setup package
+After configuring the domain connectivity settings, you can download the Azure ATP Sensor setup package. The Azure ATP Sensor can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an Azure ATP Sensor. For more information on the Azure ATP Sensor, see [Azure ATP Architecture](ata-architecture.md). 
 
 Click **Download** in the list of steps at the top of the page to go to the **Sensors** page.
 
-![Azure ATP Standalone Sensor configuration settings](media/atp-sensor-config.png)
+![Azure ATP Sensor configuration settings](media/atp-sensor-config.png)
 
 > [!NOTE] 
-> To reach the Sensor configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Standalone Sensors**.  
+> To reach the Sensor configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Sensors**.  
 
 1.  Click **Sensors**.
 2.  Save the package locally.
-3.  Copy the package to the dedicated server or domain controller onto which you are installing the Azure ATP Standalone Sensor. Alternatively, you can open the Azure ATP Console from the dedicated server or domain controller and skip this step.
+3.  Copy the package to the dedicated server or domain controller onto which you are installing the Azure ATP Standalone Sensor. Alternatively, you can open the Azure ATP workspace portal from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following files:
 
--   Azure ATP Standalone Sensor installer
+-   Azure ATP Sensor installer
 
 -   Configuration setting file with the required information to connect to the Azure ATP cloud service
 
@@ -61,10 +61,6 @@ The zip file includes the following files:
 [« Step 2](install-ata-step2.md)
 [Step 4 »](install-ata-step4.md)
 
-
-## Related Videos
-- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 ## See Also
 - [Azure ATP POC deployment guide](http://aka.ms/atapoc)

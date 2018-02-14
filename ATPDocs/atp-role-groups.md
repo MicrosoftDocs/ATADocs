@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,16 +33,24 @@ ms.suite: ems
 
 # Azure ATP role groups
 
-Role groups enable access management for ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and Azure ATP role authorization, and helps you get up and running with role groups in ATP.
+Role groups enable access management for Azure ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and Azure ATP role authorization, and helps you get up and running with role groups in ATP.
 
 > [!NOTE]
-> Any local administrator on the Azure ATP cloud service is automatically a Microsoft Azure Advanced Threat Protection Administrator.
+> Any global administrator or security administraotr on the tenant's Azure Active Directory is automatically an Azure ATP administrator.
 
-## Types of Azure ATP role groups 
+## Accessing the Workspace management portal
 
-Azure ATP introduces three types of Role group: Azure ATP Administrators, Azure ATP Users, and Azure ATP Viewers. The following table describes the type of access in Azure ATP available per role. Depending on which role you assign, various screens and menu options in Azure ATP are not available, as follows:
+Access to the workspace managememt portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After you enter the portal, you can create the different workspaces. For each workspace, the Azure ATP service will create three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
 
-|Activity |Microsoft Azure Advanced Threat Protection Administrators|Microsoft Azure Advanced Threat Protection Users|Microsoft Azure Advanced Threat Protection Viewers|
+> [!NOTE]
+> Access to the Azure ATP workspace portal is only granted to users within Azure AD security groups for that workspace, and global admins and security admins.
+
+
+## Types of Azure ATP security groups 
+
+Azure ATP introduces three types of security group: Azure ATP *workspace name* Administrators, Azure ATP *workspace name* Users, and Azure ATP *workspace name* Viewers. The following table describes the type of access in the Azure ATP workspace portal available per role. Depending on which role you assign, various screens and menu options in Azure ATP workspace portal are not available, as follows:
+
+|Activity |Azure ATP *workspace name* Administrators|Azure ATP *workspace name* Users|Azure ATP *workspace name* Viewers|
 |----|----|----|----|
 |Login|Available|Available|Available|
 |Provide Input for Suspicious Activities|Available|Available|Not available|
@@ -61,6 +69,13 @@ When users try to access a page that is not available for their role group, they
 
 ## Add and remove users 
 
-Azure ATP uses the local Windows groups as a basis for role groups. The role groups must be managed on the Azure ATP cloud service server.
-To add or remove users, use the **Local Users and Groups** MMC (Lusrmgr.msc). On a domain joined machine, you can add domain accounts as well as local accounts. 
+Azure ATP uses Azure AD security groups as a basis for role groups. The role groups mcan be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Only AAD users can be added or removed from security groups.. 
+
+
+## See Also
+- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA architecture](ata-architecture.md)
+- [Install ATA](install-ata-step1.md)
+- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
 

@@ -35,7 +35,7 @@
 ## [Set Syslog and email server settings](setting-syslog-email-server-settings.md)
 ## [Tag sensitive accounts](tag-sensitive-accounts.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
-## [Working with the Azure ATP console](working-with-atp-console.md)
+## [Working with the Azure ATP workspace portal](working-with-atp-console.md)
 ## [Creating Azure ATP workspaces](atp-workspaces.md)
 ## Azure ATP reference information
 ### [SIEM log reference](cef-format-sa.md)

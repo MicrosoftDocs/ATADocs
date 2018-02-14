@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,23 +36,21 @@ ms.suite: ems
 [« Step 3](install-atp-step3.md)
 [Step 5 »](install-atp-step5.md)
 
-## Step 4. Install the Azure ATP Standalone Sensor
+## Step 4. Install the Azure ATP Sensor
 
 Before installing the Azure ATP Standalone Sensor on a dedicated server, validate that port mirroring is properly configured and that the Azure ATP Standalone Sensor can see traffic to and from the domain controllers. For more information, see [Validate port mirroring](validate-port-mirroring.md).
 
 
 > [!IMPORTANT]
-> Make sure that [KB2919355](http://support.microsoft.com/kb/2919355/) has been installed.  Run the following PowerShell cmdlet to check if the hotfix is installed:
->
-> `Get-HotFix -Id kb2919355`
+>Make sure .NET 4.7 is installed on the machine. Verify that the machine has connectivity to the Azure ATP cloud service endpoint: https://triprd1wceuw1sensorapi.atp.azure.com (for Europe) or https://triprd1wcuse1sensorapi.atp.azure.com (for the US).
 
-Perform the following steps on the Azure ATP Standalone Sensor server.
+Perform the following steps on the Azure ATP Sensor server or domain controller.
 
 1.  Extract the files from the zip file. 
 > [!NOTE] 
 > Installing directly from the zip file fails.
 
-2.  Run **Microsoft Azure ATP Standalone Sensor Setup.exe** and follow the setup wizard.
+2.  Run **Azure ATP Sensor Setup.exe** and follow the setup wizard.
 
 3.  On the **Welcome** page, select your language and click **Next**.
 
@@ -64,9 +62,9 @@ Perform the following steps on the Azure ATP Standalone Sensor server.
     Click **Next**.
 
     > [!NOTE] 
-    > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of Azure ATP in a small lab test environment in which you don't need as much room for data storage. For production environments, it is highly recommended to work with ATP's [capacity planning](atp-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
+    > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of Azure ATP in a small lab test environment in which you don't need as much room for data storage. For production environments, it is highly recommended to work with Azure ATP's [capacity planning](atp-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
-4.  Under **Configure the Gateway**, enter the following information based on your environment:
+4.  Under **Configure the Sensor**, enter the following information based on your environment:
 
     ![Azure ATP Standalone Sensor configuration image](media/atp-gw-configure.png)
 
@@ -75,7 +73,7 @@ Perform the following steps on the Azure ATP Standalone Sensor server.
 
   ![Provide Azure ATP Standalone Sensor credentials](media/atp-install-credentials.png)
 
-   - Installation Path: This is the location where the Azure ATP Standalone Sensor is installed. By default this is  %programfiles%\Microsoft Azure Advanced Threat Protection\Gateway. Leave the default value.
+   - Installation Path: This is the location where the Azure ATP Standalone Sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection\Gateway. Leave the default value.
     
 5. Click **Install**. The following components are installed and configured during the installation of the Azure ATP Standalone Sensor:
 
@@ -87,19 +85,14 @@ Perform the following steps on the Azure ATP Standalone Sensor server.
 
     -   Azure ATP Standalone Sensor service
     -   Microsoft Visual C++ 2013 Redistributable
-    -   Custom Performance Monitor data collection set
 
-5.  After the installation completes, for the Azure ATP Standalone Sensor, click **Launch** to open your browser and log in to the Azure ATP Console, for the Azure ATP Sensor, click **Finish**.
+5.  After the installation completes, for the Azure ATP Sensor, click **Launch** to open your browser and log in to the Azure ATP workspace portal, for the Azure ATP Sensor, click **Finish**.
 
 
 >[!div class="step-by-step"]
 [« Step 3](install-atp-step3.md)
 [Step 5 »](install-atp-step5.md)
 
-
-## Related Videos
-- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 ## See Also
 

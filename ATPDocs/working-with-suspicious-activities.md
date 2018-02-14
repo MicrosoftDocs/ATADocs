@@ -2,12 +2,12 @@
 # required metadata
 
 title: Working with suspicious activities in Azure Advanced Threat Protection | Microsoft Docs
-description: Describes how to review suspicious activities identified by ATP
+description: Describes how to review suspicious activities identified by Azure ATP
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,7 +34,7 @@ ms.suite: ems
 This article explains the basics of how to work with Azure Advanced Threat Protection.
 
 ## Review suspicious activities on the attack time line
-After logging in to the Azure ATP Console, you are automatically taken to the open **Suspicious Activities Time Line**. Suspicious activities are listed in chronological order with the newest suspicious activities on the top of the time line.
+After logging in to the Azure ATP workspace portal, you are automatically taken to the open **Suspicious Activities Time Line**. Suspicious activities are listed in chronological order with the newest suspicious activities on the top of the time line.
 Each suspicious activity has the following information:
 
 -   Entities involved, including users, computers, servers, domain controllers, and resources.

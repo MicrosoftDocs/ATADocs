@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure Windows Event Forwarding in Azure Advanced Threat Protection | Microsoft Docs
-description: Describes your options for configuring Windows Event Forwarding with ATP
+description: Describes your options for configuring Windows Event Forwarding with Azure ATP
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -105,5 +105,5 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
 
 ## See Also
-- [Install ATP](install-ata-step1.md)
+- [Install Azure ATP](install-ata-step1.md)
 - [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

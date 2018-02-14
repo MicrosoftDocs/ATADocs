@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,28 +30,8 @@ ms.suite: ems
 
 
 
-# Provide Azure ATP with your email server settings
-Azure ATP can notify you when it detects a suspicious activity. For Azure ATP to be able to send email notifications, you must first configure the **Email server settings**.
+# Provide Azure ATP with your Syslog server settings
 
-1.  On the Azure ATP cloud service server, click the **Microsoft Azure Advanced Threat Protection Management** icon on the desktop.
-
-2.  Enter your user name and password and click **Log in**.
-
-3.  Select the settings option on the toolbar and select **Configuration**.
-
-    ![Azure ATP configuration settings icon](media/ATP-config-icon.png)
-
-4.  In the **notifications** section, under **Mail server**, enter the following information:
-
-    |Field|Description|Value|
-    |---------|---------------|---------|
-    |SMTP server endpoint (required)|Enter the FQDN of your SMTP server and optionally change the port number (default 25).|For example:<br />smtp.contoso.com|
-    |SSL|Toggle SSL if the SMTP server required SSL. **Note:** If you enable SSL, you also need to change the Port number.|Default is disabled|
-    |Authentication|Enable if your SMTP server requires authentication. **Note:** If you enable authentication, you must provide a user name and password of an email account that has permission to connect to the SMTP server.|Default is disabled|
-    |Send from (required)|Enter an email address from whom the email will be sent from.|For example:<br />ATP@contoso.com|
-    ![Azure ATP email server settings image](media/ata-email-server.png)
-
-## Provide Azure ATP with your Syslog server settings
 Azure ATP can notify you when it detects a suspicious activity by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
 
 1.  Before configuring Syslog notifications, work with your SIEM admin to find out the following information:
@@ -64,9 +44,9 @@ Azure ATP can notify you when it detects a suspicious activity by sending the no
 
     -   Format in which to send the data RFC 3164 or 5424
 
-2.  On the Azure ATP cloud service server, click the **Microsoft Azure Advanced Threat Protection Management** icon on the desktop.
+2.  Ener the workspace portal URL.
 
-3.  Enter your user name and password and click **Log in**.
+3.  Enter your Azure Active Directory user name and password and click **Log in**.
 
 4.  Select the settings option on the toolbar and select **Configuration**.
 
@@ -76,6 +56,7 @@ Azure ATP can notify you when it detects a suspicious activity by sending the no
 
     |Field|Description|
     |---------|---------------|
+    |Sensor|Select a designated sensor to be responsible for aggregating all the Syslog events and forwarding them to your SIEM server.|
     |Syslog server endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
     |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
     |Format|This is the format that Azure ATP uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|

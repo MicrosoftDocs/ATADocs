@@ -30,12 +30,12 @@ ms.suite: ems
 
 # Working with Azure ATP audit logs
 
-The Azure ATP audit logs are kept in the Windows Event Logs under **Applications and Services** and then **Microsoft ATP** both on the Azure ATP cloud service and Azure ATP Standalone Sensor machines.
+The Azure ATP audit logs are kept in the Windows Event Logs under **Applications and Services** and then **Azure ATP** both on the Azure ATP cloud service and Azure ATP Standalone Sensor machines.
 
 The Azure ATP cloud service audit log contains:
 -	Suspicious activity information
 -	Monitoring alerts (health page)
--	Azure ATP Console logins
+-	Azure ATP workspace portal logins
 -	All configuration changes*
 
 The Azure ATP Standalone Sensor audit log contains:

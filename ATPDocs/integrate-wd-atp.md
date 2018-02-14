@@ -83,11 +83,11 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
  ![Windows Defender ATP enable integration](./media/wd-atp-enable.png)
 
-5. To check the status of the integration, in the Azure ATP console, go to **Settings** and then **Windows Defender ATP integration**. You can see the status of the integration; if something is wrong you see an error. You can also see which Workspace is integrated with Windows Defender ATP.
+5. To check the status of the integration, in the Azure ATP workspace portal, go to **Settings** and then **Windows Defender ATP integration**. You can see the status of the integration; if something is wrong you see an error. You can also see which Workspace is integrated with Windows Defender ATP.
 
 ## How it works
 
-After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes an icon to show that it is integrated with Windows Defender ATP. 
+After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP workspace portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes an icon to show that it is integrated with Windows Defender ATP. 
 
  ![Windows Defender ATP alerts](./media/profile-alerts-wd.png)
 
