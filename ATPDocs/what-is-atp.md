@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: What is Microsoft Azure Advanced Threat Protection (ATP)? | Microsoft Docs
-description: Explains what Microsoft Azure Advanced Threat Protection (ATP) is and what kinds of suspicious activities it can detect
+title: What is Azure Advanced Threat Protection (ATP)? | Microsoft Docs
+description: Explains what Azure Advanced Threat Protection (ATP) is and what kinds of suspicious activities it can detect
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -73,7 +73,7 @@ Azure ATP searches for three main types of attacks: Malicious attacks, abnormal 
 - 	Brute Force
 - 	Remote execution
 
-Azure ATP detects these suspicious activities and surfaces the information in the Azure ATP Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that Azure ATP suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
+Azure ATP detects these suspicious activities and surfaces the information in the Azure ATP workspace portal including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that Azure ATP suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
  ![sample Azure ATP screen pass-the-ticket](media/pass_the_ticket_sa.png)
 

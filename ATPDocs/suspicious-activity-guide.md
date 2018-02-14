@@ -33,7 +33,7 @@ ms.suite: ems
 
 Following proper investigation, any suspicious activity can be classified as:
 
--   **True positive**: A malicious action detected by ATP.
+-   **True positive**: A malicious action detected by Azure ATP.
 
 -   **Benign true positive**: An action detected by Azure ATP that is real but not malicious, such as a penetration test.
 
@@ -50,7 +50,7 @@ For questions or feedback, contact the Azure ATP team at [ATAEval@microsoft.com]
 
 Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATP. The minimum period before an alert can be triggered is one month per each domain controller.
 
-For a definition of sensitive groups in ATP, see [Working with the Azure ATP console](working-with-ata-console.md#sensitive-groups).
+For a definition of sensitive groups in Azure ATP, see [Working with the Azure ATP workspace portal](working-with-ata-console.md#sensitive-groups).
 
 
 The detection relies on [events audited on domain controllers](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).

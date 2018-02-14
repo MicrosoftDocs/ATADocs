@@ -36,7 +36,7 @@ The Azure ATP logs provide insight into what each component of Azure ATP is doin
 ## Azure ATP Standalone Sensor logs
 In this section, every reference to the Azure ATP Standalone Sensor is relevant also for the Azure ATP Sensor. 
 
-The Azure ATP Standalone Sensor logs are located in a subfolder called **Logs** where Azure ATP is installed; the default location is: **C:\Program Files\Microsoft Azure Advanced Threat Protection\**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Azure Advanced Threat Protection\Gateway\Logs**.
+The Azure ATP Standalone Sensor logs are located in a subfolder called **Logs** where Azure ATP is installed; the default location is: **C:\Program Files\Azure Advanced Threat Protection\**. In the default installation location, it can be found at: **C:\Program Files\Azure Advanced Threat Protection\Gateway\Logs**.
 
 The Azure ATP Standalone Sensor has the following logs:
 
@@ -56,9 +56,9 @@ For the Azure ATP Sensor, the sensor updater process is also responsible  for th
 > The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
 
 ## Azure ATP cloud service logs
-The Azure ATP cloud service logs are located in a subfolder called **Logs**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Azure Advanced Threat Protection\Center\Logs**".
+The Azure ATP cloud service logs are located in a subfolder called **Logs**. In the default installation location, it can be found at: **C:\Program Files\Azure Advanced Threat Protection\Center\Logs**".
 > [!Note]
-> The Azure ATP console logs that were formerly under IIS logs are now located under Azure ATP cloud service logs.
+> The Azure ATP workspace portal logs that were formerly under IIS logs are now located under Azure ATP cloud service logs.
 
 The Azure ATP cloud service has the following logs:
 
@@ -80,21 +80,21 @@ The Azure ATP deployment logs are located in the temp directory for the user who
 
 Azure ATP cloud service deployment logs:
 
--   **Microsoft Azure Advanced Threat Protection Center_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the Azure ATP cloud service. Its main use is tracking the Azure ATP cloud service deployment process.
+-   **Azure Advanced Threat Protection Center_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the Azure ATP cloud service. Its main use is tracking the Azure ATP cloud service deployment process.
 
--   **Microsoft Azure Advanced Threat Protection Center_YYYYMMDDHHMMSS_0_MongoDBPackage.log** - This log lists the steps in the process of MongoDB deployment on the Azure ATP cloud service. Its main use is tracking the MongoDB deployment process.
+-   **Azure Advanced Threat Protection Center_YYYYMMDDHHMMSS_0_MongoDBPackage.log** - This log lists the steps in the process of MongoDB deployment on the Azure ATP cloud service. Its main use is tracking the MongoDB deployment process.
 
--   **Microsoft Azure Advanced Threat Protection Center_YYYYMMDDHHMMSS_1_MsiPackage.log** - This log file lists the steps in the process of the deployment of the Azure ATP cloud service binaries. Its main use is tracking the deployment of the Azure ATP cloud service binaries.
+-   **Azure Advanced Threat Protection Center_YYYYMMDDHHMMSS_1_MsiPackage.log** - This log file lists the steps in the process of the deployment of the Azure ATP cloud service binaries. Its main use is tracking the deployment of the Azure ATP cloud service binaries.
 
 Azure ATP Standalone Sensor and Azure ATP Sensor deployment logs:
 
--   **Microsoft Azure Advanced Threat Protection Gateway_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the Azure ATP Standalone Sensor. Its main use is tracking the Azure ATP Standalone Sensor deployment process.
+-   **Azure Advanced Threat Protection Gateway_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the Azure ATP Standalone Sensor. Its main use is tracking the Azure ATP Standalone Sensor deployment process.
 
--   **Microsoft Azure Advanced Threat Protection Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** - This log file lists the steps in the process of the deployment of the Azure ATP Standalone Sensor binaries. Its main use is tracking the deployment of the Azure ATP Standalone Sensor binaries.
+-   **Azure Advanced Threat Protection Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** - This log file lists the steps in the process of the deployment of the Azure ATP Standalone Sensor binaries. Its main use is tracking the deployment of the Azure ATP Standalone Sensor binaries.
 
 
 > [!NOTE] 
-> In addition to the deployment logs mentioned here, there are other logs that begin with "Microsoft Azure Advanced Threat Protection" that can also provide additional information on the deployment process.
+> In addition to the deployment logs mentioned here, there are other logs that begin with "Azure Advanced Threat Protection" that can also provide additional information on the deployment process.
 
 
 ## See Also

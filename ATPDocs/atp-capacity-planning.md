@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 21/2/2018
+ms.date: 2/14/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -30,18 +30,15 @@ ms.suite: ems
 
 
 # Azure ATP capacity planning
-This article helps you determine how many Azure ATP servers are needed to monitor your network. It helps you figure out how many Azure ATP standalone sensors and/or Azure ATP Sensors you need and the server capacity for your Azure ATP cloud service and Azure ATP standalone sensors.
+This article helps you determine how many Azure ATP Sensors and standalone Sensors you need.
 
 > [!NOTE] 
-> The Azure ATP cloud service can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
+> The sizing tool has two sheets - one for ATA and one for Azure ATP. Make sure you are on the correct sheet.
 
 ## Using the sizing tool
 The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/trisizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the Azure ATP capacity you need:
 
-- Azure ATP cloud service CPU and Memory: Match the **Busy Packets/sec** field in the Azure ATP cloud service table results file to the **PACKETS PER SECOND** field in the [Azure ATP cloud service table](#atp-center-sizing).
-
-- Azure ATP cloud service Storage: Match the **Avg Packets/sec** field in the Azure ATP cloud service table results file to the **PACKETS PER SECOND** field in the [Azure ATP cloud service table](#atp-center-sizing).
-- Azure ATP Standalone Sensor: Match the **Busy Packets/sec** field in the Azure ATP Standalone Sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP Standalone Sensor table](#atp-sensor-sizing) or the [Azure ATP Sensor table](#atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP  Sensor: Match the **Busy Packets/sec** field in the Azure ATP  Sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP Standalone Sensor table](#atp-sensor-sizing) or the [Azure ATP Sensor table](#atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Sample capacity planning tool](media/capacity tool.png)
@@ -120,15 +117,16 @@ Port mirroring considerations might require you to deploy multiple Azure ATP sta
 	An Azure ATP Standalone Sensor can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored. 
 <br>
 
+|Packets per second*|CPU (cores)|Memory (GB)|
+|----|----|-----|
+|0-1k|0.25|2.50|
+|1k-5k|0.75|6.00|
+|5k-10k|1.00|6.50|
+|10k-20k|2.00|9.00|
+|20k-50k|3.50|9.50|
+|50k-75k (*)|3.50|9.50|
+|75k-100k (*)|3.50 |9.50|
 
-
-|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|
-|---------------------------|-------------------------|---------------|
-|1,000|1|6|
-|5,000|2|10|
-|10,000|3|12|
-|20,000|6|24|
-|50,000|16|48|
 &#42;Total average number of packets-per-second from all domain controllers being monitored by the specific Azure ATP Standalone Sensor during their busiest hour of the day.
 
 &#42;The total amount of domain controller port-mirrored traffic cannot exceed the capacity of the capture NIC on the Azure ATP Standalone Sensor.

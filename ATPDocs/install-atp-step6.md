@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 2/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -43,7 +43,7 @@ To enhance detection capabilities, Azure ATP needs the following Windows events:
 > [!NOTE]
 > For Azure ATP versions 1.8 and higher, event collection configuration is no longer necessary for Azure ATP Sensors. The Azure ATP Sensor can now read events locally, without the need to configure event forwarding.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757 and 7045 for enhancing detection of sensitive group modifications and service creation. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 #### SIEM/Syslog
 For Azure ATP to be able to consume data from a Syslog server, you need to perform the following steps:
@@ -196,12 +196,6 @@ Make sure to have \t between the key=value pairs.
 >[!div class="step-by-step"]
 [« Step 5](install-ata-step5.md)
 [Step 7 »](vpn-integration-install-step.md)
-
-
-
-## Related Videos
-- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -40,7 +40,7 @@ ms.suite: ems
 ## Step 5. Configure the Azure ATP Standalone Sensor settings
 After the Azure ATP Standalone Sensor was installed, perform the following steps to configure the settings for the Azure ATP Standalone Sensor.
 
-1.  In the Azure ATP Console, go to **Configuration** and, under **System**, select **Sensors**.
+1.  In the Azure ATP workspace portal, go to **Configuration** and, under **System**, select **Sensors**.
    
      ![Configure sensor settings image](media/atp-sensors.png)
 
@@ -61,32 +61,22 @@ After the Azure ATP Standalone Sensor was installed, perform the following steps
   - For an Azure ATP Sensor, this should be all the network adapters that are used for communication with other computers in your organization.
 
 
-  - **Domain synchronizer candidate**: Any Azure ATP Standalone Sensor set to be a domain synchronizer candidate can be responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only Azure ATP Sensors are set as Domain synchronizer candidates.
+  - **Domain synchronizer candidate**: Any Azure ATP Standalone Sensor set to be a domain synchronizer candidate can be responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only Azure ATP Standalone Sensors are set as Domain synchronizer candidates.
    It is recommended that you disable any remote site Azure ATP Sensors from being Domain synchronizer candidates.
    If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [Azure ATP architecture](atp-architecture.md#ata-lightweight-sensors-features).
-
-  > [!NOTE] 
-  > It will take a few minutes for the Azure ATP Standalone Sensor service to start the first time after installation because it builds the cache of the network capture parsers.
-  > The configuration changes are applied to the Azure ATP Standalone Sensor on the next scheduled sync between the Azure ATP Standalone Sensor and the Azure ATP cloud service.
-
-3. Optionally, you can set the [Syslog listener and Windows Event Forwarding Collection](configure-event-collection.md). 
-4. Enable **Update Azure ATP Standalone Sensor automatically** so that in upcoming version releases when you update the Azure ATP cloud service, this Azure ATP Standalone Sensor is automatically updated.
-
-5. Click **Save**.
+  
+3. Optionally, you can set the [Syslog listener](configure-event-collection.md). 
+4. Click **Save**.
 
 
 ## Validate installations
 To validate that the Azure ATP Standalone Sensor has been successfully deployed, check the following steps:
 
-1.  Check that the service named **Microsoft Azure Advanced Threat Protection Gateway** is running. After you save the Azure ATP Standalone Sensor settings, it might take a few minutes for the service to start.
+1.  Check that the service named **Azure Advanced Threat Protection Sensor** is running. After you save the Azure ATP Standalone Sensor settings, it might take a few seconds for the service to start.
 
-2.  If the service does not start, review the “Microsoft.Tri.Gateway-Errors.log” file located in the following default folder, “%programfiles%\Microsoft Azure Advanced Threat Protection\Gateway\Logs” and Check [Azure ATP Troubleshooting](troubleshooting-ata-known-errors.md) for help.
+2.  If the service does not start, review the “Microsoft.Tri.Sensor-Errors.log” file located in the following default folder, “%programfiles%\Azure Advanced Threat Protection\Sensor\Version X\Logs” and Check [Azure ATP Troubleshooting](troubleshooting-ata-known-errors.md) for help.
 
-3.  If this is the first Azure ATP Standalone Sensor installed, after a few minutes, log into the Azure ATP Console and open the notification pane by swiping the right side of the screen open. You should see a list of **Entities Recently Learned** in the notification bar on the right side of the console.
-
-4.  On the desktop, click the **Microsoft Azure Advanced Threat Protection** shortcut to connect to the Azure ATP Console. Log in with the same user credentials that you used to install the Azure ATP cloud service.
-5.  In the console, search for something in the search bar, such as a user or a group on your domain.
-6.  Open Performance Monitor. In the Performance tree, click on **Performance Monitor** and then click the plus icon to **Add a Counter**. Expand **Microsoft Azure ATP Standalone Sensor** and scroll down to **Network Listener PEF Captured Messages/Sec** and add it. Then, make sure you see activity on the graph.
+3.  Go to your workspace URL. In the workspace portal, search for something in the search bar, such as a user or a group on your domain.
 
     ![Add performance counters image](media/atp-performance-monitoring-add-counters.png)
 

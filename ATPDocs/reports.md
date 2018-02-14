@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Azure ATP Reports
 
-The Azure ATP reports section in the console enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
+The Azure ATP reports section in the workspace portal enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
 To access the reports page, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
 The reports that are available are: 
@@ -49,14 +49,14 @@ There are two ways to generate a report: either on demand or by scheduling a rep
 
 To generate a report on demand:
 
-1. In the Azure ATP console menu bar, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
+1. In the Azure ATP workspace portal menu bar, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
 
 2. Under either your selected report type, set the **From** and **To** dates and click **Download**. 
  ![reports](./media/reports.png)
 
 To set a scheduled report:
  
-1. In the **Reports** page, click **Set scheduled reports**, or in the Azure ATP Console configuration page, under Notifications and Reports, click **Scheduled reports**.
+1. In the **Reports** page, click **Set scheduled reports**, or in the Azure ATP workspace portal configuration page, under Notifications and Reports, click **Scheduled reports**.
 
    ![Schedule reports](./media/ata-sched-reports.png)
 

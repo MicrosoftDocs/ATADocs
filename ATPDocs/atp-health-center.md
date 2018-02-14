@@ -2,12 +2,12 @@
 # required metadata
 
 title: Monitor Azure Advanced Threat Protection System Health and Events | Microsoft Docs
-description: Use the Azure ATP Health Center to check how the Azure ATP service is working and be alerted to potential problems and view system events in the Event viewer.
+description: Use the Azure ATP workspace health center to check how the Azure ATP service is working and be alerted to potential problems and view system events in the Event viewer.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,18 +29,20 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
-# Working with Azure ATP system health and events
+# Working with Azure ATP workspace health and events
 
-## Azure ATP Health Center
-The Azure ATP Health Center lets you know how your Azure ATP service is performing and alerts you when there are problems.
+## Azure ATP workspace health center 
 
-## Working with the Azure ATP Health Center
-The Azure ATP Health Center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
+The Azure ATP workspace health center lets you know how your Azure ATP workspace is performing and alerts you when there are problems.
 
-![Azure ATP Health Center red dot toolbar](media/atp-health-bar.png)
+## Working with the Azure ATP workspace health center
 
-### Managing Azure ATP health
-To check up on your system's overall health, click the Health Center icon in the menu bar ![Azure ATP Health Center icon](media/atp-red-dot.png)
+The Azure ATP workspace health center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
+
+![Azure ATP workspace health center red dot toolbar](media/atp-health-bar.png)
+
+### Managing Azure ATP workspace health
+To check up on your workspace's overall health, click the Health Center icon in the menu bar ![Azure ATP workspace health center icon](media/atp-red-dot.png)
 
 -   All open alerts can be managed by setting them to **Close**, **Suppress**, or **Delete** by clicking the three dots in the corner of the alert and making your selection.
 
@@ -50,14 +52,15 @@ To check up on your system's overall health, click the Health Center icon in the
 
     > [!NOTE]
     > Azure ATP may reopen a closed activity if the same activity is detected again within a short period of time.
+    > Each workspace has its own health center.
 
 -   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
 
-- **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
+- **Delete**: If you Delete an alert, it is deleted from the workspace and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
 
 
 
-![Azure ATP Health Center issues image](media/atp-health-issue.JPG)
+![Azure ATP workspace health center issues image](media/atp-health-issue.JPG)
 
 
 

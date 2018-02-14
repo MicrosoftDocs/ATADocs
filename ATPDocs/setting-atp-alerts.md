@@ -34,14 +34,14 @@ ms.suite: ems
 Azure ATP can notify you when it detects a suspicious activity, either by email or by using Azure ATP event forwarding and forwarding the event to your SIEM/syslog server. Before selecting which notifications you want to receive, you have to [set up your email server and your Syslog server](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
-> -   Email notifications include a link that takes the user directly to the suspicious activity that was detected. The host name portion of the link is taken from the setting of the Azure ATP Console URL on the Azure ATP cloud service page. By default, the Azure ATP Console URL is the IP address selected during the installation  of the Azure ATP cloud service. If you are going to configure email notifications, it is recommended to use an FQDN as the Azure ATP Console URL.
+> -   Email notifications include a link that takes the user directly to the suspicious activity that was detected. The host name portion of the link is taken from the setting of the Azure ATP workspace portal URL on the Azure ATP cloud service page. By default, the Azure ATP workspace portal URL is the IP address selected during the installation  of the Azure ATP cloud service. If you are going to configure email notifications, it is recommended to use an FQDN as the Azure ATP workspace portal URL.
 > -   Notifications are sent from the Azure ATP cloud service to either the SMTP server and the Syslog server.
 
 
 To receive notifications, set the following parameters:
 
 
-1. In the Azure ATP Console, select the settings option on the toolbar and select **Configuration**.
+1. In the Azure ATP workspace portal, select the settings option on the toolbar and select **Configuration**.
 
 ![Azure ATP configuration settings icon](media/apt-config-menu.png)
 

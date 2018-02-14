@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,19 +30,19 @@ ms.suite: ems
 
 
 
-# Change Azure ATP configuration - domain connectivity password
+# Change Azure ATP workspace portal configuration - domain connectivity password
 
 
 
 ## Change the domain connectivity password
 If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP Standalone Sensor service stops running on the Azure ATP Standalone Sensors.
 
-If you suspect that this happened, on the Azure ATP Standalone Sensor, look at the Microsoft.Tri.Gateway-Errors.log file for the following errors:
+If you suspect that this happened, on the Azure ATP Standalone Sensor, look at the Microsoft.Tri.Sensor-Errors.log file for the following errors:
 `The supplied credential is invalid.`
 
-To correct this, follow this procedure to update the Domain Connectivity password on the Azure ATP cloud service:
+To correct this, follow this procedure to update the Domain Connectivity password on the Azure ATP workspace portal:
 
-1.  Open the Azure ATP Console on the Azure ATP cloud service.
+1.  Open the Azure ATP workspace portal on the by accessing the workspace URL.
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 
@@ -54,7 +54,8 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 4.  Under **Password**, change the password.
 
-    If the Azure ATP cloud service has connectivity to the domain, use the **Test Connection** button to validate the credentials
+ > [!NOTE]
+ > Enter an Active Directory user and password here, not Azure Active Directory.
 
 5.  Click **Save**.
 
@@ -63,5 +64,5 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 
 ## See Also
-- [Working with the Azure ATP Console](working-with-ata-console.md)
+- [Working with the Azure ATP workspace portal](working-with-ata-console.md)
 - [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

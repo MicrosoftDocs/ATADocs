@@ -47,11 +47,11 @@ If it can start, the platform is probably fine. If not, it is still a platform i
 4.	Try to manually recreate the Azure ATP data collector, using an elevated prompt, running these commands:
 
         sc stop ATACenter
-        logman stop "Microsoft Azure ATP cloud service"
-        logman export "Microsoft Azure ATP cloud service" -xml c:\center.xml
-        logman delete "Microsoft Azure ATP cloud service"
-        logman import "Microsoft Azure ATP cloud service" -xml c:\center.xml
-        logman start "Microsoft Azure ATP cloud service"
+        logman stop "Azure ATP cloud service"
+        logman export "Azure ATP cloud service" -xml c:\center.xml
+        logman delete "Azure ATP cloud service"
+        logman import "Azure ATP cloud service" -xml c:\center.xml
+        logman start "Azure ATP cloud service"
         sc start ATACenter
 
 ## Troubleshooting Azure ATP Sensor startup

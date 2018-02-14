@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,11 +30,35 @@ ms.suite: ems
 
 
 
-# Tag sensitive accounts
+# Working with sensitive accounts
 
-You can manually tag groups or accounts as sensitive to enhance detections. It is important to make sure this is updated because some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. Previously, Azure ATP automatically considered an entity *sensitive* if it was a member of a specific list of groups. YOu can now manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc, and Azure ATP will consider them sensitive.
+## Sensitive groups
 
-1.  In the Azure ATP console, click the **Configuration** cog in the menu bar.
+The following list of groups are considered Sensitive by Azure ATP. Any entity that is a member of these groups is considered sensitive:
+
+-	Enterprise Read Only Domain Controllers
+-	Domain Admins
+-	Domain Controllers
+-	Schema Admins,
+-	Enterprise Admins
+-	Group Policy Creator Owners
+-	Read Only Domain Controllers
+-	Administrators
+-	Power Users
+-	Account Operators
+-	Server Operators
+-	Print Operators,
+-	Backup Operators,
+-	Replicators
+-	Remote Desktop Users
+-	Network Configuration Operators
+-	Incoming Forest Trust Builders
+-	DNS Admins
+
+
+In addition to these groups, you can manually tag groups or accounts as sensitive to enhance detections. This is important because Some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. You can manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc, and Azure ATP will consider them sensitive.
+
+1.  In the Azure ATP workspace portal, click the **Configuration** cog in the menu bar.
 
 2.  Under **Detection** click **Entity tags**.
 

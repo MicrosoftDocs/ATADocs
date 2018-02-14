@@ -136,7 +136,7 @@ The events can be found here:
 
 3004 - Azure ATP license activated
 
-3005 – Log in to Azure ATP console
+3005 – Log in to Azure ATP workspace portal
 
 3006 – Manual change to health activity status 
 

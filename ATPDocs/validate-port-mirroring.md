@@ -41,7 +41,7 @@ The following steps walk you through the process for validating that port mirror
 1. Save the text of this script into a file called *ATAdiag.ps1*.
 2. Run this script on the Azure ATP Standalone Sensor that you want to validate.
 The script generates ICMP traffic from the Azure ATP Standalone Sensor to the domain controller and looks for that traffic on the Capture NIC on the domain controller.
-If the Azure ATP Standalone Sensor sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the Azure ATP Console, it deems port mirroring configured. 
+If the Azure ATP Standalone Sensor sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the Azure ATP workspace portal, it deems port mirroring configured. 
 
 Sample for how to run the script:
 
@@ -166,7 +166,7 @@ Sample for how to run the script:
     	#Ping the DC at the end after starting the capture
     	Test-Connection -Count 1 -ComputerName $DCIP -ea SilentlyContinue | Out-Null
     		
-    	# This is the match logic - check to see if Destination IP from the Ping sent matches the DCIP entered by in the Azure ATP Console  
+    	# This is the match logic - check to see if Destination IP from the Ping sent matches the DCIP entered by in the Azure ATP workspace portal  
     	# The only way the Azure ATP Standalone Sensor should see a destination of the DC is if Port Spanning is configured
     	
     		if ($DestinationIPAddressP -eq $DCIPP)  # is the destination IP eq to the DC IP? 
