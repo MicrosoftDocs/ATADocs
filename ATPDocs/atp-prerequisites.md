@@ -52,7 +52,7 @@ The Azure ATP System works on active directory forest boundary and supports Fore
 
 [Azure ATP worksapce portal](#azure-atp-workspace-portal): This section lists browser requirements for running the Azure ATP workspace portal.
 
-![Azure ATP architecture diagram](media/ATP-architecture-topology.jpg)
+![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
 
 ## Before you start
 This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.

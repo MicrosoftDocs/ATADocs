@@ -54,7 +54,7 @@ After you verified that your network meets the requirements of the Sensor, you c
 To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
 For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
-1. Log into [portal.atp.azure.com](portal.atp.azure.com).
+1. Log into [portal.atp.azure.com](https://portal.atp.azure.com).
 
 2. Click **Create workspace**.
 

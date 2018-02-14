@@ -99,7 +99,7 @@ The Azure ATP Health Center lets you know when there's a problem with the Azure 
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP Standalone Sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP Standalone Sensor.|Monitor Azure ATP Standalone Sensor logs to [understand the root cause for Azure ATP Standalone Sensor service failure](troubleshooting-atp-using-logs.md).|High|
+|The Azure ATP Standalone Sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP Standalone Sensor.|Monitor Azure ATP Standalone Sensor logs to understand the root cause for Azure ATP Standalone Sensor service failure.|High|
 
 ## Sensor
 

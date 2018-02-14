@@ -60,7 +60,7 @@ To check up on your workspace's overall health, click the Health Center icon in 
 
 
 
-![Azure ATP workspace health center issues image](media/atp-health-issue.JPG)
+![Azure ATP workspace health center issues image](media/atp-health-issue.png)
 
 
 

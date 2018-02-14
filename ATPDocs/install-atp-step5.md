@@ -42,7 +42,7 @@ After the Azure ATP Standalone Sensor was installed, perform the following steps
 
 1.  In the Azure ATP workspace portal, go to **Configuration** and, under **System**, select **Sensors**.
    
-     ![Configure sensor settings image](media/atp-sensors.png)
+     ![Configure sensor settings image](media/atp-sensor-config.png)
 
 
 2.  Click on the Sensor you want to configure and enter the following information:

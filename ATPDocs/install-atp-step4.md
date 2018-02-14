@@ -54,26 +54,30 @@ Perform the following steps on the Azure ATP Sensor server or domain controller.
 
 3.  On the **Welcome** page, select your language and click **Next**.
 
+     ![Azure ATP Standalone Sensor installation language](media/sensor-install-language.png)
+
+
 4.  The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it is a domain controller, the Azure ATP Sensor is installed, if it is a dedicated server, the Azure ATP Standalone Sensor is installed. 
     
     For example, for an Azure ATP Standalone Sensor, the following screen is displayed to let you know that an Azure ATP Standalone Sensor will be installed on your dedicated server:
     
-    ![Azure ATP Standalone Sensor installation](media/atp-gw-install.png)
+    ![Azure ATP Standalone Sensor installation](media/sensor-install-deployment-type.png)
+
     Click **Next**.
 
     > [!NOTE] 
     > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of Azure ATP in a small lab test environment in which you don't need as much room for data storage. For production environments, it is highly recommended to work with Azure ATP's [capacity planning](atp-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
-4.  Under **Configure the Sensor**, enter the following information based on your environment:
+4.  Under **Configure the Sensor**, enter the installation path and the access key, based on your environment:
 
-    ![Azure ATP Standalone Sensor configuration image](media/atp-gw-configure.png)
+    ![Azure ATP Standalone Sensor configuration image](media/sensor-install-config.png)
 
     > [!NOTE]
     > When you deploy the Azure ATP Standalone Sensor, you do not have to provide credentials. If the Azure ATP Standalone Sensor installation fails to retrieve your credentials using single sign-on (for example, this may happen if the Azure ATP cloud service is not in the domain, if the Azure ATP Standalone Sensor isn't in the domain, you do not have Azure ATP admin credentials), you are prompted to provide credentials, as in the following screen: 
 
-  ![Provide Azure ATP Standalone Sensor credentials](media/atp-install-credentials.png)
-
    - Installation Path: This is the location where the Azure ATP Standalone Sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection\Gateway. Leave the default value.
+
+   - Access key: 
     
 5. Click **Install**. The following components are installed and configured during the installation of the Azure ATP Standalone Sensor:
 

@@ -58,7 +58,7 @@ Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneli
 
 ## How many Azure ATP Sensors do I need?
 
-The number of Azure ATP Sensors depend on your network layout, volume of packets and volume of events captured by Azure ATP. To determine the exact number, see [Azure ATP Sensor Sizing](atp-capacity-planning.md#ata-standalone-sensor-sizing). 
+The number of Azure ATP Sensors depend on your network layout, volume of packets and volume of events captured by Azure ATP. To determine the exact number, see [Azure ATP Sensor Sizing](atp-capacity-planning.md#azure-atp-standalone-sensor-sizing). 
 
 ## How much storage do I need for Azure ATP?
 For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about Azure ATP cloud service sizing see, [Azure ATP Capacity Planning](atp-capacity-planning.md).
