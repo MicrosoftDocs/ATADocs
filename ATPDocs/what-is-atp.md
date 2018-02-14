@@ -75,7 +75,7 @@ Azure ATP searches for three main types of attacks: Malicious attacks, abnormal 
 
 Azure ATP detects these suspicious activities and surfaces the information in the Azure ATP workspace portal including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that Azure ATP suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
- ![sample Azure ATP screen pass-the-ticket](media/pass_the_ticket_sa.png)
+ ![sample Azure ATP screen pass-the-ticket](media/pass-the-ticket-sa.png)
 
 
 Azure ATP also detects **security issues and risks**, including:

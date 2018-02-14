@@ -84,13 +84,13 @@ You can filter which suspicious activities are displayed in the attack time line
 
 In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in Azure ATP. To give it a try, just start typing.
 
-![Azure ATP workspace portal search image](media/ATP-workspace-portal-search.png)
+![Azure ATP workspace portal search image](media/atp-workspace-portal-search.png)
 
 ### Health center
 
 The Health center provides you with alerts when something isn't working properly in your Azure ATP workspace.
 
-![Azure ATP health center image](media/atp-health-center.png)
+![Azure ATP health center image](media/atp-health-issue.png)
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected Azure ATP Standalone Sensor, the Health Center icon lets you know by displaying a red dot. 
 
