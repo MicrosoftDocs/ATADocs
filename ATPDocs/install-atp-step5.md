@@ -63,7 +63,7 @@ After the Azure ATP Standalone Sensor was installed, perform the following steps
 
   - **Domain synchronizer candidate**: Any Azure ATP Standalone Sensor set to be a domain synchronizer candidate can be responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only Azure ATP Standalone Sensors are set as Domain synchronizer candidates.
    It is recommended that you disable any remote site Azure ATP Sensors from being Domain synchronizer candidates.
-   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [Azure ATP architecture](atp-architecture.md#ata-lightweight-sensors-features).
+   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [Azure ATP architecture](atp-architecture.md#azure-atp-sensor-features).
   
 3. Optionally, you can set the [Syslog listener](configure-event-collection.md). 
 4. Click **Save**.
@@ -74,7 +74,7 @@ To validate that the Azure ATP Standalone Sensor has been successfully deployed,
 
 1.  Check that the service named **Azure Advanced Threat Protection Sensor** is running. After you save the Azure ATP Standalone Sensor settings, it might take a few seconds for the service to start.
 
-2.  If the service does not start, review the “Microsoft.Tri.Sensor-Errors.log” file located in the following default folder, “%programfiles%\Azure Advanced Threat Protection\Sensor\Version X\Logs” and Check [Azure ATP Troubleshooting](troubleshooting-ata-known-errors.md) for help.
+2.  If the service does not start, review the “Microsoft.Tri.Sensor-Errors.log” file located in the following default folder, “%programfiles%\Azure Advanced Threat Protection\Sensor\Version X\Logs”.
 
 3.  Go to your workspace URL. In the workspace portal, search for something in the search bar, such as a user or a group on your domain.
 
@@ -82,20 +82,13 @@ To validate that the Azure ATP Standalone Sensor has been successfully deployed,
 
 
 >[!div class="step-by-step"]
-[« Step 4](install-ata-step4.md)
-[Step 6 »](install-ata-step6.md)
-
-
-
-## Related Videos
-- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
+[« Step 4](install-atp-step4.md)
+[Step 6 »](install-atp-step6.md)
 
 
 ## See Also
-- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
+
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
 

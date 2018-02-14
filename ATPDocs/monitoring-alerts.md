@@ -39,19 +39,19 @@ The Azure ATP Health Center lets you know when there's a problem with the Azure 
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Azure ATP Standalone Sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-ata-config-dcpassword.md) and then update the password in the Azure ATP Console.|Medium|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Azure ATP Standalone Sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP Console.|Medium|
 
 ### Read-only user password expired
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the Azure ATP Standalone Sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-ata-config-dcpassword.md) and then update the password in the Azure ATP Console.|High|
+|The read-only user password, used to get directory data, expired.|All the Azure ATP Standalone Sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP Console.|High|
 
 ### Domain synchronizer not assigned
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|No domain synchronizer is assigned to any Azure ATP Standalone Sensor. This may happen if there is no Azure ATP Standalone Sensor configured as domain synchronizer candidate.|When the domain is not synchronized, changes to entities might cause entity information in Azure ATP to become out of date or missing but does not affect any detection.|Make sure that at least one Azure ATP Standalone Sensor is set as a [Domain synchronizer](install-ata-step5.md).|Low|
+|No domain synchronizer is assigned to any Azure ATP Standalone Sensor. This may happen if there is no Azure ATP Standalone Sensor configured as domain synchronizer candidate.|When the domain is not synchronized, changes to entities might cause entity information in Azure ATP to become out of date or missing but does not affect any detection.|Make sure that at least one Azure ATP Standalone Sensor is set as a [Domain synchronizer](install-atp-step5.md).|Low|
 
 ### All/Some of the capture network adapters on a sensor are not available
 
@@ -93,13 +93,13 @@ The Azure ATP Health Center lets you know when there's a problem with the Azure 
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP Standalone Sensor is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP Standalone Sensor.|Consider [adding additional processors and memory](ata-capacity-planning.md) as required. If this is a standalone Azure ATP Standalone Sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, consult your VMware documentation.|Medium|
+|The Azure ATP Standalone Sensor is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP Standalone Sensor.|Consider [adding additional processors and memory](atp-capacity-planning.md) as required. If this is a standalone Azure ATP Standalone Sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, consult your VMware documentation.|Medium|
 
 ### Sensor service failed to start
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP Standalone Sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP Standalone Sensor.|Monitor Azure ATP Standalone Sensor logs to [understand the root cause for Azure ATP Standalone Sensor service failure](troubleshooting-ata-using-logs.md).|High|
+|The Azure ATP Standalone Sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP Standalone Sensor.|Monitor Azure ATP Standalone Sensor logs to [understand the root cause for Azure ATP Standalone Sensor service failure](troubleshooting-atp-using-logs.md).|High|
 
 ## Sensor
 
@@ -111,8 +111,8 @@ The Azure ATP Health Center lets you know when there's a problem with the Azure 
 
 
 ## See Also
-- [Azure ATP prerequisites](ata-prerequisites.md)
-- [Azure ATP capacity planning](ata-capacity-planning.md)
+
+- [Azure ATP prerequisites](atp-prerequisites.md)
+- [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

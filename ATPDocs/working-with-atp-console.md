@@ -38,16 +38,14 @@ Typing the `?` key provides keyboard shortcuts for Azure ATP workspace portal ac
 
 ## Enabling access to the Azure ATP workspace portal
 To successfully log in to the Azure ATP workspace portal, you have to log in with a user who was assigned the proper Azure Active Directory security group to access the Azure ATP workspace portal. 
-For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](ata-role-groups.md).
+For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
 ## Logging into the Azure ATP workspace portal
 
 1. You can enter the workspace portal either by logging in to the workspace management portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and then selecting the relevant workspace, or browsing to the workspace URL: [https://*workspacename*.atp.azure.com](https://*workspacename*.atp.azure.com).
 
-    ![Azure ATP server icon](media/ata-server-icon.png)
 
- 
-2.  If the computer on which the Azure ATP cloud service is installed and the computer from which you are trying to access the Azure ATP workspace portal are both domain joined, Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP workspace portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](ata-role-groups.md).
+2.  If the computer on which the Azure ATP cloud service is installed and the computer from which you are trying to access the Azure ATP workspace portal are both domain joined, Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP workspace portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](atp-role-groups.md).
 
  > [!NOTE]
  > Make sure to log on to the computer from which you want to access the Azure ATP workspace portal using your Azure ATP admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. To prompt the Azure ATP workspace portal to ask for credentials, access the workspace portal using an IP address and you are prompted to enter credentials.
@@ -86,7 +84,7 @@ You can filter which suspicious activities are displayed in the attack time line
 
 In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in Azure ATP. To give it a try, just start typing.
 
-![Azure ATP workspace portal search image](media/ATP-workspace portal-search.png)
+![Azure ATP workspace portal search image](media/ATP-workspace-portal-search.png)
 
 ### Health center
 
@@ -100,27 +98,7 @@ Any time your system encounters a problem, such as a connectivity error or a dis
 
 ### Sensitive groups
 
-The following list of groups are considered **Sensitive** by Azure ATP. Any entity that is a member of these groups is considered sensitive:
-
-- Enterprise Read Only Domain Controllers 
-- Domain Admins 
-- Domain Controllers 
-- Schema Admins,
-- Enterprise Admins 
-- Group Policy Creator Owners 
-- Read Only Domain Controllers 
-- Administrators  
-- Power Users  
-- Account Operators  
-- Server Operators   
-- Print Operators,
-- Backup Operators,
-- Replicators 
-- Remote Desktop Users 
-- Network Configuration Operators 
-- Incoming Forest Trust Builders 
-- DNS Admins 
-
+For information on sensitive groups in ATP, see [Working with sensitive groups](tag-sensitive-accounts.md).
 
 ### Mini profile
 
@@ -141,4 +119,5 @@ If you hover your mouse over an entity, anywhere in the workspace portal where t
 
 
 ## See Also
-[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+- [Creating Azure ATP workspaces](atp-workspaces.md)

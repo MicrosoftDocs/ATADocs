@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -107,8 +107,7 @@ May  3 13:34:23 CENTER ATP:CEF:0|Microsoft|ATP|1.8.5942.64854|LdapSimpleBindClea
 May  4 13:15:41 CENTER ATP:CEF:0|Microsoft|ATP|1.8.5942.64854|PassTheTicketSuspiciousActivity|Identity theft using Pass-the-Ticket attack|10|start=2017-05-04T13:13:44.5160000Z app=Kerberos shost=CLIENT1 suser=Administrator request=krbtgt/DOMAIN1.TEST.LOCAL msg=Administrator's Kerberos tickets were stolen from CLIENT2 to CLIENT1 and used to access krbtgt/DOMAIN1.TEST.LOCAL. cs2Label=ticketSourceComputer cs2=CLIENT2 cs3Label=ticketSourceComputerIpAddress cs3= cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/590b29168ca1ec0ba438acf6
 
 ## See Also
-- [Azure ATP prerequisites](ata-prerequisites.md)
-- [Azure ATP capacity planning](ata-capacity-planning.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
+- [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

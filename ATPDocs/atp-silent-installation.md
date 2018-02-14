@@ -138,6 +138,5 @@ To silently uninstall the Azure ATP Sensor from the server:
 
 ## See Also
 
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)

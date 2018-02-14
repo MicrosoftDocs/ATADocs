@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/10/2018
+ms.date: 02/14/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -68,7 +68,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
    
     1.	Select **Enabled**.
     2.	Under **Options**, click **Show**.
-    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
    ![Configure target subscription image](media/wef 2 config target sub manager.png)
    
@@ -105,5 +105,4 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
 
 ## See Also
-- [Install Azure ATP](install-ata-step1.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Install Azure ATP](install-atp-step1.md)

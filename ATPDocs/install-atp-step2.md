@@ -33,10 +33,10 @@ ms.suite: ems
 # Install Azure ATP - Step 2
 
 >[!div class="step-by-step"]
-[« Step 1](install-ata-step1.md)
-[Step 3 »](install-ata-step3.md)
+[« Step 1](install-atp-step1.md)
+[Step 3 »](install-atp-step3.md)
 
-## Step 2. Provide a Username and Password to connect to your Active Directory Forest
+## Step 2. Provide a username and password to connect to your Active Directory Forest
 
 The first time you open the Azure ATP workspace portal, the following screen appears:
 
@@ -50,19 +50,15 @@ The first time you open the Azure ATP workspace portal, the following screen app
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-   After it is saved, the welcome message in the workspace portal will change to the following message:
-  ![Azure ATP welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
-
 3. In the workspace portal, click **Download Sensor setup and install the first Sensor** to continue.
 
 
 >[!div class="step-by-step"]
-[« Step 1](install-ata-step1.md)
-[Step 3 »](install-ata-step3.md)
+[« Step 1](install-atp-step1.md)
+[Step 3 »](install-atp-step3.md)
 
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)

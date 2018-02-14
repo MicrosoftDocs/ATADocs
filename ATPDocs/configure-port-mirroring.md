@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Configure Port Mirroring
 > [!NOTE] 
-> This article is relevant only if you deploy Azure ATP Standalone Sensors instead of Azure ATP Sensors. To determine if you need to use Azure ATP Standalone Sensors, see [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> This article is relevant only if you deploy Azure ATP Standalone Sensors instead of Azure ATP Sensors. To determine if you need to use Azure ATP Standalone Sensors, see [Choosing the right gateways for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
 The main data source used by Azure ATP is deep packet inspection of the network traffic to and from your domain controllers. For Azure ATP to see the network traffic, you must either configure port mirroring, or use a Network TAP.
 
@@ -79,4 +79,3 @@ After configuring port mirroring, validate that port mirroring is working before
 
 ## See Also
 - [Validate port mirroring](validate-port-mirroring.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

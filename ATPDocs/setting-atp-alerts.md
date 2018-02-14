@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -43,7 +43,7 @@ To receive notifications, set the following parameters:
 
 1. In the Azure ATP workspace portal, select the settings option on the toolbar and select **Configuration**.
 
-![Azure ATP configuration settings icon](media/apt-config-menu.png)
+![Azure ATP configuration settings icon](media/atp-config-menu.png)
 
 2. Click **Notifications**.
 3. Under **Mail notifications**, specify which notifications should be sent via email - they can be sent for new alerts and new health issues. 
@@ -60,4 +60,7 @@ To receive notifications, set the following parameters:
 
 
 ## See Also
-[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+- [Configure event collection](configure-event-collection.md)
+
+- [Set Syslog settings](setting-syslog-email-server-settings.md)

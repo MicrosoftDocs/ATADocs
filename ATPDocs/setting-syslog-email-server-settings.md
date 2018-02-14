@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 
-# Provide Azure ATP with your Syslog server settings
+# Set Syslog integration
 
 Azure ATP can notify you when it detects a suspicious activity by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
 
@@ -66,4 +66,5 @@ Azure ATP can notify you when it detects a suspicious activity by sending the no
 
 
 ## See Also
-[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+- [Working with sensitive accounts](tag-sensitive-accounts.md)

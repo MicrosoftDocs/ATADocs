@@ -98,8 +98,6 @@ Perform the following steps on the Azure ATP Sensor server or domain controller.
 
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
 
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
 - [Configure event collection](configure-event-collection.md)
 
 - [Azure ATP prerequisites](atp-prerequisites.md)

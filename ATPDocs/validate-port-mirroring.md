@@ -38,7 +38,7 @@ The following steps walk you through the process for validating that port mirror
 
 ## Validate port mirroring using a Windows PowerShell script
 
-1. Save the text of this script into a file called *ATAdiag.ps1*.
+1. Save the text of this script into a file called *ATPdiag.ps1*.
 2. Run this script on the Azure ATP Standalone Sensor that you want to validate.
 The script generates ICMP traffic from the Azure ATP Standalone Sensor to the domain controller and looks for that traffic on the Capture NIC on the domain controller.
 If the Azure ATP Standalone Sensor sees ICMP traffic with a destination IP address the same as the DC IP addressed you entered in the Azure ATP workspace portal, it deems port mirroring configured. 
@@ -231,4 +231,3 @@ Sample for how to run the script:
 ## See Also
 
 - [Configure port mirroring](configure-port-mirroring.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

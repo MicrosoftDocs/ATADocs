@@ -104,4 +104,4 @@ For more information, see [Working with suspicious activities](working-with-susp
 
 
 ## See Also
-[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+[Azure ATP frequently asked questions](atp-technical-faq.md)

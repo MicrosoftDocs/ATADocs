@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -78,5 +78,5 @@ Now that you know which sensitive accounts are at risk, you can deep dive in Azu
 
 
 ## See Also
+
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
