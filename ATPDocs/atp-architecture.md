@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 2/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 # Azure ATP Architecture
 The Azure Advanced Threat Protection architecture is detailed in this diagram:
 
-![Azure ATP architecture topology diagram](media/ATP-architecture-topology.jpg)
+![Azure ATP architecture topology diagram](media/atp-architecture-topology.jpg)
 
 Azure ATP monitors your domain controller network traffic by utilizing port mirroring to an Azure ATP Standalone Sensor using physical or virtual switches. If you deploy the Azure ATP Sensor directly on your domain controllers, it removes the requirement for port mirroring. In addition, Azure ATP can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats.
 This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATP: the Azure ATP Standalone Sensor, Azure ATP Sensor (which has the same core functionality as the Azure ATP Standalone Sensor), and the Azure ATP cloud service.
@@ -114,7 +114,7 @@ Consider the following criteria when deciding how many Azure ATP Centers to depl
 
 -   One Azure ATP cloud service can monitor a single Active Directory forest. If you have more than one Active Directory forest, you need a minimum of one Azure ATP cloud service per Active Directory forest.
 
--    In large Active Directory deployments, a single Azure ATP cloud service might not be able to handle all the traffic of all your domain controllers. In this case, multiple Azure ATP Centers are required. The number of Azure ATP Centers should be dictated by [Azure ATP capacity planning](ata-capacity-planning.md).
+-    In large Active Directory deployments, a single Azure ATP cloud service might not be able to handle all the traffic of all your domain controllers. In this case, multiple Azure ATP Centers are required. The number of Azure ATP Centers should be dictated by [Azure ATP capacity planning](atp-capacity-planning.md).
 
 ## Azure ATP sensor and Azure ATP standalone sensor
 
@@ -138,7 +138,7 @@ The Azure ATP Standalone Sensor receives network traffic and Windows Events from
 
 |||
 |-|-|
-|Network Listener|The Network Listener captures network traffic and parsing the traffic. This is a CPU-heavy task, so  it is especially important to check [Azure ATP Prerequisites](ata-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
+|Network Listener|The Network Listener captures network traffic and parsing the traffic. This is a CPU-heavy task, so  it is especially important to check [Azure ATP Prerequisites](atp-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
 |Event Listener|The Event Listener captures and parsing Windows Events forwarded from a SIEM server on your network.|
 |Windows Event Log Reader|The Windows Event Log Reader reads and parsing Windows Events forwarded to the Azure ATP standalone sensor's Windows Event Log from the domain controllers.|
 |Network Activity Translator | Translates parsed traffic into a logical representation of the traffic used by Azure ATP (NetworkActivity).
@@ -193,11 +193,11 @@ Your domain controllers and the Azure ATP standalone sensors can be physical or 
 
 
 ### Events
-To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
+To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
 
 -   Configuring the Azure ATP Standalone Sensor to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATP. Azure ATP supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
 
--   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your Azure ATP Standalone Sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP Sensor.
+-   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your Azure ATP Standalone Sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-collection.md). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP Sensor.
 
 
 ## See Also
@@ -205,6 +205,5 @@ To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to se
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Configuring Windows event forwarding](configure-event-collection)
 

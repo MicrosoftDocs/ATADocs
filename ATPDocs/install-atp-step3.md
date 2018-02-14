@@ -33,18 +33,18 @@ ms.suite: ems
 # Install Azure ATP - Step 3
 
 >[!div class="step-by-step"]
-[« Step 2](install-ata-step2.md)
-[Step 4 »](install-ata-step4.md)
+[« Step 2](install-atp-step2.md)
+[Step 4 »](install-atp-step4.md)
 
-## Step 3. Download the Azure ATP Sensor setup package
-After configuring the domain connectivity settings, you can download the Azure ATP Sensor setup package. The Azure ATP Sensor can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an Azure ATP Sensor. For more information on the Azure ATP Sensor, see [Azure ATP Architecture](ata-architecture.md). 
+## Step 3. Download the Azure ATP sensor setup package
+After configuring the domain connectivity settings, you can download the Azure ATP sensor setup package. The Azure ATP Sensor can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an Azure ATP sensor. For more information on the Azure ATP sensor, see [Azure ATP Architecture](atp-architecture.md). 
 
 Click **Download** in the list of steps at the top of the page to go to the **Sensors** page.
 
-![Azure ATP Sensor configuration settings](media/atp-sensor-config.png)
+![Azure ATP sensor configuration settings](media/atp-sensor-config.png)
 
 > [!NOTE] 
-> To reach the Sensor configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Sensors**.  
+> To reach the sensor configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Sensors**.  
 
 1.  Click **Sensors**.
 2.  Save the package locally.
@@ -52,19 +52,20 @@ Click **Download** in the list of steps at the top of the page to go to the **Se
 
 The zip file includes the following files:
 
--   Azure ATP Sensor installer
+-   Azure ATP sensor installer
 
 -   Configuration setting file with the required information to connect to the Azure ATP cloud service
 
 
 >[!div class="step-by-step"]
-[« Step 2](install-ata-step2.md)
-[Step 4 »](install-ata-step4.md)
+[« Step 2](install-atp-step2.md)
+[Step 4 »](install-atp-step4.md)
 
 
 ## See Also
-- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
+
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](ata-prerequisites.md)
+
+- [Azure ATP prerequisites](atp-prerequisites.md)

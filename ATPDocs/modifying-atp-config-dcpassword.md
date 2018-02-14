@@ -50,7 +50,7 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 3.  Select **Directory Services**.
 
-    ![Azure ATP Standalone Sensor change password image](media/dirctory-services.png)
+    ![Azure ATP Standalone Sensor change password image](media/directory-services.png)
 
 4.  Under **Password**, change the password.
 
@@ -64,5 +64,5 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 
 ## See Also
-- [Working with the Azure ATP workspace portal](working-with-ata-console.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+- [Integration with Windows Defender ATP](integrate-wd-atp.md)

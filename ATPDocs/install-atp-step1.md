@@ -32,7 +32,7 @@ ms.suite: ems
 # Creating a workspace in Azure ATP - Step 1
 
 >[!div class="step-by-step"]
-[Step 2 »](install-ata-step2.md)
+[Step 2 »](install-atp-step2.md)
 
 This installation procedure provides instructions for creating and managing a workspace in Azure ATP. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
 
@@ -52,7 +52,7 @@ After you verified that your network meets the requirements of the Sensor, you c
 ## Step 2. Create a workspace
 
 To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
-For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](ata-role-groups.md).
+For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
 1. Log into [portal.atp.azure.com](portal.atp.azure.com).
 
@@ -72,17 +72,12 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 
 >[!div class="step-by-step"]
 [« Pre-install](configure-port-mirroring.md)
-[Step 2 »](install-ata-step2.md)
-
-## Related Videos
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
-- [Azure ATP Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATP-Deployment-in-10-Minutes)
+[Step 2 »](install-atp-step2.md)
 
 
 ## See Also
 - [Azure ATP POC deployment guide](http://aka.ms/atapoc)
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
 

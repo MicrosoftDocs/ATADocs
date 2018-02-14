@@ -37,7 +37,7 @@ In Azure ATP you have the ability to manage and monitor multiple workspaces. Thi
 ## Create a workspace
 
 To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
-For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](ata-role-groups.md).
+For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
 1. Log into [portal.atp.azure.com](portal.atp.azure.com).
 
@@ -57,4 +57,6 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 
 
 ## See Also
-[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+- [ATP suspicious activity guide](suspicious-activity-guide.md)
+- [Working with sensitive accounts](tag-sensitive-accounts.md)

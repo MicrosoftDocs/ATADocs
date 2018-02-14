@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2018
+ms.date: 2/14/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,23 +34,23 @@ ms.suite: ems
 This article describes the requirements for a successful deployment of Azure ATP in your environment.
 
 >[!NOTE]
-> For information on how to plan resources and capacity, see [Azure ATP capacity planning](ata-capacity-planning.md).
+> For information on how to plan resources and capacity, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 
-Azure ATP is composed of the Azure ATP cloud service, the Azure ATP Standalone Sensor and/or the Azure ATP Sensor. For more information about the Azure ATP components, see [Azure ATP architecture](ata-architecture.md).
+Azure ATP is composed of the Azure ATP cloud service, the Azure ATP Standalone Sensor and/or the Azure ATP Sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
 
 The Azure ATP System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
 
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
 
-[Azure ATP cloud service](#ata-center-requirements): This section lists Azure ATP cloud service hardware, software requirements as well as settings  you need to configure on your Azure ATP cloud service server.
+[Azure ATP cloud service](#azure-atp-cloud-service-requirements): This section lists Azure ATP cloud service hardware, software requirements as well as settings  you need to configure on your Azure ATP cloud service server.
 
-[Azure ATP Standalone Sensor](#ata-sensor-requirements): This section lists Azure ATP Standalone Sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP Standalone Sensor servers.
+[Azure ATP Standalone Sensor](#azure-atp-sensor-requirements): This section lists Azure ATP Standalone Sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP Standalone Sensor servers.
 
-[Azure ATP Sensor](#ata-lightweight-sensor-requirements): This section lists Azure ATP Sensor hardware, and software requirements.
+[Azure ATP Sensor](#azure-atp-lightweight-sensor-requirements): This section lists Azure ATP Sensor hardware, and software requirements.
 
-[Azure ATP worksapce portal](#ata-console): This section lists browser requirements for running the Azure ATP workspace portal.
+[Azure ATP worksapce portal](#azure-atp-workspace-portal): This section lists browser requirements for running the Azure ATP workspace portal.
 
 ![Azure ATP architecture diagram](media/ATP-architecture-topology.jpg)
 
@@ -67,7 +67,7 @@ This section lists information you should gather and accounts and network entiti
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
--   Optional: A user account of a user who has no network activities. This account is configured as the Azure ATP Honeytoken user. To configure the Honeytoken user, you need the SID of the user account, not the username. For more information, see [Configure IP address exclusions and Honeytoken user](install-ata-step7.md).
+-   Optional: A user account of a user who has no network activities. This account is configured as the Azure ATP Honeytoken user. To configure the Honeytoken user, you need the SID of the user account, not the username. For more information, see [Configure IP address exclusions and Honeytoken user](install-atp-step7.md).
 
 -   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
@@ -93,7 +93,7 @@ If you run the Azure ATP cloud service as a virtual machine, shut down the serve
 
 When working on a physical server, the Azure ATP database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving in order to disable NUMA. For more information, see your BIOS documentation.<br>
 For optimal performance, set the **Power Option** of the Azure ATP cloud service to **High Performance**.<br>
-The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [Azure ATP capacity planning](ata-capacity-planning.md).
+The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 
 ### Time synchronization
@@ -167,7 +167,7 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 For information on using virtual machines with the Azure ATP Standalone Sensor, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, [Azure ATP logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the Azure ATP Standalone Sensor to **High Performance**.<br>
@@ -176,7 +176,7 @@ An Azure ATP Standalone Sensor can support monitoring multiple domain controller
 >[!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
-For more information about the Azure ATP Standalone Sensor hardware requirements, see [Azure ATP capacity planning](ata-capacity-planning.md).
+For more information about the Azure ATP Standalone Sensor hardware requirements, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 ### Time synchronization
 The Azure ATP cloud service server, the Azure ATP Standalone Sensor servers, and the domain controllers must have time synchronized to within five minutes of each other.
@@ -249,7 +249,7 @@ During installation, the .Net Framework 4.6.1 is installed and might cause a reb
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, [Azure ATP logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
 
 ### Server specifications
 
@@ -260,7 +260,7 @@ The Azure ATP Sensor can be deployed on domain controllers of various loads and 
 >[!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
-For more information about the Azure ATP Sensor hardware requirements, see [Azure ATP capacity planning](ata-capacity-planning.md).
+For more information about the Azure ATP Sensor hardware requirements, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 ### Time synchronization
 
@@ -301,14 +301,11 @@ Access to the Azure ATP workspace portal is via a browser, supporting the  brows
 
 -   Minimum screen width resolution of 1700 pixels
 
-## Related Videos
-- [Choosing the right Azure ATP Standalone Sensor type](https://channel9.msdn.com/Shows/Microsoft-Security/ATP-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Azure ATP architecture](ata-architecture.md)
-- [Install ATP](install-ata-step1.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Azure ATP architecture](atp-architecture.md)
+- [Install ATP](install-atp-step1.md)
 
 

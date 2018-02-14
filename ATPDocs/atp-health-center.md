@@ -70,4 +70,3 @@ To check up on your workspace's overall health, click the Health Center icon in 
 ## See Also
 
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

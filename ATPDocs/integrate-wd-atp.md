@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/3/2018
+ms.date: 2/14/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -105,9 +105,10 @@ In the Windows Defender ATP portal, when you click on an endpoint, you can view 
 
 
 ## See Also
+
+- [Investigating lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Azure ATP architecture](ata-architecture.md)
-- [Install ATP](install-ata-step1.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Azure ATP architecture](atp-architecture.md)
+- [Install ATP](install-atp-step1.md)
 
 

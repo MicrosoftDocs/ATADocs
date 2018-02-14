@@ -41,7 +41,6 @@ Following proper investigation, any suspicious activity can be classified as:
 
 For more information on how to work with Azure ATP alerts, see [Working with suspicious activities](working-with-suspicious-activities.md).
 
-For questions or feedback, contact the Azure ATP team at [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
 
 ## Abnormal Sensitive Group Modification
 
@@ -50,11 +49,11 @@ For questions or feedback, contact the Azure ATP team at [ATAEval@microsoft.com]
 
 Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATP. The minimum period before an alert can be triggered is one month per each domain controller.
 
-For a definition of sensitive groups in Azure ATP, see [Working with the Azure ATP workspace portal](working-with-ata-console.md#sensitive-groups).
+For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](tag-sensitive-accounts.md).
 
 
-The detection relies on [events audited on domain controllers](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-To make sure your domain controllers audit the needed events, use the tool referenced in [Azure ATP Auditing (AuditPol, Advanced Audit Settings Enforcement, Sensor Service discovery)](https://aka.ms/ataauditingblog).
+The detection relies on [events audited on domain controllers](configure-event-collection.md).
+To make sure your domain controllers audit the needed events.
 
 **Investigation**
 
@@ -177,7 +176,7 @@ Also, because creating a Golden Ticket requires domain admin rights, implement 
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused, while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Install Azure ATP - Step 7](install-ata-step7.md).
+For more information on honeytoken accounts, see [Install Azure ATP - Step 7](install-atp-step7.md).
 
 **Investigation**
 
@@ -567,11 +566,6 @@ Patch all your machines, especially applying security updates.
 >![NOTE]
 > To disable a suspicious activity, contact support.
 
-## Related Videos
-- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
-
 
 ## See Also
-- [Azure ATP suspicious activity playbook](http://aka.ms/ataplaybook)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with suspicious activities](working-with-suspicious-activities.md)

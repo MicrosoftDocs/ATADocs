@@ -58,10 +58,10 @@ Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneli
 
 ## How many Azure ATP Sensors do I need?
 
-The number of Azure ATP Sensors depend on your network layout, volume of packets and volume of events captured by Azure ATP. To determine the exact number, see [Azure ATP Sensor Sizing](ata-capacity-planning.md#ata-lightweight-sensor-sizing). 
+The number of Azure ATP Sensors depend on your network layout, volume of packets and volume of events captured by Azure ATP. To determine the exact number, see [Azure ATP Sensor Sizing](atp-capacity-planning.md#ata-standalone-sensor-sizing). 
 
 ## How much storage do I need for Azure ATP?
-For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about Azure ATP cloud service sizing see, [Azure ATP Capacity Planning](ata-capacity-planning.md).
+For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about Azure ATP cloud service sizing see, [Azure ATP Capacity Planning](atp-capacity-planning.md).
 
 
 ## Why are certain accounts considered sensitive?
@@ -70,7 +70,7 @@ This happens when an account is a member of certain groups which we designate as
 To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also [tag accounts as sensitive manually](tag-sensitive-accounts.md).
 
 ## How do I monitor a virtual domain controller using Azure ATP?
-Most virtual domain controllers can be covered by the Azure ATP Sensor, to determine whether the Azure ATP Sensor is appropriate for your environment, see [Azure ATP Capacity Planning](ata-capacity-planning.md).
+Most virtual domain controllers can be covered by the Azure ATP Sensor, to determine whether the Azure ATP Sensor is appropriate for your environment, see [Azure ATP Capacity Planning](atp-capacity-planning.md).
 
 If a virtual domain controller can't be covered by the Azure ATP Sensor, you can have either a virtual or physical Azure ATP Standalone Sensor as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual Azure ATP Standalone Sensor on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
@@ -78,16 +78,11 @@ If a virtual domain controller can't be covered by the Azure ATP Sensor, you can
 -   Make sure that you affiliate the virtual Azure ATP Standalone Sensor with the virtual domain controller so that if it is moved, the Azure ATP Standalone Sensor moves with it.
 -   There are some virtual switches that can send traffic between hosts.
 
-## How do I back up Azure ATP?
-
-Refer to [Azure ATP disaster recovery](disaster-recovery.md)
-
-
 
 ## What can Azure ATP detect?
 
 Azure ATP detects known malicious attacks and techniques, security issues, and risks.
-For the full list of Azure ATP detections, see [What detections does Azure ATP perform?](ata-threats.md).
+For the full list of Azure ATP detections, see [What detections does Azure ATP perform?](suspicious-activity-guide.md).
 
 ## What kind of storage do I need for Azure ATP?
 We recommend fast storage (7200-RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
@@ -99,7 +94,7 @@ The Azure ATP Standalone Sensor needs a minimum of two network adapters:<br>1. A
 Azure ATP has a bi-directional integration with SIEMs as follows:
 
 1. Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, when a suspicious activity is detected.
-2. Azure ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-ata-step6.md).
+2. Azure ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-atp-step6.md).
 
 ## Can Azure ATP monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the Azure ATP Sensor to monitor domain controllers that are in any IaaS solution.
@@ -162,9 +157,8 @@ Microsoft developers and administrators have, by design, been given sufficient p
 In addition, Microsoft conducts background verification checks on certain operations personnel, and limits access to applications, systems, and network infrastructure in proportion to the level of background verification. Operations personnel follow a formal process when they are required to access a customer’s account or related information in the performance of their duties. 
 
 ## See Also
-- [Azure ATP prerequisites](ata-prerequisites.md)
-- [Azure ATP capacity planning](ata-capacity-planning.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
+- [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

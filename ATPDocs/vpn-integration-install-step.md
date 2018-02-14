@@ -33,8 +33,8 @@ ms.suite: ems
 # Install Azure ATP - Step 7
 
 >[!div class="step-by-step"]
-[« Step 5](install-ata-step5.md)
-[Step 8 »](install-ata-step7.md)
+[« Step 5](install-atp-step5.md)
+[Step 8 »](install-atp-step7.md)
 
 ## Step 7. Integrate VPN
 
@@ -101,14 +101,12 @@ After the Azure ATP Standalone Sensor receives the VPN events and sends them to 
 
 
 >[!div class="step-by-step"]
-[« Step 6](install-ata-step5.md)
-[Step 8 »](install-ata-step7.md)
+[« Step 6](install-atp-step5.md)
+[Step 8 »](install-atp-step7.md)
 
 
 ## See Also
-- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
 

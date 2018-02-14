@@ -65,5 +65,5 @@ When you have the possibility of excluding an IP address or a computer, you can 
 
 
 ## See Also
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Modifying Azure ATP configuration](modifying-ata-center-configuration.md)
+
+- [Integrating with Windows Defender ATP](integrate-wd-atp.md)

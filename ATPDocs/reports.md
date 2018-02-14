@@ -70,8 +70,7 @@ To set a scheduled report:
 
 
 ## See Also
-- [Azure ATP prerequisites](ata-prerequisites.md)
-- [Azure ATP capacity planning](ata-capacity-planning.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
+- [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

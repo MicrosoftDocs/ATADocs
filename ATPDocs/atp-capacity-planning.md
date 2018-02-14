@@ -38,7 +38,7 @@ This article helps you determine how many Azure ATP Sensors and standalone Senso
 ## Using the sizing tool
 The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/trisizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the Azure ATP capacity you need:
 
-- Azure ATP  Sensor: Match the **Busy Packets/sec** field in the Azure ATP  Sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP Standalone Sensor table](#atp-sensor-sizing) or the [Azure ATP Sensor table](#atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP  Sensor: Match the **Busy Packets/sec** field in the Azure ATP  Sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP Standalone Sensor table](#azure-atp-sensor-sizing) or the [Azure ATP Sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Sample capacity planning tool](media/capacity tool.png)
@@ -100,7 +100,7 @@ An Azure ATP Sensor can support the monitoring of one domain controller based on
 > -   If the domain controller does not have the resources required by the Azure ATP Sensor, domain controller performance is not effected, but the Azure ATP Sensor might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the Azure ATP Sensor to **High Performance**.
-> -   A minimum of 2 cores and 6 GB of space is required and 10 GB is recommended, including space needed for the Azure ATP binaries, [Azure ATP logs](troubleshooting-atp-using-logs.md), and [performance logs](troubleshooting-atp-using-perf-counters.md).
+> -   A minimum of 2 cores and 6 GB of space is required and 10 GB is recommended, including space needed for the Azure ATP binaries.
 
 
 ## Azure ATP standalone sensor sizing
@@ -136,7 +136,7 @@ Port mirroring considerations might require you to deploy multiple Azure ATP sta
 > [!NOTE] 
 > -   Dynamic memory is not supported.
 > -   For optimal performance, set the **Power Option** of the Azure ATP Standalone Sensor to **High Performance**.
-> -   A minimum of 2 cores and 6 GB of space is required and 10 GB is recommended, including space needed for the Azure ATP binaries, [Azure ATP logs](troubleshooting-atp-using-logs.md), and [performance logs](troubleshooting-atp-using-perf-counters.md).
+> -   A minimum of 2 cores and 6 GB of space is required and 10 GB is recommended, including space needed for the Azure ATP binaries.
 
 
 ## Domain controller traffic estimation
@@ -146,21 +146,21 @@ To determine packets per second, perform the following steps on each domain cont
 
 1.  Open Performance Monitor.
 
-    ![Performance monitor image](media/ATP-traffic-estimation-1.png)
+    ![Performance monitor image](media/atp-traffic-estimation-1.png)
 
 2.  Expand **Data Collector Sets**.
 
-    ![Data collector sets image](media/ATP-traffic-estimation-2.png)
+    ![Data collector sets image](media/atp-traffic-estimation-2.png)
 
 3.  Right click **User Defined** and select **New** &gt; **Data Collector Set**.
 
-    ![New data collector set image](media/ATP-traffic-estimation-3.png)
+    ![New data collector set image](media/atp-traffic-estimation-3.png)
 
 4.  Enter a name for the collector set and select **Create Manually (Advanced)**.
 
 5.  Under **What type of data do you want to include?** select  **Create data logs, and Performance counter**.
 
-    ![Type of data for new data collector set image](media/ATP-traffic-estimation-5.png)
+    ![Type of data for new data collector set image](media/atp-traffic-estimation-5.png)
 
 6.  Under **Which performance counters would you like to log**, click **Add**.
 
@@ -169,7 +169,7 @@ To determine packets per second, perform the following steps on each domain cont
     > [!NOTE]
     > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
 
-    ![Add performance counters image](media/ATP-traffic-estimation-7.png)
+    ![Add performance counters image](media/atp-traffic-estimation-7.png)
 
 8.  Change the **Sample interval** to **1 second**.
 
@@ -181,13 +181,13 @@ To determine packets per second, perform the following steps on each domain cont
 
 11. After 24 hours, stop the data collector set, by right-clicking the data collector set and selecting **Stop**.
 
-    ![Stop data collector set image](media/ATP-traffic-estimation-12.png)
+    ![Stop data collector set image](media/atp-traffic-estimation-12.png)
 
 12. In File Explorer, browse to the folder where the .blg file was saved and double-click it to open it in Performance Monitor.
 
 13. Select the Packets/sec counter, and record the average and maximum values.
 
-    ![Packets per second counter image](media/ATP-traffic-estimation-14.png)
+    ![Packets per second counter image](media/atp-traffic-estimation-14.png)
 
 
 
@@ -195,4 +195,3 @@ To determine packets per second, perform the following steps on each domain cont
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP architecture](atp-architecture.md)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

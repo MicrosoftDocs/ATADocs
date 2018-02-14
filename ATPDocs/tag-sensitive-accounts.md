@@ -55,6 +55,7 @@ The following list of groups are considered Sensitive by Azure ATP. Any entity t
 -	Incoming Forest Trust Builders
 -	DNS Admins
 
+## Tagging sensitive accounts
 
 In addition to these groups, you can manually tag groups or accounts as sensitive to enhance detections. This is important because Some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. You can manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc, and Azure ATP will consider them sensitive.
 
@@ -72,4 +73,5 @@ In addition to these groups, you can manually tag groups or accounts as sensitiv
 
     
 ## See also
-[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+- [Working with suspicious activities](working-with-suspicious-activities.md)

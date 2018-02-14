@@ -33,7 +33,7 @@ ms.suite: ems
 # Install Azure ATP - Step 6
 
 >[!div class="step-by-step"]
-[« Step 5](install-ata-step5.md)
+[« Step 5](install-atp-step5.md)
 [Step 7 »](vpn-integration-install-step.md)
 
 ## Step 6. Configure event collection
@@ -194,14 +194,12 @@ Make sure to have \t between the key=value pairs.
 
 
 >[!div class="step-by-step"]
-[« Step 5](install-ata-step5.md)
+[« Step 5](install-atp-step5.md)
 [Step 7 »](vpn-integration-install-step.md)
 
 
 ## See Also
-- [Azure ATP POC deployment guide](http://aka.ms/atapoc)
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
-- [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](ata-prerequisites.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
 
