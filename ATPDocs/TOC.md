@@ -11,14 +11,13 @@
 ## [3 Download the Azure ATP sensor package](install-atp-step3.md)
 ## [4 Install the Azure ATP sensor](install-atp-step4.md)
 ## [5 Configure the Azure ATP sensor](install-atp-step5.md)
-## [6 Event collection](install-atp-step6.md)
-## [7 VPN integration](vpn-integration-install-step.md)
-## [8 Exclusions and honeytoken accounts](install-atp-step7.md)
+## [6 VPN integration](vpn-integration-install-step.md)
+## [7 Exclusions and honeytoken accounts](install-atp-step7.md)
 ## [Silent installation](ATP-silent-installation.md)
 ## Azure ATP Sensor additional steps
-### [1. Configure port mirroring](configure-port-mirroring.md)
-### [2. Validate port mirroring](validate-port-mirroring.md)
-### [3. Configure Windows Event Forwarding](configure-event-collection.md)
+### [Configure port mirroring](configure-port-mirroring.md)
+### [Configure event collection](configure-event-collection.md)
+### [Configure Windows Event Forwarding](configure-event-forwarding.md)
 # Use
 ## [Azure ATP health center](atp-health-center.md)
 ## [Azure ATP reports](reports.md)
@@ -38,6 +37,5 @@
 ## [Working with the Azure ATP workspace portal](working-with-atp-console.md)
 ## Azure ATP reference information
 ### [SIEM log reference](cef-format-sa.md)
-### [Event ID reference](event-id-reference.md)
 # Investigate
 ## [Suspicious activity guide](suspicious-activity-guide.md)

@@ -1,18 +1,18 @@
 ---
 # required metadata
 
-title: Configure Windows Event Forwarding in Azure Advanced Threat Protection | Microsoft Docs
-description: Describes your options for configuring Windows Event Forwarding with Azure ATP
+title: Install Azure Advanced Threat Protection | Microsoft Docs
+description: In this step of installing ATP, you configure data sources.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/18/2018
+ms.date: 2/18/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
-ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
+ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 
 # optional metadata
 
@@ -26,85 +26,172 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection version 1.9*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
-# Configuring Windows Event Forwarding
+# Install Azure ATP
 
-> [!NOTE]
-> The Azure ATP Sensor will automatically read events locally, without the need to configure event forwarding.
+## Configure event collection
 
-
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by configuring Windows Event Forwarding.
+To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
-> Check that the domain controller is properly configured to capture the required events.
+> It is important to run the ATA auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events. 
 
-### WEF configuration for Azure ATP Standalone Sensor's with port mirroring
+In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757 and 7045 for enhancing detection of sensitive group modifications and service creation. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
-After you configured port mirroring from the domain controllers to the Azure ATP Standalone Sensor, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
+### SIEM/Syslog
+For Azure ATP to be able to consume data from a Syslog server, you need to perform the following steps:
 
-**Step 1: Add the network service account to the domain Event Log Readers Group.** 
+-   Configure your Azure ATP sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
+> [!NOTE]
+> Azure ATP only listens on IPv4 and not IPv6. 
+-   Configure your SIEM/Syslog server to forward specific events to the Azure ATP sensor.
 
-In this scenario, assume that the Azure ATP Standalone Sensor is a member of the domain.
+> [!IMPORTANT]
+> -   Do not forward all the Syslog data to the Azure ATP sensor.
+> -   Azure ATP supports UDP traffic from the SIEM/Syslog server.
 
-1.	Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**. 
-2.	Select **Members**.
-4.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
+Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. 
 
-After adding the **Network Service** to the **Event Log Readers** group, reboot the domain controllers for the change to take effect.
+> [!NOTE]
+>If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by ATP.
 
-**Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
-> [!Note] 
-> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Azure ATP Standalone Sensor. The steps below modify the local policy of the domain controller. 	
+### Configuring the Azure ATP sensor to listen for SIEM events
 
-1.	Run the following command on each domain controller: *winrm quickconfig*
-2.  From a command prompt type *gpedit.msc*.
-3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
+1.  In Azure ATP Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
 
- ![Local policy group editor image](media/wef 1 local group policy editor.png)
+    ![Enable syslog listener UDP image](media/atp-siem-config.png)
 
-4.	Double-click **Configure target Subscription Manager**.
-   
-    1.	Select **Enabled**.
-    2.	Under **Options**, click **Show**.
-    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
- 
-   ![Configure target subscription image](media/wef 2 config target sub manager.png)
-   
-    5.	Click **OK**.
-    6.	From an elevated command prompt type *gpupdate /force*. 
+2.  Configure your SIEM or Syslog server to forward all required events to the IP address of one of the Azure ATP sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
-**Step 3: Perform the following steps on the Azure ATP Standalone Sensor** 
+Azure ATP supports SIEM events in the following formats:  
 
-1.	Open an elevated command prompt and type *wecutil qc*
-2.	Open **Event Viewer**. 
-3.	Right-click **Subscriptions** and select **Create Subscription**. 
+### RSA Security Analytics
+&lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
-   1.	Enter a name and description for the subscription. 
-   2.	For **Destination Log**, confirm that **Forwarded Events** is selected. For Azure ATP to read the events, the destination log must be **Forwarded Events**. 
-   3.	Select **Source computer initiated** and click **Select Computers Groups**.
-        1.	Click **Add Domain Computer**.
-        2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**. 
-       
-        ![Event Viewer image](media/wef3 event viewer.png)
-   
-        
-        3.	Click **OK**.
-   4.	Click **Select Events**.
+-   Syslog header is optional.
 
-        1. Click **By log** and select **Security**.
-        2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
+-   “\n” character separator is required between all fields.
 
- ![Query filter image](media/wef 4 query filter.png)
+-   The fields, in order, are:
 
-   5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
-   6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP Standalone Sensor.
+    1.  RsaSA constant (must appear).
+
+    2.  The timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). Preferably in milliseconds accuracy, this is important.
+
+    3.  The Windows event ID
+
+    4.  The Windows event provider name
+
+    5.  The Windows event log name
+
+    6.  The name of the computer receiving the event (the DC in this case)
+
+    7.  The name of the user authenticating
+
+    8.  The name of the source host name
+
+    9. The result code of the NTLM
+
+-   The order is important and nothing else should be included in the message.
+
+### HP Arcsight
+CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
+
+-   Must comply with the protocol definition.
+
+-   No syslog header.
+
+-   The header part (the part that’s separated by a pipe) must exist (as stated in the protocol).
+
+-   The following keys in the _Extension_ part must be present in the event:
+
+    -   externalId = the Windows event ID
+
+    -   rt = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). Preferably  in milliseconds accuracy, this is important.
+
+    -   cat = the Windows event log name
+
+    -   shost = the source host name
+
+    -   dhost = the computer receiving the event (the DC in this case)
+
+    -   duser = the user authenticating
+
+-   The order is not important for the _Extension_ part
+
+-   There must be a custom key and keyLable for these two fields:
+
+    -   “EventSource”
+
+    -   “Reason or Error Code” = The result code of the NTLM
+
+### Splunk
+&lt;Syslog Header&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
+
+The computer attempted to validate the credentials for an account.
+
+Authentication Package:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+
+Logon Account: Administrator
+
+Source Workstation:       SIEM
+
+Error Code:         0x0
+
+-   Syslog header is optional.
+
+-   There’s a “\r\n” character separator between all required fields.
+
+-   The fields are in key=value format.
+
+-   The following keys must exist and have a value:
+
+    -   EventCode = the Windows event ID
+
+    -   Logfile = the Windows event log name
+
+    -   SourceName = The Windows event provider name
+
+    -   TimeGenerated = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
+
+    -   ComputerName = the source host name
+
+    -   Message = the original event text from the Windows event
+
+-   The Message Key and value MUST be last.
+
+-   The order is not important for the key=value pairs.
+
+### QRadar
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because Azure ATP necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+
+    <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
+
+The fields needed are:
+
+- The agent type for the collection
+- The Windows event log provider name
+- The Windows event log source
+- The DC fully qualified domain name
+- The Windows event ID
+
+TimeGenerated is the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
+
+Message is the original event text from the Windows event
+
+Make sure to have \t between the key=value pairs.
+
+>[!NOTE] 
+> Using WinCollect for Windows event collection is not supported.
 
 
-For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
+
 
 ## See Also
+- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Azure ATP SIEM log reference](cef-format-sa.md)
+- [Azure ATP prerequisites](atp-prerequisites.md)
 
-- [Install Azure ATP](install-atp-step1.md)

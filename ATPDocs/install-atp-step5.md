@@ -34,7 +34,7 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« Step 4](install-atp-step4.md)
-[Step 6 »](install-atp-step6.md)
+[Step 6 »](vpn-integration-install-step.md)
 
 
 ## Step 5. Configure the Azure ATP sensor settings
@@ -74,6 +74,9 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 1.  Check that the service named **Azure Advanced Threat Protection Sensor** is running. After you save the Azure ATP sensor settings, it might take a few seconds for the service to start.
 
 2.  If the service does not start, review the “Microsoft.Tri.Sensor-Errors.log” file located in the following default folder, “%programfiles%\Azure Advanced Threat Protection Sensor\Version X\Logs”.
+ 
+ >[!NOTE]
+ > The version of Azure ATP updates frequently, to check the latest version, in the Azure ATP workplace portal, go to **Configuration** and then **About**. 
 
 3.  Go to your workspace URL. In the workspace portal, search for something in the search bar, such as a user or a group on your domain.
 
@@ -81,7 +84,7 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 
 >[!div class="step-by-step"]
 [« Step 4](install-atp-step4.md)
-[Step 6 »](install-atp-step6.md)
+[Step 6 »](vpn-integration-install-step.md)
 
 
 ## See Also

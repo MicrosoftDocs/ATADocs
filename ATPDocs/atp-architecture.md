@@ -189,17 +189,17 @@ Your domain controllers and the Azure ATP standalone sensors can be physical or 
 
 
 ### Events
-To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
+To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
--   Configuring the Azure ATP Standalone Sensor to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATP. Azure ATP supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
+-   Configuring the Azure ATP Standalone Sensor to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATP. Azure ATP supports a number of SIEM vendors. For more information, see [Configure event forwarding](configure-event-forwarding.md).
 
--   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to your Azure ATP Standalone Sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-collection.md). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP Sensor.
+-   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to your Azure ATP Standalone Sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-forwarding.md). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP Sensor.
 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP sizing tool](http://aka.ms/trisizingtool)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md)
+- [Configure event forwarding](configure-event-forwarding.md)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 

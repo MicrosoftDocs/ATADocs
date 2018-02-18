@@ -82,7 +82,7 @@ Perform the following steps on the Azure ATP Sensor server or domain controller.
 
         > [!IMPORTANT]
         > -   Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
-        > -   Do not install Message Analyzer, Wireshark, or other network capture software on the Azure ATP standalone sensor. If you need to capture network traffic, install and use Microsoft Network Monitor 3.4.
+        > -   If Wireshark is installed on the the ATP sensor machine, after you run Wireshark you will need to reatart the ATP Sensor, because it uses the same drivers.
 
     -   Azure ATP standalone sensor service
     -   Microsoft Visual C++ 2013 Redistributable

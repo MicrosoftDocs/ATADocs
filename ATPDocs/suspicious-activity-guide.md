@@ -491,7 +491,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Description**
 
-A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 and can be collected from all endpoints in your network. In order to identify this suspicious activity on your endpoints, [configure your SIEM](install-atp-step6.md) as a data source that forwards events to ATP.
+A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 and can be collected from all endpoints in your network. In order to identify this suspicious activity on your endpoints, [configure your SIEM](configure-event-collection.md) as a data source that forwards events to ATP.
 
 **Investigation**
 

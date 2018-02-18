@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 8 | Microsoft Docs
+title: Install Azure Advanced Threat Protection - Step 7 | Microsoft Docs
 description: In the final step of installing Azure ATP, you configure the Honeytoken user.
 keywords:
 author: rkarlin
@@ -30,12 +30,12 @@ ms.suite: ems
 
 
 
-# Install Azure ATP - Step 8
+# Install Azure ATP - Step 7
 
 >[!div class="step-by-step"]
-[« Step 7](vpn-integration-install-step.md)
+[« Step 6](vpn-integration-install-step.md)
 
-## Step 8. Configure detection exclusions and honeytoken user
+## Step 7. Configure detection exclusions and honeytoken user
 
 Azure ATP enables the exclusion of specific IP addresses or users from a number of detections. 
 
@@ -71,7 +71,7 @@ Azure ATP starts scanning for suspicious activities immediately. Some detections
 
 
 >[!div class="step-by-step"]
-[« Step 7](vpn-integration-install-step.md)
+[« Step 6](vpn-integration-install-step.md)
 
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 7 | Microsoft Docs
+title: Install Azure Advanced Threat Protection - Step 6 | Microsoft Docs
 description: In this step of installing ATP, you integrate your VPN.
 keywords:
 author: rkarlin
@@ -30,13 +30,13 @@ ms.suite: ems
 
 
 
-# Install Azure ATP - Step 7
+# Install Azure ATP - Step 6
 
 >[!div class="step-by-step"]
 [« Step 5](install-atp-step5.md)
-[Step 8 »](install-atp-step7.md)
+[Step 7 »](install-atp-step7.md)
 
-## Step 7. Integrate VPN
+## Step 6. Integrate VPN
 
 Azure Advanced Threat Protection (ATP)  can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity as well as a new detection for abnormal VPN connections. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
 
@@ -102,7 +102,7 @@ After the Azure ATP Sensor receives the VPN events and sends them to the Azure A
 
 >[!div class="step-by-step"]
 [« Step 6](install-atp-step5.md)
-[Step 8 »](install-atp-step7.md)
+[Step 7 »](install-atp-step7.md)
 
 
 ## See Also
