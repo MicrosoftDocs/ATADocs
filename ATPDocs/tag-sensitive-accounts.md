@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/18/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,21 +38,21 @@ The following list of groups are considered Sensitive by Azure ATP. Any entity t
 
 -	Administrators
 -	Power Users
-3.	Account Operators
-4.	Server Operators
-5.	Print Operators
-6.	Backup Operators
-7.	Replicators
-8.	Remote Desktop Users 
-9.	Network Configuration Operators 
-10.	Incoming Forest Trust Builders
-11.	Domain Admins
-12.	Domain Controllers
-13.	Group Policy Creator Owners 
-14.	Read Only Domain Controllers 
-15.	Enterprise Read-only Domain Controllers 
-16.	Schema Admins 
-17.	Enterprise Admins
+-	Account Operators
+-	Server Operators
+-	Print Operators
+-	Backup Operators
+-	Replicators
+-	Remote Desktop Users 
+-	Network Configuration Operators 
+-	Incoming Forest Trust Builders
+-	Domain Admins
+-	Domain Controllers
+-	Group Policy Creator Owners 
+-	Read Only Domain Controllers 
+-	Enterprise Read-only Domain Controllers 
+-	Schema Admins 
+-	Enterprise Admins
 
 
 ## Tagging sensitive accounts

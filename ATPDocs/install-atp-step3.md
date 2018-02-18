@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2017
+ms.date: 2/18/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,7 +37,7 @@ ms.suite: ems
 [Step 4 »](install-atp-step4.md)
 
 ## Step 3. Download the Azure ATP sensor setup package
-After configuring the domain connectivity settings, you can download the Azure ATP sensor setup package. The Azure ATP Sensor can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an Azure ATP sensor. For more information on the Azure ATP sensor, see [Azure ATP Architecture](atp-architecture.md). 
+After configuring the domain connectivity settings, you can download the Azure ATP sensor setup package. The Azure ATP sensor setup package can be installed on a dedicated server or on a domain controller. When installing directly on a domain controller, it is installed as an Azure ATP sensor, when installing on a dedicated server and using port mirroring, it is installed as Azure ATP standalone sensor. For more information on the Azure ATP sensor, see [Azure ATP Architecture](atp-architecture.md). 
 
 Click **Download** in the list of steps at the top of the page to go to the **Sensors** page.
 
@@ -48,7 +48,8 @@ Click **Download** in the list of steps at the top of the page to go to the **Se
 
 1.  Click **Sensors**.
 2.  Save the package locally.
-3.  Copy the package to the dedicated server or domain controller onto which you are installing the Azure ATP Standalone Sensor. Alternatively, you can open the Azure ATP workspace portal from the dedicated server or domain controller and skip this step.
+3. 	Copy the **Access key**. The access key is required for the Azure ATP sensor to connect to your Azure ATP workspace.
+4.  Copy the package to the dedicated server or domain controller onto which you are installing the Azure ATP sensor. Alternatively, you can open the Azure ATP workspace portal from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following files:
 

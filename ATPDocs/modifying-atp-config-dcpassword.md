@@ -35,12 +35,15 @@ ms.suite: ems
 
 
 ## Change the domain connectivity password
-If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP Standalone Sensor service stops running on the Azure ATP Standalone Sensors.
+If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service will stop for all deployed sensors.
 
-If you suspect that this happened, on the Azure ATP Standalone Sensor, look at the Microsoft.Tri.Sensor-Errors.log file for the following errors:
+If you suspect that this happened, on the Azure ATP standalone sensor, look at the Microsoft.Tri.Sensor-Errors.log file for the following errors:
 `The supplied credential is invalid.`
 
-To correct this, follow this procedure to update the Domain Connectivity password on the Azure ATP workspace portal:
+Follow this procedure to update the Domain Connectivity password on the Azure ATP workspace portal:
+
+> [!NOTE]
+> This is the user name and password from the Active Directory on-premises deployment and not from Azure AD.
 
 1.  Open the Azure ATP workspace portal on the by accessing the workspace URL.
 
@@ -50,7 +53,7 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 3.  Select **Directory Services**.
 
-    ![Azure ATP Standalone Sensor change password image](media/directory-services.png)
+    ![Azure ATP standalone sensor change password image](media/directory-services.png)
 
 4.  Under **Password**, change the password.
 
@@ -59,9 +62,9 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 5.  Click **Save**.
 
-6.  After changing the password, manually check that the Azure ATP Standalone Sensor service is running on the Azure ATP Standalone Sensor servers.
+6.  After changing the password, manually check that the Azure ATP standalone sensor service is running on the Azure ATP standalone sensor servers.
 
-
+7. In the workspace portal, under **Configuration**, go to the **Sensors** page and check the status of the sensors.
 
 ## See Also
 

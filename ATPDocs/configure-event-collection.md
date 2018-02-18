@@ -33,12 +33,13 @@ ms.suite: ems
 # Configuring Windows Event Forwarding
 
 > [!NOTE]
-> For Azure ATP versions 1.8 and higher, event collection configuration is no longer necessary for Azure ATP Sensors. The Azure ATP Sensor can now read events locally, without the need to configure event forwarding.
+> The Azure ATP Sensor will automatically read events locally, without the need to configure event forwarding.
 
 
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by configuring Windows Event Forwarding.
+To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by configuring Windows Event Forwarding.
 
-
+> [!NOTE]
+> Check that the domain controller is properly configured to capture the required events.
 
 ### WEF configuration for Azure ATP Standalone Sensor's with port mirroring
 
@@ -105,4 +106,5 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
 
 ## See Also
+
 - [Install Azure ATP](install-atp-step1.md)

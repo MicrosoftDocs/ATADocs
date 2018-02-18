@@ -38,34 +38,37 @@ ms.suite: ems
 
 ## Step 6. Configure event collection
 ### Configure Event Collection
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
+To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
+
+> [!NOTE]
+> It is important to run the ATA auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events. 
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757 and 7045 for enhancing detection of sensitive group modifications and service creation. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 #### SIEM/Syslog
 For Azure ATP to be able to consume data from a Syslog server, you need to perform the following steps:
 
--   Configure your Azure ATP Standalone Sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
+-   Configure your Azure ATP sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
 > [!NOTE]
 > Azure ATP only listens on IPv4 and not IPv6. 
--   Configure your SIEM/Syslog server to forward specific events to the Azure ATP Standalone Sensor.
+-   Configure your SIEM/Syslog server to forward specific events to the Azure ATP sensor.
 
 > [!IMPORTANT]
-> -   Do not forward all the Syslog data to the Azure ATP Standalone Sensor.
+> -   Do not forward all the Syslog data to the Azure ATP sensor.
 > -   Azure ATP supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. 
 
 > [!NOTE]
->If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATP. Windows Event ID 4776 provides data regarding NTLM authentications.
+>If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by ATP.
 
-#### Configuring the Azure ATP Standalone Sensor to listen for SIEM events
+#### Configuring the Azure ATP sensor to listen for SIEM events
 
 1.  In Azure ATP Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
 
     ![Enable syslog listener UDP image](media/atp-siem-config.png)
 
-2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the Azure ATP Standalone Sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+2.  Configure your SIEM or Syslog server to forward all required events to the IP address of one of the Azure ATP sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
 Azure ATP supports SIEM events in the following formats:  
 

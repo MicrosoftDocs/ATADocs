@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/2/2018
+ms.date: 2/18/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection

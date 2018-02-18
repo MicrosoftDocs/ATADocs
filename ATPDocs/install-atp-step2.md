@@ -42,6 +42,10 @@ The first time you open the Azure ATP workspace portal, the following screen app
 
 ![Azure ATP welcome stage 1](media/directory-services.png)
 
+> [!IMPORTANT]
+> The user credentials here must be for a user account in the on-premises Active Directory. 
+
+
 1.  Enter the following information and click **Save**:
 
     |Field|Comments|

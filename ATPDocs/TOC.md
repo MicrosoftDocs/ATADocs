@@ -6,7 +6,7 @@
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
 ## [Azure ATP prerequisites](atp-prerequisites.md)
 # Deploy
-## [1 Download & install Azure ATP cloud service](install-atp-step1.md)
+## [1 Create a workspace in Azure ATP](install-atp-step1.md)
 ## [2 Connect to AD](install-atp-step2.md)
 ## [3 Download the Azure ATP sensor package](install-atp-step3.md)
 ## [4 Install the Azure ATP sensor](install-atp-step4.md)
