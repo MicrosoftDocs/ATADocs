@@ -60,9 +60,6 @@ Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneli
 
 The number of Azure ATP Sensors depend on your network layout, volume of packets and volume of events captured by Azure ATP. To determine the exact number, see [Azure ATP Sensor Sizing](atp-capacity-planning.md#azure-atp-standalone-sensor-sizing). 
 
-## How much storage do I need for Azure ATP?
-For every one full day with an average of 1000 packets/sec you need 0.3 GB of storage.<br /><br />For more information about Azure ATP cloud service sizing see, [Azure ATP Capacity Planning](atp-capacity-planning.md).
-
 
 ## Why are certain accounts considered sensitive?
 This happens when an account is a member of certain groups which we designate as sensitive (for example: "Domain Admins").
@@ -84,24 +81,17 @@ If a virtual domain controller can't be covered by the Azure ATP Sensor, you can
 Azure ATP detects known malicious attacks and techniques, security issues, and risks.
 For the full list of Azure ATP detections, see [What detections does Azure ATP perform?](suspicious-activity-guide.md).
 
-## What kind of storage do I need for Azure ATP?
-We recommend fast storage (7200-RPM disks are not recommended) with low latency disk access (less than 10 ms). The RAID configuration should support heavy write loads (RAID-5/6 and their derivatives are not recommended).
-
 ## How many NICs does the Azure ATP Standalone Sensor require?
 The Azure ATP Standalone Sensor needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the Azure ATP cloud service<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the Azure ATP Sensor, which natively uses all of the network adapters that the domain controller uses.
 
 ## What kind of integration does Azure ATP have with SIEMs?
 Azure ATP has a bi-directional integration with SIEMs as follows:
 
-1. Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, when a suspicious activity is detected.
+1. Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a suspicious activity is detected.
 2. Azure ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-atp-step6.md).
 
 ## Can Azure ATP monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the Azure ATP Sensor to monitor domain controllers that are in any IaaS solution.
-
-## Is this an on-premises or in-cloud offering?
-
-Azure Advanced Threat Protection is a cloud service that detects suspicious activities both on the on-premises and the cloud. 
 
 ## Is this going to be a part of Azure Active Directory or on-premises Active Directory?
 This solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
@@ -110,7 +100,7 @@ This solution is currently a standalone offering. It is not a part of Azure Acti
 With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, Azure ATP starts to detect behavioral suspicious activities. On the other hand, Azure ATP will start detecting known malicious attacks and security issues immediately after deployment.
 
 ## Does this only leverage traffic from Active Directory?
-In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP can also collect relevant events from your Security Information and Event Management (SIEM) and create entity profiles based on information from Active Directory Domain Services. Azure ATP can also collect events from the event logs if the organization configures Windows Event Log forwarding.
+In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP can also collect relevant events from your Security Information and Event Management (SIEM) and create entity profiles based on information from Active Directory Domain Services. The Azure ATP standalone sensor can also collect events from the event logs if the organization configures Windows Event Log forwarding, the Azure ATP sensor extracts these events itself. Azure ATP also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5 and Checkpoint).
 
 ## What is port mirroring?
 Also known as SPAN (Switched Port Analyzer), port mirroring is a method of monitoring network traffic. With port mirroring enabled, the switch sends a copy of all network packets seen on one port (or an entire VLAN) to another port, where the packet can be analyzed.
@@ -140,7 +130,7 @@ Microsoft does not mine your data for advertising or for any other purpose other
 
 ## Do I have the flexibility to select where to store my data? 
 
-When on-boarding the service for the first time, you can choose to store your data in Microsoft Azure data centers in either the United States or Europe. Once configured, you cannot change the location where your data is stored. Microsoft will not transfer the data from the specified location. 
+When creating the Azure ATP workspace you can choose to store your data,  you can choose to store your data in Microsoft Azure data centers in either the United States or Europe. Once configured, you cannot change the location where your data is stored. Microsoft will not transfer the data from the specified location. 
 
 ## Is my data isolated from other customer data? 
 

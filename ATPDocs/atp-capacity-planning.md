@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/18/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -30,15 +30,15 @@ ms.suite: ems
 
 
 # Azure ATP capacity planning
-This article helps you determine how many Azure ATP Sensors and standalone Sensors you need.
+This article helps you determine how many Azure ATP sensors and standalone sensors you need.
 
 > [!NOTE] 
 > The sizing tool has two sheets - one for ATA and one for Azure ATP. Make sure you are on the correct sheet.
 
 ## Using the sizing tool
-The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/trisizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the Azure ATP capacity you need:
+The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/trisizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the memory and CPU that will be used by the sensor:
 
-- Azure ATP  Sensor: Match the **Busy Packets/sec** field in the Azure ATP  Sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP Standalone Sensor table](#azure-atp-sensor-sizing) or the [Azure ATP Sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP  sensor: Match the **Busy Packets/sec** field in the Azure ATP  sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP Standalone Sensor table](#azure-atp-sensor-sizing) or the [Azure ATP Sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Sample capacity planning tool](media/capacity tool.png)
@@ -58,26 +58,12 @@ When deciding the sensor deployment type, consider the following benefits:
 
 |Sensor type|Benefits|Cost|Deployment topology|Domain controller use|
 |----|----|----|----|-----|
-|Azure ATP Standalone Sensor|The Out of band deployment makes it harder for attackers to discover Azure ATP is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 50,000 packets per second|
-|Azure ATP Sensor|Doesn't require a dedicated server and port-mirroring configuration|Lower|Installed on the domain controller|Supports up to 10,000 packets per second|
-
-The following are examples of scenarios in which domain controllers should be covered by the Azure ATP Sensor:
-
-
-- Branch sites
-
-- Virtual domain controllers deployed in the cloud (IaaS)
-
-
-The following are examples of scenarios in which domain controllers should be covered by the Azure ATP Standalone Sensor:
-
-
-- Headquarter data centers (having domain controllers with more than 10,000 packets per seconds)
-
+|Azure ATP Standalone Sensor|The Out of band deployment makes it harder for attackers to discover Azure ATP is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 100,000 packets per second|
+|Azure ATP Sensor|Doesn't require a dedicated server and port-mirroring configuration|Lower|Installed on the domain controller|Supports up to 100,000 packets per second|
 
 ## Azure ATP Sensor Sizing
 
-An Azure ATP Sensor can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
+An Azure ATP Sensor can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. The following table is an estimate, the final amount that the sensor will parse is dependant on the amount of traffic you have. 
 
 
 |Packets per second*|CPU (cores)|Memory (GB)|
@@ -87,16 +73,12 @@ An Azure ATP Sensor can support the monitoring of one domain controller based on
 |5k-10k|1.00|6.50|
 |10k-20k|2.00|9.00|
 |20k-50k|3.50|9.50|
-|50k-75k (*)|3.50|9.50|
-|75k-100k (*)|3.50 |9.50|
+|50k-75k |3.50|9.50|
+|75k-100k|3.50 |9.50|
 
-&#42;Total number of packets-per-second on the domain controller being monitored by the specific Azure ATP Sensor.
-
-&#42;&#42;Total number of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the Azure ATP Sensor, when planning for capacity, you should count actual cores and not hyper threaded cores.
-
-&#42;&#42;&#42;Total amount of memory that this domain controller has installed.
-
-> [!NOTE]	
+> [!NOTE]
+> - Total number of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the Azure ATP Sensor, when planning for capacity, you should count actual cores and not hyper threaded cores.
+> - Total amount of memory that this domain controller has installed.
 > -   If the domain controller does not have the resources required by the Azure ATP Sensor, domain controller performance is not effected, but the Azure ATP Sensor might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the Azure ATP Sensor to **High Performance**.

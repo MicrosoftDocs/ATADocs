@@ -75,7 +75,7 @@ Perform the following steps on the Azure ATP Sensor server or domain controller.
     > [!NOTE]
     > When you deploy the Azure ATP Standalone Sensor, you do not have to provide credentials. If the Azure ATP Standalone Sensor installation fails to retrieve your credentials using single sign-on (for example, this may happen if the Azure ATP cloud service is not in the domain, if the Azure ATP Standalone Sensor isn't in the domain, you do not have Azure ATP admin credentials), you are prompted to provide credentials, as in the following screen: 
 
-   - Installation Path: This is the location where the Azure ATP Standalone Sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection\Gateway. Leave the default value.
+   - Installation Path: This is the location where the Azure ATP Standalone Sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection\Sensor. Leave the default value.
 
    - Access key: 
     

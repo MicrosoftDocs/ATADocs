@@ -36,24 +36,24 @@ ms.suite: ems
 
 The following list of groups are considered Sensitive by Azure ATP. Any entity that is a member of these groups is considered sensitive:
 
--	Enterprise Read Only Domain Controllers
--	Domain Admins
--	Domain Controllers
--	Schema Admins,
--	Enterprise Admins
--	Group Policy Creator Owners
--	Read Only Domain Controllers
 -	Administrators
 -	Power Users
--	Account Operators
--	Server Operators
--	Print Operators,
--	Backup Operators,
--	Replicators
--	Remote Desktop Users
--	Network Configuration Operators
--	Incoming Forest Trust Builders
--	DNS Admins
+3.	Account Operators
+4.	Server Operators
+5.	Print Operators
+6.	Backup Operators
+7.	Replicators
+8.	Remote Desktop Users 
+9.	Network Configuration Operators 
+10.	Incoming Forest Trust Builders
+11.	Domain Admins
+12.	Domain Controllers
+13.	Group Policy Creator Owners 
+14.	Read Only Domain Controllers 
+15.	Enterprise Read-only Domain Controllers 
+16.	Schema Admins 
+17.	Enterprise Admins
+
 
 ## Tagging sensitive accounts
 

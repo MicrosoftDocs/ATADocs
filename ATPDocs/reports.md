@@ -39,7 +39,7 @@ The reports that are available are:
 
 - **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists Azure ATP system health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
 
-- **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins).
+- **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins, or manually tagged accounts or groups).
 
 - **Passwords exposed in cleartext**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. This report lists all source computer and account passwords that Azure ATP detected as being sent in clear text. 
 
