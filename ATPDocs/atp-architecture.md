@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/18/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -110,11 +110,10 @@ The Azure ATP cloud service receives parsed traffic from the Azure ATP Standalon
 |Azure ATP workspace portal|The Azure ATP workspace is used to configure Azure ATP and monitor suspicious activities detected by Azure ATP on your network. The Azure ATP workspace is not dependent on the Azure ATP sensor and runs even when the Azure ATP sensor service is stopped. |
 |Detectors|The Detectors use machine learning algorithms and deterministic rules to find suspicious activities and abnormal user behavior in your network.|
 
-Consider the following criteria when deciding how many Azure ATP Centers to deploy on your network:
+Consider the following criteria when deciding how many Azure ATP workspaces to deploy on your network:
 
--   One Azure ATP cloud service can monitor a single Active Directory forest. If you have more than one Active Directory forest, you need a minimum of one Azure ATP cloud service per Active Directory forest.
+-   One Azure ATP workspace can monitor a single Active Directory forest. If you have more than one Active Directory forest, you need a minimum of one Azure ATP cloud service per Active Directory forest.
 
--    In large Active Directory deployments, a single Azure ATP cloud service might not be able to handle all the traffic of all your domain controllers. In this case, multiple Azure ATP Centers are required. The number of Azure ATP Centers should be dictated by [Azure ATP capacity planning](atp-capacity-planning.md).
 
 ## Azure ATP sensor and Azure ATP standalone sensor
 
@@ -138,9 +137,9 @@ The Azure ATP Standalone Sensor receives network traffic and Windows Events from
 
 |||
 |-|-|
-|Network Listener|The Network Listener captures network traffic and parsing the traffic. This is a CPU-heavy task, so  it is especially important to check [Azure ATP Prerequisites](atp-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
-|Event Listener|The Event Listener captures and parsing Windows Events forwarded from a SIEM server on your network.|
-|Windows Event Log Reader|The Windows Event Log Reader reads and parsing Windows Events forwarded to the Azure ATP standalone sensor's Windows Event Log from the domain controllers.|
+|Network Listener|The Network Listener captures network traffic and parses the traffic. This is a CPU-heavy task, so  it is especially important to check [Azure ATP Prerequisites](atp-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
+|Event Listener|The Event Listener captures and parses Windows Events forwarded from a SIEM server on your network.|
+|Windows Event Log Reader|The Windows Event Log Reader reads and parses Windows Events forwarded to the Azure ATP standalone sensor's Windows Event Log from the domain controllers.|
 |Network Activity Translator | Translates parsed traffic into a logical representation of the traffic used by Azure ATP (NetworkActivity).
 |Entity Resolver|The Entity Resolver takes the parsed data (network traffic and events) and resolves it data with Active Directory to find account and identity information. It is then matched with the IP addresses found in the parsed data. The Entity Resolver inspects the packet headers efficiently, to enable parsing of authentication packets for machine names, properties, and identities. The Entity Resolver combines the parsed authentication packets with the data in the actual packet.|
 |Entity Sender|The Entity Sender sends the parsed and matched data to the Azure ATP cloud service.|
@@ -169,7 +168,7 @@ The following table provides an example of a domain controller with enough compu
 > [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
-|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.Gateway.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
+|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.Sensor.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
 |30%|20%|10%|45%|No|
 
 If Active Directory needs more computing power, the quota needed by the Azure ATP sensor is reduced. In the following example, The Azure ATP sensor needs more than the allocated quota and drops some of the traffic (monitoring only partial traffic):
@@ -177,7 +176,7 @@ If Active Directory needs more computing power, the quota needed by the Azure AT
 > [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
-|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.Gateway.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
+|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.Sensor.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
 |60%|15%|10%|15%|Yes|
 
 
@@ -193,11 +192,11 @@ Your domain controllers and the Azure ATP standalone sensors can be physical or 
 
 
 ### Events
-To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
+To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).
 
 -   Configuring the Azure ATP Standalone Sensor to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATP. Azure ATP supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
 
--   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your Azure ATP Standalone Sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-collection.md). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP Sensor.
+-   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to your Azure ATP Standalone Sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-collection.md). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP Sensor.
 
 
 ## See Also

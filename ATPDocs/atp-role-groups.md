@@ -58,8 +58,8 @@ Azure ATP introduces three types of security group: Azure ATP *workspace name* A
 |Share/Export suspicious activity via email/get link|Available|Available|Not available|
 |Change status of Monitoring Alerts|Available|Available|Not available|
 |Update Azure ATP Configuration|Available|Not available|Not available|
-|Gateway – Add|Available|Not available|Not available|
-|Gateway – Delete |Available|Not available|Not available|
+|Sensor – Add|Available|Not available|Not available|
+|Sensor – Delete |Available|Not available|Not available|
 |Monitored DC – Add |Available|Not available|Not available|
 |Monitored DC – Delete|Available|Not available|Not available|
 |View alerts and suspicious activities|Available|Available|Available|

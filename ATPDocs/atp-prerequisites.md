@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/18/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,20 +37,20 @@ This article describes the requirements for a successful deployment of Azure ATP
 > For information on how to plan resources and capacity, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 
-Azure ATP is composed of the Azure ATP cloud service, the Azure ATP Standalone Sensor and/or the Azure ATP Sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
+Azure ATP is composed of the Azure ATP cloud service, which consists of the workspace management portal and a workspace portal, the Azure ATP Standalone sensor and/or the Azure ATP sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
 
 The Azure ATP System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
 
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
 
-[Azure ATP cloud service](#azure-atp-cloud-service-requirements): This section lists Azure ATP cloud service hardware, software requirements as well as settings  you need to configure on your Azure ATP cloud service server.
+[Azure ATP workspace management portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): This section describes the workspace management portal browser requirements.
+
+[Azure ATP workspace portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): This section describes browser requirements for running the Azure ATP workspace portal.
 
 [Azure ATP Standalone Sensor](#azure-atp-sensor-requirements): This section lists Azure ATP Standalone Sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP Standalone Sensor servers.
 
 [Azure ATP Sensor](#azure-atp-lightweight-sensor-requirements): This section lists Azure ATP Sensor hardware, and software requirements.
-
-[Azure ATP worksapce portal](#azure-atp-workspace-portal): This section lists browser requirements for running the Azure ATP workspace portal.
 
 ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
 
@@ -63,94 +63,29 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Do not install Microsoft Message Analyzer on an Azure ATP Standalone Sensor or Sensor. The Message Analyzer driver conflicts with the Azure ATP Standalone Sensor and  Sensor drivers. If you run Wireshark on Azure ATP Standalone Sensor, you will need to restart the Azure Advanced Threat Protection Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an Azure ATP Sensor does not interfere with the Azure ATP Sensor.
+-   If you run Wireshark on Azure ATP Standalone Sensor, you will need to restart the Azure Advanced Threat Protection Sensor Service after you have stopped the Wireshark capture. If not, the Sensor stops capturing traffic.
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
 -   Optional: A user account of a user who has no network activities. This account is configured as the Azure ATP Honeytoken user. To configure the Honeytoken user, you need the SID of the user account, not the username. For more information, see [Configure IP address exclusions and Honeytoken user](install-atp-step7.md).
 
--   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+-   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 
-## Azure ATP cloud service requirements
-This section lists the requirements for the Azure ATP cloud service.
-### General
-The Azure ATP cloud service supports installation on a server running Windows Server 2012 R2 or Windows Server 2016. 
-The Azure ATP cloud service can be installed on a server that is a member of a domain or workgroup.
-
-Before installing Azure ATP cloud service running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
-
-You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
-
-Installation of the Azure ATP cloud service as a virtual machine is supported. 
-
->[!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-
-If you run the Azure ATP cloud service as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
-
-### Server specifications
-
-When working on a physical server, the Azure ATP database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving in order to disable NUMA. For more information, see your BIOS documentation.<br>
-For optimal performance, set the **Power Option** of the Azure ATP cloud service to **High Performance**.<br>
-The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [Azure ATP capacity planning](atp-capacity-planning.md).
-
-
-### Time synchronization
-
-The Azure ATP cloud service server, the Azure ATP Standalone Sensor servers, and the domain controllers must have time synchronized to within five minutes of each other.
-
-
-### Network adapters
-
-You should have the following set:
--   At least one network adapter (if using physical server in VLAN environment, it is recommended to use two network adapters)
-
--   An IP address for communication between the Azure ATP cloud service and the Azure ATP Standalone Sensor that is encrypted using SSL on port 443. (The Azure ATP service binds to all IP addresses that the Azure ATP cloud service has on port 443.)
-
-### Ports
-The following table lists the minimum ports that have to be opened for the Azure ATP cloud service to work properly.
-
-|Protocol|Transport|Port|To/From|Direction|
-|------------|-------------|--------|-----------|-------------|
-|**SSL** (Azure ATP Communications)|TCP|443|Azure ATP Standalone Sensor|Inbound|
-|**HTTP** (optional)|TCP|80|Company Network|Inbound|
-|**HTTPS**|TCP|443|Company Network and Azure ATP Standalone Sensor|Inbound|
-|**SMTP** (optional)|TCP|25|SMTP Server|Outbound|
-|**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|
-|**Syslog** (optional)|TCP|514|Syslog server|Outbound|
-|**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
-|**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
-|**DNS**|TCP and UDP|53|DNS servers|Outbound|
-|**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Outbound|
-|**Netlogon** (optional if domain joined)|TCP and UDP|445|Domain controllers|Outbound|
-|**Windows Time** (optional if domain joined)|UDP|123|Domain controllers|Outbound|
+## Azure ATP workspace management portal and workspace portal requirements
+Access to the Azure ATP workspace portal and the Azure ATP workspace management portal is via a browser, supporting the following browsers and settings:
+-	Microsoft Edge
+-	Internet Explorer version 10 and above
+-	Google Chrome 4.0 and above
+-	Minimum screen width resolution of 1700 pixels
+-	Firewall/proxy open - To communicate with the Azure ATP cloud service, you must have open: *.atp.azure.com port 443 in your firewall/proxy. 
 
 > [!NOTE]
 > LDAP is required to test the credentials to be used between the Azure ATP Standalone Sensors and the domain controllers. The test is performed from the Azure ATP cloud service to a domain controller to test the validity of these credentials, after which the Azure ATP Standalone Sensor uses LDAP as part of its normal resolution process.
 
 ### Certificates
 
-To ease the installation of ATP, you can install self-signed certificates during installation. Post deployment you should replace the self-signed with a certificate from an internal Certification Authority to be used by the Azure ATP cloud service.
-
-
-Make sure the Azure ATP cloud service and Azure ATP Standalone Sensors have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
-
-The certificate must have:
--	A private key
--	A provider type of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
--	A public key length of 2048 bits
--	A value set for KeyEncipherment and ServerAuthentication usage flags
-
-For example, you can use the standard **Web server** or **Computer** templates.
-
-> [!WARNING]
-> - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring Azure ATP to use the new certificate.
-
-
-> [!NOTE]
-> - If you are going to access the Azure ATP workspace portal from other computers, ensure that those computers trust the certificate being used by Azure ATP cloud service otherwise you get a warning page that there is a problem with the website's security certificate before getting to the log in page.
-> - Starting with Azure ATP  the Azure ATP Standalone Sensors and Sensors are managing their own certificates and need no administrator interaction to manage them.
+To ease the installation of ATP, you can install self-signed certificates during installation. Azure ATP Standalone Sensors and Sensors are managing their own certificates and need no administrator interaction to manage them. They will be replaced automatically from by the Azure ATP cloud service.
 
 ## Azure ATP Standalone Sensor requirements
 This section lists the requirements for the Azure ATP Standalone Sensor.
@@ -159,9 +94,7 @@ The Azure ATP Standalone Sensor supports installation on a server running Window
 The Azure ATP Standalone Sensor can be installed on a server that is a member of a domain or workgroup.
 The Azure ATP Standalone Sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
-Before installing Azure ATP Standalone Sensor running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
-
-You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
+For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
 
 For information on using virtual machines with the Azure ATP Standalone Sensor, see [Configure port mirroring](configure-port-mirroring.md).
@@ -212,8 +145,9 @@ The following table lists the minimum ports that the Azure ATP Standalone Sensor
 |Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
 |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
 |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
 |Kerberos|TCP and UDP|88|Domain controllers|Outbound|
-|Netlogon|TCP and UDP|445|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|Domain controllers|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
@@ -222,10 +156,12 @@ The following table lists the minimum ports that the Azure ATP Standalone Sensor
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
 > [!NOTE]
-> As part of the resolution process done by the Azure ATP Standalone Sensor, the following ports need to be open inbound on devices on the network from the Azure ATP Standalone Sensors.
->
-> -   NTLM over RPC (TCP Port 135)
-> -   NetBIOS (UDP port 137)
+> - The Sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
+> - As part of the resolution process done by the Azure ATP Standalone Sensor, the following ports need to be open inbound on devices on the network from the Azure ATP Standalone Sensors.
+>   -   NTLM over RPC (TCP Port 135)
+>   -   NetBIOS (UDP port 137)
+>   -   SAM-R queries (TCP/UDP port 445)
+
 
 ## Azure ATP Sensor requirements
 This section lists the requirements for the Azure ATP Sensor.
@@ -234,18 +170,9 @@ The Azure ATP Sensor supports installation on a domain controller running Window
 
 The domain controller can be a read-only domain controller (RODC).
 
-Before installing Azure ATP Sensor on a domain controller running Windows Server 2012 R2,
- confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
+For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
-You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`
-
-If the installation is for Windows server 2012 R2 Server Core, the following update should also be installed:
- [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
-
- You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb3000850]`
-
-
-During installation, the .Net Framework 4.6.1 is installed and might cause a reboot of the domain controller.
+During installation, the .Net Framework 4.7 is installed and might cause a reboot of the domain controller.
 
 
 > [!NOTE]
@@ -278,28 +205,21 @@ The following table lists the minimum ports that the Azure ATP Sensor requires:
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domain controllers|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |SSL|TCP|443|Azure ATP cloud service|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
 > [!NOTE]
-> As part of the resolution process performed by the Azure ATP Sensor, the following ports need to be open inbound on devices on the network from the Azure ATP Sensors.
->
-> -   NTLM over RPC
-> -   NetBIOS
+> - The Sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
+> - As part of the resolution process done by the Azure ATP Standalone Sensor, the following ports need to be open inbound on devices on the network from the Azure ATP Standalone Sensors.
+>   -   NTLM over RPC (TCP Port 135)
+>   -   NetBIOS (UDP port 137)
+>   -   SAM-R queries (TCP/UDP port 445)
 
-## Azure ATP workspace portal
-Access to the Azure ATP workspace portal is via a browser, supporting the  browsers and settings:
-
--   Internet Explorer version 10 and above
-
--   Microsoft Edge
-
--   Google Chrome 40 and above
-
--   Minimum screen width resolution of 1700 pixels
 
 
 
