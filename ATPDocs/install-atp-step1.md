@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2017
+ms.date: 2/18/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -51,22 +51,20 @@ After you verified that your network meets the requirements of the Sensor, you c
 
 ## Step 2. Create a workspace
 
-To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
-For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
+1. Click **Create workspace**.
 
-1. Log into [portal.atp.azure.com](https://portal.atp.azure.com).
-
-2. Click **Create workspace**.
-
-3. In the **Create new workspace** dialog, name your workspace, decide whether it's your primary workspace or not, and select a **Geolocation** for your data center.
+2. In the **Create new workspace** dialog, name your workspace, decide whether it's your primary workspace or not, and select a **Geolocation** for your data center. Only one workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you will have to remove any integrations already set for the current primary workspace.
 
     ![Azure ATP create workspace](media/create-workspace.png)
+
+3. You can click the **Manage Azure ATP user roles** link to directly access the [Azure Active Directory admin center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) and manage your role groups.
+
+ > [!NOTE]
+ > To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
 4. Click on the name of the new workspace access the Azure ATP workspace portal for that workspace.
 
     ![Azure ATP workspaces](media/atp-workspaces.png)
-
-5. You can click the **Manage Azure ATP user roles** link to directly access the [Azure Active Directory admin center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) and manage your role groups.
 
 
 

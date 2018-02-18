@@ -32,19 +32,19 @@ ms.suite: ems
 
 # Working with the Azure ATP workspaces
 
-In Azure ATP you have the ability to manage and monitor multiple workspaces. This is especially helpul if you want to create a demo workspace and a test workspace in which you can POC Azure ATP before rolling it out to your whole organization.
+In Azure ATP you have the ability to manage and monitor multiple workspaces. This is especially helpful if you want to create a demo workspace and a test workspace in which you can POC Azure ATP before rolling it out to your whole organization. This is also needed to support deployments with multiple forests. A single workspace can only monitor multiple domains from a single forest.
 
 ## Create a workspace
 
-To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
-For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
 1. Log into [portal.atp.azure.com](https://portal.atp.azure.com).
 
 2. Click **Create workspace**.
 
 3. In the **Create new workspace** dialog, name your workspace, decide whether it's your primary workspace or not, and select a **Geolocation** for your data center.
-
+ > [!NOTE]
+ > After you select a Geolocation, you cannot modify it.
+ 
     ![Azure ATP create workspace](media/create-workspace.png)
 
 4. Click on the name of the new workspace access the Azure ATP workspace portal for that workspace.
@@ -53,7 +53,8 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 
 5. You can click the **Manage Azure ATP user roles** link to directly access the [Azure Active Directory admin center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) and manage your role groups.
 
-
+To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
+For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
 
 ## See Also

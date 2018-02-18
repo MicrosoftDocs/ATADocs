@@ -143,5 +143,5 @@ The following table lists the main operating system counters to pay attention to
 - [Azure ATP prerequisites](ata-prerequisites.md)
 - [Azure ATP capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

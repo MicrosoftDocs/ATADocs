@@ -88,7 +88,7 @@ The Azure ATP Standalone Sensor needs a minimum of two network adapters:<br>1. A
 Azure ATP has a bi-directional integration with SIEMs as follows:
 
 1. Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a suspicious activity is detected.
-2. Azure ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-atp-step6.md).
+2. Azure ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](configure-event-collection.md).
 
 ## Can Azure ATP monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the Azure ATP Sensor to monitor domain controllers that are in any IaaS solution.
@@ -150,5 +150,5 @@ In addition, Microsoft conducts background verification checks on certain operat
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
 
