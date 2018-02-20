@@ -55,11 +55,10 @@ In Azure ATP you have the ability to manage and monitor multiple workspaces. Thi
 To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
 For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
-Only the Primary workspace can be edited (Primary on-off)
--	Configure integration – on-off
--	Delete – integrated/primary ws can not be deleted. The flow is first turn off the primary/integration and then delete.
+- Only the Primary workspace can be edited. To make changes to other workspaces you can delete them and add them again. If you want to delete the primary workspace, you must first turn off integrations and set the workspace to be not **Primary** before it will be able to be deleted.
+- To edit a Primary workspace you must first turn off existing integrations in the workspace.
 
-Also, worth mentioning data retention – deleted workspaces do not appear in the UI however their data is retained according to Microsft policy for a period of time (I think a year, need to check with Ophir). And add a support link to contact about data retention questions.
+Data retention – deleted workspaces do not appear in the UI, however their data is retained according to [Microsoft data retention policy](https://www.microsoft.com/trustcenter/privacy/you-own-your-data).
 
 ## See Also
 
