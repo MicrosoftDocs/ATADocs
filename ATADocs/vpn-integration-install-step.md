@@ -112,7 +112,7 @@ After the ATA Gateway receives the VPN events and sends them to the ATA Center f
 
 ## See Also
 - [ATA POC deployment guide](http://aka.ms/atapoc)
-- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA sizing tool](http://aka.ms/aatpsizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)
