@@ -98,6 +98,7 @@ An Azure ATP Sensor can support the monitoring of one domain controller based on
 
 
 ## Domain controller traffic estimation
+
 There are various tools that you can use to discover the average packets per second of your domain controllers. If you do not have any tools that track this counter, you can use Performance Monitor to gather the required information.
 
 To determine packets per second, perform the following steps on each domain controller:
