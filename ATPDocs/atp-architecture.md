@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/18/2018
+ms.date: 2/20/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,28 +34,27 @@ The Azure Advanced Threat Protection architecture is detailed in this diagram:
 
 ![Azure ATP architecture topology diagram](media/atp-architecture-topology.png)
 
-Azure ATP monitors your domain controller network traffic by utilizing port mirroring to an Azure ATP Standalone Sensor using physical or virtual switches. If you deploy the Azure ATP Sensor directly on your domain controllers, it removes the requirement for port mirroring. In addition, Azure ATP can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats.
-This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATP: the Azure ATP Standalone Sensor, Azure ATP Sensor (which has the same core functionality as the Azure ATP Standalone Sensor), and the Azure ATP cloud service.
+Azure ATP monitors your domain controller network traffic by utilizing port mirroring to an Azure ATP Standalone Sensor using physical or virtual switches. If you deploy the Azure ATP Sensor directly on your domain controllers, it removes the requirement for port mirroring. In addition, Azure ATP can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats. Azure ATP receives parsed traffic from the Azure ATP Standalone Sensor and Azure ATP Sensor. It then performs profiling, runs deterministic detection, and runs machine learning and behavioral algorithms to learn about your network, enable detection of anomalies and warn you of suspicious activities.
+
+This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATP: the Azure ATP Standalone Sensor, Azure ATP Sensor (which has the same core functionality as the Azure ATP Standalone Sensor), and the Azure ATP cloud service. 
 
 ## Azure ATP Components
 Azure ATP consists of the following components:
 
 -	**Azure ATP workspace management portal** <br>
-The Azure ATP workspace management portal allows you to create a workspace and enable integration with other microsoft services.
+The Azure ATP workspace management portal allows you to create workspaces and enables integration with other Microsoft services.
+
+> [!NOTE]
+> Only the sensors from a single Active Directory forest can connect to a single workspace.
 
 -	**Azure ATP workspace portal** <br>
-The Azure ATP workspace portal receives data from any ATP sensors and standalone sensors as well as monitor, manage and investigate threats in your environment.
+The Azure ATP workspace portal receives data from ATP sensors and standalone sensors. It monitors, manages and investigates threats in your environment.
 
 -   **Azure ATP sensor**<br>
 The Azure ATP sensor is installed directly on your domain controllers and monitors their traffic directly, without the need for a dedicated server or configuration of port mirroring. 
 
 -   **Azure ATP standalone sensor**<br>
 The Azure ATP standalone sensor is installed on a dedicated server that monitors the traffic from your domain controllers using either port mirroring or a network TAP. It is an alternative to the Azure ATP sensor.
-
-
-
-An Azure ATP deployment can consist of a single Azure ATP cloud service connected to all Azure ATP standalone sensors, all Azure ATP sensors, or a combination of Azure ATP standalone sensors and Azure ATP sensors.
-
 
 ## Deployment options
 You can deploy Azure ATP using the following combination of sensors:
@@ -69,34 +68,29 @@ Your Azure ATP deployment can contain only Azure ATP standalone sensors, without
 -	**Using both Azure ATP standalone sensors and Azure ATP sensors**<br>
 Your Azure ATP deployment includes both Azure ATP standalone sensors and Azure ATP sensors. The Azure ATP sensors are installed on some of your domain controllers (for example, all domain controllers in your branch sites). At the same time, other domain controllers are monitored by Azure ATP standalone sensors (for example, the larger domain controllers in your main data centers).
 
-In all these scenarios, all the sensors send their data to the Azure ATP cloud service.
 
 ### Azure ATP workspace management portal
 
-The Azure ATP cloud service performs the following functions:
--	Creates  and Manages Azure ATP workspaces
+The Azure ATP workspace management portal enables you to:
 
--	Enables integration with other Microsoft security services
+-	Create and manage Azure ATP workspaces
+
+-	Integrate with other Microsoft security services
+
+Set your main workspace as **Primary**. Only one workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you will have to remove any integrations already set for the current primary workspace.
 
 ### Azure ATP workspace portal
 
-The Azure ATP workspace portal performs the following functions:
+The Azure ATP workspace enables you to manage the following Azure ATP functionality:
 
--   Manages Azure ATP Standalone Sensor and Azure ATP sensor configuration settings
+-   Manage Azure ATP sensor and standalone sensor configuration settings
 
--   Receives data from Azure ATP standalone sensors and Azure ATP sensors 
+-   View data received from Azure ATP standalone sensors and Azure ATP sensors 
 
--   Detects suspicious activities
+-   Monitor detected suspicious activities based on behavioral machine learning algorithms to detect abnormal behavior and deterministic algorithms to detect advanced attacks based on the attack kill chain
 
--   Runs Azure ATP behavioral machine learning algorithms to detect abnormal behavior
+-   Optional: the workspace management portal can be configured to send emails and events when suspicious activities or health events are detected.
 
--   Runs various deterministic algorithms to detect advanced attacks based on the attack kill chain
-
--   Runs the Azure ATP workspace portal
-
--   Optional: The Azure ATP cloud service can be configured to send emails and events when a suspicious activity is detected.
-
-The Azure ATP cloud service receives parsed traffic from the Azure ATP Standalone Sensor and Azure ATP Sensor. It then performs profiling, runs deterministic detection, and runs machine learning and behavioral algorithms to learn about your network, enable detection of anomalies and warn you of suspicious activities.
 
 |||
 |-|-|
@@ -118,7 +112,7 @@ The **Azure ATP sensor** and **Azure ATP sensor** both have the same core functi
 
 -   Capture and inspect domain controller network traffic. This is port mirrored traffic for Azure ATP standalone sensors and local traffic of the domain controller in Azure ATP sensors. 
 
--   Receive Windows events from SIEM or Syslog servers, or from domain controllers using Windows Event Forwarding
+-   Receive Windows events either directly from the domain controllers (for ATP sensors) or from SIEM or Syslog servers (for ATP standalone sensors)
 
 -  Receive RADIUS accounting information from your VPN provider
 
@@ -152,7 +146,7 @@ The domain synchronizer candidate is responsible for synchronizing all entities 
 If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, Azure ATP is able to proactively synchronize entities and their changes, however Azure ATP will reactively retrieve new entities as they are detected in the monitored traffic. 
 <br>If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.<br><br>
 By default, all Azure ATP standalone sensors are synchronizer candidates.<br><br>
-Because all Azure ATP sensors are more likely to be deployed in branch sites and on small domain controllers, they are not synchronizer candidates by default.
+Azure ATP sensors are not synchronizer candidates by default.
 
 
 -	**Resource limitations**<br>
@@ -189,7 +183,7 @@ Your domain controllers and the Azure ATP standalone sensors can be physical or 
 
 
 ### Events
-To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups and Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups, creation of suspicious services, modifications to Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 -   Configuring the Azure ATP Standalone Sensor to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATP. Azure ATP supports a number of SIEM vendors. For more information, see [Configure event forwarding](configure-event-forwarding.md).
 
@@ -203,3 +197,4 @@ To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to se
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 
+- - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

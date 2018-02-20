@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/20/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,7 +36,6 @@ In Azure ATP you have the ability to manage and monitor multiple workspaces. Thi
 
 ## Create a workspace
 
-
 1. Log into [portal.atp.azure.com](https://portal.atp.azure.com).
 
 2. Click **Create workspace**.
@@ -56,6 +55,11 @@ In Azure ATP you have the ability to manage and monitor multiple workspaces. Thi
 To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. 
 For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
+Only the Primary workspace can be edited (Primary on-off)
+-	Configure integration – on-off
+-	Delete – integrated/primary ws can not be deleted. The flow is first turn off the primary/integration and then delete.
+
+Also, worth mentioning data retention – deleted workspaces do not appear in the UI however their data is retained according to Microsft policy for a period of time (I think a year, need to check with Ophir). And add a support link to contact about data retention questions.
 
 ## See Also
 

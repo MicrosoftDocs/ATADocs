@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/18/2018
+ms.date: 2/20/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -39,7 +39,7 @@ This article describes the requirements for a successful deployment of Azure ATP
 
 Azure ATP is composed of the Azure ATP cloud service, which consists of the workspace management portal and a workspace portal, the Azure ATP Standalone sensor and/or the Azure ATP sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
 
-The Azure ATP System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
+Each Azure ATP workspace supports an Active Directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above. For deployments with multiple forests, a separate Azure ATP workspace is required for each forest.
 
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
@@ -58,7 +58,7 @@ The Azure ATP System works on active directory forest boundary and supports Fore
 This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
 
 
--   User account and password with read access to all objects in the monitored domains.
+-   Azure AD **on-premises** user account and password with read access to all objects in the monitored domains.
 
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
@@ -69,7 +69,7 @@ This section lists information you should gather and accounts and network entiti
 
 -   Optional: A user account of a user who has no network activities. This account is configured as the Azure ATP Honeytoken user. To configure the Honeytoken user, you need the SID of the user account, not the username. For more information, see [Configure IP address exclusions and Honeytoken user](install-atp-step6.md).
 
--   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+-   Optional: When deploying the standalone sensor, it is necessary to forward  Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. In the Azure ATP sensor, these events are received automatically. In the Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 
 ## Azure ATP workspace management portal and workspace portal requirements
@@ -79,13 +79,6 @@ Access to the Azure ATP workspace portal and the Azure ATP workspace management 
 -	Google Chrome 4.0 and above
 -	Minimum screen width resolution of 1700 pixels
 -	Firewall/proxy open - To communicate with the Azure ATP cloud service, you must have open: *.atp.azure.com port 443 in your firewall/proxy. 
-
-> [!NOTE]
-> LDAP is required to test the credentials to be used between the Azure ATP Standalone Sensors and the domain controllers. The test is performed from the Azure ATP cloud service to a domain controller to test the validity of these credentials, after which the Azure ATP Standalone Sensor uses LDAP as part of its normal resolution process.
-
-### Certificates
-
-To ease the installation of ATP, you can install self-signed certificates during installation. Azure ATP Standalone Sensors and Sensors are managing their own certificates and need no administrator interaction to manage them. They will be replaced automatically from by the Azure ATP cloud service.
 
 ## Azure ATP Standalone Sensor requirements
 This section lists the requirements for the Azure ATP Standalone Sensor.
@@ -112,7 +105,9 @@ An Azure ATP Standalone Sensor can support monitoring multiple domain controller
 For more information about the Azure ATP Standalone Sensor hardware requirements, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 ### Time synchronization
-The Azure ATP cloud service server, the Azure ATP Standalone Sensor servers, and the domain controllers must have time synchronized to within five minutes of each other.
+
+The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
+
 
 ### Network adapters
 The Azure ATP Standalone Sensor requires at least one Management adapter and at least one Capture adapter:
@@ -152,19 +147,19 @@ The following table lists the minimum ports that the Azure ATP Standalone Sensor
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443|Azure ATP cloud service|Outbound|
-|Syslog (optional)|UDP|514|SIEM Server|Inbound|
+|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
+|RADIUS|UDDP|1813|RADIUS|Inbound|
 
 > [!NOTE]
-> - The Sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
-> - As part of the resolution process done by the Azure ATP Standalone Sensor, the following ports need to be open inbound on devices on the network from the Azure ATP Standalone Sensors.
->   -   NTLM over RPC (TCP Port 135)
->   -   NetBIOS (UDP port 137)
->   -   SAM-R queries (TCP/UDP port 445)
+> - Using the Directory service user account, the sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
+> - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
+>   -   NTLM over RPC (TCP Port 135) for resolution purposes
+>   -   NetBIOS (UDP port 137) for resolution purposes
+>   -   SAM-R queries (TCP/UDP port 445) for detection purposes
 
 
-## Azure ATP Sensor requirements
-This section lists the requirements for the Azure ATP Sensor.
+## Azure ATP sensor requirements
+This section lists the requirements for the Azure ATP sensor.
 ### General
 The Azure ATP Sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
 
@@ -191,7 +186,7 @@ For more information about the Azure ATP Sensor hardware requirements, see [Azur
 
 ### Time synchronization
 
-The Azure ATP cloud service server, the Azure ATP Sensor servers, and the domain controllers must have time synchronized to within five minutes of each other.
+The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 
 ### Network adapters
 
@@ -210,21 +205,22 @@ The following table lists the minimum ports that the Azure ATP Sensor requires:
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domain controllers|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443|Azure ATP cloud service|Outbound|
-|Syslog (optional)|UDP|514|SIEM Server|Inbound|
+|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
+|RADIUS|UDDP|1813|RADIUS|Inbound|
 
 > [!NOTE]
-> - The Sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
-> - As part of the resolution process done by the Azure ATP Standalone Sensor, the following ports need to be open inbound on devices on the network from the Azure ATP Standalone Sensors.
->   -   NTLM over RPC (TCP Port 135)
->   -   NetBIOS (UDP port 137)
->   -   SAM-R queries (TCP/UDP port 445)
+> - Using the Directory service user account, the sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
+> - The following ports need to be open inbound on devices on the network from the Azure ATP sensors:
+>   -   NTLM over RPC (TCP Port 135) for resolution purposes
+>   -   NetBIOS (UDP port 137) for resolution purposes
+>   -   SAM-R queries (TCP/UDP port 445) for detection purposes
+
 
 
 
 
 ## See Also
-- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Azure ATP architecture](atp-architecture.md)
 - [Install ATP](install-atp-step1.md)
 

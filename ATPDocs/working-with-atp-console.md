@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/20/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -45,21 +45,15 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 1. You can enter the workspace portal either by logging in to the workspace management portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and then selecting the relevant workspace, or browsing to the workspace URL: [https://*workspacename*.atp.azure.com](https://*workspacename*.atp.azure.com).
 
 
-2.  If the computer on which the Azure ATP cloud service is installed and the computer from which you are trying to access the Azure ATP workspace portal are both domain joined, Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP workspace portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](atp-role-groups.md).
+2.  Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP workspace portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](atp-role-groups.md).
 
  > [!NOTE]
- > Make sure to log on to the computer from which you want to access the Azure ATP workspace portal using your Azure ATP admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. To prompt the Azure ATP workspace portal to ask for credentials, access the workspace portal using an IP address and you are prompted to enter credentials.
-
-3. To log in using SSO, make sure the Azure ATP workspace portal site is defined as a local intranet site in your browser and that you access it using a shortname or a localhost.
-
-> [!NOTE]
-> In addition to logging each suspicious activity and health alert, every configuration change you make in the Azure ATP workspace portal is audited in the Windows Event Log on the Azure ATP cloud service machine, under **Applications and services log** and then **Microsoft ATP**. Each login to the Azure ATP workspace portal is audited as well.<br></br>  Configuration affecting the Azure ATP Standalone Sensor is also logged in the Windows Event Log of the Azure ATP Standalone Sensor machine. 
-
+ > Make sure to log on to the computer from which you want to access the Azure ATP workspace portal using your Azure ATP admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. 
 
 
 ## The Azure ATP workspace portal
 
-The Azure ATP workspace portal provides you a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The workspace portal also displays alerts and notifications to highlight problems with the Azure ATP network or new activities that are deemed suspicious.
+The Azure ATP workspace portal provides you a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The workspace portal also displays alerts and notifications to highlight problems seen by Azure ATP or new activities that are deemed suspicious.
 
 These are the key elements of the Azure ATP workspace portal.
 

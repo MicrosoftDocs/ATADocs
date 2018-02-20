@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/20/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,11 +33,9 @@ This article provides a list of frequently asked questions about Azure ATP and p
 
 ## Where can I get a license for Azure Advanced Threat Protection (ATP)?
 
-If you have an active Enterprise Agreement, you can download the software from the Microsoft Volume Licensing Center (VLSC).
+If you acquired a license for Enterprise Mobility + Security 5 (EMS 5) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to Azure ATP through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Azure Advanced Threat Protection (ATP).
 
-If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to Azure ATP through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Azure Advanced Threat Protection (ATP).
-
-## What should I do if the Azure ATP Standalone Sensor won’t start?
+## What should I do if the Azure ATP sensor or standalone sensor won’t start?
 Look at the most recent error in the current error log (Where Azure ATP is installed under the "Logs" folder).
 
 ## How can I test Azure ATP?
@@ -58,7 +56,7 @@ Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneli
 
 ## How many Azure ATP Sensors do I need?
 
-The number of Azure ATP Sensors depend on your network layout, volume of packets and volume of events captured by Azure ATP. To determine the exact number, see [Azure ATP Sensor Sizing](atp-capacity-planning.md#azure-atp-standalone-sensor-sizing). 
+Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP Sensor Sizing](atp-capacity-planning.md#azure-atp-standalone-sensor-sizing). 
 
 
 ## Why are certain accounts considered sensitive?

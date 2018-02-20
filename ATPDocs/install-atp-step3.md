@@ -65,7 +65,7 @@ The zip file includes the following files:
 
 ## See Also
 
-- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 
 - [Configure event collection](configure-event-collection.md)
 

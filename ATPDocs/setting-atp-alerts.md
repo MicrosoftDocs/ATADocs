@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/20/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,16 +29,11 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
+# Set Azure ATP notifications
 
-# Set Azure ATP Notifications
-Azure ATP can notify you when it detects a suspicious activity, either by email or by using Azure ATP event forwarding and forwarding the event to your SIEM/syslog server. Before selecting which notifications you want to receive, you have to [set up your email server and your Syslog server](setting-syslog-email-server-settings.md).
+Azure ATP can notify you when it detects a suspicious activity or a health alert via email. 
 
-> [!NOTE]
-> -   Email notifications include a link that takes the user directly to the suspicious activity that was detected. The host name portion of the link is taken from the setting of the Azure ATP workspace portal URL on the Azure ATP cloud service page. By default, the Azure ATP workspace portal URL is the IP address selected during the installation  of the Azure ATP cloud service. If you are going to configure email notifications, it is recommended to use an FQDN as the Azure ATP workspace portal URL.
-> -   Notifications are sent from the Azure ATP cloud service to either the SMTP server and the Syslog server.
-
-
-To receive notifications, set the following parameters:
+To receive notifications to a specific email address, set the following parameters:
 
 
 1. In the Azure ATP workspace portal, select the settings option on the toolbar and select **Configuration**.
@@ -46,16 +41,14 @@ To receive notifications, set the following parameters:
 ![Azure ATP configuration settings icon](media/atp-config-menu.png)
 
 2. Click **Notifications**.
-3. Under **Mail notifications**, specify which notifications should be sent via email - they can be sent for new alerts and new health issues. 
+3. Under **Mail notifications**, specify which notifications should be sent via email - they can be sent for new alerts (suspicious activities) and new health issues. 
  
  >	[!NOTE]
  >   Email alerts for suspicious activities are only sent when the suspicious activity is created.
 
-3. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
 5. Click **Save**.
 
-![Azure ATP mail notification settings image](media/notifications.png)
-
+ ![Azure ATP notifications](media/atp-notifications.png)
 
 
 

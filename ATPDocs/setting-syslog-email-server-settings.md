@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/20/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,9 +30,9 @@ ms.suite: ems
 
 
 
-# Set Syslog integration
+# Integrate with Syslog
 
-Azure ATP can notify you when it detects a suspicious activity by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
+Azure ATP can notify you when it detects suspicious activities and health alerts by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
 
 1.  Before configuring Syslog notifications, work with your SIEM admin to find out the following information:
 
@@ -63,6 +63,7 @@ Azure ATP can notify you when it detects a suspicious activity by sending the no
 
  ![Azure ATP Syslog server settings image](media/atp-syslog.png)
 
+6. You can select which events to send to your Syslog server. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
 
 
 ## See Also

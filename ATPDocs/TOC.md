@@ -2,9 +2,9 @@
 ## [What is Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Frequently asked questions](atp-technical-faq.md)
 # Plan and Design
+## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Azure ATP architecture](atp-architecture.md)
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
-## [Azure ATP prerequisites](atp-prerequisites.md)
 # Deploy
 ## [1 Create a workspace in Azure ATP](install-atp-step1.md)
 ## [2 Connect to AD](install-atp-step2.md)
@@ -25,17 +25,16 @@
 ## [Change domain connectivity password](modifying-atp-config-dcpassword.md)
 ## [Creating Azure ATP workspaces](atp-workspaces.md)
 ## [Excluding entities from detections](excluding-entities-from-detections.md)
-## [Integration with Windows Defender ATP](integrate-wd-atp.md)
-## [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
-## [Investigate entities](user-profiles.md)
+## [Integrate with Windows Defender ATP](integrate-wd-atp.md)
 ## [Monitor alerts](monitoring-alerts.md)
 ## [Set Azure ATP notifications](setting-atp-alerts.md)
 ## [Set Syslog integration](setting-syslog-email-server-settings.md)
-## [Working with NIC teaming](atp-teaming.md)
 ## [Working with sensitive accounts](tag-sensitive-accounts.md)
-## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Working with the Azure ATP workspace portal](working-with-atp-console.md)
 ## Azure ATP reference information
 ### [SIEM log reference](cef-format-sa.md)
 # Investigate
+## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Suspicious activity guide](suspicious-activity-guide.md)
+## [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
+## [Investigate entities](user-profiles.md)
