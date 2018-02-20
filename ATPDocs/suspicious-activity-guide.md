@@ -67,24 +67,6 @@ Minimize the number of users who are authorized to modify sensitive groups.
 
 Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
 
-## Broken trust between computers and domain
-
-> [!NOTE]
-> This suspicious activity was deprecated and only appears in Azure ATP versions prior to 1.9.
-
-**Description**
-
-Broken trust means that Active Directory security requirements may not be in effect for the computers in question. This is often considered a baseline security and compliance failure and a soft target for attackers. In this detection, an alert is triggered if more than 5 Kerberos authentication failures are seen from a computer account in 24 hours.
-
-**Investigation**
-
-Is the computer in question allowing domain users to log on? 
-- If yes, you may ignore this computer in the remediation steps.
-
-**Remediation**
-
-Rejoin the machine back to the domain if necessary or reset the machine's password.
-
 
 ## Brute force attack using LDAP simple bind
 
@@ -218,7 +200,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Investigation**
 
-1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? If the answer to any of these questions is yes, then it is a false positive.
+1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? Are one or more of the source IP addresses not being resolved by the Sensor? (this could an indication that the proper ports from the sensor to the devices are not properly opened.) If the answer to any of these questions is yes, then it is a false positive.
 
 2. Is there a custom application that forwards tickets on behalf of users? If so, it is a benign true positive.
 
@@ -275,22 +257,6 @@ Validate the following permissions:
 For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
-## Massive object deletion
-
-**Description**
-
-In some scenarios, attackers perform a denial of service (DoS) rather than just stealing information. Deleting a large number of accounts is one DoS technique.
-
-In this detection, an alert is triggered when more than 5% of all accounts are deleted. The detection requires read access to the deleted object container.  
-For information about configuring read-only permissions on the deleted object container, see **Changing permissions on a deleted object container** in [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
-
-**Investigation**
-
-Review the list of deleted accounts and understand if there is a pattern or a business reason that might justify this massive deletion.
-
-**Remediation**
-
-Remove permissions for users who can delete accounts in Active Directory. For more information, see [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 ## Privilege escalation using forged authorization data
 
@@ -371,8 +337,7 @@ In this detection, no alerts would be triggered in the first month after Azure A
 
 **Remediation**
 
-Use the [SAMRi10 tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) to harden your environment against this technique.
-If the tool is not applicable to your DC:
+Harden your environment against this technique using the following process:
 1. Is the computer running a vulnerability scanning tool?  
 2. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (i.e. CEO, CFO, IT management, etc.).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
 
@@ -448,25 +413,6 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
 
-## Sensitive account credentials exposed & Services exposing account credentials
-
-> [!NOTE]
-> This suspicious activity was deprecated and only appears in Azure ATP versions prior to 1.9. For Azure ATP 1.9 and later, see [Reports](reports.md).
-
-**Description**
-
-Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account triggers the alert, while for non-sensitive accounts the alert is triggered if five or more different accounts  send clear text passwords from the same source computer. 
-
-**Investigation**
-
-Click on the alert to get to its details page. See which accounts were exposed. If there are many such accounts, click **Download details** to view the list in an Excel spreadsheet.
-
-Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
-
-**Remediation**
-
-Verify the configuration on the source computers and make sure not to use LDAP simple bind. Instead of using LDAP simple binds you can use LDAP SALS or LDAPS.
-
 ## Suspicious authentication failures
 
 **Description**
@@ -491,7 +437,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Description**
 
-A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 and can be collected from all endpoints in your network. In order to identify this suspicious activity on your endpoints, [configure your SIEM](configure-event-collection.md) as a data source that forwards events to ATP.
+A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 in order to identify this suspicious activity on your endpoints. Event 7045 should be forwarded from the endpoints to ATP by configuring [Windows Event Forwarding](configure-event-forwarding.md) or by forwarding 7045 events to the SIEM and [configuring your SIEM](configure-event-collection.md) as a data source that forwards events to ATP.
 
 **Investigation**
 
@@ -508,24 +454,6 @@ A suspicious service has been created on an endpoint in your organization. This 
 **Remediation**
 
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
-
-## Suspicion of identity theft based on abnormal behavior
-
-**Description**
-
-Azure ATP learns the entity behavior for users, computers, and resources over a sliding three-week period. The behavior model is based on the following activities: the machines the entities logged in to, the resources the entity requested access to, and the time these operations took place. Azure ATP sends an alert when there is a deviation from the entity’s behavior based on machine learning algorithms. 
-
-**Investigation**
-
-1. Is the user in question supposed to be performing these operations?
-
-2. Consider the following cases as potential false positives: a user who returned from vacation, IT personnel who perform excess access as part of their duty (for example a spike in help-desk support in a given day or week), remote desktop applications.+ 
-If you **Close and exclude** the alert, the user will no longer be part of the detection
-
-
-**Remediation**
-
-Depending on what caused this abnormal behavior to occur, different actions should be taken. For example, if this is due to scanning of the network, the machine from which this occurred should be blocked from the network (unless it is approved).
 
 ## Unusual protocol implementation
 

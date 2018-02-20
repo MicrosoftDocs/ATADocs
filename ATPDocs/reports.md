@@ -37,7 +37,7 @@ The Azure ATP reports section in the workspace portal enables you to generate re
 To access the reports page, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
 The reports that are available are: 
 
-- **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists Azure ATP system health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
+- **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists Azure ATP health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
 
 - **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins, or manually tagged accounts or groups).
 

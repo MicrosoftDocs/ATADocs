@@ -76,7 +76,7 @@ Azure ATP starts scanning for suspicious activities immediately. Some detections
 
 
 ## See Also
-- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 

@@ -106,7 +106,7 @@ After the Azure ATP Sensor receives the VPN events and sends them to the Azure A
 
 
 ## See Also
-- [Azure ATP sizing tool](http://aka.ms/trisizingtool)
+- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 

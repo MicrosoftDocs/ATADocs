@@ -36,7 +36,7 @@ ms.suite: ems
 Role groups enable access management for Azure ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and Azure ATP role authorization, and helps you get up and running with role groups in ATP.
 
 > [!NOTE]
-> Any global administrator or security administraotr on the tenant's Azure Active Directory is automatically an Azure ATP administrator.
+> Any global administrator or security administrator on the tenant's Azure Active Directory is automatically an Azure ATP administrator.
 
 ## Accessing the Workspace management portal
 
@@ -73,7 +73,7 @@ Azure ATP uses Azure AD security groups as a basis for role groups. The role gro
 
 
 ## See Also
-- [ATA sizing tool](http://aka.ms/atpsizingtool)
+- [ATA sizing tool](http://aka.ms/aatpsizingtool)
 - [ATA architecture](atp-architecture.md)
 - [Install ATA](install-atp-step1.md)
 
