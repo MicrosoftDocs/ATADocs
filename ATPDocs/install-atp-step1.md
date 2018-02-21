@@ -78,4 +78,4 @@ After you verified that your network meets the requirements of the Sensor, you c
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

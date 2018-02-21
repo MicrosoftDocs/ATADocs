@@ -79,3 +79,4 @@ After configuring port mirroring, validate that port mirroring is working before
 
 ## See Also
 - [Validate port mirroring](validate-port-mirroring.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

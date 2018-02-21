@@ -45,7 +45,7 @@ Azure ATP can receive events and logs from:
 - 	SIEM Integration
 - 	Windows Event Forwarding (WEF)
 -   Directly from the Windows Event Collector (for the Sensor)
--   RADIUS accounting from VPN
+-   RADIUS Accounting from VPNs
 
 
 For more information on Azure ATP architecture, see [Azure ATP Architecture](atp-architecture.md).
@@ -61,17 +61,25 @@ Azure ATP technology detects multiple suspicious activities, focusing on several
 These phases of a cyber attack are similar and predictable, no matter what type of company is under attack or what type of information is being targeted.
 Azure ATP searches for three main types of attacks: Malicious attacks, abnormal behavior, and security issues and risks.
 
-**Malicious attacks** are detected deterministically, by looking for the full list of known attack types including:
+**Malicious attacks** are detected deterministically as well as via abnormal behavior analytics. The full list of known attack types includes:
 
 - 	Pass-the-Ticket (PtT)
 - 	Pass-the-Hash (PtH)
 - 	Overpass-the-Hash
 - 	Forged PAC (MS14-068)
 - 	Golden Ticket
-- 	Malicious replications
-- 	Reconnaissance
-- 	Brute Force
-- 	Remote execution
+- 	Malicious replication
+- 	Directory Service Enumeration
+-	SMB Session Enumeration
+-	DNS Reconnaissance
+-	Horizontal Brute Force 
+-	Vertical Brute Force
+-	Skeleton Key
+-	Unusual Protocol
+-	Encryption Downgrade
+-	Remote execution
+-	Malicious Service Creation
+
 
 Azure ATP detects these suspicious activities and surfaces the information in the Azure ATP workspace portal including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that Azure ATP suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
@@ -104,4 +112,5 @@ For more information, see [Working with suspicious activities](working-with-susp
 
 
 ## See Also
-[Azure ATP frequently asked questions](atp-technical-faq.md)
+- [Azure ATP frequently asked questions](atp-technical-faq.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

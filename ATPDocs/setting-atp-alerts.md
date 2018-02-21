@@ -57,3 +57,4 @@ To receive notifications to a specific email address, set the following paramete
 - [Configure event collection](configure-event-collection.md)
 
 - [Set Syslog settings](setting-syslog-email-server-settings.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

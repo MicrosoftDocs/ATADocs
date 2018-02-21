@@ -88,6 +88,11 @@ Azure ATP has a bi-directional integration with SIEMs as follows:
 1. Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a suspicious activity is detected.
 2. Azure ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](configure-event-collection.md).
 
+## How do I configure the Azure ATP sensors to communicate with Azure ATP cloud service when I have a proxy?
+
+For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with Azure ATP sensors](configure-proxy.md).
+ 
+
 ## Can Azure ATP monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the Azure ATP Sensor to monitor domain controllers that are in any IaaS solution.
 
@@ -149,4 +154,4 @@ In addition, Microsoft conducts background verification checks on certain operat
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
-
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

@@ -111,3 +111,4 @@ May  4 13:15:41 CENTER ATP:CEF:0|Microsoft|ATP|1.8.5942.64854|PassTheTicketSuspi
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

@@ -90,11 +90,9 @@ To configure VPN data in ATP:
 
 After this is enabled, all Azure ATP standalone sensors and sensors listen on port 1813 for RADIUS accounting events. 
 
-Your setup is complete, and you can now see VPN activity in the users' profile page:
- 
-   ![VPN setup](./media/vpn-user.png)
+Your setup is complete. 
 
-After the Azure ATP Sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, it will be added to the user profile.
+After the Azure ATP sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the entity profile will indicate distinct accessed VPN locations and activities in the profile will indicate locations.
 
 
 
@@ -109,4 +107,4 @@ After the Azure ATP Sensor receives the VPN events and sends them to the Azure A
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

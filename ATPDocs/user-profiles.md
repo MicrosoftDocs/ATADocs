@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Investigating entity profiles
 
-The entity profile provides you with a dashboard designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new Azure ATP logical activity translator which can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a comprehensive entity page with designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new Azure ATP logical activity translator which can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
 To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline.
 
@@ -63,7 +63,11 @@ In the **User access control** section, Azure ATP surfaces security settings tha
 
 By clicking the **Lateral movement paths** tab you can view a fully dynamic and clickable map that provides you with a visual representation of the lateral movement paths to and from this user that can be used to infiltrate your network.
 
-The map provides you with a list of how many hops between computers or users an attacker would have to and from this user to compromise a sensitive account, and if the user themselves has a sensitive account, you can see how many resources and accounts are directly connected. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). 
+The map provides you with a list of how many hops between computers or users an attacker would have to and from this user to compromise a sensitive account, and if the user themselves has a sensitive account, you can see how many resources and accounts are directly connected.
+
+If activity is not detected for the last two days, the graph will no longer appear, but the [lateral movement path report](reports.md) will stil be available to provide you with information about lateral movement paths over the last 60 days. 
+
+For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). 
 
  ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
 
@@ -71,3 +75,4 @@ The map provides you with a list of how many hops between computers or users an 
 ## See Also
 
 - [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

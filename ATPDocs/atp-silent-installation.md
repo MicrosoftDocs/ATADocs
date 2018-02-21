@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2017
+ms.date: 2/21/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -56,9 +56,8 @@ Use the following command to silently install the Azure ATP Sensor:
 
 **Syntax**:
 
-    Azure ATP Sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [ConsoleAccountName="<AccountName>"] 
-    [ConsoleAccountPassword="<AccountPassword>"]
+    Azure ATP Sensor Setup.exe [/AccessKey=<Access Key>] [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+   
 
 > [!NOTE]
 > Copy the access key from the workspace portal under **Configuration** and then **Sensors**.
@@ -140,3 +139,4 @@ To silently uninstall the Azure ATP Sensor from the server:
 
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

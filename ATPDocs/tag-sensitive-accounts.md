@@ -75,3 +75,4 @@ In addition to these groups, you can manually tag groups or accounts as sensitiv
 ## See also
 
 - [Working with suspicious activities](working-with-suspicious-activities.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
