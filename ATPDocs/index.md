@@ -2,7 +2,7 @@
 layout: LandingPage
 description: Learn how to use Azure Advanced Threat Protection.
 ---
-# Advanced Threat Analytics Documentation
+# Azure Advanced Threat Protection Documentation
 
 Azure Advanced Threat Protection (ATP) is a cloud service that helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats.
 
