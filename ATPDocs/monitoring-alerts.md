@@ -20,7 +20,7 @@ ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -69,7 +69,7 @@ The Azure ATP Health Center lets you know when there's a problem with the Azure 
 |----|----|----|----|
 |The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts Azure ATP’s ability to detect suspicious activities related to domain controllers monitored by this Azure ATP sensor.| Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them.|Medium|
 
-## Sensor stopped communicating
+## sensor stopped communicating
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
@@ -93,17 +93,17 @@ The Azure ATP Health Center lets you know when there's a problem with the Azure 
 |----|----|----|----|
 |The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](atp-capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, consult your VMware documentation.|Medium|
 
-## Sensor service failed to start
+## sensor service failed to start
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
 |The Azure ATP sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Monitor Azure ATP sensor logs to understand the root cause for Azure ATP sensor service failure.|High|
 
-## Sensor reached a memory resource limit
+## sensor reached a memory resource limit
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP Sensor stopped itself and will restart automatically to protect the domain controller from a low memory condition.|The Azure ATP Sensor enforces memory limitations upon itself to prevent the domain controller from experiencing resource limitations. This happens when memory usage on the domain controller is high. Data from this domain controller is only partly monitored.|Increase the amount of memory (RAM) on the domain controller or add more domain controllers in this site to better distribute the load of this domain controller.|Medium|
+|The Azure ATP sensor stopped itself and will restart automatically to protect the domain controller from a low memory condition.|The Azure ATP sensor enforces memory limitations upon itself to prevent the domain controller from experiencing resource limitations. This happens when memory usage on the domain controller is high. Data from this domain controller is only partly monitored.|Increase the amount of memory (RAM) on the domain controller or add more domain controllers in this site to better distribute the load of this domain controller.|Medium|
 
 
 ## See Also

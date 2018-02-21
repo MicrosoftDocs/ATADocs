@@ -19,7 +19,7 @@ ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -38,7 +38,7 @@ Role groups enable access management for Azure ATP. Using role groups, you can s
 > [!NOTE]
 > Any global administrator or security administrator on the tenant's Azure Active Directory is automatically an Azure ATP administrator.
 
-## Accessing the Workspace management portal
+## Accessing the workspace management portal
 
 Access to the workspace managememt portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After you enter the portal, you can create the different workspaces. For each workspace, the Azure ATP service will create three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
 
@@ -58,8 +58,8 @@ Azure ATP introduces three types of security group: Azure ATP *workspace name* A
 |Share/Export suspicious activity via email/get link|Available|Available|Not available|
 |Change status of Monitoring Alerts|Available|Available|Not available|
 |Update Azure ATP Configuration|Available|Not available|Not available|
-|Sensor – Add|Available|Not available|Not available|
-|Sensor – Delete |Available|Not available|Not available|
+|sensor – Add|Available|Not available|Not available|
+|sensor – Delete |Available|Not available|Not available|
 |Monitored DC – Add |Available|Not available|Not available|
 |Monitored DC – Delete|Available|Not available|Not available|
 |View alerts and suspicious activities|Available|Available|Available|

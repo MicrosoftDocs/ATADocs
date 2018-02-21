@@ -2,7 +2,7 @@
 # required metadata
 
 title: Change Azure Advanced Threat Protection config - domain connectivity password | Microsoft Docs
-description: Describes how to change the Domain Connectivity Password on the Azure ATP Standalone Sensor.
+description: Describes how to change the Domain Connectivity Password on the Azure ATP standalone sensor.
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -19,7 +19,7 @@ ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,7 +37,7 @@ ms.suite: ems
 ## Change the domain connectivity password
 If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service will stop for all deployed sensors.
 
-If you suspect that this happened, on the Azure ATP standalone sensor, look at the Microsoft.Tri.Sensor-Errors.log file for the following errors:
+If you suspect that this happened, on the Azure ATP standalone sensor, look at the Microsoft.Tri.sensor-Errors.log file for the following errors:
 `The supplied credential is invalid.`
 
 Follow this procedure to update the Domain Connectivity password on the Azure ATP workspace portal:
@@ -64,7 +64,7 @@ Follow this procedure to update the Domain Connectivity password on the Azure AT
 
 6.  After changing the password, manually check that the Azure ATP standalone sensor service is running on the Azure ATP standalone sensor servers.
 
-7. In the workspace portal, under **Configuration**, go to the **Sensors** page and check the status of the sensors.
+7. In the workspace portal, under **Configuration**, go to the **Sensor** page and check the status of the sensors.
 
 ## See Also
 

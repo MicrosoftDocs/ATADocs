@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install Azure Advanced Threat Protection - Step 2 | Microsoft Docs
-description: Step two of installing Azure ATP helps you configure the domain connectivity settings on your Azure ATP cloud service server
+description: Step two of installing Azure ATP helps you configure the domain connectivity settings on your Azure ATP cloud service
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -19,7 +19,7 @@ ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -54,7 +54,7 @@ The first time you open the Azure ATP workspace portal, the following screen app
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-3. In the workspace portal, click **Download Sensor setup and install the first Sensor** to continue.
+3. In the workspace portal, click **Download sensor setup and install the first sensor** to continue.
 
 
 >[!div class="step-by-step"]

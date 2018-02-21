@@ -19,7 +19,7 @@ ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,7 +34,7 @@ ms.suite: ems
 
 ## Configure event collection
 
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
 > It is important to run the ATA auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events. 

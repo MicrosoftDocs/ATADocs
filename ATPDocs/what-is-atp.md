@@ -19,7 +19,7 @@ ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,14 +37,14 @@ Azure Advanced Threat Protection (ATP) is a cloud service that helps protect you
 Azure ATP leverages a proprietary network parsing engine to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM, and others) for authentication, authorization, and information gathering. This information is collected by Azure ATP via either:
 
 - 	Deploying Azure ATP sensors directly on your domain controllers
-- 	Port mirroring from Domain Controllers and DNS servers to the Azure ATP Standalone Sensor
+- 	Port mirroring from Domain Controllers and DNS servers to the Azure ATP standalone sensor
 
 Azure ATP takes information from multiple data-sources, such as logs and events in your network, to learn the behavior of users and other entities in the organization and build a behavioral profile about them.
 Azure ATP can receive events and logs from:
 
 - 	SIEM Integration
 - 	Windows Event Forwarding (WEF)
--   Directly from the Windows Event Collector (for the Sensor)
+-   Directly from the Windows Event Collector (for the sensor)
 -   RADIUS Accounting from VPNs
 
 

@@ -19,7 +19,7 @@ ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -56,7 +56,7 @@ Azure ATP can notify you when it detects suspicious activities and health alerts
 
     |Field|Description|
     |---------|---------------|
-    |Sensor|Select a designated sensor to be responsible for aggregating all the Syslog events and forwarding them to your SIEM server.|
+    |sensor|Select a designated sensor to be responsible for aggregating all the Syslog events and forwarding them to your SIEM server.|
     |Service endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
     |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
     |Format|This is the format that Azure ATP uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
@@ -68,5 +68,5 @@ Azure ATP can notify you when it detects suspicious activities and health alerts
 
 ## See Also
 
-- [Working with sensitive accounts](tag-sensitive-accounts.md)
+- [Working with sensitive accounts](sensitive-accounts.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

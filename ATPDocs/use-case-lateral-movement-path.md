@@ -19,7 +19,7 @@ ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -52,48 +52,7 @@ To discover which sensitive accounts in your network are vulnerable because of t
 
 3. The Excel file that is created provides you with details about your sensitive accounts that are at risk. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should be concerned about.
 
-
-## Using SAM-R: remote querying of SAM
-The Security Account Manager Remote (SAM-R) protocol exposes the security account manager database for remote authenticated domain users. It does so for both local and domain accounts. There are five objects that are exposed by the protocol: server, domain, group, alias, and user. All these objects can be updated and read, and some (user, group, and alias) can also be created and deleted.
-
-### SAM-R flow and use
-
-The following steps describe the basic SAMR protocol flow:
-
-1.	Connect to a server (the remote machine).
-
-2.	Enumerate/lookup the server for domains.
-
-3.	Open the domain of interest.
-
-4.	Lookup a user or alias/group in the domain.
-
-5.	Open the user/alias of interest.
-
-6.	Query the user/alias of interest.
-
-### SAMR required permissions
-
-The lateral movement path detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol. Prior to Windows 10, any domain user could query any computer for its local users using the SAM-R protocol. If your environment includes servers that are prior to Windows 10, these servers can be accessed by ATP without necessary changes. All versions Windows 10 and above limit SAM-R access to administrators on each machine, so you must modify them to enable access for ATP.
-
-#### Working with Windows 10 servers
-
-For Windows 10 servers prior to the anniversary update:
-
-- Configure the following registry key on every server to enable access. 
-
- `HKLM/System/CurrentControlSet/Control/Lsa/RestrictRemoteSAM`
-
-- The value `RestrictRemoteSAM` is a string format in Security Descriptor Definition Language (SDDL) which contains a Discretionary Access Control List (DACL) with a suitable access control entry for allowed or denied users or groups.
-
-#### Working with Windows 10 Anniversary update
-
-The Windows Anniversary update version changed the default security descriptor for SAM access to:
-- Limit the remote querying of SAM to local administrators only, even if the registry key is not present. 
-
-- Add the Group Policy setting of **Network Access** which restricts which clients are allowed to make remote calls to SAM, to allow the central administration of this policy setting.
-
- ![SAM-R](media/samr.png)
+4. For instructions on how to set your servers to allow Azure ATP to perform the SAM-R operations needed for lateral movement path detection, [Configure SAM-R](configure-sam-r.md).
 
 ## Investigate
 
@@ -121,5 +80,6 @@ Now that you know which sensitive accounts are at risk, you can deep dive in Azu
 
 ## See Also
 
+- [Configure SAM-R required permissions](install-atp-step8-samr.md)
 - [Working with suspicious activities](working-with-suspicious-activities.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
