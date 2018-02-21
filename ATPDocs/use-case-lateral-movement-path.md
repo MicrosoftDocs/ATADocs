@@ -42,7 +42,7 @@ Azure ATP enables you to take pre-emptive action on your network to prevent atta
 
 To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, follow these steps. To secure your network from lateral movement attacks, Azure ATP works from the end backward, meaning that Azure ATP gives you a map that starts from your privileged accounts and then shows you which users and devices are in the lateral path of these users and their credentials.
 
-1. In the Azure ATP workspace portal menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
+1. In the Azure ATP workspace portal menu, click the reports icon ![reports icon](./media/atp-report-icon.png).
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. The lateral movement path report provides data for the last 60 days.
 
