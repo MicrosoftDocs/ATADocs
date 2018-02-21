@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/18/2018
+ms.date: 02/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,7 +33,7 @@ ms.suite: ems
 # Configuring Windows Event Forwarding
 
 > [!NOTE]
-> The Azure ATP sensor will automatically read events locally, without the need to configure event forwarding.
+> The Azure ATP sensor automatically reads events locally, without the need to configure event forwarding.
 
 
 To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by configuring Windows Event Forwarding.
@@ -57,7 +57,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
 > [!Note] 
-> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Azure ATP standalone sensor. The steps below modify the local policy of the domain controller. 	
+> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Azure ATP standalone sensor. The following steps modify the local policy of the domain controller. 	
 
 1.	Run the following command on each domain controller: *winrm quickconfig*
 2.  From a command prompt type *gpedit.msc*.
@@ -95,9 +95,9 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
    4.	Click **Select Events**.
 
         1. Click **By log** and select **Security**.
-        2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
+        2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample:
 
- ![Query filter image](media/wef 4 query filter.png)
+ ![Query filter image](media/wef four query filter.png)
 
    5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
    6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP standalone sensor.

@@ -41,7 +41,7 @@ https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (for US), you should ge
  
 2.	If you do not get an error 503, review the proxy configuration and try again.
 
-3.	If the proxy configuration works for the **CURRENT_USER** (i.e. you see the 503 error) then, check if the WinInet proxy settings are enabled for the **LOCAL_SYSTEM** account (used by the sensor updater service) by running the following command in elevated command prompt:
+3.	If the proxy configuration works for the **CURRENT_USER** (that is, you see the 503 error) then, check if the WinInet proxy settings are enabled for the **LOCAL_SYSTEM** account (used by the sensor updater service) by running the following command in elevated command prompt:
  
     reg compare "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" "HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" /v DefaultConnectionSettings
 
@@ -53,7 +53,7 @@ If the result is “Result Compared: Different” this means that proxy is set f
  
   ![proxy result compared](/media/proxy-result-compared.png)
 
-5.	If the **LOCAL_SYSTEM** does not have the correct proxy settings (either not configured or different from the **CURRENT_USER**), then you may need to copy the proxy setting from the **CURRENT_USER** to the **LOCAL_SYSTEM**. Make sure to backup this registry key before you modify it:
+5.	If the **LOCAL_SYSTEM** does not have the correct proxy settings (either not configured or different from the **CURRENT_USER**), then you may need to copy the proxy setting from the **CURRENT_USER** to the **LOCAL_SYSTEM**. Make sure to back up this registry key before you modify it:
 
  Current user key:
     HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings”

@@ -40,7 +40,7 @@ When you install Azure ATP, .Net Framework 4.7 is automatically installed as par
 
 > [!Note] 
 > The installation of .Net framework 4.7 may require rebooting the server. When installing Azure ATP sensor on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
-When using Azure ATP silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
+When using Azure ATP silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
 
 To track the progress of the deployment, monitor Azure ATP installer logs, which are located in **%AppData%\Local\Temp**.
 

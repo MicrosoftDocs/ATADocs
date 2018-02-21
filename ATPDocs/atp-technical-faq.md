@@ -35,11 +35,11 @@ This article provides a list of frequently asked questions about Azure ATP and p
 
 If you acquired a license for Enterprise Mobility + Security 5 (EMS 5) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to Azure ATP through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Azure Advanced Threat Protection (ATP).
 
-## What should I do if the Azure ATP sensor or standalone sensor won’t start?
+## What should I do if the Azure ATP sensor or standalone sensor doesn't start?
 Look at the most recent error in the current error log (Where Azure ATP is installed under the "Logs" folder).
 
 ## How can I test Azure ATP?
-You can simulate suspicious activities which is an end to end test by doing the following:
+You can simulate suspicious activities as an end-to-end test, by running the following command:
 
 -  DNS reconnaissance by using Nslookup.exe
 
@@ -48,19 +48,19 @@ This needs to run remotely against the domain controller being monitored and not
 
 
 ## Does Azure ATP work with encrypted traffic?
-Azure ATP relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding. Detections based on network protocols with encrypted traffic (for example, LDAPS and IPSEC) will not be analyzed.
+Azure ATP relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding. Detections based on network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not analyzed.
 
 
 ## Does Azure ATP work with Kerberos Armoring?
-Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATP, with the exception of over-pass the hash detection which will not work.
+Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATP, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
 
-## How many Azure ATP sensor do I need?
+## How many Azure ATP sensors do I need?
 
 Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP sensor Sizing](atp-capacity-planning.md#sizing). 
 
 
 ## Why are certain accounts considered sensitive?
-This happens when an account is a member of certain groups which we designate as sensitive (for example: "Domain Admins").
+This happens when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
 
 To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also [tag accounts as sensitive manually](sensitive-accounts.md).
 
@@ -103,7 +103,7 @@ This solution is currently a standalone offering. It is not a part of Azure Acti
 With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, Azure ATP starts to detect behavioral suspicious activities. On the other hand, Azure ATP will start detecting known malicious attacks and security issues immediately after deployment.
 
 ## Does this only leverage traffic from Active Directory?
-In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP can also collect relevant events from your Security Information and Event Management (SIEM) and create entity profiles based on information from Active Directory Domain Services. The Azure ATP standalone sensor can also collect events from the event logs if the organization configures Windows Event Log forwarding, the Azure ATP sensor extracts these events itself. Azure ATP also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5 and Checkpoint).
+In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP also collects relevant events from your Security Information and Event Management (SIEM) and creates entity profiles based on information from Active Directory Domain Services. If you use the Azure ATP sensor, it extracts these events automatically. You can use Windows Event Forwarding to send these events to the Azure ATP standalone sensor. Azure ATP also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
 
 ## What is port mirroring?
 Also known as SPAN (Switched Port Analyzer), port mirroring is a method of monitoring network traffic. With port mirroring enabled, the switch sends a copy of all network packets seen on one port (or an entire VLAN) to another port, where the packet can be analyzed.
@@ -121,7 +121,7 @@ Azure Advanced Threat Protection supports multi-domain environments within the s
 Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur.
 
 ## What data does Azure ATP collect? 
-Azure ATP collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites) and entity information (such as names, email addresses and phone numbers). 
+Azure ATP collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites), and entity information (such as names, email addresses, and phone numbers). 
 
 Microsoft uses this data to: 
 

@@ -111,15 +111,15 @@ If you hover your mouse over an entity, anywhere in the workspace portal where t
 - Phone number
 - Domain
 - SAM name
-- Created on – When the entity was created in the Active Directory. If was created before Azure ATP started monitoring it will not be displayed.
+- Created on – When the entity was created in the Active Directory. If was created before Azure ATP started monitoring, it will not be displayed.
 - First seen – The first time Azure ATP observed an activity from this entity.
 - Last seen - The last time Azure ATP observed an activity from this entity.
-- SA badge - Will be displayed if there are suspicious activities associated with this entity.
+- SA badge - Is displayed if there are suspicious activities associated with this entity.
 - WD ATP badge- Will be displayed if there are suspicious activities in Windows Defender ATP associated with this entity.
-- Lateral movement paths badge - Will be displayed if there are have been lateral movement paths detected for this entity within the last two days.
+- Lateral movement paths badge - Will be displayed if there have been lateral movement paths detected for this entity within the last two days.
 
 
 ## See Also
 
-- [Creating Azure ATP workspaces](atp-workspaces.md)
+- [Creating Azure ATP workspaces](install-atp-step1.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

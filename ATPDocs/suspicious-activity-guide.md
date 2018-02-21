@@ -85,7 +85,7 @@ In this detection, an alert is triggered when Azure ATP detects a massive number
 
 2. Click on the alert to go to its dedicated page. Check if any login attempts ended with a successful authentication. The attempts would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
 
-3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes,**Suppress** the suspicious activity.
+3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
 
 **Remediation**
 
@@ -147,8 +147,7 @@ security policy.
 **Remediation**
 
 Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so.  
-Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
+tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Honeytoken activity
 
@@ -200,7 +199,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Investigation**
 
-1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? Are one or more of the source IP addresses not being resolved by the sensor? (this could an indication that the proper ports from the sensor to the devices are not properly opened.) If the answer to any of these questions is yes, then it is a false positive.
+1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? Are one or more of the source IP addresses not being resolved by the sensor? (this could indicate that the proper ports from the sensor to the devices are not properly opened.) If the answer to any of these questions is yes, then it is a false positive.
 
 2. Is there a custom application that forwards tickets on behalf of users? If so, it is a benign true positive.
 
@@ -283,9 +282,9 @@ all member servers and domain controllers up to 2012 R2 are up-to-date with KB24
 
 **Description**
 
-In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess to attempt to guess user names in your domain. The attacker makes Kerberos requests using these names in order to try to find a valid username in your domain. If a guess successfully determines a username, the attacker will get the Kerberos error **Preauthentication required** instead of **Security principal unknown**. 
+In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess to attempt to guess user names in your domain. The attacker makes Kerberos requests using these names in order to try to find a valid username in your domain. If a guess successfully determines a username, the attacker gets the Kerberos error **Preauthentication required** instead of **Security principal unknown**. 
 
-In this detection, Azure ATP can detect where the attack came from, the total number of guess attempts and how many were matched. If there are too many unknown users, Azure ATP will detect it as a suspicious activity. 
+In this detection, Azure ATP can detect where the attack came from, the total number of guess attempts and how many were matched. If there are too many unknown users, Azure ATP detects it as a suspicious activity. 
 
 **Investigation**
 
@@ -339,7 +338,7 @@ In this detection, no alerts would be triggered in the first month after Azure A
 
 Harden your environment against this technique using the following process:
 1. Is the computer running a vulnerability scanning tool?  
-2. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (i.e. CEO, CFO, IT management, etc.).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
+2. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (that is, CEO, CFO, IT management, etc.).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
 
 ## Reconnaissance using DNS
 
@@ -355,7 +354,7 @@ There are several query types in the DNS protocol. Azure ATP detects the AXFR (T
 
 2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for Azure ATP admins).
 
-3. If the answer to all the above is no, assume this is malicious.
+3. If the answer to all the preceding questions is no, assume this is malicious.
 
 **Remediation**
 

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2017
+ms.date: 2/21/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -40,7 +40,7 @@ Role groups enable access management for Azure ATP. Using role groups, you can s
 
 ## Accessing the workspace management portal
 
-Access to the workspace managememt portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After you enter the portal, you can create the different workspaces. For each workspace, the Azure ATP service will create three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
+Access to the workspace management portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After you enter the portal, you can create the different workspaces. For each workspace, the Azure ATP service creates three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
 
 > [!NOTE]
 > Access to the Azure ATP workspace portal is only granted to users within Azure AD security groups for that workspace, and global admins and security admins.
@@ -69,7 +69,7 @@ When users try to access a page that is not available for their role group, they
 
 ## Add and remove users 
 
-Azure ATP uses Azure AD security groups as a basis for role groups. The role groups mcan be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Only AAD users can be added or removed from security groups.. 
+Azure ATP uses Azure AD security groups as a basis for role groups. The role groups can be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Only AAD users can be added or removed from security groups. 
 
 
 ## See Also

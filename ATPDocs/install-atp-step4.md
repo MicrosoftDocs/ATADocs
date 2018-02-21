@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/18/2017
+ms.date: 2/21/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,11 +38,11 @@ ms.suite: ems
 
 ## Step 4. Install the Azure ATP sensor
 
-Before installing the Azure ATP standalone sensor on a dedicated server, validate that port mirroring is properly configured and that the Azure ATP standalone sensor can see traffic to and from the domain controllers. For more information, see [Validate port mirroring](validate-port-mirroring.md).
+Before installing the Azure ATP standalone sensor on a dedicated server, validate that port mirroring is properly configured and that the Azure ATP standalone sensor can see traffic to and from the domain controllers. 
 
 
 > [!IMPORTANT]
->Make sure .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed the Azure ATP sensor setup package will install it which will require a reboot of the server. Verify that the machine has connectivity to the Azure ATP cloud service endpoint: https://triprd1wceuw1sensorapi.atp.azure.com (for Europe) or https://triprd1wcuse1sensorapi.atp.azure.com (for the US).
+>Make sure .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed the Azure ATP sensor setup package installs it, which requires a reboot of the server. Verify that the machine has connectivity to the Azure ATP cloud service endpoint: https://triprd1wceuw1sensorapi.atp.azure.com (for Europe) or https://triprd1wcuse1sensorapi.atp.azure.com (for the US).
 
 Perform the following steps on the Azure ATP sensor server or domain controller.
 
@@ -59,7 +59,7 @@ Perform the following steps on the Azure ATP sensor server or domain controller.
 
 4.  The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it is a domain controller, the Azure ATP sensor is installed, if it is a dedicated server, the Azure ATP standalone sensor is installed. 
     
-    For example, for an Azure ATP standalone sensor, the following screen is displayed to let you know that an Azure ATP standalone sensor will be installed on your dedicated server:
+    For example, for an Azure ATP standalone sensor, the following screen is displayed to let you know that an Azure ATP standalone sensor is installed on your dedicated server:
     
     ![Azure ATP standalone sensor installation](media/sensor-install-deployment-type.png)
 
@@ -82,7 +82,7 @@ Perform the following steps on the Azure ATP sensor server or domain controller.
 
         > [!IMPORTANT]
         > -   Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
-        > -   If Wireshark is installed on the the ATP sensor machine, after you run Wireshark you will need to reatart the ATP sensor, because it uses the same drivers.
+        > -   If Wireshark is installed on the ATP sensor machine, after you run Wireshark you need to restart the ATP sensor, because it uses the same drivers.
 
     -   Azure ATP sensor service and Azure ATP sensor updater service
     -   Microsoft Visual C++ 2013 Redistributable
