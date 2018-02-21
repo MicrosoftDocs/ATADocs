@@ -19,7 +19,7 @@ ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -32,6 +32,9 @@ ms.suite: ems
 
 Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP, for an even more complete threat protection solution. While Azure ATP monitors the traffic on your domain controllers, Windows Defender ATP monitors your endpoints, together providing a single interface from which you can protect your environment.
 
+> [!NOTE]
+> Integration is currently enabled only if you are a Windows Defender ATP private preview customer.
+ 
 By integrating Windows Defender ATP into Azure ATP, you can leverage the full power of both services and secure your environment, including:
 
 - Azure ATP sensors and standalone sensors: Can sit directly on your domain controllers or port mirror from your domain controllers to ATP, to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM, and others) for authentication, authorization, and information gathering. 
@@ -83,7 +86,7 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
  ![Windows Defender ATP enable integration](./media/wd-atp-enable.png)
 
-5. To check the status of the integration, in the Azure ATP workspace portal, go to **Settings** and then **Windows Defender ATP integration**. You can see the status of the integration; if something is wrong you see an error. You can also see which Workspace is integrated with Windows Defender ATP.
+5. To check the status of the integration, in the Azure ATP workspace portal, go to **Settings** and then **Windows Defender ATP integration**. You can see the status of the integration; if something is wrong you see an error. You can also see which workspace is integrated with Windows Defender ATP.
 
 ## How it works
 

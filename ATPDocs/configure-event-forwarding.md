@@ -19,7 +19,7 @@ ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,21 +33,21 @@ ms.suite: ems
 # Configuring Windows Event Forwarding
 
 > [!NOTE]
-> The Azure ATP Sensor will automatically read events locally, without the need to configure event forwarding.
+> The Azure ATP sensor will automatically read events locally, without the need to configure event forwarding.
 
 
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by configuring Windows Event Forwarding.
+To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by configuring Windows Event Forwarding.
 
 > [!NOTE]
 > Check that the domain controller is properly configured to capture the required events.
 
-### WEF configuration for Azure ATP Standalone Sensor's with port mirroring
+### WEF configuration for Azure ATP standalone sensor's with port mirroring
 
-After you configured port mirroring from the domain controllers to the Azure ATP Standalone Sensor, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
+After you configured port mirroring from the domain controllers to the Azure ATP standalone sensor, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
 
 **Step 1: Add the network service account to the domain Event Log Readers Group.** 
 
-In this scenario, assume that the Azure ATP Standalone Sensor is a member of the domain.
+In this scenario, assume that the Azure ATP standalone sensor is a member of the domain.
 
 1.	Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**. 
 2.	Select **Members**.
@@ -57,7 +57,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
 > [!Note] 
-> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Azure ATP Standalone Sensor. The steps below modify the local policy of the domain controller. 	
+> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Azure ATP standalone sensor. The steps below modify the local policy of the domain controller. 	
 
 1.	Run the following command on each domain controller: *winrm quickconfig*
 2.  From a command prompt type *gpedit.msc*.
@@ -76,7 +76,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     5.	Click **OK**.
     6.	From an elevated command prompt type *gpupdate /force*. 
 
-**Step 3: Perform the following steps on the Azure ATP Standalone Sensor** 
+**Step 3: Perform the following steps on the Azure ATP standalone sensor** 
 
 1.	Open an elevated command prompt and type *wecutil qc*
 2.	Open **Event Viewer**. 
@@ -100,7 +100,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
  ![Query filter image](media/wef 4 query filter.png)
 
    5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
-   6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP Standalone Sensor.
+   6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP standalone sensor.
 
 
 For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)

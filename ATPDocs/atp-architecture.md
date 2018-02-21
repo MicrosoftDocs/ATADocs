@@ -19,7 +19,7 @@ ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,9 +34,9 @@ The Azure Advanced Threat Protection architecture is detailed in this diagram:
 
 ![Azure ATP architecture topology diagram](media/atp-architecture-topology.png)
 
-Azure ATP monitors your domain controller network traffic by utilizing port mirroring to an Azure ATP Standalone Sensor using physical or virtual switches. If you deploy the Azure ATP Sensor directly on your domain controllers, it removes the requirement for port mirroring. In addition, Azure ATP can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats. Azure ATP receives parsed traffic from the Azure ATP Standalone Sensor and Azure ATP Sensor. It then performs profiling, runs deterministic detection, and runs machine learning and behavioral algorithms to learn about your network, enable detection of anomalies and warn you of suspicious activities.
+Azure ATP monitors your domain controller network traffic by utilizing port mirroring to an Azure ATP standalone sensor using physical or virtual switches. If you deploy the Azure ATP sensor directly on your domain controllers, it removes the requirement for port mirroring. In addition, Azure ATP can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats. Azure ATP receives parsed traffic from the Azure ATP standalone sensor and Azure ATP sensor. It then performs profiling, runs deterministic detection, and runs machine learning and behavioral algorithms to learn about your network, enable detection of anomalies and warn you of suspicious activities.
 
-This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATP: the Azure ATP Standalone Sensor, Azure ATP Sensor (which has the same core functionality as the Azure ATP Standalone Sensor), and the Azure ATP cloud service. 
+This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATP: the Azure ATP standalone sensor, Azure ATP sensor (which has the same core functionality as the Azure ATP standalone sensor), and the Azure ATP cloud service. 
 
 ## Azure ATP Components
 Azure ATP consists of the following components:
@@ -63,7 +63,7 @@ You can deploy Azure ATP using the following combination of sensors:
 Your Azure ATP deployment can contain only Azure ATP sensors: The Azure ATP sensors are deployed on each domain controller and no additional servers or port mirroring configuration is necessary.
 
 -	**Using only Azure ATP standalone sensors** <br>
-Your Azure ATP deployment can contain only Azure ATP standalone sensors, without any Azure ATP sensors: All the domain controllers must be configured to enable port mirroring to an Azure ATP Standalone Sensor or network TAPs must be in place.
+Your Azure ATP deployment can contain only Azure ATP standalone sensors, without any Azure ATP sensors: All the domain controllers must be configured to enable port mirroring to an Azure ATP standalone sensor or network TAPs must be in place.
 
 -	**Using both Azure ATP standalone sensors and Azure ATP sensors**<br>
 Your Azure ATP deployment includes both Azure ATP standalone sensors and Azure ATP sensors. The Azure ATP sensors are installed on some of your domain controllers (for example, all domain controllers in your branch sites). At the same time, other domain controllers are monitored by Azure ATP standalone sensors (for example, the larger domain controllers in your main data centers).
@@ -122,9 +122,9 @@ The **Azure ATP sensor** and **Azure ATP sensor** both have the same core functi
 
 -   Transfer relevant data to the Azure ATP cloud service
 
--   Monitor multiple domain controllers from a single Azure ATP Standalone Sensor, or monitor a single domain controller for an Azure ATP Sensor.
+-   Monitor multiple domain controllers from a single Azure ATP standalone sensor, or monitor a single domain controller for an Azure ATP sensor.
 
-The Azure ATP Standalone Sensor receives network traffic and Windows Events from your network and processes it in the following main components:
+The Azure ATP standalone sensor receives network traffic and Windows Events from your network and processes it in the following main components:
 
 |||
 |-|-|
@@ -135,11 +135,11 @@ The Azure ATP Standalone Sensor receives network traffic and Windows Events from
 |Entity Resolver|The Entity Resolver takes the parsed data (network traffic and events) and resolves it data with Active Directory to find account and identity information. It is then matched with the IP addresses found in the parsed data. The Entity Resolver inspects the packet headers efficiently, to enable parsing of authentication packets for machine names, properties, and identities. The Entity Resolver combines the parsed authentication packets with the data in the actual packet.|
 |Entity Sender|The Entity Sender sends the parsed and matched data to the Azure ATP cloud service.|
 
-## Azure ATP Sensor features
+## Azure ATP sensor features
 
-The following features work differently depending on whether you are running an Azure ATP Standalone Sensor or an Azure ATP Sensor.
+The following features work differently depending on whether you are running an Azure ATP standalone sensor or an Azure ATP sensor.
 
--	The Azure ATP Sensor can read events locally, without the need to configure event forwarding.
+-	The Azure ATP sensor can read events locally, without the need to configure event forwarding.
 
 -	**Domain synchronizer candidate**<br>
 The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
@@ -150,16 +150,16 @@ Azure ATP sensors are not synchronizer candidates by default.
 
 
 -	**Resource limitations**<br>
-The Azure ATP Sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Azure ATP Sensor process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
+The Azure ATP sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Azure ATP sensor process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
 No matter what happens on the domain controller, this process always frees up resources to make sure the domain controller's core functionality is not affected.<br><br>
-If this causes the Azure ATP Sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Health page.
+If this causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Health page.
 
 The following table provides an example of a domain controller with enough compute resource available to allow for a larger quota then is currently needed, so that all traffic is monitored:
 
 > [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
-|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.Sensor.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
+|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.sensor.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
 |30%|20%|10%|45%|No|
 
 If Active Directory needs more computing power, the quota needed by the Azure ATP sensor is reduced. In the following example, The Azure ATP sensor needs more than the allocated quota and drops some of the traffic (monitoring only partial traffic):
@@ -167,7 +167,7 @@ If Active Directory needs more computing power, the quota needed by the Azure AT
 > [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
-|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.Sensor.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
+|Active Directory (Lsass.exe)|Azure ATP sensor (Microsoft.Tri.sensor.exe)|Miscellaneous (other processes) |Azure ATP sensor quota|Is sensor dropping traffic?|
 |60%|15%|10%|15%|Yes|
 
 
@@ -175,19 +175,19 @@ If Active Directory needs more computing power, the quota needed by the Azure AT
 In order to work with Azure ATP, make sure to check that the following components are set up.
 
 ### Port mirroring
-If you are using Azure ATP standalone sensors, you have to set up port mirroring for the domain controllers that are monitored and set the Azure ATP Standalone Sensor as the destination using the physical or virtual switches. Another option is to use network TAPs. Azure ATP works if some but not all of your domain controllers are monitored, but detections are less effective.
+If you are using Azure ATP standalone sensors, you have to set up port mirroring for the domain controllers that are monitored and set the Azure ATP standalone sensor as the destination using the physical or virtual switches. Another option is to use network TAPs. Azure ATP works if some but not all of your domain controllers are monitored, but detections are less effective.
 
-While port mirroring mirrors all the domain controller network traffic to the Azure ATP Standalone Sensor, only a small percentage of that traffic is then sent, compressed, to the Azure ATP cloud service for analysis.
+While port mirroring mirrors all the domain controller network traffic to the Azure ATP standalone sensor, only a small percentage of that traffic is then sent, compressed, to the Azure ATP cloud service for analysis.
 
 Your domain controllers and the Azure ATP standalone sensors can be physical or virtual, see [Configure port mirroring](configure-port-mirroring.md) for more information.
 
 
 ### Events
-To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups, creation of suspicious services, modifications to Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP Sensor or in case the Azure ATP Sensor is not deployed, it can be forwarded to the Azure ATP Standalone Sensor in one of two ways, by configuring the Azure ATP Standalone Sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance Azure ATP detection of Pass-the-Hash, Brute Force, Modification to sensitive groups, creation of suspicious services, modifications to Honey Tokens, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
--   Configuring the Azure ATP Standalone Sensor to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATP. Azure ATP supports a number of SIEM vendors. For more information, see [Configure event forwarding](configure-event-forwarding.md).
+-   Configuring the Azure ATP standalone sensor to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATP. Azure ATP supports a number of SIEM vendors. For more information, see [Configure event forwarding](configure-event-forwarding.md).
 
--   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to your Azure ATP Standalone Sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-forwarding.md). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP Sensor.
+-   Configuring Windows Event Forwarding<br>Another way Azure ATP can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to your Azure ATP standalone sensor. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATP. For more information about Windows Event Forwarding in ATP, see [Configuring Windows event forwarding](configure-event-forwarding.md). This only applies to physical Azure ATP standalone sensors - not to the Azure ATP sensor.
 
 
 ## See Also

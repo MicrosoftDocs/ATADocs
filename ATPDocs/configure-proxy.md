@@ -19,7 +19,7 @@ ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -66,5 +66,5 @@ If the result is “Result Compared: Different” this means that proxy is set f
 
 
 ## See Also
-- [Validate port mirroring](validate-port-mirroring.md)
+- [Configure event forwarding](configure-event-forwarding.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

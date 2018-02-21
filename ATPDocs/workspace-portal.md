@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/20/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -19,7 +19,7 @@ ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -36,6 +36,11 @@ Use the Azure ATP workspace portal to monitor and respond to suspicious activity
 
 Typing the `?` key provides keyboard shortcuts for Azure ATP workspace portal accessibility. 
 
+The Azure ATP workspace portal provides you a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The workspace portal also displays alerts and notifications to highlight problems seen by Azure ATP or new activities that are deemed suspicious.
+
+This article describes how to work with the key elements of the Azure ATP workspace portal.
+
+
 ## Enabling access to the Azure ATP workspace portal
 To successfully log in to the Azure ATP workspace portal, you have to log in with a user who was assigned the proper Azure Active Directory security group to access the Azure ATP workspace portal. 
 For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
@@ -49,13 +54,6 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 
  > [!NOTE]
  > Make sure to log on to the computer from which you want to access the Azure ATP workspace portal using your Azure ATP admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. 
-
-
-## The Azure ATP workspace portal
-
-The Azure ATP workspace portal provides you a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The workspace portal also displays alerts and notifications to highlight problems seen by Azure ATP or new activities that are deemed suspicious.
-
-These are the key elements of the Azure ATP workspace portal.
 
 
 ### Attack time line
@@ -90,13 +88,13 @@ The Health center provides you with alerts when something isn't working properly
 
 ![Azure ATP health center image](media/atp-health-issue.png)
 
-Any time your system encounters a problem, such as a connectivity error or a disconnected Azure ATP Standalone Sensor, the Health Center icon lets you know by displaying a red dot. 
+Any time your system encounters a problem, such as a connectivity error or a disconnected Azure ATP standalone sensor, the Health Center icon lets you know by displaying a red dot. 
 
 ![Azure ATP health center red dot image](media/atp-health-bar.png)
 
 ### Sensitive groups
 
-For information on sensitive groups in ATP, see [Working with sensitive groups](tag-sensitive-accounts.md).
+For information on sensitive groups in ATP, see [Working with sensitive groups](sensitive-accounts.md).
 
 ### Mini profile
 

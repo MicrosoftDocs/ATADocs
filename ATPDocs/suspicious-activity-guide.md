@@ -19,7 +19,7 @@ ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -49,7 +49,7 @@ For more information on how to work with Azure ATP alerts, see [Working with sus
 
 Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATP. The minimum period before an alert can be triggered is one month per each domain controller.
 
-For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](tag-sensitive-accounts.md).
+For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
 
 
 The detection relies on [events audited on domain controllers](configure-event-collection.md).
@@ -140,7 +140,7 @@ security policy.
 
 1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
 
-2. Is the Azure ATP Standalone Sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
+2. Is the Azure ATP standalone sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
 
 3. If the answer to the above questions is no, assume this is malicious.
 
@@ -200,7 +200,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Investigation**
 
-1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? Are one or more of the source IP addresses not being resolved by the Sensor? (this could an indication that the proper ports from the sensor to the devices are not properly opened.) If the answer to any of these questions is yes, then it is a false positive.
+1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? Are one or more of the source IP addresses not being resolved by the sensor? (this could an indication that the proper ports from the sensor to the devices are not properly opened.) If the answer to any of these questions is yes, then it is a false positive.
 
 2. Is there a custom application that forwards tickets on behalf of users? If so, it is a benign true positive.
 
@@ -351,7 +351,7 @@ There are several query types in the DNS protocol. Azure ATP detects the AXFR (T
 
 **Investigation**
 
-1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between Azure ATP Standalone Sensors and the source computer to prevent future false positives.
+1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between Azure ATP standalone sensor and the source computer to prevent future false positives.
 
 2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for Azure ATP admins).
 

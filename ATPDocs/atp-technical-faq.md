@@ -19,7 +19,7 @@ ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -44,7 +44,7 @@ You can simulate suspicious activities which is an end to end test by doing the 
 -  DNS reconnaissance by using Nslookup.exe
 
 
-This needs to run remotely against the domain controller being monitored and not from the Azure ATP Standalone Sensor.
+This needs to run remotely against the domain controller being monitored and not from the Azure ATP standalone sensor.
 
 
 ## Does Azure ATP work with encrypted traffic?
@@ -54,23 +54,23 @@ Azure ATP relies on analyzing multiple network protocols, as well as events coll
 ## Does Azure ATP work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATP, with the exception of over-pass the hash detection which will not work.
 
-## How many Azure ATP Sensors do I need?
+## How many Azure ATP sensor do I need?
 
-Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP Sensor Sizing](atp-capacity-planning.md#azure-atp-standalone-sensor-sizing). 
+Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP sensor Sizing](atp-capacity-planning.md#sizing). 
 
 
 ## Why are certain accounts considered sensitive?
 This happens when an account is a member of certain groups which we designate as sensitive (for example: "Domain Admins").
 
-To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also [tag accounts as sensitive manually](tag-sensitive-accounts.md).
+To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also [tag accounts as sensitive manually](sensitive-accounts.md).
 
 ## How do I monitor a virtual domain controller using Azure ATP?
-Most virtual domain controllers can be covered by the Azure ATP Sensor, to determine whether the Azure ATP Sensor is appropriate for your environment, see [Azure ATP Capacity Planning](atp-capacity-planning.md).
+Most virtual domain controllers can be covered by the Azure ATP sensor, to determine whether the Azure ATP sensor is appropriate for your environment, see [Azure ATP Capacity Planning](atp-capacity-planning.md).
 
-If a virtual domain controller can't be covered by the Azure ATP Sensor, you can have either a virtual or physical Azure ATP Standalone Sensor as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual Azure ATP Standalone Sensor on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following steps:
+If a virtual domain controller can't be covered by the Azure ATP sensor, you can have either a virtual or physical Azure ATP standalone sensor as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual Azure ATP standalone sensor on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
--   When the virtual domain controller moves to another host, preconfigure the Azure ATP Standalone Sensor in that host to receive the traffic from the recently moved virtual domain controller.
--   Make sure that you affiliate the virtual Azure ATP Standalone Sensor with the virtual domain controller so that if it is moved, the Azure ATP Standalone Sensor moves with it.
+-   When the virtual domain controller moves to another host, preconfigure the Azure ATP standalone sensor in that host to receive the traffic from the recently moved virtual domain controller.
+-   Make sure that you affiliate the virtual Azure ATP standalone sensor with the virtual domain controller so that if it is moved, the Azure ATP standalone sensor moves with it.
 -   There are some virtual switches that can send traffic between hosts.
 
 
@@ -79,8 +79,8 @@ If a virtual domain controller can't be covered by the Azure ATP Sensor, you can
 Azure ATP detects known malicious attacks and techniques, security issues, and risks.
 For the full list of Azure ATP detections, see [What detections does Azure ATP perform?](suspicious-activity-guide.md).
 
-## How many NICs does the Azure ATP Standalone Sensor require?
-The Azure ATP Standalone Sensor needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the Azure ATP cloud service<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the Azure ATP Sensor, which natively uses all of the network adapters that the domain controller uses.
+## How many NICs does the Azure ATP standalone sensor require?
+The Azure ATP standalone sensor needs a minimum of two network adapters:<br>1. A NIC to connect to the internal network and the Azure ATP cloud service<br>2. A NIC that is used to capture the domain controller network traffic via port mirroring.<br>* This does not apply to the Azure ATP sensor, which natively uses all of the network adapters that the domain controller uses.
 
 ## What kind of integration does Azure ATP have with SIEMs?
 Azure ATP has a bi-directional integration with SIEMs as follows:
@@ -94,7 +94,7 @@ For your domain controllers to communicate with the cloud service, you must open
  
 
 ## Can Azure ATP monitor domain controllers virtualized on your IaaS solution?
-Yes, you can use the Azure ATP Sensor to monitor domain controllers that are in any IaaS solution.
+Yes, you can use the Azure ATP sensor to monitor domain controllers that are in any IaaS solution.
 
 ## Is this going to be a part of Azure Active Directory or on-premises Active Directory?
 This solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.

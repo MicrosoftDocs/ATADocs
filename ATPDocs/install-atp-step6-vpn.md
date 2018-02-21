@@ -19,7 +19,7 @@ ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -51,9 +51,8 @@ Azure ATP integrates with your VPN solution by listening to RADIUS accounting ev
 
 To enable VPN integration, make sure you set the following parameters:
 
--	Open port UDP 1813 on your Azure ATP standalone sensors and Azure ATP Sensors.
+-	Open port UDP 1813 on your Azure ATP standalone sensors and Azure ATP sensor.
 
--	Connect the Azure ATP cloud service to the Internet so that it can query the location of incoming IP addresses.
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 

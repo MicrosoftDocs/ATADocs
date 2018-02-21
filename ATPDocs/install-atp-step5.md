@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install Azure Advanced Threat Protection - Step 5 | Microsoft Docs
-description: Step five of installing Azure ATP helps you configure settings for your Azure ATP Standalone Sensor.
+description: Step five of installing Azure ATP helps you configure settings for your Azure ATP standalone sensor.
 keywords:
 author: rkarlin
 ms.author: rkarlin
@@ -19,7 +19,7 @@ ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -34,13 +34,13 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« Step 4](install-atp-step4.md)
-[Step 6 »](vpn-integration-install-step.md)
+[Step 6 »](install-atp-step6-vpn.md)
 
 
 ## Step 5. Configure the Azure ATP sensor settings
 After the Azure ATP sensor was installed, perform the following steps to configure the settings for the Azure ATP sensor.
 
-1.  In the Azure ATP workspace portal, go to **Configuration** and, under **System**, select **Sensors**.
+1.  In the Azure ATP workspace portal, go to **Configuration** and, under **System**, select **sensor**.
    
      ![Configure sensor settings image](media/atp-sensor-config.png)
 
@@ -62,7 +62,7 @@ After the Azure ATP sensor was installed, perform the following steps to configu
 
 
   - **Domain synchronizer candidate**: Any Azure ATP standalone sensor set to be a domain synchronizer candidate can be responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only Azure ATP standalone sensors are set as Domain synchronizer candidates.
-   It is recommended that you disable any remote site Azure ATP Sensors from being Domain synchronizer candidates.
+   It is recommended that you disable any remote site Azure ATP sensor from being Domain synchronizer candidates.
    If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [Azure ATP architecture](atp-architecture.md#azure-atp-sensor-features).
   
 4. Click **Save**.
@@ -71,9 +71,9 @@ After the Azure ATP sensor was installed, perform the following steps to configu
 ## Validate installations
 To validate that the Azure ATP sensor has been successfully deployed, check the following steps:
 
-1.  Check that the service named **Azure Advanced Threat Protection Sensor** is running. After you save the Azure ATP sensor settings, it might take a few seconds for the service to start.
+1.  Check that the service named **Azure Advanced Threat Protection sensor** is running. After you save the Azure ATP sensor settings, it might take a few seconds for the service to start.
 
-2.  If the service does not start, review the “Microsoft.Tri.Sensor-Errors.log” file located in the following default folder, “%programfiles%\Azure Advanced Threat Protection Sensor\Version X\Logs”.
+2.  If the service does not start, review the “Microsoft.Tri.sensor-Errors.log” file located in the following default folder, “%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs”.
  
  >[!NOTE]
  > The version of Azure ATP updates frequently, to check the latest version, in the Azure ATP workplace portal, go to **Configuration** and then **About**. 
@@ -84,7 +84,7 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 
 >[!div class="step-by-step"]
 [« Step 4](install-atp-step4.md)
-[Step 6 »](vpn-integration-install-step.md)
+[Step 6 »](install-atp-step6-vpn.md)
 
 
 ## See Also

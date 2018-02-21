@@ -19,7 +19,7 @@ ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -39,28 +39,28 @@ Azure ATP  requires the installation of Microsoft .NET Framework 4.7.
 When you install Azure ATP, .Net Framework 4.7 is automatically installed as part of the deployment of Azure ATP.
 
 > [!Note] 
-> The installation of .Net framework 4.7 may require rebooting the server. When installing Azure ATP Sensor on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
+> The installation of .Net framework 4.7 may require rebooting the server. When installing Azure ATP sensor on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
 When using Azure ATP silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
 
 To track the progress of the deployment, monitor Azure ATP installer logs, which are located in **%AppData%\Local\Temp**.
 
 
 
-## Azure ATP Sensor silent installation
+## Azure ATP sensor silent installation
 
 > [!NOTE]
-> When silently deploying the Azure ATP Sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 including rebooting the domain controller</br>- Azure ATP Sensor. </br>Make the Azure ATP Sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
+> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 including rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
 
 
-Use the following command to silently install the Azure ATP Sensor:
+Use the following command to silently install the Azure ATP sensor:
 
 **Syntax**:
 
-    Azure ATP Sensor Setup.exe [/AccessKey=<Access Key>] [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Azure ATP sensor Setup.exe [/AccessKey=<Access Key>] [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
    
 
 > [!NOTE]
-> Copy the access key from the workspace portal under **Configuration** and then **Sensors**.
+> Copy the access key from the workspace portal under **Configuration** and then **sensor**.
 
 
 **Installation options**:
@@ -77,22 +77,22 @@ Use the following command to silently install the Azure ATP Sensor:
 > [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="**"|Yes|Sets the access key that is used to register the Azure ATP Sensor with the Azure ATP workspace.|
+|AccessKey|AccessKey="**"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP workspace.|
 
 **Examples**:
-To silently install the Azure ATP Sensor, log into the domain joined computer with your Azure ATP admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the Azure ATP cloud service using the specified credentials:
+To silently install the Azure ATP sensor, log into the domain joined computer with your Azure ATP admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the Azure ATP cloud service using the specified credentials:
 
-    "Azure ATP Sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
+    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
     
 
-## Update the Azure ATP Sensor
+## Update the Azure ATP sensor
 
-Use the following command to silently update the Azure ATP Sensor:
+Use the following command to silently update the Azure ATP sensor:
 
 **Syntax**:
 
-    Azure ATP  Sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+    Azure ATP  sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installation options**:
@@ -106,16 +106,16 @@ Use the following command to silently update the Azure ATP Sensor:
 
 
 **Examples**:
-To update the Azure ATP Sensor silently:
+To update the Azure ATP sensor silently:
 
-    	Azure ATP Sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+    	Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Uninstall the Azure ATP Sensor silently
+## Uninstall the Azure ATP sensor silently
 
-Use the following command to perform a silent uninstall of the Azure ATP Sensor:
+Use the following command to perform a silent uninstall of the Azure ATP sensor:
 **Syntax**:
 
-    Azure ATP Sensor Setup.exe [/quiet] [/Uninstall] [/Help]
+    Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
     
 **Installation options**:
 
@@ -123,14 +123,14 @@ Use the following command to perform a silent uninstall of the Azure ATP Sensor:
 |Name|Syntax|Mandatory for silent uninstallation?|Description|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Azure ATP Sensor from the server.|
+|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Azure ATP sensor from the server.|
 |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Examples**:
-To silently uninstall the Azure ATP Sensor from the server:
+To silently uninstall the Azure ATP sensor from the server:
 
 
-    Azure ATP Sensor Setup.exe /quiet /uninstall
+    Azure ATP sensor Setup.exe /quiet /uninstall
     
 
 

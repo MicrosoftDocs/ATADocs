@@ -19,7 +19,7 @@ ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -56,5 +56,5 @@ To receive notifications to a specific email address, set the following paramete
 
 - [Configure event collection](configure-event-collection.md)
 
-- [Set Syslog settings](setting-syslog-email-server-settings.md)
+- [Set Syslog settings](setting-syslog.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

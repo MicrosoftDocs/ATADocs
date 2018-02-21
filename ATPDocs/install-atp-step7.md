@@ -19,7 +19,7 @@ ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -33,7 +33,8 @@ ms.suite: ems
 # Install Azure ATP - Step 7
 
 >[!div class="step-by-step"]
-[« Step 6](vpn-integration-install-step.md)
+[« Step 6](install-atp-step6-vpn.md)
+[Step 8 »](install-atp-step8-samr.md)
 
 ## Step 7. Configure detection exclusions and honeytoken user
 
@@ -71,9 +72,8 @@ Azure ATP starts scanning for suspicious activities immediately. Some detections
 
 
 >[!div class="step-by-step"]
-[« Step 6](vpn-integration-install-step.md)
-
-
+[« Step 6](install-atp-step6-vpn.md)
+[Step 8 »](install-atp-step8-samr.md)
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)

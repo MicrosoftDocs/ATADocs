@@ -19,7 +19,7 @@ ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:

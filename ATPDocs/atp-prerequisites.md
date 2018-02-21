@@ -19,7 +19,7 @@ ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: itargoet
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -37,7 +37,7 @@ This article describes the requirements for a successful deployment of Azure ATP
 > For information on how to plan resources and capacity, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 
-Azure ATP is composed of the Azure ATP cloud service, which consists of the workspace management portal and a workspace portal, the Azure ATP Standalone sensor and/or the Azure ATP sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
+Azure ATP is composed of the Azure ATP cloud service, which consists of the workspace management portal and a workspace portal, the Azure ATP standalone sensor and/or the Azure ATP sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
 
 Each Azure ATP workspace supports an Active Directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above. For deployments with multiple forests, a separate Azure ATP workspace is required for each forest.
 
@@ -48,9 +48,9 @@ Each Azure ATP workspace supports an Active Directory forest boundary and suppor
 
 [Azure ATP workspace portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): This section describes browser requirements for running the Azure ATP workspace portal.
 
-[Azure ATP Standalone Sensor](#azure-atp-sensor-requirements): This section lists Azure ATP Standalone Sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP Standalone Sensor servers.
+[Azure ATP standalone sensor](#azure-atp-sensor-requirements): This section lists Azure ATP standalone sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP standalone sensor servers.
 
-[Azure ATP Sensor](#azure-atp-lightweight-sensor-requirements): This section lists Azure ATP Sensor hardware, and software requirements.
+[Azure ATP sensor](#azure-atp-lightweight-sensor-requirements): This section lists Azure ATP sensor hardware, and software requirements.
 
 ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
 
@@ -63,7 +63,7 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   If you run Wireshark on Azure ATP Standalone Sensor, you will need to restart the Azure Advanced Threat Protection Sensor Service after you have stopped the Wireshark capture. If not, the Sensor stops capturing traffic.
+-   If you run Wireshark on Azure ATP standalone sensor, you will need to restart the Azure Advanced Threat Protection sensor Service after you have stopped the Wireshark capture. If not, the sensor stops capturing traffic.
 
 - If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you will receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, contact your Azure ATP support representative.
 
@@ -82,29 +82,29 @@ Access to the Azure ATP workspace portal and the Azure ATP workspace management 
 -	Minimum screen width resolution of 1700 pixels
 -	Firewall/proxy open - To communicate with the Azure ATP cloud service, you must have open: *.atp.azure.com port 443 in your firewall/proxy. 
 
-## Azure ATP Standalone Sensor requirements
-This section lists the requirements for the Azure ATP Standalone Sensor.
+## Azure ATP standalone sensor requirements
+This section lists the requirements for the Azure ATP standalone sensor.
 ### General
-The Azure ATP Standalone Sensor supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
-The Azure ATP Standalone Sensor can be installed on a server that is a member of a domain or workgroup.
-The Azure ATP Standalone Sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
+The Azure ATP standalone sensor supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
+The Azure ATP standalone sensor can be installed on a server that is a member of a domain or workgroup.
+The Azure ATP standalone sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
 For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
 
-For information on using virtual machines with the Azure ATP Standalone Sensor, see [Configure port mirroring](configure-port-mirroring.md).
+For information on using virtual machines with the Azure ATP standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
 > A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
 
 ### Server specifications
-For optimal performance, set the **Power Option** of the Azure ATP Standalone Sensor to **High Performance**.<br>
-An Azure ATP Standalone Sensor can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
+For optimal performance, set the **Power Option** of the Azure ATP standalone sensor to **High Performance**.<br>
+An Azure ATP standalone sensor can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
 >[!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
-For more information about the Azure ATP Standalone Sensor hardware requirements, see [Azure ATP capacity planning](atp-capacity-planning.md).
+For more information about the Azure ATP standalone sensor hardware requirements, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 ### Time synchronization
 
@@ -112,7 +112,7 @@ The servers and domain controllers onto which the sensor is installed must have 
 
 
 ### Network adapters
-The Azure ATP Standalone Sensor requires at least one Management adapter and at least one Capture adapter:
+The Azure ATP standalone sensor requires at least one Management adapter and at least one Capture adapter:
 
 -   **Management adapter** - used for communications on your corporate network. This adapter should be configured with the following settings:
 
@@ -125,7 +125,7 @@ The Azure ATP Standalone Sensor requires at least one Management adapter and at 
         ![Configure DNS suffix in advanced TCP/IP settings](media/ATP-DNS-Suffix.png)
 
         > [!NOTE]
-        > If the Azure ATP Standalone Sensor is a member of the domain, this may be configured automatically.
+        > If the Azure ATP standalone sensor is a member of the domain, this may be configured automatically.
 
 -   **Capture adapter** - used to capture traffic to and from the domain controllers.
 
@@ -134,7 +134,7 @@ The Azure ATP Standalone Sensor requires at least one Management adapter and at 
     > -   Configure a static non-routable IP address for your environment with no default sensor and no DNS server addresses. For example, 1.1.1.1/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
-The following table lists the minimum ports that the Azure ATP Standalone Sensor requires configured on the management adapter:
+The following table lists the minimum ports that the Azure ATP standalone sensor requires configured on the management adapter:
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
@@ -153,7 +153,7 @@ The following table lists the minimum ports that the Azure ATP Standalone Sensor
 |RADIUS|UDDP|1813|RADIUS|Inbound|
 
 > [!NOTE]
-> - Using the Directory service user account, the sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
+> - Using the Directory service user account, the sensor will query endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information see [Configure SAM-R required permissions](install-atp-step8-samr.md).
 > - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
@@ -163,7 +163,7 @@ The following table lists the minimum ports that the Azure ATP Standalone Sensor
 ## Azure ATP sensor requirements
 This section lists the requirements for the Azure ATP sensor.
 ### General
-The Azure ATP Sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
+The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
 
 The domain controller can be a read-only domain controller (RODC).
 
@@ -177,14 +177,14 @@ During installation, the .Net Framework 4.7 is installed and might cause a reboo
 
 ### Server specifications
 
-The Azure ATP Sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
-For optimal performance, set the **Power Option** of the Azure ATP Sensor to **High Performance**.
-The Azure ATP Sensor can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
+The Azure ATP sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
+For optimal performance, set the **Power Option** of the Azure ATP sensor to **High Performance**.
+The Azure ATP sensor can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
 >[!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
-For more information about the Azure ATP Sensor hardware requirements, see [Azure ATP capacity planning](atp-capacity-planning.md).
+For more information about the Azure ATP sensor hardware requirements, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 ### Time synchronization
 
@@ -192,13 +192,13 @@ The servers and domain controllers onto which the sensor is installed must have 
 
 ### Network adapters
 
-The Azure ATP Sensor monitors the local traffic on all of the domain controller's network adapters. <br>
+The Azure ATP sensor monitors the local traffic on all of the domain controller's network adapters. <br>
 After deployment, you can use the Azure ATP workspace portal if you ever want to modify which network adapters are monitored.
 
-The Sensor is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
+The sensor is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
 ### Ports
-The following table lists the minimum ports that the Azure ATP Sensor requires:
+The following table lists the minimum ports that the Azure ATP sensor requires:
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
