@@ -56,7 +56,7 @@ To check up on your workspace's overall health, click the Health Center icon in 
 
 -   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
 
--   **Reopen**: If you close or suppress an issue you can reopen it so that it appears Open in the timeline again.
+-   **Reopen**: If you close or suppress an issue, you can reopen it so that it appears Open in the timeline again.
 - 
 - **Delete**: From within the suspicious activities timeline, you also have the option to delete a health issue. If you Delete an alert, it is deleted from the workspace and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
 

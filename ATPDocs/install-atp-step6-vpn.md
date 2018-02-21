@@ -56,7 +56,7 @@ To enable VPN integration, make sure you set the following parameters:
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 
-If you’re using a third party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
+If you’re using a third-party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
 
 ## Configure RADIUS Accounting on the VPN system
 

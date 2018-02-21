@@ -36,7 +36,7 @@ This article helps you determine how many Azure ATP sensors and standalone senso
 > The sizing tool has two sheets - one for ATA and one for Azure ATP. Make sure you are on the correct sheet.
 
 ## Using the sizing tool
-The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/aatpsizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the memory and CPU that will be used by the sensor:
+The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/aatpsizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the memory and CPU that used by the sensor:
 
 - Azure ATP  sensor: Match the **Busy Packets/sec** field in the Azure ATP  sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP standalone sensor table](#azure-atp-sensor-sizing) or the [Azure ATP sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
@@ -64,7 +64,7 @@ When deciding the sensor deployment type, consider the following benefits:
 Consider the following issues when deciding how many Azure ATP standalone sensors to deploy.
 
 -	**Active Directory forests and domains**<br>
-	Azure ATP can monitor traffic from multiple domains withing a single Active Directory forest for each workspace you create. To monitor multiple forests, you need to create multiple Workspaces. 
+	Azure ATP can monitor traffic from multiple domains within a single Active Directory forest for each workspace you create. To monitor multiple forests, you need to create multiple Workspaces. 
 
 -	**Port Mirroring**<br>
 Port mirroring considerations might require you to deploy multiple Azure ATP standalone sensors per data center or branch site.
@@ -75,7 +75,7 @@ Port mirroring considerations might require you to deploy multiple Azure ATP sta
 
 ## Azure ATP sensor and standalone sensor sizing <a name="sizing"></a>
 
-An Azure ATP sensor can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. The following table is an estimate, the final amount that the sensor will parse is dependant on the amount of traffic you have. 
+An Azure ATP sensor can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. The following table is an estimate, the final amount that the sensor parses is dependent on the amount of traffic you have. 
 
 
 |Packets per second*|CPU (cores)|Memory (GB)|
@@ -130,7 +130,7 @@ To determine packets per second, perform the following steps on each domain cont
 
     ![Add performance counters image](media/atp-traffic-estimation-7.png)
 
-8.  Change the **Sample interval** to **5 seconds**.
+8.  Change the **Sample interval** to **five seconds**.
 
 9. Set the location where you want the data to be saved.
 

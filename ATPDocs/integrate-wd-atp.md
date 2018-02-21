@@ -100,7 +100,7 @@ If the entity contains alerts in Windows Defender ATP, there is a number next to
 
 If you click on the badge, you are brought to the Windows Defender ATP portal where you can view and mitigate the alerts. If the entity is not recognized by Windows Defender ATP, the badge is grayed out. 
 
- ![Windows Defender ATP grey](./media/wd-grey.png)
+ ![Windows Defender ATP gray](./media/wd-grey.png)
 
 In the Windows Defender ATP portal, when you click on an endpoint, you can view Azure ATP alerts. If you click on the alerts for this entity in Windows Defender ATP, the entity's profile page opens in Azure ATP. 
 

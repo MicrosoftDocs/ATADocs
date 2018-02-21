@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,7 +34,7 @@ ms.suite: ems
 
 The Azure ATP reports section in the workspace portal enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
-To access the reports page, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
+To access the reports page, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
 The reports that are available are: 
 
 - **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists Azure ATP health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
@@ -43,13 +43,13 @@ The reports that are available are:
 
 - **Passwords exposed in cleartext**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. This report lists all source computer and account passwords that Azure ATP detected as being sent in clear text. 
 
-- **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). This report collects paths that were created in the last 60 days, as opposed to the information displayed in the workspace portal which represents only two days.
+- **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). This report collects paths that were created in the last 60 days, as opposed to the information displayed in the workspace portal, which represents only two days.
 
 There are two ways to generate a report: either on demand or by scheduling a report to be sent to your email periodically.
 
 To generate a report on demand:
 
-1. In the Azure ATP workspace portal menu bar, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
+1. In the Azure ATP workspace portal menu bar, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
 
 2. Under either your selected report type, set the **From** and **To** dates and click **Download**. 
  ![reports](./media/reports.png)
@@ -58,7 +58,7 @@ To set a scheduled report:
  
 1. In the **Reports** page, click **Set scheduled reports**, or in the Azure ATP workspace portal configuration page, under Notifications and Reports, click **Scheduled reports**.
 
-   ![Schedule reports](./media/ata-sched-reports.png)
+   ![Schedule reports](./media/atp-sched-reports.png)
 
 2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 

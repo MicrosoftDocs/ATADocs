@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/20/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -48,7 +48,7 @@ The Azure ATP workspace management portal allows you to create workspaces and en
 > Only the sensors from a single Active Directory forest can connect to a single workspace.
 
 -	**Azure ATP workspace portal** <br>
-The Azure ATP workspace portal receives data from ATP sensors and standalone sensors. It monitors, manages and investigates threats in your environment.
+The Azure ATP workspace portal receives data from ATP sensors and standalone sensors. It monitors, manages, and investigates threats in your environment.
 
 -   **Azure ATP sensor**<br>
 The Azure ATP sensor is installed directly on your domain controllers and monitors their traffic directly, without the need for a dedicated server or configuration of port mirroring. 
@@ -77,7 +77,7 @@ The Azure ATP workspace management portal enables you to:
 
 -	Integrate with other Microsoft security services
 
-Set your main workspace as **Primary**. Only one workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you will have to remove any integrations already set for the current primary workspace.
+Set your main workspace as **Primary**. Only one workspace can be set as primary. Setting a workspace as primary effects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
 
 ### Azure ATP workspace portal
 
@@ -143,7 +143,7 @@ The following features work differently depending on whether you are running an 
 
 -	**Domain synchronizer candidate**<br>
 The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
-If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, Azure ATP is able to proactively synchronize entities and their changes, however Azure ATP will reactively retrieve new entities as they are detected in the monitored traffic. 
+If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, Azure ATP is able to proactively synchronize entities and their changes, however Azure ATP retrieves new entities as they are detected in the monitored traffic. 
 <br>If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.<br><br>
 By default, all Azure ATP standalone sensors are synchronizer candidates.<br><br>
 Azure ATP sensors are not synchronizer candidates by default.
@@ -179,7 +179,7 @@ If you are using Azure ATP standalone sensors, you have to set up port mirroring
 
 While port mirroring mirrors all the domain controller network traffic to the Azure ATP standalone sensor, only a small percentage of that traffic is then sent, compressed, to the Azure ATP cloud service for analysis.
 
-Your domain controllers and the Azure ATP standalone sensors can be physical or virtual, see [Configure port mirroring](configure-port-mirroring.md) for more information.
+Your domain controllers and the Azure ATP standalone sensors can be physical or virtual. For more information, see [Configure port mirroring](configure-port-mirroring.md).
 
 
 ### Events

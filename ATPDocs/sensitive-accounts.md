@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/18/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -49,7 +49,7 @@ The following list of groups are considered Sensitive by Azure ATP. Any entity t
 -	Domain Admins
 -	Domain Controllers
 -	Group Policy Creator Owners 
--	Read Only Domain Controllers 
+-	read-only Domain Controllers 
 -	Enterprise Read-only Domain Controllers 
 -	Schema Admins 
 -	Enterprise Admins
@@ -57,7 +57,7 @@ The following list of groups are considered Sensitive by Azure ATP. Any entity t
 
 ## Tagging sensitive accounts
 
-In addition to these groups, you can manually tag groups or accounts as sensitive to enhance detections. This is important because Some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. You can manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc, and Azure ATP will consider them sensitive.
+In addition to these groups, you can manually tag groups or accounts as sensitive to enhance detections. This is important because Some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. You can manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc., and Azure ATP considers them sensitive.
 
 1.  In the Azure ATP workspace portal, click the **Configuration** cog in the menu bar.
 

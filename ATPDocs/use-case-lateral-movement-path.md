@@ -52,30 +52,30 @@ To discover which sensitive accounts in your network are vulnerable because of t
 
 3. The Excel file that is created provides you with details about your sensitive accounts that are at risk. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should be concerned about.
 
-4. For instructions on how to set your servers to allow Azure ATP to perform the SAM-R operations needed for lateral movement path detection, [Configure SAM-R](configure-sam-r.md).
+4. For instructions on how to set your servers to allow Azure ATP to perform the SAM-R operations needed for lateral movement path detection, [Configure SAM-R](install-atp-step8-samr.md).
 
 ## Investigate
 
 Now that you know which sensitive accounts are at risk, you can deep dive in Azure ATP to learn more and take preventative measures.
 
-1. In the Azure ATP workspace portal, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You can also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). This will be available if there was lateral movement within the last two days. 
+1. In the Azure ATP workspace portal, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You can also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). This is available if there was lateral movement within the last two days. 
 
 2. In the user profile page that opens, click the **Lateral movement paths** tab. 
 
-3. The diagram that is displayed provides you with a map of the possible paths to your sensitive user. The graph shows connections that have been made over the last two days, so the exposure is fresh. If activity is not detected for the last two days, the graph will not appear, but the [lateral movement path report](reports.md) will still be available to provide you with information about lateral movement paths over the last 60 days.
+3. The diagram that is displayed provides you with a map of the possible paths to your sensitive user. The graph shows connections that have been made over the last two days, so the exposure is fresh. If activity is not detected for the last two days, the graph does not appear, but the [lateral movement path report](reports.md) will still be available to provide you with information about lateral movement paths over the last 60 days.
 
-4. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, Samira Abbasi you can follow the **Logged into by** gray arrows to see where Samira logged in with her privileged credentials. In this case, Samira's sensitive credentials were saved on the computer REDMOND-WA-DEV. Then, see which other users logged into which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group Contoso All has the ability to access user credentials from that resource.  
+4. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, Samira Abbasi you can follow the **Logged into by** gray arrows to see where Samira logged in with their privileged credentials. In this case, Samira's sensitive credentials were saved on the computer REDMOND-WA-DEV. Then, see which other users logged into which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group Contoso All has the ability to access user credentials from that resource.  
 
  ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
 
 
 ## Preventative best practices
 
-- The best way to prevent lateral movement is to make sure that sensitive users use their administrator credentials only when logging into hardened computers. In the example, make sure that if Samira needs access to REDMOND-WA-DEV, she logs in with a username and password other than her admin credentials.
+- The best way to prevent lateral movement is to make sure that sensitive users use their administrator credentials only when logging into hardened computers. In the example, make sure that if the admin Samira needs access to REDMOND-WA-DEV, they log in with a username and password other than their admin credentials.
 
 - It is also recommended that you make sure that no one has unnecessary administrative permissions. In the example, you should check to see if everyone in Contoso All really needs admin rights on REDMOND-WA-DEV.
 
-- It's always a good idea to make sure people only have access to necessary resources. As you can see in the example, Oscar Posada significantly widens Samira's exposure. Is it necessary that he be included in Contoso All? Are there subgroups that you could create to minimize exposure?
+- It's always a good idea to make sure people only have access to necessary resources. As you can see in the example, Oscar Posada significantly widens Samira's exposure. Is it necessary that the user be included in Contoso All? Are there subgroups that you could create to minimize exposure?
 
 
 ## See Also

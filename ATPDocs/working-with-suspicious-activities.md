@@ -108,5 +108,5 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 
 ## See Also
 
-- [Working with the Azure ATP workspace portal](atp-workspaces.md)
+- [Working with the Azure ATP workspace portal](workspace-portal.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

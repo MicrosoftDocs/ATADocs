@@ -35,7 +35,7 @@ ms.suite: ems
 
 
 ## Change the domain connectivity password
-If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service will stop for all deployed sensors.
+If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service stops for all deployed sensors.
 
 If you suspect that this happened, on the Azure ATP standalone sensor, look at the Microsoft.Tri.sensor-Errors.log file for the following errors:
 `The supplied credential is invalid.`

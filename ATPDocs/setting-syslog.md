@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/20/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -44,7 +44,7 @@ Azure ATP can notify you when it detects suspicious activities and health alerts
 
     -   Format in which to send the data RFC 3164 or 5424
 
-2.  Ener the workspace portal URL.
+2.  Enter the workspace portal URL.
 
 3.  Enter your Azure Active Directory user name and password and click **Log in**.
 
