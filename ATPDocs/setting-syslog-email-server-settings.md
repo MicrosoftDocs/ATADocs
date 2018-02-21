@@ -52,12 +52,12 @@ Azure ATP can notify you when it detects suspicious activities and health alerts
 
     ![Azure ATP configuration settings icon](media/ATP-config-menu.png)
 
-5.  Under Notifications section, Select **Syslog server** and enter the following information:
+5.  Click **Notifications**, and then, under **Syslog notifications** click **Configure** and enter the following information:
 
     |Field|Description|
     |---------|---------------|
     |Sensor|Select a designated sensor to be responsible for aggregating all the Syslog events and forwarding them to your SIEM server.|
-    |Syslog server endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
+    |Service endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
     |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
     |Format|This is the format that Azure ATP uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
 
@@ -69,3 +69,4 @@ Azure ATP can notify you when it detects suspicious activities and health alerts
 ## See Also
 
 - [Working with sensitive accounts](tag-sensitive-accounts.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

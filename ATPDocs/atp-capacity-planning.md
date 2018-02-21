@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/20/2018
+ms.date: 2/21/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -41,7 +41,7 @@ The recommended and simplest way to determine capacity for your Azure ATP deploy
 - Azure ATP  sensor: Match the **Busy Packets/sec** field in the Azure ATP  sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP Standalone Sensor table](#azure-atp-sensor-sizing) or the [Azure ATP Sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
-![Sample capacity planning tool](media/capacity tool.png)
+![Sample capacity planning tool](media/capacity-tool.png)
 
 
 If for some reason you cannot use the Azure ATP Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
@@ -154,3 +154,4 @@ To determine packets per second, perform the following steps on each domain cont
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP architecture](atp-architecture.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

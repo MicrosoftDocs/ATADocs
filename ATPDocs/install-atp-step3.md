@@ -70,3 +70,5 @@ The zip file includes the following files:
 - [Configure event collection](configure-event-collection.md)
 
 - [Azure ATP prerequisites](atp-prerequisites.md)
+
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

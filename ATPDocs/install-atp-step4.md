@@ -84,7 +84,7 @@ Perform the following steps on the Azure ATP Sensor server or domain controller.
         > -   Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
         > -   If Wireshark is installed on the the ATP sensor machine, after you run Wireshark you will need to reatart the ATP Sensor, because it uses the same drivers.
 
-    -   Azure ATP standalone sensor service
+    -   Azure ATP sensor service and Azure ATP sensor updater service
     -   Microsoft Visual C++ 2013 Redistributable
 
 5.  After the installation completes, click **Launch** to open your browser and log in to the Azure ATP workspace portal.
@@ -103,3 +103,4 @@ Perform the following steps on the Azure ATP Sensor server or domain controller.
 
 - [Azure ATP prerequisites](atp-prerequisites.md)
 
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

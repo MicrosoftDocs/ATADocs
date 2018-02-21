@@ -112,3 +112,4 @@ The Azure ATP Health Center lets you know when there's a problem with the Azure 
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/18/2018
+ms.date: 2/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -433,11 +433,11 @@ In this detection, an alert is triggered when many authentication failures using
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious service creation
+## Suspicious service creation - Preview feature!
 
 **Description**
 
-A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 in order to identify this suspicious activity on your endpoints. Event 7045 should be forwarded from the endpoints to ATP by configuring [Windows Event Forwarding](configure-event-forwarding.md) or by forwarding 7045 events to the SIEM and [configuring your SIEM](configure-event-collection.md) as a data source that forwards events to ATP.
+A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 in order to identify this suspicious activity on your endpoints. Event 7045 should be forwarded from the endpoints to ATP by configuring [Windows Event Forwarding](configure-event-forwarding.md) or by forwarding 7045 events to the SIEM and [configuring your SIEM](configure-event-collection.md) as a data source that forwards events to ATP.
 
 **Investigation**
 
@@ -497,3 +497,4 @@ Patch all your machines, especially applying security updates.
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

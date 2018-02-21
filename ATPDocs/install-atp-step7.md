@@ -55,7 +55,7 @@ To configure this, follow these steps:
 
    ![Honeytoken](media/honeytoken-sensitive.png)
 
-4. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
+4. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md) and the [suspicious activity guide](suspicious-activity-guide.md).
 
    ![Exclusions](media/exclusions.png)
 
@@ -79,4 +79,4 @@ Azure ATP starts scanning for suspicious activities immediately. Some detections
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

@@ -92,4 +92,4 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

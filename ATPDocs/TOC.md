@@ -1,4 +1,4 @@
-# Understand and Explore
+# Understand and Explore - Preview!
 ## [What is Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Frequently asked questions](atp-technical-faq.md)
 # Plan and Design
@@ -18,6 +18,7 @@
 ### [Configure port mirroring](configure-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
 ### [Configure Windows Event Forwarding](configure-event-forwarding.md)
+### [Configure proxy to enable communication](configure-proxy.md)
 # Use
 ## [Azure ATP health center](atp-health-center.md)
 ## [Azure ATP reports](reports.md)
@@ -28,7 +29,7 @@
 ## [Integrate with Windows Defender ATP](integrate-wd-atp.md)
 ## [Monitor alerts](monitoring-alerts.md)
 ## [Set Azure ATP notifications](setting-atp-alerts.md)
-## [Set Syslog integration](setting-syslog-email-server-settings.md)
+## [Integrate with Syslog](setting-syslog-email-server-settings.md)
 ## [Working with sensitive accounts](tag-sensitive-accounts.md)
 ## [Working with the Azure ATP workspace portal](working-with-atp-console.md)
 ## Azure ATP reference information

@@ -108,3 +108,4 @@ For more information, see: [Configure the computers to forward and collect event
 ## See Also
 
 - [Install Azure ATP](install-atp-step1.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

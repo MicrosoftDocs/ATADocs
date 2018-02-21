@@ -69,3 +69,4 @@ Follow this procedure to update the Domain Connectivity password on the Azure AT
 ## See Also
 
 - [Integration with Windows Defender ATP](integrate-wd-atp.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

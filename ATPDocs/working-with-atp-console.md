@@ -76,9 +76,13 @@ You can filter which suspicious activities are displayed in the attack time line
 
 ### Search bar
 
-In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in Azure ATP. To give it a try, just start typing.
+In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in Azure ATP. To give it a try, just start typing. At the bottom of the search bar, the number of search results found is indicated. 
 
 ![Azure ATP workspace portal search image](media/atp-workspace-portal-search.png)
+
+If you click the number, you can access the search results page in which you can filter results by entity type for further investigation.
+
+![search results](media/search-results.png)
 
 ### Health center
 
@@ -96,22 +100,28 @@ For information on sensitive groups in ATP, see [Working with sensitive groups](
 
 ### Mini profile
 
-If you hover your mouse over an entity, anywhere in the workspace portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information if available:
+If you hover your mouse over an entity, anywhere in the workspace portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information, if available and relevant:
 
 ![Azure ATP mini profile image](media/atp-mini-profile.png)
 
--   Name
-
--   Picture
-
--   Email
-
--   Telephone
-
--   Number of suspicious activities by severity
-
+- Name
+- Title
+- Department
+- AD tags
+- Email
+- Office
+- Phone number
+- Domain
+- SAM name
+- Created on – When the entity was created in the Active Directory. If was created before Azure ATP started monitoring it will not be displayed.
+- First seen – The first time Azure ATP observed an activity from this entity.
+- Last seen - The last time Azure ATP observed an activity from this entity.
+- SA badge - Will be displayed if there are suspicious activities associated with this entity.
+- WD ATP badge- Will be displayed if there are suspicious activities in Windows Defender ATP associated with this entity.
+- Lateral movement paths badge - Will be displayed if there are have been lateral movement paths detected for this entity within the last two days.
 
 
 ## See Also
 
 - [Creating Azure ATP workspaces](atp-workspaces.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

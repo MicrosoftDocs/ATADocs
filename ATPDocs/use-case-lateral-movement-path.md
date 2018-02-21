@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/18/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -44,7 +44,7 @@ To discover which sensitive accounts in your network are vulnerable because of t
 
 1. In the Azure ATP workspace portal menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
 
-2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. 
+2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. The lateral movement path report provides data for the last 60 days.
 
  ![reports](./media/reports.png)
 
@@ -99,11 +99,11 @@ The Windows Anniversary update version changed the default security descriptor f
 
 Now that you know which sensitive accounts are at risk, you can deep dive in Azure ATP to learn more and take preventative measures.
 
-1. In the Azure ATP workspace portal, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You an also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png).
+1. In the Azure ATP workspace portal, look at the user whose account is listed as vulnerable in the **Lateral movements paths to sensitive accounts** report, for example, Samira Abbasi. You can also search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). This will be available if there was lateral movement within the last two days. 
 
-2. In the user profile page that opens, click the **Lateral movement paths** tab.
+2. In the user profile page that opens, click the **Lateral movement paths** tab. 
 
-3. The diagram that is displayed provides you with a map of the possible paths to your sensitive user. The graph shows connections that have been made over the last two days, so the exposure is fresh.
+3. The diagram that is displayed provides you with a map of the possible paths to your sensitive user. The graph shows connections that have been made over the last two days, so the exposure is fresh. If activity is not detected for the last two days, the graph will not appear, but the [lateral movement path report](reports.md) will still be available to provide you with information about lateral movement paths over the last 60 days.
 
 4. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, Samira Abbasi you can follow the **Logged into by** gray arrows to see where Samira logged in with her privileged credentials. In this case, Samira's sensitive credentials were saved on the computer REDMOND-WA-DEV. Then, see which other users logged into which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group Contoso All has the ability to access user credentials from that resource.  
 
@@ -122,3 +122,4 @@ Now that you know which sensitive accounts are at risk, you can deep dive in Azu
 ## See Also
 
 - [Working with suspicious activities](working-with-suspicious-activities.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

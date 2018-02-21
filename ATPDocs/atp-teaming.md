@@ -58,4 +58,4 @@ In order to support NIC Teaming, download the latest version of Npcap driver fro
 
 
 ## See Also
-[Check out the Azure ATP forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

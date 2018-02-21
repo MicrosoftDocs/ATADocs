@@ -64,3 +64,4 @@ Data retention – deleted workspaces do not appear in the UI, however their dat
 
 - [ATP suspicious activity guide](suspicious-activity-guide.md)
 - [Working with sensitive accounts](tag-sensitive-accounts.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

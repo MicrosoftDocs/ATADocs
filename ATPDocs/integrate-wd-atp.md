@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/18/2018
+ms.date: 2/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -87,15 +87,15 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
 ## How it works
 
-After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP workspace portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes an icon to show that it is integrated with Windows Defender ATP. 
+After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP workspace portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes a badge to show that it is integrated with Windows Defender ATP. 
 
  ![Windows Defender ATP alerts](./media/profile-alerts-wd.png)
 
-If the entity contains alerts in Windows Defender ATP, there is a number next to the icon to let you know how many alerts were raised.
+If the entity contains alerts in Windows Defender ATP, there is a number next to the badge to let you know how many alerts were raised.
 
  ![Azure ATP alerts](./media/atp-integrated-wd-icon-alerts.png)
 
-If you click on the icon, you are brought to the Windows Defender ATP portal where you can view and mitigate the alerts. If the entity is not recognized by Windows Defender ATP, the icon is grayed out. 
+If you click on the badge, you are brought to the Windows Defender ATP portal where you can view and mitigate the alerts. If the entity is not recognized by Windows Defender ATP, the badge is grayed out. 
 
  ![Windows Defender ATP grey](./media/wd-grey.png)
 
@@ -110,5 +110,5 @@ In the Windows Defender ATP portal, when you click on an endpoint, you can view 
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Azure ATP architecture](atp-architecture.md)
 - [Install ATP](install-atp-step1.md)
-
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
 

@@ -39,11 +39,11 @@ The reports that are available are:
 
 - **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists Azure ATP health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
 
-- **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins, or manually tagged accounts or groups).
+- **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins, or manually tagged accounts or groups). If you're using Azure ATP standalone sensors, to receive a full report about your sensitive groups, it is necessary to make sure that [events are forwarded from your domain controllers to the standalone sensors](configure-event-forwarding.md). 
 
 - **Passwords exposed in cleartext**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. This report lists all source computer and account passwords that Azure ATP detected as being sent in clear text. 
 
-- **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md)
+- **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). This report collects paths that were created in the last 60 days, as opposed to the information displayed in the workspace portal which represents only two days.
 
 There are two ways to generate a report: either on demand or by scheduling a report to be sent to your email periodically.
 
@@ -65,12 +65,9 @@ To set a scheduled report:
    ![Schedule report frequency and email](./media/sched-report1.png)
 
 
-> [!NOTE]
-> Scheduled reports are delivered by email and can only be sent if you have already configured an email server under **Configuration** and then, under **Notifications and Reports**, select **Mail server**.
-
-
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

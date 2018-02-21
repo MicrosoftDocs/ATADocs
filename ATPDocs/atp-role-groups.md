@@ -76,5 +76,5 @@ Azure ATP uses Azure AD security groups as a basis for role groups. The role gro
 - [ATA sizing tool](http://aka.ms/aatpsizingtool)
 - [ATA architecture](atp-architecture.md)
 - [Install ATA](install-atp-step1.md)
-
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
 

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 2/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -51,10 +51,6 @@ Each suspicious activity has the following information:
 
     -   Export the suspicious activity to Excel.
 
-    -   Add a note to the suspicious activity.
-
-    -   Provide input on the suspicious activity.
-
 > [!NOTE]
 > -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
 > -   If you click on an entity, it takes you to the entity profile of the user or computer.
@@ -85,7 +81,7 @@ To filter the suspicious activities list:
 
 
 
-## Remediating suspicious activities
+## Managing suspicious activities
 You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific suspicious activity to reveal the list of available actions.
 
@@ -113,3 +109,4 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 ## See Also
 
 - [Working with the Azure ATP workspace portal](atp-workspaces.md)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
