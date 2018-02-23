@@ -57,7 +57,7 @@ If you are using physical servers, you should plan capacity. You can get help fr
 
 [ATA sizing tool](http://aka.ms/atasizing) - The sizing tool automates collection of the amount of traffic ATA needs. It automatically provides supportability and resource recommendations for both the ATA Center and ATA Lightweight Gateways.
 
-[ATA capacity planning](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
+[ATA capacity planning](https://docs.microsoft.com/advanced-threat-analytics/ata-capacity-planning)
 
 ## Deploy ATA
 
@@ -75,7 +75,7 @@ The basic necessary settings in ATA are configured as part of the installation w
 
 [Audit settings](https://aka.ms/ataauditingblog) – Audit your domain controller health before and after an ATA deployment.
 
-[ATA general documentation](https://docs.microsoft.com/en-us/advanced-threat-analytics/)
+[ATA general documentation](https://docs.microsoft.com/advanced-threat-analytics/)
 
 ## Work with ATA
 
