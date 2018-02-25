@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/25/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -58,7 +58,7 @@ Each Azure ATP workspace supports an Active Directory forest boundary and suppor
 This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
 
 
--   An **on-premises** Azure AD user account and password with read access to all objects in the monitored domains.
+-   An **on-premises** AD user account and password with read access to all objects in the monitored domains.
 
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
