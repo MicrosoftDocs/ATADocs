@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -78,6 +78,9 @@ The Azure ATP workspace management portal enables you to:
 -	Integrate with other Microsoft security services
 
 Set your main workspace as **Primary**. Only one workspace can be set as primary. Setting a workspace as primary effects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
+
+> [!NOTE]
+> Azure ATP currently supports creation of two workspaces. It is recommended that you create a primary workspace for your production environment and an additional workspace as a staging environment.
 
 ### Azure ATP workspace portal
 
