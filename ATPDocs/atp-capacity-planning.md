@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -89,7 +89,7 @@ An Azure ATP sensor can support the monitoring of one domain controller based on
 |75k-100k|3.50 |9.50|
 
 > [!NOTE]
-> - Total number of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the Azure ATP sensor, when planning for capacity, you should count actual cores and not hyper threaded cores.
+> - Total number of cores that this domain controller has installed.<br>It is recommended that you don't work with hyper-threaded cores.
 > - Total amount of memory that this domain controller has installed.
 > -   If the domain controller does not have the resources required by the Azure ATP sensor, domain controller performance is not effected, but the Azure ATP sensor might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
