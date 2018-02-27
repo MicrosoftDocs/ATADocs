@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2018
+ms.date: 2/27/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -451,7 +451,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 ## Sensitive account credentials exposed & Services exposing account credentials
 
-> ![NOTE]
+> [!NOTE]
 > This suspicious activity was deprecated and only appears in ATA versions prior to 1.9. For ATA 1.9 and later, see [Reports](reports.md).
 
 **Description**
@@ -566,7 +566,7 @@ Patch all your machines, especially applying security updates.
 3. WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
->![NOTE]
+>[!NOTE]
 > To disable a suspicious activity, contact support.
 
 ## Related Videos

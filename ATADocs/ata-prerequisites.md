@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/3/2018
+ms.date: 2/27/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -76,6 +76,10 @@ This section lists information you should gather and accounts and network entiti
 This section lists the requirements for the ATA Center.
 ### General
 The ATA Center supports installation on a server running Windows Server 2012 R2 or Windows Server 2016. 
+
+ > [!NOTE]
+ > The ATA Center does not support Windows Server core.
+
 The ATA Center can be installed on a server that is a member of a domain or workgroup.
 
 Before installing ATA Center running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
@@ -155,7 +159,7 @@ For example, you can use the standard **Web server** or **Computer** templates.
 ## ATA Gateway requirements
 This section lists the requirements for the ATA Gateway.
 ### General
-The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
+The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (including server core).
 The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
 The ATA Gateway can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 

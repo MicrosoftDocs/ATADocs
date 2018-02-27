@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/2/2018
+ms.date: 2/27/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -74,8 +74,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 &#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
 > -   The ATA Center can handle an aggregated maximum of 1M packets per second from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M. Contact askcesec@microsoft.com for assistance with such environments.
-> -   The amount of storage dictated here are net values. You should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
-> -   If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. Deletion continues to occur until 5% or 50 GB of free space remains at which point data collection stops working.
+> -   If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it is not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.
 > - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
 > -   The storage latency for read and write activities should be below 10 ms.
 > -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
