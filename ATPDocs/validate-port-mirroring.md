@@ -50,15 +50,15 @@ The following steps walk you through the process for validating that port mirror
 
     3.  Click **New Capture**.
 
-        ![Create new capture tab image](media/ATA-Port-Mirroring-Capture.jpg)
+        ![Create new capture tab image](media/atp-port-mirroring-capture.png])
 
 3.  In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then click **Apply**.
 
-    ![Apply KerberosV5 or LDAP filter image](media/ATA-Port-Mirroring-filter-settings.jpg)
+    ![Apply KerberosV5 or LDAP filter image](media/atp-port-mirroring-filter-settings.png)
 
 4.  Click **Start** to start the capture session. If you do not see traffic to and from the domain controller, review your port mirroring configuration.
 
-    ![Start capture session image](media/ATA-Port-Mirroring-Capture-traffic.jpg)
+    ![Start capture session image](media/atp-port-mirroring-capture-traffic.png)
 
     > [!NOTE]
     > It is important to make sure you see traffic to and from the domain controllers.
