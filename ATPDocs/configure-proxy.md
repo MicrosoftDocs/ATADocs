@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,7 +37,7 @@ For your Domain Controllers to communicate with the cloud service, you must open
 1.	Confirm that the **current user** has access to the processor endpoint using IE, by browsing to the following URL from the DC: 
 https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (for US), you should get error 503:
 
- ![service unavailable](/media/service-unavailable.png)
+ ![service unavailable](./media/service-unavailable.png)
  
 2.	If you do not get an error 503, review the proxy configuration and try again.
 
@@ -47,11 +47,11 @@ https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (for US), you should ge
 
 If you get the error “ERROR: The system was unable to find the specified registry key or value.” this means that no proxy has been set on the **LOCAL_SYSTEM** level
  
- ![proxy local system error](/media/proxy-local-system-error.png)
+ ![proxy local system error](./media/proxy-local-system-error.png)
 
 If the result is “Result Compared: Different” this means that proxy is set for the **LOCAL_SYSTEM** but it is not the same as the **CURRENT_USER**:
  
-  ![proxy result compared](/media/proxy-result-compared.png)
+  ![proxy result compared](./media/proxy-result-compared.png)
 
 5.	If the **LOCAL_SYSTEM** does not have the correct proxy settings (either not configured or different from the **CURRENT_USER**), then you may need to copy the proxy setting from the **CURRENT_USER** to the **LOCAL_SYSTEM**. Make sure to back up this registry key before you modify it:
 
