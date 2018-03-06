@@ -17,8 +17,9 @@
 ## [Silent installation](ATP-silent-installation.md)
 ## Azure ATP sensor additional steps
 ### [Configure port mirroring](configure-port-mirroring.md)
+### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
-### [Configure Windows Event Forwarding](configure-event-forwarding.md)
+### [Configure Windows Event Forwarding](configure-event-forwarding.md))
 ### [Configure proxy to enable communication](configure-proxy.md)
 # Use
 ## [Azure ATP health center](atp-health-center.md)
@@ -39,3 +40,5 @@
 ## [Suspicious activity guide](suspicious-activity-guide.md)
 ## [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
 ## [Investigate entities](entity-profiles.md)
+# Troubleshooting
+## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
