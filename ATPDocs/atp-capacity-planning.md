@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -47,7 +47,7 @@ The recommended and simplest way to determine capacity for your Azure ATP deploy
 If for some reason you cannot use the Azure ATP Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
 The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
 
-## Choosing the right sensor type for your deployment
+## Choosing the right sensor type for your deployment<a name="choosing-the right-sensor-type-for-your-deployment"></a>
 In an Azure ATP deployment any combination of the Azure ATP standalone sensor types is supported:
 
 - Only Azure ATP standalone sensors
