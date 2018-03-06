@@ -13,7 +13,7 @@
 ## [5 Configure the Azure ATP sensor](install-atp-step5.md)
 ## [6 VPN integration](install-atp-step6-vpn.md)
 ## [7 Exclusions and honeytoken accounts](install-atp-step7.md)
-### [8 Configure SAM-R required permissions](install-atp-step8-samr.md)
+## [8 Configure SAM-R required permissions](install-atp-step8-samr.md)
 ## [Silent installation](ATP-silent-installation.md)
 ## Azure ATP sensor additional steps
 ### [Configure port mirroring](configure-port-mirroring.md)
