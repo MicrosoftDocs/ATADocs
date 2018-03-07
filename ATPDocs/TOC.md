@@ -20,7 +20,7 @@
 ### [Configure port mirroring](configure-port-mirroring.md)
 ### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
-### [Configure Windows Event Forwarding](configure-event-forwarding.md))
+### [Configure Windows Event Forwarding](configure-event-forwarding.md)
 ### [Configure proxy to enable communication](configure-proxy.md)
 # Use
 ## [Azure ATP health center](atp-health-center.md)
