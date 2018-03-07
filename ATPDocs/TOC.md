@@ -1,4 +1,4 @@
-# Understand and Explore - Preview!
+# Understand and Explore
 ## [What is Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Frequently asked questions](atp-technical-faq.md)
 ## [What's new in Azure ATP](atp-whats-new.md)
