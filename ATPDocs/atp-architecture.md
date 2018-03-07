@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/11/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -81,6 +81,8 @@ Set your main workspace as **Primary**. Only one workspace can be set as primary
 
 > [!NOTE]
 > Azure ATP currently supports creation of two workspaces. It is recommended that you create a primary workspace for your production environment and an additional workspace as a staging environment.
+> After you delete a workspace, you can contact support to reactivate it. You an have a mazimum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
+
 
 ### Azure ATP workspace portal
 
@@ -126,6 +128,8 @@ The **Azure ATP sensor** and **Azure ATP sensor** both have the same core functi
 -   Transfer relevant data to the Azure ATP cloud service
 
 -   Monitor multiple domain controllers from a single Azure ATP standalone sensor, or monitor a single domain controller for an Azure ATP sensor.
+
+Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
 
 The Azure ATP standalone sensor receives network traffic and Windows Events from your network and processes it in the following main components:
 
