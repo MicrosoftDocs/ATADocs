@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -75,8 +75,9 @@ Port mirroring considerations might require you to deploy multiple Azure ATP sta
 
 ## Azure ATP sensor and standalone sensor sizing <a name="sizing"></a>
 
-An Azure ATP sensor can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. The following table is an estimate, the final amount that the sensor parses is dependent on the amount of traffic you have. 
-
+An Azure ATP sensor can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. The following table is an estimate, the final amount that the sensor parses is dependent on the amount of traffic and the distribution of traffic. 
+> [!NOTE]
+> The following CPU and memory capacity refers to the sensor's own consumption – not the domain controller capacity.
 
 |Packets per second*|CPU (cores)|Memory (GB)|
 |----|----|-----|
@@ -89,12 +90,12 @@ An Azure ATP sensor can support the monitoring of one domain controller based on
 |75k-100k|3.50 |9.50|
 
 > [!NOTE]
-> - Total number of cores that this domain controller has installed.<br>It is recommended that you don't work with hyper-threaded cores.
-> - Total amount of memory that this domain controller has installed.
-> -   If the domain controller does not have the resources required by the Azure ATP sensor, domain controller performance is not effected, but the Azure ATP sensor might not operate as expected.
+> - Total number of cores that the sensor service will use.<br>It is recommended that you don't work with hyper-threaded cores.
+> - Total amount of memory that the sensor service will use.
+> -   If the domain controller does not have the resources required by the Azure ATP sensor, domain controller performance is not affected, but the Azure ATP sensor might not operate as expected.
 > -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 > -   For optimal performance, set the **Power Option** of the Azure ATP sensor to **High Performance**.
-> -   A minimum of 2 cores and 6 GB of space is required and 10 GB is recommended, including space needed for the Azure ATP binaries.
+> -   A minimum of 2 cores and 6 GB of space is required and 10 GB is recommended, including space needed for the Azure ATP binaries and logs.
 
 
 ## Domain controller traffic estimation
