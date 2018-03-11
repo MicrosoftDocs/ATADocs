@@ -43,3 +43,4 @@
 ## [Investigate entities](entity-profiles.md)
 # Troubleshooting
 ## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
+## [Support and information](atp-support.md)
