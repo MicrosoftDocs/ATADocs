@@ -1,6 +1,7 @@
-# Understand and Explore - Preview!
+# Understand and Explore
 ## [What is Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Frequently asked questions](atp-technical-faq.md)
+## [What's new in Azure ATP](atp-whats-new.md)
 # Plan and Design
 ## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Azure ATP architecture](atp-architecture.md)
@@ -19,7 +20,7 @@
 ### [Configure port mirroring](configure-port-mirroring.md)
 ### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
-### [Configure Windows Event Forwarding](configure-event-forwarding.md))
+### [Configure Windows Event Forwarding](configure-event-forwarding.md)
 ### [Configure proxy to enable communication](configure-proxy.md)
 # Use
 ## [Azure ATP health center](atp-health-center.md)

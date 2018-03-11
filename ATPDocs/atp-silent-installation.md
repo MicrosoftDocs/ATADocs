@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/11/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,7 +38,10 @@ Azure ATP  requires the installation of Microsoft .NET Framework 4.7.
 
 When you install Azure ATP, .Net Framework 4.7 is automatically installed as part of the deployment of Azure ATP.
 
-> [!Note] 
+> [!IMPORTANT] 
+> Make sure that you have the latest version of .Net Framework installed. If a previous version of .Net is installed, your Azure ATP silent installation will get stuck in a loop and fail to install. 
+
+> [!NOTE] 
 > The installation of .Net framework 4.7 may require rebooting the server. When installing Azure ATP sensor on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
 When using Azure ATP silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
 
