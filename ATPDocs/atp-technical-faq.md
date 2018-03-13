@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/13/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,7 +33,7 @@ This article provides a list of frequently asked questions about Azure ATP and p
 
 ## Where can I get a license for Azure Advanced Threat Protection (ATP)?
 
-If you acquired a license for Enterprise Mobility + Security 5 (EMS E5) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to Azure ATP through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Azure Advanced Threat Protection (ATP).
+You can acquire a license for Enterprise Mobility + Security 5 (EMS E5) directly via the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.                  
 
 ## What should I do if the Azure ATP sensor or standalone sensor doesn't start?
 Look at the most recent error in the current error log (Where Azure ATP is installed under the "Logs" folder).

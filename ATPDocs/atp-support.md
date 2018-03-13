@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/13/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -39,7 +39,6 @@ Use the following resources to help you learn about, deploy, and support Azure A
 |----|----|
 |See our most popular documentation|Read the top five pages:|- [What is Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Azure ATP prerequisites](atp-prerequisites.md)<br>- [Azure ATP architecture](atp-architecture.md)<br>- [Azure ATP capacity planning](atp-capacity-planning.md)<br>- [Creating a workspace](install-atp-step1.md)|
 |Engage with the product team and your peers|Visit the [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) for Azure Advanced Threat Protection.|
-|Request a new feature or change of functionality|Visit the [Azure ATP feedback portal](https://microsoftsecurity.uservoice.com/forums/905791-azure-advanced-threat-protection-ata-in-the-cloud).|
 |Check subscription information and get a list of which features are supported|See [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Advanced Threat Protection website.|
 
 ## Information about new releases and updates
@@ -62,8 +61,7 @@ For other customers, use the support channels as follows:
 | Channels|Instructions|
 |------|-----|
 |Use the Azure portal|1. Select **New support request** from **Help + support** in the Azure portal. <br>2. When you are prompted, on the **Basics** blade, as the **Issue type**, choose **Technical**, as the **Service** under Security & Identity, choose **Azure Advanced Threat Protection**. <br>3. Make sure that one of the following options is selected:<br>- Subscription with technical support included. You see this option if you have a paid or trial subscription for Azure.<br>- Technical support included. You see this option if you don't have an Azure subscription.|
-|Use Online Assisted Support (OAS)|Enter the [business support portal](https://support.microsoft.com/assistedsupportproducts)|
-|Use the Azure Advanced Threat Protection Portal| 1. Click on the “?” icon in the top navigation bar in Azure Advanced Threat Protection Portal<br>2. Search for Azure Advanced Threat Protection.<br>3. Open an Incident ticket.<br>- Select “Support”<br>4. Open an incident ticket.|
+|Use the Azure Advanced Threat Protection portal| 1. Click on the “?” icon in the top navigation bar in Azure Advanced Threat Protection portal<br>2. Search for Azure Advanced Threat Protection.<br>3. Open an incident ticket.<br>- Select “Support”<br>4. Open an incident ticket. If you succeed in entering the Azure Advanced Threat Protection portal, you can enter the [Online Assisted Support (OAS) portal](https://support.microsoft.com/assistedsupportproducts). |
 
 For additional support options, ask your Microsoft contact.
 
