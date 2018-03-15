@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -51,7 +51,7 @@ After you verified that your network meets the requirements of the sensor, you c
 
 1.  Enter [the Azure ATP workspace portal](https://portal.atp.azure.com).
 
-2.  Log in with your on-premises Azure Active Directory user account that has at least read access to all objects in the monitored domains.
+2.  Log in with your Azure Active Directory user account.
 
 ## Step 2. Create a workspace
 
