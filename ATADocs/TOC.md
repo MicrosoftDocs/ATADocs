@@ -28,6 +28,7 @@
 ## [6 Event collection](install-ata-step6.md)
 ## [7 VPN integration](vpn-integration-install-step.md)
 ## [8 Exclusions and Honeytoken](install-ata-step7.md)
+## [9 Configure SAM-R](install-ata-step9-samr.md)
 ## [Silent installation](ata-silent-installation.md)
 ## ATA Gateway additional steps
 ### [1. Configure port mirroring](configure-port-mirroring.md)
