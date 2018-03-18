@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/2/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 # Install ATA - Step 1
@@ -34,7 +34,7 @@ ms.suite: ems
 >[!div class="step-by-step"]
 [Step 2 »](install-ata-step2.md)
 
-This installation procedure provides instructions for performing a fresh installation of ATA 1.8. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.8](ata-update-1.8-migration-guide.md).
+This installation procedure provides instructions for performing a fresh installation of ATA 1.8. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.9](ata-update-1.9-migration-guide.md).
 
 > [!IMPORTANT] 
 > If using Windows 2012 R2, you can install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation installs this update and requires a restart in the middle of the ATA installation.

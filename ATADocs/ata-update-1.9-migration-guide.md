@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -34,7 +34,7 @@ ms.suite: ems
 If you already have ATA version 1.8 deployed, this procedure walks you through the steps necessary to update your deployment.
 
 > [!NOTE] 
->  Only ATA version 1.8 and 1.8.1 can be updated to ATA version 1.9, any earlier version of ATA can't be directly updated to ATA version 1.9.
+>  Only ATA version 1.8 (1.8.6645) and ATA 1.8 update 1 (1.8.6765) can be updated to ATA version 1.9, any earlier version of ATA can't be directly updated to ATA version 1.9.
 
 Follow these steps to update to ATA version 1.9:
 
@@ -65,7 +65,7 @@ In the migration version, the file can be used only for updating from ATA 1.8. I
      
      This adjusts the Windows settings to enable updates for  ATA. 
     
-	-  The **Partial data migration** screen lets you know that previously captured network traffic, events, entities and detection related data is deleted. All detections work immediately with the exception of abnormal behavior detection, which takes three weeks to build a complete profile after the required learning time. 
+	-  The **Partial data migration** screen lets you know that previously captured network traffic, events, entities and detection related data is deleted. All detections work immediately with the exception of abnormal behavior detection, abnormal group modification, Reconnaissance using Directory Services (SAM-R), and encryption downgrade detections which take up to three weeks to build a complete profile after the required learning time. 
      
       ![ATA partial migration](media/partial-migration.png)
 
@@ -84,7 +84,7 @@ In the migration version, the file can be used only for updating from ATA 1.8. I
 > Update all the ATA Gateways to make sure ATA functions properly.
  
 > [!NOTE] 
-> To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.8 Gateway installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md).
+> To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.9 Gateway installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](install-ata-step4.md).
 
 
 ## See Also

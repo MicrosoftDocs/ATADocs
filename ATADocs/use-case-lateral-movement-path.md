@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -30,11 +30,11 @@ ms.suite: ems
 
 # Investigating lateral movement paths with ATA
 
-ATA can help you prevent attacks that use lateral movement paths. Even when you do your best to protect your sensitive users, your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths, moving across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
+Even when you do your best to protect your sensitive users, and your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths to access sensitive accounts. In this type of attack, the attacker takes advantage of instances when sensitive users log into a machine where a non-sensitive user has local rights. This can enable attackers to move laterally, accessing the less sensitive user and then moving across the computer to gain credentials for the sensitive user. 
 
 ## What is a lateral movement path?
 
-Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts. They can use any of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md) to gain the initial non-sensitive password and then use a tool, like Bloodhound, to understand who the administrators are in your network and which machines they accessed. They can then take advantage of the data available to attackers on your domain controllers to know who has which accounts and access to which resources and files, and can steal the credentials of other users (sometimes sensitive users) stored on the computers they have already accessed, and then laterally move to more and more users and resources until they attain admin privileges in your network. 
+Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts. They can use any of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md) to gain the initial non-sensitive password and then use a tool, like Bloodhound, to understand who the administrators are in your network and which machines they accessed. They can then access the data on your domain controllers to know who has which accounts and access to which resources and files, stealing credentials of other users (sometimes sensitive users) that are stored on the computers they have already accessed, and then laterally move across users and resources until they attain admin privileges in your network. 
 
 ATA enables you to take pre-emptive action on your network to prevent attackers from succeeding at lateral movement.
 
@@ -70,9 +70,9 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATA
 
 ## Preventative best practices
 
-- The best way to prevent lateral movement is to make sure that sensitive users use their administrator credentials only when logging into hardened computers. In the example, make sure that if Samira needs access to REDMOND-WA-DEV, she logs in with a username and password other than her admin credentials.
+- The best way to prevent lateral movement is to make sure that sensitive users use their administrator credentials only when logging into hardened computers where there is no non-sensitive user who has admin rights on the same computer. In the example, make sure that if Samira needs access to REDMOND-WA-DEV, she logs in with a username and password other than her admin credentials, or remove the Contoso All group from the local administrators group on REDMOND-WA-DEV.
 
-- It is also recommended that you make sure that no one has unnecessary administrative permissions. In the example, you should check to see if everyone in Contoso All really needs admin rights on REDMOND-WA-DEV.
+- It is also recommended that you make sure that no one has unnecessary local administrative permissions. In the example, you should check to see if everyone in Contoso All really needs admin rights on REDMOND-WA-DEV.
 
 - It's always a good idea to make sure people only have access to necessary resources. As you can see in the example, Oscar Posada significantly widens Samira's exposure. Is it necessary that he be included in Contoso All? Are there subgroups that you could create to minimize exposure?
 

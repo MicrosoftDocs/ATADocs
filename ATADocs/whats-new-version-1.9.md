@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/21/2018
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -36,8 +36,14 @@ These release notes provide information about updates, new features, bug fixes a
 
 ## New & updated detections
 
--  **Suspicious service creation** – Attackers attempt to use run suspicious services on your network. ATA now raises an alert when it identifies that someone on a specific computer runs a new service that seems suspicious. This detection is based on events (not network traffic) and is detected on any endpoint in your network forwarding event 7045. For more information see the [Suspicious activity guide](suspicious-activity-guide.md).
+-  **Suspicious service creation**: Attackers attempt to run suspicious services on your network. ATA now raises an alert when it identifies that someone runs a new service, that seems suspicious, on a domain controller. This detection is based on events (not network traffic), for more information see the [Suspicious activity guide](suspicious-activity-guide.md#suspicious-service-creation).
 
+
+## New reports to help you investigate 
+
+-	The [**Passwords exposed in cleartext**](reports.md) enables you to detect when acccounts, both sensitive and non-sensitive, send account credentials in plain text. This allows you to investigate and mitigate the use of LDAP simple bind in your environment, improving your network security level. This report replaces the service and sensitive account cleartext suspicious activity alerts.
+
+- The [**Lateral movement paths to sensitive accounts**](reports.md) lists the sensitive accounts that are exposed via lateral movement paths. This enables you to mitigate these paths and harden your network to minimize the attack surface risk. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
 
 ## Improved investigation
 
@@ -45,16 +51,9 @@ These release notes provide information about updates, new features, bug fixes a
 
 -	ATA 1.9 enables you to [manually tag groups](tag-sensitive-accounts.md) or accounts as sensitive to enhance detections. This tagging impacts many ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
 
-## New reports to help you investigate 
-
--	The [**Passwords exposed in cleartext**](reports.md) enables you to detect when services send account credentials in plain text. This allows you to investigate services and improve your network security level. This report replaces the cleartext suspicious activity alerts.
-
-- The [**Lateral movement paths to sensitive accounts**](reports.md) lists the sensitive accounts that are exposed via lateral movement paths. This enables you to mitigate these paths and harden your network to minimize the attack surface risk. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
-
-
 ## Performance improvements
 
-- The ATA Center infrastructure was improved for performance: the aggregated view of the traffic enables optimization of CPU and packet pipeline, and reuses sockets to the domain controllers to minimize SSL sessions to the DC. 
+- The ATA Center infrastructure was improved for performance: the aggregated view of the traffic enables optimization of CPU and packet pipeline, and reuses sockets to the domain controllers to minimize SSL sessions to the DC. For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
 
 

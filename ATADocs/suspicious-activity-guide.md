@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 # Advanced Threat Analytics suspicious activity guide
@@ -488,11 +488,11 @@ In this detection, an alert is triggered when many authentication failures using
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious service creation
+## Suspicious service creation <a name="suspicious-service-creation"></a>
 
 **Description**
 
-A suspicious service has been created on an endpoint in your organization. This alert relies on event 7045 and can be collected from all endpoints in your network. In order to identify this suspicious activity on your endpoints, [configure your SIEM](install-ata-step6.md) as a data source that forwards events to ATA.
+Attackers attempt to run suspicious services on your network. ATA raises an alert when a new service that seems suspicious has been created on a domain controller. This alert relies on event 7045, and it is detected from each domain controller that is covered by an ATA Gateway or Lightweight Gateway.
 
 **Investigation**
 
@@ -535,7 +535,7 @@ Depending on what caused this abnormal behavior to occur, different actions shou
 
 **Description**
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash, as well as exploits used by advanced ransomware, for example, WannaCry.
 
 **Investigation**
 
