@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/13/2018
+ms.date: 3/18/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -66,6 +66,10 @@ For other customers, use the support channels as follows:
 For additional support options, ask your Microsoft contact.
 
 ### Self help
+
+#### System status page 
+
+To view system status for Azure ATP, visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to whether the Workspace management portal is up and active, if there are issues with detections and if the Sensor is able to send traffic to the cloud. You can access the **System status** from the Azure ATP menu bar.
 
 #### On-demand videos
 
