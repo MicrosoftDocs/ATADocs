@@ -1,6 +1,7 @@
 ---
 layout: LandingPage
 description: Learn how to use Advanced Threat Analytics.
+ms.topic: landing-page
 ---
 # Advanced Threat Analytics Documentation
 
