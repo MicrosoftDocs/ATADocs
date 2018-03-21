@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod:
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
@@ -35,7 +35,7 @@ This article helps you determine how many ATA servers are needed to monitor your
 > [!NOTE] 
 > The ATA Center can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
 
-##Using the sizing tool
+## Using the sizing tool
 The recommended and simplest way to determine capacity for your ATA deployment is to use the [ATA Sizing Tool](http://aka.ms/atasizingtool). Run the ATA Sizing Tool and from the Excel file results, use the following fields to determine the ATA capacity you need:
 
 - ATA Center CPU and Memory: Match the **Busy Packets/sec** field in the ATA Center table results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
@@ -54,6 +54,9 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 If for some reason you cannot use the ATA Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
 The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
 
+
+> [!NOTE]
+> Because different environments vary and have multiple special and unexpected network traffic characteristics, after you initially deploy ATA and run the sizing tool, you may need to adjust and fine tune your deployment for capacity.
 
 
 ### ATA Center Sizing
@@ -74,8 +77,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 &#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
 > -   The ATA Center can handle an aggregated maximum of 1M packets per second from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M. Contact askcesec@microsoft.com for assistance with such environments.
-> -   The amount of storage dictated here are net values. You should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
-> -   If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. Deletion continues to occur until 5% or 50 GB of free space remains at which point data collection stops working.
+> -   If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it is not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.
 > - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
 > -   The storage latency for read and write activities should be below 10 ms.
 > -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
@@ -170,56 +172,6 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 > -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
 > -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
-
-## Domain controller traffic estimation
-There are various tools that you can use to discover the average packets per second of your domain controllers. If you do not have any tools that track this counter, you can use Performance Monitor to gather the required information.
-
-To determine packets per second, perform the following steps on each domain controller:
-
-1.  Open Performance Monitor.
-
-    ![Performance monitor image](media/ATA-traffic-estimation-1.png)
-
-2.  Expand **Data Collector Sets**.
-
-    ![Data collector sets image](media/ATA-traffic-estimation-2.png)
-
-3.  Right click **User Defined** and select **New** &gt; **Data Collector Set**.
-
-    ![New data collector set image](media/ATA-traffic-estimation-3.png)
-
-4.  Enter a name for the collector set and select **Create Manually (Advanced)**.
-
-5.  Under **What type of data do you want to include?** select  **Create data logs, and Performance counter**.
-
-    ![Type of data for new data collector set image](media/ATA-traffic-estimation-5.png)
-
-6.  Under **Which performance counters would you like to log**, click **Add**.
-
-7.  Expand **Network Adapter** and select **Packets/sec** and select the proper instance. If you are not sure, you can select **&lt;All instances&gt;** and click **Add** and **OK**.
-
-    > [!NOTE]
-    > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
-
-    ![Add performance counters image](media/ATA-traffic-estimation-7.png)
-
-8.  Change the **Sample interval** to **1 second**.
-
-9. Set the location where you want the data to be saved.
-
-10. Under **Create the data collector set**,  select **Start this data collector set now**, and click **Finish**.
-
-    You should now see the data collector set you created with a green triangle indicating that it is working.
-
-11. After 24 hours, stop the data collector set, by right-clicking the data collector set and selecting **Stop**.
-
-    ![Stop data collector set image](media/ATA-traffic-estimation-12.png)
-
-12. In File Explorer, browse to the folder where the .blg file was saved and double-click it to open it in Performance Monitor.
-
-13. Select the Packets/sec counter, and record the average and maximum values.
-
-    ![Packets per second counter image](media/ATA-traffic-estimation-14.png)
 
 
 ## Related Videos

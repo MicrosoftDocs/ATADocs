@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/9/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -25,7 +25,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 # Recommended upgrade path for ATA
 This article provides information about available Advanced Threat Analytics versions and how to upgrade ATA depending on which version you have running.
@@ -42,6 +42,7 @@ This article provides information about available Advanced Threat Analytics vers
 |1.7 Update 2|1.7.5757|
 |1.8|1.8.6645|
 |1.8 Update 1|1.8.6765|
+|1.9|1.9.7312|
 
 ## ATA version upgrade matrix
 
