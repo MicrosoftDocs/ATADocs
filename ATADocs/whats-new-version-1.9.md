@@ -30,22 +30,22 @@ ms.suite: ems
 
 The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=55536)  or the full version can be downloaded from the [Eval center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
-These release notes provide information about updates, new features, bug fixes and known issues in this version of Advanced Threat Analytics.
+These release notes provide information about updates, new features, bug fixes, and known issues in this version of Advanced Threat Analytics.
 
 ## New & updated detections
 
--  **Suspicious service creation**: Attackers attempt to run a suspicious services on your network. ATA now raises an alert when it identifies that someone runs a new service, that seems suspicious, on a domain controller. This detection is based on events (not network traffic), for more information see the [Suspicious activity guide](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Suspicious service creation**: Attackers attempt to run a suspicious service on your network. ATA now raises an alert when it identifies that someone runs a new service, that seems suspicious, on a domain controller. This detection is based on events (not network traffic), for more information, see the [Suspicious activity guide](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## New reports to help you investigate 
 
--	The [**Passwords exposed in cleartext**](reports.md) enables you to detect when acccounts, both sensitive and non-sensitive, send account credentials in plain text. This allows you to investigate and mitigate the use of LDAP simple bind in your environment, improving your network security level. This report replaces the service and sensitive account cleartext suspicious activity alerts.
+-	The [**Passwords exposed in cleartext**](reports.md) enables you to detect when accounts, both sensitive and non-sensitive, send account credentials in plain text. This allows you to investigate and mitigate the use of LDAP simple bind in your environment, improving your network security level. This report replaces the service and sensitive account cleartext suspicious activity alerts.
 
 - The [**Lateral movement paths to sensitive accounts**](reports.md) lists the sensitive accounts that are exposed via lateral movement paths. This enables you to mitigate these paths and harden your network to minimize the attack surface risk. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
 
 ## Improved investigation
 
--  ATA 1.9 includes a new and improved [entity profile](user-profiles.md). The entity profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they accessed and their history. The entity profile also enables you to identify sensitive users who are accessible via lateral movement paths. 
+-  ATA 1.9 includes a new and improved [entity profile](user-profiles.md). The entity profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they accessed, and their history. The entity profile also enables you to identify sensitive users who are accessible via lateral movement paths. 
 
 -	ATA 1.9 enables you to [manually tag groups](tag-sensitive-accounts.md) or accounts as sensitive to enhance detections. This tagging impacts many ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
 

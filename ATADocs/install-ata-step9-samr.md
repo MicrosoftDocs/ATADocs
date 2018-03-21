@@ -36,7 +36,7 @@ ms.suite: ems
 
 ## Step 9. Configure SAM-R required permissions
 
-The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol, via the ATA Service account created in [Step 2. Connect to AD](install-atp-step2.md).
+The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol, via the ATA Service account created in [Step 2. Connect to AD](install-ata-step2.md).
  
 To ensure Windows clients and servers allow the ATA Service account to perform this SAM-R operation, a modification to Group Policy must be made.
 
@@ -51,13 +51,13 @@ To ensure Windows clients and servers allow the ATA Service account to perform t
  
   ![Add the service](./media/samr-add-service.png)
 
-3. The **AATP Service** (the ATA service created during installation) now has the proper privileges to perform SAMR in the environment.
+3. The **ATA Service** (the ATA service created during installation) now has the proper privileges to perform SAMR in the environment.
 
 For more on SAM-R and this Group Policy, see the [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]
-[« Step 8](install-atp-step7.md)
+[« Step 8](install-ata-step7.md)
 
 ## See Also
 - [ATA POC deployment guide](http://aka.ms/atapoc)
