@@ -42,6 +42,7 @@ This article provides information about available Advanced Threat Analytics vers
 |1.7 Update 2|1.7.5757|
 |1.8|1.8.6645|
 |1.8 Update 1|1.8.6765|
+|1.9|1.9.7312|
 
 ## ATA version upgrade matrix
 

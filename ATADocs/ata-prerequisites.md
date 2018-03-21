@@ -130,6 +130,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 |**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Outbound|
 |**Netlogon** (optional if domain joined)|TCP and UDP|445|Domain controllers|Outbound|
 |**Windows Time** (optional if domain joined)|UDP|123|Domain controllers|Outbound|
+|**Netlogon (SMB, CIFS, SAM-R)**|TCP and UDP|445|Gateways and devices|Inbound and Outbound|
 
 > [!NOTE]
 > LDAP is required to test the credentials to be used between the ATA Gateways and the domain controllers. The test is performed from the ATA Center to a domain controller to test the validity of these credentials, after which the ATA Gateway uses LDAP as part of its normal resolution process.

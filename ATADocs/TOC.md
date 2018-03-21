@@ -49,7 +49,7 @@
 ## [Tag sensitive accounts](tag-sensitive-accounts.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Working with the ATA Console](working-with-ata-console.md)
-### [User profiles](user-profiles.md)
+### [Entity profiles](entity-profiles.md)
 ##[Preventing lateral movement paths](use-case-lateral-movement-path.md)
 ## ATA reference information
 ### [SIEM log reference](cef-format-sa.md)

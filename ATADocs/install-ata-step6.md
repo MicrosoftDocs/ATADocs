@@ -38,7 +38,7 @@ ms.suite: ems
 
 ## Step 6. Configure event collection
 ### Configure Event Collection
-To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757 and 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md). In order to detect suspicious service creation from all endpoints in your network, event 7045 needs to be forwarded to the ATA Gateway. This can be accomplished by configuring your SIEM as a data source that forwards 7045 events to ATA, or by [configuring Windows Event Forwarding](configure-event-collection.md) from the endpoints to the domain controllers.
+To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757 and 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md). 
 
 > [!NOTE]
 > For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
