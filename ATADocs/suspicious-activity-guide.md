@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 # Advanced Threat Analytics suspicious activity guide
@@ -70,6 +70,9 @@ Set up [Privileged Access Management for Active Directory](https://docs.microsof
 
 ## Broken trust between computers and domain
 
+> ![NOTE]
+> This suspicious activity was deprecated and only appears in ATA versions prior to 1.9.
+
 **Description**
 
 Broken trust means that Active Directory security requirements may not be in effect for the computers in question. This is often considered a baseline security and compliance failure and a soft target for attackers. In this detection, an alert is triggered if more than 5 Kerberos authentication failures are seen from a computer account in 24 hours.
@@ -83,6 +86,7 @@ Is the computer in question allowing domain users to log on?
 
 Rejoin the machine back to the domain if necessary or reset the machine's password.
 
+
 ## Brute force attack using LDAP simple bind
 
 **Description**
@@ -92,7 +96,7 @@ Rejoin the machine back to the domain if necessary or reset the machine's passwo
 
 In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when ATA detects many different passwords being used. This can be either *horizontally* with a small set of passwords across many users; or *vertically”* with a large set of passwords on just a few users; or any combination of these two options.
+In this detection, an alert is triggered when ATA detects a massive number of simple bind authentications. This can be either *horizontally* with a small set of passwords across many users; or *vertically”* with a large set of passwords on just a few users; or any combination of these two options.
 
 **Investigation**
 
@@ -110,15 +114,15 @@ In this detection, an alert is triggered when ATA detects many different passwor
 
 **Description**
 
-Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
 
 There are three detection types:
 
-1.  Skeleton Key – is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to encipher the user's passwords on the domain  controller. In this detection, the encryption method of the KRB_ERR message from the source computer was downgraded compared to the previously learned behavior.
+1.  Skeleton Key – is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain  controller. In this detection, the encryption method of the KRB_ERR message from the domain controller to the account asking for a ticket was downgraded compared to the previously learned behavior.
 
 2.  Golden Ticket – In a [Golden Ticket](#golden-ticket) alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the previous service request detected by ATA.
 
-3.  Overpass-the-Hash – The AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
+3.  Overpass-the-Hash – An attacker can use a weak stolen hash in order to create a strong ticket, with a Kerberos AS request. In this detection, the AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
 
 **Investigation**
 
@@ -364,6 +368,8 @@ In this detection, no alerts would be triggered in the first month after ATA is 
 
  - If the answer was no to all of the above, assume this is malicious.
 
+6. If there is no information about the account that was involved, you can go to the endpoint and check which account was logged in at the time of the alert.
+
 **Remediation**
 
 Use the [SAMRi10 tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) to harden your environment against this technique.
@@ -445,6 +451,9 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 ## Sensitive account credentials exposed & Services exposing account credentials
 
+> [!NOTE]
+> This suspicious activity was deprecated and only appears in ATA versions prior to 1.9. For ATA 1.9 and later, see [Reports](reports.md).
+
 **Description**
 
 Some services send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. Any clear text password for a sensitive account triggers the alert, while for non-sensitive accounts the alert is triggered if five or more different accounts  send clear text passwords from the same source computer. 
@@ -465,7 +474,7 @@ Verify the configuration on the source computers and make sure not to use LDAP s
 
 In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when many authentication failures occurred, this can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options.
+In this detection, an alert is triggered when many authentication failures using Kerberos or NTLM occurred, this can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options. The minimum period before an alert can be triggered is one week.
 
 **Investigation**
 
@@ -478,6 +487,30 @@ In this detection, an alert is triggered when many authentication failures occur
 **Remediation**
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+
+## Suspicious service creation <a name="suspicious-service-creation"></a>
+
+**Description**
+
+Attackers attempt to run suspicious services on your network. ATA raises an alert when a new service that seems suspicious has been created on a domain controller. This alert relies on event 7045, and it is detected from each domain controller that is covered by an ATA Gateway or Lightweight Gateway.
+
+**Investigation**
+
+1. If the computer in question is an administrative workstation, or a computer on which IT team members and service accounts perform administrative tasks, this may be a false positive and you may need to **Suppress** the alert and add it to the Exclusions list if necessary.
+
+2. Is the service something you recognize on this computer?
+
+ - Is the **account** in question allowed to install this service?
+
+ - If the answer to both questions is *yes*, then **Close** the alert or add it to the Exclusions list.
+
+3. If the answer to either questions is *no*, then this should be considered a true positive.
+
+**Remediation**
+
+- Implement less privileged access on domain machines to allow only specific users the right to create new services.
+
+
 
 ## Suspicion of identity theft based on abnormal behavior
 
@@ -502,7 +535,7 @@ Depending on what caused this abnormal behavior to occur, different actions shou
 
 **Description**
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash, as well as exploits used by advanced ransomware, for example, WannaCry.
 
 **Investigation**
 
@@ -531,6 +564,10 @@ Patch all your machines, especially applying security updates.
 2. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
+
+>[!NOTE]
+> To disable a suspicious activity, contact support.
 
 ## Related Videos
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

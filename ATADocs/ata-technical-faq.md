@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/10/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -25,7 +25,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 # ATA frequently asked questions
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
@@ -89,7 +89,9 @@ For every one full day with an average of 1000 packets/sec you need 0.3 GB of st
 ## Why are certain accounts considered sensitive?
 This happens when an account is a member of certain groups which we designate as sensitive (for example: "Domain Admins").
 
-To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group).
+To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). 
+
+In addition, you can manually tag a user, group or computer as sensitive. For more information, see [Tag sensitive accounts](tag-sensitive-accounts.md).
 
 ## How do I monitor a virtual domain controller using ATA?
 Most virtual domain controllers can be covered by the ATA Lightweight Gateway, to determine whether the ATA Lightweight Gateway is appropriate for your environment, see [ATA Capacity Planning](ata-capacity-planning.md).

@@ -7,8 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
-ms.topic: article
+ms.date: 3/21/2018
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
@@ -26,7 +25,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
@@ -60,7 +59,9 @@ The URL is used in the following scenarios:
     
 3. Wait for the ATA Gateways to sync. They now have two potential URLs through which to access the ATA Console. As long as the ATA Gateway can connect using the original URL, it does not try the new one.
 
-4. After all the ATA Gateways synced with the updated configuration, activate the new URL. When you activate the new URL, the ATA Gateways will now use the new URL to access the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new URL for the ATA Console. 
+4. After all the ATA Gateways synced with the updated configuration, in the Center configuration page, click the **Activate** button to activate the new URL. When you activate the new URL, the ATA Gateways will now use the new URL to access the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new URL for the ATA Console. 
+5. 
+ ![Activate the certificate](media/center-activation.png)
 
 > [!NOTE]
 > -   If an ATA Gateway was offline while you activated the new URL, and never got the updated configuration, manually update the configuration JSON file on the ATA Gateway.

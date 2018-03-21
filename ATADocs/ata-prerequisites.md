@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
@@ -76,6 +76,10 @@ This section lists information you should gather and accounts and network entiti
 This section lists the requirements for the ATA Center.
 ### General
 The ATA Center supports installation on a server running Windows Server 2012 R2 or Windows Server 2016. 
+
+ > [!NOTE]
+ > The ATA Center does not support Windows Server core.
+
 The ATA Center can be installed on a server that is a member of a domain or workgroup.
 
 Before installing ATA Center running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
@@ -91,7 +95,8 @@ If you run the ATA Center as a virtual machine, shut down the server before crea
 
 ### Server specifications
 
-When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving in order to disable NUMA. For more information, see your BIOS documentation. <br>
+When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving in order to disable NUMA. For more information, see your BIOS documentation.<br>
+
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
@@ -125,6 +130,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 |**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Outbound|
 |**Netlogon** (optional if domain joined)|TCP and UDP|445|Domain controllers|Outbound|
 |**Windows Time** (optional if domain joined)|UDP|123|Domain controllers|Outbound|
+|**Netlogon (SMB, CIFS, SAM-R)**|TCP and UDP|445|Gateways and devices|Inbound and Outbound|
 
 > [!NOTE]
 > LDAP is required to test the credentials to be used between the ATA Gateways and the domain controllers. The test is performed from the ATA Center to a domain controller to test the validity of these credentials, after which the ATA Gateway uses LDAP as part of its normal resolution process.
@@ -155,7 +161,7 @@ For example, you can use the standard **Web server** or **Computer** templates.
 ## ATA Gateway requirements
 This section lists the requirements for the ATA Gateway.
 ### General
-The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
+The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (including server core).
 The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
 The ATA Gateway can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
