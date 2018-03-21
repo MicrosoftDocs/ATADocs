@@ -45,7 +45,7 @@ These release notes provide information about updates, new features, bug fixes, 
 
 ## Improved investigation
 
--  ATA 1.9 includes a new and improved [entity profile](user-profiles.md). The entity profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they accessed, and their history. The entity profile also enables you to identify sensitive users who are accessible via lateral movement paths. 
+-  ATA 1.9 includes a new and improved [entity profile](entity-profiles.md). The entity profile provides you with a dashboard designed for full deep-dive investigation of users, the resources they accessed, and their history. The entity profile also enables you to identify sensitive users who are accessible via lateral movement paths. 
 
 -	ATA 1.9 enables you to [manually tag groups](tag-sensitive-accounts.md) or accounts as sensitive to enhance detections. This tagging impacts many ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive.
 
