@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/25/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -129,7 +129,7 @@ The **Azure ATP sensor** and **Azure ATP sensor** both have the same core functi
 
 -   Monitor multiple domain controllers from a single Azure ATP standalone sensor, or monitor a single domain controller for an Azure ATP sensor.
 
-Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
+By default, Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
 
 The Azure ATP standalone sensor receives network traffic and Windows Events from your network and processes it in the following main components:
 
