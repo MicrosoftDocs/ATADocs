@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/25/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -42,11 +42,16 @@ Before installing the Azure ATP standalone sensor on a dedicated server, validat
 
 
 > [!IMPORTANT]
->Make sure .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed the Azure ATP sensor setup package installs it, which requires a reboot of the server. Verify that the machine has connectivity to the Azure ATP cloud service endpoint: https://triprd1wceuw1sensorapi.atp.azure.com (for Europe) or https://triprd1wcuse1sensorapi.atp.azure.com (for the US).
+>Make sure .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed the Azure ATP sensor setup package installs it, which requires a reboot of the server.
 
 Perform the following steps on the Azure ATP sensor server or domain controller.
 
-1.  Extract the files from the zip file. 
+1. Verify that the machine has connectivity to the relevant Azure ATP cloud service endpoint:
+  - https://triprd1wceuw1sensorapi.atp.azure.com (for Europe)  
+  - https://triprd1wcuse1sensorapi.atp.azure.com (for the US)
+  - https://triprd1wcasse1sensorapi.atp.azure.com (for Asia)
+
+2. Extract the installation files from the zip file. 
 > [!NOTE] 
 > Installing directly from the zip file fails.
 
