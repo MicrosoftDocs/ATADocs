@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/25/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,6 +33,8 @@ ms.suite: ems
 # Azure ATP Reports
 
 The Azure ATP reports section in the workspace portal enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
+
+The daily reports are designed to be sent shortly after midnight, UTC.
 
 To access the reports page, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
 The reports that are available are: 
