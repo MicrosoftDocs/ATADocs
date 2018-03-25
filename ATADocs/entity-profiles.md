@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/25/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -53,6 +53,8 @@ At the top, you can view the summary tiles that give you a quick overview of wha
 - How many resources the user accessed
 - From which locations the user logged into VPN
 
+  ![entity menu](media/entity-menu.png)
+
 For computers you can see:
 - How many open suspicious activities there are for the machine
 - How many users logged into the machine
@@ -60,7 +62,7 @@ For computers you can see:
 - How many locations VPN was accessed from on the computer
 - A list of which IP addresses the computer has used
 
-![entity menu](media/entity-menu.png)
+  ![entity menu computer](media/entity-computer.png)
 
 Using the **Filter by** button above the activity timeline, you can filter the activities by activity type. You can also filter out a specific (noisy) type of activity. This is really helpful for investigation when you want to understand the basics of what an entity is doing in the network. You can also go to a specific date, and you can export the activities as filtered to Excel. The exported file provides a page for directory services changes (things that changed in Active Directory for the account) and a separate page for activities. 
 
