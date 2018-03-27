@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 3/27/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -81,7 +81,7 @@ Set your main workspace as **Primary**. Only one workspace can be set as primary
 
 > [!NOTE]
 > Azure ATP currently supports creation of two workspaces. It is recommended that you create a primary workspace for your production environment and an additional workspace as a staging environment.
-> After you delete a workspace, you can contact support to reactivate it. You an have a mazimum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
+> After you delete a workspace, you can contact support to reactivate it. You an have a maximum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
 
 
 ### Azure ATP workspace portal
