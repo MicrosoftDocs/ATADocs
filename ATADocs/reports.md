@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/27/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -59,6 +59,9 @@ To set a scheduled report:
 1. In the **Reports** page, click **Set scheduled reports**, or in the ATA Console configuration page, under Notifications and Reports, click **Scheduled reports**.
 
    ![Schedule reports](./media/ata-sched-reports.png)
+
+  > [!NOTE]
+  > The daily reports are designed to be sent shortly after midnight, UTC.
 
 2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 
