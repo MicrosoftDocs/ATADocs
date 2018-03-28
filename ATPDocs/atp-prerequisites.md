@@ -138,11 +138,13 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
+|**Internet ports**|||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
+|**Internal ports**|||||
 |LDAP|TCP and UDP|389|Domain controllers|Outbound|
 |Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
 |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
 |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
 |Kerberos|TCP and UDP|88|Domain controllers|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|Domain controllers|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
@@ -202,7 +204,9 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
+|**Internet ports**|||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
+|**Internal ports**|||||
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domain controllers|Outbound|
