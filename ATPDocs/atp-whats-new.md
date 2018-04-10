@@ -32,6 +32,15 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.27
+
+Released April 8, 2018
+
+- You now have the ability to provide user feedback from the top navigation bar. Clicking the smiley face in the menu bar enables you to send an email to the Azure Advanced Threat Protection team with your feedback.
+
+- This version includes fixes and improvements for multiple issues. 
+ 
+
 ## Azure ATP release 2.26
 
 Released March 25, 2018

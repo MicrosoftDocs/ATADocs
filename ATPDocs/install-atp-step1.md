@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/15/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -39,7 +39,8 @@ This installation procedure provides instructions for creating and managing a wo
 In Azure ATP, you have the ability to manage and monitor multiple workspaces. This is especially helpful if you want to create a demo workspace and a test workspace in which you can POC Azure ATP before rolling it out to your whole organization. This is also needed to support deployments with multiple forests. A single workspace can only monitor multiple domains from a single forest. 
 
 > [!NOTE]
-> You can have a maximum of two active workspaces. After you delete a workspace, you can contact support to reactivate it. You an have a mazimum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
+> - You can have a maximum of two active workspaces. After you delete a workspace, you can contact support to reactivate it. You an have a maximum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
+> - Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia.
 
 ## Step 1. Enter the workspace management portal
 
