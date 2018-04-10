@@ -251,7 +251,7 @@ In this detection, an alert is triggered when a replication request is initiated
 1.	Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close and exclude** the suspicious activity.  IP problem fix NNr + make sure port are opened
 2.	If this is newly promoted DC … close.
 3.	Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
-4.	Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP icon (add picture) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
+4.	Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
 
 
 **Remediation**
@@ -378,7 +378,7 @@ There are several query types in the DNS protocol. Azure ATP detects the AXFR (T
 
 2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for Azure ATP admins).
 
-3. 3.	If the answer to all the preceding questions is no, keep investigating focusing on the source computer. Click on the source computer to go to its profile page. Check what happened around the time of the request, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP icon (add picture) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
+3. 3.	If the answer to all the preceding questions is no, keep investigating focusing on the source computer. Click on the source computer to go to its profile page. Check what happened around the time of the request, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
 
 **Remediation**
 
@@ -428,7 +428,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
  - If the answer to both questions is *yes*, then **Close** the alert.
 
-3. If the answer to either questions is no, then this should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATPintegration, click the Windows Defender ATPicon (add picture) to further investigate the machine. In Windows Defender ATPyou can see which processes and alerts occurred around the time of the alert. 
+3. If the answer to either questions is no, then this should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATPintegration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATPyou can see which processes and alerts occurred around the time of the alert. 
 
 **Remediation**
 
@@ -452,7 +452,7 @@ In this detection, an alert is triggered when many authentication failures using
    -	If the authentication attempts were performed using NTLM, you will see relevant event activities 
    -	If the authentication attempts were performed using Kerberos, you will see relevant  network activities
 
-2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP icon (add picture) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
+2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
 
 3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server which the source machine tried to access, you should enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server** which the source machine tried to access. After you know which server sent the authentication validation, you should investigate the server by checking its events such as 4624 to better understand the authentication process. 
 
