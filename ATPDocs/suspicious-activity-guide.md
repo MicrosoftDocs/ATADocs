@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -107,14 +107,21 @@ There are three detection types:
 
 **Investigation**
 
-First check the description of the alert, to see which of the above three detection types you’re dealing with.
+First check the description of the alert, to see which of the above three detection types you’re dealing with.Investigation 
+First check the description of the alert to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
 
-1.  Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
+1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
-2.  Golden Ticket – there are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
+2.	Golden Ticket – In the excel spreadsheet, go to the network activity tab. You will see that the relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** contains stronger encryption methods.
 
-3.  Overpass-the-Hash – there are cases in which this alert might be triggered when users configured with smart cards are required for interactive login, and this setting is disabled and then enabled. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
+  1. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common (for example, all the marketing personnel use a specific app that might be causing the alert to be triggered). There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
+  
+  2. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
+
+3.	Overpass-the-Hash – In the excel spreadsheet, go to the network activity tab. You will see that the relevant downgraded field is **Encrypted Timestamp Encryption Type** and **Source Computer Supported Encryption Types** contains stronger encryption methods.
+
+  1. There are cases in which this alert might be triggered when users log in using smartcards if the smartcard configuration was changed recently. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
+  2. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
 
 **Remediation**
 
@@ -241,9 +248,11 @@ In this detection, an alert is triggered when a replication request is initiated
 
 **Investigation**
 
-1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close and exclude** the suspicious activity.  
+1.	Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close and exclude** the suspicious activity.  IP problem fix NNr + make sure port are opened
+2.	If this is newly promoted DC … close.
+3.	Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+4.	Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP icon (add picture) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
 
-2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
 
 **Remediation**
 
@@ -369,7 +378,7 @@ There are several query types in the DNS protocol. Azure ATP detects the AXFR (T
 
 2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for Azure ATP admins).
 
-3. If the answer to all the preceding questions is no, assume this is malicious.
+3. 3.	If the answer to all the preceding questions is no, keep investigating focusing on the source computer. Click on the source computer to go to its profile page. Check what happened around the time of the request, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP icon (add picture) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
 
 **Remediation**
 
@@ -403,7 +412,7 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
 
-## Remote execution attempt detected
+## Remote execution attempt
 
 **Description**
 
@@ -419,7 +428,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
  - If the answer to both questions is *yes*, then **Close** the alert.
 
-3. If the answer to either questions is *no*, then this should be considered a true positive.
+3. If the answer to either questions is no, then this should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATPintegration, click the Windows Defender ATPicon (add picture) to further investigate the machine. In Windows Defender ATPyou can see which processes and alerts occurred around the time of the alert. 
 
 **Remediation**
 
@@ -437,21 +446,25 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Investigation**
 
-1. If there are many accounts involved, click **Download details** to view the list in an Excel spreadsheet.
+1.	Click **Download details** to view the full information in an Excel spreadsheet. You can get the following information: 
+   -	List of the attacked accounts
+   -	List of guessed accounts in which login attempts ended with successful authentication
+   -	If the authentication attempts were performed using NTLM, you will see relevant event activities 
+   -	If the authentication attempts were performed using Kerberos, you will see relevant  network activities
 
-2. Click on the alert to go to its details page. Check if any login attempts ended with a successful authentication, these would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
+2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP icon (add picture) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
 
-3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
+3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server which the source machine tried to access, you should enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server** which the source machine tried to access. After you know which server sent the authentication validation, you should investigate the server by checking its events such as 4624 to better understand the authentication process. 
 
 **Remediation**
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious service creation - Preview feature!
+## Suspicious service creation
 
 **Description**
 
-A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 in order to identify this suspicious activity on your endpoints. Event 7045 should be forwarded from the endpoints to ATP by configuring [Windows Event Forwarding](configure-event-forwarding.md) or by forwarding 7045 events to the SIEM and [configuring your SIEM](configure-event-collection.md) as a data source that forwards events to ATP.
+A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 in order to identify this suspicious activity on your endpoints. 
 
 **Investigation**
 
