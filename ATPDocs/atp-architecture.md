@@ -113,7 +113,7 @@ Consider the following criteria when deciding how many Azure ATP workspaces to d
 
 ## Azure ATP sensor and Azure ATP standalone sensor
 
-The **Azure ATP sensor** and **Azure ATP sensor** both have the same core functionality:
+The **Azure ATP sensor** and **Azure ATP standalone sensor** both have the same core functionality:
 
 -   Capture and inspect domain controller network traffic. This is port mirrored traffic for Azure ATP standalone sensors and local traffic of the domain controller in Azure ATP sensors. 
 

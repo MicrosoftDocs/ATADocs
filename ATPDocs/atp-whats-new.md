@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/15/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,16 @@ ms.suite: ems
 
 
 # What's new in Azure ATP 
+
+
+
+## Azure ATP release 2.28
+
+Released April 15, 2018
+ 
+-	Users who are members of the role groups Azure ATP Users and Azure ATP Viewers now have permissions to see monitoring alerts.
+- This version includes fixes and improvements for multiple issues. 
+
 
 ## Azure ATP release 2.27
 
