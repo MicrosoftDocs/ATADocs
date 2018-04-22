@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -95,7 +95,7 @@ For your domain controllers to communicate with the cloud service, you must open
 For information on using virtual machines with the Azure ATP standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
+> A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the Azure ATP standalone sensor to **High Performance**.<br>
@@ -114,9 +114,9 @@ The servers and domain controllers onto which the sensor is installed must have 
 ### Network adapters
 The Azure ATP standalone sensor requires at least one Management adapter and at least one Capture adapter:
 
--   **Management adapter** - used for communications on your corporate network. This adapter should be configured with the following settings:
+-   **Management adapter** - used for communications on your corporate network. The sensor will use this adapter to query the DC it’s protecting and performing resolution to machine accounts. <br>This adapter should be configured with the following settings:
 
-    -   Static IP address including default sensor
+    -   Static IP address including default gateway
 
     -   Preferred and alternate DNS servers
 
@@ -171,11 +171,11 @@ The domain controller can be a read-only domain controller (RODC).
 
 For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
-During installation, the .Net Framework 4.7 is installed and might cause a reboot of the domain controller.
+During installation, the .Net Framework 4.7 is installed and might require a reboot of the domain controller, if a restart is already pending.
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
+> A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
 
 ### Server specifications
 
