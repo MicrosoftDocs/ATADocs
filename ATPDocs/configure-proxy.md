@@ -67,7 +67,7 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 ## Enable access to Azure ATP service URLs in the proxy server
 
-If a proxy or firewall is blocking all traffic by default and allowing only specific domains through or HTTPS scanning (SSL inspection) is enabled, make sure that the following URLs are white-listed to permit communication with Windows Defender ATP service in port 443:
+If a proxy or firewall is blocking all traffic by default and allowing only specific domains through or HTTPS scanning (SSL inspection) is enabled, make sure that the following URLs are white-listed to permit communication with the Azure ATP service in port 443:
 
 |Service location|.Atp.Azure.com DNS record|
 |----|----|
