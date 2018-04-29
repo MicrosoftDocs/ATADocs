@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -50,10 +50,6 @@ Each suspicious activity has the following information:
     -   Share the suspicious activity with other people in your organization via email.
 
     -   Export the suspicious activity to Excel.
-
-    -   Add a note to the suspicious activity.
-
-    -   Provide input on the suspicious activity.
 
 > [!NOTE]
 > -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.

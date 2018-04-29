@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,6 +36,28 @@ ms.suite: ems
 ## Deployment log location
  
 The Azure ATP deployment logs are located in the temp directory for the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%).
+
+## Proxy authentication problem presents as licensing error
+
+During sensor installation you receive the following error:  **The sensor failed to register due to licensing issues.**
+
+Deployment log entries: 
+[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]]
+[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]]
+[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]]
+[1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
+
+
+**Cause:**
+
+In some cases, when communicating via a proxy, during authentication it might respond to the Azure ATP sensor with error 401 or 403 instead of error 407. The Azure ATP sensor will interpret error 401 or 403 as a licensing issue and not as a proxy authentication issue. 
+
+**Resolution:**
+
+Ensure that the sensor can browse to *.atp.azure.com through the configured proxy without authentication. For more information see, [Configure proxy to enable communication](configure-proxy.md).
+
+
+
 
 ## Azure ATP sensor NIC teaming issue
 
