@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,7 +37,7 @@ ms.suite: ems
 
 The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol, via the Azure ATP Service account created in [Step 2. Connect to AD](install-atp-step2.md).
  
-To ensure Windows clients and servers allow the Azure ATP Service account to perform this SAM-R operation, a modification to Group Policy must be made.
+To ensure Windows clients and servers allow Azure ATP account to perform this SAM-R operation, a modification to **Group Policy** must be made to add the Azure ATP service account in addition to the configured accounts listed in the **Network access** policy.
 
 1. Locate the policy:
 

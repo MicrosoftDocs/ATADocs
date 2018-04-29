@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/27/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,6 +37,8 @@ The Azure Advanced Threat Protection architecture is detailed in this diagram:
 Azure ATP monitors your domain controller network traffic by utilizing port mirroring to an Azure ATP standalone sensor using physical or virtual switches. If you deploy the Azure ATP sensor directly on your domain controllers, it removes the requirement for port mirroring. In addition, Azure ATP can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats. Azure ATP receives parsed traffic from the Azure ATP standalone sensor and Azure ATP sensor. It then performs profiling, runs deterministic detection, and runs machine learning and behavioral algorithms to learn about your network, enable detection of anomalies and warn you of suspicious activities.
 
 This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATP: the Azure ATP standalone sensor, Azure ATP sensor (which has the same core functionality as the Azure ATP standalone sensor), and the Azure ATP cloud service. 
+
+When installed directly on domain controllers, the sensor accesses the required event logs directly from the domain controller. After these logs and the network traffic have been parsed by the sensor, Azure ATP sends only this parsed information to the Azure ATP service (not all of the logs).
 
 ## Azure ATP Components
 Azure ATP consists of the following components:
