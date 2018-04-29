@@ -6,6 +6,7 @@
 ## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Azure ATP architecture](atp-architecture.md)
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
+### [Configure proxy to enable communication](configure-proxy.md)
 # Deploy
 ## [1 Create a workspace in the workspace management portal](install-atp-step1.md)
 ## [2 Connect to AD](install-atp-step2.md)
@@ -21,7 +22,6 @@
 ### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
 ### [Configure Windows Event Forwarding](configure-event-forwarding.md)
-### [Configure proxy to enable communication](configure-proxy.md)
 # Use
 ## [Azure ATP health center](atp-health-center.md)
 ## [Azure ATP reports](reports.md)
@@ -44,3 +44,4 @@
 # Troubleshooting
 ## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
 ## [Support and information](atp-support.md)
+## [Azure ATP readiness roadmap](atp-resources.md)

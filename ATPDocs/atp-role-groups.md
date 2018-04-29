@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 4/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -53,10 +53,9 @@ Azure ATP introduces three types of security group: Azure ATP *workspace name* A
 |Activity |Azure ATP *workspace name* Administrators|Azure ATP *workspace name* Users|Azure ATP *workspace name* Viewers|
 |----|----|----|----|
 |Login|Available|Available|Available|
-|Provide Input for Suspicious Activities|Available|Available|Not available|
 |Change status of Suspicious Activities|Available|Available|Not available|
 |Share/Export suspicious activity via email/get link|Available|Available|Not available|
-|Change status of Monitoring Alerts|Available|Available|Not available|
+|Change status of Monitoring Alerts|Available|Not available|Not available|
 |Update Azure ATP Configuration|Available|Not available|Not available|
 |sensor – Add|Available|Not available|Not available|
 |sensor – Delete |Available|Not available|Not available|

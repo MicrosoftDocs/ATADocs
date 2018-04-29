@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,6 +33,15 @@ ms.suite: ems
 # What's new in Azure ATP 
 
 
+
+## Azure ATP release 2.30
+
+Released April 29, 2018
+ 
+- Encryption downgrade suspicious activities now include an evidence section which describes the symptoms detected by Azure ATP that cause it to suspect that an encryption downgrade activity transpired. 
+-	Azure ATP now uses Azure Email Orchestrator for all emails sent from Azure ATP, including suspicious activities, monitoring alerts and reports. You will see that these email notifications now follow a consistent format for ease-of-use and Excel files will be linked to from the email to be downloaded from the console.
+ 
+ 
 
 ## Azure ATP release 2.29
 
