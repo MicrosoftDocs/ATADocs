@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -39,7 +40,7 @@
     "template": "docs.html",
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "/enterprise-mobility-security/toc.json"
+      "breadcrumb_path": "/advanced-threat-analytics/bread/toc.json"
     }
   }
 }

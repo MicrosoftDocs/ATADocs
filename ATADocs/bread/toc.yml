@@ -1,0 +1,24 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: Enterprise Mobility + Security
+    href: /enterprise-mobility-security/
+    homepage: /enterprise-mobility-security
+    items:
+    - name: Advanced Threat Analytics
+      href: /advanced-threat-analytics/
+      homepage: /advanced-threat-analytics
+      items:
+        - name: Understand & Explore
+          href: /advanced-threat-analytics/understand-explore/
+          homepage: /advanced-threat-analytics/understand/ata-understand-and-explore
+        - name: Plan & Design
+          href: /advanced-threat-analytics/plan-design/
+          homepage: /advanced-threat-analytics/plandesign/ata-plan-and-design
+        - name: Deploy & Use
+          href: /advanced-threat-analytics/deploy-use/
+          homepage: /advanced-threat-analytics/deployuse/configure-port-mirroring
+        - name: Troubleshoot
+          href: /advanced-threat-analytics/troubleshoot/
+          homepage: /advanced-threat-analytics/troubleshoot/ata-troubleshooting
