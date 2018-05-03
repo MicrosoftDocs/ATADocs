@@ -1,0 +1,11 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: Enterprise Mobility + Security
+    href: /enterprise-mobility-security/
+    homepage: /enterprise-mobility-security
+    items:
+    - name: Azure Threat Protection
+      href: /azure-threat-protection/
+      homepage: /azure-advanced-threat-protection
