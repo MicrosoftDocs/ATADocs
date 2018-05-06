@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -146,7 +146,7 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
 |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
 |Kerberos|TCP and UDP|88|Domain controllers|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
@@ -159,7 +159,6 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 > - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
->   -   SAM-R queries (TCP/UDP port 445) for detection purposes
 
 
 ## Azure ATP sensor requirements
@@ -209,18 +208,16 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDDP|1813|RADIUS|Inbound|
 
 > [!NOTE]
-> - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
-> - The following ports need to be open inbound on devices on the network from the Azure ATP sensors:
+> - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
+> - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
->   -   SAM-R queries (TCP/UDP port 445) for detection purposes
-
 
 
 
