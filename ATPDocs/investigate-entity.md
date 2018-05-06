@@ -70,7 +70,7 @@ The user access control flags are also imported from Active Directory. Azure ATP
 
 Azure ATP lets you know if these flags are On or Off in Azure Active Directory. Colorful icons indicate that the flag is on in Active Directory; in the example below, only **Account disabled** is On in Active Directory.
 
- ![user access control flags](./media/user-access-flags.md)
+ ![user access control flags](./media/user-access-flags.png)
 
 ## Cross-check with Windows Defender
 
