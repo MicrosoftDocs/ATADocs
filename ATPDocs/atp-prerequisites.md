@@ -159,7 +159,7 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 > - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
-
+>   -   RDP (TCP port 3389), only first packet of *Client hello*, for resolution purposes<br> Note that no authentication is performed on any of the ports.
 
 ## Azure ATP sensor requirements
 This section lists the requirements for the Azure ATP sensor.
