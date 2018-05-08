@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 5/8/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,6 +38,7 @@ ms.suite: ems
 
 Released May 6, 2018
  
+- Improvements were made to name resolution. As part of this effort, in addition to the RPC and NetBIOS active resolution, the sensor may issue a TLS Client Hello packet to the endpoint RDP port (3389). 
 - This version includes fixes and improvements for multiple issues. 
 
 ## Azure ATP release 2.30
