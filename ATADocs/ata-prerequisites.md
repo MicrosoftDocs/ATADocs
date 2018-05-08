@@ -230,7 +230,7 @@ The following table lists the minimum ports that the ATA Gateway requires config
 >
 > -   NTLM over RPC (TCP Port 135)
 > -   NetBIOS (UDP port 137)
-> - Using the Directory service user account, the ATA Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
+> - Using the Directory service user account, the ATA Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-ata-step9-samr.md).
 > - The following ports need to be open inbound on devices on the network from the ATA Gateway:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
@@ -298,7 +298,7 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 >
 > -   NTLM over RPC
 > -   NetBIOS
-> - Using the Directory service user account, the ATA Lightweight Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
+> - Using the Directory service user account, the ATA Lightweight Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-ata-step9-samr.md).
 > - The following ports need to be open inbound on devices on the network from the ATA Gateway:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
