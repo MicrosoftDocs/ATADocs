@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -128,9 +128,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 |**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
 |**DNS**|TCP and UDP|53|DNS servers|Outbound|
 |**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Outbound|
-|**Netlogon** (optional if domain joined)|TCP and UDP|445|Domain controllers|Outbound|
 |**Windows Time** (optional if domain joined)|UDP|123|Domain controllers|Outbound|
-|**Netlogon (SMB, CIFS, SAM-R)**|TCP and UDP|445|Gateways and devices|Inbound and Outbound|
 
 > [!NOTE]
 > LDAP is required to test the credentials to be used between the ATA Gateways and the domain controllers. The test is performed from the ATA Center to a domain controller to test the validity of these credentials, after which the ATA Gateway uses LDAP as part of its normal resolution process.
@@ -219,7 +217,7 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
 |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
 |Kerberos|TCP and UDP|88|Domain controllers|Outbound|
-|Netlogon|TCP and UDP|445|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
@@ -232,6 +230,10 @@ The following table lists the minimum ports that the ATA Gateway requires config
 >
 > -   NTLM over RPC (TCP Port 135)
 > -   NetBIOS (UDP port 137)
+> - Using the Directory service user account, the ATA Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
+> - The following ports need to be open inbound on devices on the network from the ATA Gateway:
+>   -   NTLM over RPC (TCP Port 135) for resolution purposes
+>   -   NetBIOS (UDP port 137) for resolution purposes
 
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
@@ -289,12 +291,17 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 
 > [!NOTE]
 > As part of the resolution process performed by the ATA Lightweight Gateway, the following ports need to be open inbound on devices on the network from the ATA Lightweight Gateways.
 >
 > -   NTLM over RPC
 > -   NetBIOS
+> - Using the Directory service user account, the ATA Lightweight Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
+> - The following ports need to be open inbound on devices on the network from the ATA Gateway:
+>   -   NTLM over RPC (TCP Port 135) for resolution purposes
+>   -   NetBIOS (UDP port 137) for resolution purposes
 
 ## ATA Console
 Access to the ATA Console is via a browser, supporting the  browsers and settings:

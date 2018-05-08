@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 5/6/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,6 +33,12 @@ ms.suite: ems
 # What's new in Azure ATP 
 
 
+
+## Azure ATP release 2.31
+
+Released May 6, 2018
+ 
+- This version includes fixes and improvements for multiple issues. 
 
 ## Azure ATP release 2.30
 
