@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -57,6 +57,10 @@ For version upgrade information, see [ATA upgrade path](upgrade-path.md).
 
 For the ATA version upgrade matrix, see [ATA upgrade path](upgrade-path.md).
 
+
+## How does the ATA Center update its latest signatures?
+
+The ATA detection mechanism is enhanced when a new version is installed on the ATA Center. You can upgrade the Center either by using Microsoft Update (MU) or by manually downloading the new version from Download Center or Volume License Site.
 
 ## How do I verify Windows Event Forwarding?
 You can place the the following code into a file and then execute it from a command prompt in the directory:  **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** as follows:

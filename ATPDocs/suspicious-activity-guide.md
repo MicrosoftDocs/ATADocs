@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -134,28 +134,6 @@ First check the description of the alert to see which of the above three detecti
 3.  Overpass-the-Hash – If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys
     tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
 
-## Golden Ticket<a name="golden-ticket"></a>
-
-**Description**
-
-Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve persistency in the network.
-
-In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
-security policy.
-
-**Investigation**
-
-1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
-
-2. Is the Azure ATP standalone sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
-
-3. If the answer to the above questions is no, assume this is malicious.
-
-**Remediation**
-
-Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
-
 ## Honeytoken activity
 
 
@@ -217,6 +195,28 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](http://aka.ms/PtH).
 
+## Kerberos Golden Ticket<a name="golden-ticket"></a>
+
+**Description**
+
+Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve persistency in the network.
+
+In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
+security policy.
+
+**Investigation**
+
+1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
+
+2. Is the Azure ATP standalone sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
+
+3. If the answer to the above questions is no, assume this is malicious.
+
+**Remediation**
+
+Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
+tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
+
 ## Malicious Data Protection Private Information Request
 
 **Description**
@@ -237,7 +237,7 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 To use DPAPI, an attacker needs domain admin rights. Implement [Pass the hash recommendations](http://aka.ms/PtH).
 
-## Malicious replication requests
+## Malicious replication of directory services
 
 
 **Description**
@@ -463,7 +463,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Description**
 
-A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 in order to identify this suspicious activity on your endpoints. 
+A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 in order to identify this suspicious activity. 
 
 **Investigation**
 
