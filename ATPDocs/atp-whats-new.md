@@ -34,6 +34,12 @@ ms.suite: ems
 
 
 
+## Azure ATP release 2.32
+
+Released May 13, 2018
+ 
+- This version includes fixes and improvements for multiple issues. 
+
 ## Azure ATP release 2.31
 
 Released May 6, 2018
