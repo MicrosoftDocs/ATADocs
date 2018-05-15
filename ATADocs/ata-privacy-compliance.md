@@ -46,11 +46,11 @@ Although data in ATA is replicated and always updated from AD, when an entity is
 
 To permanently delete user-related data from the ATA database, follow this procedure: 
 
-1. Download the MongoDB script (gdpr.js) from the download center.  
+1. [Download](https://aka.ms/ata-gdpr-script) the MongoDB script (gdpr.js).  
 
 2. Copy the script onto the ATA Center machine and run the following command from the ATA Center machine: 
 
-The ATA GDPR database script can perform the following actions: 
+Use the ATA GDPR database script to delete entities and delete entity activity data, as described in the following sections.
 
 ### Delete entities
 

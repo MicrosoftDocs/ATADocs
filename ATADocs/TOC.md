@@ -14,6 +14,7 @@
 #### [Update to ATA 1.5 - migration guide](ata-update-1.5-migration-guide.md)
 ### [What's new in ATA version 1.4](whats-new-version-1.4.md)
 ## [Frequently asked questions](ata-technical-faq.md)
+## [ATA compliance, trust, data security, and privacy](ata-privacy-compliance.md)
 # Plan and Design
 ## [ATA Architecture](ata-architecture.md)
 ## [Plan your ATA capacity](ata-capacity-planning.md)
