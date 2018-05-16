@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Configure endpoint proxy and Internet connectivity settings for your Azure ATP Sensor
 
-Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to operate successfully. In some organizations, the domain controllers aren’t directly connected to the Internet, but are connected through a web proxy connection. Each Azure ATP sensor requires that you use the Microsoft Windows Internet (WinINET) proxy conifguration to report sensor data and communicate with the Azure ATP service. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) brower proxy settings for communication between the sensor and the Azure ATP cloud service.
+Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to operate successfully. In some organizations, the domain controllers aren’t directly connected to the Internet, but are connected through a web proxy connection. Each Azure ATP sensor requires that you use the Microsoft Windows Internet (WinINET) proxy configuration to report sensor data and communicate with the Azure ATP service. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Azure ATP cloud service.
 
 
 When configuring the proxy, you will need to know that the embedded Azure ATP sensor service runs in system context using the **LocalService** account and the Azure ATP Sensor Updater service runs in the system context using **LocalSystem** account. 
@@ -75,6 +75,11 @@ If a proxy or firewall is blocking all traffic by default and allowing only spec
 |Europe|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Asia|triprd1wcasse1sensorapi.atp.azure.com|
 
+
+You can also harden the firewall or proxy rules for a specific workspace you created, by creating a rule for the following DNS records:
+- <Workspace-Name>.atp.azure.com – for console connectivity
+- <Workspace-Name>sensorapi.atp.azure.com – for sensor connectivity
+ 
 > [!NOTE]
 > When performing SSL inspection on the Azure ATP network traffic (between the sensor and the Azure ATP service), the SSL inspection must support mutual inspection.
 
