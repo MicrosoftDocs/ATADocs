@@ -7,19 +7,19 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
-ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
+ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: ophirp
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -29,6 +29,8 @@ ms.suite: ems
 *Applies to: Advanced Threat Analytics version 1.9*
 
 # ATA compliance, trust, data security, and privacy 
+
+For information about ATA trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
 
 ## Searching for and identifying personal data 
 

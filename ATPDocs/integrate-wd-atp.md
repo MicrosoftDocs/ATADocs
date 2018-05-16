@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -103,8 +103,11 @@ If you click on the badge, you are brought to the Windows Defender ATP portal wh
  ![Windows Defender ATP gray](./media/wd-grey.png)
 
 In the Windows Defender ATP portal, when you click on an endpoint, you can view Azure ATP alerts. If you click on the alerts for this entity in Windows Defender ATP, the entity's profile page opens in Azure ATP. 
+ 
+ > ![NOTE]
+ > Currently, Azure ATP integration with Windows Defender ATP supports only users and machines from the on-premises AD. Users from Azure AD and virtual machines that are managed in Azure will not be displayed as part of the integration 
 
- ![Windows Defender ATP alerts](./media/wd-atp-alerts.png)
+![Windows Defender ATP alerts](./media/wd-atp-alerts.png)
 
 
 ## See Also
