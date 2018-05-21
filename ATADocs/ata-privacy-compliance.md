@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics compliance, trust, data security, and privacy| Microsoft Docs
-description: Provides a list of ATA resources, videos, getting started, deployment and readiness roadmap links.
+title: Advanced Threat Analytics personal data policy| Microsoft Docs
+description: Provides links to information about how to delete private information and personal data from ATA.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -28,7 +28,7 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
-# ATA compliance, trust, data security, and privacy 
+# ATA data security 
 
 For information about ATA trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
 
@@ -43,6 +43,10 @@ From the ATA Center, use the search bar to view the identifiable personal data t
 Personal data about users and entities in ATA is derived from the user's object in your organization's AD. Because of this, any changes made to the user profile in AD are reflected in ATA. 
 
 ## Deleting personal data 
+
+> [!NOTE]
+> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
 
 Although data in ATA is replicated and always updated from AD, when an entity is deleted in AD, the entity’s data in ATA is maintained for purposes of security investigation. 
 
@@ -76,16 +80,23 @@ This script removes all data for all entity activities and security alerts from 
 
 ## Exporting personal data 
 
+> [!NOTE]
+> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
+
 Because the data related to entities in ATA is derived from AD, only a subset of that data is stored in the ATA database. For this reason, you should export entity-related data from AD. 
 
 ATA enables you to export to Excel all security-related information, which might include personal data. 
 
  
-## Opt-out of telemetry 
+## Opt-out of system-generated logs 
 
-ATA collects anonymized telemetry about each deployment and transmits this data over HTTPS to Microsoft servers. This data is used by Microsoft to help improve future versions of ATA. 
+> [!NOTE]
+> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
-For more information, see [Manage telemetry settings](manage-telemetry-settings.md).
+ATA collects anonymized system-generated logs about each deployment and transmits this data over HTTPS to Microsoft servers. This data is used by Microsoft to help improve future versions of ATA. 
+
+For more information, see [Manage system-generated logs](manage-telemetry-settings.md).
 
 To disable data collection:
 

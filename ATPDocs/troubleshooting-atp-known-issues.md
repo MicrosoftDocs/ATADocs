@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 5/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -59,7 +59,7 @@ Ensure that the sensor can browse to *.atp.azure.com through the configured prox
 
 
 
-## Azure ATP sensor NIC teaming issue
+## Azure ATP sensor NIC teaming issue <a name="nic-teaming"></a>
 
 If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, please follow these instructions:
 
