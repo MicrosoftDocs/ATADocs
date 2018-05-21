@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -127,7 +127,7 @@ There are three detection types:
 **Investigation**
 
 First check the description of the alert to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
-1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using the scanner written by the ATA team. If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
+1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using the [the scanner written by the ATA team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 2.	Golden Ticket – In the Excel spreadsheet, go to the **Network activity** tab. You will see that the relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** contains stronger encryption methods.
   a.	Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common (for example, all the marketing personnel use a specific app that might be causing the alert to be triggered). There are cases in which a custom application that is rarely used is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and you can **Suppress** it.
   b.	Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute `msDS-SupportedEncryptionTypes`, of the resource service account.
