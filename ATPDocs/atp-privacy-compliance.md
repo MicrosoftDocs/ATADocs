@@ -31,8 +31,7 @@ ms.suite: ems
 
 # Azure ATP data security and privacy
 
-> [!NOTE]
-> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## Search for and identify personal data 
 
@@ -57,12 +56,8 @@ In Azure ATP you have the ability to [export]((working-with-suspicious-activitie
  
 ## Audit personal data
 
- 
 Azure ATP implements the audit of personal data changes, including the deleting and exporting of personal data records. Audit trail retention time is 90 days. Auditing in Azure ATP is a back-end feature and not accessible to customers.
  
-
- 
-
 ## Additional resources
 
 - For information about Azure ATP trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
