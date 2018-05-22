@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -72,7 +72,7 @@ After a new version of Azure ATP is released, the **What's new** window appears 
 
 You can filter which suspicious activities are displayed in the attack time line or displayed in the entity profile suspicious activities tab based on Status and Severity.
 
-### Search bar
+### Search bar <a name="search-bar"></a>
 
 In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in Azure ATP. To give it a try, just start typing. At the bottom of the search bar, the number of search results found is indicated. 
 
