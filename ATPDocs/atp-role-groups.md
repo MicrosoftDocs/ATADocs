@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,6 +32,11 @@ ms.suite: ems
 
 
 # Azure ATP role groups
+
+Azure ATP offers role-based security to safeguard data according to an organization's specific security and compliance needs. Azure ATP support three separate roles: Administrators, Users and Viewers. 
+
+> [!NOTE]
+> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 Role groups enable access management for Azure ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and Azure ATP role authorization, and helps you get up and running with role groups in ATP.
 

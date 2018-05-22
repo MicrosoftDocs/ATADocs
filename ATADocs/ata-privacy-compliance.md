@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -28,7 +28,7 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
-# ATA data security 
+# ATA data security and privacy
 
 For information about ATA trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
 
@@ -111,10 +111,4 @@ To disable data collection:
 
 ## Additional resources
 
-[Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/Microsoft-Security/)
-
-## Community resources
-
-[ATA blog](https://aka.ms/ATABlog)
-[ATA community](https://aka.ms/ATACommunity)
-[Provide feedback on ATA](https://aka.ms/ATAUserVoice)
+- For information about ATA trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
