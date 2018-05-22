@@ -40,7 +40,7 @@ In Azure Advanced Threat Protection you can view identifiable personal data from
 
 You can search for a specific user or computer, and clicking on the  entity will bring you to the user or computer [profile page](entity-profiles.md). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
 
-Azure ATP end user identifiable information is gathered from Active Directory through the Azure ATP sensor and stored in a backend database.
+Azure ATP personal data is gathered from Active Directory through the Azure ATP sensor and stored in a backend database.
 
 ## Update personal data 
 
