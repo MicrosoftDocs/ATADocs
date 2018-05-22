@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,7 +33,7 @@ ms.suite: ems
 # Working with Suspicious Activities
 This article explains the basics of how to work with Azure Advanced Threat Protection.
 
-## Review suspicious activities on the attack time line
+## Review suspicious activities on the attack time line <a name="review-suspicious-activities-on-the-attack-time-line"></a>
 After logging in to the Azure ATP workspace portal, you are automatically taken to the open **Suspicious Activities Time Line**. Suspicious activities are listed in chronological order with the newest suspicious activities on the top of the time line.
 Each suspicious activity has the following information:
 
