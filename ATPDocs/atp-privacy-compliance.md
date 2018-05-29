@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 5/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -52,7 +52,7 @@ After a user is deleted from the organization's Active Directory, Azure ATP auto
 
 ## Export personal data 
 
-In Azure ATP you have the ability to [export]((working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) security alert information to Excel. This will also export the personal data. 
+In Azure ATP you have the ability to [export](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) security alert information to Excel. This will also export the personal data. 
  
 ## Audit personal data
 

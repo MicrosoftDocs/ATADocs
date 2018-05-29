@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -77,8 +77,9 @@ If a proxy or firewall is blocking all traffic by default and allowing only spec
 
 
 You can also harden the firewall or proxy rules for a specific workspace you created, by creating a rule for the following DNS records:
-- <Workspace-Name>.atp.azure.com – for console connectivity
-- <Workspace-Name>sensorapi.atp.azure.com – for sensor connectivity
+- <Workspace-Name>.atp.azure.com – for console connectivity. For example, contosoATP.atp.azure.com
+- <Workspace-Name>sensorapi.atp.azure.com – for sensors connectivity. For example, contosoATPsensorapi.atp.azure.com
+
  
 > [!NOTE]
 > When performing SSL inspection on the Azure ATP network traffic (between the sensor and the Azure ATP service), the SSL inspection must support mutual inspection.
