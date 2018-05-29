@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 5/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -89,7 +89,7 @@ The Azure ATP standalone sensor supports installation on a server running Window
 The Azure ATP standalone sensor can be installed on a server that is a member of a domain or workgroup.
 The Azure ATP standalone sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
-For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
+For your standalone sensor to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com
 
 
 For information on using virtual machines with the Azure ATP standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/13/2018
+ms.date: 5/29/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,27 @@ ms.suite: ems
 
 
 # What's new in Azure ATP 
+
+
+
+## Azure ATP release 2.33
+
+Released May 27, 2018
+
+- Preview feature: Azure ATP now supports new languages, and 13 new locales:
+    - Czech
+    - Hungarian
+    - Italian
+    - Korean
+    - Dutch
+    - Polish
+    - Portuguese (Brasil)
+    - Portuguese (Portugal)
+    - Russia
+    - Swedish
+    - Turkish
+    - Chinese (China)
+    - Chinese (Taiwan)
 
 
 
