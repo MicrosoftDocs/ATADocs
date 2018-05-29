@@ -33,7 +33,7 @@ ms.suite: ems
 # ATA Prerequisites
 This article describes the requirements for a successful deployment of ATA in your environment.
 
->[!NOTE]
+> [!NOTE]
 > For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
 
 
@@ -84,7 +84,7 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 
 Installation of the ATA Center as a virtual machine is supported. 
 
->[!NOTE] 
+> [!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
@@ -169,7 +169,7 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
->[!NOTE] 
+> [!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 For more information about the ATA Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
@@ -254,7 +254,7 @@ The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM instal
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
->[!NOTE] 
+> [!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 For more information about the ATA Lightweight Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
@@ -268,8 +268,8 @@ The ATA Center server, the ATA Lightweight Gateway servers, and the domain contr
 The ATA Lightweight Gateway monitors the local traffic on all of the domain controller's network adapters. <br>
 After deployment, you can use the ATA Console if you ever want to modify which network adapters are monitored.
 
-[!NOTE]
-The Lightweight Gateway is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
+> [!NOTE]
+> The Lightweight Gateway is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
 ### Ports
 The following table lists the minimum ports that the ATA Lightweight Gateway requires:
