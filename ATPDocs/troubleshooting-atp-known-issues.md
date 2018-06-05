@@ -80,7 +80,7 @@ If you already installed the sensor:
 
 ## Windows Defender ATP integration issue
 
-Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. Integration is currently only enabled if you are a Windows Defender ATP private preview customer. 
+Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. 
 
 ## VMware virtual machine sensor issue
 
