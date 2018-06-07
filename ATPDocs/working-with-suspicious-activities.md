@@ -57,6 +57,23 @@ Each suspicious activity has the following information:
 
 ![Azure ATP suspicious activities timeline image](media/atp-sa-timeline.png)
 
+## Preview detections
+
+The Azure ATP research team sees new attacks almost every day, and constantly works on implementing new detections for these attacks. Because Azure ATP is a cloud service, it's possible to release these new detections quickly to enable Azure ATP customers to benefit from new detections as soon as possible.
+
+These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. 
+
+By default, preview detections are enabled in Azure ATP. 
+
+To disable preview detections:
+
+1. In the Azure ATP console, click the settings cog.
+2. In the left menu, under Preview, click **Detections**.
+3. Use the slider to turn the preview detections on and off.
+ 
+![preview detections](./media/preview-detections.png) 
+
+
 ## Filter suspicious activities list
 To filter the suspicious activities list:
 
