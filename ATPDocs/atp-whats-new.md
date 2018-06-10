@@ -32,7 +32,15 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.35
 
+Released June 10, 2018
+ 
+- The Azure ATP research team constantly works on implementing new detections for newly discovered attacks. Because Azure ATP is a cloud service, it's possible to release these new detections quickly to enable Azure ATP customers to benefit from new detections as soon as possible. For more information about enabling and disabling preview detections, see [preview detections](working-with-suspicious-activities.md#preview-detections).
+ 
+- This release introduces a preview version of the Suspicious VPN detection. Azure ATP learns user VPN behavior, including the machines the users signed in to and the locations the users connect from, and alerts you when there is a deviation from the expected behavior. For more information, see [Suspicious VPN detection](suspicious-activity-guide.md#suspicious-vpn-detection).
+ 
+- This version includes fixes and improvements for multiple issues. 
 
 ## Azure ATP release 2.34
 

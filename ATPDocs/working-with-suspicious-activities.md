@@ -57,11 +57,13 @@ Each suspicious activity has the following information:
 
 ![Azure ATP suspicious activities timeline image](media/atp-sa-timeline.png)
 
-## Preview detections
+## Preview detections<a name="preview-detections"></a>
 
-The Azure ATP research team sees new attacks almost every day, and constantly works on implementing new detections for these attacks. Because Azure ATP is a cloud service, it's possible to release these new detections quickly to enable Azure ATP customers to benefit from new detections as soon as possible.
+The Azure ATP research team constantly works on implementing new detections for newly discovered attacks. Because Azure ATP is a cloud service, it's possible to release these new detections quickly to enable Azure ATP customers to benefit from new detections as soon as possible.
 
-These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. 
+These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the Azure ATP console - not in the timeline or in entity profiles - and new alerts won’t be opened.
+
+![preview detection vpn](./media/preview-detection-vpn.png) 
 
 By default, preview detections are enabled in Azure ATP. 
 

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/7/2018
+ms.date: 6/10/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -481,11 +481,12 @@ A suspicious service has been created on a domain controller in your organizatio
 
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
-## Suspicious VPN connection - Preview
+## Suspicious VPN connection - Preview<a name="suspicious-vpn-detection"></a>
 
 **Description**
 
 Azure ATP learns the entity behavior for users VPN connections over a sliding period of one month. 
+
 The VPN-behavior model is based on the following activities: the machines the users logged in to and the locations the users connect from. 
 
 An alert is opened when there is a deviation from the user’s behavior based on machine learning algorithm.
