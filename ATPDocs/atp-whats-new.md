@@ -36,10 +36,16 @@ ms.suite: ems
 
 Released June 10, 2018
  
-- The Azure ATP research team constantly works on implementing new detections for newly discovered attacks. Because Azure ATP is a cloud service, it's possible to release these new detections quickly to enable Azure ATP customers to benefit from new detections as soon as possible. For more information about enabling and disabling preview detections, see [preview detections](working-with-suspicious-activities.md#preview-detections).
+- **New preview detections**<br></br>From now on, Azure ATP will take advantage of the fact that it's a cloud service -- where new features can be delivered in fast cycles -- and provide you with new detections as quickly as possible. These new detections will be tagged as "preview" when they are first released. Usually a new detection will move from preview to general availability within a few weeks. By default you will see preview detections. For information about opting out, see [preview detections](working-with-suspicious-activities.md#preview-detections).
  
-- This release introduces a preview version of the Suspicious VPN detection. Azure ATP learns user VPN behavior, including the machines the users signed in to and the locations the users connect from, and alerts you when there is a deviation from the expected behavior. For more information, see [Suspicious VPN detection](suspicious-activity-guide.md#suspicious-vpn-detection).
+- **Suspicious VPN detection**<br></br>This release introduces a preview version of the Suspicious VPN detection. Azure ATP learns user VPN behavior, including the machines the users signed in to and the locations the users connect from, and alerts you when there is a deviation from the expected behavior. For more information, see [Suspicious VPN detection](suspicious-activity-guide.md#suspicious-vpn-detection).
+
+- **Delayed deployment**<br></br>You now have the option to set Azure ATP sensors to update at a later time, each time Azure ATP updates. You can now set each Azure ATP sensor to **Delayed deployment** so that it will update 12 hours after the Azure ATP cloud service updates. This feature enables you to test the update on specific test sensors and only update your production sensors later on. If you discover an issue during the first update cycle, open a support ticket. For more information see [Update Azure ATP sensors](sensor-update.md).
+
+- **Updated unusual protocol implementation detection**<br></br>The unusual protocol implementation detection now provides more information. You can now see which potential attack tool Azure ATP suspects is at work on your network. For more information, see the [Suspicious activity guide](suspicious-activity-guide.md).
  
+- **Outdated sensor alert**<br></br>Azure ATP includes a new monitoring alert to let you know if a sensor is more than three versions outdated. If you see this alert, you should update the sensor, or investigate why the sensor isn't updating automatically. If the alert recurs, uninstall and reinstall the sensor.
+
 - This version includes fixes and improvements for multiple issues. 
 
 ## Azure ATP release 2.34
@@ -60,7 +66,7 @@ Released May 27, 2018
     - Korean
     - Dutch
     - Polish
-    - Portuguese (Brasil)
+    - Portuguese (Brazil)
     - Portuguese (Portugal)
     - Russia
     - Swedish
