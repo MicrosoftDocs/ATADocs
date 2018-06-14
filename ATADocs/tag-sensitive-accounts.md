@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 6/14/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -48,6 +48,28 @@ You can manually tag groups or accounts as sensitive to enhance detections. It i
 
 5. Go to the entity profile page by clicking on the entity name. Here you will be able to see why the entity is considered sensitive - whether it is because of membership in a group or because of manual tagging as sensitive.
 
+
+## Sensitive groups
+
+The following list of groups are considered Sensitive by ATA. Any entity that is a member of these groups is considered sensitive:
+
+-	Administrators
+-	Power Users
+-	Account Operators
+-	Server Operators
+-	Print Operators
+-	Backup Operators
+-	Replicators
+-	Remote Desktop Users 
+-	Network Configuration Operators 
+-	Incoming Forest Trust Builders
+-	Domain Admins
+-	Domain Controllers
+-	Group Policy Creator Owners 
+-	read-only Domain Controllers 
+-	Enterprise Read-only Domain Controllers 
+-	Schema Admins 
+-	Enterprise Admins
      
 ## See also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

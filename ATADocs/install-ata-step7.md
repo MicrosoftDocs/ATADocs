@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 6/14/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -49,7 +49,7 @@ To configure this, follow these steps:
 
     ![ATA configuration settings](media/ATA-config-icon.png)
 
-2.  Under **Detection**, click **General**.
+2.  Under **Detection**, click **Entity tags**.
 
 2. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network.
 

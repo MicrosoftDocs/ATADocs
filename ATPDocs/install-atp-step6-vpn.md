@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
+ms.date: 6/14/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -74,7 +74,7 @@ Perform the following steps on your RRAS server.
      
 ### Configure VPN in ATP
 
-Azure ATP collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect abnormal VPN connections.
+Azure ATP collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect suspicious VPN connections.
 
 To configure VPN data in ATP:
 
