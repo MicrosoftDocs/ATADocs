@@ -32,6 +32,13 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.36
+
+Released June 17, 2018
+
+- This version includes fixes and improvements for multiple issues. 
+
+
 ## Azure ATP release 2.35
 
 Released June 10, 2018
