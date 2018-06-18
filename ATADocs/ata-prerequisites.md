@@ -141,7 +141,7 @@ The certificate must have:
 For example, you can use the standard **Web server** or **Computer** templates.
 
 > [!WARNING]
-> - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
+> The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
 
 
 > [!NOTE]
@@ -163,7 +163,7 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
@@ -246,7 +246,7 @@ During installation, the .Net Framework 4.6.1 is installed and might cause a reb
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 
