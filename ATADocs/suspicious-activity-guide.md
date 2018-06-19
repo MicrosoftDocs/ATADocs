@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 # Advanced Threat Analytics suspicious activity guide
@@ -70,6 +70,9 @@ Set up [Privileged Access Management for Active Directory](https://docs.microsof
 
 ## Broken trust between computers and domain
 
+> ![NOTE]
+> This suspicious activity was deprecated and only appears in ATA versions prior to 1.9.
+
 **Description**
 
 Broken trust means that Active Directory security requirements may not be in effect for the computers in question. This is often considered a baseline security and compliance failure and a soft target for attackers. In this detection, an alert is triggered if more than 5 Kerberos authentication failures are seen from a computer account in 24 hours.
@@ -83,6 +86,7 @@ Is the computer in question allowing domain users to log on?
 
 Rejoin the machine back to the domain if necessary or reset the machine's password.
 
+
 ## Brute force attack using LDAP simple bind
 
 **Description**
@@ -92,7 +96,7 @@ Rejoin the machine back to the domain if necessary or reset the machine's passwo
 
 In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when ATA detects many different passwords being used. This can be either *horizontally* with a small set of passwords across many users; or *vertically”* with a large set of passwords on just a few users; or any combination of these two options.
+In this detection, an alert is triggered when ATA detects a massive number of simple bind authentications. This can be either *horizontally* with a small set of passwords across many users; or *vertically”* with a large set of passwords on just a few users; or any combination of these two options.
 
 **Investigation**
 
@@ -110,26 +114,26 @@ In this detection, an alert is triggered when ATA detects many different passwor
 
 **Description**
 
-Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
 
 There are three detection types:
 
-1.  Skeleton Key – is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to encipher the user's passwords on the domain  controller. In this detection, the encryption method of the KRB_ERR message from the source computer was downgraded compared to the previously learned behavior.
+1.  Skeleton Key – is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain  controller. In this detection, the encryption method of the KRB_ERR message from the domain controller to the account asking for a ticket was downgraded compared to the previously learned behavior.
 
 2.  Golden Ticket – In a [Golden Ticket](#golden-ticket) alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the previous service request detected by ATA.
 
-3.  Overpass-the-Hash – The AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
+3.  Overpass-the-Hash – An attacker can use a weak stolen hash in order to create a strong ticket, with a Kerberos AS request. In this detection, the AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
 
 **Investigation**
 
-First check the description of the alert, to see which of the above three detection types you’re dealing with.
-
-1.  Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the ATA team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
-
-2.  Golden Ticket – there are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
-
-3.  Overpass-the-Hash – there are cases in which this alert might be triggered when users configured with smart cards are required for interactive login, and this setting is disabled and then enabled. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
+First check the description of the alert to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
+1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using the [the scanner written by the ATA team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
+2.	Golden Ticket – In the Excel spreadsheet, go to the **Network activity** tab. You will see that the relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** contains stronger encryption methods.
+  a.	Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common (for example, all the marketing personnel use a specific app that might be causing the alert to be triggered). There are cases in which a custom application that is rarely used is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and you can **Suppress** it.
+  b.	Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute `msDS-SupportedEncryptionTypes`, of the resource service account.
+3.	Overpass-the-Hash – In the Excel spreadsheet, go to the **Network activity** tab. You will see that the relevant downgraded field is **Encrypted Timestamp Encryption Type** and **Source Computer Supported Encryption Types** contains stronger encryption methods.
+  a.	There are cases in which this alert might be triggered when users log in using smartcards if the smartcard configuration was changed recently. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and you can **Suppress** it.
+  b.	Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute `msDS-SupportedEncryptionTypes`, of the resource service account.
 
 **Remediation**
 
@@ -142,28 +146,6 @@ First check the description of the alert, to see which of the above three detect
 3.  Overpass-the-Hash – If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys
     tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
 
-## Golden Ticket<a name="golden-ticket"></a>
-
-**Description**
-
-Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve persistency in the network.
-
-In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
-security policy.
-
-**Investigation**
-
-1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
-
-2. Is the ATA Gateway involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
-
-3. If the answer to the above questions is no, assume this is malicious.
-
-**Remediation**
-
-Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so.  
-Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
 
 ## Honeytoken activity
 
@@ -226,6 +208,30 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](http://aka.ms/PtH).
 
+## Kerberos Golden Ticket<a name="golden-ticket"></a>
+
+**Description**
+
+Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve persistency in the network.
+
+In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
+security policy.
+
+**Investigation**
+
+1. Was there any recent (within the last few hours) change made to the **Maximum lifetime for user ticket** setting in group policy? If yes, then **Close** the alert (it was a false positive).
+
+2. Is the ATA Gateway involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then **Close** this alert.
+
+3. If the answer to the above questions is no, assume this is malicious.
+
+**Remediation**
+
+Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
+tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so.  
+Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
+
+
 ## Malicious Data Protection Private Information Request
 
 **Description**
@@ -246,7 +252,7 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 To use DPAPI, an attacker needs domain admin rights. Implement [Pass the hash recommendations](http://aka.ms/PtH).
 
-## Malicious replication requests
+## Malicious replication of directory services
 
 
 **Description**
@@ -257,9 +263,10 @@ In this detection, an alert is triggered when a replication request is initiated
 
 **Investigation**
 
-1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close and exclude** the suspicious activity.  
+1.	Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close** the suspicious activity. 
+2.	Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+3.	Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, which resources where accessed. 
 
-2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
 
 **Remediation**
 
@@ -364,6 +371,8 @@ In this detection, no alerts would be triggered in the first month after ATA is 
 
  - If the answer was no to all of the above, assume this is malicious.
 
+6. If there is no information about the account that was involved, you can go to the endpoint and check which account was logged in at the time of the alert.
+
 **Remediation**
 
 Use the [SAMRi10 tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) to harden your environment against this technique.
@@ -381,11 +390,10 @@ There are several query types in the DNS protocol. ATA detects the AXFR (Transfe
 
 **Investigation**
 
-1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between ATA Gateways and the source computer to prevent future false positives.
+1. Is the source machine (**Originating from…**) a DNS server? If yes, then this is probably a false positive. To validate, click on the alert to get to its details page. In the table, under **Query**, check which domains were queried. Are these existing domains? If yes, then **Close** the suspicious activity (it is a false positive). In addition, make sure UDP port 53 is open between the ATA Gateway and the source computer to prevent future false positives.
+2.	Is the source machine running a security scanner? If yes, **Exclude** the entities in ATA, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for ATA admins).
+3.	If the answer to all the preceding questions is no, keep investigating focusing on the source computer. Click on the source computer to go to its profile page. Check what happened around the time of the request, searching for unusual activities, such as: who was logged in, which resources where accessed.
 
-2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATA, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for ATA admins).
-
-3. If the answer to all the above is no, assume this is malicious.
 
 **Remediation**
 
@@ -423,19 +431,16 @@ Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blockin
 
 **Description**
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. ATA detects PSexec and Remote WMI connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistence, collecting information, denial of service (DOS) attacks or any other reason. ATA detects PSexec and Remote WMI connections.
 
 **Investigation**
 
-1. This is common for administrative workstations and IT team members and service accounts that perform administrative tasks against the domain controllers. If this is this the case, and the alert gets updated since the same admin and/or computer are performing the task, then **Suppress** the alert.
+1. This is common for administrative workstations as well as for IT team members and service accounts that perform administrative tasks against domain controllers. If this is this the case, and the alert gets updated because the same admin or computer are performing the task, then **Suppress** the alert.
+2.	Is the computer in question allowed to perform this remote execution against your domain controller?
+  -	Is the account in question allowed to perform this remote execution against your domain controller?
+  -	If the answer to both questions is yes, then **Close** the alert.
+3.	If the answer to either questions is no, then this should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed.
 
-2. Is the **computer** in question allowed to perform this remote execution against your domain controller?
-
- - Is the **account** in question allowed to perform this remote execution against your domain controller?
-
- - If the answer to both questions is *yes*, then **Close** the alert.
-
-3. If the answer to either questions is *no*, then this should be considered a true positive.
 
 **Remediation**
 
@@ -444,6 +449,9 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
 
 ## Sensitive account credentials exposed & Services exposing account credentials
+
+> [!NOTE]
+> This suspicious activity was deprecated and only appears in ATA versions prior to 1.9. For ATA 1.9 and later, see [Reports](reports.md).
 
 **Description**
 
@@ -465,19 +473,46 @@ Verify the configuration on the source computers and make sure not to use LDAP s
 
 In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when many authentication failures occurred, this can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options.
+In this detection, an alert is triggered when many authentication failures using Kerberos or NTLM occurred, this can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options. The minimum period before an alert can be triggered is one week.
 
 **Investigation**
 
-1. If there are many accounts involved, click **Download details** to view the list in an Excel spreadsheet.
+1.	Click **Download details** to view the full information in an Excel spreadsheet. You can get the following information: 
+  - List of the attacked accounts
+  -	List of guessed accounts in which login attempts ended with successful authentication
+  -	If the authentication attempts were performed using NTLM, you will see relevant event activities 
+  -	If the authentication attempts were performed using Kerberos, you will see relevant network activities
+2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. 
+3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server that the source machine tried to access, you should enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account, and **server** that the source machine tried to access. After you know which server sent the authentication validation, you should investigate the server by checking its events such as 4624 to better understand the authentication process. 
 
-2. Click on the alert to go to its details page. Check if any login attempts ended with a successful authentication, these would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
-
-3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
 
 **Remediation**
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+
+## Suspicious service creation <a name="suspicious-service-creation"></a>
+
+**Description**
+
+Attackers attempt to run suspicious services on your network. ATA raises an alert when a new service that seems suspicious has been created on a domain controller. This alert relies on event 7045, and it is detected from each domain controller that is covered by an ATA Gateway or Lightweight Gateway.
+
+**Investigation**
+
+1. If the computer in question is an administrative workstation, or a computer on which IT team members and service accounts perform administrative tasks, this may be a false positive and you may need to **Suppress** the alert and add it to the Exclusions list if necessary.
+
+2. Is the service something you recognize on this computer?
+
+ - Is the **account** in question allowed to install this service?
+
+ - If the answer to both questions is *yes*, then **Close** the alert or add it to the Exclusions list.
+
+3. If the answer to either questions is *no*, then this should be considered a true positive.
+
+**Remediation**
+
+- Implement less privileged access on domain machines to allow only specific users the right to create new services.
+
+
 
 ## Suspicion of identity theft based on abnormal behavior
 
@@ -502,7 +537,7 @@ Depending on what caused this abnormal behavior to occur, different actions shou
 
 **Description**
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash, as well as exploits used by advanced ransomware, for example, WannaCry.
 
 **Investigation**
 
@@ -531,6 +566,10 @@ Patch all your machines, especially applying security updates.
 2. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
+
+>[!NOTE]
+> To disable a suspicious activity, contact support.
 
 ## Related Videos
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

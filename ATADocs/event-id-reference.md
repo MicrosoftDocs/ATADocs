@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -27,7 +27,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 # ATA event ID reference
@@ -92,8 +92,6 @@ The events can be found here:
 
 2004 – LDAP brute force suspicious activity 
 
-2005 – Computer pre-authentication failed suspicious activity 
-
 2006 – Directory services replication suspicious activity 
 
 2007 – DNS reconnaissance suspicious activity 
@@ -105,8 +103,6 @@ The events can be found here:
 2013 – Forged PAC suspicious activity 
 
 2014 – Honeytoken activity suspicious activity 
-
-2015 – LDAP clear text password suspicious activity 
 
 2016 – Massive object deletion suspicious activity 
 

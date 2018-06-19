@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
@@ -44,7 +44,6 @@ ATA integrates with your VPN solution by listening to RADIUS accounting events f
 
 -	Microsoft
 -	F5
--	Check Point
 -	Cisco ASA
 
 ## Prerequisites
@@ -53,7 +52,7 @@ To enable VPN integration, make sure you set the following parameters:
 
 -	Open port UDP 1813 on your ATA Gateways and ATA Lightweight Gateways.
 
--	Connect the ATA Center to the Internet so that it can query the location of incoming IP addresses.
+-	The ATA Center must be able to access *ti.ata.azure.com* using HTTPS (port 443) so that it can query the location of incoming IP addresses.
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 
@@ -75,7 +74,7 @@ Perform the following steps on your RRAS server.
      
 ### Configure VPN in ATA
 
-ATA collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect abnormal VPN connections.
+ATA collects VPN data and identifies when and where credentials are being used via VPN and integrates that data into your investigation. This provides additional information to help you investigate alerts reported by ATA.
 
 To configure VPN data in ATA:
 
@@ -95,8 +94,7 @@ Your setup is complete, and you can now see VPN activity in the users' profile p
  
    ![VPN setup](./media/vpn-user.png)
 
-After the ATA Gateway receives the VPN events and sends them to the ATA Center for processing, the ATA Center needs Internet connectivity for HTTPS port 443 to be able to resolve the external IP addresses in the VPN events to their geolocation.
-
+After the ATA Gateway receives the VPN events and sends them to the ATA Center for processing, the ATA Center needs access to *ti.ata.azure.com* using HTTPS (port 443) to be able to resolve the external IP addresses in the VPN events to their geographic location.
 
 
 
@@ -114,7 +112,7 @@ After the ATA Gateway receives the VPN events and sends them to the ATA Center f
 
 ## See Also
 - [ATA POC deployment guide](http://aka.ms/atapoc)
-- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA sizing tool](http://aka.ms/aatpsizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)

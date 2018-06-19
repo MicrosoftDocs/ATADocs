@@ -9,7 +9,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/advanced-threat-analytics/whats-new-version-1.8">
+        <a href="/advanced-threat-analytics/whats-new-version-1.9">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -27,7 +27,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
         </a>
     </li>
     <li>
-        <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
+        <a href="/advanced-threat-analytics/what-is-ata">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -45,7 +45,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
         </a>
     </li>
     <li>
-        <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq"> 
+        <a href="/advanced-threat-analytics/ata-technical-faq"> 
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -63,7 +63,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
         </a>
     </li>
     <li>
-        <a href="/advanced-threat-analytics/plan-design/ata-architecture"> 
+        <a href="/advanced-threat-analytics/ata-architecture"> 
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -81,7 +81,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
         </a>
     </li>
     <li>
-        <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning"> 
+        <a href="/advanced-threat-analytics/ata-capacity-planning"> 
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

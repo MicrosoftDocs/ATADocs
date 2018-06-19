@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
@@ -85,6 +85,10 @@ When a new suspicious activity is detected, the notification bar opens automatic
 
 ![ATA notification bar image](media/notification-bar-1.7.png)
 
+### What's new
+
+After a new version of ATA is released, the **What's new** window appears in the top right to let you know what was added in the latest version. It also provides you with a link to the version download.
+
 ### Filtering panel
 
 You can filter which suspicious activities are displayed in the attack time line or displayed in the entity profile suspicious activities tab based on Status and Severity.
@@ -102,23 +106,6 @@ The Health Center provides you with alerts when something isn't working properly
 ![ATA health center image](media/ATA-Health-Issue.jpg)
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon lets you know by displaying a red dot. ![ATA health center red dot image](media/ATA-Health-Center-Alert-red-dot.png)
-
-### User and computer profiles
-
-ATA builds a profile for each user and computer in the network. In the user profile ATA displays general information, such as group membership, recent logins, and recently accessed resources. It also provides a list of locations where the user connected via VPN. For a list of group memberships that ATA considers sensitive, see the list that follows.
-
-![User profile](media/user-profile.png)
-
-In the computer profile, ATA displays general information, such as recent logins and recently accessed resources.
-
-![Computer profile](media/computer-profile.png)
-
-ATA provides additional information about entities (computers, devices, users) on the following pages: Summary, Activities, and Suspicious activities.
-
-A profile that ATA has not been able to fully resolve is identified by a half-filled circle icon next to it.
-
-
-![ATA unresolved profile image](media/ATA-Unresolved-Profile.jpg)
 
 ### Sensitive groups
 
