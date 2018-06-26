@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/14/2018
+ms.date: 6/24/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -70,7 +70,7 @@ To set a sensor to delayed update:
 
 1. From the Azure ATP workspace portal, click on the settings icon and select **Configuration**.
 2. Click on the **Updates** tab.
-3. In the table row next to each sensor you want to delay, set the **Delayed deployment** slider to **On**.
+3. In the table row next to each sensor you want to delay, set the **Delayed update** slider to **On**.
 4. Click **Save**.
  
 ## Sensor update process
