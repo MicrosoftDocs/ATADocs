@@ -56,12 +56,8 @@ In Azure ATP you have the ability to [export](working-with-suspicious-activities
  
 ## Audit personal data
 
- 
 Azure ATP implements the audit of personal data changes, including the deleting and exporting of personal data records. Audit trail retention time is 90 days. Auditing in Azure ATP is a back-end feature and not accessible to customers.
  
-
- 
-
 ## Additional resources
 
 - For information about Azure ATP trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
