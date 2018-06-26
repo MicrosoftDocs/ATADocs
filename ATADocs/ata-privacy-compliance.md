@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 6/26/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -30,8 +30,7 @@ ms.suite: ems
 
 # ATA data security and privacy
 
-> [!NOTE]
-> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## Searching for and identifying personal data 
 
@@ -45,8 +44,7 @@ Personal data about users and entities in ATA is derived from the user's object 
 
 ## Deleting personal data 
 
-> [!NOTE]
-> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 
 Although data in ATA is replicated and always updated from AD, when an entity is deleted in AD, the entity’s data in ATA is maintained for purposes of security investigation. 
@@ -81,9 +79,7 @@ This script removes all data for all entity activities and security alerts from 
 
 ## Exporting personal data 
 
-> [!NOTE]
-> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
-
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 Because the data related to entities in ATA is derived from AD, only a subset of that data is stored in the ATA database. For this reason, you should export entity-related data from AD. 
 
@@ -92,8 +88,7 @@ ATA enables you to export to Excel all security-related information, which might
  
 ## Opt-out of system-generated logs 
 
-> [!NOTE]
-> If you’re interested in viewing or deleting personal data, please review Microsoft's guidance in the [Microsoft Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager) and in the [GDPR section of the Microsoft 365 Enterprise Compliance site](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). If you’re looking for general information about GDPR, see the [GDPR section of the Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ATA collects anonymized system-generated logs about each deployment and transmits this data over HTTPS to Microsoft servers. This data is used by Microsoft to help improve future versions of ATA. 
 
