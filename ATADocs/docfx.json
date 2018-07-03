@@ -39,6 +39,9 @@
     "dest": "ATADocs",
     "template": "docs.html",
     "globalMetadata": {
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/atadocs",
+      "feedback_product_url": "https://microsoftsecurity.uservoice.com/forums/905158-advanced-threat-analytics", 
       "layout": "Conceptual",
       "breadcrumb_path": "/advanced-threat-analytics/bread/toc.json"
     }

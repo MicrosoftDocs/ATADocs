@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 6/26/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -43,7 +43,6 @@ From the ATA Center, use the search bar to view the identifiable personal data t
 Personal data about users and entities in ATA is derived from the user's object in your organization's AD. Because of this, any changes made to the user profile in AD are reflected in ATA. 
 
 ## Deleting personal data 
-
 
 Although data in ATA is replicated and always updated from AD, when an entity is deleted in AD, the entity’s data in ATA is maintained for purposes of security investigation. 
 
