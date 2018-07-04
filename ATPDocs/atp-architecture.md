@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/4/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -82,7 +82,9 @@ The Azure ATP workspace management portal enables you to:
 Set your main workspace as **Primary**. Setting a workspace as primary effects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. 
 
 > [!NOTE]
-> Azure ATP currently supports creation of only one workspace. After you delete a workspace, you can contact support to reactivate it. You can have a maximum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
+> - Azure ATP currently supports creation of only one workspace. After you delete a workspace, you can contact support to reactivate it. You can have a maximum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
+> - If no sensor is installed on your workspace within 60 days, the workspace might be deleted and you’ll need to create it again.
+
 
 
 ### Azure ATP workspace portal

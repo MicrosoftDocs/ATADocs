@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 7/4/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 
-# Configure Port Mirroring
+# Configure port mirroring
 > [!NOTE] 
 > This article is relevant only if you deploy Azure ATP standalone sensor instead of Azure ATP sensor. To determine if you need to use Azure ATP standalone sensor, see [Choosing the right sensors for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
