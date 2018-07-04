@@ -39,8 +39,7 @@ This installation procedure provides instructions for creating and managing a wo
 In Azure ATP, you have the ability to manage and monitor multiple workspaces. This is especially helpful if you want to create a demo workspace and a test workspace in which you can POC Azure ATP before rolling it out to your whole organization. This is also needed to support deployments with multiple forests. A single workspace can only monitor multiple domains from a single forest. 
 
 > [!NOTE]
-> - You can have a maximum of two active workspaces. After you delete a workspace, you can contact support to reactivate it. You an have a maximum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
-> - Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia.
+> Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia.
 
 ## Step 1. Enter the workspace management portal
 
@@ -75,7 +74,7 @@ After you verified that your network meets the requirements of the sensor, you c
 - Only the Primary workspace can be edited. To make changes to other workspaces, you can delete them and add them again. If you want to delete the primary workspace, you must first turn off integrations and set the workspace to be not **Primary** before it is able to be deleted.
 - To edit a Primary workspace, you must first turn off existing integrations in the workspace.
 
-- Data retention – deleted workspaces do not appear in the UI, however their data is retained according to [Microsoft data retention policy](https://www.microsoft.com/trustcenter/privacy/you-own-your-data).
+- Data retention – deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
 
 >[!div class="step-by-step"]
