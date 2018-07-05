@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 7/5/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,14 @@ ms.suite: ems
 
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.39
+
+Released July 5, 2018
+-	**New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md#golden-ticket)
+
+- This version includes fixes and improvements for multiple issues. 
+
 
 ## Azure ATP release 2.38
 
