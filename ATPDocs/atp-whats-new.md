@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,14 @@ ms.suite: ems
 
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.40
+
+Released July 15, 2018
+
+- The pass-the-ticket detection now includes an evidence section in the alert details page. This provides additional information for investigating the alert.
+
+- User access control flags, that can be found in a user's profile under Directory data, now include a legend so you can better understand which attributes are on and which are off.  
 
 ## Azure ATP release 2.39
 
