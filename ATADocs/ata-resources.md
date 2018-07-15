@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -35,7 +35,7 @@ This document provides you a readiness roadmap that will assist you to get start
 
 Advanced Threat Analytics (ATA) is an on-premises platform that helps protect your enterprise from multiple types of advanced targeted cyber attacks and insider threats. Use the following resources to learn more about ATA:
 
-- [ATA overview](https://aka.ms/ATAOverview)
+- [ATA overview](what-is-ata.md)
 
 - [ATA introduction video - short](https://aka.ms/ATAShort)
 
@@ -55,9 +55,9 @@ ATA is comprised of the ATA Center, which you can install on a server, and ATA G
 
 If you are using physical servers, you should plan capacity. You can get help from the sizing tool to allocate space for ATA:
 
-[ATA sizing tool](http://aka.ms/atasizing) - The sizing tool automates collection of the amount of traffic ATA needs. It automatically provides supportability and resource recommendations for both the ATA Center and ATA Lightweight Gateways.
+[ATA sizing tool](ata-capacity-planning.md) - The sizing tool automates collection of the amount of traffic ATA needs. It automatically provides supportability and resource recommendations for both the ATA Center and ATA Lightweight Gateways.
 
-[ATA capacity planning](https://docs.microsoft.com/en-us/advanced-threat-analytics/ata-capacity-planning)
+[ATA capacity planning](ata-capacity-planning.md)
 
 ## Deploy ATA
 
@@ -75,7 +75,7 @@ The basic necessary settings in ATA are configured as part of the installation w
 
 [Audit settings](https://aka.ms/ataauditingblog) – Audit your domain controller health before and after an ATA deployment.
 
-[ATA general documentation](https://docs.microsoft.com/en-us/advanced-threat-analytics/)
+[ATA general documentation](https://docs.microsoft.com/advanced-threat-analytics/)
 
 ## Work with ATA
 
@@ -83,7 +83,7 @@ After ATA is up and running, you will be able to view suspicious activities that
 
 [ATA suspicious activity playbook](http://aka.ms/ataplaybook) - This article walks you through credential theft attack techniques using readily available research tools on the Internet. At each point of the attack, you can see how ATA helps you gain visibility into these threats.
 
-[ATA suspicious activity guide](http://aka.ms/atasaguide)
+[ATA suspicious activity guide](suspicious-activity-guide.md)
 
 
 
@@ -91,7 +91,7 @@ After ATA is up and running, you will be able to view suspicious activities that
 
 [ATA best practices](https://aka.ms/atasecbestpractices) - Best practices for securing ATA.
 
-[ATA frequently asked questions](http://aka.ms/atafaq) - This article provides a list of frequently asked questions about ATA and provides insight and answers.
+[ATA frequently asked questions](ata-technical-faq.md) - This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 ## Additional resources
 
