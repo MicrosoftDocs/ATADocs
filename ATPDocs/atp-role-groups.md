@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 7/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -72,7 +72,7 @@ When users try to access a page that is not available for their role group, they
 
 ## Add and remove users 
 
-Azure ATP uses Azure AD security groups as a basis for role groups. The role groups can be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups). Only AAD users can be added or removed from security groups. 
+Azure ATP uses Azure AD security groups as a basis for role groups. The role groups can be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Only Azure AD users can be added or removed from security groups. 
 
 
 ## See Also
