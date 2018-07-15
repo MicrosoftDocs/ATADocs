@@ -75,7 +75,7 @@ The basic necessary settings in ATA are configured as part of the installation w
 
 [Audit settings](https://aka.ms/ataauditingblog) – Audit your domain controller health before and after an ATA deployment.
 
-[ATA general documentation](advanced-threat-analytics.md)
+[ATA general documentation](https://docs.microsoft.com/advanced-threat-analytics/)
 
 ## Work with ATA
 
