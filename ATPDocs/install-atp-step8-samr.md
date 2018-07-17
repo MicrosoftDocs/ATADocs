@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/17/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,6 +32,7 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« Step 7](install-atp-step7.md)
+[Step 9 »](atp-multi-forest.md)
 
 ## Step 8. Configure SAM-R required permissions
 
@@ -57,6 +58,7 @@ For more on SAM-R and this Group Policy, see the [Network access: Restrict clien
 
 >[!div class="step-by-step"]
 [« Step 7](install-atp-step7.md)
+[Step 9 »](atp-multi-forest.md)
 
 
 
