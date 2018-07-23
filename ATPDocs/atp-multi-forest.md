@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -50,7 +50,7 @@ The ability to support multiple Active Directory forests enables the following:
 To detect cross-forest activities, Azure ATP sensors query domain controllers in remote forests to create profiles for all entities involved, including users and computers from remote forests. 
 
 > [!NOTE]
-> - In order for this to work, the forest on which the Azure ATP sensors are installed must be trusted by all other forests.
+> - Azure ATP sensors can be installed on all forests (if a minimum one-way trust exists).
 > - The user you configure in the Azure ATP console under **Directory services** must be trusted in all the other forests.
 
 

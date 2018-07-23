@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -484,6 +484,72 @@ In this detection, an alert is triggered when many authentication failures using
 **Remediation**
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+
+## Suspicious domain controller promotion (potential DCShadow attack)
+
+**Description**
+
+A domain controller shadow (DCShadow) attack is an attack designed to change directory objects using malicious replication. This attack can be performed from any machine by creating a rogue domain controller using a replication process.
+ 
+DCShadow uses RPC and LDAP to:
+1. Register the machine account as a domain controller (using domain admin rights), and
+2. Perform replication (using the granted replication rights) over DRSUAPI and send changes to directory objects.
+ 
+In this detection, an alert is triggered when a machine in the network is trying to register as a rogue domain controller. 
+
+**Investigation**
+ 
+1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close** the suspicious activity.
+2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+3. Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, to which resources and what is the computer’s operating system?
+   1. Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to promote a server to domain controller? (are they domain admins)?
+   2. Are the users supposed to access these resources?
+   3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
+If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+
+4. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurrs, enable this audit on the relevant domain controller for further investigation.
+
+**Remediate**
+
+Check who in your organization has the following permissions: 
+- Replicate directory changes 
+- Replicate directory changes all 
+ 
+ 
+For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). 
+
+You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+ 
+
+
+
+## Suspicious replication request (potential DCShadow attack)
+
+**Description** 
+
+Active Directory replication is the process by which changes that are made on one domain controller are synchronized with other domain controllers. Given necessary permissions, attackers can grant rights for their machine account, allowing them to impersonate a domain controller. The attackers will strive to initiate a malicious replication request, allowing them to change Active Directory objects on a genuine domain controller, which might give the attackers persistence in the domain.
+In this detection, an alert is triggered when a suspicious replication request is generated against a genuine domain controller protected by Azure ATP. The behavior is indicative of techniques used in domain controller shadow attacks.
+
+**Investigation** 
+ 
+1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close** the suspicious activity.
+2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+3. Click on the source computer to go to its profile page. Check what happened **around the time** of the replication, searching for unusual activities, such as: who was logged in, which resources were used and what is the computer’s operating system?
+
+   1.  Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to preform replications (are they domain admins)?
+   2.  Are the users supposed to access these resources?
+   3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
+If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurrs, enable this audit on the relevant domain controller for further investigation.
+
+**Remediation**
+
+Check who in your organization has the following permissions: 
+- Replicate directory changes 
+- Replicate directory changes all 
+
+To do this, you can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+
 
 ## Suspicious service creation
 
