@@ -4,10 +4,10 @@
 title: List of helpful resources for Azure Advanced Threat Protection | Microsoft Docs
 description: This article provides a list of helpful resources for Azure ATP 
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/29/2018
+ms.date: 7/23/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -53,7 +53,7 @@ These resources will help you set up Azure ATP, connect to Active Directory, dow
 - [Try Azure ATP (part of EMS E5)](http://aka.ms/aatptrial)  The trial is valid for 90 days.
 - [Deployment guide](install-atp-step1.md)  Deploy Azure ATP in your environment following these steps.
 - [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md)
-- 
+
 ## Azure ATP settings
 
 The basic necessary settings in Azure ATP are configured when creating the workspace. However, there are several other settings that you can configure to fine-tune Azure ATP that make detections more accurate for your environment, such as SIEM integration and audit settings. 
