@@ -485,7 +485,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious domain controller promotion (potential DCShadow attack)
+## Suspicious domain controller promotion (potential DCShadow attack) - Preview
 
 **Description**
 
@@ -523,7 +523,7 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat
 
 
 
-## Suspicious replication request (potential DCShadow attack)
+## Suspicious replication request (potential DCShadow attack) - Preview
 
 **Description** 
 
