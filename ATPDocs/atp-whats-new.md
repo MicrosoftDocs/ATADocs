@@ -75,7 +75,7 @@ Released July 5, 2018
 
 Released July 1, 2018
 
-- This version includes fixes and improvements for multiple issues as well as enhancements of the Azure ATP portal. 
+- This version includes fixes and improvements for multiple issues as well as enhancements of the Azure ATP portal.
 
 ## Azure ATP release 2.37
 

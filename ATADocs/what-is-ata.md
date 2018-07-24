@@ -4,10 +4,10 @@
 title: What is Microsoft Advanced Threat Analytics (ATA)? | Microsoft Docs
 description: Explains what Microsoft Advanced Threat Analytics (ATA) is and what kinds of suspicious activities it can detect
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/24/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -34,12 +34,12 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
 
 ## How ATA works
 
-ATA leverages a proprietary network parsing engine to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM, and others) for authentication, authorization, and information gathering. This information is collected by ATA via either:
+ATA leverages a proprietary network parsing engine to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM, and others) for authentication, authorization, and information gathering. This information is collected by ATA via:
 
 - 	Port mirroring from Domain Controllers and DNS servers to the ATA Gateway and/or
 - 	Deploying an ATA Lightweight Gateway (LGW) directly on Domain Controllers
 
-ATA takes information from multiple data-sources, such as logs and events in your network, to learn the behavior of users and other entities in the organization and build a behavioral profile about them.
+ATA takes information from multiple data-sources, such as logs and events in your network, to learn the behavior of users and other entities in the organization, and builds a behavioral profile about them.
 ATA can receive events and logs from:
 
 - 	SIEM Integration
@@ -53,9 +53,9 @@ For more information on ATA architecture, see [ATA Architecture](ata-architectur
 
 ATA technology detects multiple suspicious activities, focusing on several phases of the cyber-attack kill chain including:
 
-- 	Reconnaissance, during which attackers gather information on how the environment is built, what the different assets are, and which entities exist. They generally building their plan for the next phases of the attack.
+- 	Reconnaissance, during which attackers gather information on how the environment is built, what the different assets are, and which entities exist. Typically, this is where attackers build plans for their next phases of attack.
 - 	Lateral movement cycle, during which an attacker invests time and effort in spreading their attack surface inside your network.
-- 	Domain dominance (persistence), during which an attacker captures the information allowing them to resume their campaign using various sets of entry points, credentials, and techniques. 
+- 	Domain dominance (persistence), during which an attacker captures the information that allows them to resume their campaign using various sets of entry points, credentials, and techniques. 
 
 These phases of a cyber attack are similar and predictable, no matter what type of company is under attack or what type of information is being targeted.
 ATA searches for three main types of attacks: Malicious attacks, abnormal behavior, and security issues and risks.
@@ -74,7 +74,7 @@ ATA searches for three main types of attacks: Malicious attacks, abnormal behavi
 
 For a complete list of the detections and their descriptions, see [What Suspicious Activities Can ATA detect?](ata-threats.md). 
 
-ATA detects these suspicious activities and surfaces the information in the ATA Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that ATA suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
+ATA detects these suspicious activities and surfaces the information in the ATA Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that ATA suspects a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
  ![sample ATA screen pass-the-ticket](media/pass_the_ticket_sa.png)
 
