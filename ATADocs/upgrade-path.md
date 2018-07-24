@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -43,10 +43,11 @@ This article provides information about available Advanced Threat Analytics vers
 |1.8|1.8.6645|
 |1.8 Update 1|1.8.6765|
 |1.9|1.9.7312|
+|1.9 Update 1|1.9.7412|
 
 ## ATA version upgrade matrix
 
-![ATA version upgrade matrix](./media/version-matrix.png)
+![ATA version upgrade matrix](./media/upgrade-path.png)
 
 
 

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/24/2018
+ms.date: 7/21/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,51 @@ ms.suite: ems
 
 
 # What's new in Azure ATP 
+
+
+## Azure ATP release 2.41
+
+Released July 22, 2018
+
+- **Azure ATP multi-forest support is being gradually rolled out (preview)** <br> Azure ATP can now support organizations with multiple forests which gives you the ability monitor activity and profile users across forests. This new capability enables you to:
+
+  -	View and investigate activities performed by users across multiple forests from a single pane of glass.
+  - Improves detection and reduces false positives by providing advanced Active Directory integration and account resolution.
+  -	Get better monitoring alerts and reporting for cross-org coverage.
+
+
+-	**New detections: DCShadow**<br>Two new detections were added to help protect against domain controller shadow (DCShadow) attacks:
+
+    -	Suspicious domain controller promotion (potential DCShadow attack) – This detection helps detect attacks in which a machine impersonate a domain controller and then tries to use replication to propagate changes to other domain controllers in your domain.
+
+    -	Suspicious replication request (potential DCShadow attack) – This detection helps protect against attacks that attempt to perform DC promotion of machines that are not domain controllers in order to change directory objects.
+
+-	**Improved encryption downgrade information**<br>Encryption downgrade detection now provides more information regarding the specific type of attack detected: overpass-the-hash, golden ticket, and skeleton key. In addition, these alerts have been aggregated to enable easier investigation.
+- This version includes fixes and improvements for multiple issues. 
+
+
+
+## Azure ATP release 2.40
+
+Released July 15, 2018
+
+- The pass-the-ticket detection now includes an evidence section in the alert details page. This provides additional information for investigating the alert.
+
+- User access control flags, that can be found in a user's profile under Directory data, now include a legend so you can better understand which attributes are on and which are off.  
+
+## Azure ATP release 2.39
+
+Released July 5, 2018
+-	**New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md#golden-ticket)
+
+- This version includes fixes and improvements for multiple issues. 
+
+
+## Azure ATP release 2.38
+
+Released July 1, 2018
+
+- This version includes fixes and improvements for multiple issues as well as enhancements of the Azure ATP portal.
 
 ## Azure ATP release 2.37
 
