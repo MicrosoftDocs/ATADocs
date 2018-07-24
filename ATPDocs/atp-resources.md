@@ -71,6 +71,7 @@ After Azure ATP is up and running, you will be able to view suspicious activitie
 ## Security best practices
 
 - [Azure ATP Frequently Asked Questions](atp-technical-faq.md) - This article provides a list of frequently asked questions about Azure ATP and provides insight and answers. 
+
 ## Community resources
 
 Blog: [Azure ATP blog](https://aka.ms/aatpblog)

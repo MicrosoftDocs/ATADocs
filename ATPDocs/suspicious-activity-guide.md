@@ -4,10 +4,10 @@
 title: Azure ATP suspicious activity guide | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/20/2018
+ms.date: 7/24/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -485,7 +485,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious domain controller promotion (potential DCShadow attack)
+## Suspicious domain controller promotion (potential DCShadow attack) - Preview
 
 **Description**
 
@@ -523,7 +523,7 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat
 
 
 
-## Suspicious replication request (potential DCShadow attack)
+## Suspicious replication request (potential DCShadow attack) - Preview
 
 **Description** 
 
