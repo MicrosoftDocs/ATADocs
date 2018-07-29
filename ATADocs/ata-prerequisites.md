@@ -4,10 +4,10 @@
 title: Advanced Threat Analytics prerequisites | Microsoft Docs
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 7/25/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -135,7 +135,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 
 ### Certificates
 
-To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you should replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Center.
+To install and deploy ATA more quickly, you can install self-signed certificates during installation. If you have chosen to use self-signed certificates, after the initial deployment it is recommended to replace self-signed certificates with certificates from an internal Certification Authority to be used by the ATA Center.
 
 
 Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
@@ -145,6 +145,7 @@ The certificate must have:
 -	A provider type of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
 -	A public key length of 2048 bits
 -	A value set for KeyEncipherment and ServerAuthentication usage flags
+-	KeySpec (KeyNumber) value of "KeyExchange" (AT\_KEYEXCHANGE). Note that the value "Signature" (AT\_SIGNATURE) is not supported. 
 
 For example, you can use the standard **Web server** or **Computer** templates.
 
