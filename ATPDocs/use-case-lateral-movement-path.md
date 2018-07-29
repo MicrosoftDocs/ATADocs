@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/25/2018
+ms.date: 7/29/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -26,17 +26,17 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection version 1.9*
+*Applies to: Azure Advanced Threat Protection*
 
 # Investigating lateral movement paths with Azure ATP
 
 
-Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the [Suspicious activity guide](suspicious-activity-guide.md). Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network using non-sensitive accounts that share resources. Once an attacker has gained access to sensitive accounts and machines, the attacker can also take advantage of the data on your domain controllers.
+Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the [Suspicious activity guide](suspicious-activity-guide.md). Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network using non-sensitive accounts that share stored log-in credentials in accounts, groups and machines. Once an attacker has gained access, the attacker can also take advantage of the data on your domain controllers.
 
 
 ## Discovery your at-risk sensitive accounts
 
-To discover which sensitive accounts in your network are exposed because of their connection to non-sensitive accounts or resources, follow these steps. 
+To discover which sensitive accounts in your network are exposed because of their connection to non-sensitive accounts, groups and machines, follow these steps. 
 
 1. In the Azure ATP workspace portal menu, click the reports icon ![reports icon](./media/atp-report-icon.png).
 
@@ -46,7 +46,7 @@ To discover which sensitive accounts in your network are exposed because of thei
 
 3. Click **Download**.
 
-4. An Excel file is created that provides you with details about your potential lateral movement paths and sensitive account exposure for the dates selected. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should investigate further. Note that the paths detailed in the report may no longer be available because they were detected previously.
+4. An Excel file is created that provides you with details about your potential lateral movement paths and sensitive account exposure for the dates selected. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk access. The **Details** tab provides a list of the sensitive accounts that you should investigate further. Note that the paths detailed in the downloadable report may no longer be available because they were detected over the past 60 days and may have changed or been modified.
 
 
 ## Investigate
