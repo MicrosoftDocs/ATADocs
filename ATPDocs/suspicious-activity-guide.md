@@ -107,8 +107,7 @@ There are three detection types:
 
 **Investigation**
 
-First check the description of the alert, to see which of the above three detection types you’re dealing with.Investigation 
-First check the description of the alert to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
+First check the description of the alert, to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
 
 1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
@@ -116,9 +115,9 @@ First check the description of the alert to see which of the above three detecti
 
   1. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
   
-  2. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common (for example, all the marketing personnel use a specific app that might be causing the alert to be triggered). There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
+  2. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common. For example, all of your marketing personnel use a specific app that might be causing the alert to be triggered. There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
   
-  
+
 
 3.	Overpass-the-Hash – In the excel spreadsheet, go to the network activity tab. You will see that the relevant downgraded field is **Encrypted Timestamp Encryption Type** and **Source Computer Supported Encryption Types** contains stronger encryption methods.
 
@@ -127,8 +126,7 @@ First check the description of the alert to see which of the above three detecti
 
 **Remediation**
 
-1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.secureworks.com/research/skeleton-key-malware-analysis)
-    by SecureWorks.
+1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket – Follow the instructions of the [Golden Ticket](#golden-ticket) suspicious activities.   
     Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).

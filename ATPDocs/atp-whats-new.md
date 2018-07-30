@@ -4,10 +4,10 @@
 title: What's new in Azure ATP | Microsoft Docs
 description: Describes the latest releases of Azure ATP and provides information about what's new in each version.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/21/2018
+ms.date: 7/29/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,12 @@ ms.suite: ems
 
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.42
+
+Released July 29, 2018
+
+- This version includes fixes and improvements for multiple issues. 
 
 
 ## Azure ATP release 2.41
