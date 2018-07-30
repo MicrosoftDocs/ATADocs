@@ -4,10 +4,10 @@
 title: Troubleshooting ATA known issues | Microsoft Docs 
 description: Describes how you can troubleshoot known issues in Advanced Threat Analytics 
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/25/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -73,7 +73,11 @@ This section details possible errors in the deployments of ATA and the steps req
 |Error [\[]DeploymentModel[\]] Failed management authentication [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|The deployment process of the ATA Gateway or ATA Lightweight Gateway could not successfully authenticate against the ATA Center|Open a browser from the machine on which the deployment process failed and see if you can reach the ATA Console. </br>If not, start troubleshooting to see why the browser can't authenticate against the ATA Center. </br>Things to check: </br>Proxy configuration</br>Networking issues</br>Group policy settings for authentication on that machine that differs from the ATA Center.|
 
 
-
+## ATA Center errors
+> [!div class="mx-tableFixed"]
+|Error|Description|Resolution|
+|-------------|----------|---------|
+|System.Security.Cryptography.CryptographicException: Access denied.|The ATA Center failed to use the issued certificate for decryption. This most likely happened due to use of a certificate with KeySpec (KeyNumber) set to Signature (AT\_SIGNATURE) which is not supported for decryption, instead of using KeyExchange (AT\_KEYEXCHANGE).|1.    Stop the ATA Center service. <br></br>2.     Delete the ATA Center certificate from the center’s certificate store. (Before deleting, make sure you have the certificate backed up with the private key in a PFX file.) <br></br>3.    Open an elevated command prompt and run      certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Start the ATA Center service. <br></br>5.     Verify everything now works as expected.|
 
 
 ## ATA Gateway and Lightweight Gateway issues
