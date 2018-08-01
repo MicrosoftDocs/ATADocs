@@ -36,7 +36,7 @@ The ATA logs provide insight into what each component of ATA is doing at any giv
 ## ATA Gateway logs
 In this section, every reference to the ATA Gateway is relevant also for the ATA Lightweight Gateway. 
 
-The ATA Gateway logs are located in a subfolder called **Logs** where ATA is installed; the default location is: **C:\Program Files\Microsoft Advanced Threat Analytics\**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+The ATA Gateway logs are located in a subfolder called **Logs** where ATA is installed; the default location is: **C:\Program Files\Microsoft Advanced Threat Analytics\\**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 The ATA Gateway has the following logs:
 
