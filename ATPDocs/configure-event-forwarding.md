@@ -63,7 +63,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 2.  From a command prompt type *gpedit.msc*.
 3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
- ![Local policy group editor image](media/wef 1 local group policy editor.png)
+ ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.	Double-click **Configure target Subscription Manager**.
    
@@ -71,7 +71,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     2.	Under **Options**, click **Show**.
     3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
-   ![Configure target subscription image](media/wef 2 config target sub manager.png)
+   ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.	Click **OK**.
     6.	From an elevated command prompt type *gpupdate /force*. 
@@ -88,7 +88,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         1.	Click **Add Domain Computer**.
         2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**. 
        
-        ![Event Viewer image](media/wef3 event viewer.png)
+        ![Event Viewer image](media/wef3%20event%20viewer.png)
    
         
         3.	Click **OK**.
