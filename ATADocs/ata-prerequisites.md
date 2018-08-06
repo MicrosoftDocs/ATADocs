@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/25/2018
+ms.date: 8/1/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -55,7 +55,7 @@ The ATA System works on active directory forest boundary and supports Forest Fun
 ![ATA architecture diagram](media/ATA-architecture-topology.jpg)
 
 ## Before you start
-This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
+This section lists information you should gather as well as accounts and network entities you should have before starting ATA installation.
 
 
 -   User account and password with read access to all objects in the monitored domains.
@@ -63,7 +63,7 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
+-   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
@@ -123,7 +123,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 |**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|
 |**SMTP** (optional)|TCP|25|SMTP Server|Outbound|
 |**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|
-|**Syslog** (optional)|TCP|514|Syslog server|Outbound|
+|**Syslog** (optional)|TCP/UPS/TLS (configurable)|514 (default)|Syslog server|Outbound|
 |**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
 |**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
 |**DNS**|TCP and UDP|53|DNS servers|Outbound|

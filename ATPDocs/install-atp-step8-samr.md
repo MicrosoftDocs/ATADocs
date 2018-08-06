@@ -4,10 +4,10 @@
 title: Configure SAM-R to enable lateral movement path detection in Azure ATP | Microsoft Docs
 description: Describes how to configure SAM-R to enable lateral movement path detection in Azure ATP
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/31/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,9 +36,9 @@ ms.suite: ems
 
 ## Step 8. Configure SAM-R required permissions
 
-The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol, via the Azure ATP Service account created in [Step 2. Connect to AD](install-atp-step2.md).
+The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Azure ATP Service account created in [Step 2. Connect to AD](install-atp-step2.md).
  
-To ensure Windows clients and servers allow Azure ATP account to perform this SAM-R operation, a modification to **Group Policy** must be made to add the Azure ATP service account in addition to the configured accounts listed in the **Network access** policy.
+To ensure Windows clients and servers allow your Azure ATP account to perform SAM-R, a modification to **Group Policy** must be made to add the Azure ATP service account in addition to the configured accounts listed in the **Network access** policy.
 
 1. Locate the policy:
 
@@ -51,9 +51,12 @@ To ensure Windows clients and servers allow Azure ATP account to perform this SA
  
   ![Add the service](./media/samr-add-service.png)
 
-3. The **AATP Service** (the Azure ATP service created during installation) now has the proper privileges to perform SAMR in the environment.
+3. **AATP Service** (the Azure ATP service created during installation) now has the privileges needed to perform SAM-R in the environment.
 
-For more on SAM-R and this Group Policy, see the [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+> [!NOTE]
+> Before enforcing new policies, make sure that your environment remains secure, without impacting your application compatibility by enabling and verifying proposed changes in audit mode.
+
+For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]

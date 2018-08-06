@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection version 1.9*
+*Applies to: Azure Advanced Threat Protection*
 
 
 
@@ -36,11 +36,11 @@ This article describes the process for investigating entities after suspicious a
 
 ## Look at the entity profile
 
-The entity profile provides you with a comprehensive entity page with designed for full deep-dive investigation of users, computers, devices, and the resources they have access to and their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a comprehensive entity page, designed for full deep-dive investigation of users, computers, devices, and the resources they have access to along with their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
 To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline. You can also see a mini-version of the entity profile in the suspicious activity page by hovering over the entity name.
 
-The entity profile lets you view entity activities, view directory data and view lateral movement paths for the entity. For more information, see [Investigating entity profiles ](entity-profiles.md).
+The entity profile lets you view entity activities, view directory data, and view lateral movement paths for the entity. For more information, see [Investigating entity profiles ](entity-profiles.md).
 
 ## Check entity tags
 
@@ -54,9 +54,9 @@ These tags provide you with information about the entity from Active Directory, 
 - Expired: The entity is expired in Active Directory.
 - New: The entity was created less than 30 days ago.
 
-## Look at the User access control flags
+## Look at the User account control flags
 
-The user access control flags are also imported from Active Directory. Azure ATP includes 10 flags that are effective for investigation: 
+The user account control flags are also imported from Active Directory. Azure ATP includes 10 flags that are effective for investigation: 
 - Password never expires
 - Trusted for delegation
 - Smartcard required
@@ -70,7 +70,7 @@ The user access control flags are also imported from Active Directory. Azure ATP
 
 Azure ATP lets you know if these flags are On or Off in Azure Active Directory. Colorful icons indicate that the flag is on in Active Directory; in the example below, only **Account disabled** is On in Active Directory.
 
- ![user access control flags](./media/user-access-flags.png)
+ ![user account control flags](./media/user-access-flags.png)
 
 ## Cross-check with Windows Defender
 
@@ -99,7 +99,7 @@ Azure ATP imports user and group information from Azure Active Directory, enabli
 -	Schema Admins 
 -	Enterprise Admins
 
-In addition, you can **manually tag** entities as sensitive within Azure ATP. This is important because some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and director of sales, Azure ATP will consider them sensitive. For more information, see [Working with sensitive accounts](sensitive-accounts.md).
+In addition, you can **manually tag** entities as sensitive within Azure ATP. This is important because some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, Azure ATP will consider them sensitive. For more information, see [Working with sensitive accounts](sensitive-accounts.md).
 
 ## Be aware of lateral movement paths
 
@@ -112,7 +112,7 @@ For more information, see [Investigating lateral movement paths with Azure ATP](
 
 ## Is it a honeytoken entity?
 
-Before you move on with your investigation, it's important to know if the entity is a honeytoken. For your convenience, Azure ATP enables you to tag accounts and entities as honeytokens. Then, during investigation, when you open the entity profile or mini-profile, you will see the honeytoken badge to alert you that the activity you are looking at was performed by an account that you tagged as a honeytoken.
+Before you move on with your investigation, it's important to know if the entity is a honeytoken. You can tag accounts and entities as honeytokens in Azure ATP. When you open the entity profile or mini-profile of an account or entity you tagged as a honeytoken, you will see the honeytoken badge. When investigating, the honeytoken badge alerts you that the activity under review was performed by an account that you tagged as a honeytoken.
 
 
     
