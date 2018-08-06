@@ -43,7 +43,8 @@
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Suspicious activity guide](suspicious-activity-guide.md)
 ## [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
-## [Investigate entities](entity-profiles.md)
+## [Investigate entities](investigate-entities.md)
+## [Understanding entity profiles](entity-profiles.md)
 # Troubleshooting
 ## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
 ## [Support and information](atp-support.md)

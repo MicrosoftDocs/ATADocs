@@ -4,10 +4,10 @@
 title: Configure SAM-R to enable lateral movement path detection in Advanced Threat Analytics | Microsoft Docs
 description: Describes how to configure SAM-R to enable lateral movement path detection in Advanced Threat Analytics (ATA)
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/25/2018
+ms.date: 7/30/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -51,9 +51,12 @@ To ensure that Windows clients and servers allow the ATA service account to perf
  
   ![Add the service](./media/samr-add-service.png)
 
-3. The **ATA Service** (the ATA service created during installation) now has the proper privileges to perform SAMR in the environment.
+3. The **ATA Service** (the ATA service created during installation) now has the proper privileges to perform SAM-R in the environment.
 
-For more on SAM-R and this Group Policy, see the [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+> [!NOTE]
+> Before enforcing new policies, make sure that your environment remains secure, without impacting application compatibility by enabling and verifying your proposed changes in audit mode. 
+
+ For more information on SAM-R and Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]
