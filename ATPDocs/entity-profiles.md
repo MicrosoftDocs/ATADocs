@@ -4,10 +4,10 @@
 title: Working with user profiles in the Azure Advanced Threat Protection workspace portal | Microsoft Docs
 description: Describes how to investigate users from the user profiles screen in the Azure ATP workspace portal
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/06/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 
-# Investigating entity profiles
+# Understanding entity profiles
 
 The entity profile provides you with a comprehensive entity page with designed for full deep-dive investigation of users, computers, devices, and the resources they have access to and their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 

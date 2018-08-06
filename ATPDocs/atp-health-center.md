@@ -4,10 +4,10 @@
 title: Monitor Azure Advanced Threat Protection System Health and Events | Microsoft Docs
 description: Use the Azure ATP workspace health center to check how the Azure ATP service is working and be alerted to potential problems and view system events in the Event viewer.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,7 +33,7 @@ ms.suite: ems
 
 ## Azure ATP workspace health center 
 
-The Azure ATP workspace health center lets you know how your Azure ATP workspace is performing and issues you when there are problems.
+The Azure ATP workspace health center lets you know how your Azure ATP workspace is performing and alerts you when there are problems.
 
 ## Working with the Azure ATP workspace health center
 
@@ -56,7 +56,7 @@ To check up on your workspace's overall health, click the Health Center icon in 
 
 -   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
 
--   **Reopen**: If you close or suppress an issue, you can reopen it so that it appears Open in the timeline again.
+-   **Reopen**: You can reopen a closed or suppressed issue so that it appears Open in the timeline again.
 - 
 - **Delete**: From within the suspicious activities timeline, you also have the option to delete a health issue. If you Delete an alert, it is deleted from the workspace and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
 
