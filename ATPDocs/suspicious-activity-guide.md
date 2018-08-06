@@ -107,7 +107,7 @@ There are three detection types:
 
 **Investigation**
 
-First check the description of the alert, to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
+First check the description of the alert, to see which of the three detection types listed above you’re dealing with. For further information, download the Excel spreadsheet.
 
 1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
@@ -288,21 +288,6 @@ Validate the following permissions:
 For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
-
-## Password exposed in cleartext report
-
-**Description**
-
-Some services send account credentials in plain text. This can even happen for users accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. 
-
-**Investigation**
-
-Click on the reports page, and download the Password exposed in cleartext report. See in the Excel spreadsheet which accounts were exposed.
-Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
-
-**Remediation**
-
-Verify the configuration on the source computers and make sure not to use LDAP simple bind. Instead of using LDAP simple binds you can use LDAP SALS or LDAPS.
 
 ## Privilege escalation using forged authorization data
 
