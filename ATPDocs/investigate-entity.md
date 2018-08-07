@@ -4,10 +4,10 @@
 title: How to investigate users and computers with Azure ATP | Microsoft Docs
 description: Describes how to investigate suspicious activities performed by users, entities, computers, or devices using Azure Advanced Threat Protection (ATP) 
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 8/6/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -40,7 +40,7 @@ The entity profile provides you with a comprehensive entity page, designed for f
 
 To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline. You can also see a mini-version of the entity profile in the suspicious activity page by hovering over the entity name.
 
-The entity profile lets you view entity activities, view directory data, and view lateral movement paths for the entity. For more information, see [Investigating entity profiles ](entity-profiles.md).
+The entity profile lets you view entity activities, view directory data, and view lateral movement paths for the entity. For more information, see [Understanding entity profiles ](entity-profiles.md).
 
 ## Check entity tags
 
@@ -56,7 +56,7 @@ These tags provide you with information about the entity from Active Directory, 
 
 ## Look at the User account control flags
 
-The user account control flags are also imported from Active Directory. Azure ATP includes 10 flags that are effective for investigation: 
+The user account control flags are also imported from Active Directory. Azure ATP entity directory data includes 10 flags that are effective for investigation: 
 - Password never expires
 - Trusted for delegation
 - Smartcard required
@@ -68,7 +68,7 @@ The user account control flags are also imported from Active Directory. Azure AT
 - Kerberos pre-authentication not required
 - Account disabled 
 
-Azure ATP lets you know if these flags are On or Off in Azure Active Directory. Colorful icons indicate that the flag is on in Active Directory; in the example below, only **Account disabled** is On in Active Directory.
+Azure ATP lets you know if these flags are On or Off in Azure Active Directory. Colored icons and the corresponding toggle indicate the status of each flag. In the example below, only **Password never expires** is On in Active Directory.
 
  ![user account control flags](./media/user-access-flags.png)
 
