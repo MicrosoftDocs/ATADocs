@@ -107,7 +107,7 @@ There are three detection types:
 
 **Investigation**
 
-First check the description of the alert, to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
+First check the description of the alert, to see which of the three detection types listed above you’re dealing with. For further information, download the Excel spreadsheet.
 
 1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
@@ -202,7 +202,7 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "goldentTicket" and allows attackers to achieve persistency in the network.
 
 In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), this is a **time anomaly** golden ticket attack, or by a nonexistent account, this is a **nonexistent account** golden ticket attack.
-security policy.
+
 
 **Investigation**
 
@@ -288,21 +288,6 @@ Validate the following permissions:
 For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
-
-## Password exposed in cleartext report
-
-**Description**
-
-Some services send account credentials in plain text. This can even happen for users accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. 
-
-**Investigation**
-
-Click on the reports page, and download the Password exposed in cleartext report. See in the Excel spreadsheet which accounts were exposed.
-Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
-
-**Remediation**
-
-Verify the configuration on the source computers and make sure not to use LDAP simple bind. Instead of using LDAP simple binds you can use LDAP SALS or LDAPS.
 
 ## Privilege escalation using forged authorization data
 
