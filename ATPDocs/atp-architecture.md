@@ -4,10 +4,10 @@
 title: Azure Advanced Threat Protection architecture | Microsoft Docs
 description: Describes the architecture of Azure Advanced Threat Analytics (ATP)
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 # Azure ATP Architecture
-The Azure Advanced Threat Protection architecture is detailed in this diagram:
+Azure Advanced Threat Protection architecture:
 
 ![Azure ATP architecture topology diagram](media/atp-architecture-topology.png)
 
@@ -116,13 +116,13 @@ Consider the following criteria when deciding how many Azure ATP workspaces to d
 
 ## Azure ATP sensor and Azure ATP standalone sensor
 
-The **Azure ATP sensor** and **Azure ATP standalone sensor** both have the same core functionality:
+The **Azure ATP sensor** and **Azure ATP standalone sensor** have the same core functionality:
 
 -   Capture and inspect domain controller network traffic. This is port mirrored traffic for Azure ATP standalone sensors and local traffic of the domain controller in Azure ATP sensors. 
 
 -   Receive Windows events either directly from the domain controllers (for ATP sensors) or from SIEM or Syslog servers (for ATP standalone sensors)
 
--  Receive RADIUS accounting information from your VPN provider
+-   Receive RADIUS accounting information from your VPN provider
 
 -   Retrieve data about users and computers from the Active Directory domain
 
@@ -138,7 +138,7 @@ The Azure ATP standalone sensor receives network traffic and Windows Events from
 
 |||
 |-|-|
-|Network Listener|The Network Listener captures network traffic and parses the traffic. This is a CPU-heavy task, so  it is especially important to check [Azure ATP Prerequisites](atp-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
+|Network Listener|The Network Listener captures network traffic and parses the traffic. This is a CPU-heavy task, so it is especially important to check [Azure ATP Prerequisites](atp-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
 |Event Listener|The Event Listener captures and parses Windows Events forwarded from a SIEM server on your network.|
 |Windows Event Log Reader|The Windows Event Log Reader reads and parses Windows Events forwarded to the Azure ATP standalone sensor's Windows Event Log from the domain controllers.|
 |Network Activity Translator | Translates parsed traffic into a logical representation of the traffic used by Azure ATP (NetworkActivity).
@@ -182,7 +182,7 @@ If Active Directory needs more computing power, the quota needed by the Azure AT
 
 
 ## Your network components
-In order to work with Azure ATP, make sure to check that the following components are set up.
+Verify that the following components are set up, in order to work with Azure ATP.
 
 ### Port mirroring
 If you are using Azure ATP standalone sensors, you have to set up port mirroring for the domain controllers that are monitored and set the Azure ATP standalone sensor as the destination using the physical or virtual switches. Another option is to use network TAPs. Azure ATP works if some but not all of your domain controllers are monitored, but detections are less effective.
