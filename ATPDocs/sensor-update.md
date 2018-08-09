@@ -4,10 +4,10 @@
 title: Update your Azure ATP sensors | Microsoft Docs
 description: This describes how to update the sensors in Azure ATP.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/24/2018
+ms.date: 8/06/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,7 +36,7 @@ The Azure ATP service is updated a few times a month with bug fixes, performance
 
 If you don't update your sensors, they may not be able to communicate with the Azure ATP cloud service, which can result in a degraded service.
 
-Each update is tested and validated on all supported operating systems to  cause minimal impact to your network and operations.
+Each update is tested and validated on all supported operating systems to cause minimal impact to your network and operations.
 
 ### Azure ATP sensor update types	
 

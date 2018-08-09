@@ -61,6 +61,7 @@ Your domain controllers and ATA Gateways can be either physical or virtual. The 
 |Physical|Virtual|Make sure your virtual switch supports this scenario - and port mirroring configuration on your physical switches based on the scenario:<br /><br />If the virtual host is on the same physical switch, you need to configure a switch level span.<br /><br />If the virtual host is on a different switch, you need to configure RSPAN or ERSPAN&#42;.|
 |Physical|Physical on the same switch|Physical switch must support SPAN/Port Mirroring.|
 |Physical|Physical on a different switch|Requires physical switches to support RSPAN or ERSPAN&#42;.|
+
 &#42; ERSPAN is only supported when decapsulation is performed before the traffic is analyzed by ATA.
 
 > [!NOTE]

@@ -4,10 +4,10 @@
 title: What's new in Azure ATP | Microsoft Docs
 description: Describes the latest releases of Azure ATP and provides information about what's new in each version.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 8/06/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,8 +29,45 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-
 # What's new in Azure ATP 
+
+
+## Azure ATP release 2.43
+
+Released August 5th, 2018
+
+- This version includes fixes and improvements for multiple issues.
+
+
+
+## Azure ATP release 2.42
+
+Released July 29, 2018
+
+- This version includes fixes and improvements for multiple issues. 
+
+
+## Azure ATP release 2.41
+
+Released July 22, 2018
+
+- **Azure ATP multi-forest support is being gradually rolled out (preview)** <br> Azure ATP can now support organizations with multiple forests which gives you the ability monitor activity and profile users across forests. This new capability enables you to:
+
+  -	View and investigate activities performed by users across multiple forests from a single pane of glass.
+  - Improves detection and reduces false positives by providing advanced Active Directory integration and account resolution.
+  -	Get better monitoring alerts and reporting for cross-org coverage.
+
+
+-	**New detections: DCShadow**<br>Two new detections were added to help protect against domain controller shadow (DCShadow) attacks:
+
+    -	Suspicious domain controller promotion (potential DCShadow attack) – This detection helps detect attacks in which a machine impersonate a domain controller and then tries to use replication to propagate changes to other domain controllers in your domain.
+
+    -	Suspicious replication request (potential DCShadow attack) – This detection helps protect against attacks that attempt to perform DC promotion of machines that are not domain controllers in order to change directory objects.
+
+-	**Improved encryption downgrade information**<br>Encryption downgrade detection now provides more information regarding the specific type of attack detected: overpass-the-hash, golden ticket, and skeleton key. In addition, these alerts have been aggregated to enable easier investigation.
+- This version includes fixes and improvements for multiple issues. 
+
+
 
 ## Azure ATP release 2.40
 
@@ -52,7 +89,7 @@ Released July 5, 2018
 
 Released July 1, 2018
 
-- This version includes fixes and improvements for multiple issues as well as enhancements of the Azure ATP portal. 
+- This version includes fixes and improvements for multiple issues as well as enhancements of the Azure ATP portal.
 
 ## Azure ATP release 2.37
 

@@ -4,10 +4,10 @@
 title: ATA suspicious activity guide | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 7/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -137,8 +137,7 @@ First check the description of the alert to see which of the above three detecti
 
 **Remediation**
 
-1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.secureworks.com/research/skeleton-key-malware-analysis)
-    by SecureWorks.
+1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket – Follow the instructions of the [Golden Ticket](#golden-ticket) suspicious activities.   
     Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).

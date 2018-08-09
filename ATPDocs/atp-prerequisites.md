@@ -208,8 +208,8 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Both|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Outbound|
+|NTLM over RPC|TCP|135|All devices on the network|Both|
 |NetBIOS|UDP|137|All devices on the network|Both|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDP|1813|RADIUS|Inbound|

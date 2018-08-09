@@ -4,10 +4,10 @@
 title: Advanced Threat Analytics prerequisites | Microsoft Docs
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -55,7 +55,7 @@ The ATA System works on active directory forest boundary and supports Forest Fun
 ![ATA architecture diagram](media/ATA-architecture-topology.jpg)
 
 ## Before you start
-This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
+This section lists information you should gather as well as accounts and network entities you should have before starting ATA installation.
 
 
 -   User account and password with read access to all objects in the monitored domains.
@@ -63,7 +63,7 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
+-   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
@@ -123,7 +123,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 |**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|
 |**SMTP** (optional)|TCP|25|SMTP Server|Outbound|
 |**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|
-|**Syslog** (optional)|TCP|514|Syslog server|Outbound|
+|**Syslog** (optional)|TCP/UPS/TLS (configurable)|514 (default)|Syslog server|Outbound|
 |**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
 |**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
 |**DNS**|TCP and UDP|53|DNS servers|Outbound|
@@ -135,7 +135,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 
 ### Certificates
 
-To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you should replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Center.
+To install and deploy ATA more quickly, you can install self-signed certificates during installation. If you have chosen to use self-signed certificates, after the initial deployment it is recommended to replace self-signed certificates with certificates from an internal Certification Authority to be used by the ATA Center.
 
 
 Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
@@ -145,6 +145,7 @@ The certificate must have:
 -	A provider type of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
 -	A public key length of 2048 bits
 -	A value set for KeyEncipherment and ServerAuthentication usage flags
+-	KeySpec (KeyNumber) value of "KeyExchange" (AT\_KEYEXCHANGE). Note that the value "Signature" (AT\_SIGNATURE) is not supported. 
 
 For example, you can use the standard **Web server** or **Computer** templates.
 
@@ -220,8 +221,8 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|NetBIOS|UDP|137|All devices on the network|Outbound|
+|NTLM over RPC|TCP|135|All devices on the network|Both|
+|NetBIOS|UDP|137|All devices on the network|Both|
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
@@ -289,8 +290,8 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|NetBIOS|UDP|137|All devices on the network|Outbound|
+|NTLM over RPC|TCP|135|All devices on the network|Both|
+|NetBIOS|UDP|137|All devices on the network|Both|
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|

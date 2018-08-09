@@ -62,15 +62,15 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 2.  From a command prompt type *gpedit.msc*.
 3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
- ![Local policy group editor image](media/wef 1 local group policy editor.png)
+![Local policy group editor image](media/wef 1 local group policy editor.png)
 
 4.	Double-click **Configure target Subscription Manager**.
    
     1.	Select **Enabled**.
     2.	Under **Options**, click **Show**.
-    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (For example: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-   ![Configure target subscription image](media/wef 2 config target sub manager.png)
+    ![Configure target subscription image](media/wef 2 config target sub manager.png)
    
     5.	Click **OK**.
     6.	From an elevated command prompt type *gpupdate /force*. 
@@ -81,25 +81,25 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 2.	Open **Event Viewer**. 
 3.	Right-click **Subscriptions** and select **Create Subscription**. 
 
-   1.	Enter a name and description for the subscription. 
-   2.	For **Destination Log**, confirm that **Forwarded Events** is selected. For ATA to read the events, the destination log must be **Forwarded Events**. 
-   3.	Select **Source computer initiated** and click **Select Computers Groups**.
+    1.	Enter a name and description for the subscription. 
+    2.	For **Destination Log**, confirm that **Forwarded Events** is selected. For ATA to read the events, the destination log must be **Forwarded Events**. 
+    3.	Select **Source computer initiated** and click **Select Computers Groups**.
         1.	Click **Add Domain Computer**.
         2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**. 
-       
-        ![Event Viewer image](media/wef3 event viewer.png)
-   
-        
+ 
+    ![Event Viewer image](media/wef3 event viewer.png)
+ 
+ 
         3.	Click **OK**.
-   4.	Click **Select Events**.
+     4.	Click **Select Events**.
 
         1. Click **By log** and select **Security**.
         2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
 
- ![Query filter image](media/wef 4 query filter.png)
+    ![Query filter image](media/wef 4 query filter.png)
 
-   5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
-   6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATA Gateway.
+    5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
+    6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATA Gateway.
 
 
 For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)

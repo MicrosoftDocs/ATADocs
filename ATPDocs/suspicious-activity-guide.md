@@ -4,10 +4,10 @@
 title: Azure ATP suspicious activity guide | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/24/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -107,8 +107,7 @@ There are three detection types:
 
 **Investigation**
 
-First check the description of the alert, to see which of the above three detection types you’re dealing with.Investigation 
-First check the description of the alert to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
+First check the description of the alert, to see which of the three detection types listed above you’re dealing with. For further information, download the Excel spreadsheet.
 
 1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
@@ -116,9 +115,9 @@ First check the description of the alert to see which of the above three detecti
 
   1. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
   
-  2. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common (for example, all the marketing personnel use a specific app that might be causing the alert to be triggered). There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
+  2. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common. For example, all of your marketing personnel use a specific app that might be causing the alert to be triggered. There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
   
-  
+
 
 3.	Overpass-the-Hash – In the excel spreadsheet, go to the network activity tab. You will see that the relevant downgraded field is **Encrypted Timestamp Encryption Type** and **Source Computer Supported Encryption Types** contains stronger encryption methods.
 
@@ -127,8 +126,7 @@ First check the description of the alert to see which of the above three detecti
 
 **Remediation**
 
-1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.secureworks.com/research/skeleton-key-malware-analysis)
-    by SecureWorks.
+1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket – Follow the instructions of the [Golden Ticket](#golden-ticket) suspicious activities.   
     Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
@@ -204,7 +202,7 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "goldentTicket" and allows attackers to achieve persistency in the network.
 
 In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), this is a **time anomaly** golden ticket attack, or by a nonexistent account, this is a **nonexistent account** golden ticket attack.
-security policy.
+
 
 **Investigation**
 
@@ -290,21 +288,6 @@ Validate the following permissions:
 For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
-
-## Password exposed in cleartext report
-
-**Description**
-
-Some services send account credentials in plain text. This can even happen for users accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. 
-
-**Investigation**
-
-Click on the reports page, and download the Password exposed in cleartext report. See in the Excel spreadsheet which accounts were exposed.
-Usually there’s a script or legacy application on the source computers that uses LDAP simple bind.
-
-**Remediation**
-
-Verify the configuration on the source computers and make sure not to use LDAP simple bind. Instead of using LDAP simple binds you can use LDAP SALS or LDAPS.
 
 ## Privilege escalation using forged authorization data
 
@@ -484,6 +467,72 @@ In this detection, an alert is triggered when many authentication failures using
 **Remediation**
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+
+## Suspicious domain controller promotion (potential DCShadow attack) - Preview
+
+**Description**
+
+A domain controller shadow (DCShadow) attack is an attack designed to change directory objects using malicious replication. This attack can be performed from any machine by creating a rogue domain controller using a replication process.
+ 
+DCShadow uses RPC and LDAP to:
+1. Register the machine account as a domain controller (using domain admin rights), and
+2. Perform replication (using the granted replication rights) over DRSUAPI and send changes to directory objects.
+ 
+In this detection, an alert is triggered when a machine in the network is trying to register as a rogue domain controller. 
+
+**Investigation**
+ 
+1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close** the suspicious activity.
+2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+3. Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, to which resources and what is the computer’s operating system?
+   1. Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to promote a server to domain controller? (are they domain admins)?
+   2. Are the users supposed to access these resources?
+   3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
+If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+
+4. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurrs, enable this audit on the relevant domain controller for further investigation.
+
+**Remediate**
+
+Check who in your organization has the following permissions: 
+- Replicate directory changes 
+- Replicate directory changes all 
+ 
+ 
+For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). 
+
+You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+ 
+
+
+
+## Suspicious replication request (potential DCShadow attack) - Preview
+
+**Description** 
+
+Active Directory replication is the process by which changes that are made on one domain controller are synchronized with other domain controllers. Given necessary permissions, attackers can grant rights for their machine account, allowing them to impersonate a domain controller. The attackers will strive to initiate a malicious replication request, allowing them to change Active Directory objects on a genuine domain controller, which might give the attackers persistence in the domain.
+In this detection, an alert is triggered when a suspicious replication request is generated against a genuine domain controller protected by Azure ATP. The behavior is indicative of techniques used in domain controller shadow attacks.
+
+**Investigation** 
+ 
+1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close** the suspicious activity.
+2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+3. Click on the source computer to go to its profile page. Check what happened **around the time** of the replication, searching for unusual activities, such as: who was logged in, which resources were used and what is the computer’s operating system?
+
+   1.  Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to preform replications (are they domain admins)?
+   2.  Are the users supposed to access these resources?
+   3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
+If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurrs, enable this audit on the relevant domain controller for further investigation.
+
+**Remediation**
+
+Check who in your organization has the following permissions: 
+- Replicate directory changes 
+- Replicate directory changes all 
+
+To do this, you can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+
 
 ## Suspicious service creation
 
