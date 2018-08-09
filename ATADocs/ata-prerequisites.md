@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/1/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -221,8 +221,8 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|NetBIOS|UDP|137|All devices on the network|Outbound|
+|NTLM over RPC|TCP|135|All devices on the network|Both|
+|NetBIOS|UDP|137|All devices on the network|Both|
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
@@ -290,8 +290,8 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|NetBIOS|UDP|137|All devices on the network|Outbound|
+|NTLM over RPC|TCP|135|All devices on the network|Both|
+|NetBIOS|UDP|137|All devices on the network|Both|
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|

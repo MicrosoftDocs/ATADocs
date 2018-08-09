@@ -81,7 +81,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 > [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="**"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP workspace.|
+|AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP workspace.|
 
 **Examples**:
 To silently install the Azure ATP sensor, log into the domain joined computer with your Azure ATP admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the Azure ATP cloud service using the specified credentials:
