@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/27/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -27,7 +27,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 # ATA Reports
@@ -36,16 +36,23 @@ The ATA reports section in the console enables you to generate reports that prov
 
 To access the reports page, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
 The reports that are available are: 
-- Summary report: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists ATA system health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
-- Modification to sensitive groups: This report lists every time a modification is made to sensitive groups (such as admins).
+
+- **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists ATA system health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
+
+- **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins).
+
+- **Passwords exposed in cleartext**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. This report lists all source computer and account passwords that ATA detected as being sent in clear text. 
+
+- **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md)
 
 There are two ways to generate a report: either on demand or by scheduling a report to be sent to your email periodically.
 
 To generate a report on demand:
 
 1. In the ATA console menu bar, click the report icon in the menu bar: ![report icon](./media/ata-report-icon.png).
-2. Under either **Summary** or **Modifications to sensitive groups**, set the **From** and **To** dates and click **Download**. 
-![reports](./media/reports.png)
+
+2. Under either your selected report type, set the **From** and **To** dates and click **Download**. 
+ ![reports](./media/reports.png)
 
 To set a scheduled report:
  
@@ -53,13 +60,16 @@ To set a scheduled report:
 
    ![Schedule reports](./media/ata-sched-reports.png)
 
-2. Click **Schedule** next to **Summary** or **Modification to sensitive groups** to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
+  > [!NOTE]
+  > The daily reports are designed to be sent shortly after midnight, UTC.
+
+2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 
    ![Schedule report frequency and email](./media/sched-report1.png)
 
 
 > [!NOTE]
-> Scheduled reports are delivered by email and can only be sent if you have already configured an email server under **Configuration** and then, under Notifications and Reports, select **Mail server**.
+> Scheduled reports are delivered by email and can only be sent if you have already configured an email server under **Configuration** and then, under **Notifications and Reports**, select **Mail server**.
 
 
 ## See Also

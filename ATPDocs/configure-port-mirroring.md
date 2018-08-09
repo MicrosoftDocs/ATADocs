@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 7/4/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 
-# Configure Port Mirroring
+# Configure port mirroring
 > [!NOTE] 
 > This article is relevant only if you deploy Azure ATP standalone sensor instead of Azure ATP sensor. To determine if you need to use Azure ATP standalone sensor, see [Choosing the right sensors for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
@@ -61,6 +61,7 @@ Your domain controllers and Azure ATP standalone sensor can be either physical o
 |Physical|Virtual|Make sure your virtual switch supports this scenario - and port mirroring configuration on your physical switches based on the scenario:<br /><br />If the virtual host is on the same physical switch, you need to configure a switch level span.<br /><br />If the virtual host is on a different switch, you need to configure RSPAN or ERSPAN&#42;.|
 |Physical|Physical on the same switch|Physical switch must support SPAN/Port Mirroring.|
 |Physical|Physical on a different switch|Requires physical switches to support RSPAN or ERSPAN&#42;.|
+
 &#42; ERSPAN is only supported when decapsulation is performed before the traffic is analyzed by ATP.
 
 > [!NOTE]

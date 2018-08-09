@@ -4,10 +4,10 @@
 title: Install Azure Advanced Threat Protection - Step 7 | Microsoft Docs
 description: In the final step of installing Azure ATP, you configure the Honeytoken user.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/2/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,15 +36,15 @@ ms.suite: ems
 [« Step 6](install-atp-step6-vpn.md)
 [Step 8 »](install-atp-step8-samr.md)
 
-## Step 7. Configure detection exclusions and honeytoken user
+## Step 7. Configure detection exclusions and honeytoken accounts
 
 Azure ATP enables the exclusion of specific IP addresses or users from a number of detections. 
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps Azure ATP ignore such scanners.  
 
-Azure ATP also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account triggers an alert.
+Azure ATP also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
 
-To configure this, follow these steps:
+To configure, follow these steps:
 
 1.  From the Azure ATP workspace portal, click on the settings icon and select **Configuration**.
 
@@ -52,22 +52,23 @@ To configure this, follow these steps:
 
 2.  Under **Detection**, click **Entity tags**.
 
-3. Under **Honeytoken accounts** enter the Honeytoken account name and click the **+** sign. The Honeytoken accounts field is searchable and automatically displays entities in your network. Click **Save**.
+3. Under **Honeytoken accounts**, enter the Honeytoken account name and click the **+** sign. The Honeytoken accounts field is searchable and automatically displays entities in your network. Click **Save**.
 
    ![Honeytoken](media/honeytoken-sensitive.png)
 
-4. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md) and the [suspicious activity guide](suspicious-activity-guide.md).
+4. Click **Exclusions**. Enter a user account or IP address to be excluded from the detection, for each type of threat. 
+5. Click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md) and the [suspicious activity guide](suspicious-activity-guide.md).
 
    ![Exclusions](media/exclusions.png)
 
-5.  Click **Save**.
+6.  Click **Save**.
 
 
-Congratulations, you have successfully deployed  Azure Advanced Threat Protection!
+Congratulations, you have successfully deployed Azure Advanced Threat Protection!
 
 Check the attack time line to view detected suspicious activities and search for users or computers and view their profiles.
 
-Azure ATP starts scanning for suspicious activities immediately. Some detections, such as Abnormal Group Modifications, require a learning period and are not available immediately after the deployment of Azure ATP.
+Azure ATP scanning for suspicious activities starts immediately. Some detections, such as Abnormal Group Modifications, require a learning period and aren't available immediately after Azure ATP deployment.
 
 
 

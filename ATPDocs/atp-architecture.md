@@ -4,10 +4,10 @@
 title: Azure Advanced Threat Protection architecture | Microsoft Docs
 description: Describes the architecture of Azure Advanced Threat Analytics (ATP)
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,13 +30,15 @@ ms.suite: ems
 
 
 # Azure ATP Architecture
-The Azure Advanced Threat Protection architecture is detailed in this diagram:
+Azure Advanced Threat Protection architecture:
 
 ![Azure ATP architecture topology diagram](media/atp-architecture-topology.png)
 
 Azure ATP monitors your domain controller network traffic by utilizing port mirroring to an Azure ATP standalone sensor using physical or virtual switches. If you deploy the Azure ATP sensor directly on your domain controllers, it removes the requirement for port mirroring. In addition, Azure ATP can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats. Azure ATP receives parsed traffic from the Azure ATP standalone sensor and Azure ATP sensor. It then performs profiling, runs deterministic detection, and runs machine learning and behavioral algorithms to learn about your network, enable detection of anomalies and warn you of suspicious activities.
 
 This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATP: the Azure ATP standalone sensor, Azure ATP sensor (which has the same core functionality as the Azure ATP standalone sensor), and the Azure ATP cloud service. 
+
+When installed directly on domain controllers, the sensor accesses the required event logs directly from the domain controller. After these logs and the network traffic have been parsed by the sensor, Azure ATP sends only this parsed information to the Azure ATP service (not all of the logs).
 
 ## Azure ATP Components
 Azure ATP consists of the following components:
@@ -77,7 +79,13 @@ The Azure ATP workspace management portal enables you to:
 
 -	Integrate with other Microsoft security services
 
-Set your main workspace as **Primary**. Only one workspace can be set as primary. Setting a workspace as primary effects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
+Set your main workspace as **Primary**. Setting a workspace as primary effects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. 
+
+> [!NOTE]
+> - Azure ATP currently supports creation of only one workspace. After you delete a workspace, you can contact support to reactivate it. You can have a maximum of three deleted workspaces. To increase the number of saved, deleted workspaces, contact Azure ATP support.
+> - If no sensor is installed on your workspace within 60 days, the workspace might be deleted and you’ll need to create it again.
+
+
 
 ### Azure ATP workspace portal
 
@@ -108,13 +116,13 @@ Consider the following criteria when deciding how many Azure ATP workspaces to d
 
 ## Azure ATP sensor and Azure ATP standalone sensor
 
-The **Azure ATP sensor** and **Azure ATP sensor** both have the same core functionality:
+The **Azure ATP sensor** and **Azure ATP standalone sensor** have the same core functionality:
 
 -   Capture and inspect domain controller network traffic. This is port mirrored traffic for Azure ATP standalone sensors and local traffic of the domain controller in Azure ATP sensors. 
 
 -   Receive Windows events either directly from the domain controllers (for ATP sensors) or from SIEM or Syslog servers (for ATP standalone sensors)
 
--  Receive RADIUS accounting information from your VPN provider
+-   Receive RADIUS accounting information from your VPN provider
 
 -   Retrieve data about users and computers from the Active Directory domain
 
@@ -124,11 +132,13 @@ The **Azure ATP sensor** and **Azure ATP sensor** both have the same core functi
 
 -   Monitor multiple domain controllers from a single Azure ATP standalone sensor, or monitor a single domain controller for an Azure ATP sensor.
 
+By default, Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
+
 The Azure ATP standalone sensor receives network traffic and Windows Events from your network and processes it in the following main components:
 
 |||
 |-|-|
-|Network Listener|The Network Listener captures network traffic and parses the traffic. This is a CPU-heavy task, so  it is especially important to check [Azure ATP Prerequisites](atp-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
+|Network Listener|The Network Listener captures network traffic and parses the traffic. This is a CPU-heavy task, so it is especially important to check [Azure ATP Prerequisites](atp-prerequisites.md) when planning your Azure ATP sensor or Azure ATP standalone sensor.|
 |Event Listener|The Event Listener captures and parses Windows Events forwarded from a SIEM server on your network.|
 |Windows Event Log Reader|The Windows Event Log Reader reads and parses Windows Events forwarded to the Azure ATP standalone sensor's Windows Event Log from the domain controllers.|
 |Network Activity Translator | Translates parsed traffic into a logical representation of the traffic used by Azure ATP (NetworkActivity).
@@ -172,7 +182,7 @@ If Active Directory needs more computing power, the quota needed by the Azure AT
 
 
 ## Your network components
-In order to work with Azure ATP, make sure to check that the following components are set up.
+Verify that the following components are set up, in order to work with Azure ATP.
 
 ### Port mirroring
 If you are using Azure ATP standalone sensors, you have to set up port mirroring for the domain controllers that are monitored and set the Azure ATP standalone sensor as the destination using the physical or virtual switches. Another option is to use network TAPs. Azure ATP works if some but not all of your domain controllers are monitored, but detections are less effective.

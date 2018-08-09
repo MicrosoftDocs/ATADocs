@@ -1,10 +1,13 @@
-# Understand and Explore - Preview!
+# Understand and Explore
 ## [What is Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Frequently asked questions](atp-technical-faq.md)
+## [What's new in Azure ATP](atp-whats-new.md)
+## [Azure ATP data security and privacy](atp-privacy-compliance.md)
 # Plan and Design
 ## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Azure ATP architecture](atp-architecture.md)
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
+### [Configure proxy to enable communication](configure-proxy.md)
 # Deploy
 ## [1 Create a workspace in the workspace management portal](install-atp-step1.md)
 ## [2 Connect to AD](install-atp-step2.md)
@@ -13,13 +16,15 @@
 ## [5 Configure the Azure ATP sensor](install-atp-step5.md)
 ## [6 VPN integration](install-atp-step6-vpn.md)
 ## [7 Exclusions and honeytoken accounts](install-atp-step7.md)
-### [8 Configure SAM-R required permissions](install-atp-step8-samr.md)
+## [8 Configure SAM-R required permissions](install-atp-step8-samr.md)
+## [9 Set up multi-forest support](atp-multi-forest.md)
 ## [Silent installation](ATP-silent-installation.md)
+## [Update ATP sensors](sensor-update.md)
 ## Azure ATP sensor additional steps
 ### [Configure port mirroring](configure-port-mirroring.md)
+### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
 ### [Configure Windows Event Forwarding](configure-event-forwarding.md)
-### [Configure proxy to enable communication](configure-proxy.md)
 # Use
 ## [Azure ATP health center](atp-health-center.md)
 ## [Azure ATP reports](reports.md)
@@ -38,4 +43,9 @@
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Suspicious activity guide](suspicious-activity-guide.md)
 ## [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
-## [Investigate entities](entity-profiles.md)
+## [Investigate entities](investigate-entity.md)
+## [Understanding entity profiles](entity-profiles.md)
+# Troubleshooting
+## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
+## [Support and information](atp-support.md)
+## [Azure ATP readiness roadmap](atp-resources.md)

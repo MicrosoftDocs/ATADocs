@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,6 +34,7 @@ ms.suite: ems
 
 The Azure ATP reports section in the workspace portal enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
+
 To access the reports page, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
 The reports that are available are: 
 
@@ -59,6 +60,9 @@ To set a scheduled report:
 1. In the **Reports** page, click **Set scheduled reports**, or in the Azure ATP workspace portal configuration page, under Notifications and Reports, click **Scheduled reports**.
 
    ![Schedule reports](./media/atp-sched-reports.png)
+ 
+ > [!NOTE]
+ > The daily reports are designed to be sent shortly after midnight, UTC.
 
 2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 

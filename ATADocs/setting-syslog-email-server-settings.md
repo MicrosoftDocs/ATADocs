@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
@@ -49,6 +49,7 @@ ATA can notify you when it detects a suspicious activity. For ATA to be able to 
     |SSL|Toggle SSL if the SMTP server required SSL. **Note:** If you enable SSL, you also need to change the Port number.|Default is disabled|
     |Authentication|Enable if your SMTP server requires authentication. **Note:** If you enable authentication, you must provide a user name and password of an email account that has permission to connect to the SMTP server.|Default is disabled|
     |Send from (required)|Enter an email address from whom the email will be sent from.|For example:<br />ATA@contoso.com|
+    
     ![ATA email server settings image](media/ata-email-server.png)
 
 ## Provide ATA with your Syslog server settings

@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -38,8 +39,11 @@
     "dest": "ATADocs",
     "template": "docs.html",
     "globalMetadata": {
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/atadocs",
+      "feedback_product_url": "https://microsoftsecurity.uservoice.com/forums/905158-advanced-threat-analytics", 
       "layout": "Conceptual",
-      "breadcrumb_path": "/enterprise-mobility-security/toc.json"
+      "breadcrumb_path": "/advanced-threat-analytics/bread/toc.json"
     }
   }
 }

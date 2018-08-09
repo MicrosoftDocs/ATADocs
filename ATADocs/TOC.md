@@ -2,6 +2,8 @@
 ## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [What threats does ATA detect?](ata-threats.md)
 ## What's new in ATA?
+### [What's new in ATA version 1.9](whats-new-version-1.9.md)
+#### [Update to ATA 1.9 - migration guide](ata-update-1.9-migration-guide.md)
 ### [What's new in ATA version 1.8](whats-new-version-1.8.md)
 #### [Update to ATA 1.8 - migration guide](ata-update-1.8-migration-guide.md)
 ### [What's new in ATA version 1.7](whats-new-version-1.7.md)
@@ -12,6 +14,7 @@
 #### [Update to ATA 1.5 - migration guide](ata-update-1.5-migration-guide.md)
 ### [What's new in ATA version 1.4](whats-new-version-1.4.md)
 ## [Frequently asked questions](ata-technical-faq.md)
+## [ATA data security and privacy](ata-privacy-compliance.md)
 # Plan and Design
 ## [ATA Architecture](ata-architecture.md)
 ## [Plan your ATA capacity](ata-capacity-planning.md)
@@ -26,6 +29,7 @@
 ## [6 Event collection](install-ata-step6.md)
 ## [7 VPN integration](vpn-integration-install-step.md)
 ## [8 Exclusions and Honeytoken](install-ata-step7.md)
+## [9 Configure SAM-R](install-ata-step9-samr.md)
 ## [Silent installation](ata-silent-installation.md)
 ## ATA Gateway additional steps
 ### [1. Configure port mirroring](configure-port-mirroring.md)
@@ -40,11 +44,14 @@
 ## [Change domain connectivity password](modifying-ata-config-dcpassword.md)
 ## [Excluding entities from detections](excluding-entities-from-detections.md)
 ## [Export/Import ATA configuration](ata-configuration-file.md)
-## [Manage ATA telemetry](manage-telemetry-settings.md)
+## [Manage system-generated logs](manage-telemetry-settings.md)
 ## [Set ATA notifications](setting-ata-alerts.md)
-## [Set Syslog and Email server settings](setting-syslog-email-server-settings.md)
+## [Set syslog and email server settings](setting-syslog-email-server-settings.md)
+## [Tag sensitive accounts](tag-sensitive-accounts.md)
 ## [Working with suspicious activities](working-with-suspicious-activities.md)
 ## [Working with the ATA Console](working-with-ata-console.md)
+### [Entity profiles](entity-profiles.md)
+##[Preventing lateral movement paths](use-case-lateral-movement-path.md)
 ## ATA reference information
 ### [SIEM log reference](cef-format-sa.md)
 ### [Event ID reference](event-id-reference.md)

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 6/7/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -58,14 +58,14 @@ Each Azure ATP workspace supports an Active Directory forest boundary and suppor
 This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
 
 
--   An **on-premises** Azure AD user account and password with read access to all objects in the monitored domains.
+-   An **on-premises** AD user account and password with read access to all objects in the monitored domains.
 
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
 -   If you run Wireshark on Azure ATP standalone sensor, you will need to restart the Azure Advanced Threat Protection sensor Service after you have stopped the Wireshark capture. If not, the sensor stops capturing traffic.
 
-- If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, contact your Azure ATP support representative.
+- If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
@@ -89,13 +89,13 @@ The Azure ATP standalone sensor supports installation on a server running Window
 The Azure ATP standalone sensor can be installed on a server that is a member of a domain or workgroup.
 The Azure ATP standalone sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
-For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
+For your standalone sensor to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com
 
 
 For information on using virtual machines with the Azure ATP standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
+> A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the Azure ATP standalone sensor to **High Performance**.<br>
@@ -114,9 +114,9 @@ The servers and domain controllers onto which the sensor is installed must have 
 ### Network adapters
 The Azure ATP standalone sensor requires at least one Management adapter and at least one Capture adapter:
 
--   **Management adapter** - used for communications on your corporate network. This adapter should be configured with the following settings:
+-   **Management adapter** - used for communications on your corporate network. The sensor will use this adapter to query the DC it’s protecting and performing resolution to machine accounts. <br>This adapter should be configured with the following settings:
 
-    -   Static IP address including default sensor
+    -   Static IP address including default gateway
 
     -   Preferred and alternate DNS servers
 
@@ -138,27 +138,29 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
+|**Internet ports**|||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
+|**Internal ports**|||||
 |LDAP|TCP and UDP|389|Domain controllers|Outbound|
 |Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
 |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
 |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
 |Kerberos|TCP and UDP|88|Domain controllers|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
-|RADIUS|UDDP|1813|RADIUS|Inbound|
+|RADIUS|UDP|1813|RADIUS|Inbound|
+|RDP|TCP|3389|All devices on network|Outbound|
 
 > [!NOTE]
 > - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
 > - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
->   -   SAM-R queries (TCP/UDP port 445) for detection purposes
-
+>   -   RDP (TCP port 3389), only first packet of *Client hello*, for resolution purposes<br> Note that no authentication is performed on any of the ports.
 
 ## Azure ATP sensor requirements
 This section lists the requirements for the Azure ATP sensor.
@@ -169,11 +171,11 @@ The domain controller can be a read-only domain controller (RODC).
 
 For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
-During installation, the .Net Framework 4.7 is installed and might cause a reboot of the domain controller.
+During installation, the .Net Framework 4.7 is installed and might require a reboot of the domain controller, if a restart is already pending.
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
+> A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
 
 ### Server specifications
 
@@ -202,21 +204,23 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 
 |Protocol|Transport|Port|To/From|Direction|
 |------------|-------------|--------|-----------|-------------|
+|**Internet ports**|||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
+|**Internal ports**|||||
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Outbound|
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
-|RADIUS|UDDP|1813|RADIUS|Inbound|
+|RADIUS|UDP|1813|RADIUS|Inbound|
+|TLS to RDP port|TCP|3389|All devices on network|Outbound|
 
 > [!NOTE]
-> - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md).
-> - The following ports need to be open inbound on devices on the network from the Azure ATP sensors:
+> - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
+> - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
->   -   SAM-R queries (TCP/UDP port 445) for detection purposes
-
+>   -   RDP (TCP port 3389), only first packet of *Client hello*, for resolution purposes<br> Note that no authentication is performed on any of the ports.
 
 
 

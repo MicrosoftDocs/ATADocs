@@ -4,10 +4,10 @@
 title: Advanced Threat Analytics prerequisites | Microsoft Docs
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 8/1/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,14 +26,14 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
 # ATA Prerequisites
 This article describes the requirements for a successful deployment of ATA in your environment.
 
->[!NOTE]
+> [!NOTE]
 > For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
 
 
@@ -55,7 +55,7 @@ The ATA System works on active directory forest boundary and supports Forest Fun
 ![ATA architecture diagram](media/ATA-architecture-topology.jpg)
 
 ## Before you start
-This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
+This section lists information you should gather as well as accounts and network entities you should have before starting ATA installation.
 
 
 -   User account and password with read access to all objects in the monitored domains.
@@ -63,7 +63,7 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and  Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
+-   Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
@@ -76,6 +76,10 @@ This section lists information you should gather and accounts and network entiti
 This section lists the requirements for the ATA Center.
 ### General
 The ATA Center supports installation on a server running Windows Server 2012 R2 or Windows Server 2016. 
+
+ > [!NOTE]
+ > The ATA Center does not support Windows Server core.
+
 The ATA Center can be installed on a server that is a member of a domain or workgroup.
 
 Before installing ATA Center running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
@@ -84,14 +88,15 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 
 Installation of the ATA Center as a virtual machine is supported. 
 
->[!NOTE] 
+> [!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 
 ### Server specifications
 
-When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving in order to disable NUMA. For more information, see your BIOS documentation. <br>
+When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving in order to disable NUMA. For more information, see your BIOS documentation.<br>
+
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
@@ -118,12 +123,11 @@ The following table lists the minimum ports that have to be opened for the ATA C
 |**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|
 |**SMTP** (optional)|TCP|25|SMTP Server|Outbound|
 |**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|
-|**Syslog** (optional)|TCP|514|Syslog server|Outbound|
+|**Syslog** (optional)|TCP/UPS/TLS (configurable)|514 (default)|Syslog server|Outbound|
 |**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
 |**LDAPS** (optional)|TCP|636|Domain controllers|Outbound|
 |**DNS**|TCP and UDP|53|DNS servers|Outbound|
 |**Kerberos** (optional if domain joined)|TCP and UDP|88|Domain controllers|Outbound|
-|**Netlogon** (optional if domain joined)|TCP and UDP|445|Domain controllers|Outbound|
 |**Windows Time** (optional if domain joined)|UDP|123|Domain controllers|Outbound|
 
 > [!NOTE]
@@ -131,7 +135,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 
 ### Certificates
 
-To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you should replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Center.
+To install and deploy ATA more quickly, you can install self-signed certificates during installation. If you have chosen to use self-signed certificates, after the initial deployment it is recommended to replace self-signed certificates with certificates from an internal Certification Authority to be used by the ATA Center.
 
 
 Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
@@ -141,11 +145,12 @@ The certificate must have:
 -	A provider type of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
 -	A public key length of 2048 bits
 -	A value set for KeyEncipherment and ServerAuthentication usage flags
+-	KeySpec (KeyNumber) value of "KeyExchange" (AT\_KEYEXCHANGE). Note that the value "Signature" (AT\_SIGNATURE) is not supported. 
 
 For example, you can use the standard **Web server** or **Computer** templates.
 
 > [!WARNING]
-> - The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
+> The process of renewing an existing certificate is not supported. The only way to renew a certificate is by creating a new certificate and configuring ATA to use the new certificate.
 
 
 > [!NOTE]
@@ -155,7 +160,7 @@ For example, you can use the standard **Web server** or **Computer** templates.
 ## ATA Gateway requirements
 This section lists the requirements for the ATA Gateway.
 ### General
-The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
+The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (including server core).
 The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
 The ATA Gateway can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
@@ -167,13 +172,13 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
->[!NOTE] 
+> [!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 For more information about the ATA Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
@@ -213,7 +218,7 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
 |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
 |Kerberos|TCP and UDP|88|Domain controllers|Outbound|
-|Netlogon|TCP and UDP|445|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |NTLM over RPC|TCP|135|All devices on the network|Outbound|
@@ -221,11 +226,16 @@ The following table lists the minimum ports that the ATA Gateway requires config
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
 
+
 > [!NOTE]
 > As part of the resolution process done by the ATA Gateway, the following ports need to be open inbound on devices on the network from the ATA Gateways.
 >
 > -   NTLM over RPC (TCP Port 135)
 > -   NetBIOS (UDP port 137)
+> - Using the Directory service user account, the ATA Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-ata-step9-samr.md).
+> - The following ports need to be open inbound on devices on the network from the ATA Gateway:
+>   -   NTLM over RPC (TCP Port 135) for resolution purposes
+>   -   NetBIOS (UDP port 137) for resolution purposes
 
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
@@ -249,7 +259,7 @@ During installation, the .Net Framework 4.6.1 is installed and might cause a reb
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, ATA logs, and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### Server specifications
 
@@ -257,7 +267,7 @@ The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM instal
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
->[!NOTE] 
+> [!NOTE] 
 > When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
 
 For more information about the ATA Lightweight Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
@@ -271,7 +281,8 @@ The ATA Center server, the ATA Lightweight Gateway servers, and the domain contr
 The ATA Lightweight Gateway monitors the local traffic on all of the domain controller's network adapters. <br>
 After deployment, you can use the ATA Console if you ever want to modify which network adapters are monitored.
 
-The Lightweight Gateway is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
+> [!NOTE]
+> The Lightweight Gateway is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
 ### Ports
 The following table lists the minimum ports that the ATA Lightweight Gateway requires:
@@ -283,12 +294,17 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 |NetBIOS|UDP|137|All devices on the network|Outbound|
 |SSL|TCP|443|ATA Center|Outbound|
 |Syslog (optional)|UDP|514|SIEM Server|Inbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 
 > [!NOTE]
 > As part of the resolution process performed by the ATA Lightweight Gateway, the following ports need to be open inbound on devices on the network from the ATA Lightweight Gateways.
 >
 > -   NTLM over RPC
 > -   NetBIOS
+> - Using the Directory service user account, the ATA Lightweight Gateway queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-ata-step9-samr.md).
+> - The following ports need to be open inbound on devices on the network from the ATA Gateway:
+>   -   NTLM over RPC (TCP Port 135) for resolution purposes
+>   -   NetBIOS (UDP port 137) for resolution purposes
 
 ## ATA Console
 Access to the ATA Console is via a browser, supporting the  browsers and settings:

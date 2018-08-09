@@ -4,10 +4,10 @@
 title: Install Azure Advanced Threat Protection Silently | Microsoft Docs
 description: This describes how to silently install Azure ATP.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/7/2017
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,20 +29,23 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
-# Azure ATP silent installation
-This article provides instructions for silently installing Azure ATP.
+# Azure ATP switches and silent installation
+This article provides guidance and instructions for Azure ATP switches and silent installation.
 
 ## Prerequisites
 
-Azure ATP  requires the installation of Microsoft .NET Framework 4.7. 
+Azure ATP requires the installation of Microsoft .NET Framework 4.7. 
 
 When you install Azure ATP, .Net Framework 4.7 is automatically installed as part of the deployment of Azure ATP.
 
-> [!Note] 
-> The installation of .Net framework 4.7 may require rebooting the server. When installing Azure ATP sensor on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
-When using Azure ATP silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
+> [!IMPORTANT] 
+> Make sure that you have the latest version of .Net Framework installed. If a previous version of .Net is installed, your Azure ATP silent installation will get stuck in a loop and fail to install. 
 
-To track the progress of the deployment, monitor Azure ATP installer logs, which are located in **%AppData%\Local\Temp**.
+> [!NOTE] 
+> The installation of .Net framework 4.7 may require rebooting the server. When installing the Azure ATP sensor on Domain Controllers, consider scheduling a maintenance window for the Domain Controllers.
+Using Azure ATP silent installation, the installer is configured to automatically restart the server at the end of the installation (if necessary). Make sure to run silent installation only during a maintenance window. Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart.
+
+To track your deployment progress, monitor the Azure ATP installer logs, which are located in **%AppData%\Local\Temp**.
 
 
 
@@ -52,11 +55,12 @@ To track the progress of the deployment, monitor Azure ATP installer logs, which
 > When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 including rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
 
 
-Use the following command to silently install the Azure ATP sensor:
+Use the following command to perform a fully silent install of the Azure ATP sensor:
+
 
 **Syntax**:
 
-    Azure ATP sensor Setup.exe [/AccessKey=<Access Key>] [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
    
 
 > [!NOTE]
@@ -77,7 +81,7 @@ Use the following command to silently install the Azure ATP sensor:
 > [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="**"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP workspace.|
+|AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP workspace.|
 
 **Examples**:
 To silently install the Azure ATP sensor, log into the domain joined computer with your Azure ATP admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the Azure ATP cloud service using the specified credentials:
@@ -92,7 +96,7 @@ Use the following command to silently update the Azure ATP sensor:
 
 **Syntax**:
 
-    Azure ATP  sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+    Azure ATP sensor Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Installation options**:
@@ -108,7 +112,7 @@ Use the following command to silently update the Azure ATP sensor:
 **Examples**:
 To update the Azure ATP sensor silently:
 
-    	Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+    Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
 ## Uninstall the Azure ATP sensor silently
 

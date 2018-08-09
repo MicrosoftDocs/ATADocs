@@ -1,6 +1,7 @@
 ---
 layout: LandingPage
 description: Learn how to use Advanced Threat Analytics.
+ms.topic: landing-page
 ---
 # Advanced Threat Analytics Documentation
 
@@ -8,7 +9,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="/advanced-threat-analytics/whats-new-version-1.8">
+        <a href="/advanced-threat-analytics/whats-new-version-1.9">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

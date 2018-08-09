@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/29/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,39 +30,59 @@ ms.suite: ems
 
 
 
-# Configure your proxy to allow communication between Azure ATP sensors and the Azure ATP cloud service
+# Configure endpoint proxy and Internet connectivity settings for your Azure ATP Sensor
 
-For your Domain Controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall or proxy. The configuration needs to be at the machine level (=machine account) and not at the user account level. You can test your configuration using the following steps:
+Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to operate successfully. In some organizations, the domain controllers aren’t directly connected to the Internet, but are connected through a web proxy connection. Each Azure ATP sensor requires that you use the Microsoft Windows Internet (WinINET) proxy configuration to report sensor data and communicate with the Azure ATP service. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Azure ATP cloud service.
+
+
+When configuring the proxy, you will need to know that the embedded Azure ATP sensor service runs in system context using the **LocalService** account and the Azure ATP Sensor Updater service runs in the system context using **LocalSystem** account. 
+
+> [!NOTE]
+> If you're using Transparent proxy or WPAD in your network topology, you do not need to configure WinINET for your proxy.
+
+## Configure the proxy 
+
+Configure your proxy server manually using a registry-based static proxy, to allow Azure ATP sensor to report diagnostic data and communicate with Azure ATP cloud service when a computer is not permitted to connect to the Internet.
+
+> [!NOTE]
+> The registry changes should be applied only to LocalService and LocalSystem.
+
+The static proxy is configurable through the Registry. You must copy the proxy configuration that you use in user context to the localsystem and localservice. To copy your user context proxy settings:
+
+1.	 Make sure to back up the registry keys before you modify them.
+
+2. In the registry, search for the value `DefaultConnectionSetting` as REG_BINARY under the registry key `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` and copy it.
  
-1.	Confirm that the **current user** has access to the processor endpoint using IE, by browsing to the following URL from the DC: 
-https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (for US), you should get error 503:
+2.	If the LocalSystem does not have the correct proxy settings (either they are not configured or they are different from the Current_User), then copy the proxy setting from the Current_User to the LocalSystem. Under the registry key `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
- ![service unavailable](/media/service-unavailable.png)
+3.	Paste the value from the Current_user `DefaultConnectionSetting` as REG_BINARY.
+
+4.	If the LocalService does not have the correct proxy settings, then copy the proxy setting from the Current_User to the LocalService. Under the registry key `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+
+5.	Paste the value from the Current_User `DefaultConnectionSetting` as REG_BINARY.
+
+> [!NOTE]
+> This will affect all applications including Windows services which use WinINET with LocalService, LocalSytem context.
+
+
+## Enable access to Azure ATP service URLs in the proxy server
+
+If a proxy or firewall is blocking all traffic by default and allowing only specific domains through or HTTPS scanning (SSL inspection) is enabled, make sure that the following URLs are white-listed to permit communication with the Azure ATP service in port 443:
+
+|Service location|.Atp.Azure.com DNS record|
+|----|----|
+|US	|triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
+|Europe|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
+|Asia|triprd1wcasse1sensorapi.atp.azure.com|
+
+
+You can also harden the firewall or proxy rules for a specific workspace you created, by creating a rule for the following DNS records:
+- <Workspace-Name>.atp.azure.com – for console connectivity. For example, contosoATP.atp.azure.com
+- <Workspace-Name>sensorapi.atp.azure.com – for sensors connectivity. For example, contosoATPsensorapi.atp.azure.com
+
  
-2.	If you do not get an error 503, review the proxy configuration and try again.
-
-3.	If the proxy configuration works for the **CURRENT_USER** (that is, you see the 503 error) then, check if the WinInet proxy settings are enabled for the **LOCAL_SYSTEM** account (used by the sensor updater service) by running the following command in elevated command prompt:
- 
-    reg compare "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" "HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" /v DefaultConnectionSettings
-
-If you get the error “ERROR: The system was unable to find the specified registry key or value.” this means that no proxy has been set on the **LOCAL_SYSTEM** level
- 
- ![proxy local system error](/media/proxy-local-system-error.png)
-
-If the result is “Result Compared: Different” this means that proxy is set for the **LOCAL_SYSTEM** but it is not the same as the **CURRENT_USER**:
- 
-  ![proxy result compared](/media/proxy-result-compared.png)
-
-5.	If the **LOCAL_SYSTEM** does not have the correct proxy settings (either not configured or different from the **CURRENT_USER**), then you may need to copy the proxy setting from the **CURRENT_USER** to the **LOCAL_SYSTEM**. Make sure to back up this registry key before you modify it:
-
- Current user key:
-    HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings”
- Local system key:
-    HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings”
-
- 
-6.	Complete steps 4 & 5 for the**Local_Service** account (it is the same as **Local_System** but should be S-1-5-19 instead of S-1-5-18.
-
+> [!NOTE]
+> When performing SSL inspection on the Azure ATP network traffic (between the sensor and the Azure ATP service), the SSL inspection must support mutual inspection.
 
 
 ## See Also

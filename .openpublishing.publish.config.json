@@ -76,18 +76,38 @@
   "notification_subscribers": [
     ""
   ],
+  "sync_notification_subscribers": [
+    "v-jiahu@microsoft.com",
+    "v-jutao@microsoft.com"
+  ],
+  "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/ATADocs",
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master"
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
-  "need_generate_pdf_url_template": false,
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "need_generate_pdf_url_template": true,
+  "targets": {},
   "need_generate_pdf": false,
   "need_generate_intellisense": false
 }

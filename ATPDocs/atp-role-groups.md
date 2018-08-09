@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 7/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,6 +33,10 @@ ms.suite: ems
 
 # Azure ATP role groups
 
+Azure ATP offers role-based security to safeguard data according to an organization's specific security and compliance needs. Azure ATP support three separate roles: Administrators, Users and Viewers. 
+
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
+
 Role groups enable access management for Azure ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and Azure ATP role authorization, and helps you get up and running with role groups in ATP.
 
 > [!NOTE]
@@ -53,10 +57,9 @@ Azure ATP introduces three types of security group: Azure ATP *workspace name* A
 |Activity |Azure ATP *workspace name* Administrators|Azure ATP *workspace name* Users|Azure ATP *workspace name* Viewers|
 |----|----|----|----|
 |Login|Available|Available|Available|
-|Provide Input for Suspicious Activities|Available|Available|Not available|
 |Change status of Suspicious Activities|Available|Available|Not available|
-|Share/Export suspicious activity via email/get link|Available|Available|Not available|
-|Change status of Monitoring Alerts|Available|Available|Not available|
+|Share/Export suspicious activity via email/get link|Available|Available|Available|
+|Change status of Monitoring Alerts|Available|Not available|Not available|
 |Update Azure ATP Configuration|Available|Not available|Not available|
 |sensor – Add|Available|Not available|Not available|
 |sensor – Delete |Available|Not available|Not available|
@@ -69,8 +72,8 @@ When users try to access a page that is not available for their role group, they
 
 ## Add and remove users 
 
-Azure ATP uses Azure AD security groups as a basis for role groups. The role groups can be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Only AAD users can be added or removed from security groups. 
 
+Azure ATP uses Azure AD security groups as a basis for role groups. The role groups can be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Only Azure AD users can be added or removed from security groups. 
 
 ## See Also
 - [ATA sizing tool](http://aka.ms/aatpsizingtool)

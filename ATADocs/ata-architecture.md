@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
@@ -98,6 +98,7 @@ The ATA Center receives parsed traffic from the ATA Gateway and ATA Lightweight 
 |Database|ATA utilizes MongoDB for purposes of storing all the data in the system:<br /><br />-   Network activities<br />-   Event activities<br />-   Unique entities<br />-   Suspicious activities<br />-   ATA configuration|
 |Detectors|The Detectors use machine learning algorithms and deterministic rules to find suspicious activities and abnormal user behavior in your network.|
 |ATA Console|The ATA Console is for configuring ATA and monitoring suspicious activities detected by ATA on your network. The ATA Console is not dependent on the ATA Center service and runs even when the service is stopped, as long as it can communicate with the database.|
+
 Consider the following criteria when deciding how many ATA Centers to deploy on your network:
 
 -   One ATA Center can monitor a single Active Directory forest. If you have more than one Active Directory forest, you need a minimum of one ATA Center per Active Directory forest.

@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,7 +33,7 @@ ms.suite: ems
 # Working with Suspicious Activities
 This article explains the basics of how to work with Azure Advanced Threat Protection.
 
-## Review suspicious activities on the attack time line
+## Review suspicious activities on the attack time line <a name="review-suspicious-activities-on-the-attack-time-line"></a>
 After logging in to the Azure ATP workspace portal, you are automatically taken to the open **Suspicious Activities Time Line**. Suspicious activities are listed in chronological order with the newest suspicious activities on the top of the time line.
 Each suspicious activity has the following information:
 
@@ -56,6 +56,25 @@ Each suspicious activity has the following information:
 > -   If you click on an entity, it takes you to the entity profile of the user or computer.
 
 ![Azure ATP suspicious activities timeline image](media/atp-sa-timeline.png)
+
+## Preview detections<a name="preview-detections"></a>
+
+The Azure ATP research team constantly works on implementing new detections for newly discovered attacks. Because Azure ATP is a cloud service, it's possible to release these new detections quickly to enable Azure ATP customers to benefit from new detections as soon as possible.
+
+These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the Azure ATP console - not in the timeline or in entity profiles - and new alerts won’t be opened.
+
+![preview detection vpn](./media/preview-detection-vpn.png) 
+
+By default, preview detections are enabled in Azure ATP. 
+
+To disable preview detections:
+
+1. In the Azure ATP console, click the settings cog.
+2. In the left menu, under Preview, click **Detections**.
+3. Use the slider to turn the preview detections on and off.
+ 
+![preview detections](./media/preview-detections.png) 
+
 
 ## Filter suspicious activities list
 To filter the suspicious activities list:

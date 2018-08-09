@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Manage Advanced Threat Analytics telemetry settings | Microsoft Docs
+title: Manage Advanced Threat Analytics system-generated logs| Microsoft Docs
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 6/26/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -26,12 +26,15 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.8*
+*Applies to: Advanced Threat Analytics version 1.9*
 
 
 
-# Manage Telemetry Settings
-Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
+# Manage system-generated logs> [!NOTE]
+
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
+
+Advanced Threat Analytics (ATA) collects anonymized system-generated log data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
 
 ## Data collected
 Collected anonymized data includes the following parameters:

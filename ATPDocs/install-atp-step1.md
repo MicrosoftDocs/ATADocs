@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,7 +36,10 @@ ms.suite: ems
 
 This installation procedure provides instructions for creating and managing a workspace in the Azure ATP workspace management portal. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
 
-In Azure ATP, you have the ability to manage and monitor multiple workspaces. This is especially helpful if you want to create a demo workspace and a test workspace in which you can POC Azure ATP before rolling it out to your whole organization. This is also needed to support deployments with multiple forests. A single workspace can only monitor multiple domains from a single forest.
+In Azure ATP, you have the ability to manage and monitor multiple workspaces. This is especially helpful if you want to create a demo workspace and a test workspace in which you can POC Azure ATP before rolling it out to your whole organization. This is also needed to support deployments with multiple forests. A single workspace can only monitor multiple domains from a single forest. 
+
+> [!NOTE]
+> Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia.
 
 ## Step 1. Enter the workspace management portal
 
@@ -48,7 +51,7 @@ After you verified that your network meets the requirements of the sensor, you c
 
 1.  Enter [the Azure ATP workspace portal](https://portal.atp.azure.com).
 
-2.  Log in with your on-premises Azure Active Directory user account that has at least read access to all objects in the monitored domains.
+2.  Log in with your Azure Active Directory user account.
 
 ## Step 2. Create a workspace
 
@@ -71,7 +74,7 @@ After you verified that your network meets the requirements of the sensor, you c
 - Only the Primary workspace can be edited. To make changes to other workspaces, you can delete them and add them again. If you want to delete the primary workspace, you must first turn off integrations and set the workspace to be not **Primary** before it is able to be deleted.
 - To edit a Primary workspace, you must first turn off existing integrations in the workspace.
 
-- Data retention – deleted workspaces do not appear in the UI, however their data is retained according to [Microsoft data retention policy](https://www.microsoft.com/trustcenter/privacy/you-own-your-data).
+- Data retention – deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
 
 >[!div class="step-by-step"]

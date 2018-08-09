@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/28/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -45,8 +45,10 @@ In addition to collecting and analyzing network traffic to and from the domain c
 For Azure ATP to be able to consume data from a Syslog server, you need to perform the following steps:
 
 -   Configure your Azure ATP sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
-> [!NOTE]
-> Azure ATP only listens on IPv4 and not IPv6. 
+
+ > [!NOTE]
+ > Azure ATP only listens on IPv4 and not IPv6. 
+
 -   Configure your SIEM/Syslog server to forward specific events to the Azure ATP sensor.
 
 > [!IMPORTANT]
