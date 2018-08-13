@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/9/2018
+ms.date: 8/12/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,7 +37,7 @@ This article describes the requirements for a successful deployment of Azure ATP
 > For information on how to plan resources and capacity, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 
-Azure ATP is composed of the Azure ATP cloud service, which consists of the workspace management portal and a workspace portal, the Azure ATP standalone sensor and/or the Azure ATP sensor. For more information about the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
+Azure ATP is composed of the Azure ATP cloud service, which consists of the workspace management portal, workspace portal, the Azure ATP standalone sensor and/or the Azure ATP sensor. For more information about each of the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
 
 Each Azure ATP workspace supports an Active Directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above. For deployments with multiple forests, a separate Azure ATP workspace is required for each forest.
 
@@ -63,7 +63,7 @@ This section lists information you should gather and accounts and network entiti
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   If you run Wireshark on Azure ATP standalone sensor, you will need to restart the Azure Advanced Threat Protection sensor Service after you have stopped the Wireshark capture. If not, the sensor stops capturing traffic.
+-   If you run Wireshark on Azure ATP standalone sensor, you will need to restart the Azure Advanced Threat Protection sensor service after you have stopped the Wireshark capture. If not, the sensor stops capturing traffic.
 
 - If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
 
@@ -71,7 +71,7 @@ This section lists information you should gather and accounts and network entiti
 
 -   Optional: A user account of a user who has no network activities. This account is configured as the Azure ATP Honeytoken user. For more information, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
 
--   Optional: When deploying the standalone sensor, it is necessary to forward  Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. In the Azure ATP sensor, these events are received automatically. In the Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+-   Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 
 ## Azure ATP workspace management portal and workspace portal requirements
@@ -80,7 +80,7 @@ Access to the Azure ATP workspace portal and the Azure ATP workspace management 
 -	Internet Explorer version 10 and above
 -	Google Chrome 4.0 and above
 -	Minimum screen width resolution of 1700 pixels
--	Firewall/proxy open - To communicate with the Azure ATP cloud service, you must have open: *.atp.azure.com port 443 in your firewall/proxy. 
+-	Firewall/proxy open - To communicate with the Azure ATP cloud service *.atp.azure.com port 443 must be open in your firewall/proxy. 
 
 ## Azure ATP standalone sensor requirements
 This section lists the requirements for the Azure ATP standalone sensor.
@@ -89,7 +89,7 @@ The Azure ATP standalone sensor supports installation on a server running Window
 The Azure ATP standalone sensor can be installed on a server that is a member of a domain or workgroup.
 The Azure ATP standalone sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
-For your standalone sensor to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com
+For your standalone sensor to communicate with the cloud service, port 443 in your firewalls and proxies to *.atp.azure.com must be open.
 
 
 For information on using virtual machines with the Azure ATP standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
@@ -208,8 +208,8 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Both|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Outbound|
+|NTLM over RPC|TCP|135|All devices on the network|Both|
 |NetBIOS|UDP|137|All devices on the network|Both|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDP|1813|RADIUS|Inbound|
