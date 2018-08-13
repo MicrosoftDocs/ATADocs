@@ -4,10 +4,10 @@
 title: Install Azure Advanced Threat Protection - Step 5 | Microsoft Docs
 description: Step five of installing Azure ATP helps you configure settings for your Azure ATP standalone sensor.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/12/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -60,8 +60,7 @@ After the Azure ATP sensor was installed, perform the following steps to configu
      - For an Azure ATP standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These receive the mirrored domain controller traffic.
      - For an Azure ATP sensor, this should be all the network adapters that are used for communication with other computers in your organization.
 
-
-  - **Domain synchronizer candidate**: Any Azure ATP standalone sensor set to be a domain synchronizer candidate can be responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only Azure ATP standalone sensors are set as Domain synchronizer candidates.
+    - **Domain synchronizer candidate**: Any Azure ATP standalone sensor set to be a domain synchronizer candidate can be responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only Azure ATP standalone sensors are set as Domain synchronizer candidates.
    It is recommended that you disable any remote site Azure ATP sensor from being Domain synchronizer candidates.
    If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [Azure ATP architecture](atp-architecture.md#azure-atp-sensor-features).
   

@@ -47,5 +47,6 @@
 ## [Understanding entity profiles](entity-profiles.md)
 # Troubleshooting
 ## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
+## [Troubleshooting using the logs](troubleshooting-atp-using-logs.md)
 ## [Support and information](atp-support.md)
 ## [Azure ATP readiness roadmap](atp-resources.md)
