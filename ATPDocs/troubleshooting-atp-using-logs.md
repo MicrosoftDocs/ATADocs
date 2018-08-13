@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -20,7 +20,7 @@ ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 #audience:
 #ms.devlang:
 ms.reviewer: 
-ms.suite: ems
+ms.suite: 
 #ms.tgt_pltfrm:
 #ms.custom:
 
