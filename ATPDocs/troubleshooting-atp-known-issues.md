@@ -4,10 +4,10 @@
 title: Troubleshooting Azure ATP known issues | Microsoft Docs
 description: Describes how you can troubleshoot issues in Azure ATP.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -35,7 +35,7 @@ ms.suite: ems
 
 ## Deployment log location
  
-The Azure ATP deployment logs are located in the temp directory for the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%).
+The Azure ATP deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%). For more information, see [Troubleshooting ATP using logs](troubleshooting-atp-using-logs.md)
 
 ## Proxy authentication problem presents as licensing error
 
