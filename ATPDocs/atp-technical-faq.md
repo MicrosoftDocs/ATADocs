@@ -4,10 +4,10 @@
 title: Azure Advanced Threat Protection frequently asked questions | Microsoft Docs
 description: Provides a list of frequently asked questions about Azure ATP and the associated answers
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/13/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,19 +36,21 @@ This article provides a list of frequently asked questions about Azure ATP and p
 You can acquire a license for Enterprise Mobility + Security 5 (EMS E5) directly via the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.                  
 
 ## What should I do if the Azure ATP sensor or standalone sensor doesn't start?
-Look at the most recent error in the current error log (Where Azure ATP is installed under the "Logs" folder).
+Look at the most recent error in the current error [log](troubleshooting-atp-using-logs.md) (Where Azure ATP is installed under the "Logs" folder).
 
 ## How can I test Azure ATP?
-You can simulate suspicious activities as an end-to-end test, by running the following command:
+You can simulate suspicious activities as an end-to-end test. In the following scenario, DNS reconnaisance is simulated:
 
--  DNS reconnaissance by using Nslookup.exe
-
-
-This needs to run remotely against the domain controller being monitored and not from the Azure ATP standalone sensor.
-
+1.  Verify Azure ATP sensors are installed and configured on the domain controllers (or standalone sensors and related port-mirroring are installed and configured)
+2.  Open CMD
+3.  Run the following command: nslookup -<DC iP address>
+    1.  Press enter
+    2.  Type: Is -d <FQDN>
+    3.  Depending on the configuration of your environment, responses will vary from "Query refused" to a list of your DNS records. 
+4. View the alert related to the simulated DNS reconnaisance in the Azure ATP console. 
 
 ## Does Azure ATP work with encrypted traffic?
-Azure ATP relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding. Detections based on network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not analyzed.
+Azure ATP relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding.  Network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not decrypted, but are analyzed.
 
 
 ## Does Azure ATP work with Kerberos Armoring?
