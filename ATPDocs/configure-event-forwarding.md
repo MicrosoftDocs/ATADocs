@@ -69,7 +69,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
    
     1.	Select **Enabled**.
     2.	Under **Options**, click **Show**.
-    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (For example: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
    
