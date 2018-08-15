@@ -4,10 +4,10 @@
 title: Tag sensitive accounts with Azure ATP | Microsoft Docs
 description: Describes how to tag sensitive accounts using Azure Advanced Threat Protection (ATP) 
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/12/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection version 1.9*
+*Applies to: Azure Advanced Threat Protection*
 
 
 

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 8/14/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,15 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
+ 
+
+
+## Azure ATP release 2.44
+
+Released August 12th, 2018
+
+- This version includes fixes and improvements for multiple issues.
+- Log files created on the sensor machine no longer include the "Exception Statistic" log.
 
 
 ## Azure ATP release 2.43
