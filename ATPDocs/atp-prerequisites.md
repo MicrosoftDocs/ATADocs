@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,20 +37,20 @@ This article describes the requirements for a successful deployment of Azure ATP
 > For information on how to plan resources and capacity, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
 
-Azure ATP is composed of the Azure ATP cloud service, which consists of the workspace management portal, workspace portal, the Azure ATP standalone sensor and/or the Azure ATP sensor. For more information about each of the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
+Azure ATP is composed of the Azure ATP cloud service, which consists of the management portal, workspace portal, the Azure ATP sensor and/or the Azure ATP standalone sensor. For more information about each of the Azure ATP components, see [Azure ATP architecture](atp-architecture.md).
 
-Each Azure ATP workspace supports an Active Directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above. For deployments with multiple forests, a separate Azure ATP workspace is required for each forest.
+Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. 
 
 
 [Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
 
-[Azure ATP workspace management portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): This section describes the workspace management portal browser requirements.
+[Azure ATP management portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): This section describes the Azure ATP management portal browser requirements.
 
 [Azure ATP workspace portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): This section describes browser requirements for running the Azure ATP workspace portal.
 
-[Azure ATP standalone sensor](#azure-atp-sensor-requirements): This section lists Azure ATP standalone sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP standalone sensor servers.
-
 [Azure ATP sensor](#azure-atp-lightweight-sensor-requirements): This section lists Azure ATP sensor hardware, and software requirements.
+
+[Azure ATP standalone sensor](#azure-atp-sensor-requirements): This section lists Azure ATP standalone sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP standalone sensor servers.
 
 ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
 

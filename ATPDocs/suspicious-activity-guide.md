@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/24/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -468,7 +468,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious domain controller promotion (potential DCShadow attack) - Preview
+## Suspicious domain controller promotion (potential DCShadow attack) - New
 
 **Description**
 
@@ -503,10 +503,11 @@ For more information, see [Grant Active Directory Domain Services permissions fo
 
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
  
+> [!NOTE]
+> Suspicious domain controller promotion (potential DCShadow attack) detections are supported by ATP sensors only. 
 
 
-
-## Suspicious replication request (potential DCShadow attack) - Preview
+## Suspicious replication request (potential DCShadow attack) - New
 
 **Description** 
 
@@ -532,6 +533,9 @@ Check who in your organization has the following permissions:
 - Replicate directory changes all 
 
 To do this, you can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+
+> [!NOTE]
+> Suspicious replication request (potential DCShadow attack) detections are supported by ATP sensors only. 
 
 
 ## Suspicious service creation

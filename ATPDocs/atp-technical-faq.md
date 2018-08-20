@@ -88,7 +88,7 @@ The Azure ATP standalone sensor needs a minimum of two network adapters:<br>1. A
 Azure ATP has a bi-directional integration with SIEMs as follows:
 
 1. Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a suspicious activity is detected.
-2. Azure ATP can be configured to receive Syslog messages for Windows events from  [these SIEMs](configure-event-collection.md).
+2. Azure ATP can be configured to receive Syslog messages for Windows events from [these SIEMs](configure-event-collection.md).
 
 ## How do I configure the Azure ATP sensors to communicate with Azure ATP cloud service when I have a proxy?
 
@@ -117,7 +117,7 @@ No. Azure ATP monitors all devices in the network performing authentication and 
 Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, Azure ATP monitors all computer accounts behavior and all other entities in the environment.
 
 ## Can Azure ATP support multi-domain and multi-forest?
-Azure Advanced Threat Protection supports multi-domain environments within the same forest boundary. Multiple forests require an Azure ATP workspace for each forest.
+Azure Advanced Threat Protection supports multi-domain environments and multiple forests. This feature is currently in public preview. For more information and known limitations, see [Multi-forest support](atp-multi-forest.md).
 
 ## Can you see the overall health of the deployment?
 Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur.
