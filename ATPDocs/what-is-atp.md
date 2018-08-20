@@ -68,6 +68,8 @@ Azure ATP searches for three main types of attacks: Malicious attacks, abnormal 
 - 	Overpass-the-Hash
 - 	Forged PAC (MS14-068)
 - 	Golden Ticket
+    -   time anomoly
+    -   non existent account - New
 - 	Malicious replication
 - 	Directory Service Enumeration
 -	SMB Session Enumeration
@@ -79,6 +81,9 @@ Azure ATP searches for three main types of attacks: Malicious attacks, abnormal 
 -	Encryption Downgrade
 -	Remote execution
 -	Malicious Service Creation
+-   Suspicious domain controller promotion (potential DCShadow attack) - New
+-   Suspicious replication request (potential DCShadow attack) - New
+-   VPN 
 
 
 Azure ATP detects these suspicious activities and surfaces the information in the Azure ATP workspace portal including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that Azure ATP suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.

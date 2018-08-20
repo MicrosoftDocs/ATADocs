@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/23/2018
+ms.date: 8/15/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,18 +32,18 @@ ms.suite: ems
 
 # Azure ATP readiness guide
 
-This article provides you with a readiness roadmap that gives you with a list of resources that assist you to get started with Azure Advanced Threat Analytics. 
+This article provides you with a readiness roadmap that gives you with a list of resources that assist you getting started with Azure Advanced Threat Protection. 
 
 ## Understanding Azure ATP
 
-Azure Advanced Threat Protection (ATP) is a cloud service that helps protect your enterprise from multiple types of advanced targeted cyber-attacks and insider threats. 
+Azure Advanced Threat Protection (ATP) is a cloud service that helps identify and protect your enterprise from multiple types of advanced targeted cyber-attacks and insider threats. 
 Use the following resources to learn more about Azure ATP: 
 - [Azure ATP overview](what-is-atp.md)
 - [Azure ATP introductory video - Full](https://www.youtube.com/watch?v=KX-xpFc0sBw) 
 
 ## Deployment decisions
 
-Azure ATP is comprised of a Cloud Service residing in Azure, and sensors that can be installed on a domain controller or on dedicated servers. Before you get Azure ATP up and running, it's important to choose what type of sensors better suit your deployment.<br>If you are using physical servers, you should plan capacity. You can get help from the sizing tool to allocate space for your sensors: 
+Azure ATP is comprised of a Cloud Service residing in Azure, and integrated sensors that can be installed on a domain controller or standalone sensors on dedicated servers. Before you get Azure ATP up and running, it's important to choose the type of sensors that best suit your deployment and needs. Azure ATP integrated sensors provide enhanced security, lower operational costs and easier deployment. Azure ATP standalone sensors require physical hardware, additionl configuration steps and heavier operational costs. <br>If you are using physical servers, capacity planning is critical. You can get help from the sizing tool to allocate space for your sensors: 
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool) - The sizing tool automates collection of the amount of traffic Azure ATP monitors. It automatically provides supportability and resource recommendations for sensors. 
 - [ATA capacity planning guidance](atp-capacity-planning.md)
 
@@ -56,14 +56,14 @@ These resources will help you set up Azure ATP, connect to Active Directory, dow
 
 ## Azure ATP settings
 
-The basic necessary settings in Azure ATP are configured when creating the workspace. However, there are several other settings that you can configure to fine-tune Azure ATP that make detections more accurate for your environment, such as SIEM integration and audit settings. 
+The basic settings necessary in Azure ATP are configured when creating the workspace. However, there are several additional settings that you can configure to fine-tune Azure ATP that make detections more accurate for your environment, such as SIEM integration and audit settings. 
 
 - [Azure ATP general documentation](what-is-atp.md)
-- [Audit settings](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/) – Audit your domain controller health before and after an ATA deployment. 
+- [Audit settings](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/) – Audit your domain controller health before and after an ATP deployment. 
 
 ## Work with Azure ATP
 
-After Azure ATP is up and running, you will be able to view suspicious activities that are detected in the activity time line. This is the default landing page you are taken to when you log in to the Azure ATP portal. By default, all open suspicious activities are shown on the attack time line. You can also see the severity assigned to each activity. Investigate each suspicious activity by drilling down into the entities (computers, devices, users) to open their profile pages that provide more information. These resources will help you work with Azure ATP's suspicious activities: 
+After Azure ATP is up and running, view detected suspicious activities in the Azure ATP portal activity time line. The activity time line is the default landing page after logging in to the Azure ATP portal. By default, all open suspicious activities are shown on the attack time line. You can also see the severity assigned to each activity. Investigate each suspicious activity by drilling down into the entities (computers, devices, users) to open their profile pages with more information. These resources help you work with Azure ATP's suspicious activities: 
 
 - [Azure ATP suspicious activity guide](suspicious-activity-guide.md) Learn to triage and take the next steps with your Azure ATP detections.
 - [Tag groups as sensitive](sensitive-accounts.md) Gain visibility into credential exposure on sensitive security groups.

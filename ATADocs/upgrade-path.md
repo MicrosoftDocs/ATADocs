@@ -4,10 +4,10 @@
 title: Advanced Threat Analytics recommended upgrade path | Microsoft Docs
 description: Provides instructions for upgrading your Advanced Threat Analytics (ATA) version.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/15/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
