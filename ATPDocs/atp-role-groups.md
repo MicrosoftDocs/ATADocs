@@ -37,14 +37,14 @@ Azure ATP offers role-based security to safeguard data according to an organizat
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Role groups enable access management for Azure ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and Azure ATP role authorization, and helps you get up and running with role groups in ATP.
+Role groups enable access management for Azure ATP. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management, Azure ATP role authorization, and helps you get up and running with role groups in ATP.
 
 > [!NOTE]
 > Any global administrator or security administrator on the tenant's Azure Active Directory is automatically an Azure ATP administrator.
 
-## Accessing the workspace management portal
+## Accessing the management portal
 
-Access to the workspace management portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After you enter the portal, you can create the different workspaces. For each workspace, the Azure ATP service creates three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
+Access to the management portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After you enter the portal, you can create your workspace. Azure ATP service creates three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
 
 > [!NOTE]
 > Access to the Azure ATP workspace portal is only granted to users within Azure AD security groups for that workspace, and global admins and security admins.

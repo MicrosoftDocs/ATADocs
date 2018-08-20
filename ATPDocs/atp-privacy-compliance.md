@@ -4,10 +4,10 @@
 title: Azure Advanced Threat Protection personal data policy| Microsoft Docs
 description: Provides links to information about how to delete private information and personal data from Azure ATP.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,13 +37,13 @@ ms.suite: ems
 
 In Azure Advanced Threat Protection you can view identifiable personal data from the [Workspace portal](workspace-portal.md) using the [search bar](workspace-portal.md#search-bar). 
 
-You can search for a specific user or computer, and clicking on the  entity will bring you to the user or computer [profile page](entity-profiles.md). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
+Search for a specific user or computer, and click on the entity to bring you to the user or computer [profile page](entity-profiles.md). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
 
 Azure ATP personal data is gathered from Active Directory through the Azure ATP sensor and stored in a backend database.
 
 ## Update personal data 
 
-Since Azure ATP user’s personal data is derived from the user’s object in the Active Directory of the organization, any changes made to the user profile in the AD will be reflected in Azure ATP.
+Azure ATP's personal user data is derived from the user’s object in the Active Directory of the organization. Therefore, changes made to the user profile in the organization AD are reflected in Azure ATP.
 
 
 ## Delete personal data 
@@ -52,7 +52,7 @@ After a user is deleted from the organization's Active Directory, Azure ATP auto
 
 ## Export personal data 
 
-In Azure ATP you have the ability to [export](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) security alert information to Excel. This will also export the personal data. 
+In Azure ATP you have the ability to [export](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) security alert information to Excel. This function also exports the personal data. 
  
 ## Audit personal data
 

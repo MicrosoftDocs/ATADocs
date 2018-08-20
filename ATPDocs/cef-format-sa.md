@@ -52,7 +52,7 @@ In this example, cs1 is a field that has a URL to the alert.
 
 ## Sample logs
 
-The following logs example comply with RFC 5242, but Azure ATP also supports RFC 3164.
+The following logs example complies with RFC 5242, but Azure ATP also supports RFC 3164.
 
 Priorities:
 
