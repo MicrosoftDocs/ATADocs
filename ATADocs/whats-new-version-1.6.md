@@ -103,9 +103,10 @@ In deployments in which the database path is manually moved, ATA deployment does
 
 - Updating ATA to version 1.6 may fail the pre-update Readiness Checks, as shown in the image below.
     ![Failed readiness check](media/ata_failed_readinesschecks.png)
-	>[!Important]
-Before updating ATA to version 1.6, update the following registry key with the correct database path:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
-
+    
+    > [!IMPORTANT]
+    > Before updating ATA to version 1.6, update the following registry key with the correct database path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
+    
 ### Migration failure when updating from ATA 1.5
 When updating to ATA 1.6, the update process may fail with the following error code:
 
