@@ -211,7 +211,7 @@ In this detection, an alert is triggered when a Kerberos ticket granting ticket 
    2.	Is the Azure ATP sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then Close this alert.
    3.	If the answer to the above questions is no, assume this is malicious.
 
-- **Nonexistent account** (Preview)
+- **Nonexistent account**
    1.	Ask the following questions:
          - Is the user is a known and valid domain user? If yes, then Close the alert (it was a false positive).
          - Has the user been recently added? If yes, then Close the alert, the change may not have been synchronized yet.
@@ -560,7 +560,7 @@ A suspicious service has been created on a domain controller in your organizatio
 
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
-## Suspicious VPN connection - Preview<a name="suspicious-vpn-detection"></a>
+## Suspicious VPN connection <a name="suspicious-vpn-detection"></a>
 
 **Description**
 
