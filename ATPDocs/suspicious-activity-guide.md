@@ -211,7 +211,7 @@ In this detection, an alert is triggered when a Kerberos ticket granting ticket 
    2.	Is the Azure ATP sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then Close this alert.
    3.	If the answer to the above questions is no, assume this is malicious.
 
-- **Nonexistent account**
+- **Nonexistent account - New** 
    1.	Ask the following questions:
          - Is the user is a known and valid domain user? If yes, then Close the alert (it was a false positive).
          - Has the user been recently added? If yes, then Close the alert, the change may not have been synchronized yet.
@@ -490,7 +490,7 @@ In this detection, an alert is triggered when a machine in the network is trying
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
 If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
 
-4. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurrs, enable this audit on the relevant domain controller for further investigation.
+4. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Remediate**
 
@@ -524,7 +524,7 @@ In this detection, an alert is triggered when a suspicious replication request i
    2.  Are the users supposed to access these resources?
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
 If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
-1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurrs, enable this audit on the relevant domain controller for further investigation.
+1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Remediation**
 
@@ -560,7 +560,8 @@ A suspicious service has been created on a domain controller in your organizatio
 
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
-## Suspicious VPN connection <a name="suspicious-vpn-detection"></a>
+
+## Suspicious VPN connection - New <a name="suspicious-vpn-detection"></a>
 
 **Description**
 
