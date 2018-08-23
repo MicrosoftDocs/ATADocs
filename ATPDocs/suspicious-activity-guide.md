@@ -560,6 +560,7 @@ A suspicious service has been created on a domain controller in your organizatio
 
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
+
 ## Suspicious VPN connection - New <a name="suspicious-vpn-detection"></a>
 
 **Description**
