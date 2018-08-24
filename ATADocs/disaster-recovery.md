@@ -4,10 +4,10 @@
 title: Disaster recovery for Advanced Threat Analytics | Microsoft Docs
 description: Describes how you can quickly recover ATA functionality after disaster
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -61,12 +61,12 @@ ATA Gateways again. When prompted for a certificate, provide the certificate you
     1. Remove the default ATA Center System Profile document from the MongoDB: 
         1. Go to **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Run `mongo.exe ATA` 
-        3. Start the ATA Center service.
-        4. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
+        3. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
     2. Run the command: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` using the backup file from step 1.</br>
     For a full explanation of how to locate and import backup files, see [Export and import the ATA configuration](ata-configuration-file.md). 
-    3. Open the ATA Console. You should see all the ATA Gateways linked under the Configuration/Gateways tab. 
-    4. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5.md). 
+    3. Start the ATA Center service.
+    4. Open the ATA Console. You should see all the ATA Gateways linked under the Configuration/Gateways tab.
+    5. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5.md). 
 
 
 

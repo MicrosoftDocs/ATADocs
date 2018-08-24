@@ -4,10 +4,10 @@
 title: Install Azure Advanced Threat Protection | Microsoft Docs
 description: In this step of installing ATP, you configure data sources.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,9 +30,7 @@ ms.suite: ems
 
 
 
-# Install Azure ATP
-
-## Configure event collection
+# Configure event collection
 
 To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
@@ -41,7 +39,7 @@ To enhance detection capabilities, Azure ATP needs the following Windows events:
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757 and 7045 for enhancing detection of sensitive group modifications and service creation. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
-### SIEM/Syslog
+## SIEM/Syslog
 For Azure ATP to be able to consume data from a Syslog server, you need to perform the following steps:
 
 -   Configure your Azure ATP sensor servers to listen to and accept events forwarded from the SIEM/Syslog server.
@@ -60,7 +58,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 > [!NOTE]
 >If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by ATP.
 
-### Configuring the Azure ATP sensor to listen for SIEM events
+## Configuring the Azure ATP sensor to listen for SIEM events
 
 1.  In Azure ATP Configuration, under **Data sources** click **SIEM** and turn on **Syslog** and click **Save**.
 
@@ -70,7 +68,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 
 Azure ATP supports SIEM events in the following formats:  
 
-### RSA Security Analytics
+## RSA Security Analytics
 &lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Syslog header is optional.
@@ -99,7 +97,7 @@ Azure ATP supports SIEM events in the following formats:
 
 -   The order is important and nothing else should be included in the message.
 
-### HP Arcsight
+## HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   Must comply with the protocol definition.
@@ -130,7 +128,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 
     -   “Reason or Error Code” = The result code of the NTLM
 
-### Splunk
+## Splunk
 &lt;Syslog Header&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 The computer attempted to validate the credentials for an account.
@@ -167,7 +165,7 @@ Error Code:         0x0
 
 -   The order is not important for the key=value pairs.
 
-### QRadar
+## QRadar
 QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because Azure ATP necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0

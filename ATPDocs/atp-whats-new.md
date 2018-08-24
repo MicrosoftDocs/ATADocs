@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/14/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,23 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
- 
+
+
+## Azure ATP release 2.45
+
+Released August 19th, 2018
+
+- **Azure ATP adds Event Tracing for Windows (ETW) as an additional data source**  <br> 
+Event Tracing for Windows (ETW) added as additional data source in addition to existing network traffic and Windows events. ETW provides additional suspicious activity detections, including: suspicious domain controller promotions and suspicious domain controller replication requests (both are potential DCShadow attacks). <br>
+Only ATP sensors installed on domain controllers support ETW based detections. ETW detections are not supported by ATP standalone sensors. <br>  
+
+- **Four new detections now in general availability** <br>
+  - Suspicious VPN connection
+  - Kerberos Golden Ticket – nonexistent account 
+  - Suspicious domain controller promotion (potential DcShadow attack) – ETW based detection, only available with ATP sensors 
+  - Suspicious domain controller replication request (potential DcShadow attack) – ETW based detection, only available with ATP sensors
+
+- This version also includes fixes and improvements for multiple issues.
 
 
 ## Azure ATP release 2.44
