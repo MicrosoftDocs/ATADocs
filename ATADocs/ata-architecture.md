@@ -4,10 +4,10 @@
 title: Advanced Threat Analytics architecture | Microsoft Docs
 description: Describes the architecture of Microsoft Advance Threat Analytics (ATA)
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -185,7 +185,7 @@ To enhance ATA detection of Pass-the-Hash, Brute Force, Modification to sensitiv
 
 -   Configuring the ATA Gateway to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
 
--   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). This only applies to physical ATA Gateways - not to the ATA Lightweight Gateway.
+-   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756 and 4757 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. To complete your configuration of Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding). This only applies to physical ATA Gateways - not to the ATA Lightweight Gateway.
 
 ## Related Videos
 - [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
