@@ -97,9 +97,6 @@ The Azure ATP workspace enables you to manage the following Azure ATP functional
 
 |||
 |-|-|
-|Entity Receiver|Receives batches of entities from all Azure ATP sensors and Azure ATP standalone sensors.|
-|Network Activity Processor|Processes all the network activities within each batch received. For example, matching between the various Kerberos steps performed from potentially different computers|
-|Entity Profiler|Profiles all the Unique Entities according to the traffic and events. For example, Azure ATP updates the list of logged-on computers for each user profile.|
 |Azure ATP management portal|Manages your Azure ATP workspace.|
 |Azure ATP workspace portal|The Azure ATP workspace is used to configure Azure ATP and monitor suspicious activities detected by Azure ATP on your network. The Azure ATP workspace is not dependent on the Azure ATP sensor and runs even when the Azure ATP sensor service is stopped. |
 |Detectors|The Detectors use machine learning algorithms and deterministic rules to find suspicious activities and abnormal user behavior in your network.|
