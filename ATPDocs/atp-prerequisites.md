@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 8/26/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -131,7 +131,7 @@ The Azure ATP standalone sensor requires at least one Management adapter and at 
 
     > [!IMPORTANT]
     > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. For more information, see [Configure port mirroring](configure-port-mirroring.md). Typically, you need to work with the networking or virtualization team to configure port mirroring.
-    > -   Configure a static non-routable IP address for your environment with no default sensor and no DNS server addresses. For example, 1.1.1.1/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
+    > -   Configure a static non-routable IP address (with /32 mask) for your environment with no default sensor gateway and no DNS server addresses. For example, 10.10.0.10/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 ### Ports
 The following table lists the minimum ports that the Azure ATP standalone sensor requires configured on the management adapter:
