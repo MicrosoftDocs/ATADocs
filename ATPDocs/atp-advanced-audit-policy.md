@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Audit Policy Check | Microsoft Docs
+title: Advanced Audit Policy check | Microsoft Docs
 d|Description: This article provides an overview of Azure ATP's Advanced Audit Policy check.
 keywords:
 author: mlottner
@@ -29,7 +29,7 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
-# Azure ATP Advanced Audit Policy Check
+# Azure ATP Advanced Audit Policy check
 
 Azure ATP detection relies on specific Windows Event Logs for visibility in certain scenarios, such as NTLM logons, security group modifications, and similar events. For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage. <br>
 <br>To make it easier to verify the current status of each of your domain controller’s Advanced Audit Policies, Azure ATP automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
@@ -50,11 +50,11 @@ Advanced Security Audit Policy is enabled via GPO. These audit events are record
 
     ![Advanced Audit Policy Configuration](media/atp-advanced-audit-policy-check-step-2.png)
 
-5. Go to Account Login, double click on **Audit Credential Validation** and select **Configure the following audit events** for both success and failure events. 
+5. Go to Account Logon, double click on **Audit Credential Validation** and select **Configure the following audit events** for both success and failure events. 
 
     ![Credential validation](media/atp-advanced-audit-policy-check-step-3.png)
 
-6. Go to Account management, double click on **Audit Security Group Management** and enable audit events for both successful and failed events.
+6. Go to Account Logon , double click on **Audit Security Group Management** and select **Configure the following audit events** for both success and failure events.
 
     ![Audit Security Group Management](media/atp-advanced-audit-policy-check-step-4.png)
 
