@@ -85,11 +85,8 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     2.	For **Destination Log**, confirm that **Forwarded Events** is selected. For ATA to read the events, the destination log must be **Forwarded Events**. 
     3.	Select **Source computer initiated** and click **Select Computers Groups**.
         1.	Click **Add Domain Computer**.
-        2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**. 
- 
-    ![Event Viewer image](media/wef3 event viewer.png)
- 
- 
+        2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.  
+          ![Event Viewer image](media/wef3 event viewer.png)  
         3.	Click **OK**.
      4.	Click **Select Events**.
 
