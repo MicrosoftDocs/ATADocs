@@ -197,5 +197,4 @@ To enhance Azure ATP detection coverage of Pass-the-Hash, Suspicious authenticat
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-
-- - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
