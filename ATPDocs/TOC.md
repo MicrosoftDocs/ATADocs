@@ -46,6 +46,7 @@
 ## [Investigate entities](investigate-entity.md)
 ## [Understanding entity profiles](entity-profiles.md)
 # Troubleshoot
+## [Advanced Audit Policy check](atp-advanced-audit-policy.md)
 ## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
 ## [Troubleshooting using logs](troubleshooting-atp-using-logs.md)
 ## [Support and information](atp-support.md)
