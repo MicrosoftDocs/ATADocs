@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Advanced Audit Policy check | Microsoft Docs
-d|Description: This article provides an overview of Azure ATP's Advanced Audit Policy check.
+title: Azure Advanced Threat Protection Advanced Audit Policy check | Microsoft Docs
+description: This article provides an overview of Azure ATP's Advanced Audit Policy check.
 keywords:
 author: mlottner
 ms.author: mlottner
@@ -31,13 +31,15 @@ ms.suite: ems
 
 # Azure ATP Advanced Audit Policy check
 
-Azure ATP detection relies on specific Windows Event Logs for visibility in certain scenarios, such as NTLM logons, security group modifications, and similar events. For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage. <br>
-<br>To make it easier to verify the current status of each of your domain controller’s Advanced Audit Policies, Azure ATP automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
+Azure ATP detection relies on specific Windows Event Logs for visibility in certain scenarios, such as NTLM logons, security group modifications, and similar events. For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.
+
+To make it easier to verify the current status of each of your domain controller’s Advanced Audit Policies, Azure ATP automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
 
 ![Advanced Audit Policy Health Alert](media/atp-health-alert-audit-policy.png)
 
 
-Advanced Security Audit Policy is enabled via GPO. These audit events are recorded on the domain controller's Windows Events. This should be enabled in the **Default Domain Controllers Policy** in Active Directory.<br>
+Advanced Security Audit Policy is enabled via GPO. These audit events are recorded on the domain controller's Windows Events. This should be enabled in the **Default Domain Controllers Policy** in Active Directory.
+
 <br>Modify the Advanced Audit Policies of your domain controller using the following instructions:
 
 1. Log in to the Server as **Domain Administrator**.
