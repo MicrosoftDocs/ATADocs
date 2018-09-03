@@ -89,7 +89,7 @@ Perform the following steps on the ATA Gateway server.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Custom Performance Monitor data collection set
 
-5.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
+6.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
 
 
 >[!div class="step-by-step"]
