@@ -8,7 +8,7 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:

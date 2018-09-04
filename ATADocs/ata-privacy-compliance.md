@@ -8,7 +8,7 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 6/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
