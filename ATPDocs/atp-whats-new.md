@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 8/30/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,7 +31,19 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.47
+Released September 2nd, 2018
 
+- **Azure ATP Advanced Audit Policy Check**
+<br> 
+Azure Advanced Threat Protection now checks your domain controller’s existing Advanced Audit Policies and recommends policy changes to provide maximum Azure ATP service coverage for your organization. <br> 
+**This new check enables you to:**
+  -  Identify events missing from your Windows Event logs that are currently excluded from your Azure ATP coverage.
+  -  Verify ideal settings and make changes based on the health alert recommendations provided.
+  -  A single aggregated health alert will be issued for all of your domain controllers including remediation suggestions (if/as needed).
+
+Review how to [Configure Advanced Audit Policies](atp-advanced-audit-policy.md)to ensure your system is configured correctly. 
+- This version also includes fixes and improvements for multiple issues.
 
 ## Azure ATP release 2.46
 

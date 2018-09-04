@@ -34,7 +34,7 @@ ms.suite: ems
 Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the [Suspicious activity guide](suspicious-activity-guide.md). Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network using non-sensitive accounts that share stored log-in credentials in accounts, groups and machines. Once an attacker has gained access, the attacker can also take advantage of the data on your domain controllers.
 
 
-## Discovery your at-risk sensitive accounts
+## Discover your at-risk sensitive accounts
 
 To discover which sensitive accounts in your network are exposed because of their connection to non-sensitive accounts, groups and machines, follow these steps. 
 
