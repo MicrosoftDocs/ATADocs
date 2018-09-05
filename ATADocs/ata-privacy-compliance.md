@@ -4,10 +4,10 @@
 title: Advanced Threat Analytics personal data policy| Microsoft Docs
 description: Provides links to information about how to delete private information and personal data from ATA.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod:
 ms.service: advanced-threat-analytics
@@ -58,7 +58,7 @@ Use the ATA GDPR database script to delete entities and delete entity activity d
 
 This action permanently deletes an entity from the ATA database. To run this command, provide the command name `deleteAccount`, and the `SamName`, `UpnName` or `GUID` of the computer or username you wish to delete. For example: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteAccount,admin1@contoso.com;” GDPR.js `
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteAccount,admin1@contoso.com';" GDPR.js`
 
 Running this completely removes the entity with the UPN admin1@contoso.com from the database along with all the activities and security alerts associated with the entity. 
 
@@ -70,7 +70,7 @@ To run this command, provide the command name `deleteOldData`, and the number of
 
 For example: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteOldData,30;” GDPR.js`
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteOldData,30';" GDPR.js`
 
 This script removes all data for all entity activities and security alerts from the database that are older than 30 days. You will retain only the last 30 days of data.
 
