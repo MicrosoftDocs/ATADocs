@@ -8,7 +8,7 @@ author: mlottner
 ms.author: mlottner
 manager: mbaldwin
 ms.date: 8/9/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod:
 ms.service: advanced-threat-analytics
 ms.technology:
