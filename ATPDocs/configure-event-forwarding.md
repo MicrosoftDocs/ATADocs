@@ -8,7 +8,7 @@ author: mlottner
 ms.author: mlottner
 manager: mbaldwin
 ms.date: 08/12/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
