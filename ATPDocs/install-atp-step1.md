@@ -2,12 +2,12 @@
 # required metadata
 
 title: Install Azure Advanced Threat Protection - Step 1 | Microsoft Docs
-description: First step to install Azure ATP involves creating a workspace for your Azure ATP deployment.
+description: First step to install Azure ATP involves creating the instance for your Azure ATP deployment.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 9/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,30 +34,30 @@ ms.suite: ems
 >[!div class="step-by-step"]
 [Step 2 »](install-atp-step2.md)
 
-This installation procedure provides instructions for creating and managing a workspace in the Azure ATP workspace management portal. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
+This installation procedure provides instructions for creating and managing your Azure ATP instance. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
 
-In Azure ATP, you have the ability to manage and monitor multiple workspaces. This is especially helpful if you want to create a demo workspace and a test workspace in which you can POC Azure ATP before rolling it out to your whole organization. This is also needed to support deployments with multiple forests. A single workspace can only monitor multiple domains from a single forest. 
+In Azure ATP, you'll have a single workspace or instance to enable you to manage multiple forests from a single pane of glass. 
 
 > [!NOTE]
 > Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia.
 
-## Step 1. Enter the workspace management portal
+## Step 1. Enter the management portal
 
 After you verified that your network meets the requirements of the sensor, you can proceed with the creation of the Azure ATP workspace.
 
 > [!NOTE]
->In order to access the workspace management portal, you need to be a global administrator or security administrator on that tenant.
+>In order to access the management portal, you need to be a global administrator or security administrator on that tenant.
 
 
-1.  Enter [the Azure ATP workspace portal](https://portal.atp.azure.com).
+1.  Enter [the Azure ATP portal](https://portal.atp.azure.com).
 
 2.  Log in with your Azure Active Directory user account.
 
-## Step 2. Create a workspace
+## Step 2. Create your workspace
 
 1. Click **Create workspace**.
 
-2. In the **Create new workspace** dialog, name your workspace, decide whether it's your primary workspace or not, and select a **Geolocation** for your data center. Only one workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
+2. In the **Create new workspace** dialog, name your workspace, and select a **Geolocation** for your data center. Only one workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
  > [!NOTE]
  > After you select a Geolocation, you cannot modify it.
     ![Azure ATP workspace](media/create-workspace.png)
@@ -67,7 +67,7 @@ After you verified that your network meets the requirements of the sensor, you c
  > [!NOTE]
  > To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
-4. Click on the name of the new workspace access the Azure ATP workspace portal for that workspace.
+4. Click on the name of the new workspace to access the Azure ATP workspace portal for that workspace.
 
     ![Azure ATP workspaces](media/atp-workspaces.png)
 
