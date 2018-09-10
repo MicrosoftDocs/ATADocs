@@ -147,7 +147,7 @@ This should return a `WriteResult({ "nRemoved" : XX })` where “XX” is the nu
 
 ### Net Framework 4.6.1 requires restarting the server
 
-    ![.Net Framework restart](media/ata-net-framework-restart.png)
+![.Net Framework restart](media/ata-net-framework-restart.png)
 
 ### Historical network activities no longer migrated
 This version of ATA delivers an improved detection engine, which provides more accurate detection and reduces many false positive scenarios, especially for Pass-the-Hash.
