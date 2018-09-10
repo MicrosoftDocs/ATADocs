@@ -50,7 +50,7 @@ The update to ATA 1.6 provides improvements in the following areas:
 
 
 - **Malicious Data Protection Private Information Request**
-Data Protection API (DPAPI) is a password-based data protection service. This protection service is used by various applications that store user’s secrets, such as website passwords and file-share credentials. In order to support password-loss scenarios, users can decrypt protected data by using a recovery key which does not involve their password. In a domain environment, attackers can remotely steal the recovery key and use it to decrypt protected data on all domain joined computers.
+Data Protection API (DPAPI) is a password-based data protection service. This protection service is used by various applications that store user’s secrets, such as website passwords and file-share credentials. In order to support password-loss scenarios, users can decrypt protected data by using a recovery key, which does not involve their password. In a domain environment, attackers can remotely steal the recovery key and use it to decrypt protected data on all domain joined computers.
 
 
 - **Net Session Enumeration**
@@ -62,18 +62,18 @@ In Active Directory environments, replication happens regularly between Domain C
 
 
 - **Detection of MS11-013 vulnerability**
-There is an elevation of privilege vulnerability in Kerberos which allows for certain aspects of a Kerberos service ticket to be forged. A malicious user or attacker who successfully exploits this vulnerability can obtain a token with elevated privileges on the Domain Controller.
+There is an elevation of privilege vulnerability in Kerberos, which allows for certain aspects of a Kerberos service ticket to be forged. A malicious user or attacker who successfully exploits this vulnerability can obtain a token with elevated privileges on the Domain Controller.
 
 
 - **Unusual protocol implementation**
-Authentication requests (Kerberos or NTLM) are usually performed using a standard set of methods and protocols. However, in order to successfully authenticate, the request must meet only a specific set of requirements. Attackers might implement these protocols with minor deviations from the standard implementation in the environment. These deviations might indicate the presence of an attacker attempting to execute attacks such as Pass-The-Hash, Brute Force and others.
+Authentication requests (Kerberos or NTLM) are usually performed using a standard set of methods and protocols. However, in order to successfully authenticate, the request must meet only a specific set of requirements. Attackers might implement these protocols with minor deviations from the standard implementation in the environment. These deviations might indicate the presence of an attacker attempting to execute attacks such as Pass-The-Hash, Brute Force, and others.
 
 
 ### Improvements to existing detections
-ATA 1.6 includes improved detection logic that reduces false-positive and false-negative scenarios for existing detections such as Golden Ticket, Honey Token, Brute Force and Remote Execution.
+ATA 1.6 includes improved detection logic that reduces false-positive and false-negative scenarios for existing detections such as Golden Ticket, Honey Token, Brute Force, and Remote Execution.
 
 ### The ATA Lightweight Gateway
-This version of ATA introduces a new deployment option for the ATA Gateway, which allows an ATA Gateway to be installed directly on the Domain Controller. This deployment option removes non-critical functionality of the ATA Gateway and introduces dynamic resource management based on available resources on the DC, which makes sure the existing operations of the DC are not affected. The ATA Lightweight Gateway reduces the cost of ATA deployment. At the same time it makes deployment easier in branch sites, in which there is limited hardware resource capacity or inability to set up port-mirroring support.
+This version of ATA introduces a new deployment option for the ATA Gateway, which allows an ATA Gateway to be installed directly on the Domain Controller. This deployment option removes non-critical functionality of the ATA Gateway and introduces dynamic resource management based on available resources on the DC, which makes sure the existing operations of the DC are not affected. The ATA Lightweight Gateway reduces the cost of ATA deployment. At the same time, it makes deployment easier in branch sites, in which there is limited hardware resource capacity or inability to set up port-mirroring support.
 For more information about the ATA Lightweight Gateway, see [ATA architecture](ata-architecture.md#ata-gateway-and-ata-lightweight-gateway)
 
 For more information about deployment considerations and choosing the right type of gateways for you, see [ATA capacity planning](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment)
@@ -88,7 +88,7 @@ With this version, a lighter database load and a more efficient way of running a
 ATA 1.6 necessitates ignificantly less storage space to run the ATA Database, now requiring only 20% of the storage space used in previous versions.
 
 ### Support for IBM QRadar
-ATA now can now receive events from IBM's QRadar SIEM solution, in addition to the previously supported SIEM solutions.
+ATA can now receive events from IBM's QRadar SIEM solution, in addition to the previously supported SIEM solutions.
 
 ## Known issues
 The following known issues exist in this version.
