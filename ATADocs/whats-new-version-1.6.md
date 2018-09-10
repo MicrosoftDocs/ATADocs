@@ -50,7 +50,7 @@ The update to ATA 1.6 provides improvements in the following areas:
 
 
 - **Malicious Data Protection Private Information Request**
-Data Protection API (DPAPI) is a password-based data protection service. This protection service is used by various applications that store user’s secrets, such as website passwords and file-share credentials. In order to support password-loss scenarios, users can decrypt protected data by using a recovery key, which does not involve their password. In a domain environment, attackers can remotely steal the recovery key and use it to decrypt protected data on all domain joined computers.
+Data Protection API (DPAPI) is a password-based data protection service. This protection service is used by various applications that store user’s secrets, such as website passwords and file-share credentials. In order to support password-loss scenarios, users can decrypt protected data by using a recovery key, which doesn't involve their password. In a domain environment, attackers can remotely steal the recovery key and use it to decrypt protected data on all domain joined computers.
 
 
 - **Net Session Enumeration**
@@ -147,12 +147,11 @@ This should return a `WriteResult({ "nRemoved" : XX })` where “XX” is the nu
 
 ### Net Framework 4.6.1 requires restarting the server
 
-In some cases, the installation of .Net Framework 4.6.1 may require you to restart the server. Notice that clicking OK in the **Microsoft Advanced Threat Analytics Center Setup** dialog automatically restarts the server. This is especially important when installing the ATA Lightweight Gateway on a domain controller, as you may want to plan a maintenance window before the installation.
     ![.Net Framework restart](media/ata-net-framework-restart.png)
 
 ### Historical network activities no longer migrated
 This version of ATA delivers an improved detection engine, which provides more accurate detection and reduces many false positive scenarios, especially for Pass-the-Hash.
-The new and improved detection engine utilizes inline detection technology enabling detection without accessing historical network activity, to significantly increase the performance of the ATA Center. This also means that it is unnecessary to migrate historical network activity during the update procedure.
+The new and improved detection engine utilizes inline detection technology that enable detection without accessing historical network activity, to increase significantly the performance of the ATA Center. This also means that is unnecessary to migrate historical network activity during the update procedure.
 The ATA update procedure exports the data, in case you want it for future investigation, to `<Center Installation Path>\Migration` as a JSON file.
 
 ## See Also
