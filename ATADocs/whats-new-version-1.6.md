@@ -54,14 +54,14 @@ Data Protection API (DPAPI) is a password-based data protection service. This pr
 
 
 - **Net Session Enumeration**
-Reconnaissance is a key stage within the advanced attack kill chain. Domain Controllers (DCs) function as file servers for the purpose of Group Policy Object distribution, using the Server Message Block (SMB) protocol. As part of the reconnaissance phase, attackers can query the DC for all active SMB sessions on the server, allowing them to gain access to all users and IP addresses associated with those SMB sessions. SMB session enumeration can be used by attackers for targeting sensitive accounts, helping them move laterally across the network.
+Reconnaissance is a key stage within the advanced attack kill chain. Domain Controllers (DCs) function as file servers for the purpose of Group Policy Object distribution, using the Server Message Block (SMB) protocol. As part of the reconnaissance phase, attackers can query the DC for all active SMB sessions on the server. It allow them to gain access to all users and IP addresses associated with those SMB sessions. SMB session enumeration can be used by attackers for targeting sensitive accounts, helping them move laterally across the network.
 
 
 - **Malicious replication requests**
-In Active Directory environments, replication happens regularly between Domain Controllers. An attacker can spoof an Active Directory replication request (sometimes impersonating a Domain Controller) allowing the attacker to retrieve the data stored in Active Directory, including password hashes, without utilizing more intrusive techniques like Volume Shadow Copy.
+In Active Directory environments, replication happens regularly between Domain Controllers. An attacker can spoof an Active Directory replication request (sometimes impersonating a Domain Controller). This spoof allows the attacker to retrieve the data stored in Active Directory, including password hashes, without utilizing more intrusive techniques like Volume Shadow Copy.
 
 
-- **Detection of MS11-013 vulnerability**
+- **Detection of MS11-013 vulnerability**  
 There is an elevation of privilege vulnerability in Kerberos, which allows for certain aspects of a Kerberos service ticket to be forged. A malicious user or attacker who successfully exploits this vulnerability can obtain a token with elevated privileges on the Domain Controller.
 
 
@@ -95,7 +95,7 @@ The following known issues exist in this version.
 
 ### Failure to recognize new path in manually moved databases
 
-In deployments in which the database path is manually moved, ATA deployment does not use the new database path for the update. This may cause the following issues:
+In deployments in which the database path is manually moved, ATA deployment does not use the new database path for the update. This manually moved database path may cause the following issues:
 
 
 - ATA may use all the free space in the system drive of the ATA Center, without circularly deleting old network activities.
@@ -151,7 +151,7 @@ This should return a `WriteResult({ "nRemoved" : XX })` where “XX” is the nu
 
 ### Historical network activities no longer migrated
 This version of ATA delivers an improved detection engine, which provides more accurate detection and reduces many false positive scenarios, especially for Pass-the-Hash.
-The new and improved detection engine utilizes inline detection technology that enable detection without accessing historical network activity, to increase significantly the performance of the ATA Center. This also means that is unnecessary to migrate historical network activity during the update procedure.
+The new and improved detection engine utilizes inline detection technology that enables detection without accessing historical network activity, to increase significantly the performance of the ATA Center. This also means that is unnecessary to migrate historical network activity during the update procedure.
 The ATA update procedure exports the data, in case you want it for future investigation, to `<Center Installation Path>\Migration` as a JSON file.
 
 ## See Also
