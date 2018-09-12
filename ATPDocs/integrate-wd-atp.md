@@ -4,10 +4,10 @@
 title: Azure Advanced Threat Protection integration with Windows Defender ATP | Microsoft Docs
 description: How to integrate Azure Advanced Threat Protection with Windows Defender ATP for full threat detection coverage
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/5/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -65,13 +65,9 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
 ## How to integrate Azure ATP with Windows Defender ATP
 
-1. Set the workspace you want to integrate as **Primary**. Only one workspace can be the Primary workspace and only a primary workspace can integrate with other services. If, at some point in the future, you should want to make this workspace no longer the primary workspace, you will first have to remove the integration before you can set it as non-primary.
+1. Click **Configuration**, and under **Data sources** select **Windows Defender ATP**. Then click the link to **Workspace management**. This is only available if you have a license for Windows Defender ATP and you already performed the on-boarding process for Windows Defender ATP. 
 
- ![primary workspace](./media/primary-workspace.png)
-
-2. Click **Configuration**, and under **Data sources** select **Windows Defender ATP**. Then click the link to **Workspace management**. This is only available if you have a license for Windows Defender ATP and you already performed the on-boarding process for Windows Defender ATP. 
-
-3. In your primary workspace, click the settings cog.
+2. In your workspace, click the settings cog.
 
  ![workspace integration](./media/edit-workspace.png)
  
