@@ -38,7 +38,7 @@ To make it easier to verify the current status of each of your domain controller
 ![Advanced Audit Policy Health Alert](media/atp-health-alert-audit-policy.png)
 
 
-Advanced Security Audit Policy is enabled via GPO. These audit events are recorded on the domain controller's Windows Events. This should be enabled in the **Default Domain Controllers Policy** in Active Directory.
+Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events. 
 
 <br>Modify the Advanced Audit Policies of your domain controller using the following instructions:
 
@@ -56,7 +56,7 @@ Advanced Security Audit Policy is enabled via GPO. These audit events are record
 
     ![Credential validation](media/atp-advanced-audit-policy-check-step-3.png)
 
-6. Go to Account Logon , double click on **Audit Security Group Management** and select **Configure the following audit events** for both success and failure events.
+6. Go to Account Management, double click on **Audit Security Group Management** and select **Configure the following audit events** for both success and failure events.
 
     ![Audit Security Group Management](media/atp-advanced-audit-policy-check-step-4.png)
 

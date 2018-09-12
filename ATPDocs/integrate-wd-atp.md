@@ -71,7 +71,7 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
 2. Click **Configuration**, and under **Data sources** select **Windows Defender ATP**. Then click the link to **Workspace management**. This is only available if you have a license for Windows Defender ATP and you already performed the on-boarding process for Windows Defender ATP. 
 
-3. In your primary workspace, click the settings cog.
+3. In your workspace, click the settings cog.
 
  ![workspace integration](./media/edit-workspace.png)
  
