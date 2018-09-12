@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,7 +34,9 @@ It is essential to keep Azure Advanced Threat Protection up to date to enable th
 
 The Azure ATP service is updated a few times a month with bug fixes, performance improvements, and new detections. Occasionally these updates require a corresponding update to the sensors. 
 
-If you don't update your sensors, they may not be able to communicate with the Azure ATP cloud service, which can result in a degraded service.
+If you don't update your sensors, they may not be able to communicate with the Azure ATP cloud service, which can result in a degraded service. 
+
+Authentication between your sensors and the Azure cloud service uses strong, certificate-based mutual authentication. 
 
 Each update is tested and validated on all supported operating systems to cause minimal impact to your network and operations.
 
