@@ -4,10 +4,10 @@
 title: Configure your proxy or firewall to enable Azure ATP communication with the sensor | Microsoft Docs
 description: Describes how to set up your firewall or proxy to allow communication between the Azure ATP cloud service and Azure ATP sensors
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/29/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -77,8 +77,8 @@ If a proxy or firewall is blocking all traffic by default and allowing only spec
 
 
 You can also harden the firewall or proxy rules for a specific workspace you created, by creating a rule for the following DNS records:
-- <Workspace-Name>.atp.azure.com – for console connectivity. For example, contosoATP.atp.azure.com
-- <Workspace-Name>sensorapi.atp.azure.com – for sensors connectivity. For example, contosoATPsensorapi.atp.azure.com
+- \<your-workspace-name>.atp.azure.com – for console connectivity. For example, "Contoso-corp.atp.azure.com"
+- \<your-workspace-name>sensorapi.atp.azure.com – for sensors connectivity. For example, "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]
