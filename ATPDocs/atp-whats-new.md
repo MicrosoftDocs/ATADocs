@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/05/2018
+ms.date: 9/16/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,22 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.48
+Released September 16th, 2018
+- **Security alert:** Reconnaissance using directory services queries
+
+  This security alert now has improved infographics and evidence. 
+
+- **Exclude entities from detections** 
+
+  To reduce false positives, you can now choose to exclude entities from the following detections: 
+  - Suspicious VPN connection (user exclusion)
+  - Suspicious domain controller promotion (potential DcShadow attack)
+  - Suspicious replication request (potential DcShadow attack)
+
+- This version also includes fixes and improvements for multiple issues.
+
 
 ## Azure ATP release 2.47
 Released September 2nd, 2018

@@ -8,7 +8,7 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: conceptual
+ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
@@ -38,7 +38,7 @@ This article helps you determine how many Azure ATP sensors and standalone senso
 ## Using the sizing tool
 The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/aatpsizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the memory and CPU that used by the sensor:
 
-- Azure ATP  sensor: Match the **Busy Packets/sec** field in the Azure ATP  sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP standalone sensor table](#azure-atp-sensor-sizing) or the [Azure ATP sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP sensor: Match the **Busy Packets/sec** field in the Azure ATP  sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP standalone sensor table](#azure-atp-sensor-sizing) or the [Azure ATP sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Sample capacity planning tool](media/capacity-tool.png)
@@ -64,7 +64,7 @@ When deciding the sensor deployment type, consider the following benefits:
 Consider the following issues when deciding how many Azure ATP standalone sensors to deploy.
 
 -	**Active Directory forests and domains**<br>
-	Azure ATP can monitor traffic from multiple domains within a single Active Directory forest for each workspace you create. To monitor multiple forests, you need to create multiple Workspaces. 
+	Azure ATP can monitor traffic from multiple domains within multiple Active Directory forests for each workspace you create. 
 
 -	**Port Mirroring**<br>
 Port mirroring considerations might require you to deploy multiple Azure ATP standalone sensors per data center or branch site.

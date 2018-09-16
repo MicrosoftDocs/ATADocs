@@ -2,13 +2,13 @@
 # required metadata
 
 title: What is Azure Advanced Threat Protection (ATP)? | Microsoft Docs
-description: Explains what Azure Advanced Threat Protection (ATP) is and what kinds of suspicious activities it can detect
+description: Explains  Azure Advanced Threat Protection (ATP) is and what kinds of suspicious activities it can detect
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
-ms.topic: conceptual
+ms.date: 9/16/2018
+ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -28,94 +28,64 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-
 # What is Azure Advanced Threat Protection?
-Azure Advanced Threat Protection (ATP) is a cloud service that helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats.
+Azure Advanced Threat Protection (ATP) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. 
+Azure ATP enables SecOp analysts and security professionals struggling to detect advanced attacks in hybrid environments to:  
+- Monitor users, entity behavior and activities with learning-based analytics  
+- Protect user identities and credentials stored in Active Directory  
+- Identify and investigate suspicious user activities and advanced attacks throughout the kill chain 
+- Provide clear incident information on a simple timeline for fast triage 
+ 
+## Monitor and profile user behavior and activities  
+Azure ATP monitors and analyzes user activities and information across your network, such as permissions and group membership, creating a behavioral baseline for each user. Azure ATP then identifies anomalies with adaptive built-in intelligence, giving you insights into suspicious activities and events, revealing the advanced threats, compromised users and insider threats facing your organization. Azure ATP’s proprietary sensors monitor organizational domain controllers, providing a comprehensive view for all user activities from every device. 
+ 
+## Protect user identities and reduce the attack surface   
+Azure ATP provides you invaluable insights on identity configurations and suggested security best-practices. Through security reports and user profile analytics, Azure ATP helps dramatically reduce your organizational attack surface, making it harder to compromise user credentials and advance an attack. ATP’s visual Lateral Movement Paths help you quickly understand exactly how an attacker can move laterally inside your organization to compromise sensitive accounts and assists in preventing those risks in advance. Additional, ATP security reports help you identify users and devices that authenticate using clear-text passwords and provide additional insights to improve your organizational security posture and policies.  
+ 
+## Identify suspicious activities and advanced attacks across the attack kill-chain 
+Typically, attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain: 
+### Reconnaissance 
+Identify rogue users and attackers’ attempts to gain information about user names, users’ group membership, IP addresses assigned to devices, resources and more - using a variety of methods.  
+### Compromised users
+Identify attempts to compromise user credentials through brute force attacks, failed authentications, user group membership changes, and additional methods.  
 
-## How Azure ATP works
+### Lateral movements
+Detect attempts to move laterally inside the network to gain further control of sensitive users, utilizing methods such as Pass the Ticket, Pass the Hash, Overpass the Hash and more.  
 
-Azure ATP leverages a proprietary network parsing engine to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM, and others) for authentication, authorization, and information gathering. This information is collected by Azure ATP via either:
+### Domain dominance
+Highlighting attacker behavior if domain dominance is achieved, through remote code execution on the domain controller and methods such as DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.   
 
-- 	Deploying Azure ATP sensors directly on your domain controllers
-- 	Port mirroring from Domain Controllers and DNS servers to the Azure ATP standalone sensor
+## Investigate alerts and user activities  
+Azure ATP is designed to reduce general alert noise, providing only relevant and important security alerts in a simple, real-time organizational attack timeline. The Azure ATP attack timeline view allows you to easily stay focused on what matters, leveraging the intelligence of smart analytics. Security professionals using Azure ATP can quickly investigate threats and gain insights across the organization for users, devices and network recourses. Seamless integration with Windows Defender ATP provides another layer of enhanced security by additional detection and protection against advanced persistent threats on the operating system.  
 
-Azure ATP takes information from multiple data-sources, such as logs and events in your network, to learn the behavior of users and other entities in the organization and build a behavioral profile about them.
-Azure ATP can receive events and logs from:
-
-- 	SIEM Integration
-- 	Windows Event Forwarding (WEF)
--   Directly from the Windows Event Collector (for the sensor)
--   RADIUS Accounting from VPNs
-
+## Additional resources for Azure ATP  
+Start a free trial:  [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
+ 
+Follow Azure ATP on Microsoft Tech Community  
+[https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection "Azure ATP on Microsoft Tech Community")
+ 
+Join the Azure ATP Yammer community [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer community")
+ 
+Visit the Azure ATP product page  
+[https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/](https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/ "Azure ATP product page")
 
 For more information on Azure ATP architecture, see [Azure ATP Architecture](atp-architecture.md).
+ 
+## What's next? 
+We recommend deploying Azure ATP in 3 phases:  
+### Phase 1
+1. Setup Azure ATP to protect your primary environments. Azure ATP's fast deployment model enables you to start protecting your organization today. [Install ATP](install-atp-step1.md)  
+2. Set [sensitive accounts](sensitive-accounts.md) and [honeytoken accounts](install-atp-step7.md).   
+3. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).  
+### Phase 2
+1. Protect all the domain controllers and [forests](atp-multi-forest.md) in your organization.  
+2.  Monitor all [alerts](working-with-suspicious-activities.md) – investigate lateral movement & domain dominance alerts.  
+3. Work with the [Security Alert guide](suspicious-activity-guide.md) to understand threats and triage potential attacks.   
 
-## What does Azure ATP do?
-
-Azure ATP technology detects multiple suspicious activities, focusing on several phases of the cyber-attack kill chain including:
-
-- 	Reconnaissance, during which attackers gather information on how the environment is built, what the different assets are, and which entities exist. They generally building their plan for the next phases of the attack.
-- 	Lateral movement cycle, during which an attacker invests time and effort in spreading their attack surface inside your network.
-- 	Domain dominance (persistence), during which an attacker captures the information allowing them to resume their campaign using various sets of entry points, credentials, and techniques. 
-
-These phases of a cyber attack are similar and predictable, no matter what type of company is under attack or what type of information is being targeted.
-Azure ATP searches for three main types of attacks: Malicious attacks, abnormal behavior, and security issues and risks.
-
-**Malicious attacks** are detected deterministically as well as via abnormal behavior analytics. The full list of known attack types includes:
-
-- 	Pass-the-Ticket (PtT)
-- 	Pass-the-Hash (PtH)
-- 	Overpass-the-Hash
-- 	Forged PAC (MS14-068)
-- 	Golden Ticket
-    -   time anomoly
-    -   non existent account - New
-- 	Malicious replication
-- 	Directory Service Enumeration
--	SMB Session Enumeration
--	DNS Reconnaissance
--	Horizontal Brute Force 
--	Vertical Brute Force
--	Skeleton Key
--	Unusual Protocol
--	Encryption Downgrade
--	Remote execution
--	Malicious Service Creation
--   Suspicious domain controller promotion (potential DCShadow attack) - New
--   Suspicious replication request (potential DCShadow attack) - New
--   VPN 
-
-
-Azure ATP detects these suspicious activities and surfaces the information in the Azure ATP workspace portal including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that Azure ATP suspects that a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
-
- ![sample Azure ATP screen pass-the-ticket](media/pass-the-ticket-sa.png)
-
-
-Azure ATP also detects **security issues and risks**, including:
-
-- 	Weak protocols
-- 	Known protocol vulnerabilities
--   [Lateral movement path to sensitive accounts](use-case-lateral-movement-path.md)
-
-# What threats does Azure ATP look for?
-
-Azure ATP provides detection for the following various phases of an advanced attack: reconnaissance, credential compromise, lateral movement, privilege escalation, domain dominance, and others. These detections are aimed at detecting advanced attacks and insider threats before they cause damage to your organization.
-
-The detection of each phase results in several suspicious activities relevant for the phase in question, where each suspicious activity correlates to different flavors of possible attacks.
-These phases in the kill-chain where Azure ATP currently provides detections are highlighted in the following image:
-
-![Azure ATP focus on lateral activity in attack kill chain](media/attack-kill-chain-small.jpg)
-
-
-For more information, see [Working with suspicious activities](working-with-suspicious-activities.md) and the [Azure ATP suspicious activity guide](suspicious-activity-guide.md).
-
-## What's next?
-
--   For more information about how Azure ATP fits into your network: [Azure ATP architecture](atp-architecture.md)
-
--   To get started deploying ATP: [Install ATP](install-atp-step1.md)
-
+### Phase 3
+1. Integrate Azure ATP alerts into your SecOp workflows. 
 
 ## See Also
 - [Azure ATP frequently asked questions](atp-technical-faq.md)
+- [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

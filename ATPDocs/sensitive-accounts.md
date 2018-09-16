@@ -43,7 +43,6 @@ The following list of groups are considered Sensitive by Azure ATP. Any entity t
 -	Print Operators
 -	Backup Operators
 -	Replicators
--	Remote Desktop Users 
 -	Network Configuration Operators 
 -	Incoming Forest Trust Builders
 -	Domain Admins
@@ -54,6 +53,8 @@ The following list of groups are considered Sensitive by Azure ATP. Any entity t
 -	Schema Admins 
 -	Enterprise Admins
 
+ > [!NOTE]
+ > Until September, 2018 Remote Desktop Users were also automatically considered Sensitive by Azure ATP. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.  
 
 ## Tagging sensitive accounts
 
