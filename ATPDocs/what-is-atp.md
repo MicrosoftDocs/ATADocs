@@ -72,18 +72,25 @@ Visit the Azure ATP product page
 For more information on Azure ATP architecture, see [Azure ATP Architecture](atp-architecture.md).
  
 ## What's next? 
+
 We recommend deploying Azure ATP in 3 phases:  
+
 ### Phase 1
+
 1. Setup Azure ATP to protect your primary environments. Azure ATP's fast deployment model enables you to start protecting your organization today. [Install ATP](install-atp-step1.md)  
 2. Set [sensitive accounts](sensitive-accounts.md) and [honeytoken accounts](install-atp-step7.md).   
 3. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).  
 
+
 ### Phase 2
+
 1. Protect all the domain controllers and [forests](atp-multi-forest.md) in your organization.  
 2.  Monitor all [alerts](working-with-suspicious-activities.md) – investigate lateral movement & domain dominance alerts.  
 3. Work with the [Security Alert guide](suspicious-activity-guide.md) to understand threats and triage potential attacks.   
 
+
 ### Phase 3
+
 1. Integrate Azure ATP alerts into your SecOp workflows. 
 
 ## See Also
