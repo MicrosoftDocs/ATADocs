@@ -57,7 +57,7 @@ After you verified that your network meets the requirements of the sensor, you c
 
 1. Click **Create workspace**.
 
-2. In the **Create new workspace** dialog, name your workspace, and select a **Geolocation** for your data center. Only one workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
+2. In the **Create new workspace** dialog, name your workspace, and select a **Geolocation** for your data center. One workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
  > [!NOTE]
  > After you select a Geolocation, you cannot modify it.
     ![Azure ATP workspace](media/create-workspace.png)
@@ -71,7 +71,7 @@ After you verified that your network meets the requirements of the sensor, you c
 
     ![Azure ATP workspaces](media/atp-workspaces.png)
 
-- Only the Primary workspace can be edited. To make changes to other workspaces, you can delete them and add them again. If you want to delete the primary workspace, you must first turn off integrations and set the workspace to be not **Primary** before it is able to be deleted.
+- Only the Primary workspace can be edited. If you want to delete the primary workspace, you must first turn off integrations and set the workspace to be not **Primary** before it is able to be deleted.
 - To edit a Primary workspace, you must first turn off existing integrations in the workspace.
 
 - Data retention – deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
