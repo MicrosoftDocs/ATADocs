@@ -48,8 +48,8 @@ To receive notifications, set the following parameters:
 1. Under the **Notifications & Reports** section, select **Notifications**.
 1. Under **Mail notifications**, specify which notifications should be sent via email - new suspicious activities and new health issues. You can set a separate email address for the suspicious activities to be sent to and for the health alerts so that, for example, suspicious activity notifications can be sent to your security analyst and your health alert notifications can be sent to your IT admin.
     
-    >	[!NOTE]
-    >   Email alerts for suspicious activities are only sent when the suspicious activity is created.
+    > [!NOTE]
+    > Email alerts for suspicious activities are only sent when the suspicious activity is created.
 
 1. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new suspicious activities, updated suspicious activities, and new health issues.
 1. Click **Save**.
