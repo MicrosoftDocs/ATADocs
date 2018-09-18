@@ -9,8 +9,8 @@ ms.author: mlottner
 manager: mbaldwin
 ms.date: 7/30/2018
 ms.topic: conceptual
-ms.prod:
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service:
 ms.technology:
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 
