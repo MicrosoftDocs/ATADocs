@@ -9,8 +9,8 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod:
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service:
 ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 
