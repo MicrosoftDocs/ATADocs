@@ -38,13 +38,13 @@ To receive notifications to a specific email address, set the following paramete
 
 1. In the Azure ATP workspace portal, select the settings option on the toolbar and select **Configuration**.
 
-![Azure ATP configuration settings icon](media/atp-config-menu.png)
+ ![Azure ATP configuration settings icon](media/atp-config-menu.png)
 
 2. Click **Notifications**.
 3. Under **Mail notifications**, specify which notifications should be sent via email - they can be sent for new alerts (suspicious activities) and new health issues. 
  
  >	[!NOTE]
- >   Email alerts for suspicious activities are only sent when the suspicious activity is created.
+ > Email alerts for suspicious activities are only sent when the suspicious activity is created.
  
 4. Click **Save**.
 
