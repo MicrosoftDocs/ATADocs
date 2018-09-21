@@ -9,7 +9,7 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: azure-advanced-threat-protection
 ms.service:
 ms.technology:
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
