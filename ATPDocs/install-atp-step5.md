@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -63,7 +63,7 @@ After the Azure ATP sensor was installed, perform the following steps to configu
 
     - **Domain synchronizer candidate**: Any Azure ATP standalone sensor set to be a domain synchronizer candidate can be responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only Azure ATP standalone sensors are set as Domain synchronizer candidates.
    It is recommended that you disable any remote site Azure ATP sensor from being Domain synchronizer candidates.
-   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [Azure ATP architecture](atp-architecture.md##Azure-ATP-Sensor-features).
+   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information, see [Azure ATP architecture](atp-architecture.md#azure-atp-sensor-features)
   
 4. Click **Save**.
 
