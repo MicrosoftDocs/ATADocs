@@ -97,7 +97,7 @@ The Azure ATP sensor reads events locally, without the need to purchase and main
 
 -  Windows Events
 
-    To enhance Azure ATP detection coverage of Pass-the-Hash, Suspicious authentication failures, Modification to sensitive groups, Creation of suspicious services and Honeytoken activity types of attack,  Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757,and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy-settings.md). 
+    To enhance Azure ATP detection coverage of Pass-the-Hash, Suspicious authentication failures, Modification to sensitive groups, Creation of suspicious services and Honeytoken activity types of attack,  Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757,and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
