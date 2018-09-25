@@ -76,7 +76,7 @@ The Azure ATP sensor has the following core functionality:
 > [!NOTE]
 > - By default, Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
  
-## Azure TP Sensor features
+## Azure ATP Sensor features
 The Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configure event. The Azure ATP sensor also supports Event Thread for Windows (ETW) which provides the log information for multiple detections. ETW based detections include both Suspicious Replication Request and Suspicious Domain Controller Promotion, both are potential DC Shadow attacks.
 - Domain synchronizer candidate
 
