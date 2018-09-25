@@ -4,10 +4,10 @@
 title: Troubleshooting Advanced Threat Analytics with performance counters | Microsoft Docs
 description: Describes how you can use performance counters to troubleshoot issues with ATA
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -114,7 +114,7 @@ Here is the list of the main ATA Center counters to pay attention to:
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|The number of entity batches queued by the ATA Center.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener.  Refer to the preceding **ATA Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
 |Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|The number of Network Activities (NAs) queued for processing.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATA Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
-|Microsoft ATA Center\EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 10,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATA Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
+|Microsoft ATA Center\EntityProfiler Network Activity Block Size|The number of Network Activities (NAs) queued for profiling.|Should be less than the maximum-1 (default maximum: 100,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATA Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
 |Microsoft ATA Center\Database &#42; Block Size|The number of Network Activities, of a specific type, queued to be written to the database.|Should be less than the maximum-1 (default maximum: 50,000)|Check if there is any component that reached its maximum size  and is blocking previous components all the way to the NetworkListener. Refer to the preceding **ATA Component Process**.<br /><br />Check that there is no issue with the CPU or memory.|
 
 
