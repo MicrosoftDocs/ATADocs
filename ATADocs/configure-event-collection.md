@@ -9,8 +9,8 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod:
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service:
 ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 
@@ -88,14 +88,14 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     3.	Select **Source computer initiated** and click **Select Computers Groups**.
         1.	Click **Add Domain Computer**.
         2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.  
-          ![Event Viewer image](media/wef3 event viewer.png)  
+          ![Event Viewer image](media/wef3%20event%20viewer.png)  
         3.	Click **OK**.
      4.	Click **Select Events**.
 
         1. Click **By log** and select **Security**.
         2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
 
-    ![Query filter image](media/wef 4 query filter.png)
+        ![Query filter image](media/wef%204%20query%20filter.png)
 
     5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
     6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATA Gateway.
