@@ -31,7 +31,7 @@ ms.suite: ems
 
 # Azure ATP Architecture
 
-Azure ATP monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events (directly from your domain controllers or from a SIEM server), and analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms Azure ATP learns about your network, enables detection of anomalies and warns you of suspicious activities.
+Azure ATP monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events (directly from your domain controllers or from a SIEM server), and analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms Azure ATP learns about your network, enables detection of anomalies, and warns you of suspicious activities.
 
 Azure Advanced Threat Protection architecture:
 
@@ -39,19 +39,19 @@ Azure Advanced Threat Protection architecture:
 
 This section describes how the flow of Azure ATP's network and event capturing works and drills down to describe the functionality of the main components: the Azure ATP portal, Azure ATP sensor, and Azure ATP cloud service. 
 
-Installed directly on your domain controllers, the Azure ATP sensor accesses the required event logs directly from the domain controller. After these logs and the network traffic are parsed by the sensor, Azure ATP sends only the parsed information to the Azure ATP cloud service (only a percentage of the logs are sent). 
+Installed directly on your domain controllers, the Azure ATP sensor accesses the required event logs directly from the domain controller. After the logs and network traffic are parsed by the sensor, Azure ATP sends only the parsed information to the Azure ATP cloud service (only a percentage of the logs are sent). 
 
 ## Azure ATP Components
 Azure ATP consists of the following components:
 
 -	**Azure ATP portal** <br>
-The Azure ATP portal allows you to create your Azure ATP instance, displays the data received from Azure ATP sensors and enables you to monitor, manage and investigate threats in your network environment.  
+The Azure ATP portal allows you to create your Azure ATP instance, displays the data received from Azure ATP sensors and enables you to monitor, manage, and investigate threats in your network environment.  
 
 -   **Azure ATP sensor**<br>
 Azure ATP sensors are installed directly on your domain controllers. The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
 
 -   **Azure ATP cloud service**<br>
-Azure ATP cloud service runs on Azure infrastructure and is currently deployed in the US, Europe and Asia. Azure ATP cloud service is connected to Microsoft's intelligent security graph. 
+Azure ATP cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, and Asia. Azure ATP cloud service is connected to Microsoft's intelligent security graph. 
 
 ## Azure ATP portal 
 Use the Azure ATP portal to:
@@ -77,7 +77,7 @@ The Azure ATP sensor has the following core functionality:
 > - By default, Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
  
 ## Azure ATP Sensor features
-The Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configure event. The Azure ATP sensor also supports Event Thread for Windows (ETW) which provides the log information for multiple detections. ETW based detections include both Suspicious Replication Request and Suspicious Domain Controller Promotion, both are potential DC Shadow attacks.
+Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Azure ATP sensor also supports Event Thread for Windows (ETW) which provides the log information for multiple detections. ETW based detections include both Suspicious Replication Request and Suspicious Domain Controller Promotion, both are potential DC Shadow attacks.
 - Domain synchronizer candidate
 
     The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. 
@@ -86,18 +86,18 @@ The Azure ATP sensor reads events locally, without the need to purchase and main
     
     If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.
 
-    Azure ATP sensors are not synchronizer candidates by default.
+    By default, Azure ATP sensors are not synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md#step-5-configure-the-azure-atp-sensor-settings).
 - Resource limitations
 
     The Azure ATP sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Azure ATP sensor process. The monitoring process makes sure the domain controller always has at least 15% of free compute and memory resources available.
 
     No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
 
-    If this causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
+    If the monitoring process causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
 
 -  Windows Events
 
-    To enhance Azure ATP detection coverage of Pass-the-Hash, Suspicious authentication failures, Modification to sensitive groups, Creation of suspicious services and Honeytoken activity types of attack,  Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757,and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
+    To enhance Azure ATP detection coverage of Pass-the-Hash, Suspicious authentication failures, Modification to sensitive groups, Creation of suspicious services, and Honeytoken activity types of attack, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757, and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)

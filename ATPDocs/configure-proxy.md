@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -51,15 +51,15 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 1.	 Make sure to back up the registry keys before you modify them.
 
-2. In the registry, search for the value `DefaultConnectionSetting` as REG_BINARY under the registry key `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` and copy it.
+2. In the registry, search for the value `DefaultConnectionSettings` as REG_BINARY under the registry key `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings` and copy it.
  
-2.	If the LocalSystem does not have the correct proxy settings (either they are not configured or they are different from the Current_User), then copy the proxy setting from the Current_User to the LocalSystem. Under the registry key `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+2.	If the LocalSystem does not have the correct proxy settings (either they are not configured or they are different from the Current_User), then copy the proxy setting from the Current_User to the LocalSystem. Under the registry key `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-3.	Paste the value from the Current_user `DefaultConnectionSetting` as REG_BINARY.
+3.	Paste the value from the Current_user `DefaultConnectionSettings` as REG_BINARY.
 
-4.	If the LocalService does not have the correct proxy settings, then copy the proxy setting from the Current_User to the LocalService. Under the registry key `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+4.	If the LocalService does not have the correct proxy settings, then copy the proxy setting from the Current_User to the LocalService. Under the registry key `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-5.	Paste the value from the Current_User `DefaultConnectionSetting` as REG_BINARY.
+5.	Paste the value from the Current_User `DefaultConnectionSettings` as REG_BINARY.
 
 > [!NOTE]
 > This will affect all applications including Windows services which use WinINET with LocalService, LocalSytem context.
