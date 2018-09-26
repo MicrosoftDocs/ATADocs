@@ -1,5 +1,5 @@
 ---
-layout: HubPage
+layout: LandingPage
 title: Azure Advanced Threat Protection documentation - Tutorials, samples, reference, and resources
 description: Learn how to use Azure Advanced Threat Protection
 ms.service: azure-advanced-threat-protection
