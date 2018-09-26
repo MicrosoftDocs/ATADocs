@@ -1,4 +1,5 @@
 ---
+layout: HubPage
 title: Azure Advanced Threat Protection documentation - Tutorials, samples, reference, and resources
 description: Learn how to use Azure Advanced Threat Protection
 ms.service: azure-advanced-threat-protection
@@ -105,3 +106,4 @@ Azure Advanced Threat Protection (ATP) is a cloud service that helps protect you
         </a>
     </li>
 </ul>
+
