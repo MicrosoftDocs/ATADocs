@@ -3,7 +3,7 @@ layout: LandingPage
 title: Azure Advanced Threat Protection documentation - Tutorials, samples, reference, and resources
 description: Learn how to use Azure Advanced Threat Protection
 ms.service: azure-advanced-threat-protection
-keywords: ansible, azure, devops, tutorials, samples, reference
+keywords: advanced threat protection, azure, atp, tutorials, samples, reference
 author: rkarlin
 manager: mbaldwin
 ms.author: rkarlin
