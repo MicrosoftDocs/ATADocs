@@ -33,16 +33,16 @@ ms.suite: ems
 # Configuring Windows Event Forwarding
 
 > [!NOTE]
-> For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
-
+> For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway now read events locally, without the need to configure event forwarding.
 
 To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by configuring Windows Event Forwarding.
 
-
+> [!NOTE]
+> If you are using Server Core, [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) can be used to create and manage subscriptions to events that are forwarded from remote computers.
 
 ### WEF configuration for ATA Gateway's with port mirroring
 
-After you configured port mirroring from the domain controllers to the ATA Gateway, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
+After configuring port mirroring from the domain controllers to the ATA Gateway, use the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
 
 **Step 1: Add the network service account to the domain Event Log Readers Group.** 
 
