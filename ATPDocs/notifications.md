@@ -45,8 +45,8 @@ To receive notifications to a specific email address, set the following paramete
  
  >	[!NOTE]
  >   Email alerts for suspicious activities are only sent when the suspicious activity is created.
-
-5. Click **Save**.
+ 
+4. Click **Save**.
 
  ![Azure ATP notifications](media/atp-notifications.png)
 
