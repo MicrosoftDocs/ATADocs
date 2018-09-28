@@ -31,8 +31,8 @@ ms.suite: ems
 
 # Creating a workspace in the Azure ATP workspace management portal - Step 1
 
->[!div class="step-by-step"]
-[Step 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [Step 2 »](install-atp-step2.md)
 
 This installation procedure provides instructions for creating and managing your Azure ATP instance. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
 
@@ -77,9 +77,9 @@ After you verified that your network meets the requirements of the sensor, you c
 - Data retention – deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
 
->[!div class="step-by-step"]
-[« Pre-install](configure-port-mirroring.md)
-[Step 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Pre-install](configure-port-mirroring.md)
+> [Step 2 »](install-atp-step2.md)
 
 
 ## See Also
