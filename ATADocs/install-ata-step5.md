@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install ATA - Step 5
 
->[!div class="step-by-step"]
-[« Step 4](install-ata-step4.md)
-[Step 6 »](install-ata-step6.md)
+> [!div class="step-by-step"]
+> [« Step 4](install-ata-step4.md)
+> [Step 6 »](install-ata-step6.md)
 
 
 ## Step 5. Configure the ATA Gateway settings
@@ -90,9 +90,9 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
     ![Add performance counters image](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"]
-[« Step 4](install-ata-step4.md)
-[Step 6 »](install-ata-step6.md)
+> [!div class="step-by-step"]
+> [« Step 4](install-ata-step4.md)
+> [Step 6 »](install-ata-step6.md)
 
 
 

@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install ATA - Step 4
 
->[!div class="step-by-step"]
-[« Step 3](install-ata-step3.md)
-[Step 5 »](install-ata-step5.md)
+> [!div class="step-by-step"]
+> [« Step 3](install-ata-step3.md)
+> [Step 5 »](install-ata-step5.md)
 
 ## Step 4. Install the ATA Gateway
 
@@ -92,9 +92,9 @@ Perform the following steps on the ATA Gateway server.
 6.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
 
 
->[!div class="step-by-step"]
-[« Step 3](install-ata-step3.md)
-[Step 5 »](install-ata-step5.md)
+> [!div class="step-by-step"]
+> [« Step 3](install-ata-step3.md)
+> [Step 5 »](install-ata-step5.md)
 
 
 ## Related Videos

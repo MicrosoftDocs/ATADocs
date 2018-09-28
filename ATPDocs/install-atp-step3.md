@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install Azure ATP - Step 3
 
->[!div class="step-by-step"]
-[« Step 2](install-atp-step2.md)
-[Step 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Step 2](install-atp-step2.md)
+> [Step 4 »](install-atp-step4.md)
 
 ## Step 3. Download the Azure ATP sensor setup package
 After configuring the domain connectivity settings, you can download the Azure ATP sensor setup package. The Azure ATP sensor setup package can be installed on a dedicated server or on a domain controller. When installing directly on a domain controller, it is installed as an Azure ATP sensor, when installing on a dedicated server and using port mirroring, it is installed as Azure ATP standalone sensor. For more information on the Azure ATP sensor, see [Azure ATP Architecture](atp-architecture.md). 
@@ -58,9 +58,9 @@ The zip file includes the following files:
 -   Configuration setting file with the required information to connect to the Azure ATP cloud service
 
 
->[!div class="step-by-step"]
-[« Step 2](install-atp-step2.md)
-[Step 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Step 2](install-atp-step2.md)
+> [Step 4 »](install-atp-step4.md)
 
 
 ## See Also

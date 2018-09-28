@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install ATA - Step 8
 
->[!div class="step-by-step"]
-[« Step 7](vpn-integration-install-step.md)
-[Step 9 »](install-ata-step9-samr.md)
+> [!div class="step-by-step"]
+> [« Step 7](vpn-integration-install-step.md)
+> [Step 9 »](install-ata-step9-samr.md)
 
 ## Step 8. Configure IP address exclusions and Honeytoken user
 ATA enables the exclusion of specific IP addresses or users from a number of detections. 
@@ -71,9 +71,9 @@ ATA starts scanning for suspicious activities immediately. Some activities, such
 To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 
 
->[!div class="step-by-step"]
-[« Step 7](vpn-integration-install-step.md)
-[Step 9 »](install-ata-step9-samr.md)
+> [!div class="step-by-step"]
+> [« Step 7](vpn-integration-install-step.md)
+> [Step 9 »](install-ata-step9-samr.md)
 
 
 ## Related Videos
