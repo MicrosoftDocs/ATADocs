@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install Azure ATP - Step 2
 
->[!div class="step-by-step"]
-[« Step 1](install-atp-step1.md)
-[Step 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Step 1](install-atp-step1.md)
+> [Step 3 »](install-atp-step3.md)
 
 ## Step 2. Provide a username and password to connect to your Active Directory Forest
 
@@ -57,9 +57,9 @@ The first time you open the Azure ATP workspace portal, the following screen app
 3. In the workspace portal, click **Download sensor setup and install the first sensor** to continue.
 
 
->[!div class="step-by-step"]
-[« Step 1](install-atp-step1.md)
-[Step 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Step 1](install-atp-step1.md)
+> [Step 3 »](install-atp-step3.md)
 
 
 ## See Also
