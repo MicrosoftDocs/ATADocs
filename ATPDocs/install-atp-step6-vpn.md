@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install Azure ATP - Step 6
 
->[!div class="step-by-step"]
-[« Step 5](install-atp-step5.md)
-[Step 7 »](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [« Step 5](install-atp-step5.md)
+> [Step 7 »](install-atp-step7.md)
 
 ## Step 6. Integrate VPN
 
@@ -97,9 +97,9 @@ After the Azure ATP sensor receives the VPN events and sends them to the Azure A
 
 
 
->[!div class="step-by-step"]
-[« Step 6](install-atp-step5.md)
-[Step 7 »](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [« Step 6](install-atp-step5.md)
+> [Step 7 »](install-atp-step7.md)
 
 
 ## See Also

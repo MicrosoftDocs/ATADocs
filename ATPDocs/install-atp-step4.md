@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install Azure ATP - Step 4
 
->[!div class="step-by-step"]
-[« Step 3](install-atp-step3.md)
-[Step 5 »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« Step 3](install-atp-step3.md)
+> [Step 5 »](install-atp-step5.md)
 
 ## Step 4. Install the Azure ATP sensor
 
@@ -95,9 +95,9 @@ Perform the following steps on the Azure ATP sensor server or domain controller.
 8.  After the installation completes, click **Launch** to open your browser and log in to the Azure ATP workspace portal.
 
 
->[!div class="step-by-step"]
-[« Step 3](install-atp-step3.md)
-[Step 5 »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« Step 3](install-atp-step3.md)
+> [Step 5 »](install-atp-step5.md)
 
 
 ## See Also

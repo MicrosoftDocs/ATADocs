@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install ATA - Step 7
 
->[!div class="step-by-step"]
-[« Step 5](install-ata-step5.md)
-[Step 8 »](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [« Step 5](install-ata-step5.md)
+> [Step 8 »](install-ata-step7.md)
 
 ## Step 7. Integrate VPN
 
@@ -99,9 +99,9 @@ After the ATA Gateway receives the VPN events and sends them to the ATA Center f
 
 
 
->[!div class="step-by-step"]
-[« Step 6](install-ata-step5.md)
-[Step 8 »](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [« Step 6](install-ata-step5.md)
+> [Step 8 »](install-ata-step7.md)
 
 
 

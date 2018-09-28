@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install ATA - Step 6
 
->[!div class="step-by-step"]
-[« Step 5](install-ata-step5.md)
-[Step 7 »](vpn-integration-install-step.md)
+> [!div class="step-by-step"]
+> [« Step 5](install-ata-step5.md)
+> [Step 7 »](vpn-integration-install-step.md)
 
 ## Step 6. Configure event collection
 ### Configure Event Collection
@@ -193,9 +193,9 @@ Make sure to have \t between the key=value pairs.
 
 
 
->[!div class="step-by-step"]
-[« Step 5](install-ata-step5.md)
-[Step 7 »](vpn-integration-install-step.md)
+> [!div class="step-by-step"]
+> [« Step 5](install-ata-step5.md)
+> [Step 7 »](vpn-integration-install-step.md)
 
 
 
