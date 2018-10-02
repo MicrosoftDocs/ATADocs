@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/04/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -57,7 +57,7 @@ After you verified that your network meets the requirements of the sensor, you c
 
 1. Click **Create workspace**.
 
-2. In the **Create new workspace** dialog, name your workspace, and select a **Geolocation** for your data center. One workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
+2. In the **Create new workspace** dialog, name your workspace, and select a **Geolocation** for your data center. Your workspace is **Primary** by default. 
  > [!NOTE]
  > After you select a Geolocation, you cannot modify it.
     ![Azure ATP workspace](media/create-workspace.png)
@@ -67,14 +67,13 @@ After you verified that your network meets the requirements of the sensor, you c
  > [!NOTE]
  > To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
-4. Click on the name of the new workspace to access the Azure ATP workspace portal for that workspace.
+4. Click on the name of your workspace to access the Azure ATP workspace portal.
 
     ![Azure ATP workspaces](media/atp-workspaces.png)
 
-- Only the Primary workspace can be edited. If you want to delete the primary workspace, you must first turn off integrations and set the workspace to be not **Primary** before it is able to be deleted.
-- To edit a Primary workspace, you must first turn off existing integrations in the workspace.
+- Only the Primary workspace can be edited. If you want to delete your active workspace, you must first turn off integrations before it is able to be deleted.
 
-- Data retention – deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
+- Data retention – previously deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
 
 >[!div class="step-by-step"]
