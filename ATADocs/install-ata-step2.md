@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install ATA - Step 2
 
->[!div class="step-by-step"]
-[« Step 1](install-ata-step1.md)
-[Step 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Step 1](install-ata-step1.md)
+> [Step 3 »](install-ata-step3.md)
 
 ## Step 2. Provide a Username and Password to connect to your Active Directory Forest
 
@@ -58,9 +58,9 @@ The first time you open the ATA Console, the following screen appears:
 3. In the Console, click **Download Gateway setup and install the first Gateway** to continue.
 
 
->[!div class="step-by-step"]
-[« Step 1](install-ata-step1.md)
-[Step 3 »](install-ata-step3.md)
+> [!div class="step-by-step"]
+> [« Step 1](install-ata-step1.md)
+> [Step 3 »](install-ata-step3.md)
 
 
 ## See Also

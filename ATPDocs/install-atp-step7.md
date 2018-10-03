@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install Azure ATP - Step 7
 
->[!div class="step-by-step"]
-[« Step 6](install-atp-step6-vpn.md)
-[Step 8 »](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Step 6](install-atp-step6-vpn.md)
+> [Step 8 »](install-atp-step8-samr.md)
 
 ## Step 7. Configure detection exclusions and honeytoken accounts
 
@@ -72,9 +72,9 @@ Azure ATP scanning for suspicious activities starts immediately. Some detections
 
 
 
->[!div class="step-by-step"]
-[« Step 6](install-atp-step6-vpn.md)
-[Step 8 »](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Step 6](install-atp-step6-vpn.md)
+> [Step 8 »](install-atp-step8-samr.md)
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)

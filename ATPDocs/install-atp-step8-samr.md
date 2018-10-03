@@ -30,9 +30,9 @@ ms.suite: ems
 
 # Install Azure ATP - Step 8
 
->[!div class="step-by-step"]
-[« Step 7](install-atp-step7.md)
-[Step 9 »](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [« Step 7](install-atp-step7.md)
+> [Step 9 »](atp-multi-forest.md)
 
 ## Step 8. Configure SAM-R required permissions
 
@@ -59,9 +59,9 @@ To ensure Windows clients and servers allow your Azure ATP account to perform SA
 For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[« Step 7](install-atp-step7.md)
-[Step 9 »](atp-multi-forest.md)
+> [!div class="step-by-step"]
+> [« Step 7](install-atp-step7.md)
+> [Step 9 »](atp-multi-forest.md)
 
 
 
