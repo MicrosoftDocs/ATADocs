@@ -7,7 +7,7 @@
 ## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Azure ATP architecture](atp-architecture.md)
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
-### [Proxy configuration](configure-proxy.md)
+## [Proxy configuration](configure-proxy.md)
 # Deploy
 ## [1 Create a workspace in the workspace management portal](install-atp-step1.md)
 ## [2 Connect to AD](install-atp-step2.md)

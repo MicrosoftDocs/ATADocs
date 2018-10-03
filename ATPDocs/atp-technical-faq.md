@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/2/2018
+ms.date: 10/3/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -54,7 +54,7 @@ Microsoft uses this data to:
 Microsoft does not mine your data for advertising or for any other purpose other than providing you the service. 
 
 ### Does Azure ATP only leverage traffic from Active Directory?
-In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP also collects relevant events from your Security Information and Event Management (SIEM) and creates entity profiles based on information from Active Directory Domain Services. If you use the Azure ATP sensor, it extracts these events automatically. You can use Windows Event Forwarding to send these events to the Azure ATP standalone sensor. Azure ATP also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
+In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP also collects relevant Windows Events from your domain controller and creates entity profiles based on information from Active Directory Domain Services. Azure ATP also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
 
 ### Does Azure ATP monitor only domain-joined devices?
 No. Azure ATP monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
@@ -94,7 +94,7 @@ In addition, Microsoft conducts background verification checks on certain operat
 Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP sensor Sizing](atp-capacity-planning.md#sizing). 
 
 ### Does Azure ATP work with encrypted traffic?
-Azure ATP relies on analyzing multiple network protocols, as well as events collected from the SIEM or via Windows Event Forwarding.  Network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not decrypted, but are analyzed.
+Network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not decrypted, but are analyzed by the sensors.
 
 ### Does Azure ATP work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATP, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
@@ -124,10 +124,7 @@ Yes, you can view the overall health of the deployment as well as specific issue
 ## Operation
 
 ### What kind of integration does Azure ATP have with SIEMs?
-Azure ATP has a bi-directional integration with SIEMs as follows:
-
-1. Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a suspicious activity is detected.
-2. Azure ATP can be configured to receive Syslog messages for Windows events from [these SIEMs](configure-event-collection.md).
+Azure ATP can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a security alert is detected. See the [SIEM log reference](cef-format-sa.md) for more information .
 
 ### Why are certain accounts considered sensitive?
 This happens when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
