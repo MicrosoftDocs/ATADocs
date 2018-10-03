@@ -36,7 +36,7 @@ ms.suite: ems
 
 This installation procedure provides instructions for creating and managing your Azure ATP instance. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
 
-In Azure ATP, you'll have a single workspace or instance to enable you to manage multiple forests from a single pane of glass. 
+In Azure ATP, you'll have a single workspace or instance enabling you to manage multiple forests from a single pane of glass. 
 
 > [!NOTE]
 > Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia.
@@ -76,9 +76,10 @@ After you verified that your network meets the requirements of the sensor, you c
 - Data retention – previously deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
 
-> [!div class="step-by-step"]
-> [« Pre-install](configure-port-mirroring.md)
-> [Step 2 »](install-atp-step2.md)
+>[!div class="step-by-step"]
+[« Pre-install](atp-prerequisites.md)
+[Step 2 »](install-atp-step2.md)
+
 
 
 ## See Also
