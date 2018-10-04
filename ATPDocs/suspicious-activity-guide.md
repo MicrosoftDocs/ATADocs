@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Azure ATP suspicious activity guide | Microsoft Docs
-d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
+title: Azure ATP security alert guide | Microsoft Docs
+d|Description: This article provides a list of the security alerts issued by Azure ATP and steps for remediation.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,9 +29,9 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
-# Azure Advanced Threat Protection suspicious activity guide
+# Azure Advanced Threat Protection security alert guide
 
-Following proper investigation, any suspicious activity can be classified as:
+Following proper investigation, all Azure ATP security alerts can be classified as:
 
 -   **True positive**: A malicious action detected by Azure ATP.
 
@@ -39,7 +39,7 @@ Following proper investigation, any suspicious activity can be classified as:
 
 -   **False positive**: A false alarm, meaning the activity didn’t happen.
 
-For more information on how to work with Azure ATP alerts, see [Working with suspicious activities](working-with-suspicious-activities.md).
+For more information on how to work with Azure ATP security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
 
 
 ## Abnormal Sensitive Group Modification
@@ -47,7 +47,7 @@ For more information on how to work with Azure ATP alerts, see [Working with sus
 
 **Description**
 
-Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATP. The minimum period before an alert can be triggered is one month per each domain controller.
+Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by Azure ATP. The minimum period before an alert can be triggered is one month per each domain controller.
 
 For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
 
@@ -618,9 +618,9 @@ Patch all your machines, especially applying security updates.
 
 
 > [!NOTE]
-> To disable a suspicious activity, contact support.
+> To disable a security alert, contact support.
 
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

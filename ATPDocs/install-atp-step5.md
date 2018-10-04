@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 5 | Microsoft Docs
+title: Install Azure Advanced Threat Protection | Microsoft Docs
 description: Step five of installing Azure ATP helps you configure settings for your Azure ATP standalone sensor.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -40,7 +40,7 @@ ms.suite: ems
 ## Step 5. Configure the Azure ATP sensor settings
 After the Azure ATP sensor is installed, perform the following steps to configure the Azure ATP sensor settings.
 
-1.  In the Azure ATP workspace portal, go to **Configuration** and, under **System**, select **sensor**.
+1.  In the Azure ATP portal, go to **Configuration** and, under **System**, select **sensor**.
    
      ![Configure sensor settings image](media/atp-sensor-config.png)
 
@@ -65,7 +65,7 @@ After the Azure ATP sensor is installed, perform the following steps to configur
     
         The domain synchronizer is responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. 
    It is recommended that you disable any remote site Azure ATP sensor(s) from being domain synchronizer candidates.
-   If your domain controller is read-only, do not set it as a Domain synchronizer candidate. For more information about Azure ATP domain synchronization, see [Azure ATP architecture](atp-architecture.md#azure-atp-sensor-features)
+   If your domain controller is read-only, do not set it as a domain synchronizer candidate. For more information about Azure ATP domain synchronization, see [Azure ATP architecture](atp-architecture.md#azure-atp-sensor-features)
   
 4. Click **Save**.
 
@@ -78,9 +78,9 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 2.  If the service does not start, review the “Microsoft.Tri.sensor-Errors.log” file located in the following default folder, “%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs”.
  
  >[!NOTE]
- > The version of Azure ATP updates frequently, to check the latest version, in the Azure ATP workplace portal, go to **Configuration** and then **About**. 
+ > The version of Azure ATP updates frequently, to check the latest version, in the Azure ATP portal, go to **Configuration** and then **About**. 
 
-3.  Go to your workspace URL. In the workspace portal, search for something in the search bar, such as a user or a group on your domain.
+3.  Go to your workspace URL. In the Azure ATP portal, search for something in the search bar, such as a user or a group on your domain.
 
 
 
@@ -94,4 +94,4 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

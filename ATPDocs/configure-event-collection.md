@@ -7,8 +7,8 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -35,7 +35,7 @@ ms.suite: ems
 To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045. These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
-> It is important to run the ATA auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events. 
+> It is important to run the Azure ATP auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events. 
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757 and 7045 for enhancing detection of sensitive group modifications and service creation. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
@@ -56,7 +56,7 @@ For Azure ATP to be able to consume data from a Syslog server, you need to perfo
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. 
 
 > [!NOTE]
->If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by ATP.
+>If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by Azure ATP.
 
 ## Configuring the Azure ATP sensor to listen for SIEM events
 
@@ -194,4 +194,4 @@ Make sure to have \t between the key=value pairs.
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Azure ATP SIEM log reference](cef-format-sa.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

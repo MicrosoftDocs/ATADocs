@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -35,7 +35,7 @@ ms.suite: ems
 
 ## Search for and identify personal data 
 
-In Azure Advanced Threat Protection you can view identifiable personal data from the [Workspace portal](workspace-portal.md) using the [search bar](workspace-portal.md#search-bar). 
+In Azure Advanced Threat Protection you can view identifiable personal data from the [Azure ATP portal](workspace-portal.md) using the [search bar](workspace-portal.md#search-bar). 
 
 Search for a specific user or computer, and click on the entity to bring you to the user or computer [profile page](entity-profiles.md). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
 

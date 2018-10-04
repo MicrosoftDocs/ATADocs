@@ -4,10 +4,10 @@
 title: Planning your Azure Advanced Threat Protection deployment | Microsoft Docs
 description: Helps you plan your deployment and decide how many Azure ATP servers will be needed to support your network
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -32,13 +32,13 @@ ms.suite: ems
 # Azure ATP capacity planning
 This article helps you determine how many Azure ATP sensors and standalone sensors you need.
 
-> [!NOTE] 
-> The sizing tool has two sheets - one for ATA and one for Azure ATP. Make sure you are on the correct sheet.
-
 ## Using the sizing tool
 The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/aatpsizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the memory and CPU that used by the sensor:
 
-- Azure ATP sensor: Match the **Busy Packets/sec** field in the Azure ATP  sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP standalone sensor table](#azure-atp-sensor-sizing) or the [Azure ATP sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
+> [!NOTE] 
+> The sizing tool has two sheets - one for ATA and one for Azure ATP. Make sure you use the correct sheet.
+
+- Azure ATP sensor: Match the **Busy Packets/sec** field in the Azure ATP sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP standalone sensor table](#azure-atp-sensor-sizing) or the [Azure ATP sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Sample capacity planning tool](media/capacity-tool.png)
@@ -48,10 +48,10 @@ If for some reason you cannot use the Azure ATP Sizing Tool, manually gather the
 The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
 
 ## Choosing the right sensor type for your deployment<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-In an Azure ATP deployment any combination of the Azure ATP standalone sensor types is supported:
+In an Azure ATP deployment any combination of the Azure ATP sensor types is supported:
 
+- Only Azure ATP sensors
 - Only Azure ATP standalone sensors
-- Only Azure ATP sensor
 - A combination of both
 
 When deciding the sensor deployment type, consider the following benefits:
@@ -67,7 +67,7 @@ Consider the following issues when deciding how many Azure ATP standalone sensor
 	Azure ATP can monitor traffic from multiple domains within multiple Active Directory forests for each workspace you create. 
 
 -	**Port Mirroring**<br>
-Port mirroring considerations might require you to deploy multiple Azure ATP standalone sensors per data center or branch site.
+    Port mirroring considerations might require you to deploy multiple Azure ATP standalone sensors per data center or branch site.
 
 -	**Capacity**<br>
 	An Azure ATP standalone sensor can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored. 
@@ -155,4 +155,4 @@ To determine packets per second, perform the following steps on each domain cont
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP architecture](atp-architecture.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

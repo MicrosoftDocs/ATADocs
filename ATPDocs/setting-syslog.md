@@ -4,10 +4,10 @@
 title: Setting email notification settings in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to have Azure ATP notify you (by email or by Azure ATP event forwarding) when it detects suspicious activities 
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Integrate with Syslog
 
-Azure ATP can notify you when it detects suspicious activities and health alerts by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
+Azure ATP can notify you when it detects suspicious activities and issues security alerts as well as health alerts by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following:
 
 1.  Before configuring Syslog notifications, work with your SIEM admin to find out the following information:
 
@@ -44,7 +44,7 @@ Azure ATP can notify you when it detects suspicious activities and health alerts
 
     -   Format in which to send the data RFC 3164 or 5424
 
-2.  Enter the workspace portal URL.
+2.  Enter the workspace URL.
 
 3.  Enter your Azure Active Directory user name and password and click **Log in**.
 
@@ -69,4 +69,4 @@ Azure ATP can notify you when it detects suspicious activities and health alerts
 ## See Also
 
 - [Working with sensitive accounts](sensitive-accounts.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

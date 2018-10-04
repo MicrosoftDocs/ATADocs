@@ -2,12 +2,12 @@
 # required metadata
 
 title: Set Azure Advanced Threat Protection notifications | Microsoft Docs
-description: Describes how to set Azure ATP alerts so you are notified when suspicious activities are detected.
+description: Describes how to set Azure ATP security alerts so you are notified when suspicious activities are detected.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,12 +31,12 @@ ms.suite: ems
 
 # Set Azure ATP notifications
 
-Azure ATP can notify you when it detects a suspicious activity or a health alert via email. 
+Azure ATP can notify you when it detects a suspicious activity and issues a security alert or a health alert via email. 
 
 To receive notifications to a specific email address, set the following parameters:
 
 
-1. In the Azure ATP workspace portal, select the settings option on the toolbar and select **Configuration**.
+1. In the Azure ATP portal, select the settings option on the toolbar and select **Configuration**.
 
 ![Azure ATP configuration settings icon](media/atp-config-menu.png)
 
@@ -57,4 +57,4 @@ To receive notifications to a specific email address, set the following paramete
 - [Configure event collection](configure-event-collection.md)
 
 - [Set Syslog settings](setting-syslog.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
