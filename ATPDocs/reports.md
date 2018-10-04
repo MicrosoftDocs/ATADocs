@@ -4,10 +4,10 @@
 title: Working with Azure ATP Reports | Microsoft Docs
 description: Describes how you can generate reports in Azure ATP to monitor your network.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Azure ATP Reports
 
-The Azure ATP reports section in the workspace portal enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
+The Azure ATP reports section in the Azure ATP portal enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
 
 To access the reports page, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
@@ -50,7 +50,7 @@ There are two ways to generate a report: either on demand or by scheduling a rep
 
 To generate a report on demand:
 
-1. In the Azure ATP workspace portal menu bar, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
+1. In the Azure ATP portal menu bar, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
 
 2. Under either your selected report type, set the **From** and **To** dates and click **Download**. 
  ![reports](./media/reports.png)
@@ -74,4 +74,4 @@ To set a scheduled report:
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

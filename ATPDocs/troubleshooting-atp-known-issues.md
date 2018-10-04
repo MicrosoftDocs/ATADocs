@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/13/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,9 +37,9 @@ ms.suite: ems
  
 The Azure ATP deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%). For more information, see [Troubleshooting ATP using logs](troubleshooting-atp-using-logs.md)
 
-## Proxy authentication problem presents as licensing error
+## Proxy authentication problem presents as a licensing error
 
-During sensor installation you receive the following error:  **The sensor failed to register due to licensing issues.**
+If during sensor installation you receive the following error:  **The sensor failed to register due to licensing issues.**
 
 Deployment log entries: 
 [1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]]
@@ -61,9 +61,9 @@ Ensure that the sensor can browse to *.atp.azure.com through the configured prox
 
 ## Azure ATP sensor NIC teaming issue <a name="nic-teaming"></a>
 
-If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, please follow these instructions:
+If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, follow these instructions:
 
-If you did not install the sensor yet:
+If you have not yet installed the sensor:
 
 1.	Download Npcap from [https://nmap.org/npcap/](https://nmap.org/npcap/).
 2.	Uninstall WinPcap, if it was installed.
@@ -80,7 +80,7 @@ If you already installed the sensor:
 
 ## Windows Defender ATP integration issue
 
-Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. 
+Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. See [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md) for more information. 
 
 ## VMware virtual machine sensor issue
 
@@ -99,4 +99,4 @@ Set the following settings to **0** or **Disabled** in the virtual machine's NIC
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

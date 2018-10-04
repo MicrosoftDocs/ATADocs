@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 6 | Microsoft Docs
-description: In this step of installing ATP, you integrate your VPN.
+title: Install Azure Advanced Threat Protection VPN Integration| Microsoft Docs
+description: Collect accounting information for Azure ATP by integrating a VPN.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/14/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,8 +30,11 @@ ms.suite: ems
 
 
 
-# Install Azure ATP - Step 6
+# Integrate VPN
 
+<<<<<<< HEAD
+Azure Advanced Threat Protection (ATP) can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity as well as a new detection for abnormal VPN connections. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+=======
 > [!div class="step-by-step"]
 > [« Step 5](install-atp-step5.md)
 > [Step 7 »](install-atp-step7.md)
@@ -39,6 +42,7 @@ ms.suite: ems
 ## Step 6. Integrate VPN
 
 Azure Advanced Threat Protection (ATP)  can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity as well as a new detection for abnormal VPN connections. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP integrates with your VPN solution by listening to RADIUS accounting events forwarded to the Azure ATP sensors. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
 
@@ -51,7 +55,7 @@ Azure ATP integrates with your VPN solution by listening to RADIUS accounting ev
 
 To enable VPN integration, make sure you set the following parameters:
 
--	Open port UDP 1813 on your Azure ATP standalone sensors and Azure ATP sensor.
+-	Open port UDP 1813 on your Azure ATP sensors and/or Azure ATP standalone sensors.
 
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
@@ -78,7 +82,7 @@ Azure ATP collects VPN data that helps profile the locations from which computer
 
 To configure VPN data in ATP:
 
-1.	In the Azure ATP workspace portal, click on the configuration cog and then **VPN**.
+1.	In the Azure ATP portal, click on the configuration cog and then **VPN**.
  
 
 2.	Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
@@ -87,23 +91,20 @@ To configure VPN data in ATP:
   ![Configure Azure ATP VPN](./media/atp-vpn-radius.png)
 
 
-After this is enabled, all Azure ATP standalone sensors and sensors listen on port 1813 for RADIUS accounting events. 
+After this is enabled, all Azure ATP sensors and standalone sensors listen on port 1813 for RADIUS accounting events, and your setup is complete. 
 
-Your setup is complete. 
+ After the Azure ATP sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the entity profile will indicate distinct accessed VPN locations and activities in the profile will indicate locations.
 
-After the Azure ATP sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the entity profile will indicate distinct accessed VPN locations and activities in the profile will indicate locations.
-
-
-
-
-
+<<<<<<< HEAD
+=======
 > [!div class="step-by-step"]
 > [« Step 6](install-atp-step5.md)
 > [Step 7 »](install-atp-step7.md)
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

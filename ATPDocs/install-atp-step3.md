@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 3 | Microsoft Docs
-description: Step three of installing Azure ATP helps you download the Azure ATP standalone sensor setup package.
+title: Install Azure Advanced Threat Protection | Microsoft Docs
+description: Step three of installing Azure ATP helps you download the Azure ATP sensor setup package.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -48,7 +48,7 @@ Click **Download** in the list of steps at the top of the page to go to the **Se
 
 1.  Click **sensor**.
 2.  Save the package locally.
-3. 	Copy the **Access key**. The access key is required for the Azure ATP sensor to connect to your Azure ATP workspace. The access key is a one-time-password for sensor deployment, after which all communication is performed using certificates for authentication and TLS encryption. Use the **Regenerate** button if you ever need to regenerate the new access key, you can, and it will not affect any previously deployed sensors, because it is only used for initial registration of the sensor.
+3. 	Copy the **Access** **key**. The access key is required for the Azure ATP sensor to connect to your Azure ATP workspace. The access key is a one-time-password for sensor deployment, after which all communication is performed using certificates for authentication and TLS encryption. Use the **Regenerate** button if you ever need to regenerate the new access key, you can, and it will not affect any previously deployed sensors, because it is only used for initial registration of the sensor.
 4.  Copy the package to the dedicated server or domain controller onto which you are installing the Azure ATP sensor. Alternatively, you can open the Azure ATP workspace portal from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following files:
@@ -71,4 +71,4 @@ The zip file includes the following files:
 
 - [Azure ATP prerequisites](atp-prerequisites.md)
 
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/3/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -91,13 +91,13 @@ In addition, Microsoft conducts background verification checks on certain operat
 ## Deployment
 ### How many Azure ATP sensors do I need?
 
-Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP sensor Sizing](atp-capacity-planning.md#sizing). 
+Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP sensor sizing](atp-capacity-planning.md#sizing). 
 
 ### Does Azure ATP work with encrypted traffic?
 Network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not decrypted, but are analyzed by the sensors.
 
 ### Does Azure ATP work with Kerberos Armoring?
-Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by ATP, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
+Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by zure ATP, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
 
 ### How do I monitor a virtual domain controller using Azure ATP?
 Most virtual domain controllers can be covered by the Azure ATP sensor, to determine whether the Azure ATP sensor is appropriate for your environment, see [Azure ATP Capacity Planning](atp-capacity-planning.md).
@@ -147,7 +147,7 @@ You can simulate suspicious activities as an end-to-end test. In the following s
     -   Press enter
     -   Type: Is -d <FQDN>
     -   Depending on the configuration of your environment, responses will vary from "Query refused" to a list of your DNS records. 
-4. View the alert related to the simulated DNS reconnaisance in the Azure ATP console. 
+4. View the alert related to the simulated DNS reconnaisance in the Azure ATP portal. 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
@@ -155,4 +155,4 @@ You can simulate suspicious activities as an end-to-end test. In the following s
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Troubleshooting](troubleshooting-atp-known-issues.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 # Azure ATP Architecture
 
-Azure ATP monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events (directly from your domain controllers or from a SIEM server), and analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms Azure ATP learns about your network, enables detection of anomalies, and warns you of suspicious activities.
+Azure ATP monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events directly from your domain controllers, then analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms Azure ATP learns about your network, enables detection of anomalies, and warns you of suspicious activities.
 
 Azure Advanced Threat Protection architecture:
 
@@ -46,7 +46,6 @@ Azure ATP consists of the following components:
 
 -	**Azure ATP portal** <br>
 The Azure ATP portal allows you to create your Azure ATP instance, displays the data received from Azure ATP sensors and enables you to monitor, manage, and investigate threats in your network environment.  
-
 -   **Azure ATP sensor**<br>
 Azure ATP sensors are installed directly on your domain controllers. The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
 
@@ -63,7 +62,7 @@ Use the Azure ATP portal to:
 - **Optional**: the portal can also be configured to send emails and events when security alerts or health issues are detected
 
 > [!NOTE]
-> - If no sensor is installed on your workspace within 60 days, the workspace may be deleted and you’ll need recreate it.
+> - If no sensor is installed on your workspace within 60 days, the workspace may be deleted and you’ll need to recreate it.
 
 ## Azure ATP sensor
 The Azure ATP sensor has the following core functionality:
@@ -73,11 +72,10 @@ The Azure ATP sensor has the following core functionality:
 - Retrieve data about users and computers from the Active Directory domain
 - Perform resolution of network entities (users, groups, and computers)
 - Transfer relevant data to the Azure ATP cloud service
-> [!NOTE]
-> - By default, Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
+
  
 ## Azure ATP Sensor features
-Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Azure ATP sensor also supports Event Thread for Windows (ETW) which provides the log information for multiple detections. ETW based detections include both Suspicious Replication Request and Suspicious Domain Controller Promotion, both are potential DC Shadow attacks.
+Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Azure ATP sensor also supports Event Tracing for Windows (ETW) which provides the log information for multiple detections. ETW based detections include both Suspicious Replication Request and Suspicious Domain Controller Promotion, both are potential DCShadow attacks.
 - Domain synchronizer candidate
 
     The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. 
@@ -105,4 +103,4 @@ Azure ATP sensor reads events locally, without the need to purchase and maintain
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
