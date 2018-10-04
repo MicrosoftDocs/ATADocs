@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure Advanced Threat Protection mutli-forest support | Microsoft Docs
-description: How to set up support for multiple Active Directory forests in Azure ATP.
+description: Support for multiple Active Directory forests in Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
@@ -28,12 +28,10 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Install Azure ATP - Step 9
+# Azure Advanced Threat Protection multi-forest support
 
-> [!div class="step-by-step"]
-> [« Step 8](install-atp-step8-samr.md)
 
-## Step 9.  Set up Azure Advanced Threat Protection multi-forest support
+## Multi-forest support set up 
 
 Azure ATP can support organizations with multiple forests which gives you the ability to easily monitor activity and profile users across forests from a single pane of glass. 
 
@@ -87,9 +85,6 @@ When Azure ATP maps your forests, it uses a process that impacts the following:
 ## Known limitations
 -	Interactive logons performed by users in one forest to access resources in another forest are not displayed in the Azure ATP dashboard.
 
-
-> [!div class="step-by-step"]
-> [« Step 8](install-atp-step8-samr.md)
 
 
 ## See Also
