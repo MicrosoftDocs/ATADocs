@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Investigating lateral movement path attacks with Azure ATP | Microsoft Docs
-description: This article describes how to detect lateral movement path attacks with Azure Advanced Threat Protection (ATP).
+title: Investigating lateral movement attacks with Azure ATP | Microsoft Docs
+description: This article describes how to detect lateral movement  attacks with Azure Advanced Threat Protection (ATP).
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,7 +38,7 @@ Lateral movement is when an attacker uses non-sensitive accounts to gain access 
 
 To discover which sensitive accounts in your network are exposed because of their connection to non-sensitive accounts, groups and machines, follow these steps. 
 
-1. In the Azure ATP workspace portal menu, click the reports icon ![reports icon](./media/atp-report-icon.png).
+1. In the Azure ATP portal menu, click the reports icon ![reports icon](./media/atp-report-icon.png).
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no potential lateral movement paths found, the report is grayed out. If there are potential lateral movement paths, the report automatically pre-selects the first date when there is relevant data. The lateral movement path report provides data for up to 60 days.
 
@@ -53,7 +53,7 @@ To discover which sensitive accounts in your network are exposed because of thei
 
 
 
-1. In the Azure ATP workspace portal, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). Note that badges will only appear if there was lateral movement within the last 48 hours. 
+1. In the Azure ATP portal, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). Note that badges will only appear if there was lateral movement within the last 48 hours. 
 
 2. In the user profile page that opens, click the **Lateral movement paths** tab. 
 
@@ -79,6 +79,6 @@ To discover which sensitive accounts in your network are exposed because of thei
 
 ## See Also
 
-- [Configure SAM-R required permissions](install-atp-step8-samr.md)
-- [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
+- [Working with security alerts](working-with-suspicious-activities.md)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 7 | Microsoft Docs
-description: In the final step of installing Azure ATP, you configure the Honeytoken user.
+title: Azure Advanced Threat Protection configure detection exclusions and honeytoken accounts  | Microsoft Docs
+description: Configuration of detection exclusions and honeytoken user accounts.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/2/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,6 +29,9 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
+<<<<<<< HEAD
+# Configure detection exclusions and honeytoken accounts
+=======
 
 # Install Azure ATP - Step 7
 
@@ -37,6 +40,7 @@ ms.suite: ems
 > [Step 8 »](install-atp-step8-samr.md)
 
 ## Step 7. Configure detection exclusions and honeytoken accounts
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP enables the exclusion of specific IP addresses or users from a number of detections. 
 
@@ -46,7 +50,7 @@ Azure ATP also enables the configuration of honeytoken accounts, which are used 
 
 To configure, follow these steps:
 
-1.  From the Azure ATP workspace portal, click on the settings icon and select **Configuration**.
+1.  From the Azure ATP portal, click on the settings icon and select **Configuration**.
 
     ![Azure ATP configuration settings](media/atp-config-menu.png)
 
@@ -71,13 +75,16 @@ Check the attack time line to view detected suspicious activities and search for
 Azure ATP scanning for suspicious activities starts immediately. Some detections, such as Abnormal Group Modifications, require a learning period and aren't available immediately after Azure ATP deployment.
 
 
+<<<<<<< HEAD
+=======
 
 > [!div class="step-by-step"]
 > [« Step 6](install-atp-step6-vpn.md)
 > [Step 8 »](install-atp-step8-samr.md)
 
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the zure ATP forum!](https://aka.ms/azureatpcommunity)

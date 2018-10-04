@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -57,7 +57,7 @@ The **Directory data** tab provides the static information available from Active
 
  ![user profile directory data](media/user-profile-dir-data.png)
 
-In the **User access control** section, Azure ATP surfaces security settings that may need your attentions. You can see important flags about the user, such as can the user press enter to bypass the password, does the user have a password that never expires, etc. 
+In the **User access control** section, Azure ATP surfaces security settings that may need your attentions. You can see important flags about the user, such as if the the user can press enter to bypass the password, and if the user has a password that never expires, etc. 
 
 ## View lateral movement paths
 
@@ -65,7 +65,7 @@ By clicking the Lateral movement paths tab, you can view a fully dynamic and cli
 
 The map provides you with a list of how many hops between computers or users an attacker would have to and from this user to compromise a sensitive account, and if the user has a sensitive account, you can see how many resources and accounts are directly connected.
 
-If activity is not detected for the last two days, the graph no longer appears, but the [lateral movement path report](reports.md) will be available to provide you with information about lateral movement paths over the last 60 days. 
+If activity is not detected for the last two days, the graph no longer appears, but the [lateral movement path report](reports.md) is available to provide you with information about the lateral movement paths that existed over the last 60 days. 
 
 For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). 
 
@@ -75,4 +75,4 @@ For more information, see [Lateral movement paths](use-case-lateral-movement-pat
 ## See Also
 
 - [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

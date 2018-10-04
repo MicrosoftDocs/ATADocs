@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -294,8 +294,9 @@ Released March 11, 2018
  -	The Azure ATP sensor infrastructure was improved for performance: the aggregated view of traffic enables optimization of CPU and packet pipeline, and reuses sockets to the domain controllers to minimize SSL sessions to the DC.
 
 ## See Also
+- [What is Azure Advanced Threat Protection?](what-is-atp.md)
+- [Frequently asked questions](atp-technical-faq.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+(configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
