@@ -31,8 +31,8 @@ ms.suite: ems
 
 # Install ATA - Step 9
 
->[!div class="step-by-step"]
-[« Step 8](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [« Step 8](install-ata-step7.md)
 
 ## Step 9. Configure SAM-R required permissions
 
@@ -59,8 +59,8 @@ To ensure that Windows clients and servers allow the ATA service account to perf
  For more information on SAM-R and Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[« Step 8](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [« Step 8](install-ata-step7.md)
 
 ## See Also
 - [ATA POC deployment guide](http://aka.ms/atapoc)

@@ -32,7 +32,17 @@ ms.suite: ems
 
 # Integrate VPN
 
+<<<<<<< HEAD
 Azure Advanced Threat Protection (ATP) can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity as well as a new detection for abnormal VPN connections. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+=======
+> [!div class="step-by-step"]
+> [« Step 5](install-atp-step5.md)
+> [Step 7 »](install-atp-step7.md)
+
+## Step 6. Integrate VPN
+
+Azure Advanced Threat Protection (ATP)  can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity as well as a new detection for abnormal VPN connections. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP integrates with your VPN solution by listening to RADIUS accounting events forwarded to the Azure ATP sensors. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
 
@@ -85,6 +95,12 @@ After this is enabled, all Azure ATP sensors and standalone sensors listen on po
 
  After the Azure ATP sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the entity profile will indicate distinct accessed VPN locations and activities in the profile will indicate locations.
 
+<<<<<<< HEAD
+=======
+> [!div class="step-by-step"]
+> [« Step 6](install-atp-step5.md)
+> [Step 7 »](install-atp-step7.md)
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 
 ## See Also

@@ -31,8 +31,8 @@ ms.suite: ems
 
 # Install ATA - Step 1
 
->[!div class="step-by-step"]
-[Step 2 »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [Step 2 »](install-ata-step2.md)
 
 This installation procedure provides instructions for performing a fresh installation of ATA 1.8. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.9](ata-update-1.9-migration-guide.md).
 
@@ -105,9 +105,9 @@ After installing the ATA Center you should exclude the MongoDB database director
 
 
 
->[!div class="step-by-step"]
-[« Pre-install](configure-port-mirroring.md)
-[Step 2 »](install-ata-step2.md)
+> [!div class="step-by-step"]
+> [« Pre-install](configure-port-mirroring.md)
+> [Step 2 »](install-ata-step2.md)
 
 ## Related Videos
 - [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

@@ -31,8 +31,8 @@ ms.suite: ems
 
 # Creating your Azure ATP instance in the portal - Step 1
 
->[!div class="step-by-step"]
-[Step 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [Step 2 »](install-atp-step2.md)
 
 This installation procedure provides instructions for creating and managing your Azure ATP instance or workspace. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
 
@@ -79,6 +79,7 @@ After you verified that your network meets the requirements of the sensor, you c
 >[!div class="step-by-step"]
 [« Pre-install](atp-prerequisites.md)
 [Step 2 »](install-atp-step2.md)
+
 
 
 ## See Also

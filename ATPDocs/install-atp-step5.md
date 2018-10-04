@@ -32,9 +32,9 @@ ms.suite: ems
 
 # Install Azure ATP - Step 5
 
->[!div class="step-by-step"]
-[« Step 4](install-atp-step4.md)
-[Step 6 »](install-atp-step6-vpn.md)
+> [!div class="step-by-step"]
+> [« Step 4](install-atp-step4.md)
+
 
 
 ## Step 5. Configure the Azure ATP sensor settings
@@ -84,9 +84,9 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 
 
 
->[!div class="step-by-step"]
-[« Step 4](install-atp-step4.md)
-[Step 6 »](install-atp-step6-vpn.md)
+> [!div class="step-by-step"]
+> [« Step 4](install-atp-step4.md)
+
 
 
 ## See Also

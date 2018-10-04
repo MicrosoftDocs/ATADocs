@@ -30,8 +30,8 @@ ms.suite: ems
 
 # Install Azure ATP - Step 9
 
->[!div class="step-by-step"]
-[« Step 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Step 8](install-atp-step8-samr.md)
 
 ## Step 9.  Set up Azure Advanced Threat Protection multi-forest support
 
@@ -88,8 +88,8 @@ When Azure ATP maps your forests, it uses a process that impacts the following:
 -	Interactive logons performed by users in one forest to access resources in another forest are not displayed in the Azure ATP dashboard.
 
 
->[!div class="step-by-step"]
-[« Step 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [« Step 8](install-atp-step8-samr.md)
 
 
 ## See Also

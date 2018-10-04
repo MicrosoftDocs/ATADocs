@@ -1,7 +1,14 @@
 ---
 layout: LandingPage
-description: Learn how to use Azure Advanced Threat Protection.
+title: Azure Advanced Threat Protection documentation - Tutorials, samples, reference, and resources
+description: Learn how to use Azure Advanced Threat Protection
 ms.service: azure-advanced-threat-protection
+keywords: advanced threat protection, azure, atp, tutorials, samples, reference
+author: rkarlin
+manager: mbaldwin
+ms.author: rkarlin
+ms.topic: landing-page
+ms.date: 09/26/2018
 ---
 # Azure Advanced Threat Protection Documentation
 
@@ -99,3 +106,4 @@ Azure Advanced Threat Protection (ATP) is a cloud service that helps protect you
         </a>
     </li>
 </ul>
+

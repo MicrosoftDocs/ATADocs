@@ -29,7 +29,18 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
+<<<<<<< HEAD
 # Configure detection exclusions and honeytoken accounts
+=======
+
+# Install Azure ATP - Step 7
+
+> [!div class="step-by-step"]
+> [« Step 6](install-atp-step6-vpn.md)
+> [Step 8 »](install-atp-step8-samr.md)
+
+## Step 7. Configure detection exclusions and honeytoken accounts
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Azure ATP enables the exclusion of specific IP addresses or users from a number of detections. 
 
@@ -64,6 +75,14 @@ Check the attack time line to view detected suspicious activities and search for
 Azure ATP scanning for suspicious activities starts immediately. Some detections, such as Abnormal Group Modifications, require a learning period and aren't available immediately after Azure ATP deployment.
 
 
+<<<<<<< HEAD
+=======
+
+> [!div class="step-by-step"]
+> [« Step 6](install-atp-step6-vpn.md)
+> [Step 8 »](install-atp-step8-samr.md)
+
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)

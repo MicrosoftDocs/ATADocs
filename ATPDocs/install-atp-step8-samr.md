@@ -30,6 +30,12 @@ ms.suite: ems
 
 # Configure Azure ATP to make remote calls to SAM
 
+<<<<<<< HEAD
+=======
+> [!div class="step-by-step"]
+> [« Step 7](install-atp-step7.md)
+> [Step 9 »](atp-multi-forest.md)
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 ## Configure SAM-R required permissions
 
@@ -57,6 +63,14 @@ To ensure Windows clients and servers allow your Azure ATP account to perform SA
 For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
+<<<<<<< HEAD
+=======
+> [!div class="step-by-step"]
+> [« Step 7](install-atp-step7.md)
+> [Step 9 »](atp-multi-forest.md)
+
+
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 ## See Also
 - [Investigating lateral movement path attacks with Azure ATP](use-case-lateral-movement-path.md)
