@@ -3,14 +3,11 @@
 ## [Frequently asked questions](atp-technical-faq.md)
 ## [What's new in Azure ATP](atp-whats-new.md)
 ## [Azure ATP data security and privacy](atp-privacy-compliance.md)
-# Plan and Design
-## [Azure ATP prerequisites](atp-prerequisites.md)
-### [Proxy configuration](configure-proxy.md)
-### [Advanced Audit Policy check](atp-advanced-audit-policy.md)
-### [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
+# Overview
 ## [Azure ATP architecture](atp-architecture.md)
+## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
-# Basic setup
+# Quickstarts
 ## [Create a workspace in the Azure ATP portal](install-atp-step1.md)
 ## [Connect to Active Directory](install-atp-step2.md)
 ### [Azure ATP multi-forest support](atp-multi-forest.md)
@@ -18,7 +15,10 @@
 ## [Install the Azure ATP sensor](install-atp-step4.md)
 ### [Silent installation](ATP-silent-installation.md)
 ## [Configure the Azure ATP sensor](install-atp-step5.md)
-# Advanced setup
+### [Proxy configuration](configure-proxy.md)
+### [Advanced Audit Policy check](atp-advanced-audit-policy.md)
+### [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
+# Advanced configuration
 ## [Azure ATP sensor delayed update](sensor-update.md)
 ## [Set Azure ATP notifications](notifications.md)
 ## [Integrate with Windows Defender ATP](integrate-wd-atp.md)
