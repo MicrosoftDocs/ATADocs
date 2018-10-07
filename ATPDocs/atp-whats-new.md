@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,26 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.49
+Released October 7th, 2018
+-	**New detections: Suspicious DNS Communication** (preview)<br>New detection added to help protect against suspicious DNS communication attacks:
+
+    -	This detection helps detect attacks against the DNS protocol. In most organizations the DNS protocol is not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+
+- **New functionality** <br>Azure ATP **user role** enhanced with the following capabilities:
+  - Change status of security alerts (re-open, close, exclude, suppress)
+  - Set scheduled reports
+  - Set entity tags (sensitive and honeytoken)
+  - Exclusion of detection
+  - Change language
+  - Set notifications via email or syslog
+
+
+- A temporary increase in **Reconnaissance using directory services queries** security alerts that occurred on 09/16/2018 was identified and resolved. 
+
+- This version also includes fixes and improvements for multiple issues.
+
 
 ## Azure ATP release 2.48
 Released September 16th, 2018
