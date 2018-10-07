@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -52,20 +52,25 @@ Access to the Azure ATP portal (portal.atp.azure.com) can only be accomplished b
 
 ## Types of Azure ATP security groups 
 
-Azure ATP introduces three types of security group: Azure ATP *(workspace name)* Administrators, Azure ATP *(workspace name)* Users, and Azure ATP *(workspace name)* Viewers. The following table describes the type of access in the Azure ATP portal available per role. Depending on which role you assign, various screens and menu options in Azure ATP portal are unavailable, as follows:
+Azure ATP provides three types of security groups: Azure ATP *(workspace name)* Administrators, Azure ATP *(workspace name)* Users, and Azure ATP *(workspace name)* Viewers. The following table describes the type of access in the Azure ATP portal available for each role. Depending on which role you assign, various screens and menu options in Azure ATP portal are unavailable for those users, as follows:
 
 |Activity |Azure ATP *(workspace name)* Administrators|Azure ATP *(workspace name)* Users|Azure ATP *(workspace name)* Viewers|
 |----|----|----|----|
 |Login|Available|Available|Available|
-|Change status of Security Alerts|Available|Available|Not available|
-|Share/Export security alerts via email/get link|Available|Available|Available|
+|Change status of Security Alerts (re-open, close, exclude, suppress)|Available|Available|Not available|
+|Share/Export security alerts (via email, get link, download details)|Available|Available|Available|
+|Download a report|Available|Available|Available|
 |Change status of Monitoring Alerts|Available|Not available|Not available|
-|Update Azure ATP Configuration|Available|Not available|Not available|
-|sensor – Add|Available|Not available|Not available|
-|sensor – Delete |Available|Not available|Not available|
-|Monitored DC – Add |Available|Not available|Not available|
-|Monitored DC – Delete|Available|Not available|Not available|
-|View alerts and security alerts|Available|Available|Available|
+|Update Azure ATP Configuration - Sensors (download, regenerate key, configure, delete)|Available|Not available|Not available|
+|Update Azure ATP Configuration - Data sources (directory services, SIEM, VPN WD-ATP)|Available|Not available|Not available|
+|Update ATP Configuration - Updates|Available|Not available|Not available|
+|Update ATP Configuration -Scheduled reports|Available|Available|Not available|
+|Update ATP Configuration -Entity tags (sensitive and honeytoken)|Available|Available|Not available|
+|Update ATP Configuration -Exclusions|Available|Available|Not available|
+|Update ATP Configuration -Language|Available|Available|Not available|
+|Update ATP Configuration -Notifications (email and syslog)|Available|Available|Not available|
+|Update ATP Configuration -Preview detections|Available|Available|Not available|
+|View entity profiles and security alerts|Available|Available|Available|
 
 
 When users try to access a page that is not available for their role group, they are redirected to the Azure ATP unauthorized page. 
