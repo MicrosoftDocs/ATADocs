@@ -480,12 +480,12 @@ The DNS protocol in most organizations is typically not monitored and rarely blo
 
 
 1.	Some legitimate companies use DNS for regular communication. Check if the registered query domain belongs to a trusted source such as your antivirus provider.
-3.	 If the registered query domain is not trusted, identify the process creating the request on the source machine. Use [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)to assist with this task. []
+3.	 If the registered query domain is not trusted, identify the process creating the request on the source machine. Use [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) to assist with this task.
 4.	Determine when the suspicious activity begin? Were any new programs deployed or installed (AV?) in the organization? Are there other alerts from the same time?
 5.	Click on the source computer to access its profile page. Check what happened around the time of the DNS query, searching for unusual activities, such as who was logged in, and which resources were used. If you already enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. Using Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
 
 **Remediation**
-If the registered query domain is not trusted after your investigation, re reccomend blocking the destination domain to avoid all future communication. 
+If the registered query domain is not trusted after your investigation, we recommend blocking the destination domain to avoid all future communication. 
 
 ## Suspicious domain controller promotion (potential DCShadow attack) - New
 
