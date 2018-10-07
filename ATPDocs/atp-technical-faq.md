@@ -112,7 +112,7 @@ If a virtual domain controller can't be covered by the Azure ATP sensor, you can
 
 For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with Azure ATP sensors](configure-proxy.md).
 
-### Can Azure ATP monitor domain controllers virtualized on your IaaS solution?
+### Can Azure ATP monitor domain controllers be virtualized on your IaaS solution?
 Yes, you can use the Azure ATP sensor to monitor domain controllers that are in any IaaS solution.
 
 ### Can Azure ATP support multi-domain and multi-forest?

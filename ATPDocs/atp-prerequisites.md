@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/4/2018
+ms.date: 10/7/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -39,10 +39,9 @@ This article describes the requirements for a successful deployment of Azure ATP
 
 Azure ATP is composed of the Azure ATP cloud service, which consists of the Azure ATP portal, the Azure ATP sensor and/or the Azure ATP standalone sensor. For more information about each Azure ATP component, see [Azure ATP architecture](atp-architecture.md).
 
-Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. 
+To create your Azure ATP instance, you'll need an AAD tenant with at least one global/security administrator. Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. 
 
 This prerequisite guide is divided into the following sections to ensure you have everything you need to successfully deploy Azure ATP. 
-
 
 [Before you start](#before-you-start): Lists information to gather  and accounts and network entities you'll need to have before starting to install.
 
@@ -55,6 +54,8 @@ This prerequisite guide is divided into the following sections to ensure you hav
 ## Before you start
 This section lists information you should gather and accounts and network entities you should have before starting Azure ATP installation.
 
+- Acquire a license for Enterprise Mobility + Security 5 (EMS E5) directly via the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.  
+
 - Verify the domain controller(s) you intend to install Azure ATP sensors on have internet connectivity to the Azure ATP Cloud Service. The Azure ATP sensor support the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for Azure ATP](configure-proxy.md).  
 
 -   An **on-premises** AD user account and password with read access to all objects in the monitored domains.
@@ -66,14 +67,14 @@ This section lists information you should gather and accounts and network entiti
 
 - If you attempt to install the Azure ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the Azure ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
+-    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
--   Optional: A user account of a user who has no network activities. This account is configured as the Azure ATP Honeytoken user. For more information, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
+-   Optional: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
 
 -   Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to zure ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
-## Azure ATP workspace management portal and workspace portal requirements
-Access to the Azure ATP workspace portal and the Azure ATP workspace management portal is via a browser, supporting the following browsers and settings:
+## Azure ATP portal requirements
+Access to the Azure ATP portal is via a browser, supporting the following browsers and settings:
 -	Microsoft Edge
 -	Internet Explorer version 10 and above
 -	Google Chrome 4.0 and above
