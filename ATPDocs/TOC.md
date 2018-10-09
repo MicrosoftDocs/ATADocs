@@ -7,7 +7,7 @@
 ## [Azure ATP architecture](atp-architecture.md)
 ## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
-# Quickstarts
+# Quickstart
 ## [Create a workspace in the Azure ATP portal](install-atp-step1.md)
 ## [Connect to Active Directory](install-atp-step2.md)
 ### [Azure ATP multi-forest support](atp-multi-forest.md)
@@ -20,6 +20,7 @@
 ### [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
 # Advanced configuration
 ## [Azure ATP sensor delayed update](sensor-update.md)
+## [Azure ATP user roles](atp-role-groups.md)
 ## [Set Azure ATP notifications](notifications.md)
 ## [Integrate with Windows Defender ATP](integrate-wd-atp.md)
 ## [VPN integration](install-atp-step6-vpn.md)
@@ -32,7 +33,6 @@
 ### [Configure event collection](configure-event-collection.md)
 ### [Configure Windows Event Forwarding](configure-event-forwarding.md)
 # Use and investigate
-## [Azure ATP user roles](atp-role-groups.md)
 ## [Azure ATP portal](workspace-portal.md)
 ## [Azure ATP reports](reports.md)
 ## [Understanding entity profiles](entity-profiles.md)
@@ -40,8 +40,8 @@
 ## [Excluding entities from detections](excluding-entities-from-detections.md)
 ## [Exclusions and honeytoken accounts](install-atp-step7.md)
 ## [Managing security alerts](working-with-suspicious-activities.md)
-# Azure ATP Security Alerts
-## [Suspicious activity guide](suspicious-activity-guide.md)
+# Azure ATP security alerts
+## [Security alert guide](suspicious-activity-guide.md)
 ## [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
 ## [Investigate entities](investigate-entity.md)
 # Troubleshoot

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2017
+ms.date: 10/09/2017
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -52,7 +52,7 @@ To track your deployment progress, monitor the Azure ATP installer logs, which a
 ## Azure ATP sensor silent installation
 
 > [!NOTE]
-> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 including rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
+> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 including rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
 
 
 Use the following command to perform a fully silent install of the Azure ATP sensor:
