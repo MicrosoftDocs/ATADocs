@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -42,30 +42,6 @@ Following proper investigation, all Azure ATP security alerts can be classified 
 For more information on how to work with Azure ATP security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
 
 
-## Abnormal Sensitive Group Modification
-
-
-**Description**
-
-Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by Azure ATP. The minimum period before an alert can be triggered is one month per each domain controller.
-
-For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
-
-
-The detection relies on [events audited on domain controllers](configure-event-collection.md).
-To make sure your domain controllers audit the needed events.
-
-**Investigation**
-
-1. Is the group modification legitimate? </br>Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive.
-
-2. If the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in Azure ATP to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
-
-**Remediation**
-
-Minimize the number of users who are authorized to modify sensitive groups.
-
-Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
 
 
 ## Brute force attack using LDAP simple bind
@@ -420,7 +396,7 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
 
-## Remote execution attempt
+## Remote code execution attempt
 
 **Description**
 
@@ -487,7 +463,7 @@ The DNS protocol in most organizations is typically not monitored and rarely blo
 **Remediation**
 If the registered query domain is not trusted after your investigation, we recommend blocking the destination domain to avoid all future communication. 
 
-## Suspicious domain controller promotion (potential DCShadow attack) - New
+## Suspicious domain controller promotion (potential DCShadow attack)
 
 **Description**
 
@@ -525,8 +501,33 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat
 > [!NOTE]
 > Suspicious domain controller promotion (potential DCShadow attack) detections are supported by ATP sensors only. 
 
+## Suspicious modification of sensitive groups
 
-## Suspicious replication request (potential DCShadow attack) - New
+**Description**
+
+Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by Azure ATP. The minimum period before an alert can be triggered is one month per each domain controller.
+
+For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
+
+
+The detection relies on [events audited on domain controllers](configure-event-collection.md).
+To make sure your domain controllers audit the needed events.
+
+**Investigation**
+
+1. Is the group modification legitimate? </br>Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive.
+
+2. If the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in Azure ATP to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
+
+**Remediation**
+
+Minimize the number of users who are authorized to modify sensitive groups.
+
+Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
+
+
+
+## Suspicious replication request (potential DCShadow attack) 
 
 **Description** 
 
@@ -580,7 +581,7 @@ A suspicious service has been created on a domain controller in your organizatio
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
 
-## Suspicious VPN connection - New <a name="suspicious-vpn-detection"></a>
+## Suspicious VPN connection <a name="suspicious-vpn-detection"></a>
 
 **Description**
 
