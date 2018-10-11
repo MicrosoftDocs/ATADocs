@@ -75,7 +75,7 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
  ![enable integration](./media/enable-integration.png)
 
-4. In the [Windows Defender ATP portal](https://beta.securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**. 
+4. In the [Windows Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**. 
 
  ![Windows Defender ATP enable integration](./media/wd-atp-enable.png)
 
