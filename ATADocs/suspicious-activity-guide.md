@@ -48,7 +48,7 @@ For questions or feedback, contact the ATA team at [ATAEval@microsoft.com](mailt
 
 **Description**
 
-Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATA. The minimum period before an alert can be triggered is one month per each domain controller.
+Attackers add users to highly privileged groups. They do so to gain access to more resources and gain persistency. Detections rely on profiling the user group modification activities, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATA. The minimum period before an alert can be triggered is one month per domain controller.
 
 For a definition of sensitive groups in ATA, see [Working with the ATA console](working-with-ata-console.md#sensitive-groups).
 
@@ -71,15 +71,15 @@ Set up [Privileged Access Management for Active Directory](https://docs.microsof
 ## Broken trust between computers and domain
 
 > ![NOTE]
-> This suspicious activity was deprecated and only appears in ATA versions prior to 1.9.
+> The Broken trust between computers and domain alert was deprecated and only appears in ATA versions prior to 1.9.
 
 **Description**
 
-Broken trust means that Active Directory security requirements may not be in effect for the computers in question. This is often considered a baseline security and compliance failure and a soft target for attackers. In this detection, an alert is triggered if more than 5 Kerberos authentication failures are seen from a computer account in 24 hours.
+Broken trust means that Active Directory security requirements may not be in effect for these computers. This is considered a baseline security and compliance failure and a soft target for attackers. In this detection, an alert is triggered if more than five Kerberos authentication failures are seen from a computer account within 24 hours.
 
 **Investigation**
 
-Is the computer in question allowing domain users to log on? 
+Is the computer being investigated allowing domain users to log on? 
 - If yes, you may ignore this computer in the remediation steps.
 
 **Remediation**
@@ -104,7 +104,7 @@ In this detection, an alert is triggered when ATA detects a massive number of si
 
 2. Click on the alert to go to its dedicated page. Check if any login attempts ended with a successful authentication. The attempts would appear as **Guessed accounts** on the right side of the infographic. If yes, are any of the **Guessed accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
 
-3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes,**Suppress** the suspicious activity.
+3. If there are no **Guessed accounts**, are any of the **Attacked accounts** normally used from the source computer? If yes, **Suppress** the suspicious activity.
 
 **Remediation**
 
@@ -114,7 +114,7 @@ In this detection, an alert is triggered when ATA detects a massive number of si
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are normally encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, ATA learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
 
 There are three detection types:
 
@@ -128,7 +128,7 @@ There are three detection types:
 
 First check the description of the alert to see which of the above three detection types you’re dealing with. For further information, download the Excel spreadsheet.
 1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using the [the scanner written by the ATA team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
-2.	Golden Ticket – In the Excel spreadsheet, go to the **Network activity** tab. You will see that the relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** contains stronger encryption methods.
+2.	Golden Ticket – In the Excel spreadsheet, go to the **Network activity** tab. You will see that the relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** lists stronger encryption methods.
   a.	Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common (for example, all the marketing personnel use a specific app that might be causing the alert to be triggered). There are cases in which a custom application that is rarely used is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and you can **Suppress** it.
   b.	Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute `msDS-SupportedEncryptionTypes`, of the resource service account.
 3.	Overpass-the-Hash – In the Excel spreadsheet, go to the **Network activity** tab. You will see that the relevant downgraded field is **Encrypted Timestamp Encryption Type** and **Source Computer Supported Encryption Types** contains stronger encryption methods.
@@ -154,7 +154,7 @@ First check the description of the alert to see which of the above three detecti
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused, while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Install ATA - Step 7](install-ata-step7.md).
+For more information on honey token accounts, see [Install ATA - Step 7](install-ata-step7.md).
 
 **Investigation**
 
@@ -178,15 +178,14 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user’
 
 **Investigation**
 
-Was the hash used from a computer that the targeted user owns or regularly uses? If yes, this is a false positive. If not, it is probably a true positive.
+Check if the hash used from a computer owed by the targeted user or uses regularly? If yes, the alert is a false positive. If not, it is probably a true positive.
 
 **Remediation**
 
-1. If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they
-expire. 
+1. If the involved account is not sensitive, reset the password of that account. Resetting the password prevents the attacker from creating new Kerberos tickets from the password hash. Note that existing tickets are still usable until they expire. 
 
-2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See
-the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
+2. If the involved account is sensitive, consider resetting the KRBTGT account twice, as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain, so plan around the impact before doing so. See
+the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also refer to using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). As this is typically a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Identity theft using Pass-the-Ticket attack
 
@@ -406,7 +405,7 @@ Modifying zone transfers is one task among a checklist that should be addressed 
 
 Server Message Block (SMB) enumeration enables attackers to get information about where users recently logged on. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
 
-In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller, because this should not happen.
+In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller.
 
 **Investigation**
 
@@ -512,7 +511,6 @@ Attackers attempt to run suspicious services on your network. ATA raises an aler
 - Implement less privileged access on domain machines to allow only specific users the right to create new services.
 
 
-
 ## Suspicion of identity theft based on abnormal behavior
 
 **Description**
@@ -536,13 +534,13 @@ Depending on what caused this abnormal behavior to occur, different actions shou
 
 **Description**
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, ATA is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash, as well as exploits used by advanced ransomware, such as WannaCry.
 
 **Investigation**
 
-Identify the protocol that is unusual – from the Suspicious activity time line,  click on the suspicious activity to get to its details page; the protocol appears above the arrow: Kerberos or NTLM.
+Identify the protocol that is unusual – from the suspicious activity time line, click on the suspicious activity to access the details page; the protocol appears above the arrow: Kerberos or NTLM.
 
-- **Kerberos**: This will often be triggered if a hacking tool such as Mimikatz has been used, potentially performing an Overpass-the-Hash attack. Check if the source computer is running an application that implements its own Kerberos stack, not in accordance with the Kerberos RFC. If that is the case, it is a benign true positive and you can **Close** the alert. If the alert keeps being triggered, and it is still the case, you can **Suppress** the alert.
+- **Kerberos**: Often triggered if a hacking tool such as Mimikatz was potentially used an Overpass-the-Hash attack. Check if the source computer is running an application that implements its own Kerberos stack, that is not in accordance with the Kerberos RFC. In that case, it is a benign true positive and the alert can be **Closed**. If the alert keeps being triggered, and it is still the case, you can **Suppress** the alert.
 
 - **NTLM**: Could be either WannaCry or tools such as Metasploit, Medusa, and Hydra.  
 
@@ -558,13 +556,13 @@ To determine whether this is a WannaCry attack, perform the following steps:
 
 **Remediation**
 
-Patch all your machines, especially applying security updates.
+Patch all of your machines. Ensure all security updates are applied.
 
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 2. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+3. WanaKiwi can decrypt the data in the control of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
 >[!NOTE]
