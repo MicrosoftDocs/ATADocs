@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -242,7 +242,7 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 1. Is the source computer running an organization-approved advanced security scanner against Active Directory?
 
-2. If yes and it should always be doing so,**Close and exclude**the suspicious activity.
+2. If yes and it should always be doing so,**Close and exclude** the suspicious activity.
 
 3. If yes and it should not do this,**Close the suspicious activity.
 
@@ -437,7 +437,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 2.	Is the computer in question allowed to perform this remote execution against your domain controller?
   -	Is the account in question allowed to perform this remote execution against your domain controller?
   -	If the answer to both questions is yes, then **Close** the alert.
-3.	If the answer to either questions is no, this activty should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed.
+3.	If the answer to either questions is no, this activity should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed.
 
 
 **Remediation**
