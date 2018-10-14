@@ -70,7 +70,7 @@ Set up [Privileged Access Management for Active Directory](https://docs.microsof
 
 ## Broken trust between computers and domain
 
-> ![NOTE]
+> [!NOTE]
 > The Broken trust between computers and domain alert was deprecated and only appears in ATA versions prior to 1.9.
 
 **Description**
@@ -178,13 +178,13 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user’
 
 **Investigation**
 
-Check if the hash used from a computer owed by the targeted user or uses regularly? If yes, the alert is a false positive. If not, it is probably a true positive.
+Check if the hash used from a computer owed by the targeted user or uses regularly? If yes, the alert is a false positive, if not, it is probably a true positive.
 
 **Remediation**
 
-1. If the involved account is not sensitive, reset the password of that account. Resetting the password prevents the attacker from creating new Kerberos tickets from the password hash. Note that existing tickets are still usable until they expire. 
+1. If the involved account is not sensitive, reset the password of that account. Resetting the password prevents the attacker from creating new Kerberos tickets from the password hash. Existing tickets are still usable until they expire. 
 
-2. If the involved account is sensitive, consider resetting the KRBTGT account twice, as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain, so plan around the impact before doing so. See
+2. If the involved account is sensitive, consider resetting the KRBTGT account twice, as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all domain Kerberos tickets, so plan around the impact before doing so. See
 the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also refer to using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). As this is typically a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Identity theft using Pass-the-Ticket attack
@@ -195,13 +195,13 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Investigation**
 
-1. Click the **Download details** button to view the full list of IP addresses involved. Does the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? If the answer to any of these questions is yes, then it is a false positive.
+1. Click the **Download details** button to view the full list of IP addresses involved. Is the IP address of one or both computers part of a subnet allocated from an undersized DHCP pool, for example, VPN or WiFi? Is the IP address shared? For example, by a NAT device? If the answer to any of these questions is yes, the alert is a false positive.
 
 2. Is there a custom application that forwards tickets on behalf of users? If so, it is a benign true positive.
 
 **Remediation**
 
-1. If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire.  
+1. If the involved account is not sensitive, then reset the password of that account. Password resent prevents the attacker from creating new Kerberos tickets from the password hash. Any existing tickets remain usable until expired.  
 
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
@@ -210,9 +210,9 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 
 **Description**
 
-Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve persistency in the network.
+Attackers with domain admin rights can compromise your [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Attackers can use the KRBTGT account to create a Kerberos ticket granting ticket (TGT) providing authorization to any resource. The ticket  expiration can be set to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve and maintain persistency in your network.
 
-In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
+In this detection, an alert is triggered when a Kerberos ticket granting ticket (TGT) is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
 security policy.
 
 **Investigation**
@@ -242,9 +242,9 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 1. Is the source computer running an organization-approved advanced security scanner against Active Directory?
 
-2. If yes and it should always be doing so, **Close and exclude** the suspicious activity.
+2. If yes and it should always be doing so,**Close and exclude**the suspicious activity.
 
-3. If yes and it should not do this, **Close** the suspicious activity.
+3. If yes and it should not do this,**Close the suspicious activity.
 
 **Remediation**
 
@@ -281,14 +281,14 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepla
 
 **Description**
 
-In some scenarios, attackers perform a denial of service (DoS) rather than just stealing information. Deleting a large number of accounts is one DoS technique.
+In some scenarios, attackers perform denial of service (DoS) attacks rather than only stealing information. Deleting a large number of accounts is one method of attempting a DoS attack. 
 
-In this detection, an alert is triggered when more than 5% of all accounts are deleted. The detection requires read access to the deleted object container.  
+In this detection, an alert is triggered any time more than 5% of all accounts are deleted. The detection requires read access to the deleted object container.  
 For information about configuring read-only permissions on the deleted object container, see **Changing permissions on a deleted object container** in [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 **Investigation**
 
-Review the list of deleted accounts and understand if there is a pattern or a business reason that might justify this massive deletion.
+Review the list of deleted accounts and determine if there is a pattern or a business reason that justifies a large-scale deletion.
 
 **Remediation**
 
@@ -298,17 +298,17 @@ Remove permissions for users who can delete accounts in Active Directory. For mo
 
 **Description**
 
-Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC), a field in the Kerberos ticket that contains a user authorization data (in Active Directory this is group membership), granting attackers additional privileges.
+Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC). PAC is a field in the Kerberos ticket that has user authorization data (in Active Directory this is group membership) and grants attackers additional privileges.
 
 **Investigation**
 
-1. Click on the alert to get to its details page.
+1. Click on the alert to access the details page.
 
 2. Is the destination computer (under the **ACCESSED** column) patched with MS14-068 (domain controller) or MS11-013 (server)? If yes, **Close** the suspicious activity (it is a false positive).
 
-3. If not, does the source computer run (under the **FROM** column) an OS/application known to modify the PAC? If yes, **Suppress** the suspicious activity (it is a benign true positive).
+3. If the destination computer is not patched, does the source computer run (under the **FROM** column) an OS/application known to modify the PAC? If yes, **Suppress** the suspicious activity (it is a benign true positive).
 
-4. If the answer was no to the above two questions, assume this is malicious.
+4. If the answer to the two previous questions was no, assume this activity is malicious.
 
 **Remediation**
 
@@ -331,7 +331,7 @@ In this detection, ATA can detect where the attack came from, the total number o
 Is there a script or application running on the host that could generate this behavior? <br></br>
 If the answer to either of these questions is yes, **Close** the suspicious activity (it is a benign true positive) and exclude that host from the suspicious activity.
 
-3. Download the details of the alert in an Excel spreadsheet to conveniently see the list of account attempts, divided into existing and non-existing accounts. If you look at the non existing accounts sheet in the spreadsheet and the accounts look familiar, they may be disabled accounts or employees who left the company. In this case, it is unlikely that the attempt is coming from a dictionary. Most likely, it's an application or script that is checking to see which accounts still exist in Active Directory, meaning that it's a benign true positive.
+3. Download the details of the alert in an Excel spreadsheet to conveniently see the list of account attempts, divided into existing and non-existing accounts. If you look at the non-existing accounts sheet in the spreadsheet and the accounts look familiar, they may be disabled accounts or employees who left the company. In this case, it is unlikely that the attempt is coming from a dictionary. Most likely, it's an application or script that is checking to see which accounts still exist in Active Directory, meaning that it's a benign true positive.
 
 3. If the names are largely unfamiliar, did any of the guess attempts match existing account names in Active Directory? If there are no matches, the attempt was futile, but you should pay attention to the alert to see if it gets updated over time.
 
@@ -374,9 +374,9 @@ In this detection, no alerts would be triggered in the first month after ATA is 
 **Remediation**
 
 Use the [SAMRi10 tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) to harden your environment against this technique.
-If the tool is not applicable to your DC:
+If the tool is not applicable to your domain controller:
 1. Is the computer running a vulnerability scanning tool?  
-2. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (i.e. CEO, CFO, IT management, etc.).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
+2. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (that is, CEO, CFO, IT management, etc.).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
 
 ## Reconnaissance using DNS
 
@@ -409,7 +409,7 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 **Investigation**
 
-1. Click on the alert to get to its details page. Check which account/s performed the operation and which accounts were exposed, if any.
+1. Click on the alert to get to its details page. Check the account/s that performed the operation and which accounts were exposed, if any.
 
  - Is there some kind of security scanner running on the source computer? If yes, **Close and exclude** the suspicious activity.
 
@@ -417,13 +417,13 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 3. If yes and the alert gets updated, **Suppress** the suspicious activity.  
 
-4. If yes and it should not do this anymore, **Close** the suspicious activity.
+4. If yes and it should not get updated, **Close** the suspicious activity.
 
-5. If the answer to all the above is no, assume this is malicious.
+5. If the answer to all the above is no, assume the activity is malicious.
 
 **Remediation**
 
-Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
+Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this type of attack.
 
 ## Remote execution attempt detected
 
@@ -433,11 +433,11 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **Investigation**
 
-1. This is common for administrative workstations as well as for IT team members and service accounts that perform administrative tasks against domain controllers. If this is this the case, and the alert gets updated because the same admin or computer are performing the task, then **Suppress** the alert.
+1. This is common for administrative workstations as well as for IT team members and service accounts that perform administrative tasks against domain controllers. If this is this the case, and the alert gets updated because the same admin or computer is performing the task, **Suppress** the alert.
 2.	Is the computer in question allowed to perform this remote execution against your domain controller?
   -	Is the account in question allowed to perform this remote execution against your domain controller?
   -	If the answer to both questions is yes, then **Close** the alert.
-3.	If the answer to either questions is no, then this should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed.
+3.	If the answer to either questions is no, this activty should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed.
 
 
 **Remediation**
@@ -527,7 +527,7 @@ If you **Close and exclude** the alert, the user will no longer be part of the d
 
 **Remediation**
 
-Depending on what caused this abnormal behavior to occur, different actions should be taken. For example, if this is due to scanning of the network, the machine from which this occurred should be blocked from the network (unless it is approved).
+ Different actions should be taken depending on what caused this abnormal behavior to occur. For example, if the network was scanned, the source machine should be blocked from the network (unless it is approved).
 
 ## Unusual protocol implementation
 
@@ -544,29 +544,29 @@ Identify the protocol that is unusual – from the suspicious activity time line
 
 - **NTLM**: Could be either WannaCry or tools such as Metasploit, Medusa, and Hydra.  
 
-To determine whether this is a WannaCry attack, perform the following steps:
+To determine whether the activity is a WannaCry attack, perform the following steps:
 
 1. Check if the source computer is running an attack tool such as Metasploit, Medusa, or Hydra.
 
 2. If no attack tools are found, check if the source computer is running an application that implements its own NTLM or SMB stack.
 
-3. If not then check if this is caused by WannaCry by running a WannaCry scanner script, for example [this scanner](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) against the source computer involved in the suspicious activity. If the scanner finds that the machine as infected or vulnerable, work on patching the machine and removing the malware and blocking it from the network.
+3. If not, check if caused by WannaCry by running a WannaCry scanner script, for example [this scanner](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) against the source computer involved in the suspicious activity. If the scanner finds that the machine as infected or vulnerable, work on patching the machine and removing the malware and blocking it from the network.
 
 4. If the script didn't find that the machine is infected or vulnerable, then it could still be infected but SMBv1 might have been disabled or the machine has been patched, which would affect the scanning tool.
 
 **Remediation**
 
-Patch all of your machines. Ensure all security updates are applied.
+Apply the latest patches to all of your machines, and check all security updates are applied.
 
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 2. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. WanaKiwi can decrypt the data in the control of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+3.  Data in the control of some ransom software can sometimes be decrypted. Decryption is only possible if the user hasn't restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
 >[!NOTE]
-> To disable a suspicious activity, contact support.
+> To disable a suspicious activity alert, contact support.
 
 ## Related Videos
 - [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
