@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,11 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.50
+Released October 14th, 2018
+- This version includes fixes and improvements for multiple issues.
+
 
 ## Azure ATP release 2.49
 Released October 7th, 2018
