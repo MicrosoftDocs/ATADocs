@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -69,7 +69,7 @@ For additional support options, ask your Microsoft contact.
 
 #### System status page 
 
-To view system status for Azure ATP, visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to whether the Workspace management portal is up and active, if there are issues with detections and if the Sensor is able to send traffic to the cloud. You can access the **System status** from the Azure ATP menu bar.
+To view system status for Azure ATP, visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to whether the Azure ATP portal is up and active, if there are issues with detections and if the Sensor is able to send traffic to the cloud. You can access the **System status** from the Azure ATP menu bar.
 
 #### On-demand videos
 
