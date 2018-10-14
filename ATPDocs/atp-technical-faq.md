@@ -97,7 +97,7 @@ Every domain controller in the environment should be covered by an ATP sensor or
 Network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not decrypted, but are analyzed by the sensors.
 
 ### Does Azure ATP work with Kerberos Armoring?
-Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by zure ATP, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
+Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by Azure ATP, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
 
 ### How do I monitor a virtual domain controller using Azure ATP?
 Most virtual domain controllers can be covered by the Azure ATP sensor, to determine whether the Azure ATP sensor is appropriate for your environment, see [Azure ATP Capacity Planning](atp-capacity-planning.md).
