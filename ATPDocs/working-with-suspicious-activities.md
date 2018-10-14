@@ -125,5 +125,5 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 ## See Also
 
-- [Working with the Azure ATP workspace portal](workspace-portal.md)
+- [Working with the Azure ATP portal](workspace-portal.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
