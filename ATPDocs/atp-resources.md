@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,35 +37,37 @@ This article provides you with a readiness roadmap that gives you with a list of
 ## Understanding Azure ATP
 
 Azure Advanced Threat Protection (ATP) is a cloud service that helps identify and protect your enterprise from multiple types of advanced targeted cyber-attacks and insider threats. 
-Use the following resources to learn more about Azure ATP: 
+To learn more about Azure ATP: 
 - [Azure ATP overview](what-is-atp.md)
-- [Azure ATP introductory video - Full](https://www.youtube.com/watch?v=KX-xpFc0sBw) 
+- [Azure ATP introductory video (25 minutes)- Full](https://www.youtube.com/watch?v=EGY2m8yU_KE)
+- [Azure ATP deep dive video (75 minutes)- Full](https://www.youtube.com/watch?v=QXZIfH0wP3Q)
 
 ## Deployment decisions
 
-Azure ATP is comprised of a Cloud Service residing in Azure, and integrated sensors that can be installed on a domain controller or standalone sensors on dedicated servers. Before you get Azure ATP up and running, it's important to choose the type of sensors that best suit your deployment and needs. Azure ATP integrated sensors provide enhanced security, lower operational costs and easier deployment. Azure ATP standalone sensors require physical hardware, additionl configuration steps and heavier operational costs. <br>If you are using physical servers, capacity planning is critical. You can get help from the sizing tool to allocate space for your sensors: 
+Azure ATP is comprised of a Cloud Service residing in Azure, and integrated sensors that can be installed on a domain controller or standalone sensors on dedicated servers. Before you get Azure ATP up and running, it's important to choose the type of sensors that best suit your deployment and needs. Azure ATP integrated sensors (Azure ATP sensors) provide enhanced security, lower operational costs and easier deployment than Azure ATP standalone sensors. Azure ATP standalone sensors require physical hardware, additionl configuration steps and heavier operational costs. <br>If you are using physical servers, capacity planning is critical. You can get help from the sizing tool to allocate space for your sensors: 
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool) - The sizing tool automates collection of the amount of traffic Azure ATP monitors. It automatically provides supportability and resource recommendations for sensors. 
-- [ATA capacity planning guidance](atp-capacity-planning.md)
+- [ATP capacity planning guidance](atp-capacity-planning.md)
 
 ## Deploy Azure ATP
 
 These resources will help you set up Azure ATP, connect to Active Directory, download the sensor package, set up event collection and optionally integrate with your VPN and set up honeytoken accounts and exclusions. 
 - [Try Azure ATP (part of EMS E5)](http://aka.ms/aatptrial)  The trial is valid for 90 days.
-- [Deployment guide](install-atp-step1.md)  Deploy Azure ATP in your environment following these steps.
+- [Azure ATP Set up](install-atp-step1.md)  Deploy Azure ATP in your environment following these steps.
 - [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md)
 
 ## Azure ATP settings
 
-The basic settings necessary in Azure ATP are configured when creating the workspace. However, there are several additional settings that you can configure to fine-tune Azure ATP that make detections more accurate for your environment, such as SIEM integration and audit settings. 
+The basic settings necessary in Azure ATP are configured when creating your workspace. However, there are several additional settings that you can configure in Azure ATP that make detections more accurate for your environment, such as VPN integration, SAM required permissions and advanced audit policy settings. 
 
-- [Azure ATP general documentation](what-is-atp.md)
-- [Audit settings](https://blogs.technet.microsoft.com/positivesecurity/2017/08/18/ata-auditing-auditpol-advanced-audit-settings-enforcement-lightweight-gateway-service-discovery/) – Audit your domain controller health before and after an ATP deployment. 
+- [VPN integration](install-atp-step6-vpn.md)
+- [SAM-R required permissions](install-atp-step8-samr.md)
+- [Audit policy settings](atp-advanced-audit-policy.md) – Audit your domain controller health before and after an ATP deployment. 
 
 ## Work with Azure ATP
 
-After Azure ATP is up and running, view detected suspicious activities in the Azure ATP portal activity time line. The activity time line is the default landing page after logging in to the Azure ATP portal. By default, all open suspicious activities are shown on the attack time line. You can also see the severity assigned to each activity. Investigate each suspicious activity by drilling down into the entities (computers, devices, users) to open their profile pages with more information. These resources help you work with Azure ATP's suspicious activities: 
+After Azure ATP is up and running, view security alerts in the Azure ATP portal activity time line. The activity time line is the default landing page after logging in to the Azure ATP portal. By default, all open security alerts are shown on the attack time line. You can also see the severity assigned to each alert. Investigate each alert by drilling down into the entities (computers, devices, users) to open their profile pages with more information. These resources help you work with Azure ATP's security alerts: 
 
-- [Azure ATP suspicious activity guide](suspicious-activity-guide.md) Learn to triage and take the next steps with your Azure ATP detections.
+- [Azure ATP security alert guide](suspicious-activity-guide.md) Learn to triage and take the next steps with your Azure ATP detections.
 - [Tag groups as sensitive](sensitive-accounts.md) Gain visibility into credential exposure on sensitive security groups.
 
 ## Security best practices
@@ -87,4 +89,4 @@ Channel 9: [Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/M
 ## See Also
 
 - [Working with sensitive accounts](sensitive-accounts.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

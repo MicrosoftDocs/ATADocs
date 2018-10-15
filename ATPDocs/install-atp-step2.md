@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 2 | Microsoft Docs
+title: Install Azure Advanced Threat Protection | Microsoft Docs
 description: Step two of installing Azure ATP helps you configure the domain connectivity settings on your Azure ATP cloud service
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,7 +38,7 @@ ms.suite: ems
 
 ## Step 2. Provide a username and password to connect to your Active Directory Forest
 
-The first time you open the Azure ATP workspace portal, the following screen appears:
+The first time you open the Azure ATP portal, the following screen appears:
 
 ![Azure ATP welcome stage 1](media/directory-services.png)
 
@@ -54,7 +54,7 @@ The first time you open the Azure ATP workspace portal, the following screen app
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-3. In the workspace portal, click **Download sensor setup and install the first sensor** to continue.
+3. In the Azure ATP portal, click **Download sensor setup and install the first sensor** to continue.
 
 
 > [!div class="step-by-step"]
@@ -66,4 +66,4 @@ The first time you open the Azure ATP workspace portal, the following screen app
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

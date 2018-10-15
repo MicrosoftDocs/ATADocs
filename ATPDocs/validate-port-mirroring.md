@@ -4,10 +4,10 @@
 title: Validate port mirroring in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to validate that port mirroring is configured correctly in Azure ATP
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.service:
@@ -70,4 +70,4 @@ The following steps walk you through the process for validating that port mirror
 
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Configure port mirroring](configure-port-mirroring.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

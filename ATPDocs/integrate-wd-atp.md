@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Integrating Azure ATP with Windows Defender ATP
+# Integrate Azure ATP with Windows Defender ATP
 
 Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP, for an even more complete threat protection solution. While Azure ATP monitors the traffic on your domain controllers, Windows Defender ATP monitors your endpoints, together providing a single interface from which you can protect your environment.
 
@@ -75,15 +75,15 @@ To enable this feature, you need a license for both Azure ATP and Windows Defend
 
  ![enable integration](./media/enable-integration.png)
 
-4. In the [Windows Defender ATP portal](https://beta.securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**. 
+4. In the [Windows Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**. 
 
  ![Windows Defender ATP enable integration](./media/wd-atp-enable.png)
 
-5. To check the status of the integration, in the Azure ATP workspace portal, go to **Settings** and then **Windows Defender ATP integration**. You can see the status of the integration; if something is wrong you see an error. You can also see which workspace is integrated with Windows Defender ATP.
+5. To check the status of the integration, in the Azure ATP portal, go to **Settings** and then **Windows Defender ATP integration**. You can see the status of the integration; if something is wrong you see an error. You can also see which workspace is integrated with Windows Defender ATP.
 
 ## How it works
 
-After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP workspace portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes a badge to show that it is integrated with Windows Defender ATP. 
+After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes a badge to show that it is integrated with Windows Defender ATP. 
 
  ![Windows Defender ATP alerts](./media/profile-alerts-wd.png)
 
@@ -109,5 +109,5 @@ In the Windows Defender ATP portal, when you click on an endpoint, you can view 
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Azure ATP architecture](atp-architecture.md)
 - [Install ATP](install-atp-step1.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
 

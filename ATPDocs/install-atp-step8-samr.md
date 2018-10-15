@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure SAM-R to enable lateral movement path detection in Azure ATP | Microsoft Docs
-description: Describes how to configure SAM-R to enable lateral movement path detection in Azure ATP
+description: Explains how to configure Azure ATP to make remote calls to SAM
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/31/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -28,16 +28,10 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Install Azure ATP - Step 8
+# Configure Azure ATP to make remote calls to SAM
+The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Azure ATP Service account created during Azure ATP installation  [Step 2. Connect to AD](install-atp-step2.md).
 
-> [!div class="step-by-step"]
-> [« Step 7](install-atp-step7.md)
-> [Step 9 »](atp-multi-forest.md)
-
-## Step 8. Configure SAM-R required permissions
-
-The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Azure ATP Service account created in [Step 2. Connect to AD](install-atp-step2.md).
- 
+## Configure SAM-R required permissions
 To ensure Windows clients and servers allow your Azure ATP account to perform SAM-R, a modification to **Group Policy** must be made to add the Azure ATP service account in addition to the configured accounts listed in the **Network access** policy.
 
 1. Locate the policy:
@@ -59,12 +53,7 @@ To ensure Windows clients and servers allow your Azure ATP account to perform SA
 For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
-> [!div class="step-by-step"]
-> [« Step 7](install-atp-step7.md)
-> [Step 9 »](atp-multi-forest.md)
-
-
 
 ## See Also
 - [Investigating lateral movement path attacks with Azure ATP](use-case-lateral-movement-path.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

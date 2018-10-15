@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: What is Azure Advanced Threat Protection (ATP)? | Microsoft Docs
-description: Explains  Azure Advanced Threat Protection (ATP) is and what kinds of suspicious activities it can detect
+title: What is Azure Advanced Threat Protection (Azure ATP)? | Microsoft Docs
+description: Explains what Azure Advanced Threat Protection (Azure ATP) is and what kinds of suspicious activities it can detect
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -40,7 +40,7 @@ Azure ATP enables SecOp analysts and security professionals struggling to detect
 Azure ATP monitors and analyzes user activities and information across your network, such as permissions and group membership, creating a behavioral baseline for each user. Azure ATP then identifies anomalies with adaptive built-in intelligence, giving you insights into suspicious activities and events, revealing the advanced threats, compromised users and insider threats facing your organization. Azure ATP’s proprietary sensors monitor organizational domain controllers, providing a comprehensive view for all user activities from every device. 
  
 ## Protect user identities and reduce the attack surface   
-Azure ATP provides you invaluable insights on identity configurations and suggested security best-practices. Through security reports and user profile analytics, Azure ATP helps dramatically reduce your organizational attack surface, making it harder to compromise user credentials and advance an attack. ATP’s visual Lateral Movement Paths help you quickly understand exactly how an attacker can move laterally inside your organization to compromise sensitive accounts and assists in preventing those risks in advance. Additional, ATP security reports help you identify users and devices that authenticate using clear-text passwords and provide additional insights to improve your organizational security posture and policies.  
+Azure ATP provides you invaluable insights on identity configurations and suggested security best-practices. Through security reports and user profile analytics, Azure ATP helps dramatically reduce your organizational attack surface, making it harder to compromise user credentials and advance an attack. Azure ATP’s visual Lateral Movement Paths help you quickly understand exactly how an attacker can move laterally inside your organization to compromise sensitive accounts and assists in preventing those risks in advance. Additional,Azure ATP security reports help you identify users and devices that authenticate using clear-text passwords and provide additional insights to improve your organizational security posture and policies.  
  
 ## Identify suspicious activities and advanced attacks across the attack kill-chain 
 Typically, attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain: 
@@ -77,7 +77,7 @@ We recommend deploying Azure ATP in 3 phases:
 
 ### Phase 1
 
-1. Setup Azure ATP to protect your primary environments. Azure ATP's fast deployment model enables you to start protecting your organization today. [Install ATP](install-atp-step1.md)  
+1. Setup Azure ATP to protect your primary environments. Azure ATP's fast deployment model enables you to start protecting your organization today. [Install Azure ATP](install-atp-step1.md)  
 2. Set [sensitive accounts](sensitive-accounts.md) and [honeytoken accounts](install-atp-step7.md).   
 3. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).  
 
@@ -96,4 +96,4 @@ We recommend deploying Azure ATP in 3 phases:
 ## See Also
 - [Azure ATP frequently asked questions](atp-technical-faq.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

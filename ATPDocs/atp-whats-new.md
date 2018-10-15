@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,31 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.50
+Released October 14th, 2018
+- This version includes fixes and improvements for multiple issues.
+
+
+## Azure ATP release 2.49
+Released October 7th, 2018
+-	**New detections: Suspicious DNS Communication** (preview)<br>New detection added to help protect against suspicious DNS communication attacks:
+
+    -	This detection helps detect attacks against the DNS protocol. In most organizations the DNS protocol is not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+
+- **New functionality** <br>Azure ATP **user role** enhanced with the following capabilities:
+  - Change status of security alerts (re-open, close, exclude, suppress)
+  - Set scheduled reports
+  - Set entity tags (sensitive and honeytoken)
+  - Exclusion of detection
+  - Change language
+  - Set notifications via email or syslog
+
+
+- A temporary increase in **Reconnaissance using directory services queries** security alerts that occurred on 09/16/2018 was identified and resolved. 
+
+- This version also includes fixes and improvements for multiple issues.
+
 
 ## Azure ATP release 2.48
 Released September 16th, 2018
@@ -294,8 +319,9 @@ Released March 11, 2018
  -	The Azure ATP sensor infrastructure was improved for performance: the aggregated view of traffic enables optimization of CPU and packet pipeline, and reuses sockets to the domain controllers to minimize SSL sessions to the DC.
 
 ## See Also
+- [What is Azure Advanced Threat Protection?](what-is-atp.md)
+- [Frequently asked questions](atp-technical-faq.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+(configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

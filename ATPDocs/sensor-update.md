@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -66,7 +66,7 @@ Ordinarily, sensors update automatically when the Azure ATP cloud service is upd
 This enables you to select specific sensors on which the update is rolled out automatically, and update the rest of your sensors on delay, only after you see that the initial update went smoothly.
 
 > [!NOTE]
-> If an error occurs and a sensor does not update, open a support ticket.
+> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your workspace, see [Proxy configuration](configure-proxy.md)
 
 To set a sensor to delayed update:
 
@@ -93,7 +93,7 @@ Every few minutes, Azure ATP sensors check whether they have the latest version.
   7. A sensor receives clearance from the Azure cloud service. This can be verified in the **Updates** page.
   8. The next sensor starts the update process. 
 
-4. 24 hours after the Azure ATP cloud service updated, sensors selected for **Delayed update start the update process.
+4. 24 hours after the Azure ATP cloud service updated, sensors selected for **Delayed update** start the update process.
 
 ![sensor update](./media/sensor-update.png)
 
@@ -107,4 +107,4 @@ In the event of failure, if the sensor didn’t complete the update process, a r
 
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

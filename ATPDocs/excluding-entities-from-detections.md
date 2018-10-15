@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/2/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 
 # Excluding entities from detections
-This article explains how to exclude entities from triggering alerts in order to minimize true benign positives but at the same time, make sure you catch the true positives. In order to keep Azure ATP from being noisy about activities that, from specific users, may be part of your normal rhythm of business, you can quiet - or exclude - specific entities from raising alerts.
+This article explains how to exclude entities from triggering alerts in order to minimize true benign positives while making sure you can catch the true positives. In order to keep Azure ATP from being noisy about activities that, from specific users, may be part of your normal rhythm of business, you can quiet - or exclude - specific entities from raising alerts.
 
 For example, if you have a security scanner that does DNS recon or an admin who remotely runs scripts on the domain controller - and these are sanctioned activities whose intent is part of the normal IT operations in your organization. For more information about Azure ATP detections to help you decide which entities to exclude, see the [Suspicious activities guide](suspicious-activity-guide.md).
 
@@ -69,4 +69,4 @@ When you have the possibility of excluding an IP address or a computer, you can 
 ## See Also
 
 - [Integrating with Windows Defender ATP](integrate-wd-atp.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/6/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,13 +32,13 @@ ms.suite: ems
 
 # Investigate an entity with Azure ATP
 
-This article describes the process for investigating entities after suspicious activities were detected with Azure Advanced Threat Protection (ATP). After viewing a suspicious activity in the time line, you can drill down into the entity involved in the activity and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
+This article describes the process for investigating entities after suspicious activities were detected with Azure Advanced Threat Protection (ATP). After viewing a security alert in the time line, you can drill down into the entity involved in the alert and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
 
 ## Look at the entity profile
 
 The entity profile provides you with a comprehensive entity page, designed for full deep-dive investigation of users, computers, devices, and the resources they have access to along with their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
-To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline. You can also see a mini-version of the entity profile in the suspicious activity page by hovering over the entity name.
+To access an entity profile page, click on the name of the entity, such as a username, in the security alert timeline. You can also see a mini-version of the entity profile in the security alert page by hovering over the entity name.
 
 The entity profile lets you view entity activities, view directory data, and view lateral movement paths for the entity. For more information, see [Understanding entity profiles ](entity-profiles.md).
 
@@ -119,4 +119,4 @@ Before you move on with your investigation, it's important to know if the entity
 ## See also
 
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -4,10 +4,10 @@
 title: Understanding Azure ATP monitoring alerts | Microsoft Docs
 description: Describes how you can use the Azure ATP logs to troubleshoot issues
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,19 +31,19 @@ ms.suite: ems
 
 # Understanding Azure ATP sensor and standalone sensor monitoring alerts
 
-The Azure ATP Health Center lets you know when there's a problem with any of your Azure ATP workspaces, by raising a monitoring alert. This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
+The Azure ATP Health Center lets you know when there's a problem with  your Azure ATP workspace, by raising a monitoring alert. This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
 
 ## Read-only user password to expire shortly
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Azure ATP sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP Console.|Medium|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Azure ATP sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP portal.|Medium|
 
 ## Read-only user password expired
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the Azure ATP sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP Console.|High|
+|The read-only user password, used to get directory data, expired.|All the Azure ATP sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP portal.|High|
 
 ## Domain synchronizer not assigned
 
@@ -117,4 +117,4 @@ The Azure ATP Health Center lets you know when there's a problem with any of you
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

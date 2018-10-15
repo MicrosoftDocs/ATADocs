@@ -2,12 +2,12 @@
 # required metadata
 
 title: Azure Advanced Threat Protection mutli-forest support | Microsoft Docs
-description: How to set up support for multiple Active Directory forests in Azure ATP.
+description: Support for multiple Active Directory forests in Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -28,12 +28,10 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Install Azure ATP - Step 9
+# Azure Advanced Threat Protection multi-forest support
 
-> [!div class="step-by-step"]
-> [« Step 8](install-atp-step8-samr.md)
 
-## Step 9.  Set up Azure Advanced Threat Protection multi-forest support
+## Multi-forest support set up 
 
 Azure ATP can support organizations with multiple forests which gives you the ability to easily monitor activity and profile users across forests from a single pane of glass. 
 
@@ -61,7 +59,7 @@ If you have forests on which no Azure ATP sensors are installed, Azure ATP can s
 -	If Azure ATP standalone sensors are installed on standalone machines, rather than directly on the domain controllers, make sure the machines are allowed to communicate with all of remote forest domain controllers using LDAP. 
 - The user you configure in the Azure ATP console under **Directory services** must be trusted in all the other forests and must have at least read only permission to perform LDAP queries of the domain controllers.
 
-- In order for Azure ATP to communicated with the ATP sensors and ATP standalone sensors, open the following ports on each maching on which the ATP sensor is installed:
+- In order for Azure ATP to communicate with the Azure ATP sensors and zure ATP standalone sensors, open the following ports on each maching on which the Azure ATP sensor is installed:
 
  
   |Protocol|Transport|Port|To/From|Direction|
@@ -82,19 +80,16 @@ When Azure ATP maps your forests, it uses a process that impacts the following:
 -	After the Azure ATP sensor is running, it queries the remote Active Directory forests and retrieves a list of users and machine data for profile creation.
 -	Every 5 minutes, each Azure ATP sensor queries one domain controller from each domain, from each forest, to map all the forests in the network.
 -	Each Azure ATP sensor maps the forests using the “trustedDomain” object in Active Directory, by logging in and checking the trust type.
--	You may also see ad-hoc traffic when the ATP sensor detects cross forest activity. When this occurs, the ATP sensors will send an LDAP query to the relevant domain controllers in order to retrieve entity information. 
+-	You may also see ad-hoc traffic when the Azure ATP sensor detects cross forest activity. When this occurs, the Azure ATP sensors will send an LDAP query to the relevant domain controllers in order to retrieve entity information. 
 
 ## Known limitations
 -	Interactive logons performed by users in one forest to access resources in another forest are not displayed in the Azure ATP dashboard.
 
 
-> [!div class="step-by-step"]
-> [« Step 8](install-atp-step8-samr.md)
-
 
 ## See Also
-- [ATP sizing tool](http://aka.ms/aatpsizingtool)
-- [ATP architecture](atp-architecture.md)
-- [Install ATP](install-atp-step1.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
+- [Azure ATP architecture](atp-architecture.md)
+- [Install Azure ATP](install-atp-step1.md)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
 

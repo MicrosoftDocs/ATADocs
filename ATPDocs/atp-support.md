@@ -4,10 +4,10 @@
 title: Azure ATP support | Microsoft Docs
 description: Describes the process for getting support help for Azure ATP.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/18/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -69,11 +69,11 @@ For additional support options, ask your Microsoft contact.
 
 #### System status page 
 
-To view system status for Azure ATP, visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to whether the Workspace management portal is up and active, if there are issues with detections and if the Sensor is able to send traffic to the cloud. You can access the **System status** from the Azure ATP menu bar.
+To view system status for Azure ATP, visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to whether the Azure ATP portal is up and active, if there are issues with detections and if the Sensor is able to send traffic to the cloud. You can access the **System status** from the Azure ATP menu bar.
 
 #### On-demand videos
 
-- Microsoft Ignite 2017 sessions for [Azure Advanced Threat Protection](https://myignite.microsoft.com/sessions/53476?source=sessions).
+- Microsoft Ignite 2018 sessions for [Azure Advanced Threat Protection](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
 
 Troubleshooting:
 
@@ -83,8 +83,8 @@ Troubleshooting:
 
 - If you have Windows Defender ATP deployed in your environment and you want to integrate it with Azure Advanced Threat Protection, see [Integrate with Windows Defender ATP](integrate-wd-atp.md).
 
-- For information regarding investigation of a suspicious activity, see the [Suspicious activity guide](suspicious-activity-guide.md).
+- For information regarding investigation of a security alert, see the [security alert guide](suspicious-activity-guide.md).
 
 ### Community resources
 
-We recommend the [for Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Advanced Threat Protection team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.
+We recommend the [Yammer group for Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Advanced Threat Protection team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.

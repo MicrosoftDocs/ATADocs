@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 08/12/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -51,7 +51,7 @@ In this scenario, assume that the Azure ATP standalone sensor is a member of the
 
 1.	Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**. 
 2.	Select **Members**.
-4.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
+3.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
 
 After adding the **Network Service** to the **Event Log Readers** group, reboot the domain controllers for the change to take effect.
 
@@ -69,7 +69,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
    
     1.	Select **Enabled**.
     2.	Under **Options**, click **Show**.
-    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (For example: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` *(For example: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -85,20 +85,14 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
    1.	Enter a name and description for the subscription. 
    2.	For **Destination Log**, confirm that **Forwarded Events** is selected. For Azure ATP to read the events, the destination log must be **Forwarded Events**. 
    3.	Select **Source computer initiated** and click **Select Computers Groups**.
-        1.	Click **Add Domain Computer**.
+        1.  Click **Add Domain Computer**.
         2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**. 
-       
-        ![Event Viewer image](media/wef3%20event%20viewer.png)
-   
-        
         3.	Click **OK**.
+        ![Event Viewer image](media/wef3%20event%20viewer.png)     
    4.	Click **Select Events**.
-
         1. Click **By log** and select **Security**.
         2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample:
-
         ![Query filter image](media/wef-4-query-filter.png)
-
    5.	Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
    6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP standalone sensor.
 
@@ -108,4 +102,4 @@ For more information, see: [Configure the computers to forward and collect event
 ## See Also
 
 - [Install Azure ATP](install-atp-step1.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

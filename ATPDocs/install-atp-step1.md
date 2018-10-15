@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection - Step 1 | Microsoft Docs
+title: Install Azure Advanced Threat Protection | Microsoft Docs
 description: First step to install Azure ATP involves creating the instance for your Azure ATP deployment.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/04/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,19 +29,19 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
-# Creating a workspace in the Azure ATP workspace management portal - Step 1
+# Creating your Azure ATP instance in the portal - Step 1
 
 > [!div class="step-by-step"]
 > [Step 2 »](install-atp-step2.md)
 
-This installation procedure provides instructions for creating and managing your Azure ATP instance. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
+This installation procedure provides instructions for creating and managing your Azure ATP instance or workspace. For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
 
-In Azure ATP, you'll have a single workspace or instance to enable you to manage multiple forests from a single pane of glass. 
+In Azure ATP, you'll have a single instance or workspace enabling you to manage multiple forests from a single pane of glass. 
 
 > [!NOTE]
 > Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia.
 
-## Step 1. Enter the management portal
+## Step 1. Enter the Azure ATP portal
 
 After you verified that your network meets the requirements of the sensor, you can proceed with the creation of the Azure ATP workspace.
 
@@ -57,7 +57,7 @@ After you verified that your network meets the requirements of the sensor, you c
 
 1. Click **Create workspace**.
 
-2. In the **Create new workspace** dialog, name your workspace, and select a **Geolocation** for your data center. One workspace can be set as primary. Setting a workspace as primary affects integrations - you can only integrate Azure ATP with Windows Defender ATP for your primary workspace. You can change which workspace is Primary later, but in order to do so, you have to remove any integrations already set for the current primary workspace.
+2. In the **Create new workspace** dialog, name your workspace, and select a **Geolocation** for your data center. Your workspace is **Primary** by default. 
  > [!NOTE]
  > After you select a Geolocation, you cannot modify it.
     ![Azure ATP workspace](media/create-workspace.png)
@@ -65,25 +65,25 @@ After you verified that your network meets the requirements of the sensor, you c
 3. You can click the **Manage Azure ATP user roles** link to directly access the [Azure Active Directory admin center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) and manage your role groups.
 
  > [!NOTE]
- > To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP workspace portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
+ > To successfully log in to Azure ATP, you have to log in with a user who was assigned the proper Azure ATP role to access the Azure ATP portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
-4. Click on the name of the new workspace to access the Azure ATP workspace portal for that workspace.
+4. Click on the name of your workspace to access the Azure ATP portal.
 
     ![Azure ATP workspaces](media/atp-workspaces.png)
 
-- Only the Primary workspace can be edited. If you want to delete the primary workspace, you must first turn off integrations and set the workspace to be not **Primary** before it is able to be deleted.
-- To edit a Primary workspace, you must first turn off existing integrations in the workspace.
+- Only the Primary workspace can be edited. If you want to delete your primary workspace, you must first turn off integrations before it is able to be deleted.
 
-- Data retention – deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
+- Data retention – previously deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
 
-> [!div class="step-by-step"]
-> [« Pre-install](configure-port-mirroring.md)
-> [Step 2 »](install-atp-step2.md)
+>[!div class="step-by-step"]
+[« Pre-install](atp-prerequisites.md)
+[Step 2 »](install-atp-step2.md)
+
 
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

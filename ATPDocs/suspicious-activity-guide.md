@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Azure ATP suspicious activity guide | Microsoft Docs
-d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
+title: Azure ATP security alert guide | Microsoft Docs
+d|Description: This article provides a list of the security alerts issued by Azure ATP and steps for remediation.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,9 +29,9 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
-# Azure Advanced Threat Protection suspicious activity guide
+# Azure Advanced Threat Protection security alert guide
 
-Following proper investigation, any suspicious activity can be classified as:
+Following proper investigation, all Azure ATP security alerts can be classified as:
 
 -   **True positive**: A malicious action detected by Azure ATP.
 
@@ -39,33 +39,9 @@ Following proper investigation, any suspicious activity can be classified as:
 
 -   **False positive**: A false alarm, meaning the activity didn’t happen.
 
-For more information on how to work with Azure ATP alerts, see [Working with suspicious activities](working-with-suspicious-activities.md).
+For more information on how to work with Azure ATP security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
 
 
-## Abnormal Sensitive Group Modification
-
-
-**Description**
-
-Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATP. The minimum period before an alert can be triggered is one month per each domain controller.
-
-For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
-
-
-The detection relies on [events audited on domain controllers](configure-event-collection.md).
-To make sure your domain controllers audit the needed events.
-
-**Investigation**
-
-1. Is the group modification legitimate? </br>Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive.
-
-2. If the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in Azure ATP to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
-
-**Remediation**
-
-Minimize the number of users who are authorized to modify sensitive groups.
-
-Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
 
 
 ## Brute force attack using LDAP simple bind
@@ -129,10 +105,10 @@ First check the description of the alert, to see which of the three detection ty
 1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Golden Ticket – Follow the instructions of the [Golden Ticket](#golden-ticket) suspicious activities.   
-    Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
+    Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 3.  Overpass-the-Hash – If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys
-    tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
+    tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Honeytoken activity
 
@@ -174,7 +150,7 @@ Was the hash used from a computer that the targeted user owns or regularly uses?
 expire. 
 
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See
-the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](http://aka.ms/PtH).
+the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Identity theft using Pass-the-Ticket attack
 
@@ -193,7 +169,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 1. If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire.  
 
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](http://aka.ms/PtH).
+tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Kerberos golden ticket<a name="golden-ticket"></a>
 
@@ -231,7 +207,7 @@ If you enabled Windows Defender ATP integration, click the Windows Defender ATP 
 
 
 Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](http://aka.ms/PtH).
+tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 
@@ -254,7 +230,7 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 **Remediation**
 
-To use DPAPI, an attacker needs domain admin rights. Implement [Pass the hash recommendations](http://aka.ms/PtH).
+To use DPAPI, an attacker needs domain admin rights. Implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Malicious replication of directory services
 
@@ -420,7 +396,7 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
 
-## Remote execution attempt
+## Remote code execution attempt
 
 **Description**
 
@@ -468,7 +444,26 @@ In this detection, an alert is triggered when many authentication failures using
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious domain controller promotion (potential DCShadow attack) - New
+## Suspicious communication over DNS - preview
+
+**Description**
+
+The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+
+**Investigation**
+> [!NOTE]
+> *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by Azure ATP but are known to or part of your organization can be closed. 
+
+
+1.	Some legitimate companies use DNS for regular communication. Check if the registered query domain belongs to a trusted source such as your antivirus provider. If the domain is known and trusted and DNS queries are permitted, the alert can be closed, and the domain can be [excluded](excluding-entities-from-detections.md) from future alerts. 
+2.	 If the registered query domain is not trusted, identify the process creating the request on the source machine. Use [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) to assist with this task.
+3.	Determine when the suspicious activity begin? Were any new programs deployed or installed (AV?) in the organization? Are there other alerts from the same time?
+4.	Click on the source computer to access its profile page. Check what happened around the time of the DNS query, searching for unusual activities, such as who was logged in, and which resources were used. If you already enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. Using Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+
+**Remediation**
+If the registered query domain is not trusted after your investigation, we recommend blocking the destination domain to avoid all future communication. 
+
+## Suspicious domain controller promotion (potential DCShadow attack)
 
 **Description**
 
@@ -490,7 +485,7 @@ In this detection, an alert is triggered when a machine in the network is trying
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
 If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
 
-4. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
+4. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Remediate**
 
@@ -506,8 +501,33 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat
 > [!NOTE]
 > Suspicious domain controller promotion (potential DCShadow attack) detections are supported by ATP sensors only. 
 
+## Suspicious modification of sensitive groups
 
-## Suspicious replication request (potential DCShadow attack) - New
+**Description**
+
+Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by Azure ATP. The minimum period before an alert can be triggered is one month per each domain controller.
+
+For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
+
+
+The detection relies on [events audited on domain controllers](configure-event-collection.md).
+To make sure your domain controllers audit the needed events.
+
+**Investigation**
+
+1. Is the group modification legitimate? </br>Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive.
+
+2. If the added object was a user account, check which actions the user account took after being added to the admin group. Go to the user’s page in Azure ATP to get more context. Were there any other suspicious activities associated with the account before or after the addition took place? Download the **Sensitive group modification** report to see what other modifications were made and by whom during the same time period.
+
+**Remediation**
+
+Minimize the number of users who are authorized to modify sensitive groups.
+
+Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
+
+
+
+## Suspicious replication request (potential DCShadow attack) 
 
 **Description** 
 
@@ -524,7 +544,7 @@ In this detection, an alert is triggered when a suspicious replication request i
    2.  Are the users supposed to access these resources?
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
 If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
-1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
+1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Remediation**
 
@@ -561,7 +581,7 @@ A suspicious service has been created on a domain controller in your organizatio
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
 
-## Suspicious VPN connection - New <a name="suspicious-vpn-detection"></a>
+## Suspicious VPN connection <a name="suspicious-vpn-detection"></a>
 
 **Description**
 
@@ -618,9 +638,9 @@ Patch all your machines, especially applying security updates.
 
 
 > [!NOTE]
-> To disable a suspicious activity, contact support.
+> To disable a security alert, contact support.
 
 
 ## See Also
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
