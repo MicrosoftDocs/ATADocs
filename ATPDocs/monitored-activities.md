@@ -103,7 +103,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 | --- |Failed Logon |Domain-account failed authentication attempt (via NTLM and Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
 
 
-## Monitored activities -Machine Account
+## Monitored machine activities: Machine Account
 
 |Monitored activity|Description|
 |---------------------|------------------|
