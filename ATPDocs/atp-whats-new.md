@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 10/21/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,13 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
+
+## Azure ATP release 2.5.1
+Released October 21st, 2018
+
+- You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-wd-atp#how-to-integrate-azure-atp-with-windows-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.50
 Released October 14th, 2018
