@@ -36,7 +36,7 @@
 ## [Azure ATP portal](workspace-portal.md)
 ## [Azure ATP reports](reports.md)
 ## [Understanding entity profiles](entity-profiles.md)
-## [Monitored-activities](monitored-activities.md)
+## [Monitored activities](monitored-activities.md)
 ## [Managing sensitive accounts](sensitive-accounts.md)
 ## [Excluding entities from detections](excluding-entities-from-detections.md)
 ## [Exclusions and honeytoken accounts](install-atp-step7.md)
