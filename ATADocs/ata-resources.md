@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics resources and readiness roadamp| Microsoft Docs
+title: Advanced Threat Analytics resources and readiness roadmap | Microsoft Docs
 description: Provides a list of ATA resources, videos, getting started, deployment and readiness roadmap links.
 keywords:
 author: rkarlin
@@ -29,7 +29,7 @@ ms.suite: ems
 *Applies to: Advanced Threat Analytics version 1.9*
 
 # ATA readiness roadmap 
-This document provides you a readiness roadmap that will assist you to get started with Advanced Threat Analytics.
+This article provides you a readiness roadmap that will assist you to get started with Advanced Threat Analytics.
 
 ## Understanding ATA
 
@@ -44,9 +44,9 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
 
 ## Deployment decisions
 
-ATA is comprised of the ATA Center, which you can install on a server, and ATA Gateways which you can install on separate computers or by using the Lightweight Gateway directly on your domain controllers. Before you get up and running, it's important to make the following deployment decisions:
+ATA is comprised of the ATA Center, which you can install on a server, and ATA Gateways, which you can install on separate computers or by using the Lightweight Gateway directly on your domain controllers. Before you get up and running, it's important to make the following deployment decisions:
 
-|CONFIGURATION|DECISION|
+|Configuration | Decision |
 |----|----|
 |Hardware type|Physical, virtual, Azure VM|
 |Workgroup or Domain|Workgroup, domain|
@@ -63,7 +63,7 @@ If you are using physical servers, you should plan capacity. You can get help fr
 
 ## Deploy ATA
 
-These resources will help you download and install the ATA Center, connect to Active Directory, download the ATA Gateway package, set up event collection and optionally integrate with your VPN and set up honeytoken accounts and exclusions.
+These resources will help you download and install the ATA Center, connect to Active Directory, download the ATA Gateway package, set up event collection, and optionally integrate with your VPN and set up honeytoken accounts and exclusions.
 
 [Download ATA](http://aka.ms/ataeval) - Before deploying ATA, if you haven't made the decision to purchase ATA, you can download the evaluation version. 
 
@@ -83,7 +83,7 @@ The basic necessary settings in ATA are configured as part of the installation w
 
 After ATA is up and running, you will be able to view suspicious activities that are detected in the Attack timeline. This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can also see the severity assigned to each activity. Investigate each suspicious activity by drilling down into the entities (computers, devices, users) to open their profile pages that provide more information. These resources will help you work with ATA's suspicious activities:
 
-[ATA suspicious activity playbook](http://aka.ms/ataplaybook) - This article walks you through credential theft attack techniques using readily available research tools on the Internet. At each point of the attack, you can see how ATA helps you gain visibility into these threats.
+[ATA suspicious activity playbook](http://aka.ms/ataplaybook) - This article walks you through credential theft attack techniques using readily available research tools on the internet. At each point of the attack, you can see how ATA helps you gain visibility into these threats.
 
 [ATA suspicious activity guide](suspicious-activity-guide.md)
 
