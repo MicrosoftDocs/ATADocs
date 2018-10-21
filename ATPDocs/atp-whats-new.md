@@ -34,7 +34,7 @@ ms.suite: ems
 ## Azure ATP release 2.5.1
 Released October 21st, 2018
 
-- You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-wd-atp#how-to-integrate-azure-atp-with-windows-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
+- You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
