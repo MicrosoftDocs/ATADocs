@@ -63,7 +63,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Account Smartcard Required Changed  |Account changes to require users to log on to a device using a smart card.|
 |Account Supported Encryption Types Changed |Kerberos supported encryption types were changed (types: Des, AES 129, AES 256)|
 |Group Membership Changed  |User was added/removed, to/from a group, by another user or by themselves.|
-|Account UpnName Changed  |User's principle name was changed.|
+|Account Upn Name Changed  |User's principle name was changed.|
 
 ## Monitored user activities: AD service principal operations
 
@@ -103,7 +103,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 | --- |Failed Logon |Domain-account failed authentication attempt (via NTLM and Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
 
 
-## Monitored machine activities: Machine Account
+## Monitored machine activities: Machine account
 
 |Monitored activity|Description|
 |---------------------|------------------|
