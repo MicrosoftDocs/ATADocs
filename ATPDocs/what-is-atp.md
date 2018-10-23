@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,53 +31,69 @@ ms.suite: ems
 # What is Azure Advanced Threat Protection?
 Azure Advanced Threat Protection (ATP) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. 
 Azure ATP enables SecOp analysts and security professionals struggling to detect advanced attacks in hybrid environments to:  
-- Monitor users, entity behavior and activities with learning-based analytics  
+- Monitor users, entity behavior, and activities with learning-based analytics  
 - Protect user identities and credentials stored in Active Directory  
 - Identify and investigate suspicious user activities and advanced attacks throughout the kill chain 
 - Provide clear incident information on a simple timeline for fast triage 
  
 ## Monitor and profile user behavior and activities  
-Azure ATP monitors and analyzes user activities and information across your network, such as permissions and group membership, creating a behavioral baseline for each user. Azure ATP then identifies anomalies with adaptive built-in intelligence, giving you insights into suspicious activities and events, revealing the advanced threats, compromised users and insider threats facing your organization. Azure ATP’s proprietary sensors monitor organizational domain controllers, providing a comprehensive view for all user activities from every device. 
+Azure ATP monitors and analyzes user activities and information across your network, such as permissions and group membership, creating a behavioral baseline for each user. Azure ATP then identifies anomalies with adaptive built-in intelligence, giving you insights into suspicious activities and events, revealing the advanced threats, compromised users, and insider threats facing your organization. Azure ATP’s proprietary sensors monitor organizational domain controllers, providing a comprehensive view for all user activities from every device. 
  
 ## Protect user identities and reduce the attack surface   
-Azure ATP provides you invaluable insights on identity configurations and suggested security best-practices. Through security reports and user profile analytics, Azure ATP helps dramatically reduce your organizational attack surface, making it harder to compromise user credentials and advance an attack. Azure ATP’s visual Lateral Movement Paths help you quickly understand exactly how an attacker can move laterally inside your organization to compromise sensitive accounts and assists in preventing those risks in advance. Additional,Azure ATP security reports help you identify users and devices that authenticate using clear-text passwords and provide additional insights to improve your organizational security posture and policies.  
+Azure ATP provides you invaluable insights on identity configurations and suggested security best-practices. Through security reports and user profile analytics, Azure ATP helps dramatically reduce your organizational attack surface, making it harder to compromise user credentials, and advance an attack. Azure ATP’s visual Lateral Movement Paths help you quickly understand exactly how an attacker can move laterally inside your organization to compromise sensitive accounts and assists in preventing those risks in advance. Azure ATP security reports help you identify users and devices that authenticate using clear-text passwords and provide additional insights to improve your organizational security posture and policies.  
  
 ## Identify suspicious activities and advanced attacks across the attack kill-chain 
-Typically, attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain: 
+Typically, attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain: 
 ### Reconnaissance 
-Identify rogue users and attackers’ attempts to gain information about user names, users’ group membership, IP addresses assigned to devices, resources and more - using a variety of methods.  
+Identify rogue users and attackers’ attempts to gain information. Attackers are searching for information bout user names, users’ group membership, IP addresses assigned to devices, resources, and more,  using a variety of methods.  
 ### Compromised users
-Identify attempts to compromise user credentials through brute force attacks, failed authentications, user group membership changes, and additional methods.  
+Identify attempts to compromise user credentials using brute force attacks, failed authentications, user group membership changes, and other methods.  
 
 ### Lateral movements
 Detect attempts to move laterally inside the network to gain further control of sensitive users, utilizing methods such as Pass the Ticket, Pass the Hash, Overpass the Hash and more.  
 
 ### Domain dominance
-Highlighting attacker behavior if domain dominance is achieved, through remote code execution on the domain controller and methods such as DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.   
+Highlighting attacker behavior if domain dominance is achieved, through remote code execution on the domain controller, and methods such as DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.   
 
 ## Investigate alerts and user activities  
-Azure ATP is designed to reduce general alert noise, providing only relevant and important security alerts in a simple, real-time organizational attack timeline. The Azure ATP attack timeline view allows you to easily stay focused on what matters, leveraging the intelligence of smart analytics. Security professionals using Azure ATP can quickly investigate threats and gain insights across the organization for users, devices and network recourses. Seamless integration with Windows Defender ATP provides another layer of enhanced security by additional detection and protection against advanced persistent threats on the operating system.  
+Azure ATP is designed to reduce general alert noise, providing only relevant, important security alerts in a simple, real-time organizational attack timeline. The Azure ATP attack timeline view allows you to easily stay focused on what matters, leveraging the intelligence of smart analytics. Security professionals using Azure ATP can quickly investigate threats and gain insights across the organization for users, devices, and network recourses. Seamless integration with Windows Defender ATP provides another layer of enhanced security by additional detection and protection against advanced persistent threats on the operating system.  
 
 ## Additional resources for Azure ATP  
-Start a free trial:  [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
+### Start a free trial  
+[https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
  
-Follow Azure ATP on Microsoft Tech Community  
+### Follow Azure ATP on Microsoft Tech Community  
 [https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection "Azure ATP on Microsoft Tech Community")
  
-Join the Azure ATP Yammer community [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer community")
+### Join the Azure ATP Yammer community 
+[https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Azure ATP Yammer community")
  
-Visit the Azure ATP product page  
+### Visit the Azure ATP product page  
 [https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/](https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/ "Azure ATP product page")
 
-For more information on Azure ATP architecture, see [Azure ATP Architecture](atp-architecture.md).
+### Learn more about Azure ATP architecture
+ [Azure ATP Architecture](atp-architecture.md)
  
+## Microsoft Ignite
+Microsoft Ignite 2018 featured multiple sessions focused on [Azure Advanced Threat Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Advanced%2520Threat%2520Protection&t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D). Sessions were recorded, so if you missed the event, we recommend you watch here:
+
+### Azure ATP 
+[BRK3117](https://myignite.techcommunity.microsoft.com/sessions/65780?source=sessions#ignite-html-anchor) - SecOp and incident response with Azure ATP - watch the [YouTube video](https://www.youtube.com/watch?v=QXZIfH0wP3Q)
+
+### Azure ATP and Azure AD IP (Active Directory Identity Protection)
+[BRK3237](https://myignite.techcommunity.microsoft.com/sessions/64523?source=sessions#ignite-html-anchor) - Securing your hybrid cloud environment with Azure AD Identity Protection and Azure ATP  - watch the [YouTube video](https://www.youtube.com/watch?v=X7CXaok6GbM)
+
+[BRK2157](https://myignite.techcommunity.microsoft.com/sessions/65776?source=sessions#ignite-html-anchor) - Accelerate deployment and adoption of Microsoft Information Protection solutions - watch the [YouTube video](https://www.youtube.com/watch?v=Foh-XDVbPog)
+
+For a summary of Azure ATP announcements that were made at Ignite 2018, see the blog post -	[Azure Advanced Threat Protection Expands Integrations, Detections, and Forensic Capabilities](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Azure-Advanced-Threat-Protection-Expands-Integrations-Detections/ba-p/262409).
+
 ## What's next? 
 
-We recommend deploying Azure ATP in 3 phases:  
+We recommend deploying Azure ATP in three phases:  
 
 ### Phase 1
 
-1. Setup Azure ATP to protect your primary environments. Azure ATP's fast deployment model enables you to start protecting your organization today. [Install Azure ATP](install-atp-step1.md)  
+1. Set up Azure ATP to protect your primary environments. Azure ATP's fast deployment model enables you to start protecting your organization today. [Install Azure ATP](install-atp-step1.md)  
 2. Set [sensitive accounts](sensitive-accounts.md) and [honeytoken accounts](install-atp-step7.md).   
 3. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).  
 
