@@ -43,7 +43,7 @@ To receive notifications to a specific email address, set the following paramete
 2. Click **Notifications**.
 3. Under **Mail notifications**, specify which notifications should be sent via email - they can be sent for new alerts (suspicious activities) and new health issues. 
  
- >	[!NOTE]
+ > [!NOTE]
  > Email alerts for suspicious activities are only sent when the suspicious activity is created.
  
 4. Click **Save**.
