@@ -39,7 +39,8 @@ In the case of a valid threat, or **true positive**, Azure ATP enables you to di
 The information monitored by Azure ATP is presented in the form of activities. Azure ATP currently supports monitoring of the following activity types:
 
 > [!NOTE] 
-> This article is relevant for all Azure ATP sensor types.
+> - This article is relevant for all Azure ATP sensor types.
+>- Azure ATP monitored activities appear on both the user and machine profile page. 
  
 
 ## Monitored user activities: User account AD attribute changes
@@ -65,7 +66,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Group Membership Changed  |User was added/removed, to/from a group, by another user or by themselves.|
 |Account Upn Name Changed  |User's principle name was changed.|
 
-## Monitored user activities: AD service principal operations
+## Monitored user activities: AD security principal operations
 
 |Monitored activity|Description|
 |---------------------|------------------|
@@ -74,7 +75,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Security Principal Display Name Changed   |Account display name was changed from X to Y.|
 |Security Principal Name Changed  |Account name attribute was changed.|
 |Security Principal Path Changed  |Account Distinguished name was changed from X to Y.|
-|Security Principal Sam Name Changed |SAM name changed (SAM is The logon name used to support clients and servers running earlier versions of the operating system).|
+|Security Principal Sam Name Changed |SAM name changed (SAM is the logon name used to support clients and servers running earlier versions of the operating system).|
 
 ## Monitored user activities: Domain controller based user operations
 
