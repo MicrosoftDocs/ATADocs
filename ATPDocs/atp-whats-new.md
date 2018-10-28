@@ -35,11 +35,11 @@ ms.suite: ems
 Released October 8th, 2018
 
 
-- **Feature enhancement: Set report scheduling**
-<br>You can now set a specific hour to schedule your Azure ATP reports using the [reports](reports.md#) function. 
-
 - **Security Alert enhancement: Remote Code Execution Attempt**<br>
 Azure ATP’s [Remote Code Execution Attempt security alert](suspicious-activity-guide.md) now includes monitoring for suspicious attempts to execute remote PowerShell code on your domain controllers. Remote PowerShell is a common method for executing valid administrative commands, but is often used maliciously in an attempt to run scripts on remote endpoints. 
+
+- **Feature enhancement: Set report scheduling**
+<br>You can now set a specific hour to schedule your Azure ATP reports using the [reports](reports.md#) function. 
 
 - **Configuration addition: Tenant role based access control (RBAC)**
 <br>Configure the security roles of your tenant in Azure Active Directory (AAD) Admin Center directly from the new Admin link in the Azure ATP Portal. 
