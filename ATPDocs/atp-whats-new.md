@@ -47,7 +47,7 @@ Azure ATP’s [Remote Code Execution Attempt security alert](suspicious-activity
 - **Revised documentation structure and content**
 <br>Recent content changes to Azure ATP documentation include new articles providing a complete list of all Azure ATP monitored activities, activity filtering instructions, as well as a redesign of the documentation site structure for improved usability:
   - [Azure ATP monitored activities](monitored-activities.md) 
-  - [Azure ATP activity filtering](activity-filtering.md) 
+  - [Azure ATP activity filtering](atp-activity-search.md) 
   - [Azure ATP documentation](https://docs.microsoft.com/azure-advanced-threat-protection/)  
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
