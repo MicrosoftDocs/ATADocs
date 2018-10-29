@@ -75,10 +75,9 @@ After you verified that your network meets the requirements of the sensor, you c
 
 - Data retention – previously deleted workspaces do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
-
->[!div class="step-by-step"]
-[« Pre-install](atp-prerequisites.md)
-[Step 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Pre-install](atp-prerequisites.md)
+> [Step 2 »](install-atp-step2.md)
 
 
 

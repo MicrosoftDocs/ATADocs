@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/10/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -420,6 +420,9 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
 
+> [!NOTE]
+> Remote code execution attempt alerts are supported by ATP sensors only. 
+
 ## Suspicious authentication failures
 
 **Description**
@@ -499,7 +502,7 @@ For more information, see [Grant Active Directory Domain Services permissions fo
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
  
 > [!NOTE]
-> Suspicious domain controller promotion (potential DCShadow attack) detections are supported by ATP sensors only. 
+> Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by ATP sensors only. 
 
 ## Suspicious modification of sensitive groups
 
@@ -555,7 +558,7 @@ Check who in your organization has the following permissions:
 To do this, you can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 > [!NOTE]
-> Suspicious replication request (potential DCShadow attack) detections are supported by ATP sensors only. 
+> Suspicious replication request (potential DCShadow attack) alerts are supported by ATP sensors only. 
 
 
 ## Suspicious service creation

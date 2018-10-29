@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/4/2018
+ms.date: 10/29/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,11 +29,11 @@ ms.suite: ems
 
 # Azure ATP frequently asked questions
 This article provides a list of frequently asked questions and answers about Azure ATP divided into the following catergories: 
-- [What is Azure ATP](#What-is-Azure-ATP)
-- [Licensing and privacy](#Licensing-and-privacy)
-- [Deployment](#Deployment)
-- [Operations](#Operations)
-- [Troubleshooting](#Troubleshooting)
+- [What is Azure ATP](#what-is-azure-atp)
+- [Licensing and privacy](#licensing-and-privacy)
+- [Deployment](#deployment)
+- [Operations](#operation)
+- [Troubleshooting](#troubleshooting)
 
 ## What is Azure ATP?
 
@@ -65,7 +65,7 @@ Yes. Since computer accounts (as well as any other entities) can be used to perf
 ## Licensing and privacy 
 ### Where can I get a license for Azure Advanced Threat Protection (ATP)?
 
-You can acquire a license for Enterprise Mobility + Security 5 (EMS E5) directly via the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.  
+Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5) and as a standalone license. You can acquire a license directly from the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
 
 ### Is this going to be a part of Azure Active Directory or on-premises Active Directory?
 This solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
