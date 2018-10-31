@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/21/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,27 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP 
+
+### Azure ATP release 2.5.2
+Released October 8th, 2018
+
+
+- **Security Alert enhancement: Remote Code Execution Attempt**<br>
+Azure ATP’s [Remote Code Execution Attempt security alert](suspicious-activity-guide.md) now includes monitoring for suspicious attempts to execute remote PowerShell code on your domain controllers. Remote PowerShell is a common method for executing valid administrative commands, but is often used maliciously in an attempt to run scripts on remote endpoints. 
+
+- **Feature enhancement: Set report scheduling**
+<br>You can now set a specific hour to schedule your Azure ATP reports using the [reports](reports.md#) function. 
+
+- **Configuration addition: Tenant role based access control (RBAC)**
+<br>Configure the security roles of your tenant in Azure Active Directory (AAD) Admin Center directly from the new Admin link in the Azure ATP Portal. 
+
+- **Revised documentation structure and content**
+<br>Recent content changes to Azure ATP documentation include new articles providing a complete list of all Azure ATP monitored activities, activity filtering instructions, as well as a redesign of the documentation site structure for improved usability:
+  - [Azure ATP monitored activities](monitored-activities.md) 
+  - [Azure ATP activity filtering](atp-activities-search.md) 
+  - [Azure ATP documentation](https://docs.microsoft.com/azure-advanced-threat-protection/)  
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.5.1
 Released October 21st, 2018

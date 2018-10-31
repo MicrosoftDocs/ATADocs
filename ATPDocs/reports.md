@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,11 +32,11 @@ ms.suite: ems
 
 # Azure ATP Reports
 
-The Azure ATP reports section in the Azure ATP portal enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
+The Azure ATP reports section in the Azure ATP portal enables you to schedule or immediately generate and download reports that provide you with system status information. From the reports feature, you can create reports about system health and suspicious activities detected in your environment.
 
 
 To access the reports page, click the report icon in the menu bar: ![report icon](./media/atp-report-icon.png).
-The reports that are available are: 
+Available reports are: 
 
 - **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists Azure ATP health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues. 
 
@@ -62,7 +62,7 @@ To set a scheduled report:
    ![Schedule reports](./media/atp-sched-reports.png)
  
  > [!NOTE]
- > The daily reports are designed to be sent shortly after midnight, UTC.
+ > By default, daily reports are designed to be sent shortly after midnight, UTC. Pick your own time using the time selection option. 
 
 2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 
