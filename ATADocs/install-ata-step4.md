@@ -66,7 +66,7 @@ Perform the following steps on the ATA Gateway server.
     > [!NOTE] 
     > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of ATA in a small lab test environment in which you don't need as much room for data storage. For production environments, it is highly recommended to work with ATA's [capacity planning](ata-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
-4.  Under **Configure the Gateway**, enter the following information based on your environment:
+5.  Under **Configure the Gateway**, enter the following information based on your environment:
 
     ![ATA gateway configuration image](media/ata-gw-configure.png)
 
@@ -77,7 +77,7 @@ Perform the following steps on the ATA Gateway server.
 
    - Installation Path: This is the location where the ATA Gateway is installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Leave the default value.
     
-5. Click **Install**. The following components are installed and configured during the installation of the ATA Gateway:
+6. Click **Install**. The following components are installed and configured during the installation of the ATA Gateway:
 
     -   KB 3047154 (for Windows Server 2012 R2 only)
 
@@ -89,7 +89,7 @@ Perform the following steps on the ATA Gateway server.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Custom Performance Monitor data collection set
 
-6.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
+7.  After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
 
 
 > [!div class="step-by-step"]

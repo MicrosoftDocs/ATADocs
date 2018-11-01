@@ -53,7 +53,7 @@ Follow these steps to update to ATA version 1.5:
 
 1.  Download ATA v1.5 from VLSC or MSDN.
       > [!NOTE]
-         You can also use the updated full version of ATA to perform the update to version 1.5.
+      > You can also use the updated full version of ATA to perform the update to version 1.5.
 
 
 2.  Update the ATA Center

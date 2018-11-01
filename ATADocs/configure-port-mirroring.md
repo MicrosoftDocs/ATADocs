@@ -70,9 +70,10 @@ Your domain controllers and ATA Gateways can be either physical or virtual. The 
 **If you are working with virtualization clusters:**
 
 -   For each domain controller running on the virtualization cluster in a virtual machine with the ATA Gateway,  configure affinity between the domain controller and the ATA Gateway. This way when the domain controller moves to another host in the cluster the ATA Gateway follows it. This works well when there are a few domain controllers.
+
 > [!NOTE]
 > If your environment supports Virtual to Virtual on different hosts (RSPAN) you do not need to worry about affinity.
-> 
+
 -   To make sure the ATA Gateways are properly sized to handle monitoring all of the DCs by themselves, try this option: Install a virtual machine on each virtualization host and install an ATA Gateway on each host. Configure each ATA Gateway to monitor all of the domain controllers  that run on the cluster. This way, any host the domain controllers run on is monitored.
 
 After configuring port mirroring, validate that port mirroring is working before installing the ATA Gateway.

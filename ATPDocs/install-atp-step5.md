@@ -34,6 +34,7 @@ ms.suite: ems
 
 > [!div class="step-by-step"]
 > [« Step 4](install-atp-step4.md)
+> [Step 6 »](install-atp-step6-vpn.md)
 
 
 
@@ -67,7 +68,7 @@ After the Azure ATP sensor is installed, perform the following steps to configur
    It is recommended that you disable any remote site Azure ATP sensor(s) from being domain synchronizer candidates.
    If your domain controller is read-only, do not set it as a domain synchronizer candidate. For more information about Azure ATP domain synchronization, see [Azure ATP architecture](atp-architecture.md#azure-atp-sensor-features)
   
-4. Click **Save**.
+3. Click **Save**.
 
 
 ## Validate installations
@@ -86,6 +87,7 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 
 > [!div class="step-by-step"]
 > [« Step 4](install-atp-step4.md)
+> [Step 6 »](install-atp-step6-vpn.md)
 
 
 
