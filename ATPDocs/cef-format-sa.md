@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,23 +32,28 @@ ms.suite: ems
 
 # Azure ATP SIEM log reference
 
-Azure ATP can forward suspicious activity and monitoring alert events to your SIEM. Suspicious activity events are in the CEF format. This reference article provides samples of the suspicious activity logs sent to your SIEM.
+Azure ATP can forward security alert and monitoring alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
 
-## Sample Azure ATP suspicious activities in CEF format
+## Sample Azure ATP security alerts in CEF format
 The following fields and their values are forwarded to your SIEM:
 
--	start – start time of the alert
--	suser – account (usually the user account) involved in the alert
--	shost – source machine of the alert
--	outcome – when relevant, a success or failure of the suspicious activity in the alert  
--	msg – description of the alert
--	cnt – for alerts that have a count of the number of times that activity happened (for example, brute force has an amount of guessed passwords)
--	app – protocol used in this alert
--	externalId – event type ID Azure ATP writes to the event log that corresponds to each type of alert
--	cs#label & cs# – customer strings allowed by CEF, where the cs#label is the name of the new field and cs# is the value, for example:
-cs1Label=url cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+|Detail|Explanation|
+|---------|---------------|
+|start|start time of the alert|
+|suser|account (usually the user account) involved in the alert|
+|shost|account (usually the user account) involved in the alert|
+|outcome|when relevant, a success or failure of the suspicious activity in the alert|
+|msg|description of the alert|
+|cnt|for alerts that have a count of the number of times that activity happened (for example, brute force has an amount of guessed passwords)|
+|app |protocol used in this alert|
+|externalId|event type ID Azure ATP writes to the event log that corresponds to each type of alert|
+|cs#label|customer strings allowed by CEF, where cs#label is the name of the new field |
+|cs#|customer strings allowed by CEF, where cs# is the value.|
+|
 
-    In this example, cs1 is a field that has a URL to the alert.
+For example: cs1Label=url
+cs1=https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+<br> In this example, the cs1 field is the alert URL. 
 
 > [!NOTE]
 > If you plan to create automation or scripts for Azure ATP SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent.  
