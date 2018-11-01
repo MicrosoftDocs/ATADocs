@@ -65,6 +65,9 @@ Azure ATP can notify you when it detects suspicious activities and issues securi
 
 6. You can select which events to send to your Syslog server. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
 
+> [!NOTE]
+> If you plan to create automation or scripts for Azure ATP SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [Azure ATP SIEM log reference](cef-format-sa.md). 
+
 
 ## See Also
 
