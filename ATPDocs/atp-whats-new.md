@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,8 +31,20 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+
+### Azure ATP release 2.5.3
+Released November 4th, 2018
+
+- **Security Alert enhancement: Suspicious Authentication Failure**<br>
+Azure ATP’s [Suspicious Authentication Failure security alert](suspicious-activity-guide.md) now includes monitoring for detection of password spray brute force attacks.
+In a typical **password spray** attack, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). When the initial password spray is not successful, they'll try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. 
+
+- **Feature enhancement: Send a test Syslog message**<br>	New ability to send a test Syslog message during the SIEM setup process. See [Integrate with Syslog](setting-syslog.md), to learn more. 
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 ### Azure ATP release 2.5.2
-Released October 8th, 2018
+Released October 28th, 2018
 
 
 - **Security Alert enhancement: Remote Code Execution Attempt**<br>
