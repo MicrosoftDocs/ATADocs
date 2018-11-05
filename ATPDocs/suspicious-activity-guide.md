@@ -51,7 +51,7 @@ For more information on how to work with Azure ATP security alerts, see [Working
 >[!NOTE]
 > The main difference between **Suspicious authentication failures** and this detection is that in this detection, Azure ATP can determine whether different passwords were in use.
 
-In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
+In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can sign in using that account.
 
 In this detection, an alert is triggered when Azure ATP detects a massive number of simple bind authentications. This can be either *horizontally* with a small set of passwords across many users; or *vertically”* with a large set of passwords on just a few users; or any combination of these two options.
 
@@ -87,18 +87,18 @@ First check the description of the alert, to see which of the three detection ty
 
 1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
 
-2.	Golden Ticket – In the excel spreadsheet, go to the network activity tab. You will see that the relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** contains stronger encryption methods.
+2.	Golden Ticket – In the excel spreadsheet, open the network activity tab. The relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** has stronger encryption methods.
 
-  a. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
+  1. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
   
-  b. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common. For example, all of your marketing personnel use a specific app that might be causing the alert to be triggered. There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
+  2. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common. For example, all of your marketing personnel use a specific app that might be causing the alert to be triggered. There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
   
 
 
 3.	Overpass-the-Hash – In the excel spreadsheet, go to the network activity tab. You will see that the relevant downgraded field is **Encrypted Timestamp Encryption Type** and **Source Computer Supported Encryption Types** contains stronger encryption methods.
 
-  a. There are cases in which this alert might be triggered when users log in using smartcards if the smartcard configuration was changed recently. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
-  b. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
+  1. There are cases in which this alert might be triggered when users sign in using smartcards if the smartcard configuration was changed recently. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
+  2. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
 
 **Remediation**
 
@@ -118,7 +118,7 @@ First check the description of the alert, to see which of the three detection ty
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused, while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Install Azure ATP - Step 7](install-atp-step7.md).
+For more information on honey token accounts, see [Install Azure ATP - Step 7](install-atp-step7.md).
 
 **Investigation**
 
@@ -142,7 +142,7 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user’
 
 **Investigation**
 
-Was the hash used from a computer that the targeted user owns or regularly uses? If yes, this is a false positive. If not, it is probably a true positive.
+Investigate if the hash was used from a computer that the targeted user owns or regularly uses? If yes, this is a false positive, if not, it is probably a true positive.
 
 **Remediation**
 
@@ -189,7 +189,7 @@ In this detection, an alert is triggered when a Kerberos ticket granting ticket 
 
 - **Nonexistent account - New** 
    1.	Ask the following questions:
-         - Is the user is a known and valid domain user? If yes, then Close the alert (it was a false positive).
+         - Is the user a known and valid domain user? If yes, then Close the alert (it was a false positive).
          - Has the user been recently added? If yes, then Close the alert, the change may not have been synchronized yet.
          - Has the user been recently deleted from AD? If yes, then Close the alert.
    2.	If the answer to the above questions is no, assume this is malicious.
@@ -198,10 +198,10 @@ In this detection, an alert is triggered when a Kerberos ticket granting ticket 
 
 2.	Are all the users who were logged into the computer supposed to be logged into? What are their privileges? 
 
-3.	Are those users supposed to have access to these resources?<br>
-If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![WD badge](./media/wd-badge.png).
+3.	Are the users who were logged in supposed to have access to these resources?<br>
+If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge.
  
- 4. To further investigate the machine, in Windows Defender ATP, check which processes and alerts occurred around the time of the alert.
+ 4. To further investigate the machine, check which processes and alerts occurred around the time of the alert in Windows Defender ATP.
 
 **Remediation**
 
@@ -250,7 +250,7 @@ In this detection, an alert is triggered when a replication request is initiated
 2.	Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect or network performance monitoring devices. If yes, **Close and exclude** the suspicious activity.
 3. Is the IP from which the replication request was sent a NAT or a proxy? If yes, check if there is a new domain controller behind the device or if other suspicious activities have occurred from it. 
 
-4. Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
+4. Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert. 
 
 
 **Remediation**
@@ -269,7 +269,7 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepla
 
 **Description**
 
-Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC), a field in the Kerberos ticket that contains a user authorization data (in Active Directory this is group membership), granting attackers additional privileges.
+Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC). The PAC is a a field in the Kerberos ticket that contains user authorization data (in Active Directory this is group membership), granting attackers additional privileges.
 
 **Investigation**
 
@@ -332,7 +332,7 @@ In this detection, no alerts would be triggered in the first month after Azure A
 
 4. If yes and it should not do this anymore, **Close** the suspicious activity.
 
-5. If there’s information on the involved account: are such queries supposed to be made by that account or does that account normally log in to the source computer?
+5. If there’s information on the involved account: are such queries supposed to be made by that account or does that account normally sign in to the source computer?
 
  - If yes and the alert gets updated, **Suppress** the suspicious activity.
 
@@ -362,7 +362,7 @@ There are several query types in the DNS protocol. Azure ATP detects the AXFR (T
 
 2. Is the source machine running a security scanner? If yes, **Exclude the entities** in ATP, either directly with **Close and exclude** or via the **Exclusion** page (under **Configuration** – available for Azure ATP admins).
 
-3. If the answer to all the preceding questions is no, keep investigating focusing on the source computer. Click on the source computer to go to its profile page. Check what happened around the time of the request, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
+3. If the answer to all the preceding questions is no, keep investigating focusing on the source computer. Click on the source computer to go to its profile page. Check what happened around the time of the request, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert. 
 
 **Remediation**
 
@@ -423,25 +423,29 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 > [!NOTE]
 > Remote code execution attempt alerts are supported by ATP sensors only. 
 
-## Suspicious authentication failures
+## Suspicious authentication failures -enhanced
 
 **Description**
 
-In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
+In a brute-force attack, the attacker attempts to authenticate with multiple passwords on different accounts until a correct password is found or using one password in a large scale password spray that works for at least one account. Once found, the attacker logs in using the authenticated account.
 
-In this detection, an alert is triggered when many authentication failures using Kerberos or NTLM occurred, this can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options. The minimum period before an alert can be triggered is one week.
+In this detection, an alert is triggered when many authentication failures occur using Kerberos or NTLM or use of a password spray is detected. Using Kerberos or NTLM, this attack is typically either horizontal, using a small set of passwords across many users; or vertical with a large set of passwords on a few users; or any combination of the two. In a password spray, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. 
+
+**Learning period**
+The minimum period before this type of alert can be triggered is one week.
 
 **Investigation**
 
-1.	Click **Download details** to view the full information in an Excel spreadsheet. You can get the following information: 
+1.	Click **Download details** to view the full information in an Excel spreadsheet. The following information is available: 
    -	List of the attacked accounts
    -	List of guessed accounts in which login attempts ended with successful authentication
-   -	If the authentication attempts were performed using NTLM, you will see relevant event activities 
-   -	If the authentication attempts were performed using Kerberos, you will see relevant  network activities
+   -	If the authentication attempts were performed using NTLM, you'll see relevant event activities 
+   -	If the authentication attempts were performed using Kerberos, you'll see relevant network activities
+   -  If the authentication attempts used a password spray, you'll see relevant network activities
 
-2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert. 
+2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert. 
 
-3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server which the source machine tried to access, you should enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server** which the source machine tried to access. After you know which server sent the authentication validation, you should investigate the server by checking its events such as 4624 to better understand the authentication process. 
+3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server which the source machine tried to access, enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server** which the source machine tried to access. After you know which server sent the authentication validation, investigate the server by checking its events such as 4624 to better understand the authentication process. 
 
 **Remediation**
 
@@ -486,7 +490,7 @@ In this detection, an alert is triggered when a machine in the network is trying
    1. Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to promote a server to domain controller? (are they domain admins)?
    2. Are the users supposed to access these resources?
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
-If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
 
 4. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
@@ -546,7 +550,7 @@ In this detection, an alert is triggered when a suspicious replication request i
    1.  Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to preform replications (are they domain admins)?
    2.  Are the users supposed to access these resources?
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
-If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
 1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Remediation**
@@ -625,7 +629,7 @@ To determine whether this is a WannaCry attack, perform the following steps:
 
 2. If no attack tools are found, check if the source computer is running an application that implements its own NTLM or SMB stack.
 
-3. Click on the source computer to go to its profile page. Check what happened around the time of the alert, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![wd badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+3. Click on the source computer to go to its profile page. Check what happened around the time of the alert, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![wd badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
 
 
 
