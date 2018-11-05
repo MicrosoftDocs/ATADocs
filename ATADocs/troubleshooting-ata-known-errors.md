@@ -81,6 +81,7 @@ This section details possible errors in the deployments of ATA and the steps req
 
 
 ## ATA Gateway and Lightweight Gateway issues
+
 > [!div class="mx-tableFixed"]
 |Issue|Description|Resolution|
 |-------------|----------|---------|
