@@ -38,7 +38,6 @@ This section details possible errors in the deployments of ATA and the steps req
 ## ATA Gateway and Lightweight Gateway errors
 
 > [!div class="mx-tableFixed"]
-
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: A local error occurred|The ATA Gateway failed to authenticate against the domain controller.|1. Confirm that the domain controller’s DNS record is configured properly in the DNS server. <br>2. Verify that the time of the ATA Gateway is synchronized with the time of the domain controller.|
@@ -64,9 +63,7 @@ This section details possible errors in the deployments of ATA and the steps req
 |System.Net.Sockets.SocketException: An attempt was made to access a socket in a way forbidden by its access permissions|Another application is using port 514 on the ATA Gateway|Use `netstat -o` to establish which process is using that port.|
  
 ## Deployment errors
-
 > [!div class="mx-tableFixed"]
-
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |.Net Framework 4.6.1 installation fails with error 0x800713ec|The pre-requisites for .Net Framework 4.6.1 are not installed on the server. |Before installing ATA, verify that the windows updates [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) and [KB2919355](https://support.microsoft.com/kb/2919355) are installed on the server.|
@@ -77,18 +74,14 @@ This section details possible errors in the deployments of ATA and the steps req
 
 
 ## ATA Center errors
-
 > [!div class="mx-tableFixed"]
-
 |Error|Description|Resolution|
 |-------------|----------|---------|
 |System.Security.Cryptography.CryptographicException: Access denied.|The ATA Center failed to use the issued certificate for decryption. This most likely happened due to use of a certificate with KeySpec (KeyNumber) set to Signature (AT\_SIGNATURE) which is not supported for decryption, instead of using KeyExchange (AT\_KEYEXCHANGE).|1.    Stop the ATA Center service. <br></br>2.     Delete the ATA Center certificate from the center’s certificate store. (Before deleting, make sure you have the certificate backed up with the private key in a PFX file.) <br></br>3.    Open an elevated command prompt and run      certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Start the ATA Center service. <br></br>5.     Verify everything now works as expected.|
 
 
 ## ATA Gateway and Lightweight Gateway issues
-
 > [!div class="mx-tableFixed"]
-
 |Issue|Description|Resolution|
 |-------------|----------|---------|
 |No traffic received from domain controller, but monitoring alerts are observed|	No traffic was received from a domain controller using port mirroring through an ATA Gateway|On the ATA Gateway capture NIC, disable these features in **Advanced Settings**:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|
