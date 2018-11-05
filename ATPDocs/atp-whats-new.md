@@ -32,7 +32,7 @@ ms.suite: ems
 # What's new in Azure ATP 
 
 
-### Azure ATP release 2.5.3
+## Azure ATP release 2.5.3
 Released November 4th, 2018
 
 - **Security Alert enhancement: Suspicious Authentication Failure**<br>
@@ -43,7 +43,7 @@ In a typical **password spray** attack, after successfully enumerating a list of
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
-### Azure ATP release 2.5.2
+## Azure ATP release 2.5.2
 Released October 28th, 2018
 
 
