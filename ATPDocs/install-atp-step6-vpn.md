@@ -61,7 +61,7 @@ Perform the following steps on your RRAS server.
 
     ![RADIUS setup](./media/radius-setup.png)
 
-4.	In the **Add RADIUS Server** window, type the **Server name** of the closest Azure ATP standalone sensor or Azure ATP sensor. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You need to fill it out later in your Azure ATP Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
+4.	In the **Add RADIUS Server** window, type the **Server name** of the closest Azure ATP sensor (which has network connectivity). For high availability you can add additional Azure ATP sensors as RADIUS Servers. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You need to fill it out later in your Azure ATP Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
  
      ![VPN setup](./media/vpn-set-accounting.png)
      

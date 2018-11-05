@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Setting email notification settings in Azure Advanced Threat Protection | Microsoft Docs
+title: Setting syslog settings in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to have Azure ATP notify you (by email or by Azure ATP event forwarding) when it detects suspicious activities 
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
