@@ -39,7 +39,7 @@ ms.suite: ems
 
 ## Step 5. Configure the ATA Gateway settings
 After the ATA Gateway was installed, perform the following steps to configure the settings for the ATA Gateway.
-
+<!-- Inconsistent format -->
 1.  In the ATA Console, go to **Configuration** and, under **System**, select **Gateways**.
    
      ![Configure gateway settings image](media/ata-gw-config-1.png)
