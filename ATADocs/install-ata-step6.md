@@ -52,6 +52,7 @@ For ATA to be able to consume data from a Syslog server, you need to perform the
 
 > [!NOTE]
 > ATA only listens on IPv4 and not IPv6. 
+
 -   Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
 
 > [!IMPORTANT]
