@@ -36,19 +36,19 @@ Azure ATP occasionally has engineering or feature limitations that may limit or 
 For Azure ATP known issues with known workarounds, see [Troubleshooting Azure ATP Known Issues](troubleshooting-atp-known-issues.md). To check the status of your Azure ATP tenant, visit the [Azure ATP Health Center](atp-health-center.md). 
 
 ## WinRM not supported using Windows Server 2016
-
+> [!div class="mx-tableFixed"]  
 |Issue|Status|
 |----|----|
 |WinRM does not currently support Windows Server 2016. The related detection and resulting alerts (Remote Code Execution Attempts) are not available for machines running Windows Server 2016.|Engineering is currently working on addressing this issue and adding Windows Server 2016 support.|
 
 ## AD groups with more than 1000 members have limited detail sync
-
+> [!div class="mx-tableFixed"]  
 |Issue|Status|
 |----|----|
 |Azure ATP does not support entity detail sync in AD groups with more than 1000 members per group. When investigating entities in groups with more than 1000 members, some entities may fail to sync or display details.|Engineering limitation. No known resolution.|
 
 ## Report downloads cannot contain more than 100,000 entries
-
+> [!div class="mx-tableFixed"]  
 |Issue|Status|
 |----|----|
 |Azure ATP does not support report downloads that contain more than 100,000 entries per report. Reports will render as incomplete if more than 100,000 entries are included.|Engineering limitation. No known resolution.|
