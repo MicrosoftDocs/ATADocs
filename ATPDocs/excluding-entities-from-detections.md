@@ -37,6 +37,7 @@ For example, if you have a security scanner that does DNS recon or an admin who 
 
 ## Entities excluded by default from raising alerts
  For certain alerts, such as **Suspicious communication over DNS**, automatic domain exclusions are added by Azure ATP based on customer feedback and research. 
+ 
 ![Suspicious communication over DNS auto exclusions](./media/dns-auto-exclusions.png) 
 
 ## Exclude entities from raising alerts
