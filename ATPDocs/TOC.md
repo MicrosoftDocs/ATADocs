@@ -50,6 +50,6 @@
 ## [Azure ATP health center](atp-health-center.md)
 ## [Manage Azure ATP health alerts](monitoring-alerts.md)
 ## [Troubleshooting known issues](troubleshooting-atp-known-issues.md)
-### [Troubleshooting using logs](troubleshooting-atp-using-logs.md)
+## [Troubleshooting using logs](troubleshooting-atp-using-logs.md)
 ## [Support and information](atp-support.md)
 ## [Azure ATP readiness roadmap](atp-resources.md)

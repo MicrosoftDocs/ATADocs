@@ -1,0 +1,61 @@
+---
+# required metadata
+
+title: Azure ATP Known Issues | Microsoft Docs
+description: Describes current Known Issues in Azure ATP
+keywords:
+author: mlottner
+ms.author: mlottner
+manager: mbaldwin
+ms.date: 11/12/2018
+ms.topic: conceptual
+ms.prod:
+ms.service: azure-advanced-threat-protection
+ms.technology:
+ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
+
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: itargoet
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+*Applies to: Azure Advanced Threat Protection*
+
+# Azure ATP Known Issues
+
+Azure ATP occasionally has engineering or feature limitations that may limit or change the way your organization uses Azure ATP services. Known Issue limitations that have no known workaround, or a work in progress status without a specific update timeline are described here. 
+
+For Azure ATP known issues with known workarounds, see [Troubleshooting Azure ATP Known Issues](troubleshooting-atp-known-issues.md). To check the status of your Azure ATP tenant, visit the [Azure ATP Health Center](atp-health-center.md). 
+
+## WinRM not supported using Windows Server 2016
+
+|Issue|Status|
+|----|----|
+|WinRM does not currently support Windows Server 2016. The related detection and resulting alerts (Remote Code Execution Attempts)_ are not available for machines running Windows Server 2016.|Engineering is currently working on addressing this issue and adding Windows Server 2016 support||
+
+## AD groups with more than 1000 members have limited detail sync
+
+|Issue|Status|
+|----|----|
+|Azure ATP does not support entity detail sync in AD groups with more than 1000 members per group. When investigating entities in groups with more than 1000 members, some entities may fail to sync or display details. |Engineering limitation. No known resolution|
+
+## Report downloads cannot contain more than 100,000 entries
+
+|Issue|Status|
+|----|----|
+|Azure ATP does not support report downloads that contain more than 100,000 entries per report. Reports will render as incomplete if more than 100,000 entries are included. |Engineering limitation. No known resolution|
+
+## See Also
+
+- [Troubleshooting Azure ATP Known Issues](troubleshooting-atp-known-issues.md)
+- [Troubleshooting Azure ATP using logs](troubleshooting-atp-using-logs.md)
+- [What's new in Azure ATP](atp-whats-new.md)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
