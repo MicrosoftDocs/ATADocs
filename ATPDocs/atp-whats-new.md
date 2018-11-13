@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,8 +31,28 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
-### Azure ATP release 2.5.2
-Released October 8th, 2018
+## Azure ATP release 2.5.4
+Released November 11, 2018
+
+- **Feature enhancement: Default domain exclusions added to Suspicious Communication over DNS alert**<br>	New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Excluding entities from detections](excluding-entities-from-detections.md), to learn more. 
+
+- **Documentation enhancements: SIEM log update, Known Issues guidance**<br>	externalId mapping and additional explanations were added to SIEM log descriptions. See [SIEM log reference](cef-format-sa.md), to learn more. <br>Additional article for currently unresolved Known Issues guidance was added. See, [Azure ATP Known Issues](known-issues.md), to learn more.  
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.5.3
+Released November 4, 2018
+
+- **Security Alert enhancement: Suspicious Authentication Failure**<br>
+Azure ATP’s [Suspicious Authentication Failure security alert](suspicious-activity-guide.md) now includes monitoring for detection of password spray brute force attacks.
+In a typical **password spray** attack, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). When the initial password spray is not successful, they'll try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. 
+
+- **Feature enhancement: Send a test Syslog message**<br>	New ability to send a test Syslog message during the SIEM setup process. See [Integrate with Syslog](setting-syslog.md), to learn more. 
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.5.2
+Released October 28, 2018
 
 
 - **Security Alert enhancement: Remote Code Execution Attempt**<br>
@@ -41,7 +61,7 @@ Azure ATP’s [Remote Code Execution Attempt security alert](suspicious-activity
 - **Feature enhancement: Set report scheduling**
 <br>You can now set a specific hour to schedule your Azure ATP reports using the [reports](reports.md#) function. 
 
-- **Configuration addition: Tenant role based access control (RBAC)**
+- **Configuration addition: Tenant role-based access control (RBAC)**
 <br>Configure the security roles of your tenant in Azure Active Directory (AAD) Admin Center directly from the new Admin link in the Azure ATP Portal. 
 
 - **Revised documentation structure and content**
@@ -53,39 +73,39 @@ Azure ATP’s [Remote Code Execution Attempt security alert](suspicious-activity
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.5.1
-Released October 21st, 2018
+Released October 21, 2018
 
 - You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.50
-Released October 14th, 2018
+Released October 14, 2018
 - This version includes fixes and improvements for multiple issues.
 
 
 ## Azure ATP release 2.49
-Released October 7th, 2018
--	**New detections: Suspicious DNS Communication** (preview)<br>New detection added to help protect against suspicious DNS communication attacks:
+Released October 7, 2018
+-	**New detections: Suspicious DNS Communication** (preview)<br>New detection added to help protects against suspicious DNS communication attacks:
 
-    -	This detection helps detect attacks against the DNS protocol. In most organizations the DNS protocol is not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+    -	This detection helps detect attacks against the DNS protocol. In most organizations, the DNS protocol is not monitored and rarely blocked for malicious activity. Enabling an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
 
 - **New functionality** <br>Azure ATP **user role** enhanced with the following capabilities:
-  - Change status of security alerts (re-open, close, exclude, suppress)
+  - Change status of security alerts (reopen, close, exclude, suppress)
   - Set scheduled reports
-  - Set entity tags (sensitive and honeytoken)
+  - Set entity tags (sensitive and honey token)
   - Exclusion of detection
   - Change language
   - Set notifications via email or syslog
 
 
-- A temporary increase in **Reconnaissance using directory services queries** security alerts that occurred on 09/16/2018 was identified and resolved. 
+- A temporary increase in **Reconnaissance using directory services queries** security alerts that occurred on September 16, 2018 was identified and resolved. 
 
 - This version also includes fixes and improvements for multiple issues.
 
 
 ## Azure ATP release 2.48
-Released September 16th, 2018
+Released September 16, 2018
 - **Security alert:** Reconnaissance using directory services queries
 
   This security alert now has improved infographics and evidence. 
@@ -101,7 +121,7 @@ Released September 16th, 2018
 
 
 ## Azure ATP release 2.47
-Released September 2nd, 2018
+Released September 2, 2018
 
 - **Azure ATP Advanced Audit Policy Check**
  
@@ -117,13 +137,13 @@ Review how to [Configure Advanced Audit Policies](atp-advanced-audit-policy.md) 
 
 ## Azure ATP release 2.46
 
-Released August 26th, 2018
+Released August 26, 2018
 
 - This version includes fixes and improvements for multiple issues.
 
 ## Azure ATP release 2.45
 
-Released August 19th, 2018
+Released August 19, 2018
 
 - **Azure ATP adds Event Tracing for Windows (ETW) as an additional data source**  <br> 
 Event Tracing for Windows (ETW) added as additional data source in addition to existing network traffic and Windows events. ETW provides additional suspicious activity detections, including: suspicious domain controller promotions and suspicious domain controller replication requests (both are potential DCShadow attacks). <br>

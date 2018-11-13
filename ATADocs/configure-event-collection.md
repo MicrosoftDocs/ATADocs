@@ -90,8 +90,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.  
           ![Event Viewer image](media/wef3%20event%20viewer.png)  
         3.	Click **OK**.
-     4.	Click **Select Events**.
-
+    4.	Click **Select Events**.
         1. Click **By log** and select **Security**.
         2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
 

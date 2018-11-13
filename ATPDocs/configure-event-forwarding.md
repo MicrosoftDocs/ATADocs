@@ -93,8 +93,8 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         1. Click **By log** and select **Security**.
         2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample:<br/>
         ![Query filter image](media/wef-4-query-filter.png)
-   5. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
-   6. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP standalone sensor.
+    5. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
+    6. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP standalone sensor.
 
 
 For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
