@@ -31,6 +31,14 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.5.5
+Released November 18, 2018
+
+- **Security Alert: Suspicious communication over DNS - general availability**<br>
+Azure ATP’s [Suspicious communication over DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) security alert is now in general availability. <br> Typically, the DNS protocol in most organizations is not monitored, and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.5.4
 Released November 11, 2018
 
@@ -371,5 +379,4 @@ Released March 11, 2018
 - [Frequently asked questions](atp-technical-faq.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
-(configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

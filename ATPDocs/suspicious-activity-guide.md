@@ -451,7 +451,7 @@ The minimum period before this type of alert can be triggered is one week.
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious communication over DNS - preview
+## Suspicious communication over DNS 
 
 **Description**
 

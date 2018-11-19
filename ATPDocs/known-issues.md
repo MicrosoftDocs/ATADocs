@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/15/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -35,11 +35,11 @@ Azure ATP occasionally has engineering or feature limitations that may limit or 
 
 For Azure ATP known issues with known workarounds, see [Troubleshooting Azure ATP Known Issues](troubleshooting-atp-known-issues.md). To check the status of your Azure ATP tenant, visit the [Azure ATP Health Center](atp-health-center.md). 
 
-## WinRM not supported using Windows Server 2016
+## Remote Code Execution attempts using Remote PowerShell commands or scripts are not detected when using Windows Server 2016
 > [!div class="mx-tableFixed"]  
 |Issue|Status|
 |----|----|
-|WinRM does not currently support Windows Server 2016. The related detection and resulting alerts (Remote Code Execution Attempts) are not available for machines running Windows Server 2016.|Engineering is currently working on addressing this issue and adding Windows Server 2016 support.|
+|Remote Code Execution attempts using Remote PowerShell commands are not currently detected on Sensor machines running Windows Server 2016. Related detections and resulting alerts are not available.|Engineering is currently working on addressing this issue and adding Windows Server 2016 support.|
 
 ## AD groups with more than 1000 members have limited detail sync
 > [!div class="mx-tableFixed"]  
