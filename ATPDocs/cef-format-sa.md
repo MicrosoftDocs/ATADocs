@@ -60,7 +60,9 @@ The following fields and their values are forwarded to your SIEM:
 > [!NOTE]
 > If you plan to create automation or scripts for Azure ATP SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent.  
 
-|Azure ATP Alert|Unique ExternalId|
+## Azure ATP security alert unique externalIds
+
+|Security alert name|Unique externalId|
 |---------|---------|
 |Brute force attack using LDAP simple bind|2004|
 |Encryption downgrade activity-Skeleton key|2011|
