@@ -31,7 +31,9 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
-## Azure ATP release 2.5.5
+
+
+## Azure ATP release 2.55
 Released November 18, 2018
 
 - **Security Alert: Suspicious communication over DNS - general availability**<br>
@@ -39,7 +41,7 @@ Azure ATP’s [Suspicious communication over DNS](suspicious-activity-guide.md#s
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
-## Azure ATP release 2.5.4
+## Azure ATP release 2.54
 Released November 11, 2018
 
 - **Feature enhancement: Default domain exclusions added to Suspicious Communication over DNS alert**<br>	New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Excluding entities from detections](excluding-entities-from-detections.md), to learn more. 
@@ -48,7 +50,7 @@ Released November 11, 2018
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
-## Azure ATP release 2.5.3
+## Azure ATP release 2.53
 Released November 4, 2018
 
 - **Security Alert enhancement: Suspicious Authentication Failure**<br>
@@ -59,7 +61,7 @@ In a typical **password spray** attack, after successfully enumerating a list of
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
-## Azure ATP release 2.5.2
+## Azure ATP release 2.52
 Released October 28, 2018
 
 
@@ -80,7 +82,7 @@ Azure ATP’s [Remote Code Execution Attempt security alert](suspicious-activity
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
-## Azure ATP release 2.5.1
+## Azure ATP release 2.51
 Released October 21, 2018
 
 - You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
