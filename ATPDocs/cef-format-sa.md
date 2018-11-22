@@ -62,7 +62,7 @@ The following fields and their values are forwarded to your SIEM:
 
 ## Azure ATP security alert unique externalIds
 
-|Security alert name|Unique ExternalId|
+|Security alert name|Unique externalId|
 |---------|---------|
 |Brute force attack using LDAP simple bind|2004|
 |Encryption downgrade activity-Skeleton key|2011|
