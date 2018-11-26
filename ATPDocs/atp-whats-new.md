@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,7 +31,22 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.56
+Released November 25, 2018
 
+
+- **Feature Enhancement: Lateral Movement Paths (LMPs)** <br>
+Two additional features are added to enhance Azure ATP Lateral Movement Path (LMP) capabilities:
+
+  - LMP history is now saved and discoverable per entity, and when using LMP reports. 
+  - Follow an entity in an LMP via the activity timeline, and investigate using additional evidence provided for discovery of potential attack paths. 
+
+  See [Azure ATP Lateral Movement Paths](use-case-lateral-movement-paths) to learn more about how to use and investigate with enhanced LMPs. 
+
+- **Documentation enhancements: Lateral Movement Paths, Security Alert names**<br> Additions and updates were made to Azure ATP articles describing Lateral Movement Path descriptions and features, name mapping was added for all instances of old security alert names to new names and externalIds. 
+  - See [Azure ATP Lateral Movement Paths](use-case-lateral-movement-path.md), [Investigate  Lateral Movement Paths](investigate-lateral-movement-path.md), and [Security Alert Guide](suspicious-activity-guide.md) to learn more.   
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.55
 Released November 18, 2018
@@ -212,7 +227,6 @@ Released July 22, 2018
 - This version includes fixes and improvements for multiple issues. 
 
 
-
 ## Azure ATP release 2.40
 
 Released July 15, 2018
@@ -291,7 +305,6 @@ Released May 27, 2018
     - Chinese (Taiwan)
 
 
-
 ## Azure ATP release 2.32
 
 Released May 13, 2018
@@ -313,7 +326,6 @@ Released April 29, 2018
 -	Azure ATP now uses Azure Email Orchestrator for all emails sent from Azure ATP, including suspicious activities, monitoring alerts and reports. You will see that these email notifications now follow a consistent format for ease-of-use and Excel files will be linked to from the email to be downloaded from the console.
  
  
-
 ## Azure ATP release 2.29
 
 Released April 22, 2018

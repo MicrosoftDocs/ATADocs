@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/22/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -62,7 +62,8 @@ The following fields and their values are forwarded to your SIEM:
 
 ## Azure ATP security alert unique externalIds
 
-|Security alert name|Unique externalId|
+> [!div class="mx-tableFixed"] 
+|Security alert name|Unique ExternalId|
 |---------|---------|
 |Brute force attack using LDAP simple bind|2004|
 |Encryption downgrade activity-Skeleton key|2011|
@@ -183,7 +184,7 @@ Priorities:
 ### Unusual protocol implementation - (potential use of malicious tools such a Hydra)
 02-21-2018	16:21:22	Auth.Warning	192.168.0.220	1 2018-02-21T14:21:13.916050+00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AbnormalProtocolSecurityAlert|Unusual protocol implementation|5|start=2018-02-21T14:19:03.1981155Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. May be a result of malicious tools used to execute attacks such as Pass-the-Hash and brute force. externalId=2002 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label=trigger cs2=new
 
-### Unusual protocol implementation -(potential use of malicious tools such a Metasploit)
+### Unusual protocol implementation - (potential use of malicious tools such a Metasploit)
 10-29-2018	11:22:04	Auth.Warning	192.168.0.202	1 2018-10-29T09:22:00.460233+00:00 DC3 CEF 3908 AbnormalProtocolSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|AbnormalProtocolSecurityAlert|Unusual protocol implementation (potential use of Metasploit hacking tools)|5|start=2018-10-29T09:19:46.6092465Z app=Ntlm shost=CLIENT2 outcome=Success msg=There were attempts to authenticate from CLIENT2 against DC1 using an unusual protocol implementation. externalId=2002 cs1Label=url cs1=https://contoso-corp.atp.azure.com/securityAlert/573f10a1-6f8a-44b1-a5b1-212d40996363 cs2Label=trigger cs2=new
 
 ## See Also
