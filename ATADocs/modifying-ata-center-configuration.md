@@ -61,7 +61,7 @@ The URL is used in the following scenarios:
 
 4. After all the ATA Gateways synced with the updated configuration, in the Center configuration page, click the **Activate** button to activate the new URL. When you activate the new URL, the ATA Gateways will now use the new URL to access the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new URL for the ATA Console. 
 
-5. ![Activate the certificate](media/center-activation.png)
+ ![Activate the certificate](media/center-activation.png)
 
 > [!NOTE]
 > -   If an ATA Gateway was offline while you activated the new URL, and never got the updated configuration, manually update the configuration JSON file on the ATA Gateway.
