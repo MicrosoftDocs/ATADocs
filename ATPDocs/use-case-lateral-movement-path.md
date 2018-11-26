@@ -87,7 +87,7 @@ Security insights are never too late to prevent the next attack and remediate da
 
 
 ## Investigating LMPs
-For instructions on how to identify and investigate using Azure ATP Lateral Movement Paths, see [Investigate Lateral Movement Paths](investigate-lateral-movement-path).
+For instructions on how to identify and investigate using Azure ATP Lateral Movement Paths, see [Investigate Lateral Movement Paths](investigate-lateral-movement-path.md).
 
 
 ## See Also

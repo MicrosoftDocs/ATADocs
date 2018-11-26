@@ -63,38 +63,37 @@ The following fields and their values are forwarded to your SIEM:
 ## Azure ATP security alert unique externalIds
 
 > [!div class="mx-tableFixed"] 
-|Security alert name|Unique ExternalId|
-|---------|---------|
-|Brute force attack using LDAP simple bind|2004|
-|Encryption downgrade activity-Skeleton key|2011|
-|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
-|Encryption downgrade activity (potential golden ticket attack)|2009|
-|Encryption downgrade activity (potential skeleton key attack)|2010|
-|Honeytoken activity|2014|
-|Identity theft using Pass-the-Hash attack|2017|
-|Identity theft using Pass-the-Ticket attack|2018|
-|Kerberos golden ticket – time anomaly|2022|
-|Kerberos Golden Ticket - nonexistent account|2027|
-|Malicious Data Protection Private Information Request|2020|
-|Malicious replication of directory services|2006|
-|Privilege escalation using forged authorization data|2013|
-|Reconnaissance using account enumeration|2003|
-|Reconnaissance using DNS|2007|
-|Reconnaissance using SMB Session Enumeration|2012|
-|Reconnaissance using directory services queries|2021|
-|Remote code execution attempt|2019|
-|Suspicious authentication failures|2023|
-|Suspicious domain controller replication request (potential DCShadow attack)|2029|
-|Suspicious domain controller promotion (potential DCShadow attack)|2028|
-|Suspicious communication over DNS|2031|
-|Suspicious modification of sensitive groups|2024|
-|Suspicious service creation|2026|
-|Suspicious VPN connection|2025|
-|Unusual protocol implementation (potential WannaCry ransomware attack)*|2002|
-|Unusual protocol implementation (potential use of malicious tools such as Hydra)*|2002|
-|Unusual protocol implementation (potential use of Metasploit hacking tools)*|2002|
-|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)*|2002|
-|*Unusual protocol implementation* alerts currently share an externalId. The externalId for each type of these alerts will be changed in a future release to a unique externalId|****|
+|New security alert name|Legacy security alert name|Unique ExternalId|
+|---------|----------|---------|
+|Suspected Brute Force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
+|Suspected Skeleton Key attack (encryption downgrade)|Encryption downgrade activity-Skeleton key|2011|
+|Suspected over-pass-the-hash attack (encryption downgrade)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
+|Suspected golden ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
+|Suspected skeleton key attack (encryption downgrade)|Encryption downgrade activity (potential skeleton key attack)|2010|
+|Honeytoken activity|Honeytoken activity|2014|
+|Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
+|Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
+|Suspected golden ticket usage (time anomaly) |Kerberos golden ticket – time anomaly|2022|
+|Suspected golden ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
+|Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
+|Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
+|Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
+|Account enumeration reconnaissance|Reconnaissance using account enumeration|2003|
+|Network-mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
+|User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
+|User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
+|Remote code execution attempt|Remote code execution attempt|2019|
+|Suspected DCShadow attack (DC replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
+|Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
+|Suspicious communication over DNS|Suspicious communication over DNS|2031|
+|Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
+|Suspicious service creation|Suspicious service creation|2026|
+|Suspicious VPN connection|Suspicious VPN connection|2025|
+|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)*|2002|
+|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)*|2002|
+|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)*|2002|
+|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)*|2002|
+|*Unusual protocol implementation* alerts currently share an externalId. The externalId for each type of these alerts will be changed in a future release to a unique externalId||****|
 
 ## Sample logs
 

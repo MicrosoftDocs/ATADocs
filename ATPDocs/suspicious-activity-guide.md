@@ -46,7 +46,6 @@ For more information on how to work with Azure ATP security alerts, see [Working
 In version 2.56, all existing Azure ATP security alerts were renamed with easier to understand names. Mapping between old and new names, and their corresponding unique externalIds are as listed in the following table. Microsoft recommends use of alert externalIds in place of alert names for scripts or automation as only security alert externalIds are permanent and not subject to change. 
 
 > [!div class="mx-tableFixed"] 
-
 |New security alert name|Legacy security alert name|Unique ExternalId|
 |---------|----------|---------|
 |Suspected Brute Force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
