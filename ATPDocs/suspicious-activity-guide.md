@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -41,10 +41,46 @@ Following proper investigation, all Azure ATP security alerts can be classified 
 
 For more information on how to work with Azure ATP security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
 
+## Security alert name mapping and unique externalId
 
+In version 2.56, all existing Azure ATP security alerts were renamed with easier to understand names. Mapping between old and new names, and their corresponding unique externalIds are as listed in the following table. Microsoft recommends use of alert externalIds in place of alert names for scripts or automation as only security alert externalIds are permanent and not subject to change. 
 
+> [!div class="mx-tableFixed"] 
+|New security alert name|Legacy security alert name|Unique ExternalId|
+|---------|----------|---------|
+|Suspected Brute Force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
+|Suspected Skeleton Key attack (encryption downgrade)|Encryption downgrade activity-Skeleton key|2011|
+|Suspected over-pass-the-hash attack (encryption downgrade)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
+|Suspected golden ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
+|Suspected skeleton key attack (encryption downgrade)|Encryption downgrade activity (potential skeleton key attack)|2010|
+|Honeytoken activity|Honeytoken activity|2014|
+|Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
+|Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
+|Suspected golden ticket usage (time anomaly) |Kerberos golden ticket – time anomaly|2022|
+|Suspected golden ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
+|Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
+|Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
+|Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
+|Account enumeration reconnaissance|Reconnaissance using account enumeration|2003|
+|Network-mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
+|User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
+|User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
+|Remote code execution attempt|Remote code execution attempt|2019|
+|Suspected DCShadow attack (DC replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
+|Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
+|Suspicious communication over DNS|Suspicious communication over DNS|2031|
+|Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
+|Suspicious service creation|Suspicious service creation|2026|
+|Suspicious VPN connection|Suspicious VPN connection|2025|
+|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)*|2002|
+|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)*|2002|
+|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)*|2002|
+|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)*|2002|
+|*Unusual protocol implementation* alerts currently share an externalId. The externalId for each type of these alerts will be changed in a future release to a unique externalId||****|
 
-## Brute force attack using LDAP simple bind
+## Suspected Brute Force attack (LDAP) 
+<a name="brute-force-attack-using-ldap-simple-bind"></a>
+*Previous name:* Brute force attack using LDAP simple bind
 
 **Description**
 
@@ -67,51 +103,79 @@ In this detection, an alert is triggered when Azure ATP detects a massive number
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Encryption downgrade activity
+## Suspected Skeleton Key attack (encryption downgrade)
+<a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
+
+*Previous name:* Encryption downgrade activity
 
 **Description**
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques. 
 
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques.
+Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller. In this detection, the encryption method of the KRB_ERR message from the domain controller to the account asking for a ticket was downgraded compared to the previously learned behavior.
 
-There are three detection types:
-
-1.  Skeleton Key – is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain  controller. In this detection, the encryption method of the KRB_ERR message from the domain controller to the account asking for a ticket was downgraded compared to the previously learned behavior.
-
-2.  Golden Ticket – In a [Golden Ticket](#golden-ticket) alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the previous service request detected by ATP.
-
-3.  Overpass-the-Hash – An attacker can use a weak stolen hash in order to create a strong ticket, with a Kerberos AS request. In this detection, the AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
 
 **Investigation**
-
-First check the description of the alert, to see which of the three detection types listed above you’re dealing with. For further information, download the Excel spreadsheet.
-
-1.	Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using [the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it is a true positive.
-
-2.	Golden Ticket – In the excel spreadsheet, open the network activity tab. The relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** has stronger encryption methods.
-
-  1. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
-  
-  2. Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common. For example, all of your marketing personnel use a specific app that might be causing the alert to be triggered. There are cases in which a custom application that is rarely used, is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it is probably a benign true positive and can be suppressed.
-  
+1. Click on the source computer or account to go to its profile page. <br>Check what happened around the time of the replication, searching for unusual activities, such as who was logged in and which resources where accessed. <br>If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert. 
+2. Check if Skeleton Key has affected your domain controllers by using the [scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
 
 
-3.	Overpass-the-Hash – In the excel spreadsheet, go to the network activity tab. You will see that the relevant downgraded field is **Encrypted Timestamp Encryption Type** and **Source Computer Supported Encryption Types** contains stronger encryption methods.
+**Remediation**
+1. Remove the malware. For more information about malware removal, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
-  1. There are cases in which this alert might be triggered when users sign in using smartcards if the smartcard configuration was changed recently. Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
-  2. Check the resource accessed by those tickets, if there is one resource they are all accessing, validate it, make sure it is a valid resource they supposed to access. In addition, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute msDS-SupportedEncryptionTypes, of the resource service account.
+
+## Suspected Golden Ticket attack (encryption downgrade)
+<a name="Encryption-downgrade-activity-potential-golden-ticket-attack"></a>
+
+*Previous name:* Encryption downgrade activity
+
+**Description**
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques. 
+
+In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the previous service request detected by ATP.
+
+**Investigation**
+1. Some resources don’t support strong encryption methods and might trigger this alert.
+   1. Check the resources accessed by those tickets. Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
+   2. If there is one resource that is being accessed, validate it. Make sure it is a valid resource they're supposed to access. 
+2. Custom applications might authenticate using a lower encryption cipher.
+   1. Check if there are any custom apps authenticating using a lower encryption cipher on the source computer.
+   2. If there are multiple users, check if they have something in common. <br>For example, all of your marketing personnel using a specific app that might be triggering the alert.
+3. Click on the source computer or account to go to its profile page. Check what happened around the time of the replication. Make sure to searching for unusual activities, such as who was logged in, and which resources where accessed. 
+
+4. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
 
 **Remediation**
 
-1.  Skeleton Key – Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
+1. Reset the password for the compromised users.
+2. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain, so plan carefully before performing the reset.
 
-2.  Golden Ticket – Follow the instructions of the [Golden Ticket](#golden-ticket) suspicious activities.   
-    Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
+## Suspected Over-Pass-the-Hash attack (encryption downgrade) 
+<a name="Encryption-downgrade-activity-potential-over-pass-the-hash"></a>
 
-3.  Overpass-the-Hash – If the involved account is not sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys
-    tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
+*Previous name:* Encryption downgrade activity
+
+**Description**
+
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques. 
+
+In an over-pass-the-hash attack, an attacker can use a weak stolen hash in order to create a strong ticket, with a Kerberos AS request. In this detection, the AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
+
+**Investigation**
+
+1. Was the smartcard configuration changed recently? <br>Check if there were changes like this for the account(s) involved. If so, this is probably a benign true positive and can be suppressed.
+2. Some resources don’t support strong encryption methods. Weak encryption methods can trigger this alert.<br>Check the resources accessed by those tickets. Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.<br>If there is one resource that is being accessed, validate it. Make sure it is a valid resource they're supposed to access. 
+3. Click on the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as who was logged in, and which resources where accessed. <br> If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
+
+
+**Remediation**
+1. If the compromised user is *not sensitive* - reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. 
+2. If the compromised user is *sensitive* - consider resetting the KRBTGT account twice. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain, so plan carefully before performing the reset. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+
 
 ## Honeytoken activity
+<a name="honeytoken-activity"></a>
 
+*Previous name:* Honeytoken activity
 
 **Description**
 
@@ -134,7 +198,10 @@ If after performing steps 1 through 3, if there’s no evidence of benign use, a
 
 Make sure Honeytoken accounts are used only for their intended purpose, otherwise they might generate many alerts.
 
-## Identity theft using Pass-the-Hash attack
+## Suspected identity theft (pass-the-hash) 
+<a name="identity-theft-using-pass-the-hash-attack"></a>
+
+*Previous name:* Identity theft using Pass-the-Hash attack
 
 **Description**
 
@@ -152,7 +219,10 @@ expire.
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See
 the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Identity theft using Pass-the-Ticket attack
+## Suspected identity theft (pass-the-ticket) 
+<a name="identity-theft-using-pass-the-ticket-attack"></a>
+
+*Previous name:* Identity theft using Pass-the-Ticket attack
 
 **Description**
 
@@ -171,7 +241,10 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Kerberos golden ticket<a name="golden-ticket"></a>
+## Suspected Golden Ticket usage (forged authorization data)
+<a name="golden-ticket"></a>
+
+Previous name: Kerberos golden ticket
 
 **Description**
 
@@ -210,9 +283,10 @@ Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to 
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
+## Malicious request of Data Protection API master key
+<a name="malicious-data-protection-private-information-request"></a>
 
-
-## Malicious Data Protection Private Information Request
+*Previous name:* Malicious Data Protection Private Information Request
 
 **Description**
 
@@ -232,7 +306,10 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 To use DPAPI, an attacker needs domain admin rights. Implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Malicious replication of directory services
+## Suspected DCSync attack (replication of directory services)
+<a name="malicious-replication-of-directory-services"></a>
+
+*Previous name:* Malicious replication of directory services
 
 
 **Description**
@@ -265,11 +342,14 @@ For more information, see [Grant Active Directory Domain Services permissions f
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 
-## Privilege escalation using forged authorization data
+## Suspected golden ticket usage (forged authorization data)
+<a name="privilege-escalation-using-forged-authorization-data"></a>
+
+*Previous name:* Privilege escalation using forged authorization data
 
 **Description**
 
-Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC). The PAC is a a field in the Kerberos ticket that contains user authorization data (in Active Directory this is group membership), granting attackers additional privileges.
+Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC). The PAC is a field in the Kerberos ticket that contains user authorization data (in Active Directory this is group membership), granting attackers additional privileges.
 
 **Investigation**
 
@@ -286,7 +366,9 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) and
 all member servers and domain controllers up to 2012 R2 are up-to-date with KB2496930. For more information, see [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) and [Forged PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
-## Reconnaissance using account enumeration
+## Account enumeration reconnaissance
+<a name="reconnaissance-using-account-enumeration"></a>
+*Previous name:* Reconnaissance using account enumeration
 
 **Description**
 
@@ -302,7 +384,7 @@ In this detection, Azure ATP can detect where the attack came from, the total nu
 Is there a script or application running on the host that could generate this behavior? <br></br>
 If the answer to either of these questions is yes, **Close** the suspicious activity (it is a benign true positive) and exclude that host from the suspicious activity.
 
-3. Download the details of the alert in an Excel spreadsheet to conveniently see the list of account attempts, divided into existing and non-existing accounts. If you look at the non existing accounts sheet in the spreadsheet and the accounts look familiar, they may be disabled accounts or employees who left the company. In this case, it is unlikely that the attempt is coming from a dictionary. Most likely, it's an application or script that is checking to see which accounts still exist in Active Directory, meaning that it's a benign true positive.
+3. Download the details of the alert in an Excel spreadsheet to conveniently see the list of account attempts, divided into existing and non-existing accounts. If you look at the non-existing accounts sheet in the spreadsheet and the accounts look familiar, they may be disabled accounts or employees who left the company. In this case, it is unlikely that the attempt is coming from a dictionary. Most likely, it's an application or script that is checking to see which accounts still exist in Active Directory, meaning that it's a benign true positive.
 
 3. If the names are largely unfamiliar, did any of the guess attempts match existing account names in Active Directory? If there are no matches, the attempt was futile, but you should pay attention to the alert to see if it gets updated over time.
 
@@ -314,7 +396,10 @@ If the answer to either of these questions is yes, **Close** the suspicious acti
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
 
-## Reconnaissance using directory services queries
+## User and group membership reconnaissance (SAMR)
+<a name="reconnaissance-using-directory-services-queries"></a>
+
+Reconnaissance using directory services queries
 
 **Description**
 
@@ -348,7 +433,10 @@ Harden your environment against this technique using the following process:
 1. Is the computer running a vulnerability scanning tool?  
 2. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (that is, CEO, CFO, IT management, etc.).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
 
-## Reconnaissance using DNS
+## Network-mapping reconnaissance (DNS)
+<a name="reconnaissance-using-dns"></a>
+
+Reconnaissance using DNS
 
 **Description**
 
@@ -369,7 +457,9 @@ There are several query types in the DNS protocol. Azure ATP detects the AXFR (T
 Securing an internal DNS server to prevent reconnaissance using DNS from occurring can be accomplished by disabling or restricting zone transfers only to specified IP addresses. For more information on restricting zone transfers, see [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
 Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
-## Reconnaissance using SMB Session Enumeration
+## User and IP address reconnaissance (SMB)
+<a name="reconnaissance-using-smb-session-enumeration"></a>
+Reconnaissance using SMB Session Enumeration
 
 
 **Description**
@@ -396,7 +486,9 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
 
-## Remote code execution attempt - enhanced
+## Remote code execution attempt
+<a name="remote-code-execution-attempt"></a>
+*Previous name:* Remote code execution attempt
 
 **Description**
 
@@ -423,11 +515,14 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 > [!NOTE]
 > Remote code execution attempt alerts are supported by ATP sensors only. 
 
-## Suspicious authentication failures -enhanced
+## Suspected Brute Force attack (Kerberos NTLM)
+<a name="suspicious-authentication-failures"></a>
+
+*Previous name:* Suspicious authentication failures
 
 **Description**
 
-In a brute-force attack, the attacker attempts to authenticate with multiple passwords on different accounts until a correct password is found or using one password in a large scale password spray that works for at least one account. Once found, the attacker logs in using the authenticated account.
+In a brute-force attack, the attacker attempts to authenticate with multiple passwords on different accounts until a correct password is found or using one password in a large-scale password spray that works for at least one account. Once found, the attacker logs in using the authenticated account.
 
 In this detection, an alert is triggered when many authentication failures occur using Kerberos or NTLM or use of a password spray is detected. Using Kerberos or NTLM, this attack is typically either horizontal, using a small set of passwords across many users; or vertical with a large set of passwords on a few users; or any combination of the two. In a password spray, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. 
 
@@ -445,13 +540,16 @@ The minimum period before this type of alert can be triggered is one week.
 
 2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert. 
 
-3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server which the source machine tried to access, enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server** which the source machine tried to access. After you know which server sent the authentication validation, investigate the server by checking its events such as 4624 to better understand the authentication process. 
+3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server, which the source machine tried to access, enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server, which the source machine tried to access. After you know which server sent the authentication validation, investigate the server by checking its events such as 4624 to better understand the authentication process. 
 
 **Remediation**
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspicious communication over DNS 
+## Suspicious communication over DNS
+<a name="suspicious-communication-over-dns"></a>
+
+*Previous name:* Suspicious communication over DNS 
 
 **Description**
 
@@ -464,14 +562,17 @@ The DNS protocol in most organizations is typically not monitored and rarely blo
 
 1.	Some legitimate companies use DNS for regular communication. Check if the registered query domain belongs to a trusted source such as your antivirus provider. If the domain is known and trusted and DNS queries are permitted, the alert can be closed, and the domain can be [excluded](excluding-entities-from-detections.md) from future alerts. 
 2.	 If the registered query domain is not trusted, identify the process creating the request on the source machine. Use [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) to assist with this task.
-3.	Determine when the suspicious activity begin? Were any new programs deployed or installed (AV?) in the organization? Are there other alerts from the same time?
+3.	Determine when the suspicious activity started? Were any new programs deployed or installed (AV?) in the organization? Are there other alerts from the same time?
 4.	Click on the source computer to access its profile page. Check what happened around the time of the DNS query, searching for unusual activities, such as who was logged in, and which resources were used. If you already enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. Using Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
 
 **Remediation**
 
 If the registered query domain is not trusted after your investigation, we recommend blocking the destination domain to avoid all future communication. 
 
-## Suspicious domain controller promotion (potential DCShadow attack)
+## Suspected DCShadow attack (DC promotion)
+<a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>
+
+*Previous name:* Suspicious domain controller promotion (potential DCShadow attack)
 
 **Description**
 
@@ -510,6 +611,9 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat
 > Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by ATP sensors only. 
 
 ## Suspicious modification of sensitive groups
+<a name="suspicious-midification-of-sensitive-groups"></a>
+
+*Previous name:* Suspicious modification of sensitive groups
 
 **Description**
 
@@ -535,7 +639,10 @@ Set up [Privileged Access Management for Active Directory](https://docs.microsof
 
 
 
-## Suspicious replication request (potential DCShadow attack) 
+## Suspected DCShadow attack (DC replication request)
+<a name="suspicious-replication-request-potential-dcshadow-attack"></a>
+
+*Previous name:* Suspicious replication request (potential DCShadow attack) 
 
 **Description** 
 
@@ -567,6 +674,9 @@ To do this, you can leverage [AD ACL Scanner](https://blogs.technet.microsoft.co
 
 
 ## Suspicious service creation
+<a name="suspicious-service-creation"></a>
+
+*Previous name:* Suspicious service creation
 
 **Description**
 
@@ -589,7 +699,10 @@ A suspicious service has been created on a domain controller in your organizatio
 - Implement less-privileged access on domain machines to allow only specific users the right to create new services.
 
 
-## Suspicious VPN connection <a name="suspicious-vpn-detection"></a>
+## Suspicious VPN connection
+<a name="suspicious-vpn-detection"></a>
+
+*Previous name:* Suspicious VPN connection 
 
 **Description**
 
@@ -610,7 +723,9 @@ An alert is opened when there is a deviation from the user’s behavior based on
 2.	Consider blocking this user from connecting through VPN.
 
 ## Unusual protocol implementation
+<a name="unusual-protocol-implementation"></a>
 
+*Previous name:* Unusual protocol implementation 
 
 **Description**
 
@@ -618,11 +733,11 @@ Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in no
 
 **Investigation**
 
-Identify the protocol that is unusual – from the Suspicious activity time line,  click on the suspicious activity to get to its details page; the protocol appears above the arrow: Kerberos or NTLM.
+Identify the protocol that is unusual – from the Suspicious activity time line,  click on the security alert to get to its details page; the protocol appears above the arrow: Kerberos or NTLM.
 
-- **Kerberos**: This will often be triggered if a hacking tool such as Mimikatz has been used, potentially performing an Overpass-the-Hash attack. Check if the source computer is running an application that implements its own Kerberos stack, not in accordance with the Kerberos RFC. If that is the case, it is a benign true positive and you can **Close** the alert. If the alert keeps being triggered, and it is still the case, you can **Suppress** the alert.
+- **Kerberos**: This will often be triggered if a hacking tool such as Mimikatz has been used, potentially performing an Overpass-the-Hash attack. Check if the source computer is running an application that implements its own Kerberos stack, not in accordance with the Kerberos RFC. If that is the case, it is a benign true positive and you can **Close** the alert. If the alert continues to trigger, and your previous check is still true, you can **Suppress** the alert.
 
-- **NTLM**: Could be either WannaCry or tools such as Metasploit, Medusa, and Hydra.  
+- **NTLM**: Possibly WannaCry or tools such as Metasploit, Medusa, and Hydra.  
 
 To determine whether this is a WannaCry attack, perform the following steps:
 
@@ -631,7 +746,6 @@ To determine whether this is a WannaCry attack, perform the following steps:
 2. If no attack tools are found, check if the source computer is running an application that implements its own NTLM or SMB stack.
 
 3. Click on the source computer to go to its profile page. Check what happened around the time of the alert, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![wd badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
-
 
 
 **Remediation**
@@ -643,6 +757,7 @@ Patch all your machines, especially applying security updates.
 2. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
 
 
 > [!NOTE]
