@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Investigating lateral movement attacks with Azure ATP | Microsoft Docs
-description: This article describes how to detect lateral movement  attacks with Azure Advanced Threat Protection (ATP).
+title: Introducing Lateral Movement Paths with Azure ATP | Microsoft Docs
+description: This article describes the potential Lateral Movement Paths (LMPs) of Azure Advanced Threat Protection (ATP).
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/25/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -28,57 +28,70 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Investigating lateral movement paths with Azure ATP
+# Azure ATP Lateral Movement Paths (LMPs) 
+
+Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored log-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md).
+
+A key component of Azure ATP’s security insights are Lateral Movement Paths or LMPs. Azure ATP LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Azure ATP LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in future, and close attacker access before they achieve domain dominance.
+
+![Azure ATP Lateral Movement Path (LMP)](./media/atp-lmp.png)
+
+Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
+
+## Where can I find Azure ATP LMPs?
+
+Every computer or user profile discovered by Azure ATP to be in an LMP has  a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP. 
+
+![Azure ATP Lateral Movement Path (LMP) tab](./media/lateral-movement-path-tab.png)
+
+The LMP for each entity provides different information depending on the sensitivity of the entity: 
+- Sensitive users – potential LMP(s) leading to this user are shown.
+- Non-sensitive users and computers – potential LMP(s) the entity is related to are shown. <br>
+
+Each time the tab is clicked, Azure ATP displays the most recently discovered LMP. Each potential LMP is saved for 48 hours following discovery. LMP history is available. View older LMPs that were discovered in the past by clicking on **View a different date**. 
+
+![Azure ATP Lateral Movement Path (LMP) display](./media/atp-lmp-complete.png)
+
+Discover when potential LMPs were identified and which related entities are potentially involved. 
+
+## LMP discovery
+
+From the Activities tab, an indication is given when a new potential LMP was identified:
+- Sensitive users – when a new path was identified to a sensitive user
+
+![Azure ATP Lateral Movement Path (LMP) sensitive identified](./media/atp-lmp-activities.png)
 
 
-Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the [Suspicious activity guide](suspicious-activity-guide.md). Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network using non-sensitive accounts that share stored log-in credentials in accounts, groups and machines. Once an attacker has gained access, the attacker can also take advantage of the data on your domain controllers.
+- Non-sensitive users and computers – when this entity was identified in a potential LMP leading to a sensitive user.
 
+![Azure ATP Lateral Movement Path (LMP) non-sensitive identified](./media/atp-lateral-non-sensitive.png)
 
-## Discover your at-risk sensitive accounts
+## LMP related entities
+LMP can now directly assists with your investigation process. Azure ATP security alert evidence lists provide the related entities that are involved in each potential lateral movement path. The evidence lists directly help your security response team increase or reduce the importance of the security alert and/or investigation of the related entities. For example, when a Pass the Ticket alert is issued, the source computer, compromised user and destination computer the stolen ticket was used from, are all part of the potential lateral movement path leading to a sensitive user. The existence of the detected LMP makes investigating the alert and watching the suspected user even more important to prevent your adversary from additional lateral moves. Trackable evidence is provided in LMPs to make it easier and faster for you to prevent attackers from moving forward in your network. 
 
-To discover which sensitive accounts in your network are exposed because of their connection to non-sensitive accounts, groups and machines, follow these steps. 
-
-1. In the Azure ATP portal menu, click the reports icon ![reports icon](./media/atp-report-icon.png).
-
-2. Under **Lateral movements paths to sensitive accounts**, if there are no potential lateral movement paths found, the report is grayed out. If there are potential lateral movement paths, the report automatically pre-selects the first date when there is relevant data. The lateral movement path report provides data for up to 60 days.
-
- ![reports](./media/reports.png)
-
-3. Click **Download**.
-
-4. An Excel file is created that provides you with details about your potential lateral movement paths and sensitive account exposure for the dates selected. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk access. The **Details** tab provides a list of the sensitive accounts that you should investigate further. Note that the paths detailed in the downloadable report may no longer be available because they were detected over the past 60 days and may have changed or been modified.
-
-
-## Investigate
-
-
-
-1. In the Azure ATP portal, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). Note that badges will only appear if there was lateral movement within the last 48 hours. 
-
-2. In the user profile page that opens, click the **Lateral movement paths** tab. 
-
-3. The graph that is displayed provides a map of the possible paths to the sensitive user. The graph shows the possible connections observed in the last 48 hours. If no activity was detected in the last two days, the graph will not appear. 
-
-4. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, you can follow the **Logged into by** gray arrows to see where Samira logged in with their privileged credentials. In this case, Samira's sensitive credentials were saved on the REDMOND-WA-DEV computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group Contoso All has the ability to access user credentials from that resource.  
-
- ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
-
+## Lateral Movement paths to sensitive accounts report 
+LMP data is also available in the [Lateral Movement Paths to Sensitive Accounts report](investigate-lateral-movement-path.md). This report lists the sensitive accounts that are exposed via lateral movement paths and includes paths that were selected manually for a specific time period, or included in the time period for scheduled reports.  Customize the included date range using the calendar selection. 
 
 ## Preventative best practices
+Security insights are never too late to prevent the next attack and remediate damage. For this reason, investigating an attack even during the domain dominance phase provides a different, but important example. Typically, while investigating a security alert such as Remote Code Execution, if the alert is a true positive, your domain controller may already be compromised. But LMPs inform on where the attacker gained privileges, and what path they used into your network. Used this way, LMPs can also offer key insights into how to remediate.  
 
-- The best way to prevent lateral movement is to make sure that sensitive users use their administrator credentials only when logging into hardened computers. In the example, make sure that if Samira the admin needs access to REDMOND-WA-DEV, they log in with a username and password other than their admin credentials.
+- The best way to prevent lateral movement exposure within your organization is to make sure that sensitive users only use their administrator credentials when logging into hardened computers. In the example, check if admin in the path actually needs access to the shared computer. If they do need access, make sure log in to the shared computer with a username and password other than their admin credentials.
 
-- It is also recommended that you make sure that no one has unnecessary administrative permissions. In the example, you should check if everyone in Contoso All actually requires admin rights on REDMOND-WA-DEV.
+- Verify that your users do not have unnecessary administrative permissions. In the example, check if everyone in the shared group actually requires admin rights on the exposed computer.
 
-- Make sure people only have access to necessary resources. In the example, Oscar Posada significantly widens Samira's exposure. Is it necessary that this user be included in the group **Contoso All**? Are there subgroups that could be created to minimize exposure?
+- Make sure people only have access to necessary resources. In the example, Ron Harper significantly widens Nick Cowley's exposure. Is it necessary that Ron Harper be included in the group? Are there subgroups that could be created to minimize lateral movement exposure?
 
-**Tip** – When no activity is detected during the past 48 hours and the graph is unavailable, the lateral movement path report is still available and provides you with information about potential lateral movement paths detected over the last 60 days. 
+**Tip** – When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose to **View a different date** and check for previous potential lateral movement paths. The **LMP to sensitive users report** is always available is LMPs were discovered and provides you with information about potential lateral movement paths detected to sensitive users. 
 
 **Tip** - For instructions on how to set your clients and servers to allow Azure ATP to perform the SAM-R operations needed for lateral movement path detection, see [configure SAM-R](install-atp-step8-samr.md).
 
 
-## See Also
+## Investigating LMPs
+For instructions on how to identify and investigate using Azure ATP Lateral Movement Paths, see [Investigate Lateral Movement Paths](investigate-lateral-movement-path.md).
 
+
+## See Also
+- [Investigating Azure ATP LMPs](investigate-lateral-movement-path.md)
 - [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
