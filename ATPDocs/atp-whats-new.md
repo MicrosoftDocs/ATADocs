@@ -41,7 +41,7 @@ Two additional features are added to enhance Azure ATP Lateral Movement Path (LM
   - LMP history is now saved and discoverable per entity, and when using LMP reports. 
   - Follow an entity in an LMP via the activity timeline, and investigate using additional evidence provided for discovery of potential attack paths. 
 
-  See [Azure ATP Lateral Movement Paths](use-case-lateral-movement-paths) to learn more about how to use and investigate with enhanced LMPs. 
+  See [Azure ATP Lateral Movement Paths](use-case-lateral-movement-path.md) to learn more about how to use and investigate with enhanced LMPs. 
 
 - **Documentation enhancements: Lateral Movement Paths, Security Alert names**<br> Additions and updates were made to Azure ATP articles describing Lateral Movement Path descriptions and features, name mapping was added for all instances of old security alert names to new names and externalIds. 
   - See [Azure ATP Lateral Movement Paths](use-case-lateral-movement-path.md), [Investigate  Lateral Movement Paths](investigate-lateral-movement-path.md), and [Security Alert Guide](suspicious-activity-guide.md) to learn more.   

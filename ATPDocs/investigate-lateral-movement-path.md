@@ -75,7 +75,7 @@ To review historical LMPs, select different available dates in the calendar sele
 
 ## See Also
 
-- [Understanding Azure ATP Lateral Movement Paths](use-case-lateral-movement-paths.md)
+- [Understanding Azure ATP Lateral Movement Paths](use-case-lateral-movement-path.md)
 - [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
