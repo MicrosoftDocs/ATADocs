@@ -46,7 +46,7 @@ For more information on how to work with Azure ATP security alerts, see [Working
 In version 2.56, all existing Azure ATP security alerts were renamed with easier to understand names. Mapping between old and new names, and their corresponding unique externalIds are as listed in the following table. Microsoft recommends use of alert externalIds in place of alert names for scripts or automation as only security alert externalIds are permanent and not subject to change. 
 
 > [!div class="mx-tableFixed"] 
-|New security alert name|Legacy security alert name|Unique ExternalId|
+|New security alert name|Previous security alert name|Unique externalId|
 |---------|----------|---------|
 |Suspected Brute Force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
 |Suspected Skeleton Key attack (encryption downgrade)|Encryption downgrade activity-Skeleton key|2011|
@@ -56,8 +56,8 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |Honeytoken activity|Honeytoken activity|2014|
 |Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
 |Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
-|Suspected golden ticket usage (time anomaly) |Kerberos golden ticket – time anomaly|2022|
-|Suspected golden ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
+|Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket – time anomaly|2022|
+|Suspected Golden Ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
 |Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
 |Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
@@ -103,7 +103,7 @@ In this detection, an alert is triggered when Azure ATP detects a massive number
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspected Skeleton Key attack (encryption downgrade)
+## Suspected Skeleton Key attack (encryption downgrade) 
 <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
 
 *Previous name:* Encryption downgrade activity
@@ -241,40 +241,31 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Suspected Golden Ticket usage (forged authorization data)
+## Suspected Golden Ticket attack (nonexistant account)
 <a name="golden-ticket"></a>
 
 Previous name: Kerberos golden ticket
 
 **Description**
 
-Attackers with domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "goldentTicket" and allows attackers to achieve persistency in the network.
-
-In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), this is a **time anomaly** golden ticket attack, or by a nonexistent account, this is a **nonexistent account** golden ticket attack.
-
+Attackers that gain domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. A forged TGT of this type is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. In this detection, an alert is triggered by use of a nonexistent account.
 
 **Investigation**
 
-- **Time anomaly**
-   1.	Was there any recent (within the last few hours) change made to the Maximum lifetime for user ticket setting in group policy? Check for the specific value and see if it is lower than the time the ticket was used for. If yes, then Close the alert (it was a false positive).
-   2.	Is the Azure ATP sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then Close this alert.
-   3.	If the answer to the above questions is no, assume this is malicious.
+1. Ask the following questions:
+      - Is the user a known and valid domain user? If yes, then Close the alert (it was a false positive).
+      - Has the user been recently added? If yes, then Close the alert, the change may not have been synchronized yet.
+      - Has the user been recently deleted from AD? If yes, then Close the alert.
+2. If the answer to the above questions is no, assume this is malicious.
 
-- **Nonexistent account - New** 
-   1.	Ask the following questions:
-         - Is the user a known and valid domain user? If yes, then Close the alert (it was a false positive).
-         - Has the user been recently added? If yes, then Close the alert, the change may not have been synchronized yet.
-         - Has the user been recently deleted from AD? If yes, then Close the alert.
-   2.	If the answer to the above questions is no, assume this is malicious.
+3. Click on the source computer to go to its **Profile** page. Check what happened around the time of the activity and look for unusual activities including who was logged in, which resources were accessed? 
 
-1. For both types of golden ticket attacks, click on the source computer to go to its **Profile** page. Check what happened around the time of the activity and look for unusual activities including who was logged in, which resources were accessed? 
+4. Are all the users who were logged into the computer supposed to be logged into? What are their privileges? 
 
-2.	Are all the users who were logged into the computer supposed to be logged into? What are their privileges? 
-
-3.	Are the users who were logged in supposed to have access to these resources?<br>
+5. Are the users who were logged in supposed to have access to these resources?<br>
 If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge.
  
- 4. To further investigate the machine, check which processes and alerts occurred around the time of the alert in Windows Defender ATP.
+ 1. To further investigate the machine, check which processes and alerts occurred around the time of the alert in Windows Defender ATP.
 
 **Remediation**
 
@@ -282,6 +273,28 @@ If you enabled Windows Defender ATP integration, click the Windows Defender ATP 
 Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
+## Suspected Golden Ticket usage (time anomaly)
+
+Previous name: Kerberos golden ticket
+
+**Description**
+
+Attackers that gain domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, attackers can create Kerberos ticket granting tickets (TGT) that provide authorization to any resource,and set the ticket expiration to any arbitrary time. A forged TGT of this type is called a "Golden Ticket"  because it allows attackers to achieve lasting network persistence. In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+
+
+**Investigation**
+
+1. Was there any recent (within the last few hours) change made to the Maximum lifetime for user ticket setting in group policy? Check for the specific value and see if it is lower than the time the ticket was used for. If yes, then Close the alert (it was a false positive).
+
+2. Is the Azure ATP sensor involved in this alert a virtual machine? If yes, did it recently resume from a saved state? If yes, then Close this alert.
+
+3. If the answer to the above questions is no, assume this is malicious.
+
+**Remediation**
+
+
+Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
+tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Malicious request of Data Protection API master key
 <a name="malicious-data-protection-private-information-request"></a>
@@ -342,7 +355,7 @@ For more information, see [Grant Active Directory Domain Services permissions f
 You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 
-## Suspected golden ticket usage (forged authorization data)
+## Suspected Golden Ticket usage (forged authorization data)
 <a name="privilege-escalation-using-forged-authorization-data"></a>
 
 *Previous name:* Privilege escalation using forged authorization data
@@ -726,6 +739,7 @@ An alert is opened when there is a deviation from the user’s behavior based on
 <a name="unusual-protocol-implementation"></a>
 
 *Previous name:* Unusual protocol implementation 
+*This group of security alerts will be renamed and given new externalIds in a future Azure ATP version*
 
 **Description**
 
