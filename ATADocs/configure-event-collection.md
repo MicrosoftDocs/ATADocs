@@ -62,7 +62,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 2.  From a command prompt type *gpedit.msc*.
 3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
-![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+  ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.	Double-click **Configure target Subscription Manager**.
    
@@ -70,7 +70,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     2.	Under **Options**, click **Show**.
     3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
-         *(For example: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)*
+         *(For example: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
          ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
       
