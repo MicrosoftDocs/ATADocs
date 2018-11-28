@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/22/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -41,7 +41,7 @@ The following fields and their values are forwarded to your SIEM:
 |---------|---------------|
 |start|start time of the alert|
 |suser|account (usually the user account) involved in the alert|
-|shost|account (usually the user account) involved in the alert|
+|machine account|account (usually the user account) involved in the alert|
 |outcome|when relevant, a success or failure of the suspicious activity in the alert|
 |msg|description of the alert|
 |cnt|for alerts that have a count of the number of times that activity happened (for example, brute force has an amount of guessed passwords)|
