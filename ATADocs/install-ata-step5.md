@@ -39,7 +39,7 @@ ms.suite: ems
 
 ## Step 5. Configure the ATA Gateway settings
 After the ATA Gateway was installed, perform the following steps to configure the settings for the ATA Gateway.
-<!-- Inconsistent format -->
+
 1.  In the ATA Console, go to **Configuration** and, under **System**, select **Gateways**.
    
      ![Configure gateway settings image](media/ata-gw-config-1.png)
@@ -57,8 +57,8 @@ The following information applies to the servers you enter in the **Domain Contr
     - At least one domain controller in the list should be a global catalog. This enables ATA to resolve computer and user objects in other domains in the forest.
 
   - **Capture Network adapters** (required):
-  - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These receive the mirrored domain controller traffic.
-  - For an ATA Lightweight Gateway, this should be all the network adapters that are used for communication with other computers in your organization.
+    - For an ATA Gateway on a dedicated server, select the network adapters that are configured as the destination mirror port. These receive the mirrored domain controller traffic.
+    - For an ATA Lightweight Gateway, this should be all the network adapters that are used for communication with other computers in your organization.
   
   - **Domain synchronizer candidate**: Any ATA Gateway set to be a domain synchronizer candidate can be responsible for synchronization between ATA and your Active Directory domain. Depending on the size of the domain, the initial synchronization might take some time and is resource-intensive. By default, only ATA Gateways are set as Domain synchronizer candidates.
    It is recommended that you disable any remote site ATA Gateways from being Domain synchronizer candidates.
