@@ -62,8 +62,8 @@ Advanced Security Audit Policy is enabled via **Default Domain Controllers Polic
 
     ![Audit Security Group Management](media/atp-advanced-audit-policy-check-step-4.png)
 
-> [!NOTE]
-> If you choose to use local policy, make sure to add the **Account Logon** and **Account Management** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > [!NOTE]
+    > If you choose to use local policy, make sure to add the **Account Logon** and **Account Management** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 7. After applying via GPO, the new events are visible under your **Windows Event logs**.
 
