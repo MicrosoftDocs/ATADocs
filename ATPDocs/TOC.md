@@ -8,7 +8,7 @@
 ## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
 # Quickstart
-## [Create a workspace in the Azure ATP portal](install-atp-step1.md)
+## [Create your Azure ATP instance](install-atp-step1.md)
 ## [Connect to Active Directory](install-atp-step2.md)
 ### [Azure ATP multi-forest support](atp-multi-forest.md)
 ## [Download the Azure ATP sensor package](install-atp-step3.md)
