@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,7 +33,7 @@ ms.suite: ems
 
 ## Multi-forest support set up 
 
-Azure ATP can support organizations with multiple forests which gives you the ability to easily monitor activity and profile users across forests from a single pane of glass. 
+Azure ATP can support organizations with multiple forests, giving you the ability to easily monitor activity and profile users across forests, from a single pane of glass. 
 
 Enterprise organizations typically have several Active Directory forests - often used for different purposes, including legacy infrastructure from corporate mergers and acquisitions, geographical distribution, and security boundaries (red-forests). You can protect multiple forests using Azure ATP, providing you with the ability to monitor and investigate through a single pane of glass.
 
@@ -45,7 +45,7 @@ The ability to support multiple Active Directory forests enables the following:
 
 ## How Azure ATP detects activities across multiple forests 
 
-To detect cross-forest activities, Azure ATP sensors query domain controllers in remote forests to create profiles for all entities involved, including users and computers from remote forests. 
+To detect cross-forest activities, Azure ATP sensors query domain controllers in remote forests to create profiles for all entities involved, (including users and computers from remote forests). 
 
 > [!NOTE]
 > - Azure ATP sensors can be installed on all forests (if a minimum one-way trust exists).

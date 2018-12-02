@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -43,7 +43,7 @@ To create your Azure ATP instance, you'll need an AAD tenant with at least one g
 
 This prerequisite guide is divided into the following sections to ensure you have everything you need to successfully deploy Azure ATP. 
 
-[Before you start](#before-you-start): Lists information to gather  and accounts and network entities you'll need to have before starting to install.
+[Before you start](#before-you-start): Lists information to gather and accounts and network entities you'll need to have before starting to install.
 
 [Azure ATP portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): Describes Azure ATP portal browser requirements.
 
@@ -65,7 +65,7 @@ This section lists information you should gather as well as accounts and network
 
 -   If you run Wireshark on Azure ATP standalone sensor, you will need to restart the Azure Advanced Threat Protection sensor service after you have stopped the Wireshark capture. If not, the sensor stops capturing traffic.
 
-- If you attempt to install the Azure ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the Azure ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
+- If you attempt to install the Azure ATP sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the Azure ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
 
 -    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,7 +31,7 @@ ms.suite: ems
 
 # Understanding Azure ATP sensor and standalone sensor monitoring alerts
 
-The Azure ATP Health Center lets you know when there's a problem with  your Azure ATP workspace, by raising a monitoring alert. This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
+The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a monitoring alert. This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
 
 ## Read-only user password to expire shortly
 

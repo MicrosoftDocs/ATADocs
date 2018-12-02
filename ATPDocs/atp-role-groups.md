@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -44,17 +44,17 @@ Role groups enable access management for Azure ATP. Using role groups, you can s
 
 ## Accessing the Azure ATP portal
 
-Access to the Azure ATP portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After you enter the portal, you can create your workspace. Azure ATP service creates three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
+Access to the Azure ATP portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After entering the portal with the required role, you can create your Azure ATP instance. Azure ATP service creates three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers. 
 
 > [!NOTE]
-> Access to the Azure ATP portal is only granted to users within the Azure ATP security groups within your Azure Active Directory, and global admins and security admins of the tennant.
+> Access to the Azure ATP portal is granted only to users within the Azure ATP security groups, within your Azure Active Directory, as well as global and security admins of the tennant.
 
 
 ## Types of Azure ATP security groups 
 
-Azure ATP provides three types of security groups: Azure ATP *(workspace name)* Administrators, Azure ATP *(workspace name)* Users, and Azure ATP *(workspace name)* Viewers. The following table describes the type of access in the Azure ATP portal available for each role. Depending on which role you assign, various screens and menu options in Azure ATP portal are unavailable for those users, as follows:
+Azure ATP provides three types of security groups: Azure ATP *(instance name)* Administrators, Azure ATP *(instance name)* Users, and Azure ATP *(instance name)* Viewers. The following table describes the type of access in the Azure ATP portal available for each role. Depending on which role you assign, various screens and menu options in Azure ATP portal are unavailable for those users, as follows:
 
-|Activity |Azure ATP *(workspace name)* Administrators|Azure ATP *(workspace name)* Users|Azure ATP *(workspace name)* Viewers|
+|Activity |Azure ATP *(instance name)* Administrators|Azure ATP *(instance name)* Users|Azure ATP *(instance name)* Viewers|
 |----|----|----|----|
 |Login|Available|Available|Available|
 |Change status of Security Alerts (re-open, close, exclude, suppress)|Available|Available|Not available|

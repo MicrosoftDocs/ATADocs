@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -40,7 +40,7 @@ The entity profile provides you with a comprehensive entity page, designed for f
 
 To access an entity profile page, click on the name of the entity, such as a username, in the security alert timeline. You can also see a mini-version of the entity profile in the security alert page by hovering over the entity name.
 
-The entity profile lets you view entity activities, view directory data, and view lateral movement paths for the entity. For more information, see [Understanding entity profiles ](entity-profiles.md).
+The entity profile lets you view entity activities, view directory data, and view [lateral movement paths](use-case-lateral-movement-path.md) for the entity. For more information about entities, see [Understanding entity profiles ](entity-profiles.md).
 
 ## Check entity tags
 
@@ -118,5 +118,5 @@ Before you move on with your investigation, it's important to know if the entity
     
 ## See also
 
-- [Working with suspicious activities](working-with-suspicious-activities.md)
+- [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

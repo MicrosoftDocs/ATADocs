@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 
 
-# Change Azure ATP workspace portal configuration - domain connectivity password
+# Change Azure ATP portal configuration - domain connectivity password
 
 
 
@@ -45,7 +45,7 @@ Follow this procedure to update the Domain Connectivity password on the Azure AT
 > [!NOTE]
 > This is the user name and password from the Active Directory on-premises deployment and not from Azure AD.
 
-1.  Open the Azure ATP portal on the by accessing the workspace URL.
+1.  Open the Azure ATP portal by accessing the portal URL.
 
 2.  Select the settings option on the toolbar and select **Configuration**.
 

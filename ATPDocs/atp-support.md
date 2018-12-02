@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -37,7 +37,7 @@ Use the following resources to help you learn about, deploy, and support Azure A
 
 |To do this ...|...do this:|
 |----|----|
-|See our most popular documentation|Read the top five pages:<br>- [What is Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Azure ATP prerequisites](atp-prerequisites.md)<br>- [Azure ATP architecture](atp-architecture.md)<br>- [Azure ATP capacity planning](atp-capacity-planning.md)<br>- [Creating a workspace](install-atp-step1.md)|
+|See our most popular documentation|Read the top five pages:<br>- [What is Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Azure ATP prerequisites](atp-prerequisites.md)<br>- [Azure ATP architecture](atp-architecture.md)<br>- [Azure ATP capacity planning](atp-capacity-planning.md)<br>- [Creating an instance](install-atp-step1.md)|
 |Engage with the product team and your peers|Visit the [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) for Azure Advanced Threat Protection.|
 |Check subscription information and get a list of which features are supported|See [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Advanced Threat Protection website.|
 

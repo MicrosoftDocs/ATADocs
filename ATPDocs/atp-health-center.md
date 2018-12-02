@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -53,11 +53,11 @@ To check up on your workspace's overall health, click the Health Center icon in 
     > [!NOTE]
     > Azure ATP may reopen a closed activity if the same activity is detected again within a short period of time.
     
--   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
+-   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, you're alerted again.
 
--   **Reopen**: You can reopen a closed or suppressed issue so that it appears Open in the timeline again.
+-   **Reopen**: You can reopen a closed or suppressed alert so that it appears as **Open** in the timeline again.
 
--   **Delete**: From within the suspicious activities timeline, you also have the option to delete a health issue. If you Delete an alert, it is deleted from the workspace and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
+-   **Delete**: From within the security alert timeline, you also have the option to delete a health issue. If you Delete an alert, it is deleted from the instance and you will NOT be able to restore it. After you click delete, you'll be able to delete all security alerts of the same type.
 
 
 
