@@ -47,7 +47,7 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 
 ## Logging into the Azure ATP portal
 
-1. You can enter the Azure ATP portal either by logging in to the   portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and selecting the relevant workspace, or browsing to the workspace URL: [https://*workspacename*.atp.azure.com](https://*workspacename*.atp.azure.com).
+1. You can enter the Azure ATP portal either by logging in to the portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and selecting your instance, or browsing to the instance URL: [https://*instancename*.atp.azure.com](https://*instancename*.atp.azure.com).
 
 
 2.  Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](atp-role-groups.md).
@@ -58,7 +58,7 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 
 ### Attack time line
 
-The Attack time line This is the default landing page you are taken to when you log in to the Azure ATP workspace portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
+The Attack time line This is the default landing page you are taken to when you log in to the Azure ATP portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
 ![Azure ATP attack timeline image](media/atp-sa-timeline.png)
 
@@ -84,7 +84,7 @@ If you click the number, you can access the search results page in which you can
 
 ### Health center
 
-The Health center provides you with alerts when something isn't working properly in your Azure ATP workspace.
+The Health center provides you with alerts when something isn't working properly in your Azure ATP instance.
 
 ![Azure ATP health center image](media/atp-health-issue.png)
 
@@ -98,7 +98,7 @@ For information on sensitive groups in Azure ATP, see [Working with sensitive gr
 
 ### Mini profile
 
-If you hover your mouse over an entity, anywhere in the workspace portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information, if available and relevant:
+If you hover your mouse over an entity, anywhere in the Azure ATP portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information, if available and relevant:
 
 ![Azure ATP mini profile image](media/atp-mini-profile.png)
 
@@ -121,5 +121,5 @@ If you hover your mouse over an entity, anywhere in the workspace portal where t
 
 ## See Also
 
-- [Creating Azure ATP workspaces](install-atp-step1.md)
+- [Creating Azure ATP instances](install-atp-step1.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

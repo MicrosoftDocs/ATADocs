@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Working with user profiles in the Azure Advanced Threat Protection workspace portal | Microsoft Docs
-description: Describes how to investigate users from the user profiles screen in the Azure ATP workspace portal
+title: Working with user profiles in the Azure Advanced Threat Protection portal | Microsoft Docs
+description: Describes how to investigate users from the user profiles screen in the Azure ATP portal
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 # Understanding entity profiles
 
-The entity profile provides you with a comprehensive entity page with designed for full deep-dive investigation of users, computers, devices, and the resources they have access to and their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a comprehensive entity page designed for a full deep-dive investigation of users, computers, devices, the resources they have access to, and their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
 To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline.
 
@@ -65,7 +65,7 @@ By clicking the Lateral movement paths tab, you can view a fully dynamic and cli
 
 The map provides you with a list of how many hops between computers or users an attacker would have to and from this user to compromise a sensitive account, and if the user has a sensitive account, you can see how many resources and accounts are directly connected.
 
-If activity is not detected for the last two days, the graph no longer appears, but the [lateral movement path report](reports.md) is available to provide you with information about the lateral movement paths that existed over the last 60 days. 
+If a potential LMP was not detected for the entity during the past two days, the graph does not display. Select a different date using **View a different date** to view previous lateral movement paths graphs discovered for this entity. The [lateral movement path report](reports.md) is always available to provide you with information about the potential lateral movement paths discovered, and can be customized by time.  
 
 For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). 
 

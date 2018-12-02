@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -44,7 +44,7 @@ Azure ATP can notify you when it detects suspicious activities and issues securi
 
     -   Format in which to send the data RFC 3164 or 5424
 
-2.  Enter the workspace URL.
+2.  Enter the instance URL.
 
 3.  Enter your Azure Active Directory user name and password and click **Log in**.
 

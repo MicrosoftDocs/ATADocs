@@ -66,11 +66,11 @@ Ordinarily, sensors update automatically when the Azure ATP cloud service is upd
 This enables you to select specific sensors on which the update is rolled out automatically, and update the rest of your sensors on delay, only after you see that the initial update went smoothly.
 
 > [!NOTE]
-> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your workspace, see [Proxy configuration](configure-proxy.md)
+> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md)
 
 To set a sensor to delayed update:
 
-1. From the Azure ATP workspace portal, click on the settings icon and select **Configuration**.
+1. From the Azure ATP portal, click on the settings icon and select **Configuration**.
 2. Click on the **Updates** tab.
 3. In the table row next to each sensor you want to delay, set the **Delayed update** slider to **On**.
 4. Click **Save**.

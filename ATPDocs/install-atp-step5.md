@@ -81,7 +81,7 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
  >[!NOTE]
  > The version of Azure ATP updates frequently, to check the latest version, in the Azure ATP portal, go to **Configuration** and then **About**. 
 
-3.  Go to your workspace URL. In the Azure ATP portal, search for something in the search bar, such as a user or a group on your domain.
+3.  Go to your Azure ATP instance URL. In the Azure ATP portal, search for something in the search bar, such as a user or a group on your domain.
 
 
 

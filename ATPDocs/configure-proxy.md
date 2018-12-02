@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -76,9 +76,9 @@ If a proxy or firewall is blocking all traffic by default and allowing only spec
 |Asia|triprd1wcasse1sensorapi.atp.azure.com|
 
 
-You can also harden the firewall or proxy rules for a specific workspace you created, by creating a rule for the following DNS records:
-- \<your-workspace-name>.atp.azure.com – for console connectivity. For example, "Contoso-corp.atp.azure.com"
-- \<your-workspace-name>sensorapi.atp.azure.com – for sensors connectivity. For example, "contoso-corpsensorapi.atp.azure.com"
+You can also harden the firewall or proxy rules for a specific instance you created, by creating a rule for the following DNS records:
+- \<your-instance-name>.atp.azure.com – for console connectivity. For example, "Contoso-corp.atp.azure.com"
+- \<your-instance-name>sensorapi.atp.azure.com – for sensors connectivity. For example, "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]
