@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -50,7 +50,7 @@ To configure, follow these steps:
    ![Honeytoken](media/honeytoken-sensitive.png)
 
 4. Click **Exclusions**. Enter a user account or IP address to be excluded from the detection, for each type of threat. 
-5. Click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md) and the [suspicious activity guide](suspicious-activity-guide.md).
+5. Click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md) and the [security alert guide](suspicious-activity-guide.md).
 
    ![Exclusions](media/exclusions.png)
 
@@ -59,9 +59,9 @@ To configure, follow these steps:
 
 Congratulations, you have successfully deployed Azure Advanced Threat Protection!
 
-Check the attack time line to view detected suspicious activities and search for users or computers and view their profiles.
+Check the attack time line to view detected security alerts and search for users or computers, and view their profiles.
 
-Azure ATP scanning for suspicious activities starts immediately. Some detections, such as Abnormal Group Modifications, require a learning period and aren't available immediately after Azure ATP deployment.
+Azure ATP scanning starts immediately. Some detections, such as Abnormal Group Modifications, require a learning period and aren't available immediately after Azure ATP deployment.
 
 
 ## See Also
