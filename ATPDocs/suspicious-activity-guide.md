@@ -433,7 +433,7 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 
 **Description**
 
-Attackers that gain domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create Kerberos ticket granting tickets (TGT) that provide authorization to any resource, and set the ticket expiration to any arbitrary time. A forged TGT of this type is called a "Golden Ticket"  because it allows attackers to achieve lasting network persistence. In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the maximum lifetime for user ticket setting.
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. A forged TGT of this type is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify. 
 
 **Investigation**
 1. Federation services might generate tickets that will trigger this alert. Does the source computer host such services? If yes, Close the security alert.
