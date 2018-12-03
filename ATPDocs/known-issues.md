@@ -35,12 +35,6 @@ Azure ATP occasionally has engineering or feature limitations that may limit or 
 
 For Azure ATP known issues with known workarounds, see [Troubleshooting Azure ATP Known Issues](troubleshooting-atp-known-issues.md). To check the status of your Azure ATP tenant, visit the [Azure ATP Health Center](atp-health-center.md). 
 
-## Remote Code Execution attempts using Remote PowerShell commands or scripts are not detected when using Windows Server 2016
-> [!div class="mx-tableFixed"]  
-|Issue|Status|
-|----|----|
-|Remote Code Execution attempts using Remote PowerShell commands are not currently detected on Sensor machines running Windows Server 2016. Related detections and resulting alerts are not available.|Engineering is currently working on addressing this issue and adding Windows Server 2016 support.|
-
 ## AD groups with more than 1000 members have limited detail sync
 > [!div class="mx-tableFixed"]  
 |Issue|Status|
@@ -52,6 +46,15 @@ For Azure ATP known issues with known workarounds, see [Troubleshooting Azure AT
 |Issue|Status|
 |----|----|
 |Azure ATP does not support report downloads that contain more than 100,000 entries per report. Reports will render as incomplete if more than 100,000 entries are included.|Engineering limitation. No known resolution.|
+
+# Closed 
+
+This group of known issues are now closed. Check the version number of the fix for reference.   
+## Remote Code Execution attempts using Remote PowerShell commands or scripts are not detected when using Windows Server 2016 - v.2.57 (December 2, 2018)
+> [!div class="mx-tableFixed"]  
+|Issue|Status|
+|----|----|
+|Remote Code Execution attempts using Remote PowerShell commands are not currently detected on Sensor machines running Windows Server 2016. Related detections and resulting alerts are not available.|Engineering is currently working on addressing this issue and adding Windows Server 2016 support.|
 
 ## See Also
 
