@@ -4,13 +4,13 @@
 title: Manage Advanced Threat Analytics system-generated logs| Microsoft Docs
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
-ms.topic: conceptual
-ms.prod: advanced-threat-analytics
-ms.service:
+ms.date: 8/19/2018
+ms.topic: article
+ms.prod:
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 
@@ -30,11 +30,13 @@ ms.suite: ems
 
 
 
-# Manage system-generated logs> [!NOTE]
+# Manage system-generated logs> 
+
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Advanced Threat Analytics (ATA) collects anonymized system-generated log data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
+ > [!NOTE]
+ > Advanced Threat Analytics (ATA) collects anonymized system-generated log data about ATA and transmits the data over an HTTPS connection to Microsoft servers. This data is used by Microsoft to help improve future versions of ATA.
 
 ## Data collected
 Collected anonymized data includes the following parameters:

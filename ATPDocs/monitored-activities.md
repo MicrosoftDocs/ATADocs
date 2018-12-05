@@ -81,14 +81,17 @@ The information monitored by Azure ATP is presented in the form of activities. A
 
 |Monitored activity|Description|
 |---------------------|------------------|
+|Directory Service Replication  |Used tried to replicate the directory service.|
+|DNS Query  |User preformed an AXFR query against the domain controller.|
 |Wmi Execution  |User attempted to remotely execute a WMI method.|
 |Service Creation   |User attempted to remotely create a specific service to a remote machine.|
 |SMB Session Enumeration   |User attempted to enumerate all users with open SMB sessions on the domain controllers.|
+|SMB file copy| User copied files using SMB|
 |Task Scheduling  |User tried to remotely schedule X task to a remote machine.|
 |SAMR Query   |User performed a SAMR query.|
 |Private Data Retrieval  |User attempted/succeeded to query private data using LSARPC protocol.|
-|Directory Service Replication  |Used tried to replicate the directory service.|
-|DNS Query  |User preformed an AXFR query against the domain controller.|
+
+
 
 
 ## Monitored user activities: Login operations
