@@ -62,20 +62,21 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 2.  From a command prompt type *gpedit.msc*.
 3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
-![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+  ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.	Double-click **Configure target Subscription Manager**.
    
     1.	Select **Enabled**.
     2.	Under **Options**, click **Show**.
-    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*`Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10`* 
-    
-        (For example: *`Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`*)
- 
-    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.	Click **OK**.
-    6.	From an elevated command prompt type *gpupdate /force*. 
+
+    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	*Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
+      
+         *(For example: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
+      
+         ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
+      
+    4.	Click **OK**.
+    5.	From an elevated command prompt type *gpupdate /force*. 
 
 **Step 3: Perform the following steps on the ATA Gateway** 
 
@@ -90,8 +91,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.  
           ![Event Viewer image](media/wef3%20event%20viewer.png)  
         3.	Click **OK**.
-     4.	Click **Select Events**.
-
+    4.	Click **Select Events**.
         1. Click **By log** and select **Security**.
         2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
 
