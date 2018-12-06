@@ -102,7 +102,7 @@ The events can be found here:
        
 2010 – Encryption downgrade suspicious activity (suspected Overpass-The-Hash)
 
-2011 – Encryption downgrade suspicious activity(suspected Skeleton-Key)
+2011 – Encryption downgrade suspicious activity (suspected Skeleton-Key)
 
 2012 – Enumerate sessions suspicious activity 
 
@@ -126,7 +126,7 @@ The events can be found here:
 
 2023 – Brute force suspicious activity 
 
-2024 - Abnormal sensitive group membership change suspicious activity 
+2024 – Abnormal membership change to senstitive group suspicious activity 
 
 2025 – Abnormal VPN suspicious activity
 
