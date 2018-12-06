@@ -4,10 +4,10 @@
 title: ATA event ID reference | Microsoft Docs 
 description: Provides a list of ATA events IDs and their descriptions. 
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -96,7 +96,13 @@ The events can be found here:
 
 2007 – DNS reconnaissance suspicious activity 
 
-2008 – Encryption downgrade suspicious activity 
+2008 – Encryption downgrade suspicious activity (no subtype)
+
+2009 – Encryption downgrade suspicious activity (suspected GoldenTicket)
+       
+2010 – Encryption downgrade suspicious activity (suspected Overpass-The-Hash)
+
+2011 – Encryption downgrade suspicious activity (suspected Skeleton-Key)
 
 2012 – Enumerate sessions suspicious activity 
 
@@ -120,7 +126,11 @@ The events can be found here:
 
 2023 – Brute force suspicious activity 
 
-2024 - Abnormal sensitive group membership change suspicious activity  
+2024 – Abnormal membership change to senstitive group suspicious activity 
+
+2025 – Abnormal VPN suspicious activity
+
+2026 – Malicious service creation suspicious activity
 
 ## ATA auditing events
 
