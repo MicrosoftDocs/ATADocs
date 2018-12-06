@@ -36,16 +36,16 @@ This article helps you determine how many Azure ATP sensors and standalone senso
 The recommended and simplest way to determine capacity for your Azure ATP deployment is to use the [Azure ATP Sizing Tool](http://aka.ms/aatpsizingtool). Run the Azure ATP Sizing Tool and from the Excel file results, use the following fields to determine the memory and CPU that used by the sensor:
 
 > [!NOTE] 
-> The sizing tool has two sheets - one for ATA and one for Azure ATP. Make sure you use the correct sheet.
+> The sizing tool has two sheets - one for Azure ATP and one for ATA. Make sure you use the correct sheet.
 
-- Azure ATP sensor: Match the **Busy Packets/sec** field in the Azure ATP sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP standalone sensor table](#azure-atp-sensor-sizing) or the [Azure ATP sensor table](#azure-atp-standalone-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
+- Azure ATP sensor: Match the **Busy Packets/sec** field in the Azure ATP sensor table in the results file to the **PACKETS PER SECOND** field in the [Azure ATP sensor table](#azure-atp-standalone-sensor-sizing) or the [Azure ATP standalone sensor table](#azure-atp-sensor-sizing), depending on the [sensor type you choose](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Sample capacity planning tool](media/capacity-tool.png)
 
 
-If for some reason you cannot use the Azure ATP Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
-The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
+If for some reason you cannot use the Azure ATP Sizing Tool, manually gather the packet/sec counter information from all your domain controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each domain controller, you  must calculate the daily average and the busiest period (15 minutes) average.
+The following sections present the instruction for how to collect the packets/sec counter from one domain controller.
 
 ## Choosing the right sensor type for your deployment<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 In an Azure ATP deployment any combination of the Azure ATP sensor types is supported:
@@ -56,15 +56,16 @@ In an Azure ATP deployment any combination of the Azure ATP sensor types is supp
 
 When deciding the sensor deployment type, consider the following benefits:
 
-|sensor type|Benefits|Cost|Deployment topology|Domain controller use|
+|Sensor type|Benefits|Cost|Deployment topology|Domain controller use|
 |----|----|----|----|-----|
-|Azure ATP standalone sensor|The Out of band deployment makes it harder for attackers to discover Azure ATP is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 100,000 packets per second|
 |Azure ATP sensor|Doesn't require a dedicated server and port-mirroring configuration|Lower|Installed on the domain controller|Supports up to 100,000 packets per second|
+|Azure ATP standalone sensor|The Out of band deployment makes it harder for attackers to discover Azure ATP is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 100,000 packets per second|
+
 
 Consider the following issues when deciding how many Azure ATP standalone sensors to deploy.
 
 -	**Active Directory forests and domains**<br>
-	Azure ATP can monitor traffic from multiple domains within multiple Active Directory forests for each workspace you create. 
+	Azure ATP can monitor traffic from multiple domains within multiple Active Directory forests for each instance you create. 
 
 -	**Port Mirroring**<br>
     Port mirroring considerations might require you to deploy multiple Azure ATP standalone sensors per data center or branch site.

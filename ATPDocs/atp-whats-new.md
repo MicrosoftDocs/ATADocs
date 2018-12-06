@@ -31,6 +31,24 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.57
+Released December 2, 2018
+
+- **New Security Alert: Suspected Golden ticket usage- ticket anomaly (preview)**<br>
+Azure ATP’s [Suspected Golden Ticket usage - ticket anomoly](suspicious-activity-guide.md) security alert is now in public preview. <br> Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. 
+<br>This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this new detection is specifically designed to identify. 
+
+
+- **Feature Enhancement: Automated Azure ATP instance (workspace) creation** <br>
+From today, Azure ATP *workspaces* are renamed Azure ATP *instances*. Azure ATP now supports one Azure ATP instance per Azure ATP account. Instances for new customers are created using the instance creation wizard in the [Azure ATP portal](https://portal.atp.azure.com). Existing Azure ATP workspaces are converted automatically to Azure ATP instances with the update.  
+
+  - Simplified instance creation for faster deployment and protection using [create your Azure ATP instance](install-atp-step1.md). 
+  - All [data privacy and compliance](atp-privacy-compliance.md) remains the same. 
+
+  See [Create your Azure ATP instance](install-atp-step1.md) to learn more. 
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.56
 Released November 25, 2018
 

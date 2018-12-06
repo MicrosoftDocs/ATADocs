@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -42,17 +42,16 @@ When you install Azure ATP, .Net Framework 4.7 is automatically installed as par
 > Make sure that you have the latest version of .Net Framework installed. If a previous version of .Net is installed, your Azure ATP silent installation will get stuck in a loop and fail to install. 
 
 > [!NOTE] 
-> The installation of .Net framework 4.7 may require rebooting the server. When installing the Azure ATP sensor on Domain Controllers, consider scheduling a maintenance window for the Domain Controllers.
+> The installation of .Net framework 4.7 may require rebooting the server. When installing the Azure ATP sensor on domain controllers, consider scheduling a maintenance window for the domain controllers.
 Using Azure ATP silent installation, the installer is configured to automatically restart the server at the end of the installation (if necessary). Make sure to run silent installation only during a maintenance window. Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart.
 
 To track your deployment progress, monitor the Azure ATP installer logs, which are located in **%AppData%\Local\Temp**.
 
 
-
 ## Azure ATP sensor silent installation
 
 > [!NOTE]
-> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 including rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
+> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 which may include rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
 
 
 Use the following command to perform a fully silent install of the Azure ATP sensor:
@@ -81,10 +80,10 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 > [!div class="mx-tableFixed"]
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
-|AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP workspace.|
+|AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP instance.|
 
 **Examples**:
-To silently install the Azure ATP sensor, log into the domain joined computer with your Azure ATP admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the Azure ATP cloud service using the specified credentials:
+Use the following command to silently install the Azure ATP sensor:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 

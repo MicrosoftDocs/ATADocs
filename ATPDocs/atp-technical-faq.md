@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/29/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -39,7 +39,7 @@ This article provides a list of frequently asked questions and answers about Azu
 
 ### What can Azure ATP detect?
 
-Azure ATP detects known malicious attacks and techniques, security issues, and risks.
+Azure ATP detects known malicious attacks and techniques, security issues, and risks against your network.
 For the full list of Azure ATP detections, see [What detections does Azure ATP perform?](suspicious-activity-guide.md).
 
 ### What data does Azure ATP collect? 
@@ -65,18 +65,18 @@ Yes. Since computer accounts (as well as any other entities) can be used to perf
 ## Licensing and privacy 
 ### Where can I get a license for Azure Advanced Threat Protection (ATP)?
 
-Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5) and as a standalone license. You can acquire a license directly from the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
+Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5), and as a standalone license. You can acquire a license directly from the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
 
 ### Is this going to be a part of Azure Active Directory or on-premises Active Directory?
-This solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
+The Azure ATP solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
 
 ### Is my data isolated from other customer data? 
 
-Yes, your data is isolated through access authentication and logical segregation based on customer identifier. Each customer can only access data collected from their own organization and generic data that Microsoft provides.
+Yes, your data is isolated through access authentication and logical segregation based on customer identifiers. Each customer can only access data collected from their own organization and generic data that Microsoft provides.
 
 ### Do I have the flexibility to select where to store my data? 
 
-When creating the Azure ATP workspace you can choose to store your data,  you can choose to store your data in Microsoft Azure data centers in either the United States or Europe. Once configured, you cannot change the location where your data is stored. Microsoft will not transfer the data from the specified location.                
+No. When your Azure ATP instance is created, it is stored automatically in the country data center closest to the geographical location of your AAD tenant. Azure ATP data cannot be moved once your Azure ATP instance is created to a different data center.                
 
 ### How does Microsoft prevent malicious insider activities and abuse of high privilege roles? 
 
@@ -112,14 +112,14 @@ If a virtual domain controller can't be covered by the Azure ATP sensor, you can
 
 For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with Azure ATP sensors](configure-proxy.md).
 
-### Can Azure ATP monitor domain controllers be virtualized on your IaaS solution?
+### Can Azure ATP monitored domain controllers be virtualized on your IaaS solution?
 Yes, you can use the Azure ATP sensor to monitor domain controllers that are in any IaaS solution.
 
 ### Can Azure ATP support multi-domain and multi-forest?
 Azure Advanced Threat Protection supports multi-domain environments and multiple forests. This feature is currently in public preview. For more information and known limitations, see [Multi-forest support](atp-multi-forest.md).
 
 ### Can you see the overall health of the deployment?
-Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur.
+Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Azure ATP health alerts.
 
 ## Operation
 
@@ -129,10 +129,10 @@ Azure ATP can be configured to send a Syslog alert, to any SIEM server using the
 ### Why are certain accounts considered sensitive?
 This happens when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
 
-To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also [tag accounts as sensitive manually](sensitive-accounts.md).
+To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](sensitive-accounts.md).
 
 ### Do you have to write your own rules and create a threshold/baseline?
-With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources—as well as their relationship to one another—and can detect suspicious activity and known attacks fast. Three weeks after deployment, Azure ATP starts to detect behavioral suspicious activities. On the other hand, Azure ATP will start detecting known malicious attacks and security issues immediately after deployment.
+With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. Three weeks after deployment, Azure ATP starts to detect behavioral suspicious activities. On the other hand, Azure ATP will start detecting known malicious attacks and security issues immediately after deployment.
 
 ## Troubleshooting
 ### What should I do if the Azure ATP sensor or standalone sensor doesn't start?

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -61,7 +61,7 @@ Perform the following steps on your RRAS server.
 
     ![RADIUS setup](./media/radius-setup.png)
 
-4.	In the **Add RADIUS Server** window, type the **Server name** of the closest Azure ATP sensor (which has network connectivity). For high availability you can add additional Azure ATP sensors as RADIUS Servers. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters that you can remember. You need to fill it out later in your Azure ATP Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and then click **OK** on all open dialog boxes.
+4.	In the **Add RADIUS Server** window, type the **Server name** of the closest Azure ATP sensor (which has network connectivity). For high availability you can add additional Azure ATP sensors as RADIUS Servers. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters. Take note of the new shared secret string as you'll need to fill it out later during Azure ATP Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and click **OK** on all open dialog boxes.
  
      ![VPN setup](./media/vpn-set-accounting.png)
      
@@ -80,7 +80,7 @@ To configure VPN data in ATP:
   ![Configure Azure ATP VPN](./media/atp-vpn-radius.png)
 
 
-After this is enabled, all Azure ATP sensors and standalone sensors listen on port 1813 for RADIUS accounting events, and your setup is complete. 
+After this is enabled, all Azure ATP sensors listen on port 1813 for RADIUS accounting events, and your VPN setup is complete. 
 
  After the Azure ATP sensor receives the VPN events and sends them to the Azure ATP cloud service for processing, the entity profile will indicate distinct accessed VPN locations and activities in the profile will indicate locations.
 
