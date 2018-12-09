@@ -63,8 +63,8 @@ After you verified that your network meets the sensor requirements, proceed with
 
     ![Azure instance created](media/instance-created.png)
 
-> [!NOTE]
- > To log in to Azure ATP, you'll need to log in with a user assigned an Azure ATP role with rights to access the Azure ATP portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
+    > [!NOTE]
+    > To log in to Azure ATP, you'll need to log in with a user assigned an Azure ATP role with rights to access the Azure ATP portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
  
 3. Click **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups. .
 
