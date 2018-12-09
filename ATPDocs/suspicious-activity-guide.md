@@ -270,7 +270,7 @@ In this detection, an alert is triggered when a suspicious replication request i
 2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
 3. Click on the source computer to go to its profile page. Check what happened **around the time** of the replication, searching for unusual activities, such as: who was logged in, which resources were used and what is the computer’s operating system?
 
-   1.  Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to preform replications (are they domain admins)?
+   1.  Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to perform replications (are they domain admins)?
    2.  Are the users supposed to access these resources?
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
 If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
@@ -409,7 +409,7 @@ Previous name: Kerberos golden ticket
 
 **Description**
 
-Attackers that gain domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, attackers can create Kerberos ticket granting tickets (TGT) that provide authorization to any resource,and set the ticket expiration to any arbitrary time. A forged TGT of this type is called a "Golden Ticket"  because it allows attackers to achieve lasting network persistence. In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+Attackers that gain domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, attackers can create Kerberos ticket granting tickets (TGT) that provide authorization to any resource, and set the ticket expiration to any arbitrary time. A forged TGT of this type is called a "Golden Ticket"  because it allows attackers to achieve lasting network persistence. In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
 
 
 **Investigation**
@@ -432,7 +432,7 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 
 **Description**
 
-Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. A forged TGT of this type is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify. 
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. A forged TGT of this type is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this detection is designed to identify. 
 
 **Investigation**
 1. Federation services might generate tickets that will trigger this alert. Does the source computer host such services? If yes, Close the security alert.
@@ -565,7 +565,7 @@ Modifying zone transfers is one task among a checklist that should be addressed 
 
 **Description**
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Azure ATP detects PSexec,  Remote WMI and PowerShell connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Azure ATP detects PSexec,  Remote WMI, and PowerShell connections.
 
 **Investigation**
 
@@ -595,7 +595,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **Description**
 
-The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
 **Investigation**
 > [!NOTE]
@@ -695,23 +695,23 @@ An alert is opened when there is a deviation from the user’s behavior based on
 
 **Description**
 
-Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware,such as WannaCry.
+Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
 
 **Investigation**
 
 Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list. 
 
-Is this a *true positive*, *benign true positive* or *false positive*? 
+Is this a *true positive*, *benign true positive*, or *false positive*? 
 
 1. Check if WannaCry is running on the source computer. 
 
-2. If yes, it is a true positive. To understand the scope of the breach:
+2. If yes, this alert is a true positive. To understand the scope of the breach:
       - Investigate the source computer
       - Investigate the compromised computer. 
 
 2. If the source computer is not running an attack tool, sometimes, applications implement their own NTLM or SMB stack. Check if the source computer is running an application that implements its own NTLM or SMB stack.
 
-      1. If the computer is running its own stack, and it should not be, fix the application configuration. In such a case, it is a benign activity, The security alert can be closed.
+      1. If the computer is running its own stack, and it should not be, fix the application configuration. In such a case, it is a benign activity, the security alert can be closed.
 
       2. If the computer is running its own stack and it the configuration is correct, the security alert can be closed and the computer excluded, as it is  probably a benign activity.
 
@@ -742,7 +742,7 @@ Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in no
 
 Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list.
 
-Is this a *true positive*, *benign true positive* or *false positive*? 
+Is this a *true positive*, *benign true positive*, or *false positive*? 
 
 1. Check if the source computer is running an attack tool such as Metasploit or Medusa. 
 
@@ -783,7 +783,7 @@ Attackers use tools that implement various protocols such as Kerberos and SMB in
 
 Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list.
 
-Is this a *true positive*, *benign true positive* or *false positive*? 
+Is this a *true positive*, *benign true positive*, or *false positive*? 
 
  1. Sometimes applications implement their own Kerberos stack, not in accordance with the Kerberos RFC.
    1. Check if the source computer is running its own Kerberos stack. 
@@ -812,7 +812,7 @@ Attackers use tools that implement various protocols such as SMB, Kerberos, and 
 
 Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list.
 
-Is this a *true positive*, *benign true positive* or *false positive*? 
+Is this a *true positive*, *benign true positive, or *false positive*? 
 
 1. Check if the source computer is running an attack tool such as Hydra. 
    1. If yes, it is a true positive. To understand the scope of the breach:
@@ -852,7 +852,7 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
  - Is there some kind of security scanner running on the source computer? If yes, **Close and exclude** the suspicious activity.
 
-2. Check which involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
+2. Check which of the involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
 
 3. If yes and the alert gets updated, **Suppress** the suspicious activity.  
 
