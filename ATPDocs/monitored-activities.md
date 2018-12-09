@@ -47,10 +47,6 @@ The information monitored by Azure ATP is presented in the form of activities. A
 
 |Monitored activity|Description|
 |---------------------|------------------|
-|User Mail Changed|Users email attribute was changed.|
-|User Manager Changed|User's manager attribute was changed.|
-|User Phone Number Changed|User's phone number attribute was changed.|
-|User Title Changed |User's title attribute was changed.|
 |Account Constrained Delegation State Changed |The account state is now enabled or disabled for delegation.|
 |Account Constrained Delegation Spns Changed | Constrained delegation restricts the services to which the specified server can act on behalf of the user.|
 |Account Disabled Changed |Indicates whether an account is disabled or enabled.|
@@ -63,8 +59,12 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Account Password Not Required Changed |User account was changed allow logging in with a blank password.|
 |Account Smartcard Required Changed  |Account changes to require users to log on to a device using a smart card.|
 |Account Supported Encryption Types Changed |Kerberos supported encryption types were changed (types: Des, AES 129, AES 256)|
-|Group Membership Changed  |User was added/removed, to/from a group, by another user or by themselves.|
 |Account Upn Name Changed  |User's principle name was changed.|
+|Group Membership Changed  |User was added/removed, to/from a group, by another user or by themselves.|
+|User Mail Changed|Users email attribute was changed.|
+|User Manager Changed|User's manager attribute was changed.|
+|User Phone Number Changed|User's phone number attribute was changed.|
+|User Title Changed |User's title attribute was changed.|
 
 ## Monitored user activities: AD security principal operations
 
@@ -83,16 +83,13 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |---------------------|------------------|
 |Directory Service Replication  |Used tried to replicate the directory service.|
 |DNS Query  |User preformed an AXFR query against the domain controller.|
-|Wmi Execution  |User attempted to remotely execute a WMI method.|
+|Private Data Retrieval  |User attempted/succeeded to query private data using LSARPC protocol.|
 |Service Creation   |User attempted to remotely create a specific service to a remote machine.|
 |SMB Session Enumeration   |User attempted to enumerate all users with open SMB sessions on the domain controllers.|
 |SMB file copy| User copied files using SMB|
-|Task Scheduling  |User tried to remotely schedule X task to a remote machine.|
 |SAMR Query   |User performed a SAMR query.|
-|Private Data Retrieval  |User attempted/succeeded to query private data using LSARPC protocol.|
-
-
-
+|Task Scheduling  |User tried to remotely schedule X task to a remote machine.|
+|Wmi Execution  |User attempted to remotely execute a WMI method.|
 
 ## Monitored user activities: Login operations
 

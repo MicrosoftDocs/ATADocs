@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -71,11 +71,10 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
 |Suspicious service creation|Suspicious service creation|2026|
 |Suspicious VPN connection|Suspicious VPN connection|2025|
-|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack) *|2002|
-|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra) *|2002|
-|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools )*|2002|
-|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack) *|2002|
-|* *Unusual protocol implementation* alerts currently share an externalId. The externalId for each type of these alerts will be changed in a future release to a unique externalId||****|
+|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)|2002|
+|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2002|
+|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2002|
+|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
 |User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
 |User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
 
@@ -271,7 +270,7 @@ In this detection, an alert is triggered when a suspicious replication request i
 2. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
 3. Click on the source computer to go to its profile page. Check what happened **around the time** of the replication, searching for unusual activities, such as: who was logged in, which resources were used and what is the computer’s operating system?
 
-   1.  Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to preform replications (are they domain admins)?
+   1.  Are all the users who were logged into the computer supposed to be logged into it? What are their privileges? Do they have permission to perform replications (are they domain admins)?
    2.  Are the users supposed to access these resources?
    3. Does the computer run Windows Server OS (or Windows/Linux)? A non-server machine is not supposed to replicate data.
 If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
@@ -410,7 +409,7 @@ Previous name: Kerberos golden ticket
 
 **Description**
 
-Attackers that gain domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, attackers can create Kerberos ticket granting tickets (TGT) that provide authorization to any resource,and set the ticket expiration to any arbitrary time. A forged TGT of this type is called a "Golden Ticket"  because it allows attackers to achieve lasting network persistence. In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+Attackers that gain domain admin rights can compromise the [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Using the KRBTGT account, attackers can create Kerberos ticket granting tickets (TGT) that provide authorization to any resource, and set the ticket expiration to any arbitrary time. A forged TGT of this type is called a "Golden Ticket"  because it allows attackers to achieve lasting network persistence. In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
 
 
 **Investigation**
@@ -433,7 +432,7 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 
 **Description**
 
-Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. A forged TGT of this type is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify. 
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. A forged TGT of this type is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this detection is designed to identify. 
 
 **Investigation**
 1. Federation services might generate tickets that will trigger this alert. Does the source computer host such services? If yes, Close the security alert.
@@ -566,7 +565,7 @@ Modifying zone transfers is one task among a checklist that should be addressed 
 
 **Description**
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Azure ATP detects PSexec,  Remote WMI and PowerShell connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Azure ATP detects PSexec,  Remote WMI, and PowerShell connections.
 
 **Investigation**
 
@@ -596,7 +595,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **Description**
 
-The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
 **Investigation**
 > [!NOTE]
@@ -689,42 +688,152 @@ An alert is opened when there is a deviation from the user’s behavior based on
 2.	Consider blocking this user from connecting through VPN.
 
 
-## Unusual protocol implementation
+## Suspected WannaCry ransomware attack
 <a name="unusual-protocol-implementation"></a>
 
-*Previous name:* Unusual protocol implementation 
-*This group of security alerts will be renamed and given new externalIds in a future Azure ATP version*
+*Previous name:* Unusual protocol implementation (potential WannaCry ransomware attack)
 
 **Description**
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
 
 **Investigation**
 
-Identify the protocol that is unusual – from the Suspicious activity time line,  click on the security alert to get to its details page; the protocol appears above the arrow: Kerberos or NTLM.
+Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list. 
 
-- **Kerberos**: This will often be triggered if a hacking tool such as Mimikatz has been used, potentially performing an Overpass-the-Hash attack. Check if the source computer is running an application that implements its own Kerberos stack, not in accordance with the Kerberos RFC. If that is the case, it is a benign true positive and you can **Close** the alert. If the alert continues to trigger, and your previous check is still true, you can **Suppress** the alert.
+Is this a *true positive*, *benign true positive*, or *false positive*? 
 
-- **NTLM**: Possibly WannaCry or tools such as Metasploit, Medusa, and Hydra.  
+1. Check if WannaCry is running on the source computer. 
 
-To determine whether this is a WannaCry attack, perform the following steps:
+2. If yes, this alert is a true positive. To understand the scope of the breach:
+      - Investigate the source computer
+      - Investigate the compromised computer. 
 
-1. Check if the source computer is running an attack tool such as Metasploit, Medusa, or Hydra.
+2. If the source computer is not running an attack tool, sometimes, applications implement their own NTLM or SMB stack. Check if the source computer is running an application that implements its own NTLM or SMB stack.
 
-2. If no attack tools are found, check if the source computer is running an application that implements its own NTLM or SMB stack.
+      1. If the computer is running its own stack, and it should not be, fix the application configuration. In such a case, it is a benign activity, the security alert can be closed.
 
-3. Click on the source computer to go to its profile page. Check what happened around the time of the alert, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![wd badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
+      2. If the computer is running its own stack and it the configuration is correct, the security alert can be closed and the computer excluded, as it is  probably a benign activity.
+
+3. Click on the source computer to go to its profile page. Check what happened around the time of the alert, searching for unusual activities, such as who was logged in, and which resources where accessed. 
+
+4. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![wd badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
 
 
 **Remediation**
 
-Patch all your machines, especially applying security updates.
+1. Contain the source computer. 
+      - [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+      - WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA 
+2. Patch all of your machines, making sure to apply security updates. 
+      - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+## Suspected use of Metasploit hacking framework
 
-2. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+*Previous name:* Unusual protocol implementation (potential use of Metasploit hacking tools)
+
+**Description**
+
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as use of the Metasploit hacking framework. 
+
+**Investigation**
+
+Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list.
+
+Is this a *true positive*, *benign true positive*, or *false positive*? 
+
+1. Check if the source computer is running an attack tool such as Metasploit or Medusa. 
+
+2. If yes, it is a true positive. To understand the scope of the breach:
+      - Investigate the source computer
+      - Investigate the compromised computer. 
+
+3. If the source computer is not running an attack tool, sometimes, applications implement their own NTLM or SMB stack. Check if the source computer is running an application that implements its own NTLM or SMB stack.
+
+4. If the computer is running its own NTML or SMB stack, and it should not be, fix the application configuration.
+      1. In such a case, it is a benign activity, the security alert can be closed. 
+      2. If the computer is running its own stack and it the configuration is correct, the security alert can be closed and the computer excluded, as it is  probably a benign activity.
+
+5. Click on the source computer to go to its profile page. Check what happened around the time of the alert, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![wd badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
+
+
+**Remediation**
+
+1. Reset the passwords of the compromised users and enable  multi-factor authentication.
+2. Contain the source computer
+   1. Find the tool that performed the attack and remove it.
+   2. Search for users logged on around the time of the activity, as they may also be compromised.
+   3. Reset their passwords and enable multi-factor authentication. 
+4. Reset the passwords of the source user and enable multi-factor authentication. 
+5. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+
+## Suspected overpass-the-hash attack (Kerberos)
+<a name="unusual-protocol-implementation"></a>
+
+*Previous name:* Unusual Kerberos protocol implementation (potential overpass-the-hash attack) 
+
+**Description**
+
+Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+
+**Investigation**
+
+Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list.
+
+Is this a *true positive*, *benign true positive*, or *false positive*? 
+
+ 1. Sometimes applications implement their own Kerberos stack, not in accordance with the Kerberos RFC.
+   1. Check if the source computer is running its own Kerberos stack. 
+   2. If the computer is running its own Kerberos stack, and it should not be, fix the application configuration. In such a case, it is a benign activity, the security alert can be closed. 
+   3. If the computer is running its own Kerberos stack and it the configuration is correct, the security alert can be closed and the computer excluded, as it is  probably a benign activity.
+
+ **Remediation**
+
+1. Reset the passwords of the compromised users and enable  multi-factor authentication.
+2. Contain the source computer. 
+   1. Find the tool that performed the attack and remove it.
+   2. Search for users logged on around the time of the activity, as they may also be compromised. 
+   3. Reset their passwords and enable multi-factor authentication. 
+4. Reset the passwords of the source user and enable multi-factor authentication. 
+
+## Suspected brute force attack (SMB)
+<a name="unusual-protocol-implementation-smb"></a>
+
+*Previous name:* Unusual protocol implementation (potential use of malicious tools such as Hydra)
+
+**Description**
+
+Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of brute force techniques. 
+
+**Investigation**
+
+Review the unusual activity in the security alert on the activity time line. Click on the security alert to get to its details page, then review the potentially affected entities and the evidence list.
+
+Is this a *true positive*, *benign true positive, or *false positive*? 
+
+1. Check if the source computer is running an attack tool such as Hydra. 
+   1. If yes, it is a true positive. To understand the scope of the breach:
+      - Investigate the source computer
+      - Investigate the compromised computer. 
+
+2. If the source computer is not running an attack tool, sometimes, applications implement their own NTLM or SMB stack. Check if the source computer is running an application that implements its own NTLM or SMB stack.
+
+3. Click on the source computer to go to its profile page. Check what happened around the time of the alert, searching for unusual activities, such as who was logged in and which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![wd badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert.
+
+**Remediation**
+
+1. Reset the passwords of the guessed users and enable  multi-factor authentication.
+2. Add the guessed users to a watchlist.
+3. Contain the source computer
+   1. Find the tool that performed the attack and remove it.
+   2. Search for users logged on around the time of the activity, as they may also be compromised.
+   3. Reset their passwords and enable multi-factor authentication. 
+4. Enforce Complex and long passwords in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
+5. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
 
 ## User and IP address reconnaissance (SMB)
 <a name="reconnaissance-using-smb-session-enumeration"></a>
@@ -743,7 +852,7 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
  - Is there some kind of security scanner running on the source computer? If yes, **Close and exclude** the suspicious activity.
 
-2. Check which involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
+2. Check which of the involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
 
 3. If yes and the alert gets updated, **Suppress** the suspicious activity.  
 
