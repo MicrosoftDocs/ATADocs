@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/26/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,16 +31,42 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.58
+
+Released December 9, 2018
+
+- **Security Alert Enhancement: Unusual Protocol Implementation alert split**<br>
+Azure ATP's series of Unusual Protocol Implementation security alerts that previously shared 1 externalId (2002),  are now split into 4 distinctive alerts, with a corresponding unique externalId. 
+
+### New alert externalIds
+> [!div class="mx-tableFixed"] 
+
+|New security alert name|Previous security alert name|Unique externalId|
+|---------|----------|---------|
+|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033
+|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
+|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034
+|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)|2035
+|
+
+- **New monitored activity: File copy through SMB**<br>
+Copying of files using SMB is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal. 
+
+- **Large Lateral Movement Path image enhancement**<br>
+When viewing large lateral movement paths, Azure ATP now highlights only the nodes connected to a selected entity,  instead of blurring the other nodes. This change introduces a significant improvement in large LMP rendering speed. 
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.57
 Released December 2, 2018
 
 - **New Security Alert: Suspected Golden ticket usage- ticket anomaly (preview)**<br>
-Azure ATP’s [Suspected Golden Ticket usage - ticket anomoly](suspicious-activity-guide.md) security alert is now in public preview. <br> Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. 
+Azure ATP’s [Suspected Golden Ticket usage - ticket anomaly](suspicious-activity-guide.md) security alert is now in public preview. <br> Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. 
 <br>This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this new detection is specifically designed to identify. 
 
 
 - **Feature Enhancement: Automated Azure ATP instance (workspace) creation** <br>
-From today, Azure ATP *workspaces* are renamed Azure ATP *instances*. Azure ATP now supports one Azure ATP instance per Azure ATP account. Instances for new customers are created using the instance creation wizard in the [Azure ATP portal](https://portal.atp.azure.com). Existing Azure ATP workspaces are converted automatically to Azure ATP instances with the update.  
+From today, Azure ATP *workspaces* are renamed Azure ATP *instances*. Azure ATP now supports one Azure ATP instance per Azure ATP account. Instances for new customers are created using the instance creation wizard in the [Azure ATP portal](https://portal.atp.azure.com). Existing Azure ATP workspaces are converted automatically to Azure ATP instances with this update.  
 
   - Simplified instance creation for faster deployment and protection using [create your Azure ATP instance](install-atp-step1.md). 
   - All [data privacy and compliance](atp-privacy-compliance.md) remains the same. 
