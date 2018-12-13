@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -54,27 +54,28 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
 |Network-mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
 |Remote code execution attempt|Remote code execution attempt|2019|
-|Suspected Brute Force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
+|Suspected brute force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
 |Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
 |Suspected DCShadow attack (domain controller replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
 |Suspected Golden Ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
 |Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
 |Suspected Golden Ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
-|Suspected Golden Ticket usage (ticket anomaly) |Kerberos Golden Ticket – ticket anomaly|2022|
-|Suspected Golden Ticket usage (time anomaly) - preview| NA|2032|
+|Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket-time anomaly|2022|
+|Suspected Golden Ticket usage (ticket anomaly) - preview|NA|2032|
 |Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
 |Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
+|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
+|Suspected brute force attack (Kerberos, NTLM)|Suspicious authentication failures|2023|
 |Suspected over-pass-the-hash attack (encryption downgrade)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
+|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
+|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034|
 |Suspected skeleton key attack (encryption downgrade)|Encryption downgrade activity (potential skeleton key attack)|2010|
+|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)|2035|
 |Suspicious communication over DNS|Suspicious communication over DNS|2031|
 |Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
 |Suspicious service creation|Suspicious service creation|2026|
 |Suspicious VPN connection|Suspicious VPN connection|2025|
-|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)|2002|
-|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2002|
-|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2002|
-|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
 |User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
 |User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
 
@@ -834,10 +835,41 @@ Is this a *true positive*, *benign true positive, or *false positive*?
 4. Enforce Complex and long passwords in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 5. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+## Suspected brute force attack (Kerberos, NTLM)
+<a name="suspicious-authentication-failures"></a>
+
+*Previous name:* Suspicious authentication failures
+
+**Description**
+In a brute-force attack, an attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
+
+In this detection, an alert is triggered when many authentication failures using Kerberos or NTLM are detected. This can be either horizontally with a small set of passwords across many users; or vertically with a large set of passwords on just a few users; or any combination of these two options.
+
+**Timeframe**
+The minimum period before this specific alert can be triggered is a minimum of one week after sensor deployment.
+
+**Investigation**
+
+1. Click the alert to view: 
+   - List of the attacked accounts
+   - List of guessed accounts in which login attempts ended with successful authentication
+   - If the authentication attempts were performed using NTLM, you will see relevant event activities
+   - If the authentication attempts were performed using Kerberos, you will see relevant network activities
+2. Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities,such as who was logged in and which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge   to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+
+3. If the authentication was performed using NTLM, and you see the alert occurs many times and there is not enough information available about the server which the source machine tried to access, you should enable NTLM auditing on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and server which the source machine tried to access. After you know which server sent the authentication validation,  investigate the server by checking its events such as 4624 to better understand the authentication process.
+<br>
+1. Click **Download details** to view in an Excel spreadsheet. 
+
+**Remediation**
+
+Complex and long passwords provide the necessary first level of security against brute force attacks.
+
 
 ## User and IP address reconnaissance (SMB)
 <a name="reconnaissance-using-smb-session-enumeration"></a>
-Reconnaissance using SMB Session Enumeration
+
+*Previous name:* Reconnaissance using SMB Session Enumeration
 
 
 **Description**
