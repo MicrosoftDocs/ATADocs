@@ -59,9 +59,9 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |Suspected DCShadow attack (domain controller replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
 |Suspected Golden Ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
-|Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
+|Suspected Golden Ticket usage (forged authorization data)|Privilege escalation using forged authorization data|2013|
 |Suspected Golden Ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
-|Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket-time anomaly|2022|
+|Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket - time anomaly|2022|
 |Suspected Golden Ticket usage (ticket anomaly) - preview|NA|2032|
 |Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
 |Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
@@ -183,7 +183,7 @@ In this detection, an alert is triggered when Azure ATP detects a massive number
 
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
-## Suspected Brute Force attack (Kerberos NTLM)
+## Suspected Brute Force attack (Kerberos, NTLM)
 <a name="suspicious-authentication-failures"></a>
 
 *Previous name:* Suspicious authentication failures
@@ -199,16 +199,16 @@ The minimum period before this type of alert can be triggered is one week.
 
 **Investigation**
 
-1.	Click **Download details** to view the full information in an Excel spreadsheet. The following information is available: 
+1. Click **Download details** to view the full information in an Excel spreadsheet. The following information is available: 
    -	List of the attacked accounts
    -	List of guessed accounts in which login attempts ended with successful authentication
    -	If the authentication attempts were performed using NTLM, you'll see relevant event activities 
    -	If the authentication attempts were performed using Kerberos, you'll see relevant network activities
    -  If the authentication attempts used a password spray, you'll see relevant network activities
 
-2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert. 
+2. Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP, you can see which processes and alerts occurred around the time of the alert. 
 
-3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server, which the source machine tried to access, enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server, which the source machine tried to access. After you know which server sent the authentication validation, investigate the server by checking its events such as 4624 to better understand the authentication process. 
+3. If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server, which the source machine tried to access, enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and **server, which the source machine tried to access. After you know which server sent the authentication validation, investigate the server by checking its events such as 4624 to better understand the authentication process. 
 
 **Remediation**
 
