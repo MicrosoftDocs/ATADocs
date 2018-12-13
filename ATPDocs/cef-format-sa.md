@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -64,36 +64,37 @@ The following fields and their values are forwarded to your SIEM:
 
 > [!div class="mx-tableFixed"] 
 
-|New security alert name|Legacy security alert name|Unique ExternalId|
+|New security alert name|Previous security alert name|Unique externalId|
 |---------|----------|---------|
 |Account enumeration reconnaissance|Reconnaissance using account enumeration|2003|
 |Honeytoken activity|Honeytoken activity|2014|
 |Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
 |Network-mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
-|Suspected Brute Force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
+|Remote code execution attempt|Remote code execution attempt|2019|
+|Suspected brute force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
+|Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
+|Suspected DCShadow attack (domain controller replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
-|Suspected golden ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
-|Suspected golden ticket usage (time anomaly) |Kerberos golden ticket – time anomaly|2022|
-|Suspected golden ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
-|Suspected golden ticket usage (ticket anomaly) - preview|NA|2032|
+|Suspected Golden Ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
 |Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
+|Suspected Golden Ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
+|Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket - time anomaly|2022|
+|Suspected Golden Ticket usage (ticket anomaly) - preview|NA|2032|
 |Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
 |Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
+|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
+|Suspected brute force attack (Kerberos, NTLM)|Suspicious authentication failures|2023|
 |Suspected over-pass-the-hash attack (encryption downgrade)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
+|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
+|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034|
 |Suspected skeleton key attack (encryption downgrade)|Encryption downgrade activity (potential skeleton key attack)|2010|
-|Suspected DCShadow attack (DC replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
-|Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
-|Remote code execution attempt|Remote code execution attempt|2019|
+|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)|2035|
 |Suspicious communication over DNS|Suspicious communication over DNS|2031|
 |Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
 |Suspicious service creation|Suspicious service creation|2026|
 |Suspicious VPN connection|Suspicious VPN connection|2025|
-|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)*|2035|
-|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
-|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034|
-|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
-|User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
 |User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
+|User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
 
 ## Sample logs
 
@@ -123,8 +124,11 @@ Priorities:
 ### Remote code execution attempt
 10-29-2018	11:22:04	Auth.Warning	192.168.0.202	1 2018-10-29T09:22:00.100856+00:00 DC3 CEF 3908 RemoteExecutionSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|RemoteExecutionSecurityAlert|Remote code execution attempt|5|start=2018-10-29T09:19:45.0552367Z shost=CLIENT1 msg=The following remote code execution attempts were performed on DC1 from CLIENT1:\r\nSuccessful remote scheduling of one or more tasks by user1.\r\nFailed remote scheduling of one or more tasks by user1.\r\nSuccessful remote execution of one or more WMI methods by user1. externalId=2019 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/f063c778-830c-4e9f-98d1-bc6c11c94e11 cs2Label=trigger cs2=new
 
-### Suspected Brute force attack (LDAP)
+### Suspected brute force attack (LDAP)
 02-21-2018	16:20:21	Auth.Warning	192.168.0.220	1 2018-02-21T14:20:06.156238+00:00 CENTER CEF 6076 LdapBruteForceSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|LdapBruteForceSecurityAlert|Brute force attack using LDAP simple bind|5|start=2018-02-21T14:19:41.7422810Z app=Ldap suser=Wofford Thurston shost=CLIENT1 msg=A brute force attack using the Ldap protocol was attempted on Wofford Thurston (Software Engineer) from CLIENT1 (100 guess attempts). cnt=100 externalId=2004 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/57b8ac96-7907-4971-9b27-ec77ad8c029a cs2Label=trigger cs2=update
+
+### Suspected brute force attack (Kerberos, NTLM)
+10-29-2018	11:20:47	Auth.Warning	192.168.0.202	1 2018-10-29T09:20:44.478827+00:00 DC3 CEF 3908 BruteForceSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|BruteForceSecurityAlert|Suspicious authentication failures|5|start=2018-10-29T09:19:44.9512286Z app=Kerberos shost=CLIENT1 msg=Suspicious authentication failures indicating a potential brute-force attack were detected from CLIENT1. externalId=2023 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/85042c8e-27fa-49b3-8667-dabc1aa31580 cs2Label=trigger cs2=new
 
 ### Suspected Golden Ticket usage (encryption downgrade)
 10-29-2018	11:25:07	Auth.Warning	192.168.0.202	1 2018-10-29T09:25:01.007701+00:00 DC3 CEF 3908 GoldenTicketEncryptionDowngradeS ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|GoldenTicketEncryptionDowngradeSecurityAlert|Encryption downgrade activity (potential golden ticket attack)|5|start=2018-10-29T09:37:49.0849130Z app=Kerberos msg=W10-000007-Lap used a weaker encryption method (RC4),Â in the Kerberos service request (TGS_REQ),Â from W10-000007-Lap, to access host/domain1.test.local. externalId=2009 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/f01f8403-88b2-437e-b4ad-d72485fe05ac cs2Label=trigger cs2=new
