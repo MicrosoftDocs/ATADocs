@@ -78,7 +78,7 @@ The following fields and their values are forwarded to your SIEM:
 |Suspected Golden Ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
 |Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
 |Suspected Golden Ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
-|Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket-time anomaly|2022|
+|Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket - time anomaly|2022|
 |Suspected Golden Ticket usage (ticket anomaly) - preview|NA|2032|
 |Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
 |Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
