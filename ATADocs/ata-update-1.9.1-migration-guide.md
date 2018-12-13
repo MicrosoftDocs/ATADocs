@@ -28,11 +28,10 @@ ms.suite: ems
 
 # ATA version 1.9.1
 
-## Introduction
 
 This article describes issues fixed in Update 1 for Microsoft Advanced Threat Analytics (ATA) version 1.9. The build number of this update is 1.9.7412.
 
-## Fixed issues included in this update:
+## Fixed issues included in this update
 
 - Possibility of migration failures between ATA version 1.8 to version 1.9 for large databases.
 - When using the latest version of the Microsoft Edge browser, and switching users, the browser may hang.
@@ -43,11 +42,11 @@ This article describes issues fixed in Update 1 for Microsoft Advanced Threat An
 - Inconsistent exports of suspicious activities to Microsoft Excel. Occasional failure with error generation.  
 
 
-## Improvements included in this update: 
+## Improvements included in this update
 - Changes required for Microsoft Accessibility Standards (MAS) certification.
 - Includes additional performance and security fixes.
 
-## Get this update:
+## Get this update
 
 Updates for Microsoft Advanced Threat Analytics version 1.9 are available from Microsoft Update or by manual download.
 
@@ -68,7 +67,7 @@ Your computer may require a restart after you apply this update.
 This update replaces ATA version 1.9 (1.9.7312).
 
 
-## See Also
+## See also
 
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA versions](ata-versions.md)
