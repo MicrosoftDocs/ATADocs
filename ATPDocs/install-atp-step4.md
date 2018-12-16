@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/16/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -44,9 +44,9 @@ ms.suite: ems
 Perform the following steps on the domain controller.
 
 1. Verify that the machine has connectivity to the relevant Azure ATP cloud service endpoint:
-  - https://triprd1wceuw1sensorapi.atp.azure.com (for Europe)  
-  - https://triprd1wcuse1sensorapi.atp.azure.com (for the US)
-  - https://triprd1wcasse1sensorapi.atp.azure.com (for Asia)
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (for Europe)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (for the US)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (for Asia)
 
 2. Extract the installation files from the zip file. 
 > [!NOTE] 
