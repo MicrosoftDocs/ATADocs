@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/16/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,12 @@ ms.suite: ems
 
 # What's new in Azure ATP 
 
+## Azure ATP release 2.59
+Released December 16, 2018
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
+
 ## Azure ATP release 2.58
 
 Released December 9, 2018
@@ -39,6 +45,7 @@ Released December 9, 2018
 Azure ATP's series of Unusual Protocol Implementation security alerts that previously shared 1 externalId (2002),  are now split into 4 distinctive alerts, with a corresponding unique externalId. 
 
 ### New alert externalIds
+
 > [!div class="mx-tableFixed"] 
 
 |New security alert name|Previous security alert name|Unique externalId|
