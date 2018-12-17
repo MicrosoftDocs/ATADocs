@@ -43,7 +43,7 @@ For more information on how to work with ATA alerts, see [Working with suspiciou
 
 For questions or feedback, contact the ATA team at [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com).
 
-## Abnormal Sensitive Group Modification
+## Abnormal modification of sensitive groups
 
 
 **Description**
@@ -206,7 +206,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 2. If it’s a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
 tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Kerberos Golden Ticket<a name="golden-ticket"></a>
+## Kerberos Golden Ticket activity<a name="golden-ticket"></a>
 
 **Description**
 
@@ -230,7 +230,7 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
-## Malicious Data Protection Private Information Request
+## Malicious data protection private information request
 
 **Description**
 
@@ -250,7 +250,7 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 To use DPAPI, an attacker needs domain admin rights. Implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Malicious replication of directory services
+## Malicious replication of Directory Services
 
 
 **Description**
@@ -343,7 +343,7 @@ If the answer to either of these questions is yes, **Close** the suspicious acti
 [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
 
-## Reconnaissance using directory services queries
+## Reconnaissance using Directory Services queries
 
 **Description**
 
@@ -398,7 +398,7 @@ There are several query types in the DNS protocol. ATA detects the AXFR (Transfe
 Securing an internal DNS server to prevent reconnaissance using DNS from occurring can be accomplished by disabling or restricting zone transfers only to specified IP addresses. For more information on restricting zone transfers, see [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
 Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
-## Reconnaissance using SMB Session Enumeration
+## Reconnaissance using SMB session enumeration
 
 
 **Description**
