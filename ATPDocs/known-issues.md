@@ -35,6 +35,13 @@ Azure ATP occasionally has engineering or feature limitations that may limit or 
 
 For Azure ATP known issues with known workarounds, see [Troubleshooting Azure ATP Known Issues](troubleshooting-atp-known-issues.md). To check the status of your Azure ATP tenant, visit the [Azure ATP Health Center](atp-health-center.md). 
 
+## Suspected Brute Force attack (LDAP) Security Alert display
+> [!div class="mx-tableFixed"] 
+
+|Issue|Status|
+|----|----|
+The *Suspected Brute Force attack (LDAP)* security alert is not always displayed as expected. In certain scenarios, the alert description is displayed out of order.| Engineering is currently working on addressing this issue.| 
+
 ## AD groups with more than 1000 members have limited detail sync
 > [!div class="mx-tableFixed"]  
 |Issue|Status|

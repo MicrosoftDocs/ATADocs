@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/17/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -38,116 +38,72 @@ The events can be found here:
 
 ![event ID location](./media/event-id-location.png)
 
-## ATA Health events
+## ATA health events
 
-1001 – ATA Center database data drive free space health alert 
-
-1003 – ATA Center overloaded health alert 
-
-1004 – Certificate expiry health alert 
-
-1005 – Center database disconnected health alert 
-
-1006 – ATA Gateway directory services client account password expiry health alert 
-
-1007 – ATA Gateway domain synchronizer not assigned health alert 
-
-1008 – ATA Gateway capture network adapter faulted health alert 
-
-1009 – ATA Gateway capture network adapter missing health alert 
-
-1010 – ATA Gateway directory services client connectivity health alert 
-
-1011 – ATA Gateway disconnected health alert 
-
-1012 – ATA Gateway overloaded event activities health alert 
-
-1013 – ATA Gateway overloaded network activities health alert 
-
-1014 – Center mail health alert 
-
-1015 – Center Syslog health alert 
-
-1016 – ATA Gateways outdated health alert 
-
-1017 – Center not receiving traffic health alert 
-
-1018 – ATA Gateway start-failure health alert 
-
-1019 – ATA Gateway low memory health alert 
-
-1020 – ATA Gateway RADIUS event listener health alert 
-
-1021 – ATA Gateway Syslog event listener health alert 
-
-1022 – ATA Center external IP address resolution failure health alert 
+|Monitoring event ID| Monitoring alert name|
+|---------|---------------|
+|1001|Center running out of disk space|
+|1003|Center overloaded|
+|1004|Center certificate about to expire / Center certificate expired|
+|1005|MongoDB is down|
+|1006|Read-only user password to expire shortly / Read-only user password expired|
+|1007|Domain synchronizer not assigned|
+|1008|Some or All of the capture network adapters on a Gateway are not available|
+|1009|A capture network adapter on a Gateway no longer exists|
+|1010|Some domain controllers are unreachable by a Gateway  /  All domain controllers are unreachable by a Gateway|
+|1011|Gateway stopped communicating|
+|1012|Some forwarded events are not being analyzed|
+|1013|Some network traffic is not being analyzed|
+|1014|Failure sending mail|
+|1015|Failure connecting to the SIEM server using Syslog|
+|1016|Gateway version outdated|
+|1017|No traffic received from domain controller|
+|1018|Gateway service failed to start|
+|1019|Lightweight Gateway reached a memory resource limit|
+|1020|Gateway is not processing Radius events|
+|1021|Gateway is not processing Syslog events|
+|1022|Geolocation service is unavailable|
  
-## ATA suspicious activity events
+## ATA security alert events
 
-2001 – Abnormal behavior suspicious activity 
-
-2002 – Abnormal protocol suspicious activity 
-
-2003 – Account enumeration suspicious activity 
-
-2004 – LDAP brute force suspicious activity 
-
-2006 – Directory services replication suspicious activity 
-
-2007 – DNS reconnaissance suspicious activity 
-
-2008 – Encryption downgrade suspicious activity (no subtype)
-
-2009 – Encryption downgrade suspicious activity (suspected GoldenTicket)
-       
-2010 – Encryption downgrade suspicious activity (suspected Overpass-The-Hash)
-
-2011 – Encryption downgrade suspicious activity (suspected Skeleton-Key)
-
-2012 – Enumerate sessions suspicious activity 
-
-2013 – Forged PAC suspicious activity 
-
-2014 – Honeytoken activity suspicious activity 
-
-2016 – Massive object deletion suspicious activity 
-
-2017 – Pass the hash suspicious activity 
-
-2018 – Pass the ticket suspicious activity 
-
-2019 – Remote execution suspicious activity 
-
-2020 – Retrieve data protection backup key suspicious activity 
-
-2021 – SAMR reconnaissance suspicious activity 
-
-2022 – Golden ticket suspicious activity 
-
-2023 – Brute force suspicious activity 
-
-2024 – Abnormal membership change to senstitive group suspicious activity 
-
-2025 – Abnormal VPN suspicious activity
-
-2026 – Malicious service creation suspicious activity
+|Alert names|Alert Event IDs|
+|---------|---------------|
+|2001|Suspicion of identity theft based on abnormal behavior|
+|2002|Unusual protocol implementation|
+|2003|Reconnaissance using account enumeration|
+|2004|Brute force attack using LDAP simple bind|
+|2006|Malicious replication of Directory Services|
+|2007|Reconnaissance using DNS|
+|2008|Encryption downgrade activity|
+|2009|Encryption downgrade activity (potential golden ticket)|
+|2010|Encryption downgrade activity (potential overpass-the-hash)|
+|2011|Encryption downgrade activity (potential skeleton key)|
+|2012|Reconnaissance using SMB session enumeration|
+|2013|Privilege escalation using forged authorization data|
+|2014|Honeytoken activity|
+|2016|Massive object deletion|
+|2017|Identity theft using Pass-the-Hash attack|
+|2018|Identity theft using Pass-the-Ticket attack|
+|2019|Remote execution attempt detected|
+|2020|Malicious data protection private information request|
+|2021|Reconnaissance using Directory Services queries|
+|2022|Kerberos Golden Ticket activity|
+|2023|Suspicious authentication failures|
+|2024|Abnormal modification of sensitive groups|
+|2025|Abnormal VPN|
+|2026|Suspicious service creation|
 
 ## ATA auditing events
 
-3001 – Change to ATA configuration 
-
-3002 – ATA Gateway added
-
-3003 – ATA Gateway deleted
-
-3004 - ATA license activated
-
-3005 – Log in to ATA console
-
-3006 – Manual change to health activity status 
-
-3007 – Manual change to suspicious activity status 
-
+|Alert names|Alert Event IDs|
+|---------|---------------|
+|3001|Change to ATA configuration|
+|3002|ATA Gateway added|
+|3003|ATA Gateway deleted|
+|3004|ATA license activated|
+|3005|Log in to ATA console|
+|3006|Manual change to health activity status|
+|3007|Manual change to suspicious activity status|
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)

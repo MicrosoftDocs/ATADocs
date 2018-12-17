@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 12/17/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -59,7 +59,7 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |Suspected DCShadow attack (domain controller replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
 |Suspected Golden Ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
-|Suspected Golden Ticket usage (forged authorization data)|Privilege escalation using forged authorization data|2013|
+|Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
 |Suspected Golden Ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
 |Suspected Golden Ticket usage (time anomaly) |Kerberos Golden Ticket - time anomaly|2022|
 |Suspected Golden Ticket usage (ticket anomaly) - preview|NA|2032|

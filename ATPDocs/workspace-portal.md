@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
