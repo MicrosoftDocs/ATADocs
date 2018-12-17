@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/15/2018
+ms.date: 12/17/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -54,10 +54,10 @@ The *Suspected Brute Force attack (LDAP)* security alert is not always displayed
 |----|----|
 |Azure ATP does not support report downloads that contain more than 100,000 entries per report. Reports will render as incomplete if more than 100,000 entries are included.|Engineering limitation. No known resolution.|
 
-# Closed 
+## Closed issues
 
 This group of known issues are now closed. Check the version number of the fix for reference.   
-## Remote Code Execution attempts using Remote PowerShell commands or scripts are not detected when using Windows Server 2016 - v.2.57 (December 2, 2018)
+### Remote Code Execution attempts using Remote PowerShell commands or scripts are not detected when using Windows Server 2016 - v.2.57 (December 2, 2018)
 > [!div class="mx-tableFixed"]  
 |Issue|Status|
 |----|----|
