@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/17/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -907,7 +907,6 @@ Is this alert a **True Positive**, **Benign True Positive** , or **False Positiv
 <a name="reconnaissance-using-smb-session-enumeration"></a>
 
 *Previous name:* Reconnaissance using SMB Session Enumeration
-
 
 **Description**
 
