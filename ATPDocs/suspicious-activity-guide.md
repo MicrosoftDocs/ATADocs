@@ -43,19 +43,19 @@ For more information on how to work with Azure ATP security alerts, see [Working
 
 ## Security alert name mapping and unique externalId
 
-In version 2.56, all existing Azure ATP security alerts were renamed with easier to understand names. Mapping between old and new names, and their corresponding unique externalIds are as listed in the following table. Microsoft recommends use of alert externalIds in place of alert names for scripts or automation as only security alert externalIds are permanent and not subject to change. 
+In version 2.56, all existing Azure ATP security alerts were renamed with easier to understand names. Mapping between old and new names, and their corresponding unique externalIds are as listed in the following table. Microsoft recommends use of alert externalIds in place of alert names for scripts or automation as only security alert externalIds are permanent and not subject to change.
 
 > [!div class="mx-tableFixed"] 
 
 |New security alert name|Previous security alert name|Unique externalId|
 |---------|----------|---------|
-|[Account enumeration reconnaissance](#reconnaisance-using-account-enumeration)|Reconnaissance using account enumeration|2003|
-|[Honeytoken activity](#honeytoken-activity)|Honeytoken activity|2014|
-|[Malicious request of Data Protection API master key](#malicious-data-protection-private-information-request)|Malicious Data Protection Private Information Request|2020|
-|[Network mapping reconnaissance (DNS)](#reconnaisance-using-dns)|Reconnaissance using DNS|2007|
-|[Remote code execution attempt](#remote-code-execution-attempt)|Remote code execution attempt|2019|
-|[Suspected brute force attack (LDAP)](#brute-force-attack-using-ldap-simple-bind)|Brute force attack using LDAP simple bind|2004|
-|[Suspected DCShadow attack (domain controller promotion)](#suspicious-domain-controller-promotion-potential-dcshadow-attack)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
+|Account enumeration reconnaissance|Reconnaissance using account enumeration|2003|
+|Honeytoken activity|Honeytoken activity|2014|
+|Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
+|Network mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
+|Remote code execution attempt|Remote code execution attempt|2019|
+|Suspected brute force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
+|Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
 |Suspected DCShadow attack (domain controller replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
 |Suspected Golden Ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
@@ -76,8 +76,10 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
 |Suspicious service creation|Suspicious service creation|2026|
 |Suspicious VPN connection|Suspicious VPN connection|2025|
-|[User and group membership reconnaissance (SAMR)](##reconnaissance-using-directory-services-queries)|Reconnaissance using directory services queries|2021|
+|User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
 |User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
+
+
 
 
 ## Account enumeration reconnaissance
@@ -151,9 +153,9 @@ In this detection, an alert is triggered when the DPAPI is used to retrieve the 
 
 1. Is the source computer running an organization-approved advanced security scanner against Active Directory?
 
-2. If yes and it should always be doing so, **Close and exclude** the suspicious activity.
+2. If yes and it should always be doing so, **Close and exclude** the alert.
 
-3. If yes and it should not do this, **Close** the suspicious activity.
+3. If yes and it should not do this, **Close** the alert.
 
 **Remediation**
 
@@ -331,7 +333,7 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepla
 **Description**
 Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques. 
 
-In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the previous service request detected by ATP.
+In a Golden Ticket alert, the encryption method of the ticket granting ticket (TGT) field of TGS_REQ (service request) message from the source computer was downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, there was no Kerberos authentication request associated with the previous service request detected by ATP.
 
 **Investigation**
 1. Some resources don’t support strong encryption methods and might trigger this alert.
@@ -620,7 +622,7 @@ If the registered query domain is not trusted after your investigation, we recom
 
 **Description**
 
-Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by Azure ATP. The minimum period before an alert can be triggered is one month per each domain controller.
+Attackers typically add users to highly privileged groups. They do so to gain access to more resources, and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by Azure ATP. The minimum period before an alert can be triggered is one month per each domain controller.
 
 For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
 
@@ -726,7 +728,7 @@ Is this a *true positive*, *benign true positive*, or *false positive*?
 
 1. Contain the source computer. 
       - [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
-      - WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [Wanna Cry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [WannaCry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
       - Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA 
 2. Patch all of your machines, making sure to apply security updates. 
       - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
@@ -856,9 +858,9 @@ The minimum period before this specific alert can be triggered is a minimum of o
    - List of guessed accounts in which login attempts ended with successful authentication
    - If the authentication attempts were performed using NTLM, you will see relevant event activities
    - If the authentication attempts were performed using Kerberos, you will see relevant network activities
-2. Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities,such as who was logged in and which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge   to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+2. Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as who was logged in and which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge   to further investigate the machine. Use Windows Defender ATP, to see which processes and alerts occurred around the time of the alert.
 
-3. If the authentication was performed using NTLM, and you see the alert occurs many times and there is not enough information available about the server which the source machine tried to access, you should enable NTLM auditing on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account and server which the source machine tried to access. After you know which server sent the authentication validation,  investigate the server by checking its events such as 4624 to better understand the authentication process.
+3. If the authentication was performed using NTLM, and you see the alert occurs many times without enough information about the server the source machine tried to access, enable NTLM auditing on the involved domain controllers. Enable NTLM auditing on the involved domain controllers by turning on event 8004. This is the NTLM authentication event that includes information about the source computer, user account, and server the source machine tried to access. After you know which server sent the authentication validation, investigate the server by checking events, such as event 4624 to better understand the authentication process.
 <br>
 1. Click **Download details** to view in an Excel spreadsheet. 
 
@@ -872,37 +874,34 @@ Complex and long passwords provide the necessary first level of security against
 <a name="reconnaissance-using-directory-service-queries"></a>
 
 **Description** 
-User and group membership reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in an attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.  
+User and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in an attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.  
 In this detection, no alerts are triggered in the first month after Azure ATP is deployed (learning period). During the learning period, Azure ATP profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts. 
 
 **Learning period**
 4 weeks per domain controller starting from the first network activity of SAMR against the specific DC. 
 
-Is this alert a **True Positive**, **Benign True Positive** or **False Positive**? 
+Is this alert a **True Positive**, **Benign True Positive** , or **False Positive**? 
 
 1. Click on the source computer to go to its profile page.        - Is the source computer supposed to generate activities of this type?  
-      - If yes, you can Close the security alert and exclude that computer, it is probably a benign true positive activity. 
+      - If yes, you can *Close* the security alert and exclude that computer, it is probably a benign true positive activity. 
 2. Check the user/s that performed the operation. 
       - Do they normally log into that source computer or are they administrators that should be performing those specific actions?   
       - Check the user profile, and their related user activities. Understand their normal behavior and search for additional suspicious activities using the user investigation guide. 
       - If yes, *Close* the security alert as a benign activity. 
   
-**Scope of breach**
+**Understand the scope of the breach**
 
-Understand the scope of the breach: 
-- Check which queries were performed (for example, Enterprise admins, or Administrator) and determine if  they were successful. 
-- Investigate each exposed user using the user investigation guide. 
-- Investigate the source computer.  
+1. Check which queries were performed (for example, Enterprise admins, or Administrator) and determine if  they were successful. 
+2. Investigate each exposed user using the user investigation guide. 
+3. Investigate the source computer.  
   
-**Remediation**
+**Suggested remediation and steps for prevention**
 
-Suggested remediation and steps for prevention: 
-- Contain the source computer 
-- Find the tool that performed the attack and remove it. 
-- Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA. 
-- Add the exposed accounts to your account watchlist. 
-- Reset the source user password and enable MFA. 
-- Apply Network access: Restrict clients allowed to make remote calls to SAM group policy.
+1. Contain the source computer. 
+2. Find the tool that performed the attack and remove it. 
+3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA. 
+4. Reset the source user password and enable MFA. 
+5. Apply Network access: Restrict clients allowed to make remote calls to SAM group policy.
 
 ## User and IP address reconnaissance (SMB)
 <a name="reconnaissance-using-smb-session-enumeration"></a>
@@ -924,9 +923,9 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 2. Check which of the involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
 
-3. If yes and the alert gets updated, **Suppress** the suspicious activity.  
+3. If yes and the alert is updated, **Suppress** the security alert.  
 
-4. If yes and it should not do this anymore, **Close** the suspicious activity.
+4. If yes and it should not do this, **Close** the security alert.
 
 5. If the answer to all the above is no, assume this is malicious.
 
