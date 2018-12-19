@@ -49,13 +49,13 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 
 |New security alert name|Previous security alert name|Unique externalId|
 |---------|----------|---------|
-|Account enumeration reconnaissance|Reconnaissance using account enumeration|2003|
-|Honeytoken activity|Honeytoken activity|2014|
-|Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
-|Network-mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
-|Remote code execution attempt|Remote code execution attempt|2019|
-|Suspected brute force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
-|Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
+|[Account enumeration reconnaissance](#reconnaisance-using-account-enumeration)|Reconnaissance using account enumeration|2003|
+|[Honeytoken activity](#honeytoken-activity)|Honeytoken activity|2014|
+|[Malicious request of Data Protection API master key](#malicious-data-protection-private-information-request)|Malicious Data Protection Private Information Request|2020|
+|[Network mapping reconnaissance (DNS)](#reconnaisance-using-dns)|Reconnaissance using DNS|2007|
+|[Remote code execution attempt](#remote-code-execution-attempt)|Remote code execution attempt|2019|
+|[Suspected brute force attack (LDAP)](#brute-force-attack-using-ldap-simple-bind)|Brute force attack using LDAP simple bind|2004|
+|[Suspected DCShadow attack (domain controller promotion)](#suspicious-domain-controller-promotion-potential-dcshadow-attack)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
 |Suspected DCShadow attack (domain controller replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
 |Suspected Golden Ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
@@ -76,12 +76,13 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
 |Suspicious service creation|Suspicious service creation|2026|
 |Suspicious VPN connection|Suspicious VPN connection|2025|
-|User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
+|[User and group membership reconnaissance (SAMR)](##reconnaissance-using-directory-services-queries)|Reconnaissance using directory services queries|2021|
 |User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
 
 
 ## Account enumeration reconnaissance
 <a name="reconnaissance-using-account-enumeration"></a>
+
 *Previous name:* Reconnaissance using account enumeration
 
 **Description**
@@ -865,6 +866,43 @@ The minimum period before this specific alert can be triggered is a minimum of o
 
 Complex and long passwords provide the necessary first level of security against brute force attacks.
 
+## User and group membership reconnaissance (SAMR)
+
+*Previous name:* Reconnaissance using directory services queries
+<a name="reconnaissance-using-directory-service-queries"></a>
+
+**Description** 
+User and group membership reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in an attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.  
+In this detection, no alerts are triggered in the first month after Azure ATP is deployed (learning period). During the learning period, Azure ATP profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts. 
+
+**Learning period**
+4 weeks per domain controller starting from the first network activity of SAMR against the specific DC. 
+
+Is this alert a **True Positive**, **Benign True Positive** or **False Positive**? 
+
+1. Click on the source computer to go to its profile page.        - Is the source computer supposed to generate activities of this type?  
+      - If yes, you can Close the security alert and exclude that computer, it is probably a benign true positive activity. 
+2. Check the user/s that performed the operation. 
+      - Do they normally log into that source computer or are they administrators that should be performing those specific actions?   
+      - Check the user profile, and their related user activities. Understand their normal behavior and search for additional suspicious activities using the user investigation guide. 
+      - If yes, *Close* the security alert as a benign activity. 
+  
+**Scope of breach**
+
+Understand the scope of the breach: 
+- Check which queries were performed (for example, Enterprise admins, or Administrator) and determine if  they were successful. 
+- Investigate each exposed user using the user investigation guide. 
+- Investigate the source computer.  
+  
+**Remediation**
+
+Suggested remediation and steps for prevention: 
+- Contain the source computer 
+- Find the tool that performed the attack and remove it. 
+- Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA. 
+- Add the exposed accounts to your account watchlist. 
+- Reset the source user password and enable MFA. 
+- Apply Network access: Restrict clients allowed to make remote calls to SAM group policy.
 
 ## User and IP address reconnaissance (SMB)
 <a name="reconnaissance-using-smb-session-enumeration"></a>
