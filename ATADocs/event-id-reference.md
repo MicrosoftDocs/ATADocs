@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/17/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -90,7 +90,6 @@ The events can be found here:
 |2022|Kerberos Golden Ticket activity|
 |2023|Suspicious authentication failures|
 |2024|Abnormal modification of sensitive groups|
-|2025|Abnormal VPN|
 |2026|Suspicious service creation|
 
 ## ATA auditing events
