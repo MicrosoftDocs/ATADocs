@@ -76,7 +76,6 @@ In this example, cs1 is a field that has a URL to the alert.
 |2022|Kerberos Golden Ticket activity|
 |2023|Suspicious authentication failures|
 |2024|Abnormal modification of sensitive groups|
-|2025|Abnormal VPN|
 |2026|Suspicious service creation|
 
 
