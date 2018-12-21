@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/16/2018
+ms.date: 12/21/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,7 +29,10 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# What's new in Azure ATP 
+# What's new in Azure ATP
+
+## Azure ATP release 2.60
+Azure ATP Version 2.60 is currently planned for release during the first week of 2019. During this time, if any critical issues that require an interim update are found, updates will be made as needed.
 
 ## Azure ATP release 2.59
 Released December 16, 2018
