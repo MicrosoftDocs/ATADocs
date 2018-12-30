@@ -46,7 +46,7 @@ The first time you open the ATA Console, the following screen appears:
 
     |Field|Comments|
     |---------|------------|
-    |**Username** (required)|Enter the read-only user name, for example: **ATAuser**. **Note:** Do not use the UPN format for your username.|
+    |**Username** (required)|Enter the read-only user name, for example: **ATAuser**. **Note:** Do **not** use the UPN format for your username.|
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
