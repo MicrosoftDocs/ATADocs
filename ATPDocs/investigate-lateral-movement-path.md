@@ -76,17 +76,17 @@ To discover all the sensitive accounts in your network that are exposed because 
 
 ## Schedule report
 
-The Lateral movement to sensitive account report can also be scheduled using the set scheduled reports feature. 
+The Lateral movement to sensitive account report can also be scheduled using the set scheduled reports feature.
 
 Note that the actual LMPs detailed in the downloadable report may no longer be available because they were detected in the past and may have been changed, modified or fixed since they were detected.
 
-To review historical LMPs, select different available dates in the calendar selection when creating a report. 
+To review historical LMPs, select different available dates in the calendar selection when creating a report.
 
 ## Next steps
 
 In this tutorial, you've learned how to use LMPs to investigate suspicious activities. To learn more about entities involved in LMPs, continue to the investigate entities tutorial.
 > [!div class="nextstepaction"]
-> [Investigate entities](investigate-entities.md)
+> [Investigate entities](investigate-entity.md)
 
 ## See Also
 
