@@ -72,21 +72,21 @@ To discover all the sensitive accounts in your network that are exposed because 
 
 3. Click **Download**.
 
-4. An Excel file is created that provides you with details about your potential lateral movement paths and sensitive account exposure for the dates selected. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk access. The **Details** tab provides a list of the sensitive accounts that you should investigate further. 
+4. An Excel file is created that provides you with details about your potential lateral movement paths and sensitive account exposure for the dates selected. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk access. The **Details** tab provides a list of the sensitive accounts that you should investigate further.
 
 ## Schedule report
 
 The Lateral movement to sensitive account report can also be scheduled using the set scheduled reports feature. 
 
-Note that the actual LMPs detailed in the downloadable report may no longer be available because they were detected in the past and may have been changed, modified or fixed since they were detected. 
+Note that the actual LMPs detailed in the downloadable report may no longer be available because they were detected in the past and may have been changed, modified or fixed since they were detected.
 
 To review historical LMPs, select different available dates in the calendar selection when creating a report. 
 
 ## Next steps
 
-In this tutorial, you've learned how to use LMPs to investigate suspicious activities. To learn more about entities involved in LMPs, continue to the investigate entities tutorial. 
+In this tutorial, you've learned how to use LMPs to investigate suspicious activities. To learn more about entities involved in LMPs, continue to the investigate entities tutorial.
 > [!div class="nextstepaction"]
-> [Investigate entities](./investigate-entities.md)
+> [Investigate entities](investigate-entities.md)
 
 ## See Also
 
