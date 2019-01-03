@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/23/2018
+ms.date: 1/3/2019
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -46,14 +46,14 @@ Azure ATP provides you invaluable insights on identity configurations and sugges
 Typically, attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain: 
 ### Reconnaissance 
 Identify rogue users and attackers’ attempts to gain information. Attackers are searching for information bout user names, users’ group membership, IP addresses assigned to devices, resources, and more,  using a variety of methods.  
-### Compromised users
+### Compromised credentials
 Identify attempts to compromise user credentials using brute force attacks, failed authentications, user group membership changes, and other methods.  
 
 ### Lateral movements
 Detect attempts to move laterally inside the network to gain further control of sensitive users, utilizing methods such as Pass the Ticket, Pass the Hash, Overpass the Hash and more.  
 
 ### Domain dominance
-Highlighting attacker behavior if domain dominance is achieved, through remote code execution on the domain controller, and methods such as DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.   
+Highlighting attacker behavior if domain dominance is achieved, through remote code execution on the domain controller, and methods such as DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.
 
 ## Investigate alerts and user activities  
 Azure ATP is designed to reduce general alert noise, providing only relevant, important security alerts in a simple, real-time organizational attack timeline. The Azure ATP attack timeline view allows you to easily stay focused on what matters, leveraging the intelligence of smart analytics. Security professionals using Azure ATP can quickly investigate threats and gain insights across the organization for users, devices, and network recourses. Seamless integration with Windows Defender ATP provides another layer of enhanced security by additional detection and protection against advanced persistent threats on the operating system.  
