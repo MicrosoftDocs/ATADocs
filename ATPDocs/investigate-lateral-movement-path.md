@@ -7,8 +7,8 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/25/2018
-ms.topic: conceptual
+ms.date: 1/3/2019
+ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -28,24 +28,31 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Using Azure ATP Lateral Movement Paths (LMPs)
+# Tutorial: Use Lateral Movement Paths (LMPs)
 
-Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are [credential theft](suspicious-activity-guide.md#) and [Pass the Ticket](suspicious-activity-guide.md) attacks. In both methods, non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts. 
+Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are [credential theft](suspicious-activity-guide.md#) and [Pass the Ticket](suspicious-activity-guide.md) attacks. In both methods, non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
 
-Use Azure ATP LMPs to [investigate](#investigate) potential lateral movement paths, and along with Azure ATP security alerts, gain a better understanding of what happened in your network and how. Use the [LMP to sensitive account report](#discover-your-at-risk-sensitive-accounts) to discover all of the sensitive accounts with potential lateral movement paths discovered in your network by time period.  
+In this tutorial, you'll learn how to use Azure ATP LMPs to [investigate](#investigate) potential lateral movement paths, and along with Azure ATP security alerts, gain a better understanding of what happened in your network and how. In addition, you'll learn how to use the [LMP to sensitive account report](#discover-your-at-risk-sensitive-accounts) to discover all of the sensitive accounts with potential lateral movement paths discovered in your network by time period.
+
+> [!div class="checklist"]
+> * Investigate LMPs
+> * Discover your sensitive accounts at risk
+> * Access the **Lateral movement paths to sensitive accounts** report
+
 
 ## Investigate
-There are multiple ways to use and investigate LMPs. In the Azure ATP portal, search by entity and then explore by path or activity. 
+
+There are multiple ways to use and investigate LMPs. In the Azure ATP portal, search by entity and then explore by path or activity.
 
 1. From the portal, search for a user or computer. Notice if a lateral movement badge was added to an entity profile. Badges will only display when an entity is discovered in a potential LMP within the last 48 hours.  
 
-   ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). 
+   ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png).
 
-2. In the user profile page that opens, click the **Lateral movement paths** tab. 
+2. In the user profile page that opens, click the **Lateral movement paths** tab.
 
    ![Azure ATP Lateral Movement Path (LMP) tab](./media/lateral-movement-path-tab.png)
 
-3. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. If no activity was detected in the last two days, the graph will not appear. Use the **View a different date** option to display the graph for previous lateral movement path detections for the entity. 
+3. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. If no activity was detected in the last two days, the graph will not appear. Use the **View a different date** option to display the graph for previous lateral movement path detections for the entity.
 
    ![LMP view a different date](./media/atp-view-different-date.png)
 
@@ -65,13 +72,21 @@ To discover all the sensitive accounts in your network that are exposed because 
 
 3. Click **Download**.
 
-4. An Excel file is created that provides you with details about your potential lateral movement paths and sensitive account exposure for the dates selected. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk access. The **Details** tab provides a list of the sensitive accounts that you should investigate further. 
+4. An Excel file is created that provides you with details about your potential lateral movement paths and sensitive account exposure for the dates selected. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk access. The **Details** tab provides a list of the sensitive accounts that you should investigate further.
 
-The Lateral movement to sensitive account report can also be scheduled using the set scheduled reports feature. 
+## Schedule report
 
-Note that the actual LMPs detailed in the downloadable report may no longer be available because they were detected in the past and may have been changed, modified or fixed since they were detected. 
+The Lateral movement to sensitive account report can also be scheduled using the set scheduled reports feature.
 
-To review historical LMPs, select different available dates in the calendar selection when creating a report. 
+Note that the actual LMPs detailed in the downloadable report may no longer be available because they were detected in the past and may have been changed, modified or fixed since they were detected.
+
+To review historical LMPs, select different available dates in the calendar selection when creating a report.
+
+## Next steps
+
+In this tutorial, you've learned how to use LMPs to investigate suspicious activities. To learn more about entities involved in LMPs, continue to the investigate entities tutorial.
+> [!div class="nextstepaction"]
+> [Investigate entities](investigate-entity.md)
 
 ## See Also
 
