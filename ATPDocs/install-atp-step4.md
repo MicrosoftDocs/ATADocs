@@ -57,7 +57,7 @@ Perform the following steps on the domain controller.
 > [!NOTE] 
 > Installing directly from the zip file fails.
 
-3.  Run **Azure ATP sensor setup.exe** and follow the setup wizard.
+3. Run **Azure ATP sensor setup.exe** and follow the setup wizard.
 
 4.  On the **Welcome** page, select your language and click **Next**.
 
