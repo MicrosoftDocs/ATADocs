@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/21/2018
+ms.date: 1/6/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,9 @@ ms.suite: ems
 # What's new in Azure ATP
 
 ## Azure ATP release 2.60
-Azure ATP Version 2.60 is currently planned for release during the first week of 2019. During this time, if any critical issues that require an interim update are found, updates will be made as needed.
+Released January 6th, 2019
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.59
 Released December 16, 2018
@@ -45,13 +47,13 @@ Released December 16, 2018
 Released December 9, 2018
 
 - **Security Alert Enhancement: Unusual Protocol Implementation alert split**<br>
-Azure ATP's series of Unusual Protocol Implementation security alerts that previously shared 1 externalId (2002),  are now split into 4 distinctive alerts, with a corresponding unique externalId. 
+Azure ATP's series of Unusual Protocol Implementation security alerts that previously shared 1 externalId (2002), are now split into 4 distinctive alerts, with a corresponding unique external ID. 
 
 ### New alert externalIds
 
 > [!div class="mx-tableFixed"] 
 
-|New security alert name|Previous security alert name|Unique externalId|
+|New security alert name|Previous security alert name|Unique external ID|
 |---------|----------|---------|
 |Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033
 |Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|

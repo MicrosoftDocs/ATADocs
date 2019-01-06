@@ -43,16 +43,21 @@ ms.suite: ems
 
 Perform the following steps on the domain controller.
 
-1. Verify that the machine has connectivity to the relevant Azure ATP cloud service endpoint:
-  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (for Europe)  
-  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (for the US)
-  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (for Asia)
+1. Verify the machine has connectivity to the relevant Azure ATP cloud service endpoint(s):
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+  - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
+<br>(for Europe)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
+  - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
+  - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+<br>(for the US)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(for Asia)
 
 2. Extract the installation files from the zip file. 
 > [!NOTE] 
 > Installing directly from the zip file fails.
 
-3.  Run **Azure ATP sensor setup.exe** and follow the setup wizard.
+3. Run **Azure ATP sensor setup.exe** and follow the setup wizard.
 
 4.  On the **Welcome** page, select your language and click **Next**.
 
