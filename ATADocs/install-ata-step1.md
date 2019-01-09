@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 1/9/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -72,7 +72,7 @@ Perform the following steps on the ATA Center server.
 
     |Field|Description|Comments|
     |---------|---------------|------------|
-    |Installation Path|This is the location where the ATA Center is installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
+    |Installation Path|This is the location where the ATA Center is installed. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
     |Database Data Path|This is the location where the MongoDB database files are located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments, you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](ata-capacity-planning.md) for sizing information.|
     |Center Service SSL Certificate|This is the certificate that is used by the ATA Console and ATA Center service.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment. You have the option to create a self-signed certificate.|
         
@@ -103,7 +103,14 @@ Because you are logging into the site using an IP address, you receive a warning
 After installing the ATA Center you should exclude the MongoDB database directory from being continuously scanned by your anti-virus application. The default location in the database is:
 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
+Make sure to also exclude these folders from AV scanning:
 
+C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
+
+If you installed ATA in different directory, make sure to change the  folder paths according to your installation. 
 
 > [!div class="step-by-step"]
 > [« Pre-install](configure-port-mirroring.md)

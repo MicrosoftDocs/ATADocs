@@ -39,7 +39,7 @@ ms.suite: ems
 ## Step 4. Install the Azure ATP sensor
 
 > [!IMPORTANT]
->Make sure .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed the Azure ATP sensor setup package installs it, which may require a reboot of the server.
+>Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
 
 Perform the following steps on the domain controller.
 
