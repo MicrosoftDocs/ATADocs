@@ -103,12 +103,18 @@ Because you are logging into the site using an IP address, you receive a warning
 After installing the ATA Center you should exclude the MongoDB database directory from being continuously scanned by your anti-virus application. The default location in the database is:
 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
-Make sure to also exclude these folders from AV scanning:
+Make sure to also exclude the following folders and processes from AV scanning:
 
+**Folders**
 C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
+
+**Processes**
+<br>mongod.exe
+<br>Microsoft.Tri.Center.exe
+
 
 If you installed ATA in different directory, make sure to change the  folder paths according to your installation. 
 
