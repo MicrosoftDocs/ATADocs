@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/17/2018
+ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -64,14 +64,17 @@ The following fields and their values are forwarded to your SIEM:
 
 > [!div class="mx-tableFixed"] 
 
-|New security alert name|Previous security alert name|Unique externalId|
+|New security alert name|Previous security alert name|Unique external ID|
 |---------|----------|---------|
 |Account enumeration reconnaissance|Reconnaissance using account enumeration|2003|
+|Data exfiltration over SMB| NA| 2030|
 |Honeytoken activity|Honeytoken activity|2014|
 |Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
-|Network-mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
+|Network mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
 |Remote code execution attempt|Remote code execution attempt|2019|
 |Suspected brute force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
+|Suspected brute force attack (Kerberos, NTLM)|Suspicious authentication failures|2023|
+|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
 |Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
 |Suspected DCShadow attack (domain controller replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
 |Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
@@ -82,8 +85,6 @@ The following fields and their values are forwarded to your SIEM:
 |Suspected Golden Ticket usage (ticket anomaly) - preview|NA|2032|
 |Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
 |Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
-|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
-|Suspected brute force attack (Kerberos, NTLM)|Suspicious authentication failures|2023|
 |Suspected over-pass-the-hash attack (encryption downgrade)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
 |Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
 |Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034|
@@ -108,6 +109,9 @@ Priorities:
 
 ### Account enumeration reconnaissance 
 02-21-2018	16:19:35	Auth.Warning	192.168.0.220	1 2018-02-21T14:19:27.540731+00:00 CENTER CEF 6076 AccountEnumerationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AccountEnumerationSecurityAlert|Reconnaissance using account enumeration|5|start=2018-02-21T14:19:02.6045416Z app=Kerberos shost=CLIENT1 suser=LMaldonado msg=Suspicious account enumeration activity using the Kerberos protocol, originating from CLIENT1, was observed and successfully guessed Lamon Maldonado (Software Engineer). externalId=2003 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/eb6a35da-ff7f-4ab5-a1b5-a07529a89e6d cs2Label=trigger cs2=new
+
+### Data exfiltration over SMB
+12-19-2018  14:17:46    Auth.Error     127.0.0.1      1 2018-12-19T12:17:34.645993+00:00 DC1 CEF 3288 SmbDataExfiltrationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.60.0.0|SmbDataExfiltrationSecurityAlert|[PREVIEW] Data exfiltration over SMB|10|start=2018-12-19T12:14:12.4932821Z app=Smb shost=CLIENT1 msg=Eugene Jenkins (Software Engineer) on DC2 copied suspicious files to CLIENT1. externalId=2030 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/3ca2ec9d-2c67-44cc-a2d6-391716611bb6 cs2Label=trigger cs2=new
 
 ### Honeytoken activity
 02-21-2018	16:20:36	Auth.Warning  192.168.0.220	1 2018-02-21T14:20:34.106162+00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|HoneytokenActivitySecurityAlert|Honeytoken activity|5|start=2018-02-21T14:20:26.6705617Z app=Kerberos suser=honey msg=The following activities were performed by honey:\r\nLogged in to CLIENT2 via DC1. externalId=2014 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c cs2Label=trigger cs2=new
