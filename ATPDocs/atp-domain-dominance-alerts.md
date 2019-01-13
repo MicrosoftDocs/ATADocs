@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 # Tutorial: Domain dominance alerts  
 
 Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
@@ -554,6 +552,9 @@ A suspicious service has been created on a domain controller in your organizatio
 1. Restrict remote access to domain controllers from non-Tier 0 machines. 
 2. Implement [privileged access](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for administrators.
 3. Implement less-privileged access on domain machines to give only specific users the right to create services.
+
+> [!div class="nextstepaction"]
+> [exfiltration alerts](atp-exfiltration-alerts.md)
  
 ## See Also
 

@@ -73,11 +73,11 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
 
 *Phases:*
-- [1. Reconnaissance alerts](atp-reconnaissance-alerts.md)
-- [2. Compromised credential alerts](atp-compromised-credentials-alerts.md)
-- [3. Lateral movement alerts](atp-lateral-movement-alerts.md)
-- [4. Domain dominance alerts](atp-domain-dominance-alerts.md)
-- [5. Exfiltration alerts](atp-exfiltration-alerts.md)
+    [1. Reconnaissance alerts](atp-reconnaissance-alerts.md)
+    [2. Compromised credential alerts](atp-compromised-credentials-alerts.md)
+    [3. Lateral movement alerts](atp-lateral-movement-alerts.md)
+    [4. Domain dominance alerts](atp-domain-dominance-alerts.md)
+    [5. Exfiltration alerts](atp-exfiltration-alerts.md)
 
 > [!NOTE]
 > To disable any security alert, contact support.
