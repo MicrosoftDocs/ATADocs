@@ -28,7 +28,7 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Investigate a computer
+# Tutorial: Investigate a computer
 
 Azure ATP alert evidence provides clear indications when computers have been involved in suspicious activities or when indications exist that a machine is compromised. Use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar attacks in the future.  
 
