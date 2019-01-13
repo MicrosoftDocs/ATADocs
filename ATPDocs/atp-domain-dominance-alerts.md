@@ -561,7 +561,7 @@ A suspicious service has been created on a domain controller in your organizatio
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Working with lateral movement paths](use-case-lateral-movement-path.md)
 - [Reconnaissance alerts](atp-reconnaissance-alerts.md)
-- [Compromised credential alerts](atp-compromised-credential-alerts.md)
+- [Compromised credential alerts](atp-compromised-credentials-alerts.md)
 - [Lateral movement alerts](atp-lateral-movement-alerts.md)
 - [Exfiltration alerts](atp-exfiltration-alerts.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
