@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/9/2019
+ms.date: 1/13/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -28,9 +28,9 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Domain Dominance alerts  
+# Tutorial: Domain dominance alerts  
 
-Typically, cyber-attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](atp-reconnaissance.md)
 2. [Compromised credentials](atp-compromised-credentials-alerts.md)
@@ -38,7 +38,7 @@ Typically, cyber-attacks are launched against any accessible entity, such as a l
 4. **Domain dominance**
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
-The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn about understand, classify, prevent and remediate the following attacks:
+The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by Azure ATP in your network. In this tutorial, learn how to understand, classify, prevent, and remediate the following attacks:
 
 > [!div class="checklist"]
 > * Malicious request of Data Protection API master key (external ID 2020)
@@ -70,8 +70,8 @@ Advanced security scanners may legitimately generate this type of activity again
 
 1. Check if the source computer is running an organization-approved advanced security scanner against Active Directory?
 
-    - If the answer is **yes**, and it should not do this, fix the application configuration. This alert is a **B-TP** and can be **Closed**.
-    - If the answer is **yes**, and it should always do this, **Close** the alert and exclude that computer, it is probably a **B-TP** activity.
+    - If the answer is **yes**, and it should not be running, fix the application configuration. This alert is a **B-TP** and can be **Closed**.
+    - If the answer is **yes**, and it should always do this, **Close** the alert, and exclude that computer, it is probably a **B-TP** activity.
 
 **Understand the scope of the breach**
 
@@ -84,8 +84,8 @@ Advanced security scanners may legitimately generate this type of activity again
 2. Contain the source computer. 
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
-3. The stolen private key is never changed. This means the actor can always use the stolen key to decrypt protected data in the target domain. A methodological way to change this private key does not exist. 
-    - To create a new key, use the current private key, create a new key and re-encrypt all of the domain master keys with the new private key.
+3. The stolen private key is never changed. Meaning the actor can always use the stolen key to decrypt protected data in the target domain. A methodological way to change this private key does not exist. 
+    - To create a key, use the current private key, create a key, and re-encrypt every domain master key with the new private key.
 
 ## Remote code execution attempt (external ID 2019) <a name="remote-code-execution-attempt"></a>
 
@@ -97,18 +97,12 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **TP, B-TP, or FP**
 
-Administrative workstations, IT team members and service accounts can all perform legitimate administrative tasks against domain controllers.
+Administrative workstations, IT team members, and service accounts can all perform legitimate administrative tasks against domain controllers.
 
 1. Check if the source computer or user is supposed to run those types of commands on your domain controller?  
     - If the source computer or user is supposed to run those types of commands, **Close** the security alert as a **B-TP** activity.  
-    - If the source computer or user is supposed to run those commands on your domain controller, and will continue to do so, **Close** the security alert and exclude that computer, as a **B-TP** activity.
+    - If the source computer or user is supposed to run those commands on your domain controller, and will continue to do so, it is a **B-TP** activity. **Close** the security alert and exclude the computer.
 
-    If the answer to the previous questions is **no**, then this should be considered a **TP**. 
-
-    - Try to find the source of the attempt by checking the computer and user profiles. 
-    - Click on the source computer or account to go to its profile page. 
-    - -Check what happened around the time of the attempts, searching for unusual activities, such as, who was logged in and which resources where accessed. 
-    - If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge ![Windows Defender ATP badge](./media/wd-badge.png) to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
 
 **Understand the scope of the breach**
 
@@ -131,10 +125,10 @@ Administrative workstations, IT team members and service accounts can all perfor
 
 1. Restrict remote access to domain controllers from non-Tier 0 machines.
 2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access). allowing only hardened machines to connect to domain controllers for admins.
-3. Implement less-privileged access on domain machines to allow only specific users the right to create new services. 
+3. Implement less-privileged access on domain machines to allow specific users the right to create services. 
 
 > [!NOTE]
-> Remote code execution attempt alerts are only supported by ATP sensors.
+> Remote code execution attempt alerts on attempted use of Powershell commands are only supported by ATP sensors.
 
 ## Suspected DCShadow attack (domain controller promotion) (external ID 2028) <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>
 
@@ -144,7 +138,7 @@ Administrative workstations, IT team members and service accounts can all perfor
 
 A domain controller shadow (DCShadow) attack is an attack designed to change directory objects using malicious replication. This attack can be performed from any machine by creating a rogue domain controller using a replication process.
 
-In a DCShadow attack, RPC and LDAP are used to:
+In a DCShadow attack, RPC, and LDAP are used to:
 
 1. Register the machine account as a domain controller (using domain admin rights).
 2. Perform replication (using the granted replication rights) over DRSUAPI and send changes to directory objects.
@@ -153,7 +147,7 @@ In this Azure ATP detection, a security alert is triggered when a machine in the
 
 **TP, B-TP, or FP**
 
-Failed or low certainty resolution can prevent Azure ATP from identifying if the source computer is a domain controller.  
+If the source computer is a domain controller, failed or low certainty resolution can prevent Azure ATP from being able to confirm identification.  
 
 1. Check if the source computer is a domain controller?
     If the answer is **yes**, **Close** the alert as a **B-TP** activity.
@@ -180,8 +174,8 @@ Servers and applications might replicate data from Active Directory, such as Azu
 **Remediation:**
 
 1. Contain the source computer.
-2. Find the tool that performed the attack and remove it.
-3. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. <br>Reset their passwords and enable MFA.
 
 **Prevention:**
 
@@ -189,7 +183,7 @@ Validate the following permissions:
 
 1. Replicate directory changes.
 2. Replicate directory changes all.
-3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who has these permissions in the domain.
+3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). You can use [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who has these permissions in the domain.
 
 > [!NOTE]
 > Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by ATP sensors only.
@@ -200,12 +194,12 @@ Validate the following permissions:
 
 **Description**
 
-Active Directory replication is the process by which changes that are made on one domain controller are synchronized with other domain controllers. Given necessary permissions, attackers can grant rights for their machine account, allowing them to impersonate a domain controller. The attackers will strive to initiate a malicious replication request, allowing them to change Active Directory objects on a genuine domain controller, which might give the attackers persistence in the domain.
+Active Directory replication is the process by which changes that are made on one domain controller are synchronized with other domain controllers. Given necessary permissions, attackers can grant rights for their machine account, allowing them to impersonate a domain controller. Attackers strive to initiate a malicious replication request, allowing them to change Active Directory objects on a genuine domain controller, which can give the attackers persistence in the domain.
 In this detection, an alert is triggered when a suspicious replication request is generated against a genuine domain controller protected by Azure ATP. The behavior is indicative of techniques used in domain controller shadow attacks.
 
 **TP, B-TP, or FP** 
 
-Failed or low certainty resolution can prevent Azure ATP from identifying if the source computer is a domain controller.  
+If the source computer is a domain controller, failed or low certainty resolution can prevent Azure ATP from identification. 
 
 1. Check if the source computer is a domain controller?
     If the answer is **yes**, **Close** the alert as a **B-TP** activity.
@@ -231,9 +225,10 @@ Servers and applications might replicate data from Active Directory, such as Azu
 **Remediation:**
 
 1. Contain the source computer.
-2. Find the tool that performed the attack and remove it.
-3. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
-4. Remediate the data that was replicated on the domain controllers.
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. 
+    <br>Reset their passwords and enable MFA.
+2. Remediate the data that was replicated on the domain controllers.
 
 **Prevention:**
 
@@ -241,7 +236,7 @@ Validate the following permissions:
 
 1. Replicate directory changes.
 2. Replicate directory changes all.
-3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). You can use [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 > [!NOTE]
 > Suspicious replication request (potential DCShadow attack) alerts are supported by ATP sensors only. 
@@ -257,11 +252,11 @@ Active Directory replication is the process by which changes that are made on on
 In this detection, an alert is triggered when a replication request is initiated from a computer that is not a domain controller.
 
 > [!NOTE]
-> If you have domain controllers on which Azure ATP sensors are not installed, those domain controllers are not covered by Azure ATP. In this case, if you deploy a new domain controller on an unregistered or unprotected domain controller, it may not be identified by Azure ATP as a domain controller at first. It is highly recommended to install the Azure ATP sensor on every domain controller to get full coverage.
+> If you have domain controllers on which Azure ATP sensors are not installed, those domain controllers are not covered by Azure ATP. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by Azure ATP as a domain controller. It is highly recommended to install the Azure ATP sensor on every domain controller to get full coverage.
 
 **TP, B-TP, or FP**
 
-Failed or low certainty resolution can prevent Azure ATP from identifying if the source computer is a domain controller.  
+If the source computer is a domain controller, failed or low certainty resolution can prevent Azure ATP from identification.   
 
 1. Check if the source computer is a domain controller?
     If the answer is **yes**, **Close** the alert as a **B-TP** activity.
@@ -297,19 +292,19 @@ Validate the following permissions:
 
 1. Replicate directory changes.
 2. Replicate directory changes all.
-3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). You can use [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 ## Suspected Golden Ticket usage (encryption downgrade) (external ID 2009) <a name="encryption-downgrade-activity-potential-golden-ticket-attack"></a>
 
 *Previous name:* Encryption downgrade activity
 
 **Description**
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer and/or user and matches known attack techniques.  
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different protocol fields that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer and/or user and matches known attack techniques.  
 
 In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by Azure ATP.
  
 **TP, B-TP, or FP**
-Some legitimate resources don’t support strong encryption ciphers and may trigger this alert. 
+<br>Some legitimate resources don’t support strong encryption ciphers and may trigger this alert. 
 
 2. Do all of the source users share something in common? 
     1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
@@ -321,9 +316,10 @@ Some legitimate resources don’t support strong encryption ciphers and may trig
 
 Applications might authenticate using a lower encryption cipher. Some are authenticating on behalf of users, such as IIS and SQL servers. 
 
-1. Check if the source users have something in common.         - For example, do all of your sales personnel use a specific app that might trigger the alert ? 
-    - Check if there applications of this type on the source computer. 
-    - Check the computer roles. Are they servers that work with these types of applications? 
+1. Check if the source users have something in common.         
+    - For example, do all of your sales personnel use a specific app that might trigger the alert?
+    - Check if there are applications of this type on the source computer. 
+    - Check the computer roles. <br>Are they servers that work with these types of applications? 
 
     If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher,implement a stronger encryption cipher where possible, and **Close** the security alert.
 
@@ -343,7 +339,9 @@ Applications might authenticate using a lower encryption cipher. Some are authen
     - If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 2. Contain the resources that were accessed by this ticket. 
 3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
+    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. 
+    - **Plan carefully before performing the KRBTGT double reset. The KRBTGT double reset impacts all computers, servers, and users in the environment.**
+
 4. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) and [Forged PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## Suspected Golden Ticket usage (forged authorization data) (external ID 2013)<a name="privilege-escalation-using-forged-authorization-data"></a>
@@ -354,11 +352,12 @@ Description
 Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC), a field in the Kerberos ticket that contains a user authorization data (in Active Directory this is group membership), granting attackers additional privileges. 
  
 **TP, B-TP, or FP**
-For computers that are patched with MS14-068 (domain controller) or MS11-013 (server) attempted attacks will not succeed, and will generate Kerberos error. 
+<br>For computers that are patched with MS14-068 (domain controller) or MS11-013 (server) attempted attacks will not succeed, and will generate Kerberos error. 
 
 1. Check which resources were accessed in the security alert evidence list, and if the attempts were successful or failed.  
 2. Check if the accessed computers were patched, as described above? 
     - If the computers were patched, **Close** the security alert as a **B-TP** activity. 
+
 Some Operating Systems or applications are known to modify the authorization data. For example, Linux and Unix services have their own authorization mechanism which may trigger the alert. 
 
 1. Is the source computer running an OS or application that has its own authorization mechanism?  
@@ -387,7 +386,7 @@ Previous name: Kerberos golden ticket
 Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. In this detection, an alert is triggered by a nonexistent account. 
  
 **TP, B-TP, or FP**
-Changes in Active directory might take time to be synchronized.
+<br>Changes in Active Directory can take time to synchronize.
 1. Is the user a known and valid domain user?  
 2. Has the user been recently added?  
 3. Was the user been recently deleted from Active Directory?  
@@ -399,16 +398,15 @@ If the answer is **yes**, to any of the previous questions, **Close** the alert,
  
 **Suggested remediation and steps for prevention** 
 1. Contain the source computers 
-2. Find the tool that performed the attack and remove it. 
-3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA. 
-If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-4. Contain the resources that were accessed by this ticket.
-5. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+    - Find the tool that performed the attack and remove it.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
+    - If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
+2. Contain the resources that were accessed by this ticket.
+3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
 
  
-## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032) -Preview <a name="golden-ticket-usage-ticket-anomaly
-"></a>
+## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032) -Preview <a name="golden-ticket-usage-ticket-anomaly"></a>
 
 **Description**
 Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.  
@@ -421,33 +419,35 @@ Federation services might generate tickets that will trigger this alert.
  
 **Understand the scope of the breach**
 1. Investigate the [source computer and accessed resources](investigate-a-computer.md). 
-2. Investigate the source user(investigate-a-user.md). 
+2. Investigate the [source user](investigate-a-user.md). 
  
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computers 
-2. Find the tool that performed the attack and remove it. 
-3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA. 
-If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-4. Contain the resources that were accessed by this ticket.
-5. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
+    - Find the tool that performed the attack and remove it.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
+    - If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
+2. Contain the resources that were accessed by this ticket.
+3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are  broken and cannot work again until renewed or in some cases, the service is restarted. 
+
+    **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
 
 ## Suspected Golden Ticket usage (time anomaly) (external ID 2022) 
 
 Previous name: Kerberos golden ticket
 
 **Description** 
-Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. In this detection, an alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted as specified in the Maximum lifetime for user ticket. 
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. This alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the Maximum lifetime for user ticket. 
  
 **TP, B-TP, or FP**
 1. In the last few hours, was there any change made to the **Maximum lifetime for user ticket** setting in group policy, that might affect the alert?  
 2. Is the Azure ATP Standalone Sensor involved in this alert a virtual machine? 
     - If the Azure ATP standalone sensor is involved, was it recently resumed from a saved state?  
-3. Is there a time synchronization problem in the network, that not all the computers are synchronized? 
-    - Click the **Download details** button to view the Security Alert report Excel file, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
+3. Is there a time synchronization problem in the network, where not all of the computers are synchronized? 
+    - Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
 
-If the answer to the questions above is **yes**, **Close** the security alert as a **B-TP** activity. 
+If the answer to the previous questions is **yes**, **Close** the security alert as a **B-TP** activity. 
  
 **Understand the scope of the breach**
 1. Investigate the [source computer and accessed resources](investigate-a-computer.md). 
@@ -455,21 +455,23 @@ If the answer to the questions above is **yes**, **Close** the security alert as
  
 **Suggested remediation and steps for prevention** 
 1. Contain the source computer. 
-2. Find the tool that performed the attack and remove it. 
-3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA. 
-If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-4. Contain the resources that were accessed by this ticket.
-5. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
+    - Find the tool that performed the attack and remove it.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
+    - If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
+3. Contain the resources accessed by this ticket.
+4. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are broken, and won't work again until they are renewed or in some cases, the service is restarted. 
+
+    **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
 
 ## Suspected skeleton key attack (encryption downgrade) (external ID 2010) <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
 
 *Previous name:* Encryption downgrade activity
 
 **Description**
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are usually encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that (1) is unusual for the source computer, and/or user, and (2) matches known attack techniques.  
+Encryption downgrade is a method of weakening Kerberos using a downgraded encryption level for different fields of the protocol that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users. The alert is issued when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.  
  
-Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller. In this detection, the encryption method of the KRB_ERR message from the domain controller to the account asking for a ticket was downgraded compared to the previously learned behavior 
+Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller. In this alert, the learned behavior of previous KRB_ERR message encryption from domain controller to the account requesting a ticket, was downgraded.
  
 **Understand the scope of the breach**
 1. Investigate the [domain controller](investigate-a-computer.md). 
@@ -480,52 +482,60 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 1. Reset the passwords of the compromised users and enable MFA. 
 2. Contain the domain controller. 
-3. Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
-4. Look for users logged on around the same time as the suspicious activity occurred, as they may also be compromised. Reset their passwords and enable MFA. 
-
+    - Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
+    - Look for users logged on around the same time as the suspicious activity occurred, as they may also be compromised. Reset their passwords and enable MFA.
 
 ## Suspicious modification of sensitive groups (external ID 2024)
 
 **Description** 
-Attackers add users to highly privileged groups. They do so to gain access to more resources and to gain persistency. The detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Profiling is continuously performed by ATP.  
+Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Azure ATP profiles continuously.  
  
 For a definition of sensitive groups in Azure ATP, see Working with the sensitive accounts.
  
 The detection relies on events audited on domain controllers. Make sure your domain controllers are auditing the events needed to audit the needed events.
  
 **Learning period**
-4 weeks per DC, starting from the first event.
+<br>Four weeks per DC, starting from the first event.
  
 **TP, B-TP, or FP**
-Legitimate group modifications that rarely occur, and were not learned as “normal”, might cause an alert, which would be considered a benign true positive. 
-Is the group modification legitimate? 
-If yes, you can Close the security alert it is a benign activity.
+<br>Legitimate group modifications that occur rarely and the system didn't learn as "normal", may trigger an alert. These alerts would be considered  **B-TP**. 
+1. Is the group modification legitimate? 
+    - If the group modification is legitimate, **Close** the security alert as a **B-TP** activity.
  
 **Understand the scope of the breach** 
-Investigate the users that were added to groups. Focus on the activities they took after being added to a sensitive group. 
-Investigate the source user. 
-Download the Sensitive group modification report to see what other modifications were made and by whom during the same time period. 
-Investigate the computers the source user was logged into around the time of the activity. 
+1. Investigate the users added to groups. 
+    - Focus on their activities after they were added to the sensitive groups. 
+2. Investigate the source user. 
+    - Download the **Sensitive Group Modification** report to see what other modifications were made an who made them in the same time period. 
+3. Investigate the computers the source user was logged into, around the time of the activity. 
   
-Suggested remediation and prevention steps: 
-Reset the password of the source user and enable MFA. 
-Look for the computer the source user was active on. Check to which computers the user was logged into around the time of the activity, and check if these computers are compromised. 
-Add the compromised users that were add to groups to a watchlist. If they are compromised reset their passwords and enable MFA. 
-To prevent future attacks, minimize the number of users who are authorized to modify sensitive groups. Set up Privileged Access Management for Active Directory if applicable. 
+**Suggested remediation and steps for prevention** 
+
+**Remediation:**
+
+1. Reset the password of the source user and enable MFA. 
+    - Look for the computer the source user was active on. 
+    - Check which computers the user was logged into around the same time as the activity. Check if these computers are compromised. 
+    - If the users are compromised, reset their passwords and enable MFA. 
+
+**Prevention:**
+
+1. To help prevent future attacks, minimize the number of users authorized to modify sensitive groups. 
+2. Set up Privileged Access Management for Active Directory if applicable.
  
 ## Suspicious service creation (external ID 2026)<a name="suspicious-service-creation"></a>
 
 *Previous name:* Suspicious service creation
 
 **Description** 
-A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 in order to identify this suspicious activity.  
+A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 to identify this suspicious activity.  
  
 **TP, B-TP, or FP**
-Administrative workstations, IT team members and service accounts perform administrative tasks against the domain controllers. 
+<br>Some administrative tasks are legitimately performed against domain controllers by administrative workstations, IT team members, and service accounts. 
 
 1. Is the source user/computer supposed to run these types of services on the domain controller?  
-    - If the source user or computer behavior is supposed to run these types of services, and it should not continue to do this, **Close** the alert as a **B-TP** activity. 
-    - If the source user or computer behavior is supposed to run these types of services, and it should continue to do so, **Close** the security alert as a **B-TP** activity, and exclude that computer. 
+    - If the source user or computer is supposed to run these types of services, and should not continue to, **Close** the alert as a **B-TP** activity. 
+    - If the source user or computer  is supposed to run these types of services, and should continue to, **Close** the security alert as a **B-TP** activity, and exclude that computer. 
  
 **Understand the scope of the breach**
 1. Investigate the [source user](investigate-a-user.md). 
@@ -535,15 +545,15 @@ Administrative workstations, IT team members and service accounts perform admini
 
 **Remediation**
 1. Reset the password of the source user and enable MFA. 
-2. Contain the domain controllers 
-3. Remediate the suspicious service. 
-4. Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA.  
-5. Locate the computer the source user was active on.         - Check the computers the user was logged into around the same time as the activity, and check if these computers are also compromised. 
+2. Contain the domain controllers.
+    - Remediate the suspicious service.
+    - Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA.
+3. Locate the computer the source user was active on.         - Check the computers the user was logged into around the same time as the activity, and check if these computers are also compromised. 
 
 **Prevention:**
 1. Restrict remote access to domain controllers from non-Tier 0 machines. 
-2. Implement privileged access to allow only hardened machines to connect to domain controllers for administrators. 
-3. Implement less-privileged access on domain machines to give only specific users the right to create new services. 
+2. Implement [privileged access](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for administrators.
+3. Implement less-privileged access on domain machines to give only specific users the right to create services.
  
 ## See Also
 

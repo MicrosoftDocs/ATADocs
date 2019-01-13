@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Azure ATP security alert guide | Microsoft Docs
+title: Azure ATP security alert tutorial | Microsoft Docs
 d|Description: This article explains how to use and understand Azure ATP security alerts.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/2/2019
-ms.topic: conceptual
+ms.date: 1/13/2019
+ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -26,20 +26,31 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
+# Tutorial: Understanding security alerts
 
-# Understanding security alerts
+Azure ATP security alerts explain in clear language and graphics, which suspicious activities were identified on your network and the actors and computers involved in the threats. Alerts are graded for severity, color-coded to make them easy to visually filter, and organized by threat phase. Each alert is designed to help you quickly understand exactly what is happening on your network. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
-Azure ATP security alerts explain in clear language and graphics which suspicious activities were identified on your network and the actors and computers involved in the threats. Alerts are graded for severity, color coded to make them easy to visually filter and organized by threat phase, so you'll be able to quickly understand what is happening on your network and where. Alert evidence lists contain direct links to the involved users and computers to help make investigations easy and direct.
+In this tutorial, learn the structure of Azure ATP security alerts, and how to use them: 
+
+> [!div class="checklist"]
+> * Security alert structure
+> * Security alert classifications
+> * Security alert categories
+> * Advanced Security Alert investigation
+> * Related entities
+> * Azure ATP and NNR (Network Name Resolution)
+
 
 ## Security alert structure
 
-Each Azure ATP security alert contains:
+Each Azure ATP security alert includes:
  
 - **Alert title** <br> Official Azure ATP name of the alert.
 - **Description** <br> Brief explanation of what happened.
 - **Evidence** <br> Additional relevant information and related data about what happened to help in the investigation process.
 - **Excel download** <br> Detailed Excel download report for analysis
+
+![Azure ATP security alert structure](media/security-alert-structure.png)
 
 ## Security alert classifications
 
@@ -51,7 +62,7 @@ Following proper investigation, all Azure ATP security alerts can be classified 
 
 - **False positive (FP)**: A false alarm, meaning the activity didn’t happen.
 
-### Is the security alert a TP, B-TP or FP
+### Is the security alert a TP, B-TP, or FP
 
 For each alert, ask the following questions to determine the alert classification and help decide what to do next:
 
@@ -59,11 +70,11 @@ For each alert, ask the following questions to determine the alert classificatio
 2. Was the alert triggered by the same types of computers or users?
    For example, servers with the same role or users from the same group/department? If the computers or users were similar, you may decide to exclude it to avoid additional future FP alerts.
 
-Note: An increase of alerts of the exact same type typically reduce the suspicious/importance level of the alert. If you notice repeated alerts, make sure to verify configurations and use security alert details and definitions to understand exactly what is happening to trigger the repeats.
+Note: An increase of alerts of the exact same type typically reduces the suspicious/importance level of the alert. For repeated alerts, verify configurations, and use security alert details and definitions to understand exactly what is happening that trigger the repeats. 
 
-### Security alert categories
+## Security alert categories
 
-Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase and the alerts designed to detect each attack, using the links below.
+Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase and the alerts designed to detect each attack, using the following links:
 
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credential-alerts.md)
@@ -71,11 +82,11 @@ Azure ATP security alerts are divided into the following categories or phases, l
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
 
-## Advanced Security Alert investigation
+## Advanced security alert investigation
 
 To get more details on a security alert, download the detailed Excel alert report.
 
-1. Click on the three dots in the upper right corner of any alert, select *Download Details*.
+1. Click the three dots in the upper right corner of any alert, select *Download Details*.
  
 Each Azure ATP alert Excel download provides the following information:   
 - Summary – the first tab includes the highlights of the alert 
@@ -88,39 +99,49 @@ Each Azure ATP alert Excel download provides the following information:
   - Status Update Time (UTC)
   - View in browser
 - All involved entities (accounts, computers, and resources) are listed, separated by their role. 
-    - Source, destination or attacked, depending on the alert. 
-- Most of the tabs include the following data per entity: Name, Details, Type, SamName  
+    - Source, destination, or attacked, depending on the alert. 
+- Most of the tabs include the following data per entity: 
+  - Name
+  - Details 
+  - Type 
+  - SamName  
   - Source Computer
   - Source User (if available)
   - Domain Controllers
   - Accessed Resource: Time, Computer, Name, Details, Type, Service.
-  - There are additional tabs per alert on attacked accounts when the suspected attack used Brute Force, and on DNS servers when the suspected attacked involved network mapping reconnaissance (DNS)
-  - Related entities: Id, Type, Name, Unique Entity Json, Unique Entity Profile Json
+  - Additional tabs per alert: 
+      - On attacked accounts when the suspected attack used Brute Force.
+      - On Domain Name System (DNS) servers when the suspected attacked involved network mapping reconnaissance (DNS).
+  - Related entities: ID, Type, Name, Unique Entity Json, Unique Entity Profile Json
 - All raw activities captured by Azure ATP Sensors related to the alert (network or event activities) including:
   - Network Activities
   - Event Activities
 
+![Involved entities](media/involved-entities.png)
+
 ### Related entities
 
-In each alert the last tab provides the **Related Entities**. Related entities are all entities involved in a suspicious activity, without the separation of the “role” they played in the alert. Each entity has 2 Json files, the Unique Entity Json and Unique Entity Profile Json. Use these 2 Json files to learn more about the entity and to help you investigate the alert. 
+In each alert, the last tab provides the **Related Entities**. Related entities are all entities involved in a suspicious activity, without the separation of the “role” they played in the alert. Each entity has two Json files, the Unique Entity Json and Unique Entity Profile Json. Use these two Json files to learn more about the entity and to help you investigate the alert. 
  
 **Unique Entity Json**
  
-Includes the data Azure ATP learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime* and *PasswordExpiryTime*. For user accounts this includes data such as *Department*, *Mail* and *PhoneNumber*. For computer accounts, this includes data such as *OperatingSystem*, *IsDomainController* and *DnsName*. 
+Includes the data Azure ATP learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime, and *PasswordExpiryTime*. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, *IsDomainController, and *DnsName*.
 
 **Unique Entity Profile Json**
 
-Includes all the data Azure ATP profiled on the entity. Azure ATP learns from the network and event activities it capture about the users and computers in the environment. Azure ATP profiles relevant information per  entity, information which contributes to threat identification capabilities.
+Includes all data Azure ATP profiled on the entity. Azure ATP uses the network and event activities captured to learn about the environment's users and computers. Azure ATP profiles relevant information per entity. This information contributes Azure ATP's threat identification capabilities.
+
+![Related entities](media/related-entities.png)
  
-### How can I use this information in an investigation? 
+### How can I use Azure ATP information in an investigation? 
 
-Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by Azure ATP. 
+Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by Azure ATP.
 
-- Check if all related users belong to the same group or department? 
-- Do related users use the same resource, application or computer?
-- Is an account is active even though its PasswordExpiryTime already passed?
+- Check if all related users belong to the same group or department?
+- Do related users share resources, applications, or computers?
+- Is an account active even though its PasswordExpiryTime already passed?
 
-### Azure ATP and NNR (Network Name Resolution)
+## Azure ATP and NNR (Network Name Resolution)
 
 Azure ATP detection capabilities rely on active Network Name Resolution (NNR) to resolve IPs to computers in your organization. Using NNR, Azure ATP is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Azure ATP profiles entities, including computers, and generates alerts.
 
@@ -129,16 +150,18 @@ NNR data is crucial for detecting the following alerts:
 - Suspected DCSync attack (replication of directory services)
 - Network mapping reconnaissance (DNS)
 
-Use the NNR information provided in the **Network Activities** tab of the alert download report, to determine if an alert is an **FP**. In cases of an **FP** alert, it is common to have the NNR certainty result given with low confidence. 
+Use the NNR information provided in the **Network Activities** tab of the alert download report, to determine if an alert is an **FP**. In cases of an **FP** alert, it's common to have the NNR certainty result given with low confidence.
 
-Download report data appears in 2 columns: 
+Download report data appears in two columns: 
 - **Source/Destination computer** 
 
-    - *Certainty* – low resolution certainty may indicate incorrect name resolution.
+    - *Certainty* – low-resolution certainty may indicate incorrect name resolution.
 - **Source/Destination computer**
     - *Resolution method* – provides the NNR methods used to resolve the IP to computer in the organization.
 
-For additional information on how to work with Azure ATP security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
+![Network activities](media/network-activities.png)
+
+For more information about how to work with Azure ATP security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
 
 ## See Also
 

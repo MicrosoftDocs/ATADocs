@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/9/2019
+ms.date: 1/13/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 # Lateral Movement alerts  
 
-Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](atp-reconnaissance.md)
 2. [Compromised credentials](atp-compromised-credentials-alerts.md)
@@ -38,7 +38,7 @@ Typically, cyber attacks are launched against any accessible entity, such as a l
 4. [Domain dominance](atp-domain-dominance.md)
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
-The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn how to understand, classify, remediate and prevent the following types of attacks:
+The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
 > * Suspected identity theft (pass-the-hash) (external ID 2017)
@@ -55,8 +55,8 @@ The following security alerts help you identify and remediate **Lateral Movement
 Pass-the-Hash is a lateral movement technique in which attackers steal a user’s NTLM hash from one computer and use it to gain access to another computer.
 
 **TP, B-TP, or FP?**
-1. Determine if the hash was used from computers which the user is using on a regular basis? 
-    - If the hash was used from computers used on a regular basis, **Close** the alert as a **FP**.  
+1. Determine if the hash was used from computers the user is using regularly? 
+    - If the hash was used from computers used regularly, **Close** the alert as an **FP**.  
  
 **Understand the scope of the breach**
 
@@ -80,17 +80,17 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **TP, B-TP, or FP?**
 
-Successfully resolving IPs to computers in the organization is critical to identify pass the ticket from one computer to another. 
+Successfully resolving IPs to computers in the organization is critical to identify pass-the-ticket attacks from one computer to another. 
 
 1. Check if the IP address of one or both computers belong to a subnet that is allocated from an undersized DHCP pool, for example, VPN, VDI or WiFi? 
 2. Is the IP address shared (for example, by a NAT device)?  
-3. Are one or more of the destination IP addresses not being resolved by the sensor? If a destination IP address is not resolved, this can indicate that the correct ports between sensor and devices are not opened correctly. 
+3. Is the sensor not resolving one or more of the destination IP addresses? If a destination IP address is not resolved, it may indicate that the correct ports between sensor and devices are not open correctly. 
 
-    If the answer to any of the questions above is **yes**, check if the source and destinations computers are the same. If they are the same, it is a **FP** and there were no real **pass-the-ticket** attempts. 
+    If the answer to any of the previous questions is **yes**, check if the source and destinations computers are the same. If they are the same, it is an **FP** and there were no real attempts at **pass-the-ticket**. 
 
 There are custom applications that forward tickets on behalf of users. These applications have delegation rights to user tickets.
 
-1. Is a custom application type such as the one described above currently on the destination computers? Which services is the application running? Are the services acting on behalf of users, for example, accessing databases?
+1. Is a custom application type like the one previously described, currently on the destination computers? Which services is the application running? Are the services acting on behalf of users, for example, accessing databases?
     - If the answer is yes, **Close** the security alert as a **T-BP** activity.
 2. Is the destination computer a delegation server?
     - If the answer is yes, **Close** the security alert, and exclude that computer as a **T-BP** activity.
@@ -114,23 +114,23 @@ There are custom applications that forward tickets on behalf of users. These app
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different fields of the protocol that are encrypted using the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that: (1) is unusual for the source computer and/or user; and (2) matches known attack techniques. 
+Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques. 
 
-In an over-pass-the-hash attack, an attacker can use a weak stolen hash in order to create a strong ticket, with a Kerberos AS request. In this detection, the AS_REQ message encryption type from the source computer was downgraded compared to the previously learned behavior (that is, the computer was using AES).
+In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
 
 **TP, B-TP, or FP?**
 1. Determine if the smartcard configuration recently changed. 
-    - Were smartcard configuration changes recently made to the account(s) involved?  
+    - Did the accounts involved recently have smartcard configurations changes?  
     
     If the answer is yes, **Close** the security alert as a **T-BP** activity. 
 
 Some legitimate resources don’t support strong encryption ciphers and may trigger this alert. 
 
-2. Do all of the source users share something in common? 
+2. Do all source users share something? 
     1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
     2. Check the resources accessed by those tickets. 
         - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
-    3. If there is only one resource being accessed, check if is a valid resource these users are supposed to access.  
+    3. If there is only one accessed resource, check if it is a valid resource for these users to access.   
 
     If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
@@ -159,7 +159,7 @@ Some legitimate resources don’t support strong encryption ciphers and may trig
 
 **Description**
 
-Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as Over-Pass-the-Hash and brute force, as well as exploits used by advanced ransomware, for example, WannaCry.
+Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While Microsoft Windows accepts this type of network traffic without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as over-pass-the-hash, Brute Force, and advanced ransomware exploits such as WannaCry, are used.
 
 **TP, B-TP, or FP?**
 

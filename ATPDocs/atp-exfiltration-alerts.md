@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/6/2019
+ms.date: 1/13/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 # Exfiltration alerts  
 
-Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 - [Reconnaissance](atp-reconnaissance.md)
 - [Compromised credentials](atp-compromised-credentials-alerts.md)
@@ -38,7 +38,11 @@ Typically, cyber attacks are launched against any accessible entity, such as a l
 - [Domain dominance](atp-domain-dominance-alerts.md)
 - **Exfiltration**
 
-The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by Azure ATP in your network.
+The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by Azure ATP in your network. In this tutorial, learn to understand, classify, prevent, and remediate the following attacks:
+
+> [!div class="checklist"]
+> * Suspicious communication over DNS (external ID 2031)
+> * Data exfiltration over SMB - Preview (external ID 2030)
 
 ## Suspicious communication over DNS (external ID 2031) <a name="suspicious-communication-over-dns"></a>
 
@@ -46,19 +50,19 @@ The following security alerts help you identify and remediate **Exfiltration** p
 
 ## Description
 
-The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
+The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. Enabling an attacker on a compromised machine, to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
-## TP, B-TP or FP?
+## TP, B-TP, or FP?
  
 Some companies legitimately use DNS for regular communication. To determine the status of the security alert:
 
 1. Check if the registered query domain belongs to a trusted source, such as your antivirus provider.  
-    - If the domain is known and trusted, and DNS queries are permitted, it is a **B-TP** activity. *Close* the security alert, and exclude the domain from future alerts.  
+    - Consider it a **B-TP** activity if the domain is known and trusted, and DNS queries are permitted. *Close* the security alert, and exclude the domain from future alerts.  
     - If the registered query domain is not trusted, identify the process creating the request on the source computer. Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to assist with this task.
 
 ## Understand the scope of the breach
 
-1. On the destination computer, (should be a DNS server), check for the records of the domain in question.
+1. On the destination computer, which should be a DNS server, check for the records of the domain in question.
     - What IP is it correlated to?
     - Who is the owner of the domain?
     - Where is the IP?
@@ -67,13 +71,37 @@ Some companies legitimately use DNS for regular communication. To determine the 
 ## Suggested remediation and steps for prevention
 
 1. Contain the source computer.
-2. Find the tool that performed the attack and remove it.
-3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
-4. If, after your investigation, the registered query domain is not trusted, we recommend blocking the destination domain to avoid all future communication.
+    - Find the tool that performed the attack and remove it.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
+2. If after your investigation, the registered query domain remains not trusted, we recommend blocking the destination domain to avoid all future communication.
 
 > [!NOTE]
 > *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by Azure ATP but are known to or part of your organization can be closed.
 
+## Data exfiltration over SMB - Preview (external ID 2030)
+
+## Description
+Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. An Azure ATP **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
+
+## TP, B-TP, or FP?
+1. Are these users supposed to copy these files, to this computer?  
+    -If the answer to the previous question is **yes**, **Close** the security alert, and exclude the computer as a **B-TP** activity.
+## Understand the scope of the breach
+1. Investigate the [source users](investigate-a-user.md).  
+2. Investigate the [source and destination computers](investigate-a-computer.md) of the copies. 
+
+## Suggested remediation and steps for prevention
+1. Reset the password of the source users and enable MFA.
+2. Contain the source computer.
+    - Find the tool that performed the attack and remove it.
+    - Find the files that were copied and remove them. 
+    <br>Check if there were other activities on these files. Where they transferred to another place? Check if they were transferred outside the organization network? 
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
+3. If one of the files is the **ntds.dit** file:
+    - Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and won't work again until they are renewed or in some cases, the service is restarted.
+    - **Plan carefully before performing the KRBTGT double reset. The KRBTGT double reset impacts all computers, servers, and users in the environment.**
+   - Close all existing sessions tot the domain controllers. 
 
 ## See Also
 
