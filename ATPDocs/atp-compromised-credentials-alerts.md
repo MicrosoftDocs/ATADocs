@@ -309,11 +309,11 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 ## See Also
 
 - [Investigate a computer](investigate-a-computer.md)
+- [Investigate a user](investigate-a-user.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Working with lateral movement paths](use-case-lateral-movement-path.md)
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credential-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Reconnaissance alerts](atp-reconnaissance-alerts.md)
+- [Lateral movement alerts](atp-lateral-movement-alerts.md)
+- [Domain dominance alerts](atp-domain-dominance-alerts.md)
+- [Exfiltration alerts](atp-exfiltration-alerts.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

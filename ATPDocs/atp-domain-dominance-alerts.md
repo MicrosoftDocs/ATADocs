@@ -32,7 +32,7 @@ ms.suite: ems
 
 Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-1. [Reconnaissance](atp-reconnaissance.md)
+1. [Reconnaissance](atp-reconnaissance-alerts.md)
 2. [Compromised credentials](atp-compromised-credentials-alerts.md)
 3. [Lateral Movements](atp-lateral-movement-alerts.md)
 4. **Domain dominance**
@@ -560,8 +560,8 @@ A suspicious service has been created on a domain controller in your organizatio
 - [Investigate a computer](investigate-a-computer.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Working with lateral movement paths](use-case-lateral-movement-path.md)
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credential-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Reconnaissance alerts](atp-reconnaissance-alerts.md)
+- [Compromised credential alerts](atp-compromised-credential-alerts.md)
+- [Lateral movement alerts](atp-lateral-movement-alerts.md)
+- [Exfiltration alerts](atp-exfiltration-alerts.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

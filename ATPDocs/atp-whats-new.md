@@ -51,7 +51,7 @@ Azure ATP security alert documentation has been enhanced and expanded to include
     - [Azure ATP Security Alerts](suspicious-activity-guide.md)
     - [Understanding security alerts](understanding-security-alerts.md)
         - [Reconnaissance phase alerts](atp-reconnaissance-alerts.md)
-        - [Compromised credential phase alerts](atp-compromised-credential-alerts.md)
+        - [Compromised credential phase alerts](atp-compromised-credentials-alerts.md)
         - [Lateral movement phase alerts](atp-lateral-movement-alerts.md)
         - [Domain dominance phase alerts](atp-domain-dominance-alerts.md)
         - [Exfiltration phase alerts](atp-exfiltration-alerts.md)
@@ -138,7 +138,7 @@ Two additional features are added to enhance Azure ATP Lateral Movement Path (LM
 Released November 18, 2018
 
 - **Security Alert: Suspicious communication over DNS - general availability**<br>
-Azure ATP’s [Suspicious communication over DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) security alert is now in general availability. <br> Typically, the DNS protocol in most organizations is not monitored, and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
+Azure ATP’s [Suspicious communication over DNS](suspicious-activity-guide.md) security alert is now in general availability. <br> Typically, the DNS protocol in most organizations is not monitored, and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -324,7 +324,7 @@ Released July 15, 2018
 ## Azure ATP release 2.39
 
 Released July 5, 2018
--	**New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md#golden-ticket)
+-	**New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md)
 
 - This version includes fixes and improvements for multiple issues. 
 
@@ -354,7 +354,7 @@ Released June 10, 2018
  
 - **New preview detections**<br></br>From now on, Azure ATP will take advantage of the fact that it's a cloud service -- where new features can be delivered in fast cycles -- and provide you with new detections as quickly as possible. These new detections will be tagged as "preview" when they are first released. Usually a new detection will move from preview to general availability within a few weeks. By default you will see preview detections. For information about opting out, see [preview detections](working-with-suspicious-activities.md#preview-detections).
  
-- **Suspicious VPN detection**<br></br>This release introduces a preview version of the Suspicious VPN detection. Azure ATP learns user VPN behavior, including the machines the users signed in to and the locations the users connect from, and alerts you when there is a deviation from the expected behavior. For more information, see [Suspicious VPN detection](suspicious-activity-guide.md#suspicious-vpn-detection).
+- **Suspicious VPN detection**<br></br>This release introduces a preview version of the Suspicious VPN detection. Azure ATP learns user VPN behavior, including the machines the users signed in to and the locations the users connect from, and alerts you when there is a deviation from the expected behavior. For more information, see [Suspicious VPN detection](suspicious-activity-guide.md).
 
 - **Delayed update**<br></br>You now have the option to set Azure ATP sensors to update at a later time, each time Azure ATP updates. You can now set each Azure ATP sensor to **Delayed update** so that it will update 24 hours after the Azure ATP cloud service updates. This feature enables you to test the update on specific test sensors and only update your production sensors later on. If you discover an issue during the first update cycle, open a support ticket. For more information see [Update Azure ATP sensors](sensor-update.md).
 

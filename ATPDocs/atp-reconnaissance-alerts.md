@@ -219,17 +219,17 @@ Four weeks per domain controller starting from the first network activity of SAM
 > To disable any Azure ATP security alert, contact support.
 
 > [!div class="nextstepaction"]
-> [Compromised credential alert tutorial](atp-compromised-credential-alerts.md)
+> [Compromised credential alert tutorial](atp-compromised-credentials-alerts.md)
 
 ## See Also
 
 - [Investigate a computer](investigate-a-computer.md)
 - [Investigate a user](investigate-a-user.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
-- [Compromised credential alerts](compromised-credential-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
-- [Azure ATP SIEM log reference](cef-format.sa.md)
+- [Compromised credential alerts](atp-compromised-credentials-alerts.md)
+- [Lateral movement alerts](atp-lateral-movement-alerts.md)
+- [Domain dominance alerts](atp-domain-dominance-alerts.md)
+- [Exfiltration alerts](atp-exfiltration-alerts.md)
+- [Azure ATP SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](use-case-lateral-movement-path.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
