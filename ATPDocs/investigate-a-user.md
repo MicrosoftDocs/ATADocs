@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 # Tutorial: Investigate a user
 
 Azure ATP alert evidence and lateral movement paths provide clear indications when users have performed suspicious activities or indications exist that their account has been compromised. Use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar future attacks.  
