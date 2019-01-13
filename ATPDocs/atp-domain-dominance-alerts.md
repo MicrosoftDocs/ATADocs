@@ -546,7 +546,8 @@ A suspicious service has been created on a domain controller in your organizatio
 2. Contain the domain controllers.
     - Remediate the suspicious service.
     - Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA.
-3. Locate the computer the source user was active on.         - Check the computers the user was logged into around the same time as the activity, and check if these computers are also compromised. 
+3. Locate the computer the source user was active on.         
+    - Check the computers the user was logged into around the same time as the activity, and check if these computers are also compromised. 
 
 **Prevention:**
 1. Restrict remote access to domain controllers from non-Tier 0 machines. 
@@ -554,7 +555,7 @@ A suspicious service has been created on a domain controller in your organizatio
 3. Implement less-privileged access on domain machines to give only specific users the right to create services.
 
 > [!div class="nextstepaction"]
-> [exfiltration alerts](atp-exfiltration-alerts.md)
+> [Exfiltration alert tutorial](atp-exfiltration-alerts.md)
  
 ## See Also
 
