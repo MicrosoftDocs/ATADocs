@@ -48,7 +48,7 @@ The following security alerts help you identify and remediate **Compromised cred
 > * Suspected use of Metasploit hacking framework (external ID 2034)
 > * Suspicious VPN connection (external ID 2025)
 
-## Honeytoken activity (external ID 2014) <a name="honeytoken-activity"></a>
+## Honeytoken activity (external ID 2014) 
 
 *Previous name:* Honeytoken activity
 
@@ -76,7 +76,7 @@ For more information on honeytoken accounts, see [Configure detection exclusions
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
 
-## Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023) <a name="suspicious-authentication-failures"></a>
+## Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
 
 *Previous name:* Suspicious authentication failures
 
@@ -124,7 +124,7 @@ It is important to check if any login attempts ended with successful authenticat
 3. Reset the passwords of the source user and enable MFA.
 4. Enforce [complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 
-## Suspected Brute Force attack (LDAP) (external ID 2004) <a name="brute-force-attack-using-ldap-simple-bind"></a>
+## Suspected Brute Force attack (LDAP) (external ID 2004) 
 
 *Previous name:* Brute force attack using LDAP simple bind
 
@@ -163,7 +163,7 @@ It is important to check if any login attempts ended with successful authenticat
 4. Enforce [complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 5. Prevent future usage of LDAP clear text protocol in your organization.
 
-## Suspected WannaCry ransomware attack (external ID 2035)<a name="unusual-protocol-implementation"></a>
+## Suspected WannaCry ransomware attack (external ID 2035)
 
 *Previous name:* Unusual protocol implementation (potential WannaCry ransomware attack)
 
@@ -198,7 +198,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
       - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 
-## Suspected brute force attack (SMB) (external ID 2033) <a name="unusual-protocol-implementation-smb"></a>
+## Suspected brute force attack (SMB) (external ID 2033) 
 
 *Previous name:* Unusual protocol implementation (potential use of malicious tools such as Hydra)
 
@@ -232,7 +232,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
 3. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 4. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-## Suspected use of Metasploit hacking framework (external ID 2034)<a name="unusual-protocol-implementation-metasploit-hacking-tools"></a>
+## Suspected use of Metasploit hacking framework (external ID 2034)
 
 *Previous name:* Unusual protocol implementation (potential use of Metasploit hacking tools)
 
@@ -266,7 +266,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
 3. Reset the passwords of the source user and enable MFA. 
 4. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/) 
 
-## Suspicious VPN connection (external ID 2025) <a name="suspicious-vpn-detection"></a>
+## Suspicious VPN connection (external ID 2025) 
 
 *Previous name:* Suspicious VPN connection 
 
