@@ -83,7 +83,7 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 
 **TP, B-TP, or FP**
 1. Are these users supposed to copy these files, to this computer?  
-    -If the answer to the previous question is **yes**, **Close** the security alert, and exclude the computer as a **B-TP** activity.
+    - If the answer to the previous question is **yes**, **Close** the security alert, and exclude the computer as a **B-TP** activity.
 
 **Understand the scope of the breach**
 1. Investigate the [source users](investigate-a-user.md).  
