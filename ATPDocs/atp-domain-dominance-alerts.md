@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -53,7 +53,7 @@ The following security alerts help you identify and remediate **Domain dominance
 > * Suspicious modification of sensitive groups (external ID 2024)
 > * Suspicious service creation (external ID 2026)
 
-## Malicious request of Data Protection API master key (external ID 2020) <a name="malicious-data-protection-private-information-request"></a>
+## Malicious request of Data Protection API master key (external ID 2020) 
 
 *Previous name:* Malicious Data Protection Private Information Request
 
@@ -85,7 +85,7 @@ Advanced security scanners may legitimately generate this type of activity again
 3. The stolen private key is never changed. Meaning the actor can always use the stolen key to decrypt protected data in the target domain. A methodological way to change this private key does not exist. 
     - To create a key, use the current private key, create a key, and re-encrypt every domain master key with the new private key.
 
-## Remote code execution attempt (external ID 2019) <a name="remote-code-execution-attempt"></a>
+## Remote code execution attempt (external ID 2019) 
 
 *Previous name:* Remote code execution attempt
 
@@ -128,7 +128,7 @@ Administrative workstations, IT team members, and service accounts can all perfo
 > [!NOTE]
 > Remote code execution attempt alerts on attempted use of Powershell commands are only supported by ATP sensors.
 
-## Suspected DCShadow attack (domain controller promotion) (external ID 2028) <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>
+## Suspected DCShadow attack (domain controller promotion) (external ID 2028) 
 
 *Previous name:* Suspicious domain controller promotion (potential DCShadow attack)
 
@@ -186,7 +186,7 @@ Validate the following permissions:
 > [!NOTE]
 > Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by ATP sensors only.
 
-## Suspected DCShadow attack (domain controller replication request) (external ID 2029) <a name="suspicious-replication-request-potential-dcshadow-attack"></a>
+## Suspected DCShadow attack (domain controller replication request) (external ID 2029) 
 
 *Previous name:* Suspicious replication request (potential DCShadow attack)
 
@@ -239,7 +239,7 @@ Validate the following permissions:
 > [!NOTE]
 > Suspicious replication request (potential DCShadow attack) alerts are supported by ATP sensors only. 
 
-## Suspected DCSync attack (replication of directory services) (external ID 2006) <a name="malicious-replication-of-directory-services"></a>
+## Suspected DCSync attack (replication of directory services) (external ID 2006) 
 
 *Previous name:* Malicious replication of directory services
 
@@ -292,7 +292,7 @@ Validate the following permissions:
 2. Replicate directory changes all.
 3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx). You can use [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
-## Suspected Golden Ticket usage (encryption downgrade) (external ID 2009) <a name="encryption-downgrade-activity-potential-golden-ticket-attack"></a>
+## Suspected Golden Ticket usage (encryption downgrade) (external ID 2009) 
 
 *Previous name:* Encryption downgrade activity
 
@@ -342,7 +342,7 @@ Applications might authenticate using a lower encryption cipher. Some are authen
 
 4. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) and [Forged PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
-## Suspected Golden Ticket usage (forged authorization data) (external ID 2013)<a name="privilege-escalation-using-forged-authorization-data"></a>
+## Suspected Golden Ticket usage (forged authorization data) (external ID 2013)
 
 *Previous name:* Privilege escalation using forged authorization data
 
@@ -375,7 +375,7 @@ Some Operating Systems or applications are known to modify the authorization dat
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
 4. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) and [Forged PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
-## Suspected Golden Ticket usage (nonexistent account) (external ID 2027) <a name="golden-ticket"></a>
+## Suspected Golden Ticket usage (nonexistent account) (external ID 2027) 
 
 Previous name: Kerberos golden ticket
 
@@ -404,7 +404,7 @@ If the answer is **yes**, to any of the previous questions, **Close** the alert,
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
 
  
-## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032) -Preview <a name="golden-ticket-usage-ticket-anomaly"></a>
+## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032) -Preview 
 
 **Description**
 Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.  
@@ -462,7 +462,7 @@ If the answer to the previous questions is **yes**, **Close** the security alert
 
     **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
 
-## Suspected skeleton key attack (encryption downgrade) (external ID 2010) <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
+## Suspected skeleton key attack (encryption downgrade) (external ID 2010) 
 
 *Previous name:* Encryption downgrade activity
 
@@ -521,7 +521,7 @@ The detection relies on events audited on domain controllers. Make sure your dom
 1. To help prevent future attacks, minimize the number of users authorized to modify sensitive groups. 
 2. Set up Privileged Access Management for Active Directory if applicable.
  
-## Suspicious service creation (external ID 2026)<a name="suspicious-service-creation"></a>
+## Suspicious service creation (external ID 2026)
 
 *Previous name:* Suspicious service creation
 

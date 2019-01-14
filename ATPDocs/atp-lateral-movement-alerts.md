@@ -45,7 +45,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 
-## Suspected identity theft (pass-the-hash) (external ID 2017)<a name="identity-theft-using-pass-the-hash-attack"></a>
+## Suspected identity theft (pass-the-hash) (external ID 2017)
 
 *Previous name:* Identity theft using Pass-the-Hash attack
 
@@ -69,7 +69,7 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user’
 3. Find the tool that performed the attack and remove it.
 4. Look for users logged in around the same time of the activity, as they may also be compromised. Reset their passwords and enable MFA.
 
-## Suspected identity theft (pass-the-ticket) (external ID 2018)<a name="identity-theft-using-pass-the-ticket-attack"></a>
+## Suspected identity theft (pass-the-ticket) (external ID 2018)
 
 *Previous name:* Identity theft using Pass-the-Ticket attack
 
@@ -107,7 +107,7 @@ There are custom applications that forward tickets on behalf of users. These app
 4. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
 5. If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 
-## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008) <a name="Encryption-downgrade-activity-potential-over-pass-the-hash"></a>
+## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008) 
 
 *Previous name:* Encryption downgrade activity
 
@@ -152,7 +152,7 @@ Some legitimate resources don’t support strong encryption ciphers and may trig
 2. Make sure the domain functional level is set to support strong encryption cyphers.  
 3. Give preference to using applications that support strong encryption cyphers.
 
-## Suspected overpass-the-hash attack (Kerberos) (external ID 2002) <a name="unusual-protocol-implementation"></a>
+## Suspected overpass-the-hash attack (Kerberos) (external ID 2002) 
 
 *Previous name:* Unusual Kerberos protocol implementation (potential overpass-the-hash attack)
 
