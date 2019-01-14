@@ -45,7 +45,7 @@ The following security alerts help you identify and remediate **Reconnaissance**
 > * User and IP address reconnaissance (SMB) (external ID 2012)
 > * User and Group membership reconnaissance (SAMR) (external ID 2021)
 
-## Account enumeration reconnaissance (external ID 2003) <a name="reconnaissance-using-account-enumeration"></a>
+## Account enumeration reconnaissance (external ID 2003) 
 
 
 *Previous name:* Reconnaissance using account enumeration
@@ -105,7 +105,7 @@ Now, look at the accounts:<br>
     3. Reset their passwords and enable MFA.
 2. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration. 
 
-## Network mapping reconnaissance (DNS) (external ID 2007) <a name="reconnaissance-using-dns"></a>
+## Network mapping reconnaissance (DNS) (external ID 2007) 
 
 
 *Previous name:* Reconnaissance using DNS
@@ -145,7 +145,7 @@ It is important to preventing future attacks using AXFR queries by securing your
 
 1. Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
-## User and IP address reconnaissance (SMB) (external ID 2012) <a name="reconnaissance-using-smb-session-enumeration"></a>
+## User and IP address reconnaissance (SMB) (external ID 2012) 
 
 
 *Previous name:* Reconnaissance using SMB Session Enumeration
@@ -176,7 +176,7 @@ Security scanners and applications may legitimately query domain controllers for
 
 Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
 
-## User and Group membership reconnaissance (SAMR) (external ID 2021) <a name="reconnaissance-using-directory-service-queries"></a>
+## User and Group membership reconnaissance (SAMR) (external ID 2021) 
 
 
 *Previous name:* Reconnaissance using directory services queries 

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -42,15 +42,15 @@ The following security alerts help you identify and remediate **Exfiltration** p
 > * Suspicious communication over DNS (external ID 2031)
 > * Data exfiltration over SMB - Preview (external ID 2030)
 
-## Suspicious communication over DNS (external ID 2031) <a name="suspicious-communication-over-dns"></a>
+## Suspicious communication over DNS (external ID 2031) 
 
 *Previous name*: Suspicious communication over DNS
 
-## Description
+**Description**
 
 The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. Enabling an attacker on a compromised machine, to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
-## TP, B-TP, or FP?
+**TP, B-TP, or FP?**
  
 Some companies legitimately use DNS for regular communication. To determine the status of the security alert:
 
@@ -58,7 +58,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
     - Consider it a **B-TP** activity if the domain is known and trusted, and DNS queries are permitted. *Close* the security alert, and exclude the domain from future alerts.  
     - If the registered query domain is not trusted, identify the process creating the request on the source computer. Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to assist with this task.
 
-## Understand the scope of the breach
+**Understand the scope of the breach**
 
 1. On the destination computer, which should be a DNS server, check for the records of the domain in question.
     - What IP is it correlated to?
@@ -66,7 +66,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
     - Where is the IP?
 1. Investigate the [source and destination computers](investigate-a-computer.md).
 
-## Suggested remediation and steps for prevention
+**Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
@@ -78,17 +78,18 @@ Some companies legitimately use DNS for regular communication. To determine the 
 
 ## Data exfiltration over SMB - Preview (external ID 2030)
 
-## Description
+**Description**
 Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. An Azure ATP **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
 
-## TP, B-TP, or FP?
+**TP, B-TP, or FP**
 1. Are these users supposed to copy these files, to this computer?  
-    -If the answer to the previous question is **yes**, **Close** the security alert, and exclude the computer as a **B-TP** activity.
-## Understand the scope of the breach
+    - If the answer to the previous question is **yes**, **Close** the security alert, and exclude the computer as a **B-TP** activity.
+
+**Understand the scope of the breach**
 1. Investigate the [source users](investigate-a-user.md).  
 2. Investigate the [source and destination computers](investigate-a-computer.md) of the copies. 
 
-## Suggested remediation and steps for prevention
+**Suggested remediation and steps for prevention**
 1. Reset the password of the source users and enable MFA.
 2. Contain the source computer.
     - Find the tool that performed the attack and remove it.
@@ -98,7 +99,9 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 3. If one of the files is the **ntds.dit** file:
     - Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and won't work again until they are renewed or in some cases, the service is restarted.
+
     - **Plan carefully before performing the KRBTGT double reset. The KRBTGT double reset impacts all computers, servers, and users in the environment.**
+
    - Close all existing sessions tot the domain controllers. 
 
 ## See Also

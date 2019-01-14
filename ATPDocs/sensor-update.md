@@ -2,12 +2,12 @@
 # required metadata
 
 title: Update your Azure ATP sensors | Microsoft Docs
-description: This describes how to update the sensors in Azure ATP.
+description: Describes how to update and delay update of sensors in Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -93,12 +93,12 @@ Every few minutes, Azure ATP sensors check whether they have the latest version.
   7. A sensor receives clearance from the Azure cloud service. This can be verified in the **Updates** page.
   8. The next sensor starts the update process. 
 
-4. 24 hours after the Azure ATP cloud service updated, sensors selected for **Delayed update** start the update process.
+4. 24 hours after the Azure ATP cloud service is updated, sensors selected for **Delayed update** start the update process.
 
 ![sensor update](./media/sensor-update.png)
 
 
-In the event of failure, if the sensor didn’t complete the update process, a relevant monitoring alert is triggered and is sent as a notification.
+In the event of an update failure, if the sensor didn’t complete the update process, a relevant monitoring alert is triggered and is sent as a notification.
 
 ![sensor outdated](./media/sensor-outdated.png)
 
