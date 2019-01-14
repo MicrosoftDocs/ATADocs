@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/9/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -43,8 +43,8 @@ The following security alerts help you identify and remediate **Compromised cred
 > * Honeytoken activity (external ID 2014)
 > * Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
 > * Suspected Brute Force attack (LDAP) (external ID 2004)
+> * Suspected Brute Force attack (SMB) (external ID 2033)
 > * Suspected WannaCry ransomware attack (external ID 2035)
-> * Suspected brute force attack (SMB) (external ID 2033)
 > * Suspected use of Metasploit hacking framework (external ID 2034)
 > * Suspicious VPN connection (external ID 2025)
 
@@ -115,7 +115,7 @@ It is important to check if any login attempts ended with successful authenticat
     2. To enable NTLM auditing, turn on event 8004 (the NTLM authentication event that includes information about the source computer, user account and server that the source machine tried to access).
     3. When you learn which server sent the authentication validation, investigate the server by checking events, such as event 4624, to better understand the authentication process.
 
-### Suggested remediation and steps for prevention
+**Suggested remediation and steps for prevention**
 
 1. Reset the passwords of the guessed users and enable MFA.
 2. Contain the source computer.
@@ -128,12 +128,12 @@ It is important to check if any login attempts ended with successful authenticat
 
 *Previous name:* Brute force attack using LDAP simple bind
 
-### **Description**
+**Description**
 
 In a brute-force attack, the attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.  
 In this detection, an alert is triggered when Azure ATP detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options.
 
-### TP, B-TP, or FP
+**TP, B-TP, or FP**
 
 It is important to check if any login attempts ended with successful authentication.
 
@@ -163,15 +163,49 @@ It is important to check if any login attempts ended with successful authenticat
 4. Enforce [complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 5. Prevent future usage of LDAP clear text protocol in your organization.
 
+## Suspected Brute Force attack (SMB) (external ID 2033) 
+
+*Previous name:* Unusual protocol implementation (potential use of malicious tools such as Hydra)
+
+**Description**
+
+Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of brute force techniques.
+
+**TP, B-TP, or FP**
+
+1. Check if the source computer is running an attack tool such as Hydra.
+   1. If the source computer is running an attack tool, this alert is a **TP**. Follow the instructions in [understand the scope of the breach](#understand-the-scope-of-the-breach).
+
+Occasionally, applications implement their own NTLM or SMB stack.
+
+1. Check if the source computer is running its own NTLM or SMB stack type of application.
+    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
+    2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](investigate-a-computer.md).
+2. Investigate the [source user](investigate-a-user.md)) (if there is a source user).
+
+**Suggested remediation and steps for prevention**
+
+1. Reset the passwords of the guessed users and enable  multi-factor authentication.
+2. Contain the source computer
+   1. Find the tool that performed the attack and remove it.
+   2. Search for users logged on around the time of the activity, as they may also be compromised.
+   3. Reset their passwords and enable multi-factor authentication.
+3. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
+4. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
 ## Suspected WannaCry ransomware attack (external ID 2035)
 
 *Previous name:* Unusual protocol implementation (potential WannaCry ransomware attack)
 
-### Description
+**Description**
 
 Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
 
-### TP, B-TP, or FP**
+**TP, B-TP, or FP**
 
 1. Check if WannaCry is running on the source computer. 
 
@@ -183,12 +217,12 @@ Occasionally, applications implement their own NTLM or SMB stack.
     1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
     2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
 
-### Understand the scope of the breach
+**Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
 2. Investigate the [compromised user](investigate-a-user.md).
 
-### Suggested remediation and steps for prevention
+**Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
       - [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
@@ -197,50 +231,15 @@ Occasionally, applications implement their own NTLM or SMB stack.
 2. Patch all of your machines, making sure to apply security updates. 
       - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-
-## Suspected brute force attack (SMB) (external ID 2033) 
-
-*Previous name:* Unusual protocol implementation (potential use of malicious tools such as Hydra)
-
-### Description
-
-Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of brute force techniques.
-
-### TP, B-TP, or FP
-
-1. Check if the source computer is running an attack tool such as Hydra.
-   1. If the source computer is running an attack tool, this alert is a **TP**. Follow the instructions in [understand the scope of the breach](#understand-the-scope-of-the-breach).
-
-Occasionally, applications implement their own NTLM or SMB stack.
-
-1. Check if the source computer is running its own NTLM or SMB stack type of application.
-    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
-    2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
-
-### Understand the scope of the breach
-
-1. Investigate the [source computer](investigate-a-computer.md).
-2. Investigate the [source user](investigate-a-user.md)) (if there is a source user).
-
-### Suggested remediation and steps for prevention 
-
-1. Reset the passwords of the guessed users and enable  multi-factor authentication.
-2. Contain the source computer
-   1. Find the tool that performed the attack and remove it.
-   2. Search for users logged on around the time of the activity, as they may also be compromised.
-   3. Reset their passwords and enable multi-factor authentication.
-3. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
-4. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
-
 ## Suspected use of Metasploit hacking framework (external ID 2034)
 
 *Previous name:* Unusual protocol implementation (potential use of Metasploit hacking tools)
 
-### Description
+**Description**
 
 Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as use of the Metasploit hacking framework. 
 
-### TP, B-TP, or FP
+**TP, B-TP, or FP**
 
 1. Check if the source computer is running an attack tool such as Metasploit or Medusa.
 
@@ -252,12 +251,12 @@ Occasionally, applications implement their own NTLM or SMB stack.
     1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
     2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
 
-### Understand the scope of the breach
+**Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
 2. If there is a source user, [investigate the user](investigate-a-user.md).
 
-### Suggested remediation and steps for prevention 
+**Suggested remediation and steps for prevention**
 
 1. Reset the passwords of the guessed users and enable MFA.
 2. Contain the source computer.
@@ -270,7 +269,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 *Previous name:* Suspicious VPN connection 
 
-### Description
+**Description**
 
 Azure ATP learns the entity behavior for users VPN connections over a sliding period of one month. 
 
@@ -278,10 +277,11 @@ The VPN-behavior model is based on the machines users log in to and the location
 
 An alert is opened when there is a deviation from the user’s behavior based on a machine learning algorithm.
 
-### Learning period
+**Learning period**
+
 30 days from the first VPN connection, and at least 5 VPN connections in the last 30 days, per user.
 
-### TP, B-TP, or FP
+**TP, B-TP, or FP**
 
 1. Is the suspicious user supposed to be performing these operations?
     1. Did the user recently change their location?
@@ -289,12 +289,12 @@ An alert is opened when there is a deviation from the user’s behavior based on
 
 If the answer is yes to the questions above, **Close** the security alert as a **B-TP** activity.
 
-### Understand the scope of the breach
+**Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
 2. If there is a source user, [investigate the user](investigate-a-user.md).
 
-### Suggested remediation and steps for prevention
+**Suggested remediation and steps for prevention**
 
 1. Reset the password of the user and enable MFA.
 2. Consider blocking this user from connecting using VPN.

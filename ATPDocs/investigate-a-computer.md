@@ -26,7 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
 
 # Tutorial: Investigate a computer
 
