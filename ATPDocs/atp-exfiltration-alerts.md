@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 1/15/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,11 +30,13 @@ ms.suite: ems
 
 Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-- [Reconnaissance](atp-reconnaissance-alerts.md)
-- [Compromised credentials](atp-compromised-credentials-alerts.md)
-- [Lateral Movements](atp-lateral-movement-alerts.md)
-- [Domain dominance](atp-domain-dominance-alerts.md)
-- **Exfiltration**
+1. [Reconnaissance](atp-reconnaissance-alerts.md)
+2. [Compromised credentials](atp-compromised-credentials-alerts.md)
+3. [Lateral Movements](atp-lateral-movement-alerts.md)
+4. [Domain dominance](atp-domain-dominance-alerts.md)
+5. **Exfiltration**
+
+To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md)
 
 The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by Azure ATP in your network. In this tutorial, learn to understand, classify, prevent, and remediate the following attacks:
 

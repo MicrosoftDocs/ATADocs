@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/15/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -26,13 +26,23 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
 
 # Azure ATP Security Alerts
 
+Azure ATP security alerts explain the suspicious activities detected by Azure ATP sensors on your network, and the actors and computers involved in each threat.   Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+
+Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
+  1. [Reconnaissance phase alerts](atp-reconnaissance-alerts.md)
+  2. [Compromised credential phase alerts](atp-compromised-credentials-alerts.md)
+  3. [Lateral movement phase alerts](atp-lateral-movement-alerts.md)
+  4. [Domain dominance phase alerts](atp-domain-dominance-alerts.md)
+  5. [Exfiltration phase alerts](atp-exfiltration-alerts.md)
+
+To learn more about the structure and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md).
+
 ## Security alert name mapping and unique external IDs
 
-In version 2.56, all existing Azure ATP security alerts were renamed with easier to understand names. Mapping between old and new names, and their corresponding unique externalIds are as listed in the following table. Microsoft recommends use of alert external IDs in place of alert names for scripts or automation as only security alert external IDs are permanent and not subject to change.
+In version 2.56, all existing Azure ATP security alerts were renamed with easier to understand names. Mapping between old and new names, and their corresponding unique externalIds are as listed in the following table. When used with scripts or automation, Microsoft recommends use of alert external IDs in place of alert names, as only security alert external IDs are permanent, and not subject to change.
 
 > [!div class="mx-tableFixed"] 
 
@@ -68,17 +78,6 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |[Suspicious VPN connection](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Suspicious VPN connection|2025|
 |[User and group membership reconnaissance (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance using directory services queries|2021|
 |[User and IP address reconnaissance (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Reconnaissance using SMB Session Enumeration|2012|
-
-
-Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
-
-*Phases:*
-
-   <br>[1. Reconnaissance alerts](atp-reconnaissance-alerts.md)
-   <br>[2. Compromised credential alerts](atp-compromised-credentials-alerts.md)
-   <br>[3. Lateral movement alerts](atp-lateral-movement-alerts.md)
-   <br>[4. Domain dominance alerts](atp-domain-dominance-alerts.md)
-   <br>[5. Exfiltration alerts](atp-exfiltration-alerts.md)
 
 > [!NOTE]
 > To disable any security alert, contact support.
