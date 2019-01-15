@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/15/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,13 +31,17 @@ ms.suite: ems
 
 Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-- **Reconnaissance**
-- [Compromised credentials](atp-compromised-credentials-alerts.md)
-- [Lateral Movements](atp-lateral-movement-alerts.md)
-- [Domain dominance](atp-domain-dominance-alerts.md)
-- [Exfiltration](atp-exfiltration-alerts.md) 
+1. **Reconnaissance**
+2. [Compromised credentials](atp-compromised-credentials-alerts.md)
+3. [Lateral Movements](atp-lateral-movement-alerts.md)
+4. [Domain dominance](atp-domain-dominance-alerts.md)
+5. [Exfiltration](atp-exfiltration-alerts.md) 
 
-The following security alerts help you identify and remediate **Reconnaissance** phase suspicious activities detected by Azure ATP in your network. In this tutorial, learn how to understand, classify, remediate, and prevent the following types of attacks:
+To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md).
+
+The following security alerts help you identify and remediate **Reconnaissance** phase suspicious activities detected by Azure ATP in your network.
+
+In this tutorial, learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
 > * Account enumeration reconnaissance (external ID 2003)

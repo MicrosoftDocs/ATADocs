@@ -26,21 +26,19 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
 
 # Azure ATP Security Alerts
 
-Azure ATP security alerts explain the suspicious activities detected on your network, and the actors and computers involved in each threat. Alerts are designed to help you quickly understand exactly what is happening.  Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+Azure ATP security alerts explain the suspicious activities detected by Azure ATP sensors on your network, and the actors and computers involved in each threat.   Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
 Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
+  1. [Reconnaissance phase alerts](atp-reconnaissance-alerts.md)
+  2. [Compromised credential phase alerts](atp-compromised-credentials-alerts.md)
+  3. [Lateral movement phase alerts](atp-lateral-movement-alerts.md)
+  4. [Domain dominance phase alerts](atp-domain-dominance-alerts.md)
+  5. [Exfiltration phase alerts](atp-exfiltration-alerts.md)
 
-   <br>[1. Reconnaissance phase alerts](atp-reconnaissance-alerts.md)
-   <br>[2. Compromised credential phase alerts](atp-compromised-credentials-alerts.md)
-   <br>[3. Lateral movement phase alerts](atp-lateral-movement-alerts.md)
-   <br>[4. Domain dominance phase alerts](atp-domain-dominance-alerts.md)
-   <br>[5. Exfiltration phase alerts](atp-exfiltration-alerts.md)
-
-To learn more about the structure and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md)
+To learn more about the structure and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md).
 
 ## Security alert name mapping and unique external IDs
 
