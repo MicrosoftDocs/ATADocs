@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/15/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -36,6 +36,8 @@ Typically, cyber attacks are launched against any accessible entity, such as a l
 3. **Lateral Movements**
 4. [Domain dominance](atp-domain-dominance-alerts.md)
 5. [Exfiltration](atp-exfiltration-alerts.md)
+
+To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md).
 
 The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
