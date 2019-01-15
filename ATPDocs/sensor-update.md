@@ -66,7 +66,7 @@ Ordinarily, sensors update automatically when the Azure ATP cloud service is upd
 This enables you to select specific sensors on which the update is rolled out automatically, and update the rest of your sensors on delay, only after you see that the initial update went smoothly.
 
 > [!NOTE]
-> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md)
+> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md).
 
 To set a sensor to delayed update:
 
