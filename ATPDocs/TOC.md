@@ -20,7 +20,7 @@
 ## [VPN integration](install-atp-step6-vpn.md)
 ## [Integrate with Syslog](setting-syslog.md)
 # Tutorials
-## [ATP playbook lab]
+## ATP playbook lab
 ### [Playbook lab setup](atp-playbook-setup-lab.md)
 ### [Playbook - reconnaissance](atp-playbook-reconnaissance.md)
 ### [Playbook - lateral movement](atp-playbook-lateral-movement.md)
