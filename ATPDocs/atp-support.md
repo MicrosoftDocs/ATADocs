@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 1/7/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -67,7 +67,7 @@ For additional support options, ask your Microsoft contact.
 
 ### Self help
 
-#### System status page 
+#### System status page
 
 To view system status for Azure ATP, visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to whether the Azure ATP portal is up and active, if there are issues with detections and if the Sensor is able to send traffic to the cloud. You can access the **System status** from the Azure ATP menu bar.
 
@@ -87,4 +87,4 @@ Troubleshooting:
 
 ### Community resources
 
-We recommend the [Yammer group for Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). This resource provides direct responses from the Azure Advanced Threat Protection team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.
+We recommend the [tech community group for Azure Advanced Threat Protection](https://aka.ms/azureatpcommunity). This resource provides direct responses from the Azure Advanced Threat Protection team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.

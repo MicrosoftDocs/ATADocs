@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -82,7 +82,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Monitored activity|Description|
 |---------------------|------------------|
 |Directory Service Replication  |Used tried to replicate the directory service.|
-|DNS Query  |User preformed an AXFR query against the domain controller.|
+|DNS Query  |Type of query user performed against the domain controller (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
 |Private Data Retrieval  |User attempted/succeeded to query private data using LSARPC protocol.|
 |Service Creation   |User attempted to remotely create a specific service to a remote machine.|
 |SMB Session Enumeration   |User attempted to enumerate all users with open SMB sessions on the domain controllers.|

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 1/17/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -59,12 +59,12 @@ Perform the following steps on the ATA Center server.
 4.  If Microsoft .Net Framework is not installed, you are prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
 5.  On the **Welcome** page, select the language to be used for the ATA installation screens and click **Next**.
 
-6.  Read the Microsoft Software License Terms and if you accept the terms, click the check box, and then click **Next**.
+6.  Read the Microsoft Software License Terms, after accepting the terms, click the acceptance check box, then click **Next**.
 
-7.  It is recommended that you set ATA to update automatically. If Windows isn't set to do this on your computer, you get the **Use Microsoft Update to help keep your computer secure and up to date** screen. 
+7.  We recommend setting ATA to update automatically. If Windows isn't set to update automatically on your computer, you'll see the **Use Microsoft Update to help keep your computer secure and up to date** screen. 
     ![Keep ATA up to date image](media/ata_ms_update.png)
 
-8. Select **Use Microsoft Update when I check for updates (recommended)**. This adjusts the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
+8. Select **Use Microsoft Update when I check for updates (recommended)**. This adjusts the Windows settings to enable updates for other Microsoft products (including ATA). 
 
     ![Windows auto-update image](media/ata_installupdatesautomatically.png)
 
@@ -72,9 +72,9 @@ Perform the following steps on the ATA Center server.
 
     |Field|Description|Comments|
     |---------|---------------|------------|
-    |Installation Path|This is the location where the ATA Center is installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
+    |Installation Path|This is the location where the ATA Center is installed. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
     |Database Data Path|This is the location where the MongoDB database files are located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments, you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](ata-capacity-planning.md) for sizing information.|
-    |Center Service SSL Certificate|This is the certificate that is used by the ATA Console and ATA Center service.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment. You have the option to create a self-signed certificate.|
+    |Center Service SSL Certificate|This is the certificate that is used by the ATA Console and ATA Center service.|Click the key icon to select an installed certificate or use the checkbox to create a self-signed certificate.|
         
     ![ATA center configuration image](media/ATA-Center-Configuration.png)
 
@@ -89,21 +89,34 @@ Perform the following steps on the ATA Center server.
 
     -   Self-signed certificates (if selected during the installation)
 
-11.  When the installation completes, click **Launch**  to open the ATA Console and complete setup on the **Configuration** page.
-At this point, you will be brought automatically to the **General** settings page to continue the configuration and the deployment of the ATA Gateways.
+11.  When the installation is complete, click **Launch**  to open the ATA Console and complete setup from the **Configuration** page.
+The **General** settings page will open automatically to continue the configuration and the deployment of the ATA Gateways.
 Because you are logging into the site using an IP address, you receive a warning related to the certificate, this is normal and you should click **Continue to this website**.
 
 ### Validate installation
 
-1.  Check to see that the service named **Microsoft Advanced Threat Analytics Center** is running.
-2.  On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the same user credentials that you used to install the ATA Center.
+1.  Check if the service **Microsoft Advanced Threat Analytics Center**, is running.
+2.  On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the user credentials you used to install the ATA Center.
 
 ### Set anti-virus exclusions
 
-After installing the ATA Center you should exclude the MongoDB database directory from being continuously scanned by your anti-virus application. The default location in the database is:
+After installing the ATA Center, exclude the MongoDB database directory from being continuously scanned by your anti-virus application. The default location in the database is:
 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
+Make sure to also exclude the following folders and processes from AV scanning:
 
+**Folders**
+C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
+
+**Processes**
+<br>mongod.exe
+<br>Microsoft.Tri.Center.exe
+
+
+If you installed ATA in different directory, make sure to change the folder paths according to your installation. 
 
 > [!div class="step-by-step"]
 > [« Pre-install](configure-port-mirroring.md)
