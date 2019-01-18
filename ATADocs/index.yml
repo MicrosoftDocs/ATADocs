@@ -33,7 +33,7 @@ sections:
       image: 
         src: https://docs.microsoft.com/media/common/i_quick-start.svg
         href: whats-new-version-1.9.md
-    - title:  Frequently Asked Questions about ATA
+    - title:  Frequently Asked Questions
       href: ata-technical-faq.md
       image: 
         src: https://docs.microsoft.com/media/common/i_support.svg
