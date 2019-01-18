@@ -70,5 +70,5 @@ Advanced Security Audit Policy is enabled via **Default Domain Controllers Polic
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-forwarding.mdconfigure-event-collection.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
