@@ -46,7 +46,7 @@ sections:
     style: icon48
     items: 
     - image: 
-        src: https://docs.microsoft.com/media/common/i_design.svg.svg
+        src: https://docs.microsoft.com/media/common/i_design.svg
       text: Plan your capacity
       href: atp-capacity-planning.md
     - image: 
