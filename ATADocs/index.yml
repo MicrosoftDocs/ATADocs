@@ -28,12 +28,12 @@ sections:
       image: 
         src: https://docs.microsoft.com/media/common/i_learn-about.svg
         href: what-is-ata.md
-    - title:  What's New with Advanced Threat Analytics
+    - title:  What's New with ATA
       href: whats-new-version-1.9.md
       image: 
         src: https://docs.microsoft.com/media/common/i_quick-start.svg
         href: whats-new-version-1.9.md
-    - title:  Frequently Asked Questions about Advanced Threat Analytics
+    - title:  Frequently Asked Questions about ATA
       href: ata-technical-faq.md
       image: 
         src: https://docs.microsoft.com/media/common/i_support.svg
@@ -41,7 +41,7 @@ sections:
 - title: Get Started
   items:
   - type: paragraph
-    text: Plan, Design, and Begin with Advanced Threat Analytics
+    text: Plan, Design, and Begin with ATA
   - type: list
     style: icon48
     items: 
@@ -51,7 +51,7 @@ sections:
       href: ata-architecture.md
     - image: 
         src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Advanced Threat Analytics capacity planning
+      text: ATA capacity planning
       href: ata-capacity-planning.md
     - image: 
         src: https://docs.microsoft.com/media/common/i_download-install.svg
@@ -60,7 +60,7 @@ sections:
 - title: Try It Now
   items:
   - type: paragraph
-    text: Plan, Design, and Begin with Advanced Threat Analytics
+    text: Plan, Design, and Begin with ATA
   - type: list
     style: icon48
     items: 
