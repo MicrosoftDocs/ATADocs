@@ -31,26 +31,26 @@ sections:
     - title:  Azure ATP Architecture
       href: atp-architecture.md
       image: 
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
         href: atp-architecture.md
     - title:  What's New with Azure ATP
       href: atp-whats-new.md
       image: 
-        src: https://docs.microsoft.com/media/common/i_support.svg
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
         href: atp-whats-new.md
 - title: 5-Minute Quickstarts
   items:
   - type: paragraph
-    text: Learn how to protect your data using the following quickstarts.
+    text: Learn the fundamentals of Azure Advanced Threat Protection with these quickstarts.
   - type: list
     style: icon48
     items: 
     - image: 
-        src: https://docs.microsoft.com/media/common/i_portal.svg
+        src: https://docs.microsoft.com/media/common/i_design.svg.svg
       text: Plan your capacity
       href: atp-capacity-planning.md
     - image: 
-        src: https://docs.microsoft.com/media/common/i_search.svg
+        src: https://docs.microsoft.com/media/common/i_event.svg
       text: Create an Azure ATP instance
       href: install-atp-step1.md
     - image: 
@@ -60,7 +60,7 @@ sections:
 - title: Step-by-Step Tutorials
   items:
   - type: paragraph
-    text: Learn how to edit policies, create new labels and configure settings.
+    text: Learn to understand alerts and undertake investigations with these tutorials.
   - type: list
     style: unordered
     items:
