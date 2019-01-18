@@ -153,6 +153,6 @@ You can simulate suspicious activities as an end-to-end test. In the following s
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.mdconfigure-event-collection.md)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Troubleshooting](troubleshooting-atp-known-issues.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
