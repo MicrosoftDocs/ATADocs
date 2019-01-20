@@ -39,7 +39,8 @@ Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#re
 
 - **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24 hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 
 
- - This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.61
 Released January 13, 2019
