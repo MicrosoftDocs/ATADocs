@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -54,6 +54,7 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |[Malicious request of Data Protection API master key](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Malicious Data Protection Private Information Request|2020|
 |[Network mapping reconnaissance (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance using DNS|2007|
 |[Remote code execution attempt](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Remote code execution attempt|2019|
+|[Remote code execution over DNS - preview](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036--preview)|NA|2036|
 |[Suspected brute force attack (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Brute force attack using LDAP simple bind|2004|
 |[Suspected brute force attack (Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Suspicious authentication failures|2023|
 |[Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
