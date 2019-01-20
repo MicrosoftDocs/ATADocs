@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -42,10 +42,48 @@ To learn more about how to understand the structure, and common components of al
 The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
+> * Remote code execution over DNS - preview (external ID 2036)
 > * Suspected identity theft (pass-the-hash) (external ID 2017)
 > * Suspected identity theft (pass-the-ticket) (external ID 2018)
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
+
+## Remote code execution over DNS (external ID 2036) - preview
+
+**Description**
+
+12/11/2018 Microsoft published [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626), announcing that a newly discovered remote code execution vulnerability exists in Windows Domain Name System (DNS) servers. In this vulnerability, servers fail to properly handle requests. An attacker who successfully exploits the vulnerability can run arbitrary code in the context of the Local System Account. Windows servers currently configured as DNS servers are at risk from this vulnerability.
+
+In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting the CVE-2018-8626 security vulnerability are made against a domain controller in the network.
+
+**TP, B-TP or FP**
+
+1. Are the destination computers up-to-date and patched against CVE-2018-8626? 
+    - If the computers are up-to-date and patched, **Close** the security alert as a **FP**.
+2. Was a service created or an unfamiliar process executed around the time of the attack
+    - If no new service or unfamiliar process is found, **Close** the security alert as a **FP**. 
+3. This type of attack can crash the DNS service before successfully causing code execution.
+    - Check if the DNS service was restarted a few times around the time of the attack.
+    - If the DNS was restarted, it was likely an attempt to exploit CVE-2018-8626. Consider this alert a **TP** and follow the instructions in **Understand the scope of the breach**. 
+
+**Understand the scope of the breach**
+
+- Investigate the [source and destination computers](investigate-a-computer.md).
+
+**Suggested remediation and steps for prevention**
+
+**Remediation**
+
+1. Contain the domain controllers. 
+    1. Remediate the remote code execution attempt.
+    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA. 
+2. Contain the source computer.
+    1. Find the tool that performed the attack and remove it.
+    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA.
+
+**Prevention**
+
+- Make sure all DNS servers in the environment are up-to-date, and patched against [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626). 
 
 ## Suspected identity theft (pass-the-hash) (external ID 2017)
 

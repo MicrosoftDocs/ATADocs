@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -30,6 +30,17 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.62
+Released January 20, 2019
+
+- **New Security Alert: Remote code execution over DNS- (preview)**<br>
+Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
+
+- **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24 hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 
+
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.61
 Released January 13, 2019
