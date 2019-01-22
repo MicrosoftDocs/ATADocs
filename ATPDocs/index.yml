@@ -1,0 +1,69 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Azure Advanced Threat Protection Documentation
+metadata:
+  title: Azure Advanced Threat Protection Documentation
+  description: Protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats.
+  services: azure-advanced-threat-protection
+  author: msmbaldwin
+  manager: mbaldwin
+  ms.prod: azure-advanced-threat-protection
+  ms.tgt_pltfrm: na
+  ms.devlang: na
+  ms.topic: landing-page
+  ms.date: 01/18/2019
+  ms.author: mbaldwin
+  layout: LandingPage
+abstract:
+  description: Azure Advanced Threat Protection (ATP) is a cloud service that helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats.
+sections:
+- title: Learn More
+  items:
+  - type: list
+    style: cards
+    className: cardsFTitle
+    items:
+    - title: Learn More about Azure Advanced Threat Protection?
+      href: what-is-atp.md
+      image: 
+        src: https://docs.microsoft.com/media/common/i_learn-about.svg
+        href: what-is-atp.md
+    - title:  Azure ATP Architecture
+      href: atp-architecture.md
+      image: 
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
+        href: atp-architecture.md
+    - title:  What's New with Azure ATP
+      href: atp-whats-new.md
+      image: 
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+        href: atp-whats-new.md
+- title: 5-Minute Quickstarts
+  items:
+  - type: paragraph
+    text: Learn the fundamentals of Azure Advanced Threat Protection with these quickstarts.
+  - type: list
+    style: icon48
+    items: 
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_design.svg
+      text: Plan your capacity
+      href: atp-capacity-planning.md
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_event.svg
+      text: Create an Azure ATP instance
+      href: install-atp-step1.md
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
+      text: Connect to Active Directory
+      href: install-atp-step2
+- title: Step-by-Step Tutorials
+  items:
+  - type: paragraph
+    text: Learn to understand alerts and undertake investigations with these tutorials.
+  - type: list
+    style: unordered
+    items:
+    - html: <a href="/azure-advanced-threat-protection/understanding-security-alerts">Understand security alerts</a>
+    - html: <a href="/azure-advanced-threat-protection/investigate-a-user">Investigate a user</a>
+    - html: <a href="/azure-advanced-threat-protection/investigate-a-computer">Investigate a computer</a>
