@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/30/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -50,7 +50,7 @@ The first time you open the Azure ATP portal, the following screen appears:
 
     |Field|Comments|
     |---------|------------|
-    |**Username** (required)|Enter the read-only Active Directory user name, for example: **ATPuser**.|
+    |**Username** (required)|Enter the read-only Active Directory user name, for example: **ATPuser**. **Note:** Do **not** use the UPN format for your username.|
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 

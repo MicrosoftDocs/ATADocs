@@ -4,10 +4,10 @@
 title: Install Advanced Threat Analytics - Step 2 | Microsoft Docs
 description: Step two of installing ATA helps you configure the domain connectivity settings on your ATA Center server
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 12/30/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -46,7 +46,7 @@ The first time you open the ATA Console, the following screen appears:
 
     |Field|Comments|
     |---------|------------|
-    |**Username** (required)|Enter the read-only user name, for example: **ATAuser**.|
+    |**Username** (required)|Enter the read-only user name, for example: **ATAuser**. **Note:** Do **not** use the UPN format for your username.|
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 

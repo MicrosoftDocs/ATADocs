@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,19 +29,72 @@ ms.suite: ems
 
 *Applies to: Azure Advanced Threat Protection*
 
-# What's new in Azure ATP 
+# What's new in Azure ATP
+
+## Azure ATP release 2.62
+Released January 20, 2019
+
+- **New Security Alert: Remote code execution over DNS- (preview)**<br>
+Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
+
+- **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24 hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 
+
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.61
+Released January 13, 2019
+
+- **New Security Alert: Data exfiltration over SMB - (preview)**<br>
+Azure ATP’s [Data exfiltration over SMB](atp-exfiltration-alerts.md) security alert is now in public preview. <br> Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provide authorization to any resource. 
+
+
+- **Feature Enhancement: Remote code execution attempt** security alert <br> A new alert description and additional evidence were added to help make the alert easier to understand, and provide better investigation workflows. 
+
+
+- **Feature Enhancement: DNS query logical activities** <br>Additional query types were added to [Azure ATP monitored activities](monitored-activities.md) including: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**. 
+
+- **Feature Enhancement: Suspected Golden Ticket usage (ticket anomaly) and Suspected Golden Ticket usage (nonexistent account)** <br>
+Improved detection logic has been applied to both alerts to reduce the number of FP alerts, and deliver more accurate results.
+
+- **Feature Enhancement: Azure ATP Security Alert documentation** <br>
+Azure ATP security alert documentation has been enhanced and expanded to include better alert descriptions, more accurate alert classifications, and explanations of evidence, remediation, and prevention. Get familiar with the new security alert documentation design using the following links: 
+    - [Azure ATP Security Alerts](suspicious-activity-guide.md)
+    - [Understanding security alerts](understanding-security-alerts.md)
+        - [Reconnaissance phase alerts](atp-reconnaissance-alerts.md)
+        - [Compromised credential phase alerts](atp-compromised-credentials-alerts.md)
+        - [Lateral movement phase alerts](atp-lateral-movement-alerts.md)
+        - [Domain dominance phase alerts](atp-domain-dominance-alerts.md)
+        - [Exfiltration phase alerts](atp-exfiltration-alerts.md)
+    - [Investigate a computer](investigate-a-computer.md)
+    - [Investigate a user](investigate-a-user.md)
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+
+## Azure ATP release 2.60
+Released January 6, 2019
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.59
+Released December 16, 2018
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
 
 ## Azure ATP release 2.58
 
 Released December 9, 2018
 
 - **Security Alert Enhancement: Unusual Protocol Implementation alert split**<br>
-Azure ATP's series of Unusual Protocol Implementation security alerts that previously shared 1 externalId (2002),  are now split into 4 distinctive alerts, with a corresponding unique externalId. 
+Azure ATP's series of Unusual Protocol Implementation security alerts that previously shared 1 externalId (2002), are now split into four distinctive alerts, with a corresponding unique external ID. 
 
 ### New alert externalIds
+
 > [!div class="mx-tableFixed"] 
 
-|New security alert name|Previous security alert name|Unique externalId|
+|New security alert name|Previous security alert name|Unique external ID|
 |---------|----------|---------|
 |Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033
 |Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
@@ -62,7 +115,7 @@ Released December 2, 2018
 
 - **New Security Alert: Suspected Golden ticket usage- ticket anomaly (preview)**<br>
 Azure ATP’s [Suspected Golden Ticket usage - ticket anomaly](suspicious-activity-guide.md) security alert is now in public preview. <br> Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource. 
-<br>This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this new detection is specifically designed to identify. 
+<br>This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this new detection is designed to identify. 
 
 
 - **Feature Enhancement: Automated Azure ATP instance (workspace) creation** <br>
@@ -71,7 +124,7 @@ From today, Azure ATP *workspaces* are renamed Azure ATP *instances*. Azure ATP 
   - Simplified instance creation for faster deployment and protection using [create your Azure ATP instance](install-atp-step1.md). 
   - All [data privacy and compliance](atp-privacy-compliance.md) remains the same. 
 
-  See [Create your Azure ATP instance](install-atp-step1.md) to learn more. 
+  To learn more about Azure ATP instances, see [Create your Azure ATP instance](install-atp-step1.md). 
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -96,7 +149,7 @@ Two additional features are added to enhance Azure ATP Lateral Movement Path (LM
 Released November 18, 2018
 
 - **Security Alert: Suspicious communication over DNS - general availability**<br>
-Azure ATP’s [Suspicious communication over DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) security alert is now in general availability. <br> Typically, the DNS protocol in most organizations is not monitored, and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+Azure ATP’s [Suspicious communication over DNS](suspicious-activity-guide.md) security alert is now in general availability. <br> Typically, the DNS protocol in most organizations is not monitored, and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -282,7 +335,7 @@ Released July 15, 2018
 ## Azure ATP release 2.39
 
 Released July 5, 2018
--	**New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md#golden-ticket)
+-	**New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md)
 
 - This version includes fixes and improvements for multiple issues. 
 
@@ -312,7 +365,7 @@ Released June 10, 2018
  
 - **New preview detections**<br></br>From now on, Azure ATP will take advantage of the fact that it's a cloud service -- where new features can be delivered in fast cycles -- and provide you with new detections as quickly as possible. These new detections will be tagged as "preview" when they are first released. Usually a new detection will move from preview to general availability within a few weeks. By default you will see preview detections. For information about opting out, see [preview detections](working-with-suspicious-activities.md#preview-detections).
  
-- **Suspicious VPN detection**<br></br>This release introduces a preview version of the Suspicious VPN detection. Azure ATP learns user VPN behavior, including the machines the users signed in to and the locations the users connect from, and alerts you when there is a deviation from the expected behavior. For more information, see [Suspicious VPN detection](suspicious-activity-guide.md#suspicious-vpn-detection).
+- **Suspicious VPN detection**<br></br>This release introduces a preview version of the Suspicious VPN detection. Azure ATP learns user VPN behavior, including the machines the users signed in to and the locations the users connect from, and alerts you when there is a deviation from the expected behavior. For more information, see [Suspicious VPN detection](suspicious-activity-guide.md).
 
 - **Delayed update**<br></br>You now have the option to set Azure ATP sensors to update at a later time, each time Azure ATP updates. You can now set each Azure ATP sensor to **Delayed update** so that it will update 24 hours after the Azure ATP cloud service updates. This feature enables you to test the update on specific test sensors and only update your production sensors later on. If you discover an issue during the first update cycle, open a support ticket. For more information see [Update Azure ATP sensors](sensor-update.md).
 

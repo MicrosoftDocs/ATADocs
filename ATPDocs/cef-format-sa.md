@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 1/20/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -64,36 +64,39 @@ The following fields and their values are forwarded to your SIEM:
 
 > [!div class="mx-tableFixed"] 
 
-|New security alert name|Legacy security alert name|Unique ExternalId|
+|New security alert name|Previous security alert name|Unique external ID|
 |---------|----------|---------|
-|Account enumeration reconnaissance|Reconnaissance using account enumeration|2003|
-|Honeytoken activity|Honeytoken activity|2014|
-|Malicious request of Data Protection API master key|Malicious Data Protection Private Information Request|2020|
-|Network-mapping reconnaissance (DNS)|Reconnaissance using DNS|2007|
-|Suspected Brute Force attack (LDAP)|Brute force attack using LDAP simple bind|2004|
-|Suspected DCSync attack (replication of directory services)|Malicious replication of directory services|2006|
-|Suspected golden ticket usage (encryption downgrade)|Encryption downgrade activity (potential golden ticket attack)|2009|
-|Suspected golden ticket usage (time anomaly) |Kerberos golden ticket – time anomaly|2022|
-|Suspected golden ticket usage (nonexistent account)|Kerberos Golden Ticket - nonexistent account|2027|
-|Suspected golden ticket usage (ticket anomaly) - preview|NA|2032|
-|Suspected Golden Ticket usage (forged authorization data) |Privilege escalation using forged authorization data|2013|
-|Suspected identity theft (pass-the-hash)|Identity theft using Pass-the-Hash attack|2017|
-|Suspected identity theft (pass-the-ticket)|Identity theft using Pass-the-Ticket attack|2018|
-|Suspected over-pass-the-hash attack (encryption downgrade)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
-|Suspected skeleton key attack (encryption downgrade)|Encryption downgrade activity (potential skeleton key attack)|2010|
-|Suspected DCShadow attack (DC replication request)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
-|Suspected DCShadow attack (domain controller promotion)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
-|Remote code execution attempt|Remote code execution attempt|2019|
-|Suspicious communication over DNS|Suspicious communication over DNS|2031|
-|Suspicious modification of sensitive groups|Suspicious modification of sensitive groups|2024|
-|Suspicious service creation|Suspicious service creation|2026|
-|Suspicious VPN connection|Suspicious VPN connection|2025|
-|Suspected WannaCry ransomware attack|Unusual protocol implementation (potential WannaCry ransomware attack)*|2035|
-|Suspected brute force attack (SMB)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
-|Suspected use of Metasploit hacking framework|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034|
-|Suspected overpass-the-hash attack (Kerberos)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
-|User and IP address reconnaissance (SMB) |Reconnaissance using SMB Session Enumeration|2012|
-|User and group membership reconnaissance (SAMR)|Reconnaissance using directory services queries|2021|
+|[Account enumeration reconnaissance](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Reconnaissance using account enumeration|2003|
+|[Data exfiltration over SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb---preview-external-id-2030)| NA| 2030|
+|[Honeytoken activity](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Honeytoken activity|2014|
+|[Malicious request of Data Protection API master key](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Malicious Data Protection Private Information Request|2020|
+|[Network mapping reconnaissance (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance using DNS|2007|
+|[Remote code execution attempt](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Remote code execution attempt|2019|
+|[Remote code execution over DNS - preview](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview)|NA|2036|
+|[Suspected brute force attack (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Brute force attack using LDAP simple bind|2004|
+|[Suspected brute force attack (Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Suspicious authentication failures|2023|
+|[Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|
+|[Suspected DCShadow attack (domain controller promotion)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Suspicious domain controller promotion (potential DCShadow attack)|2028|
+|[Suspected DCShadow attack (domain controller replication request)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Suspicious domain controller replication request (potential DCShadow attack)|2029|
+|[Suspected DCSync attack (replication of directory services)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Malicious replication of directory services|2006|
+|[Suspected Golden Ticket usage (encryption downgrade)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Encryption downgrade activity (potential golden ticket attack)|2009|
+|[Suspected Golden Ticket usage (forged authorization data)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Privilege escalation using forged authorization data|2013|
+|[Suspected Golden Ticket usage (nonexistent account)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Kerberos Golden Ticket - nonexistent account|2027|
+|[Suspected Golden Ticket usage (ticket anomaly) - Preview](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview)|NA|2032|
+|[Suspected Golden Ticket usage (time anomaly)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket - time anomaly|2022|
+|[Suspected identity theft (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Identity theft using Pass-the-Hash attack|2017|
+|[Suspected identity theft (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Identity theft using Pass-the-Ticket attack|2018|
+|[Suspected over-pass-the-hash attack (encryption downgrade)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|
+|[Suspected overpass-the-hash attack (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|
+|[Suspected use of Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034|
+|[Suspected skeleton key attack (encryption downgrade)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Encryption downgrade activity (potential skeleton key attack)|2010|
+|[Suspected WannaCry ransomware attack](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Unusual protocol implementation (potential WannaCry ransomware attack)|2035|
+|[Suspicious communication over DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Suspicious communication over DNS|2031|
+|[Suspicious modification of sensitive groups](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Suspicious modification of sensitive groups|2024|
+|[Suspicious service creation](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Suspicious service creation|2026|
+|[Suspicious VPN connection](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Suspicious VPN connection|2025|
+|[User and group membership reconnaissance (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance using directory services queries|2021|
+|[User and IP address reconnaissance (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Reconnaissance using SMB Session Enumeration|2012|
 
 ## Sample logs
 
@@ -107,6 +110,9 @@ Priorities:
 
 ### Account enumeration reconnaissance 
 02-21-2018	16:19:35	Auth.Warning	192.168.0.220	1 2018-02-21T14:19:27.540731+00:00 CENTER CEF 6076 AccountEnumerationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|AccountEnumerationSecurityAlert|Reconnaissance using account enumeration|5|start=2018-02-21T14:19:02.6045416Z app=Kerberos shost=CLIENT1 suser=LMaldonado msg=Suspicious account enumeration activity using the Kerberos protocol, originating from CLIENT1, was observed and successfully guessed Lamon Maldonado (Software Engineer). externalId=2003 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/eb6a35da-ff7f-4ab5-a1b5-a07529a89e6d cs2Label=trigger cs2=new
+
+### Data exfiltration over SMB
+12-19-2018  14:17:46    Auth.Error     127.0.0.1      1 2018-12-19T12:17:34.645993+00:00 DC1 CEF 3288 SmbDataExfiltrationSecurityAlert ï»¿0|Microsoft|Azure ATP|2.60.0.0|SmbDataExfiltrationSecurityAlert|[PREVIEW] Data exfiltration over SMB|10|start=2018-12-19T12:14:12.4932821Z app=Smb shost=CLIENT1 msg=Eugene Jenkins (Software Engineer) on DC2 copied suspicious files to CLIENT1. externalId=2030 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/3ca2ec9d-2c67-44cc-a2d6-391716611bb6 cs2Label=trigger cs2=new
 
 ### Honeytoken activity
 02-21-2018	16:20:36	Auth.Warning  192.168.0.220	1 2018-02-21T14:20:34.106162+00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|HoneytokenActivitySecurityAlert|Honeytoken activity|5|start=2018-02-21T14:20:26.6705617Z app=Kerberos suser=honey msg=The following activities were performed by honey:\r\nLogged in to CLIENT2 via DC1. externalId=2014 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c cs2Label=trigger cs2=new
@@ -123,8 +129,14 @@ Priorities:
 ### Remote code execution attempt
 10-29-2018	11:22:04	Auth.Warning	192.168.0.202	1 2018-10-29T09:22:00.100856+00:00 DC3 CEF 3908 RemoteExecutionSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|RemoteExecutionSecurityAlert|Remote code execution attempt|5|start=2018-10-29T09:19:45.0552367Z shost=CLIENT1 msg=The following remote code execution attempts were performed on DC1 from CLIENT1:\r\nSuccessful remote scheduling of one or more tasks by user1.\r\nFailed remote scheduling of one or more tasks by user1.\r\nSuccessful remote execution of one or more WMI methods by user1. externalId=2019 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/f063c778-830c-4e9f-98d1-bc6c11c94e11 cs2Label=trigger cs2=new
 
-### Suspected Brute force attack (LDAP)
+### Remote code execution over DNS - preview
+1-17-2019	08:24:54	Auth.Warning	192.168.0.202	1 2019-01-17T08:24:54.100856+00:00 DC3 CEF 3908 DnsRemoteCodeExecutionSecurityAlert ï»¿0|Microsoft|Azure ATP|2.63.0.0|DnsRemoteCodeExecutionSecurityAlert|[PREVIEW] Remote code execution over DNS|5|start=2019-01-17T08:24:54.5293800Z app=Dns shost=CLIENT1 msg=An actor attempted to run commands remotely on CLIENT1 from DC1, over DNS protocol. externalId=2036 cs1Label=url cs1=https\:////contoso-corp.atp.azure.com:13000/securityAlert/591f9769-d904-40b1-89fa-c307c2ca814f cs2Label=trigger cs2=new
+
+### Suspected brute force attack (LDAP)
 02-21-2018	16:20:21	Auth.Warning	192.168.0.220	1 2018-02-21T14:20:06.156238+00:00 CENTER CEF 6076 LdapBruteForceSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|LdapBruteForceSecurityAlert|Brute force attack using LDAP simple bind|5|start=2018-02-21T14:19:41.7422810Z app=Ldap suser=Wofford Thurston shost=CLIENT1 msg=A brute force attack using the Ldap protocol was attempted on Wofford Thurston (Software Engineer) from CLIENT1 (100 guess attempts). cnt=100 externalId=2004 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/57b8ac96-7907-4971-9b27-ec77ad8c029a cs2Label=trigger cs2=update
+
+### Suspected brute force attack (Kerberos, NTLM)
+10-29-2018	11:20:47	Auth.Warning	192.168.0.202	1 2018-10-29T09:20:44.478827+00:00 DC3 CEF 3908 BruteForceSecurityAlert ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|BruteForceSecurityAlert|Suspicious authentication failures|5|start=2018-10-29T09:19:44.9512286Z app=Kerberos shost=CLIENT1 msg=Suspicious authentication failures indicating a potential brute-force attack were detected from CLIENT1. externalId=2023 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/85042c8e-27fa-49b3-8667-dabc1aa31580 cs2Label=trigger cs2=new
 
 ### Suspected Golden Ticket usage (encryption downgrade)
 10-29-2018	11:25:07	Auth.Warning	192.168.0.202	1 2018-10-29T09:25:01.007701+00:00 DC3 CEF 3908 GoldenTicketEncryptionDowngradeS ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|GoldenTicketEncryptionDowngradeSecurityAlert|Encryption downgrade activity (potential golden ticket attack)|5|start=2018-10-29T09:37:49.0849130Z app=Kerberos msg=W10-000007-Lap used a weaker encryption method (RC4),Â in the Kerberos service request (TGS_REQ),Â from W10-000007-Lap, to access host/domain1.test.local. externalId=2009 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/f01f8403-88b2-437e-b4ad-d72485fe05ac cs2Label=trigger cs2=new
@@ -132,7 +144,7 @@ Priorities:
 ### Suspected Golden Ticket usage (non-existent account)
 07-01-2018  14:28:49    Auth.Error  192.168.0.100   1 2018-07-01T11:28:35.546638+00:00 CENTER CEF 38768 ForgedPrincipalSecurityAlert ï»¿0|Microsoft|Azure ATP|2.39.0.0|ForgedPrincipalSecurityAlert|Kerberos Golden Ticket - non-existing account|10|start=2018-07-01T09:48:31.2567987Z app=Kerberos suser=domain1.test.local\fake msg=domain1.test.local\fake, which does not exist in Active Directory, used a Kerberos ticket. The ticket was detected from 2 computers to access 3 resources. This may indicate a potential Golden Ticket attack. externalId=2027 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/98f050d4-9134-429c-8e54-d8eeb19849c4 cs2Label=trigger cs2=update
 
-### Suspected Golden Ticket usage (ticket anomaly) -preview
+### Suspected Golden Ticket usage (ticket anomaly) - preview
 1 2018-11-18T10:46:23.346946+00:00 MAXIMG-7050 CEF 24284 GoldenTicketSizeAnomalySecurityA 0|Microsoft|Azure ATP|2.56.0.0|GoldenTicketSizeAnomalySecurityAlert|[PREVIEW] Suspected Golden Ticket usage (ticket anomaly)|10|start=2018-11-18T10:44:12.9317797Z app=Kerberos shost=CLIENT2 suser=RFosdyke msg=Renzo Fosdyke (Software Engineer) used a suspicious Kerberos ticket from CLIENT2 to access ldap/domain1.test.local. externalId=2032 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/63600e03-f423-49bf-a92d-4010e1d52b9f cs2Label=trigger cs2=update
 
 ### Suspected Golden Ticket usage (time anomaly) 
@@ -148,10 +160,10 @@ Priorities:
 02-21-2018	17:04:47	Auth.Error	192.168.0.220	1 2018-02-21T15:04:33.537583+00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|PassTheTicketSecurityAlert|Identity theft using Pass-the-Ticket attack|10|start=2018-02-21T15:02:22.2577465Z app=Kerberos suser=Eugene Jenkins msg=Eugene Jenkins (Software Engineer)'s Kerberos tickets were stolen from Admin-PC to Victim-PC and used to access krbtgt/DOMAIN1.TEST.LOCAL. externalId=2018 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd cs2Label=trigger cs2=new
 
 ### Suspected Over-Pass-the-Hash attack (encryption downgrade) 
-02-21-2018	16:21:07	Auth.Warning	192.168.0.220	1 2018-02-21T14:20:54.145833+00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|EncryptionDowngradeSecurityAlert|Encryption downgrade activity|5|start=2018-02-21T14:19:41.8737870Z app=Kerberos msg= The encryption method of the Encrypted_Timestamp field of AS_REQ message from CLIENT1 has been downgraded based on previously learned behavior. This may be a result of a credential theft using Overpass-the-Hash from CLIENT1. externalId=2011 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label=trigger cs2=update
+02-21-2018	16:21:07	Auth.Warning	192.168.0.220	1 2018-02-21T14:20:54.145833+00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|EncryptionDowngradeSecurityAlert|Encryption downgrade activity|5|start=2018-02-21T14:19:41.8737870Z app=Kerberos msg= The encryption method of the Encrypted_Timestamp field of AS_REQ message from CLIENT1 has been downgraded based on previously learned behavior. This may be a result of a credential theft using Overpass-the-Hash from CLIENT1. externalId=2008 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label=trigger cs2=update
 
 ### Suspected Skeleton Key attack (encryption downgrade) 
-02-21-2018	16:21:07	Auth.Warning	192.168.0.220	1 2018-02-21T14:20:54.145833+00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|EncryptionDowngradeSecurityAlert|Encryption downgrade activity|5|start=2018-02-21T14:19:41.8737870Z app=Kerberos msg=The encryption method of the ETYPE_INFO2 field of KRB_ERR message from CLIENT1 has been downgraded based on previously learned behavior. This may be a result of a Skeleton Key on DC1. externalId=2011 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label=trigger cs2=new
+02-21-2018	16:21:07	Auth.Warning	192.168.0.220	1 2018-02-21T14:20:54.145833+00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|EncryptionDowngradeSecurityAlert|Encryption downgrade activity|5|start=2018-02-21T14:19:41.8737870Z app=Kerberos msg=The encryption method of the ETYPE_INFO2 field of KRB_ERR message from CLIENT1 has been downgraded based on previously learned behavior. This may be a result of a Skeleton Key on DC1. externalId=2010 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label=trigger cs2=new
 
 ### Suspected DCSync attack (replication of directory services)
 02-21-2018	16:20:06	Auth.Warning	192.168.0.220	1 2018-02-21T14:19:54.254930+00:00 CENTER CEF 6076 MaliciousServiceCreationSecurity ï»¿0|Microsoft|Azure ATP|2.22.4228.22540|MaliciousServiceCreationSecurityAlert|Suspicious service creation|5|start=2018-02-21T14:19:41.7897808Z app=ServiceInstalledEvent shost=CLIENT1 msg=user1 created MaliciousService in order to execute potentially malicious commands on CLIENT1. externalId=2026 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/179229b6-b791-4895-b5aa-fdf3747a325c cs2Label=trigger cs2=update
@@ -199,5 +211,5 @@ Priorities:
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

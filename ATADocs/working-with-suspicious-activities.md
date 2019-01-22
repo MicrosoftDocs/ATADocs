@@ -79,8 +79,6 @@ To filter the suspicious activities list:
     Indicates suspicious activities that can lead to identity theft, privilege escalation, or other high-impact attacks
 
 
-
-
 ## Remediating suspicious activities
 You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific suspicious activity to reveal the list of available actions.

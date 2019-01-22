@@ -167,6 +167,6 @@ Yes, you can view the overall health of the deployment as well as specific issue
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-collection.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

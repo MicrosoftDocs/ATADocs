@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/16/2018
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -39,20 +39,25 @@ ms.suite: ems
 ## Step 4. Install the Azure ATP sensor
 
 > [!IMPORTANT]
->Make sure .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed the Azure ATP sensor setup package installs it, which may require a reboot of the server.
+>Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
 
 Perform the following steps on the domain controller.
 
-1. Verify that the machine has connectivity to the relevant Azure ATP cloud service endpoint:
-  - https://triprd1wceuw1sensorapi.atp.azure.com (for Europe)  
-  - https://triprd1wcuse1sensorapi.atp.azure.com (for the US)
-  - https://triprd1wcasse1sensorapi.atp.azure.com (for Asia)
+1. Verify the machine has connectivity to the relevant Azure ATP cloud service endpoint(s):
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+  - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
+<br>(for Europe)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
+  - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
+  - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+<br>(for the US)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(for Asia)
 
 2. Extract the installation files from the zip file. 
 > [!NOTE] 
 > Installing directly from the zip file fails.
 
-3.  Run **Azure ATP sensor setup.exe** and follow the setup wizard.
+3. Run **Azure ATP sensor setup.exe** and follow the setup wizard.
 
 4.  On the **Welcome** page, select your language and click **Next**.
 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Update your Azure ATP sensors | Microsoft Docs
-description: This describes how to update the sensors in Azure ATP.
+description: Describes how to update and delay update of sensors in Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -26,47 +26,49 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
-
 # Update Azure ATP sensors
-It is essential to keep Azure Advanced Threat Protection up to date to enable the best possible protection for your organization.
 
-The Azure ATP service is updated a few times a month with bug fixes, performance improvements, and new detections. Occasionally these updates require a corresponding update to the sensors. 
+Keeping your Azure Advanced Threat Protection sensors up-to-date, provides the best possible protection for your organization.
 
-If you don't update your sensors, they may not be able to communicate with the Azure ATP cloud service, which can result in a degraded service. 
+The Azure ATP service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. Azure ATP sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the Azure ATP sensor and sensor detection capabilities. 
 
+### Azure ATP sensor update types	
+
+Azure ATP sensors support two kinds of updates:
+- Minor version updates: 
+    - Frequent 
+    - Requires no MSI install, and no registry changes
+    - Restarted: Azure ATP sensor services 
+    - Not restarted: Domain controller services and server OS
+
+- Major version updates:
+    - Rare
+    - Contains significant changes 
+    - Restarted: Azure ATP sensor services
+    - Possible restart required: Domain controller services and server OS
+
+> [!NOTE]
+>- Control automatic sensor restarts (for **major** updates) in the Azure ATP portal configuration page. 
+> - Azure ATP sensor always reserves at least 15% of the available memory and CPU available on the domain controller where it is installed. If the Azure ATP service consumes too much memory, the service is automatically stopped and restarted by the Azure ATP sensor updater service.
+
+### Update requirement
+
+A failure to update your sensors for more than one version update means your sensors can no longer communicate with the Azure ATP cloud service, and may result in no Azure ATP service unavailability and no protection for your organization.  
+
+## Delayed sensor update
+
+Given the rapid speed of ongoing Azure ATP development and release updates, you may decide to define a subset group of your sensors as a delayed update ring, allowing for a gradual sensor update process. Azure ATP enables you to choose how your sensors are updated and set each sensor as a **Delayed update** candidate.  
+
+Sensors not selected for delayed update are updated automatically, each time the Azure ATP service is updated. Sensors set to **Delayed update** are updated on a delay of 72 hours, following the official release of each service update. 
+
+The **delayed update** option enables you to select specific sensors as an automatic update ring, on which all updates are rolled out automatically, and set the rest of your sensors to update on delay, giving you time to confirm that the automatically updated sensors were successful.
+
+> [!NOTE]
+> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md).
 Authentication between your sensors and the Azure cloud service uses strong, certificate-based mutual authentication. 
 
 Each update is tested and validated on all supported operating systems to cause minimal impact to your network and operations.
 
-### Azure ATP sensor update types	
-
-Azure ATP sensors supports two kinds of updates:
-- Minor version updates: 
-  -	Frequent 
-  - Require no MSI install, and no registry changes
-  - Azure ATP sensor service restarts
-  - Domain controllers and server do not need to be restarted
-
-- Major version updates:
- - Rare
- - May require a restart of domain controllers and servers
- - Contain significant changes 
-
-> [!NOTE]
->- Automatic restart of the sensors (in Major updates) can be controlled in the configuration page. 
-> - The Azure ATP sensor always preserves at least 15% of the memory and CPU available. If the service consumes too much memory it is restarted automatically by the Azure ATP sensor updater service.
-
-## Delayed sensor update
-To allow a more gradual update process, Azure ATP enables you to set a sensor as a **Delayed update** candidate. 
-
-Ordinarily, sensors update automatically when the Azure ATP cloud service is updated. Sensors set to **Delayed update** will update 24 hours after the initial cloud service update.
-
-This enables you to select specific sensors on which the update is rolled out automatically, and update the rest of your sensors on delay, only after you see that the initial update went smoothly.
-
-> [!NOTE]
-> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md)
 
 To set a sensor to delayed update:
 
@@ -79,28 +81,28 @@ To set a sensor to delayed update:
 
 Every few minutes, Azure ATP sensors check whether they have the latest version. After the Azure ATP cloud service is updated to a newer version, the Azure ATP sensor service starts the update process:
 
-1. The Azure ATP cloud service updates to the latest version.
-2. The Azure ATP sensor updater service learns that there is an updated version.
-3. Sensors that are not set to **Delayed update** start the update process:
-  1. The Azure ATP sensor updater service pulls the updated version from the cloud service (in a cab file format).
-  2. The Azure ATP sensor updater validates the file signature.
-  3. The Azure ATP sensor updater service extract the cab file to a new folder in the sensor’s installation folder. By default it will be extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
-  4. The Azure ATP sensor updater service restarts the Azure ATP sensor service.
-  5. The Azure ATP sensor service points to the new files extracted from the cab file.
-  > [!NOTE]
-  >A minor update of the sensors doesn’t install an MSI or change any registry values or any system files. Even a pending restart won’t impact the update of the sensors. 
-  6. The sensors run based on the newly updated version.
-  7. A sensor receives clearance from the Azure cloud service. This can be verified in the **Updates** page.
-  8. The next sensor starts the update process. 
+1. Azure ATP cloud service updates to the latest version.
+2. Azure ATP sensor updater service learns that there is an updated version.
+3. Sensors that are not set to **Delayed update** start the update process on a sensor by sensor basis:
+    1. Azure ATP sensor updater service pulls the updated version from the cloud service (in cab file format).
+    2. Azure ATP sensor updater validates the file signature.
+    3. Azure ATP sensor updater service extracts the cab file to a new folder in the sensor’s installation folder. By default it is extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
+    4. Azure ATP sensor service points to the new files extracted from the cab file.    
+    5. Azure ATP sensor updater service restarts the Azure ATP sensor service.
+        > [!NOTE]
+      >Minor sensor updates install no MSI, changes no registry values or any system files. Even a pending restart does not impact a sensor update. 
+    6. Sensors run based on the newly updated version.
+    7. Sensor receives clearance from the Azure cloud service. You can verify sensor status in the **Updates** page.
+    8. The next sensor starts the update process. 
 
-4. 24 hours after the Azure ATP cloud service updated, sensors selected for **Delayed update** start the update process.
+4. 72 hours after the Azure ATP cloud service is updated, sensors selected for **Delayed update** start their update process according to the same update process as automatically updated sensors.
 
-![sensor update](./media/sensor-update.png)
+![Sensor update](./media/sensor-update.png)
 
 
-In the event of failure, if the sensor didn’t complete the update process, a relevant monitoring alert is triggered and is sent as a notification.
+For any sensor that fails to complete the update process, a relevant monitoring alert is triggered, and is sent as a notification.
 
-![sensor outdated](./media/sensor-outdated.png)
+![Sensor update failure](./media/sensor-outdated.png)
 
 
 ## See Also

@@ -7,8 +7,8 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
-ms.topic: conceptual
+ms.date: 1/3/2019
+ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -26,15 +26,21 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
 
+# Tutorial: Investigate an entity
 
+In this tutorial you'll learn how to investigate entities connected to suspicious activities detected by Azure Advanced Threat Protection (ATP). After viewing a security alert in the timeline, you'll learn how to drill down into the entity involved in the alert, and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
 
-# Investigate an entity with Azure ATP
+> [!div class="checklist"]
+> * Check the entity profile
+> * Check entity tags
+> * Check user account control flags
+> * Cross-check with Windows Defender
+> * Keep an eye on sensitive users and groups
+> * Review potential lateral movement paths
+> * Check honeytoken status
 
-This article describes the process for investigating entities after suspicious activities were detected with Azure Advanced Threat Protection (ATP). After viewing a security alert in the time line, you can drill down into the entity involved in the alert and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
-
-## Look at the entity profile
+## Check the entity profile
 
 The entity profile provides you with a comprehensive entity page, designed for full deep-dive investigation of users, computers, devices, and the resources they have access to along with their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
@@ -54,7 +60,7 @@ These tags provide you with information about the entity from Active Directory, 
 - Expired: The entity is expired in Active Directory.
 - New: The entity was created less than 30 days ago.
 
-## Look at the User account control flags
+## Check user account control flags
 
 The user account control flags are also imported from Active Directory. Azure ATP entity directory data includes 10 flags that are effective for investigation: 
 - Password never expires
@@ -101,7 +107,7 @@ Azure ATP imports user and group information from Azure Active Directory, enabli
 
 In addition, you can **manually tag** entities as sensitive within Azure ATP. This is important because some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, Azure ATP will consider them sensitive. For more information, see [Working with sensitive accounts](sensitive-accounts.md).
 
-## Be aware of lateral movement paths
+## Review lateral movement paths
 
 Azure ATP can help you prevent attacks that use lateral movement paths. Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts.
 
@@ -109,13 +115,10 @@ If a lateral movement path exists for an entity, in the entity profile page, you
 
 For more information, see [Investigating lateral movement paths with Azure ATP](use-case-lateral-movement-path.md).
 
-
-## Is it a honeytoken entity?
+## Check honeytoken status
 
 Before you move on with your investigation, it's important to know if the entity is a honeytoken. You can tag accounts and entities as honeytokens in Azure ATP. When you open the entity profile or mini-profile of an account or entity you tagged as a honeytoken, you will see the honeytoken badge. When investigating, the honeytoken badge alerts you that the activity under review was performed by an account that you tagged as a honeytoken.
 
-
-    
 ## See also
 
 - [Working with security alerts](working-with-suspicious-activities.md)

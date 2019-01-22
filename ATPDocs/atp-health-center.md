@@ -2,12 +2,12 @@
 # required metadata
 
 title: Monitor Azure Advanced Threat Protection System Health and Events | Microsoft Docs
-description: Use the Azure ATP workspace health center to check how the Azure ATP service is working and be alerted to potential problems and view system events in the Event viewer.
+description: Use the Azure ATP health center to check how the Azure ATP service is working and be alerted to potential problems and view system events in the Event viewer.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 1/3/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,20 +29,20 @@ ms.suite: ems
 *Applies to: Azure Advanced Threat Protection*
 
 
-# Working with Azure ATP workspace health and events
+# Work with Azure ATP health and events
 
-## Azure ATP workspace health center 
+## Azure ATP health center 
 
-The Azure ATP workspace health center lets you know how your Azure ATP workspace is performing and alerts you when there are problems.
+The Azure ATP health center lets you know how your Azure ATP instance is performing and alerts you when there are problems.
 
-## Working with the Azure ATP workspace health center
+## Working with the Azure ATP health center
 
-The Azure ATP workspace health center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
+The Azure ATP health center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
 
-![Azure ATP workspace health center red dot toolbar](media/atp-health-bar.png)
+![Azure ATP health center red dot toolbar](media/atp-health-bar.png)
 
-### Managing Azure ATP workspace health
-To check up on your workspace's overall health, click the Health Center icon in the menu bar ![Azure ATP workspace health center icon](media/atp-red-dot.png)
+### Managing Azure ATP health
+To check up on the overall health of your Azure ATP instance, click the Health Center icon in the menu bar ![Azure ATP health center icon](media/atp-red-dot.png)
 
 -   All open issues can be managed by setting them to **Close**,  or **Suppress**, by clicking the three dots in the corner of the alert and making your selection.
 
