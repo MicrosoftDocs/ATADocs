@@ -25,8 +25,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-*Applies to: Azure Advanced Threat Protection*
-
 # Azure ATP frequently asked questions
 This article provides a list of frequently asked questions and answers about Azure ATP divided into the following catergories: 
 - [What is Azure ATP](#what-is-azure-atp)

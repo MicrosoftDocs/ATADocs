@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 # Azure ATP switches and silent installation
 This article provides guidance and instructions for Azure ATP switches and silent installation.
