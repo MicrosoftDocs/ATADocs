@@ -78,11 +78,11 @@ ATA collects VPN data and identifies when and where credentials are being used v
 
 To configure VPN data in ATA:
 
-1.	In the ATA console, open the ATA Configuration page and go to **VPN**.
+1. In the ATA console, open the ATA Configuration page and go to **VPN**.
  
-  ![ATA config menu](./media/config-menu.png)
+   ![ATA config menu](./media/config-menu.png)
 
-2.	Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
+2. Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
  
 
   ![Configure ATA VPN](./media/vpn.png)

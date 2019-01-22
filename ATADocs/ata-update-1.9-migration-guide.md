@@ -50,34 +50,34 @@ In the migration version, the file can be used only for updating from ATA 1.8. I
 
 ### Step 1: Update the ATA Center
 
-1.  Back up your database: (optional)
+1. Back up your database: (optional)
 
-    -   If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut down the virtual machine first.
+   -   If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut down the virtual machine first.
 
-    -   If the ATA Center is running on a physical server, see the [Disaster recovery](disaster-recovery.md) article for information about backing up the database.
+   -   If the ATA Center is running on a physical server, see the [Disaster recovery](disaster-recovery.md) article for information about backing up the database.
 
-2.  Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
+2. Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
 
-	-  On the **Welcome** page, choose your language and click **Next**.
+   - On the **Welcome** page, choose your language and click **Next**.
 
-	-  If you didn't enable automatic updates in version 1.8, you are prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
-    ![Keep ATA up-to-date image](media/ata_ms_update.png)
+   - If you didn't enable automatic updates in version 1.8, you are prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
+     ![Keep ATA up-to-date image](media/ata_ms_update.png)
      
      This adjusts the Windows settings to enable updates for  ATA. 
     
-	-  The **Partial data migration** screen lets you know that previously captured network traffic, events, entities and detection related data is deleted. All detections work immediately with the exception of abnormal behavior detection, abnormal group modification, Reconnaissance using Directory Services (SAM-R), and encryption downgrade detections which take up to three weeks to build a complete profile after the required learning time. 
+   - The **Partial data migration** screen lets you know that previously captured network traffic, events, entities and detection related data is deleted. All detections work immediately with the exception of abnormal behavior detection, abnormal group modification, Reconnaissance using Directory Services (SAM-R), and encryption downgrade detections which take up to three weeks to build a complete profile after the required learning time. 
      
-      ![ATA partial migration](media/partial-migration.png)
+     ![ATA partial migration](media/partial-migration.png)
 
-	-  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
+   - Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
 
-4.  After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
+3. After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
 
-     ![Update success screen](media/migration-center-success.png)
+    ![Update success screen](media/migration-center-success.png)
 
-5.  In the **Updates** screen, if you already set your ATA Gateways to automatically update, they update at this point, if not, click **Update** next to each ATA Gateway.
+4. In the **Updates** screen, if you already set your ATA Gateways to automatically update, they update at this point, if not, click **Update** next to each ATA Gateway.
   
-     ![Update gateways image](media/migration-update-gw.png)
+    ![Update gateways image](media/migration-update-gw.png)
 
   
 > [!IMPORTANT] 

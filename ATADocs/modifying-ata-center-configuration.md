@@ -52,16 +52,16 @@ The URL is used in the following scenarios:
 
 2. In the ATA settings, under **Center**, enter the new URL. At this point, the ATA Center service still uses the original URL. 
 
- ![Change ATA configuration](media/change-center-config.png)
+   ![Change ATA configuration](media/change-center-config.png)
 
-  > [!NOTE]
-  > If you entered a custom IP address, you cannot click **Activate** until you installed the IP address on the ATA Center.
+   > [!NOTE]
+   > If you entered a custom IP address, you cannot click **Activate** until you installed the IP address on the ATA Center.
     
 3. Wait for the ATA Gateways to sync. They now have two potential URLs through which to access the ATA Console. As long as the ATA Gateway can connect using the original URL, it does not try the new one.
 
 4. After all the ATA Gateways synced with the updated configuration, in the Center configuration page, click the **Activate** button to activate the new URL. When you activate the new URL, the ATA Gateways will now use the new URL to access the ATA Center. After connecting to the ATA Center service, the ATA Gateway will pull down the latest configuration and will have only the new URL for the ATA Console. 
 
- ![Activate the certificate](media/center-activation.png)
+   ![Activate the certificate](media/center-activation.png)
 
 > [!NOTE]
 > -   If an ATA Gateway was offline while you activated the new URL, and never got the updated configuration, manually update the configuration JSON file on the ATA Gateway.
@@ -80,7 +80,7 @@ Replace the certificate by following this process:
 
 2. In the ATA settings, under **Center**, select this newly created certificate. At this point, the ATA Center service is still bound to the original certificate. 
 
- ![Change ATA configuration](media/change-center-config.png)
+   ![Change ATA configuration](media/change-center-config.png)
 
 3. Wait for the ATA Gateways to sync. They now have two potential certificates that are valid for mutual authentication. As long as the ATA Gateway can connect using the original certificate, it does not try the new one.
 

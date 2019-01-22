@@ -159,19 +159,19 @@ In an over-pass-the-hash attack, an attacker can use a weak stolen hash to creat
 
 **TP, B-TP, or FP?**
 1. Determine if the smartcard configuration recently changed. 
-    - Did the accounts involved recently have smartcard configurations changes?  
+   - Did the accounts involved recently have smartcard configurations changes?  
     
-    If the answer is yes, **Close** the security alert as a **T-BP** activity. 
+     If the answer is yes, **Close** the security alert as a **T-BP** activity. 
 
 Some legitimate resources don’t support strong encryption ciphers and may trigger this alert. 
 
 2. Do all source users share something? 
-    1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
-    2. Check the resources accessed by those tickets. 
-        - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
-    3. If there is only one accessed resource, check if it is a valid resource for these users to access.   
+   1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
+   2. Check the resources accessed by those tickets. 
+       - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
+   3. If there is only one accessed resource, check if it is a valid resource for these users to access.   
 
-    If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
+      If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
 **Understand the scope of the breach**
 
