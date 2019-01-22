@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 
 # Configure endpoint proxy and Internet connectivity settings for your Azure ATP Sensor
