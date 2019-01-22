@@ -23,7 +23,7 @@ sections:
     style: cards
     className: cardsFTitle
     items:
-    - title: Learn More about Azure Advanced Threat Protection?
+    - title: Learn More about Azure Advanced Threat Protection
       href: what-is-atp.md
       image: 
         src: https://docs.microsoft.com/media/common/i_learn-about.svg
