@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 # Creating your Azure ATP instance in the Azure ATP portal - Step 1
 

@@ -27,8 +27,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 # Azure ATP SIEM log reference
 

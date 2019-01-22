@@ -27,8 +27,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 # Azure ATP Known Issues
 
 Azure ATP occasionally has engineering or feature limitations that may limit or change the way your organization uses Azure ATP services. Known Issue limitations that have no known workaround, or a work in progress status without a specific update timeline are described here. 
