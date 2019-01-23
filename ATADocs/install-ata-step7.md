@@ -28,13 +28,13 @@ ms.suite: ems
 
 # Install ATA - Step 8
 
+*Applies to: Advanced Threat Analytics version 1.9*
+
 > [!div class="step-by-step"]
 > [« Step 7](vpn-integration-install-step.md)
 > [Step 9 »](install-ata-step9-samr.md)
 
 ## Step 8. Configure IP address exclusions and Honeytoken user
-
-*Applies to: Advanced Threat Analytics version 1.9*
 
 ATA enables the exclusion of specific IP addresses or users from a number of detections. 
 
