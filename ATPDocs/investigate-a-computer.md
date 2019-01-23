@@ -41,7 +41,7 @@ Check and investigate the computer profile for the following details and activit
   1. Which [user](investigate-a-user.md) was logged in to the computer?
   2. Does that user normally log into or access the source or destination computer?
   3. Which resources where accessed? By which users?
-    - If resources were accessed, were they high value resources?
+      - If resources were accessed, were they high value resources?
   4. Was the user supposed to access those resources?
   5. Did the [user](investigate-a-user.md) that accessed the computer perform other suspicious activities?
 
