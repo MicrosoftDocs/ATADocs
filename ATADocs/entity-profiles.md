@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Investigating entity profiles
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 The entity profile provides you with a dashboard designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new ATA logical activity translator which can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 

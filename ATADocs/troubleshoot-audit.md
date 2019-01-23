@@ -26,9 +26,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
 # Working with ATA audit logs
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 The ATA audit logs are kept in the Windows Event Logs under **Applications and Services** and then **Microsoft ATA** both on the ATA Center and ATA Gateway machines.
 

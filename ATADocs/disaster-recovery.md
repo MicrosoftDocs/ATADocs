@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# ATA disaster recovery
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# ATA disaster recovery
 This article describes how to quickly recover your ATA Center and restore ATA functionality when the ATA Center functionality is lost but the ATA Gateways are still working. 
 
 >[!NOTE]

@@ -27,10 +27,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # ATA Reports
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 The ATA reports section in the console enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 

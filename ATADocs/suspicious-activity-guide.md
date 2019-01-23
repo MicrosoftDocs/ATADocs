@@ -26,10 +26,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # Advanced Threat Analytics suspicious activity guide
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 Following proper investigation, any suspicious activity can be classified as:
 

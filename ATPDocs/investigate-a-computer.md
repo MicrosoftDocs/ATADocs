@@ -45,7 +45,6 @@ Check and investigate the computer profile for the following details and activit
   4. Was the user supposed to access those resources?
   5. Did the [user](investigate-a-user.md) that accessed the computer perform other suspicious activities?
 
-
 - Additional suspicious activities to investigate:
     1. Were other alerts opened around the same time as this alert in Azure ATP, or in other security tools such as Windows Defender ATP, Azure Security Center and/or Microsoft CAS?
     2. Were there failed logons?

@@ -26,10 +26,10 @@ ms.suite: ems
 
 ---
 
+# ATA Silent Installation
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-# ATA Silent Installation
 This article provides instructions for silently installing ATA.
 
 ## Prerequisites

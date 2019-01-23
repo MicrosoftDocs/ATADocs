@@ -306,7 +306,8 @@ In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (ser
 **TP, B-TP, or FP**
 <br>Some legitimate resources don’t support strong encryption ciphers and may trigger this alert. 
 
-2. Do all of the source users share something in common? 
+
+1. Do all of the source users share something in common? 
    1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
    2. Check the resources accessed by those tickets. 
        - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
