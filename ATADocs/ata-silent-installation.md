@@ -53,29 +53,31 @@ Use the following command to install the ATA Center:
 
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
-    
+
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
-|LicenseAccepted|--LicenseAccepted|Yes|Indicates that the license was read and approved. Must be set on silent installation.|
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+> |LicenseAccepted|--LicenseAccepted|Yes|Indicates that the license was read and approved. Must be set on silent installation.|
 
 **Installation parameters**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-|DatabaseDataPath|DatabaseDataPath= "<DBPath>"|No|Sets the path for the ATA Database data folder. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
-|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Yes|Sets the IP address of the ATA Center Service|
-|CenterPort|CenterPort=<CenterPort>|Yes|Sets the network port of the ATA Center Service|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the ATA Center Service. This Certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation generates a self-signed certificate.|
-|ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Yes|Sets the IP address of the ATA Console|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|No|Specifies the certificate thumbprint for the ATA Console. This Certificate is used to validate the identity of the ATA Console website. If not specified, the installation generates a self-signed certificate|
+> 
+> |             Name             |                      Syntax                      | Mandatory for silent installation? |                                                                                                        Description                                                                                                         |
+> |------------------------------|--------------------------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+> |       InstallationPath       |         InstallationPath="<InstallPath>"         |                 No                 |                                               Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center                                                |
+> |       DatabaseDataPath       |           DatabaseDataPath= "<DBPath>"           |                 No                 |                                         Sets the path for the ATA Database data folder. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
+> |       CenterIpAddress        |        CenterIpAddress=<CenterIPAddress>         |                Yes                 |                                                                                       Sets the IP address of the ATA Center Service                                                                                        |
+> |          CenterPort          |             CenterPort=<CenterPort>              |                Yes                 |                                                                                      Sets the network port of the ATA Center Service                                                                                       |
+> | CenterCertificateThumbprint  |  CenterCertificateThumbprint="<CertThumbprint>"  |                 No                 | Sets the certificate thumbprint for the ATA Center Service. This Certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation generates a self-signed certificate. |
+> |       ConsoleIpAddress       |       ConsoleIpAddress=<ConsoleIPAddress>        |                Yes                 |                                                                                           Sets the IP address of the ATA Console                                                                                           |
+> | ConsoleCertificateThumbprint | ConsoleCertificateThumbprint="<CertThumbprint >" |                 No                 |       Specifies the certificate thumbprint for the ATA Console. This Certificate is used to validate the identity of the ATA Console website. If not specified, the installation generates a self-signed certificate       |
 
 **Examples**:
 To install the ATA Center with default installation paths and a single IP address:
@@ -100,11 +102,12 @@ Use the following command to update the ATA Center:
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
 
 When updating ATA, the installer automatically detects that ATA is already installed on the server, and no update installation option is required.
@@ -112,7 +115,7 @@ When updating ATA, the installer automatically detects that ATA is already insta
 **Examples**:
 To update the ATA Center silently. In large environments, the ATA Center update can take a while to complete. Monitor ATA logs to track the progress of the update.
 
-    	"Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
+        "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
 ## Uninstall the ATA Center silently
 
@@ -125,18 +128,20 @@ Use the following command to perform a silent uninstall of the ATA Center:
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent uninstallation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Center from the server.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> 
+> |Name|Syntax|Mandatory for silent uninstallation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
+> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Center from the server.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Installation parameters**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent uninstallation?|Description|
-|-------------|----------|---------|---------|
-|DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
+> 
+> |Name|Syntax|Mandatory for silent uninstallation?|Description|
+> |-------------|----------|---------|---------|
+> |DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
 
 **Examples**:
 To silently uninstall the ATA Center from the server, removing all existing database data:
@@ -165,26 +170,28 @@ Use the following command to silently install the ATA Gateway:
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
 **Installation parameters**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
-|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
+> 
+> |          Name          |                   Syntax                   | Mandatory for silent installation? |                                                      Description                                                       |
+> |------------------------|--------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+> |   ConsoleAccountName   |     ConsoleAccountName="<AccountName>"     |                Yes                 |   Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.    |
+> | ConsoleAccountPassword | ConsoleAccountPassword="<AccountPassword>" |                Yes                 | Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center. |
 
 **Examples**:
 To silently install the ATA Gateway, log into the domain joined computer with your ATA admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the ATA Center using the specified credentials:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
-    
+
 
 ## Update the ATA Gateway
 
@@ -198,17 +205,18 @@ Use the following command to silently update the ATA Gateway:
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
 
 **Examples**:
 To update the ATA Gateway silently:
 
-    	Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+        Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
 ## Uninstall the ATA Gateway silently
 
@@ -216,22 +224,23 @@ Use the following command to perform a silent uninstall of the ATA Gateway:
 **Syntax**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
-    
+
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent uninstallation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Gateway from the server.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> 
+> |Name|Syntax|Mandatory for silent uninstallation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
+> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Gateway from the server.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Examples**:
 To silently uninstall the ATA Gateway from the server:
 
 
     Microsoft ATA Gateway Setup.exe /quiet /uninstall
-    
+
 
 
 
