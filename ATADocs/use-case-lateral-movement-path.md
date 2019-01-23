@@ -47,11 +47,11 @@ To discover which sensitive accounts in your network were vulnerable because of 
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. 
 
- ![reports](./media/reports.png)
+   ![reports](./media/reports.png)
 
 3. Click **Download**.
 
-3. The Excel file that is created provides you with details about your sensitive accounts that are at risk. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should be concerned about. Note that the paths are paths that existed previously, and may not be available today.
+4. The Excel file that is created provides you with details about your sensitive accounts that are at risk. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should be concerned about. Note that the paths are paths that existed previously, and may not be available today.
 
 
 ## Investigate
@@ -66,7 +66,7 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATA
 
 4. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, you can follow the **Logged into by** gray arrows to see where Samira logged in with her privileged credentials. In this case, Samira's sensitive credentials were saved on the computer REDMOND-WA-DEV. Then, see which other users logged into which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group **Contoso All** has the ability to access user credentials from that resource.  
 
- ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
+   ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
 
 
 ## Preventative best practices

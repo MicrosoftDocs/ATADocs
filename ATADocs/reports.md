@@ -60,8 +60,8 @@ To set a scheduled report:
 
    ![Schedule reports](./media/ata-sched-reports.png)
 
-  > [!NOTE]
-  > The daily reports are designed to be sent shortly after midnight, UTC.
+   > [!NOTE]
+   > The daily reports are designed to be sent shortly after midnight, UTC.
 
 2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 

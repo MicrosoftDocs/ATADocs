@@ -97,10 +97,10 @@ In a password spray, after successfully enumerating a list of valid users from t
 It is important to check if any login attempts ended with successful authentication.
 
 1. If any login attempts ended successfully, check if  any of the **Guessed accounts** are normally used from that source computer.
-    - Is there any chance these accounts failed because a wrong password was used?  
-    - Check with the user(s) if they generated the activity, (failed to login a fe times and then succeeded). 
+   - Is there any chance these accounts failed because a wrong password was used?  
+   - Check with the user(s) if they generated the activity, (failed to login a fe times and then succeeded). 
 
-    If the answer to the questions above is **yes**,  **Close** the security alert as a B-TP activity.
+     If the answer to the questions above is **yes**,  **Close** the security alert as a B-TP activity.
 
 2. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
     - Check if there is a script running on the source computer with wrong/old credentials?
@@ -139,15 +139,15 @@ In this detection, an alert is triggered when Azure ATP detects a massive number
 It is important to check if any login attempts ended with successful authentication.
 
 1. If any login attempts ended successfully, are any of the **Guessed accounts** normally used from that source computer?
-    - Is there any chance these accounts failed because a wrong password was used?  
-    - Check with the user(s) if they generated the activity, (failed to login a few times and then succeeded).
+   - Is there any chance these accounts failed because a wrong password was used?  
+   - Check with the user(s) if they generated the activity, (failed to login a few times and then succeeded).
 
-    If the answer to the previous questions is **yes**,  **Close** the security alert as a B-TP activity.
+     If the answer to the previous questions is **yes**,  **Close** the security alert as a B-TP activity.
 
 2. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
-    - Check if there is a script running on the source computer with wrong/old credentials?
+   - Check if there is a script running on the source computer with wrong/old credentials?
 
-    If the answer to the previous question is **yes**, stop and edit, or delete the script. **Close** the security alert as a B-TP activity.
+     If the answer to the previous question is **yes**, stop and edit, or delete the script. **Close** the security alert as a B-TP activity.
 
 **Understand the scope of the breach**
 
