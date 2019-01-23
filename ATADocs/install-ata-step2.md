@@ -28,14 +28,13 @@ ms.suite: ems
 
 # Install ATA - Step 2
 
+*Applies to: Advanced Threat Analytics version 1.9*
+
 > [!div class="step-by-step"]
 > [« Step 1](install-ata-step1.md)
 > [Step 3 »](install-ata-step3.md)
 
 ## Step 2. Provide a Username and Password to connect to your Active Directory Forest
-
-
-*Applies to: Advanced Threat Analytics version 1.9*
 
 The first time you open the ATA Console, the following screen appears:
 
