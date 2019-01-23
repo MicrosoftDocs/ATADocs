@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# Validate Port Mirroring
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# Validate Port Mirroring
 > [!NOTE] 
 > This article is relevant only if you deploy ATA Gateways instead of ATA Lightweight Gateways. To determine if you need to use ATA Gateways, see [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  

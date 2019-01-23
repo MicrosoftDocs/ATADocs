@@ -27,9 +27,9 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
 # Install ATA - Step 9
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Step 8](install-ata-step7.md)

@@ -27,11 +27,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Troubleshooting ATA known issues
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 This section details possible errors in the deployments of ATA and the steps required for troubleshooting them.
 

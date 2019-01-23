@@ -26,13 +26,13 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # Install ATA - Step 1
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [Step 2 »](install-ata-step2.md)
+
 
 This installation procedure provides instructions for performing a fresh installation of ATA 1.9. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.9](ata-update-1.9-migration-guide.md).
 

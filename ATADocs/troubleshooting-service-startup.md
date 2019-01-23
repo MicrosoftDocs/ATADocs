@@ -26,11 +26,9 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Troubleshooting service startup
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 ## Troubleshooting ATA Center service startup
 

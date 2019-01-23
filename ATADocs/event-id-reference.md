@@ -27,10 +27,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # ATA event ID reference
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 The ATA Center event viewer logs events for ATA. This article provides a list of event IDs and provides a description of each.
 
