@@ -28,11 +28,9 @@ ms.suite: ems
 
 # Change ATA configuration - domain connectivity password
 
-
+*Applies to: Advanced Threat Analytics version 1.9*
 
 ## Change the domain connectivity password
-
-*Applies to: Advanced Threat Analytics version 1.9*
 
 If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service stops running on the ATA Gateways.
 
