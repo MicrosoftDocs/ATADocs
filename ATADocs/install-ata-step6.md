@@ -28,14 +28,14 @@ ms.suite: ems
 
 # Install ATA - Step 6
 
+*Applies to: Advanced Threat Analytics version 1.9*
+
 > [!div class="step-by-step"]
 > [« Step 5](install-ata-step5.md)
 > [Step 7 »](vpn-integration-install-step.md)
 
 ## Step 6. Configure event collection
 ### Configure Event Collection
-
-*Applies to: Advanced Threat Analytics version 1.9*
 
 To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757 and 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md). 
 
