@@ -28,11 +28,10 @@ ms.suite: ems
 
 # Configuring Windows Event Forwarding
 
+*Applies to: Advanced Threat Analytics version 1.9*
+
 > [!NOTE]
 > For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway now read events locally, without the need to configure event forwarding.
-
-
-*Applies to: Advanced Threat Analytics version 1.9*
 
 To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by configuring Windows Event Forwarding.
 
