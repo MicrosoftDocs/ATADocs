@@ -26,10 +26,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # Advanced Threat Analytics suspicious activity guide
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 Following proper investigation, any suspicious activity can be classified as:
 
@@ -363,11 +363,11 @@ In this detection, no alerts would be triggered in the first month after ATA is 
 
 5. If there’s information on the involved account: are such queries supposed to be made by that account or does that account normally log in to the source computer?
 
- - If yes and the alert gets updated, **Suppress** the suspicious activity.
+   - If yes and the alert gets updated, **Suppress** the suspicious activity.
 
- - If yes and it should not do this anymore, **Close** the suspicious activity.
+   - If yes and it should not do this anymore, **Close** the suspicious activity.
 
- - If the answer was no to all of the above, assume this is malicious.
+   - If the answer was no to all of the above, assume this is malicious.
 
 6. If there is no information about the account that was involved, you can go to the endpoint and check which account was logged in at the time of the alert.
 
@@ -411,7 +411,7 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 
 1. Click on the alert to get to its details page. Check the account/s that performed the operation and which accounts were exposed, if any.
 
- - Is there some kind of security scanner running on the source computer? If yes, **Close and exclude** the suspicious activity.
+   - Is there some kind of security scanner running on the source computer? If yes, **Close and exclude** the suspicious activity.
 
 2. Check which involved user/s performed the operation. Do they normally log into the source computer or are they administrators who should perform such actions?  
 
@@ -434,10 +434,10 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 **Investigation**
 
 1. This is common for administrative workstations as well as for IT team members and service accounts that perform administrative tasks against domain controllers. If this is this the case, and the alert gets updated because the same admin or computer is performing the task, **Suppress** the alert.
-2.	Is the computer in question allowed to perform this remote execution against your domain controller?
-  -	Is the account in question allowed to perform this remote execution against your domain controller?
-  -	If the answer to both questions is yes, then **Close** the alert.
-3.	If the answer to either questions is no, this activity should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed.
+2. Is the computer in question allowed to perform this remote execution against your domain controller?
+   - Is the account in question allowed to perform this remote execution against your domain controller?
+   - If the answer to both questions is yes, then **Close** the alert.
+3. If the answer to either questions is no, this activity should be considered a true positive. Try to find the source of the attempt by checking computer and account profiles. Click on the source computer or account to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed.
 
 
 **Remediation**
@@ -475,13 +475,13 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Investigation**
 
-1.	Click **Download details** to view the full information in an Excel spreadsheet. You can get the following information: 
-  - List of the attacked accounts
-  -	List of guessed accounts in which login attempts ended with successful authentication
-  -	If the authentication attempts were performed using NTLM, you will see relevant event activities 
-  -	If the authentication attempts were performed using Kerberos, you will see relevant network activities
-2.	Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. 
-3.	If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server that the source machine tried to access, you should enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account, and **server** that the source machine tried to access. After you know which server sent the authentication validation, you should investigate the server by checking its events such as 4624 to better understand the authentication process. 
+1. Click **Download details** to view the full information in an Excel spreadsheet. You can get the following information: 
+   - List of the attacked accounts
+   - List of guessed accounts in which login attempts ended with successful authentication
+   - If the authentication attempts were performed using NTLM, you will see relevant event activities 
+   - If the authentication attempts were performed using Kerberos, you will see relevant network activities
+2. Click on the source computer to go to its profile page. Check what happened around the time of these attempts, searching for unusual activities, such as: who was logged in, which resources where accessed. 
+3. If the authentication was performed using NTLM, and you see that the alert occurs many times, and there is not enough information available about the server that the source machine tried to access, you should enable **NTLM auditing** on the involved domain controllers. To do this, turn on event 8004. This is the NTLM authentication event that includes information about the source computer, user account, and **server** that the source machine tried to access. After you know which server sent the authentication validation, you should investigate the server by checking its events such as 4624 to better understand the authentication process. 
 
 
 **Remediation**
@@ -500,9 +500,9 @@ Attackers attempt to run suspicious services on your network. ATA raises an aler
 
 2. Is the service something you recognize on this computer?
 
- - Is the **account** in question allowed to install this service?
+   - Is the **account** in question allowed to install this service?
 
- - If the answer to both questions is *yes*, then **Close** the alert or add it to the Exclusions list.
+   - If the answer to both questions is *yes*, then **Close** the alert or add it to the Exclusions list.
 
 3. If the answer to either questions is *no*, then this should be considered a true positive.
 

@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# Troubleshooting ATA using the ATA database
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# Troubleshooting ATA using the ATA database
 ATA uses MongoDB as its database.
 You can interact with the database using the default command line or using a user interface tool to perform advanced tasks and troubleshooting.
 
@@ -42,12 +41,13 @@ The default and most basic way to query the database is using the Mongo shell:
 2.  Run: `mongo.exe ATA`. Make sure to type ATA with all capital letters.
 
 > [!div class="mx-tableFixed"]
-|How to...|Syntax|Notes|
-|-------------|----------|---------|
-|Check for collections in the database.|`show collections`|Useful as an end-to-end test to see that traffic is being written to the database and that event 4776 is being received by ATA.|
-|Get the details of a user/computer/group (UniqueEntity), such as user ID.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
-|Find Kerberos authentication traffic originating from a specific computer on a specific day.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|To get the &lt;ID of the source computer&gt; you can query the UniqueEntity collections, as shown in the example.<br /><br />Each network activity type, for example Kerberos authentications, has its own collection per UTC date.|
-|Make advanced configuration changes. In this example, change the send queue size for all ATA Gateways to 10,000.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
+> 
+> |How to...|Syntax|Notes|
+> |-------------|----------|---------|
+> |Check for collections in the database.|`show collections`|Useful as an end-to-end test to see that traffic is being written to the database and that event 4776 is being received by ATA.|
+> |Get the details of a user/computer/group (UniqueEntity), such as user ID.|`db.UniqueEntity.find({CompleteSearchNames: "<name of entity in lower case>"})`||
+> |Find Kerberos authentication traffic originating from a specific computer on a specific day.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|To get the &lt;ID of the source computer&gt; you can query the UniqueEntity collections, as shown in the example.<br /><br />Each network activity type, for example Kerberos authentications, has its own collection per UTC date.|
+> |Make advanced configuration changes. In this example, change the send queue size for all ATA Gateways to 10,000.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
 The following example provides sample code using the syntax provided earlier. If you are investigating a suspicious activity that occurred on 20/10/2015 and want to learn more about the NTLM activities that "John Doe" performed on that day:<br /><br />First, find the ID of "John Doe"
 

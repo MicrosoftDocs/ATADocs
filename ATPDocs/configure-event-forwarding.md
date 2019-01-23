@@ -57,23 +57,23 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 > [!Note] 
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Azure ATP standalone sensor. The following steps modify the local policy of the domain controller. 	
 
-1.	Run the following command on each domain controller: *winrm quickconfig*
-2.  From a command prompt type *gpedit.msc*.
-3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
+1. Run the following command on each domain controller: *winrm quickconfig*
+2. From a command prompt type *gpedit.msc*.
+3. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
- ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+   ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
-4.	Double-click **Configure target Subscription Manager**.
+4. Double-click **Configure target Subscription Manager**.
    
-    1.	Select **Enabled**.
-    2.	Under **Options**, click **Show**.
-    3.	Under **SubscriptionManagers**, enter the following value and click **OK**:	
-    Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+   1.  Select **Enabled**.
+   2.  Under **Options**, click **Show**.
+   3.  Under **SubscriptionManagers**, enter the following value and click **OK**: 
+   Server= http\://\<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
     
-    ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
+   ![Configure target subscription image](media/wef%202%20config%20target%20sub%20manager.png)
     
-5.	Click **OK**.
-6.	From an elevated command prompt type *gpupdate /force*. 
+5. Click **OK**.
+6. From an elevated command prompt type *gpupdate /force*. 
 
 **Step 3: Perform the following steps on the Azure ATP standalone sensor** 
 

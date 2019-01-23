@@ -26,17 +26,16 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Install ATA - Step 3
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Step 2](install-ata-step2.md)
 > [Step 4 »](install-ata-step4.md)
 
 ## Step 3. Download the ATA Gateway setup package
+
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see [ATA Architecture](ata-architecture.md). 
 
 Click **Download Gateway Setup** in the list of steps at the top of the page to go to the **Gateways** page.

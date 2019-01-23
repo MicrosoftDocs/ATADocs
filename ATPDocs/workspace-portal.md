@@ -48,10 +48,10 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 1. You can enter the Azure ATP portal either by logging in to the portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and selecting your instance, or browsing to the instance URL: [https://*instancename*.atp.azure.com](https://*instancename*.atp.azure.com).
 
 
-2.  Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](atp-role-groups.md).
+2. Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](atp-role-groups.md).
 
- > [!NOTE]
- > Make sure to log on to the computer from which you want to access the Azure ATP portal using your Azure ATP admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. 
+   > [!NOTE]
+   > Make sure to log on to the computer from which you want to access the Azure ATP portal using your Azure ATP admin username and password. Alternatively, you can run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. 
 
 
 ### Attack time line
