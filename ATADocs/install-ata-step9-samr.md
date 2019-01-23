@@ -27,14 +27,15 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
 # Install ATA - Step 9
 
 > [!div class="step-by-step"]
 > [« Step 8](install-ata-step7.md)
 
 ## Step 9. Configure SAM-R required permissions
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol, via the ATA Service account created in [Step 2. Connect to AD](install-ata-step2.md).
  

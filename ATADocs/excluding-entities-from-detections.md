@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# Excluding entities from detections
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# Excluding entities from detections
 This article explains how to exclude entities from triggering alerts in order to minimize true benign positives but at the same time, make sure you catch the true positives. In order to keep ATA from being noisy about activities that, from specific users, may be part of your normal rhythm of business, you can quiet - or exclude - specific entities from raising alerts.
 
 For example, if you have a security scanner that does DNS recon or an admin who remotely runs scripts on the domain controller - and these are sanctioned activities whose intent is part of the normal IT operations in your organization.

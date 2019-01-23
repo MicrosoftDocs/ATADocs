@@ -26,10 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Install ATA - Step 4
 
 > [!div class="step-by-step"]
@@ -37,6 +33,9 @@ ms.suite: ems
 > [Step 5 »](install-ata-step5.md)
 
 ## Step 4. Install the ATA Gateway
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 Before installing the ATA Gateway on a dedicated server, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. For more information, see [Validate port mirroring](validate-port-mirroring.md).
 

@@ -26,10 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Install ATA - Step 8
 
 > [!div class="step-by-step"]
@@ -37,6 +33,9 @@ ms.suite: ems
 > [Step 9 »](install-ata-step9-samr.md)
 
 ## Step 8. Configure IP address exclusions and Honeytoken user
+
+*Applies to: Advanced Threat Analytics version 1.9*
+
 ATA enables the exclusion of specific IP addresses or users from a number of detections. 
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    

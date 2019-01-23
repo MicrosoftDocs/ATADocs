@@ -26,12 +26,12 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # Working with ATA system health and events
 
 ## ATA Health Center
+
+*Applies to: Advanced Threat Analytics version 1.9*
+
 The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.
 
 ## Working with the ATA Health Center

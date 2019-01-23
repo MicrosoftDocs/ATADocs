@@ -26,12 +26,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
-
 # ATA Role Groups
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 Role groups enable access management for ATA. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to perform their jobs. This article explains access management and ATA role authorization, and helps you get up and running with role groups in ATA.
 

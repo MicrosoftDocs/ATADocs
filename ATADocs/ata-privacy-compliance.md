@@ -26,13 +26,14 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
 # ATA data security and privacy
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## Searching for and identifying personal data 
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 All data in ATA that relates to entities is derived from Active Directory (AD) and replicated to ATA from there. When searching for personal data, the first place you should consider searching is AD. 
 
