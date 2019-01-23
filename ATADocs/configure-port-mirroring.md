@@ -27,11 +27,11 @@ ms.suite: ems
 ---
 
 # Configure Port Mirroring
-> [!NOTE] 
-> This article is relevant only if you deploy ATA Gateways instead of ATA Lightweight Gateways. To determine if you need to use ATA Gateways, see [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
- 
 
 *Applies to: Advanced Threat Analytics version 1.9*
+
+> [!NOTE] 
+> This article is relevant only if you deploy ATA Gateways instead of ATA Lightweight Gateways. To determine if you need to use ATA Gateways, see [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
 
 The main data source used by ATA is deep packet inspection of the network traffic to and from your domain controllers. For ATA to see the network traffic, you must either configure port mirroring, or use a Network TAP.
 
