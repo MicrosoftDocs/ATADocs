@@ -28,10 +28,9 @@ ms.suite: ems
 
 # Troubleshooting service startup
 
-## Troubleshooting ATA Center service startup
-
-
 *Applies to: Advanced Threat Analytics version 1.9*
+
+## Troubleshooting ATA Center service startup
 
 If your ATA Center does not start, perform the following troubleshooting procedure:
 
