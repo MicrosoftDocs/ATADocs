@@ -28,14 +28,14 @@ ms.suite: ems
 
 # Install ATA - Step 5
 
+*Applies to: Advanced Threat Analytics version 1.9*
+
 > [!div class="step-by-step"]
 > [« Step 4](install-ata-step4.md)
 > [Step 6 »](install-ata-step6.md)
 
 
 ## Step 5. Configure the ATA Gateway settings
-
-*Applies to: Advanced Threat Analytics version 1.9*
 
 After the ATA Gateway was installed, perform the following steps to configure the settings for the ATA Gateway.
 
