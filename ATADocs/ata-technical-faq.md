@@ -25,9 +25,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+# ATA frequently asked questions
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-# ATA frequently asked questions
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 

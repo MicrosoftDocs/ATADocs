@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# Troubleshooting ATA using the ATA database
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# Troubleshooting ATA using the ATA database
 ATA uses MongoDB as its database.
 You can interact with the database using the default command line or using a user interface tool to perform advanced tasks and troubleshooting.
 

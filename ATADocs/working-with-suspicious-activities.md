@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# Working with Suspicious Activities
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# Working with Suspicious Activities
 This article explains the basics of how to work with Advanced Threat Analytics.
 
 ## Review suspicious activities on the attack time line

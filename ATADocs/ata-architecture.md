@@ -26,12 +26,10 @@ ms.suite: ems
 
 ---
 
+# ATA Architecture
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-
-# ATA Architecture
 The Advanced Threat Analytics architecture is detailed in this diagram:
 
 ![ATA architecture topology diagram](media/ATA-architecture-topology.jpg)

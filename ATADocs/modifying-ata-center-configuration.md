@@ -25,12 +25,11 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Modifying the ATA Center configuration
 
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the console URL, and the certificate.
 

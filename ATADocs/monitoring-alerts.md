@@ -27,10 +27,10 @@ ms.suite: ems
 
 ---
 
+# Understanding ATA monitoring alerts
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-# Understanding ATA monitoring alerts
 The ATA Health Center lets you know when there's a problem with the ATA deployment, by raising a monitoring alert.
 This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
 ## ATA Center Issues
