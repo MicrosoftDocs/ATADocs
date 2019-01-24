@@ -145,7 +145,7 @@ When your checklist status is completed, the Azure ATP basic lab setup is finish
 
 ## Local Policies Setup
 
-To make this lab look active, we will hydrage our VictimPC and AdminPC.
+To make this lab look active, we will hydrate our VictimPC and AdminPC.
 
 ### VictimPC
 
