@@ -26,12 +26,9 @@ ms.suite: ems
 
 ---
 
+# Manage system-generated logs
+
 *Applies to: Advanced Threat Analytics version 1.9*
-
-
-
-# Manage system-generated logs> 
-
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -39,6 +36,7 @@ ms.suite: ems
  > Advanced Threat Analytics (ATA) collects anonymized system-generated log data about ATA and transmits the data over an HTTPS connection to Microsoft servers. This data is used by Microsoft to help improve future versions of ATA.
 
 ## Data collected
+
 Collected anonymized data includes the following parameters:
 
 -   Performance counters from both the ATA Center and the ATA Gateway

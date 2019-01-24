@@ -27,8 +27,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 # Azure ATP Reports
 
@@ -61,8 +59,8 @@ To set a scheduled report:
 
    ![Schedule reports](./media/atp-sched-reports.png)
  
- > [!NOTE]
- > By default, daily reports are designed to be sent shortly after midnight, UTC. Pick your own time by using the time selection option. 
+   > [!NOTE]
+   > By default, daily reports are designed to be sent shortly after midnight, UTC. Pick your own time by using the time selection option. 
 
 2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports. The report frequency you select determines the information included in the report. To add email addresses, click the plus sign next to the email address field, enter the address and click **Save**.
 

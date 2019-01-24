@@ -26,8 +26,6 @@ ms.suite:
 
 ---
 
-*Applies to: Advanced Threat Protection*
-
 
 
 # Troubleshooting Azure Advanced Threat Protection (ATP) sensor using the ATP logs

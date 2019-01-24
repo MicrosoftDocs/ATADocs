@@ -69,28 +69,28 @@ To determine if this query was a **TP**, **BTP** or **FP**, click the alert to g
 1. Check if the source computer was supposed to perform this type of query. Examples of a **B-TP** in this case could be Microsoft Exchange servers or human resource systems.
 
 2. Check the account domains.
-    - Do you see additional users who belong to a different domain? 
-    <br>A server misconfiguration such as Exchange/Skype or ADSF can cause additional users that belong to different domains.
-    - Look at the configuration of the problematic service to fix the misconfiguration.
+   - Do you see additional users who belong to a different domain? 
+     <br>A server misconfiguration such as Exchange/Skype or ADSF can cause additional users that belong to different domains.
+   - Look at the configuration of the problematic service to fix the misconfiguration.
 
-    If you answered **yes** to the questions above, it is a **B-TP** activity. *Close* the security alert.<br>
+     If you answered **yes** to the questions above, it is a **B-TP** activity. *Close* the security alert.<br>
 
 As the next step, look at the source computer: 
 
 1. Is there a script or application running on the source computer that could generate this behavior?  
-    - Is the script an old script running with old credentials? <br>If yes, stop and edit or delete the script. 
-    - Is the application an administrative or security script/application that is supposed to run in the environment?
+   - Is the script an old script running with old credentials? <br>If yes, stop and edit or delete the script. 
+   - Is the application an administrative or security script/application that is supposed to run in the environment?
  
-    If you answered **yes** to previous question, *Close* the security alert and exclude that computer. It is probably a **B-TP** activity.
+     If you answered **yes** to previous question, *Close* the security alert and exclude that computer. It is probably a **B-TP** activity.
 
 Now, look at the accounts:<br>
 <br>Attackers are known to use a dictionary of randomized account names to find existing account names in an organization.
 
 1. Do the non-existing accounts look familiar?  
-    - If the non-existing accounts look familiar, they may be disabled accounts or belong to employees who left the company.
-    - Check for an application or script that checks to determine which accounts still exist in Active Directory.
+   - If the non-existing accounts look familiar, they may be disabled accounts or belong to employees who left the company.
+   - Check for an application or script that checks to determine which accounts still exist in Active Directory.
 
-    If you answered **yes** to one of the previous questions, *Close* the security alert, it is probably a **B-TP** activity.
+     If you answered **yes** to one of the previous questions, *Close* the security alert, it is probably a **B-TP** activity.
 
 2. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names. 
     - Check the guessed account names for additional suspicious activities. 
@@ -196,13 +196,13 @@ Four weeks per domain controller starting from the first network activity of SAM
 **TP, B-TP, or FP** 
 
 1. Click the source computer to go to its profile page.        
-    - Is the source computer supposed to generate activities of this type?
-      - If yes, *Close* the security alert and exclude that computer, as a  **B-TP** activity. 
-    - Check the user/s that performed the operation.
-      - Do those users normally log into that source computer, or are they administrators that should be performing those specific actions?   
-      - Check the user profile, and their related user activities. Understand their normal user behavior and search for additional suspicious activities using the [user investigation guide](investigate-a-user.md). 
+   - Is the source computer supposed to generate activities of this type?
+     - If yes, *Close* the security alert and exclude that computer, as a  **B-TP** activity. 
+   - Check the user/s that performed the operation.
+     - Do those users normally log into that source computer, or are they administrators that should be performing those specific actions?   
+     - Check the user profile, and their related user activities. Understand their normal user behavior and search for additional suspicious activities using the [user investigation guide](investigate-a-user.md). 
     
-    If you answered **yes** to the previous above, *Close* the alert as a **B-TP** activity. 
+     If you answered **yes** to the previous above, *Close* the alert as a **B-TP** activity. 
   
 **Understand the scope of the breach**
 

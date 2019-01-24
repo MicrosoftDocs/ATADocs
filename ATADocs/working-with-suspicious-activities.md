@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# Working with Suspicious Activities
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# Working with Suspicious Activities
 This article explains the basics of how to work with Advanced Threat Analytics.
 
 ## Review suspicious activities on the attack time line
@@ -87,20 +86,20 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 
 **Suspicious activity status**
 
--   **Open**: All new suspicious activities appear in this list.
+- **Open**: All new suspicious activities appear in this list.
 
--   **Close**: Is used to track suspicious activities that you identified, researched, and fixed for mitigated.
+- **Close**: Is used to track suspicious activities that you identified, researched, and fixed for mitigated.
 
-    > [!NOTE]
-    > If the same activity is detected again within a short period of time, ATA may reopen a closed activity.
+  > [!NOTE]
+  > If the same activity is detected again within a short period of time, ATA may reopen a closed activity.
 
--   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert ATA doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
+- **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert ATA doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
 
 - **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
 
 - **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set ATA to exclude a specific entity (user or computer) from alerting again for a certain type of suspicious activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the Suspicious activity as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each suspicious activity you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket). 
-> [!NOTE]
-> The configuration pages can only be modified by ATA admins.
+  > [!NOTE]
+  > The configuration pages can only be modified by ATA admins.
 
 
 ## Related Videos

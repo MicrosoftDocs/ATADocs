@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 
 # Azure ATP Prerequisites
@@ -75,13 +73,13 @@ This section lists information you should gather as well as accounts and network
 
 ## Azure ATP portal requirements
 Access to the Azure ATP portal is via a browser, supporting the following browsers and settings:
--	Microsoft Edge
--	Internet Explorer version 10 and above
--	Google Chrome 4.0 and above
--	Minimum screen width resolution of 1700 pixels
--	Firewall/proxy open - To communicate with the Azure ATP cloud service *.atp.azure.com port 443 must be open in your firewall/proxy.
+- Microsoft Edge
+- Internet Explorer version 10 and above
+- Google Chrome 4.0 and above
+- Minimum screen width resolution of 1700 pixels
+- Firewall/proxy open - To communicate with the Azure ATP cloud service *.atp.azure.com port 443 must be open in your firewall/proxy.
 
- ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
+  ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]

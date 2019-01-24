@@ -27,8 +27,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 # What's new in Azure ATP
 
 ## Azure ATP release 2.62
