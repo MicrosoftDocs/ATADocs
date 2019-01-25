@@ -34,7 +34,7 @@ Make sure your Azure ATP lab setup matches the lab setup reccomendation as close
 
 # Executing a Reconnaissance attack
 
-This Reconnaissance Playbook explains the process of how to use real-world, publicaly available hacking and attack tools against threat detections and security alerts services of Azure ATP.
+This Reconnaissance Playbook explains the process of how to use real-world, publicly available hacking and attack tools against threat detections and security alerts services of Azure ATP.
 
 Other phases of the Azure ATP Attack Simulation Playbook:
 

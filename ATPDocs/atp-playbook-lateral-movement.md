@@ -31,7 +31,7 @@ Make sure your Azure ATP lab setup matches the recommendation as closely as poss
 
 # Executing an attack
 
-This **Lateral Movement Playbook** explains the process of using real-world, publicaly available hacking and attack tools against the lateral movement path threat detections and security alerts services of Azure ATP.
+This **Lateral Movement Playbook** explains the process of using real-world, publicly available hacking and attack tools against the lateral movement path threat detections and security alerts services of Azure ATP.
 
 Other stages of the Azure ATP Attack Simulation Playbook:
 

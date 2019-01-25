@@ -1,0 +1,54 @@
+---
+# required metadata
+
+title: Azure ATP Security Alert lab tutorial overview | Microsoft Docs
+description: This tutorial overview describes the four parts of the Azure ATP Security Alert lab for simulating threats for detection by Azure ATP.
+ms.service: azure-advanced-threat-protection
+ms.topic: tutorial
+author: mlottner
+ms.author: mlottner
+ms.date: 01/22/2018
+
+# optional metadata
+
+# ms.custom
+ms.reviewer: itargoet
+# ms.subservice
+# ROBOTS
+
+---
+
+*Applies to: Azure Advanced Threat Protection*
+
+# Tutorial overview: ATP security alert lab
+
+The purpose of the Azure ATP Security Alert lab tutorial is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This four part tutorial explains how to install and configure a working environment to test against some of Azure ATP's *discrete* detections. This lab focuses on Azure ATP’s *signature*-based capabilities. The lab doesn't include advanced machine-learning and user or entity based behavioral detections since those require a learning period with real network traffic of up to 30 days.
+
+## Lab setup
+
+The first tutorial in this four part series walks you through creating a lab for testing Azure ATP's discrete detections. The tutorial includes information about machines, users, and tools that are needed to set up the lab and complete its playbooks. The instructions assume that you are comfortable setting up a domain controller and workstations for lab use along with performing administrative tasks. The closer your lab is to the suggested lab setup, the easier it will be to follow Azure ATP testing procedures. When your lab setup is complete, use Azure ATP Security Alert playbooks for testing.
+
+> [!div class="nextstepaction"]
+> [Setup an ATP security alert lab](/atp-playbook-setup-lab.md)
+
+## Reconnaissance
+
+The second tutorial in this four part series is a reconnaissance playbook. The playbook explains the process of how to use real-world, publicly available hacking and attack tools to illustrate Azure ATP's capabilities in identifying and detecting suspicious activities and potential attacks. Reconnaissance activities allow attackers to gain a thorough understanding and complete mapping of your environment for later use.
+
+> [!div class="nextstepaction"]
+> [Reconnaissance playbook](atp-playbook-reconnaissance.md)
+
+
+## Lateral movement
+
+The lateral movement playbook is third in the four part tutorial series. The playbook uses real-world publicly available hacking and attack tools. You'll use various attack methods to try to move laterally across the domain and obtain domain dominance. As you move, you'll see the lateral movement path threat detections and security alerts services of Azure ATP. 
+
+> [!div class="nextstepaction"]
+> [Lateral movement playbook](atp-playbook-lateral-movement.md)
+
+## Domain dominance
+
+The last tutorial in the four part series is the domain dominance playbook. During the domain dominance phase, an attacker has already gained legitimate credentials to access your domain controller. The domain dominance playbook explains the process of using real-world, publicly available hacking and attack tools to attempt attacks against domain dominance focused threat detection and security alert services of Azure ATP.
+
+> [!div class="nextstepaction"]
+> [Domain dominance playbook](atp-playbook-domain-dominance.md)

@@ -20,11 +20,11 @@ ms.reviewer: itargoet
 
 *Applies to: Azure Advanced Threat Protection*
 
-# Tutorial: Lab setup overview
+# Tutorial: ATP security alert lab overview
 
-The purpose of the Azure ATP Security Alert lab setup tutorial is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This tutorial explains how to install and configure a working environment to test against some of Azure ATP's *discrete* detections. The lab focuses on Azure ATP’s *signature*-based capabilities and does not include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic of up to 30 days).
+The purpose of the Azure ATP Security Alert lab tutorial is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This four part tutorial explains how to install and configure a working environment to test against some of Azure ATP's *discrete* detections. The lab focuses on Azure ATP’s *signature*-based capabilities and doesn't include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic of up to 30 days).
 
-## Lab Setup
+## Lab set up
 
 We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow Azure ATP testing procedures.
 
@@ -35,14 +35,14 @@ When your lab setup is complete, use Azure ATP Security Alert playbooks for test
 - [Domain Dominance playbook](atp-playbook-domain-dominance.md)
 
 ### Setup steps
-1. Setup your [Servers and Computers](#Servers-and-Computers). 
+1. Set up your [Servers and Computers](#Servers-and-Computers). 
 2. Configure Active Directory with [users and groups](#Users-and-Groups-Active-Directory-Setup).
-3. Setup and configure [Azure ATP](#Azure-ATP-Setup), including setup of [local policies](#Local-Policies-Setup) for your servers and computers. 
-4. [Mimic a management scenario](#Helpdesk-Simulation) utilizing a Scheduled Task.   
+3. Set up and configure [Azure ATP](#Azure-ATP-Setup), including setup of [local policies](#Local-Policies-Setup) for your servers and computers. 
+4. [Mimic a management scenario](#Helpdesk-Simulation) using a Scheduled Task.   
 
 After the lab setup is complete, you'll be ready to get started with the suggested hacking research tools, and Azure ATP's detections.
 
-Your complete lab setup should look as similiar as possible to the following diagram:
+Your complete lab setup should look as similar as possible to the following diagram:
 
 ![Azure ATP testing lab setup](media/playbook-atp-setup-lab.png)
 
@@ -62,7 +62,7 @@ In these examples, the Forest NetBIOS name is **CONTOSO.AZURE**.
 
 In this lab, there are 3 main users and 1 service account. The service account is for Azure ATP and is used for both LDAP synchronization purposes *and* [SAMR](https://docs.microsoft.com/en-us/azure-advanced-threat-protection/install-atp-step8-samr).
 
-There is a “Helpdesk” Security Group (SG) of which Ron HelpDesk is a member. This Security Group mimics the Helpdesk, and is paired with a Group Policy Object that gives our Helpdesk members Local Admin rights on the respective computers (shown here). This is used to simulate a realistic administrative model in a production environment.
+There's a “Helpdesk” Security Group (SG) of which Ron HelpDesk is a member. This Security Group mimics the Helpdesk, and is paired with a Group Policy Object that gives our Helpdesk members Local Admin rights on the respective computers (shown here). This is used to simulate a realistic administrative model in a production environment.
 
 | Full Name    | SAMAccount | Purpose                                                                                          |
 |--------------|------------|--------------------------------------------------------------------------------------------------|
@@ -93,19 +93,19 @@ $ronHdSecurePass = ConvertTo-SecureString -String 'FightingTiger$' -AsPlainText 
 $jefflSecurePass = ConvertTo-SecureString -String 'Password$fun' -AsPlainText -Force
 $AATPService = ConvertTo-SecureString -String 'Password123!@#' -AsPlainText -Force
 
-# SamiraA
+# Create new AD user SamiraA and add her to the domain admins group
 New-ADUser -Name SamiraA -DisplayName "Samira Abbasi" -PasswordNeverExpires $true -AccountPassword $samiraASecurePass -Enabled $true
 Add-ADGroupMember -Identity "Domain Admins" -Members SamiraA
 
-# RonHD and Helpdesk Security Group
+# Create new AD user RonHD, create new AD security group Helpdesk, add RonHD to Helpdesk group
 New-ADUser -Name RonHD -DisplayName "Ron Helpdesk" -PasswordNeverExpires $true -AccountPassword $ronHdSecurePass -Enabled $true
 New-ADGroup -Name Helpdesk -GroupScope Global -GroupCategory Security
 Add-ADGroupMember -Identity "Helpdesk" -Members "RonHD"
 
-# JeffL
+# Create new AD user JeffL
 New-ADUser -Name JeffL -DisplayName "Jeff Leatherman" -PasswordNeverExpires $true -AccountPassword $jefflSecurePass -Enabled $true
 
-# Azure ATP Service
+# Create new AD user Azure ATP Service
 New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNeverExpires $true -AccountPassword $AATPService -Enabled $true
 ```
 
@@ -231,7 +231,6 @@ while ($true){
 
 This will result in simulated network activity as Samira.
 
-### Helpdesk Simulation
 
 
 

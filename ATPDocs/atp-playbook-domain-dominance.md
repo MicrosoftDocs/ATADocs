@@ -32,7 +32,7 @@ Make sure your Azure ATP lab setup matches the recommendation as closely as poss
 
 # Executing an attack
 
-This Domain Dominance playbook explains the process of using real-world, publically available hacking and attack tools to attempt attacks against domain dominance focused threat detection and security alert services of Azure ATP.
+This Domain Dominance playbook explains the process of using real-world, publicly available hacking and attack tools to attempt attacks against domain dominance focused threat detection and security alert services of Azure ATP.
 
 Other phases of the Azure ATP Attack Simulation Playbook:
 

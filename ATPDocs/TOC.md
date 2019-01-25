@@ -20,11 +20,12 @@
 ## [VPN integration](install-atp-step6-vpn.md)
 ## [Integrate with Syslog](setting-syslog.md)
 # Tutorials
-## ATP playbook lab
-### [Playbook lab setup](atp-playbook-setup-lab.md)
-### [Playbook - reconnaissance](atp-playbook-reconnaissance.md)
-### [Playbook - lateral movement](atp-playbook-lateral-movement.md)
-### [Playbook - domain dominance](atp-playbook-domain-dominance.md)
+## Security alert lab
+### [Lab overview](atp-playbook-lab-overview.md)
+### [1 - Lab setup](atp-playbook-setup-lab.md)
+### [2 -Reconnaissance playbook](atp-playbook-reconnaissance.md)
+### [3 -Lateral movement playbook](atp-playbook-lateral-movement.md)
+### [4 - domain dominance playbook](atp-playbook-domain-dominance.md)
 ## [Understanding security alerts](understanding-security-alerts.md)
 ## [Reconnaissance alerts](atp-reconnaissance-alerts.md)
 ## [Compromised credential alerts](atp-compromised-credentials-alerts.md)
