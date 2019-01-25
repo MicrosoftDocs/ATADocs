@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure ATP playbook lab setup tutorial | Microsoft Docs
-description: This tutorial describes how to set up an Azure ATP test lab for simulating threats for detection by Azure ATP.
+title: Azure ATP security alert tutorial | Microsoft Docs
+description: In this tutorial you set up an Azure ATP test lab for simulating threats for detection by Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
@@ -15,30 +15,46 @@ ms.date: 01/22/2018
 ms.reviewer: itargoet
 # ms.subservice
 # ROBOTS
-
+# Customer intent: As an Azure ATP user, I want to simulate threats in a lab so that I can see some of Azure ATP's capabilities.
 ---
 
-# Tutorial: ATP security alert lab overview
+# Tutorial: Setup an ATP security alert lab 
 
 The purpose of the Azure ATP Security Alert lab tutorial is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This four part tutorial explains how to install and configure a working environment to test against some of Azure ATP's *discrete* detections. The lab focuses on Azure ATP’s *signature*-based capabilities and doesn't include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic of up to 30 days).
 
-## Lab set up
+In this tutorial you will: 
 
-We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow Azure ATP testing procedures.
+> [!div class="checklist"]
+> * Set up your [server and computers](#Servers-and-Computers)
+> * Configure Active Directory with [users and groups](#Users-and-Groups-Active-Directory-Setup)
+> * Set up and configure [Azure ATP](#Azure-ATP-Setup)
+> * Setup [local policies](#Local-Policies-Setup) for your server and computers
+> * [Mimic a management scenario](#Helpdesk-Simulation) using a scheduled task
 
-When your lab setup is complete, use Azure ATP Security Alert playbooks for testing:
+<!--When your lab setup is complete, use Azure ATP Security Alert playbooks for testing:
 
 - [Reconnaissance playbook](atp-playbook-reconnaissance.md)
 - [Lateral Movement playbook](atp-playbook-lateral-movement.md)
 - [Domain Dominance playbook](atp-playbook-domain-dominance.md)
+-->
+## Prerequisites
 
+1. An [Azure ATP instance](install-atp-step1.md)
+2. [A lab domain controller and 2 lab workstations](#Servers-and-Computers)
+3. [Download](install-atp-step3.md) and [install Azure ATP sensor version 2.56 or newer](install-atp-step4.md) on your lab's domain controller
+
+
+<!--
 ### Setup steps
 1. Set up your [Servers and Computers](#Servers-and-Computers). 
-2. Configure Active Directory with [users and groups](#Users-and-Groups-Active-Directory-Setup).
-3. Set up and configure [Azure ATP](#Azure-ATP-Setup), including setup of [local policies](#Local-Policies-Setup) for your servers and computers. 
-4. [Mimic a management scenario](#Helpdesk-Simulation) using a Scheduled Task.   
+1. Configure Active Directory with [users and groups](#Users-and-Groups-Active-Directory-Setup).
+1. Set up and configure [Azure ATP](#Azure-ATP-Setup), including setup of [local policies](#Local-Policies-Setup) for your servers and computers. 
+1. [Mimic a management scenario](#Helpdesk-Simulation) using a Scheduled Task.   
+-->
 
-After the lab setup is complete, you'll be ready to get started with the suggested hacking research tools, and Azure ATP's detections.
+## Recommendations
+
+We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Azure ATP testing procedures. After the lab setup is complete, you'll be ready to get started with the suggested hacking research tools, and Azure ATP's detections.
 
 Your complete lab setup should look as similar as possible to the following diagram:
 
@@ -46,15 +62,15 @@ Your complete lab setup should look as similar as possible to the following diag
 
 ## Servers and computers
 
-This table details the computers, and the configurations needed. IP addresses are provided for reference purposes only so you can easily follow along.
+This table details the computers, and the configurations needed. IP addresses are provided for reference purposes only so you can easily follow along. 
+
+In the examples for these tutorials, the Forest NetBIOS name is **CONTOSO.AZURE**.
 
 |             FQDN     |            OS        |    IP   |                    Purpose                                  |
 |------------------------|----------------------|---------|-------------------------------------------------------------|
 |ContosoDC1.contoso.azure|Windows Server 2012 R2|10.0.24.4|Domain Controller with the Azure ATP Sensor installed locally|
 |VictimPC.contoso.azure |Windows 10            |10.0.24.5|Victim’s PC                                                   |
 |AdminPC.contoso.azure  |Windows 10            |10.0.24.6| Domain Admin's PC (sometimes referred to as "Secure Admin Workstation" or "Privileged Admin Workstation")                                                    |        |
-
-In these examples, the Forest NetBIOS name is **CONTOSO.AZURE**.
 
 ## User and Group Active Directory Setup
 
@@ -71,11 +87,13 @@ There's a “Helpdesk” Security Group (SG) of which Ron HelpDesk is a member. 
 
 ## Azure ATP Attack Simulation Playbook Lab Setup
 
+<!-- put this in prereqs
 ### Azure ATP Environment
 
 This lab was written to support Azure ATP sensor version 2.56 and newer. Verify your sensor version in the Azure ATP portal and upgrade as needed before you begin.
 
 If you haven't created an Azure ATP instance yet, follow the  [installation instructions](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1) to get started. If you already have an instance to use, follow [these instructions](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step4) to install the Azure ATP sensor on your domain controller (in this lab, the domain controller is called ContosoDC).  
+-->
 
 ### ContosoDC
 
@@ -160,7 +178,7 @@ Inspect the Administrators group on **VictimPC**, making sure it appears to have
 
 ![Helpdesk nd JeffV should be in the Local Admin Group for VictimPC](media/playbook-labsetup-localgrouppolicies2.png)
 
-#### Simulate Helpdesk Support
+#### <a name="helpdesk-simulation"></a> Simulate Helpdesk Support
 
 To simulate a _working_ and _managed_ network, create a Scheduled Task on the **VictimPC** machine to run the "cmd.exe" process as **RonHD**.
 
