@@ -22,18 +22,18 @@ ms.reviewer: itargoet
 
 # Tutorial overview: ATP security alert lab
 
-The purpose of the Azure ATP Security Alert lab tutorial is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This four part tutorial explains how to install and configure a working environment to test against some of Azure ATP's *discrete* detections. This lab focuses on Azure ATP’s *signature*-based capabilities. The lab doesn't include advanced machine-learning and user or entity based behavioral detections since those require a learning period with real network traffic of up to 30 days.
+The purpose of the Azure ATP Security Alert lab tutorial is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This four part tutorial explains how to install and configure a working environment to test against some of Azure ATP's *discrete* detections. This lab focuses on Azure ATP’s *signature*-based capabilities. The lab doesn't include advanced machine-learning and user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days.
 
 ## Lab setup
 
-The first tutorial in this four part series walks you through creating a lab for testing Azure ATP's discrete detections. The tutorial includes information about machines, users, and tools that are needed to set up the lab and complete its playbooks. The instructions assume that you are comfortable setting up a domain controller and workstations for lab use along with performing administrative tasks. The closer your lab is to the suggested lab setup, the easier it will be to follow Azure ATP testing procedures. When your lab setup is complete, use Azure ATP Security Alert playbooks for testing.
+The first tutorial in this four part series walks you through creating a lab for testing Azure ATP's discrete detections. The tutorial includes information about machines, users, and tools that are needed to set up the lab and complete its playbooks. The instructions assume that you're comfortable setting up a domain controller and workstations for lab use along with other administrative tasks. The closer your lab is to the suggested lab setup, the easier it will be to follow Azure ATP testing procedures. When your lab setup is complete, use the Azure ATP Security Alert playbooks for testing.
 
 > [!div class="nextstepaction"]
 > [Setup an ATP security alert lab](/atp-playbook-setup-lab.md)
 
 ## Reconnaissance
 
-The second tutorial in this four part series is a reconnaissance playbook. The playbook explains the process of how to use real-world, publicly available hacking and attack tools to illustrate Azure ATP's capabilities in identifying and detecting suspicious activities and potential attacks. Reconnaissance activities allow attackers to gain a thorough understanding and complete mapping of your environment for later use.
+The second tutorial in this four part series is a reconnaissance playbook. Reconnaissance activities allow attackers to gain a thorough understanding and complete mapping of your environment for later use. The playbook explains the process of how to use real-world, publicly available hacking and attack tools to illustrate Azure ATP's capabilities in identifying and detecting suspicious activities and potential attacks. 
 
 > [!div class="nextstepaction"]
 > [Reconnaissance playbook](atp-playbook-reconnaissance.md)

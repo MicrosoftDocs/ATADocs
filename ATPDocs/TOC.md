@@ -25,7 +25,7 @@
 ### [1 - Lab setup](atp-playbook-setup-lab.md)
 ### [2 -Reconnaissance playbook](atp-playbook-reconnaissance.md)
 ### [3 -Lateral movement playbook](atp-playbook-lateral-movement.md)
-### [4 - domain dominance playbook](atp-playbook-domain-dominance.md)
+### [4 - Domain dominance playbook](atp-playbook-domain-dominance.md)
 ## [Understanding security alerts](understanding-security-alerts.md)
 ## [Reconnaissance alerts](atp-reconnaissance-alerts.md)
 ## [Compromised credential alerts](atp-compromised-credentials-alerts.md)
