@@ -17,7 +17,6 @@ ms.date: 01/22/2018
 # ROBOTS
 
 ---
-*Applies to: Azure Advanced Threat Protection*
 
 # Overview
 

@@ -18,8 +18,6 @@ ms.date: 01/22/2018
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 # Overview
 
 The purpose of the **Azure ATP Security Alert Playbook Suite** is to illustrate **Azure ATP**'s capabilities in identifying and detecting potential attacks against your network. The playbooks in the suite explain how to test against some of Azure ATP's *discrete* detections using Azure ATP’s *signature*-based capabilities. The tutorials included do not include Azure ATP advanced machine-learning, user, or entity based behavioral detections and alerts. Those types of detections and alerts are not included in testing because they require a learning period, and real network traffic for up to 30 days.
