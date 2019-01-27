@@ -125,7 +125,7 @@ In each alert, the last tab provides the **Related Entities**. Related entities 
  
 **Unique Entity Json**
  
-Includes the data Azure ATP learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime, and *PasswordExpiryTime*. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, *IsDomainController, and *DnsName*.
+Includes the data Azure ATP learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, <em>LockoutTime, and *PasswordExpiryTime</em>. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, <em>IsDomainController, and *DnsName</em>.
 
 **Unique Entity Profile Json**
 

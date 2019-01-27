@@ -17,15 +17,15 @@
       }
     ],
     "resource": [
-        {
-          "files": [
-          "**/images/**", 
+      {
+        "files": [
+          "**/images/**",
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
           "**/*.bmp",
           "**/*.html"
-          ],
+        ],
         "exclude": [
           "**/obj/**",
           "_themes/**",
@@ -41,9 +41,10 @@
     "globalMetadata": {
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/atadocs",
-      "feedback_product_url": "https://microsoftsecurity.uservoice.com/forums/905158-advanced-threat-analytics", 
+      "feedback_product_url": "https://microsoftsecurity.uservoice.com/forums/905158-advanced-threat-analytics",
       "layout": "Conceptual",
       "breadcrumb_path": "/advanced-threat-analytics/bread/toc.json"
-    }
+    },
+    "markdownEngineName": "markdig"
   }
 }

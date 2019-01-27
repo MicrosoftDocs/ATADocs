@@ -306,22 +306,23 @@ In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (ser
 **TP, B-TP, or FP**
 <br>Some legitimate resources don’t support strong encryption ciphers and may trigger this alert. 
 
-2. Do all of the source users share something in common? 
-    1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
-    2. Check the resources accessed by those tickets. 
-        - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
-    3. If there is only one resource being accessed, check if is a valid resource these users are supposed to access.  
 
-    If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher,  implement a stronger encryption cipher where possible, and **Close** the security alert.
+1. Do all of the source users share something in common? 
+   1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
+   2. Check the resources accessed by those tickets. 
+       - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
+   3. If there is only one resource being accessed, check if is a valid resource these users are supposed to access.  
+
+      If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher,  implement a stronger encryption cipher where possible, and **Close** the security alert.
 
 Applications might authenticate using a lower encryption cipher. Some are authenticating on behalf of users, such as IIS and SQL servers. 
 
 1. Check if the source users have something in common.         
-    - For example, do all of your sales personnel use a specific app that might trigger the alert?
-    - Check if there are applications of this type on the source computer. 
-    - Check the computer roles. <br>Are they servers that work with these types of applications? 
+   - For example, do all of your sales personnel use a specific app that might trigger the alert?
+   - Check if there are applications of this type on the source computer. 
+   - Check the computer roles. <br>Are they servers that work with these types of applications? 
 
-    If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher,implement a stronger encryption cipher where possible, and **Close** the security alert.
+     If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher,implement a stronger encryption cipher where possible, and **Close** the security alert.
 
 
 **Understand the scope of the breach**
@@ -429,9 +430,9 @@ Federation services might generate tickets that will trigger this alert.
     - If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 2. Contain the resources that were accessed by this ticket.
 3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are  broken and cannot work again until renewed or in some cases, the service is restarted. 
+   - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are  broken and cannot work again until renewed or in some cases, the service is restarted. 
 
-    **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
+     **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
 
 ## Suspected Golden Ticket usage (time anomaly) (external ID 2022) 
 
@@ -458,11 +459,11 @@ If the answer to the previous questions is **yes**, **Close** the security alert
     - Find the tool that performed the attack and remove it.
     - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
     - If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-3. Contain the resources accessed by this ticket.
-4. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are broken, and won't work again until they are renewed or in some cases, the service is restarted. 
+2. Contain the resources accessed by this ticket.
+3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+   - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are broken, and won't work again until they are renewed or in some cases, the service is restarted. 
 
-    **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
+     **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
 
 ## Suspected skeleton key attack (encryption downgrade) (external ID 2010) 
 

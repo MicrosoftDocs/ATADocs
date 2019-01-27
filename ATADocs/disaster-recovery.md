@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# ATA disaster recovery
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# ATA disaster recovery
 This article describes how to quickly recover your ATA Center and restore ATA functionality when the ATA Center functionality is lost but the ATA Gateways are still working. 
 
 >[!NOTE]
@@ -46,8 +45,8 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
     3. Follow the instructions to export the certificate, making sure to export the private key as well.
     4. Back up the exported certificate file on a separate computer.
 
-  > [!NOTE] 
-  > If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](modifying-ata-center-configuration.md), and then export it. 
+   > [!NOTE] 
+   > If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](modifying-ata-center-configuration.md), and then export it. 
 
 ## Recover your ATA Center
 

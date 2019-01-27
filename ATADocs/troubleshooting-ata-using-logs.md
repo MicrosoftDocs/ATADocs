@@ -26,11 +26,10 @@ ms.suite: ems
 
 ---
 
+# Troubleshooting ATA using the ATA logs
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# Troubleshooting ATA using the ATA logs
 The ATA logs provide insight into what each component of ATA is doing at any given point in time.
 
 ## ATA Gateway logs
@@ -101,5 +100,5 @@ ATA Gateway and ATA Lightweight Gateway deployment logs:
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-collection.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

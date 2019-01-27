@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 
 # Install Azure ATP - Step 3

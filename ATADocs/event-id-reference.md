@@ -27,10 +27,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # ATA event ID reference
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 The ATA Center event viewer logs events for ATA. This article provides a list of event IDs and provides a description of each.
 
@@ -108,5 +108,5 @@ The events can be found here:
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-collection.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -26,11 +26,9 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
-
 # Install ATA - Step 6
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 > [!div class="step-by-step"]
 > [« Step 5](install-ata-step5.md)
@@ -38,6 +36,7 @@ ms.suite: ems
 
 ## Step 6. Configure event collection
 ### Configure Event Collection
+
 To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757 and 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md). 
 
 > [!NOTE]
@@ -52,8 +51,8 @@ For ATA to be able to consume data from a Syslog server, you need to perform the
 
 > [!NOTE]
 > ATA only listens on IPv4 and not IPv6. 
--   Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
-
+> -   Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
+> 
 > [!IMPORTANT]
 > -   Do not forward all the Syslog data to the ATA Gateway.
 > -   ATA supports UDP traffic from the SIEM/Syslog server.

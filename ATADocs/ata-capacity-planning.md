@@ -24,11 +24,10 @@ ms.suite: ems
 
 ---
 
+# ATA Capacity Planning
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-
-# ATA Capacity Planning
 This article helps you determine how many ATA servers are needed to monitor your network. It helps you figure out how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
 
 > [!NOTE] 
@@ -75,14 +74,14 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 
 &#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
-> -   The ATA Center can handle an aggregated maximum of 1M packets per second from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M. Contact askcesec@microsoft.com for assistance with such environments.
-> -   If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it is not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.
+> - The ATA Center can handle an aggregated maximum of 1M packets per second from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M. Contact askcesec@microsoft.com for assistance with such environments.
+> - If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it is not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.
 > - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
-> -   The storage latency for read and write activities should be below 10 ms.
-> -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
-> -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-> -   For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
-> -   When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
+> - The storage latency for read and write activities should be below 10 ms.
+> - The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
+> - When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+> - For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
+> - When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
 
 
 ## Choosing the right gateway type for your deployment

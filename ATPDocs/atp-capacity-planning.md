@@ -25,8 +25,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 
 # Azure ATP capacity planning

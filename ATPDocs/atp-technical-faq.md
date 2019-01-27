@@ -25,8 +25,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-*Applies to: Azure Advanced Threat Protection*
-
 # Azure ATP frequently asked questions
 This article provides a list of frequently asked questions and answers about Azure ATP divided into the following catergories: 
 - [What is Azure ATP](#what-is-azure-atp)
@@ -141,18 +139,18 @@ Look at the most recent error in the current error [log](troubleshooting-atp-usi
 ### How can I test Azure ATP?
 You can simulate suspicious activities as an end-to-end test. In the following scenario, DNS reconnaisance is simulated:
 
-1.  Verify Azure ATP sensors are installed and configured on the domain controllers (or standalone sensors and related port-mirroring are installed and configured)
-2.  Open CMD
-3.  Run the following command: nslookup -<DC iP address>
-    -   Press enter
-    -   Type: Is -d <FQDN>
-    -   Depending on the configuration of your environment, responses will vary from "Query refused" to a list of your DNS records. 
+1. Verify Azure ATP sensors are installed and configured on the domain controllers (or standalone sensors and related port-mirroring are installed and configured)
+2. Open CMD
+3. Run the following command: nslookup -<DC iP address>
+   - Press enter
+   - Type: Is -d <FQDN>
+   - Depending on the configuration of your environment, responses will vary from "Query refused" to a list of your DNS records. 
 4. View the alert related to the simulated DNS reconnaisance in the Azure ATP portal. 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Troubleshooting](troubleshooting-atp-known-issues.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

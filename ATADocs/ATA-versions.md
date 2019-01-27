@@ -25,9 +25,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
-*Applies to: Advanced Threat Analytics version 1.9*
-
 # Support for Microsoft Advanced Threat Analytics (ATA) versions
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 Microsoft plans to release ATA updates a few times a year with each update version supported for 12 months from its general availability (GA) release date. Technical support is provided for the entire 12 months. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest version.
 

@@ -27,10 +27,10 @@ ms.suite: ems
 
 ---
 
+# Understanding ATA monitoring alerts
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-
-# Understanding ATA monitoring alerts
 The ATA Health Center lets you know when there's a problem with the ATA deployment, by raising a monitoring alert.
 This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
 ## ATA Center Issues
@@ -130,5 +130,5 @@ This article describes all the monitoring alerts for each component, listing the
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-collection.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -26,8 +26,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 
 # Azure ATP switches and silent installation
 This article provides guidance and instructions for Azure ATP switches and silent installation.
@@ -60,7 +58,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 **Syntax**:
 
     Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
-   
+
 
 > [!NOTE]
 > Copy the access key from the Azure ATP portal under **Configuration** and then **sensor**.
@@ -69,25 +67,27 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
 **Installation parameters**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP instance.|
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP instance.|
 
 **Examples**:
 Use the following command to silently install the Azure ATP sensor:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
-    
+
 
 ## Update the Azure ATP sensor
 
@@ -101,11 +101,12 @@ Use the following command to silently update the Azure ATP sensor:
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
 
 **Examples**:
@@ -119,22 +120,23 @@ Use the following command to perform a silent uninstall of the Azure ATP sensor:
 **Syntax**:
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
-    
+
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-|Name|Syntax|Mandatory for silent uninstallation?|Description|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Azure ATP sensor from the server.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> 
+> |Name|Syntax|Mandatory for silent uninstallation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
+> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Azure ATP sensor from the server.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Examples**:
 To silently uninstall the Azure ATP sensor from the server:
 
 
     Azure ATP sensor Setup.exe /quiet /uninstall
-    
+
 
 
 

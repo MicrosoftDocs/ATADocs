@@ -27,10 +27,10 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
-
 # ATA Reports
+
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 The ATA reports section in the console enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
@@ -60,8 +60,8 @@ To set a scheduled report:
 
    ![Schedule reports](./media/ata-sched-reports.png)
 
-  > [!NOTE]
-  > The daily reports are designed to be sent shortly after midnight, UTC.
+   > [!NOTE]
+   > The daily reports are designed to be sent shortly after midnight, UTC.
 
 2. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
 
@@ -76,5 +76,5 @@ To set a scheduled report:
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-collection.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -26,8 +26,6 @@ ms.suite:
 
 ---
 
-*Applies to: Advanced Threat Protection*
-
 
 
 # Troubleshooting Azure Advanced Threat Protection (ATP) sensor using the ATP logs
@@ -68,5 +66,5 @@ Azure ATP sensor deployment logs:
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
