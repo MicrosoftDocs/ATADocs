@@ -28,7 +28,7 @@ ms.suite: ems
 
 
 
-# Monitoring your Azure ATP sensors
+# Monitoring your domain controller coverage
 
 As soon as your first Azure ATP sensor is installed and configured on any domain controller in your network, Azure ATP begins either constant active or passive scanning of all of the domain controllers in your network depending on the selections made during sensor setup. 
 
@@ -50,11 +50,11 @@ The domain controller coverage Excel download provides the following information
 
 |Title|Description|
 |----|----|
-|Hostname|Name|
+|Hostname|Nme of the device|
 |Domain name|Domain name|
 |Monitored|Azure ATP monitoring status|
 |Sensor type|Azure ATP sensor or Azure ATP standalone sensor|
-|Organizational unit| |
+|Organizational unit|Location inside of Active Directory |
 |Operating system version| Version of operating system detected|
 |IP address|Detected IP address| 
 
