@@ -56,9 +56,13 @@ In this tutorial, learn how to understand, classify, remediate, and prevent the 
 
 **Description**
 
-In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess in an attempt to guess user names in the domain. The attacker makes Kerberos requests using these names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the Kerberos error **Preauthentication required** instead of **Security principal unknown**.
+In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess in an attempt to guess user names in the domain.
 
-In this detection, Azure ATP detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Azure ATP detects it as a suspicious activity.
+**Kerberos**: Attacker makes Kerberos requests using these names to try to find a valid username in the domain. When a guess successfully determines a username, the attacker gets the **Preauthentication required** instead of **Security principal unknown** Kerberos error.
+
+**NTLM**: Attacker makes NTLM authentication requests using the dictionary of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the **WrongPassword (0xc000006a)** instead of **NoSuchUser (0xc0000064)** NTLM error.
+
+In this alert detection, Azure ATP detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Azure ATP detects it as a suspicious activity.
 
 **TP, B-TP, or FP**
 
