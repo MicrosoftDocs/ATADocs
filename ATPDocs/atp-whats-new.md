@@ -36,7 +36,7 @@ Released January 27, 2019
 
 - **New feature: Untrusted forest support – (preview)**<br>
 Azure ATP’s support for sensors in untrusted forests is now in public preview. 
-From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](atp-muti-forest.md) to learn more. 
+From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](atp-multi-forest.md) to learn more. 
 
 - **New feature: Domain controller coverage**<br>
 Azure ATP now provides coverage information for Azure ATP monitored domain controllers.  
