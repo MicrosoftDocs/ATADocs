@@ -1,0 +1,74 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Advanced Threat Analytics Documentation
+metadata:
+  title: Advanced Threat Analytics Documentation
+  description: Protect your enterprise by using information from multiple data-sources in your network to learn the behavior of users and other entities in the organization
+  services: advanced-threat-analytics
+  author: msmbaldwin
+  manager: mbaldwin
+  ms.prod: advanced-threat-analytics
+  ms.tgt_pltfrm: na
+  ms.devlang: na
+  ms.topic: landing-page
+  ms.date: 01/07/2019
+  ms.author: mbaldwin
+  layout: LandingPage
+abstract:
+  description: Protect your enterprise by using information from multiple data-sources in your network to learn the behavior of users and other entities in the organization
+sections:
+- title: Learn More
+  items:
+  - type: list
+    style: cards
+    className: cardsFTitle
+    items:
+    - title: What is Advanced Threat Analytics?
+      href: what-is-ata.md
+      image: 
+        src: https://docs.microsoft.com/media/common/i_learn-about.svg
+        href: what-is-ata.md
+    - title:  What's New with ATA
+      href: whats-new-version-1.9.md
+      image: 
+        src: https://docs.microsoft.com/media/common/i_quick-start.svg
+        href: whats-new-version-1.9.md
+    - title:  Frequently Asked Questions
+      href: ata-technical-faq.md
+      image: 
+        src: https://docs.microsoft.com/media/common/i_support.svg
+        href: ata-technical-faq.md
+- title: Get Started
+  items:
+  - type: paragraph
+    text: Plan, Design, and Begin with ATA
+  - type: list
+    style: icon48
+    items: 
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
+      text: Advanced Threat Analytics architecture
+      href: ata-architecture.md
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      text: ATA capacity planning
+      href: ata-capacity-planning.md
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_download-install.svg
+      text: Download and install
+      href: install-ata-step1.md
+- title: Try It Now
+  items:
+  - type: paragraph
+    text: Plan, Design, and Begin with ATA
+  - type: list
+    style: icon48
+    items: 
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_test.svg
+      text: Evaluate
+      href: https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics
+    - image: 
+        src: https://docs.microsoft.com/media/common/i_road-map.svg
+      text: Check out ATA attack simulation playbook
+      href: https://gallery.technet.microsoft.com/ATA-Playbook-ef0a8e38

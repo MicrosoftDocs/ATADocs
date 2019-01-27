@@ -26,9 +26,9 @@ ms.suite: ems
 
 ---
 
-*Applies to: Advanced Threat Analytics version 1.9*
-
 # ATA data security and privacy
+
+*Applies to: Advanced Threat Analytics version 1.9*
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 

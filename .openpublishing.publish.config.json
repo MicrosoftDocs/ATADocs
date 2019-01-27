@@ -2,57 +2,15 @@
   "build_entry_point": "docs.ps1",
   "docsets_to_publish": [
     {
-      "docset_name": "ATADeployUse",
-      "build_source_folder": "ATADocs/DeployUse",
-      "build_output_subfolder": "ATADocs-DeployUse",
-      "locale": "en-us",
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "version": 0
-    },
-    {
       "docset_name": "ATADocs",
       "build_source_folder": "ATADocs",
       "build_output_subfolder": "ATADocs",
       "locale": "en-us",
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "version": 0
-    },
-    {
-      "docset_name": "ATAPlanDesign",
-      "build_source_folder": "ATADocs/PlanDesign",
-      "build_output_subfolder": "ATADocs-PlanDesign",
-      "locale": "en-us",
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "version": 0
-    },
-    {
-      "docset_name": "ATATroubleshoot",
-      "build_source_folder": "ATADocs/Troubleshoot",
-      "build_output_subfolder": "ATADocs-Troubleshoot",
-      "locale": "en-us",
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "version": 0
-    },
-    {
-      "docset_name": "ATAUnderstand",
-      "build_source_folder": "ATADocs/Understand",
-      "build_output_subfolder": "ATADocs-Understand",
-      "locale": "en-us",
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+	"LandingData": "Content",
+        "ContextObject": "Toc"
       },
       "version": 0
     },
@@ -113,5 +71,7 @@
     }  
    }, 
   "need_generate_pdf": false,
-  "need_generate_intellisense": false
+  "need_generate_intellisense": false,
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true
 }

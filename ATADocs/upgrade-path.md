@@ -25,9 +25,10 @@ ms.suite: ems
 #ms.custom:
 
 ---
+# Recommended upgrade path for ATA
+
 *Applies to: Advanced Threat Analytics version 1.9*
 
-# Recommended upgrade path for ATA
 This article provides information about available Advanced Threat Analytics versions and how to upgrade ATA depending on which version you have running.
 
 
@@ -55,6 +56,6 @@ This article provides information about available Advanced Threat Analytics vers
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Configuring Windows event forwarding](configure-event-collection.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

@@ -39,6 +39,7 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "ATPDocs"
+    "dest": "ATPDocs",
+    "markdownEngineName": "markdig"
   }
 }

@@ -27,8 +27,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
 # Azure ATP data security and privacy
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
