@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -38,9 +38,9 @@ To make it easier to verify the current status of each of your domain controller
 
 Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events. 
 
+## Modify audit policies 
 
-
-<br>Modify the Advanced Audit Policies of your domain controller using the following instructions:
+Modify the Advanced Audit Policies of your domain controller using the following instructions:
 
 1. Log in to the Server as **Domain Administrator**.
 2. Load the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**. 
