@@ -34,11 +34,11 @@ Released January 27, 2019
 
 - **New feature: Untrusted forest support – (preview)**<br>
 Azure ATP’s support for sensors in untrusted forests is now in public preview. 
-From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](atp-muti-forest.md) to learn more. 
+From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](atp-multi-forest.md) to learn more. 
 
 - **New feature: Domain controller coverage**<br>
 Azure ATP now provides coverage information for Azure ATP monitored domain controllers.  
-From the Azure ATP portal **Sensors** page, view the number of the monitored and unmonitored domain controllers detected by Azure ATP in your environment. Export and download the monitored sensor list for further analysis, and build an action plan. See the [Sensor monitoring](atp-sensor-monitoring.md) how-to guide to learn more. 
+From the Azure ATP portal **Sensors** page, view the number of the monitored and unmonitored domain controllers detected by Azure ATP in your environment. Download the monitored domain controller list for further analysis, and to build an action plan. See the [Domain controller monitoring](atp-sensor-monitoring.md) how-to guide to learn more. 
 
 - **Feature Enhancement: Account enumeration reconnaissance**<br>
 The Azure ATP account enumeration reconnaissance detection now detects and issues alerts for enumeration attempts using Kerberos and NTLM. Previously, the detection only worked for attempts using Kerberos. See [Azure ATP reconnaissance alerts](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003) to learn more. 
