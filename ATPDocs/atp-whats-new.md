@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: What's new in Azure ATP | Microsoft Docs
+title: What's new in Azure Advanced Threat Protection (Azure ATP) | Microsoft Docs
 description: Describes the latest releases of Azure ATP and provides information about what's new in each version.
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -31,10 +31,35 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+### Azure ATP release 2.63
+Released January 27, 2019
+
+- **New feature: Untrusted forest support – (preview)**<br>
+Azure ATP’s support for sensors in untrusted forests is now in public preview. 
+From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](atp-muti-forest.md) to learn more. 
+
+- **New feature: Domain controller coverage**<br>
+Azure ATP now provides coverage information for Azure ATP monitored domain controllers.  
+From the Azure ATP portal **Sensors** page, view the number of the monitored and unmonitored domain controllers detected by Azure ATP in your environment. Export and download the monitored sensor list for further analysis, and build an action plan. See the [Sensor monitoring](atp-sensor-monitoring.md) how-to guide to learn more. 
+
+- **Feature Enhancement: Account enumeration reconnaissance**<br>
+The Azure ATP account enumeration reconnaissance detection now detects and issues alerts for enumeration attempts using Kerberos and NTLM. Previously, the detection only worked for attempts using Kerberos. See [Azure ATP reconnaissance alerts](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003) to learn more. 
+
+- **Feature enhancement: Remote code execution attempt alert**<br>
+    - All remote execution activities, such as service creation, WMI execution, and the new **PowerShell** execution, were added to the profile timeline of the destination machine. The destination machine is the domain controller the command was executed on. 
+    - **PowerShell** execution was added to the list of remote code execution activities listed in the entity profile alert timeline.
+    - See [Remote code execution attempt](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019) to learn more.  
+
+- **Windows Server 2019 LSASS issue and Azure ATP**<br>
+In response to customer feedback regarding Azure ATP usage with domain controllers running Windows Server 2019, this update includes additional logic to avoid triggering the reported behavior on Windows Server 2019 machines. Full support for Azure ATP sensor on Windows Server 2019 is planned for a future Azure ATP update, however installing and running Azure ATP on Windows Servers 2019 is **not** currently supported. See [Azure ATP sensor requirements](atp-prerequisites.md#azure-atp-sensor-requirements) to learn more. 
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+
 ## Azure ATP release 2.62
 Released January 20, 2019
 
-- **New Security Alert: Remote code execution over DNS- (preview)**<br>
+- **New Security Alert: Remote code execution over DNS – (preview)**<br>
 Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
 
 - **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24 hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 

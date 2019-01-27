@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -33,34 +33,33 @@ ms.suite: ems
 
 ## Multi-forest support set up 
 
-Azure ATP can support organizations with multiple forests, giving you the ability to easily monitor activity and profile users across forests, from a single pane of glass. 
+Azure ATP supports organizations with multiple forests, giving you the ability to easily monitor activity and profile users across forests. 
 
-Enterprise organizations typically have several Active Directory forests - often used for different purposes, including legacy infrastructure from corporate mergers and acquisitions, geographical distribution, and security boundaries (red-forests). You can protect multiple forests using Azure ATP, providing you with the ability to monitor and investigate through a single pane of glass.
+Enterprise organizations typically have several Active Directory forests - often used for different purposes, including legacy infrastructure from corporate mergers and acquisitions, geographical distribution, and security boundaries (red-forests). You can protect multiple forests using Azure ATP, providing you with the ability to monitor and investigate your entire network through a single pane of glass.
 
 The ability to support multiple Active Directory forests enables the following:
--	View and investigate activities performed by users across multiple forests from a single pane of glass. 
+-	View and investigate activities performed by users across multiple forests, from a single pane of glass. 
 -	Improved detection and reduced false positives by providing advanced Active Directory integration and account resolution. 
 -	Greater control and easier deployment. Improved monitoring alerts and reporting for cross-org coverage when your domain controllers are all monitored from a single Azure ATP console.
 
 
-## How Azure ATP detects activities across multiple forests 
+## Azure ATP detection activity across multiple forests 
 
 To detect cross-forest activities, Azure ATP sensors query domain controllers in remote forests to create profiles for all entities involved, (including users and computers from remote forests). 
 
-> [!NOTE]
-> - Azure ATP sensors can be installed on all forests (if a minimum one-way trust exists).
-> - The user you configure in the Azure ATP console under **Directory services** must be trusted in all the other forests.
+- Azure ATP sensors can be installed on all forests, even forests with no trust.
+- Add credentials on the Directory services page for all forests in your environment. 
+    - One credential is required per forest with two-way trust. 
+    - Additional credentials are required for each forest with non-Kerberos trust or no trust. 
 
+![Azure ATP welcome stage 1](media/directory-services-add-no-trust-forests.png)
 
-If you have forests on which no Azure ATP sensors are installed, Azure ATP can still view and monitor activities originating from those forests. The ATP sensors installed can query all connected remote forest domain controllers to resolve users, machines and create profiles for each of them. 
+### Requirements 
 
-## Installation requirements 
+- The user you configure in the Azure ATP console under **Directory services** must be trusted in all the other forests and must have at least read-only permission to perform LDAP queries on the domain controllers.
+- If Azure ATP standalone sensors are installed on standalone machines, rather than directly on the domain controllers, make sure the machines are allowed to communicate with all of remote forest domain controllers using LDAP. 
 
--	If Azure ATP standalone sensors are installed on standalone machines, rather than directly on the domain controllers, make sure the machines are allowed to communicate with all of remote forest domain controllers using LDAP. 
-- The user you configure in the Azure ATP console under **Directory services** must be trusted in all the other forests and must have at least read only permission to perform LDAP queries of the domain controllers.
-
-- In order for Azure ATP to communicate with the Azure ATP sensors and zure ATP standalone sensors, open the following ports on each maching on which the Azure ATP sensor is installed:
-
+- In order for Azure ATP to communicate with the Azure ATP sensors and Azure ATP standalone sensors, open the following ports on each machine on which the Azure ATP sensor is installed:
  
   |Protocol|Transport|Port|To/From|Direction|
   |----|----|----|----|----|
@@ -73,7 +72,7 @@ If you have forests on which no Azure ATP sensors are installed, Azure ATP can s
   |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
 
 
-## Multi forest support network traffic impact 
+## Multi-forest support network traffic impact 
 
 When Azure ATP maps your forests, it uses a process that impacts the following:
 

@@ -1,0 +1,71 @@
+---
+# required metadata
+
+title: Monitoring domain controllers and installed sensors installed on  your domain controllers using Azure Advanced Threat Protection | Microsoft Docs
+description: Describes how to monitor Azure ATP sensors and sensor coverage using Azure ATP
+keywords:
+author: mlottner
+ms.author: mlottner
+manager: mbaldwin
+ms.date: 1/27/2019
+ms.topic: conceptual
+ms.prod:
+ms.service: azure-advanced-threat-protection
+ms.technology:
+ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: itargoet
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+
+
+# Monitoring your Azure ATP sensors
+
+As soon as your first Azure ATP sensor is installed and configured on any domain controller in your network, Azure ATP begins either constant active or passive scanning of all of the domain controllers in your network depending on the selections made during sensor setup. 
+
+During setup, it is recommended to select at least one Azure ATP sensor domain controller as the domain synchronizer candidate per domain. The job of the domain synchronizer is to ensure active, instead of default passive scanning and monitoring of your entire Active Directory environment is occurring. Domain controllers can be switched to and from domain synchronizer candidate status after initial configuration. See [Azure ATP sensor configuration](install-atp-step5.md) for more information about configuring an Azure sensor and setting it as a **domain synchronizer candidate**. 
+
+Once an Azure ATP sensor is installed and configured on a domain controller in your network, the sensor communicates with the Azure ATP service on a constant basis sending sensor status, health and version information, and collected Active Directory events and changes.  
+
+### Domain controller status
+
+Azure ATP continuously monitors your environment for unmonitored domain controllers introduced into your environment, and reports on them to assist you in managing full coverage of your environment. 
+
+1. To check the status of your detected monitored and unmonitored domain controllers and their status, go to the **Configuration** area of the Azure ATP portal, under the **System** section, select **Sensors**.
+   
+     ![Azure ATP sensor status monitoring](media/atp-sensors-status-monitoring.png)
+
+2. Your currently monitored and unmonitored sensors are displayed at the top of the screen. To download the details of your monitored domain controller status, select **Download Details**. 
+
+The domain controller coverage Excel download provides the following information for all detected domain controllers in your organization:
+
+|Title|Description|
+|----|----|
+|Hostname|Name|
+|Domain name|Domain name|
+|Monitored|Azure ATP monitoring status|
+|Sensor type|Azure ATP sensor or Azure ATP standalone sensor|
+|Organizational unit| |
+|Operating system version| Version of operating system detected|
+|IP address|Detected IP address| 
+
+
+> [!NOTE]
+> Azure ATP portal configuration pages can be modified by Azure ATP admins only.
+
+
+## See Also
+
+- [Azure ATP Architecture](atp-architecture.md)
+- [Configuring Azure ATP sensors](install-atp-step5.md)
+- [Multi-forest support](atp-multi-forest.md)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -36,7 +36,7 @@ ms.suite: ems
 > [« Step 1](install-atp-step1.md)
 > [Step 3 »](install-atp-step3.md)
 
-## Step 2. Provide a username and password to connect to your Active Directory Forest
+## Provide a username and password to connect to your Active Directory Forest
 
 The first time you open the Azure ATP portal, the following screen appears:
 
@@ -54,7 +54,7 @@ The first time you open the Azure ATP portal, the following screen appears:
     |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
     |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-3. In the Azure ATP portal, click **Download sensor setup and install the first sensor** to continue.
+2. In the Azure ATP portal, click **Download sensor setup and install the first sensor** to continue.
 
 
 > [!div class="step-by-step"]
