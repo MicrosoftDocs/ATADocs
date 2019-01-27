@@ -38,7 +38,7 @@ From the Azure ATP portal **Directory services** page, configure additional sets
 
 - **New feature: Domain controller coverage**<br>
 Azure ATP now provides coverage information for Azure ATP monitored domain controllers.  
-From the Azure ATP portal **Sensors** page, view the number of the monitored and unmonitored domain controllers detected by Azure ATP in your environment. Export and download the monitored sensor list for further analysis, and build an action plan. See the [Sensor monitoring](atp-sensor-monitoring.md) how-to guide to learn more. 
+From the Azure ATP portal **Sensors** page, view the number of the monitored and unmonitored domain controllers detected by Azure ATP in your environment. Download the monitored domain controller list for further analysis, and to build an action plan. See the [Domain controller monitoring](atp-sensor-monitoring.md) how-to guide to learn more. 
 
 - **Feature Enhancement: Account enumeration reconnaissance**<br>
 The Azure ATP account enumeration reconnaissance detection now detects and issues alerts for enumeration attempts using Kerberos and NTLM. Previously, the detection only worked for attempts using Kerberos. See [Azure ATP reconnaissance alerts](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003) to learn more. 
