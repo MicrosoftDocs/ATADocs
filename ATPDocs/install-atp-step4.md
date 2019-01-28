@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/16/2018
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -34,7 +34,7 @@ ms.suite: ems
 > [« Step 3](install-atp-step3.md)
 > [Step 5 »](install-atp-step5.md)
 
-## Step 4. Install the Azure ATP sensor
+## Install the Azure ATP sensor
 
 > [!IMPORTANT]
 >Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
@@ -64,20 +64,20 @@ Perform the following steps on the domain controller.
 
 5. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it is a domain controller, the Azure ATP sensor is installed, if it is a dedicated server, the Azure ATP standalone sensor is installed. 
     
-   For example, for an Azure ATP standalone sensor, the following screen is displayed to let you know that an Azure ATP standalone sensor is installed on your dedicated server:
+    For example, for an Azure ATP sensor, the following screen is displayed to let you know that an Azure ATP sensor is installed on your dedicated server:
     
-   ![Azure ATP standalone sensor installation](media/sensor-install-deployment-type.png)
+    ![Azure ATP sensor installation](media/sensor-install-deployment-type.png)
 
    Click **Next**.
 
-   > [!NOTE] 
-   > If the domain controller or dedicated server does not meet the minimum hardware requirements for the installation, you receive a warning. This does not prevent you from clicking **Next** and proceeding with installation. This might be the right option for installation of Azure ATP in a small lab test environment in which you don't need as much room for data storage. For production environments, it is highly recommended to work with Azure ATP's [capacity planning](atp-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
+    > [!NOTE] 
+    > A warning is issued if the domain controller or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from clicking **Next**, and proceeding with installation. It can still be the right option for installation of Azure ATP in a small lab test environment where less room for data storage is required. For production environments, it is highly recommended to work with Azure ATP's [capacity planning](atp-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
 6. Under **Configure the sensor**, enter the installation path and the access key that you copied from the previous step, based on your environment:
 
-   ![Azure ATP standalone sensor configuration image](media/sensor-install-config.png)
+    ![Azure ATP sensor configuration image](media/sensor-install-config.png)
 
-     - Installation Path: This is the location where the Azure ATP standalone sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
+      - Installation Path: This is the location where the Azure ATP sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
 
      - Access key: This is retrieved from the Azure ATP portal in the previous step.
     

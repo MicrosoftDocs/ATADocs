@@ -39,7 +39,7 @@ In Azure ATP, you'll have a single instance enabling you to manage multiple fore
 > [!NOTE]
 > Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your AAD. Once created, Azure ATP instances are not movable. 
 
-## Step 1. Enter the Azure ATP portal
+## Enter the Azure ATP portal
 
 After you verified that your network meets the sensor requirements, proceed with the creation of your Azure ATP instance.
 
@@ -51,7 +51,7 @@ After you verified that your network meets the sensor requirements, proceed with
 
 2.  Log in with your Azure Active Directory user account.
 
-## Step 2. Create your instance
+## Create your instance
 
 1. Click **Create instance**. 
 

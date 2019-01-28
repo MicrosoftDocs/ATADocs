@@ -118,7 +118,7 @@ The servers and domain controllers onto which the sensor is installed must have 
 ### Network adapters
 
 The Azure ATP sensor monitors the local traffic on all of the domain controller's network adapters. <br>
-After deployment, you can use the Azure ATP portal if you  want to modify which network adapters are monitored.
+After deployment, use the Azure ATP portal to modify which network adapters are monitored.
 
 The sensor is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 

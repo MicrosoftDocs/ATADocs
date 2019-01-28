@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/7/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -35,7 +35,7 @@ Use the following resources to help you learn about, deploy, and support Azure A
 
 |To do this ...|...do this:|
 |----|----|
-|See our most popular documentation|Read the top five pages:<br>- [What is Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Azure ATP prerequisites](atp-prerequisites.md)<br>- [Azure ATP architecture](atp-architecture.md)<br>- [Azure ATP capacity planning](atp-capacity-planning.md)<br>- [Creating an instance](install-atp-step1.md)|
+|See our most popular documentation|Read the top ten pages:<br>- [What is Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Azure ATP prerequisites](atp-prerequisites.md)<br>- [Azure ATP architecture](atp-architecture.md)<br>- [Azure ATP capacity planning](atp-capacity-planning.md)<br>-[Creating an instance](install-atp-step1.md)<br>-[Understanding security alerts](understanding-security-alerts.md)<br>-[Azure ATP security alerts](suspicious-activity-guide.md)<br>-[Investigate a computer](investigate-a-computer.md)<br>-[Investigate a user](investigate-a-user.md)<br>-[Investigate a lateral movement path](investigate-lateral-movement-path.md)
 |Engage with the product team and your peers|Visit the [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) for Azure Advanced Threat Protection.|
 |Check subscription information and get a list of which features are supported|See [subscription information](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) and the [feature list](https://www.microsoft.com/cloud-platform/azure-information-protection-features) from the Azure Advanced Threat Protection website.|
 
@@ -44,7 +44,7 @@ Use the following resources to help you learn about, deploy, and support Azure A
 The Azure Advanced Threat Protection product team posts announcements about new releases and updates to the [Enterprise Mobility and Security blog.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
 These blog posts supplement the product documentation and support information.
 
-For an up-to-date list of newly released features and changes in Azure ATP, check out [What's new in Azure Advanced Threat Protection](atp-whats-new.md).
+For an up-to-date list of newly released features and recent changes in Azure ATP, check out [What's new in Azure Advanced Threat Protection](atp-whats-new.md).
 
 ## Support options and community resources
 
