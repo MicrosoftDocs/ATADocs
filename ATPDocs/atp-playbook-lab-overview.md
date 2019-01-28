@@ -50,3 +50,8 @@ The last tutorial in the four part series is the domain dominance playbook. Duri
 
 > [!div class="nextstepaction"]
 > [Domain dominance playbook](atp-playbook-domain-dominance.md)
+
+
+## Join the Community
+
+Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
