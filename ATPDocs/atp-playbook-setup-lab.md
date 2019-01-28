@@ -242,6 +242,19 @@ while ($true)
 
 ```
 
+### Workstation setup checklist
+
+Review the checklist to make sure that the workstation setup is complete.   
+
+| Step    | Action | Status |
+|--------------|------------|------------------|
+| 1  | AddJeffL and Helpdesk as local administrators on VictimPC | - [ ] |
+| 2  | Create Scheduled Task running as RonHD on VictimPC | - [ ] |
+| 3  | Turn off antivirus solution on VictimPC | - [ ] |
+| 4  | Stage hacking tools on VictimPC| - [ ] |
+| 5  | Add Helpdesk and remove Domain Admins from AdminPC's local administrators group| - [ ] |
+| 6  | Run PowerShell script as Samira to simulate domain activities | - [ ] |
+
 ## Mission accomplished!
 
 Your Azure ATP lab is now ready to use. The methods used in this set up were chosen knowing that resources must managed (by *something* or *someone*) and management requires local admin privileges. There are other ways to simulate a management workflow in the lab, such as:
