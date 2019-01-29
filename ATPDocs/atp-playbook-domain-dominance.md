@@ -208,7 +208,7 @@ Azure ATP successfully detected the suspicious pre-authentication encryption met
 ### Golden Ticket - Existing User
 
 > [!Important]
-> It is important that you restart the ContosoDC after you executed the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
+> It is important that you restart  ContosoDC after you executed the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
 
 After stealing the “Golden Ticket”, (“krbtgt” account explained [here via Malicious Replication](#Malicious-Replication), an attacker is able to sign tickets *as if they are the domain controller*. **Mimikatz**, the Domain SID and the stolen "krbtgt" account are all required to accomplish this attack.
 

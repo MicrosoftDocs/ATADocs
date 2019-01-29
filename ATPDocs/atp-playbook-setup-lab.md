@@ -20,7 +20,7 @@ ms.reviewer: itargoet
 
 # Tutorial: Setup an ATP security alert lab 
 
- The purpose of the Azure ATP Security Alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first tutorial in a four part series walks you through creating a lab environment for testing against Azure ATP's *discrete* detections. The security alert lab focuses on Azure ATP’s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity based behavioral detections since those require a learning period with real network traffic of up to 30 days. For more information about each tutorial in the series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md). 
+ The purpose of the Azure ATP Security Alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first tutorial in a four part series walks you through creating a lab environment for testing against Azure ATP's *discrete* detections. The security alert lab focuses on Azure ATP’s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity based behavioral detections since those require a learning period with real network traffic of up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md). 
 
 In this tutorial you will: 
 
@@ -55,7 +55,7 @@ In the examples for these tutorials, the Forest NetBIOS name is **CONTOSO.AZURE*
 
 |  FQDN | OS | IP | Purpose |
 |------|-------|---------|--------------|
-| ContosoDC1.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Domain Controller with the Azure ATP Sensor installed locally |
+| ContosoDC.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Domain Controller with the Azure ATP Sensor installed locally |
 | VictimPC.contoso.azure | Windows 10 | 10.0.24.5 |Victim’s PC |
 | AdminPC.contoso.azure | Windows 10  | 10.0.24.6 | Domain Admin's PC (sometimes referred to as "Secure Admin Workstation" or "Privileged Admin Workstation") |
 
@@ -109,7 +109,7 @@ New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNever
 
 ```
 
-### Configure SAM-R capabilities from the ContosoDC
+### Configure SAM-R capabilities from ContosoDC
 
 To allow the Azure ATP Service to perform SAM-R enumeration correctly and build Lateral Movement paths, you'll need to edit the SAM policy. 
 
