@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP security alert tutorial | Microsoft Docs
+title: Azure ATP security alert lab setup tutorial | Microsoft Docs
 description: In this tutorial you set up an Azure ATP test lab for simulating threats for detection by Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.date: 01/22/2018
 ms.reviewer: itargoet
 # ms.subservice
 # ROBOTS
-# Customer intent: As an Azure ATP user, I want to simulate threats in a lab so that I can see some of Azure ATP's capabilities.
+# Customer intent: As an Azure ATP user, I want to set up a lab and simulate threats so I can see some of Azure ATP's capabilities.
 ---
 
 # Tutorial: Setup an ATP security alert lab 
 
-The purpose of the Azure ATP Security Alert lab tutorial is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This four part tutorial explains how to install and configure a working environment to test against some of Azure ATP's **discrete detections**. The lab focuses on Azure ATP’s **signature-based capabilities** and doesn't include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic of up to 30 days).
+ The purpose of the Azure ATP Security Alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first tutorial in a four part series walks you through creating a lab environment for testing against Azure ATP's *discrete* detections. The security alert lab focuses on Azure ATP’s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity based behavioral detections since those require a learning period with real network traffic of up to 30 days. For more information about each tutorial in the series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md). 
 
 In this tutorial you will: 
 
@@ -244,11 +244,11 @@ while ($true)
 
 ### Workstation setup checklist
 
-Review the checklist to make sure that the workstation setup is complete.   
+Review the checklist to make sure that the workstation setup is complete.
 
 | Step    | Action | Status |
 |--------------|------------|------------------|
-| 1  | AddJeffL and Helpdesk as local administrators on VictimPC | - [ ] |
+| 1  | Add JeffL and Helpdesk as local administrators on VictimPC | - [ ] |
 | 2  | Create Scheduled Task running as RonHD on VictimPC | - [ ] |
 | 3  | Turn off antivirus solution on VictimPC | - [ ] |
 | 4  | Stage hacking tools on VictimPC| - [ ] |

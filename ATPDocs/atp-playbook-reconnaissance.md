@@ -15,12 +15,22 @@ ms.date: 01/22/2018
  ms.reviewer: itargoet
 # ms.subservice
 # ROBOTS
+# Customer intent: As an Azure ATP user, I want to simulate reconnaissance threats in a lab so I can see some of Azure ATP's capabilities.
 
 ---
 
-# Overview
+# Tutorial: Reconnaissance playbook
 
-The purpose of the Azure ATP Security Alert playbook is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections, and focuses on Azure ATP’s *signature*-based capabilities. This playbook does not include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days.
+The second tutorial in this four part series is a reconnaissance playbook. The playbook's purpose is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections, and focuses on Azure ATP’s *signature*-based capabilities. This playbook does not include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days.
+
+In this tutorial you will: 
+> [!div class="checklist"]
+> * Use real-world, publicly available hacking and attack tools against threat detections and security alerts services of Azure ATP
+> * Select and use VM images
+> * View and use specific VM sizes
+> * Resize a VM
+> * View and understand VM state
+
 
 
 ## Lab Setup
