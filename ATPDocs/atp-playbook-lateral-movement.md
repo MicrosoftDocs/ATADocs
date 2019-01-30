@@ -30,7 +30,7 @@ In this tutorial you will:
 > * Perform an Over-pass-the-Hash attack to obtain a Kerberos Ticket Granting Ticket (TGT).
 > * Masquerade as as another user, move laterally across the network, and harvest more credentials.
 > * Perform a Pass-the-Ticket attack to gain access to the domain controller.
-> * Review the security alerts from the reconnaissance in Azure ATP
+> * Review the security alerts from the lateral movement in Azure ATP.
 
 ## Prerequisites
 
@@ -77,7 +77,7 @@ From **VictimPC**, run the following command:
 
 ![Reconnaissance against RonHD's account](media/playbook-lateral-sekurlsa-logonpasswords-ronhd_discovery.png)
 
-From the results, we learn RonHD is a member of the "Helpdesk" Security Group. Not particularly useful, but we know RonHD gives us privileges that come with his account *and* with that of the Helpdesk security group.
+From the results, we learn RonHD is a member of the "Helpdesk" Security Group. Not particularly useful, but we know RonHD gives us privileges that come with his account *and* with that of the Helpdesk Security Group.
 
 ### Mimikatz sekurlsa::pth
 
@@ -85,21 +85,20 @@ Using a technique called **Over-pass-the-Hash**, the harvested NTLM hash is used
 
 1. From **VictimPC**, change directory to the folder containing **Mimikatz.exe**. storage location on your filesystem and execute the following command:
 
-``` cmd
-mimikatz.exe "privilege::debug" "sekurlsa::pth /user:ronhd /ntlm:96def1a633fc6790124d5f8fe21cc72b /domain:contoso.azure" "exit"
-```
+   ``` cmd
+   mimikatz.exe "privilege::debug" "sekurlsa::pth /user:ronhd /ntlm:96def1a633fc6790124d5f8fe21cc72b /domain:contoso.azure" "exit"
+   ```
 
-> [!Note]
-> If your hash was different in the previous step, replace the hash above with your previous hash. 
+   > [!Note]
+   > If your hash for RonHD was different in the previous steps, replace the NTLM hash above with the hash you gathered from victimpc.txt.
 
-![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
+   ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
 
-3. Check that a new command prompt opens, executing as RonHD.
+3. Check that a new command prompt opens. It will be executing as RonHD but that may not seem apparent yet. Don't close the new command prompt since you'll use it next.
 
-> [!Note]
-> Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects when a hash is *used from one resource to access another* resource or service.
+Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects when a hash is **used from one resource to access another** resource or service.
 
-#### Additional lateral move
+### Additional lateral move
 
 Now, with RonHD's credential, can it give us access we previously didn't have with JeffL's credentials?
 We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
@@ -141,7 +140,7 @@ klist
 
 You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an *Over*pass-the-Hash attack, converting the NTLM hash which was compromised earlier and used it to obtain a Kerberos TGT.  That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC.
 
-#### Overpass-the-Hash Detected
+### Overpass-the-Hash Detected in Azure ATP
 
 Looking at the Azure ATP console, we can see the following:
 
