@@ -15,80 +15,75 @@ ms.date: 01/22/2018
  ms.reviewer: itargoet
 # ms.subservice
 # ROBOTS
-
+# Customer intent: As an Azure ATP user, I want to simulate lateral movement threats in a lab so I can see some of Azure ATP's capabilities.
 ---
 
-# Overview
+# Tutorial: Lateral movement playbook
 
-The purpose of the **Azure ATP Security Alert Playbook Suite** is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections. The playbook focuses on Azure ATP’s *signature*-based capabilities and does not include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic for up to 30 days).
-
-## Lab Setup
-
-Make sure your Azure ATP lab setup matches the recommendation as closely as possible. The closer your lab is to the [suggested lab setup](atp-playbook-setup-lab.md), the easier it will be to follow each test.
-
-![Azure ATP lab setup.](media/playbook-atp-setup-lab.png)
-
-# Executing an attack
+The lateral movement playbook is third in the four part tutorial series for Azure ATP security alerts. The purpose of the **Azure ATP Security Alert Playbook Suite** is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections. The playbook focuses on Azure ATP’s *signature*-based capabilities and does not include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
 This **Lateral Movement Playbook** explains the process of using real-world, publicly available hacking and attack tools against the lateral movement path threat detections and security alerts services of Azure ATP.
 
-Other stages of the Azure ATP Attack Simulation Playbook:
+In this tutorial you will:
+> [!div class="checklist"]
+> * Dump credentials in memory to harvest NTLM hashes.
+> * Perform an Over-pass-the-Hash attack to obtain a Kerberos Ticket Granting Ticket (TGT).
+> * Masquerade as as another user, move laterally across the network, and harvest more credentials.
+> * Perform a Pass-the-Ticket attack to gain access to the domain controller.
+> * Review the security alerts from the reconnaissance in Azure ATP
 
-- [Reconnaissance](atp-playbook-reconnaissance.md)
-- [Domain Dominance](atp-playbook-domain-dominance.md)
+## Prerequisites
 
-This section follows the [Reconnaissance Phase](atp-playbook-reconnaissance.md) of the Azure ATP Attack Simulation Playbook.
+1. [A completed ATP security alert lab](atp-playbook-setup-lab.md) 
+     - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Azure ATP testing procedures.
+
+2. [Completion of the reconnaissance playbook tutorial](atp-playbook-reconnaissance.md)
 
 ## Lateral Movement
 
-In the attacks we simulated using the [Reconnaissance Playbook](atp-playbook-reconnaissance.md) we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered. In the previous [Reconnaissance](atp-playbook-reconnaissance.md) lab simulation, we identified 192.168.10.30 (where SamiraA’s computer credentials were exposed) as the target IP. We'll use various attack methods to try to move laterally across the domain. 
+In the attacks we simulated in the previous tutorial, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA’s computer credentials were exposed. We'll use various attack methods to try to move laterally across the domain.
 
-### Dump Credentials In-Memory
+## Dump Credentials In-Memory from VictimPC
+
 During our reconnaissance attacks, **VictimPC** wasn't only exposed to JeffL’s credentials. There are other useful accounts to discover on that machine. To achieve a lateral move using **VictimPC**, we'll attempt to enumerate in-memory credentials on the shared resource. Dumping in-memory credentials using **mimikatz** is a popular attack method using a common tool. 
 
-#### Mimikatz sekurlsa::logonpasswords
+### Mimikatz sekurlsa::logonpasswords
 
 1. Open an *elevated command* prompt on **VictimPC**. 
 2. Navigate to the tools folder where you saved Mimikatz and execute the following command:
 
-``` cmd
-mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> c:\temp\victimcpc.txt
-```
+   ``` cmd
+   mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> c:\temp\victimcpc.txt
+   ```
 
-2. Open the text file of harvested credentials written by Mimikatz found here: **c:\\temp\\victimpc.txt**
-![Mimikatz output including RonHD's NTLM hash](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
+3. Open **c:\\temp\\victimpc.txt** to view the harvested credentials Mimikatz found and wrote to the txt file.
+   ![Mimikatz output including RonHD's NTLM hash](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
 
-We successfully harvested RonHD's NTLM hash from memory using mimikatz.
+4. We successfully harvested RonHD's NTLM hash from memory using mimikatz. We'll need the NTLM hash shortly.
 
-> [!Note]
-> It is expected and normal that the actual hashes shown in this example are different from the hashes you see in your own lab environment. The purpose of this exercise is to help you understand how the hashes were obtained, get their values, and are reusable in the next phases.
+   > [!Important]
+   > - It's expected and normal that the hashes shown in this example are different from the hashes you see in your own lab environment. The purpose of this tutorial is to help you understand how the hashes were obtained, get their values, and use them in the next phases. </br> </br>
+   > - The credential of the computer account was also exposed in this harvest. While the computer account credential value is not useful in our current lab, remember this is another avenue real attackers use to gain lateral movement in your environment.
 
-> [!Important]
->The computer accounts credential was also exposed in this harvest. While computer accounts credential value is not useful in our current lab, remember this is another avenue real attackers use to gain lateral movement in your environment.
+### Gather more information about the RonHD account
 
-### Next steps
+An attacker may not initially know who RonHD is or his value as a target. All they know is they can use his credential if it's advantageous to do so. However, using the **net** command we can discover what groups RonHD is a member of.
 
-An attacker may not initially know who RonHD is or his value as a target. All they know is they can use his credentialy if its advantageous to do so.  However, Using the **net** command we can discover what groups RonHD is a member of.
+From **VictimPC**, run the following command:
 
-1. Run the following command:
+   ``` cmd
+   net user ronhd /domain
+   ```
 
-``` cmd
-net user ronhd /domain
-```
+![Reconnaissance against RonHD's account](media/playbook-lateral-sekurlsa-logonpasswords-ronhd_discovery.png)
 
-![Recon against RonHD's account](media/playbook-lateral-sekurlsa-logonpasswords-ronhd_discovery.png)
+From the results, we learn RonHD is a member of the "Helpdesk" Security Group. Not particularly useful, but we know RonHD gives us privileges that come with his account *and* with that of the Helpdesk security group.
 
-2. From the results, we learn RonHD is a member of "Helpdesk" Security Group.
+### Mimikatz sekurlsa::pth
 
-Not particularly useful, but we know RonHD gives us privileges that come with his account *and* with that of the Helpdesk security group.
+Using a technique called **Over-pass-the-Hash**, the harvested NTLM hash is used to obtain a Ticket Granting Ticket (TGT). An attacker with a user's TGT, can masquerade as the compromised user such as RonHD. While masquerading as RonHD, we can access any domain resource the compromised user has access to or their respective Security Groups have access to.
 
-#### Mimikatz sekurlsa::pth
-
-Using a technique called **Over-pass-the-Hash**, the harvested NTLM hash is used to obtain a Ticket Granting Ticket (TGT). An attacker with a user's TGT,  can masquerade as a compromised user (such as RonHD) and access any domain resource the compromised user had access to--or their respective Security Groups.
-
-Using **Mimikatz**:
-
-1. From VictimPC, go to the **Mimikatz** storage location on your filesystem and execute the following command:
+1. From **VictimPC**, change directory to the folder containing **Mimikatz.exe**. storage location on your filesystem and execute the following command:
 
 ``` cmd
 mimikatz.exe "privilege::debug" "sekurlsa::pth /user:ronhd /ntlm:96def1a633fc6790124d5f8fe21cc72b /domain:contoso.azure" "exit"
