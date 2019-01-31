@@ -27,12 +27,12 @@ This playbook explains the process of using real-world, publicly available hacki
 In this tutorial you will use the following methods to achieve persistent domain dominance: 
 
 > [!div class="checklist"]
-* [Remote Code Execution](#remote-code-execution)
-* [Data Protection API (DPAPI)](#data-protection-api-dpapi)
-* [Malicious Replication](#malicious-replication)
-* [Service Creation](#skeleton-key)
-* [Skeleton Key](#skeleton-key)
-* [Golden Ticket](#golden-ticket)
+* Remote Code Execution
+* Data Protection API (DPAPI)
+* Malicious Replication
+* Service Creation
+* Skeleton Key
+* Golden Ticket
 
 ## Prerequisites
 
