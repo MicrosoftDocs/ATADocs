@@ -12,7 +12,7 @@ ms.date: 02/07/2019
 # optional metadata
 
 # ms.custom
- ms.reviewer: itargoet
+ms.reviewer: itargoet
 # ms.subservice
 # ROBOTS
 # Customer intent: As an Azure ATP user, I want to simulate lateral movement threats in a lab so I can see some of Azure ATP's capabilities.
