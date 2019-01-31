@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 01/22/2018
+ms.date: 02/07/2019
 
 # optional metadata
 
