@@ -20,7 +20,7 @@ ms.reviewer: itargoet
 
 # Tutorial: Lateral movement playbook
 
-The lateral movement playbook is third in the four part tutorial series for Azure ATP security alerts. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections. The playbook focuses on Azure ATP’s *signature*-based capabilities and does not include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
+The lateral movement playbook is third in the four part tutorial series for Azure ATP security alerts. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections. The playbook focuses on Azure ATP’s *signature*-based capabilities and doesn't include advanced machine-learning, user or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
 This playbook explains the process of using real-world, publicly available hacking and attack tools against the lateral movement path threat detections and security alerts services of Azure ATP.
 
@@ -67,7 +67,7 @@ During our reconnaissance attacks, **VictimPC** wasn't only exposed to JeffL’s
 
 ### Gather more information about the RonHD account
 
-An attacker may not initially know who RonHD is or his value as a target. All they know is they can use his credential if it's advantageous to do so. However, using the **net** command we can discover what groups RonHD is a member of.
+An attacker may not initially know who RonHD is or its value as a target. All they know is they can use the credential if it's advantageous to do so. However, using the **net** command we can discover what groups RonHD is a member of.
 
 From **VictimPC**, run the following command:
 
@@ -77,7 +77,7 @@ From **VictimPC**, run the following command:
 
 ![Reconnaissance against RonHD's account](media/playbook-lateral-sekurlsa-logonpasswords-ronhd_discovery.png)
 
-From the results, we learn RonHD is a member of the "Helpdesk" Security Group. Not particularly useful, but we know RonHD gives us privileges that come with his account *and* with that of the Helpdesk Security Group.
+From the results, we learn RonHD is a member of the "Helpdesk" Security Group. We know RonHD gives us privileges that come with the account *and* with the Helpdesk Security Group.
 
 ### Mimikatz sekurlsa::pth
 
@@ -94,7 +94,7 @@ Using a technique called **Overpass-the-Hash**, the harvested NTLM hash is used 
 
    ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
 
-3. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem apparent *yet*. Don't close the new command prompt since you'll use it next.
+3. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem obvious *yet*. Don't close the new command prompt since you'll use it next.
 
 Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects when a hash is **used from one resource to access another** resource or service.
 
@@ -103,7 +103,7 @@ Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects wh
 Now, with RonHD's credential, can it give us access we previously didn't have with JeffL's credentials?
 We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
 
-1. In the command console that opened up as a result of our previous attack, running as RonHD, execute the following:
+1. In the command console that opened up because of our previous attack, running as RonHD, execute the following items:
 
    ``` PowerShell
    powershell
@@ -114,41 +114,41 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
 
    ![Get local admins for 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
 
-   Behind the scenes, this leverages Remote SAM to identify the local admins for the IP we discovered earlier that was exposed to a Domain Admin account.
+   Behind the scenes, this uses Remote SAM to identify the local admins for the IP we discovered earlier that was exposed to a Domain Admin account.
 
-   Our output will look like the following:
+   Our output will look similar to:
 
    ![Output of the PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
 
-   This machine has two Local Administrators, the built-in Administrator "ContosoAdmin" and "Helpdesk", which we know is the Security Group that RonHD is a member of. We also were told the machine's name, AdminPC. Since we have RonHD's credentials, we should be able to use it to laterally move to AdminPC and gain access to that machine.
+   This machine has two Local Administrators, the built-in Administrator "ContosoAdmin" and "Helpdesk". We know RonHD is a member of the "Helpdesk" Security Group. We also were told the machine's name, AdminPC. Since we have RonHD's credentials, we should be able to use it to laterally move to AdminPC and gain access to that machine.
 
-2. From the *same command prompt which is running in context of RonHD*, type **exit** to get out of PowerShell if needed. Then, run the following command:
+2. From the *same command prompt, which is running in context of RonHD*, type **exit** to get out of PowerShell if needed. Then, run the following command:
 
    ``` cmd
    dir \\adminpc\c$
    ```
 
-3. We just successfully accessed AdminPC! Let's see what tickets we have. In the same cmd prompt, run the following command:
+3. We successfully accessed AdminPC! Let's see what tickets we have. In the same cmd prompt, run the following command:
 
    ``` cmd
    klist
    ```
 
-   ![Use klist to show us kerberos tickets in our current cmd.exe process](media/playbook-lateral-klist.png)
+   ![Use klist to show us Kerberos tickets in our current cmd.exe process](media/playbook-lateral-klist.png)
 
-You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an Overpass-the-Hash attack, converting the NTLM hash which was compromised earlier and used it to obtain a Kerberos TGT.  That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC.
+You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an Overpass-the-Hash attack. We converted the NTLM hash that was compromised earlier and used it to obtain a Kerberos TGT. That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC.
 
 ### Overpass-the-Hash Detected in Azure ATP
 
-Looking at the Azure ATP console, we can see the following:
+Looking at the Azure ATP console, we can see the following things:
 
-![AATP detecting the Overpass-the-Hash attaack](media/playbook-lateral-opthdetection.png)
+![AATP detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
 
-Azure ATP detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we click on RonHD's name in the alert, we are taken to the Logical Activity timeline of RonHD, where we can further our investigation.
+Azure ATP detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we click on RonHD's name in the alert, we're taken to the Logical Activity timeline of RonHD, where we can further our investigation.
 
 ![View the detection in the Logical Activity timeline](media/playbook-lateral-opthlogicalactivity.png)
 
-In the Security Operations Center, our Security Analyst is made aware of the compromised credential and is able to quickly investigate what resources it accessed.
+In the Security Operations Center, our Security Analyst is made aware of the compromised credential and can quickly investigate what resources it accessed.
 
 ## Domain Escalation
 
@@ -162,7 +162,7 @@ Here, we will:
 
 ### Pass-the-Ticket
 
-From the command prompt running in the context of *RonHD* on **VictimPC**, traverse to where our attack-tools are located on disk. Then, run xcopy to move those tools to the AdminPC:
+From the command prompt running in the context of *RonHD* on **VictimPC**, traverse to where our attack-tools are located. Then, run xcopy to move those tools to the AdminPC:
 
 ``` cmd
 xcopy mimikatz.exe \\adminpc\c$\temp
@@ -174,9 +174,9 @@ Press ```d``` when prompted, stating that the "temp" folder is a directory on Ad
 
 ### Mimikatz sekurlsa::tickets
 
-With Mimikatz staged on AdminPC, we will use PsExec to remotely execute it. 
+With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it. 
 
-1. Traverse to where PsExec is located and execute the following:
+1. Traverse to where PsExec is located and execute the following command:
 
    ``` cmd
    PsExec.exe \\AdminPC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "sekurlsa::tickets /export" "exit")
@@ -184,7 +184,7 @@ With Mimikatz staged on AdminPC, we will use PsExec to remotely execute it.
 
    That command will execute and export the tickets found in the LSASS.exe process and place them in the current directory, on AdminPC.
 
-2. We need to copy the tickets back over to VictimPC from AdminPC. Since we are only interested in SamiraA's tickets for this example, execute the following:
+2. We need to copy the tickets back over to VictimPC from AdminPC. Since we're only interested in SamiraA's tickets for this example, execute the following command:
 
    ``` cmd
    xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
@@ -209,7 +209,7 @@ With Mimikatz staged on AdminPC, we will use PsExec to remotely execute it.
 ### Mimikatz Kerberos::ptt
 With the tickets locally on VictimPC, it's finally time to become SamiraA by "Passing the Ticket".
 
-1. From the location of **Mimikatz** on **VictimPC**'s filesystem, open a new **elevated command prompt**, and execute the following:
+1. From the location of **Mimikatz** on **VictimPC**'s filesystem, open a new **elevated command prompt**, and execute the following command:
 
    ``` cmd
    mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
@@ -232,7 +232,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 
 
 
-4. Complete your attack by accessing the domain controller from **VictimPC**. In the command prompt now running with the tickets of SamirA in memory execute:
+4. Complete your attack by accessing the domain controller from **VictimPC**. In the command prompt, now running with the tickets of SamirA in memory, execute:
 
    ``` cmd
    dir \\ContosoDC\c$
@@ -250,9 +250,9 @@ Most security tools have no way to detect when a legitimate credential was used 
 - The Azure ATP portal shows exactly which resources were accessed using the stolen tickets.
 - Provides key information and evidence to identify exactly where to start your investigation and what steps to take to remediate. 
 
-Azure ATP detection and alert information is of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise. 
+Azure ATP detections and alert information are of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise. 
 
-![Azure ATP detects Pass-the-Ticket with 2 hour suppression](media/playbook-escalation-pttdetection.png)
+![Azure ATP detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
 
 > [!NOTE]
 > This event will only display on the Azure ATP console in **2 hours**. Events of this type are purposefully suppressed for this timeframe to reduce false positives.
