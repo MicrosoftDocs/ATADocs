@@ -165,7 +165,7 @@ Let’s perform SMB Session Enumeration against the ContosoDC resource so we can
 
 ### Use JoeWare’s NetSess.exe from VictimPC
 
-Run JoeWare’s **NetSess** tool against ContosoDC in context of an authenticated user, JeffL:
+Run JoeWare’s **NetSess** tool against ContosoDC in context of an authenticated user, in this case, ContosoDC:
 
 ``` cmd
 NetSess.exe ContosoDC
@@ -184,7 +184,7 @@ Now we can see what Azure ATP detected for us:
 Not only are we alerted on this activity, we are also alerted on the exposed accounts and their respective IP addresses *at that point in time*. As the Security Operations Center (SOC), we don't just have the attempt and its status, but also what was sent back to the attacker. We could use this information to aid our investigation.
 
 
-## Next step
+## Next steps
 
 The next phase in the attack kill chain is typically an attempt at lateral movement.
 

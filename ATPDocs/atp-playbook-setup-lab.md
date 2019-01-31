@@ -268,9 +268,9 @@ Your Azure ATP lab is now ready to use. The methods used in this set up were cho
  For best results, choose a simulation method that you can automate in your lab for consistency purposes.
 
 
-## Next step
+## Next steps
 
-Test your Azure ATP lab environment using the Azure ATP Security Alert playbooks for each phase of the cyber-attack kill chain.  
+Test your Azure ATP lab environment using the Azure ATP Security Alert playbooks for each phase of the cyber-attack kill chain starting with reconnaissance.  
 
 > [!div class="nextstepaction"]
 > [Azure ATP Reconnaissance playbook](atp-playbook-reconnaissance.md)
