@@ -16,6 +16,7 @@ ms.reviewer: itargoet
 # ms.subservice
 # ROBOTS
 # Customer intent: As an Azure ATP user, I want to simulate domain dominance threats in a lab so I can see some of Azure ATP's capabilities.
+
 ---
 
 # # Tutorial: Domain dominance playbook
