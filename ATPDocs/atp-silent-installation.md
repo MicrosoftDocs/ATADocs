@@ -57,11 +57,10 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 
 **Syntax**:
 
-    Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
-
+    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
 > [!NOTE]
-> Copy the access key from the Azure ATP portal under **Configuration** and then **sensor**.
+> Copy the access key from the Azure ATP portal **Configuration** section, **Sensor** page.
 
 
 **Installation options**:
@@ -85,8 +84,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 **Examples**:
 Use the following command to silently install the Azure ATP sensor:
 
-    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
-    AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
+    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
 
 ## Update the Azure ATP sensor
