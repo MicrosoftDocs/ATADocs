@@ -20,9 +20,9 @@ ms.date: 01/22/2018
 
 # Tutorial: Lateral movement playbook
 
-The lateral movement playbook is third in the four part tutorial series for Azure ATP security alerts. The purpose of the **Azure ATP Security Alert Playbook Suite** is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections. The playbook focuses on Azure ATP’s *signature*-based capabilities and does not include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
+The lateral movement playbook is third in the four part tutorial series for Azure ATP security alerts. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections. The playbook focuses on Azure ATP’s *signature*-based capabilities and does not include advanced machine-learning, user or entity based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
-This **Lateral Movement Playbook** explains the process of using real-world, publicly available hacking and attack tools against the lateral movement path threat detections and security alerts services of Azure ATP.
+This playbook explains the process of using real-world, publicly available hacking and attack tools against the lateral movement path threat detections and security alerts services of Azure ATP.
 
 In this tutorial you will:
 > [!div class="checklist"]
@@ -94,7 +94,7 @@ Using a technique called **Overpass-the-Hash**, the harvested NTLM hash is used 
 
    ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
 
-3. Check that a new command prompt opens. It will be executing as RonHD but that may not seem apparent *yet*. Don't close the new command prompt since you'll use it next.
+3. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem apparent *yet*. Don't close the new command prompt since you'll use it next.
 
 Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects when a hash is **used from one resource to access another** resource or service.
 
@@ -103,7 +103,7 @@ Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects wh
 Now, with RonHD's credential, can it give us access we previously didn't have with JeffL's credentials?
 We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
 
-1. In the command console running as RonHD--the one that just opened up as a result of our previous attack--execute the following:
+1. In the command console that opened up as a result of our previous attack, running as RonHD, execute the following:
 
    ``` PowerShell
    powershell
@@ -122,7 +122,7 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
 
    This machine has two Local Administrators, the built-in Administrator "ContosoAdmin" and "Helpdesk", which we know is the Security Group that RonHD is a member of. We also were told the machine's name, AdminPC. Since we have RonHD's credentials, we should be able to use it to laterally move to AdminPC and gain access to that machine.
 
-2. From the *same command prompt which is running in context of RonHD*, type **exit** to get out of PowerShell. Then, run the following command:
+2. From the *same command prompt which is running in context of RonHD*, type **exit** to get out of PowerShell if needed. Then, run the following command:
 
    ``` cmd
    dir \\adminpc\c$
@@ -158,11 +158,11 @@ Here, we will:
 
 * Stage Mimikatz on AdminPC
 * Harvest Tickets on AdminPC
-* Pass-the-Ticket]to become SamiraA
+* Pass-the-Ticket to become SamiraA
 
 ### Pass-the-Ticket
 
-From the new command prompt running in the context of *RonHD* on **VictimPC**, we will traverse to where our attack-tools are located on disk. Then, run xcopy to move those tools to the AdminPC:
+From the command prompt running in the context of *RonHD* on **VictimPC**, traverse to where our attack-tools are located on disk. Then, run xcopy to move those tools to the AdminPC:
 
 ``` cmd
 xcopy mimikatz.exe \\adminpc\c$\temp
@@ -174,38 +174,40 @@ Press ```d``` when prompted, stating that the "temp" folder is a directory on Ad
 
 ### Mimikatz sekurlsa::tickets
 
-With Mimikatz staged on AdminPC, we will use PsExec to remotely execute it. Traverse to where PsExec is located and execute the following:
+With Mimikatz staged on AdminPC, we will use PsExec to remotely execute it. 
 
-``` cmd
-PsExec.exe \\AdminPC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "sekurlsa::tickets /export" "exit")
-```
+1. Traverse to where PsExec is located and execute the following:
 
-That command will execute and export the tickets found in the LSASS.exe process and place them in the current directory, on AdminPC.
+   ``` cmd
+   PsExec.exe \\AdminPC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "sekurlsa::tickets /export" "exit")
+   ```
 
-We now need to copy the tickets back over to VictimPC from AdminPC. Since we are only interested in SamiraA's tickets for this example, execute the following:
+   That command will execute and export the tickets found in the LSASS.exe process and place them in the current directory, on AdminPC.
 
-``` cmd
-xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
-```
+2. We need to copy the tickets back over to VictimPC from AdminPC. Since we are only interested in SamiraA's tickets for this example, execute the following:
 
-![Export harvested credentials from AdminPC back to VictimPC](media/playbook-escalation-export_tickets2.png)
+   ``` cmd
+   xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
+   ```
 
-Let's clean up our tracks on AdminPC by deleting our files.
+   ![Export harvested credentials from AdminPC back to VictimPC](media/playbook-escalation-export_tickets2.png)
 
-``` cmd
-rmdir \\adminpc\c$\temp /s /q
-```
+3. Let's clean up our tracks on AdminPC by deleting our files.
 
-> [!Note]
-> More sophisticated attackers will not touch disk when executing arbitrary code on a machine after gaining administrative privileges on it.
+   ``` cmd
+   rmdir \\adminpc\c$\temp /s /q
+   ```
 
-On our **VictimPC**, we have these harvested tickets in our **c:\temp\adminpc_tickets** folder:
+   > [!Note]
+   > More sophisticated attackers will not touch disk when executing arbitrary code on a machine after gaining administrative privileges on it.
 
-![C:\temp\tickets is our exported mimikatz output from AdminPC](media/playbook-escalation-export_tickets4.png)
+   On our **VictimPC**, we have these harvested tickets in our **c:\temp\adminpc_tickets** folder:
 
-With the tickets locally on VictimPC, it's finally time to become SamiraA by "Passing the Ticket".
+   ![C:\temp\tickets is our exported mimikatz output from AdminPC](media/playbook-escalation-export_tickets4.png)
+
 
 ### Mimikatz Kerberos::ptt
+With the tickets locally on VictimPC, it's finally time to become SamiraA by "Passing the Ticket".
 
 1. From the location of **Mimikatz** on **VictimPC**'s filesystem, open a new **elevated command prompt**, and execute the following:
 
@@ -228,9 +230,9 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
    > [!Note]
    > Like in Pass-the-Hash, Azure ATP doesn't know the ticket was passed  based on local client activity. However, Azure ATP does detect the activity *once the ticket is used*, that is, leveraged to access another resource/service. 
 
-Complete your attack by accessing the domain controller using the “dir” command:
 
-4. Access the Domain Controller from VictimPC. In the command prompt now running with the tickets of SamirA in memory execute:
+
+4. Complete your attack by accessing the domain controller from **VictimPC**. In the command prompt now running with the tickets of SamirA in memory execute:
 
    ``` cmd
    dir \\ContosoDC\c$
