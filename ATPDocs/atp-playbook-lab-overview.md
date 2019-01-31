@@ -24,7 +24,7 @@ The purpose of the Azure ATP Security Alert lab tutorial is to illustrate **Azur
 
 ## Lab setup
 
-The first tutorial in this four part series walks you through creating a lab for testing Azure ATP's discrete detections. The tutorial includes information about machines, users, and tools that are needed to set up the lab and complete its playbooks. The instructions assume that you're comfortable setting up a domain controller and workstations for lab use along with other administrative tasks. The closer your lab is to the suggested lab setup, the easier it will be to follow Azure ATP testing procedures. When your lab setup is complete, use the Azure ATP Security Alert playbooks for testing.
+The first tutorial in this four part series walks you through creating a lab for testing Azure ATP's discrete detections. The tutorial includes information about machines, users, and tools that are needed to set up the lab and complete its playbooks. The instructions assume you're comfortable setting up a domain controller and workstations for lab use along with other administrative tasks. The closer your lab is to the suggested lab setup, the easier it will be to follow Azure ATP testing procedures. When your lab setup is complete, use the Azure ATP Security Alert playbooks for testing.
 
 > [!div class="nextstepaction"]
 > [Setup an ATP security alert lab](/atp-playbook-setup-lab.md)
