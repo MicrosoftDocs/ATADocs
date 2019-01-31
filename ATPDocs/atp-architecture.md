@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/27/2019
 ms.topic: article
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -74,7 +74,8 @@ The Azure ATP sensor has the following core functionality:
  
 ## Azure ATP Sensor features
 Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Azure ATP sensor also supports Event Tracing for Windows (ETW) which provides the log information for multiple detections. ETW based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
-- Domain synchronizer candidate
+
+### Domain synchronizer candidate
 
     The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. 
 
@@ -82,8 +83,9 @@ Azure ATP sensor reads events locally, without the need to purchase and maintain
     
     If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.
 
-    By default, Azure ATP sensors are not synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md#step-5-configure-the-azure-atp-sensor-settings).
-- Resource limitations
+    By default, Azure ATP sensors are not synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md#configure-azure-atp-sensor-settings).
+
+### Resource limitations
 
     The Azure ATP sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Azure ATP sensor process. The monitoring process makes sure the domain controller always has at least 15% of free compute and memory resources available.
 
@@ -91,9 +93,9 @@ Azure ATP sensor reads events locally, without the need to purchase and maintain
 
     If the monitoring process causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
 
--  Windows Events
+### Windows Events
 
-    To enhance Azure ATP detection coverage of suspected identity theft (pass-the-hash), suspicious authentication failures, modifications to sensitive groups, creation of suspicious services, and Honeytoken activity types of attack, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757, and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
+    To enhance Azure ATP detection coverage of suspected identity theft (pass-the-hash), suspicious authentication failures,modifications to sensitive groups, creation of suspicious services, and Honeytoken activity types of attack, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757, and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)

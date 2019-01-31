@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod:
@@ -63,7 +63,7 @@ When deciding the sensor deployment type, consider the following benefits:
 Consider the following issues when deciding how many Azure ATP standalone sensors to deploy.
 
 -	**Active Directory forests and domains**<br>
-	Azure ATP can monitor traffic from multiple domains within multiple Active Directory forests for each instance you create. 
+	Azure ATP can monitor traffic from multiple domains within multiple Active Directory forests, for each Azure ATP instance you create. 
 
 -	**Port Mirroring**<br>
     Port mirroring considerations might require you to deploy multiple Azure ATP standalone sensors per data center or branch site.
