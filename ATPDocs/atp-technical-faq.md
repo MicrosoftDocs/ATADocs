@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -136,16 +136,6 @@ With Azure Advanced Threat Protection, there is no need to create rules, thresho
 ### What should I do if the Azure ATP sensor or standalone sensor doesn't start?
 Look at the most recent error in the current error [log](troubleshooting-atp-using-logs.md) (Where Azure ATP is installed under the "Logs" folder).
 
-### How can I test Azure ATP?
-You can simulate suspicious activities as an end-to-end test. In the following scenario, DNS reconnaisance is simulated:
-
-1. Verify Azure ATP sensors are installed and configured on the domain controllers (or standalone sensors and related port-mirroring are installed and configured)
-2. Open CMD
-3. Run the following command: nslookup -<DC iP address>
-   - Press enter
-   - Type: Is -d <FQDN>
-   - Depending on the configuration of your environment, responses will vary from "Query refused" to a list of your DNS records. 
-4. View the alert related to the simulated DNS reconnaisance in the Azure ATP portal. 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
