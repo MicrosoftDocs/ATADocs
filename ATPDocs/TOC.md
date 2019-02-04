@@ -1,9 +1,8 @@
 
+# [Azure Advanced Threat Protection Documentation](index.yml)
 # Overview
 ## [What is Azure Advanced Threat Protection?](what-is-atp.md)
-## [Azure ATP architecture](atp-architecture.md)
 ## [What's new in Azure ATP](atp-whats-new.md)
-## [Azure ATP prerequisites](atp-prerequisites.md)
 # Quickstarts
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
 ## [Create your Azure ATP instance](install-atp-step1.md)
@@ -31,6 +30,8 @@
 ## [Investigate lateral movement paths](investigate-lateral-movement-path.md)
 ## [Investigate entities](investigate-entity.md)
 # Concepts
+## [Azure ATP architecture](atp-architecture.md)
+## [Azure ATP prerequisites](atp-prerequisites.md)
 ## [Azure ATP portal](workspace-portal.md)
 ## [Azure ATP security alerts](suspicious-activity-guide.md)
 ## [Monitored activities](monitored-activities.md)
