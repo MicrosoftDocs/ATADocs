@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -25,6 +25,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
+
+*Applies to: Azure Advanced Threat Protection*
 
 
 
@@ -54,14 +56,14 @@ This section lists information you should gather as well as accounts and network
 
 - Acquire a license for Enterprise Mobility + Security 5 (EMS E5) directly via the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.  
 
-- Verify the domain controller(s) you intend to install Azure ATP sensors on have internet connectivity to the Azure ATP Cloud Service. The Azure ATP sensor support the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for Azure ATP](configure-proxy.md).  
+- Verify the domain controller(s) you intend to install Azure ATP sensors on have internet connectivity to the Azure ATP Cloud Service. The Azure ATP sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for Azure ATP](configure-proxy.md).  
 
 -   An **on-premises** AD user account and password with read access to all objects in the monitored domains.
 
     > [!NOTE]
     > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
--   If you run Wireshark on Azure ATP standalone sensor, you will need to restart the Azure Advanced Threat Protection sensor service after you have stopped the Wireshark capture. If not, the sensor stops capturing traffic.
+-   If you run Wireshark on Azure ATP standalone sensor, restart the Azure Advanced Threat Protection sensor service after you've stopped the Wireshark capture. If you don't restart the sensor service, the sensor stops capturing traffic.
 
 - If you attempt to install the Azure ATP sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the Azure ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
 
@@ -73,13 +75,13 @@ This section lists information you should gather as well as accounts and network
 
 ## Azure ATP portal requirements
 Access to the Azure ATP portal is via a browser, supporting the following browsers and settings:
-- Microsoft Edge
-- Internet Explorer version 10 and above
-- Google Chrome 4.0 and above
-- Minimum screen width resolution of 1700 pixels
-- Firewall/proxy open - To communicate with the Azure ATP cloud service *.atp.azure.com port 443 must be open in your firewall/proxy.
+-	Microsoft Edge
+-	Internet Explorer version 10 and above
+-	Google Chrome 4.0 and above
+-	Minimum screen width resolution of 1700 pixels
+-	Firewall/proxy open - To communicate with the Azure ATP cloud service *.atp.azure.com port 443 must be open in your firewall/proxy.
 
-  ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
+ ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]
@@ -87,6 +89,7 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 
 ## Azure ATP sensor requirements
 This section lists the requirements for the Azure ATP sensor.
+
 ### General
 The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
 
@@ -102,9 +105,9 @@ During installation, the .Net Framework 4.7 is installed and might require a reb
 
 ### Server specifications
 
-The Azure ATP sensor requires a minimum of two cores and 6 GB of RAM installed on the domain controller.
+The Azure ATP sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
 For optimal performance, set the **Power Option** of the Azure ATP sensor to **High Performance**.
-The Azure ATP sensor can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
+Azure ATP sensors can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers, and the amount of resources installed.
 
 >[!NOTE] 
 > When running as a virtual machine, dynamic memory or any other memory ballooning feature is not supported.
@@ -140,7 +143,7 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 
 ### Windows Event logs
 Azure ATP detection relies on specific Windows Event Logs that the sensor can parse from the domain controller. For the correct events to be audited and included in the Windows Event og, your domain controllers require accurate Advanced Audit Policy settings. 
-For more information see, [Advanced Audit Policy Check](atp-advanced-audit-policy.md).
+For more information, see, [Advanced Audit Policy Check](atp-advanced-audit-policy.md).
 
 
 > [!NOTE]
@@ -152,6 +155,7 @@ For more information see, [Advanced Audit Policy Check](atp-advanced-audit-polic
 
 ## Azure ATP standalone sensor requirements
 This section lists the requirements for the Azure ATP standalone sensor.
+
 ### General
 The Azure ATP standalone sensor supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
 The Azure ATP standalone sensor can be installed on a server that is a member of a domain or workgroup.
@@ -167,7 +171,7 @@ For information on using virtual machines with the Azure ATP standalone sensor, 
 
 ### Server specifications
 For optimal performance, set the **Power Option** of the Azure ATP standalone sensor to **High Performance**.<br>
-An Azure ATP standalone sensor can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
+Azure ATP standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
 >[!NOTE] 
 > When running as a virtual machine, dynamic memory or any other memory ballooning feature is not supported.
