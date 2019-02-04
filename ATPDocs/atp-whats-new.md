@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/27/2019
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,7 +29,30 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
-### Azure ATP release 2.63
+## Azure ATP release 2.64
+Released February 4, 2019
+
+
+- **General availability: Suspected Golden Ticket usage (ticket anomaly)**<br>
+This alert is now in GA (general availability). See the [Suspected Golden Ticket usage (ticket anomaly) alert description page](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) for more details and alert features. 
+
+- **Feature enhancement: Network mapping reconnaissance (DNS)**<br>
+Improved alert detection logic deployed for this alert to minimize false-positives and alert noise. This alert now has a learning period of eight days before the alert will possibly trigger for the first time. For more information about this alert, see [Network mapping reconnaissance (DNS) alert description page](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 
+
+    **Due to the enhancement of this alert, the nslookup method should no longer be used to test Azure ATP connectivity during initial configuration.** 
+
+- **Feature enhancement:**<br>
+This version includes redesigned alert pages, and new evidence, providing better alert investigation. 
+    - [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)
+    - [Suspected Golden Ticket usage (time anomaly) alert description page](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)
+    - [Suspected overpass-the-hash attack (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)
+    - [Suspected use of Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)
+    - [Suspected WannaCry ransomware attack](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+
+## Azure ATP release 2.63
 Released January 27, 2019
 
 - **New feature: Untrusted forest support – (preview)**<br>
@@ -60,7 +83,7 @@ Released January 20, 2019
 - **New Security Alert: Remote code execution over DNS – (preview)**<br>
 Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
 
-- **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24 hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 
+- **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24-hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 
 
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
@@ -305,7 +328,7 @@ Only ATP sensors installed on domain controllers support ETW based detections. E
 
 ## Azure ATP release 2.44
 
-Released August 12th, 2018
+Released August 12, 2018
 
 - This version includes fixes and improvements for multiple issues.
 - Log files created on the sensor machine no longer include the "Exception Statistic" log.
@@ -313,7 +336,7 @@ Released August 12th, 2018
 
 ## Azure ATP release 2.43
 
-Released August 5th, 2018
+Released August 5, 2018
 
 - This version includes fixes and improvements for multiple issues.
 
@@ -330,7 +353,7 @@ Released July 29, 2018
 
 Released July 22, 2018
 
-- **Azure ATP multi-forest support is being gradually rolled out (preview)** <br> Azure ATP can now support organizations with multiple forests which gives you the ability monitor activity and profile users across forests. This new capability enables you to:
+- **Azure ATP multi-forest support is being gradually rolled out (preview)** <br> Azure ATP can now support organizations with multiple forests that give you the ability monitor activity and profile users across forests. This new capability enables you to:
 
   -	View and investigate activities performed by users across multiple forests from a single pane of glass.
   - Improves detection and reduces false positives by providing advanced Active Directory integration and account resolution.
