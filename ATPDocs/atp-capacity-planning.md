@@ -159,7 +159,7 @@ To determine packets per second, do the following steps on each domain controlle
 In this quickstart, you determined how many Azure ATP sensors and standalone sensors you need. You also determined sizing for the sensors. Continue to the next quickstart to create an Azure ATP instance.
 
 > [!div class="nextstepaction"]
-> [Azure Windows virtual machine tutorials](install-atp-step1.md)
+> [Create your Azure ATP instance](install-atp-step1.md)
 
 
 ## Join the Community

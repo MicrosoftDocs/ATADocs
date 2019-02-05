@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-# Quickstart: Create your Azure ATP instance in the Azure ATP portal - Step 1
+# Quickstart: Create your Azure ATP instance
 
 > [!div class="step-by-step"]
 > [« Prerequisites](atp-prerequisites.md)
