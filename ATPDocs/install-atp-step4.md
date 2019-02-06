@@ -23,6 +23,7 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [« Step 3 - Download the sensor setup](install-atp-step3.md)
 > [Step 5 - Configure sensor settings »](install-atp-step5.md)
+</br></br>
 
 # Quickstart: Install the Azure ATP sensor
 
