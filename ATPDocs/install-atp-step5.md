@@ -1,18 +1,14 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection | Microsoft Docs
+title: Configure Azure ATP sensor settings quickstart | Microsoft Docs
 description: Step five of installing Azure ATP helps you configure settings for your Azure ATP standalone sensor.
-keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 10/04/2018
-ms.topic: conceptual
-ms.prod:
+ms.date: 02/06/2018
+ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.technology:
-ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
+
 
 # optional metadata
 
@@ -26,17 +22,21 @@ ms.suite: ems
 
 ---
 
-
-
-# Install Azure ATP - Step 5
+# Quickstart: Configure Azure ATP sensor settings
 
 > [!div class="step-by-step"]
-> [« Step 4](install-atp-step4.md)
+> [« Step 4 - Install the Azure ATP sensor](install-atp-step4.md)
 > [Step 6 »](install-atp-step6-vpn.md)
 
+In this quickstart, you'll configure the Azure ATP sensor settings. Additional configuration is needed to take advantage of 
 
+## Prerequisites
 
-## Configure Azure ATP sensor settings
+- An [Azure ATP instance](install-atp-step1.md) that's [connected to Active Directory](install-atp-step2.md).
+- A downloaded copy of your [ATP sensor setup package](install-atp-step3.md) and the access key.
+
+## Configure sensor settings
+
 After the Azure ATP sensor is installed, perform the following steps to configure the Azure ATP sensor settings.
 
 1.  In the Azure ATP portal, go to **Configuration** and, under the **System** section, select **Sensors**.
@@ -64,7 +64,7 @@ After the Azure ATP sensor is installed, perform the following steps to configur
     
     - The domain synchronizer is responsible for synchronization between Azure ATP and your Active Directory domain. Depending on the size of the domain, the initial synchronization may take time and is resource-intensive. Azure ATP recommends setting at least one domain controller as the domain synchronizer candidate per domain. Failure to select at least one domain controller as the domain synchronizer candidate means Azure ATP will only passively scan your network and may not be able to collect all Active Directory changes and entity details. At least one designated **domain synchronizer candidate** per domain ensures Azure ATP is actively scanning your network at all times and able to collect all Active Directory changes and entity values.
   
-    - By default, Azure ATP sensors are not domain synchronizer candidates, while Azure ATP standalone sensors are. To manually set an Azure ATP sensor as a domain synchronizer candidate, switch the **Domain synchronizer candidate** toggle option to **ON** in the configuration screen.   
+    - By default, Azure ATP sensors are not domain synchronizer candidates, while Azure ATP standalone sensors are. To manually set an Azure ATP sensor as a domain synchronizer candidate, switch the **Domain synchronizer candidate** toggle option to **ON** in the configuration screen.
         
     - It is recommended that you disable any remote site Azure ATP sensor(s) from being domain synchronizer candidates.
    
@@ -85,17 +85,13 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 
 3. Go to your Azure ATP instance URL. In the Azure ATP portal, search for something in the search bar, such as a user or a group on your domain.
 
-
+## Next steps
 
 > [!div class="step-by-step"]
-> [« Step 4](install-atp-step4.md)
+> [« Step 4 - Install the Azure ATP sensor](install-atp-step4.md)
 > [Step 6 »](install-atp-step6-vpn.md)
 
 
+## Join the Community
 
-## See Also
-
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
-- [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://aka.ms/azureatpcommunity) today!

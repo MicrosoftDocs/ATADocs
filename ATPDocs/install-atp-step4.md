@@ -20,20 +20,19 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# Quickstart: Install the Azure ATP sensor
-
 > [!div class="step-by-step"]
 > [« Step 3 - Download the sensor setup](install-atp-step3.md)
 > [Step 5 - Configure sensor settings »](install-atp-step5.md)
 
-In this quickstart you'll install the Azure ATP sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](atp-silent-installation.md) article.
+# Quickstart: Install the Azure ATP sensor
+
+In this quickstart, you'll install the Azure ATP sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](atp-silent-installation.md) article.
 
 ## Prerequisites
 
 - An [Azure ATP instance](install-atp-step1.md) that's [connected to Active Directory](install-atp-step2.md).
 - A downloaded copy of your [ATP sensor setup package](install-atp-step3.md) and the access key.
-- Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
+- Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 isn't installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
 
 ## Install the sensor
 
@@ -59,7 +58,7 @@ Perform the following steps on the domain controller.
     ![Azure ATP standalone sensor installation language](media/sensor-install-language.png)
 
 
-5. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it is a domain controller, the Azure ATP sensor is installed, if it is a dedicated server, the Azure ATP standalone sensor is installed. 
+5. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it's a domain controller, the Azure ATP sensor is installed. If it's a dedicated server, the Azure ATP standalone sensor is installed.
     
     For example, for an Azure ATP sensor, the following screen is displayed to let you know that an Azure ATP sensor is installed on your dedicated server:
     
@@ -74,9 +73,9 @@ Perform the following steps on the domain controller.
 
     ![Azure ATP sensor configuration image](media/sensor-install-config.png)
 
-      - Installation Path: This is the location where the Azure ATP sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
+      - Installation Path: The location where the Azure ATP sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
 
-     - Access key: This is retrieved from the Azure ATP portal in the previous step.
+     - Access key: Retrieved from the Azure ATP portal in the previous step.
     
 7. Click **Install**. The following components are installed and configured during the installation of the Azure ATP sensor:
 
@@ -89,7 +88,7 @@ Perform the following steps on the domain controller.
     - Azure ATP sensor service and Azure ATP sensor updater service
     - Microsoft Visual C++ 2013 Redistributable
 
-8. After the installation completes, click **Launch** to open your browser and log in to the Azure ATP portal.
+8. After the installation completes, click **Launch** to open your browser and sign in to the Azure ATP portal.
 
 ## Next steps
 
