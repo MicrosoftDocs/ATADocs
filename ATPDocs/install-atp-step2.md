@@ -23,10 +23,6 @@ ms.service: azure-advanced-threat-protection
 
 # Quickstart: Connect to your Active Directory Forest
 
-> [!div class="step-by-step"]
-> [« Step 1 - Create Azure ATP instance](install-atp-step1.md)
-> [Step 3 - Download the sensor setup »](install-atp-step3.md)
-
 In this quickstart, you'll connect Azure ATP to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](atp-multi-forest.md) article.
 
 ## Prerequisites
