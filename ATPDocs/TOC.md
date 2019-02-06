@@ -5,11 +5,11 @@
 ## [What's new in Azure ATP](atp-whats-new.md)
 # Quickstarts
 ## [Plan your Azure ATP capacity](atp-capacity-planning.md)
-## [1 Create your Azure ATP instance](install-atp-step1.md)
-## [2 Connect to Active Directory](install-atp-step2.md)
-## [3 Download the Azure ATP sensor package](install-atp-step3.md)
-## [4 Install the Azure ATP sensor](install-atp-step4.md)
-## [5 Configure the Azure ATP sensor](install-atp-step5.md)
+## [Create your Azure ATP instance](install-atp-step1.md)
+## [Connect to Active Directory](install-atp-step2.md)
+## [Download the Azure ATP sensor package](install-atp-step3.md)
+## [Install the Azure ATP sensor](install-atp-step4.md)
+## [Configure the Azure ATP sensor](install-atp-step5.md)
 # Tutorials
 ## [Understanding security alerts](understanding-security-alerts.md)
 ## [Reconnaissance alerts](atp-reconnaissance-alerts.md)
