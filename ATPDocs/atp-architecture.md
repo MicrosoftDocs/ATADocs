@@ -84,7 +84,7 @@ If the synchronizer is offline for more than 30 minutes, another candidate is ch
     
 If there's no domain synchronizer available, and you search for an entity that didn't have any traffic related to it, no search results are displayed.
 
-By default, Azure ATP sensors aren't synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md#configure-azure-atp-sensor-settings).
+By default, Azure ATP sensors aren't synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md).
 
 ### Resource limitations
 

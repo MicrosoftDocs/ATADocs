@@ -10,8 +10,6 @@ ms.date: 02/05/2019
 ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
 
-
-
 # optional metadata
 
 #ROBOTS:
@@ -27,7 +25,7 @@ ms.suite: ems
 
 > [!div class="step-by-step"]
 > [« Prerequisites](atp-prerequisites.md)
-> [Step 2 -Install Azure ATP »](install-atp-step2.md)
+> [Step 2 - Connect to Active Directory »](install-atp-step2.md)
 
 In this quickstart, you'll create your Azure ATP instance in the Azure ATP portal. In Azure ATP, you'll have a single instance, previously called a workspace. A single instance enables you to manage multiple forests from a single pane of glass.
 
@@ -68,10 +66,11 @@ After you verified that your network meets the sensor requirements, start the cr
 
 - Data retention – previously deleted Azure ATP instances don't appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
+## Next steps
 
 > [!div class="step-by-step"]
 > [« Prerequisites](atp-prerequisites.md)
-> [Step 2 -Install Azure ATP »](install-atp-step2.md)
+> [Step 2 - Connect to Active Directory »](install-atp-step2.md)
 
 ## Join the Community
 
