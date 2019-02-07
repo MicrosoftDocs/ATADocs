@@ -3,23 +3,19 @@
 
 title: Planning your Azure Advanced Threat Protection deployment quickstart | Microsoft Docs
 description: Helps you plan your deployment and decide how many Azure ATP servers will be needed to support your network
-keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
 ms.date: 1/24/2019
 ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.prod:
-
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-#ms.devlang:
-ms.reviewer: itargoet
-ms.suite: ems
+#  ms.devlang:
+# ms.reviewer: itargoet
+# ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -163,7 +159,7 @@ To determine packets per second, do the following steps on each domain controlle
 In this quickstart, you determined how many Azure ATP sensors and standalone sensors you need. You also determined sizing for the sensors. Continue to the next quickstart to create an Azure ATP instance.
 
 > [!div class="nextstepaction"]
-> [Azure Windows virtual machine tutorials](install-atp-step1.md)
+> [Create your Azure ATP instance](install-atp-step1.md)
 
 
 ## Join the Community

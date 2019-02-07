@@ -1,38 +1,35 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection | Microsoft Docs
+title: Connect Azure ATP to Active Directory quickstart | Microsoft Docs
 description: Step two of installing Azure ATP helps you configure the domain connectivity settings on your Azure ATP cloud service
-keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 12/30/2018
+ms.date: 02/05/2019
 ms.topic: conceptual
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
-ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: itargoet
-ms.suite: ems
+# ms.reviewer: itargoet
+# ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
 
+# Quickstart: Connect to your Active Directory Forest
 
+In this quickstart, you'll connect Azure ATP to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](atp-multi-forest.md) article.
 
-# Install Azure ATP - Step 2
+## Prerequisites
 
-> [!div class="step-by-step"]
-> [« Step 1](install-atp-step1.md)
-> [Step 3 »](install-atp-step3.md)
+- An [Azure ATP instance](install-atp-step1.md).
+- Review the [Azure ATP prerequisites](atp-prerequisites.md) article.
+- An **on-premises** AD user account and password with read access to all objects in the monitored domains.
 
 ## Provide a username and password to connect to your Active Directory Forest
 
@@ -40,28 +37,24 @@ The first time you open the Azure ATP portal, the following screen appears:
 
 ![Azure ATP welcome stage 1](media/directory-services.png)
 
-> [!IMPORTANT]
-> The user credentials here must be for a user account in the on-premises Active Directory. 
 
-
-1.  Enter the following information and click **Save**:
+1. Enter the following information and click **Save**:
 
     |Field|Comments|
     |---------|------------|
-    |**Username** (required)|Enter the read-only Active Directory user name, for example: **ATPuser**. **Note:** Do **not** use the UPN format for your username.|
-    |**Password** (required)|Enter the password for the read-only user, for example: **Pencil1**.|
-    |**Domain** (required)|Enter the domain for the read-only user, for example, **contoso.com**. **Note:** It is important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
+    |**Username** (required)|Enter the read-only Active Directory user name. For example: **ATPuser**.  You must use an **on-premises** AD user account. **Don't** use the UPN format for your username.|
+    |**Password** (required)|Enter the password for the read-only user. For example: **Pencil1**.|
+    |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
 2. In the Azure ATP portal, click **Download sensor setup and install the first sensor** to continue.
 
 
+## Next steps
+
 > [!div class="step-by-step"]
-> [« Step 1](install-atp-step1.md)
-> [Step 3 »](install-atp-step3.md)
+> [« Step 1 - Create Azure ATP instance](install-atp-step1.md)
+> [Step 3 - Download the sensor setup »](install-atp-step3.md)
 
+## Join the Community
 
-## See Also
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
-- [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://aka.ms/azureatpcommunity) today!
