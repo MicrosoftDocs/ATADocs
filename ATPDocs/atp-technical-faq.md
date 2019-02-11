@@ -6,7 +6,7 @@ description: Provides a list of frequently asked questions about Azure ATP and t
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod:

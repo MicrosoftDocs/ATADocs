@@ -6,7 +6,7 @@ description: Describes the requirements for a successful deployment of Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod:

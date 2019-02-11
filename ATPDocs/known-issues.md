@@ -6,7 +6,7 @@ description: Describes current Known Issues in Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/17/2018
 ms.topic: conceptual
 ms.prod:

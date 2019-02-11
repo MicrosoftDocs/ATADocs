@@ -6,7 +6,7 @@ d|Description: This article provides a list of the security alerts issued by Azu
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/03/2019
 ms.topic: conceptual
 ms.prod:
