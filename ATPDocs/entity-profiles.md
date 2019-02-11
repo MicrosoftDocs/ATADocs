@@ -6,7 +6,7 @@ description: Describes how to investigate users from the user profiles screen in
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod:

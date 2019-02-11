@@ -6,7 +6,7 @@ description: Describes how to set Azure ATP security alerts so you are notified 
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:
