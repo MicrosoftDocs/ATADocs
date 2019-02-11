@@ -6,7 +6,7 @@ description: First step to install ATA involves downloading and installing the A
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/17/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
