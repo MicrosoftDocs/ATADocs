@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -42,7 +42,7 @@ The following security alerts help you identify and remediate **Exfiltration** p
 
 > [!div class="checklist"]
 > * Suspicious communication over DNS (external ID 2031)
-> * Data exfiltration over SMB - Preview (external ID 2030)
+> * Data exfiltration over SMB (external ID 2030)
 
 ## Suspicious communication over DNS (external ID 2031) 
 
@@ -78,7 +78,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
 > [!NOTE]
 > *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by Azure ATP but are known to or part of your organization can be closed.
 
-## Data exfiltration over SMB - Preview (external ID 2030)
+## Data exfiltration over SMB (external ID 2030)
 
 **Description**
 Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. An Azure ATP **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
