@@ -6,7 +6,7 @@ description: Describes the data collected by ATA and provides steps to turn off 
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 8/19/2018
 ms.topic: article
 ms.prod:
