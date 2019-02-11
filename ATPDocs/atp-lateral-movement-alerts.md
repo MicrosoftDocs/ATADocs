@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -42,13 +42,14 @@ To learn more about how to understand the structure, and common components of al
 The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
-> * Remote code execution over DNS - preview (external ID 2036)
+> * Remote code execution over DNS (external ID 2036)
 > * Suspected identity theft (pass-the-hash) (external ID 2017)
 > * Suspected identity theft (pass-the-ticket) (external ID 2018)
+> * Suspected NTLM relay attack (Exchange account)  (external ID 2037) - preview
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 
-## Remote code execution over DNS (external ID 2036) - preview
+## Remote code execution over DNS (external ID 2036)
 
 **Description**
 
@@ -146,6 +147,34 @@ There are custom applications that forward tickets on behalf of users. These app
 3. Find the tool that performed the attack and remove it.
 4. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
 5. If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
+
+## Suspected NTLM relay attack (Exchange account) (external ID 2037) - preview
+
+**Description**
+
+An Exchange Server can be configured to triggered NTLM authentication with the Exchange Server account to a remote http server run by an attacker. This server waits for the Exchange Server communication to relay its own sensitive authentication to any other server, or even more interestingly to the Active Directory over LDAP, and grabs the authentication information.
+
+Once the relay server receives the NTLM authentication, it provides a challenge that was originally created by the target server. The client responds to the challenge, preventing an attacker from taking the response, and using it to continue NTLM negotiation with the target domain controller. 
+
+In this detection, an alert is triggered when Azure ATP identify use of Exchange account credentials from a suspicious source.
+
+**TP, B-TP, or FP?**
+
+1. Check the source computers behind the IP addresses. 
+    1. If the source computer is an Exchange Server, **Close** the security alert as an **FP** activity.
+    2. Determine if the source account should authenticate using NTLM from these computers? If they should authenticate, **Close** the security alert, and exclude these computers as a **B-TP** activity.
+
+**Understand the scope of the breach**
+
+1. Continue [investigating the source computers](investigate-a-computer.md) behind the IP addresses involved.  
+2. Investigate the [source account](investigate-a-user.md).
+
+**Suggested remediation and steps for prevention**
+
+1. Contain the source computers
+    1. Find the tool that preformed the attack and remove it.
+    2. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA.
+2. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers. 
 
 ## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008) 
 
