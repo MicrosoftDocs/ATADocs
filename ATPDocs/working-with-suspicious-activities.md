@@ -6,7 +6,7 @@ description: Describes how to review security alerts issued by Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/1/2019
 ms.topic: article
 ms.prod:

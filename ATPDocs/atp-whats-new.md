@@ -6,7 +6,7 @@ description: Describes the latest releases of Azure ATP and provides information
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod:

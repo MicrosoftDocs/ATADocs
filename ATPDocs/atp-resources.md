@@ -6,7 +6,7 @@ description: This article provides a list of helpful resources for Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod:

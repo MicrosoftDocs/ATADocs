@@ -6,7 +6,7 @@ description: Describes the requirements for a successful deployment of Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod:
@@ -26,11 +26,8 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
-
-
 # Azure ATP Prerequisites
+
 This article describes the requirements for a successful deployment of Azure ATP in your environment.
 
 >[!NOTE]

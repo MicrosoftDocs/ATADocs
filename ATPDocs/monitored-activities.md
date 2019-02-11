@@ -6,7 +6,7 @@ description: Describes each activity type monitored by Azure Advanced Threat Pro
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod:
