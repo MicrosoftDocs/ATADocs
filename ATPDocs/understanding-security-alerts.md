@@ -6,7 +6,7 @@ d|Description: This article explains how to use and understand Azure ATP securit
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/13/2019
 ms.topic: tutorial
 ms.prod:

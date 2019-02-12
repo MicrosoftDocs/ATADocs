@@ -6,7 +6,7 @@ description: In the final step of installing ATA, you configure the Honeytoken u
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

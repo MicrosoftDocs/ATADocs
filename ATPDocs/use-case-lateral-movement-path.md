@@ -6,7 +6,7 @@ description: This article describes the potential Lateral Movement Paths (LMPs) 
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/25/2018
 ms.topic: conceptual
 ms.prod:

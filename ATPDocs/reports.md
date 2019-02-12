@@ -6,7 +6,7 @@ description: Describes how you can generate reports in Azure ATP to monitor your
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod:

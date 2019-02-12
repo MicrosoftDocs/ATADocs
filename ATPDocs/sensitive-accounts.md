@@ -6,7 +6,7 @@ description: Describes how to tag sensitive accounts using Azure Advanced Threat
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod:

@@ -6,13 +6,9 @@ d|Description: This article explains how to user Azure ATP security alerts to in
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 
 # optional metadata
 
@@ -28,7 +24,13 @@ ms.suite: ems
 
 # Tutorial: Investigate a user
 
-Azure ATP alert evidence and lateral movement paths provide clear indications when users have performed suspicious activities or indications exist that their account has been compromised. Use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar future attacks.  
+Azure ATP alert evidence and lateral movement paths provide clear indications when users have performed suspicious activities or indications exist that their account has been compromised. In this tutorial you'll use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar future attacks.  
+
+> [!div class="checklist"]
+> * Gather information about the user.
+> * Investigate activities that the user performed.
+> * Investigate resources the user accessed.
+> * Investigate lateral movement paths.
 
 ## Recommended investigation steps for suspicious users
 

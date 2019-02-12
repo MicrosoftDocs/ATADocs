@@ -6,8 +6,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/20/2019
+manager: barbkess
+ms.date: 02/03/2019
 ms.topic: tutorial
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -49,7 +49,7 @@ The following security alerts help you identify and remediate **Domain dominance
 > * Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)
 > * Suspected Golden Ticket usage (forged authorization data) (external ID 2013)
 > * Suspected Golden Ticket usage (nonexistent account) (external ID 2027)
-> * Suspected Golden Ticket usage (ticket anomaly) - preview (external ID 2032)
+> * Suspected Golden Ticket usage (ticket anomaly) (external ID 2032)
 > * Suspected Golden Ticket usage (time anomaly) (external ID 2022)
 > * Suspected Skeleton Key attack (encryption downgrade) (external ID )
 > * Suspicious modification of sensitive groups (external ID 2024)
@@ -407,7 +407,7 @@ If the answer is **yes**, to any of the previous questions, **Close** the alert,
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
 
  
-## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032) -Preview 
+## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032) 
 
 **Description**
 Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.  
