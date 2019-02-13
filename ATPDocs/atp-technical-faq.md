@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/04/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -114,7 +114,7 @@ For your domain controllers to communicate with the cloud service, you must open
 Yes, you can use the Azure ATP sensor to monitor domain controllers that are in any IaaS solution.
 
 ### Can Azure ATP support multi-domain and multi-forest?
-Azure Advanced Threat Protection supports multi-domain environments and multiple forests. This feature is currently in public preview. For more information and known limitations, see [Multi-forest support](atp-multi-forest.md).
+Azure Advanced Threat Protection supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](atp-multi-forest.md).
 
 ### Can you see the overall health of the deployment?
 Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Azure ATP health alerts.
