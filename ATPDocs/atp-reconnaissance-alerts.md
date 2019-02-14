@@ -9,6 +9,7 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 02/04/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
