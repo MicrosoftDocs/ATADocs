@@ -8,6 +8,7 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/05/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 
 # optional metadata
