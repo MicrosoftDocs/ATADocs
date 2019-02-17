@@ -51,7 +51,7 @@ The following security alerts help you identify and remediate **Domain dominance
 > * Suspected Golden Ticket usage (nonexistent account) (external ID 2027)
 > * Suspected Golden Ticket usage (ticket anomaly) (external ID 2032)
 > * Suspected Golden Ticket usage (time anomaly) (external ID 2022)
-> * Suspected Skeleton Key attack (encryption downgrade) (external ID )
+> * Suspected Skeleton Key attack (encryption downgrade) (external ID 2010)
 > * Suspicious modification of sensitive groups (external ID 2024)
 > * Suspicious service creation (external ID 2026)
 
@@ -362,7 +362,7 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 Some Operating Systems or applications are known to modify the authorization data. For example, Linux and Unix services have their own authorization mechanism which may trigger the alert. 
 
 1. Is the source computer running an OS or application that has its own authorization mechanism?  
-    - If the source computer is running this type of computer, consider upgrading the OS or fixing the application configuration. **Close** the alert as a **B-TP** activity. 
+    - If the source computer is running this type of authorization mechanism, consider upgrading the OS or fixing the application configuration. **Close** the alert as a **B-TP** activity. 
   
 **Understand the scope of the breach**
 1. Investigate the [source computer](investigate-a-computer.md). 

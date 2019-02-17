@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/04/2019
+ms.date: 02/17/2019
 ms.topic: conceptual
 ms.prod:
 ms.service: azure-advanced-threat-protection
@@ -29,17 +29,26 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+## Azure ATP release 2.66
+Released February 17, 2019
+
+- **Feature enhancement: Suspected DCSync attack (replication of directory services) alert**<br>
+Usability improvements were made to this security alert including a revised description, provision of additional source information, new infographic, and more evidence. 
+Learn more about [Suspected DCSync attack (replication of directory services)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006) security alerts. 
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.65
 Released February 10, 2019
 
 - **New security alert: Suspected NTLM relay attack (Exchange account) – (preview)**<br>
-Azure ATP’s [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when use of Exchange account credentials from a suspicious source is identified. These types of attacks attempt to leverage NTLM relay techniques to gain domain controller exchange privileges and are known as **ExchangePriv**. Learn more about the **ExchangePriv** technique from the [ADV190007 advisory](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) first published Jan 31, 2019, and the [Azure ATP alert response](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+Azure ATP’s [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when use of Exchange account credentials from a suspicious source is identified. These types of attacks attempt to leverage NTLM relay techniques to gain domain controller exchange privileges and are known as **ExchangePriv**. Learn more about the **ExchangePriv** technique from the [ADV190007 advisory](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) first published January 31, 2019, and the [Azure ATP alert response](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **General availability: Remote code execution over DNS**<br>
-This alert is now in GA (general availability). See the [Remote code execution over DNS alert description page](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) for more details and alert features. 
+This alert is now in GA (general availability). For more information and alert features, see the [Remote code execution over DNS alert description page](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
 
 - **General availability: Data exfiltration over SMB**<br>
-This alert is now in GA (general availability). See the [Data exfiltration over SMB alert description page](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030) for more details and alert features.
+This alert is now in GA (general availability). For more information and alert features, see the [Data exfiltration over SMB alert description page](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
 
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
@@ -48,7 +57,7 @@ This alert is now in GA (general availability). See the [Data exfiltration over 
 Released February 4, 2019
 
 - **General availability: Suspected Golden Ticket usage (ticket anomaly)**<br>
-This alert is now in GA (general availability). See the [Suspected Golden Ticket usage (ticket anomaly) alert description page](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) for more details and alert features. 
+This alert is now in GA (general availability). For more information and alert features, see the [Suspected Golden Ticket usage (ticket anomaly) alert description page](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032). 
 
 - **Feature enhancement: Network mapping reconnaissance (DNS)**<br>
 Improved alert detection logic deployed for this alert to minimize false-positives and alert noise. This alert now has a learning period of eight days before the alert will possibly trigger for the first time. For more information about this alert, see [Network mapping reconnaissance (DNS) alert description page](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 
