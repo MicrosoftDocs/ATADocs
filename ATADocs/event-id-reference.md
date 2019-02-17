@@ -6,7 +6,7 @@ description: Provides a list of ATA events IDs and their descriptions.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

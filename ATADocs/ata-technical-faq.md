@@ -6,7 +6,7 @@ description: Provides a list of frequently asked questions about ATA and the ass
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 5/6/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

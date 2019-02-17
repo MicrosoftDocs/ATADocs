@@ -5,7 +5,7 @@ title: Advanced Threat Analytics versions | Microsoft Docs
 description: Explains the different support options for Microsoft Advanced Threat Analytics (ATA) versions.
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 7/15/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

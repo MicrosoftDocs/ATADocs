@@ -6,7 +6,7 @@ description: Helps you plan your deployment and decide how many ATA servers will
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.service: 

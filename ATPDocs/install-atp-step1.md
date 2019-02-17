@@ -1,18 +1,15 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection | Microsoft Docs
-description: First step to install Azure ATP involves creating the instance for your Azure ATP deployment.
+title: Create your Azure ATP instance quickstart | Microsoft Docs
+description: Quickstart for creating the instance for your Azure ATP deployment which is the first step to install Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 12/02/2018
-ms.topic: conceptual
-ms.prod:
+ms.date: 02/05/2019
+ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.technology:
-ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 
 # optional metadata
 
@@ -25,31 +22,27 @@ ms.suite: ems
 #ms.custom:
 
 ---
+# Quickstart: Create your Azure ATP instance
 
+In this quickstart, you'll create your Azure ATP instance in the Azure ATP portal. In Azure ATP, you'll have a single instance, previously called a workspace. A single instance enables you to manage multiple forests from a single pane of glass.
 
-# Creating your Azure ATP instance in the Azure ATP portal - Step 1
+> [!IMPORTANT]
+> Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, Azure ATP instances aren't movable.
 
-> [!div class="step-by-step"]
-> [Step 2 »](install-atp-step2.md)
+## Prerequisites
 
-This installation procedure provides instructions for creating and managing your Azure ATP instance (previously called a workspace). For information on Azure ATP architecture, see [Azure ATP architecture](atp-architecture.md).
+- An [Azure ATP license](atp-technical-faq.md#licensing-and-privacy).
+- You need to be a [global administrator or security administrator on the tenant](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Azure ATP portal.
+- Review the [Azure ATP architecture](atp-architecture.md) article.
+- Review the [Azure ATP prerequisites](atp-prerequisites.md) article. 
 
-In Azure ATP, you'll have a single instance enabling you to manage multiple forests from a single pane of glass. 
+## Sign in to the Azure ATP portal
 
-> [!NOTE]
-> Currently, Azure ATP data centers are deployed in Europe, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your AAD. Once created, Azure ATP instances are not movable. 
+After you verified that your network meets the sensor requirements, start the creation of your Azure ATP instance.
 
-## Enter the Azure ATP portal
+1. Go to [the Azure ATP portal](https://portal.atp.azure.com).
 
-After you verified that your network meets the sensor requirements, proceed with the creation of your Azure ATP instance.
-
-> [!NOTE]
->You need to be a global administrator or security administrator on the tenant, to access the Azure ATP portal.
-
-
-1.  Enter [the Azure ATP portal](https://portal.atp.azure.com).
-
-2.  Log in with your Azure Active Directory user account.
+2. Sign in with your Azure Active Directory user account.
 
 ## Create your instance
 
@@ -57,28 +50,26 @@ After you verified that your network meets the sensor requirements, proceed with
 
     ![Create Azure ATP instance](media/create-instance.png)
 
-2. Your Azure ATP instance is automatically named with the AAD initial domain name, and allocated to the data center located closest to your AAD and created. 
+2. Your Azure ATP instance is automatically named with the Azure AD initial domain name and created in the data center located closest to your Azure AD. 
 
     ![Azure instance created](media/instance-created.png)
 
     > [!NOTE]
-    > To log in to Azure ATP, you'll need to log in with a user assigned an Azure ATP role with rights to access the Azure ATP portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
+    > To signin to Azure ATP, you'll need to sign in with a user assigned an Azure ATP role with rights to access the Azure ATP portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
  
-3. Click **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups. .
+3. Click **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups.
 
     ![Manage role groups](media/creation-manage-role-groups.png)
 
-- Data retention – previously deleted Azure ATP instances do not appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
+- Data retention – previously deleted Azure ATP instances don't appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
 
+## Next steps
 
 > [!div class="step-by-step"]
-> [« Pre-install](atp-prerequisites.md)
-> [Step 2 »](install-atp-step2.md)
+> [« Prerequisites](atp-prerequisites.md)
+> [Step 2 - Connect to Active Directory »](install-atp-step2.md)
 
+## Join the Community
 
+Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://aka.ms/azureatpcommunity) today!
 
-## See Also
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
-- [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
