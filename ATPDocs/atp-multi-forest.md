@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection mutli-forest support | Microsoft Docs
+title: Azure Advanced Threat Protection multi-forest support | Microsoft Docs
 description: Support for multiple Active Directory forests in Azure ATP.
 keywords:
 author: mlottner
@@ -50,6 +50,7 @@ To detect cross-forest activities, Azure ATP sensors query domain controllers in
 - Add credentials on the Directory services page for all forests in your environment. 
     - One credential is required per forest with two-way trust. 
     - Additional credentials are required for each forest with non-Kerberos trust or no trust. 
+    - Limit of 10 forests per Azure ATP instance. Contact support if your organization has more than 10 forests. 
 
 ![Azure ATP welcome stage 1](media/directory-services-add-no-trust-forests.png)
 
