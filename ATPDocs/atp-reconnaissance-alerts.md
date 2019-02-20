@@ -6,9 +6,10 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/15/2019
+manager: barbkess
+ms.date: 02/04/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -122,7 +123,11 @@ Now, look at the accounts:<br>
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack. 
  
-There are several query types in the DNS protocol. This Azure ATP security alert detects the AXFR (transfer) request originating from non-DNS servers.
+There are several query types in the DNS protocol. This Azure ATP security alert detects suspicious AXFR (transfer) requests originating from non-DNS servers.
+
+**Learning period**
+
+This alert has a learning period of 8 days from the start of domain controller monitoring. 
 
 **TP, B-TP, or FP**
 

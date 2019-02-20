@@ -6,13 +6,10 @@ d|Description: This article explains how to use Azure ATP security alerts to inv
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod:
+ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.technology:
-ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 
 # optional metadata
 
@@ -29,7 +26,14 @@ ms.suite: ems
 
 # Tutorial: Investigate a computer
 
-Azure ATP alert evidence provides clear indications when computers have been involved in suspicious activities or when indications exist that a machine is compromised. Use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar attacks in the future.  
+Azure ATP alert evidence provides clear indications when computers have been involved in suspicious activities or when indications exist that a machine is compromised. In this tutorial you'll use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar attacks in the future.  
+
+> [!div class="checklist"]
+> * Check the computer for the logged in user.
+> * Verify if the user normally accesses the computers.
+> * Investigate suspicious activities from the computer.
+> * Where there other alerts around the same time?
+
 
 ## Investigation steps for suspicious computers
 
@@ -53,7 +57,7 @@ Check and investigate the computer profile for the following details and activit
 - If Windows Defender ATP integration is enabled, click the Windows Defender ATP badge to further investigate the computer. In Windows Defender ATP you can see which processes and alerts occurred around the same time as the alert.
     1. Were any new programs deployed or installed?
 
-## See Also
+## Next steps
 
 - [Investigate a user](investigate-a-user.md)
 - [Working with security alerts](working-with-suspicious-activities.md)

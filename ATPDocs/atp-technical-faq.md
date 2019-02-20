@@ -6,9 +6,10 @@ description: Provides a list of frequently asked questions about Azure ATP and t
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 11/29/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -114,7 +115,7 @@ For your domain controllers to communicate with the cloud service, you must open
 Yes, you can use the Azure ATP sensor to monitor domain controllers that are in any IaaS solution.
 
 ### Can Azure ATP support multi-domain and multi-forest?
-Azure Advanced Threat Protection supports multi-domain environments and multiple forests. This feature is currently in public preview. For more information and known limitations, see [Multi-forest support](atp-multi-forest.md).
+Azure Advanced Threat Protection supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](atp-multi-forest.md).
 
 ### Can you see the overall health of the deployment?
 Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Azure ATP health alerts.
@@ -136,16 +137,6 @@ With Azure Advanced Threat Protection, there is no need to create rules, thresho
 ### What should I do if the Azure ATP sensor or standalone sensor doesn't start?
 Look at the most recent error in the current error [log](troubleshooting-atp-using-logs.md) (Where Azure ATP is installed under the "Logs" folder).
 
-### How can I test Azure ATP?
-You can simulate suspicious activities as an end-to-end test. In the following scenario, DNS reconnaisance is simulated:
-
-1. Verify Azure ATP sensors are installed and configured on the domain controllers (or standalone sensors and related port-mirroring are installed and configured)
-2. Open CMD
-3. Run the following command: nslookup -<DC iP address>
-   - Press enter
-   - Type: Is -d <FQDN>
-   - Depending on the configuration of your environment, responses will vary from "Query refused" to a list of your DNS records. 
-4. View the alert related to the simulated DNS reconnaisance in the Azure ATP portal. 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)

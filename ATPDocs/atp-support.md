@@ -6,9 +6,10 @@ description: Describes the process for getting support help for Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/27/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:

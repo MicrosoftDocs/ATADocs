@@ -6,9 +6,10 @@ description: Describes the latest releases of Azure ATP and provides information
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/27/2019
+manager: barbkess
+ms.date: 02/17/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -29,7 +30,53 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
-### Azure ATP release 2.63
+## Azure ATP release 2.66
+Released February 17, 2019
+
+- **Feature enhancement: Suspected DCSync attack (replication of directory services) alert**<br>
+Usability improvements were made to this security alert including a revised description, provision of additional source information, new infographic, and more evidence. 
+Learn more about [Suspected DCSync attack (replication of directory services)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006) security alerts. 
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.65
+Released February 10, 2019
+
+- **New security alert: Suspected NTLM relay attack (Exchange account) – (preview)**<br>
+Azure ATP’s [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when use of Exchange account credentials from a suspicious source is identified. These types of attacks attempt to leverage NTLM relay techniques to gain domain controller exchange privileges and are known as **ExchangePriv**. Learn more about the **ExchangePriv** technique from the [ADV190007 advisory](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) first published January 31, 2019, and the [Azure ATP alert response](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+
+- **General availability: Remote code execution over DNS**<br>
+This alert is now in GA (general availability). For more information and alert features, see the [Remote code execution over DNS alert description page](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
+
+- **General availability: Data exfiltration over SMB**<br>
+This alert is now in GA (general availability). For more information and alert features, see the [Data exfiltration over SMB alert description page](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
+
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.64
+Released February 4, 2019
+
+- **General availability: Suspected Golden Ticket usage (ticket anomaly)**<br>
+This alert is now in GA (general availability). For more information and alert features, see the [Suspected Golden Ticket usage (ticket anomaly) alert description page](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032). 
+
+- **Feature enhancement: Network mapping reconnaissance (DNS)**<br>
+Improved alert detection logic deployed for this alert to minimize false-positives and alert noise. This alert now has a learning period of eight days before the alert will possibly trigger for the first time. For more information about this alert, see [Network mapping reconnaissance (DNS) alert description page](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 
+
+    **Due to the enhancement of this alert, the nslookup method should no longer be used to test Azure ATP connectivity during initial configuration.** 
+
+- **Feature enhancement:**<br>
+This version includes redesigned alert pages, and new evidence, providing better alert investigation. 
+    - [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)
+    - [Suspected Golden Ticket usage (time anomaly) alert description page](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)
+    - [Suspected overpass-the-hash attack (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)
+    - [Suspected use of Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)
+    - [Suspected WannaCry ransomware attack](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+
+## Azure ATP release 2.63
 Released January 27, 2019
 
 - **New feature: Untrusted forest support – (preview)**<br>
@@ -40,7 +87,7 @@ From the Azure ATP portal **Directory services** page, configure additional sets
 Azure ATP now provides coverage information for Azure ATP monitored domain controllers.  
 From the Azure ATP portal **Sensors** page, view the number of the monitored and unmonitored domain controllers detected by Azure ATP in your environment. Download the monitored domain controller list for further analysis, and to build an action plan. See the [Domain controller monitoring](atp-sensor-monitoring.md) how-to guide to learn more. 
 
-- **Feature Enhancement: Account enumeration reconnaissance**<br>
+- **Feature enhancement: Account enumeration reconnaissance**<br>
 The Azure ATP account enumeration reconnaissance detection now detects and issues alerts for enumeration attempts using Kerberos and NTLM. Previously, the detection only worked for attempts using Kerberos. See [Azure ATP reconnaissance alerts](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003) to learn more. 
 
 - **Feature enhancement: Remote code execution attempt alert**<br>
@@ -57,10 +104,10 @@ In response to customer feedback regarding Azure ATP usage with domain controlle
 ## Azure ATP release 2.62
 Released January 20, 2019
 
-- **New Security Alert: Remote code execution over DNS – (preview)**<br>
-Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
+- **New security alert: Remote code execution over DNS – (preview)**<br>
+Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
 
-- **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24 hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 
+- **Feature Enhancement: 72 hour delayed sensor update** <br> Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24-hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions. 
 
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
@@ -305,7 +352,7 @@ Only ATP sensors installed on domain controllers support ETW based detections. E
 
 ## Azure ATP release 2.44
 
-Released August 12th, 2018
+Released August 12, 2018
 
 - This version includes fixes and improvements for multiple issues.
 - Log files created on the sensor machine no longer include the "Exception Statistic" log.
@@ -313,7 +360,7 @@ Released August 12th, 2018
 
 ## Azure ATP release 2.43
 
-Released August 5th, 2018
+Released August 5, 2018
 
 - This version includes fixes and improvements for multiple issues.
 
@@ -330,7 +377,7 @@ Released July 29, 2018
 
 Released July 22, 2018
 
-- **Azure ATP multi-forest support is being gradually rolled out (preview)** <br> Azure ATP can now support organizations with multiple forests which gives you the ability monitor activity and profile users across forests. This new capability enables you to:
+- **Azure ATP multi-forest support is being gradually rolled out (preview)** <br> Azure ATP can now support organizations with multiple forests that give you the ability monitor activity and profile users across forests. This new capability enables you to:
 
   -	View and investigate activities performed by users across multiple forests from a single pane of glass.
   - Improves detection and reduces false positives by providing advanced Active Directory integration and account resolution.

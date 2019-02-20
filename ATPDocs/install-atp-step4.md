@@ -1,18 +1,14 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection | Microsoft Docs
+title: Install Azure ATP sensor quickstart | Microsoft Docs
 description: Step four of installing Azure ATP helps you to install the Azure ATP sensor.
-keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/27/2019
-ms.topic: conceptual
-ms.prod:
+ms.date: 02/06/2019
+ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.technology:
-ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 
 # optional metadata
 
@@ -26,34 +22,32 @@ ms.suite: ems
 
 ---
 
+# Quickstart: Install the Azure ATP sensor
 
+In this quickstart, you'll install the Azure ATP sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](atp-silent-installation.md) article.
 
-# Install Azure ATP - Step 4
+## Prerequisites
 
-> [!div class="step-by-step"]
-> [« Step 3](install-atp-step3.md)
-> [Step 5 »](install-atp-step5.md)
+- An [Azure ATP instance](install-atp-step1.md) that's [connected to Active Directory](install-atp-step2.md).
+- A downloaded copy of your [ATP sensor setup package](install-atp-step3.md) and the access key.
+- Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 isn't installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
 
-## Install the Azure ATP sensor
-
-> [!IMPORTANT]
->Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 is not installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
+## Install the sensor
 
 Perform the following steps on the domain controller.
 
 1. Verify the machine has connectivity to the relevant Azure ATP cloud service endpoint(s):
-   - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
-   - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
-   <br>(for Europe)  
-   - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
-   - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
-   - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
-   <br>(for the US)
-   - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(for Asia)
+   - Europe
+      - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+      - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
+   - US 
+      - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
+      - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
+      - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+   - Asia
+      - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)
 
-2. Extract the installation files from the zip file. 
-   > [!NOTE] 
-   > Installing directly from the zip file fails.
+2. Extract the installation files from the zip file. Installing directly from the zip file will fail.
 
 3. Run **Azure ATP sensor setup.exe** and follow the setup wizard.
 
@@ -62,7 +56,7 @@ Perform the following steps on the domain controller.
     ![Azure ATP standalone sensor installation language](media/sensor-install-language.png)
 
 
-5. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it is a domain controller, the Azure ATP sensor is installed, if it is a dedicated server, the Azure ATP standalone sensor is installed. 
+5. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it's a domain controller, the Azure ATP sensor is installed. If it's a dedicated server, the Azure ATP standalone sensor is installed.
     
     For example, for an Azure ATP sensor, the following screen is displayed to let you know that an Azure ATP sensor is installed on your dedicated server:
     
@@ -77,35 +71,29 @@ Perform the following steps on the domain controller.
 
     ![Azure ATP sensor configuration image](media/sensor-install-config.png)
 
-      - Installation Path: This is the location where the Azure ATP sensor is installed. By default this is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
+      - Installation Path: The location where the Azure ATP sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
 
-     - Access key: This is retrieved from the Azure ATP portal in the previous step.
+     - Access key: Retrieved from the Azure ATP portal in the previous step.
     
 7. Click **Install**. The following components are installed and configured during the installation of the Azure ATP sensor:
 
-    -   KB 3047154 (for Windows Server 2012 R2 only)
+    - KB 3047154 (for Windows Server 2012 R2 only)
 
         > [!IMPORTANT]
-        > -   Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
-        > -   If Wireshark is installed on the ATP sensor machine, after you run Wireshark you need to restart the ATP sensor, because it uses the same drivers.
+        > - Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
+        > - If Wireshark is installed on the ATP sensor machine, after you run Wireshark you need to restart the ATP sensor, because it uses the same drivers.
 
-    -   Azure ATP sensor service and Azure ATP sensor updater service
-    -   Microsoft Visual C++ 2013 Redistributable
+    - Azure ATP sensor service and Azure ATP sensor updater service
+    - Microsoft Visual C++ 2013 Redistributable
 
-8. After the installation completes, click **Launch** to open your browser and log in to the Azure ATP portal.
+8. After the installation completes, click **Launch** to open your browser and sign in to the Azure ATP portal.
 
+## Next steps
 
 > [!div class="step-by-step"]
-> [« Step 3](install-atp-step3.md)
-> [Step 5 »](install-atp-step5.md)
+> [« Step 3 - Download the sensor setup](install-atp-step3.md)
+> [Step 5 - Configure sensor settings »](install-atp-step5.md)
 
+## Join the Community
 
-## See Also
-
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
-
-- [Configure event collection](configure-event-collection.md)
-
-- [Azure ATP prerequisites](atp-prerequisites.md)
-
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://aka.ms/azureatpcommunity) today!

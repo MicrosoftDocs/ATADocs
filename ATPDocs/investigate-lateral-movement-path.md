@@ -6,9 +6,10 @@ description: This article describes how to detect and investigate potential late
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/3/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
