@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/04/2019
+ms.date: 02/22/2019
 
 # optional metadata
 
@@ -31,7 +31,7 @@ The first tutorial in this four part series walks you through creating a lab for
 
 ## Reconnaissance playbook
 
-The second tutorial in this four part series is a reconnaissance playbook. Reconnaissance activities allow attackers to gain a thorough understanding and complete mapping of your environment for later use. The playbook explains the process of how to use real-world, publicly available hacking and attack tools to illustrate Azure ATP's capabilities in identifying and detecting suspicious activities and potential attacks.
+The second tutorial in this four part series is a reconnaissance playbook. Reconnaissance activities allow attackers to gain a thorough understanding and complete mapping of your environment for later use. The playbook shows how an attacker can use common, publicly available hacking and attack tools to further illustrate Azure ATP's capabilities in identifying and detecting suspicious activities and potential attacks.
 
 > [!div class="nextstepaction"]
 > [Reconnaissance playbook](atp-playbook-reconnaissance.md)
@@ -39,14 +39,14 @@ The second tutorial in this four part series is a reconnaissance playbook. Recon
 
 ## Lateral movement playbook
 
-The lateral movement playbook is third in the four part tutorial series. The playbook uses real-world publicly available hacking and attack tools. You'll use various attack methods to try to move laterally across the domain and obtain domain dominance. As you move, you'll see the lateral movement path threat detections and security alerts services of Azure ATP. 
+The lateral movement playbook is third in the four part tutorial series. The playbook illustrates how an attacker can use common, real-world publicly available hacking and attack tools to try to move laterally across the domain and obtain domain dominance. As you run this playbook, you'll see the lateral movement path threat detections and security alerts services of Azure ATP.
 
 > [!div class="nextstepaction"]
 > [Lateral movement playbook](atp-playbook-lateral-movement.md)
 
 ## Domain dominance playbook
 
-The last tutorial in the four part series is the domain dominance playbook. During the domain dominance phase, an attacker has already gained legitimate credentials to access your domain controller. The domain dominance playbook explains the process of using real-world, publicly available hacking and attack tools to attempt attacks against domain dominance focused threat detection and security alert services of Azure ATP.
+The last tutorial in the four part series is the domain dominance playbook. During the domain dominance phase, an attacker has already gained legitimate credentials to access your domain controller. The domain dominance playbook explains how an attacker could use common, real-world, publicly available hacking and attack tools to attack the domain. You'll see the domain dominance focused threat detection and security alert services of Azure ATP as you run the playbook.
 
 > [!div class="nextstepaction"]
 > [Domain dominance playbook](atp-playbook-domain-dominance.md)

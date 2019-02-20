@@ -2,12 +2,12 @@
 # required metadata
 
 title: Azure ATP security alert lab setup tutorial | Microsoft Docs
-description: In this tutorial you set up an Azure ATP test lab for simulating threats for detection by Azure ATP.
+description: In this tutorial, you set up an Azure ATP test lab for simulating threats for detection by Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/04/2019
+ms.date: 02/22/2019
 
 # optional metadata
 
@@ -39,10 +39,9 @@ In this tutorial you will:
 3. [Download](install-atp-step3.md) and [install Azure ATP sensor version 2.56 or newer](install-atp-step4.md) on your lab's domain controller.
 4. Familiarity with [Privileged Access Workstations](https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
-
 ## Recommendations
 
-We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Azure ATP testing procedures. After the lab setup is complete, you'll be ready to get started with the suggested hacking research tools, and Azure ATP's detections.
+We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Azure ATP testing procedures. After the lab setup is complete, you'll be ready to perform actions with the suggested hacking research tools and review Azure ATP's detections of these actions.
 
 Your complete lab setup should look as similar as possible to the following diagram:
 
@@ -50,7 +49,7 @@ Your complete lab setup should look as similar as possible to the following diag
 
 ### Servers and computers
 
-This table details the computers, and the configurations needed. IP addresses are provided for reference purposes only so you can easily follow along. 
+This table details the computers, and the configurations needed. IP addresses are provided for reference purposes only so you can easily follow along.
 
 In the examples for these tutorials, the Forest NetBIOS name is **CONTOSO.AZURE**.
 
@@ -112,7 +111,7 @@ New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNever
 
 ### Configure SAM-R capabilities from ContosoDC
 
-To allow the Azure ATP Service to perform SAM-R enumeration correctly and build Lateral Movement paths, you'll need to edit the SAM policy. 
+To allow the Azure ATP Service to perform SAM-R enumeration correctly and build Lateral Movement paths, you'll need to edit the SAM policy.
 
 1. Find your SAM policy under: **Policies \> Windows Settings \> Security Settings \> Local Policies \> Security Options\> “Network access: Restrict clients allowed to make remote calls to SAM”**_
 
@@ -122,9 +121,8 @@ To allow the Azure ATP Service to perform SAM-R enumeration correctly and build 
 
     ![Add the service](./media/samr-add-service.png)
 
-
 ### Add sensitive group to Azure ATP
-    
+
 Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to use the Lateral Movement Graph feature of Azure ATP. Tagging highly sensitive users and groups who aren't necessarily Domain Admins but do have privileges across numerous resources is a best practice.
 
 1. In the Azure ATP portal, click the **Configuration** cog in the menu bar.
@@ -139,7 +137,6 @@ Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to
 
 4. Click **Save**.
 
-
 ### Azure ATP Lab base setup checklist
 
 At this point, you should have a base Azure ATP lab. Azure ATP should be ready to use and users are staged. Review the checklist to make sure that the base lab is complete.  
@@ -153,7 +150,7 @@ At this point, you should have a base Azure ATP lab. Azure ATP should be ready t
 
 ## Set up the lab workstations
 
-Once you verify your base Azure ATP lab is set up, you can start the workstation configuration to prepare for the next three tutorials in this series. To make this lab look active, we'll hydrate our VictimPC and AdminPC.
+Once you verify your base Azure ATP lab is set up, you can start the workstation configuration to prepare for the next three tutorials in this series. We'll hydrate our VictimPC and AdminPC to make this lab look active.
 
 ### VictimPC local policies
 
@@ -174,7 +171,7 @@ Inspect the Administrators group on **VictimPC**, making sure it appears to have
 
 ### <a name="helpdesk-simulation"></a> Simulate helpdesk support on VictimPC
 
-To simulate a working and managed network, create a Scheduled Task on the **VictimPC** machine to run the "cmd.exe" process as **RonHD**. 
+To simulate a working and managed network, create a Scheduled Task on the **VictimPC** machine to run the "cmd.exe" process as **RonHD**.
 
 1. From an **elevated PowerShell console** on VictimPC run the following code:
 
@@ -190,11 +187,11 @@ To simulate a working and managed network, create a Scheduled Task on the **Vict
 
 ### Turn off antivirus on VictimPC
 
-For testing purposes, turn off any antivirus solutions running in the lab environment. Doing so ensures focus is on Azure ATP during these exercises and not focusing on antivirus evasion techniques.
+For testing purposes, turn off any antivirus solutions running in the lab environment. Doing so ensures we can focus on Azure ATP during these exercises and not on antivirus evasion techniques.
 
-Without turning off antivirus solutions first, you'll be unable to download some of the tools in the next section. In addition, if antivirus is enabled after the attack tools are staged, you'll need to redownload the tools after disabling antivirus again.
+Without turning off antivirus solutions first, you'll be unable to download some of the tools in the next section. Additionally, if antivirus is enabled after the attack tools are staged, you'll need to redownload the tools after disabling antivirus again.
 
-### Stage hacker tools
+### Stage common hacker tools
 
 > [!WARNING]
 > The following tools are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. These tools should be run in a test lab environment **only**.
@@ -229,7 +226,7 @@ We thank the authors of these research tools for enabling the community to bette
 
 ### Simulate domain activities from AdminPC
 
-Simulated domain activities are required from SamiraA. This step can be done manually, or use the PowerShell script provided. The PowerShell script accesses the domain controller every 5 minutes and will result in simulated network activity as Samira. 
+Simulated domain activities are required from SamiraA. This step can be done manually, or use the PowerShell script provided. The PowerShell script accesses the domain controller every 5 minutes and will result in simulated network activity as Samira.
 
 As **SamiraA**, execute the following script in a PowerShell prompt in AdminPC:
 
@@ -270,7 +267,7 @@ Your Azure ATP lab is now ready to use. The methods used in this set up were cho
 
 ## Next steps
 
-Test your Azure ATP lab environment using the Azure ATP Security Alert playbooks for each phase of the cyber-attack kill chain starting with reconnaissance.  
+Test your Azure ATP lab environment using the Azure ATP Security Alert playbooks for each phase of the cyber-attack kill chain starting with the reconnaissance phase.  
 
 > [!div class="nextstepaction"]
 > [Azure ATP Reconnaissance playbook](atp-playbook-reconnaissance.md)
