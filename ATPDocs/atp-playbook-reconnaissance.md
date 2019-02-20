@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/04/2019
+ms.date: 02/22/2019
 
 # optional metadata
 
@@ -21,33 +21,31 @@ ms.reviewer: itargoet
 
 # Tutorial: Reconnaissance playbook
 
-The second tutorial in this four part series for Azure ATP security alerts is a reconnaissance playbook. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections, and focuses on Azure ATP’s *signature*-based capabilities. This playbook doesn't include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md). 
+The second tutorial in this four part series for Azure ATP security alerts is a reconnaissance playbook. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections, and focuses on Azure ATP’s *signature*-based capabilities. This playbook doesn't include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
-This playbook explains the process of how to use real-world, publicly available hacking and attack tools against threat detections and security alerts services of Azure ATP.
+This playbook illustrates the threat detections and security alerts services of Azure ATP for simulated attacks from common, real-world, publicly available hacking and attack tools.
 
 In this tutorial you will:
 > [!div class="checklist"]
-> * Perform network mapping reconnaissance
-> * Perform Directory Service reconnaissance
-> * Perform user and IP address (SMB) reconnaissance
-> * Review the security alerts from the reconnaissance in Azure ATP
-
+> * Simulate network mapping reconnaissance
+> * Simulate Directory Service reconnaissance
+> * Simulate user and IP address (SMB) reconnaissance
+> * Review the security alerts from the simulated reconnaissance in Azure ATP
 
 ## Prerequisites
 
-[A completed ATP security alert lab](atp-playbook-setup-lab.md) 
+[A completed ATP security alert lab](atp-playbook-setup-lab.md)
   - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Azure ATP testing procedures.
 
-## Executing a Reconnaissance attack
+## Simulate a Reconnaissance attack
 
-Once an adversary gains presence in your environment, their reconnaissance campaign begins. At this phase, the adversary will typically spend time researching. They try to discover computers of interest, enumerate users and groups, gather important IPs, and map your organization's assets and weaknesses. Reconnaissance activities allow attackers to gain a thorough understanding and complete mapping of your environment for later use.
+Once an attacker gains presence in your environment, their reconnaissance campaign begins. At this phase, the attacker will typically spend time researching. They try to discover computers of interest, enumerate users and groups, gather important IPs, and map your organization's assets and weaknesses. Reconnaissance activities allow attackers to gain a thorough understanding and complete mapping of your environment for later use.
 
 Reconnaissance attack testing methods:
 
 * Network-mapping reconnaissance
 * Directory Service reconnaissance
 * User and IP Address (SMB) reconnaissance
-
 
 ## Network-mapping reconnaissance (DNS)
 
