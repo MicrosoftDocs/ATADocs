@@ -34,10 +34,11 @@ In this tutorial you will:
 
 ## Prerequisites
 
-1. An [Azure ATP instance](install-atp-step1.md)
-2. [A lab domain controller and two lab workstations](#Server-and-Computers)
-3. [Download](install-atp-step3.md) and [install Azure ATP sensor version 2.56 or newer](install-atp-step4.md) on your lab's domain controller.
-4. Familiarity with [Privileged Access Workstations](https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+1. [A lab domain controller and two lab workstations](#Server-and-Computers).
+   - Go ahead and [hydrate Active Directory (AD) with users](#bkmk_hydrate).
+1. An [Azure ATP instance](install-atp-step1.md) that is [connected to AD](install-atp-step2.md).
+1. [Download](install-atp-step3.md) and [install the latest version of the Azure ATP sensor](install-atp-step4.md) on your lab's domain controller.
+1. Familiarity with [Privileged Access Workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## Recommendations
 
@@ -65,10 +66,10 @@ In this lab, there are three main users and one service account. The service acc
 
 There's a “Helpdesk” Security Group (SG) of which Ron HelpDesk is a member. This SG mimics the Helpdesk. The SG is paired with a Group Policy Object that gives our Helpdesk members Local Admin rights on the respective computers. This setup is used to simulate a realistic administrative model in a production environment.
 
-| Full Name    | SAMAccount | Purpose                                                                                          |
+| Full Name    | SAMAccount |Purpose|
 |--------------|------------|--------------------------------------------------------------------------------------------------|
 | Jeff Leatherman  | JeffL  | Soon to be a victim of an impressively effective phishing attack  |
-| Ron HelpDesk  | RonHD  | Ron is the “go-to-person” in Contoso’s IT team. RonHD is a member of the “Helpdesk” security group. |
+| Ron HelpDesk  | RonHD  |Ron is the “go-to-person” in Contoso’s IT team. RonHD is a member of the “Helpdesk” security group. |
 | Samira Abbasi | SamiraA  | At Contoso, this user is our Domain Admin. |
 | Azure ATP Service | AATPService | Azure ATP's service account |
 
@@ -76,9 +77,9 @@ There's a “Helpdesk” Security Group (SG) of which Ron HelpDesk is a member. 
 
 To configure the base lab we'll add users and groups to Active Directory, edit a SAM policy, and a sensitive group in Azure ATP.
 
-### Hydrate Active Directory users on ContosoDC
+### <a name="bkmk_hydrate"></a> Hydrate Active Directory users on ContosoDC
 
-To simplify the lab, we automated the process to create fictitious users and groups in Active Directory. You can use or modify this script to hydrate your lab's Active Directory environment. If you prefer not to use a script, you can do it manually.
+To simplify the lab, we automated the process to create fictitious users and groups in Active Directory. This script is run as a prerequisite for this tutorial. You can use or modify the script to hydrate your lab's Active Directory environment. If you prefer not to use a script, you can do it manually.
 
 As a Domain Admin, on ContosoDC, run the following to hydrate our Active Directory Users:
 

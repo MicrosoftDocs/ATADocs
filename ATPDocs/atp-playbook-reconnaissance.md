@@ -53,12 +53,23 @@ One of the first things an attacker will attempt is to try to get a dump of all 
 
 ### Run nslookup from VictimPC
 
-To test DNS reconnaissance, we'll use the native Microsoft binary, *nslookup*. DNS servers with correct configuration will refuse queries of this type and won't allow the zone transfer attempt.
+To test DNS reconnaissance, we'll use the native Microsoft binary, *nslookup*. DNS servers with correct configuration will refuse queries of this type and won't allow the zone transfer attempt. If this is the first logical activity the ContsoDC sensor ever sees, then we are going to wait 15 minutes after we first run this section. Then, we are going to run these commands again. 
 
 Sign into **VictimPC**, using the compromised JeffL credentials. Run the following command:
 
 ``` cmd
 nslookup
+```
+
+Type **server** then the FQDN or IP address of the DC where the ATP sensor is installed.
+
+```nslookup
+server contosodc.contoso.azure
+```
+
+Let's try to transfer the domain.
+
+```nslookup
 ls -d contoso.azure
 ```
 
@@ -67,7 +78,9 @@ ls -d contoso.azure
 
 ### Network-mapping reconnaissance (DNS) Detected in Azure ATP
 
-Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. Azure ATP detects this type of reconnaissance against your DNS and issues the following security alert:
+Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. Since we just installed the environment, we'll need to go to the Logical Activities timeline to see the activity.
+
+In the Azure ATP Search, type **VictimPC** and click on it to view the timeline. Azure ATP detects this type of reconnaissance against your DNS and issues the following security alert:
 
 ![DNS reconnaissance detected by AATP, high-level view](media/playbook-recon-nslookupdetection1.png)
 
@@ -77,7 +90,7 @@ Click on the security alert issued by Azure ATP to see additional details and ev
 
 If your security analyst determined this activity originated from a security scanner, the specific device can be excluded from further detection alerts. In the top-right area of the alert, click on the three dots. Then, select **Close and exclude MySecurityScanner**. Ensuring this alert doesn't show up again when detected from "MySecurityScanner".
 
-Detecting failures can be as insightful as detecting successful attacks against an environment. The Azure ATP portal allows us to see the exact result of the actions done by a possible attacker. In our simulated DNS reconnaissance attack story, we, as attackers, were stopped from dumping the DNS records of the domain. Your SecOps team became aware of our attack attempt and which machine we used in our attempt from the Azure ATP security alert.
+Detecting failures can be as insightful as detecting successful attacks against an environment. The Azure ATP portal allows us to see the exact result of the actions done by a possible attacker. In our simulated DNS reconnaissance attack story, we, acting as attackers, were stopped from dumping the DNS records of the domain. Your SecOps team became aware of our attack attempt and which machine we used in our attempt from the Azure ATP security alert.
 
 ## Directory Service Reconnaissance
 
