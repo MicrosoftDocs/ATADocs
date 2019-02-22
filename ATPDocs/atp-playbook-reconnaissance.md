@@ -53,7 +53,7 @@ One of the first things an attacker will attempt is to try to get a dump of all 
 
 ### Run nslookup from VictimPC
 
-To test DNS reconnaissance, we'll use the native Microsoft binary, *nslookup*. DNS servers with correct configuration will refuse queries of this type and won't allow the zone transfer attempt. If this is the first logical activity the ContsoDC sensor ever sees, then we are going to wait 15 minutes after we first run this section. Then, we are going to run these commands again. 
+To test DNS reconnaissance, we'll use the native Microsoft binary, *nslookup*. DNS servers with correct configuration will refuse queries of this type and won't allow the zone transfer attempt.  
 
 Sign into **VictimPC**, using the compromised JeffL credentials. Run the following command:
 
@@ -75,6 +75,7 @@ ls -d contoso.azure
 
 ![nslookup command attempt to dump the DNS server -failure](media/playbook-recon-nslookup.png)
 
+If **ContsoDC** is your first deployed sensor, and this is the first logical activity it ever sees, then we are going to wait 15 minutes and rerun the commands above. When your first sensor is deployed and the first logical activity is seen, the logical activity Kusto database is created. During the 15 minutes the database is being created, all logical activities are dropped. For any additional sensors you want to test, run the **server** and **ls -d** commands again. Just swap in the other server names.
 
 ### Network-mapping reconnaissance (DNS) Detected in Azure ATP
 
