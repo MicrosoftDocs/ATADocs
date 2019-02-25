@@ -43,7 +43,7 @@ Released February 24, 2019
     Improved **Account enumeration reconnaissance (NTLM)** alert using additional analysis, and improved detection logic to reduce **B-TP** and **FP** alert results. 
  
 - **Feature enhancement: Network mapping reconnaissance (DNS) alert** <br>
-    New types of detections added to Network mapping reconnaissance (DNS) alerts. Azure ATP now detects suspicious types of requests originating from non-DNS servers in addition to AXFR. 
+    New types of detections added to Network mapping reconnaissance (DNS) alerts. In addition to detecting suspicious AXFR requests, Azure ATP now detects suspicious types of requests originating from non-DNS servers using an excessive amount of requests.
 
  - This version also includes improvements and bug fixes for internal sensor infrastructure.
 

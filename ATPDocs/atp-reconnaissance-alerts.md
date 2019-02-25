@@ -124,7 +124,7 @@ Now, look at the accounts:<br>
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack. 
  
-There are several query types in the DNS protocol. This Azure ATP security alert detects suspicious AXFR (transfer) requests originating from non-DNS servers.
+There are several query types in the DNS protocol. This Azure ATP security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive amount of requests.
 
 **Learning period**
 
