@@ -131,7 +131,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
    ![Enumerate all members of the Domain Admins group](media/playbook-recon-dsenumeration-netdomainadmins.png)
 
-    As the attacker, we've learned there are two members of the Domain Admins group: **SamiraA** and **ContosoAdmin** (built-in Administrator for the Domain Controller). Knowing no security boundary exists between our Domain and Forest, our next leap is to try to enumerate the Enterprise Admins.
+    Acting as an attacker, we've learned there are two members of the Domain Admins group: **SamiraA** and **ContosoAdmin** (built-in Administrator for the Domain Controller). Knowing no security boundary exists between our Domain and Forest, our next leap is to try to enumerate the Enterprise Admins.
 
 4. To attempt to enumerate the Enterprise Admins, execute the following command:
 
