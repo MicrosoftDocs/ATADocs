@@ -47,7 +47,7 @@ In this tutorial, learn how to understand, classify, remediate, and prevent the 
 > [!div class="checklist"]
 > * Account enumeration reconnaissance (external ID 2003)
 > * Network mapping reconnaissance (DNS) (external ID 2007)
-> * Security principal reconnaissance (LDAP) (external ID 2038)
+> * Security principal reconnaissance (LDAP) (external ID 2038) - preview
 > * User and IP address reconnaissance (SMB) (external ID 2012)
 > * User and Group membership reconnaissance (SAMR) (external ID 2021)
 > * 
@@ -118,7 +118,6 @@ Now, look at the accounts:<br>
 
 ## Network mapping reconnaissance (DNS) (external ID 2007) 
 
-
 *Previous name:* Reconnaissance using DNS
 
 **Description**
@@ -151,16 +150,16 @@ Security scanners and legitimate applications can  generate DNS queries.
 **Suggested remediation and steps for prevention**
 
 **Remediation:**
-1. Contain the source computer. 
+- Contain the source computer. 
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
 
-**Prevention:**
+**Prevention:**<br>
 It is important to preventing future attacks using AXFR queries by securing your internal DNS server.
 
-1. Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+- Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
-## Security principal reconnaissance (LDAP) (external ID 2038) 
+## Security principal reconnaissance (LDAP) (external ID 2038) - preview
 
 **Description**
 Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory.  LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
@@ -171,7 +170,7 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 10 days per computer, starting from the day of the first event, observed from the machine. 
 
 **TP, B-TP, or FP**
-1.	Click on the source computer to go to its profile page. 
+1.	Click on the source computer and go to its profile page. 
     1. Is this source computer expected to generate this activity? 
     2. If the computer and activity are expected, **Close** the security alert and exclude that computer as a **B-TP** activity. 
 
