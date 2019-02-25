@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/17/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -29,6 +29,23 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.67
+Released February 24, 2019
+
+- **New security alert: Security principal reconnaissance (LMP) – (preview)**<br>
+
+    Azure ATP’s [Security principal reconnaissance (LDAP) - preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-lmp-external-id-2038---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. 
+
+    Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
+
+- **Feature enhancement: Account enumeration reconnaissance (NTLM) alert** <br> 
+    Improved **Account enumeration reconnaissance (NTLM)** alert using additional analysis, and improved detection logic to reduce **B-TP** and **FP** alert results. 
+ 
+- **Feature enhancement: Network mapping reconnaissance (DNS) alert** <br>
+    New types of detections added to Network mapping reconnaissance (DNS) alerts. Azure ATP now detects suspicious types of requests originating from non-DNS servers in addition to AXFR. 
+
+ - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.66
 Released February 17, 2019
