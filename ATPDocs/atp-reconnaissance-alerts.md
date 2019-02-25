@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod:
@@ -47,8 +47,10 @@ In this tutorial, learn how to understand, classify, remediate, and prevent the 
 > [!div class="checklist"]
 > * Account enumeration reconnaissance (external ID 2003)
 > * Network mapping reconnaissance (DNS) (external ID 2007)
+> * Security principal reconnaissance (LDAP) (external ID 2038) - preview
 > * User and IP address reconnaissance (SMB) (external ID 2012)
 > * User and Group membership reconnaissance (SAMR) (external ID 2021)
+> * 
 
 ## Account enumeration reconnaissance (external ID 2003) 
 
@@ -116,14 +118,13 @@ Now, look at the accounts:<br>
 
 ## Network mapping reconnaissance (DNS) (external ID 2007) 
 
-
 *Previous name:* Reconnaissance using DNS
 
 **Description**
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack. 
  
-There are several query types in the DNS protocol. This Azure ATP security alert detects suspicious AXFR (transfer) requests originating from non-DNS servers.
+There are several query types in the DNS protocol. This Azure ATP security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive amount of requests.
 
 **Learning period**
 
@@ -149,17 +150,45 @@ Security scanners and legitimate applications can  generate DNS queries.
 **Suggested remediation and steps for prevention**
 
 **Remediation:**
-1. Contain the source computer. 
+- Contain the source computer. 
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
 
-**Prevention:**
+**Prevention:**<br>
 It is important to preventing future attacks using AXFR queries by securing your internal DNS server.
 
-1. Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+- Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+
+## Security principal reconnaissance (LDAP) (external ID 2038) - preview
+
+**Description**
+Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory.  LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
+
+In order to allow Azure ATP to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Azure ATP deployment. Once the Azure ATP initial learning phase is completed, alerts are generated on computers which perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.  
+
+**Learning period**
+10 days per computer, starting from the day of the first event, observed from the machine. 
+
+**TP, B-TP, or FP**
+1.	Click on the source computer and go to its profile page. 
+    1. Is this source computer expected to generate this activity? 
+    2. If the computer and activity are expected, **Close** the security alert and exclude that computer as a **B-TP** activity. 
+
+**Understand the scope of the breach**
+
+1.	Check the queries that were performed (such as Domain admins, or all users in a domain) and determine if the queries  were successful. Investigate each exposed group search for suspicious activities made on the group, or by member users of the group.
+2. Investigate the [source computer](investigate-a-computer.md). 
+    - Using the LDAP queries, check if any resource access activity occurred on any of the exposed SPNs.
+
+**Suggested remediation and steps for prevention**
+
+1.	Contain the source computer
+    1. Find the tool that preformed the attack and remove it.
+    2. Is the computer running a scanning tool that performs a variety of LDAP queries?
+    3. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA.
+2.	Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 ## User and IP address reconnaissance (SMB) (external ID 2012) 
-
 
 *Previous name:* Reconnaissance using SMB Session Enumeration
 
