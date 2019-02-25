@@ -22,14 +22,13 @@ ms.reviewer: itargoet
 
 The lateral movement playbook is third in the four part tutorial series for Azure ATP security alerts. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections. The playbook focuses on Azure ATP’s *signature*-based capabilities and doesn't include advanced machine-learning, user or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
-This playbook explains the process of using real-world, publicly available hacking and attack tools against the lateral movement path threat detections and security alerts services of Azure ATP.
+This playbook shows some of the lateral movement path threat detections and security alerts services of Azure ATP by mimicking an attack with common, real-world, publicly available hacking and attack tools.
 
 In this tutorial you will:
 > [!div class="checklist"]
-> * Dump credentials in memory to harvest NTLM hashes.
-> * Perform an Overpass-the-Hash attack to obtain a Kerberos Ticket Granting Ticket (TGT).
+> * Harvest NTLM hashes and simulate an Overpass-the-Hash attack to obtain a Kerberos Ticket Granting Ticket (TGT).
 > * Masquerade as as another user, move laterally across the network, and harvest more credentials.
-> * Perform a Pass-the-Ticket attack to gain access to the domain controller.
+> * Simulate a Pass-the-Ticket attack to gain access to the domain controller.
 > * Review the security alerts from the lateral movement in Azure ATP.
 
 ## Prerequisites
@@ -41,11 +40,11 @@ In this tutorial you will:
 
 ## Lateral Movement
 
-In the attacks we simulated in the previous tutorial, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA’s computer credentials were exposed. We'll use various attack methods to try to move laterally across the domain.
+From our simulated attacks in the previous tutorial, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered and seeing Azure ATP's alerts on the movement. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA’s computer credentials were exposed. We'll mimic various attack methods to try to move laterally across the domain.
 
 ## Dump Credentials In-Memory from VictimPC
 
-During our reconnaissance attacks, **VictimPC** wasn't only exposed to JeffL’s credentials. There are other useful accounts to discover on that machine. To achieve a lateral move using **VictimPC**, we'll attempt to enumerate in-memory credentials on the shared resource. Dumping in-memory credentials using **mimikatz** is a popular attack method using a common tool. 
+During our mock reconnaissance attacks, **VictimPC** wasn't only exposed to JeffL’s credentials. There are other useful accounts to discover on that machine. To achieve a lateral move using **VictimPC**, we'll attempt to enumerate in-memory credentials on the shared resource. Dumping in-memory credentials using **mimikatz** is a popular attack method using a common tool.
 
 ### Mimikatz sekurlsa::logonpasswords
 
@@ -62,12 +61,12 @@ During our reconnaissance attacks, **VictimPC** wasn't only exposed to JeffL’s
 4. We successfully harvested RonHD's NTLM hash from memory using mimikatz. We'll need the NTLM hash shortly.
 
    > [!Important]
-   > - It's expected and normal that the hashes shown in this example are different from the hashes you see in your own lab environment. The purpose of this tutorial is to help you understand how the hashes were obtained, get their values, and use them in the next phases. </br> </br>
+   > - It's expected and normal that the hashes shown in this example are different from the hashes you see in your own lab environment. The purpose of this exercise is to help you understand how the hashes were obtained, get their values, and use them in the next phases. </br> </br>
    > - The credential of the computer account was also exposed in this harvest. While the computer account credential value is not useful in our current lab, remember this is another avenue real attackers use to gain lateral movement in your environment.
 
 ### Gather more information about the RonHD account
 
-An attacker may not initially know who RonHD is or its value as a target. All they know is they can use the credential if it's advantageous to do so. However, using the **net** command we can discover what groups RonHD is a member of.
+An attacker may not initially know who RonHD is or its value as a target. All they know is they can use the credential if it's advantageous to do so. However, using the **net** command we, acting as an attacker, can discover what groups RonHD is a member of.
 
 From **VictimPC**, run the following command:
 
@@ -81,7 +80,7 @@ From the results, we learn RonHD is a member of the "Helpdesk" Security Group. W
 
 ### Mimikatz sekurlsa::pth
 
-Using a technique called **Overpass-the-Hash**, the harvested NTLM hash is used to obtain a Ticket Granting Ticket (TGT). An attacker with a user's TGT, can masquerade as the compromised user such as RonHD. While masquerading as RonHD, we can access any domain resource the compromised user has access to or their respective Security Groups have access to.
+Using a common technique called **Overpass-the-Hash**, the harvested NTLM hash is used to obtain a Ticket Granting Ticket (TGT). An attacker with a user's TGT, can masquerade as a compromised user such as RonHD. While masquerading as RonHD, we can access any domain resource the compromised user has access to or their respective Security Groups have access to.
 
 1. From **VictimPC**, change directory to the folder containing **Mimikatz.exe**. storage location on your filesystem and execute the following command:
 
@@ -90,11 +89,11 @@ Using a technique called **Overpass-the-Hash**, the harvested NTLM hash is used 
    ```
 
    > [!Note]
-   > If your hash for RonHD was different in the previous steps, replace the NTLM hash above with the hash you gathered from victimpc.txt.
+   > If your hash for RonHD was different in the previous steps, replace the NTLM hash above with the hash you gathered from *victimpc.txt*.
 
    ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
 
-3. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem obvious *yet*. Don't close the new command prompt since you'll use it next.
+2. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem obvious *yet*. Don't close the new command prompt since you'll use it next.
 
 Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects when a hash is **used from one resource to access another** resource or service.
 
@@ -128,7 +127,7 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
    dir \\adminpc\c$
    ```
 
-3. We successfully accessed AdminPC! Let's see what tickets we have. In the same cmd prompt, run the following command:
+3. We successfully accessed AdminPC. Let's see what tickets we have. In the same cmd prompt, run the following command:
 
    ``` cmd
    klist
@@ -136,7 +135,7 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
 
    ![Use klist to show us Kerberos tickets in our current cmd.exe process](media/playbook-lateral-klist.png)
 
-You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an Overpass-the-Hash attack. We converted the NTLM hash that was compromised earlier and used it to obtain a Kerberos TGT. That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC.
+You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an Overpass-the-Hash attack in our lab. We converted the NTLM hash that was compromised earlier and used it to obtain a Kerberos TGT. That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC. 
 
 ### Overpass-the-Hash Detected in Azure ATP
 
@@ -152,7 +151,7 @@ In the Security Operations Center, our Security Analyst is made aware of the com
 
 ## Domain Escalation
 
-We don't just have access to AdminPC, we have validated Administrator privileges on AdminPC. We can now laterally move to AdminPC and harvest even more credentials.
+From our simulated attack, we don't just have access to AdminPC, we have validated Administrator privileges on AdminPC. We can now laterally move to AdminPC and harvest more credentials.
 
 Here, we will:
 
@@ -162,7 +161,7 @@ Here, we will:
 
 ### Pass-the-Ticket
 
-From the command prompt running in the context of *RonHD* on **VictimPC**, traverse to where our attack-tools are located. Then, run xcopy to move those tools to the AdminPC:
+From the command prompt running in the context of *RonHD* on **VictimPC**, traverse to where our common attack-tools are located. Then, run xcopy to move those tools to the AdminPC:
 
 ``` cmd
 xcopy mimikatz.exe \\adminpc\c$\temp
@@ -174,7 +173,7 @@ Press ```d``` when prompted, stating that the "temp" folder is a directory on Ad
 
 ### Mimikatz sekurlsa::tickets
 
-With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it. 
+With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
 1. Traverse to where PsExec is located and execute the following command:
 
@@ -207,6 +206,7 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
 
 ### Mimikatz Kerberos::ptt
+
 With the tickets locally on VictimPC, it's finally time to become SamiraA by "Passing the Ticket".
 
 1. From the location of **Mimikatz** on **VictimPC**'s filesystem, open a new **elevated command prompt**, and execute the following command:
@@ -225,14 +225,12 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 
    ![Run klist to see the imported tickets in the CMD process](media/playbook-escalation-ptt2.png)
 
-3. Note that these tickets remain unused. As the attacker, we successfully "passed the ticket". We harvested SamirA's credential from AdminPC, and then passed it to another process running on VictimPC.
+3. Note that these tickets remain unused. Acting as an attacker, we successfully "passed the ticket". We harvested SamirA's credential from AdminPC, and then passed it to another process running on VictimPC.
 
    > [!Note]
-   > Like in Pass-the-Hash, Azure ATP doesn't know the ticket was passed  based on local client activity. However, Azure ATP does detect the activity *once the ticket is used*, that is, leveraged to access another resource/service. 
+   > Like in Pass-the-Hash, Azure ATP doesn't know the ticket was passed  based on local client activity. However, Azure ATP does detect the activity *once the ticket is used*, that is, leveraged to access another resource/service.
 
-
-
-4. Complete your attack by accessing the domain controller from **VictimPC**. In the command prompt, now running with the tickets of SamirA in memory, execute:
+4. Complete your simulated attack by accessing the domain controller from **VictimPC**. In the command prompt, now running with the tickets of SamirA in memory, execute:
 
    ``` cmd
    dir \\ContosoDC\c$
@@ -240,7 +238,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 
    ![Access the c:\ drive of ContosoDC using SamirA's credentials](media/playbook-escalation-ptt3.png)
 
-Success! We gained administrator access on the domain controller and succeeding in compromising the Active Directory Domain/Forest.
+Success! Through our mock attacks, we gained administrator access on our domain controller and succeeded in compromising our lab's Active Directory Domain/Forest.
 
 ### Pass the Ticket detection in Azure ATP
 
@@ -248,15 +246,14 @@ Most security tools have no way to detect when a legitimate credential was used 
 
 - Azure ATP detected theft of Samira's tickets from AdminPC and movement to VictimPC.
 - The Azure ATP portal shows exactly which resources were accessed using the stolen tickets.
-- Provides key information and evidence to identify exactly where to start your investigation and what steps to take to remediate. 
+- Provides key information and evidence to identify exactly where to start your investigation and what remediation steps to take.
 
-Azure ATP detections and alert information are of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise. 
+Azure ATP detections and alert information are of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise.
 
 ![Azure ATP detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
 
 > [!NOTE]
 > This event will only display on the Azure ATP console in **2 hours**. Events of this type are purposefully suppressed for this timeframe to reduce false positives.
-
 
 ## Next steps
 The next phase in the attack kill chain is domain dominance.

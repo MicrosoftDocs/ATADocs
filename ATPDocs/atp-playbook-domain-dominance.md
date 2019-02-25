@@ -23,9 +23,9 @@ ms.reviewer: itargoet
 
 The last tutorial in this four part series for Azure ATP security alerts is a domain dominance playbook. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of Azure ATP's *discrete* detections using Azure ATP’s *signature*-based capabilities. The tutorials don't include Azure ATP advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
-This playbook explains the process of using real-world, publicly available hacking and attack tools against the domain dominance threat detections and security alerts services of Azure ATP. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance. 
+This playbook shows some of the domain dominance threat detections and security alerts services of Azure ATP using simulated attacks from common, real-world, publicly available hacking and attack tools. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance.
 
-In this tutorial, you'll use the following methods to achieve persistent domain dominance: 
+In this tutorial, you'll simulate an attacker achieving persistent domain dominance by using the following common methods:
 
 > [!div class="checklist"]
 > * Remote Code Execution
@@ -75,7 +75,7 @@ Using WMI via the command line, try to create a process locally on the domain co
 
    ![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
 
-As the attacker, you've successfully created a new user by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. The new credential gives the attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
+As an attacker, you've successfully created a new user by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. The new credential gives the attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
 
 ### Remote Code Execution Detection in Azure ATP
 

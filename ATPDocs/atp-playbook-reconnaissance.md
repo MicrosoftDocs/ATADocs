@@ -75,7 +75,7 @@ ls -d contoso.azure
 
 ![nslookup command attempt to dump the DNS server -failure](media/playbook-recon-nslookup.png)
 
-If **ContsoDC** is your first deployed sensor, and this is the first logical activity it ever sees, then we are going to wait 15 minutes and rerun the commands above. When your first sensor is deployed and the first logical activity is seen, the logical activity Kusto database is created. During the 15 minutes the database is being created, all logical activities are dropped. For any additional sensors you want to test, run the **server** and **ls -d** commands again. Just swap in the other server names.
+If **ContsoDC** is your first deployed sensor, and this is the first logical activity it ever sees, then we're going to wait 15 minutes and rerun the commands above. When your first sensor is deployed and the first logical activity is seen, the logical activity Kusto database is created. During the 15 minutes the database is being created, all logical activities are dropped. For any additional sensors you want to test, run the **server** and **ls -d** commands again, swapping in the other server names.
 
 ### Network-mapping reconnaissance (DNS) Detected in Azure ATP
 
@@ -95,13 +95,13 @@ Detecting failures can be as insightful as detecting successful attacks against 
 
 ## Directory Service Reconnaissance
 
-As the attacker, the next reconnaissance goal is an attempt to enumerate all users and groups in the Forest. Azure ATP suppresses Directory Service enumeration activity from your Suspicious Activity timeline until a 30 day learning period is completed. In the learning period, Azure ATP learns what is normal and abnormal for your network. After the 30 day learning period, abnormal Directory Service enumeration events invoke a security alert. During the 30 day learning period, you can see Azure ATP detections of these activities using the activity timeline of an entity in your network. The Azure ATP detections of these activities are shown in this lab.
+Acting as an attacker, the next reconnaissance goal is an attempt to enumerate all users and groups in the Forest. Azure ATP suppresses Directory Service enumeration activity from your Suspicious Activity timeline until a 30 day learning period is completed. In the learning period, Azure ATP learns what is normal and abnormal for your network. After the 30 day learning period, abnormal Directory Service enumeration events invoke a security alert. During the 30 day learning period, you can see Azure ATP detections of these activities using the activity timeline of an entity in your network. The Azure ATP detections of these activities are shown in this lab.
 
-To demonstrate the Directory Service reconnaissance method, we'll use the native Microsoft binary, *net*. After our attempt, examining the Activity timeline of JeffL, our compromised user, will show Azure ATP detecting this activity.
+To demonstrate a common Directory Service reconnaissance method, we'll use the native Microsoft binary, *net*. After our attempt, examining the Activity timeline of JeffL, our compromised user, will show Azure ATP detecting this activity.
 
 ### Directory Service Enumeration via *net* from VictimPC
 
-Any authenticated user or computer can potentially enumerate other users and groups in a domain. This enumeration ability is required for most applications to function properly. Our compromised user, JeffL, is an unprivileged domain account. In this attack, we'll see exactly how even an unprivileged domain account can still provide valuable data points to an attacker.
+Any authenticated user or computer can potentially enumerate other users and groups in a domain. This enumeration ability is required for most applications to function properly. Our compromised user, JeffL, is an unprivileged domain account. In this simulated attack, we'll see exactly how even an unprivileged domain account can still provide valuable data points to an attacker.
 
 1. From **VictimPC**, execute the following command:
 
@@ -143,7 +143,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
    ![Enterprise Admins enumerated in the domain](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
 
-With the information gathered in our reconnaissance, we now know about the Helpdesk Security Group. Although, that information isn't interesting *yet*. We also know that **SamiraA** is a member of the Domain Admins group. If we can harvest SamiraA's credential, we can gain access the Domain Controller itself!
+With the information gathered in our reconnaissance, we now know about the Helpdesk Security Group. Although that information isn't interesting *yet*. We also know that **SamiraA** is a member of the Domain Admins group. If we can harvest SamiraA's credential, we can gain access the Domain Controller itself.
 
 ### Directory Service Enumeration Detected in Azure ATP
 
@@ -185,7 +185,7 @@ NetSess.exe ContosoDC
 
 ![Attackers use SMB reconnaissance to identify users and their IP addresses](media/playbook-recon-smbrecon.png)
 
-We already know that SamiraA is a Domain Admin. This attack gave us SamiraA's IP address as 10.0.24.6. As the attacker, we learned exactly who we need to compromise. We also got the network location where that credential is logged in.
+We already know that SamiraA is a Domain Admin. This attack gave us SamiraA's IP address as 10.0.24.6. As an attacker, we learned exactly who we need to compromise. We also got the network location where that credential is logged in.
 
 ### User and IP Address reconnaissance (SMB) Detected in Azure ATP
 
@@ -193,7 +193,7 @@ Now we can see what Azure ATP detected for us:
 
 ![AATP Detecting SMB reconnaissance](media/playbook-recon-smbrecon-detection1.png)
 
-Not only are we alerted on this activity, we're also alerted on the exposed accounts and their respective IP addresses *at that point in time*. As the Security Operations Center (SOC), we don't just have the attempt and its status, but also what was sent back to the attacker. We could use this information to aid our investigation.
+Not only are we alerted on this activity, we're also alerted on the exposed accounts and their respective IP addresses *at that point in time*. As the Security Operations Center (SOC), we don't just have the attempt and its status, but also what was sent back to the attacker. This information aids our investigation.
 
 
 ## Next steps
