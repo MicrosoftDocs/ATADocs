@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/04/2019
+ms.date: 02/27/2019
 
 # optional metadata
 
@@ -49,7 +49,7 @@ In the cyber-attack kill chain, during the phase of domain dominance, an attacke
 
 ### Remote Code Execution
 
-Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller. We'll try using these tools together to perform remote code execution and gain domain controller persistency:
+Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller. We'll try using these common tools together to perform remote code execution and gain domain controller persistency:
 
 - Windows Management Instrumentation (WMI)
 - PsExec from SysInternals
@@ -76,7 +76,7 @@ Using WMI via the command line, try to create a process locally on the domain co
 
    ![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
 
-As an attacker, you've successfully created a new user in your lab by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. The new credential gives the attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
+Acting as an attacker, you've successfully created a new user in your lab by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. New credentials give an attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
 
 ### Remote Code Execution Detection in Azure ATP
 
@@ -90,7 +90,7 @@ Because of encryption on the WMI session, certain values such as the actual WMI 
 
 VictimPC, the computer, should never be executing remote code against the Domain Controllers.
 
-As Azure ATP learns who is inserted into which Security Groups over time, and similar suspicious activities are identified as anomalous activity in the timeline. Since this lab was recently built and is still within the learning period, this activity won't display as an alert. Security group modification detection by Azure ATP can be validated by checking the activity timeline. Azure ATP also allows you to generate reports on all Security Group modifications, which can be emailed to you proactively.
+As Azure ATP learns who is inserted into which Security Groups over time,  similar suspicious activities are identified as anomalous activity in the timeline. Since this lab was recently built and is still within the learning period, this activity won't display as an alert. Security group modification detection by Azure ATP can be validated by checking the activity timeline. Azure ATP also allows you to generate reports on all Security Group modifications, which can be emailed to you proactively.
 
 Access the **Administrator** page in the Azure ATP portal using the Search tool. The Azure ATP detection of the user insertion is displayed in the Admin Group activity timeline.
 
@@ -98,7 +98,7 @@ Access the **Administrator** page in the Azure ATP portal using the Search tool.
 
 ### Data Protection API (DPAPI)
 
-Data Protection Application Programming Interface (DPAPI) is used by Windows to securely protect passwords saved by browsers, encrypted files, and other sensitive data. Domain controllers hold a master key that can decrypt *all* secrets on domain-joined Windows machines. 
+Data Protection Application Programming Interface (DPAPI) is used by Windows to securely protect passwords saved by browsers, encrypted files, and other sensitive data. Domain controllers hold a master key that can decrypt *all* secrets on domain-joined Windows machines.
 
 Using **mimikatz**, we'll attempt to export the master key from the domain controller. 
 
@@ -124,7 +124,7 @@ Using the Azure ATP portal, let's verify that Azure ATP successfully detected ou
 
 Malicious replication allows an attacker to replicate user information using Domain Admin (or equivalent) credentials. Malicious replication essentially allows an attacker to remotely harvest a credential. Obviously, the most critical account to attempt to harvest is "krbtgt" as it's the master key used to sign all Kerberos tickets.
 
-The two major hacking tool sets that allow attackers to attempt malicious replication are **Mimikatz**, and Core Security’s **Impacket**.
+The two common hacking tool sets that allow attackers to attempt malicious replication are **Mimikatz**, and Core Security’s **Impacket**.
 
 #### Mimikatz lsadump::dcsync
 
@@ -140,15 +140,15 @@ We've replicated the “krbtgt” account information to: c:\\temp\\ContosoDC_kr
 
 #### Malicious Replication Detection in Azure ATP
 
-Using the Azure ATP portal, verify the SOC is now aware of the malicious replication from VictimPC.
+Using the Azure ATP portal, verify the SOC is now aware of the malicious replication we simulated from VictimPC.
 
 ![Malicious replication being detected by AATP](media/playbook-dominance-maliciousrep_detected.png)
 
 ### Skeleton Key
 
-Another domain dominance method attackers use is known as **Skeleton Key**. Using a Skeleton Key, the attacker creates, the attacker can masquerade *as any user* at *any time*. In a Skeleton Key attack, every user can still sign in with their normal password, but each of their accounts is also given a master password. The new master password or Skeleton Key gives anyone who knows it, open access to the account. A Skeleton Key attack is achieved by patching the LSASS.exe process on the domain controller, forcing users to authenticate via a downgraded encryption type.
+Another domain dominance method attackers use is known as **Skeleton Key**. Using a Skeleton Key the attacker creates, the attacker can masquerade *as any user* at *any time*. In a Skeleton Key attack, every user can still sign in with their normal password, but each of their accounts is also given a master password. The new master password or Skeleton Key gives anyone who knows it, open access to the account. A Skeleton Key attack is achieved by patching the LSASS.exe process on the domain controller, forcing users to authenticate via a downgraded encryption type.
 
-Let's see exactly how Skeleton Key works:
+Let's use a Skeleton Key to see how this type of attack works:
 
 1. Move **mimikatz** to **ContosoDC** using the **SamirA** credentials we acquired before. Make sure to push the right architecture of **mimikatz.exe** based on the architecture type of the DC (64-bit vs 32-bit). From the **mimikatz** folder, execute:
 
@@ -162,13 +162,13 @@ Let's see exactly how Skeleton Key works:
    PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
    ```
 
-4. Success! You successfully patched the LSASS process on **ContosoDC**. 
+3. You successfully patched the LSASS process on **ContosoDC**.
 
    ![Skeleton Key attack via mimikatz](media/playbook-dominance-skeletonkey.png)
 
 ### Exploiting the Skeleton Key Patched LSASS
 
-On **VictimPC**, open up a cmd prompt (in the context of **JeffL**), execute the following to try to become context of RonHD
+On **VictimPC**, open up a cmd prompt (in the context of **JeffL**), execute the following to try to become context of RonHD.
 
 ``` cmd
 runas /user:ronhd@contoso.azure "notepad"
@@ -184,10 +184,10 @@ But Skeleton Key adds an additional password to each account. Do the "runas" com
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-This command will create a new process, *notepad*, running in the context of RonHD. **Skeleton Key can be done for _any_ account, including service accounts and computer accounts.**
+This command creates a new process, *notepad*, running in the context of RonHD. **Skeleton Key can be done for _any_ account, including service accounts and computer accounts.**
 
 > [!Important]
-> It is important that you restart  ContosoDC after you execute the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
+> It is important that you restart ContosoDC after you execute the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
 
 ### Skeleton Key attack Detection in Azure ATP
 
@@ -199,7 +199,7 @@ Azure ATP successfully detected the suspicious pre-authentication encryption met
 
 ### Golden Ticket - Existing User
 
-After stealing the “Golden Ticket”, (“krbtgt” account explained [here via Malicious Replication](#Malicious-Replication), an attacker is able to sign tickets *as if they're the domain controller*. **Mimikatz**, the Domain SID, and the stolen "krbtgt" account are all required to accomplish this attack. Not only can we generate tickets for a user, we can generate tickets for users who don't even exist!
+After stealing the “Golden Ticket”, (“krbtgt” account explained [here via Malicious Replication](#Malicious-Replication), an attacker is able to sign tickets *as if they're the domain controller*. **Mimikatz**, the Domain SID, and the stolen "krbtgt" account are all required to accomplish this attack. Not only can we generate tickets for a user, we can generate tickets for users who don't even exist.
 
 1. As JeffL, run the below command on **VictimPC** to acquire the domain SID:
 
@@ -211,7 +211,7 @@ After stealing the “Golden Ticket”, (“krbtgt” account explained [here vi
 
 2. Identify and copy the Domain SID highlighted in the above screenshot.
 
-3. Using **mimikatz**, take the copied Domain SID, along with the stolen “krbtgt” user's NTLM hash to generate the TGT. Insert the following text into a cmd.exe as JeffV:
+3. Using **mimikatz**, take the copied Domain SID, along with the stolen “krbtgt” user's NTLM hash to generate the TGT. Insert the following text into a cmd.exe as JeffL:
 
    ``` cmd
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
@@ -225,7 +225,7 @@ After stealing the “Golden Ticket”, (“krbtgt” account explained [here vi
 
    ![klist results after passing the generated ticket](media/playbook-dominance-golden_klist.png)
 
-4. Execute the following Pass-the-Ticket command to use it against the DC:
+5. Acting as an attacker, execute the following Pass-the-Ticket command to use it against the DC:
 
    ``` cmd
    dir \\ContosoDC\c$
