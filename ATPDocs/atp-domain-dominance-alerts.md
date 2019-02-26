@@ -443,11 +443,11 @@ Previous name: Kerberos golden ticket
 Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. This alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the Maximum lifetime for user ticket. 
  
 **TP, B-TP, or FP**
-1. In the last few hours, was there any change made to the **Maximum lifetime for user ticket** setting in group policy, that might affect the alert?  
+1. In the last few hours, was there any change made to the **Maximum lifetime for user ticket** setting in group policy, that might affect the alert?  
 2. Is the Azure ATP Standalone Sensor involved in this alert a virtual machine? 
     - If the Azure ATP standalone sensor is involved, was it recently resumed from a saved state?  
 3. Is there a time synchronization problem in the network, where not all of the computers are synchronized? 
-    - Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
+    - Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
 
 If the answer to the previous questions is **yes**, **Close** the security alert as a **B-TP** activity. 
  
