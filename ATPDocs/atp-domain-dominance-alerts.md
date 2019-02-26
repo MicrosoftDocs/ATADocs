@@ -9,6 +9,7 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 02/03/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -51,7 +52,7 @@ The following security alerts help you identify and remediate **Domain dominance
 > * Suspected Golden Ticket usage (nonexistent account) (external ID 2027)
 > * Suspected Golden Ticket usage (ticket anomaly) (external ID 2032)
 > * Suspected Golden Ticket usage (time anomaly) (external ID 2022)
-> * Suspected Skeleton Key attack (encryption downgrade) (external ID )
+> * Suspected Skeleton Key attack (encryption downgrade) (external ID 2010)
 > * Suspicious modification of sensitive groups (external ID 2024)
 > * Suspicious service creation (external ID 2026)
 
@@ -362,7 +363,7 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 Some Operating Systems or applications are known to modify the authorization data. For example, Linux and Unix services have their own authorization mechanism which may trigger the alert. 
 
 1. Is the source computer running an OS or application that has its own authorization mechanism?  
-    - If the source computer is running this type of computer, consider upgrading the OS or fixing the application configuration. **Close** the alert as a **B-TP** activity. 
+    - If the source computer is running this type of authorization mechanism, consider upgrading the OS or fixing the application configuration. **Close** the alert as a **B-TP** activity. 
   
 **Understand the scope of the breach**
 1. Investigate the [source computer](investigate-a-computer.md). 
@@ -442,11 +443,11 @@ Previous name: Kerberos golden ticket
 Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. This alert is triggered when a Kerberos ticket granting ticket is used for more than the allowed time permitted, as specified in the Maximum lifetime for user ticket. 
  
 **TP, B-TP, or FP**
-1. In the last few hours, was there any change made to the **Maximum lifetime for user ticket** setting in group policy, that might affect the alert?  
+1. In the last few hours, was there any change made to the **Maximum lifetime for user ticket** setting in group policy, that might affect the alert?  
 2. Is the Azure ATP Standalone Sensor involved in this alert a virtual machine? 
     - If the Azure ATP standalone sensor is involved, was it recently resumed from a saved state?  
 3. Is there a time synchronization problem in the network, where not all of the computers are synchronized? 
-    - Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
+    - Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
 
 If the answer to the previous questions is **yes**, **Close** the security alert as a **B-TP** activity. 
  

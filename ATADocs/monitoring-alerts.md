@@ -4,11 +4,12 @@
 title: Understanding ATA monitoring alerts | Microsoft Docs
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 3/21/2018
+ms.date: 02/20/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: advanced-threat-analytics
 ms.service:
 ms.technology:
@@ -20,7 +21,7 @@ ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
+ms.reviewer: elofek
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -59,7 +60,7 @@ This article describes all the monitoring alerts for each component, listing the
 ### ATA Center certificate expired
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Center certificate expired.|After the certificate expires: Connectivity from the ATA Gateways to the ATA Center fails. The ATA Center process crashes and all ATA functionality stops.|[Replace the ATA Center certificate](modifying-ata-center-configuration.md)|High|
+|The ATA Center certificate expired.|After the certificate expires: Connectivity from the ATA Gateways to the ATA Center fails. The ATA Center process crashes and all ATA functionality stops.|[Redeploy the ATA Center](install-ata-step1.md)|High|
 ## ATA Gateway issues
 ### Read-only user password to expire shortly
 |Alert|Description|Resolution|Severity|

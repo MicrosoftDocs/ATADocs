@@ -7,8 +7,9 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/17/2018
+ms.date: 02/25/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -32,6 +33,13 @@ ms.suite: ems
 Azure ATP occasionally has engineering or feature limitations that may limit or change the way your organization uses Azure ATP services. Known Issue limitations that have no known workaround, or a work in progress status without a specific update timeline are described here. 
 
 For Azure ATP known issues with known workarounds, see [Troubleshooting Azure ATP Known Issues](troubleshooting-atp-known-issues.md). To check the status of your Azure ATP tenant, visit the [Azure ATP Health Center](atp-health-center.md). 
+
+## DNS reconnaissance alert
+> [!div class="mx-tableFixed"] 
+
+|Issue|Status|
+|----|----|
+The *DNS reconnaissance* security alert issue affects  customers by issuing repetitive False Positive **DNS reconnaissance alerts** from a single machine. If a spike of **DNS reconnaissance alerts** are seen generated from a single computer, close or delete these alerts until update 2.67 is deployed and resolves this issue. | Update 2.67 resolves this issue.|
 
 ## Suspected Brute Force attack (LDAP) Security Alert display
 > [!div class="mx-tableFixed"] 

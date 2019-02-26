@@ -1,14 +1,16 @@
 ---
 # required metadata
 
-title: Monitoring domain controllers and installed sensors installed on  your domain controllers using Azure Advanced Threat Protection | Microsoft Docs
+title: Monitoring domain controllers and installed sensors installed on your domain controllers using Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to monitor Azure ATP sensors and sensor coverage using Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
+
 manager: barbkess
-ms.date: 1/27/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
@@ -30,9 +32,9 @@ ms.suite: ems
 
 # Monitoring your domain controller coverage
 
-As soon as your first Azure ATP sensor is installed and configured on any domain controller in your network, Azure ATP begins monitoring your environment for domain controllers. 
+As soon as the first Azure ATP sensor is installed and configured on any domain controller in your network, Azure ATP begins monitoring your environment for domain controllers. 
 
-During setup, it is recommended to select at least one Azure ATP sensor domain controller as the domain synchronizer candidate per domain. One of the jobs of the domain synchronizer sensor is to ensure that domain controllers are actively being searched for by that specific sensor. Domain controllers can be switched to and from domain synchronizer candidate status after initial configuration. See [Azure ATP sensor configuration](install-atp-step5.md) for more information about configuring an Azure sensor and setting it as a **domain synchronizer candidate**. 
+During setup, it is recommended to select at least one Azure ATP sensor domain controller as the domain synchronizer candidate per domain. One of the jobs of the domain synchronizer sensor is to ensure that domain controllers are actively being searched for by that specific sensor. Domain controllers can be switched to and from domain synchronizer candidate status after initial configuration. When no domain controller is selected as the domain synchronizer candidate, only passive monitoring of the network activity on your domain controllers is occurring. See [Azure ATP sensor configuration](install-atp-step5.md) for more information about configuring an Azure sensor and setting it as a **domain synchronizer candidate**. 
 
 Once an Azure ATP sensor is installed and configured on a domain controller in your network, the sensor communicates with the Azure ATP service on a constant basis sending sensor status, health and version information, and collected Active Directory events and changes.  
 
