@@ -49,11 +49,11 @@ Reconnaissance attack testing methods:
 
 ## Network-mapping reconnaissance (DNS)
 
-One of the first things an attacker will attempt is to try to get a dump of all DNS information. When successful, the attacker gains extensive information about your environment that potentially includes similar information about your other environments or networks.
+One of the first things an attacker will attempt is to try to get a copy of all DNS information. When successful, the attacker gains extensive information about your environment that potentially includes similar information about your other environments or networks.
 
 ### Run nslookup from VictimPC
 
-To test DNS reconnaissance, we'll use the native Microsoft binary, *nslookup*. DNS servers with correct configuration will refuse queries of this type and won't allow the zone transfer attempt.  
+To test DNS reconnaissance, we'll use the native command-line tool, *nslookup*, to initiate a DNS zone transfer. DNS servers with correct configuration will refuse queries of this type and won't allow the zone transfer attempt.  
 
 Sign into **VictimPC**, using the compromised JeffL credentials. Run the following command:
 
@@ -73,13 +73,15 @@ Let's try to transfer the domain.
 ls -d contoso.azure
 ```
 
-![nslookup command attempt to dump the DNS server -failure](media/playbook-recon-nslookup.png)
+- You should replace contosodc.contoso.azure and contoso.azure with the FQDN of your Azure ATP sensor and domain name respectively.
 
-If **ContsoDC** is your first deployed sensor, and this is the first logical activity it ever sees, then we're going to wait 15 minutes and rerun the commands above. When your first sensor is deployed and the first logical activity is seen, the logical activity Kusto database is created. During the 15 minutes the database is being created, all logical activities are dropped. For any additional sensors you want to test, run the **server** and **ls -d** commands again, swapping in the other server names.
+ ![nslookup command attempt to dump the DNS server -failure](media/playbook-recon-nslookup.png)
+
+If you're **deploying your first Azure ATP sensor**, allow 15 minutes for some backend processing to complete and rerun the previous commands. For any additional sensors you want to test, run the **server** and **ls -d** commands again against other server names.
 
 ### Network-mapping reconnaissance (DNS) Detected in Azure ATP
 
-Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. Since we just installed the environment, we'll need to go to the Logical Activities timeline to see the activity.
+Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. Since we just installed the environment, we'll need to go to the Logical Activities timeline to see the activity. Azure ATP suppresses **Network-mapping reconnaissance** activity from your Suspicious Activity timeline until an 8-day learning period is completed. In the learning period, Azure ATP learns what is normal and abnormal for your network.
 
 In the Azure ATP Search, type **VictimPC** and click on it to view the timeline. Azure ATP detects this type of reconnaissance against your DNS and issues the following security alert:
 

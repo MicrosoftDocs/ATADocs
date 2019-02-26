@@ -25,7 +25,7 @@ The last tutorial in this four part series for Azure ATP security alerts is a do
 
 This playbook shows some of the domain dominance threat detections and security alerts services of Azure ATP using simulated attacks from common, real-world, publicly available hacking and attack tools. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance.
 
-In this tutorial, you'll simulate an attacker achieving persistent domain dominance by using the following common methods:
+In this tutorial, you'll simulate an attacker attempting to achieve persistent domain dominance. You'll review Azure ATP's detections for the following common methods:
 
 > [!div class="checklist"]
 > * Remote Code Execution
@@ -34,6 +34,7 @@ In this tutorial, you'll simulate an attacker achieving persistent domain domina
 > * Service Creation
 > * Skeleton Key
 > * Golden Ticket
+
 
 ## Prerequisites
 
@@ -75,11 +76,11 @@ Using WMI via the command line, try to create a process locally on the domain co
 
    ![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
 
-As an attacker, you've successfully created a new user by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. The new credential gives the attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
+As an attacker, you've successfully created a new user in your lab by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. The new credential gives the attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
 
 ### Remote Code Execution Detection in Azure ATP
 
-Sign in to the Azure ATP portal to check what, if anything, Azure ATP detected from our last attack: 
+Sign in to the Azure ATP portal to check what, if anything, Azure ATP detected from our last simulated attack:
 
 ![Azure ATP detecting WMI remote code execution](media/playbook-dominance-wmipsexecdetected.png)
 
@@ -91,7 +92,7 @@ VictimPC, the computer, should never be executing remote code against the Domain
 
 As Azure ATP learns who is inserted into which Security Groups over time, and similar suspicious activities are identified as anomalous activity in the timeline. Since this lab was recently built and is still within the learning period, this activity won't display as an alert. Security group modification detection by Azure ATP can be validated by checking the activity timeline. Azure ATP also allows you to generate reports on all Security Group modifications, which can be emailed to you proactively.
 
-Access the **Administrator** page in the Azure ATP portal using the Search tool. The Azure ATP detection of the user insertion is displayed in the Admin Group activity timeline. 
+Access the **Administrator** page in the Azure ATP portal using the Search tool. The Azure ATP detection of the user insertion is displayed in the Admin Group activity timeline.
 
 ![View added user to sensitive security group](media/playbook-dominance-admininserteduser.png)
 
