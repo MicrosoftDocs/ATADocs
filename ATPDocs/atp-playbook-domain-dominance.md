@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/27/2019
+ms.date: 02/28/2019
 
 # optional metadata
 
@@ -25,7 +25,7 @@ The last tutorial in this four part series for Azure ATP security alerts is a do
 
 This playbook shows some of the domain dominance threat detections and security alerts services of Azure ATP using simulated attacks from common, real-world, publicly available hacking and attack tools. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance.
 
-In this tutorial, you'll simulate an attacker attempting to achieve persistent domain dominance. You'll review Azure ATP's detections for the following common methods:
+In this tutorial, you'll simulate attempts to achieve persistent domain dominance in order to review each of Azure ATP's detections for the following common methods:
 
 > [!div class="checklist"]
 > * Remote Code Execution
@@ -49,7 +49,7 @@ In the cyber-attack kill chain, during the phase of domain dominance, an attacke
 
 ### Remote Code Execution
 
-Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller. We'll try using these common tools together to perform remote code execution and gain domain controller persistency:
+Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller. We'll try using these common tools together to perform remote code execution and gain domain controller persistency and then see what Azure ATP shows us.
 
 - Windows Management Instrumentation (WMI)
 - PsExec from SysInternals
