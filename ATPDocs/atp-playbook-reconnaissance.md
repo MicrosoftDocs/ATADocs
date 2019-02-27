@@ -77,17 +77,18 @@ ls -d contoso.azure
 
  ![nslookup command attempt to dump the DNS server -failure](media/playbook-recon-nslookup.png)
 
-If you're **deploying your first Azure ATP sensor**, allow 15 minutes for some backend processing to complete and rerun the previous commands. For any additional sensors you want to test, run the **server** and **ls -d** commands again against other server names.
+If **ContsoDC** is your first deployed sensor, wait 15 minutes to allow the database backend to finish deploying the necessary microservices.
 
 ### Network-mapping reconnaissance (DNS) Detected in Azure ATP
 
-Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. Since we just installed the environment, we'll need to go to the Logical Activities timeline to see the activity. Azure ATP suppresses **Network-mapping reconnaissance** activity from your Suspicious Activity timeline until an 8-day learning period is completed. In the learning period, Azure ATP learns what is normal and abnormal for your network.
+Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. Since we just installed the environment, we'll need to go to the Logical Activities timeline to see the activity. 
 
-In the Azure ATP Search, type **VictimPC** and click on it to view the timeline. Azure ATP detects this type of reconnaissance against your DNS and issues the following security alert:
+In the Azure ATP Search, type **VictimPC**, then click on it to view the timeline.
 
 ![DNS reconnaissance detected by AATP, high-level view](media/playbook-recon-nslookupdetection1.png)
 
-Click on the security alert issued by Azure ATP to see additional details and evidence:
+Look for the "AXFR query" activity. Azure ATP detects this type of reconnaissance against your DNS. 
+  - If you have a large number of activities, click **Filter by** and uncheck all types except "DNS query".
 
 ![Detailed view of the DNS reconnaissance detection in AATP](media/playbook-recon-nslookupdetection2.png)
 
