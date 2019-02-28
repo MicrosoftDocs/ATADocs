@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
