@@ -19,7 +19,7 @@ ms.reviewer: itargoet
 
 ---
 
-# # Tutorial: Domain dominance playbook
+# Tutorial: Domain dominance playbook
 
 The last tutorial in this four part series for Azure ATP security alerts is a domain dominance playbook. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of Azure ATP's *discrete* detections using Azure ATP’s *signature*-based capabilities. The tutorials don't include Azure ATP advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](atp-playbook-lab-overview.md).
 
