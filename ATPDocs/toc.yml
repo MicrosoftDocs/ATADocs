@@ -11,8 +11,8 @@
   - name: What's new in Azure ATP
     href: atp-whats-new.md
 - name: Quickstarts
-  items:
   expanded: true
+  items:
   - name: Plan your Azure ATP capacity
     href: atp-capacity-planning.md
   - name: Create your Azure ATP instance
