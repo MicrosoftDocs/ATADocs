@@ -139,7 +139,7 @@ In this detection, an alert is triggered when Azure ATP detects a massive number
 
 It is important to check if any login attempts ended with successful authentication.
 
-1. If any login attempts ended successfully, are any of the **Guessed accounts** normally used from that source computer?
+1. If any login attempts ended successfully, are any of the **Guessed accounts** normally used from that source computer?
    - Is there any chance these accounts failed because a wrong password was used?  
    - Check with the user(s) if they generated the activity, (failed to login a few times and then succeeded).
 
