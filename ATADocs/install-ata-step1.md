@@ -78,6 +78,9 @@ Perform the following steps on the ATA Center server.
         
    ![ATA center configuration image](media/ATA-Center-Configuration.png)
 
+> [!NOTE]   
+> Make sure to pay attention to monitoring alerts regarding the Center Service SSL Certificate status and expiration warnings. If the certificate expires, you'll need to completely re-deploy ATA. 
+
 10. Click **Install** to install the ATA Center and its components.
    The following components are installed and configured during the installation of ATA Center:
 
