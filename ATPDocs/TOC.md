@@ -13,7 +13,6 @@
 ## [Install the Azure ATP sensor](install-atp-step4.md)
 ## [Configure the Azure ATP sensor](install-atp-step5.md)
 # Tutorials
-## [Understanding security alerts](understanding-security-alerts.md)
 ## [Reconnaissance alerts](atp-reconnaissance-alerts.md)
 ## [Compromised credential alerts](atp-compromised-credentials-alerts.md)
 ## [Lateral movement alerts](atp-lateral-movement-alerts.md)
@@ -59,6 +58,13 @@
 ### [Validate port mirroring](validate-port-mirroring.md)
 ### [Configure event collection](configure-event-collection.md)
 ### [Configure Windows Event Forwarding](configure-event-forwarding.md)
+## [Understanding security alerts](understanding-security-alerts.md)
+## Security alert lab
+### [Lab overview](atp-playbook-lab-overview.md)
+### [1 - Lab setup](atp-playbook-setup-lab.md)
+### [2 -Reconnaissance playbook](atp-playbook-reconnaissance.md)
+### [3 -Lateral movement playbook](atp-playbook-lateral-movement.md)
+### [4 - Domain dominance playbook](atp-playbook-domain-dominance.md)
 # Reference
 ## [SIEM log reference](cef-format-sa.md)
 ## [Azure ATP known issues](known-issues.md)
