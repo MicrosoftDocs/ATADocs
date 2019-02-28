@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -77,6 +77,9 @@ Perform the following steps on the ATA Center server.
    |Center Service SSL Certificate|This is the certificate that is used by the ATA Console and ATA Center service.|Click the key icon to select an installed certificate or use the checkbox to create a self-signed certificate.|
         
    ![ATA center configuration image](media/ATA-Center-Configuration.png)
+
+> [!NOTE]   
+> Make sure to pay attention to monitoring alerts regarding the Center Service SSL Certificate status and expiration warnings. If the certificate expires, you'll need to completely re-deploy ATA. 
 
 10. Click **Install** to install the ATA Center and its components.
    The following components are installed and configured during the installation of ATA Center:
