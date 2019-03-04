@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/28/2019
+ms.date: 03/03/2019
 
 # optional metadata
 
@@ -73,9 +73,9 @@ Let's try to transfer the domain.
 ls -d contoso.azure
 ```
 
-- You should replace contosodc.contoso.azure and contoso.azure with the FQDN of your Azure ATP sensor and domain name respectively.
+- Replace contosodc.contoso.azure and contoso.azure with the FQDN of your Azure ATP sensor and domain name respectively.
 
- ![nslookup command attempt to dump the DNS server -failure](media/playbook-recon-nslookup.png)
+ ![nslookup command attempt to copy the DNS server -failure](media/playbook-recon-nslookup.png)
 
 If **ContsoDC** is your first deployed sensor, wait 15 minutes to allow the database backend to finish deploying the necessary microservices.
 
