@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/28/2019
+ms.date: 03/03/2019
 
 # optional metadata
 
@@ -259,7 +259,7 @@ Azure ATP detections and alert information are of critical value to any Digital 
 The next phase in the attack kill chain is domain dominance.
 
 > [!div class="nextstepaction"]
-> [Azure ATP Domain Dominance playbook](atp-playbook-lateral-movement.md)
+> [Azure ATP Domain Dominance playbook](atp-playbook-domain-dominance.md)
 
 ## Join the Community
 

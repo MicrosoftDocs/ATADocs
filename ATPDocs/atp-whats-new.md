@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/25/2019
+ms.date: 03/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -30,10 +30,25 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+## Azure ATP release 2.68
+Released March 3, 2019
+
+- **Feature enhancement: Suspected brute force attack (LDAP) alert**<br>
+Significant usability improvements were made to this security alert including a revised description, provision of additional source information, and guess attempt details for faster remediation. 
+Learn more about [Suspected brute force attack (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004) security alerts. 
+
+- **New documentation feature: Security alert lab**<br>
+
+    To explain the power of Azure ATP in detecting the real threats to your working environment, we've added a new **Security alert lab** to this documentation. The **Security alert lab** helps you quickly set up a lab or testing environment, and explains the best defensive posturing against common, real-world threats and attacks.  
+
+    The [step-by-step lab](atp-playbook-lab-overview.md) is designed to ensure you spend minimal time building, and more time learning about your threat landscape and available Azure ATP alerts and protection. We're excited to hear your feedback.
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.67
 Released February 24, 2019
 
-- **New security alert: Security principal reconnaissance (LMP) – (preview)**<br>
+- **New security alert: Security principal reconnaissance (LDAP) – (preview)**<br>
 
     Azure ATP’s [Security principal reconnaissance (LDAP) - preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. 
 
@@ -43,7 +58,7 @@ Released February 24, 2019
     Improved **Account enumeration reconnaissance (NTLM)** alert using additional analysis, and improved detection logic to reduce **B-TP** and **FP** alert results. 
  
 - **Feature enhancement: Network mapping reconnaissance (DNS) alert** <br>
-    New types of detections added to Network mapping reconnaissance (DNS) alerts. In addition to detecting suspicious AXFR requests, Azure ATP now detects suspicious types of requests originating from non-DNS servers using an excessive amount of requests.
+    New types of detections added to Network mapping reconnaissance (DNS) alerts. In addition to detecting suspicious AXFR requests, Azure ATP now detects suspicious types of requests originating from non-DNS servers using an excessive number of requests.
 
  - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
