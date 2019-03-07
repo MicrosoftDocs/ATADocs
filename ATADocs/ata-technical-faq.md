@@ -4,10 +4,10 @@
 title: Advanced Threat Analytics frequently asked questions | Microsoft Docs
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 5/6/2018
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -36,7 +36,7 @@ This article provides a list of frequently asked questions about ATA and provide
 
 If you have an active Enterprise Agreement, you can download the software from the Microsoft Volume Licensing Center (VLSC).
 
-If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
+If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Microsoft 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
 
 ## What should I do if the ATA Gateway won’t start?
 Look at the most recent error in the current error log (Where ATA is installed under the "Logs" folder).
