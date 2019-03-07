@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -64,7 +64,7 @@ Yes. Since computer accounts (as well as any other entities) can be used to perf
 ## Licensing and privacy 
 ### Where can I get a license for Azure Advanced Threat Protection (ATP)?
 
-Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5), and as a standalone license. You can acquire a license directly from the [Office 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
+Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5), and as a standalone license. You can acquire a license directly from the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
 
 ### Is this going to be a part of Azure Active Directory or on-premises Active Directory?
 The Azure ATP solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
