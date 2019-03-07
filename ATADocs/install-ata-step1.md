@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -43,7 +43,7 @@ This installation procedure provides instructions for performing a fresh install
 After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
     
 > [!NOTE]
->If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Office 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
+>If you acquired a license for Enterprise Mobility + Security (EMS) directly via the Microsoft 365 portal or through the Cloud Solution Partner (CSP) licensing model and you do not have access to ATA through the Microsoft Volume Licensing Center (VLSC), contact Microsoft Customer Support to obtain the process to activate Advanced Threat Analytics (ATA).
 
 Perform the following steps on the ATA Center server.
 
