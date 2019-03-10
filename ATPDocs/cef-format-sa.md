@@ -70,8 +70,8 @@ The following fields and their values are forwarded to your SIEM:
 |[Honeytoken activity](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Honeytoken activity|2014||
 |[Malicious request of Data Protection API master key](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Malicious Data Protection Private Information Request|2020|Credential access|
 |[Network mapping reconnaissance (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance using DNS|2007|Discovery|
-|[Remote code execution attempt](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Remote code execution attempt|2019|Execution,<br> Persistence,<br> Privilege Escalation,<br> Defense Evasion,<br> Lateral Movement|
-|[Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|NA|2036|Privilege Escalation,<br> Lateral Movement|
+|[Remote code execution attempt](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Remote code execution attempt|2019|Execution,<br> Persistence,<br> Privilege Escalation,<br> Defense evasion,<br> Lateral movement|
+|[Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|NA|2036|Privilege escalation,<br> Lateral movement|
 |[Security principal reconnaissance (LDAP) - preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)|NA|2038|Credential access|
 |[Suspected brute force attack (Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Suspicious authentication failures|2023|Credential access|
 |[Suspected brute force attack (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Brute force attack using LDAP simple bind|2004|Credential access|
@@ -93,9 +93,9 @@ The following fields and their values are forwarded to your SIEM:
 |[Suspected WannaCry ransomware attack](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Unusual protocol implementation (potential WannaCry ransomware attack)|2035||
 |[Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037||
 |[Suspicious communication over DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Suspicious communication over DNS|2031|Exfiltration|
-|[Suspicious modification of sensitive groups](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Suspicious modification of sensitive groups|2024|Credential Access,<br>Persistence|
-|[Suspicious service creation](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Suspicious service creation|2026|Execution,<br> Persistence,<br> Privilege Escalation,<br> Defense Evasion,<br>Lateral Movement|
-|[Suspicious VPN connection](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Suspicious VPN connection|2025|Persistence,<br>Defense Evasion|
+|[Suspicious modification of sensitive groups](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Suspicious modification of sensitive groups|2024|Credential access,<br>Persistence|
+|[Suspicious service creation](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Suspicious service creation|2026|Execution,<br> Persistence,<br> Privilege Escalation,<br> Defense evasion,<br>Lateral movement|
+|[Suspicious VPN connection](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Suspicious VPN connection|2025|Persistence,<br>Defense evasion|
 |[User and group membership reconnaissance (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance using directory services queries|2021|Discovery|
 |[User and IP address reconnaissance (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Reconnaissance using SMB Session Enumeration|2012|Discovery|
 
