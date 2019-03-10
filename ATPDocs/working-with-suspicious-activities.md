@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/1/2019
+ms.date: 03/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.prod:
@@ -54,8 +54,8 @@ Each security alert has the following information:
     - Download the security alert in Excel format.
 
 > [!NOTE]
-> - When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of security alerts that the entity is linked to.
-> - If you click on an entity, it takes you to the entity profile of the user or computer.
+> - When you hover your mouse over a user or computer, a mini entity profile is displayed. The mini-profile provides additional information about the entity and includes the number of security alerts that the entity is linked to.
+> - Clicking on an entity, takes you to the entity profile of the user or computer.
 
 ![Azure ATP security alerts timeline image](media/atp-sa-timeline.png)
 
@@ -63,11 +63,11 @@ Each security alert has the following information:
 
 Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. 
 
-- Reconnaissance alerts
-- Compromised credential alerts
-- Lateral movement alerts
-- Domain dominance alerts
-- Exfiltration alerts
+- [Reconnaissance alerts](atp-reconnaissance-alerts.md)
+- [Compromised credential alerts](atp-compromised-credentials-alerts.md)
+- [Lateral movement alerts](atp-lateral-movement-alerts.md)
+- [Domain dominance alerts](atp-domain-dominance-alerts.md)
+- [Exfiltration alerts](atp-exfiltration-alerts.md)
 
 ## Preview detections <a name="preview-detections"></a>
 
