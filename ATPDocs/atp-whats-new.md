@@ -33,7 +33,7 @@ ms.suite: ems
 ## Azure ATP release 2.69
 Released March 10, 2019
 
-- **Feature enhancement: Suspected identity theft (pass-the-ticket) alert**<br> This alert now features new evidence showing the details of connections made by using remote desktop protocol (RDP). 
+- **Feature enhancement: Suspected identity theft (pass-the-ticket) alert**<br> This alert now features new evidence showing the details of connections made by using remote desktop protocol (RDP). The added evidence makes it easy to remediate the known issue of (B-TP) Benign-True Positive alerts caused by use of Remote Credential Guard over RDP connections. 
 
 - **Feature enhancement: Remote code execution over DNS alert**<br> 
 This alert now features new evidence showing your domain controller security update status, informing you when updates are required.   
