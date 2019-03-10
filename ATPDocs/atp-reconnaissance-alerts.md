@@ -50,7 +50,7 @@ In this tutorial, learn how to understand, classify, remediate, and prevent the 
 > * Security principal reconnaissance (LDAP) (external ID 2038) - preview
 > * User and IP address reconnaissance (SMB) (external ID 2012)
 > * User and Group membership reconnaissance (SAMR) (external ID 2021)
-> * 
+ 
 
 ## Account enumeration reconnaissance (external ID 2003) 
 
