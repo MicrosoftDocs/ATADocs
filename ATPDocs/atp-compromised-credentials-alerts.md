@@ -97,7 +97,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 
 It is important to check if any login attempts ended with successful authentication.
 
-1. If any login attempts ended successfully, check if  any of the **Guessed accounts** are normally used from that source computer.
+1. If any login attempts ended successfully, check if  any of the **Guessed accounts** are normally used from that source computer.
    - Is there any chance these accounts failed because a wrong password was used?  
    - Check with the user(s) if they generated the activity, (failed to login a fe times and then succeeded). 
 
