@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -33,6 +33,9 @@ Azure ATP [lateral movement path](use-case-lateral-movement-path.md) detection r
 ## Configure SAM-R required permissions
 To ensure Windows clients and servers allow your Azure ATP account to perform SAM-R, a modification to **Group Policy** must be made to add the Azure ATP service account in addition to the configured accounts listed in the **Network access** policy.
 
+> [!Note]
+> Before enforcing new policies such as this one, it is critical to make sure that your environment remains secure, and any changes will not impact your application compatibility. Do this by first enabling and then verifying compatibility of proposed changes in audit mode before making changes to your production environment.
+
 1. Locate the policy:
 
    - Policy Name: Network access - Restrict clients allowed to make remote calls to SAM
@@ -46,8 +49,7 @@ To ensure Windows clients and servers allow your Azure ATP account to perform SA
 
 3. **AATP Service** (the Azure ATP service created during installation) now has the privileges needed to perform SAM-R in the environment.
 
-> [!NOTE]
-> Before enforcing new policies, make sure that your environment remains secure, without impacting your application compatibility by enabling and verifying proposed changes in audit mode.
+
 
 For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 

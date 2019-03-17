@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/24/2019
+ms.date: 03/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod:
@@ -150,11 +150,13 @@ Security scanners and legitimate applications can  generate DNS queries.
 **Suggested remediation and steps for prevention**
 
 **Remediation:**
+
 - Contain the source computer. 
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
 
 **Prevention:**<br>
+
 It is important to preventing future attacks using AXFR queries by securing your internal DNS server.
 
 - Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
@@ -162,14 +164,17 @@ It is important to preventing future attacks using AXFR queries by securing your
 ## Security principal reconnaissance (LDAP) (external ID 2038) - preview
 
 **Description**
+
 Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory.  LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
 In order to allow Azure ATP to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Azure ATP deployment. Once the Azure ATP initial learning phase is completed, alerts are generated on computers which perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.  
 
 **Learning period**
+
 10 days per computer, starting from the day of the first event, observed from the machine. 
 
 **TP, B-TP, or FP**
+
 1.	Click on the source computer and go to its profile page. 
     1. Is this source computer expected to generate this activity? 
     2. If the computer and activity are expected, **Close** the security alert and exclude that computer as a **B-TP** activity. 
@@ -223,7 +228,8 @@ Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blockin
 
 *Previous name:* Reconnaissance using directory services queries 
 
-**Description** 
+**Description**
+ 
 User and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.  
 In this detection, no alerts are triggered in the first month after Azure ATP is deployed (learning period). During the learning period, Azure ATP profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts. 
 
