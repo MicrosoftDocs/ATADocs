@@ -38,12 +38,10 @@ Released March 17, 2019
     NNR confidence level evidence was added to the following alerts:
   - [Network mapping reconnaissance (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
   - [Suspected identity theft (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
-
   - [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
   - [Suspected DCSync attack (replication of directory services)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
 
 - **Additional health alert scenario: Azure ATP sensor service failed to start**<br>In instances where the Azure ATP sensor failed to start due to a network capturing driver issue, a sensor health alert is now triggered. [Troubleshooting Azure ATP sensor with Azure ATP logs](troubleshooting-atp-using-logs.md) for more information about Azure ATP logs and how to use them. 
-
   
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
