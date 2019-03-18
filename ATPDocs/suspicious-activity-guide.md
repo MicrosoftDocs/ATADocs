@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/25/2019
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -51,7 +51,7 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |---------|----------|---------|---------|
 |[Account enumeration reconnaissance](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Reconnaissance using account enumeration|2003|Discovery|
 |[Data exfiltration over SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| NA| 2030|Exfiltration,<br>Lateral movement,<br>Command and control|
-|[Honeytoken activity](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Honeytoken activity|2014||
+|[Honeytoken activity](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Honeytoken activity|2014|Credential access,<br> Discovery|
 |[Malicious request of Data Protection API master key](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Malicious Data Protection Private Information Request|2020|Credential access|
 |[Network mapping reconnaissance (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Reconnaissance using DNS|2007|Discovery|
 |[Remote code execution attempt](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Remote code execution attempt|2019|Execution,<br> Persistence,<br> Privilege escalation,<br> Defense evasion,<br> Lateral movement|
@@ -62,20 +62,20 @@ In version 2.56, all existing Azure ATP security alerts were renamed with easier
 |[Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Unusual protocol implementation (potential use of malicious tools such as Hydra)|2033|Lateral movement|
 |[Suspected DCShadow attack (domain controller promotion)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Suspicious domain controller promotion (potential DCShadow attack)|2028|Defense evasion|
 |[Suspected DCShadow attack (domain controller replication request)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Suspicious domain controller replication request (potential DCShadow attack)|2029|Defense evasion|
-|[Suspected DCSync attack (replication of directory services)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Malicious replication of directory services|2006||
-|[Suspected Golden Ticket usage (encryption downgrade)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Encryption downgrade activity (potential golden ticket attack)|2009|
-|[Suspected Golden Ticket usage (forged authorization data)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Privilege escalation using forged authorization data|2013|Privilege escalation,<br>Lateral movement||
-|[Suspected Golden Ticket usage (nonexistent account)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Kerberos Golden Ticket - nonexistent account|2027||
-|[Suspected Golden Ticket usage (ticket anomaly)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|NA|2032||
-|[Suspected Golden Ticket usage (time anomaly)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket - time anomaly|2022||
+|[Suspected DCSync attack (replication of directory services)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Malicious replication of directory services|2006|Persistence,<br> Credential access|
+|[Suspected Golden Ticket usage (encryption downgrade)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Encryption downgrade activity (potential golden ticket attack)|2009|Privilege Escalation,<br> Lateral movement,<br>Persistence|
+|[Suspected Golden Ticket usage (forged authorization data)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013)|Privilege escalation using forged authorization data|2013|Privilege escalation,<br>Lateral movement,<br>Persistence|
+|[Suspected Golden Ticket usage (nonexistent account)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Kerberos Golden Ticket - nonexistent account|2027|Privilege Escalation,<br> Lateral movement,<br>Persistence|
+|[Suspected Golden Ticket usage (ticket anomaly)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|NA|2032|Privilege Escalation,<br> Lateral movement,<br>Persistence|
+|[Suspected Golden Ticket usage (time anomaly)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket - time anomaly|2022|Privilege Escalation,<br> Lateral movement,<br>Persistence|
 |[Suspected identity theft (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Identity theft using Pass-the-Hash attack|2017|Lateral movement|
 |[Suspected identity theft (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Identity theft using Pass-the-Ticket attack|2018|Lateral movement|
-|[Suspected over-pass-the-hash attack (encryption downgrade)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Encryption downgrade activity (potential overpass-the-hash attack)|2008||
+|[Suspected over-pass-the-hash attack (encryption downgrade)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Encryption downgrade activity (potential overpass-the-hash attack)|2008|Lateral movement|
 |[Suspected overpass-the-hash attack (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Unusual Kerberos protocol implementation (potential overpass-the-hash attack)|2002|Lateral movement|
-|[Suspected skeleton key attack (encryption downgrade)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Encryption downgrade activity (potential skeleton key attack)|2010||
+|[Suspected skeleton key attack (encryption downgrade)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Encryption downgrade activity (potential skeleton key attack)|2010|Lateral movement,<br> Persistence|
 |[Suspected use of Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Unusual protocol implementation (potential use of Metasploit hacking tools)|2034|Lateral movement|
-|[Suspected WannaCry ransomware attack](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Unusual protocol implementation (potential WannaCry ransomware attack)|2035||
-|[Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037||
+|[Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037|Privilege escalation, <br> Lateral movement|
+|[Suspected WannaCry ransomware attack](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Unusual protocol implementation (potential WannaCry ransomware attack)|2035|Lateral movement|
 |[Suspicious communication over DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Suspicious communication over DNS|2031|Exfiltration|
 |[Suspicious modification of sensitive groups](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Suspicious modification of sensitive groups|2024|Credential access,<br>Persistence|
 |[Suspicious service creation](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Suspicious service creation|2026|Execution,<br> Persistence,<br> Privilege Escalation,<br> Defense evasion,<br>Lateral movement|
