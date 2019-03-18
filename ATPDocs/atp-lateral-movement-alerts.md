@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/11/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod:
@@ -128,6 +128,13 @@ Successfully resolving IPs to computers in the organization is critical to ident
 3. Is the sensor not resolving one or more of the destination IP addresses? If a destination IP address is not resolved, it may indicate that the correct ports between sensor and devices are not open correctly. 
 
     If the answer to any of the previous questions is **yes**, check if the source and destinations computers are the same. If they are the same, it is an **FP** and there were no real attempts at **pass-the-ticket**. 
+
+The [Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) feature of RDP connections, when used with Windows 10 on Windows Server 2016 and newer, can cause **B-TP** alerts. 
+Using the alert evidence, check if the user made a remote desktop connection from the source computer to the destination computer.
+
+1. Check for correlating evidence.
+2. If there is correlating evidence, check if the RDP connection was made using Remote Credential Guard. 
+3. If the answer is yes, **Close** the security alert as a **T-BP** activity. 
 
 There are custom applications that forward tickets on behalf of users. These applications have delegation rights to user tickets.
 

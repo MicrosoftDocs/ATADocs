@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -66,18 +66,19 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 ## Enable access to Azure ATP service URLs in the proxy server
 
-If a proxy or firewall is blocking all traffic by default and allowing only specific domains through or HTTPS scanning (SSL inspection) is enabled, make sure that the following URLs are white-listed to permit communication with the Azure ATP service in port 443:
+To enable access to Azure ATP allow traffic to the following URLs:
 
-|Service location|.Atp.Azure.com DNS record|
+- \<your-instance-name>.atp.azure.com – for console connectivity. For example, "Contoso-corp.atp.azure.com"
+
+- \<your-instance-name>sensorapi.atp.azure.com – for sensors connectivity. For example, "contoso-corpsensorapi.atp.azure.com"
+
+The previous URLs automatically map to the correct service location for your Azure ATP instance. If you require more granular control, consider allowing traffic to the relevant endpoints from the following table:
+
+|Service location|*.atp.azure.com DNS record|
 |----|----|
 |US	|triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
 |Europe|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Asia|triprd1wcasse1sensorapi.atp.azure.com|
-
-
-You can also harden the firewall or proxy rules for a specific instance you created, by creating a rule for the following DNS records:
-- \<your-instance-name>.atp.azure.com – for console connectivity. For example, "Contoso-corp.atp.azure.com"
-- \<your-instance-name>sensorapi.atp.azure.com – for sensors connectivity. For example, "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]
