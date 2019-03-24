@@ -29,6 +29,7 @@
 ## [Monitored activities](monitored-activities.md)
 ## [Understanding entity profiles](entity-profiles.md)
 ## [Lateral movement paths](use-case-lateral-movement-path.md)
+## [Understanding Network Name Resolution (NNR)](atp-nnr-policy.md)
 ## [Reports](reports.md)
 ## [User roles](atp-role-groups.md)
 # How-to guides

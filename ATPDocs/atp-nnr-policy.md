@@ -1,17 +1,18 @@
 ---
 
-title: Azure Advanced Threat Protection Network Name Resolution port policy check | Microsoft Docs
-description: This article provides an overview of Azure ATP's Advanced Network Name Resolution port policy check.
+title: Azure Advanced Threat Protection Network Name Resolution | Microsoft Docs
+description: This article provides an overview of Azure ATP's Advanced Network Name Resolution functionality and uses.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 03/24/2019
-ms.topic: get-started-article
+ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod:
 ms.service: azure-advanced-threat-protection
 ms.technology:
-ms.assetid: 05a8e961-fb9f-49d0-9778-6f26664c2c08
+ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 
 # optional metadata
 
@@ -25,37 +26,63 @@ ms.suite: ems
 
 ---
 
-# Azure ATP Network Name Resolution port policy check
+# What is Network Name Resolution?
 
-Azure ATP detection capabilities rely on active Network Name Resolution (NNR) for visibility in certain scenarios, such as NetBios,RPC over NTLM, reverse and forward DNS. NNR enables Azure ATP to translate IP addresses used for communication with your domain, into a device name. To achieve a high rate of success with active NNR, the correct ports have to be accessible and open to Azure ATP sensors. Incorrect port settings leave critical event profiling and detections unavailable, resulting in unnecessary false positives, and incomplete Azure ATP coverage for your organization.
+Network Name Resolution or (NNR) is a main component of  Azure ATP functionality. Azure ATP captures activities based on network traffic, Windows events, and ETW - these activities normally contain IP data.  
 
-Methods and relevant ports:
- - NetBIOS – UDP port 137
- - NTLM over RPC - TCP port 135
- - TLS – TCP port 3389 
+Using NNR, Azure ATP is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Azure ATP profiles entities, including computers, and generates security alerts for suspicious activities.
 
-Use the following logic flow to understand how Azure ATP performs NNR. 
+NNR data is crucial for detecting the following threats:
 
-![Network Name Resolution (NNR) logic flow](media/atp-nnr-flow-diagram.png)
+- Suspected identity theft (pass-the-ticket)
+- Suspected DCSync attack (replication of directory services)
+- Network mapping reconnaissance (DNS)
+- Suspected NTLM relay attack (Exchange account)
 
-To make it easier to verify the current status of each of your sensor's ports, Azure ATP checks the status of each port per sensor and issues sensor alerts for port settings that require modification. Each alert provides specific details of the sensor, the problematic policy as well as remediation suggestions.
+To resolve IP addresses to computer names, ATP sensors query the IP address for the computer name “behind” the IP, using one of the following methods:
+
+1. NTLM over RPC (TCP Port 135)
+2. NetBIOS (UDP port 137)
+3. RDP (TCP port 3389) - only first packet of **Client hello**
+4. Query the DNS server using reverse DNS lookup of the IP address (UDP 53)
+
+> [!NOTE]
+>No authentication is performed on any of the ports.
+
+After retrieving the computer name, the Azure ATP sensor checks in Active Directory to see if there is a correlated computer object with the same computer name. If the sensor finds the correlation, the sensor associated this IP to that computer object.
+
+### Prerequisites
+|Protocol|	Transport|	Port|	Device|	Direction|
+|--------|--------|------|-------|------|
+|NTLM over RPC|	TCP	|135|	All devices on the network|	Inbound|
+|NetBIOS|	UDP|	137|	All devices on the network|	Inbound|
+|DNS|	UDP|	53|	Domain controllers|	Outbound|
+|
+
+When port 3389 is opened on devices in the environment, the Azure ATP sensor using it for network name resolution purposes.
+Opening port 3389 **is not a requirement**, it is only an additional method that can provide the computer name if the port is already opened for other purposes.
+
+To make sure Azure ATP is working ideally and the environment is configured correctly, Azure ATP checks the resolution status of each Sensor and issues a monitoring alert per method, providing a list of the Azure ATP sensors with low success rate of active name resolution using each method.
+
+Each monitoring alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
 
 ![Low success rate Network Name Resolution (NNR) alert](media/atp-health-alert-audit-policy.png)
 
-## Port recommendations 
-- NetBIOS/ RPC over NTLM:
-  - Check that the port is open for inbound communication from Azure ATP sensors, on all machines in the environment. 
-  - Check all network configurations (such as firewalls), that could prevent communication to the relevant ports. 
 
- - Forward DNS:
-    - Check that the sensor can reach the DNS server.  
+### Configuration recommendations
 
- - Reverse DNS:
-    - Check that the sensor can reach the DNS server and that reverse lookup is enabled. 
+- RPC over NTLM:
+    - Check that Port 135 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
+    - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
+
+-NetBIOS:
+    - Check that Port 137 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
+    - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
+- Reverse DNS:
+    - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
 
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)

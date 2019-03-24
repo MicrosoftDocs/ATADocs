@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/17/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -89,7 +89,11 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 This section lists the requirements for the Azure ATP sensor.
 
 ### General
-The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano). Windows Server 2019 is not currently supported. 
+
+> [!NOTE]
+> Make sure KB4487044 is installed when using Server 2019. Azure ATP Sensors already installed on 2019 servers without KB4487044 will be automatically stopped.
+ 
+The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano), Windows Server 2019 (including Core but not Nano).
 
 The domain controller can be a read-only domain controller (RODC).
 
@@ -138,6 +142,7 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDP|1813|RADIUS|Inbound|
 |TLS to RDP port|TCP|3389|All devices on network|Both|
+|
 
 ### Windows Event logs
 Azure ATP detection relies on specific Windows Event Logs that the sensor can parse from the domain controller. For the correct events to be audited and included in the Windows Event og, your domain controllers require accurate Advanced Audit Policy settings. 

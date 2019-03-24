@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/17/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -29,6 +29,22 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.71
+Released March 24, 2019
+
+- **Feature enhancement: Network Name Resolution (NNR) monitoring alerts**<br>
+Monitoring alerts were added for confidence levels associated with Azure ATP security alerts that are based on NNR. Each monitoring alert includes actionable and detailed recommendations to help resolve low NNR success rates. 
+
+    See [What is Network Name Resolution](atp-nnr-policy.md) to learn more about how Azure ATP uses NNR and why it's important for alert accuracy. 
+
+- **Server support: Support added for Server 2019 with use of KB4487044**<br>
+Support added for use of Windows Server 2019, with a patch level of KB4487044. Use of Server 2019 without the patch is not supported, and is blocked starting from this update. 
+
+- **Feature enhancement: User-based alert exclusion**<br>
+Extended alert exclusion options now allow for excluding specific users from specific alerts. Exclusions can help avoid situations where use or configuration of certain types of internal software repeatedly triggered benign security alerts.
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.70
 Released March 17, 2019
