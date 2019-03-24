@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Azure Advanced Threat Protection Network Name Resolution port policy check | Microsoft Docs
 description: This article provides an overview of Azure ATP's Advanced Network Name Resolution port policy check.
@@ -26,9 +25,6 @@ ms.suite: ems
 
 ---
 
-*Applies to: Azure Advanced Threat Protection*
-
-
 # Azure ATP Network Name Resolution port policy check
 
 Azure ATP detection capabilities rely on active Network Name Resolution (NNR) for visibility in certain scenarios, such as NetBios,RPC over NTLM, reverse and forward DNS. NNR enables Azure ATP to translate IP addresses used for communication with your domain, into a device name. To achieve a high rate of success with active NNR, the correct ports have to be accessible and open to Azure ATP sensors. Incorrect port settings leave critical event profiling and detections unavailable, resulting in unnecessary false positives, and incomplete Azure ATP coverage for your organization.
@@ -39,7 +35,8 @@ Methods and relevant ports:
  - TLS – TCP port 3389 
 
 Use the following logic flow to understand how Azure ATP performs NNR. 
-![Network Name Resolution (NNR) logic flow](media/atp-nnr-flow diagram.png)
+
+![Network Name Resolution (NNR) logic flow](media/atp-nnr-flow-diagram.png)
 
 To make it easier to verify the current status of each of your sensor's ports, Azure ATP checks the status of each port per sensor and issues sensor alerts for port settings that require modification. Each alert provides specific details of the sensor, the problematic policy as well as remediation suggestions.
 
