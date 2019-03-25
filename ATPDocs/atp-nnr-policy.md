@@ -1,5 +1,5 @@
 ---
-
+# required metadata
 title: Azure Advanced Threat Protection Network Name Resolution | Microsoft Docs
 description: This article provides an overview of Azure ATP's Advanced Network Name Resolution functionality and uses.
 keywords:
