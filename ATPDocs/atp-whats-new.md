@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/17/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -30,6 +30,22 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+## Azure ATP release 2.71
+Released March 24, 2019
+
+- **Feature enhancement: Network Name Resolution (NNR) monitoring alerts**<br>
+Monitoring alerts were added for confidence levels associated with Azure ATP security alerts that are based on NNR. Each monitoring alert includes actionable and detailed recommendations to help resolve low NNR success rates. 
+
+    See [What is Network Name Resolution](atp-nnr-policy.md) to learn more about how Azure ATP uses NNR and why it's important for alert accuracy. 
+
+- **Server support: Support added for Server 2019 with use of KB4487044**<br>
+Support added for use of Windows Server 2019, with a patch level of KB4487044. Use of Server 2019 without the patch is not supported, and is blocked starting from this update. 
+
+- **Feature enhancement: User-based alert exclusion**<br>
+Extended alert exclusion options now allow for excluding specific users from specific alerts. Exclusions can help avoid situations where use or configuration of certain types of internal software repeatedly triggered benign security alerts.
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.70
 Released March 17, 2019
 
@@ -38,12 +54,10 @@ Released March 17, 2019
     NNR confidence level evidence was added to the following alerts:
   - [Network mapping reconnaissance (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
   - [Suspected identity theft (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
-
   - [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
   - [Suspected DCSync attack (replication of directory services)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
 
 - **Additional health alert scenario: Azure ATP sensor service failed to start**<br>In instances where the Azure ATP sensor failed to start due to a network capturing driver issue, a sensor health alert is now triggered. [Troubleshooting Azure ATP sensor with Azure ATP logs](troubleshooting-atp-using-logs.md) for more information about Azure ATP logs and how to use them. 
-
   
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
