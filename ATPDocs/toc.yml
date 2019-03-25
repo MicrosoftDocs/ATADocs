@@ -59,6 +59,8 @@
     href: entity-profiles.md
   - name: Lateral movement paths
     href: use-case-lateral-movement-path.md
+  - name: Understanding Network Name Resolution (NNR)
+    href: atp-nnr-policy.md
   - name: Reports
     href: reports.md
   - name: User roles
@@ -147,3 +149,4 @@
     href: atp-resources.md
   - name: Azure ATP data security and privacy
     href: atp-privacy-compliance.md
+
