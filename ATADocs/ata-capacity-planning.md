@@ -9,7 +9,6 @@ ms.author: rkarlin
 manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.service: 
 ms.prod: advanced-threat-analytics
 
 # optional metadata
