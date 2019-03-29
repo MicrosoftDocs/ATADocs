@@ -10,9 +10,7 @@ manager: barbkess
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 
 # optional metadata
@@ -26,9 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-
-
 # Working with the Azure ATP portal
 
 Use the Azure ATP portal to monitor and respond to suspicious activity detected by ATP.
