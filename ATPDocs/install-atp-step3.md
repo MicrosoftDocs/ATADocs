@@ -9,9 +9,7 @@ ms.author: mlottner
 ms.date: 02/05/2019
 ms.topic: get-started-article
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 
 # optional metadata
