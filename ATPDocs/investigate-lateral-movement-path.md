@@ -10,9 +10,7 @@ manager: barbkess
 ms.date: 1/3/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 
 # optional metadata
