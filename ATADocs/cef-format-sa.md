@@ -10,7 +10,6 @@ manager: barbkess
 ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 
