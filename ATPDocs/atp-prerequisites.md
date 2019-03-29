@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/10/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -43,11 +43,11 @@ This prerequisite guide is divided into the following sections to ensure you hav
 
 [Before you start](#before-you-start): Lists information to gather and accounts and network entities you'll need to have before starting to install.
 
-[Azure ATP portal](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): Describes Azure ATP portal browser requirements.
+[Azure ATP portal](#azure-atp-portal-requirements): Describes Azure ATP portal browser requirements.
 
-[Azure ATP sensor](#azure-atp-lightweight-sensor-requirements): Lists Azure ATP sensor hardware, and software requirements.
+[Azure ATP sensor](#azure-atp-sensor-requirements): Lists Azure ATP sensor hardware, and software requirements.
 
-[Azure ATP standalone sensor](#azure-atp-sensor-requirements): Lists Azure ATP standalone sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP standalone sensor servers.
+[Azure ATP standalone sensor](#azure-atp-standalone-sensor-requirements): Lists Azure ATP standalone sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP standalone sensor servers.
 
 ## Before you start
 This section lists information you should gather as well as accounts and network entity information you should have before starting Azure ATP installation.
@@ -65,11 +65,11 @@ This section lists information you should gather as well as accounts and network
 
 - If you attempt to install the Azure ATP sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the Azure ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
+- Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
--   Optional: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
+- Optional: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
 
--   Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to Azure ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+- Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to Azure ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honey Tokens detections, and malicious service creation. Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 ## Azure ATP portal requirements
 Access to the Azure ATP portal is via a browser, supporting the following browsers and settings:
@@ -89,7 +89,11 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 This section lists the requirements for the Azure ATP sensor.
 
 ### General
-The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano). Windows Server 2019 is not currently supported. 
+
+> [!NOTE]
+> Make sure KB4487044 is installed when using Server 2019. Azure ATP Sensors already installed on 2019 servers without KB4487044 will be automatically stopped.
+ 
+The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano), Windows Server 2019 (including Core but not Nano).
 
 The domain controller can be a read-only domain controller (RODC).
 
@@ -137,7 +141,7 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |NetBIOS|UDP|137|All devices on the network|Both|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDP|1813|RADIUS|Inbound|
-|TLS to RDP port|TCP|3389|All devices on network|Both|
+|
 
 ### Windows Event logs
 Azure ATP detection relies on specific Windows Event Logs that the sensor can parse from the domain controller. For the correct events to be audited and included in the Windows Event og, your domain controllers require accurate Advanced Audit Policy settings. 
