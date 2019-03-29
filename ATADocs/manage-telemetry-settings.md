@@ -10,7 +10,6 @@ manager: barbkess
 ms.date: 8/19/2018
 ms.topic: article
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 
 # optional metadata
