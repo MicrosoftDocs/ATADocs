@@ -73,7 +73,7 @@ Each monitoring alert provides specific details of the method, sensors, the prob
     - Check that Port 135 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
     - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
 
--NetBIOS:
+- NetBIOS:
     - Check that Port 137 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
     - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
 - Reverse DNS:

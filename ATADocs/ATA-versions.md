@@ -3,10 +3,10 @@
 
 title: Advanced Threat Analytics versions | Microsoft Docs
 description: Explains the different support options for Microsoft Advanced Threat Analytics (ATA) versions.
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 7/15/2018
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -29,7 +29,7 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
-Microsoft plans to release ATA updates a few times a year with each update version supported for 12 months from its general availability (GA) release date. Technical support is provided for the entire 12 months. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest version.
+Microsoft ATA updates a few times a year with each update version supported for 12 months from its general availability (GA) release date. Technical support is provided for the entire 12 months. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest version.
 
 -	Security and Critical Updates servicing phase - When running the latest version of ATA, you receive both Security and Critical updates.
 
@@ -53,6 +53,7 @@ Microsoft plans to release ATA updates a few times a year with each update versi
 |1.8.1|1.8.6765|02-AUG-2017|02-AUG-2018|
 |1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
+|1.9.2|1.9.7475|28-MAR-2019|28-MAR-2020|
 
 
 
