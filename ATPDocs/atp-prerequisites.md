@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -36,6 +36,8 @@ This article describes the requirements for a successful deployment of Azure ATP
 
 
 Azure ATP is composed of the Azure ATP cloud service, which consists of the Azure ATP portal, the Azure ATP sensor and/or the Azure ATP standalone sensor. For more information about each Azure ATP component, see [Azure ATP architecture](atp-architecture.md).
+
+Azure ATP protects your on-premesis Active Directory users and/or users synced to your Azure Active Directory. To protect an environment made up of only AAD users, see [AAD Identity Protection] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 To create your Azure ATP instance, you'll need an AAD tenant with at least one global/security administrator. Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. 
 
@@ -83,7 +85,7 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 
 
 > [!NOTE]
-> By default, Azure ATP supports up to 100 sensors. If you want to install more, contact Azure ATP support.
+> By default, Azure ATP supports up to 200 sensors. If you want to install more, contact Azure ATP support.
 
 ## Azure ATP sensor requirements
 This section lists the requirements for the Azure ATP sensor.
@@ -91,9 +93,9 @@ This section lists the requirements for the Azure ATP sensor.
 ### General
 
 > [!NOTE]
-> Make sure KB4487044 is installed when using Server 2019. Azure ATP Sensors already installed on 2019 servers without KB4487044 will be automatically stopped.
+> Make sure [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) is installed when using Server 2019 or a KB that includes KB4487044 such as [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Azure ATP Sensors already installed on 2019 servers without this update will be automatically stopped.
  
-The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano), Windows Server 2019 (including Core but not Nano).
+The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Windows Server Core but not Windows Nano Server), Windows Server 2019 (including Windows Core but not Windows Nano Server).
 
 The domain controller can be a read-only domain controller (RODC).
 

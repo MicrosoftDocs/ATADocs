@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -29,6 +29,16 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.72
+Released March 31, 2019
+
+- **Feature enhancement: Lateral Movement Path (LMP) scoped depth**<br>
+Lateral movement paths (LMP's) are a key method for threat and risk discovery in Azure ATP. To help keep focus on the critical risks to your most sensitive users, this update makes it easier and faster to analyze and remediate risks to the sensitive users on each LMP, by limiting the scope and depth of each graph displayed.   
+
+    See [Lateral Movement Paths](use-case-lateral-movement-path.md) to learn more about how Azure ATP uses LMPs to surface access risks to each entity in your environment.   
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.71
 Released March 24, 2019

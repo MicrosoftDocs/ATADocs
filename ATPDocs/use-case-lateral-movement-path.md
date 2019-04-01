@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Introducing Lateral Movement Paths with Azure ATP | Microsoft Docs
+title: Understand and use Lateral Movement Paths with Azure ATP | Microsoft Docs
 description: This article describes the potential Lateral Movement Paths (LMPs) of Azure Advanced Threat Protection (ATP).
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 11/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -56,12 +56,11 @@ Discover when potential LMPs were identified and which related entities are pote
 ## LMP discovery
 
 From the Activities tab, an indication is given when a new potential LMP was identified:
-- Sensitive users – when a new path was identified to a sensitive user
+- Sensitive users – when a new path is identified to a sensitive user
 
 ![Azure ATP Lateral Movement Path (LMP) sensitive identified](./media/atp-lmp-activities.png)
 
-
-- Non-sensitive users and computers – when this entity was identified in a potential LMP leading to a sensitive user.
+- Non-sensitive users and computers – when this entity is identified in a potential LMP leading to a sensitive user.
 
 ![Azure ATP Lateral Movement Path (LMP) non-sensitive identified](./media/atp-lateral-non-sensitive.png)
 
