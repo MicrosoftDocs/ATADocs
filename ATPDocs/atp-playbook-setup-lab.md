@@ -34,7 +34,7 @@ In this tutorial you will:
 
 ## Prerequisites
 
-1. [A lab domain controller and two lab workstations](#Server-and-Computers).
+1. [A lab domain controller and two lab workstations](#servers-and-computers).
    - Go ahead and [hydrate Active Directory (AD) with users](#bkmk_hydrate).
 1. An [Azure ATP instance](install-atp-step1.md) that is [connected to AD](install-atp-step2.md).
 1. [Download](install-atp-step3.md) and [install the latest version of the Azure ATP sensor](install-atp-step4.md) on your lab's domain controller.

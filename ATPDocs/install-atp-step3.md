@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 ms.date: 02/05/2019
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724

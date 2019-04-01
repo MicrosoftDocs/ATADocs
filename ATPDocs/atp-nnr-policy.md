@@ -6,7 +6,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -30,13 +30,6 @@ Network Name Resolution or (NNR) is a main component of  Azure ATP functionality
 
 Using NNR, Azure ATP is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Azure ATP profiles entities, including computers, and generates security alerts for suspicious activities.
 
-NNR data is crucial for detecting the following threats:
-
-- Suspected identity theft (pass-the-ticket)
-- Suspected DCSync attack (replication of directory services)
-- Network mapping reconnaissance (DNS)
-- Suspected NTLM relay attack (Exchange account)
-
 To resolve IP addresses to computer names, ATP sensors query the IP address for the computer name “behind” the IP, using one of the following methods:
 
 1. NTLM over RPC (TCP Port 135)
@@ -48,6 +41,26 @@ To resolve IP addresses to computer names, ATP sensors query the IP address for 
 >No authentication is performed on any of the ports.
 
 After retrieving the computer name, the Azure ATP sensor checks in Active Directory to see if there is a correlated computer object with the same computer name. If the sensor finds the correlation, the sensor associated this IP to that computer object.
+
+NNR data is crucial for detecting the following threats:
+
+- Suspected identity theft (pass-the-ticket)
+- Suspected DCSync attack (replication of directory services)
+- Network mapping reconnaissance (DNS)
+
+To improve your ability to determine if an alert is a **True Positive (TP)** or **False Positive (FP)**, Azure ATP includes the degree of certainty of computer naming resolving into the evidence of each security alert. 
+ 
+For example, when computer names are resolved with  **high certainty** it increases the confidence in the resulting security alert as a **True Positive** or **TP**. 
+
+The evidence includes the time, IP and computer name the IP was resolved to. When the resolution certainty is **low**, use this information to investigate and verify which device was the true source of the IP at this time. 
+After confirming the device, you can then determine if the alert is a **False Positive** or **FP**, similar to the following examples:
+
+- Suspected identity theft (pass-the-ticket) – the alert was triggered for the same computer.
+- Suspected DCSync attack (replication of directory services) – the alert was triggered from a domain controller.
+- Network mapping reconnaissance (DNS) – the alert was triggered from a DNS Server.
+
+    ![Evidence certainty](media/nnr-high-certainty.png)
+
 
 ### Prerequisites
 |Protocol|	Transport|	Port|	Device|	Direction|
@@ -73,7 +86,7 @@ Each monitoring alert provides specific details of the method, sensors, the prob
     - Check that Port 135 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
     - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
 
--NetBIOS:
+- NetBIOS:
     - Check that Port 137 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
     - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
 - Reverse DNS:
