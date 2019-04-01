@@ -8,7 +8,7 @@ author: mlottner
 ms.author: mlottner
 manager: barbkess
 ms.date: 10/04/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b

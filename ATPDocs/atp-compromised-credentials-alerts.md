@@ -174,7 +174,7 @@ Attackers use tools that implement various protocols such as SMB, Kerberos, and 
 **TP, B-TP, or FP**
 
 1. Check if the source computer is running an attack tool such as Hydra.
-   1. If the source computer is running an attack tool, this alert is a **TP**. Follow the instructions in [understand the scope of the breach](#understand-the-scope-of-the-breach).
+   1. If the source computer is running an attack tool, this alert is a **TP**. Follow the instructions in **understand the scope of the breach**, above.
 
 Occasionally, applications implement their own NTLM or SMB stack.
 
@@ -209,7 +209,7 @@ Attackers use tools that implement various protocols in non-standard ways. While
 
 1. Check if WannaCry is running on the source computer. 
 
-    - If WannaCry is running, this alert is a **TP**. Follow the instructions in [understand the scope of the breach](#understand-the-scope-of-the-breach).
+    - If WannaCry is running, this alert is a **TP**. Follow the instructions in **understand the scope of the breach**, above.
 
 Occasionally, applications implement their own NTLM or SMB stack.
 
@@ -243,7 +243,7 @@ Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in no
 
 1. Check if the source computer is running an attack tool such as Metasploit or Medusa.
 
-2. If yes, it is a true positive. Follow the instructions in [understand the scope of the breach](#understand-the-scope-of-the-breach).
+2. If yes, it is a true positive. Follow the instructions in **understand the scope of the breach**, above.
 
 Occasionally, applications implement their own NTLM or SMB stack.
 
