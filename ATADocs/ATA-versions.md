@@ -6,7 +6,7 @@ description: Explains the different support options for Microsoft Advanced Threa
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -53,7 +53,7 @@ Microsoft ATA updates a few times a year with each update version supported for 
 |1.8.1|1.8.6765|02-AUG-2017|02-AUG-2018|
 |1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
-|1.9.2|1.9.7475|28-MAR-2019|28-MAR-2020|
+|1.9.2|1.9.7478|28-MAR-2019|28-MAR-2020|
 
 
 
