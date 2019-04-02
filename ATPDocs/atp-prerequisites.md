@@ -93,7 +93,7 @@ This section lists the requirements for the Azure ATP sensor.
 ### General
 
 > [!NOTE]
-> Make sure [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) is installed when using Server 2019 or a KB that includes KB4487044 such as [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Azure ATP Sensors already installed on 2019 servers without this update will be automatically stopped.
+> Make sure [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) is installed when using Server 2019. Azure ATP Sensors already installed on 2019 servers without this update will be automatically stopped.
  
 The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Windows Server Core but not Windows Nano Server), Windows Server 2019 (including Windows Core but not Windows Nano Server).
 
@@ -185,7 +185,6 @@ For more information about the Azure ATP standalone sensor hardware requirements
 ### Time synchronization
 
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
-
 
 ### Network adapters
 The Azure ATP standalone sensor requires at least one Management adapter and at least one Capture adapter:

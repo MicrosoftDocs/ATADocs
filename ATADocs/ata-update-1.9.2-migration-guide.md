@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -31,7 +31,7 @@ ms.suite: ems
 
 We’re happy to announce the availability of Microsoft Advanced Threat Analytics 1.9 Update 2.
 
-This article describes issues fixed in Update 2 of Microsoft Advanced Threat Analytics (ATA) version 1.9. The build number of this update is 1.9.7475.
+This article describes issues fixed in Update 2 of Microsoft Advanced Threat Analytics (ATA) version 1.9. The build number of this update is 1.9.7478.
 
 ## Improvements included in this update
 
