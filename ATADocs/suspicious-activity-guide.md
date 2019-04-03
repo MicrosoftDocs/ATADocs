@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 10/14/2018
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -178,7 +178,7 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user’
 
 **Investigation**
 
-Check if the hash used from a computer owed by the targeted user or uses regularly? If yes, the alert is a false positive, if not, it is probably a true positive.
+Was the hash used from a computer owned or used regularly by the targeted user? If yes, the alert is a false positive, if not, it is probably a true positive.
 
 **Remediation**
 
