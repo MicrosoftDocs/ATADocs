@@ -219,7 +219,9 @@ We thank the authors of these research tools for enabling the community to bette
    Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
    # Remove Domain Admins from local Administrators group
    Remove-LocalGroupMember -Group "Administrators" -Member "Domain Admins"
-
+   # (Optional) if you connect to Admin-PC using RDP, add SamiraA to local Remote Desktop Users group
+   Add-LocalGroupMember -Group "Remote Desktop Users" -Member "Contoso\SamiraA"
+   
    ```
 
 2. After running the script, **Helpdesk** is located in the local **Administrators** > **Members** list of **AdminPC**.
