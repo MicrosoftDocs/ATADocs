@@ -79,7 +79,7 @@ To make sure Azure ATP is working ideally and the environment is configured corr
 
 Each monitoring alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
 
-![Low success rate Network Name Resolution (NNR) alert](media/atp-health-alert-audit-policy.png)
+![Low success rate Network Name Resolution (NNR) alert](media/atp-nnr-success-rate.png)
 
 
 ### Configuration recommendations

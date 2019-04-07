@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -32,6 +32,30 @@ ms.suite: ems
 
 The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a monitoring alert. This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
 
+## Domain synchronizer not assigned
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|No domain synchronizer is assigned to any Azure ATP sensor. This may happen if there is no Azure ATP sensor configured as domain synchronizer candidate.|When the domain is not synchronized, changes to entities might cause entity information in Azure ATP to become out of date or missing but does not affect any detection.|Make sure that at least one Azure ATP sensor is set as a [Domain synchronizer](install-atp-step5.md).|Low|
+
+## All domain controllers are unreachable by a sensor
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts Azure ATP’s ability to detect suspicious activities related to domain controllers monitored by this Azure ATP sensor.| Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them.|Medium|
+
+## All/Some of the capture network adapters on a sensor are not available
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|All/Some of the selected capture network adapters on the Azure ATP sensor are disabled or disconnected.|Network traffic for some/all of the domain controllers is no longer captured by the Azure ATP sensor. This impacts the ability to detect suspicious activities, related to those domain controllers.|Make sure these selected capture network adapters on the Azure ATP sensor are enabled and connected.|Medium|
+
+## No traffic received from domain controller
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|No traffic was received from the domain controller via this Azure ATP sensor.|This might indicate that port mirroring from the domain controllers to the Azure ATP sensor is not configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the Azure ATP sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|
+
 ## Read-only user password to expire shortly
 
 |Alert|Description|Resolution|Severity|
@@ -44,29 +68,23 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |----|----|----|----|
 |The read-only user password, used to get directory data, expired.|All the Azure ATP sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP portal.|High|
 
-## Domain synchronizer not assigned
+## Sensor outdated
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|No domain synchronizer is assigned to any Azure ATP sensor. This may happen if there is no Azure ATP sensor configured as domain synchronizer candidate.|When the domain is not synchronized, changes to entities might cause entity information in Azure ATP to become out of date or missing but does not affect any detection.|Make sure that at least one Azure ATP sensor is set as a [Domain synchronizer](install-atp-step5.md).|Low|
+|An Azure ATP sensor is outdated.|An Azure ATP sensor is running a version that is three or more versions out of date.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the Azure ATP sensor](install-atp-step4.md).|Medium|
 
-## All/Some of the capture network adapters on a sensor are not available
-
-|Alert|Description|Resolution|Severity|
-|----|----|----|----|
-|All/Some of the selected capture network adapters on the Azure ATP sensor are disabled or disconnected.|Network traffic for some/all of the domain controllers is no longer captured by the Azure ATP sensor. This impacts the ability to detect suspicious activities, related to those domain controllers.|Make sure these selected capture network adapters on the Azure ATP sensor are enabled and connected.|Medium|
-
-## Some domain controllers are unreachable by a sensor
+## Sensor reached a memory resource limit
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|An Azure ATP sensor has limited functionality due to connectivity issues to some of the configured domain controllers.|Pass the Hash detection might be less accurate when some domain controllers can't be queried by the Azure ATP sensor.|Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them.|Medium|
+|The Azure ATP sensor stopped itself and restarts automatically to protect the domain controller from a low memory condition.|The Azure ATP sensor enforces memory limitations upon itself to prevent the domain controller from experiencing resource limitations. This happens when memory usage on the domain controller is high. Data from this domain controller is only partly monitored.|Increase the amount of memory (RAM) on the domain controller or add more domain controllers in this site to better distribute the load of this domain controller.|Medium|
 
-## All domain controllers are unreachable by a sensor
+## Sensor service failed to start
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts Azure ATP’s ability to detect suspicious activities related to domain controllers monitored by this Azure ATP sensor.| Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them.|Medium|
+|The Azure ATP sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Monitor Azure ATP sensor logs to understand the root cause for Azure ATP sensor service failure.|High|
 
 ## Sensor stopped communicating
 
@@ -74,11 +92,11 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |----|----|----|----|
 |There has been no communication from the Azure ATP sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Azure ATP sensor. This impacts ATA’s ability to detect suspicious activities, since network traffic will not be able to reach the Azure ATP cloud service.|Check that the port used for the communication between the Azure ATP sensor and Azure ATP cloud service is not blocked by any routers or firewalls.|Medium|
 
-## No traffic received from domain controller
+## Some domain controllers are unreachable by a sensor
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|No traffic was received from the domain controller via this Azure ATP sensor.|This might indicate that port mirroring from the domain controllers to the Azure ATP sensor is not configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the Azure ATP sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|
+|An Azure ATP sensor has limited functionality due to connectivity issues to some of the configured domain controllers.|Pass the Hash detection might be less accurate when some domain controllers can't be queried by the Azure ATP sensor.|Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them.|Medium|
 
 ## Some forwarded events are not being analyzed
 
@@ -92,23 +110,12 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |----|----|----|----|
 |The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](atp-capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
 
-## Sensor service failed to start
-
+## Windows events missing from domain controller audit policy
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Monitor Azure ATP sensor logs to understand the root cause for Azure ATP sensor service failure.|High|
+| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](atp-advanced-audit-policy.md) and modify as needed. | Medium|
 
-## Sensor reached a memory resource limit
 
-|Alert|Description|Resolution|Severity|
-|----|----|----|----|
-|The Azure ATP sensor stopped itself and restarts automatically to protect the domain controller from a low memory condition.|The Azure ATP sensor enforces memory limitations upon itself to prevent the domain controller from experiencing resource limitations. This happens when memory usage on the domain controller is high. Data from this domain controller is only partly monitored.|Increase the amount of memory (RAM) on the domain controller or add more domain controllers in this site to better distribute the load of this domain controller.|Medium|
-
-## Sensor outdated
-
-|Alert|Description|Resolution|Severity|
-|----|----|----|----|
-|An Azure ATP sensor is outdated.|An Azure ATP sensor is running a version that is three or more versions out of date.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the Azure ATP sensor](install-atp-step4.md).|Medium|
 
 ## See Also
 

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/24/2019
+ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -34,7 +34,7 @@ Azure ATP detection relies on specific Windows Event Logs for visibility in cert
 
 To make it easier to verify the current status of each of your domain controller’s Advanced Audit Policies, Azure ATP automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
 
-![Advanced Audit Policy Health Alert](media/atp-health-alert-audit-policy.png)
+![Advanced Audit Policy Health Alert](media/atp-health-alert-audit.png)
 
 
 Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events. 
@@ -63,6 +63,9 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
     > [!NOTE]
     > If you choose to use local policy, make sure to add the **Account Logon** and **Account Management** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    
+    > [!NOTE] 
+    > If you use a policy other than then default domain controller policy to apply the advanced audit policy settings, the resulting Azure ATP health alert can be ignored. 
 
 7. After applying via GPO, the new events are visible under your **Windows Event logs**.
 
