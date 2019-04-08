@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -40,6 +40,7 @@ Azure ATP detects known malicious attacks and techniques, security issues, and r
 For the full list of Azure ATP detections, see [What detections does Azure ATP perform?](suspicious-activity-guide.md).
 
 ### What data does Azure ATP collect? 
+
 Azure ATP collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites), and entity information (such as names, email addresses, and phone numbers). 
 
 Microsoft uses this data to: 
@@ -51,6 +52,7 @@ Microsoft uses this data to:
 Microsoft does not mine your data for advertising or for any other purpose other than providing you the service. 
 
 ### Does Azure ATP only leverage traffic from Active Directory?
+
 In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP also collects relevant Windows Events from your domain controller and creates entity profiles based on information from Active Directory Domain Services. Azure ATP also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
 
 ### Does Azure ATP monitor only domain-joined devices?
@@ -60,6 +62,7 @@ No. Azure ATP monitors all devices in the network performing authentication and 
 Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, Azure ATP monitors all computer accounts behavior and all other entities in the environment.
 
 ## Licensing and privacy 
+
 ### Where can I get a license for Azure Advanced Threat Protection (ATP)?
 
 Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5), and as a standalone license. You can acquire a license directly from the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
@@ -86,6 +89,7 @@ Microsoft developers and administrators have, by design, been given sufficient p
 In addition, Microsoft conducts background verification checks on certain operations personnel, and limits access to applications, systems, and network infrastructure in proportion to the level of background verification. Operations personnel follow a formal process when they are required to access a customer’s account or related information in the performance of their duties. 
 
 ## Deployment
+
 ### How many Azure ATP sensors do I need?
 
 Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP sensor sizing](atp-capacity-planning.md#sizing). 
@@ -131,7 +135,39 @@ To understand why an account is sensitive you can review its group membership to
 ### Do you have to write your own rules and create a threshold/baseline?
 With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. Three weeks after deployment, Azure ATP starts to detect behavioral suspicious activities. On the other hand, Azure ATP will start detecting known malicious attacks and security issues immediately after deployment.
 
+### Which traffic does Azure ATP generate in the network from domain controllers, and why? 
+
+Azure ATP generates traffic from domain controllers to computers in the organization in one of three scenarios:
+1. **Network Name resolution**<br>
+   Azure ATP captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, Azure ATP needs to resolve IPs to computer accounts. To resolve IPs to computer names Azure ATP sensors request the IP address for the computer name *behind* the IP address. <br>
+ 
+   Requests are made using one of four methods: 
+    - NTLM over RPC (TCP Port 135)
+    - NetBIOS (UDP port 137)
+    - RDP (TCP port 3389)
+    - Query the DNS server using reverse DNS lookup of the IP address (UDP 53)
+    
+    After receiving the computer name,  Azure ATP sensors cross check the details in Active Directory to see if there is a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
+2. **Lateral Movement Path (LMP)**<br>
+    To build potential LMPs to sensitive users, Azure ATP requires information about the local administrators on computers. In this scenario, the Azure ATP sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Azure ATP and SAM-R, See [Configure SAM-R required permissions](install-atp-step8-samr.md). 
+
+3. **Querying Active Directory using LDAP** for entity data<br>
+    Azure ATP sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain. 
+
+|Protocol|Service|Port|Source| Direction|
+|---------|---------|---------|---------|--------|
+|LDAP|TCP and UDP|389|Domain controllers|Outbound|
+|Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
+|LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
+|LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
+|
+
+### Why don't activities always show both the source user and computer?
+
+Azure ATP captures activities over many different protocols. In some cases, Azure ATP doesn't receive the data of the source user in the traffic. Azure ATP attempts to correlate the session of the user to the activity, and when the attempt is successful, the source user of the activity is displayed. When user correlation attempts fail, only the source computer is displayed. 
+
 ## Troubleshooting
+
 ### What should I do if the Azure ATP sensor or standalone sensor doesn't start?
 Look at the most recent error in the current error [log](troubleshooting-atp-using-logs.md) (Where Azure ATP is installed under the "Logs" folder).
 
