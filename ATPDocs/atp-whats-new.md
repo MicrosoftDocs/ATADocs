@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 04/07/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -30,7 +30,7 @@ ms.suite: ems
 
 ## Azure ATP release 2.73
 
-Released April 7th, 2019
+Releasing April 10th, 2019
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
