@@ -179,17 +179,24 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 
 **Understand the scope of the breach**
 
-1.	Check the queries that were performed (such as Domain admins, or all users in a domain) and determine if the queries  were successful. Investigate each exposed group search for suspicious activities made on the group, or by member users of the group.
+1.	Check the queries that were performed (such as Domain admins, or all users in a domain) and determine if the queries were successful. Investigate each exposed group search for suspicious activities made on the group, or by member users of the group.
 2. Investigate the [source computer](investigate-a-computer.md). 
     - Using the LDAP queries, check if any resource access activity occurred on any of the exposed SPNs.
 
 **Suggested remediation and steps for prevention**
 
-1.	Contain the source computer
-    1. Find the tool that preformed the attack and remove it.
+1. Contain the source computer
+    1. Find the tool that performed the attack and remove it.
     2. Is the computer running a scanning tool that performs a variety of LDAP queries?
     3. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA.
-2.	Reset the password if SPN resource access was made that runs under a user account (not machine account).
+2. Reset the password if SPN resource access was made that runs under a user account (not machine account).
+
+**Kerberoasting specific suggested steps for prevention and remediation**
+
+1. Force a password reset on the compromised account  
+2. Require use of [long and complex passwords for users with service principal accounts](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).  
+3. [Replace the user account by Group Managed Service Account (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
+
 
 ## User and IP address reconnaissance (SMB) (external ID 2012) 
 
