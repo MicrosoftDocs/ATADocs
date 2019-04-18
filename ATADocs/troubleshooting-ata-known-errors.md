@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/31/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -70,9 +70,8 @@ This section details possible errors in the deployments of ATA and the steps req
 > |System.Threading.Tasks.TaskCanceledException: A task was canceled|The deployment process timed out as it could not reach the ATA Center.|1.    Check network connectivity to the ATA Center by browsing to it using its IP address. <br></br>2.    Check for proxy or firewall configuration.|
 > |System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.|The deployment process timed out as it could not reach the ATA Center due to a proxy misconfiguration.|Disable the proxy configuration before deployment, then enable the proxy configuration again. Alternatively, you can configure an exception in the proxy.|
 > |System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host||Use one of the following options: </br>Enable TLS 1.0 on the ATA Gateway </br>Enable TLS 1.2 on .Net by setting the registry keys to use the operating system defaults for SSL and TLS, as follows:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Error [\[]DeploymentModel[\]] Failed management authentication [\[]CurrentlyLoggedOnUser=<domain>\<username>Status=FailedAuthentication Exception=[\]]|The deployment process of the ATA Gateway or ATA Lightweight Gateway could not successfully authenticate against the ATA Center|Open a browser from the machine on which the deployment process failed and see if you can reach the ATA Console. </br>If not, start troubleshooting to see why the browser can't authenticate against the ATA Center. </br>Things to check: </br>Proxy configuration</br>Networking issues</br>Group policy settings for authentication on that machine that differs from the ATA Center.|
-> | Error [\[]DeploymentModel[\]] Failed management authentication|Center certificate authentication failed|The Center certificate requires an internet connection for validation. Make sure your Gateway service has the proper proxy configuration to enable the connection and validation.|
-
+> |Error [\\[]DeploymentModel[\\]] Failed management authentication     [\\[]CurrentlyLoggedOnUser=<domain>\\<username>Status=FailedAuthentication Exception=[\\]]|The deployment process of the ATA Gateway or ATA Lightweight Gateway could not successfully authenticate against the ATA Center|Open a browser from the machine on which the deployment process failed and see if you can reach the ATA Console. </br>If not, start troubleshooting to see why the browser can't authenticate against the ATA Center. </br>Things to check: </br>Proxy configuration</br>Networking issues</br>Group policy settings for authentication on that machine that differs from the ATA Center.|
+> | Error [\\[]DeploymentModel[\\]] Failed management authentication|Center certificate validation failed|The Center certificate may require an internet connection for validation. Make sure your Gateway service has the proper proxy configuration to enable the connection and validation.|
 
 
 ## ATA Center errors
@@ -80,7 +79,7 @@ This section details possible errors in the deployments of ATA and the steps req
 > 
 > |Error|Description|Resolution|
 > |-------------|----------|---------|
-> |System.Security.Cryptography.CryptographicException: Access denied.|The ATA Center failed to use the issued certificate for decryption. This most likely happened due to use of a certificate with KeySpec (KeyNumber) set to Signature (AT\_SIGNATURE) which is not supported for decryption, instead of using KeyExchange (AT\_KEYEXCHANGE).|1.    Stop the ATA Center service. <br></br>2.     Delete the ATA Center certificate from the center’s certificate store. (Before deleting, make sure you have the certificate backed up with the private key in a PFX file.) <br></br>3.    Open an elevated command prompt and run      certutil -importpfx "CenterCertificate.pfx" AT\_KEYEXCHANGE <br></br>4.     Start the ATA Center service. <br></br>5.     Verify everything now works as expected.|
+> |System.Security.Cryptography.CryptographicException: Access denied.|The ATA Center failed to use the issued certificate for decryption. This most likely happened due to use of a certificate with KeySpec (KeyNumber) set to Signature (AT\\_SIGNATURE) which is not supported for decryption, instead of using KeyExchange (AT\\_KEYEXCHANGE).|1.    Stop the ATA Center service. <br></br>2.     Delete the ATA Center certificate from the center’s certificate store. (Before deleting, make sure you have the certificate backed up with the private key in a PFX file.) <br></br>3.    Open an elevated command prompt and run      certutil -importpfx "CenterCertificate.pfx" AT\\_KEYEXCHANGE <br></br>4.     Start the ATA Center service. <br></br>5.     Verify everything now works as expected.|
 
 
 ## ATA Gateway and Lightweight Gateway issues
@@ -91,6 +90,7 @@ This section details possible errors in the deployments of ATA and the steps req
 > |-------------|----------|---------|
 > |No traffic received from domain controller, but monitoring alerts are observed|    No traffic was received from a domain controller using port mirroring through an ATA Gateway|On the ATA Gateway capture NIC, disable these features in **Advanced Settings**:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|
 > |This monitoring alert is displayed: Some network traffic is not being analyzed|If you have an ATA Gateway or Lightweight Gateway on VMware virtual machines, you might receive this monitoring alert. This happens because of a configuration mismatch in VMware.|Set the following settings to 0 or Disabled in the virtual machine NIC configuration: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload TLS 1.0 is disabled on the ATA Gateway but .Net is set to use TLS 1.2|
+
 
 
 
