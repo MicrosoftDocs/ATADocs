@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/14/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -28,15 +28,25 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+## Azure ATP release 2.75
+
+Released April 28, 2019
+
+- **Feature enhancement: Sensitive entities**<br> Starting from this version (2.75), machines identified as Microsoft Exchange Servers by Azure ATP are now automatically tagged as **Sensitive**.  
+
+    Entities that are automatically tagged as **Sensitive** because they function as Exchange Servers list this classification as the reason they are tagged. 
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.74
 
-Releasing April 14th, 2019
+Releasing April 14, 2019
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.73
 
-Releasing April 10th, 2019
+Releasing April 10, 2019
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
