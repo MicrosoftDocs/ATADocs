@@ -6,8 +6,8 @@ description: Provides instructions for upgrading your Advanced Threat Analytics 
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 8/20/2018
+manager: rkarlin
+ms.date: 04/29/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -45,6 +45,7 @@ This article provides information about available Advanced Threat Analytics vers
 |1.8 Update 1|1.8.6765|
 |1.9|1.9.7312|
 |1.9 Update 1|1.9.7412|
+|1.9 Update 2|1.9.7478|
 
 ## ATA version upgrade matrix
 

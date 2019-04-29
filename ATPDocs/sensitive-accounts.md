@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 10/04/2018
+ms.date: 04/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod:
@@ -31,9 +31,9 @@ ms.suite: ems
 
 # Working with sensitive accounts
 
-## Sensitive groups
+## Sensitive entites
 
-The following list of groups are considered Sensitive by Azure ATP. Any entity that is a member of these groups is considered sensitive:
+The following list of groups are considered **Sensitive** by Azure ATP. Any entity that is a member of one of these groups is considered sensitive:
 
 - Administrators
 - Power Users
@@ -51,13 +51,14 @@ The following list of groups are considered Sensitive by Azure ATP. Any entity t
 - Enterprise Read-only Domain Controllers 
 - Schema Admins 
 - Enterprise Admins
+- Microsoft Exchange Servers
 
   > [!NOTE]
   > Until September, 2018, Remote Desktop Users were also automatically considered Sensitive by Azure ATP. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.  
 
 ## Tagging sensitive accounts
 
-In addition to these groups, you can manually tag groups or accounts as sensitive to enhance detections. This is important because Some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. You can manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc., and Azure ATP considers them sensitive.
+In addition to these groups, you can manually tag groups or accounts as sensitive to enhance detections. This is important because Some Azure ATP detections, such as sensitive group modification detection and lateral movement paths, rely on which groups and accounts are considered sensitive. You can manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc., and Azure ATP considers them sensitive.
 
 1.  In the Azure ATP portal, click the **Configuration** cog in the menu bar.
 
