@@ -31,6 +31,7 @@ ms.suite: ems
 Azure ATP security alerts explain the suspicious activities detected by Azure ATP sensors on your network, and the actors and computers involved in each threat.   Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
 Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
+
   1. [Reconnaissance phase alerts](atp-reconnaissance-alerts.md)
   2. [Compromised credential phase alerts](atp-compromised-credentials-alerts.md)
   3. [Lateral movement phase alerts](atp-lateral-movement-alerts.md)
