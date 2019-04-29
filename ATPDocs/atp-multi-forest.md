@@ -6,7 +6,7 @@ description: Support for multiple Active Directory forests in Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 1/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

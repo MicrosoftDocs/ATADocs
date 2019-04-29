@@ -6,7 +6,7 @@ description: Describes the requirements for a successful deployment of Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -6,7 +6,7 @@ metadata:
   description: Protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats.
   services: azure-advanced-threat-protection
   author: msmbaldwin
-  manager: barbkess
+  manager: rkarlin
   ms.prod: azure-advanced-threat-protection
   ms.tgt_pltfrm: na
   ms.devlang: na

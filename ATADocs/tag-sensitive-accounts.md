@@ -6,7 +6,7 @@ description: Describes how to tag sensitive accounts using Advanced Threat Analy
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

@@ -6,7 +6,7 @@ description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

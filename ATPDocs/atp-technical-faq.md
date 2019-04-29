@@ -6,7 +6,7 @@ description: Provides a list of frequently asked questions about Azure ATP and t
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

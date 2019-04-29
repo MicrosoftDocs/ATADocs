@@ -6,7 +6,7 @@ description: Provides instructions for upgrading your Advanced Threat Analytics 
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 8/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

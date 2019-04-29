@@ -6,7 +6,7 @@ description: Describes the latest releases of Azure ATP and provides information
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
