@@ -6,8 +6,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 03/17/2019
+manager: rkarlin
+ms.date: 05/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -169,7 +169,7 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 
 **Learning period**
 
-10 days per computer, starting from the day of the first event, observed from the machine. 
+15 days per computer, starting from the day of the first event, observed from the machine. 
 
 **TP, B-TP, or FP**
 
