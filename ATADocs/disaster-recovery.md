@@ -6,8 +6,8 @@ description: Describes how you can quickly recover ATA functionality after disas
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 9/05/2018
+manager: rkarlin
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -60,6 +60,7 @@ ATA Gateways again. When prompted for a certificate, provide the certificate you
         1. Go to **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Run `mongo.exe ATA` 
         3. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
+        4. Leave the Mongo shell and return to the command prompt by entering: `exit`
     2. Run the command: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` using the backup file from step 1.</br>
     For a full explanation of how to locate and import backup files, see [Export and import the ATA configuration](ata-configuration-file.md). 
     3. Start the ATA Center service.
