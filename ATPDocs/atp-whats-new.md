@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/29/2019
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ ms.suite: ems
 
 Released April 28, 2019
 
-- **Feature enhancement: Sensitive entities**<br> Starting from this version (2.75), machines identified as Microsoft Exchange Servers by Azure ATP are now automatically tagged as **Sensitive**.  
+- **Feature enhancement: Sensitive entities**<br> Starting from this version (2.75), machines identified as Exchange Servers by Azure ATP are now automatically tagged as **Sensitive**.  
 
     Entities that are automatically tagged as **Sensitive** because they function as Exchange Servers list this classification as the reason they are tagged. 
 
