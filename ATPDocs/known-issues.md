@@ -6,7 +6,7 @@ description: Describes current Known Issues in Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

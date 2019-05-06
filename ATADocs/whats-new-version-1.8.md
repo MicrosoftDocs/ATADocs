@@ -6,7 +6,7 @@ description: Lists what was new in ATA version 1.8 along with known issues
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
