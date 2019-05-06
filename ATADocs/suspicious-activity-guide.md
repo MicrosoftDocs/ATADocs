@@ -6,7 +6,7 @@ d|Description: This article provides a list of the suspicious activities ATA can
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

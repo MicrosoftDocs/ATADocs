@@ -5,7 +5,7 @@ description: This article provides an overview of Azure ATP's Advanced Network N
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

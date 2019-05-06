@@ -6,7 +6,7 @@ description: Lists what was new in ATA version 1.4 along with known issues
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
