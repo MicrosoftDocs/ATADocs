@@ -6,7 +6,7 @@ description: Describes how you can use the ATA database to help troubleshoot iss
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

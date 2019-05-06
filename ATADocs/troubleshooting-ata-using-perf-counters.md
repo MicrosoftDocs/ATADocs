@@ -6,7 +6,7 @@ description: Describes how you can use performance counters to troubleshoot issu
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

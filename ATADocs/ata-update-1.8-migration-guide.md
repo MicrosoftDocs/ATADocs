@@ -6,7 +6,7 @@ description: Procedures to update ATA to version 1.8
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 07/20/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
