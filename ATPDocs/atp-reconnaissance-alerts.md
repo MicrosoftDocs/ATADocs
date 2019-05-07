@@ -10,9 +10,7 @@ manager: rkarlin
 ms.date: 05/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 
 # optional metadata

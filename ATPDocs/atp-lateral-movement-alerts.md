@@ -6,13 +6,11 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 
 # optional metadata

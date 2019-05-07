@@ -6,12 +6,10 @@ description: Procedure to update ATA to version 1.9.2
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
-ms.technology:
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 
 # optional metadata

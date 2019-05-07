@@ -6,13 +6,11 @@ description: Describes how to review security alerts issued by Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 03/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 
 # optional metadata

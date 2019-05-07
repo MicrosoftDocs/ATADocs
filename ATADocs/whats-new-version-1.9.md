@@ -6,11 +6,10 @@ description: Lists what was new in ATA version 1.9 along with known issues
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 

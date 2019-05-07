@@ -6,13 +6,11 @@ description: This article provides a list of helpful resources for Azure ATP
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 1/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 
 # optional metadata

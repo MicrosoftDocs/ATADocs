@@ -6,11 +6,10 @@ description: Describes how to change the Domain Connectivity Password on the ATA
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 

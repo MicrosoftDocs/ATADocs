@@ -6,13 +6,11 @@ description: This article describes the potential Lateral Movement Paths (LMPs) 
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 
 # optional metadata

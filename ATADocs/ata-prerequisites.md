@@ -6,11 +6,10 @@ description: Describes the requirements for a successful deployment of ATA in yo
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 

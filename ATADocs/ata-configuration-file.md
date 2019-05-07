@@ -6,11 +6,10 @@ description: How to export and import the ATA configuration.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 9/04/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 

@@ -199,7 +199,7 @@ Azure ATP successfully detected the suspicious pre-authentication encryption met
 
 ### Golden Ticket - Existing User
 
-After stealing the “Golden Ticket”, (“krbtgt” account explained [here via Malicious Replication](#Malicious-Replication), an attacker is able to sign tickets *as if they're the domain controller*. **Mimikatz**, the Domain SID, and the stolen "krbtgt" account are all required to accomplish this attack. Not only can we generate tickets for a user, we can generate tickets for users who don't even exist.
+After stealing the “Golden Ticket”, (“krbtgt” account explained [here via Malicious Replication](#malicious-replication), an attacker is able to sign tickets *as if they're the domain controller*. **Mimikatz**, the Domain SID, and the stolen "krbtgt" account are all required to accomplish this attack. Not only can we generate tickets for a user, we can generate tickets for users who don't even exist.
 
 1. As JeffL, run the below command on **VictimPC** to acquire the domain SID:
 

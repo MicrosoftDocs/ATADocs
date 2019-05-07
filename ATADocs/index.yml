@@ -6,7 +6,7 @@ metadata:
   description: Protect your enterprise by using information from multiple data-sources in your network to learn the behavior of users and other entities in the organization
   services: advanced-threat-analytics
   author: msmbaldwin
-  manager: barbkess
+  manager: rkarlin
   ms.prod: advanced-threat-analytics
   ms.tgt_pltfrm: na
   ms.devlang: na

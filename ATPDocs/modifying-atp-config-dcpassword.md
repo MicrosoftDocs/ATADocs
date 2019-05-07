@@ -6,13 +6,11 @@ description: Describes how to change the Domain Connectivity Password on the Azu
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 
 # optional metadata

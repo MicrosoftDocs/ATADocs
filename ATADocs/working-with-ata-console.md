@@ -6,11 +6,10 @@ description: Describes how to log into the ATA console and the components of the
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 

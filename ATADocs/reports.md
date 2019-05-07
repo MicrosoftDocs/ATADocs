@@ -6,11 +6,10 @@ description: Describes how you can generate reports in ATA to monitor your netwo
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 

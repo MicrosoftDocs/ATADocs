@@ -6,12 +6,10 @@ description: Describes the data collected by ATA and provides steps to turn off 
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 8/19/2018
 ms.topic: article
-ms.prod:
-ms.service: advanced-threat-analytics
-ms.technology:
+ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 
 # optional metadata

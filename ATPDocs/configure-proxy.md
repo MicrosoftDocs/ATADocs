@@ -6,13 +6,11 @@ description: Describes how to set up your firewall or proxy to allow communicati
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 
 # optional metadata

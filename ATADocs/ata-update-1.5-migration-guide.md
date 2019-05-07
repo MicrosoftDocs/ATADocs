@@ -6,11 +6,10 @@ description: Procedures to update ATA to version 1.5
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 

@@ -6,11 +6,10 @@ description: Provides links to information about how to delete private informati
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 

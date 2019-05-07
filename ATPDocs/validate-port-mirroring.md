@@ -6,13 +6,11 @@ description: Describes how to validate that port mirroring is configured correct
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 10/04/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.service:
-ms.technology:
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 
 # optional metadata
