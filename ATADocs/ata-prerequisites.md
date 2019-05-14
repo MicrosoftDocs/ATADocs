@@ -6,8 +6,8 @@ description: Describes the requirements for a successful deployment of ATA in yo
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 9/27/2018
+manager: rkarlin
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service:
@@ -41,9 +41,9 @@ ATA is composed of the ATA Center, the ATA Gateway and/or the ATA Lightweight Ga
 The ATA System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
 
 
-[Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
+[Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have, before starting ATA installation.
 
-[ATA Center](#ata-center-requirements): This section lists ATA Center hardware, software requirements as well as settings  you need to configure on your ATA Center server.
+[ATA Center](#ata-center-requirements): This section lists ATA Center hardware, software requirements as well as settings you need to configure on your ATA Center server.
 
 [ATA Gateway](#ata-gateway-requirements): This section lists ATA Gateway hardware, software requirements as well as settings  you need to configure on your ATA Gateway servers.
 
@@ -74,7 +74,7 @@ This section lists information you should gather as well as accounts and network
 ## ATA Center requirements
 This section lists the requirements for the ATA Center.
 ### General
-The ATA Center supports installation on a server running Windows Server 2012 R2 or Windows Server 2016. 
+The ATA Center supports installation on a server running Windows Server 2012 R2 Windows Server 2016 and Windows Server 2019. 
 
  > [!NOTE]
  > The ATA Center does not support Windows Server core.

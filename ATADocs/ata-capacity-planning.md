@@ -4,10 +4,10 @@
 title: Planning your Advanced Threat Analytics deployment | Microsoft Docs
 description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: barbkess
-ms.date: 3/21/2018
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.service: 
 ms.prod: advanced-threat-analytics
@@ -42,7 +42,7 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 - ATA Gateway: Match the **Busy Packets/sec** field in the ATA Gateway table in the results file to the **PACKETS PER SECOND** field in the [ATA Gateway table](#ata-gateway-sizing) or the [ATA Lightweight Gateway table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
 
 
-![Sample capacity planning tool](media/capacity tool.png)
+![Sample capacity planning tool](media/capacity-tool.png)
 
 
 > [!NOTE]
