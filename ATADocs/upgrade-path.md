@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/29/2019
+ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -45,11 +45,6 @@ This article provides information about available Advanced Threat Analytics vers
 |1.9|1.9.7312|
 |1.9 Update 1|1.9.7412|
 |1.9 Update 2|1.9.7478|
-
-## ATA version upgrade matrix
-
-![ATA version upgrade matrix](./media/upgrade-path.png)
-
 
 
 ## See Also
