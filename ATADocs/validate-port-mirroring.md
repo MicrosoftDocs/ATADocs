@@ -6,11 +6,10 @@ description: Describes how to validate that port mirroring is configured correct
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 

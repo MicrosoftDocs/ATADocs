@@ -7,13 +7,11 @@ keywords:
 author: mlottner
 ms.author: mlottner
 
-manager: barbkess
+manager: rkarlin
 ms.date: 02/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 
 # optional metadata

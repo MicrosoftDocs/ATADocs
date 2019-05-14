@@ -6,11 +6,10 @@ description: Lists what was new in ATA version 1.7 along with known issues
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 1/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 

@@ -6,13 +6,11 @@ d|Description: This article provides a list of the security alerts issued by Azu
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 
 # optional metadata

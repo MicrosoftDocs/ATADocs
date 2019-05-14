@@ -6,11 +6,10 @@ description: Describes how to stop ATA from detecting specific entity activities
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 

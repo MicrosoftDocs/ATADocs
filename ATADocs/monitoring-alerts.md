@@ -6,12 +6,11 @@ description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 02/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 

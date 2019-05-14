@@ -6,11 +6,10 @@ description: Step three of installing ATA helps you download the ATA Gateway set
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 

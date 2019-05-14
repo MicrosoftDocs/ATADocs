@@ -6,13 +6,11 @@ description: Describes how to stop Azure ATP from detecting specific entity acti
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 11/11/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 
 # optional metadata

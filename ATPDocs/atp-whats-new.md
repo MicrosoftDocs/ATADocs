@@ -10,9 +10,7 @@ manager: rkarlin
 ms.date: 05/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 
 

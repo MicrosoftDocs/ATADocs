@@ -10,7 +10,6 @@ manager: rkarlin
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 

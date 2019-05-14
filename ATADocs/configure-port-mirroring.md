@@ -6,11 +6,10 @@ description: Describes port mirroring options and how to configure them for ATA
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 

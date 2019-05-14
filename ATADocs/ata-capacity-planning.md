@@ -9,8 +9,8 @@ ms.author: mlottner
 manager: rkarlin
 ms.date: 05/12/2019
 ms.topic: conceptual
-ms.service: 
 ms.prod: advanced-threat-analytics
+ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 
 # optional metadata
 

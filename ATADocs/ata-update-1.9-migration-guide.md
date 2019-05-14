@@ -6,11 +6,10 @@ description: Procedures to update ATA to version 1.9
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 03/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 

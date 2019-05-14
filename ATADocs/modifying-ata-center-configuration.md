@@ -6,11 +6,10 @@ description: Describes how to change the IP address, port, console URL or certif
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 
 # optional metadata

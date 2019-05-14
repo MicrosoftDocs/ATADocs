@@ -6,13 +6,11 @@ description: This describes how to silently install Azure ATP.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 12/05/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 
 # optional metadata

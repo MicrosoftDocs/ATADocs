@@ -6,11 +6,10 @@ description: Describes how to set ATA alerts so you are notified when suspicious
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 

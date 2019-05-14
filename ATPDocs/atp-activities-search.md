@@ -6,13 +6,11 @@ description: This article provides an overview of how to filter and search monit
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 10/28/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 
 # optional metadata

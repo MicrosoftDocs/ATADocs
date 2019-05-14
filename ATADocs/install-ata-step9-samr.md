@@ -6,11 +6,10 @@ description: Describes how to configure SAM-R to enable lateral movement path de
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 7/30/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 

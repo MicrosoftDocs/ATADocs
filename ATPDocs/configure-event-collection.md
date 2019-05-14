@@ -6,13 +6,11 @@ description: In this step of installing ATP, you configure data sources.
 keywords:
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 10/04/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod:
 ms.service: azure-advanced-threat-protection
-ms.technology:
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 
 # optional metadata

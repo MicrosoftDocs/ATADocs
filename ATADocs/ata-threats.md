@@ -6,11 +6,10 @@ description: Lists the threats that Advanced Threat Analytics detects
 keywords:
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service:
 ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 
