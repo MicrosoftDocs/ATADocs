@@ -136,7 +136,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 To install and deploy ATA more quickly, you can install self-signed certificates during installation. If you have chosen to use self-signed certificates, after the initial deployment it is recommended to replace self-signed certificates with certificates from an internal Certification Authority to be used by the ATA Center.
 
 
-Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
+Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install all the CRL distribution points for the whole chain.
 
 The certificate must have:
 -	A private key
@@ -158,7 +158,7 @@ For example, you can use the standard **Web server** or **Computer** templates.
 ## ATA Gateway requirements
 This section lists the requirements for the ATA Gateway.
 ### General
-The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (including server core).
+The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 and Windows Server 2019 (including server core).
 The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
 The ATA Gateway can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
@@ -238,7 +238,7 @@ The following table lists the minimum ports that the ATA Gateway requires config
 ## ATA Lightweight Gateway requirements
 This section lists the requirements for the ATA Lightweight Gateway.
 ### General
-The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
+The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 and Windows Server 2019 (including Core but not Nano).
 
 The domain controller can be a read-only domain controller (RODC).
 
