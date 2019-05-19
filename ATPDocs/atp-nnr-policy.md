@@ -6,7 +6,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/31/2019
+ms.date: 05/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -30,17 +30,17 @@ Network Name Resolution or (NNR) is a main component of  Azure ATP functionality
 
 Using NNR, Azure ATP is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Azure ATP profiles entities, including computers, and generates security alerts for suspicious activities.
 
-To resolve IP addresses to computer names, ATP sensors query the IP address for the computer name “behind” the IP, using one of the following methods:
+To resolve IP addresses to computer names, Azure ATP sensors query the IP address for the computer name “behind” the IP, using one of the following methods:
 
 1. NTLM over RPC (TCP Port 135)
 2. NetBIOS (UDP port 137)
-3. RDP (TCP port 3389) - only first packet of **Client hello**
-4. Query the DNS server using reverse DNS lookup of the IP address (UDP 53)
+3. RDP (TCP port 3389) - only the first packet of **Client hello**
+4. Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
 > [!NOTE]
 >No authentication is performed on any of the ports.
 
-After retrieving the computer name, the Azure ATP sensor checks in Active Directory to see if there is a correlated computer object with the same computer name. If the sensor finds the correlation, the sensor associated this IP to that computer object.
+After retrieving the computer name, the Azure ATP sensor checks in Active Directory to see if there is a correlated computer object with the same computer name. If the sensor finds the correlation, the sensor associates this IP to that computer object.
 
 NNR data is crucial for detecting the following threats:
 
@@ -83,11 +83,11 @@ Each monitoring alert provides specific details of the method, sensors, the prob
 ### Configuration recommendations
 
 - RPC over NTLM:
-    - Check that Port 135 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
+    - Check that TCP Port 135 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
     - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
 
 - NetBIOS:
-    - Check that Port 137 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
+    - Check that UDP Port 137 is open for inbound communication from Azure ATP Sensors, on all computers in the environment.
     - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
 - Reverse DNS:
     - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
