@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/15/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -110,10 +110,13 @@ It is important to check if any login attempts ended with successful authenticat
 1. Investigate the source computer.  
 2. On the alert page, check which, if any, users were guessed successfully.
     - For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
-3. If an alert occurs many times and the authentication was performed using NTLM, sometimes, there will not be enough information available about the server the source machine tried to access.
-    1. To get this information, make sure to enable NTLM auditing on the domain controllers involved.  
-    2. To enable NTLM auditing, turn on event 8004 (the NTLM authentication event that includes information about the source computer, user account and server that the source machine tried to access).
-    3. When you learn which server sent the authentication validation, investigate the server by checking events, such as event 4624, to better understand the authentication process.
+1. If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the source computer name.
+
+    To get the source computer name, make sure to enable NTLM auditing on the relevant domain controllers.
+    
+    To enable NTLM auditing, turn on Windows Event 8004 (NTLM authentication event that includes information about the source computer, user account, and the server the source machine tried to access).
+    
+    When you learn which server sent the authentication validation, investigate the server by checking events, such as Windows Event 4624, to better understand the authentication process. Check if this server is exposed to the internet using any open ports. For example, is the server open using RDP to the internet?
 
 **Suggested remediation and steps for prevention**
 
@@ -131,6 +134,7 @@ It is important to check if any login attempts ended with successful authenticat
 **Description**
 
 In a brute-force attack, the attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.  
+
 In this detection, an alert is triggered when Azure ATP detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options.
 
 **TP, B-TP, or FP**
