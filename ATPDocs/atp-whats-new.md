@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -19,7 +19,7 @@ ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: itargoet
+ms.reviewer: ort
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -27,6 +27,23 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.78
+
+Released May 19, 2019
+
+- **Feature enhancement: Sensitive entities**<br> Manual Sensitive tagging for Exchange Servers
+
+    You can now manually tag entities as Exchange Servers during configuration.
+
+    To manually tag an entity as an Exchange Server:
+    1. In the Azure ATP portal, access the **Configuration** menu.
+    2. Under **Detection**, select **Entity tags**, then select **Sensitive**.
+    3. Select **Exchange Servers** and then add the entity you wish to tag.
+
+    After tagging a computer as an Exchange Server, it will be tagged as Sensitive and display that it was tagged as an Exchange Server.  The Sensitive tag will appear in the computer’s entity profile, and the computer will be considered in all detections that are based on Sensitive accounts and Lateral Movement Paths.
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.77
 
