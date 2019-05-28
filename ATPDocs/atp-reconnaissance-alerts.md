@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/27/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -45,7 +45,7 @@ In this tutorial, learn how to understand, classify, remediate, and prevent the 
 > [!div class="checklist"]
 > * Account enumeration reconnaissance (external ID 2003)
 > * Network mapping reconnaissance (DNS) (external ID 2007)
-> * Security principal reconnaissance (LDAP) (external ID 2038) - preview
+> * Security principal reconnaissance (LDAP) (external ID 2038)
 > * User and IP address reconnaissance (SMB) (external ID 2012)
 > * User and Group membership reconnaissance (SAMR) (external ID 2021)
  
@@ -168,7 +168,7 @@ It is important to preventing future attacks using AXFR queries by securing your
 
 - Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
-## Security principal reconnaissance (LDAP) (external ID 2038) - preview
+## Security principal reconnaissance (LDAP) (external ID 2038)
 
 **Description**
 
