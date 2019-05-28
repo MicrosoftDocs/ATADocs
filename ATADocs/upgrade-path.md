@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/14/2019
+ms.date: 05/26/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -46,6 +46,11 @@ This article provides information about available Advanced Threat Analytics vers
 |1.9 Update 1|1.9.7412|
 |1.9 Update 2|1.9.7478|
 
+## Upgrade paths
+
+Refer to the upgrade path diagram to determine the correct upgrade path for your current installation. 
+
+![ATA version upgrade path](./media/upgrade-path-ata.png)
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
