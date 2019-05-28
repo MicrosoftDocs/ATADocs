@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/31/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -77,7 +77,7 @@ Security insights are never too late to prevent the next attack and remediate da
 
 - Make sure people only have access to necessary resources. In the example, Ron Harper significantly widens Nick Cowley's exposure. Is it necessary that Ron Harper be included in the group? Are there subgroups that could be created to minimize lateral movement exposure?
 
-**Tip** – When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose to **View a different date** and check for previous potential lateral movement paths. The **LMP to sensitive users report** is always available is LMPs were discovered and provides you with information about potential lateral movement paths detected to sensitive users. 
+**Tip** – When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose to **View a different date** and check for previous potential lateral movement paths. The **LMP to sensitive users report** is always available if LMPs were discovered and provides you with information about potential lateral movement paths detected to sensitive users. 
 
 **Tip** - For instructions on how to set your clients and servers to allow Azure ATP to perform the SAM-R operations needed for lateral movement path detection, see [configure SAM-R](install-atp-step8-samr.md).
 

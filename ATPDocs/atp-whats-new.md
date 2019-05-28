@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,6 +27,15 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.79
+Released May 26, 2019
+
+- **General availability: Security principal reconnaissance (LDAP) (external ID 2038)**
+
+    This alert is now in GA (general availability). For more information about the alert,  alert features and suggested remediation and prevention, see the [Security principal reconnaissance (LDAP) alert description](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.78
 
@@ -156,7 +165,7 @@ Released February 24, 2019
 
 - **New security alert: Security principal reconnaissance (LDAP) – (preview)**<br>
 
-    Azure ATP’s [Security principal reconnaissance (LDAP) - preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. 
+    Azure ATP’s [Security principal reconnaissance (LDAP) - preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. 
 
     Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
