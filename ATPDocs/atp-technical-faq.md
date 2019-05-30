@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -95,7 +95,7 @@ In addition, Microsoft conducts background verification checks on certain operat
 Every domain controller in the environment should be covered by an ATP sensor or standalone sensor. For more information, see [Azure ATP sensor sizing](atp-capacity-planning.md#sizing). 
 
 ### Does Azure ATP work with encrypted traffic?
-Network protocols with encrypted traffic (for example, LDAPS and IPSEC) are not decrypted, but are analyzed by the sensors.
+Network protocols with encrypted traffic (for example, AtSvc and WMI) are not decrypted, but are analyzed by the sensors.
 
 ### Does Azure ATP work with Kerberos Armoring?
 Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by Azure ATP, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
