@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/27/2019
+ms.date: 06/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,6 +27,15 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.80
+
+Released June 2, 2019
+
+- **Feature enhancement: Suspicious VPN connection alert**<br>
+   This alert now includes enhanced evidence and texts for better usability. For more information about alert features, and suggested remediation steps and prevention, see the [Suspicious VPN connection alert description](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025).
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.79
 Released May 26, 2019
