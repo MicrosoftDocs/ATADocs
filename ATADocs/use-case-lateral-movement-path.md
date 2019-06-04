@@ -34,7 +34,7 @@ Even when you do your best to protect your sensitive users, and your admins have
 
 ## What is a lateral movement path?
 
-Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the[Suspicious activity guide](suspicious-activity-guide.md). To understand who the administrators are in your network and which machines the attacker can access, the attacker can take advantage of the data on your domain controllers. 
+Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the [Suspicious activity guide](suspicious-activity-guide.md). To understand who the administrators are in your network and which machines the attacker can access, the attacker can take advantage of the data on your domain controllers. 
 
 ATA enables you to take preemptive action on your network to prevent attackers from succeeding at lateral movement.
 
