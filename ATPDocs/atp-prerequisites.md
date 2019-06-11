@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/01/2019
+ms.date: 06/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -35,7 +35,7 @@ This article describes the requirements for a successful deployment of Azure ATP
 
 Azure ATP is composed of the Azure ATP cloud service, which consists of the Azure ATP portal, the Azure ATP sensor and/or the Azure ATP standalone sensor. For more information about each Azure ATP component, see [Azure ATP architecture](atp-architecture.md).
 
-Azure ATP protects your on-premises Active Directory users and/or users synced to your Azure Active Directory. To protect an environment made up of only AAD users, see [AAD Identity Protection] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
+Azure ATP protects your on-premises Active Directory users and/or users synced to your Azure Active Directory. To protect an environment made up of only AAD users, see [AAD Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 To create your Azure ATP instance, you'll need an AAD tenant with at least one global/security administrator. Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. 
 
