@@ -67,6 +67,20 @@
     href: atp-role-groups.md
 - name: How-to guides
   items:
+  - name: Security alert lab
+    items:
+    - name: Lab overview
+      href: atp-playbook-lab-overview.md
+    - name: 1 - Lab setup
+      href: atp-playbook-setup-lab.md
+    - name: 2 -Reconnaissance playbook
+      href: atp-playbook-reconnaissance.md
+    - name: 3 -Lateral movement playbook
+      href: atp-playbook-lateral-movement.md
+    - name: 4 - Domain dominance playbook
+      href: atp-playbook-domain-dominance.md
+  - name: Understanding security alerts
+    href: understanding-security-alerts.md
   - name: Manage security alerts
     href: working-with-suspicious-activities.md
   - name: Exclude entities from detections
@@ -83,10 +97,12 @@
     href: modifying-atp-config-dcpassword.md
   - name: Set Azure ATP notifications
     href: notifications.md
-  - name: Work with Azure ATP health center
-    href: atp-health-center.md
-  - name: Manage Azure ATP health alerts
-    href: monitoring-alerts.md
+  - name: Health alerts
+    items:
+    - name: Work with Azure ATP health center
+      href: atp-health-center.md
+    - name: Manage Azure ATP health alerts
+      href: monitoring-alerts.md
   - name: Azure ATP sensor delayed update
     href: sensor-update.md
   - name: Troubleshooting known issues
@@ -119,20 +135,8 @@
       href: configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: configure-event-forwarding.md
-  - name: Understanding security alerts
-    href: understanding-security-alerts.md
-  - name: Security alert lab
-    items:
-    - name: Lab overview
-      href: atp-playbook-lab-overview.md
-    - name: 1 - Lab setup
-      href: atp-playbook-setup-lab.md
-    - name: 2 -Reconnaissance playbook
-      href: atp-playbook-reconnaissance.md
-    - name: 3 -Lateral movement playbook
-      href: atp-playbook-lateral-movement.md
-    - name: 4 - Domain dominance playbook
-      href: atp-playbook-domain-dominance.md
+  - name: ATA to Azure ATP migration
+    href: ata-atp-migration-overview.md
 - name: Reference
   items:
   - name: SIEM log reference
