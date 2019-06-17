@@ -52,6 +52,8 @@ The Azure ATP deployment logs are located in the temp directory for the user who
 
 Azure ATP sensor deployment logs:
 
+-  **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - This log file provides the entire process of sensor deployment and can be found in the temp folder mentioned previously, or in C:\Windows\Temp. 
+
 -   **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the Azure ATP sensor. Its main use is tracking the Azure ATP sensor deployment process.
 
 -   **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS_001_MsiPackage.log** - This log file lists the steps in the process of the deployment of the Azure ATP sensor binaries. Its main use is tracking the deployment of the Azure ATP sensor binaries.
