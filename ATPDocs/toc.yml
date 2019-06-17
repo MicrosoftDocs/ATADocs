@@ -135,8 +135,6 @@
       href: configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: configure-event-forwarding.md
-  - name: ATA to Azure ATP migration
-    href: ata-atp-migration-overview.md
 - name: Reference
   items:
   - name: SIEM log reference
