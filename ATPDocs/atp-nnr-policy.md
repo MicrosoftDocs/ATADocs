@@ -6,7 +6,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/19/2019
+ms.date: 06/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -40,7 +40,11 @@ To resolve IP addresses to computer names, Azure ATP sensors query the IP addres
 > [!NOTE]
 >No authentication is performed on any of the ports.
 
-After retrieving the computer name, the Azure ATP sensor checks in Active Directory to see if there is a correlated computer object with the same computer name. If the sensor finds the correlation, the sensor associates this IP to that computer object.
+In cases where no name is retrieved, an **unresolved computer profile by IP** is created with the IP and the relevant detected activity.
+
+After retrieving the computer name, the Azure ATP sensor checks in Active Directory to see if there is a correlated computer object with the same computer name. If the sensor finds the correlation, the sensor associates this IP to that computer object. In cases where no computer object with this name is found,  an **unresolved computer profile by name** is created with this name and the relevant detected activity. 
+
+![Unresolved computer profile](media/unresolved-computer-profile.png)
 
 NNR data is crucial for detecting the following threats:
 
