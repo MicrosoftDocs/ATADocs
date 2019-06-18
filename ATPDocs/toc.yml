@@ -47,8 +47,6 @@
     href: investigate-entity.md
 - name: Concepts
   items:
-  - name: Azure ATP multi-forest support
-    href: atp-multi-forest.md
   - name: Azure ATP portal
     href: workspace-portal.md
   - name: Azure ATP security alerts
@@ -65,8 +63,16 @@
     href: reports.md
   - name: User roles
     href: atp-role-groups.md
+  - name: Azure ATP multi-forest support
+    href: atp-multi-forest.md
 - name: How-to guides
   items:
+  - name: Azure ATP using Microsoft Cloud App Security
+    items:
+    - name: Use Azure ATP with Cloud App Security 
+      href: atp-mcas-integration.md
+    - name: Filter activities and set policies
+      href: atp-activities-filtering-mcas.md
   - name: Security alert lab
     items:
     - name: Lab overview

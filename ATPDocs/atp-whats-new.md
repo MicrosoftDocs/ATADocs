@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/10/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,6 +27,18 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.82
+
+Released June 18, 2019
+
+- **New public preview**<br>
+Azure ATP's identity threat investigation experience is now in **Public Preview**, and available to all Azure ATP protected tenants. See [Azure ATP Microsoft Cloud App Security investigation experience](atp-mcas-integration) to learn more. 
+
+- **General availability**<br>
+Azure ATP support for untrusted forests is now in general availability. See [Azure ATP multi-forest](atp-multi-forest.md) to learn more. 
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.81
 
