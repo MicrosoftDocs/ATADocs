@@ -79,9 +79,9 @@
       href: atp-playbook-lab-overview.md
     - name: 1 - Lab setup
       href: atp-playbook-setup-lab.md
-    - name: 2 -Reconnaissance playbook
+    - name: 2 - Reconnaissance playbook
       href: atp-playbook-reconnaissance.md
-    - name: 3 -Lateral movement playbook
+    - name: 3 - Lateral movement playbook
       href: atp-playbook-lateral-movement.md
     - name: 4 - Domain dominance playbook
       href: atp-playbook-domain-dominance.md
