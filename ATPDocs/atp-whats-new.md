@@ -33,7 +33,7 @@ ms.suite: ems
 Released June 18, 2019
 
 - **New public preview**<br>
-Azure ATP's identity threat investigation experience is now in **Public Preview**, and available to all Azure ATP protected tenants. See [Azure ATP Microsoft Cloud App Security investigation experience](atp-mcas-integration) to learn more. 
+Azure ATP's identity threat investigation experience is now in **Public Preview**, and available to all Azure ATP protected tenants. See [Azure ATP Microsoft Cloud App Security investigation experience](atp-mcas-integration.md) to learn more. 
 
 - **General availability**<br>
 Azure ATP support for untrusted forests is now in general availability. See [Azure ATP multi-forest](atp-multi-forest.md) to learn more. 
