@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -49,7 +49,7 @@ Integrating with Azure ATP, the Cloud App Security portal provides alerts and in
 
 ## Access Azure ATP
 
-Choose to continue to use Azure ATP within the Azure ATP portal, or, you can now access Azure ATP alerts and identity scoring using the Microsoft Cloud App Security portal. In either workflow, Azure ATP set-up and configuration tasks continue to be handled within the Azure ATP portal. 
+Choose to continue to use Azure ATP within the Azure ATP portal, or, you can access Azure ATP alerts and identity scoring using the Microsoft Cloud App Security portal. In either workflow, Azure ATP set-up and configuration tasks continue to be handled within the Azure ATP portal. 
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ For complete user investigation features across the hybrid environment, you must
 >[!NOTE]
 >If you don't have a subscription for Cloud App Security, you will still be able to use the Cloud App Security portal to investigate Azure ATP alerts and deep dive on users and their on-premise managed activities, but you won't receive related insights from your cloud applications.
 
-See [Azure ATP integration](https://docs.microsoft.com/cloud-app-security/aatp-integration/enable-azure-advanced-threat-protection) to learn how to quickly enable Azure ATP in Cloud App Security.  
+See [Azure ATP integration](https://docs.microsoft.com/cloud-app-security/aatp-integration) to learn how to quickly enable Azure ATP in Cloud App Security.  
  
 ## Azure ATP in Cloud App Security 
 
