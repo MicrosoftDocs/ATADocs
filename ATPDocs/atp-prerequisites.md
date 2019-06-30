@@ -153,7 +153,7 @@ For more information, see, [Advanced Audit Policy Check](atp-advanced-audit-poli
 > - The following ports need to be open inbound on devices on the network from the Azure ATP sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
->   -   RDP (TCP port 3389), only first packet of *Client hello*, for resolution purposes<br> Note that no authentication is performed on any of the ports.
+<br> Note that no authentication is performed on any of the ports.
 
 ## Azure ATP standalone sensor requirements
 This section lists the requirements for the Azure ATP standalone sensor.
@@ -226,14 +226,14 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 |NetBIOS|UDP|137|All devices on the network|Both|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDP|1813|RADIUS|Inbound|
-|TLS to RDP|TCP|3389|All devices on network|Both|
+|
 
 > [!NOTE]
 > - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
 > - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
 >   -   NTLM over RPC (TCP Port 135) for resolution purposes
 >   -   NetBIOS (UDP port 137) for resolution purposes
->   -   RDP (TCP port 3389), only first packet of *Client hello*, for resolution purposes<br> Note that no authentication is performed on any of the ports.
+<br> Note that no authentication is performed on any of the ports.
 
 
 
