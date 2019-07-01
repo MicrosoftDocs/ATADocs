@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -25,13 +25,13 @@ ms.suite: ems
 
 ---
 
-# Use Activity filters and create action policies with Azure ATP in Microsoft Cloud App Security 
+# Use activity filters and create action policies with Azure ATP in Microsoft Cloud App Security 
 
 This article is designed to help you understand how to filter and create action policies for Azure ATP activities using Microsoft Cloud App Security. 
 
 For more information about how to complete your integration, see [Azure ATP Cloud App Security integration](https://docs.microsoft.com/cloud-app-security/aatp-integration/enable-azure-advanced-threat-protection).  
 
-Using Azure ATP with Microsoft Cloud App Security offers activity analysis and alerts based on User and Entity Behavior Analytics (UEBA), identifying the riskiest behaviors in your enterprise, providing a comprehensive investigation priority score as well as activity filtering and customizable activity policies. 
+Using Azure ATP with Microsoft Cloud App Security offers activity analysis and alerts based on User and Entity Behavior Analytics (UEBA), identifying the riskiest behaviors in your enterprise, providing a comprehensive investigation priority score, as well as activity filtering and customizable activity policies. 
 
 ## Prerequisites
 
@@ -57,19 +57,21 @@ To access Azure ATP activities by user:
 
 ## Create activity policies in Cloud App Security
 
-After filtering activities and identifying activity policies you'd like to implement, or noncompliance within your organization, use the **Create Activity Policy** option from the filter menu to immediately create a new customized policy per user, device, or tenant. 
+After filtering activities and identifying activity policies you'd like to implement, or noncompliance within your organization, use the **Create new activity policy** option from the filter menu to immediately create a new customized policy per user, device, or tenant. 
 
 To create a new activity policy:
 
-1. From any Activity log page, click the **New policy from search** button.  
-    ![Create new activity policy](media/atp-mcas-activity-log.png)
+1. From any **Activity log** page, apply a filter (such as APP, User Name, Activity type) etc. 
+    - To filter to activities from Azure ATP select the **Active Directory** option in the APP filter. 
+    ![Create new activity policy](media/atp-mcas-create-new-policy.png)
+1. Click the **New policy from search** button.    
 1. Add a **Policy name**. 
     ![Create new activity policy -step 2](media/atp-mcas-create-policy.png)
 1. Add a policy **Description**.  
-1. Assign the severity of the policy.
-1. Select a category for the policy.
-1. Choose the filters to create for the policy.
-1. Refine or add filters. 
+1. Assign the **severity** of the policy.
+1. Select a **category** for the policy.
+1. Choose or modify filters to create and assign for the policy.
+1. Refine or add more filters. 
 1. Save and apply the new policy.  
 
 

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/25/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -51,6 +51,8 @@ Integrating with Azure ATP, the Cloud App Security portal provides alerts and in
 
 Choose to continue to use Azure ATP within the Azure ATP portal, or, you can access Azure ATP alerts and identity scoring using the Microsoft Cloud App Security portal. In either workflow, Azure ATP set-up and configuration tasks continue to be handled within the Azure ATP portal. 
 
+ 
+
 ## Prerequisites
 
 For complete user investigation features across the hybrid environment, you must have:
@@ -70,8 +72,14 @@ Access your Azure ATP data and new hybrid features within Cloud App Security ale
 
 ## Alerts
 
-Azure ATP alerts are displayed within the Cloud App Security **Alerts** queue. Additional alert filtering options are available only when viewing alerts using Cloud App Security. Azure ATP alerts are filtered using the application filter to Azure ATP. 
+Azure ATP alerts are displayed within the Cloud App Security **Alerts** queue. Additional alert filtering options are available only when viewing alerts using Cloud App Security. Azure ATP alerts are filtered using the application filter to **Active Directory**. 
 
+## Alert management
+When using Azure ATP with Cloud app security, closing alerts in one service will not automatically close them in the other service. Decide where to manage and remediate alerts to avoid duplicated efforts. 
+
+## SIEM notification
+
+If both your services (Azure ATP and Cloud App Security) are currently configured to send alert notifications to a SIEM, after enabling Azure ATP integration in Cloud App Security, you'll start to receive duplicate SIEM notifications for the same alert. One alert will be issued from each service and they will have different alert IDs. To avoid duplication and confusion, decide where you intend to perform alert management, and then stop SIEM notifications being sent from the other service.  
 
 ## Activities
 
