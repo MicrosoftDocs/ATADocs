@@ -45,7 +45,7 @@ In this guide you will:
 
 ## Prerequisites
 
-- An AAD tenant with at least one global/security administrator is required to create an Azure ATP instance. Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- An Azure Active Directory tenant with at least one global/security administrator is required to create an Azure ATP instance. Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - Azure ATP requires .Net Framework 4.7 and may require a domain controller (restart) if your current .Net Framework version is not 4.7.
 
@@ -133,7 +133,7 @@ This section of the guide explains the actions that can be performed after compl
 > Import of existing security alerts from ATA to ATP are not supported. Make sure to record or remediate all existing ATA alerts before decommissioning the ATA Center.  
 
 - **Decommission the ATA Center** 
-    - To reference the Center data after the move, we recommend keeping the center data online for a period of time. After decommissioning the ATA Center, the number of resources can typically be reduced, especially if the resources are a Virtual Machine.  
+    - To reference the ATA Center data after the move, we recommend keeping the center data online for a period of time. After decommissioning the ATA Center, the number of resources can typically be reduced, especially if the resources are a Virtual Machine.  
 
 - **Back up Mongo DB** 
     - If you wish to keep the ATA data indefinitely, [back up Mongo DB](https://docs.microsoft.com/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).  
