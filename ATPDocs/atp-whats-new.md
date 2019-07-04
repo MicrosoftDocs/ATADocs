@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,6 +27,34 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+
+## Azure ATP release 2.84
+
+Released July 1, 2019
+
+- **New location support: Azure UK data center**<br>
+    Azure ATP instances are now supported in the Azure UK data center. To learn more about creating Azure ATP instances and their corresponding data center locations, see [Step 1 of Azure ATP installation](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
+
+- **Feature enhancement: New name and features for the Suspicious additions to sensitive groups alert (external ID 2024)**<br> 
+    The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+
+- **New documentation feature: Guide for moving from Advanced Threat Analytics to Azure ATP**<br>
+    This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.83
+
+Released June 23, 2019
+
+- **Feature enhancement: Suspicious service creation alert (external ID 2026)**<br> 
+    This alert now features an improved alert page with additional evidence and a new description. For more information, see [Suspicious service creation security alert](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-service-creation-external-id-2026).
+
+-  **Instance naming support: Support added for digit only domain prefix**<br>
+    Support added for Azure ATP instance creation using initial domain prefixes that only contain digits. For example, use of digit only initial domain prefixes such as  123456.contoso.com are now supported. 
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 
 ## Azure ATP release 2.82
 

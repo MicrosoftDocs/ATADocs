@@ -91,7 +91,7 @@ The following fields and their values are forwarded to your SIEM:
 |[Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|NA|2037|Medium or Low if observed using signed NTLM v2 protocol|Privilege escalation, <br> Lateral movement|
 |[Suspected WannaCry ransomware attack](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Unusual protocol implementation (potential WannaCry ransomware attack)|2035|Medium|Lateral movement|
 |[Suspicious communication over DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Suspicious communication over DNS|2031|Medium|Exfiltration|
-|[Suspicious modification of sensitive groups](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Suspicious modification of sensitive groups|2024|Medium|Credential access,<br>Persistence|
+|[Suspicious additions to sensitive groups](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|Suspicious additions to sensitive groups|2024|Medium|Credential access,<br>Persistence|
 |[Suspicious service creation](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Suspicious service creation|2026|Medium|Execution,<br> Persistence,<br> Privilege Escalation,<br> Defense evasion,<br>Lateral movement|
 |[Suspicious VPN connection](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Suspicious VPN connection|2025|Medium|Persistence,<br>Defense evasion|
 |[User and group membership reconnaissance (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Reconnaissance using directory services queries|2021|Medium|Discovery|
@@ -180,7 +180,7 @@ Priorities:
 ### Suspicious domain controller promotion (potential DcShadow attack)
 07-12-2018  11:18:07    Auth.Error  192.168.0.200    1 2018-07-12T08:18:06.883880+00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï»¿0|Microsoft|Azure ATP|2.40.0.0|DirectoryServicesRoguePromotionSecurityAlert| **Suspicious domain controller promotion (potential DcShadow attack)**|10|start=2018-07-12T08:17:55.4067092Z app=Ldap shost=CLIENT1 msg=CLIENT1, which is a computer in domain1.test.local, registered as a domain controller on DC1. externalId=2028 cs1Label=url cs1=https\://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53 cs2Label=trigger cs2=update
 
-### Suspicious modification of sensitive groups
+### Suspicious additions to sensitive groups
 10-29-2018	11:21:03	Auth.Warning	192.168.0.202	1 2018-10-29T09:20:49.667014+00:00 DC3 CEF 3908 AbnormalSensitiveGroupMembership ï»¿0|Microsoft|Azure ATP|2.52.5704.46184|AbnormalSensitiveGroupMembershipChangeSecurityAlert|Suspicious modification of sensitive groups|5|start=2018-10-29T09:19:43.3013729Z app=GroupMembershipChangeEvent suser=user1 msg=user1 has uncharacteristically modified sensitive group memberships. externalId=2024 cs1Label=url cs1=https\://contoso-corp.atp.azure.com/securityAlert/6f7e677e-f068-41e5-bada-708cd5a322b9 cs2Label=trigger cs2=new
 
 ### Suspicious replication of directory services
