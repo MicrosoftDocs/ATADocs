@@ -51,7 +51,7 @@ The following security alerts help you identify and remediate **Domain dominance
 > * Suspected Golden Ticket usage (ticket anomaly) (external ID 2032)
 > * Suspected Golden Ticket usage (time anomaly) (external ID 2022)
 > * Suspected Skeleton Key attack (encryption downgrade) (external ID 2010)
-> * Suspicious modification of sensitive groups (external ID 2024)
+> * Suspicious additions to sensitive groups (external ID 2024)
 > * Suspicious service creation (external ID 2026)
 
 ## Malicious request of Data Protection API master key (external ID 2020) 
@@ -485,7 +485,7 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
     - Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
     - Look for users logged on around the same time as the suspicious activity occurred, as they may also be compromised. Reset their passwords and enable MFA.
 
-## Suspicious modification of sensitive groups (external ID 2024)
+## Suspicious additions to sensitive groups (external ID 2024)
 
 **Description** 
 Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Azure ATP profiles continuously.  
