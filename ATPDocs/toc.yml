@@ -79,7 +79,7 @@
       href: atp-mcas-ispm-clear-text.md
     - name: Remove dormant entities from sensitive groups assessment
       href: atp-mcas-ispm-dormant-entities.md
-    - name: Prevent legacy protocols communication
+    - name: Prevent legacy protocols communication assessment
       href: atp-mcas-ispm-legacy-protocols.md
     - name: Disable Print spooler service on domain controllers assessment
       href: atp-mcas-ispm-print-spooler.md
