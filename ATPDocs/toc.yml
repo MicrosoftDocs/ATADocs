@@ -74,7 +74,7 @@
     - name: Filter activities and set policies
       href: atp-activities-filtering-mcas.md
     - name: Azure ATP identity security posture assessments 
-      href: atp-mcas-ispm-overview.md
+      href: atp-ispm-overview.md
     - name: Prevent clear text credentials exposure assessment
       href: atp-mcas-ispm-clear-text.md
     - name: Remove dormant entities from sensitive groups assessment
