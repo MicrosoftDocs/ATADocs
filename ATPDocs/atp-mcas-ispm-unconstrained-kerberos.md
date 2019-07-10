@@ -47,7 +47,7 @@ The problem with unconstrained delegation is that you need to trust the applicat
 
 ## Remediation
 
-To learn more about remediating these type of accounts, see [Removing accounts that use unconstrained Kerberos delegation](https://blogs.technet.microsoft.com/389thoughts/2017/04/18/get-rid-of-accounts-that-use-kerberos-unconstrained-delegation/)
+To learn more about remediating these type of accounts, see [Removing accounts that use unconstrained Kerberos delegation](https://blogs.technet.microsoft.com/389thoughts/2017/04/18/get-rid-of-accounts-that-use-kerberos-unconstrained-delegation/).
 
 ## Next steps
 - [Azure ATP activities filtering in Cloud App Security](atp-activities-filtering-mcas.md)
