@@ -28,12 +28,10 @@ ms.suite: ems
 
 # Security assessment: Dormant entities in **sensitive** groups
 
-![Remove dormant entities from sensitive groups in Cloud App Security](media/atp-mcas-ispm-dormant-entities-1.png)
-
 ## What are **sensitive** dormant entities? 
 Azure ATP discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired. 
 
-However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant **sensitive** accounts are targets of opportunity for malicious actors to gain sensitive access to your organization. 
+However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant [sensitive entities](sensitive-accounts.md) are targets of opportunity for malicious actors to gain sensitive access to your organization. 
 
 ## What risk do dormant entities create in **sensitive** groups? 
 
@@ -41,11 +39,10 @@ Organizations that fail to secure their dormant user accounts leave the door unl
 
 Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. As easy and quiet path deep into your organization is through **sensitive** user and service accounts that are no longer in use. 
 
-It doesn't matter if the cause is employee turnover or resource mismanagement -skipping this step leaves your organization's most [sensitive entities](sensitive-accounts.md) vulnerable and exposed.   
+It doesn't matter if the cause is employee turnover or resource mismanagement -skipping this step leaves your organization's most sensitive entities vulnerable and exposed.   
 
 ## How do I use this security assessment? 
 1. Use the report table to discover which of your sensitive accounts are dormant. 
-    <br>![Discover dormant sensitive entities](media/atp-mcas-ispm-dormant-entities-2.png)
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.  
 
 
