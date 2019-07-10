@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/03/2019
+ms.date: 07/07/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -106,7 +106,7 @@ Administrative workstations, IT team members, and service accounts can all perfo
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md) and [user](investigate-a-user.md).
-2. Investigate the [domain controller](investigate-a-computer.md)
+2. Investigate the [domain controller](investigate-a-computer.md).
 
 **Suggested remediation and steps for prevention:**
 
@@ -490,12 +490,12 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 **Description** 
 Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Azure ATP profiles continuously.  
  
-For a definition of sensitive groups in Azure ATP, see Working with the sensitive accounts.
+For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
  
-The detection relies on events audited on domain controllers. Make sure your domain controllers are auditing the events needed to audit the needed events.
+The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](atp-advanced-audit-policy.md).
  
 **Learning period**
-<br>Four weeks per DC, starting from the first event.
+<br>Four weeks per domain controller, starting from the first event.
  
 **TP, B-TP, or FP**
 <br>Legitimate group modifications that occur rarely and the system didn't learn as "normal", may trigger an alert. These alerts would be considered  **B-TP**. 

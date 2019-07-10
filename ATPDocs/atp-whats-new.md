@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/03/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -28,6 +28,21 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+## Azure ATP release 2.85
+
+Released July 7, 2019
+
+- **New public preview feature: Azure ATP Identity Security Posture Assessments**<br>
+    Azure ATP using the Microsoft Cloud App Security portal introduces to **public preview** six new assessment reports to assess, investigate, remediate, and improve your organizational security posture. Learn more about how to [enable](https://docs.microsoft.com/cloud-app-security/aatp-integration) and [get started](atp-mcas-integration.md) with Azure ATP identity security posture assessments in Cloud App Security, and [use](atp-ispm-overview.md) each of the new assessments:
+    - [Dormant entities](atp-mcas-ispm-dormant-entities.md)
+    - [Clear text](atp-mcas-ispm-clear-text.md)
+    - [Weak cipher usage](atp-mcas-ispm-weak-cipher.md)
+    - [Unconstrained Kerberos delegation](atp-mcas-ispm-unconstrained-kerberos.md)
+    - [Print spooler](atp-mcas-ispm-print-spooler.md)
+    - [Legacy protocols](atp-mcas-ispm-legacy-protocols.md)
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.84
 
 Released July 1, 2019
@@ -36,7 +51,7 @@ Released July 1, 2019
     Azure ATP instances are now supported in the Azure UK data center. To learn more about creating Azure ATP instances and their corresponding data center locations, see [Step 1 of Azure ATP installation](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
 
 - **Feature enhancement: New name and features for the Suspicious additions to sensitive groups alert (external ID 2024)**<br> 
-    The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+    The **Suspicious additions to sensitive groups alert were previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **New documentation feature: Guide for moving from Advanced Threat Analytics to Azure ATP**<br>
     This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
@@ -148,7 +163,7 @@ Releasing April 10, 2019
 Released March 31, 2019
 
 - **Feature enhancement: Lateral Movement Path (LMP) scoped depth**<br>
-Lateral movement paths (LMP's) are a key method for threat and risk discovery in Azure ATP. To help keep focus on the critical risks to your most sensitive users, this update makes it easier and faster to analyze and remediate risks to the sensitive users on each LMP, by limiting the scope and depth of each graph displayed.   
+Lateral movement paths (LMPs) are a key method for threat and risk discovery in Azure ATP. To help keep focus on the critical risks to your most sensitive users, this update makes it easier and faster to analyze and remediate risks to the sensitive users on each LMP, by limiting the scope and depth of each graph displayed.   
 
     See [Lateral Movement Paths](use-case-lateral-movement-path.md) to learn more about how Azure ATP uses LMPs to surface access risks to each entity in your environment.   
 
