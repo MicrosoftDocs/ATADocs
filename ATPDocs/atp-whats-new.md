@@ -33,13 +33,13 @@ ms.suite: ems
 Released July 7, 2019
 
 - **New public preview feature: Azure ATP Identity Security Posture Assessments**<br>
-    Azure ATP using the Microsoft Cloud App Security portal introduces to **public preview** six new assessment reports to assess, investigate, remediate, and improve your organizational security posture. Learn more about how to [enable](https://docs.microsoft.com/cloud-app-security/aatp-integration) and [get started](atp-mcas-integration.md) with Azure ATP identity security posture assessments in Cloud App Security, and [use](atp-ispm-overview.md) each of the new assessments:
-    - [Dormant entities](atp-mcas-ispm-dormant-entities.md)
-    - [Clear text](atp-mcas-ispm-clear-text.md)
-    - [Weak cipher usage](atp-mcas-ispm-weak-cipher.md)
-    - [Unconstrained Kerberos delegation](atp-mcas-ispm-unconstrained-kerberos.md)
-    - [Print spooler](atp-mcas-ispm-print-spooler.md)
-    - [Legacy protocols](atp-mcas-ispm-legacy-protocols.md)
+    Azure ATP using the Microsoft Cloud App Security portal introduces to **public preview** six new assessment reports to assess, investigate, remediate, and improve your organizational security posture. Learn more about how to [enable](https://docs.microsoft.com/cloud-app-security/aatp-integration) and [get started](atp-mcas-integration.md) with Azure ATP identity security posture assessments in Cloud App Security, and [use](atp-isp-overview.md) each of the new assessments:
+    - [Dormant entities](atp-cas-isp-dormant-entities.md)
+    - [Clear text](atp-cas-isp-clear-text.md)
+    - [Weak cipher usage](atp-cas-isp-weak-cipher.md)
+    - [Unconstrained Kerberos delegation](atp-cas-isp-unconstrained-kerberos.md)
+    - [Print spooler](atp-cas-isp-print-spooler.md)
+    - [Legacy protocols](atp-cas-isp-legacy-protocols.md)
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
