@@ -56,16 +56,16 @@ See the [Cloud App Security quick start](https://docs.microsoft.com/cloud-app-se
 Azure ATP offers the following identity security posture assessments. Each assessment is a downloadable report with instructions for use and tools for building an action plan to remediate or resolve. 
 
 **Assessment reports**
-- Prevent [clear text credential exposure](atp-mcas-ispm-clear-text.md)
-- Prevent [legacy protocols communication](atp-mcas-ispm-legacy-protocols.md)
-- Prevent [weak cipher usage](atp-mcas-ispm-weak-cipher.md)
-- Prevent [unconstrained Kerberos delegations](atp-mcas-ispm-unconstrained-kerberos.md)
-- Disable [Print spooler service on domain controllers](atp-mcas-ispm-print-spooler.md)
-- Remove [dormant entities from sensitive groups](atp-mcas-ispm-dormant-entities.md)
+- Prevent [clear text credential exposure](atp-cas-isp-clear-text.md)
+- Prevent [legacy protocols communication](atp-cas-isp-legacy-protocols.md)
+- Prevent [weak cipher usage](atp-cas-isp-weak-cipher.md)
+- Prevent [unconstrained Kerberos delegations](atp-cas-isp-unconstrained-kerberos.md)
+- Disable [Print spooler service on domain controllers](atp-cas-isp-print-spooler.md)
+- Remove [dormant entities from sensitive groups](atp-cas-isp-dormant-entities.md)
 
 To access identity security posture assessments:
 1. Open the **Microsoft Cloud App Security** portal. 
-    ![Access Azure ATP identity security posture reports in Cloud App Security](media/atp-mcas-isp-report-1.png)
+    ![Access Azure ATP identity security posture reports in Cloud App Security](media/atp-cas-isp-report-1.png)
 1. Select **Investigate** from the left menu, then click **Identity security posture** from the drop-down menu. 
 1. Click the identity security posture assessment you wish to review from the **Security assessment reports** list that opens.  
 

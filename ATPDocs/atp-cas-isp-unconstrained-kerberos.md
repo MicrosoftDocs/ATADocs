@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Security assessment: Unconstrained Kerberos delegation
+# Security assessment: Unconstrained Kerberos delegation - Preview
 
 
 ## What is Kerberos delegation? 
@@ -42,7 +42,7 @@ The problem with unconstrained delegation is that you need to trust the applicat
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your non-domain controller entities are configured for **unconstrained Kerberos delegation**.    
-    <br>![Unconstrained Kerberos delegation security assessment](media/atp-mcas-ispm-kerberos-delegation-2.png)
+    <br>![Unconstrained Kerberos delegation security assessment](media/atp-cas-isp-kerberos-delegation-2.png)
 1. Take appropriate action on those at-risk users, such as removing their unconstrained attribute or changing it to a more secure constrained delegation.
 
 ## Remediation
