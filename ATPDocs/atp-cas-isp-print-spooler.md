@@ -24,9 +24,9 @@ ms.suite: ems
 #ms.custom:
 
 ---
-# Security assessment: Domain controllers with Print spooler service available
+# Security assessment: Domain controllers with Print spooler service available - Preview
 
-![Disable Print spooler service](media/atp-mcas-ispm-print-spooler-1.png)
+![Disable Print spooler service](media/atp-cas-isp-print-spooler-1.png)
  
 ## What is the **Print spooler** service? 
 
@@ -34,7 +34,7 @@ Print spooler is a software service that manages printing processes. The spooler
 
 ## What risks does the **Print spooler** service on domain controllers introduce? 
 
-While seemingly harmless, any authenticated user can remotely connect to a domain controllers print spooler service, and request an update on new print jobs. In addition, users can tell the domain controller to send the notification to the system with [unconstrained delegation](atp-mcas-ispm-unconstrained-kerberos.md). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM). 
+While seemingly harmless, any authenticated user can remotely connect to a domain controllers print spooler service, and request an update on new print jobs. In addition, users can tell the domain controller to send the notification to the system with [unconstrained delegation](atp-cas-isp-unconstrained-kerberos.md). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM). 
 
 Due to the possibility for exposure, domain controllers and Active Directory  admin systems need to have the **Print spooler** service disabled. The recommended way to do this is using a Group Policy Object (GPO). 
 
@@ -42,7 +42,7 @@ While this security assessment focuses on domain controllers, any server is pote
 
 ## How do I use this security assessment? 
 1. Use the report table to discover which of your domain controllers has the **Print spooler** service enabled.   
-    <br>![Disable Print spooler service security assessment](media/atp-mcas-ispm-print-spooler-2.png)
+    <br>![Disable Print spooler service security assessment](media/atp-cas-isp-print-spooler-2.png)
 1. Take appropriate action on the at-risk domain controllers and actively remove the Print spooler service either manually, through GPO or other types of remote commands.
 
 ## Remediation
