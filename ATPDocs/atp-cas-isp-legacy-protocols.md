@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Security assessment: Prevent legacy protocol implementation
+# Security assessment: Prevent legacy protocol implementation - Preview
  
 ## What are legacy protocols?
 
@@ -49,7 +49,7 @@ To retire the use of legacy protocols, your organization must first discover whi
 
 ## How do I use this security assessment? 
 1. Use the report table to discover which of your top discovered entities are using legacy protocols.  
-    <br>![Prevent usage of legacy protocols](media/atp-mcas-ispm-legacy-protocols-2.png)
+    <br>![Prevent usage of legacy protocols](media/atp-cas-isp-legacy-protocols-2.png)
 1. Take appropriate action on those entities to discover dependencies, stop legacy protocol use and eventually, [disable the protocols completely](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/). 
 
 ## Next steps

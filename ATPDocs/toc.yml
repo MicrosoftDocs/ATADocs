@@ -73,20 +73,22 @@
       href: atp-mcas-integration.md
     - name: Filter activities and set policies
       href: atp-activities-filtering-mcas.md
-    - name: Azure ATP identity security posture assessments 
-      href: atp-ispm-overview.md
-    - name: Prevent clear text credentials exposure assessment
-      href: atp-mcas-ispm-clear-text.md
-    - name: Remove dormant entities from sensitive groups assessment
-      href: atp-mcas-ispm-dormant-entities.md
-    - name: Prevent legacy protocols communication assessment
-      href: atp-mcas-ispm-legacy-protocols.md
-    - name: Disable Print spooler service on domain controllers assessment
-      href: atp-mcas-ispm-print-spooler.md
-    - name: Prevent weak cipher usage assessment
-      href: atp-mcas-ispm-weak-cipher.md  
-    - name: Prevent unconstained Kerberos delegation assessment
-      href: atp-mcas-ispm-unconstrained-kerberos.md
+    - name: Identity security posture assessments
+      items:
+      - name: Understanding identity security posture
+        href: atp-isp-overview.md
+      - name: Prevent clear text credentials exposure assessment
+        href: atp-cas-isp-clear-text.md
+      - name: Remove dormant entities from sensitive groups assessment
+        href: atp-cas-isp-dormant-entities.md
+      - name: Prevent legacy protocols communication assessment
+        href: atp-cas-isp-legacy-protocols.md
+      - name: Disable Print spooler service on domain controllers assessment
+        href: atp-cas-isp-print-spooler.md
+      - name: Prevent weak cipher usage assessment
+        href: atp-cas-isp-weak-cipher.md  
+      - name: Prevent unconstained Kerberos delegation assessment
+        href: atp-cas-isp-unconstrained-kerberos.md
   - name: Security alert lab
     items:
     - name: Lab overview
