@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/10/2019
+ms.date: 07/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -32,16 +32,7 @@ ms.suite: ems
 
 Released July 7, 2019
 
-- **New public preview feature: Azure ATP Identity Security Posture Assessments**<br>
-    Azure ATP using the Microsoft Cloud App Security portal introduces to **public preview** six new assessment reports to assess, investigate, remediate, and improve your organizational security posture. Learn more about how to [enable](https://docs.microsoft.com/cloud-app-security/aatp-integration) and [get started](atp-mcas-integration.md) with Azure ATP identity security posture assessments in Cloud App Security, and [use](atp-isp-overview.md) each of the new assessments:
-    - [Dormant entities](atp-cas-isp-dormant-entities.md)
-    - [Clear text](atp-cas-isp-clear-text.md)
-    - [Weak cipher usage](atp-cas-isp-weak-cipher.md)
-    - [Unconstrained Kerberos delegation](atp-cas-isp-unconstrained-kerberos.md)
-    - [Print spooler](atp-cas-isp-print-spooler.md)
-    - [Legacy protocols](atp-cas-isp-legacy-protocols.md)
-
-- This version also includes improvements and bug fixes for internal sensor infrastructure.
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.84
 
@@ -51,7 +42,7 @@ Released July 1, 2019
     Azure ATP instances are now supported in the Azure UK data center. To learn more about creating Azure ATP instances and their corresponding data center locations, see [Step 1 of Azure ATP installation](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
 
 - **Feature enhancement: New name and features for the Suspicious additions to sensitive groups alert (external ID 2024)**<br> 
-    The **Suspicious additions to sensitive groups alert were previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+    The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **New documentation feature: Guide for moving from Advanced Threat Analytics to Azure ATP**<br>
     This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
