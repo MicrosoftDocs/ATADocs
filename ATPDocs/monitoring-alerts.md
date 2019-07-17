@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -29,12 +29,6 @@ ms.suite: ems
 # Understanding Azure ATP sensor and standalone sensor monitoring alerts
 
 The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a monitoring alert. This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
-
-## Domain synchronizer not assigned
-
-|Alert|Description|Resolution|Severity|
-|----|----|----|----|
-|No domain synchronizer is assigned to any Azure ATP sensor. This may happen if there is no Azure ATP sensor configured as domain synchronizer candidate.|When the domain is not synchronized, changes to entities might cause entity information in Azure ATP to become out of date or missing but does not affect any detection.|Make sure that at least one Azure ATP sensor is set as a [Domain synchronizer](install-atp-step5.md).|Low|
 
 ## All domain controllers are unreachable by a sensor
 

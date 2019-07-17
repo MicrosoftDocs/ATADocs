@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -29,7 +29,14 @@ ms.suite: ems
 
 # Integrate with Syslog
 
-Azure ATP can notify you when it detects suspicious activities and issues security alerts as well as health alerts by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following:
+Azure ATP can notify you when it detects suspicious activities and issue security alerts as well as health alerts by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following:
+
+   |Field|Description|
+   |---------|---------------|
+   |sensor|Select a designated sensor to be responsible for aggregating all the Syslog events and forwarding them to your SIEM server.|
+   |Service endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
+   |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
+   |Format|This is the format that Azure ATP uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
 
 1. Before configuring Syslog notifications, work with your SIEM admin to find out the following information:
 
@@ -41,26 +48,24 @@ Azure ATP can notify you when it detects suspicious activities and issues securi
 
    -   Format in which to send the data RFC 3164 or 5424
 
-2. Enter the instance URL.
+1. Open the Azure ATP portal. 
+2. Click **Settings**.
+3. From the **Notifications and Reports** sub menu, select **Notifications**. 
+1. From the **Syslog Service** option, click **Configure**.
+1. Select the **Sensor**. 
+1. Enter the **Service endpoint** URL.
+1. Select the **Transport** protocol (TCP or UDP). 
+1. Select the format (RFC 3164 or RFC 5424). 
+1. Select **Send text Syslog message** and then verify the message is received in your Syslog infrastructure solution. 
+1. Click **Save**. 
 
-3. Enter your Azure Active Directory user name and password and click **Log in**.
+To review or modify your Syslog settings.  
 
-4. Select the settings option on the toolbar and select **Configuration**.
-
-   ![Azure ATP configuration settings icon](media/ATP-config-menu.png)
-
-5. Click **Notifications**, and then, under **Syslog notifications** click **Configure** and enter the following information:
-
-   |Field|Description|
-   |---------|---------------|
-   |sensor|Select a designated sensor to be responsible for aggregating all the Syslog events and forwarding them to your SIEM server.|
-   |Service endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
-   |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
-   |Format|This is the format that Azure ATP uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
+3. Click **Notifications**, and then, under **Syslog notifications** click **Configure** and enter the following information:
 
    ![Azure ATP Syslog server settings image](media/atp-syslog.png)
 
-6. You can select which events to send to your Syslog server. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
+4. You can select which events to send to your Syslog server. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
 
 > [!NOTE]
 > If you plan to create automation or scripts for Azure ATP SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [Azure ATP SIEM log reference](cef-format-sa.md). 
