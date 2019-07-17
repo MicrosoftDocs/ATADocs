@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2018
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -85,6 +85,20 @@ Use the following command to silently install the Azure ATP sensor:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
+## Proxy authentication
+
+Use the following commands to complete proxy authentication:
+
+**Syntax**:
+
+
+> [!div class="mx-tableFixed"]
+> 
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |ProxyUrl|/quiet|Yes|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
+> |ProxyUserName|/help|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
+> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Azure ATP sensor.|
 
 ## Update the Azure ATP sensor
 

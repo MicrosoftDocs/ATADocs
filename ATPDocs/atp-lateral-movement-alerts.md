@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/18/2019
+ms.date: 07/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -44,6 +44,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > * Remote code execution over DNS (external ID 2036)
 > * Suspected identity theft (pass-the-hash) (external ID 2017)
 > * Suspected identity theft (pass-the-ticket) (external ID 2018)
+> * Suspected NTLM authentication tampering (external ID 2039) - preview
 > * Suspected NTLM relay attack (Exchange account)  (external ID 2037) - preview
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
@@ -153,6 +154,34 @@ There are custom applications that forward tickets on behalf of users. These app
 3. Find the tool that performed the attack and remove it.
 4. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
 5. If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
+
+## Suspected NTLM authentication tampering (external ID 2039) - preview
+
+In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), announcing discovery of a new tampering vulnerability in Microsoft Windows, when a “man-in-the-middle” attack is able to successfully bypass NTLM MIC (Message Integrity Check) protection.
+
+Malicious actors that successfully exploit this vulnerability have the ability to downgrade NTLM security features, and may successfully create authenticated sessions on behalf of other accounts. Unpatched Windows Servers are at risk from this vulnerability.
+ 
+In this detection, an Azure ATP security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
+
+**TP, B-TP, or FP?**
+
+1.	Are the involved computers, including domain controllers, up-to-date and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040)?
+o	If the computers are up-to-date and patched, we expect the authentication to fail. If the authentication ailed, **Close** the security alert as a failed attempt.
+ 
+**Understand the scope of the breach**
+1.	Investigate the [source computers](investigate-a-computer.md).
+2.	Investigate the [source account](investigate-a-user.md).
+
+**Suggested remediation and steps for prevention**
+
+**Remediation**
+1.	Contain the source computers
+2.	Find the tool that performed the attack and remove it.
+3.	Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA.
+4.	Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
+ 
+*Prevention*
+•	Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
 
 ## Suspected NTLM relay attack (Exchange account) (external ID 2037) - preview
 

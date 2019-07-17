@@ -28,6 +28,23 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+## Azure ATP release 2.86 
+
+Released July 14, 2019
+
+- **New security alert: Suspected NTLM authentication tampering (external ID 2039) – (preview)**<br>
+Azure ATP’s new [Suspected NTLM authentication tampering](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when use of "man-in-the-middle" attack is suspected of successfully bypassing NTLM Message Integrity Check (MIC), a security vulnerability detailed in Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). These types of attacks attempt to downgrade NTLM security features and successfully authenticate, with the ultimate goal of making successful lateral movements. 
+
+- **Feature enhancement: TcP FingerPrint**<br> Until now, Azure ATP provided entity device operating system (OS) information based on the available attribute in Active Directory. Previously, if OS information was unavailable in Active Directory, it was also unavailable on device pages. Starting from this version, Azure ATP now also provides this information for devices for which Active Directory(AD) doesn't have the information, or that are not registered in AD, by using TCP fingerprints. 
+ 
+    Azure ATP now evaluates and determines the device OS based on network traffic. For devices that don't have an OS attribute in AD, or are not registered, if the OS was evaluated by TCP fingerprint, this information is now provided on the device page under the device name. This additional data helps identify unregistered and non-Windows devices, while aiding in your investigation process. For learn more about investigating using Azure ATP, see [investigate a computer](investigate-a-computer.md).  
+
+- **New feature: Authenticated proxy -preview**<br> Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and  specify Username/Password to use proxies that require authentication. For more information about authenticated proxy, see [Configure the proxy](https://docs.microsoft.com/azure-advanced-threat-protection/configure-proxy#configure-the-proxy).
+
+- **Feature enhancement: Automated domain synchronizer process**<br> The process of designating and tagging domain controllers as domain synchronizer candidates during setup and ongoing configuration is now fully automated. The toggle option to select a domain controller as a domain synchronizer candidate is removed. 
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.85
 
 Released July 7, 2019
