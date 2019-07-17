@@ -180,7 +180,7 @@ o	If the computers are up-to-date and patched, we expect the authentication to f
 3.	Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA.
 4.	Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
  
-*Prevention*
+**Prevention**
 •	Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
 
 ## Suspected NTLM relay attack (Exchange account) (external ID 2037) - preview
