@@ -101,7 +101,7 @@ We recommend deploying Azure ATP in three phases:
 ### Phase 2
 
 1. Protect all the domain controllers and [forests](atp-multi-forest.md) in your organization.  
-2.  Monitor all [alerts](working-with-suspicious-activities.md) – investigate lateral movement & domain dominance alerts.  
+2. Monitor all [alerts](working-with-suspicious-activities.md) – investigate lateral movement & domain dominance alerts.  
 3. Work with the [Security Alert guide](suspicious-activity-guide.md) to understand threats and triage potential attacks.
 
 

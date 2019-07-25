@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/14/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,6 +27,13 @@ ms.suite: ems
 ---
 
 # What's new in Azure ATP
+Released July 21, 2019
+
+## Azure ATP release 2.87 
+
+- **Feature enhancement: Automated Syslog event collection**<br> Incoming Syslog connections for Azure ATP standalone sensors are now fully automated, while removing the toggle option from the configuration screen. For Azure ATP sensors, the default behavior is now turned off, and automatically controlled as needed. These changes have no effect on outgoing Syslog connections. 
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.86 
 
@@ -39,7 +46,7 @@ Azure ATP’s new [Suspected NTLM authentication tampering](atp-lateral-movement
  
     The addition of TCP fingerprint data helps identify unregistered and non-Windows devices, while simultaneously aiding in your investigation process. For learn more about Network Name Resolution in Azure ATP, see [Understanding Network Name Resolution (NNR)](atp-nnr-policy.md).  
 
-- **New feature: Authenticated proxy - preview**<br> Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Azure ATP silent installation](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authetication).
+- **New feature: Authenticated proxy - preview**<br> Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Configure the proxy](https://docs.microsoft.com/azure-advanced-threat-protection/configure-proxy#configure-the-proxy).
 
 - **Feature enhancement: Automated domain synchronizer process**<br> The process of designating and tagging domain controllers as domain synchronizer candidates during setup and ongoing configuration is now fully automated. The toggle option to manually select domain controllers as domain synchronizer candidates is removed. 
 
