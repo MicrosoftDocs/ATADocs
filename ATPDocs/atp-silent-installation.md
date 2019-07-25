@@ -96,9 +96,9 @@ Use the following commands to complete proxy authentication:
 > 
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|/quiet|Yes|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
-> |ProxyUserName|/help|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
-> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Azure ATP sensor.|
+> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
+> |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Azure ATP sensor.|
 
 ## Update the Azure ATP sensor
 

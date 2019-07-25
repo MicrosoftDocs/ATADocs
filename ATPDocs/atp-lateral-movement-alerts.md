@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 07/25/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -45,7 +45,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > * Suspected identity theft (pass-the-hash) (external ID 2017)
 > * Suspected identity theft (pass-the-ticket) (external ID 2018)
 > * Suspected NTLM authentication tampering (external ID 2039) - preview
-> * Suspected NTLM relay attack (Exchange account)  (external ID 2037) - preview
+> * Suspected NTLM relay attack (Exchange account)  (external ID 2037)
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 
@@ -183,7 +183,7 @@ o	If the computers are up-to-date and patched, we expect the authentication to f
 **Prevention**
 •	Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
 
-## Suspected NTLM relay attack (Exchange account) (external ID 2037) - preview
+## Suspected NTLM relay attack (Exchange account) (external ID 2037)
 
 **Description**
 
