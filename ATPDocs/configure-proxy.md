@@ -38,7 +38,7 @@ When configuring the proxy, you'll need to know that the embedded Azure ATP sens
 
 ## Configure the proxy 
 
-You can configure your proxy settings during sensor installation, by using the parameters defined in [Silent installation, proxy authentication settings](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication)
+You can configure your proxy settings during sensor installation, by using the parameters defined in [Silent installation, proxy authentication settings](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication).
 
 You can also configure your proxy server manually using a registry-based static proxy, to allow Azure ATP sensor to report diagnostic data and communicate with Azure ATP cloud service when a computer is not permitted to connect to the Internet.
 
