@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -87,7 +87,14 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 Installation of the ATA Center as a virtual machine is supported. 
 
 > [!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+> When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. 
+
+|VM running on|Description|
+|------------|-------------|
+|Hyper-V|Ensure that **Enable Dynamic Memory** is not enabled for the VM.|
+|VMWare|Ensure that the amount of memory configured and the reserved memory are the same, or select the following option in the VM setting – **Reserve all guest memory (All locked**.|
+|Other virtualization host|Refer to the vendor supplied documentation on how to ensure that memory is fully allocated to the VM at all times. |
+|
 
 If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 
