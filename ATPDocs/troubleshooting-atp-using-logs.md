@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -36,8 +36,6 @@ The Azure ATP logs are located in a subfolder called **Logs** where ATP is insta
 The Azure ATP sensor has the following logs:
 
 -   **Microsoft.Tri.Sensor.log** – This log contains everything that happens in the Azure ATP sensor (including resolution and errors). Its main use is getting the overall status of all operations in the chronological order in which they occurred.
-
--   **Microsoft.Tri.Sensor-Resolution.log** – This log contains the resolution details of the entities seen in traffic by the ATP sensor. Its main use is investigating resolution issues of entities.
 
 -   **Microsoft.Tri.Sensor-Errors.log** – This log contains just the errors that are caught by the ATP sensor. Its main use is performing health checks and investigating issues that need to be correlated to specific times.
 

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/29/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -72,6 +72,7 @@ This section lists information you should gather as well as accounts and network
 
 ## ATA Center requirements
 This section lists the requirements for the ATA Center.
+
 ### General
 The ATA Center supports installation on a server running Windows Server 2012 R2 Windows Server 2016 and Windows Server 2019. 
 
@@ -86,8 +87,10 @@ You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -
 
 Installation of the ATA Center as a virtual machine is supported. 
 
+### Dynamic memory
+
 > [!NOTE] 
-> When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. 
+> When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time.
 
 |VM running on|Description|
 |------------|-------------|
@@ -183,8 +186,7 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
-> [!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+To learn more about dynamic memory or any other memory ballooning feature, see [Dynamic memory](#dynamic-memory).
 
 For more information about the ATA Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 
@@ -272,8 +274,7 @@ The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM instal
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
-> [!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+To learn more about dynamic memory or any other memory ballooning feature, see [Dynamic memory](#dynamic-memory).
 
 For more information about the ATA Lightweight Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 
