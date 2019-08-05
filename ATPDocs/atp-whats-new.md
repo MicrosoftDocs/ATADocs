@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/28/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -28,6 +28,18 @@ ms.suite: ems
 
 # What's new in Azure ATP
 
+Released August 4, 2019
+
+## Azure ATP release 2.89
+
+- **Detection method improvements**<br>To avoid excess NTLM traffic generation in creation of accurate Lateral Movement Path (LMP) assessments, improvements have been made to Azure ATP sensor logic to rely less on NTLM usage and make more significant use of Kerberos.  
+
+- **Alert enhancement: Suspected Golden Ticket usage (nonexistent account)**<br>SAM name changes have been added to the supporting evidence types listed in this type of alert. To learn more about the alert, including how to prevent this type of activity and remediate, see  [Suspected Golden Ticket usage (nonexistent account)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027).
+
+- **General availability: Suspected NTLM authentication tampering**<br> The [Suspected NTLM authentication tampering](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) alert is no longer in preview mode and is now generally available. 
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 
 Released July 28, 2019
 
@@ -47,8 +59,8 @@ Released July 21, 2019
 
 Released July 14, 2019
 
-- **New security alert: Suspected NTLM authentication tampering (external ID 2039) – preview**<br>
-Azure ATP’s new [Suspected NTLM authentication tampering](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when use of "man-in-the-middle" attack is suspected of successfully bypassing NTLM Message Integrity Check (MIC), a security vulnerability detailed in Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). These types of attacks attempt to downgrade NTLM security features and successfully authenticate, with the ultimate goal of making successful lateral movements. 
+- **New security alert: Suspected NTLM authentication tampering (external ID 2039)**<br>
+Azure ATP’s new [Suspected NTLM authentication tampering](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) security alert is now in public preview. <br> In this detection, an Azure ATP security alert is triggered when use of "man-in-the-middle" attack is suspected of successfully bypassing NTLM Message Integrity Check (MIC), a security vulnerability detailed in Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). These types of attacks attempt to downgrade NTLM security features and successfully authenticate, with the ultimate goal of making successful lateral movements. 
 
 - **Feature enhancement: Enriched device operating system identification**<br> Until now, Azure ATP provided entity device operating system information based on the available attribute in Active Directory. Previously, if operating system information was unavailable in Active Directory, the information was also unavailable on Azure ATP entity pages. Starting from this version, Azure ATP now provides this information for devices where Active Directory doesn't have the information, or are not registered in Active Directory, by using enriched device operating system identification methods. 
  
@@ -540,7 +552,7 @@ Released October 7, 2018
 Released September 16, 2018
 - **Security alert:** Reconnaissance using directory services queries
 
-  This security alert now has improved infographics and evidence. 
+  This security alert now has improved informational graphics and evidence. 
 
 - **Exclude entities from detections** 
 

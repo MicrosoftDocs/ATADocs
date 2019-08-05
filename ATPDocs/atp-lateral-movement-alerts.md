@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/05/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -44,7 +44,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > * Remote code execution over DNS (external ID 2036)
 > * Suspected identity theft (pass-the-hash) (external ID 2017)
 > * Suspected identity theft (pass-the-ticket) (external ID 2018)
-> * Suspected NTLM authentication tampering (external ID 2039) - preview
+> * Suspected NTLM authentication tampering (external ID 2039) 
 > * Suspected NTLM relay attack (Exchange account)  (external ID 2037)
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
@@ -155,7 +155,7 @@ There are custom applications that forward tickets on behalf of users. These app
 4. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
 5. If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 
-## Suspected NTLM authentication tampering (external ID 2039) - preview
+## Suspected NTLM authentication tampering (external ID 2039)
 
 In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), announcing discovery of a new tampering vulnerability in Microsoft Windows, when a “man-in-the-middle” attack is able to successfully bypass NTLM MIC (Message Integrity Check) protection.
 
