@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -186,7 +186,7 @@ For information on using virtual machines with the ATA Gateway, see [Configure p
 For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
 An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
-To learn more about dynamic memory or any other memory ballooning feature, see [Dynamic memory](#dynamic-memory).
+To learn more about dynamic memory or any other virtual machine memory management feature, see [Dynamic memory](#dynamic-memory).
 
 For more information about the ATA Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 
@@ -274,7 +274,7 @@ The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM instal
 For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
 
-To learn more about dynamic memory or any other memory ballooning feature, see [Dynamic memory](#dynamic-memory).
+To learn more about dynamic memory or any other virtual machine memory management feature, see [Dynamic memory](#dynamic-memory).
 
 For more information about the ATA Lightweight Gateway hardware requirements, see [ATA capacity planning](ata-capacity-planning.md).
 

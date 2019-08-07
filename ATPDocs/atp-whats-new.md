@@ -2,12 +2,12 @@
 # required metadata
 
 title: What's new in Azure Advanced Threat Protection (Azure ATP) | Microsoft Docs
-description: Describes the latest releases of Azure ATP and provides information about what's new in each version.
+description: This article is updated frequently to let you know what's new in the latest release of Azure Advanced Threat Protection (Azure ATP).
 keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -26,13 +26,17 @@ ms.suite: ems
 
 ---
 
-# What's new in Azure ATP
+# What's new in Azure Advanced Threat Protection (Azure ATP)
+
+This article is updated frequently to let you know what's new in the latest release of Azure ATP.
+
+RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
 Released August 4, 2019
 
 ## Azure ATP release 2.89
 
-- **Detection method improvements**<br>To avoid excess NTLM traffic generation in creation of accurate Lateral Movement Path (LMP) assessments, improvements have been made to Azure ATP sensor logic to rely less on NTLM usage and make more significant use of Kerberos.  
+- **Sensor method improvements**<br>To avoid excess NTLM traffic generation in creation of accurate Lateral Movement Path (LMP) assessments, improvements have been made to Azure ATP sensor methods to rely less on NTLM usage and make more significant use of Kerberos.  
 
 - **Alert enhancement: Suspected Golden Ticket usage (nonexistent account)**<br>SAM name changes have been added to the supporting evidence types listed in this type of alert. To learn more about the alert, including how to prevent this type of activity and remediate, see  [Suspected Golden Ticket usage (nonexistent account)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027).
 
