@@ -95,7 +95,7 @@ Installation of the ATA Center as a virtual machine is supported.
 |VM running on|Description|
 |------------|-------------|
 |Hyper-V|Ensure that **Enable Dynamic Memory** is not enabled for the VM.|
-|VMWare|Ensure that the amount of memory configured and the reserved memory are the same, or select the following option in the VM setting – **Reserve all guest memory (All locked**.|
+|VMWare|Ensure that the amount of memory configured and the reserved memory are the same, or select the following option in the VM setting – **Reserve all guest memory (All locked)**.|
 |Other virtualization host|Refer to the vendor supplied documentation on how to ensure that memory is fully allocated to the VM at all times. |
 |
 

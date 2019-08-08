@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 7/30/2018
+ms.date: 08/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -33,6 +33,9 @@ ms.suite: ems
 > [!div class="step-by-step"]
 > [« Step 8](install-ata-step7.md)
 
+> [!NOTE]
+> Before enforcing any new policy, always make sure that your environment remains secure, without impacting application compatibility by first enabling and verifying your proposed changes in audit mode. 
+
 ## Step 9. Configure SAM-R required permissions
 
 The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol, via the ATA Service account created in [Step 2. Connect to AD](install-ata-step2.md).
@@ -51,9 +54,6 @@ To ensure that Windows clients and servers allow the ATA service account to perf
    ![Add the service](./media/samr-add-service.png)
 
 3. The **ATA Service** (the ATA service created during installation) now has the proper privileges to perform SAM-R in the environment.
-
-> [!NOTE]
-> Before enforcing new policies, make sure that your environment remains secure, without impacting application compatibility by enabling and verifying your proposed changes in audit mode. 
 
  For more information on SAM-R and Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
