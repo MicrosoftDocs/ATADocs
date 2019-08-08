@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/11/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -52,7 +52,7 @@ This prerequisite guide is divided into the following sections to ensure you hav
 ## Before you start
 This section lists information you should gather as well as accounts and network entity information you should have before starting Azure ATP installation.
 
-- Acquire a license for Enterprise Mobility + Security 5 (EMS E5) directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.  
+- Acquire a license for Enterprise Mobility + Security 5 (EMS E5) directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. Standalone Azure ATP licenses are also available.  
 
 - Verify the domain controller(s) you intend to install Azure ATP sensors on have internet connectivity to the Azure ATP Cloud Service. The Azure ATP sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for Azure ATP](configure-proxy.md).  
 
