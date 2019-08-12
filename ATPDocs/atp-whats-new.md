@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,12 @@ ms.suite: ems
 This article is updated frequently to let you know what's new in the latest release of Azure ATP.
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Released August 11, 2019
+
+## Azure ATP release 2.90
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 Released August 4, 2019
 

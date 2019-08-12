@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -65,9 +65,9 @@ This section lists information you should gather as well as accounts and network
 
 - If you attempt to install the Azure ATP sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the Azure ATP sensor on a machine configured with NIC teaming, see [Azure ATP sensor NIC teaming issue](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Recommended: User should have read-only permissions on the Deleted Objects container. This allows Azure ATP to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
+- **Deleted Objects** container Recommendation: User should have read-only permissions on the Deleted Objects container. Read-only permissions on this container allows Azure ATP to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
 
-- Optional: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
+- Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information about using Honeytokens, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
 
 - Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to Azure ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honeytokens detections, and malicious service creation. Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
