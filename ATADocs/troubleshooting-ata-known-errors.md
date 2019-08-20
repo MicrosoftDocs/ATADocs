@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -91,7 +91,13 @@ This section details possible errors in the deployments of ATA and the steps req
 > |No traffic received from domain controller, but monitoring alerts are observed|    No traffic was received from a domain controller using port mirroring through an ATA Gateway|On the ATA Gateway capture NIC, disable these features in **Advanced Settings**:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|
 > |This monitoring alert is displayed: Some network traffic is not being analyzed|If you have an ATA Gateway or Lightweight Gateway on VMware virtual machines, you might receive this monitoring alert. This happens because of a configuration mismatch in VMware.|Set the following settings to 0 or Disabled in the virtual machine NIC configuration: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload TLS 1.0 is disabled on the ATA Gateway but .Net is set to use TLS 1.2|
 
+## Multi Processor Group mode 
+For Windows Operating systems 2008R2 and 2012, ATA Gateway  is not supported in a Multi Processor Group mode.
 
+Suggested possible workarounds:
+- If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multi Processor Group** mode. 
+
+- If your machine has less than 64 logical cores and is running on a HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**. 
 
 
 
