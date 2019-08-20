@@ -75,6 +75,14 @@ If you already installed the sensor:
 4.	Install Npcap with the following options: loopback_support=no & winpcap_mode=yes
 5.	Reinstall the sensor package.
 
+## Multi Processor Group mode 
+For Windows Operating systems 2008R2 and 2012, Azure ATP Sensor is not supported in a Multi Processor Group mode.
+
+Suggested possible workarounds:
+- If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multi Processor Group** mode. 
+
+- If your machine has less than 64 logical cores and is running on a HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**. 
+
 ## Windows Defender ATP integration issue
 
 Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. See [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md) for more information. 
