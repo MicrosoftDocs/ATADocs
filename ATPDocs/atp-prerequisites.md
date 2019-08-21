@@ -109,7 +109,10 @@ During installation, the .Net Framework 4.7 is installed and might require a reb
 
 The Azure ATP sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
 For optimal performance, set the **Power Option** of the Azure ATP sensor to **High Performance**.
+
 Azure ATP sensors can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers, and the amount of resources installed.
+
+For Windows Operating systems 2008R2 and 2012, Azure ATP Sensor is not supported in a [Multi Processor Group](https://docs.microsoft.com/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-atp-known-issues.md##multi-processor-group-mode). 
 
 >[!NOTE] 
 > When running as a virtual machine, dynamic memory or any other memory ballooning feature is not supported.

@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -81,7 +81,8 @@ The previous URLs automatically map to the correct service location for your Azu
 
  
 > [!NOTE]
-> When performing SSL inspection on the Azure ATP network traffic (between the sensor and the Azure ATP service), the SSL inspection must support mutual inspection.
+> To ensure maximal security and data privacy, Azure ATP uses certificate based mutual authentication between each Azure ATP sensor and the Azure ATP cloud backend. If SSL inspection is used in your environment, make sure that the inspection is configured for mutual authentication so it does not interfere in the authentication process.
+
 
 
 ## See Also
