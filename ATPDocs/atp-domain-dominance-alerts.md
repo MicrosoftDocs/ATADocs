@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/07/2019
+ms.date: 08**/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -346,9 +346,9 @@ Applications might authenticate using a lower encryption cipher. Some are authen
 
 ## Suspected Golden Ticket usage (forged authorization data) (external ID 2013)
 
-*Previous name:* Privilege escalation using forged authorization data
+Previous name: Privilege escalation using forged authorization data
 
-Description 
+**Description**
 Known vulnerabilities in older versions of Windows Server allow attackers to manipulate the Privileged Attribute Certificate (PAC), a field in the Kerberos ticket that contains a user authorization data (in Active Directory this is group membership), granting attackers additional privileges. 
  
 **TP, B-TP, or FP**
