@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -187,7 +187,7 @@ o	If the computers are up-to-date and patched, we expect the authentication to f
 
 **Description**
 
-An Exchange Server can be configured to triggered NTLM authentication with the Exchange Server account to a remote http server run by an attacker. This server waits for the Exchange Server communication to relay its own sensitive authentication to any other server, or even more interestingly to the Active Directory over LDAP, and grabs the authentication information.
+An Exchange Server can be configured to trigger NTLM authentication with the Exchange Server account to a remote http server, run by an attacker. The server waits for the Exchange Server communication to relay its own sensitive authentication to any other server, or even more interestingly to Active Directory over LDAP, and grabs the authentication information.
 
 Once the relay server receives the NTLM authentication, it provides a challenge that was originally created by the target server. The client responds to the challenge, preventing an attacker from taking the response, and using it to continue NTLM negotiation with the target domain controller. 
 
