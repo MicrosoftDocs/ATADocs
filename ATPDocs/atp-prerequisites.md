@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/11/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -79,7 +79,7 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 -	Minimum screen width resolution of 1700 pixels
 -	Firewall/proxy open - To communicate with the Azure ATP cloud service *.atp.azure.com port 443 must be open in your firewall/proxy.
 
- ![Azure ATP architecture diagram](media/ATP-architecture-topology.png)
+ ![Azure ATP architecture diagram](media/azure-atp-architecture.png)
 
 
 > [!NOTE]
