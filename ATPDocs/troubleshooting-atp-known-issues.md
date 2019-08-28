@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -53,8 +53,20 @@ In some cases, when communicating via a proxy, during authentication it might re
 
 Ensure that the sensor can browse to *.atp.azure.com through the configured proxy without authentication. For more information see, [Configure proxy to enable communication](configure-proxy.md).
 
+## Silent installation error when attempting to use Powershell  
+
+If during silent sensor installation you attempt to use Powershell and receive the following error: 
 
 
+    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ...           Unexpected token '"/quiet"' in expression or statement."
+
+**Cause:**
+Failure to include the ./ prefix required to install when using Powershell causes this error. 
+
+**Resolution:**
+Use the complete command to successfully install. 
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
 ## Azure ATP sensor NIC teaming issue <a name="nic-teaming"></a>
 
