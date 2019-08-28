@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -158,7 +158,7 @@ Use the following command to silently install the ATA Gateway:
 
 **Syntax**:
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] 
     [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
