@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/27/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -85,6 +85,16 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 > [!NOTE]
 > By default, Azure ATP supports up to 200 sensors. If you want to install more, contact Azure ATP support.
 
+
+## Azure ATP Network Name Resolution (NNR) requirements
+Network Name Resolution (NNR) is a main component of Azure ATP functionality. For the Azure ATP service to work properly, at least one of the following NNR methods must be accessible for Azure ATP sensors:
+1. **TLM over RPC** (TCP Port 135)
+2. **NetBIOS** (UDP port 137)
+3. **RDP** (TCP port 3389) - only the first packet of Client hello
+4. **Queries of the DNS server using reverse DNS lookup of the IP address** (UDP 53)
+
+For methods 1, 2 and 3 to work, the relevant ports must be opened inbound from the Azure ATP sensors to devices on the network. To learn more about Azure ATP and NNR, see [Azure ATP NNR policy](atp-nnr-policy.md). 
+
 ## Azure ATP sensor requirements
 This section lists the requirements for the Azure ATP sensor.
 
@@ -140,8 +150,6 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Both|
-|NetBIOS|UDP|137|All devices on the network|Both|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDP|1813|RADIUS|Inbound|
 |
@@ -225,8 +233,6 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 |Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
 |Windows Time|UDP|123|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Both|
-|NetBIOS|UDP|137|All devices on the network|Both|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
 |RADIUS|UDP|1813|RADIUS|Inbound|
 |
@@ -244,5 +250,7 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Azure ATP architecture](atp-architecture.md)
 - [Install Azure ATP](install-atp-step1.md)
+- [Network Name Resolution (NNR)](atp-nnr-policy.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+
 
