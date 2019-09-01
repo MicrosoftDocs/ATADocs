@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -53,10 +53,16 @@ To track your deployment progress, monitor the Azure ATP installer logs, which a
 
 Use the following command to perform a fully silent install of the Azure ATP sensor:
 
-
-**Syntax**:
+**cmd.exe syntax**:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+**Powershell syntax**:
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+> [!NOTE]
+> When using the Powershell syntax, omitting the **./** preface results in an error that prevents silent installation.
 
 > [!NOTE]
 > Copy the access key from the Azure ATP portal **Configuration** section, **Sensor** page.
