@@ -7,7 +7,7 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2019
+ms.date: 09/01/2019
 
 # optional metadata
 
@@ -51,6 +51,8 @@ Reconnaissance attack testing methods:
 
 One of the first things an attacker will attempt is to try to get a copy of all DNS information. When successful, the attacker gains extensive information about your environment that potentially includes similar information about your other environments or networks.
 
+Azure ATP suppresses network-mapping reconnaissance activity from your **suspicious activity timeline** until an eight day learning period is completed. In the learning period, Azure ATP learns what is normal and abnormal for your network. After the eight day learning period, abnormal network-mapping reconnaissance events invoke the related security alert. 
+
 ### Run nslookup from VictimPC
 
 To test DNS reconnaissance, we'll use the native command-line tool, *nslookup*, to initiate a DNS zone transfer. DNS servers with correct configuration will refuse queries of this type and won't allow the zone transfer attempt.  
@@ -77,18 +79,18 @@ ls -d contoso.azure
 
  ![nslookup command attempt to copy the DNS server -failure](media/playbook-recon-nslookup.png)
 
-If **ContsoDC** is your first deployed sensor, wait 15 minutes to allow the database backend to finish deploying the necessary microservices.
+If **ContsoDC** is your first deployed sensor, wait 15 minutes to allow the database backend to finish deploying the necessary micro services.
 
 ### Network-mapping reconnaissance (DNS) Detected in Azure ATP
 
-Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. Since we just installed the environment, we'll need to go to the Logical Activities timeline to see the activity. 
+Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. After recently installing the environment, you'll  need to go to the **Logical Activities** timeline to see the detected activity. 
 
 In the Azure ATP Search, type **VictimPC**, then click on it to view the timeline.
 
 ![DNS reconnaissance detected by AATP, high-level view](media/playbook-recon-nslookupdetection1.png)
 
 Look for the "AXFR query" activity. Azure ATP detects this type of reconnaissance against your DNS. 
-  - If you have a large number of activities, click **Filter by** and uncheck all types except "DNS query".
+  - If you have a large number of activities, click **Filter by** and deselect all types except **DNS query**.
 
 ![Detailed view of the DNS reconnaissance detection in AATP](media/playbook-recon-nslookupdetection2.png)
 
