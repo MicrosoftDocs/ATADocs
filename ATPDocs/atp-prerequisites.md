@@ -81,14 +81,13 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 
  ![Azure ATP architecture diagram](media/azure-atp-architecture.png)
 
-
 > [!NOTE]
-> By default, Azure ATP supports up to 200 sensors. If you want to install more, contact Azure ATP support.
+> By default, Azure ATP supports up to 200 sensors. If you want to install more sensors, contact Azure ATP support.
 
 
 ## Azure ATP Network Name Resolution (NNR) requirements
 Network Name Resolution (NNR) is a main component of Azure ATP functionality. For the Azure ATP service to work properly, at least one of the following NNR methods must be accessible for Azure ATP sensors:
-1. **TLM over RPC** (TCP Port 135)
+1. **NTLM over RPC** (TCP Port 135)
 2. **NetBIOS** (UDP port 137)
 3. **RDP** (TCP port 3389) - only the first packet of Client hello
 4. **Queries of the DNS server using reverse DNS lookup of the IP address** (UDP 53)
@@ -161,10 +160,6 @@ For more information, see, [Advanced Audit Policy Check](atp-advanced-audit-poli
 
 > [!NOTE]
 > - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
-> - The following ports need to be open inbound on devices on the network from the Azure ATP sensors:
->   -   NTLM over RPC (TCP Port 135) for resolution purposes
->   -   NetBIOS (UDP port 137) for resolution purposes
-<br> Note that no authentication is performed on any of the ports.
 
 ## Azure ATP standalone sensor requirements
 This section lists the requirements for the Azure ATP standalone sensor.
@@ -239,11 +234,6 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 
 > [!NOTE]
 > - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-atp-step8-samr.md).
-> - The following ports need to be open inbound on devices on the network from the Azure ATP standalone sensors:
->   -   NTLM over RPC (TCP Port 135) for resolution purposes
->   -   NetBIOS (UDP port 137) for resolution purposes
-<br> Note that no authentication is performed on any of the ports.
-
 
 
 ## See Also
