@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Setting syslog settings in Azure Advanced Threat Protection | Microsoft Docs
+title: Setting Syslog settings in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to have Azure ATP notify you (by email or by Azure ATP event forwarding) when it detects suspicious activities 
 keywords:
 author: mlottner
@@ -29,7 +29,7 @@ ms.suite: ems
 
 # Integrate with Syslog
 
-Azure ATP can notify you when it detects suspicious activities and issue security alerts as well as health alerts by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following:
+Azure ATP can notify you when it detects suspicious activities and issue security alerts as well as health alerts by sending the notifications from the selected sensor to your Syslog server. If you enable Syslog notifications, you can set the following:
 
    |Field|Description|
    |---------|---------------|

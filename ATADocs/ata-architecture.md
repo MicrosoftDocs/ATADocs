@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 8/26/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -63,8 +63,6 @@ Your ATA deployment can contain only ATA Lightweight Gateways: The ATA Lightweig
 Your ATA deployment includes both ATA Gateways and ATA Lightweight Gateways. The ATA Lightweight Gateways are installed on some of your domain controllers (for example, all domain controllers in your branch sites). At the same time, other domain controllers are monitored by ATA Gateways (for example, the larger domain controllers in your main data centers).
 
 In all these scenarios, all the gateways send their data to the ATA Center.
-
-
 
 
 ## ATA Center
@@ -138,10 +136,10 @@ The following features work differently depending on whether you are running an 
 
 -	**Domain synchronizer candidate**<br>
 The domain synchronizer gateway is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One gateway is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
-If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, ATA is able to proactively synchronize entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
-<br>If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.<br><br>
-By default, all ATA Gateways are synchronizer candidates.<br><br>
-Because all ATA Lightweight Gateways are more likely to be deployed in branch sites and on small domain controllers, they are not synchronizer candidates by default.
+If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer candidate available for a specific domain, ATA proactively synchronizes entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
+<br>When no domain synchronizer is available, searching for an entity without traffic related to it displays no results.<br><br>
+By default, all ATA Gateways are domain synchronizer candidates.<br><br>
+Because all ATA Lightweight Gateways are more likely to be deployed in branch sites and on small domain controllers, they are not synchronizer candidates by default. <br><br>In an environment with only Lightweight Gateways, it is recommended to assign two of the gateways as synchronizer candidates, where one Lightweight Gateway is the default synchronizer candidate and one is the the backup in case the default is offline for more than 30 minutes. 
 
 
 -	**Resource limitations**<br>

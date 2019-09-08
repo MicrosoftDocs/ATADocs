@@ -4,10 +4,10 @@
 title: Install Advanced Threat Analytics - Step 6 | Microsoft Docs
 description: In this step of installing ATA, you configure data sources.
 keywords:
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -36,10 +36,10 @@ ms.suite: ems
 ## Step 6. Configure event collection
 ### Configure Event Collection
 
-To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757 and 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md). 
+To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757 and 7045. These Windows events are either read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, they can be forwarded to the ATA Gateway in one of two ways, either by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-collection.md).  
 
 > [!NOTE]
-> For ATA versions 1.8 and higher, event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
+> For ATA versions 1.8 and higher, Windows event collection configuration is no longer necessary for ATA Lightweight Gateways. The ATA Lightweight Gateway now read events locally, without the need to configure event forwarding.
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows events to further enhance detections. It uses event 4776 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, and 4757 for enhancing detection of sensitive group modifications. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
 
