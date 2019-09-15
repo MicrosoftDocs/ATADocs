@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Configure Azure ATP sensor settings quickstart | Microsoft Docs
+title: Configure Azure ATP sensor settings conceptual | Microsoft Docs
 description: Step five of installing Azure ATP helps you configure settings for your Azure ATP standalone sensor.
 author: mlottner
 ms.author: mlottner
-ms.date: 07/17/2019
-ms.topic: quickstart
+ms.date: 09/15/2019
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 
@@ -23,9 +23,9 @@ ms.suite: ems
 
 ---
 
-# Quickstart: Configure Azure ATP sensor settings
+# Configure Azure ATP sensor settings
 
-In this quickstart, you'll configure the Azure ATP sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of Azure ATP's capabilities.  
+In this article, you'll learn how to correctly configure Azure ATP sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of Azure ATP's full capabilities.  
 
 ## Prerequisites
 

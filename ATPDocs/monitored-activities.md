@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2018
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -28,6 +28,9 @@ ms.suite: ems
 
 
 # Azure ATP monitored activities
+
+> [!NOTE]
+> The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
 Azure Advanced Threat Protection monitors information generated from your organization's Active Directory, network activities and event activities to detect suspicious activity. The monitored activity information enables Azure ATP to help you determine the validity of each potential threat and correctly triage and respond. 
 

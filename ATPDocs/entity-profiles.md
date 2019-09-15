@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -28,6 +28,9 @@ ms.suite: ems
 
 
 # Understanding entity profiles
+
+> [!NOTE]
+> The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
 The entity profile provides you with a comprehensive entity page designed for a full deep-dive investigation of users, computers, devices, the resources they have access to, and their history. The profile page takes advantage of the new Azure ATP logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
