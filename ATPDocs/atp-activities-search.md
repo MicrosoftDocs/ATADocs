@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/28/2018
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure ATP monitored activities search and filter 
+
+> [!NOTE]
+> The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
 Activities detected by Azure ATP on your network can be searched and filtered for easy drill-down and organization during your research and investigation into security alerts.  
 
