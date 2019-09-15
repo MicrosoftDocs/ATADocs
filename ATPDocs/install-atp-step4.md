@@ -89,9 +89,8 @@ Perform the following steps on the domain controller.
 
 ## Next steps
 
-> [!div class="step-by-step"]
-> [« Step 3 - Download the sensor setup](install-atp-step3.md)
-> [Step 5 - Configure sensor settings »](install-atp-step5.md)
+The Azure ATP sensor is designed to have minimal impact on your domain controller resources and network activity. To create a performance assessment,see the [Plan capacity for your Azure ATP solution](install-atp-step5.md).
+
 
 ## Join the Community
 

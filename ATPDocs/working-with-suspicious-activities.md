@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/10/2019
+ms.date: 09/15/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -28,6 +28,9 @@ ms.suite: ems
 
 
 # Working with Security Alerts
+
+> [!NOTE]
+> The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
 This article explains the basics of how to work with Azure ATP security alerts.
 
