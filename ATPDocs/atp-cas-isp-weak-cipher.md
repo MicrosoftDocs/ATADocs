@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Security assessment: Weak cipher usage 
+# Security assessment: Weak cipher usage - Preview
 
 
 ## What are weak ciphers? 
