@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Security assessment: Prevent clear text credentials exposure 
+# Security assessment: Entities exposing credentials in clear text -   Preview
 
 ![Prevent clear text credentials exposure in Cloud App Security](media/atp-cas-isp-clear-text-1.png)
 

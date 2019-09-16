@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/08/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -56,10 +56,10 @@ See the [Cloud App Security quick start](https://docs.microsoft.com/cloud-app-se
 Azure ATP offers the following identity security posture assessments. Each assessment is a downloadable report with instructions for use and tools for building an action plan to remediate or resolve. 
 
 **Assessment reports**
-- Prevent [clear text credential exposure](atp-cas-isp-clear-text.md)
-- Prevent [legacy protocols communication](atp-cas-isp-legacy-protocols.md)
+- Prevent [entities exposing credentials in clear text](atp-cas-isp-clear-text.md)
+- Prevent [legacy protocols usage](atp-cas-isp-legacy-protocols.md)
 - Prevent [weak cipher usage](atp-cas-isp-weak-cipher.md)
-- Prevent [unconstrained Kerberos delegations](atp-cas-isp-unconstrained-kerberos.md)
+- Prevent [unsecure Kerberos delegations](atp-cas-isp-unconstrained-kerberos.md)
 - Disable [Print spooler service on domain controllers](atp-cas-isp-print-spooler.md)
 - Remove [dormant entities from sensitive groups](atp-cas-isp-dormant-entities.md)
 
