@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,10 @@ ms.suite: ems
 > [!NOTE]
 > The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
-Azure ATP can notify you when it detects suspicious activities and issue security alerts as well as health alerts by sending the notifications from the selected sensor to your Syslog server. If you enable Syslog notifications, you can set the following:
+Azure ATP can notify you when it detects suspicious activities and issue security alerts and health alerts by sending the notifications to your Syslog server. Alerts are sent from the sensor that detected the activity directly to the Syslog server. 
+
+
+Once you enable Syslog notifications, you can set the following:
 
    |Field|Description|
    |---------|---------------|

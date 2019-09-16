@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Security assessment: Unsecure Kerberos delegation - preview
+# Security assessment: Unsecure Kerberos delegation - Preview
 
 
 ## What is Kerberos delegation? 
