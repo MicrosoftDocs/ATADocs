@@ -8,7 +8,7 @@ author: mlottner
 ms.author: mlottner
 
 manager: rkarlin
-ms.date: 02/13/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -42,7 +42,7 @@ Azure ATP continuously monitors your environment for unmonitored domain controll
 
 1. To check the status of your detected monitored and unmonitored domain controllers and their status, go to the **Configuration** area of the Azure ATP portal, under the **System** section, select **Sensors**.
    
-     ![Azure ATP sensor status monitoring](media/atp-sensors-status-monitoring.png)
+    ![Azure ATP sensor status monitoring](media/atp-sensors-status-monitoring.png)
 
 2. Your currently monitored and unmonitored domain controllers are displayed at the top of the screen. To download the monitoring status details of your domain controllers, select **Download Details**. 
 
@@ -58,6 +58,15 @@ The domain controller coverage Excel download provides the following information
 |Operating system version| Version of operating system detected|
 |IP address|Detected IP address| 
 
+### Search domain controllers
+
+Managing your fleet of sensors and domain controllers can be challenging. To make it easier to find and identify, domain controllers can be searched using the search feature in Azure ATP Sensors list. 
+
+1. To search your domain controllers, go to the **Configuration** area of the Azure ATP portal, under the **System** section, select **Sensors**.
+1. Select the filter option on the **domain controller** column in the domain controller table list. 
+1. Enter the name you wish to search. Wildcards are not currently supported in the search field. 
+
+    ![Azure ATP search domain controller](media/search-sensor.png)
 
 > [!NOTE]
 > Azure ATP portal configuration pages can be modified by Azure ATP admins only.
