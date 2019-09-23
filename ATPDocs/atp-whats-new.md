@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/08/2019
+ms.date: 09/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,18 @@ ms.suite: ems
 This article is updated frequently to let you know what's new in the latest release of Azure ATP.
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Released September 22, 2019
+## Azure ATP release 2.96
+
+- **Enriched NTLM authentication data using Windows Event 8004**<br>
+
+Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data as well as enriched failed logon activities including the destination computer which the user attempted but failed to access.
+
+Learn more about NTLM authentication activities [using Windows Event 8004](configure-event-collection.md##ntlm-authentication-using-windows-event-8004).
+
+- Version also includes improvements and bug fixes for internal sensor infrastructure.
+
 
 Released September 15, 2019
 ## Azure ATP release 2.95
