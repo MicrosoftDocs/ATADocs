@@ -137,10 +137,12 @@
     href: setting-syslog.md
   - name: Silent installation
     href: ATP-silent-installation.md
-  - name: Configuring the Azure ATP sensor
+  - name: Configure the Azure ATP sensor
     items:
     - name: Configure the Azure ATP sensor
       href: install-atp-step5.md
+    - name: Configure Windows Event collection
+      href: configure-windows-event-collection.md
     - name: Proxy configuration
       href: configure-proxy.md
     - name: Advanced Audit Policy check
