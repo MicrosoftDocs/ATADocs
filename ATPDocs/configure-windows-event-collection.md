@@ -29,7 +29,7 @@ ms.suite: ems
 
 # Configure Windows Event collection
 
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 and 8004. These events can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by [configuring the Azure ATP standalone sensor](configure-event-forwarding.md) to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance threat detection capabilities, Azure Advanced Threat Protection (Azure ATP) needs the following Windows Events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 and 8004. These events can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, they can be forwarded to the Azure ATP standalone sensor in one of two ways, by [configuring the Azure ATP standalone sensor](configure-event-forwarding.md) to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
 > It is important to review and verify your [audit policies](atp-advanced-audit-policy.md) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events. 
@@ -45,7 +45,7 @@ To configure Windows Event 8004 collection:
    - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
    - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
 
-When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentications activities are enriched with the server accessed  data.
+When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentications activities are enriched with the server accessed data.
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
