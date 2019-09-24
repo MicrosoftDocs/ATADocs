@@ -154,7 +154,7 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |
 
 ### Windows Event logs
-Azure ATP detection relies on the following specific Windows Event logs that the sensor parses from your domain controllers: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 and 8004. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, [Advanced audit policy check](atp-advanced-audit-policy.md). To [make sure Windows Event 8004 is audited](configure-event-collection.md##ntlm-authentication-using-windows-event-8004) as needed by the service, review your [NTLM audit settings](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
+Azure ATP detection relies on the following specific Windows Event logs that the sensor parses from your domain controllers: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 and 8004. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, [Advanced audit policy check](atp-advanced-audit-policy.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004) as needed by the service, review your [NTLM audit settings](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]
