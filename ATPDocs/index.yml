@@ -33,14 +33,6 @@ landingContent:
             url: atp-architecture.md
           - text: Azure ATP using Cloud App Security
             url: atp-mcas-integration.md
-  - title: Azure ATP videos
-    linkLists:
-      - linkListType: video
-        links:
-          - text: Introduction to Azure ATP
-            url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
-          - text: Azure ATP fundamentals
-            url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
   - title: Quickstarts       
     linkLists:
       - linkListType: quickstart
@@ -67,6 +59,14 @@ landingContent:
             url: atp-health-center.md
           - text: Monitor domain controllers
             url: atp-sensor-monitoring.md
+  - title: Azure ATP videos
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Introduction to Azure ATP
+            url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
+          - text: Azure ATP fundamentals
+            url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
   - title: Azure ATP using Microsoft Cloud App Security 
     linkLists:
       - linkListType: deploy
