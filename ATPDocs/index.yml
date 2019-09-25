@@ -19,7 +19,7 @@ metadata:
 
 landingContent:
 
-  - title: About Azure Advanced Threat Protection
+  - title: Azure Advanced Threat Protection
     linkLists:
       - linkListType: overview
         links:
@@ -109,7 +109,7 @@ landingContent:
             url: investigate-lateral-movement-path.md
           - text: Investigate entities
             url: investigate-entity.md
-  - title: Understand Azure ATP concepts 
+  - title: Azure ATP concepts 
     linkLists:
       - linkListType: concept
         links:
