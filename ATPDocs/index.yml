@@ -59,14 +59,6 @@ landingContent:
             url: atp-health-center.md
           - text: Monitor domain controllers
             url: atp-sensor-monitoring.md
-  - title: Azure ATP videos
-    linkLists:
-      - linkListType: video
-        links:
-          - text: Introduction to Azure ATP
-            url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
-          - text: Azure ATP fundamentals
-            url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
   - title: Azure ATP using Microsoft Cloud App Security 
     linkLists:
       - linkListType: deploy
@@ -109,11 +101,19 @@ landingContent:
             url: investigate-lateral-movement-path.md
           - text: Investigate entities
             url: investigate-entity.md
+  - title: Azure ATP videos
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Introduction to Azure ATP
+            url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
+          - text: Azure ATP fundamentals
+            url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
   - title: Azure ATP concepts 
     linkLists:
       - linkListType: concept
         links:
-          - text: Azuyre ATP portal
+          - text: Azure ATP portal
             url: workspace-portal.md
           - text: Azure ATP security alerts
             url: suspicious-activity-guide.md
