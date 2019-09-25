@@ -86,9 +86,9 @@ landingContent:
           - text: Use the Azure ATP security alert lab
             url: atp-playbook-lab-overview.md
           - text: Exclude entities from detections
-            url: exclude-entities-from-detections.md
+            url: excluding-entities-from-detections.md
           - text: Search and filter monitored activities 
-            url: atp-actities-search.md
+            url: atp-activities-search.md
           - text: Use exclusions and honeytoken accounts
             url: install-atp-step7.md
           - text: Set Azure ATP notifications
@@ -122,7 +122,7 @@ landingContent:
           - text: Entity profiles
             url: entity-profiles.md
           - text: Lateral movement paths
-            url: use-case-lateral-movement-paths.md
+            url: use-case-lateral-movement-path.md
           - text: Network Name Resolution (NNR)
             url: atp-nnr-policy.md
           - text: Azure ATP reports
@@ -136,7 +136,7 @@ landingContent:
       - linkListType: learn
         links:
           - text: Frequently asked questions
-            url: resources-frequently-asked-questions.md
+            url: atp-technical-faq.md
           - text: ATP readiness roadmap
             url: atp-resources.md
   - title: Reference 
