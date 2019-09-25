@@ -23,13 +23,13 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Azure Security Center for IoT?
+          - text: What is Azure Advanced Threat Protection (Azure ATP)?
             url: what-is-atp.md
           - text: Azure ATP prerequisites
             url: atp-prerequisites.md
       - linkListType: architecture
         links:
-          - text: Understand Azure ATP architecture
+          - text: Azure ATP architecture
             url: atp-architecture.md
           - text: Azure ATP using Cloud App Security
             url: atp-mcas-integration.md
@@ -49,7 +49,7 @@ landingContent:
             url: install-atp-step1.md
           - text: Connect to Active Directory
             url: install-atp-step2.md
-          - text: Download the Azure ATP sensor package
+          - text: Download the Azure ATP sensor
             url: install-atp-step3.md
           - text: Install the Azure ATP sensor
             url: install-atp-step4.md
@@ -79,11 +79,11 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Move from Advanced Threat Analytics (ATA) to Azure ATP
+          - text: Advanced Threat Analytics (ATA) to Azure ATP move
             url: ata-atp-move-overview.md
-          - text: Use identity security posture assessments
+          - text: Identity security posture assessments
             url: atp-isp-overview.md  
-          - text: Use the Azure ATP security alert lab
+          - text: Azure ATP security alert lab
             url: atp-playbook-lab-overview.md
           - text: Exclude entities from detections
             url: excluding-entities-from-detections.md
@@ -105,7 +105,7 @@ landingContent:
             url: investigate-a-user.md  
           - text: Investigate a computer
             url: investigate-a-computer.md
-          - text: Investigate a lateral movement path
+          - text: Investigate lateral movement paths
             url: investigate-lateral-movement-path.md
           - text: Investigate entities
             url: investigate-entity.md
@@ -131,14 +131,6 @@ landingContent:
             url: atp-role-groups.md
           - text: Multi-forest support 
             url: atp-multi-forest.md
-  - title: Resources 
-    linkLists:
-      - linkListType: learn
-        links:
-          - text: Frequently asked questions
-            url: atp-technical-faq.md
-          - text: ATP readiness roadmap
-            url: atp-resources.md
   - title: Reference 
     linkLists:
       - linkListType: reference
@@ -147,6 +139,8 @@ landingContent:
             url: atp-technical-faq.md
           - text: Support and information
             url: atp-support.md
+          - text: ATP readiness roadmap
+            url: atp-resources.md
           - text: Azure ATP data security and privacy 
             url: atp-privacy-compliance.md
 
