@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/01/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -69,7 +69,7 @@ This section lists information you should gather as well as accounts and network
 
 - Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information about using Honeytokens, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
 
-- Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 to Azure ATP to further enhance Azure ATP Pass-the-Hash, Brute Force, Modification to sensitive groups, Honeytokens detections, and malicious service creation. Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+- Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 and 8004 to Azure ATP to further enhance Azure ATP authentication based detections, additions to sensitive groups and suspicious service creation detections.  Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 ## Azure ATP portal requirements
 Access to the Azure ATP portal is via a browser, supporting the following browsers and settings:
@@ -154,8 +154,7 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |
 
 ### Windows Event logs
-Azure ATP detection relies on specific Windows Event Logs that the sensor can parse from the domain controller. For the correct events to be audited and included in the Windows Event og, your domain controllers require accurate Advanced Audit Policy settings. 
-For more information, see, [Advanced Audit Policy Check](atp-advanced-audit-policy.md).
+Azure ATP detection relies on the following specific Windows Event logs that the sensor parses from your domain controllers: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 and 8004. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, [Advanced audit policy check](atp-advanced-audit-policy.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004) as needed by the service, review your [NTLM audit settings](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]

@@ -32,7 +32,7 @@ ms.suite: ems
 > [!NOTE]
 > The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
-Azure ATP can notify you when it detects suspicious activities and issue security alerts and health alerts by sending the notifications to your Syslog server. Alerts are sent from the sensor that detected the activity directly to the Syslog server. 
+Azure ATP can notify you when it detects suspicious activities and issue security alerts and health alerts by sending the notifications to your Syslog server. Alerts are sent from the Azure ATP sensor that detected the activity directly to the Syslog server. 
 
 
 Once you enable Syslog notifications, you can set the following:
