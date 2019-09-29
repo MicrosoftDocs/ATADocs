@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
 title: Azure Advanced Threat Protection Documentation 
-summary: Azure Advanced Threat Protection (ATP) is a cloud service that helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
+summary: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
 
 metadata:
   title: Azure Advanced Threat Protection Documentation
-  description: Azure Advanced Threat Protection (ATP) is a cloud service that helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
+  description: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
   services: service
   ms.service: azure-advanced-threat-protection
   ms.subservice: subservice
@@ -19,24 +19,30 @@ metadata:
 
 landingContent:
 
-  - title: Azure Advanced Threat Protection
+  - title: About Azure Advanced Threat Protection
     linkLists:
       - linkListType: overview
         links:
           - text: What is Azure Advanced Threat Protection (Azure ATP)?
             url: what-is-atp.md
-          - text: Azure ATP prerequisites
-            url: atp-prerequisites.md
       - linkListType: architecture
         links:
           - text: Azure ATP architecture
             url: atp-architecture.md
           - text: Azure ATP using Cloud App Security
             url: atp-mcas-integration.md
-  - title: Quickstarts       
+      - linkListType: video
+        links:
+          - text: Introduction to Azure ATP
+            url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
+          - text: Azure ATP fundamentals
+            url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
+  - title: Create and Install Azure ATP       
     linkLists:
       - linkListType: quickstart
         links:
+          - text: Plan your ATP solution
+            url: atp-capacity-planning.md
           - text: Create your Azure ATP instance
             url: install-atp-step1.md
           - text: Connect to Active Directory
@@ -45,19 +51,17 @@ landingContent:
             url: install-atp-step3.md
           - text: Install the Azure ATP sensor
             url: install-atp-step4.md
-  - title: Get started       
+          - text: Configure the Azure ATP sensor
+            url: install-atp-step5.md
+  - title: Check out Azure ATP alerts      
     linkLists:
       - linkListType: get-started
         links:
-          - text: Plan your ATP solution
-            url: atp-capacity-planning.md
-          - text: Configure the Azure ATP sensor
-            url: install-atp-step5.md
-          - text: Work with security alerts
+          - text: Security alerts
             url: understanding-security-alerts.md
-          - text: Work with health alerts
+          - text: Health alerts
             url: atp-health-center.md
-          - text: Monitor domain controllers
+          - text: Monitor your domain controllers
             url: atp-sensor-monitoring.md
   - title: Azure ATP using Microsoft Cloud App Security 
     linkLists:
@@ -67,7 +71,7 @@ landingContent:
             url: atp-mcas-integration.md
           - text: Filter activities and set policies
             url: atp-activities-filtering-mcas.md
-  - title: How-to guides
+  - title: Explore different ways to use Azure ATP
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -85,7 +89,7 @@ landingContent:
             url: install-atp-step7.md
           - text: Set Azure ATP notifications
             url: notifications.md
-  - title: Tutorials
+  - title: Investigate threats 
     linkLists:
       - linkListType: tutorial
         links:
@@ -101,37 +105,7 @@ landingContent:
             url: investigate-lateral-movement-path.md
           - text: Investigate entities
             url: investigate-entity.md
-  - title: Azure ATP videos
-    linkLists:
-      - linkListType: video
-        links:
-          - text: Introduction to Azure ATP
-            url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
-          - text: Azure ATP fundamentals
-            url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
-  - title: Azure ATP concepts 
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Azure ATP portal
-            url: workspace-portal.md
-          - text: Azure ATP security alerts
-            url: suspicious-activity-guide.md
-          - text: Monitored activities
-            url: monitored-activities.md
-          - text: Entity profiles
-            url: entity-profiles.md
-          - text: Lateral movement paths
-            url: use-case-lateral-movement-path.md
-          - text: Network Name Resolution (NNR)
-            url: atp-nnr-policy.md
-          - text: Azure ATP reports
-            url: reports.md
-          - text: User roles
-            url: atp-role-groups.md
-          - text: Multi-forest support 
-            url: atp-multi-forest.md
-  - title: Reference 
+  - title: Resources and support
     linkLists:
       - linkListType: reference
         links:
