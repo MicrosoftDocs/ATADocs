@@ -25,10 +25,6 @@ landingContent:
         links: 
         - text: What is Advanced Threat Analytics (ATA)?
           url: what-is-ata.md
-        - text: What's new with ATA
-          url: whats-new-version-1.9.md
-        - text: Frequently asked Questions
-          url: ata-technical-faq.md
       - linkListType: architecture
         links:
         - text: Advanced Threat Analytics architecture
@@ -65,4 +61,12 @@ landingContent:
             url: suspicious-activity-guide.md
           - text: ATA attack simulation playbook
             url: https://gallery.technet.microsoft.com/ATA-Playbook-ef0a8e38
+  - title: Learn more about ATA
+    linkLists:
+      - linkListType: reference
+        links:
+        - text: What's new in ATA?
+          url: whats-new-version-1.9.md
+        - text: Frequently asked questions
+          url: ata-technical-faq.md
 
