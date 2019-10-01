@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Azure Advanced Threat Protection Documentation 
+title: Azure Advanced Threat Protection documentation 
 summary: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
 
 metadata:
-  title: Azure Advanced Threat Protection Documentation
+  title: Azure Advanced Threat Protection documentation
   description: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
   services: service
   ms.service: azure-advanced-threat-protection
