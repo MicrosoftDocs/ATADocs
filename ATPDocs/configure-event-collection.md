@@ -34,7 +34,7 @@ To enhance detection capabilities, Azure ATP needs the following Windows events:
 > [!NOTE]
 > It is important to run the Azure ATP auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events. 
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. Azure ATP uses Windows event 4776 and 8004 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757 7045 and 8004 for enhancing detection of sensitive group modifications and service creation. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. Azure ATP uses Windows event 4776 and 8004 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757, 7045, and 8004 for enhancing detection of sensitive group modifications and service creation. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 ## NTLM authentication using Windows Event 8004
 
