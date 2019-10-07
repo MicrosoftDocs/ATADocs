@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/23/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -36,16 +36,20 @@ To enhance threat detection capabilities, Azure Advanced Threat Protection (Azur
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. Azure ATP uses Windows event 4776 and 8004 for NTLM, which enhances various detections and events 4732, 4733, 4728, 4729, 4756, 4757 and 7045 and 8004 for enhancing detection of sensitive group modifications and service creation. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
+> [!NOTE]
+>  Domain group policies to collect Windows Event 8004 should **only** be applied to domain controllers.  
+
 ## NTLM authentication using Windows Event 8004
 
 To configure Windows Event 8004 collection:
 1. Navigate to: Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options
-2. Set the **domain group policy** as follows:
+2. Configure or create a **domain group policy** which is applied to the domain controllers in each domain as follows:
    - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
    - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
    - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
 
 When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentications activities are enriched with the server accessed data.
+
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
