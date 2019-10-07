@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Azure ATP Architecture
+# Azure ATP architecture
 
 Azure ATP monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events directly from your domain controllers, then analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms Azure ATP learns about your network, enables detection of anomalies, and warns you of suspicious activities.
 
@@ -38,7 +38,7 @@ This section describes how the flow of Azure ATP's network and event capturing w
 
 Installed directly on your domain controllers, the Azure ATP sensor accesses the event logs it requires directly from the domain controller. After the logs and network traffic are parsed by the sensor, Azure ATP sends only the parsed information to the Azure ATP cloud service (only a percentage of the logs are sent). 
 
-## Azure ATP Components
+## Azure ATP components
 Azure ATP consists of the following components:
 
 -	**Azure ATP portal** <br>
@@ -71,7 +71,7 @@ The Azure ATP sensor has the following core functionality:
 - Transfer relevant data to the Azure ATP cloud service
 
  
-## Azure ATP Sensor features
+## Azure ATP sensor features
 
 Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Azure ATP sensor also supports Event Tracing for Windows (ETW) which provides the log information for multiple detections. ETW-based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
 

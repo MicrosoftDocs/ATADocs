@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/28/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -105,9 +105,7 @@ If you have an Azure ATP sensor on VMware virtual machines, you might receive th
 
 To resolve the issue:
 
-Set the following settings to **0** or **Disabled** in the virtual machine's NIC configuration: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload.
-> [!NOTE]
-> For Azure ATP sensors, you only need to disable **IPv4 TSO Offload** under the NIC configuration.
+Set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
 
  ![VMware sensor issue](./media/vm-sensor-issue.png)
 
