@@ -148,7 +148,7 @@ To silently uninstall the ATA Center from the server, removing all existing data
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## ATA Gateway Silent Installation
+## ATA Gateway silent installation
 
 > [!NOTE]
 > When silently deploying the ATA Lightweight Gateway via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.6.1 including rebooting the domain controller</br>- ATA Gateway. </br>Make the ATA Gateway package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982). 
@@ -221,6 +221,8 @@ To update the ATA Gateway silently:
 ## Uninstall the ATA Gateway silently
 
 Use the following command to perform a silent uninstall of the ATA Gateway:
+
+
 **Syntax**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
