@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/30/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 # Azure ATP frequently asked questions
-This article provides a list of frequently asked questions and answers about Azure ATP divided into the following catergories: 
+This article provides a list of frequently asked questions and answers about Azure ATP divided into the following categories: 
 - [What is Azure ATP](#what-is-azure-atp)
 - [Licensing and privacy](#licensing-and-privacy)
 - [Deployment](#deployment)
@@ -60,6 +60,24 @@ No. Azure ATP monitors all devices in the network performing authentication and 
 
 ### Does Azure ATP monitor computer accounts as well as user accounts?
 Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, Azure ATP monitors all computer accounts behavior and all other entities in the environment.
+
+### What is the difference between Advanced Threat Analytics (ATA) and Azure ATP?
+ATA is a standalone solution, installed on-premises. Azure ATP with its cloud connectivity includes continuous feature updates including new detections, UEBA capabilities, security assessments, and an investigation experience across Microsoft 365 Security solutions.
+
+
+Azure ATP’s additional capabilities: 
+- Azure ATP detects more on-premises suspicious behavior and advanced attacks than ATA, and provides **identity security assessment** reports.
+- Re-architected sensor with additional data sources (such as **Event Tracing for Windows**). 
+- Azure ATP protects multi-forest environments. 
+
+Azure ATP is a part of Microsoft 365 Security – securing the hybrid organization:
+- Azure ATP, together with Microsoft Cloud App Security (MCAS) and Azure AD Identity Protection, provides a unified investigation experience for user activities, on-premises and in the cloud, and provides enhanced User and Entity Behavior Analytics (UEBA) detections.
+- ATA has no integration with other Microsoft online security solutions 
+  
+Scalable and secure, leveraging the power of the cloud: 
+- Azure ATP allows customers to enjoy the benefits of a cloud based solution, with no scaling limitations and continuous updates. 
+- ATA is based on an on-premises, central management server that requires dedicated hardware for the central management center to be deployed on-premises, and typically receives one or two version updates annually.
+
 
 ## Licensing and privacy 
 
