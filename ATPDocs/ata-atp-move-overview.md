@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/02/2019
+ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -29,6 +29,8 @@ ms.suite: ems
 
 
 Use this guide to move from an existing ATA installation to the Azure Advanced Threat Protection (Azure ATP) service. The guide explains Azure ATP prerequisites and requirements, and details how to plan and then complete your move. Validation steps and tips to take advantage of the latest threat protection and security solutions with Azure ATP after installation are also included. 
+
+To learn more about the differences between ATA and Azure ATP, see the [Azure ATP frequently asked questions] (https://docs.microsoft.com/en-us/azure-advanced-threat-protection/atp-technical-faq#what-is-azure-atp).
 
 In this guide you will: 
 
