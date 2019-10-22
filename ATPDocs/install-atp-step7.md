@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -56,13 +56,13 @@ To configure, follow these steps:
 
 Congratulations, you have successfully deployed Azure Advanced Threat Protection!
 
-Check the attack time line to view detected security alerts and search for users or computers, and view their profiles.
+Check the attack timeline to view security alerts generated from detected activities and search for users or computers, and view their profiles.
 
-Azure ATP scanning starts immediately. Some detections, such as Abnormal Group Modifications, require a learning period and aren't available immediately after Azure ATP deployment.
+Azure ATP scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after Azure ATP deployment.The learning period for each alert is listed in the detailed [security alert guide](suspicious-activity-guide.md). 
 
 
 ## See Also
 - [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
-- [Check out the zure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
