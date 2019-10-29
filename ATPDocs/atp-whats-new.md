@@ -30,13 +30,14 @@ ms.suite: ems
 
 This article is updated frequently to let you know what's new in the latest release of Azure ATP.
 
-RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
 
 Released October 27, 2019
 ## Azure ATP release 2.98
 
 - **Feature enhancement: Suspected brute force attack alert** <br> 
-    Improved the [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) alert using additional analysis, and improved detection logic to reduce **B-TP** and **FP** alert results. 
+    Improved the [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) alert using additional analysis, and improved detection logic to reduce **benign true positive (B-TP)** and **false positive (FP)** alert results. 
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
