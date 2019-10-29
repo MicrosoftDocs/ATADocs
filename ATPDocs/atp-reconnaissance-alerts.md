@@ -205,6 +205,8 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 2. Require use of [long and complex passwords for users with service principal accounts](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).  
 3. [Replace the user account by Group Managed Service Account (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
 
+> [!NOTE]
+> Security principal reconnaissance  (LDAP) alerts are supported by ATP sensors only.
 
 ## User and IP address reconnaissance (SMB) (external ID 2012) 
 
