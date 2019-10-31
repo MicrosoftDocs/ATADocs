@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/11/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -60,3 +60,6 @@ Azure ATP implements the audit of personal data changes, including the deleting 
 ## Additional resources
 
 - For information about Azure ATP trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+
+## Security and privacy for Azure ATP US Government GCC High customers 
+For additional information on Azure ATP compliance standards and location of customer data for US Government GCC High customers, review the [Enterprise Mobility + Security for US Government service description](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description). 
