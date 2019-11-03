@@ -8,6 +8,8 @@
     href: atp-architecture.md
   - name: Azure ATP prerequisites
     href: atp-prerequisites.md
+  - name: Azure ATP for US Government
+    href: atp-us-govt-gcc-high.md
   - name: What's new in Azure ATP
     href: atp-whats-new.md
 - name: Quickstarts

@@ -6,7 +6,7 @@ description: Quickstart for creating the instance for your Azure ATP deployment 
 keywords:
 author: mlottner
 ms.author: mlottner
-ms.date: 02/05/2019
+ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -40,9 +40,11 @@ In this quickstart, you'll create your Azure ATP instance in the Azure ATP porta
 
 After you verified that your network meets the sensor requirements, start the creation of your Azure ATP instance.
 
-1. Go to [the Azure ATP portal](https://portal.atp.azure.com).
+1. Go to [the Azure ATP portal](https://portal.atp.azure.com)*.
 
 2. Sign in with your Azure Active Directory user account.
+
+* GCC High customers must use the [Azure ATP GCC High](http://portal.atp.azure.us) portal.  
 
 ## Create your instance
 
