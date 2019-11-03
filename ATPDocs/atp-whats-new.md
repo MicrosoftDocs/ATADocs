@@ -33,6 +33,15 @@ This article is updated frequently to let you know what's new in the latest rele
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
 
+Released November 3, 2019
+## Azure ATP release 2.99
+
+- **Feature enhancement:  Added user interface notification of Cloud App Security portal availability to the Azure ATP portal** <br> 
+    Ensuring all users are aware of the availability of the enhanced features available using the Cloud App Security portal, notification was added for the portal from the existing Azure ATP alert timeline. 
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
+
 Released October 27, 2019
 ## Azure ATP release 2.98
 
