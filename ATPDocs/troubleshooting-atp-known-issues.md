@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/07/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -29,6 +29,20 @@ ms.suite: ems
 
 # Troubleshooting Azure ATP Known Issues 
 
+
+## Sensor failure communication error
+If you receive the following sensor failure error: 
+
+System.Net.Http.HttpRequestException:
+An error occurred while sending the request. ---> System.Net.WebException:
+Unable to connect to the remote server --->
+System.Net.Sockets.SocketException: A connection attempt failed because the
+connected party did not properly respond after a period of time, or established
+connection failed because connected host has failed to respond...
+
+**Resolution:**
+
+Make sure that communication is not blocked for localhost, TCP port 444. To learn more about Azure ATP prerequisites, see [ports](atp-prerequisites.md#ports).
 
 ## Deployment log location
  

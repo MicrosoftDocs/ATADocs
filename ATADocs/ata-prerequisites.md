@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/20/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -154,7 +154,9 @@ The certificate must have:
 -	A provider type of either Cryptographic Service Provider (CSP) or Key Storage Provider (KSP)
 -	A public key length of 2048 bits
 -	A value set for KeyEncipherment and ServerAuthentication usage flags
--	KeySpec (KeyNumber) value of "KeyExchange" (AT\_KEYEXCHANGE). Note that the value "Signature" (AT\_SIGNATURE) is not supported. 
+-	KeySpec (KeyNumber) value of "KeyExchange" (AT\_KEYEXCHANGE).
+    The value "Signature" (AT\_SIGNATURE) is *not* supported. 
+-   All Gateway machines must be able to fully validate and trust the selected Center certificate.
 
 For example, you can use the standard **Web server** or **Computer** templates.
 
