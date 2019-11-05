@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/15/2018
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 # Working with the Azure ATP portal
 
 > [!NOTE]
-> The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> All Azure ATP features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).
 
 Use the Azure ATP portal to monitor and respond to suspicious activity detected by ATP.
 
@@ -50,12 +50,12 @@ For more information about role-based access control (RBAC) in Azure ATP, see [W
 2. Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](atp-role-groups.md).
 
    > [!NOTE]
-   > Make sure to log on to the computer from which you want to access the Azure ATP portal using your Azure ATP admin username and password. Alternatively, run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. 
+   > Make sure to log on to the computer from which you want to access the Azure ATP portal using your Azure ATP admin username and password. Alternatively, run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. Unlike the Azure ATP portal, the new [Cloud App Security portal](https://portal.cloudappsecurity.com) offers multi-user login and requires no additional license to use with Azure ATP.  
 
 
 ### Attack time line
 
-The Attack time line This is the default landing page you are taken to when you log in to the Azure ATP portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
+The Attack time line is the default landing page you are taken to when you log in to the Azure ATP portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
 ![Azure ATP attack timeline image](media/atp-sa-timeline.png)
 
