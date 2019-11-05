@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Azure ATP Prerequisites
+# Azure ATP prerequisites
 
 This article describes the requirements for a successful deployment of Azure ATP in your environment.
 
@@ -146,7 +146,7 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |------------|-------------|--------|-----------|-------------|
 |**Internet ports**|||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
-|SSL)localhost)|TCP|444|localhost|Both|
+|SSL(localhost)|TCP|444|localhost|Both|
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|DNS Servers|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Outbound|
@@ -237,7 +237,7 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 
 
 ## See Also
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
+- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
 - [Azure ATP architecture](atp-architecture.md)
 - [Install Azure ATP](install-atp-step1.md)
 - [Network Name Resolution (NNR)](atp-nnr-policy.md)

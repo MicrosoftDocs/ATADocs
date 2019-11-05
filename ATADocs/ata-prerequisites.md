@@ -331,7 +331,7 @@ Access to the ATA Console is via a browser, supporting the  browsers and setting
 
 
 ## See Also
-- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA sizing tool](https://aka.ms/atasizingtool)
 - [ATA architecture](ata-architecture.md)
 - [Install ATA](install-ata-step1.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

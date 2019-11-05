@@ -30,7 +30,7 @@ In this quickstart, you determine how many Azure ATP sensors and standalone sens
 
 ## Prerequisites
 
-- Download the [Azure ATP Sizing Tool](http://aka.ms/aatpsizingtool).
+- Download the [Azure ATP Sizing Tool](https://aka.ms/aatpsizingtool).
 - Review the [Azure ATP architecture](atp-architecture.md) article.
 - Review the [Azure ATP prerequisites](atp-prerequisites.md) article. 
 
