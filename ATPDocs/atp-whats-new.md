@@ -30,7 +30,7 @@ ms.suite: ems
 
 This article is updated frequently to let you know what's new in the latest releases of Azure ATP. 
 
-For details of earlier Azure ATP releases until (and including release 2.55), see the [Azure ATP release reference](atp-release-reference.md).
+For details of earlier Azure ATP releases until (and including) release 2.55, see the [Azure ATP release reference](atp-release-reference.md).
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
