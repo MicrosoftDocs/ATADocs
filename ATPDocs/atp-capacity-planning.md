@@ -87,8 +87,9 @@ The following CPU and memory capacity refers to the **sensor's own consumption**
 |10k-20k|2.00|9.00|
 |20k-50k|3.50|9.50|
 |50k-75k |3.50|9.50|
-|75k-100k|3.50 |9.50|
+|75k-100k|3.50|9.50|
 |
+
 ** This includes physical cores, not hyper-threaded cores. 
 
 When determining sizing, note the following items: 
