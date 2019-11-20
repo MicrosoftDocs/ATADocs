@@ -24,7 +24,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-# Security assessment: Domain controllers with Print spooler service available - Preview
+# Security assessment: Domain controllers with Print spooler service available 
 
 ![Disable Print spooler service](media/atp-cas-isp-print-spooler-1.png)
  
