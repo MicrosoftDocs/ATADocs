@@ -25,7 +25,7 @@ ms.suite: ems
 
 ---
 
-# Security assessment: Legacy protocols usage - Preview
+# Security assessment: Legacy protocols usage 
  
 ## What are legacy protocols?
 
