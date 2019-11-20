@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/30/2019
+ms.date: 11/19/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -70,9 +70,9 @@ For more information on honeytoken accounts, see [Configure detection exclusions
 1. Investigate the [source user](investigate-a-user.md).
 2. Investigate the [source computer](investigate-a-computer.md).
 
-> [!NOTE]
-    > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.
-    > Using Windows Event 4776 to capture this information, the source field for this information is occasionally overwritten by the device or software to display only Workstation or MSTSC. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the relevant domain controllers to get the true source computer name.    
+    > [!NOTE]
+    > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name. <br>
+    > Using Windows Event 4776 to capture this information, the source field for this information is occasionally overwritten by the device or software to display only Workstation or MSTSC. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the relevant domain controllers to get the true source computer name.<br>  
     > To enable NTLM auditing, turn on Windows Event 8004 (NTLM authentication event that includes information about the source computer, user account, and the server the source machine tried to access).
 
 **Suggested remediation and steps for prevention**
@@ -117,9 +117,8 @@ It is important to check if any login attempts ended with successful authenticat
     - For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
 
     > [!NOTE]
-    > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.
-    > Using Windows Event 4776 to capture this information, the source field for this information is occasionally overwritten by the device or software to display only Workstation or MSTSC. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the relevant domain controllers to get the true source computer name.    
-    > To enable NTLM auditing, turn on Windows Event 8004 (NTLM authentication event that includes information about the source computer, user account, and the server the source machine tried to access).
+    > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access. Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account  attempted to access. <br>
+    > Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name. Using Windows Event 4776 to capture this information, the information source field is occasionally overwritten by the device or software and only displays Workstation or MSTSC as the information source. In addition, the source computer might not actually exist on your network. This is possible because adversaries commonly target open, internet-accessible servers from outside the network and then use it to enumerate your users. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the domain controllers to get the accessed resource server name. You should also investigate this server, check if it is opened to the internet, and if you can, close it.
     
 1. When you learn which server sent the authentication validation, investigate the server by checking events, such as Windows Event 4624, to better understand the authentication process. 
 1. Check if this server is exposed to the internet using any open ports. 
