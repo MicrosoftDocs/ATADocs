@@ -41,7 +41,7 @@ The recommended and simplest way to determine capacity for your Azure ATP deploy
 
 1. Run the Azure ATP Sizing Tool, **TriSizingTool.exe**, from the zip file you downloaded. 
 2. When the tool finishes running, open the Excel file results.
-3. In the Excel file, locate and click on the **Azure ATP Summary** sheet. The other sheet isn't needed since it's for Azure ATA planning.
+3. In the Excel file, locate and click on the **Azure ATP Summary** sheet. The other sheet isn't needed since it's for ATA planning.
    ![Sample capacity planning tool](media/capacity-tool.png)
 
 4. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
