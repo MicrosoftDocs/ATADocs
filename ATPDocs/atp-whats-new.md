@@ -34,7 +34,7 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
-Released Nov 22, 2019
+Released Nov 24, 2019
 ## Azure ATP release 2.101
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
