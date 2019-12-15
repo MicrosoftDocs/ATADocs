@@ -8,6 +8,8 @@
     href: atp-architecture.md
   - name: Azure ATP prerequisites
     href: atp-prerequisites.md
+  - name: Azure ATP for US Government
+    href: atp-us-govt-gcc-high.md
   - name: What's new in Azure ATP
     href: atp-whats-new.md
 - name: Quickstarts
@@ -73,17 +75,17 @@
       items:
       - name: Understanding identity security posture
         href: atp-isp-overview.md
-      - name: Prevent clear text credentials exposure assessment
+      - name: Entities exposing credentials in clear text assessment
         href: atp-cas-isp-clear-text.md
-      - name: Remove dormant entities from sensitive groups assessment
+      - name: Dormant entities in sensitive groups assessment
         href: atp-cas-isp-dormant-entities.md
-      - name: Prevent legacy protocols communication assessment
+      - name: Legacy protocols usage assessment
         href: atp-cas-isp-legacy-protocols.md
-      - name: Disable Print spooler service on domain controllers assessment
+      - name: Domain controllers with Print spooler service available assessment
         href: atp-cas-isp-print-spooler.md
-      - name: Prevent weak cipher usage assessment
+      - name: Weak cipher usage assessment
         href: atp-cas-isp-weak-cipher.md  
-      - name: Prevent unsecured Kerberos delegation assessment
+      - name: Unsecured Kerberos delegation assessment
         href: atp-cas-isp-unconstrained-kerberos.md
   - name: Security alert lab
     items:
@@ -137,14 +139,16 @@
     href: setting-syslog.md
   - name: Silent installation
     href: ATP-silent-installation.md
-  - name: Configuring the Azure ATP sensor
+  - name: Configure the Azure ATP sensor
     items:
     - name: Configure the Azure ATP sensor
       href: install-atp-step5.md
-    - name: Proxy configuration
-      href: configure-proxy.md
     - name: Advanced Audit Policy check
       href: atp-advanced-audit-policy.md
+    - name: Configure Windows Event collection
+      href: configure-windows-event-collection.md
+    - name: Proxy configuration
+      href: configure-proxy.md
     - name: Configure Azure ATP to make remote calls to SAM
       href: install-atp-step8-samr.md
   - name: Azure ATP standalone sensor setup
@@ -167,6 +171,8 @@
     href: cef-format-sa.md
   - name: Azure ATP known issues
     href: known-issues.md
+  - name: Azure ATP release reference
+    href: atp-release-reference.md
 - name: Resources
   items:
   - name: Support and information

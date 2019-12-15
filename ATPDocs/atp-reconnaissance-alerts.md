@@ -106,9 +106,9 @@ Now, look at the accounts:<br>
 1. Investigate the source computer
 1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment, and can use brute force to attempt to access your domain using the discovered user names. Investigate the existing accounts using the [user investigation guide](investigate-a-user.md).
     > [!NOTE]
-    > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.
-    > Using Windows Event 4776 to capture this information, the source field for this information is occasionally overwritten by the device or software to display only Workstation or MSTSC. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the relevant domain controllers to get the true source computer name.    
-    > To enable NTLM auditing, turn on Windows Event 8004 (NTLM authentication event that includes information about the source computer, user account, and the server the source machine tried to access).
+    > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access.<br>
+    > Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account attempted to access. <br>
+    > Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name. Using Windows Event 4776 to capture this information, the information source field is occasionally overwritten by the device or software and only displays Workstation or MSTSC as the information source. In addition, the source computer might not actually exist on your network. This is possible because adversaries commonly target open, internet-accessible servers from outside the network and then use it to enumerate your users. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the domain controllers to get the accessed resource server name. You should also investigate this server, check if it is opened to the internet, and if you can, close it.
 
 1. When you learn which server sent the authentication validation, investigate the server by checking events, such as Windows Event 4624, to better understand the authentication process. 
 
@@ -118,9 +118,9 @@ Now, look at the accounts:<br>
 
 1. Contain the source [computer](investigate-a-computer.md). 
     1. Find the tool that performed the attack and remove it.
-    2. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. 
-    3. Reset their passwords and enable MFA.
-2. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration. 
+    1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. 
+    1. Reset their passwords and enable MFA.
+1. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration. 
 
 ## Network mapping reconnaissance (DNS) (external ID 2007) 
 
@@ -205,6 +205,8 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 2. Require use of [long and complex passwords for users with service principal accounts](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).  
 3. [Replace the user account by Group Managed Service Account (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
 
+> [!NOTE]
+> Security principal reconnaissance  (LDAP) alerts are supported by ATP sensors only.
 
 ## User and IP address reconnaissance (SMB) (external ID 2012) 
 

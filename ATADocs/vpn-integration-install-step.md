@@ -7,7 +7,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -35,13 +35,16 @@ ms.suite: ems
 
 ## Step 7. Integrate VPN
 
-Microsoft Advanced Threat Analytics (ATA) version 1.8 can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+Microsoft Advanced Threat Analytics (ATA) version 1.8 and higher can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
 
 ATA integrates with your VPN solution by listening to RADIUS accounting events forwarded to the ATA Gateways. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
 
 -	Microsoft
 -	F5
 -	Cisco ASA
+
+> [!IMPORTANT]
+> As of September 2019, the Advanced Threat Analytics VPN geo-location service responsible for detecting VPN locations now exclusively supports TLS 1.2. Make sure your ATA Center is configured to support TLS 1.2, as versions 1.1 and 1.0 are no longer be supported.   
 
 ## Prerequisites
 
@@ -108,8 +111,8 @@ After the ATA Gateway receives the VPN events and sends them to the ATA Center f
 
 
 ## See Also
-- [ATA POC deployment guide](http://aka.ms/atapoc)
-- [ATA sizing tool](http://aka.ms/aatpsizingtool)
+- [ATA POC deployment guide](https://aka.ms/atapoc)
+- [ATA sizing tool](https://aka.ms/aatpsizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)

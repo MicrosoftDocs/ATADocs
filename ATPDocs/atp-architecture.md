@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 09/23/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Azure ATP Architecture
+# Azure ATP architecture
 
 Azure ATP monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events directly from your domain controllers, then analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms Azure ATP learns about your network, enables detection of anomalies, and warns you of suspicious activities.
 
@@ -38,7 +38,7 @@ This section describes how the flow of Azure ATP's network and event capturing w
 
 Installed directly on your domain controllers, the Azure ATP sensor accesses the event logs it requires directly from the domain controller. After the logs and network traffic are parsed by the sensor, Azure ATP sends only the parsed information to the Azure ATP cloud service (only a percentage of the logs are sent). 
 
-## Azure ATP Components
+## Azure ATP components
 Azure ATP consists of the following components:
 
 -	**Azure ATP portal** <br>
@@ -71,7 +71,7 @@ The Azure ATP sensor has the following core functionality:
 - Transfer relevant data to the Azure ATP cloud service
 
  
-## Azure ATP Sensor features
+## Azure ATP sensor features
 
 Azure ATP sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Azure ATP sensor also supports Event Tracing for Windows (ETW) which provides the log information for multiple detections. ETW-based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
 
@@ -91,7 +91,7 @@ If the monitoring process causes the Azure ATP sensor to run out of resources, o
 
 ### Windows Events
 
-To enhance Azure ATP detection coverage of suspected identity theft (pass-the-hash), suspicious authentication failures, modifications to sensitive groups, creation of suspicious services, and Honeytoken activity types of attack, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757, and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
+To enhance Azure ATP detection coverage related to NTLM authentications, modifications to sensitive groups and creation of suspicious services, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757,7045 and 8004. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004) as needed by the service, review your [NTLM audit settings](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
 
 ## Next steps
 

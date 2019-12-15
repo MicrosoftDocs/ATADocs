@@ -5,7 +5,7 @@ title: Install Azure ATP sensor quickstart | Microsoft Docs
 description: Step four of installing Azure ATP helps you to install the Azure ATP sensor.
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2019
+ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -44,6 +44,8 @@ Perform the following steps on the domain controller.
       - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
       - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
       - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+   - US GCC High
+      - [https://triff1wcva1sensorapi.atp.azure.us](https://triff1wcva1sensorapi.atp.azure.us)
    - Asia
       - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)
 

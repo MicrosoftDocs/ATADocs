@@ -6,7 +6,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -26,19 +26,19 @@ ms.suite: ems
 
 # What is Network Name Resolution?
 
-Network Name Resolution or (NNR) is a main component of  Azure ATP functionality. Azure ATP captures activities based on network traffic, Windows events, and ETW - these activities normally contain IP data.  
+Network Name Resolution or (NNR) is a main component of  Azure ATP functionality. Azure ATP captures activities based on network traffic, Windows events, and ETW - these activities normally contain IP data. 
 
 Using NNR, Azure ATP is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Azure ATP profiles entities, including computers, and generates security alerts for suspicious activities.
 
 To resolve IP addresses to computer names, Azure ATP sensors query the IP address for the computer name “behind” the IP, using one of the following methods:
 
-1. NTLM over RPC (TCP Port 135)
-2. NetBIOS (UDP port 137)
-3. RDP (TCP port 3389) - only the first packet of **Client hello**
-4. Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
+- NTLM over RPC (TCP Port 135)
+- NetBIOS (UDP port 137)
+- RDP (TCP port 3389) - only the first packet of **Client hello**
+- Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
 > [!NOTE]
->No authentication is performed on any of the ports.
+> No authentication is performed on any of the ports.
 
 Azure ATP evaluates and determines the device operating system based on network traffic. After retrieving the computer name, the Azure ATP sensor checks Active Directory and uses TCP fingerprints to see if there is a correlated computer object with the same computer name. Using TCP fingerprints helps identify unregistered and non-Windows devices, aiding in your investigation process. 
 When the Azure ATP sensor finds the correlation, the sensor associates the IP to the computer object. 
@@ -68,6 +68,7 @@ After confirming the device, you can then determine if the alert is a **False Po
     ![Evidence certainty](media/nnr-high-certainty.png)
 
 
+
 ### Prerequisites
 |Protocol|	Transport|	Port|	Device|	Direction|
 |--------|--------|------|-------|------|
@@ -81,9 +82,13 @@ Opening port 3389 **is not a requirement**, it is only an additional method that
 
 To make sure Azure ATP is working ideally and the environment is configured correctly, Azure ATP checks the resolution status of each Sensor and issues a monitoring alert per method, providing a list of the Azure ATP sensors with low success rate of active name resolution using each method.
 
+> [!NOTE]
+> To disable an optional NNR method in Azure ATP to fit the needs of your environment, open a support call. 
+
 Each monitoring alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
 
 ![Low success rate Network Name Resolution (NNR) alert](media/atp-nnr-success-rate.png)
+
 
 
 ### Configuration recommendations
