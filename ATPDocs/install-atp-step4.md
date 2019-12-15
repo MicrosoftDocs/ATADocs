@@ -73,7 +73,7 @@ Perform the following steps on the domain controller.
 
     ![Azure ATP sensor configuration image](media/sensor-install-config.png)
 
-      - Installation Path: The location where the Azure ATP sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
+      - Installation path: The location where the Azure ATP sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
 
      - Access key: Retrieved from the Azure ATP portal in the previous step.
     
