@@ -1,24 +1,24 @@
 - name: Docs
-  href: /
-  homepage: /
+  tocHref: /
+  topicHref: /
   items:
   - name: Enterprise Mobility + Security
-    href: /enterprise-mobility-security/
-    homepage: /enterprise-mobility-security
+    tocHref: /enterprise-mobility-security/
+    topicHref: /enterprise-mobility-security
     items:
     - name: Advanced Threat Analytics
-      href: /advanced-threat-analytics/
-      homepage: /advanced-threat-analytics
+      tocHref: /advanced-threat-analytics/
+      topicHref: /advanced-threat-analytics
       items:
         - name: Understand & Explore
-          href: /advanced-threat-analytics/understand-explore/
-          homepage: /advanced-threat-analytics/understand/ata-understand-and-explore
+          tocHref: /advanced-threat-analytics/understand-explore/
+          topicHref: /advanced-threat-analytics/understand/ata-understand-and-explore
         - name: Plan & Design
-          href: /advanced-threat-analytics/plan-design/
-          homepage: /advanced-threat-analytics/plandesign/ata-plan-and-design
+          tocHref: /advanced-threat-analytics/plan-design/
+          topicHref: /advanced-threat-analytics/plandesign/ata-plan-and-design
         - name: Deploy & Use
-          href: /advanced-threat-analytics/deploy-use/
-          homepage: /advanced-threat-analytics/deployuse/configure-port-mirroring
+          tocHref: /advanced-threat-analytics/deploy-use/
+          topicHref: /advanced-threat-analytics/deployuse/configure-port-mirroring
         - name: Troubleshoot
-          href: /advanced-threat-analytics/troubleshoot/
-          homepage: /advanced-threat-analytics/troubleshoot/ata-troubleshooting
+          tocHref: /advanced-threat-analytics/troubleshoot/
+          topicHref: /advanced-threat-analytics/troubleshoot/ata-troubleshooting
