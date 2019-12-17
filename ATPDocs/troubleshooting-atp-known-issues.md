@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/05/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -31,6 +31,7 @@ ms.suite: ems
 
 
 ## Sensor failure communication error
+
 If you receive the following sensor failure error: 
 
 System.Net.Http.HttpRequestException:
@@ -86,20 +87,24 @@ Use the complete command to successfully install.
 
 If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, follow these instructions:
 
+1.	Download the latest Npcap installer version [https://nmap.org/npcap/](https://nmap.org/npcap/).
+    - Alternatively, request the OEM version of the Npcap driver (that supports silent installation) from the support team.
+    - Copies of Npcap do not count towards the five copy, five computer or fiver user licensing limitation if they are installed and used soley in conjunction with Azure ATP. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE). 
+
 If you have not yet installed the sensor:
 
-1.	Download Npcap from [https://nmap.org/npcap/](https://nmap.org/npcap/).
-2.	Uninstall WinPcap, if it was installed.
-3.	Install Npcap with the following options: loopback_support=no & winpcap_mode=yes
-4.	Install the sensor package.
+1.	Uninstall WinPcap, if it was installed.
+1.	Install Npcap with the following options: loopback_support=no & winpcap_mode=yes.
+    - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
+1.	Install the sensor package.
 
 If you already installed the sensor:
 
-1.	Download Npcap from [https://nmap.org/npcap/](https://nmap.org/npcap/).
-2.	Uninstall the sensor.
-3.	Uninstall WinPcap.
-4.	Install Npcap with the following options: loopback_support=no & winpcap_mode=yes
-5.	Reinstall the sensor package.
+1.	Uninstall the sensor.
+1.	Uninstall WinPcap.
+1.	Install Npcap with the following options: loopback_support=no & winpcap_mode=yes
+    - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
+1.	Reinstall the sensor package.
 
 ## Multi Processor Group mode 
 For Windows Operating systems 2008R2 and 2012, Azure ATP Sensor is not supported in a Multi Processor Group mode.
