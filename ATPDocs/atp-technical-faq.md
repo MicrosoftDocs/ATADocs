@@ -56,12 +56,15 @@ Microsoft does not mine your data for advertising or for any other purpose other
 In addition to analyzing Active Directory traffic using deep packet inspection technology, Azure ATP also collects relevant Windows Events from your domain controller and creates entity profiles based on information from Active Directory Domain Services. Azure ATP also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
 
 ### Does Azure ATP monitor only domain-joined devices?
+
 No. Azure ATP monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
 
 ### Does Azure ATP monitor computer accounts as well as user accounts?
+
 Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, Azure ATP monitors all computer accounts behavior and all other entities in the environment.
 
 ### What is the difference between Advanced Threat Analytics (ATA) and Azure ATP?
+
 ATA is a standalone solution, installed on-premises. Azure ATP with its cloud connectivity includes continuous feature updates including new detections, UEBA capabilities, security assessments, and an investigation experience across Microsoft 365 Security solutions.
 
 
@@ -85,7 +88,12 @@ Scalable and secure, leveraging the power of the cloud:
 
 Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5), and as a standalone license. You can acquire a license directly from the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
 
+### Does Azure ATP need only a single license or does it require a license for every user I want to protect?
+
+Azure ATP requires licensing for every user. 
+
 ### Is this going to be a part of Azure Active Directory or on-premises Active Directory?
+
 The Azure ATP solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
 
 ### Is my data isolated from other customer data? 
