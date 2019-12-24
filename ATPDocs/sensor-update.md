@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/20/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -49,10 +49,6 @@ Azure ATP sensors support two kinds of updates:
 > [!NOTE]
 >- Control automatic sensor restarts (for **major** updates) in the Azure ATP portal configuration page. 
 > - Azure ATP sensor always reserves at least 15% of the available memory and CPU available on the domain controller where it is installed. If the Azure ATP service consumes too much memory, the service is automatically stopped and restarted by the Azure ATP sensor updater service.
-
-### Update requirement
-
-A failure to update your sensors for more than one version update means your sensors can no longer communicate with the Azure ATP cloud service, and may result in no Azure ATP service unavailability and no protection for your organization.  
 
 ## Delayed sensor update
 
