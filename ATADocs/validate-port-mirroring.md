@@ -197,7 +197,7 @@ Sample for how to run the script:
     
     
 ## Validate port mirroring using Net Mon
-1.  Install [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) on the ATA Gateway that you want to validate.
+1.  Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the ATA Gateway that you want to validate.
 
     > [!IMPORTANT]
     > Do not install Microsoft Message Analyzer, or any other traffic capture software on the ATA Gateway.

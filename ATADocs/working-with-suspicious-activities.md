@@ -106,6 +106,6 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 
 
 ## See Also
-- [ATA suspicious activity playbook](http://aka.ms/ataplaybook)
+- [ATA suspicious activity playbook](https://aka.ms/ataplaybook)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modifying ATA configuration](modifying-ata-center-configuration.md)

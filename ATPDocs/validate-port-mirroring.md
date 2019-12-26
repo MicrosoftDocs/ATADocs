@@ -34,7 +34,8 @@ ms.suite: ems
 The following steps walk you through the process for validating that port mirroring is properly configured. For Azure ATP to work properly, the Azure ATP standalone sensor must be able to see the traffic to and from the domain controller. The main data source used by Azure ATP is deep packet inspection of the network traffic to and from your domain controllers. For Azure ATP to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 
 ## Validate port mirroring using Net Mon
-1.  Install [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) on the ATP standalone sensor that you want to validate.
+
+1.  Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the ATP standalone sensor that you want to validate.
 
     > [!IMPORTANT]
     > If you choose to install Wireshark in order to validate port mirroring, restart the Azure ATP standalone sensor service after validation.
