@@ -5,7 +5,7 @@ title: Planning your Azure Advanced Threat Protection deployment quickstart | Mi
 description: Helps you plan your deployment and decide how many Azure ATP servers will be needed to support your network
 author: mlottner
 ms.author: mlottner
-ms.date: 11/05/2019
+ms.date: 12/26/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -112,8 +112,6 @@ When determining sizing, note the following items:
 |VMWare|Ensure that the amount of memory configured and the reserved memory are the same, or select the following option in the VM setting – **Reserve all guest memory (All locked)**.|
 |Other virtualization host|Refer to the vendor supplied documentation on how to ensure that memory is fully allocated to the VM at all times. |
 |
-
-When running as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
 
 ## <a name="manual-sizing"></a> Domain controller traffic estimation
 
