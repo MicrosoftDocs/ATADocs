@@ -101,7 +101,7 @@ From the Windows Defender ATP portal, click on an endpoint to view Azure ATP ale
 ## See Also
 
 - [Investigating lateral movement paths with Azure ATP](use-case-lateral-movement-path.md)
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
+- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
 - [Azure ATP architecture](atp-architecture.md)
 - [Install ATP](install-atp-step1.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
