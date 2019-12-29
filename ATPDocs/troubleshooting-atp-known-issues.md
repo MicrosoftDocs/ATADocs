@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/17/2019
+ms.date: 12/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -120,13 +120,26 @@ Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows
 
 ## VMware virtual machine sensor issue
 
-If you have an Azure ATP sensor on VMware virtual machines, you might receive the monitoring alert **Some network traffic is not being analyzed**. This happens because of a configuration mismatch in VMware.
+If you have an Azure ATP sensor on VMware virtual machines, you might receive the monitoring alert **Some network traffic is not being analyzed**. This can happen  because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
 Set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
 
  ![VMware sensor issue](./media/vm-sensor-issue.png)
+
+Use the following command to check if Large Send Offload (LSO) is enabled or disabled:
+
+`Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
+
+![Check LSO status](./media/missing-network-traffic-health-alert.png)
+
+If LSO is enabled, use the following command to disable it:
+
+`Disable-NetAdapterLso -Name {name of adapter}` 
+
+![Disable LSO status](./media/disable-lso-vmware.png)
+
 
 ## See Also
 - [Azure ATP prerequisites](atp-prerequisites.md)

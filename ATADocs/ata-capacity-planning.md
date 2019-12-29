@@ -34,7 +34,7 @@ This article helps you determine how many ATA servers are needed to monitor your
 > The ATA Center can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
 
 ## Using the sizing tool
-The recommended and simplest way to determine capacity for your ATA deployment is to use the [ATA Sizing Tool](http://aka.ms/atasizingtool). Run the ATA Sizing Tool and from the Excel file results, use the following fields to determine the ATA capacity you need:
+The recommended and simplest way to determine capacity for your ATA deployment is to use the [ATA Sizing Tool](https://aka.ms/atasizingtool). Run the ATA Sizing Tool and from the Excel file results, use the following fields to determine the ATA capacity you need:
 
 - ATA Center CPU and Memory: Match the **Busy Packets/sec** field in the ATA Center table results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
 
@@ -179,7 +179,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 
 
 ## See Also
-- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA sizing tool](https://aka.ms/atasizingtool)
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA architecture](ata-architecture.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

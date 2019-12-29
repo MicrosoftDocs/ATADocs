@@ -203,8 +203,8 @@ To run the Azure ATP Security Alert playbooks, the following tools are needed.
 |----|-----|
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) |
-| NetSess | [JoeWare Tools](http://www.joeware.net/freetools) |
+| PsExec | [Microsoft Docs](https://docs.microsoft.com/sysinternals/downloads/psexec) |
+| NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
 
 We thank the authors of these research tools for enabling the community to better understand cyber risks and impacts.
 

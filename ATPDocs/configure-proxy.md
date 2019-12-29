@@ -31,7 +31,7 @@ ms.suite: ems
 
 Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to operate successfully. In some organizations, the domain controllers aren’t directly connected to the internet, but are connected through a web proxy connection. Each Azure ATP sensor requires that you use the Microsoft Windows Internet (WinINET) proxy configuration to report sensor data and communicate with the Azure ATP service. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Azure ATP cloud service.
 
-When configuring the proxy, you'll need to know that the embedded Azure ATP sensor service runs in system context using the **LocalService** account and the Azure ATP Sensor Updater service runs in the system context using **LocalSystem** account. 
+When configuring the proxy, remember that the embedded Azure ATP sensor service runs in system context using the **LocalService** account, and that the Azure ATP Sensor Updater service runs in the system context using **LocalSystem** account. 
 
 > [!NOTE]
 > If you're using Transparent proxy or WPAD in your network topology, you don't need to configure WinINET for your proxy.

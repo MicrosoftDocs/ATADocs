@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/15/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -34,14 +34,29 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: <br>`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+Released Dec 23, 2019
+## Azure ATP release 2.104
+
+
+- **Sensor version expirations eliminated**<br>
+    Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they are older than our max number of lapsed versions.
+
+- **Confirm compromise**<br>
+    You can now confirm compromise of specific Office 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Cloud App Security. 
+
+- **New experience banner**<br>
+    On Azure ATP portal pages where a new experience is available in the Cloud App Security portal, new banners are displayed describing what's available with access links.
+
+- This version also includes improvements and bug fixes for internal sensor infrastructure.
+
 Released Dec 15, 2019
 ## Azure ATP release 2.103
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 Released Dec 8, 2019
-## Azure ATP release 2.102
 
+## Azure ATP release 2.102
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 Released Nov 24, 2019
@@ -86,7 +101,7 @@ Released September 22, 2019
 
 Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data as well as enriched failed logon activities including the destination computer which the user attempted but failed to access.
 
-Learn more about NTLM authentication activities [using Windows Event 8004](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004).
+Learn more about NTLM authentication activities [using Windows Event 8004](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004).
 
 - Version also includes improvements and bug fixes for internal sensor infrastructure.
 

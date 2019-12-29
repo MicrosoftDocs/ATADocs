@@ -85,7 +85,7 @@ When Azure ATP maps your forests, it uses a process that impacts the following:
 
 
 ## See Also
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
+- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
 - [Azure ATP architecture](atp-architecture.md)
 - [Install Azure ATP](install-atp-step1.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -78,7 +78,7 @@ When users try to access a page that is not available for their role group, they
 Azure ATP uses Azure AD security groups as a basis for role groups. The role groups can be managed from [https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Only Azure AD users can be added or removed from security groups. 
 
 ## See Also
-- [ATP sizing tool](http://aka.ms/aatpsizingtool)
+- [ATP sizing tool](https://aka.ms/aatpsizingtool)
 - [ATP architecture](atp-architecture.md)
 - [Install Azure ATP](install-atp-step1.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

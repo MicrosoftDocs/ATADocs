@@ -46,7 +46,7 @@ After you have verified that the server meets the requirements, you can proceed 
 
 Perform the following steps on the ATA Center server.
 
-1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](http://www.microsoft.com/evalcenter/) or from [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/) or from [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
 2.  Log in to the computer on to which you are installing the ATA Center as a user who is a member of the local administrators group.
 
@@ -130,8 +130,8 @@ If you installed ATA in different directory, make sure to change the folder path
 
 
 ## See Also
-- [ATA POC deployment guide](http://aka.ms/atapoc)
-- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA POC deployment guide](https://aka.ms/atapoc)
+- [ATA sizing tool](https://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)

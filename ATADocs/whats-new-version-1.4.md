@@ -64,7 +64,7 @@ These release notes provide information about known issues in version 1.4 of  Ad
 The following known issues exist in this version.
 
 ### Network Capture Software
-On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software causes the ATA Gateway to stop functioning properly.
+On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software causes the ATA Gateway to stop functioning properly.
 
 ### Installation from Zip file
 When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Do not install the ATA Gateway directly from within the zip file or the installation fails.
