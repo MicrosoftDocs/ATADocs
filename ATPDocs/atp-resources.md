@@ -43,13 +43,13 @@ To learn more about Azure ATP:
 ## Deployment decisions
 
 Azure ATP is comprised of a Cloud service residing in Azure, and integrated sensors that can be installed on domain controllers or standalone sensors on dedicated servers. Before you get Azure ATP up and running, it's important to choose the type of sensors that best suit your deployment and needs. Azure ATP integrated sensors (Azure ATP sensors) provide enhanced security, lower operational costs and easier deployment than Azure ATP standalone sensors. Azure ATP standalone sensors require physical hardware, additional configuration steps and heavier operational costs. <br>If you are using physical servers, capacity planning is critical. Get help from the sizing tool to allocate space for your sensors: 
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool) - The sizing tool automates collection of the amount of traffic Azure ATP monitors. It automatically provides supportability and resource recommendations for sensors. 
+- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool) - The sizing tool automates collection of the amount of traffic Azure ATP monitors. It automatically provides supportability and resource recommendations for sensors. 
 - [ATP capacity planning guidance](atp-capacity-planning.md)
 
 ## Deploy Azure ATP
 
 Use these resources to help you set up Azure ATP, connect to Active Directory, download the sensor package, set up event collection, and optionally integrate with your VPN, and set up honeytoken accounts and exclusions. 
-- [Try Azure ATP (part of EMS E5)](http://aka.ms/aatptrial)  The trial is valid for 90 days.
+- [Try Azure ATP (part of EMS E5)](https://aka.ms/aatptrial)  The trial is valid for 90 days.
 - [Azure ATP Set up](install-atp-step1.md) Follow these steps to deploy Azure ATP in your environment.
 - [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md)
 

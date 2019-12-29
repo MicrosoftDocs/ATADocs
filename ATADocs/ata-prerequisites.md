@@ -108,7 +108,7 @@ When working on a physical server, the ATA database necessitates that you **disa
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
-For Windows Operating systems 2008R2 and 2012, Gateway is not supported in a [Multi Processor Group](https://docs.microsoft.com/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
+For Windows Operating systems 2008R2 and 2012, Gateway is not supported in a [Multi Processor Group](https://docs.microsoft.com/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-ata-known-errors.md#multi-processor-group-mode). 
 
 ### Time synchronization
 

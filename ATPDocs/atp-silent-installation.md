@@ -84,6 +84,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 > 
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
+> |InstallationPath|InstallationPath=""|No|Sets the path for the installation of AATP Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
 > |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP instance.|
 
 **Examples**:

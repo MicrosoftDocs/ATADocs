@@ -80,8 +80,8 @@ To check that ATA is up and running and catching breaches in your network, you c
 
 
 ## See Also
-- [ATA POC deployment guide](http://aka.ms/atapoc)
-- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA POC deployment guide](https://aka.ms/atapoc)
+- [ATA sizing tool](https://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)

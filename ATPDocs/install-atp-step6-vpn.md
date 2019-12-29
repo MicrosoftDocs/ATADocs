@@ -84,7 +84,7 @@ After this is enabled, all Azure ATP sensors listen on port 1813 for RADIUS acco
 
 
 ## See Also
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
+- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

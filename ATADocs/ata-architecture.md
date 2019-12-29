@@ -186,7 +186,7 @@ To enhance ATA detection of Pass-the-Hash, Brute Force, Modification to sensitiv
 
 ## See Also
 - [ATA prerequisites](ata-prerequisites.md)
-- [ATA sizing tool](http://aka.ms/atasizingtool)
+- [ATA sizing tool](https://aka.ms/atasizingtool)
 - [ATA capacity planning](ata-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-collection.md)

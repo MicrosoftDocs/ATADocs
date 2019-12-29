@@ -52,7 +52,7 @@ When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentica
 
 
 ## See Also
-- [Azure ATP sizing tool](http://aka.ms/aatpsizingtool)
+- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
 - [Azure ATP SIEM log reference](cef-format-sa.md)
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

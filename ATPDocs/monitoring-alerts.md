@@ -7,7 +7,7 @@ keywords:
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -64,7 +64,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|An Azure ATP sensor is outdated.|An Azure ATP sensor is running a version that is three or more versions out of date.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the Azure ATP sensor](install-atp-step4.md).|Medium|
+|An Azure ATP sensor is outdated.|An Azure ATP sensor is running a version that cannot communicate with the Azure ATP cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the Azure ATP sensor](install-atp-step4.md).|Medium|
 
 ## Sensor reached a memory resource limit
 
