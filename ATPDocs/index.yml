@@ -2,7 +2,6 @@
 
 title: Azure Advanced Threat Protection documentation 
 summary: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
-
 metadata:
   title: Azure Advanced Threat Protection documentation
   description: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
@@ -105,4 +104,3 @@ landingContent:
             url: atp-resources.md
           - text: Azure ATP data security and privacy 
             url: atp-privacy-compliance.md
-
