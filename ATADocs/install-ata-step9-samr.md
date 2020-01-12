@@ -4,8 +4,8 @@
 title: Configure SAM-R to enable lateral movement path detection in Advanced Threat Analytics | Microsoft Docs
 description: Describes how to configure SAM-R to enable lateral movement path detection in Advanced Threat Analytics (ATA)
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/08/2019
 ms.topic: conceptual

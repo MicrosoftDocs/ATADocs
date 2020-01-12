@@ -4,8 +4,8 @@
 title: ATA event ID reference | Microsoft Docs 
 description: Provides a list of ATA events IDs and their descriptions. 
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 12/20/2018
 ms.topic: conceptual

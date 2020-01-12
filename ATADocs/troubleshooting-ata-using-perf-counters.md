@@ -4,8 +4,8 @@
 title: Troubleshooting Advanced Threat Analytics with performance counters | Microsoft Docs
 description: Describes how you can use performance counters to troubleshoot issues with ATA
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 9/25/2018
 ms.topic: conceptual

@@ -4,8 +4,8 @@
 title: Manage Advanced Threat Analytics system-generated logs| Microsoft Docs
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 8/19/2018
 ms.topic: article

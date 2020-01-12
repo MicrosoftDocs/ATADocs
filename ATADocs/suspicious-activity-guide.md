@@ -4,8 +4,8 @@
 title: ATA suspicious activity guide | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 04/03/2019
 ms.topic: conceptual

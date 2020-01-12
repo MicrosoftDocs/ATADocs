@@ -4,8 +4,8 @@
 title: Advanced Threat Analytics update to 1.9.1 migration guide | Microsoft Docs
 description: Procedure to update ATA to version 1.9.1
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 12/10/2018
 ms.topic: conceptual
