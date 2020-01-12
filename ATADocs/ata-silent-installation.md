@@ -4,8 +4,8 @@
 title: Install Advanced Threat Analytics silently | Microsoft Docs
 description: This article describes how to silently install ATA.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/15/2019
 ms.topic: conceptual
