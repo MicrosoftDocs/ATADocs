@@ -4,8 +4,8 @@
 title: Advanced Threat Analytics prerequisites | Microsoft Docs
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/05/2019
 ms.topic: conceptual

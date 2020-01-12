@@ -4,8 +4,8 @@
 title: Export and Import Advanced Threat Analytics Configuration | Microsoft Docs
 description: How to export and import the ATA configuration.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 9/04/2018
 ms.topic: conceptual

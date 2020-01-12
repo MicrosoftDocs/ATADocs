@@ -4,8 +4,8 @@
 title: Install Advanced Threat Analytics - Step 6 | Microsoft Docs
 description: In this step of installing ATA, you configure data sources.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/08/2019
 ms.topic: conceptual

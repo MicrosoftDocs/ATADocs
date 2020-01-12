@@ -4,8 +4,8 @@
 title: Install Advanced Threat Analytics - Step 1 | Microsoft Docs
 description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 03/07/2019
 ms.topic: conceptual

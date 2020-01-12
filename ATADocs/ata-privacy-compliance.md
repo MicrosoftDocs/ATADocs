@@ -4,8 +4,8 @@
 title: Advanced Threat Analytics personal data policy| Microsoft Docs
 description: Provides links to information about how to delete private information and personal data from ATA.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 9/27/2018
 ms.topic: conceptual

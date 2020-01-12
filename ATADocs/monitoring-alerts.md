@@ -4,8 +4,8 @@
 title: Understanding ATA monitoring alerts | Microsoft Docs
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 02/20/2019
 ms.topic: conceptual
