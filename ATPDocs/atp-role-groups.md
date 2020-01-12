@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection role groups for access management | Microsoft Docs
 description: Walks you through working with Azure ATP role groups.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/29/2018
 ms.topic: conceptual

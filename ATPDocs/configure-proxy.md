@@ -4,8 +4,8 @@
 title: Configure your proxy or firewall to enable Azure ATP communication with the sensor | Microsoft Docs
 description: Describes how to set up your firewall or proxy to allow communication between the Azure ATP cloud service and Azure ATP sensors
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/23/2019
 ms.topic: conceptual

@@ -4,8 +4,8 @@
 title: Configure Port Mirroring when deploying Azure Advanced Threat Protection | Microsoft Docs
 description: Describes port mirroring options and how to configure them for Azure ATP
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/4/2018
 ms.topic: conceptual

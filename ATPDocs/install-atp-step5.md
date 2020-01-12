@@ -3,8 +3,8 @@
 
 title: Configure Azure ATP sensor settings conceptual | Microsoft Docs
 description: Step five of installing Azure ATP helps you configure settings for your Azure ATP standalone sensor.
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

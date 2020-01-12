@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection for US Government GCC Highs | Microsoft Docs
 description: This article provides an overview of Azure ATP's US Government for GCC High offering.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/31/2019
 ms.topic: conceptual

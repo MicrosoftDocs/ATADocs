@@ -5,8 +5,8 @@ title: Azure ATP Security Alert lab tutorial overview | Microsoft Docs
 description: This tutorial overview describes the four parts of the Azure ATP Security Alert lab for simulating threats for detection by Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 02/28/2019
 
 # optional metadata

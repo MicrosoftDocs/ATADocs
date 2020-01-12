@@ -4,8 +4,8 @@
 title: Azure ATP SIEM log reference | Microsoft Docs 
 description: Provides samples of suspicious activity logs sent from Azure ATP to your SIEM. 
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 07/25/2019
 ms.topic: conceptual

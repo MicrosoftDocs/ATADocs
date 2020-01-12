@@ -4,8 +4,8 @@
 title: Advanced Threat Analytics to Azure Advanced Threat Protection move  | Microsoft Docs
 description: Learn how to move an existing Advanced Threat Analytics installation to Azure ATP.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/16/2019
 ms.topic: conceptual

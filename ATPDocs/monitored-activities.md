@@ -4,8 +4,8 @@
 title: Azure ATP monitored domain activities | Microsoft Docs
 description: Describes each activity type monitored by Azure Advanced Threat Protection
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: conceptual

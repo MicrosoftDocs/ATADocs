@@ -4,8 +4,8 @@
 title: Working with Azure ATP Reports | Microsoft Docs
 description: Describes how you can generate reports in Azure ATP to monitor your network.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/26/2018
 ms.topic: conceptual

@@ -3,8 +3,8 @@
 
 title: Connect Azure ATP to Active Directory quickstart | Microsoft Docs
 description: Step two of installing Azure ATP helps you configure the domain connectivity settings on your Azure ATP cloud service
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 02/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
