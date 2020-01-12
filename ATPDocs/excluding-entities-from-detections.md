@@ -4,8 +4,8 @@
 title: Excluding entities from detections in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to stop Azure ATP from detecting specific entity activities as suspicious
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/11/2018
 ms.topic: conceptual

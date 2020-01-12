@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection prerequisites | Microsoft Docs
 description: Describes the requirements for a successful deployment of Azure ATP in your environment
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/05/2019
 ms.topic: conceptual

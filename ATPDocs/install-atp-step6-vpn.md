@@ -4,8 +4,8 @@
 title: Install Azure Advanced Threat Protection VPN Integration| Microsoft Docs
 description: Collect accounting information for Azure ATP by integrating a VPN.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/04/2018
 ms.topic: conceptual

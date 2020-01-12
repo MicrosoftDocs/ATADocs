@@ -4,8 +4,8 @@
 title: Configure SAM-R to enable lateral movement path detection in Azure ATP | Microsoft Docs
 description: Explains how to configure Azure ATP to make remote calls to SAM
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 05/16/2019
 ms.topic: conceptual

@@ -4,8 +4,8 @@
 title: Azure ATP reconnaissance phase security alerts | Microsoft Docs
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of reconnaissance phase efforts are detected against your organization. 
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 05/30/2019
 ms.topic: tutorial

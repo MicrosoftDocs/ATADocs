@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection frequently asked questions | Microsoft Docs
 description: Provides a list of frequently asked questions about Azure ATP and the associated answers
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/16/2019
 ms.topic: conceptual

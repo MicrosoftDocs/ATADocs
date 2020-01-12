@@ -4,8 +4,8 @@
 title: Install Azure Advanced Threat Protection Silently | Microsoft Docs
 description: This describes how to silently install Azure ATP.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/26/2019
 ms.topic: conceptual

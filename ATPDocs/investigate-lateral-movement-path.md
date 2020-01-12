@@ -4,8 +4,8 @@
 title: Investigating lateral movement paths with Azure ATP | Microsoft Docs
 description: This article describes how to detect and investigate potential lateral movement path attacks with Azure Advanced Threat Protection (ATP).
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: tutorial

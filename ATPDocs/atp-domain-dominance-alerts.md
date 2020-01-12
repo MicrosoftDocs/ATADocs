@@ -4,8 +4,8 @@
 title: Azure ATP domain dominance security alerts | Microsoft Docs
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of domain dominance phase efforts are detected against your organization.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 08/26/2019
 ms.topic: tutorial

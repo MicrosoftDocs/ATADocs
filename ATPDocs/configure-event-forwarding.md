@@ -4,8 +4,8 @@
 title: Configure Windows Event Forwarding in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes your options for configuring Windows Event Forwarding with Azure ATP
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/29/2018
 ms.topic: conceptual

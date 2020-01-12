@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection Advanced Audit Policy check | Microsoft Docs
 description: This article provides an overview of Azure ATP's Advanced Audit Policy check.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 04/07/2019
 ms.topic: conceptual

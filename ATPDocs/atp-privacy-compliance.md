@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection personal data policy| Microsoft Docs
 description: Provides links to information about how to delete private information and personal data from Azure ATP.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/31/2019
 ms.topic: conceptual

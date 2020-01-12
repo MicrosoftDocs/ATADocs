@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection architecture | Microsoft Docs
 description: Describes the architecture of Azure Advanced Threat Analytics (ATP)
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/23/2019
 ms.topic: article

@@ -3,8 +3,8 @@
 title: Azure Advanced Threat Protection Network Name Resolution | Microsoft Docs
 description: This article provides an overview of Azure ATP's Advanced Network Name Resolution functionality and uses.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/22/2019
 ms.topic: conceptual

@@ -3,8 +3,8 @@
 
 title: Install Azure ATP sensor quickstart | Microsoft Docs
 description: Step four of installing Azure ATP helps you to install the Azure ATP sensor.
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance

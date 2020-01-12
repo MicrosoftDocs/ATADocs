@@ -4,8 +4,8 @@
 title: Azure ATP security alert guide | Microsoft Docs
 d|Description: This article provides a list of the security alerts issued by Azure ATP.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: conceptual

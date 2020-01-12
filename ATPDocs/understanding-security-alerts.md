@@ -4,8 +4,8 @@
 title: Azure ATP security alert tutorial | Microsoft Docs
 d|Description: This article explains how to use and understand Azure ATP security alerts.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/13/2019
 ms.topic: tutorial

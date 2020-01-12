@@ -4,8 +4,8 @@
 title: Azure ATP Known Issues | Microsoft Docs
 description: Describes current Known Issues in Azure ATP
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 02/25/2019
 ms.topic: conceptual

@@ -4,8 +4,8 @@
 title: What is Azure Advanced Threat Protection (Azure ATP)? | Microsoft Docs
 description: Explains what Azure Advanced Threat Protection (Azure ATP) is and what kinds of suspicious activities it can detect
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 05/07/2019
 ms.topic: article

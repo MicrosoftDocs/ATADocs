@@ -5,8 +5,8 @@ title: Azure ATP Domain Dominance Playbook | Microsoft Docs
 description: The Azure ATP domain dominance playbook describes how to simulate domain dominance attacks for detection by Azure ATP
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 02/28/2019
 
 # optional metadata

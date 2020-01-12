@@ -4,8 +4,8 @@
 title: Azure ATP compromised credentials phase security alerts | Microsoft Docs
 d|Description: This article explains the Azure ATP alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/19/2019
 ms.topic: tutorial

@@ -4,8 +4,8 @@
 title: Understanding the Azure Advanced Threat Protection portal | Microsoft Docs
 description: Describes how to log into the Azure ATP portal and the components of the portal
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/05/2019
 ms.topic: conceptual
