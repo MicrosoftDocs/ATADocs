@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection clear text exposure assessment | Microsoft Docs
 description: This article provides an overview of Azure ATP's clear text exposure identity security posture assessment report.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 07/08/2019
 ms.topic: conceptual

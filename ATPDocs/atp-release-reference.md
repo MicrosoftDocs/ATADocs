@@ -4,8 +4,8 @@
 title: Reference of older releases in Azure Advanced Threat Protection (Azure ATP) | Microsoft Docs
 description: This article is a reference of previous releases updates to Azure Advanced Threat Protection (Azure ATP).
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 11/17/2019
 ms.topic: reference

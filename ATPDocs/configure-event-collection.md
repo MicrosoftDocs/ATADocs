@@ -4,8 +4,8 @@
 title: Install Azure Advanced Threat Protection | Microsoft Docs
 description: In this step of installing ATP, you configure data sources.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/23/2019
 ms.topic: conceptual

@@ -4,8 +4,8 @@
 title: Azure ATP computer investigation tutorial | Microsoft Docs
 d|Description: This article explains how to use Azure ATP security alerts to investigate a suspicious computer.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance

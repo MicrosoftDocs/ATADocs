@@ -4,8 +4,8 @@
 title: Working with security alerts in Azure Advanced Threat Protection | Microsoft Docs
 description: Describes how to review security alerts issued by Azure ATP
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: article

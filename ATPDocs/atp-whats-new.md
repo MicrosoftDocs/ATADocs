@@ -4,8 +4,8 @@
 title: What's new in Azure Advanced Threat Protection (Azure ATP) | Microsoft Docs
 description: This article is updated frequently to let you know what's new in the latest release of Azure Advanced Threat Protection (Azure ATP).
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 01/12/2020
 ms.topic: conceptual

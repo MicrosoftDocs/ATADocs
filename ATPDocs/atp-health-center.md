@@ -4,8 +4,8 @@
 title: Monitor Azure Advanced Threat Protection System Health and Events | Microsoft Docs
 description: Use the Azure ATP health center to check how the Azure ATP service is working and be alerted to potential problems and view system events in the Event viewer.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/3/2019
 ms.topic: conceptual

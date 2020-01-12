@@ -4,8 +4,8 @@
 title: List of helpful resources for Azure Advanced Threat Protection | Microsoft Docs
 description: This article provides a list of helpful resources for Azure ATP 
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/24/2019
 ms.topic: conceptual

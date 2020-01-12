@@ -4,8 +4,8 @@
 title: Create your Azure ATP instance quickstart | Microsoft Docs
 description: Quickstart for creating the instance for your Azure ATP deployment which is the first step to install Azure ATP.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 ms.date: 10/31/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance

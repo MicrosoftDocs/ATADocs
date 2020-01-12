@@ -4,8 +4,8 @@
 title: Configure Windows Event collection Azure Advanced Threat Protection | Microsoft Docs
 description: In this step of installing ATP, you configure Windows Event collection.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/07/2019
 ms.topic: conceptual

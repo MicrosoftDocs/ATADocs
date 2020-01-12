@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection integration with Windows Defender ATP | Microsoft Docs
 description: How to integrate Azure Advanced Threat Protection with Windows Defender ATP for full threat detection coverage
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/18/2018
 ms.topic: conceptual

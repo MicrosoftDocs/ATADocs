@@ -4,8 +4,8 @@
 title: Azure ATP support | Microsoft Docs
 description: Describes the process for getting support help for Azure ATP.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 1/27/2019
 ms.topic: conceptual

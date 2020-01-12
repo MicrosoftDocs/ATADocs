@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection configure detection exclusions and honeytoken accounts  | Microsoft Docs
 description: Configuration of detection exclusions and honeytoken user accounts.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 10/22/2019
 ms.topic: conceptual

@@ -4,8 +4,8 @@
 title: Update your Azure ATP sensors | Microsoft Docs
 description: Describes how to update and delay update of sensors in Azure ATP.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 12/24/2019
 ms.topic: conceptual

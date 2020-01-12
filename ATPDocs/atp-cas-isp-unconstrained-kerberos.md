@@ -4,8 +4,8 @@
 title: Azure Advanced Threat Protection unconstrained Kerberos identity security posture assessment | Microsoft Docs
 description: This article provides an overview of Azure ATP's unconstrained Kerberos identity security posture assessment reports.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 09/15/2019
 ms.topic: conceptual

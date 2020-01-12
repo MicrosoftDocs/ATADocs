@@ -4,8 +4,8 @@
 title: Azure ATP exfiltration alerts tutorial | Microsoft Docs
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
 keywords:
-author: mlottner
-ms.author: mlottner
+author: shsagir
+ms.author: shsagir
 manager: rkarlin
 ms.date: 02/11/2019
 ms.topic: tutorial
