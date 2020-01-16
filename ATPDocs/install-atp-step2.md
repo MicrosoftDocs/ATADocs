@@ -43,7 +43,7 @@ In this quickstart, you'll connect Azure ATP to Active Directory (AD) to retriev
 ### How to set up a gMSA account
 
 1. Create a [gMSA account](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
-1. Create a new [security group containing all your domain controllers with sensors (running Windows Server 2012 or above)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#to-add-member-hosts-using-the-set-adserviceaccount-cmdlet) with permissions to retrieve the gMSA account's password. (Recommended)
+1. Create a new [security group containing all your domain controllers with sensors (running Windows Server 2012 or above)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_AddMemberHosts) with permissions to retrieve the gMSA account's password. (Recommended)
 
 ## Provide a username and password to connect to your Active Directory Forest
 
