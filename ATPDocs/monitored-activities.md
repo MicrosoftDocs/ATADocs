@@ -61,6 +61,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Account Supported Encryption Types Changed |Kerberos supported encryption types were changed (types: Des, AES 129, AES 256)|
 |Account Upn Name Changed  |User's principle name was changed.|
 |Group Membership Changed  |User was added/removed, to/from a group, by another user or by themselves.|
+|SID-History Changed|Account's SID-History attribute was changed.|
 |User Mail Changed|Users email attribute was changed.|
 |User Manager Changed|User's manager attribute was changed.|
 |User Phone Number Changed|User's phone number attribute was changed.|

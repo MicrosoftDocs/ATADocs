@@ -33,6 +33,13 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## Azure ATP release 2.106
+
+Released Jan 19, 2020
+
+- **New monitored activity: SID history change**  
+SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
+
 ## Azure ATP release 2.105
 
 Released Jan 12, 2020
