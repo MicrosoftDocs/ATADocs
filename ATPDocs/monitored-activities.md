@@ -64,7 +64,9 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |User Phone Number Changed|User's phone number attribute was changed.|
 |User Title Changed|User's title attribute was changed.|
 
-<!--|SID-History Changed|Account's SID-History attribute was changed.|-->
+<!-- Rollback
+|SID-History Changed|Account's SID-History attribute was changed.|
+-->
 
 ## Monitored user activities: AD security principal operations
 
