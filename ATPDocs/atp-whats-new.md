@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/12/2020
+ms.date: 01/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -32,6 +32,21 @@ This article is updated frequently to let you know what's new in the latest rele
 For details of earlier Azure ATP releases until (and including) release 2.55, see the [Azure ATP release reference](atp-release-reference.md).
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+<!-- Rollback
+## Azure ATP release 2.107
+
+Released Jan 26, 2020
+
+- **New monitored activity: SID history change**  
+SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
+-->
+
+## Azure ATP release 2.106
+
+Released Jan 19, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.105
 
