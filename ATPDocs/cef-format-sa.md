@@ -43,7 +43,7 @@ The following fields and their values are forwarded to your SIEM:
 |msg|description of the alert|
 |cnt|for alerts that have a count of the number of times that activity happened (for example, brute force has an amount of guessed passwords)|
 |app |protocol used in this alert|
-|externalId|event type ID Azure ATP writes to the event log that corresponds to each type of alert|
+|externalId|event type ID Azure ATP writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Cloud App Security, this field is populated with the corresponding Cloud App Security alert ID.|
 |cs#label|customer strings allowed by CEF, where cs#label is the name of the new field |
 |cs#|customer strings allowed by CEF, where cs# is the value.|
 
