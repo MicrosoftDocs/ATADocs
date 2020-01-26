@@ -6,7 +6,7 @@ description: Explains the different support options for Microsoft Advanced Threa
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 01/26/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -26,17 +26,11 @@ ms.suite: ems
 ---
 # Support for Microsoft Advanced Threat Analytics (ATA) versions
 
-
 *Applies to: Advanced Threat Analytics version 1.9*
 
-Microsoft ATA updates a few times a year with each update version supported for 12 months from its general availability (GA) release date. Technical support is provided for the entire 12 months. However, our support structure is now dynamic, evolving into two distinct servicing phases that depend on the availability of the latest version.
+Microsoft ATA support is defined by the Microsoft Lifecycle Policy for [ATA 1.x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X), with mainstream support ending on January 12, 2021.
 
--	Security and Critical Updates servicing phase - When running the latest version of ATA, you receive both Security and Critical updates.
-
--	Security Updates (Only) servicing phase - After a new ATA version is released, support for older versions will be reduced to Security updates only, for the remainder of the 12-month support lifecycle (shown in the following example of versions servicing support).
- 
-> [!Note]
-> The latest ATA version is always in the Security and Critical Updates servicing phase. This means that if you encounter a code defect that warrants a critical update, you must have the latest current branch version installed to receive a fix. All other supported versions are only eligible to receive security updates. All support ends after the 12-month lifecycle for a version has expired. At that time, customers must update to a supported version.
+ATA updates a few times a year with each update version supported for 12 months from its general availability (GA) release date, or 6 months after a newer update is available.
 
 ## Version History
 
@@ -53,9 +47,8 @@ Microsoft ATA updates a few times a year with each update version supported for 
 |1.8.1|1.8.6765|02-AUG-2017|02-AUG-2018|
 |1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
-|1.9.2|1.9.7478|28-MAR-2019|28-MAR-2020|
-
-
+|1.9.2|1.9.7478|28-MAR-2019||
 
 ## See Also
+
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
