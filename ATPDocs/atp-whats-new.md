@@ -41,7 +41,7 @@ Released Jan 26, 2020
     SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
 
 - **Feature enhancement: Closed or suppressed alerts are no longer reopened**  
-    Once an alert is closed or suppressed in the Azure ATP portal, if the same activity is detected again within a short period of time, a new alert is triggered. Previously, under the same conditions, the alert was reopened.
+    Once an alert is closed or suppressed in the Azure ATP portal, if the same activity is detected again within a short period of time, a new alert is opened. Previously, under the same conditions, the alert was reopened.
 
 ## Azure ATP release 2.106
 
