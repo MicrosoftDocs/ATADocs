@@ -122,9 +122,6 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 - **Close**: Is used to track security alerts that you identified, researched, and fixed for mitigated.
 
-    > [!NOTE]
-    > If the same activity is detected again within a short period of time, Azure ATP may reopen a closed alert.
-
 - **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, a new alert is opened.
 
 - **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all security alerts of the same type.
