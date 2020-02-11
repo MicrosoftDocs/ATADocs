@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/26/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -35,13 +35,16 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 ## Azure ATP release 2.107
 
-Released Jan 26, 2020
+Released Feb 3, 2020
 
 - **New monitored activity: SID history change**  
     SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
 
 - **Feature enhancement: Closed or suppressed alerts are no longer reopened**  
     Once an alert is closed or suppressed in the Azure ATP portal, if the same activity is detected again within a short period of time, a new alert is opened. Previously, under the same conditions, the alert was reopened.
+
+- **TLS 1.2 required for portal access and sensors**  
+    TLS 1.2 is now required to use Azure ATP sensors and the cloud service. Access to the Azure ATP portal will no longer be possible using browsers that do not support TLS 1.2.
 
 ## Azure ATP release 2.106
 

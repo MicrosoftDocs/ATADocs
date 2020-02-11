@@ -75,9 +75,10 @@ This section lists information you should gather as well as accounts and network
 
 Access to the Azure ATP portal is via a browser, supporting the following browsers and settings:
 
-- Microsoft Edge
-- Internet Explorer version 10 and above
-- Google Chrome 4.0 and above
+- A browser that supports TLS 1.2, such as:
+    - Microsoft Edge
+    - Internet Explorer version 11 and above
+    - Google Chrome 30.0 and above
 - Minimum screen width resolution of 1700 pixels
 - Firewall/proxy open - To communicate with the Azure ATP cloud service, *.atp.azure.com port 443 must be open in your firewall/proxy.
 
