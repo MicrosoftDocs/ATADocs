@@ -38,7 +38,7 @@ In this quickstart, you'll connect Azure ATP to Active Directory (AD) to retriev
     > [!NOTE]
     >
     > - For sensor machines running Windows Server 2012 and above, we recommend using a **gMSA** account for its improved security and automatic password management.
-    > - If you have multiple sensors, some running Windows Server 2008 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must use at least one **standard** AD user account.
+    > - If you have multiple sensors, some running Windows Server 2008 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must also use at least one **standard** AD user account.
 
 ### How to set up a gMSA account
 
