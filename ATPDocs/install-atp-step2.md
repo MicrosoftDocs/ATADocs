@@ -33,16 +33,16 @@ In this quickstart, you'll connect Azure ATP to Active Directory (AD) to retriev
 - At least one of the following directory services accounts with read access to all objects in the monitored domains:
   - A **standard** AD user account and password. Required for sensors running Windows Server 2008 R2 SP1.
   - A **group Managed Service Account** (gMSA). Requires Windows Server 2012 or above.  
-  All sensors must have permissions to the retrieve the gMSA account's password. For information about creating a gMSA account, see [Set up a gMSA account](#how-to-set-up-a-gmsa-account).
+  All sensors must have permissions to retrieve the gMSA account's password. For information about creating a gMSA account, see [Set up a gMSA account](#how-to-set-up-a-gmsa-account).
 
     > [!NOTE]
     >
-    > - For sensor machines running Windows Server 2012 and above, we recommend using a gMSA account for improved security.
-    > - If you have multiple sensors, some running Windows Server 2008 and others running Windows Server 2012 or above, in addition to the recommended gMSA account, you must have at least one **standard** AD user account.
+    > - For sensor machines running Windows Server 2012 and above, we recommend using a **gMSA** account for its improved security and automatic password management.
+    > - If you have multiple sensors, some running Windows Server 2008 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must use at least one **standard** AD user account.
 
 ### How to set up a gMSA account
 
-1. Create a [gMSA account](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
+1. Create a [gMSA account](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
 1. Create a new [security group containing all your domain controllers with sensors (running Windows Server 2012 or above)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_AddMemberHosts) with permissions to retrieve the gMSA account's password. (Recommended)
 
 ## Provide a username and password to connect to your Active Directory Forest

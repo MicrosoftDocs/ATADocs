@@ -56,10 +56,24 @@ This section lists information you should gather as well as accounts and network
 
 - Verify the domain controller(s) you intend to install Azure ATP sensors on have internet connectivity to the Azure ATP Cloud Service. The Azure ATP sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for Azure ATP](configure-proxy.md).
 
-- An **on-premises** AD user account and password with read access to all objects in the monitored domains.
+- At least one of the following directory services accounts with read access to all objects in the monitored domains:
+  - A **standard** AD user account and password. Required for sensors running Windows Server 2008 R2 SP1.
+  - A **group Managed Service Account** (gMSA). Requires Windows Server 2012 or above.  
+  All sensors must have permissions to retrieve the gMSA account's password. For information about creating a gMSA account, see [Set up a gMSA account](#how-to-set-up-a-gmsa-account).  
+  To learn about gMSA accounts, see [Getting Started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
+
+    The following table shows which AD user accounts can be used with which server versions:
+
+    |Account type|Windows Server 2008 R2 SP1|Windows Server 2012 or above|
+    |---|---|---|
+    |**Standard** AD user account|Yes|Yes|
+    |**gMSA** account|No|Yes|
 
     > [!NOTE]
-    > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
+    >
+    > - For sensor machines running Windows Server 2012 and above, we recommend using a **gMSA** account for its improved security and automatic password management.
+    > - If you have multiple sensors, some running Windows Server 2008 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must use at least one **standard** AD user account.
+    > - If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
 - If you run Wireshark on Azure ATP standalone sensor, restart the Azure Advanced Threat Protection sensor service after you've stopped the Wireshark capture. If you don't restart the sensor service, the sensor stops capturing traffic.
 
@@ -76,9 +90,9 @@ This section lists information you should gather as well as accounts and network
 Access to the Azure ATP portal is via a browser, supporting the following browsers and settings:
 
 - A browser that supports TLS 1.2, such as:
-    - Microsoft Edge
-    - Internet Explorer version 11 and above
-    - Google Chrome 30.0 and above
+  - Microsoft Edge
+  - Internet Explorer version 11 and above
+  - Google Chrome 30.0 and above
 - Minimum screen width resolution of 1700 pixels
 - Firewall/proxy open - To communicate with the Azure ATP cloud service, *.atp.azure.com port 443 must be open in your firewall/proxy.
 
