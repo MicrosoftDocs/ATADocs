@@ -59,7 +59,7 @@ This section lists information you should gather as well as accounts and network
 - At least one of the following directory services accounts with read access to all objects in the monitored domains:
   - A **standard** AD user account and password. Required for sensors running Windows Server 2008 R2 SP1.
   - A **group Managed Service Account** (gMSA). Requires Windows Server 2012 or above.  
-  All sensors must have permissions to retrieve the gMSA account's password. For information about creating a gMSA account, see [Set up a gMSA account](#how-to-set-up-a-gmsa-account).  
+  All sensors must have permissions to retrieve the gMSA account's password.  
   To learn about gMSA accounts, see [Getting Started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
 
     The following table shows which AD user accounts can be used with which server versions:
