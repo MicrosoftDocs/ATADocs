@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/03/2020
+ms.date: 02/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -33,18 +33,31 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## Azure ATP release 2.108
+
+Released Feb 9, 2020
+
+- **New feature: Support for group Managed Service Accounts**  
+Azure ATP now supports using group Managed Service Accounts (gMSA) for improved security when connecting Azure ATP sensors to your Azure Active Directory (AD) forests. For more information about using gMSA with Azure ATP sensors, see [Connect to your Active Directory Forest](install-atp-step2.md#prerequisites).
+
+- **Feature enhancement: Scheduled report with too much data**  
+When a scheduled report has too much data, the email now informs you of the fact by displaying the following text: There was too much data during the specified period to generate a report. This replaces the previous behavior of only discovering the fact after clicking the report link in the email.
+
+- **Feature enhancement: Updated domain controller coverage logic**  
+We’ve updated our domain controller coverage report logic to include additional information from Azure AD, resulting in a more accurate view of domain controllers without sensors on them. This new logic should also have a positive affect on the corresponding Microsoft Secure Score.
+
 ## Azure ATP release 2.107
 
 Released Feb 3, 2020
 
 - **New monitored activity: SID history change**  
-    SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
+SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
 
 - **Feature enhancement: Closed or suppressed alerts are no longer reopened**  
-    Once an alert is closed or suppressed in the Azure ATP portal, if the same activity is detected again within a short period of time, a new alert is opened. Previously, under the same conditions, the alert was reopened.
+Once an alert is closed or suppressed in the Azure ATP portal, if the same activity is detected again within a short period of time, a new alert is opened. Previously, under the same conditions, the alert was reopened.
 
 - **TLS 1.2 required for portal access and sensors**  
-    TLS 1.2 is now required to use Azure ATP sensors and the cloud service. Access to the Azure ATP portal will no longer be possible using browsers that do not support TLS 1.2.
+TLS 1.2 is now required to use Azure ATP sensors and the cloud service. Access to the Azure ATP portal will no longer be possible using browsers that do not support TLS 1.2.
 
 ## Azure ATP release 2.106
 
@@ -63,13 +76,13 @@ Released Jan 12, 2020
 Released Dec 23, 2019
 
 - **Sensor version expirations eliminated**  
-    Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they are older than our max number of lapsed versions.
+Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they are older than our max number of lapsed versions.
 
 - **Confirm compromise**  
-    You can now confirm compromise of specific Office 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Cloud App Security.
+You can now confirm compromise of specific Office 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Cloud App Security.
 
 - **New experience banner**  
-    On Azure ATP portal pages where a new experience is available in the Cloud App Security portal, new banners are displayed describing what's available with access links.
+On Azure ATP portal pages where a new experience is available in the Cloud App Security portal, new banners are displayed describing what's available with access links.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -102,7 +115,7 @@ Released Nov 17, 2019
 Released November 3, 2019
 
 - **Feature enhancement:  Added user interface notification of Cloud App Security portal availability to the Azure ATP portal**  
-    Ensuring all users are aware of the availability of the enhanced features available using the Cloud App Security portal, notification was added for the portal from the existing Azure ATP alert timeline.
+Ensuring all users are aware of the availability of the enhanced features available using the Cloud App Security portal, notification was added for the portal from the existing Azure ATP alert timeline.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -111,7 +124,7 @@ Released November 3, 2019
 Released October 27, 2019
 
 - **Feature enhancement: Suspected brute force attack alert**  
-    Improved the [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) alert using additional analysis, and improved detection logic to reduce **benign true positive (B-TP)** and **false positive (FP)** alert results.
+Improved the [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) alert using additional analysis, and improved detection logic to reduce **benign true positive (B-TP)** and **false positive (FP)** alert results.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
