@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Understanding Azure ATP monitoring alerts | Microsoft Docs
+title: Understanding Azure ATP health alerts
 description: Describes how you can use the Azure ATP logs to troubleshoot issues
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/24/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -26,9 +26,9 @@ ms.suite: ems
 
 ---
 
-# Understanding Azure ATP sensor and standalone sensor monitoring alerts
+# Understanding Azure ATP sensor and standalone sensor health alerts
 
-The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a monitoring alert. This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
+The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
 ## All domain controllers are unreachable by a sensor
 
@@ -41,6 +41,12 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
 |All/Some of the selected capture network adapters on the Azure ATP sensor are disabled or disconnected.|Network traffic for some/all of the domain controllers is no longer captured by the Azure ATP sensor. This impacts the ability to detect suspicious activities, related to those domain controllers.|Make sure these selected capture network adapters on the Azure ATP sensor are enabled and connected.|Medium|
+
+## Directory services user credentials are incorrect
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|The credentials for the directory services user account are incorrect.|This impacts sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Connect to your Active Directory Forest](install-atp-step2.md#prerequisites) page.|Medium|
 
 ## No traffic received from domain controller
 
