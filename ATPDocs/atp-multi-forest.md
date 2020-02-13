@@ -43,7 +43,7 @@ The ability to support multiple Active Directory forests enables the following:
 
 To detect cross-forest activities, Azure ATP sensors query domain controllers in remote forests to create profiles for all entities involved, (including users and computers from remote forests).
 
-- Azure ATP sensors can be installed on Domain Controllers in all forests, even forests with no trust.
+- Azure ATP sensors can be installed on domain controllers in all forests, even forests with no trust.
 - Add additional credentials on the Directory services page to support any untrusted forests in your environment.
     - Only one credential is required to support all forests with a two-way trust.
     - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
