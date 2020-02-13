@@ -38,7 +38,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 Released Feb 9, 2020
 
 - **New feature: Support for group Managed Service Accounts**  
-Azure ATP now supports using group Managed Service Accounts (gMSA) for improved security when connecting Azure ATP sensors to your Azure Active Directory (AD) forests, alongside your existing **standard** AD account. For more information about using gMSA with Azure ATP sensors, see [Connect to your Active Directory Forest](install-atp-step2.md#prerequisites).
+Azure ATP now supports using group Managed Service Accounts (gMSA) for improved security when connecting Azure ATP sensors to your Azure Active Directory (AD) forests. For more information about using gMSA with Azure ATP sensors, see [Connect to your Active Directory Forest](install-atp-step2.md#prerequisites).
 
 - **Feature enhancement: Scheduled report with too much data**  
 When a scheduled report has too much data, the email now informs you of the fact by displaying the following text: There was too much data during the specified period to generate a report. This replaces the previous behavior of only discovering the fact after clicking the report link in the email.
