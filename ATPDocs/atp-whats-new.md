@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/09/2020
+ms.date: 02/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -32,6 +32,13 @@ This article is updated frequently to let you know what's new in the latest rele
 For details of earlier Azure ATP releases until (and including) release 2.55, see the [Azure ATP release reference](atp-release-reference.md).
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## Azure ATP release 2.109
+
+Released Feb 16, 2020
+
+- **Feature enhancement: Sensitive entities**  
+Starting from this version (2.109), machines identified as Certificate Authority, DHCP, or DNS Servers by Azure ATP are now automatically tagged as **Sensitive**.
 
 ## Azure ATP release 2.108
 
