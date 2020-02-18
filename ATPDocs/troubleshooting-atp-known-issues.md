@@ -7,12 +7,11 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/06/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
-
 
 # optional metadata
 
@@ -25,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 
 # Troubleshooting Azure ATP Known Issues
 
@@ -52,12 +50,12 @@ The Azure ATP deployment logs are located in the temp directory of the user who 
 
 If during sensor installation you receive the following error:  **The sensor failed to register due to licensing issues.**
 
-Deployment log entries:
-[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]]
-[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]]
-[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]]
-[1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
+**Deployment log entries:**
 
+[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
+[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
+[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]  
+[1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
 
 **Cause:**
 
@@ -71,7 +69,7 @@ Ensure that the sensor can browse to *.atp.azure.com through the configured prox
 
 If during silent sensor installation you attempt to use Powershell and receive the following error:
 
-    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ...           Unexpected token '"/quiet"' in expression or statement."
+    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
 
 **Cause:**
 Failure to include the ./ prefix required to install when using Powershell causes this error.
@@ -79,7 +77,9 @@ Failure to include the ./ prefix required to install when using Powershell cause
 **Resolution:**
 Use the complete command to successfully install.
 
-    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```powershell
+./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```
 
 ## Azure ATP sensor NIC teaming issue <a name="nic-teaming"></a>
 
@@ -105,9 +105,11 @@ If you already installed the sensor:
 1. Reinstall the sensor package.
 
 ## Multi Processor Group mode
+
 For Windows Operating systems 2008R2 and 2012, Azure ATP Sensor is not supported in a Multi Processor Group mode.
 
 Suggested possible workarounds:
+
 - If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multi Processor Group** mode.
 
 - If your machine has less than 64 logical cores and is running on a HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
@@ -138,8 +140,29 @@ If LSO is enabled, use the following command to disable it:
 
 ![Disable LSO status](./media/disable-lso-vmware.png)
 
+## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
+
+If you receive the following monitoring alert: **Directory services user credentials are incorrect**
+
+**Sensor log entries:**
+
+2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]  
+2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync finished [UserName=account_name Domain=domain1.test.local IsSuccess=False]
+
+**Sensor Updater log entries:**
+
+2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync failed GMSA password could not be retrieved [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]
+
+**Cause:**
+
+The sensor failed to retrieve the designated gMSA account from the Azure ATP portal.
+
+**Resolution:**
+
+Make sure that the gMSA account's credentials are correct and that the sensor has been granted permissions to retrieve the account's credentials.
 
 ## See Also
+
 - [Azure ATP prerequisites](atp-prerequisites.md)
 - [Azure ATP capacity planning](atp-capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
