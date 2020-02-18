@@ -87,7 +87,7 @@ If you attempt to install the ATP sensor on a machine configured with a NIC Team
 
 1. Download the Npcap version 0.9984 installer from  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe).
     - Alternatively, request the OEM version of the Npcap driver (that supports silent installation) from the support team.
-    - Copies of Npcap do not count towards the five copy, five computer or fiver user licensing limitation if they are installed and used soley in conjunction with Azure ATP. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
+    - Copies of Npcap do not count towards the five copy, five computer or fiver user licensing limitation if they are installed and used solely in conjunction with Azure ATP. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 If you have not yet installed the sensor:
 
