@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 10/4/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -25,12 +25,13 @@ ms.suite: ems
 
 ---
 
-
-
 # Configure port mirroring
-> [!NOTE] 
-> This article is relevant only if you deploy Azure ATP standalone sensors instead of Azure ATP sensors. To determine if you need to use Azure ATP standalone sensors, see [Choosing the right sensors for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
- 
+
+This article is relevant only if you deploy Azure ATP standalone sensors instead of Azure ATP sensors.
+
+> [!NOTE]
+> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
+
 The main data source used by Azure ATP is deep packet inspection of the network traffic to and from your domain controllers. For Azure ATP to see the network traffic, you must either configure port mirroring, or use a Network TAP.
 
 For port mirroring, configure **port mirroring** for each domain controller to be monitored, as the **source** of the network traffic. Typically, you need to work with the networking or virtualization team to configure port mirroring.
@@ -70,11 +71,12 @@ Your domain controllers and Azure ATP standalone sensor can be either physical o
 
   > [!NOTE]
   > If your environment supports Virtual to Virtual on different hosts (RSPAN) you do not need to worry about affinity.
- 
+
 - To make sure the Azure ATP standalone sensor are properly sized to handle monitoring all of the DCs by themselves, try this option: Install a virtual machine on each virtualization host and install an Azure ATP standalone sensor on each host. Configure each Azure ATP standalone sensor to monitor all of the domain controllers  that run on the cluster. This way, any host the domain controllers run on is monitored.
 
 After configuring port mirroring, validate that port mirroring is working before installing the Azure ATP standalone sensor.
 
 ## See Also
+
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
