@@ -33,6 +33,13 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## Azure ATP release 2.110
+
+Released Feb 23, 2020
+
+- **New security assessment: Unmonitored domain controllers**  
+Azure ATP security assessments now includes a report on unmonitored domain controllers, servers without a sensor, to help you in managing full coverage of your environment. For more information, see [Unmonitored domain controllers](atp-cas-isp-unmonitored-domain-controller.md).
+
 ## Azure ATP release 2.109
 
 Released Feb 16, 2020
@@ -543,7 +550,8 @@ Released January 13, 2019
 - **New Security Alert: Data exfiltration over SMB - (preview)**  
 Azure ATP’s [Data exfiltration over SMB](atp-exfiltration-alerts.md) security alert is now in public preview. Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provide authorization to any resource.
 
-- **Feature Enhancement: Remote code execution attempt** security alert    A new alert description and additional evidence were added to help make the alert easier to understand, and provide better investigation workflows.
+- **Feature Enhancement: Remote code execution attempt** security alert  
+A new alert description and additional evidence were added to help make the alert easier to understand, and provide better investigation workflows.
 
 - **Feature Enhancement: DNS query logical activities**  
 Additional query types were added to [Azure ATP monitored activities](monitored-activities.md) including: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.
