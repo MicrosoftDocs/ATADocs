@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -25,16 +25,13 @@ ms.suite: ems
 
 ---
 
-
-
 # Change Azure ATP portal configuration - domain connectivity password
 
-
-
 ## Change the domain connectivity password
+
 If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service stops for all deployed sensors.
 
-If you suspect that this happened, on the Azure ATP standalone sensor, look at the Microsoft.Tri.sensor-Errors.log file for the following errors:
+If you suspect that this happened, look at the Microsoft.Tri.sensor-Errors.log file for the following errors:
 `The supplied credential is invalid.`
 
 Follow this procedure to update the Domain Connectivity password on the Azure ATP portal:
@@ -44,24 +41,22 @@ Follow this procedure to update the Domain Connectivity password on the Azure AT
 
 1. Open the Azure ATP portal by accessing the portal URL.
 
-2. Select the settings option on the toolbar and select **Configuration**.
+1. Select the settings option on the toolbar and select **Configuration**.
 
-   ![Azure ATP configuration settings icon](media/atp-config-menu.png)
+    ![Azure ATP configuration settings icon](media/atp-config-menu.png)
 
-3. Select **Directory Services**.
+1. Select **Directory Services**.
 
-   ![Azure ATP standalone sensor change password image](media/directory-services.png)
+    ![Azure ATP standalone sensor change password image](media/directory-services.png)
 
-4. Under **Password**, change the password.
+1. Under **Password**, change the password.
 
-   > [!NOTE]
-   > Enter an Active Directory user and password here, not Azure Active Directory.
+    > [!NOTE]
+    > Enter an Active Directory user and password here, not Azure Active Directory.
 
-5. Click **Save**.
+1. Click **Save**.
 
-6. After changing the password, manually check that the Azure ATP standalone sensor service is running on the Azure ATP standalone sensor servers.
-
-7. In the Azure ATP portal, under **Configuration**, go to the **Sensor** page and check the status of the sensors.
+1. In the Azure ATP portal, under **Configuration**, go to the **Sensor** page and check the status of the sensors.
 
 ## See Also
 
