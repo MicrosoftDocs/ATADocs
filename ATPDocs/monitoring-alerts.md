@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/13/2020
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -26,7 +26,7 @@ ms.suite: ems
 
 ---
 
-# Understanding Azure ATP sensor and standalone sensor health alerts
+# Understanding Azure ATP sensor health alerts
 
 The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 

@@ -6,7 +6,7 @@ description: Step three of installing Azure ATP helps you download the Azure ATP
 keywords:
 author: shsagir
 ms.author: shsagir
-ms.date: 02/05/2019
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -33,7 +33,7 @@ In this quickstart, you'll download the Azure ATP sensor setup package from the 
 
 ## Download the setup package
 
-After configuring the domain connectivity settings, you can download the Azure ATP sensor setup package. The Azure ATP sensor setup package can be installed on a dedicated server or on a domain controller. When installing directly on a domain controller, it's installed as an Azure ATP sensor, when installing on a dedicated server and using port mirroring, it's installed as Azure ATP standalone sensor. For more information on the Azure ATP sensor, see [Azure ATP Architecture](atp-architecture.md). 
+After configuring the domain connectivity settings, you can download the Azure ATP sensor setup package. For more information on the Azure ATP sensor, see [Azure ATP Architecture](atp-architecture.md).
 
 Click **Download** in the list of steps at the top of the page to go to the **Sensor** page.
 

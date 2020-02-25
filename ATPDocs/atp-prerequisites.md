@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 11/05/2019
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -32,7 +32,7 @@ This article describes the requirements for a successful deployment of Azure ATP
 >[!NOTE]
 > For information on how to plan resources and capacity, see [Azure ATP capacity planning](atp-capacity-planning.md).
 
-Azure ATP is composed of the Azure ATP cloud service, which consists of the Azure ATP portal, the Azure ATP sensor and/or the Azure ATP standalone sensor. For more information about each Azure ATP component, see [Azure ATP architecture](atp-architecture.md).
+Azure ATP is composed of the Azure ATP cloud service, which consists of the Azure ATP portal and the Azure ATP sensor. For more information about each Azure ATP component, see [Azure ATP architecture](atp-architecture.md).
 
 Azure ATP protects your on-premises Active Directory users and/or users synced to your Azure Active Directory. To protect an environment made up of only AAD users, see [AAD Identity Protection](https://docs.microsoft.com/azure/active-directory/identity-protection/overview).
 
@@ -46,7 +46,10 @@ This prerequisite guide is divided into the following sections to ensure you hav
 
 [Azure ATP sensor](#azure-atp-sensor-requirements): Lists Azure ATP sensor hardware, and software requirements.
 
-[Azure ATP standalone sensor](#azure-atp-standalone-sensor-requirements): Lists Azure ATP standalone sensor hardware, software requirements as well as settings  you need to configure on your Azure ATP standalone sensor servers.
+[Azure ATP standalone sensor](#azure-atp-standalone-sensor-requirements): The Azure ATP Standalone Sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
+
+> [!NOTE]
+> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 
 ## Before you start
 
@@ -83,7 +86,10 @@ This section lists information you should gather as well as accounts and network
 
 - Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information about using Honeytokens, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
 
-- Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 and 8004 to Azure ATP to further enhance Azure ATP authentication based detections, additions to sensitive groups and suspicious service creation detections.  Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+- Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4776, 4732, 4733, 4728, 4729, 4756, 4757, and 7045 and 8004 to Azure ATP to further enhance Azure ATP authentication based detections, additions to sensitive groups and suspicious service creation detections.  Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller.
+
+> [!NOTE]
+> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 
 ## Azure ATP portal requirements
 
@@ -186,6 +192,9 @@ Azure ATP detection relies on the following specific Windows Event logs that the
 ## Azure ATP standalone sensor requirements
 
 This section lists the requirements for the Azure ATP standalone sensor.
+
+> [!NOTE]
+> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 
 ### General
 
