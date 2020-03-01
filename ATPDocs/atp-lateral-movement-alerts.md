@@ -77,10 +77,10 @@ In this detection, an Azure ATP security alert is triggered when DNS queries sus
 
 1. Contain the domain controllers. 
     1. Remediate the remote code execution attempt.
-    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA. 
+    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal. 
 2. Contain the source computer.
     1. Find the tool that performed the attack and remove it.
-    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA.
+    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 **Prevention**
 
@@ -105,10 +105,10 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user’
  
 **Suggested remediation and steps for prevention**
 
-1. Reset the password of the source user and enable MFA.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 2. Contain the source and destination computers.
 3. Find the tool that performed the attack and remove it.
-4. Look for users logged in around the same time of the activity, as they may also be compromised. Reset their passwords and enable MFA.
+4. Look for users logged in around the same time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 ## Suspected identity theft (pass-the-ticket) (external ID 2018)
 
@@ -149,10 +149,10 @@ There are custom applications that forward tickets on behalf of users. These app
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the password of the source user and enable MFA.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 2. Contain the source and destination computers.
 3. Find the tool that performed the attack and remove it.
-4. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
+4. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 5. If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 
 ## Suspected NTLM authentication tampering (external ID 2039)
@@ -177,7 +177,7 @@ o	If the computers are up-to-date and patched, we expect the authentication to f
 **Remediation**
 1.	Contain the source computers
 2.	Find the tool that performed the attack and remove it.
-3.	Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA.
+3.	Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 4.	Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
  
 **Prevention**
@@ -208,7 +208,7 @@ In this detection, an alert is triggered when Azure ATP identify use of Exchange
 
 1. Contain the source computers
     1. Find the tool that preformed the attack and remove it.
-    2. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA.
+    2. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 2. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers. 
 
 ## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008) 
@@ -245,7 +245,7 @@ Some legitimate resources don’t support strong encryption ciphers and may trig
 **Suggested remediation and steps for prevention** 
 
 **Remediation**
-1. Reset the password of the source user and enable MFA. 
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal. 
 2. Contain the source computer. 
 3. Find the tool that performed the attack and remove it. 
 4. Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA  
@@ -279,11 +279,11 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 
 **Suggested remediation and steps for prevention** 
 
-1. Reset the passwords of the compromised users and enable MFA.
+1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 2. Contain the source computer.
 3. Find the tool that performed the attack and remove it.
-4. Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA.  
-5. Reset the passwords of the source user and enable MFA.
+4. Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.  
+5. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 > [!div class="nextstepaction"]
 > [Domain dominance alert tutorial](atp-domain-dominance-alerts.md)

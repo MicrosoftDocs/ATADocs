@@ -119,7 +119,7 @@ Now, look at the accounts:<br>
 1. Contain the source [computer](investigate-a-computer.md). 
     1. Find the tool that performed the attack and remove it.
     1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. 
-    1. Reset their passwords and enable MFA.
+    1. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration. 
 
 ## Network mapping reconnaissance (DNS) (external ID 2007) 
@@ -159,7 +159,7 @@ Security scanners and legitimate applications can  generate DNS queries.
 
 - Contain the source computer. 
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 **Prevention:**<br>
 
@@ -196,7 +196,7 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
     2. Is the computer running a scanning tool that performs a variety of LDAP queries?
-    3. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA.
+    3. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 2. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 **Kerberoasting specific suggested steps for prevention and remediation**
@@ -273,8 +273,8 @@ Four weeks per domain controller starting from the first network activity of SAM
 
 1. Contain the source computer.
 2. Find and remove the tool that performed the attack.
-3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA.
-4. Reset the source user password and enable MFA.
+3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+4. Reset the source user password and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 5. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
 
 > [!NOTE]
