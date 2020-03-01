@@ -48,6 +48,12 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |----|----|----|----|
 |The credentials for the directory services user account are incorrect.|This impacts sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Connect to your Active Directory Forest](install-atp-step2.md#prerequisites) page.|Medium|
 
+## Low success rate of active name resolution
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|The listed Azure ATP sensors are failing to resolve IP addresses to device names more than 90% of the time using the following methods:<br />- NTLM over RPC<br />- NetBIOS<br />- Reverse DNS|This impacts Azure ATP’s detections capabilities and might increase the amount of false positive alarms.|- For NTLM over RPC: Check that port 135 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />- For reverse DNS: Check that the sensors can reach the DNS server and that Reverse Lookup Zones are enabled.<br />- For NetBIOS: Check that port 137 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />Additionally, make sure that the network configuration (such as firewalls) is not preventing communication to the relevant ports.|Low|
+
 ## No traffic received from domain controller
 
 |Alert|Description|Resolution|Severity|
@@ -109,11 +115,10 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](atp-capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
 
 ## Windows events missing from domain controller audit policy
+
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
 | Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](atp-advanced-audit-policy.md) and modify as needed. | Medium|
-
-
 
 ## See Also
 
