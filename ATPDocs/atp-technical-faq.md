@@ -175,7 +175,7 @@ To understand why an account is sensitive you can review its group membership to
 
 ### Do you have to write your own rules and create a threshold/baseline?
 
-With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. While some detections include a learning period, for many detections Azure ATP will start detecting known malicious attacks and security issues immediately after deployment. All learning periods are documented in the [Security Alerts guide](suspicious-activity-guide.md).
+With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. While some detections include a learning period, for many detections Azure ATP will start detecting known malicious attacks and security issues immediately after deployment. All learning periods are documented in the relevant alert topics listed in the [Security Alerts guide](suspicious-activity-guide.md).
 
 ### Which traffic does Azure ATP generate in the network from domain controllers, and why?
 
