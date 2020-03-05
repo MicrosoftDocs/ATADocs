@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/22/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -58,7 +58,7 @@ The cs2 field identifies if the alert is new or updated.
 
 ## Sample logs
 
-The log examples comply with RFC 5242, but Azure ATP also supports RFC 3164.
+The log examples comply with RFC 5424, but Azure ATP also supports RFC 3164.
 
 Priorities:
 
