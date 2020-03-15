@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection prerequisites | Microsoft Docs
+title: Azure Advanced Threat Protection prerequisites
 description: Describes the requirements for a successful deployment of Azure ATP in your environment
 keywords:
 author: shsagir

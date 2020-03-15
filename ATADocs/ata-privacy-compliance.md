@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics personal data policy| Microsoft Docs
+title: Advanced Threat Analytics personal data policy
 description: Provides links to information about how to delete private information and personal data from ATA.
 keywords:
 author: shsagir

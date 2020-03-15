@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP support | Microsoft Docs
+title: Azure ATP support
 description: Describes the process for getting support help for Azure ATP.
 keywords:
 author: shsagir

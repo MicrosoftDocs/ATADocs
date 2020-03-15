@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshooting Advanced Threat Analytics service startup | Microsoft Docs
+title: Troubleshooting Advanced Threat Analytics service startup
 description: Describes how you can troubleshoot ATA startup issues
 keywords:
 author: rkarlin

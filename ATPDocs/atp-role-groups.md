@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection role groups for access management | Microsoft Docs
+title: Azure Advanced Threat Protection role groups for access management
 description: Walks you through working with Azure ATP role groups.
 keywords:
 author: shsagir

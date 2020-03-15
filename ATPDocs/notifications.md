@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set Azure Advanced Threat Protection notifications | Microsoft Docs
+title: Set Azure Advanced Threat Protection notifications
 description: Describes how to set Azure ATP security alerts so you are notified when suspicious activities are detected.
 keywords:
 author: shsagir

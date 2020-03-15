@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics role groups for access management | Microsoft Docs
+title: Advanced Threat Analytics role groups for access management
 description: Walks you through working with ATA role groups.
 keywords:
 author: rkarlin

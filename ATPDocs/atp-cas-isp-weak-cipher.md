@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection weak cipher identity security posture assessment report | Microsoft Docs
+title: Azure Advanced Threat Protection weak cipher identity security posture assessment report
 description: This article provides an overview of Azure ATP's weak cipher identity security posture assessment report.
 keywords:
 author: shsagir

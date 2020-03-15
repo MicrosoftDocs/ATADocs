@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Advanced Threat Analytics - Step 8 | Microsoft Docs
+title: Install Advanced Threat Analytics - Step 8
 description: In the final step of installing ATA, you configure the Honeytoken user.
 keywords:
 author: rkarlin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Investigate lateral movement path attacks with ATA | Microsoft Docs
+title: Investigate lateral movement path attacks with ATA
 description: This article describes how to detect lateral movement path attacks with Advanced Threat Analytics (ATA).
 keywords:
 author: shsagir

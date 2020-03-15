@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics update to 1.9.1 migration guide | Microsoft Docs
+title: Advanced Threat Analytics update to 1.9.1 migration guide
 description: Procedure to update ATA to version 1.9.1
 keywords:
 author: shsagir

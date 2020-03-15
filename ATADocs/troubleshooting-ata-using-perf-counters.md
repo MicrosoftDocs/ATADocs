@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshooting Advanced Threat Analytics with performance counters | Microsoft Docs
+title: Troubleshooting Advanced Threat Analytics with performance counters
 description: Describes how you can use performance counters to troubleshoot issues with ATA
 keywords:
 author: shsagir

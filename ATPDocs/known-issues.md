@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP Known Issues | Microsoft Docs
+title: Azure ATP Known Issues
 description: Describes current Known Issues in Azure ATP
 keywords:
 author: shsagir

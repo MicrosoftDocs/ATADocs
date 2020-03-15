@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Working with ATA Reports | Microsoft Docs
+title: Working with ATA Reports
 description: Describes how you can generate reports in ATA to monitor your network.
 keywords:
 author: rkarlin

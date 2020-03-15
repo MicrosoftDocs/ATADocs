@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tag sensitive accounts with ATA | Microsoft Docs
+title: Tag sensitive accounts with ATA
 description: Describes how to tag sensitive accounts using Advanced Threat Analytics (ATA) 
 keywords:
 author: rkarlin

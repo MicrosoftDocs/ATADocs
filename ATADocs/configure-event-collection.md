@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Windows Event Forwarding in Advanced Threat Analytics | Microsoft Docs
+title: Configure Windows Event Forwarding in Advanced Threat Analytics
 description: Describes your options for configuring Windows Event Forwarding with ATA
 keywords:
 author: rkarlin

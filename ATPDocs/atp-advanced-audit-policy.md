@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection Advanced Audit Policy check | Microsoft Docs
+title: Azure Advanced Threat Protection Advanced Audit Policy check
 description: This article provides an overview of Azure ATP's Advanced Audit Policy check.
 keywords:
 author: shsagir

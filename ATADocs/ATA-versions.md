@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics versions | Microsoft Docs
+title: Advanced Threat Analytics versions
 description: Explains the different support options for Microsoft Advanced Threat Analytics (ATA) versions.
 author: shsagir
 ms.author: shsagir
