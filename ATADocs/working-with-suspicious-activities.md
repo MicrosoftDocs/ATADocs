@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Working with suspicious activities in Advanced Threat Analytics | Microsoft Docs
+title: Working with suspicious activities in Advanced Threat Analytics
 description: Describes how to review suspicious activities identified by ATA
 keywords:
 author: rkarlin

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshooting Advanced Threat Analytics using the logs | Microsoft Docs
+title: Troubleshooting Advanced Threat Analytics using the logs
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: rkarlin

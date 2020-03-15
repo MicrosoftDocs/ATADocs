@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection Monitored Activities Filter and Search | Microsoft Docs
+title: Azure Advanced Threat Protection Monitored Activities Filter and Search
 description: This article provides an overview of how to filter and search monitored activities using Azure ATP.
 keywords:
 author: shsagir

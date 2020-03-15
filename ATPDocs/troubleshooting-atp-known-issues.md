@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshooting Azure ATP known issues | Microsoft Docs
+title: Troubleshooting Azure ATP known issues
 description: Describes how you can troubleshoot issues in Azure ATP.
 keywords:
 author: shsagir

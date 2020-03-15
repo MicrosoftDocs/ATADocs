@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection | Microsoft Docs
+title: Install Azure Advanced Threat Protection
 description: In this step of installing ATP, you configure data sources.
 keywords:
 author: shsagir

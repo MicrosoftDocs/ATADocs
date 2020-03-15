@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection architecture | Microsoft Docs
+title: Azure Advanced Threat Protection architecture
 description: Describes the architecture of Azure Advanced Threat Analytics (ATP)
 keywords:
 author: shsagir

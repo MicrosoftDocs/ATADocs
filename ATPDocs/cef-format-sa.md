@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP SIEM log reference | Microsoft Docs
+title: Azure ATP SIEM log reference
 description: Provides samples of suspicious activity logs sent from Azure ATP to your SIEM.
 keywords:
 author: shsagir

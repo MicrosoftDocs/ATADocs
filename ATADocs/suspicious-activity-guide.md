@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: ATA suspicious activity guide | Microsoft Docs
+title: ATA suspicious activity guide
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
 keywords:
 author: shsagir

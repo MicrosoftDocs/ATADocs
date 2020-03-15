@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create your Azure ATP instance quickstart | Microsoft Docs
+title: Create your Azure ATP instance quickstart
 description: Quickstart for creating the instance for your Azure ATP deployment which is the first step to install Azure ATP.
 keywords:
 author: shsagir

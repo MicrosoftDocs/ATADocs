@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Change Advanced Threat Analytics ATA Center config | Microsoft Docs
+title: Change Advanced Threat Analytics ATA Center config
 description: Describes how to change the IP address, port, console URL or certificate of your ATA Center.
 keywords:
 author: rkarlin

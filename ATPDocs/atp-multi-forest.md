@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection multi-forest support | Microsoft Docs
+title: Azure Advanced Threat Protection multi-forest support
 description: Support for multiple Active Directory forests in Azure ATP.
 keywords:
 author: shsagir

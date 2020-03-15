@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Understand and use Lateral Movement Paths with Azure ATP | Microsoft Docs
+title: Understand and use Lateral Movement Paths with Azure ATP
 description: This article describes the potential Lateral Movement Paths (LMPs) of Azure Advanced Threat Protection (ATP).
 keywords:
 author: shsagir

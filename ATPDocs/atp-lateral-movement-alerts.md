@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP lateral movement security alerts | Microsoft Docs
+title: Azure ATP lateral movement security alerts
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
 keywords:
 author: shsagir

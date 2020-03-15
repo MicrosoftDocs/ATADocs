@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Advanced Threat Analytics - Step 7 | Microsoft Docs
+title: Install Advanced Threat Analytics - Step 7
 description: In this step of installing ATA, you integrate your VPN.
 keywords:
 author: rkarlin

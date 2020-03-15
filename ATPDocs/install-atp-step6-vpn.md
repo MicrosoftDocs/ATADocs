@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection VPN Integration| Microsoft Docs
+title: Install Azure Advanced Threat Protection VPN Integration
 description: Collect accounting information for Azure ATP by integrating a VPN.
 keywords:
 author: shsagir

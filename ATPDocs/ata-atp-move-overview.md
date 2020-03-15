@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics to Azure Advanced Threat Protection move  | Microsoft Docs
+title: Advanced Threat Analytics to Azure Advanced Threat Protection move 
 description: Learn how to move an existing Advanced Threat Analytics installation to Azure ATP.
 keywords:
 author: shsagir

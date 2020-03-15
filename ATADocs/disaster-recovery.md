@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Disaster recovery for Advanced Threat Analytics | Microsoft Docs
+title: Disaster recovery for Advanced Threat Analytics
 description: Describes how you can quickly recover ATA functionality after disaster
 keywords:
 author: shsagir

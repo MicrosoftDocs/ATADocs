@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Excluding entities from detections in Advanced Threat Analytics | Microsoft Docs
+title: Excluding entities from detections in Advanced Threat Analytics
 description: Describes how to stop ATA from detecting specific entity activities as suspicious
 keywords:
 author: rkarlin
