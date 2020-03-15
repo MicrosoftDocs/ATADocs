@@ -7,11 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-<<<<<<< Updated upstream
-ms.date: 03/01/2020
-=======
-ms.date: 03/08/2020
->>>>>>> Stashed changes
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -46,18 +42,6 @@ Azure ATP detects known malicious attacks and techniques, security issues, and r
 For the full list of Azure ATP detections, see [What detections does Azure ATP perform?](suspicious-activity-guide.md).
 
 ### What data does Azure ATP collect?
-<<<<<<< Updated upstream
-
-Azure ATP collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites), and entity information (such as names, email addresses, and phone numbers).
-
-Microsoft uses this data to:
-
-- Proactively identify indicators of attack (IOAs) in your organization
-- Generate alerts if a possible attack was detected
-- Provide your security operations with a view into entities related to threat signals from your network, enabling you to investigate and explore the presence of security threats on the network.
-
-Microsoft does not mine your data for advertising or for any other purpose other than providing you the service.
-=======
 
 Azure ATP collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites), and entity information (such as names, email addresses, and phone numbers).
 
@@ -72,7 +56,6 @@ Microsoft does not mine your data for advertising or for any other purpose other
 ### How many Directory Service credentials does Azure ATP support?
 
 Azure ATP currently supports adding up to 10 different Directory Service credentials to support Active Directory environments with untrusted forests. If you require more accounts, open a support ticket.
->>>>>>> Stashed changes
 
 ### Does Azure ATP only leverage traffic from Active Directory?
 
@@ -90,11 +73,7 @@ Yes. Since computer accounts (as well as any other entities) can be used to perf
 
 ATA is a standalone solution, installed on-premises. Azure ATP with its cloud connectivity includes continuous feature updates including new detections, UEBA capabilities, security assessments, and an investigation experience across Microsoft 365 Security solutions.
 
-<<<<<<< Updated upstream
-Azure ATP’s additional capabilities:
-=======
 Azure ATP's additional capabilities:
->>>>>>> Stashed changes
 
 - Azure ATP detects more on-premises suspicious behavior and advanced attacks than ATA, and provides **identity security assessment** reports.
 - Re-architected sensor with additional data sources (such as **Event Tracing for Windows**).
@@ -104,21 +83,12 @@ Azure ATP is a part of Microsoft 365 Security – securing the hybrid organizati
 
 - Azure ATP, together with Microsoft Cloud App Security (MCAS) and Azure AD Identity Protection, provides a unified investigation experience for user activities, on-premises and in the cloud, and provides enhanced User and Entity Behavior Analytics (UEBA) detections.
 - ATA has no integration with other Microsoft online security solutions
-<<<<<<< Updated upstream
 
 Scalable and secure, leveraging the power of the cloud:
 
 - Azure ATP allows customers to enjoy the benefits of a cloud based solution, with no scaling limitations and continuous updates.
 - ATA is based on an on-premises, central management server that requires dedicated hardware for the central management center to be deployed on-premises, and typically receives one or two version updates annually.
 
-=======
-
-Scalable and secure, leveraging the power of the cloud:
-
-- Azure ATP allows customers to enjoy the benefits of a cloud based solution, with no scaling limitations and continuous updates.
-- ATA is based on an on-premises, central management server that requires dedicated hardware for the central management center to be deployed on-premises, and typically receives one or two version updates annually.
-
->>>>>>> Stashed changes
 ## Licensing and privacy
 
 ### Where can I get a license for Azure Advanced Threat Protection (ATP)?
@@ -149,11 +119,7 @@ Microsoft developers and administrators have, by design, been given sufficient p
 - Combinations of controls that greatly enhance independent detection of malicious activity
 - Multiple levels of monitoring, logging, and reporting
 
-<<<<<<< Updated upstream
-In addition, Microsoft conducts background verification checks on certain operations personnel, and limits access to applications, systems, and network infrastructure in proportion to the level of background verification. Operations personnel follow a formal process when they are required to access a customer’s account or related information in the performance of their duties.
-=======
 In addition, Microsoft conducts background verification checks on certain operations personnel, and limits access to applications, systems, and network infrastructure in proportion to the level of background verification. Operations personnel follow a formal process when they are required to access a customer's account or related information in the performance of their duties.
->>>>>>> Stashed changes
 
 ## Deployment
 
@@ -173,19 +139,10 @@ Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneli
 
 Most virtual domain controllers can be covered by the Azure ATP sensor, to determine whether the Azure ATP sensor is appropriate for your environment, see [Azure ATP Capacity Planning](atp-capacity-planning.md).
 
-<<<<<<< Updated upstream
-If a virtual domain controller can't be covered by the Azure ATP sensor, you can have either a virtual or physical Azure ATP standalone sensor as described in [Configure port mirroring](configure-port-mirroring.md).
-
-The easiest way is to have a virtual Azure ATP standalone sensor on every host where a virtual domain controller exists.
-
-If your virtual domain controllers move between hosts, you need to perform one of the following steps:
-
-=======
 If a virtual domain controller can't be covered by the Azure ATP sensor, you can have either a virtual or physical Azure ATP standalone sensor as described in [Configure port mirroring](configure-port-mirroring.md).  
 The easiest way is to have a virtual Azure ATP standalone sensor on every host where a virtual domain controller exists.  
 If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
->>>>>>> Stashed changes
 - When the virtual domain controller moves to another host, preconfigure the Azure ATP standalone sensor in that host to receive the traffic from the recently moved virtual domain controller.
 - Make sure that you affiliate the virtual Azure ATP standalone sensor with the virtual domain controller so that if it is moved, the Azure ATP standalone sensor moves with it.
 - There are some virtual switches that can send traffic between hosts.
@@ -219,29 +176,17 @@ This happens when an account is a member of groups that are designated as sensit
 To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](sensitive-accounts.md).
 
 ### Do you have to write your own rules and create a threshold/baseline?
-<<<<<<< Updated upstream
-
-With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. While some detections include a learning period, for many detections Azure ATP will start detecting known malicious attacks and security issues immediately after deployment. All learning periods are documented in the relevant alert topics listed in the [Security Alerts guide](suspicious-activity-guide.md).
-
-=======
 
 With Azure Advanced Threat Protection, there is no need to create rules, thresholds, or baselines and then fine-tune. Azure ATP analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. Three weeks after deployment, Azure ATP starts to detect behavioral suspicious activities. On the other hand, Azure ATP will start detecting known malicious attacks and security issues immediately after deployment.
 
->>>>>>> Stashed changes
 ### Which traffic does Azure ATP generate in the network from domain controllers, and why?
 
 Azure ATP generates traffic from domain controllers to computers in the organization in one of three scenarios:
 
 1. **Network Name resolution**  
-<<<<<<< Updated upstream
-   Azure ATP captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, Azure ATP needs to resolve IPs to computer accounts. To resolve IPs to computer names Azure ATP sensors request the IP address for the computer name *behind* the IP address.
-
-   Requests are made using one of four methods:
-=======
 Azure ATP captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, Azure ATP needs to resolve IPs to computer accounts. To resolve IPs to computer names Azure ATP sensors request the IP address for the computer name *behind* the IP address.
 
     Requests are made using one of four methods:
->>>>>>> Stashed changes
     - NTLM over RPC (TCP Port 135)
     - NetBIOS (UDP port 137)
     - RDP (TCP port 3389)
@@ -249,17 +194,10 @@ Azure ATP captures traffic and events, learning and profiling users and computer
 
     After getting the computer name,  Azure ATP sensors cross check the details in Active Directory to see if there is a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
 2. **Lateral Movement Path (LMP)**  
-<<<<<<< Updated upstream
-    To build potential LMPs to sensitive users, Azure ATP requires information about the local administrators on computers. In this scenario, the Azure ATP sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Azure ATP and SAM-R, See [Configure SAM-R required permissions](install-atp-step8-samr.md).
-
-3. **Querying Active Directory using LDAP** for entity data  
-    Azure ATP sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.
-=======
 To build potential LMPs to sensitive users, Azure ATP requires information about the local administrators on computers. In this scenario, the Azure ATP sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Azure ATP and SAM-R, See [Configure SAM-R required permissions](install-atp-step8-samr.md).
 
 3. **Querying Active Directory using LDAP** for entity data  
 Azure ATP sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.
->>>>>>> Stashed changes
 
 |Protocol|Service|Port|Source| Direction|
 |---------|---------|---------|---------|--------|
