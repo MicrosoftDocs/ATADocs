@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP security alert lab setup tutorial | Microsoft Docs
+title: Azure ATP security alert lab setup tutorial
 description: In this tutorial, you set up an Azure ATP test lab for simulating threats for detection by Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial

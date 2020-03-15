@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Planning your Azure Advanced Threat Protection deployment quickstart | Microsoft Docs
+title: Planning your Azure Advanced Threat Protection deployment quickstart
 description: Helps you plan your deployment and decide how many Azure ATP servers will be needed to support your network
 author: shsagir
 ms.author: shsagir

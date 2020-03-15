@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Validate port mirroring in Azure Advanced Threat Protection | Microsoft Docs
+title: Validate port mirroring in Azure Advanced Threat Protection
 description: Describes how to validate that port mirroring is configured correctly in Azure ATP
 keywords:
 author: shsagir

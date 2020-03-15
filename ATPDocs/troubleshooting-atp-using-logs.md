@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshooting Azure Advanced Threat Protection using the logs | Microsoft Docs
+title: Troubleshooting Azure Advanced Threat Protection using the logs
 description: Describes how you can use the Azure ATP logs to troubleshoot issues
 keywords:
 author: shsagir

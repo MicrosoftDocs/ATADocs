@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP monitored domain activities|Microsoft Docs
+title: Azure ATP monitored domain activities
 description: Describes each activity type monitored by Azure Advanced Threat Protection
 keywords:
 author: shsagir

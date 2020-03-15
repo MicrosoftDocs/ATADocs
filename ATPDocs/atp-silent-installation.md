@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure Advanced Threat Protection Silently | Microsoft Docs
+title: Install Azure Advanced Threat Protection Silently
 description: This describes how to silently install Azure ATP.
 keywords:
 author: shsagir

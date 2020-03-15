@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection Print spooler identity security posture assessments | Microsoft Docs
+title: Azure Advanced Threat Protection Print spooler identity security posture assessments
 description: This article provides an overview of Azure ATP's Print spooler identity security posture assessment reports.
 keywords:
 author: shsagir

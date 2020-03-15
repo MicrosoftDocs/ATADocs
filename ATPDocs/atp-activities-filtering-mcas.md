@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection activity filtering and policies in Microsoft Cloud App Security  | Microsoft Docs
+title: Azure Advanced Threat Protection activity filtering and policies in Microsoft Cloud App Security 
 description: Overview of Azure ATP activity filtering and policies with Microsoft Cloud App Security.
 keywords:
 author: shsagir

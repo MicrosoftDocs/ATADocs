@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What's new in Advanced Threat Analytics version 1.6 | Microsoft Docs
+title: What's new in Advanced Threat Analytics version 1.6
 description: Lists what was new in ATA version 1.6 along with known issues
 keywords:
 author: rkarlin

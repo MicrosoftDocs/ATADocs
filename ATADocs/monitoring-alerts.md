@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Understanding ATA monitoring alerts | Microsoft Docs
+title: Understanding ATA monitoring alerts
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: shsagir

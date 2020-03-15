@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics recommended upgrade path | Microsoft Docs
+title: Advanced Threat Analytics recommended upgrade path
 description: Provides instructions for upgrading your Advanced Threat Analytics (ATA) version.
 keywords:
 author: shsagir

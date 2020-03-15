@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Windows Event collection Azure Advanced Threat Protection | Microsoft Docs
+title: Configure Windows Event collection Azure Advanced Threat Protection
 description: In this step of installing ATP, you configure Windows Event collection.
 keywords:
 author: shsagir

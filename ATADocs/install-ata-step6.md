@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Advanced Threat Analytics - Step 6 | Microsoft Docs
+title: Install Advanced Threat Analytics - Step 6
 description: In this step of installing ATA, you configure data sources.
 keywords:
 author: shsagir

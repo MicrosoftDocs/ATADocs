@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set Advanced Threat Analytics notifications | Microsoft Docs
+title: Set Advanced Threat Analytics notifications
 description: Describes how to set ATA alerts so you are notified when suspicious activities are detected.
 keywords:
 author: rkarlin

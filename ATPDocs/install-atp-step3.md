@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Download the Azure ATP sensor setup package quickstart | Microsoft Docs
+title: Download the Azure ATP sensor setup package quickstart
 description: Step three of installing Azure ATP helps you download the Azure ATP sensor setup package.
 keywords:
 author: shsagir

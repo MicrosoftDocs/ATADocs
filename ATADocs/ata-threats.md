@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What threats does Advanced Threat Analytics detect? | Microsoft Docs
+title: What threats does Advanced Threat Analytics detect?
 description: Lists the threats that Advanced Threat Analytics detects 
 keywords:
 author: rkarlin

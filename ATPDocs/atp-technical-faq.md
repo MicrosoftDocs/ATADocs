@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection frequently asked questions | Microsoft Docs
+title: Azure Advanced Threat Protection frequently asked questions
 description: Provides a list of frequently asked questions about Azure ATP and the associated answers
 keywords:
 author: shsagir

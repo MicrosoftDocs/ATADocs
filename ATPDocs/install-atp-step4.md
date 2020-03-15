@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Azure ATP sensor quickstart | Microsoft Docs
+title: Install Azure ATP sensor quickstart
 description: Step four of installing Azure ATP helps you to install the Azure ATP sensor.
 author: shsagir
 ms.author: shsagir

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP computer investigation tutorial | Microsoft Docs
+title: Azure ATP computer investigation tutorial
 d|Description: This article explains how to use Azure ATP security alerts to investigate a suspicious computer.
 keywords:
 author: shsagir
