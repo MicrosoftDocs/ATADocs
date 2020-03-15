@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/19/2020
+ms.date: 03/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configure event collection
 
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 and 8004. These events can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance detection capabilities, Azure ATP needs the following Windows events: 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045, and 8004. These events can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
 >
@@ -42,9 +42,9 @@ To configure Windows Event 8004 collection:
 
 1. Navigate to: Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options
 2. Set the **domain group policy** as follows:
-   - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
-   - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
-   - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
+    - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
+    - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
+    - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
 
 When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentications activities are enriched with the server accessed  data.
 
@@ -52,17 +52,18 @@ When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentica
 
 Azure ATP Stanalone sensors are configured by default to receive Syslog data. For Azure ATP Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
 
-  > [!NOTE]
-  > Azure ATP only listens on IPv4 and not IPv6.
+> [!NOTE]
+> Azure ATP only listens on IPv4 and not IPv6.
 
 > [!IMPORTANT]
+>
 > - Do not forward all the Syslog data to the Azure ATP sensor.
 > - Azure ATP supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server.
 
 > [!NOTE]
->If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by Azure ATP.
+> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by Azure ATP.
 
 ## Configuring the Azure ATP sensor to listen for SIEM events
 
@@ -76,28 +77,17 @@ Azure ATP supports SIEM events in the following formats:
 
 - Syslog header is optional.
 
-- “\n” character separator is required between all fields.
-
+- "\n" character separator is required between all fields.
 - The fields, in order, are:
-
     1. RsaSA constant (must appear).
-
-    1. The timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). Preferably in milliseconds accuracy, this is important.
-
-    1. The Windows event ID
-
-    1. The Windows event provider name
-
-    1. The Windows event log name
-
-    1. The name of the computer receiving the event (the DC in this case)
-
-    1. The name of the user authenticating
-
-    1. The name of the source host name
-
-    1. The result code of the NTLM
-
+    2. The timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). Preferably in milliseconds accuracy, this is important.
+    3. The Windows event ID
+    4. The Windows event provider name
+    5. The Windows event log name
+    6. The name of the computer receiving the event (the DC in this case)
+    7. The name of the user authenticating
+    8. The name of the source host name
+    9. The result code of the NTLM
 - The order is important and nothing else should be included in the message.
 
 ### HP Arcsight
@@ -107,30 +97,19 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 - Must comply with the protocol definition.
 
 - No syslog header.
-
-- The header part (the part that’s separated by a pipe) must exist (as stated in the protocol).
-
+- The header part (the part that's separated by a pipe) must exist (as stated in the protocol).
 - The following keys in the _Extension_ part must be present in the event:
-
-    - externalId = the Windows event ID
-
-    - rt = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). Preferably  in milliseconds accuracy, this is important.
-
-    - cat = the Windows event log name
-
-    - shost = the source host name
-
-    - dhost = the computer receiving the event (the DC in this case)
-
-    - duser = the user authenticating
-
+  - externalId = the Windows event ID
+  - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). Preferably  in milliseconds accuracy, this is important.
+  - cat = the Windows event log name
+  - shost = the source host name
+  - dhost = the computer receiving the event (the DC in this case)
+  - duser = the user authenticating
 - The order is not important for the _Extension_ part
 
 - There must be a custom key and keyLable for these two fields:
-
-    - “EventSource”
-
-    - “Reason or Error Code” = The result code of the NTLM
+  - "EventSource"
+  - "Reason or Error Code" = The result code of the NTLM
 
 ### Splunk
 
@@ -138,36 +117,26 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 
 The computer attempted to validate the credentials for an account.
 
-Authentication Package:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
+Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
 Logon Account: Administrator
 
-Source Workstation:       SIEM
+Source Workstation: SIEM
 
-Error Code:         0x0
+Error Code: 0x0
 
 - Syslog header is optional.
 
-- There’s a “\r\n” character separator between all required fields.
-
+- There's a "\r\n" character separator between all required fields.
 - The fields are in key=value format.
-
 - The following keys must exist and have a value:
-
-    - EventCode = the Windows event ID
-
-    - Logfile = the Windows event log name
-
-    - SourceName = The Windows event provider name
-
-    - TimeGenerated = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
-
-    - ComputerName = the source host name
-
-    - Message = the original event text from the Windows event
-
+  - EventCode = the Windows event ID
+  - Logfile = the Windows event log name
+  - SourceName = The Windows event provider name
+  - TimeGenerated = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
+  - ComputerName = the source host name
+  - Message = the original event text from the Windows event
 - The Message Key and value MUST be last.
-
 - The order is not important for the key=value pairs.
 
 ### QRadar
@@ -184,7 +153,7 @@ The fields needed are:
 - The DC fully qualified domain name
 - The Windows event ID
 
-TimeGenerated is the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
+TimeGenerated is the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
 
 Message is the original event text from the Windows event
 
