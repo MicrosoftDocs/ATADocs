@@ -161,6 +161,18 @@ The sensor failed to retrieve the designated gMSA account from the Azure ATP por
 
 Make sure that the gMSA account's credentials are correct and that the sensor has been granted permissions to retrieve the account's credentials.
 
+## Report downloads cannot contain more than 300,000 entries
+
+Azure ATP does not support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
+
+**Cause:**
+
+This is an engineering limitation.
+
+**Resolution:**
+
+No known resolution.
+
 ## See Also
 
 - [Azure ATP prerequisites](atp-prerequisites.md)
