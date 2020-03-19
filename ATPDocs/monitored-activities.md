@@ -106,7 +106,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Logon type 8|LDAP Cleartext|User authenticated using LDAP with a clear-text password (Simple authentication).|
 |Logon type 10|Remote Desktop|User performed an RDP session to a remote computer using Kerberos authentication.|
 |---|Failed Logon|Domain-account failed authentication attempt (via NTLM and Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
-|---|Failed Logon with Certificate|Domain-account failed authentication attempt (via NTLM and Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
+|---|Failed Logon with Certificate|Domain-account failed authentication attempt (via Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
 
 ## Monitored machine activities: Machine account
 
