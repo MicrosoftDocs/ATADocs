@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/01/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -31,7 +31,25 @@ This article is updated frequently to let you know what's new in the latest rele
 
 For details of earlier Azure ATP releases until (and including) release 2.55, see the [Azure ATP release reference](atp-release-reference.md).
 
-RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## Azure ATP release 2.112
+
+Released Mar 15, 2020
+
+- **New Azure ATP instances automatically integrate with Microsoft Cloud App Security**  
+When creating an Azure ATP instance (formerly workspace), the integration with Microsoft Cloud App Security is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Cloud App Security](atp-mcas-integration.md).
+
+- **New monitored activities**  
+The following activity monitors are now available:
+  - Interactive Logon with Certificate
+  - Failed Logon with Certificate
+  - Delegated Resource Access
+
+    Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
+
+- **Feature enhancement: Enriched Resource Access Activity**  
+Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource is trusted for unconstrained delegation. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Security assessment: Unsecure Kerberos delegation](atp-cas-isp-unconstrained-kerberos.md).
 
 ## Azure ATP release 2.111
 

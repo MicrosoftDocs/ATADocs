@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/19/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -98,12 +98,15 @@ The information monitored by Azure ATP is presented in the form of activities. A
 |Logon type|Monitored activity|Description|
 |---------------------|---------------------|------------------|
 |Logon type 2|Credentials Validation|Domain-account authentication event using the NTLM and Kerberos authentication methods.|
-|Logon type 2|Interactive Logon|User gained network access by entering a username and password (authentication method Kerberos).|
+|Logon type 2|Interactive Logon|User gained network access by entering a username and password (authentication method Kerberos or NTLM).|
+|Logon type 2|Interactive Logon with Certificate|User gained network access by using a certificate.|
 |Logon type 2|VPN Connection|User connected by VPN - Authentication using RADIUS protocol.|
-|Logon type 3|Resource Access|User accessed a resource using Kerberos authentication.|
+|Logon type 3|Resource Access|User accessed a resource using Kerberos or NTLM authentication.|
+|Logon type 3|Delegated Resource Access|User accessed a resource using Kerberos delegation.|
 |Logon type 8|LDAP Cleartext|User authenticated using LDAP with a clear-text password (Simple authentication).|
 |Logon type 10|Remote Desktop|User performed an RDP session to a remote computer using Kerberos authentication.|
 |---|Failed Logon|Domain-account failed authentication attempt (via NTLM and Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
+|---|Failed Logon with Certificate|Domain-account failed authentication attempt (via Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
 
 ## Monitored machine activities: Machine account
 
