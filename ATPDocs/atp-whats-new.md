@@ -37,7 +37,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 Released Mar 15, 2020
 
-- **Feature enhancement: Azure ATP instance**  
+- **New Azure ATP instances automatically integrate with Microsoft Cloud App Security**  
 When creating an Azure ATP instance (formerly workspace), the integration with Microsoft Cloud App Security is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Cloud App Security](atp-mcas-integration.md).
 
 - **New monitored activities**  
