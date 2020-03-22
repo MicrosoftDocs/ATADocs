@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Working with ATA audit logs | Microsoft Docs
+title: Working with ATA audit logs
 description: This article describes how to work with ATA audit logs in the Windows Event Log.
 keywords:
 author: rkarlin

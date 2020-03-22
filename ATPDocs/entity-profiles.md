@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Working with user profiles in the Azure Advanced Threat Protection portal | Microsoft Docs
+title: Working with user profiles in the Azure Advanced Threat Protection portal
 description: Describes how to investigate users from the user profiles screen in the Azure ATP portal
 keywords:
 author: shsagir

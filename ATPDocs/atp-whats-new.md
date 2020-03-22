@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: What's new in Azure Advanced Threat Protection (Azure ATP) | Microsoft Docs
+title: What's new in Azure Advanced Threat Protection (Azure ATP)
 description: This article is updated frequently to let you know what's new in the latest release of Azure Advanced Threat Protection (Azure ATP).
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 01/19/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -31,16 +31,71 @@ This article is updated frequently to let you know what's new in the latest rele
 
 For details of earlier Azure ATP releases until (and including) release 2.55, see the [Azure ATP release reference](atp-release-reference.md).
 
-RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader:   `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
-<!-- Rollback
+## Azure ATP release 2.112
+
+Released Mar 15, 2020
+
+- **New Azure ATP instances automatically integrate with Microsoft Cloud App Security**  
+When creating an Azure ATP instance (formerly workspace), the integration with Microsoft Cloud App Security is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Cloud App Security](atp-mcas-integration.md).
+
+- **New monitored activities**  
+The following activity monitors are now available:
+  - Interactive Logon with Certificate
+  - Failed Logon with Certificate
+  - Delegated Resource Access
+
+    Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
+
+- **Feature enhancement: Enriched Resource Access Activity**  
+Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource is trusted for unconstrained delegation. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Security assessment: Unsecure Kerberos delegation](atp-cas-isp-unconstrained-kerberos.md).
+
+## Azure ATP release 2.111
+
+Released Mar 1, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
+## Azure ATP release 2.110
+
+Released Feb 23, 2020
+
+- **New security assessment: Unmonitored domain controllers**  
+Azure ATP security assessments now includes a report on unmonitored domain controllers, servers without a sensor, to help you in managing full coverage of your environment. For more information, see [Unmonitored domain controllers](atp-cas-isp-unmonitored-domain-controller.md).
+
+## Azure ATP release 2.109
+
+Released Feb 16, 2020
+
+- **Feature enhancement: Sensitive entities**  
+Starting from this version (2.109), machines identified as Certificate Authority, DHCP, or DNS Servers by Azure ATP are now automatically tagged as **Sensitive**.
+
+## Azure ATP release 2.108
+
+Released Feb 9, 2020
+
+- **New feature: Support for group Managed Service Accounts**  
+Azure ATP now supports using group Managed Service Accounts (gMSA) for improved security when connecting Azure ATP sensors to your Azure Active Directory (AD) forests. For more information about using gMSA with Azure ATP sensors, see [Connect to your Active Directory Forest](install-atp-step2.md#prerequisites).
+
+- **Feature enhancement: Scheduled report with too much data**  
+When a scheduled report has too much data, the email now informs you of the fact by displaying the following text: There was too much data during the specified period to generate a report. This replaces the previous behavior of only discovering the fact after clicking the report link in the email.
+
+- **Feature enhancement: Updated domain controller coverage logic**  
+We've updated our domain controller coverage report logic to include additional information from Azure AD, resulting in a more accurate view of domain controllers without sensors on them. This new logic should also have a positive affect on the corresponding Microsoft Secure Score.
+
 ## Azure ATP release 2.107
 
-Released Jan 26, 2020
+Released Feb 3, 2020
 
 - **New monitored activity: SID history change**  
 SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](atp-activities-search.md) in the portal.
--->
+
+- **Feature enhancement: Closed or suppressed alerts are no longer reopened**  
+Once an alert is closed or suppressed in the Azure ATP portal, if the same activity is detected again within a short period of time, a new alert is opened. Previously, under the same conditions, the alert was reopened.
+
+- **TLS 1.2 required for portal access and sensors**  
+TLS 1.2 is now required to use Azure ATP sensors and the cloud service. Access to the Azure ATP portal will no longer be possible using browsers that do not support TLS 1.2.
 
 ## Azure ATP release 2.106
 
@@ -59,13 +114,13 @@ Released Jan 12, 2020
 Released Dec 23, 2019
 
 - **Sensor version expirations eliminated**  
-    Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they are older than our max number of lapsed versions.
+Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they are older than our max number of lapsed versions.
 
 - **Confirm compromise**  
-    You can now confirm compromise of specific Office 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Cloud App Security.
+You can now confirm compromise of specific Office 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](https://docs.microsoft.com/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Cloud App Security.
 
 - **New experience banner**  
-    On Azure ATP portal pages where a new experience is available in the Cloud App Security portal, new banners are displayed describing what's available with access links.
+On Azure ATP portal pages where a new experience is available in the Cloud App Security portal, new banners are displayed describing what's available with access links.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -98,7 +153,7 @@ Released Nov 17, 2019
 Released November 3, 2019
 
 - **Feature enhancement:  Added user interface notification of Cloud App Security portal availability to the Azure ATP portal**  
-    Ensuring all users are aware of the availability of the enhanced features available using the Cloud App Security portal, notification was added for the portal from the existing Azure ATP alert timeline.
+Ensuring all users are aware of the availability of the enhanced features available using the Cloud App Security portal, notification was added for the portal from the existing Azure ATP alert timeline.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -107,7 +162,7 @@ Released November 3, 2019
 Released October 27, 2019
 
 - **Feature enhancement: Suspected brute force attack alert**  
-    Improved the [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) alert using additional analysis, and improved detection logic to reduce **benign true positive (B-TP)** and **false positive (FP)** alert results.
+Improved the [Suspected brute force attack (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033) alert using additional analysis, and improved detection logic to reduce **benign true positive (B-TP)** and **false positive (FP)** alert results.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -144,13 +199,13 @@ Released September 8, 2019
 
 Released September 1, 2019
 
-- Version includes improvements and bug fixes for internal sensor infrastructure.
+-   ersion includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.92
 
 Released August 25, 2019
 
-- Version includes improvements and bug fixes for internal sensor infrastructure.
+-   ersion includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.91
 
@@ -199,7 +254,7 @@ Incoming Syslog connections for Azure ATP standalone sensors are now fully autom
 Released July 14, 2019
 
 - **New security alert: Suspected NTLM authentication tampering (external ID 2039)**  
-Azure ATP’s new [Suspected NTLM authentication tampering](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when use of "man-in-the-middle" attack is suspected of successfully bypassing NTLM Message Integrity Check (MIC), a security vulnerability detailed in Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). These types of attacks attempt to downgrade NTLM security features and successfully authenticate, with the ultimate goal of making successful lateral movements.
+Azure ATP's new [Suspected NTLM authentication tampering](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when use of "man-in-the-middle" attack is suspected of successfully bypassing NTLM Message Integrity Check (MIC), a security vulnerability detailed in Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). These types of attacks attempt to downgrade NTLM security features and successfully authenticate, with the ultimate goal of making successful lateral movements.
 
 - **Feature enhancement: Enriched device operating system identification**  
 Until now, Azure ATP provided entity device operating system information based on the available attribute in Active Directory. Previously, if operating system information was unavailable in Active Directory, the information was also unavailable on Azure ATP entity pages. Starting from this version, Azure ATP now provides this information for devices where Active Directory doesn't have the information, or are not registered in Active Directory, by using enriched device operating system identification methods.
@@ -298,7 +353,7 @@ Manual Sensitive tagging for Exchange Servers
     2. Under **Detection**, select **Entity tags**, then select **Sensitive**.
     3. Select **Exchange Servers** and then add the entity you wish to tag.
 
-    After tagging a computer as an Exchange Server, it will be tagged as Sensitive and display that it was tagged as an Exchange Server.  The Sensitive tag will appear in the computer’s entity profile, and the computer will be considered in all detections that are based on Sensitive accounts and Lateral Movement Paths.
+    After tagging a computer as an Exchange Server, it will be tagged as Sensitive and display that it was tagged as an Exchange Server.  The Sensitive tag will appear in the computer's entity profile, and the computer will be considered in all detections that are based on Sensitive accounts and Lateral Movement Paths.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -391,7 +446,7 @@ Released March 10, 2019
 - **Feature enhancement: Remote code execution over DNS alert**  
 This alert now features new evidence showing your domain controller security update status, informing you when updates are required.
 
-- **New documentation feature: Azure ATP Security alert MITRE ATT&CK Matrix™**  
+- **New documentation feature: Azure ATP Security alert MITRE ATT&CK Matrix&trade;**  
 To explain and make it easier to map the relationship between Azure ATP security alerts and the familiar MITRE ATT&CK Matrix, we've added the relevant MITRE techniques to Azure ATP security alert listings. This additional reference makes it easier to understand the suspected attack technique potentially in use when an Azure ATP security alert is triggered. Learn more about the [Azure ATP security alert guide](suspicious-activity-guide.md).  
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
@@ -416,7 +471,7 @@ To explain the power of Azure ATP in detecting the real threats to your working 
 Released February 24, 2019
 
 - **New security alert: Security principal reconnaissance (LDAP) – (preview)**  
-Azure ATP’s [Security principal reconnaissance (LDAP) - preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain.
+Azure ATP's [Security principal reconnaissance (LDAP) - preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain.
 
     Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
@@ -443,7 +498,7 @@ Learn more about [Suspected DCSync attack (replication of directory services)](a
 Released February 10, 2019
 
 - **New security alert: Suspected NTLM relay attack (Exchange account) – (preview)**  
-Azure ATP’s [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when use of Exchange account credentials from a suspicious source is identified. These types of attacks attempt to leverage NTLM relay techniques to gain domain controller exchange privileges and are known as **ExchangePriv**. Learn more about the **ExchangePriv** technique from the [ADV190007 advisory](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) first published January 31, 2019, and the [Azure ATP alert response](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+Azure ATP's [Suspected NTLM relay attack (Exchange account) - preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when use of Exchange account credentials from a suspicious source is identified. These types of attacks attempt to leverage NTLM relay techniques to gain domain controller exchange privileges and are known as **ExchangePriv**. Learn more about the **ExchangePriv** technique from the [ADV190007 advisory](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) first published January 31, 2019, and the [Azure ATP alert response](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **General availability: Remote code execution over DNS**  
 This alert is now in GA (general availability). For more information and alert features, see the [Remote code execution over DNS alert description page](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036).
@@ -480,7 +535,7 @@ This version includes redesigned alert pages, and new evidence, providing better
 Released January 27, 2019
 
 - **New feature: Untrusted forest support – (preview)**  
-Azure ATP’s support for sensors in untrusted forests is now in public preview.
+Azure ATP's support for sensors in untrusted forests is now in public preview.
 From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](atp-multi-forest.md) to learn more.
 
 - **New feature: Domain controller coverage**  
@@ -505,7 +560,7 @@ In response to customer feedback regarding Azure ATP usage with domain controlle
 Released January 20, 2019
 
 - **New security alert: Remote code execution over DNS – (preview)**  
-Azure ATP’s [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
+Azure ATP's [Remote code execution over DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
 
 - **Feature Enhancement: 72 hour delayed sensor update**  
 Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24-hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](sensor-update.md) for configuration instructions.
@@ -517,9 +572,10 @@ Changed option to delay sensor updates on selected sensors to 72 hours (instead 
 Released January 13, 2019
 
 - **New Security Alert: Data exfiltration over SMB - (preview)**  
-Azure ATP’s [Data exfiltration over SMB](atp-exfiltration-alerts.md) security alert is now in public preview. Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provide authorization to any resource.
+Azure ATP's [Data exfiltration over SMB](atp-exfiltration-alerts.md) security alert is now in public preview. Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provide authorization to any resource.
 
-- **Feature Enhancement: Remote code execution attempt** security alert    A new alert description and additional evidence were added to help make the alert easier to understand, and provide better investigation workflows.
+- **Feature Enhancement: Remote code execution attempt** security alert  
+A new alert description and additional evidence were added to help make the alert easier to understand, and provide better investigation workflows.
 
 - **Feature Enhancement: DNS query logical activities**  
 Additional query types were added to [Azure ATP monitored activities](monitored-activities.md) including: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.
@@ -584,7 +640,7 @@ When viewing large lateral movement paths, Azure ATP now highlights only the nod
 Released December 2, 2018
 
 - **New Security Alert: Suspected Golden ticket usage- ticket anomaly (preview)**  
-Azure ATP’s [Suspected Golden Ticket usage - ticket anomaly](suspicious-activity-guide.md) security alert is now in public preview.    Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource.
+Azure ATP's [Suspected Golden Ticket usage - ticket anomaly](suspicious-activity-guide.md) security alert is now in public preview.    Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource.
 
     This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this new detection is designed to identify.
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What's new in ATA version 1.9 | Microsoft Docs
+title: What's new in ATA version 1.9
 description: Lists what was new in ATA version 1.9 along with known issues
 keywords:
 author: rkarlin

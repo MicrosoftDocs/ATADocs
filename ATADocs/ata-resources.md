@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics resources and readiness roadmap | Microsoft Docs
+title: Advanced Threat Analytics resources and readiness roadmap
 description: Provides a list of ATA resources, videos, getting started, deployment and readiness roadmap links.
 keywords:
 author: rkarlin

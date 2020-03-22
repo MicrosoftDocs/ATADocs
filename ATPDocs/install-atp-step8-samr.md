@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure SAM-R to enable lateral movement path detection in Azure ATP | Microsoft Docs
+title: Configure SAM-R to enable lateral movement path detection in Azure ATP
 description: Explains how to configure Azure ATP to make remote calls to SAM
 keywords:
 author: shsagir

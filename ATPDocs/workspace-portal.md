@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Understanding the Azure Advanced Threat Protection portal | Microsoft Docs
+title: Understanding the Azure Advanced Threat Protection portal
 description: Describes how to log into the Azure ATP portal and the components of the portal
 keywords:
 author: shsagir

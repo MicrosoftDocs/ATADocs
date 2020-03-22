@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection legacy protocols identity security posture assessment | Microsoft Docs
+title: Azure Advanced Threat Protection legacy protocols identity security posture assessment
 description: This article provides an overview of Azure ATP's legacy protocol identification security posture assessment report.
 keywords:
 author: shsagir

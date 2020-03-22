@@ -224,6 +224,11 @@
             "source_path": "ATADocs/Understand/whats-new-version-1.7.md",
             "redirect_url": "/advanced-threat-analytics/whats-new-version-1.7",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/known-issues.md",
+            "redirect_url": "/azure-advanced-threat-protection/troubleshooting-atp-known-issues",
+            "redirect_document_id": false
         }
     ]
 }

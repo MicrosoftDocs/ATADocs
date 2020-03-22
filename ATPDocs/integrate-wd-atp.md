@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection integration with Windows Defender ATP | Microsoft Docs
+title: Azure Advanced Threat Protection integration with Windows Defender ATP
 description: How to integrate Azure Advanced Threat Protection with Windows Defender ATP for full threat detection coverage
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 10/18/2018
+ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -31,9 +31,7 @@ Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows
 
 By integrating Windows Defender ATP into Azure ATP, you can leverage the full power of both services and secure your environment, including:
 
-- Azure ATP sensors and standalone sensors: Can sit directly on your domain controllers or port mirror from your domain controllers to ATP, to capture and parse network traffic of multiple protocols (such as Kerberos, DNS, RPC, NTLM, and others) for authentication, authorization, and information gathering. 
-
--   Endpoint behavioral sensors: Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system (for example, process, registry, file, and network communications) and send this sensor data to your private, isolated, cloud instance of Windows Defender ATP.
+- Endpoint behavioral sensors: Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system (for example, process, registry, file, and network communications) and send this sensor data to your private, isolated, cloud instance of Windows Defender ATP.
 
 - Cloud security analytics: Leveraging big-data, machine-learning, and unique Microsoft view across the Windows ecosystem (such as the [Microsoft Malicious Software Removal Tool](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), enterprise cloud products (such as Office 365), and online assets (such as Bing and SmartScreen URL reputation), behavioral signals are translated into insights, detections, and recommended responses to advanced threats.
 
@@ -49,36 +47,37 @@ Azure ATP technology detects multiple suspicious activities, focusing on several
 
 At the same time, Windows Defender ATP leverages Microsoft technology and expertise to detect sophisticated cyber-attacks, providing:
 
-- Behavior-based, cloud-powered, advanced attack detection<br></br>Finds the attacks that made it past all other defenses (post breach detection), provides actionable, correlated alerts for known and unknown adversaries trying to hide their activities on endpoints.
+- Behavior-based, cloud-powered, advanced attack detection  
+Finds the attacks that made it past all other defenses (post breach detection), provides actionable, correlated alerts for known and unknown adversaries trying to hide their activities on endpoints.
 
-- Rich timeline for forensic investigation and mitigation<br></br>Easily investigate the scope of breach or suspected behaviors on any machine through a rich machine timeline. File, URLs, and network connection inventory across the network. Gain additional insight using deep collection and analysis (“detonation”) for any file or URLs.
+- Rich timeline for forensic investigation and mitigation  
+Easily investigate the scope of breach or suspected behaviors on any machine through a rich machine timeline. File, URLs, and network connection inventory across the network. Gain additional insight using deep collection and analysis (“detonation”) for any file or URLs.
 
-- Built in unique threat intelligence knowledge base<br></br>Unparalleled threat optics provides actor details and intent context for every threat intelligence based detection – combining first and third-party intelligence sources.
+- Built in unique threat intelligence knowledge base  
+Unparalleled threat optics provides actor details and intent context for every threat intelligence based detection – combining first and third-party intelligence sources.
 
 ## Prerequisites
 
-To enable this feature, you need a license for both Azure ATP and Windows Defender ATP. 
-
+To enable this feature, you need a license for both Azure ATP and Windows Defender ATP.
 
 ## How to integrate Azure ATP with Windows Defender ATP
 
-1. In the Azure ATP portal, open **Configuration**. 
+1. In the Azure ATP portal, open **Configuration**.
 
     ![Azure ATP Configuration menu](./media/atp-configuration-wd.png)
-2. In the Configurations list, select **Windows Defender ATP** and set the integration toggle to **On**. 
+2. In the Configurations list, select **Windows Defender ATP** and set the integration toggle to **On**.
 
     ![Enable Windows Defender integration](./media/enable-integration.png)
 
-
-3. In the [Windows Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**. 
+3. In the [Windows Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**.
 
     ![Windows Defender ATP enable integration](./media/wd-atp-enable.png)
 
-4. To check the status of the integration, in the Azure ATP portal, go to **Settings** > **Windows Defender ATP integration**. You can see the status of the integration and if something is wrong, you'll see an error. 
+4. To check the status of the integration, in the Azure ATP portal, go to **Settings** > **Windows Defender ATP integration**. You can see the status of the integration and if something is wrong, you'll see an error.
 
 ## How it works
 
-After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes a badge to show that it is integrated with Windows Defender ATP. 
+After Azure ATP and Windows Defender ATP are fully integrated, in the Azure ATP portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Windows Defender ATP includes a badge to show that it is integrated with Windows Defender ATP.
 
  ![Windows Defender ATP alerts](./media/profile-alerts-wd.png)
 
@@ -86,17 +85,16 @@ If the entity contains alerts in Windows Defender ATP, there is a number next to
 
  ![Azure ATP alerts](./media/atp-integrated-wd-icon-alerts.png)
 
-If you click on the badge, you are brought to the Windows Defender ATP portal where you can view and mitigate the alerts. If the entity is not recognized by Windows Defender ATP, the badge is grayed out. 
+If you click on the badge, you are brought to the Windows Defender ATP portal where you can view and mitigate the alerts. If the entity is not recognized by Windows Defender ATP, the badge is grayed out.
 
  ![Windows Defender ATP gray](./media/wd-grey.png)
 
-From the Windows Defender ATP portal, click on an endpoint to view Azure ATP alerts. If you click on the alerts for this entity in Windows Defender ATP, the entity's profile page opens in Azure ATP. 
- 
+From the Windows Defender ATP portal, click on an endpoint to view Azure ATP alerts. If you click on the alerts for this entity in Windows Defender ATP, the entity's profile page opens in Azure ATP.
+
  > [!NOTE]
- > Currently, Azure ATP integration with Windows Defender ATP supports only users and machines from the on-premises AD. Users from Azure AD and virtual machines that are managed in Azure will not be displayed as part of the integration 
+ > Currently, Azure ATP integration with Windows Defender ATP supports only users and machines from the on-premises AD. Users from Azure AD and virtual machines that are managed in Azure will not be displayed as part of the integration
 
 ![Windows Defender ATP alerts](./media/wd-atp-alerts.png)
-
 
 ## See Also
 
@@ -105,4 +103,3 @@ From the Windows Defender ATP portal, click on an endpoint to view Azure ATP ale
 - [Azure ATP architecture](atp-architecture.md)
 - [Install ATP](install-atp-step1.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
-

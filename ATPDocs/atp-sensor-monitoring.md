@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Monitoring domain controllers and installed sensors installed on your domain controllers using Azure Advanced Threat Protection | Microsoft Docs
+title: Monitoring domain controllers and installed sensors installed on your domain controllers using Azure Advanced Threat Protection
 description: Describes how to monitor Azure ATP sensors and sensor coverage using Azure ATP
 keywords:
 author: shsagir

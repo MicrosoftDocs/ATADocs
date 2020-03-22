@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure ATP Reconnaissance playbook tutorial | Microsoft Docs
+title: Azure ATP Reconnaissance playbook tutorial
 description: The Azure ATP Reconnaissance playbook tutorial describes how to simulate Reconnaissance threats for detection by Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial

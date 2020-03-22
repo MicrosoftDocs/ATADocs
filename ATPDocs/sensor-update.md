@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Update your Azure ATP sensors | Microsoft Docs
+title: Update your Azure ATP sensors
 description: Describes how to update and delay update of sensors in Azure ATP.
 keywords:
 author: shsagir

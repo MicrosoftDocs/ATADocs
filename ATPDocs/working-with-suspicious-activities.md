@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Working with security alerts in Azure Advanced Threat Protection | Microsoft Docs
+title: Working with security alerts in Azure Advanced Threat Protection
 description: Describes how to review security alerts issued by Azure ATP
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 09/15/2019
+ms.date: 01/26/2020
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -24,8 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-
 
 # Working with Security Alerts
 
@@ -55,6 +53,7 @@ Each security alert has the following information:
     - Download the security alert in Excel format.
 
 > [!NOTE]
+>
 > - When you hover your mouse over a user or computer, a mini entity profile is displayed. The mini-profile provides additional information about the entity and includes the number of security alerts that the entity is linked to.
 > - Clicking on an entity, takes you to the entity profile of the user or computer.
 
@@ -62,7 +61,7 @@ Each security alert has the following information:
 
 ## Security alert categories
 
-Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. 
+Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
 
 - [Reconnaissance alerts](atp-reconnaissance-alerts.md)
 - [Compromised credential alerts](atp-compromised-credentials-alerts.md)
@@ -78,18 +77,18 @@ These detections are tagged with a preview badge, to help you identify the new d
 
 ![preview detection vpn](./media/preview-detection-vpn.png)
 
-By default, preview detections are enabled in Azure ATP. 
+By default, preview detections are enabled in Azure ATP.
 
 To disable preview detections:
 
 1. In the Azure ATP console, click the settings cog.
 2. In the left menu, under Preview, click **Detections**.
 3. Use the slider to turn the preview detections on and off.
- 
-![preview detections](./media/preview-detections.png) 
 
+![preview detections](./media/preview-detections.png)
 
 ## Filter security alerts list
+
 To filter the security alert list:
 
 1. In the **Filter by** pane on the left side of the screen, select one of the following options: **All**, **Open**, **Closed**, or **Suppressed**.
@@ -110,7 +109,6 @@ To filter the security alert list:
 
     Indicates activities that can lead to identity theft, privilege escalation, or other high-impact attacks
 
-
 ## Managing security alerts
 
 You can change the status of a security alert by clicking the current status of the security alert and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
@@ -124,10 +122,7 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 - **Close**: Is used to track security alerts that you identified, researched, and fixed for mitigated.
 
-    > [!NOTE]
-    > If the same activity is detected again within a short period of time, Azure ATP may reopen a closed alert.
-
-- **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
+- **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, a new alert is opened.
 
 - **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all security alerts of the same type.
 
@@ -135,7 +130,6 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 > [!NOTE]
 > The configuration pages can only be modified by Azure ATP admins.
-
 
 ## See Also
 
