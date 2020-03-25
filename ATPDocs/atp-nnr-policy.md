@@ -77,7 +77,7 @@ After confirming the device, you can then determine if the alert is a **False Po
 |RDP*|TCP|3389|All devices on the network|Inbound|
 |DNS|UDP|53|Domain controllers|Outbound|
 
-\*  One of these methods is required, but we recommend using all of them.
+\* One of these methods is required, but we recommend using all of them.
 
 To make sure Azure ATP is working ideally and the environment is configured correctly, Azure ATP checks the resolution status of each Sensor and issues a monitoring alert per method, providing a list of the Azure ATP sensors with low success rate of active name resolution using each method.
 
