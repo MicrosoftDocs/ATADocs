@@ -197,7 +197,7 @@ Released July 22, 2018
 
   -	View and investigate activities performed by users across multiple forests from a single pane of glass.
   - Improves detection and reduces false positives by providing advanced Active Directory integration and account resolution.
-  -	Get better monitoring alerts and reporting for cross-org coverage.
+  -	Get better health alerts and reporting for cross-org coverage.
 
 
 -	**New detections: DCShadow**<br>Two new detections were added to help protect against domain controller shadow (DCShadow) attacks:
@@ -306,7 +306,7 @@ Released May 6, 2018
 Released April 29, 2018
  
 - Encryption downgrade suspicious activities now include an evidence section which describes the symptoms detected by Azure ATP that cause it to suspect that an encryption downgrade activity transpired. 
--	Azure ATP now uses Azure Email Orchestrator for all emails sent from Azure ATP, including suspicious activities, monitoring alerts and reports. You will see that these email notifications now follow a consistent format for ease-of-use and Excel files will be linked to from the email to be downloaded from the console.
+-	Azure ATP now uses Azure Email Orchestrator for all emails sent from Azure ATP, including suspicious activities, health alerts, and reports. You will see that these email notifications now follow a consistent format for ease-of-use and Excel files will be linked to from the email to be downloaded from the console.
  
  
 ## Azure ATP release 2.29
@@ -320,7 +320,7 @@ Released April 22, 2018
 
 Released April 15, 2018
  
--	Users who are members of the role groups Azure ATP Users and Azure ATP Viewers now have permissions to see monitoring alerts.
+-	Users who are members of the role groups Azure ATP Users and Azure ATP Viewers now have permissions to see health alerts.
 - This version includes fixes and improvements for multiple issues. 
 
 
