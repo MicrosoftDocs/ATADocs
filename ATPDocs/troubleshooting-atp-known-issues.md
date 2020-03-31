@@ -120,7 +120,7 @@ Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows
 
 ## VMware virtual machine sensor issue
 
-If you have an Azure ATP sensor on VMware virtual machines, you might receive the monitoring alert **Some network traffic is not being analyzed**. This can happen  because of a configuration mismatch in VMware.
+If you have an Azure ATP sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
@@ -142,7 +142,7 @@ If LSO is enabled, use the following command to disable it:
 
 ## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
 
-If you receive the following monitoring alert: **Directory services user credentials are incorrect**
+If you receive the following health alert: **Directory services user credentials are incorrect**
 
 **Sensor log entries:**
 
