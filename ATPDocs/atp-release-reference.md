@@ -35,16 +35,16 @@ This article is a reference of all Azure ATP releases until (and including) rele
 Released November 18, 2018
 
 - **Security Alert: Suspicious communication over DNS - general availability**<br>
-Azure ATP’s [Suspicious communication over DNS](suspicious-activity-guide.md) security alert is now in general availability. <br> Typically, the DNS protocol in most organizations is not monitored, and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
+Azure ATP's [Suspicious communication over DNS](suspicious-activity-guide.md) security alert is now in general availability. <br> Typically, the DNS protocol in most organizations is not monitored, and rarely blocked for malicious activity. This enables an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.54
 Released November 11, 2018
 
-- **Feature enhancement: Default domain exclusions added to Suspicious Communication over DNS alert**<br>	New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Excluding entities from detections](excluding-entities-from-detections.md), to learn more. 
+- **Feature enhancement: Default domain exclusions added to Suspicious Communication over DNS alert**<br> New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Excluding entities from detections](excluding-entities-from-detections.md), to learn more. 
 
-- **Documentation enhancements: SIEM log update, Known Issues guidance**<br>	externalId mapping and additional explanations were added to SIEM log descriptions. See [SIEM log reference](cef-format-sa.md), to learn more. <br>Additional article for currently unresolved Known Issues guidance was added. See, [Azure ATP Known Issues](known-issues.md), to learn more.  
+- **Documentation enhancements: SIEM log update, Known Issues guidance**<br> externalId mapping and additional explanations were added to SIEM log descriptions. See [SIEM log reference](cef-format-sa.md), to learn more. <br>Additional article for currently unresolved Known Issues guidance was added. See, [Azure ATP Known Issues](known-issues.md), to learn more.  
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -52,10 +52,10 @@ Released November 11, 2018
 Released November 4, 2018
 
 - **Security Alert enhancement: Suspicious Authentication Failure**<br>
-Azure ATP’s [Suspicious Authentication Failure security alert](suspicious-activity-guide.md) now includes monitoring for detection of password spray brute force attacks.
+Azure ATP's [Suspicious Authentication Failure security alert](suspicious-activity-guide.md) now includes monitoring for detection of password spray brute force attacks.
 In a typical **password spray** attack, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). When the initial password spray is not successful, they'll try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. 
 
-- **Feature enhancement: Send a test Syslog message**<br>	New ability to send a test Syslog message during the SIEM setup process. See [Integrate with Syslog](setting-syslog.md), to learn more. 
+- **Feature enhancement: Send a test Syslog message**<br> New ability to send a test Syslog message during the SIEM setup process. See [Integrate with Syslog](setting-syslog.md), to learn more. 
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -64,7 +64,7 @@ Released October 28, 2018
 
 
 - **Security Alert enhancement: Remote Code Execution Attempt**<br>
-Azure ATP’s [Remote Code Execution Attempt security alert](suspicious-activity-guide.md) now includes monitoring for suspicious attempts to execute remote PowerShell code on your domain controllers. Remote PowerShell is a common method for executing valid administrative commands, but is often used maliciously in an attempt to run scripts on remote endpoints. 
+Azure ATP's [Remote Code Execution Attempt security alert](suspicious-activity-guide.md) now includes monitoring for suspicious attempts to execute remote PowerShell code on your domain controllers. Remote PowerShell is a common method for executing valid administrative commands, but is often used maliciously in an attempt to run scripts on remote endpoints. 
 
 - **Feature enhancement: Set report scheduling**
 <br>You can now set a specific hour to schedule your Azure ATP reports using the [reports](reports.md#) function. 
@@ -94,9 +94,9 @@ Released October 14, 2018
 
 ## Azure ATP release 2.49
 Released October 7, 2018
--	**New detections: Suspicious DNS Communication** (preview)<br>New detection added to help protects against suspicious DNS communication attacks:
+- **New detections: Suspicious DNS Communication** (preview)<br>New detection added to help protects against suspicious DNS communication attacks:
 
-    -	This detection helps detect attacks against the DNS protocol. In most organizations, the DNS protocol is not monitored and rarely blocked for malicious activity. Enabling an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
+    - This detection helps detect attacks against the DNS protocol. In most organizations, the DNS protocol is not monitored and rarely blocked for malicious activity. Enabling an attacker on a compromised machine to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command and control, and/or evading corporate network restrictions.
 
 - **New functionality** <br>Azure ATP **user role** enhanced with the following capabilities:
   - Change status of security alerts (reopen, close, exclude, suppress)
@@ -133,7 +133,7 @@ Released September 2, 2018
 
 - **Azure ATP Advanced Audit Policy Check**
  
-Azure Advanced Threat Protection now checks your domain controller’s existing Advanced Audit Policies and recommends policy changes to provide maximum Azure ATP service coverage for your organization. 
+Azure Advanced Threat Protection now checks your domain controller's existing Advanced Audit Policies and recommends policy changes to provide maximum Azure ATP service coverage for your organization. 
 
 **This new check enables you to:**
   -  Identify events missing from your Windows Event logs that are currently excluded from your Azure ATP coverage.
@@ -195,18 +195,18 @@ Released July 22, 2018
 
 - **Azure ATP multi-forest support is being gradually rolled out (preview)** <br> Azure ATP can now support organizations with multiple forests that give you the ability monitor activity and profile users across forests. This new capability enables you to:
 
-  -	View and investigate activities performed by users across multiple forests from a single pane of glass.
+  - View and investigate activities performed by users across multiple forests from a single pane of glass.
   - Improves detection and reduces false positives by providing advanced Active Directory integration and account resolution.
-  -	Get better health alerts and reporting for cross-org coverage.
+  - Get better health alerts and reporting for cross-org coverage.
 
 
--	**New detections: DCShadow**<br>Two new detections were added to help protect against domain controller shadow (DCShadow) attacks:
+- **New detections: DCShadow**<br>Two new detections were added to help protect against domain controller shadow (DCShadow) attacks:
 
-    -	Suspicious domain controller promotion (potential DCShadow attack) – This detection helps detect attacks in which a machine impersonate a domain controller and then tries to use replication to propagate changes to other domain controllers in your domain.
+    - Suspicious domain controller promotion (potential DCShadow attack) – This detection helps detect attacks in which a machine impersonate a domain controller and then tries to use replication to propagate changes to other domain controllers in your domain.
 
-    -	Suspicious replication request (potential DCShadow attack) – This detection helps protect against attacks that attempt to perform DC promotion of machines that are not domain controllers in order to change directory objects.
+    - Suspicious replication request (potential DCShadow attack) – This detection helps protect against attacks that attempt to perform DC promotion of machines that are not domain controllers in order to change directory objects.
 
--	**Improved encryption downgrade information**<br>Encryption downgrade detection now provides more information regarding the specific type of attack detected: overpass-the-hash, golden ticket, and skeleton key. In addition, these alerts have been aggregated to enable easier investigation.
+- **Improved encryption downgrade information**<br>Encryption downgrade detection now provides more information regarding the specific type of attack detected: overpass-the-hash, golden ticket, and skeleton key. In addition, these alerts have been aggregated to enable easier investigation.
 - This version includes fixes and improvements for multiple issues. 
 
 
@@ -221,7 +221,7 @@ Released July 15, 2018
 ## Azure ATP release 2.39
 
 Released July 5, 2018
--	**New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md)
+- **New detection added: Kerberos golden ticket - nonexistent account** (preview)<br>This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md)
 
 - This version includes fixes and improvements for multiple issues. 
 
@@ -257,7 +257,7 @@ Released June 10, 2018
 
 - **Updated unusual protocol implementation detection**<br></br>The unusual protocol implementation detection now provides more information. You can now see which potential attack tool Azure ATP suspects is at work on your network. For more information, see the [Suspicious activity guide](suspicious-activity-guide.md).
  
-- **Outdated sensor alert**<br></br>Azure ATP includes a new monitoring alert to let you know if a sensor is more than three versions outdated. If you see this alert, you should update the sensor, or investigate why the sensor isn't updating automatically. If the alert recurs, uninstall and reinstall the sensor.
+- **Outdated sensor alert**<br></br>Azure ATP includes a new health alert to let you know if a sensor is more than three versions outdated. If you see this alert, you should update the sensor, or investigate why the sensor isn't updating automatically. If the alert recurs, uninstall and reinstall the sensor.
 
 - This version includes fixes and improvements for multiple issues. 
 
@@ -306,7 +306,7 @@ Released May 6, 2018
 Released April 29, 2018
  
 - Encryption downgrade suspicious activities now include an evidence section which describes the symptoms detected by Azure ATP that cause it to suspect that an encryption downgrade activity transpired. 
--	Azure ATP now uses Azure Email Orchestrator for all emails sent from Azure ATP, including suspicious activities, health alerts, and reports. You will see that these email notifications now follow a consistent format for ease-of-use and Excel files will be linked to from the email to be downloaded from the console.
+- Azure ATP now uses Azure Email Orchestrator for all emails sent from Azure ATP, including suspicious activities, health alerts, and reports. You will see that these email notifications now follow a consistent format for ease-of-use and Excel files will be linked to from the email to be downloaded from the console.
  
  
 ## Azure ATP release 2.29
@@ -320,7 +320,7 @@ Released April 22, 2018
 
 Released April 15, 2018
  
--	Users who are members of the role groups Azure ATP Users and Azure ATP Viewers now have permissions to see health alerts.
+- Users who are members of the role groups Azure ATP Users and Azure ATP Viewers now have permissions to see health alerts.
 - This version includes fixes and improvements for multiple issues. 
 
 
@@ -338,8 +338,8 @@ Released April 8, 2018
 Released March 25, 2018
 
 - When Azure ATP alerts you of a suspicious activity that you identify as a benign positive (a legitimate action that is not a suspicious activity) you have the option to exclude computers and IP addresses for more detections, including: Encryption downgrade, LDAP brute force, Forged PAC, Brute force and Pass-the-hash.
--	The Azure ATP sensor performance was improved.
--	A new region was added for Workspace deployment, you can now deploy a workspace in Asia. 
+- The Azure ATP sensor performance was improved.
+- A new region was added for Workspace deployment, you can now deploy a workspace in Asia. 
 
 
 ## Azure ATP release 2.25
@@ -355,21 +355,21 @@ Released March 18, 2018
 Released March 11, 2018
 
 **New & updated detections**
-  -	Suspicious service creation – Attackers attempt to run suspicious services on your network. Azure ATP now raises an alert when it identifies that someone on a specific computer is running a new service that seems suspicious. This detection is based on events (not network traffic) and is detected on any domain controller in your network that is forwarding event 7045 to Azure ATP. For more information see the [Suspicious activity guide](suspicious-activity-guide.md).
+  - Suspicious service creation – Attackers attempt to run suspicious services on your network. Azure ATP now raises an alert when it identifies that someone on a specific computer is running a new service that seems suspicious. This detection is based on events (not network traffic) and is detected on any domain controller in your network that is forwarding event 7045 to Azure ATP. For more information see the [Suspicious activity guide](suspicious-activity-guide.md).
 
 **Improved investigation**
-  -	Azure ATP includes an enriched [entity profile](entity-profiles.md). The entity profile provides you with a platform that is designed for deep-dive investigation of user activities This includes the resources they accessed, computers they logged onto, and many more. The entity profile also provides directory data and enables you to identify potential lateral movement paths to or from the entity, enabling you to learn more about the potential breaches in your organization.
+  - Azure ATP includes an enriched [entity profile](entity-profiles.md). The entity profile provides you with a platform that is designed for deep-dive investigation of user activities This includes the resources they accessed, computers they logged onto, and many more. The entity profile also provides directory data and enables you to identify potential lateral movement paths to or from the entity, enabling you to learn more about the potential breaches in your organization.
 
-  -	ATP enables you to manually tag entities as *sensitive* to enhance detections and monitoring. This tagging impacts many Azure ATP detections, such as sensitive group modification detection and [lateral movement path](use-case-lateral-movement-path.md), which rely on entities that are considered sensitive.
+  - ATP enables you to manually tag entities as *sensitive* to enhance detections and monitoring. This tagging impacts many Azure ATP detections, such as sensitive group modification detection and [lateral movement path](use-case-lateral-movement-path.md), which rely on entities that are considered sensitive.
 
 **New reports to help you investigate**
-  -	The [Passwords exposed in clear text report](reports.md) enables you to detect when services send account credentials are sent in plain text. This allows you to investigate services and improve your network security level. This report replaces the cleartext suspicious activity alerts.
-  -	The [Lateral movement paths to sensitive accounts report](reports.md) lists the sensitive accounts that are exposed via lateral movement paths. This enables you to mitigate these paths and harden your network to minimize the attack surface risk. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
+  - The [Passwords exposed in clear text report](reports.md) enables you to detect when services send account credentials are sent in plain text. This allows you to investigate services and improve your network security level. This report replaces the cleartext suspicious activity alerts.
+  - The [Lateral movement paths to sensitive accounts report](reports.md) lists the sensitive accounts that are exposed via lateral movement paths. This enables you to mitigate these paths and harden your network to minimize the attack surface risk. This enables you to prevent lateral movement so that attackers can't move across your network between users and computers until they hit the virtual security jackpot: your sensitive admin account credentials.
 
 - You can now easily access the documentation from a link provide within a suspicious activity alert in order to view [investigation steps that you can take](suspicious-activity-guide.md). 
 
 **Performance improvements**
- -	The Azure ATP sensor infrastructure was improved for performance: the aggregated view of traffic enables optimization of CPU and packet pipeline, and reuses sockets to the domain controllers to minimize SSL sessions to the DC.
+ - The Azure ATP sensor infrastructure was improved for performance: the aggregated view of traffic enables optimization of CPU and packet pipeline, and reuses sockets to the domain controllers to minimize SSL sessions to the DC.
 
 ## See Also
 - [What is Azure Advanced Threat Protection?](what-is-atp.md)
