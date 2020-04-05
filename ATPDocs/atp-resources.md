@@ -51,7 +51,7 @@ Use these resources to help you set up Azure ATP, connect to Active Directory, d
 
 - [Try Azure ATP (part of EMS E5)](https://aka.ms/aatptrial)  The trial is valid for 90 days.
 - [Azure ATP Set up](install-atp-step1.md) Follow these steps to deploy Azure ATP in your environment.
-- [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md)
+- [Integrate Azure ATP with Microsoft Defender ATP](integrate-wd-atp.md)
 
 ## Azure ATP settings
 

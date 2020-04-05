@@ -114,9 +114,9 @@ Suggested possible workarounds:
 
 - If your machine has less than 64 logical cores and is running on a HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
-## Windows Defender ATP integration issue
+## Microsoft Defender ATP integration issue
 
-Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. See [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md) for more information.
+Azure Advanced Threat Protection enables you to integrate Azure ATP with Microsoft Defender ATP. See [Integrate Azure ATP with Microsoft Defender ATP](integrate-wd-atp.md) for more information.
 
 ## VMware virtual machine sensor issue
 
