@@ -407,8 +407,8 @@ Lateral movement paths (LMPs) are a key method for threat and risk discovery in 
 
 Released March 24, 2019
 
-- **Feature enhancement: Network Name Resolution (NNR) monitoring alerts**  
-Monitoring alerts were added for confidence levels associated with Azure ATP security alerts that are based on NNR. Each monitoring alert includes actionable and detailed recommendations to help resolve low NNR success rates.
+- **Feature enhancement: Network Name Resolution (NNR) health alerts**  
+Health alerts were added for confidence levels associated with Azure ATP security alerts that are based on NNR. Each health alert includes actionable and detailed recommendations to help resolve low NNR success rates.
 
     See [What is Network Name Resolution](atp-nnr-policy.md) to learn more about how Azure ATP uses NNR and why it's important for alert accuracy.
 

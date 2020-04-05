@@ -41,7 +41,7 @@ Installed directly on your domain controllers, the Azure ATP sensor accesses the
 ## Azure ATP components
 Azure ATP consists of the following components:
 
--	**Azure ATP portal** <br>
+-    **Azure ATP portal** <br>
 The Azure ATP portal allows creation of your Azure ATP instance, displays the data received from Azure ATP sensors, and enables you to monitor, manage, and investigate threats in your network environment.  
 -   **Azure ATP sensor**<br>
 Azure ATP sensors are installed directly on your domain controllers. The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
@@ -59,7 +59,7 @@ Use the Azure ATP portal to:
 - **Optional**: the portal can also be configured to send emails and events when security alerts or health issues are detected
 
 > [!NOTE]
-> - If no sensor is installed on your Azure ATP instance within 60 days, the instance may be deleted and you’ll need to recreate it.
+> - If no sensor is installed on your Azure ATP instance within 60 days, the instance may be deleted and you'll need to recreate it.
 
 ## Azure ATP sensor
 The Azure ATP sensor has the following core functionality:
@@ -87,7 +87,7 @@ The Azure ATP sensor includes a monitoring component that evaluates the availabl
 
 No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
 
-If the monitoring process causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
+If the monitoring process causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
 
 ### Windows Events
 

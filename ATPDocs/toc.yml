@@ -126,7 +126,7 @@
     - name: Work with Azure ATP health center
       href: atp-health-center.md
     - name: Manage Azure ATP health alerts
-      href: monitoring-alerts.md
+      href: health-alerts.md
   - name: Azure ATP sensor delayed update
     href: sensor-update.md
   - name: Troubleshooting known issues
