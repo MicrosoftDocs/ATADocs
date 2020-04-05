@@ -79,12 +79,12 @@ After confirming the device, you can then determine if the alert is a **False Po
 
 \* One of these methods is required, but we recommend using all of them.
 
-To make sure Azure ATP is working ideally and the environment is configured correctly, Azure ATP checks the resolution status of each Sensor and issues a monitoring alert per method, providing a list of the Azure ATP sensors with low success rate of active name resolution using each method.
+To make sure Azure ATP is working ideally and the environment is configured correctly, Azure ATP checks the resolution status of each Sensor and issues a health alert per method, providing a list of the Azure ATP sensors with low success rate of active name resolution using each method.
 
 > [!NOTE]
 > To disable an optional NNR method in Azure ATP to fit the needs of your environment, open a support call.
 
-Each monitoring alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
+Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
 
 ![Low success rate Network Name Resolution (NNR) alert](media/atp-nnr-success-rate.png)
 
