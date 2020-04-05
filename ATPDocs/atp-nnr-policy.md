@@ -30,7 +30,7 @@ Network Name Resolution or (NNR) is a main component of  Azure ATP functionality
 
 Using NNR, Azure ATP is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, Azure ATP profiles entities, including computers, and generates security alerts for suspicious activities.
 
-To resolve IP addresses to computer names, Azure ATP sensors query the IP address for the computer name “behind” the IP, using one of the following methods:
+To resolve IP addresses to computer names, Azure ATP sensors query the IP address for the computer name "behind" the IP, using one of the following methods:
 
 - NTLM over RPC (TCP Port 135)
 - NetBIOS (UDP port 137)
@@ -70,22 +70,22 @@ After confirming the device, you can then determine if the alert is a **False Po
 
 
 ### Prerequisites
-|Protocol|	Transport|	Port|	Device|	Direction|
+|Protocol|    Transport|    Port|    Device|    Direction|
 |--------|--------|------|-------|------|
-|NTLM over RPC|	TCP	|135|	All devices on the network|	Inbound|
-|NetBIOS|	UDP|	137|	All devices on the network|	Inbound|
-|DNS|	UDP|	53|	Domain controllers|	Outbound|
+|NTLM over RPC|    TCP    |135|    All devices on the network|    Inbound|
+|NetBIOS|    UDP|    137|    All devices on the network|    Inbound|
+|DNS|    UDP|    53|    Domain controllers|    Outbound|
 |
 
 When port 3389 is opened on devices in the environment, the Azure ATP sensor using it for network name resolution purposes.
 Opening port 3389 **is not a requirement**, it is only an additional method that can provide the computer name if the port is already opened for other purposes.
 
-To make sure Azure ATP is working ideally and the environment is configured correctly, Azure ATP checks the resolution status of each Sensor and issues a monitoring alert per method, providing a list of the Azure ATP sensors with low success rate of active name resolution using each method.
+To make sure Azure ATP is working ideally and the environment is configured correctly, Azure ATP checks the resolution status of each Sensor and issues a health alert per method, providing a list of the Azure ATP sensors with low success rate of active name resolution using each method.
 
 > [!NOTE]
 > To disable an optional NNR method in Azure ATP to fit the needs of your environment, open a support call. 
 
-Each monitoring alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
+Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
 
 ![Low success rate Network Name Resolution (NNR) alert](media/atp-nnr-success-rate.png)
 
