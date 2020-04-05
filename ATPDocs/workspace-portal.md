@@ -112,7 +112,7 @@ If you hover your mouse over an entity, anywhere in the Azure ATP portal where t
 - First seen – The first time Azure ATP observed an activity from this entity.
 - Last seen - The last time Azure ATP observed an activity from this entity.
 - SA badge - Is displayed if there are suspicious activities associated with this entity.
-- WD ATP badge- Will be displayed if there are suspicious activities in Windows Defender ATP associated with this entity.
+- WD ATP badge- Will be displayed if there are suspicious activities in Microsoft Defender ATP associated with this entity.
 - Lateral movement paths badge - Will be displayed if there have been lateral movement paths detected for this entity within the last two days.
 
 

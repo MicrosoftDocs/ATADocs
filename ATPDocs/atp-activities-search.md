@@ -47,6 +47,6 @@ To filter alerts and activities:
 
 ## See Also
 - [Investigating entities](investigate-entity.md)
-- [Monitoring alerts](monitoring-alerts.md)
+- [Health alerts](health-alerts.md)
 - [Working with Security Alerts](working-with-suspicious-activities.md)
 - [Check out the ATP forum!](https://aka.ms/azureatpcommunity)
