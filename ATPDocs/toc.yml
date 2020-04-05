@@ -133,7 +133,7 @@
     href: troubleshooting-atp-known-issues.md
   - name: Troubleshoot using logs
     href: troubleshooting-atp-using-logs.md
-  - name: Integrate with Windows Defender ATP
+  - name: Integrate with Microsoft Defender ATP
     href: integrate-wd-atp.md
   - name: VPN integration
     href: install-atp-step6-vpn.md

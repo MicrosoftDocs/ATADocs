@@ -83,7 +83,7 @@ Azure ATP's [Remote Code Execution Attempt security alert](suspicious-activity-g
 ## Azure ATP release 2.51
 Released October 21, 2018
 
-- You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
+- You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-wd-atp.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
