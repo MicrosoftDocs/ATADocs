@@ -31,7 +31,7 @@ Keeping your Azure Advanced Threat Protection sensors up-to-date, provides the b
 
 The Azure ATP service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. Azure ATP sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the Azure ATP sensor and sensor detection capabilities. 
 
-### Azure ATP sensor update types	
+### Azure ATP sensor update types    
 
 Azure ATP sensors support two kinds of updates:
 - Minor version updates: 
@@ -81,7 +81,7 @@ Every few minutes, Azure ATP sensors check whether they have the latest version.
 3. Sensors that are not set to **Delayed update** start the update process on a sensor by sensor basis:
    1. Azure ATP sensor updater service pulls the updated version from the cloud service (in cab file format).
    2. Azure ATP sensor updater validates the file signature.
-   3. Azure ATP sensor updater service extracts the cab file to a new folder in the sensor’s installation folder. By default it is extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
+   3. Azure ATP sensor updater service extracts the cab file to a new folder in the sensor's installation folder. By default it is extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
    4. Azure ATP sensor service points to the new files extracted from the cab file.    
    5. Azure ATP sensor updater service restarts the Azure ATP sensor service.
        > [!NOTE]
@@ -95,7 +95,7 @@ Every few minutes, Azure ATP sensors check whether they have the latest version.
 ![Sensor update](./media/sensor-update.png)
 
 
-For any sensor that fails to complete the update process, a relevant monitoring alert is triggered, and is sent as a notification.
+For any sensor that fails to complete the update process, a relevant health alert is triggered, and is sent as a notification.
 
 ![Sensor update failure](./media/sensor-outdated.png)
 
