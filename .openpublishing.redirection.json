@@ -229,6 +229,11 @@
             "source_path": "ATPDocs/known-issues.md",
             "redirect_url": "/azure-advanced-threat-protection/troubleshooting-atp-known-issues",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/monitoring-alerts.md",
+            "redirect_url": "/azure-advanced-threat-protection/health-alerts",
+            "redirect_document_id": false
         }
     ]
 }
