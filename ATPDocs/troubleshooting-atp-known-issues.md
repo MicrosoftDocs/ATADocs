@@ -114,13 +114,13 @@ Suggested possible workarounds:
 
 - If your machine has less than 64 logical cores and is running on a HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
-## Windows Defender ATP integration issue
+## Microsoft Defender ATP integration issue
 
-Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. See [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md) for more information.
+Azure Advanced Threat Protection enables you to integrate Azure ATP with Microsoft Defender ATP. See [Integrate Azure ATP with Microsoft Defender ATP](integrate-wd-atp.md) for more information.
 
 ## VMware virtual machine sensor issue
 
-If you have an Azure ATP sensor on VMware virtual machines, you might receive the monitoring alert **Some network traffic is not being analyzed**. This can happen  because of a configuration mismatch in VMware.
+If you have an Azure ATP sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
@@ -142,7 +142,7 @@ If LSO is enabled, use the following command to disable it:
 
 ## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
 
-If you receive the following monitoring alert: **Directory services user credentials are incorrect**
+If you receive the following health alert: **Directory services user credentials are incorrect**
 
 **Sensor log entries:**
 

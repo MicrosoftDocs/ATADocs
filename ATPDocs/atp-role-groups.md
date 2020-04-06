@@ -49,7 +49,7 @@ Azure ATP provides three types of security groups: Azure ATP *(instance name)* A
 
 |Activity |Azure ATP *(instance name)* Administrators|Azure ATP *(instance name)* Users|Azure ATP *(instance name)* Viewers|
 |----|----|----|----|
-|Change status of Monitoring Alerts|Available|Not available|Not available|
+|Change status of Health Alerts|Available|Not available|Not available|
 |Change status of Security Alerts (re-open, close, exclude, suppress)|Available|Available|Not available|
 |Delete instance|Available|Not available|Not available|
 |Download a report|Available|Available|Available|
