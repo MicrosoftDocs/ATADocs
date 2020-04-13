@@ -33,13 +33,13 @@ ms.suite: ems
 The ATA audit logs are kept in the Windows Event Logs under **Applications and Services** and then **Microsoft ATA** both on the ATA Center and ATA Gateway machines.
 
 The ATA Center audit log contains:
--	Suspicious activity information
--	Monitoring alerts (health page)
--	ATA Console logins
--	All configuration changes*
+-    Suspicious activity information
+-    Health alerts
+-    ATA Console logins
+-    All configuration changes*
 
 The ATA Gateway audit log contains:
--	Gateway configuration changes* 
+-    Gateway configuration changes* 
 
 (All ATA Gateway configuration changes are configured on the ATA Center but are still audited on the Gateway machine itself.)
 

@@ -45,7 +45,7 @@ ATA introduces three types of Role group: ATA Administrators, ATA Users, and ATA
 |Provide Input for Suspicious Activities|Available|Available|Not available|
 |Change status of Suspicious Activities|Available|Available|Not available|
 |Share/Export suspicious activity via email/get link|Available|Available|Not available|
-|Change status of Monitoring Alerts|Available|Available|Not available|
+|Change status of Health Alerts|Available|Available|Not available|
 |Update ATA Configuration|Available|Not available|Not available|
 |Gateway – Add|Available|Not available|Not available|
 |Gateway – Delete |Available|Not available|Not available|

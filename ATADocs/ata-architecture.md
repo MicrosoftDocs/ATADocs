@@ -55,11 +55,11 @@ An ATA deployment can consist of a single ATA Center connected to all ATA Gatewa
 ## Deployment options
 You can deploy ATA using the following combination of gateways:
 
--	**Using only ATA Gateways** <br>
+-    **Using only ATA Gateways** <br>
 Your ATA deployment can contain only ATA Gateways, without any ATA Lightweight Gateways: All the domain controllers must be configured to enable port mirroring to an ATA Gateway or network TAPs must be in place.
--	**Using only ATA Lightweight Gateways**<br>
+-    **Using only ATA Lightweight Gateways**<br>
 Your ATA deployment can contain only ATA Lightweight Gateways: The ATA Lightweight Gateways are deployed on each domain controller and no additional servers or port mirroring configuration is necessary.
--	**Using both ATA Gateways and ATA Lightweight Gateways**<br>
+-    **Using both ATA Gateways and ATA Lightweight Gateways**<br>
 Your ATA deployment includes both ATA Gateways and ATA Lightweight Gateways. The ATA Lightweight Gateways are installed on some of your domain controllers (for example, all domain controllers in your branch sites). At the same time, other domain controllers are monitored by ATA Gateways (for example, the larger domain controllers in your main data centers).
 
 In all these scenarios, all the gateways send their data to the ATA Center.
@@ -132,9 +132,9 @@ The ATA Gateway receives network traffic and Windows Events from your network an
 
 The following features work differently depending on whether you are running an ATA Gateway or an ATA Lightweight Gateway.
 
--	The ATA Lightweight Gateway can read events locally, without the need to configure event forwarding.
+-    The ATA Lightweight Gateway can read events locally, without the need to configure event forwarding.
 
--	**Domain synchronizer candidate**<br>
+-    **Domain synchronizer candidate**<br>
 The domain synchronizer gateway is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One gateway is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
 If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer candidate available for a specific domain, ATA proactively synchronizes entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
 <br>When no domain synchronizer is available, searching for an entity without traffic related to it displays no results.<br><br>
@@ -142,10 +142,10 @@ By default, all ATA Gateways are domain synchronizer candidates.<br><br>
 Because all ATA Lightweight Gateways are more likely to be deployed in branch sites and on small domain controllers, they are not synchronizer candidates by default. <br><br>In an environment with only Lightweight Gateways, it is recommended to assign two of the gateways as synchronizer candidates, where one Lightweight Gateway is the default synchronizer candidate and one is the the backup in case the default is offline for more than 30 minutes. 
 
 
--	**Resource limitations**<br>
+-    **Resource limitations**<br>
 The ATA Lightweight Gateway includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the ATA Lightweight Gateway process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
 No matter what happens on the domain controller, this process always frees up resources to make sure the domain controller's core functionality is not affected.<br><br>
-If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Health page.
+If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the Health page.
 
 The following table provides an example of a domain controller with enough compute resource available to allow for a larger quota then is currently needed, so that all traffic is monitored:
 
