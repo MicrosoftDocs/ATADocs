@@ -41,7 +41,7 @@ The update to ATA 1.5 provides improvements in the following areas:
 
 -   Better UI responsiveness for suspicious activities with thousands of entities involved
 
--   Improved auto-resolution of health alerts
+-   Improved auto-resolution of monitoring alerts
 
 -   Additional performance counters for enhanced monitoring and troubleshooting
 

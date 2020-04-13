@@ -37,7 +37,7 @@ These release notes provide information about updates, new features, bug fixes a
 
 - Unusual protocol implementation was improved to be able to detect WannaCry malware.
 
-- NEW! **Abnormal modification of sensitive groups**  – As part of the privilege escalation phase, attackers modify groups with high privileges to gain access to sensitive resources. ATA now detects when there's an abnormal change in an elevated group.
+- NEW! **Abnormal modification of sensitive groups**  – As part of the privilege escalation phase, attackers modify groups with high privileges to gain access to sensitive resources. ATA now detects when there’s an abnormal change in an elevated group.
 - NEW! **Suspicious authentication failures** (Behavioral brute force) – Attackers attempt to use brute force on credentials to compromise accounts. ATA now raises an alert when abnormal failed authentication behavior is detected.   
 
 - **Remote execution attempt – WMI exec**  - Attackers can attempt to control your network by running code remotely on your domain controller. ATA has enhanced the remote execution detection to include detection of WMI methods to run code remotely.
@@ -54,29 +54,29 @@ These release notes provide information about updates, new features, bug fixes a
 
 ## Improved triage of suspicious activities
 
--    NEW! ATA 1.8 enables you to run the following actions suspicious activities during the triage process: 
+-	NEW! ATA 1.8 enables you to run the following actions suspicious activities during the triage process: 
     - **Exclude entities** from raising future suspicious activities to prevent ATA from alerting when it detects benign true positives (such as an admin running remote code or detecting security scanners).
     - **Suppress recurring** suspicious activities from alerting.
     - **Delete suspicious activities** from the attack time line.
--    The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line was redesigned. In ATA 1.8, you will be able to see many more suspicious activities on a single screen, containing better information for triage and investigation purposes. 
+-	The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line was redesigned. In ATA 1.8, you will be able to see many more suspicious activities on a single screen, containing better information for triage and investigation purposes. 
 
 ## New reports to help you investigate 
--    NEW! The **Summary report** was added to enable you to see all the summarized data from ATA, including suspicious activities, health issues and more. You can even  define a customized report that is automatically generated on a recurring basis.
--    NEW! The **Sensitive groups report** was added to enable you to see all the changes made in sensitive groups over a certain period.
+-	NEW! The **Summary report** was added to enable you to see all the summarized data from ATA, including suspicious activities, health issues and more. You can even  define a customized report that is automatically generated on a recurring basis.
+-	NEW! The **Sensitive groups report** was added to enable you to see all the changes made in sensitive groups over a certain period.
 
 
 ## Infrastructure improvements
 
--    ATA Center performance was enhanced. In ATA 1.8 the ATA Center can handle more than 1M packets per second.
--    The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
--    You can now separately configure email for health alerts and suspicious activities.
+-	ATA Center performance was enhanced. In ATA 1.8 the ATA Center can handle more than 1M packets per second.
+-	The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
+-	You can now separately configure email for monitoring alerts and suspicious activities.
 
 ## Security improvements
 
--    NEW! **Single-sign-on for ATA management**. ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Silent installation scripts for the ATA Gateway and ATA Lightweight Gateway now use the logged on user's context, without the need to provide credentials.
--    Local System privileges were removed from the ATA Gateway process, so you can now use virtual accounts (available on stand-alone ATA Gateways only), managed service accounts and group managed service accounts to run the ATA Gateway process.   
--    Auditing logs for ATA Center and Gateways were added and all actions are now logged in the Windows Event Log.
--    Support was added for KSP Certificates for the ATA Center.
+-	NEW! **Single-sign-on for ATA management**. ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Silent installation scripts for the ATA Gateway and ATA Lightweight Gateway now use the logged on user’s context, without the need to provide credentials.
+-	Local System privileges were removed from the ATA Gateway process, so you can now use virtual accounts (available on stand-alone ATA Gateways only), managed service accounts and group managed service accounts to run the ATA Gateway process.   
+-	Auditing logs for ATA Center and Gateways were added and all actions are now logged in the Windows Event Log.
+-	Support was added for KSP Certificates for the ATA Center.
 
 ## Additional changes
 
@@ -111,11 +111,11 @@ On Windows Server 2016 Core you may not see the error, but the process will fail
 
        $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
         try {
-        $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
-        $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
-        if($SecurityDescriptor.CustomSD -eq $ATASddl) {
-        Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
-        }
+	    $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+	    $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
+	    if($SecurityDescriptor.CustomSD -eq $ATASddl) {
+		Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+	    }
     }
     catch
     {

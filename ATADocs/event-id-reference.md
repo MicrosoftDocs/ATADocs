@@ -39,7 +39,7 @@ The events can be found here:
 
 ## ATA health events
 
-|Event ID|Alert name|
+|Monitoring event ID| Monitoring alert name|
 |---------|---------------|
 |1001|Center running out of disk space|
 |1003|Center overloaded|
@@ -65,7 +65,7 @@ The events can be found here:
  
 ## ATA security alert events
 
-|Event ID|Alert name|
+|Alert names|Alert Event IDs|
 |---------|---------------|
 |2001|Suspicion of identity theft based on abnormal behavior|
 |2002|Unusual protocol implementation|
@@ -93,7 +93,7 @@ The events can be found here:
 
 ## ATA auditing events
 
-|Event ID|Alert name|
+|Alert names|Alert Event IDs|
 |---------|---------------|
 |3001|Change to ATA configuration|
 |3002|ATA Gateway added|
