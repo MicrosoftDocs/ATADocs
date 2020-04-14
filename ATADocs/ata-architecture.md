@@ -145,7 +145,7 @@ Because all ATA Lightweight Gateways are more likely to be deployed in branch si
 -	**Resource limitations**<br>
 The ATA Lightweight Gateway includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the ATA Lightweight Gateway process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
 No matter what happens on the domain controller, this process always frees up resources to make sure the domain controller's core functionality is not affected.<br><br>
-If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Health page.
+If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the Health page.
 
 The following table provides an example of a domain controller with enough compute resource available to allow for a larger quota then is currently needed, so that all traffic is monitored:
 

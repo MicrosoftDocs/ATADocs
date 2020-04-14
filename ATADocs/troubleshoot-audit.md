@@ -34,7 +34,7 @@ The ATA audit logs are kept in the Windows Event Logs under **Applications and S
 
 The ATA Center audit log contains:
 -	Suspicious activity information
--	Monitoring alerts (health page)
+-	Health alerts (health page)
 -	ATA Console logins
 -	All configuration changes*
 
