@@ -55,7 +55,7 @@ Perform the following steps on the ATA Center server.
 > [!NOTE]   
 > Make sure to run the installation file from a local drive and not from a mounted ISO file to avoid issues in case a reboot is required as part of the installation.   
 
-4. If Microsoft .Net Framework is not installed, you are prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
+4. If Microsoft .NET Framework is not installed, you are prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
 5. On the **Welcome** page, select the language to be used for the ATA installation screens and click **Next**.
 
 6. Read the Microsoft Software License Terms, after accepting the terms, click the acceptance check box, then click **Next**.
