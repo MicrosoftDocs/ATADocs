@@ -31,7 +31,7 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
-ATA can forward security and monitoring alert events to your SIEM. Alerts are forwarded in the CEF format. A sample of each type of security alert log to be sent to your SIEM, is below.
+ATA can forward security and health alert events to your SIEM. Alerts are forwarded in the CEF format. A sample of each type of security alert log to be sent to your SIEM, is below.
 
 ## Sample ATA security alerts in CEF format
 The following fields and their values are forwarded to your SIEM:
@@ -149,7 +149,7 @@ Priorities:
 ### Suspicious service creation
 12-12-2018	19:53:49	Auth.Warning	192.168.0.222	1 2018-12-12T17:53:49.913034+00:00 CENTER ATA 4688 MaliciousServiceCreationSuspicio ‹¯¨CEF:0|Microsoft|ATA|1.9.0.0|MaliciousServiceCreationSuspiciousActivity|Suspicious service creation|5|start=2018-12-12T19:53:49.0000000Z app=ServiceInstalledEvent shost=W2012R2-000000-Server msg=triservice created FakeService in order to execute potentially malicious commands on W2012R2-000000-Server. externalId=2026 cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5c114b2d8ca1ec1250caf577
 
-## Monitoring alerts
+## Health alerts
 
 ### GatewayDisconnectedMonitoringAlert
 1 2018-12-12T16:52:41.520759+00:00 CENTER ATA 4688 GatewayDisconnectedMonitoringAle CEF:0|Microsoft|ATA|1.9.0.0|GatewayDisconnectedMonitoringAlert|GatewayDisconnectedMonitoringAlert|5|externalId=1011 cs1Label=url cs1=https\://192.168.0.220/monitoring msg=There has not been communication from the Gateway CENTER for 5 minutes. Last communication was on 12/12/2018 4:47:03 PM UTC.
@@ -158,7 +158,7 @@ Priorities:
 1 2018-12-12T15:36:59.701097+00:00 CENTER ATA 1372 GatewayStartFailureMonitoringAle CEF:0|Microsoft|ATA|1.9.0.0|GatewayStartFailureMonitoringAlert|GatewayStartFailureMonitoringAlert|5|externalId=1018 cs1Label=url cs1=https\://192.168.0.220/monitoring msg=The Gateway service on DC1 failed to start. It was last seen running on 12/12/2018 3:04:12 PM UTC.
 
 > [!NOTE]
-> All monitoring alerts are sent with the same template as above.
+> All health alerts are sent with the same template as above.
 
 
 ## See Also
