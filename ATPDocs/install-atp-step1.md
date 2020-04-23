@@ -63,7 +63,7 @@ After you verified that your network meets the sensor requirements, start the cr
 
     ![Manage role groups](media/creation-manage-role-groups.png)
 
-- Data retention – previously deleted Azure ATP instances don't appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
+- Data retention – previously deleted Azure ATP instances don't appear in the UI. For more information on Azure ATP data retention, see [Azure ATP data security and privacy](atp-privacy-compliance.md).
 
 ## Next steps
 

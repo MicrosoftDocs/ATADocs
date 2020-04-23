@@ -53,11 +53,11 @@ Check and investigate the computer profile for the following details and activit
   5. Did the [user](investigate-a-user.md) that accessed the computer perform other suspicious activities?
 
 - Additional suspicious activities to investigate:
-    1. Were other alerts opened around the same time as this alert in Azure ATP, or in other security tools such as Windows Defender ATP, Azure Security Center and/or Microsoft CAS?
+    1. Were other alerts opened around the same time as this alert in Azure ATP, or in other security tools such as Microsoft Defender ATP, Azure Security Center and/or Microsoft CAS?
     2. Were there failed logons?
 
 
-- If Windows Defender ATP integration is enabled, click the Windows Defender ATP badge to further investigate the computer. In Windows Defender ATP you can see which processes and alerts occurred around the same time as the alert.
+- If Microsoft Defender ATP integration is enabled, click the Microsoft Defender ATP badge to further investigate the computer. In Microsoft Defender ATP you can see which processes and alerts occurred around the same time as the alert.
     1. Were any new programs deployed or installed?
 
 ## Next steps

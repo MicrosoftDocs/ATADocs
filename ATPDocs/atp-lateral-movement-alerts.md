@@ -94,7 +94,7 @@ In this detection, an Azure ATP security alert is triggered when DNS queries sus
 
 **Description**
 
-Pass-the-Hash is a lateral movement technique in which attackers steal a user’s NTLM hash from one computer and use it to gain access to another computer.
+Pass-the-Hash is a lateral movement technique in which attackers steal a user's NTLM hash from one computer and use it to gain access to another computer.
 
 **TP, B-TP, or FP?**
 1. Determine if the hash was used from computers the user is using regularly?
@@ -155,7 +155,7 @@ There are custom applications that forward tickets on behalf of users. These app
 2. Contain the source and destination computers.
 3. Find the tool that performed the attack and remove it.
 4. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-5. If you have Windows Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
+5. If you have Microsoft Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 
 ## Suspected NTLM authentication tampering (external ID 2039)
 
@@ -233,7 +233,7 @@ In an over-pass-the-hash attack, an attacker can use a weak stolen hash to creat
 
       If the answer is yes, **Close** the security alert as a **T-BP** activity.
 
-Some legitimate resources don’t support strong encryption ciphers and may trigger this alert.
+Some legitimate resources don't support strong encryption ciphers and may trigger this alert.
 
 2. Do all source users share something?
     1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Understanding ATA monitoring alerts
+title: Understanding ATA health alerts
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
 author: shsagir
@@ -27,12 +27,12 @@ ms.suite: ems
 
 ---
 
-# Understanding ATA monitoring alerts
+# Understanding ATA health alerts
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
-The ATA Health Center lets you know when there's a problem with the ATA deployment, by raising a monitoring alert.
-This article describes all the monitoring alerts for each component, listing the cause and the steps needed to resolve the problem.
+The ATA Health Center lets you know when there's a problem with the ATA deployment, by raising a health alert.
+This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 ## ATA Center Issues
 ### Center running out of disk space
 |Alert|Description|Resolution|Severity|
@@ -46,12 +46,12 @@ This article describes all the monitoring alerts for each component, listing the
 ### Center overloaded
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. |The ATA Center stops analyzing new network traffic and events. This means that the accuracy of the detections and profiles is reduced while this monitoring alert is active.|Make sure that you provided enough resources for the ATA Center. For more details on how to properly plan for ATA Center capacity, see [ATA capacity planning](ata-capacity-planning.md). Investigate the performance of the ATA Center using [Troubleshooting ATA using the performance counters](troubleshooting-ata-using-perf-counters.md).|High|
+|The ATA Center is not able to handle the amount of data being transferred from the ATA Gateways. |The ATA Center stops analyzing new network traffic and events. This means that the accuracy of the detections and profiles is reduced while this health alert is active.|Make sure that you provided enough resources for the ATA Center. For more details on how to properly plan for ATA Center capacity, see [ATA capacity planning](ata-capacity-planning.md). Investigate the performance of the ATA Center using [Troubleshooting ATA using the performance counters](troubleshooting-ata-using-perf-counters.md).|High|
 
 ### Failure connecting to the SIEM server using Syslog
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|ATA failed to send events to the specified SIEM.|This means the ATA Center cannot send suspicious activities and monitoring alerts to your SIEM.|Make sure that your [Syslog server settings are configured correctly](setting-syslog-email-server-settings.md).|Low|
+|ATA failed to send events to the specified SIEM.|This means the ATA Center cannot send suspicious activities and health alerts to your SIEM.|Make sure that your [Syslog server settings are configured correctly](setting-syslog-email-server-settings.md).|Low|
 ### Center certificate is about to expire
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|

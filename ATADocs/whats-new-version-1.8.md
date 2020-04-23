@@ -69,7 +69,7 @@ These release notes provide information about updates, new features, bug fixes a
 
 -	ATA Center performance was enhanced. In ATA 1.8 the ATA Center can handle more than 1M packets per second.
 -	The ATA Lightweight Gateway can now read events locally, without the need to configure event forwarding.
--	You can now separately configure email for monitoring alerts and suspicious activities.
+-	You can now separately configure email for health alerts and suspicious activities.
 
 ## Security improvements
 
