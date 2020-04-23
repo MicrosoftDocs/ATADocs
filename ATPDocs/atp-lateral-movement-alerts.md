@@ -49,6 +49,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > * Suspected NTLM relay attack (Exchange account)  (external ID 2037)
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
+> * Suspected SMB packet manipulation (CVE-2020-0796 exploitation) (external ID 2406)
 
 ## Remote code execution over DNS (external ID 2036)
 
@@ -158,16 +159,16 @@ There are custom applications that forward tickets on behalf of users. These app
 
 ## Suspected NTLM authentication tampering (external ID 2039)
 
-In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040), announcing discovery of a new tampering vulnerability in Microsoft Windows, when a “man-in-the-middle” attack is able to successfully bypass NTLM MIC (Message Integrity Check) protection.
+In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040), announcing discovery of a new tampering vulnerability in Microsoft Windows, when a “man-in-the-middle” attack is able to successfully bypass NTLM MIC (Message Integrity Check) protection.
 
 Malicious actors that successfully exploit this vulnerability have the ability to downgrade NTLM security features, and may successfully create authenticated sessions on behalf of other accounts. Unpatched Windows Servers are at risk from this vulnerability.
 
-In this detection, an Azure ATP security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
+In this detection, an Azure ATP security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
 
 **TP, B-TP, or FP?**
 
-1. Are the involved computers, including domain controllers, up-to-date and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040)?
-o If the computers are up-to-date and patched, we expect the authentication to fail. If the authentication ailed, **Close** the security alert as a failed attempt.
+1. Are the involved computers, including domain controllers, up-to-date and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040)?
+  - If the computers are up-to-date and patched, we expect the authentication to fail. If the authentication ailed, **Close** the security alert as a failed attempt.
 
 **Understand the scope of the breach**
 
@@ -185,7 +186,7 @@ o If the computers are up-to-date and patched, we expect the authentication to f
 
 **Prevention**
 
-• Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
+• Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
 
 ## Suspected NTLM relay attack (Exchange account) (external ID 2037)
 
@@ -236,9 +237,9 @@ Some legitimate resources don’t support strong encryption ciphers and may trig
 
 2. Do all source users share something?
     1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
-   2. Check the resources accessed by those tickets.
+    2. Check the resources accessed by those tickets.
        - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
-   3. If there is only one accessed resource, check if it is a valid resource for these users to access.
+    3. If there is only one accessed resource, check if it is a valid resource for these users to access.
 
       If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
@@ -290,6 +291,37 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 3. Find the tool that performed the attack and remove it.
 4. Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 5. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+
+## Suspected SMB packet manipulation (CVE-2020-0796 exploitation) (external ID 2406)
+
+**Description**
+
+03/12/2020 Microsoft published [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796), announcing that a newly remote code execution vulnerability exists in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests. An attacker who successfully exploited the vulnerability could gain the ability to execute code on the target server or client. Unpatched Windows servers are at risk from this vulnerability.
+
+In this detection, an Azure ATP security alert is triggered when SMBv3 packet suspected of exploiting the CVE-2020-0796 security vulnerability are made against a domain controller in the network.
+
+**TP, B-TP, or FP?**
+
+1. Are the involved domain controllers up-to-date and patched against CVE-2020-1040?
+    - If the computers are up-to-date and patched, we expect the attack to fail, **Close** the security alert as a failed attempt.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](investigate-a-computer.md).
+2. Investigate the destination DC.
+
+**Suggested remediation and steps for prevention**
+
+**Remediation**
+
+1. Contain the source computer.
+2. Find the tool that performed the attack and remove it.
+3. Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+4. If your have computers with operating systems that don't support [KB4551762](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4551762), we recommend disabling the SMBv3 compression feature in the environment, as described in the [Workarounds](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) section.
+
+**Prevention**
+
+1. Make sure all devices in the environment are up-to-date, and patched against [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796).
 
 > [!div class="nextstepaction"]
 > [Domain dominance alert tutorial](atp-domain-dominance-alerts.md)
