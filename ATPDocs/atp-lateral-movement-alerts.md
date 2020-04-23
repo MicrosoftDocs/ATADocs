@@ -49,7 +49,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > * Suspected NTLM relay attack (Exchange account)  (external ID 2037)
 > * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 > * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
-> * Suspected SMB packet manipulation (CVE-2020-0796 exploitation) (external ID 2406)
+> * Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
 
 ## Remote code execution over DNS (external ID 2036)
 
@@ -292,7 +292,9 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 4. Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 5. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
-## Suspected SMB packet manipulation (CVE-2020-0796 exploitation) (external ID 2406)
+<!-- REMOVE BOOKMARK FROM TITLE WHEN PREVIEW REMOVED -->
+
+## <a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406"></a>Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
 
 **Description**
 

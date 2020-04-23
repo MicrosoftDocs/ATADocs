@@ -51,6 +51,9 @@ The following activity monitors are now available:
 - **Feature enhancement: Enriched Resource Access Activity**  
 Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource is trusted for unconstrained delegation. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Security assessment: Unsecure Kerberos delegation](atp-cas-isp-unconstrained-kerberos.md).
 
+- **Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview)**  
+Azure ATP's [Suspected SMB packet manipulation](atp-lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406) security alert is now in public preview. In this detection, an Azure ATP security alert is triggered when SMBv3 packet suspected of exploiting the [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) security vulnerability are made against a domain controller in the network.
+
 ## Azure ATP release 2.111
 
 Released Mar 1, 2020
