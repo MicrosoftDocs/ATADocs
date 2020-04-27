@@ -50,7 +50,10 @@ Use the remediation appropriate to your delegation type.
 
 ### Unconstrained delegation
 
-Either disable delegation or use one of the constrained delegation types.
+Either disable delegation or use one of the following constrained delegation types:
+
+- **Constrained delegation:** Restricts the services or resources to which an impersonated account can connect.
+- **Resource-based constrained delegation:** Resources can restrict which accounts can connect to it.
 
 **To switch to constrained delegation**
 
