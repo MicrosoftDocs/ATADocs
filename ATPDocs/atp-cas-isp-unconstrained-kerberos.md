@@ -50,18 +50,18 @@ Use the remediation appropriate to your delegation type.
 
 ### Unconstrained delegation
 
-Either disable delegation or use one of the following constrained delegation types:
+Either disable delegation or use one of the following Kerberos constrained delegation (KCD) types:
 
-- **Constrained delegation:** Restricts the services or resources to which an impersonated account can connect.
-- **Resource-based constrained delegation:** Resources can restrict which accounts can connect to it.
+- **Constrained delegation:** Restricts which services this account can impersonate.
 
-**To switch to constrained delegation**
+    1. Select **Trust this computer for delegation to specified services only**.
 
-1. Select **Trust this computer for delegation to specified services only**.
+        ![Constrained Kerberos delegation](media/atp-cas-isp-unconstrained-kerberos-2.png)
 
-    ![Constrained Kerberos delegation](media/atp-cas-isp-unconstrained-kerberos-2.png)
+    2. Specify the **Services to which this account can present delegated credentials**.
 
-2. Specify the **Services to which this account can present delegated credentials**.
+- **Resource-based constrained delegation:** Restricts which entities can impersonate this account.  
+Resource-based KCD is configured using PowerShell. You use the [Set-ADComputer](/powershell/module/addsadministration/set-adcomputer?view=win10-ps) or [Set-ADUser](/powershell/module/addsadministration/set-aduser?view=win10-ps) cmdlets, depending on whether the impersonating account is a computer account or a user account / service account.
 
 ### Constrained delegation
 
