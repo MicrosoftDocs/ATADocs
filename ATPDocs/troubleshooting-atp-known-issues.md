@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -159,7 +159,7 @@ The sensor failed to retrieve the designated gMSA account from the Azure ATP por
 
 **Resolution:**
 
-Make sure that the gMSA account's credentials are correct and that the sensor has been granted permissions to retrieve the account's credentials.
+Make sure that the gMSA account's credentials are correct and that the sensor has been granted permission to retrieve the account's credentials. In the applied policy, you may need to add the gMSA account to the **Log on as a service** user right assignments.
 
 ## Report downloads cannot contain more than 300,000 entries
 
