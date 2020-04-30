@@ -90,7 +90,7 @@ Azure ATP supports SIEM events in the following formats:
     9. The result code of the NTLM
 - The order is important and nothing else should be included in the message.
 
-### HP Arcsight
+### MicroFocus ArcSight
 
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
@@ -106,7 +106,6 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
   - dhost = the computer receiving the event (the DC in this case)
   - duser = the user authenticating
 - The order is not important for the _Extension_ part
-
 - There must be a custom key and keyLable for these two fields:
   - "EventSource"
   - "Reason or Error Code" = The result code of the NTLM
@@ -148,6 +147,7 @@ QRadar enables event collection via an agent. If the data is gathered using an a
 The fields needed are:
 
 - The agent type for the collection
+
 - The Windows event log provider name
 - The Windows event log source
 - The DC fully qualified domain name
