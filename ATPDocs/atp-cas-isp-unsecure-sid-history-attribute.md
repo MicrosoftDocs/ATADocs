@@ -45,7 +45,7 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your accounts have an unsecure SID History attribute.
-1. Take appropriate action to remove SID History attribute from the accounts using Powershell using the following steps:
+1. Take appropriate action to remove SID History attribute from the accounts using PowerShell using the following steps:
 
     1. Identify the SID in the SIDHistory attribute on the account.
 

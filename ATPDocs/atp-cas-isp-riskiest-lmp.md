@@ -4,6 +4,7 @@
 title: Azure Advanced Threat Protection riskiest lateral movement paths assessments
 description: This article provides an overview of Azure ATP's sensitive entities with the riskiest lateral movement paths identity security posture assessment report.
 keywords:
+
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
@@ -28,17 +29,17 @@ ms.suite: ems
 
 # Security assessment: Riskiest lateral movement paths (LMP)
 
-## What are Risky LMPs?
+## What are Risky lateral movement paths?
 
 Azure ATP continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Risky paths are those with the greatest risk of a non-senisitive account exposing them to attack by malicious actors.
 
-## What risk do risky LMPs pose?
+## What risk do risky lateral movement paths pose?
 
 Organizations that fail to secure their **sensitive** accounts leave the door unlocked for malicious actors.
 
 Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Sensitive accounts with risky lateral movement paths are windows of opportunities for attackers and can expose risks.
 
-For example, the riskiest paths are more readily visible to attackers and, if compromised, can give a attacker access to your organization's most sensitive entities.
+For example, the riskiest paths are more readily visible to attackers and, if compromised, can give an attacker access to your organization's most sensitive entities.
 
 ## How do I use this security assessment?
 
