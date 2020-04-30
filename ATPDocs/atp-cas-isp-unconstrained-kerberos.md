@@ -37,6 +37,12 @@ Unsecure Kerberos delegation gives an entity the ability to impersonate you to a
 
 The main issue with Kerberos delegation is that you need to trust the application to always do the right thing. Malicious actors can instead force the application to do the wrong thing. If you are logged on as **domain admin**, the site is able to create a ticket to whatever other service it wishes, acting as you, the **domain admin**. For example, the site could chose a domain controller, and make changes to the **enterprise admin** group. Similarly, the site could acquire the hash of the KRBTGT account, or download an interesting file from your Human Resources department. The risk is clear and the possibilities with unsecure delegation are nearly endless.
 
+The following is a description of the risk posed by different delegation types:
+
+- **Unconstrained delegation**: Any service can be abused if one of their delegation entries is sensitive.
+- **Constrained delegation**: Constrained entities can be abused if one of their delegation entries is sensitive.
+- **Resource-based constrained delegation (RBCD)**: Resource-based constrained entities can be abused if the entity itself is sensitive.
+
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your non-domain controller entities are configured for **unsecure Kerberos delegation**.
@@ -65,11 +71,11 @@ Resource-based KCD is configured using PowerShell. You use the [Set-ADComputer](
 
 ### Constrained delegation
 
-Constrained entities can be abused if one of their delegation entries is sensitive. Review the sensitive users listed in the recommendations and remove them from the services to which the affected account can present delegated credentials.
+Review the sensitive users listed in the recommendations and remove them from the services to which the affected account can present delegated credentials.
 
 ### Resource-based constrained delegation (RBCD)
 
-Resource-based constrained entities can be abused if the entity itself is sensitive. Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Azure Active Directory Domain Services](/azure/active-directory-domain-services/deploy-kcd).
+Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Azure Active Directory Domain Services](/azure/active-directory-domain-services/deploy-kcd).
 
 ## Next steps
 
