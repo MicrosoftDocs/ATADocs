@@ -50,14 +50,14 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 
 Use the remediation appropriate to the relevant attribute as described in the following table.
 
-| Attribute | Remediation | Reason |
+| Recommended action | Remediation | Reason |
 | --- | --- | --- |
-| *DontRequirePreauthentication* | Remove this setting from account properties in Active Directory (AD) | Removing this setting requires a Kerberos pre-authentication for the account resulting in improved security. |
-| *PasswordNotRequired* | Remove this setting from account properties in AD | Removing this setting requires a password to be used with the account and helps prevent unauthorized access to resources. |
-| *UseDesKeyOnly* | Remove this setting from account properties in AD | Removing this setting enables the use of stronger encryption algorithms for the account's password. |
-| *EncryptedTextPasswordAllowed* | Remove this setting from account properties in AD | Removing this setting prevents easy decryption of the account's password. |
-| *SmartCardRequiredRemovalTime* | Reset the account password | Changing the account's password enables stronger encryption algorithms to be used for its protection. |
-| *SupportedEncryptionTypes* | Enable AES features on the account properties in AD | Enabling AES128_CTS_HMAC_SHA1_96 or AES256_CTS_HMAC_SHA1_96 on the account helps prevent the use of weaker encryption ciphers for Kerberos authentication. |
+| Remove Use Kerberos DES encryption types for this account| Remove this setting from account properties in Active Directory (AD) | Removing this setting requires a Kerberos pre-authentication for the account resulting in improved security. |
+| Remove Store password using reversible encryption | Remove this setting from account properties in AD | Removing this setting prevents easy decryption of the account's password. |
+| Remove Password not required | Remove this setting from account properties in AD | Removing this setting requires a password to be used with the account and helps prevent unauthorized access to resources. |
+| Remove Password stored with weak encryption | Reset the account password | Changing the account's password enables stronger encryption algorithms to be used for its protection. |
+| Enable Kerberos AES encryption support | Enable AES features on the account properties in AD | Enabling AES128_CTS_HMAC_SHA1_96 or AES256_CTS_HMAC_SHA1_96 on the account helps prevent the use of weaker encryption ciphers for Kerberos authentication. |
+| Remove Use Kerberos DES encryption types for this account | Remove this setting from account properties in AD | Removing this setting enables the use of stronger encryption algorithms for the account's password. |
 
 ## See Also
 
