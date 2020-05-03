@@ -50,14 +50,14 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 
 Use the remediation appropriate to the relevant attribute as described in the following table.
 
-| Attribute | Risk | Remediation |
+| Attribute | Remediation | Reason |
 | --- | --- | --- |
-| *DontRequirePreauthentication* | When enabled, a malicious actor can send a request for authentication and obtain an encrypted TGT that they can attempt to brute force offline. | Remove this setting from account properties in Active Directory (AD) |
-| *PasswordNotRequired* | When enabled, the account can have no password and is readily useable by a malicious actor to gain unauthorized access to resources. | Remove this setting from account properties in AD |
-| *UseDesKeyOnly* | When enabled, the account's password is encrypted using the vulnerable DES cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Remove this setting from account properties in AD |
-| *EncryptedTextPasswordAllowed* | When enabled, the account's password is encrypted using a weaker cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Remove this setting from account properties in AD |
-| *SmartCardRequiredRemovalTime* | When disabled, the account's password stored in the Smart Card is encrypted using a weaker cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Reset the account password |
-| *SupportedEncryptionTypes* | When disabled, the account's password is encrypted using a weaker cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Enable AES features on the account properties in AD |
+| *DontRequirePreauthentication* | Remove this setting from account properties in Active Directory (AD) | Removing this setting requires a Kerberos pre-authentication for the account resulting in improved security. |
+| *PasswordNotRequired* | Remove this setting from account properties in AD | Removing this setting requires a password to be used with the account and helps prevent unauthorized access to resources. |
+| *UseDesKeyOnly* | Remove this setting from account properties in AD | Removing this setting enables the use of stronger encryption algorithms for the account's password. |
+| *EncryptedTextPasswordAllowed* | Remove this setting from account properties in AD | Removing this setting prevents easy decryption of the account's password. |
+| *SmartCardRequiredRemovalTime* | Reset the account password | Changing the account's password enables stronger encryption algorithms to be used for its protection. |
+| *SupportedEncryptionTypes* | Enable AES features on the account properties in AD | Enabling AES128_CTS_HMAC_SHA1_96 or AES256_CTS_HMAC_SHA1_96 on the account helps prevent the use of weaker encryption ciphers for Kerberos authentication. |
 
 ## See Also
 
