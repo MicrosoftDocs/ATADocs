@@ -90,7 +90,7 @@ Perform the following steps on the domain controller.
 
 ## Next steps
 
-The Azure ATP sensor is designed to have minimal impact on your domain controller resources and network activity. To create a performance assessment, see the [Plan capacity for Azure ATP](atp-capacity-planning.md).
+The Azure ATP sensor is designed to have minimal impact on your domain controller resources and network activity. To create a performance assessment, see [Plan capacity for Azure ATP](atp-capacity-planning.md).
 
 ## Join the Community
 
