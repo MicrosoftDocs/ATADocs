@@ -38,9 +38,9 @@ Perform the following steps on the domain controller.
 
 1. Verify the machine has connectivity to the relevant Azure ATP cloud service endpoint(s):
    - Europe
-      - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+      - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com)
       - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
-   - US 
+   - US
       - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
       - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
       - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
@@ -59,14 +59,14 @@ Perform the following steps on the domain controller.
 
 
 5. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it's a domain controller, the Azure ATP sensor is installed. If it's a dedicated server, the Azure ATP standalone sensor is installed.
-    
+
     For example, for an Azure ATP sensor, the following screen is displayed to let you know that an Azure ATP sensor is installed on your dedicated server:
-    
+
     ![Azure ATP sensor installation](media/sensor-install-deployment-type.png)
 
    Click **Next**.
 
-    > [!NOTE] 
+    > [!NOTE]
     > A warning is issued if the domain controller or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from clicking **Next**, and proceeding with installation. It can still be the right option for installation of Azure ATP in a small lab test environment where less room for data storage is required. For production environments, it is highly recommended to work with Azure ATP's [capacity planning](atp-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
 6. Under **Configure the sensor**, enter the installation path and the access key that you copied from the previous step, based on your environment:
@@ -75,24 +75,22 @@ Perform the following steps on the domain controller.
 
       - Installation path: The location where the Azure ATP sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
 
-     - Access key: Retrieved from the Azure ATP portal in the previous step.
-    
+      - Access key: Retrieved from the Azure ATP portal in the previous step.
+
 7. Click **Install**. The following components are installed and configured during the installation of the Azure ATP sensor:
 
     - KB 3047154 (for Windows Server 2012 R2 only)
 
         > [!IMPORTANT]
-        > - Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly. 
+        > - Do not install KB 3047154 on a virtualization host (the host that is running the virtualization, it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly.
         > - If Wireshark is installed on the ATP sensor machine, after you run Wireshark you need to restart the ATP sensor, because it uses the same drivers.
 
     - Azure ATP sensor service and Azure ATP sensor updater service
     - Microsoft Visual C++ 2013 Redistributable
 
-
 ## Next steps
 
-The Azure ATP sensor is designed to have minimal impact on your domain controller resources and network activity. To create a performance assessment,see the [Plan capacity for your Azure ATP solution](install-atp-step5.md).
-
+The Azure ATP sensor is designed to have minimal impact on your domain controller resources and network activity. To create a performance assessment, see [Plan capacity for Azure ATP](atp-capacity-planning.md).
 
 ## Join the Community
 
