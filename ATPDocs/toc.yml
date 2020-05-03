@@ -67,7 +67,7 @@
   items:
   - name: Azure ATP using Microsoft Cloud App Security
     items:
-    - name: Use Azure ATP with Cloud App Security 
+    - name: Use Azure ATP with Cloud App Security
       href: atp-mcas-integration.md
     - name: Filter activities and set policies
       href: atp-activities-filtering-mcas.md
@@ -75,20 +75,26 @@
       items:
       - name: Understanding identity security posture
         href: atp-isp-overview.md
-      - name: Entities exposing credentials in clear text assessment
-        href: atp-cas-isp-clear-text.md
-      - name: Legacy protocols usage assessment
-        href: atp-cas-isp-legacy-protocols.md
-      - name: Weak cipher usage assessment
-        href: atp-cas-isp-weak-cipher.md  
-      - name: Unsecured Kerberos delegation assessment
-        href: atp-cas-isp-unconstrained-kerberos.md
       - name: Domain controllers with Print spooler service available assessment
         href: atp-cas-isp-print-spooler.md
       - name: Dormant entities in sensitive groups assessment
         href: atp-cas-isp-dormant-entities.md
+      - name: Entities exposing credentials in clear text assessment
+        href: atp-cas-isp-clear-text.md
+      - name: Legacy protocols usage assessment
+        href: atp-cas-isp-legacy-protocols.md
       - name: Unmonitored domain controllers
         href: atp-cas-isp-unmonitored-domain-controller.md
+      - name: Unsecured Kerberos delegation assessment
+        href: atp-cas-isp-unconstrained-kerberos.md
+      - name: Weak cipher usage assessment
+        href: atp-cas-isp-weak-cipher.md
+      - name: Riskiest lateral movement paths
+        href: atp-cas-isp-riskiest-lmp.md
+      - name: Unsecure account attributes
+        href: atp-cas-isp-unsecure-account-attributes.md
+      - name: Unsecure SID History attribute
+        href: atp-cas-isp-unsecure-sid-history-attribute.md
   - name: Security alert lab
     items:
     - name: Lab overview
@@ -163,7 +169,7 @@
       href: configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: configure-event-forwarding.md
-  - name: Move from ATA to Azure ATP 
+  - name: Move from ATA to Azure ATP
     items:
     - name: Advanced Threat Analytics (ATA) to Azure ATP
       href: ata-atp-move-overview.md

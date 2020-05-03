@@ -30,7 +30,7 @@ ms.suite: ems
 
 ## What are unsecure account attributes?
 
-Azure ATP continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in managing your environment.
+Azure ATP continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
 
 ## What risk do unsecure account attributes pose?
 
@@ -43,20 +43,21 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your accounts have unsecure attributes.
+    ![Review top impacted entities and create an action plan](media/atp-cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
 ## Remediation
 
 Use the remediation appropriate to the relevant attribute as described in the following table.
 
-| Attribute | Remediation |
-| --- | --- |
-| *DontRequirePreauthentication* | Remove this setting from account properties in Azure Active Directory (Azure AD) |
-| *PasswordNotRequired* | Remove this setting from account properties in Azure AD |
-| *UseDesKeyOnly* | Remove this setting from account properties in Azure AD |
-| *EncryptedTextPasswordAllowed* | Remove this setting from account properties in Azure AD |
-| *SmartCardRequiredRemovalTime* | Reset the account password |
-| *SupportedEncryptionTypes* | Enable AES features on the account properties in Azure AD |
+| Attribute | Risk | Remediation |
+| --- | --- | --- |
+| *DontRequirePreauthentication* | When enabled, a malicious actor can send a request for authentication and obtain an encrypted TGT that they can attempt to brute force offline. | Remove this setting from account properties in Active Directory (AD) |
+| *PasswordNotRequired* | When enabled, the account can have no password and is readily useable by a malicious actor to gain unauthorized access to resources. | Remove this setting from account properties in AD |
+| *UseDesKeyOnly* | When enabled, the account's password is encrypted using the vulnerable DES cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Remove this setting from account properties in AD |
+| *EncryptedTextPasswordAllowed* | When enabled, the account's password is encrypted using a weaker cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Remove this setting from account properties in AD |
+| *SmartCardRequiredRemovalTime* | When disabled, the account's password stored in the Smart Card is encrypted using a weaker cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Reset the account password |
+| *SupportedEncryptionTypes* | When disabled, the account's password is encrypted using a weaker cipher that a malicious actor can brute force attack to gain unauthorized access to resources. | Enable AES features on the account properties in AD |
 
 ## See Also
 
