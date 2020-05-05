@@ -33,7 +33,7 @@ To enhance detection capabilities, Azure ATP needs the following Windows events:
 
 > [!NOTE]
 >
-> - Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
+> - Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 > - Check that the domain controller is properly configured to capture the required events.
 
 ## WEF configuration for Azure ATP standalone sensor's with port mirroring
