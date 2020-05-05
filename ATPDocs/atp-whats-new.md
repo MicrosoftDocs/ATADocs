@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 03/19/2020
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -33,6 +33,16 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## Azure ATP release 2.113
+
+Released May 5, 2020
+
+- **Feature enhancement: Enriched Resource Access Activity with NTLMv1**  
+Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource uses NTLMv1 authentication. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Entities exposing credentials in clear text](atp-cas-isp-clear-text.md).
+
+- **Feature enhancement: Suspected Brute Force attack (Kerberos, NTLM) alert**  
+Brute Force attack is used by attackers to gain a foothold into your organization and is a key method for threat and risk discovery in Azure ATP. To help you focus on the critical risks to your users, this update makes it easier and faster to analyze and remediate risks, by limiting and prioritizing the volume of alerts.
+
 ## Azure ATP release 2.112
 
 Released Mar 15, 2020
@@ -50,6 +60,9 @@ The following activity monitors are now available:
 
 - **Feature enhancement: Enriched Resource Access Activity**  
 Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource is trusted for unconstrained delegation. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Security assessment: Unsecure Kerberos delegation](atp-cas-isp-unconstrained-kerberos.md).
+
+- **Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview)**  
+Azure ATP's [Suspected SMB packet manipulation](atp-lateral-movement-alerts.md#suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406) security alert is now in public preview. In this detection, an Azure ATP security alert is triggered when SMBv3 packet suspected of exploiting the [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) security vulnerability are made against a domain controller in the network.
 
 ## Azure ATP release 2.111
 
