@@ -49,7 +49,7 @@ This prerequisite guide is divided into the following sections to ensure you hav
 [Azure ATP standalone sensor](#azure-atp-standalone-sensor-requirements): The Azure ATP Standalone Sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
 
 > [!NOTE]
-> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
+> Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 
 ## Before you start
 
@@ -191,7 +191,7 @@ Azure ATP detection relies on the following specific Windows Event logs that the
 This section lists the requirements for the Azure ATP standalone sensor.
 
 > [!NOTE]
-> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
+> Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 
 ### General
 
