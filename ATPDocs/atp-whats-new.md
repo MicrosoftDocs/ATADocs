@@ -38,7 +38,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 Released May 5, 2020
 
 - **Feature enhancement: Enriched Resource Access Activity with NTLMv1**  
-Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource uses NTLMv1 authentication. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Entities exposing credentials in clear text](atp-cas-isp-clear-text.md).
+Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource uses NTLMv1 authentication. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Legacy protocols usage](atp-cas-isp-legacy-protocols.md).
 
 - **Feature enhancement: Suspected Brute Force attack (Kerberos, NTLM) alert**  
 Brute Force attack is used by attackers to gain a foothold into your organization and is a key method for threat and risk discovery in Azure ATP. To help you focus on the critical risks to your users, this update makes it easier and faster to analyze and remediate risks, by limiting and prioritizing the volume of alerts.
