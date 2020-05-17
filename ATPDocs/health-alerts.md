@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 02/19/2020
+ms.date: 05/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -102,17 +102,23 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |----|----|----|----|
 |An Azure ATP sensor has limited functionality due to connectivity issues to some of the configured domain controllers.|Pass the Hash detection might be less accurate when some domain controllers can't be queried by the Azure ATP sensor.|Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them.|Medium|
 
-## Some forwarded events are not being analyzed
+## Some forwarded events could not be analyzed
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
 |The Azure ATP sensor is receiving more events than it can process.|Some forwarded events are not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
 
-## Some network traffic is not being analyzed
+## Some network traffic could not be analyzed
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic is not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](atp-capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
+|The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](atp-capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
+
+## Some Windows events could not be analyzed
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|The Azure ATP sensor is receiving Event Tracing for Windows (ETW) events than it can process.|Some Windows events could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
 
 ## Windows events missing from domain controller audit policy
 
