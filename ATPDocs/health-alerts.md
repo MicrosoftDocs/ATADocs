@@ -106,7 +106,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more events than it can process.|Some forwarded events are not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
+|The Azure ATP sensor is receiving more events than it can process.|Some forwarded events could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
 
 ## Some network traffic could not be analyzed
 
@@ -118,7 +118,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is receiving Event Tracing for Windows (ETW) events than it can process.|Some Windows events could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
+|The Azure ATP sensor is receiving Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
 
 ## Windows events missing from domain controller audit policy
 
