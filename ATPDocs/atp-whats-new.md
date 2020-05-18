@@ -33,6 +33,12 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## Azure ATP release 2.114
+
+Released May 17, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.113
 
 Released May 5, 2020
