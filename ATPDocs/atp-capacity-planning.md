@@ -5,7 +5,7 @@ title: Planning your Azure Advanced Threat Protection deployment quickstart
 description: Helps you plan your deployment and decide how many Azure ATP servers will be needed to support your network
 author: shsagir
 ms.author: shsagir
-ms.date: 02/19/2020
+ms.date: 05/20/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -52,7 +52,7 @@ An Azure ATP sensor can support the monitoring of a domain controller based on t
 
 The following CPU and Random Access Memory (RAM) capacity refers to the **sensor's own consumption**, not the domain controller capacity.
 
-|Packets per second*|CPU (cores)**|RAM (GB)|
+|Packets per second|CPU (cores)\*|Memory\*\* (GB)|
 |----|----|-----|
 |0-1k|0.25|2.50|
 |1k-5k|0.75|6.00|
@@ -62,7 +62,8 @@ The following CPU and Random Access Memory (RAM) capacity refers to the **sensor
 |50k-75k |3.50|9.50|
 |75k-100k|3.50|9.50|
 
-** This includes physical cores, not hyper-threaded cores.
+\* This includes physical cores, not hyper-threaded cores.  
+\*\* Random-access memory (RAM)
 
 When determining sizing, note the following items:
 
@@ -73,7 +74,7 @@ It's recommended that you don't work with hyper-threaded cores. Working with hyp
 - When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
 - For optimal performance, set the **Power Option** of the Azure ATP sensor to **High Performance**.
 - A minimum of 2 cores is required.
-- A minimum of 6 GB of disk space is required, 10 GB is recommended, including space needed for the Azure ATP binaries and logs.
+- A minimum of 6 GB of hard drive space is required, 10 GB is recommended, including space needed for the Azure ATP binaries and logs.
 
 ### Dynamic memory
 
