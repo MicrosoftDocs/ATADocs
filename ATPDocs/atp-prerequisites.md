@@ -141,7 +141,7 @@ During installation, the .Net Framework 4.7 is installed and might require a reb
 ### Server specifications
 
 The Azure ATP sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
-For optimal performance, set the **Power Option** of the Azure ATP sensor to **High Performance**.
+For optimal performance, set the **Power Option** of the machine running the Azure ATP sensor to **High Performance**.
 
 Azure ATP sensors can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers, and the amount of resources installed.
 
@@ -208,7 +208,7 @@ For information on using virtual machines with the Azure ATP standalone sensor, 
 
 ### Server specifications
 
-For optimal performance, set the **Power Option** of the Azure ATP standalone sensor to **High Performance**.<br>
+For optimal performance, set the **Power Option** of the machine running the Azure ATP standalone sensor to **High Performance**.<br>
 Azure ATP standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
 >[!NOTE]
