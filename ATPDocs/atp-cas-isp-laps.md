@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 
 
-# Security assessment: LAPS usage
+# Security assessment: Microsoft LAPS usage
 
 ## What is Microsoft LAPS?
 
