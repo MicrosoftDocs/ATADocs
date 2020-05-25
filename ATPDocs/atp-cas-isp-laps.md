@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection LAPS usage assessments
-description: This article provides an overview of Azure ATP's LAPS usage identity security posture assessment report.
+title: Azure Advanced Threat Protection Microsoft LAPS usage assessments
+description: This article provides an overview of Azure ATP's Microsoft LAPS usage identity security posture assessment report.
 keywords:
 author: shsagir
 ms.author: shsagir
