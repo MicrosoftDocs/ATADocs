@@ -75,20 +75,22 @@
       items:
       - name: Understanding identity security posture
         href: atp-isp-overview.md
-      - name: Entities exposing credentials in clear text assessment
-        href: atp-cas-isp-clear-text.md
-      - name: Legacy protocols usage assessment
-        href: atp-cas-isp-legacy-protocols.md
-      - name: Weak cipher usage assessment
-        href: atp-cas-isp-weak-cipher.md  
-      - name: Unsecured Kerberos delegation assessment
-        href: atp-cas-isp-unconstrained-kerberos.md
       - name: Domain controllers with Print spooler service available assessment
         href: atp-cas-isp-print-spooler.md
       - name: Dormant entities in sensitive groups assessment
         href: atp-cas-isp-dormant-entities.md
+      - name: Entities exposing credentials in clear text assessment
+        href: atp-cas-isp-clear-text.md
+      - name: LAPS usage assessment
+        href: atp-cas-isp-laps.md
+      - name: Legacy protocols usage assessment
+        href: atp-cas-isp-legacy-protocols.md
       - name: Unmonitored domain controllers
         href: atp-cas-isp-unmonitored-domain-controller.md
+      - name: Unsecured Kerberos delegation assessment
+        href: atp-cas-isp-unconstrained-kerberos.md
+      - name: Weak cipher usage assessment
+        href: atp-cas-isp-weak-cipher.md  
   - name: Security alert lab
     items:
     - name: Lab overview
