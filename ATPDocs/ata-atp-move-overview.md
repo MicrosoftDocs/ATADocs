@@ -49,7 +49,7 @@ In this guide you will:
 
 - An Azure Active Directory tenant with at least one global/security administrator is required to create an Azure ATP instance. Each Azure ATP instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
-- Azure ATP requires .Net Framework 4.7 and may require a domain controller (restart) if your current .Net Framework version is not 4.7.
+- Azure ATP requires .Net Framework 4.7 or later and may require a domain controller (restart) if your current .Net Framework version is not 4.7 or later.
 
 - Make sure your domain controllers meet all the [Azure ATP sensor requirements](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#azure-atp-sensor-requirements) and your environment meets all [Azure ATP requirements](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites).
 
