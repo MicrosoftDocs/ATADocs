@@ -6,7 +6,7 @@ description: Describes how you can quickly recover ATA functionality after disas
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

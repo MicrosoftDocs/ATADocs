@@ -6,7 +6,7 @@ description: Describes how you can troubleshoot known issues in Advanced Threat 
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/22/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

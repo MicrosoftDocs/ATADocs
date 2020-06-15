@@ -6,7 +6,7 @@ description: Helps you plan your deployment and decide how many ATA servers will
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

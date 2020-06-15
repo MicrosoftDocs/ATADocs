@@ -4,9 +4,9 @@
 title: What's new in ATA version 1.8
 description: Lists what was new in ATA version 1.8 along with known issues
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -18,7 +18,7 @@ ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer:
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -38,7 +38,7 @@ These release notes provide information about updates, new features, bug fixes a
 - Unusual protocol implementation was improved to be able to detect WannaCry malware.
 
 - NEW! **Abnormal modification of sensitive groups**  – As part of the privilege escalation phase, attackers modify groups with high privileges to gain access to sensitive resources. ATA now detects when there's an abnormal change in an elevated group.
-- NEW! **Suspicious authentication failures** (Behavioral brute force) – Attackers attempt to use brute force on credentials to compromise accounts. ATA now raises an alert when abnormal failed authentication behavior is detected.
+- NEW! **Suspicious authentication failures** (Behavioral brute force) – Attackers attempt to use brute force on credentials to compromise accounts. ATA now raises an alert when abnormal failed authentication behavior is detected.   
 
 - **Remote execution attempt – WMI exec**  - Attackers can attempt to control your network by running code remotely on your domain controller. ATA has enhanced the remote execution detection to include detection of WMI methods to run code remotely.
 
@@ -46,21 +46,21 @@ These release notes provide information about updates, new features, bug fixes a
 
 - Kerberos Golden Ticket activity – ATA 1.8 includes an additional technique to detect golden ticket attacks.
     - ATA now detects suspicious activities in which the Golden ticket lifetime has expired. If a Kerberos ticket is used for more than the allowed lifetime, ATA will detect it as a suspicious activity that a Golden ticket has likely been created.
-- Enhancements were made to the following detections to remove known false positives:
-    - Privilege escalation detection  (forged PAC)
+- Enhancements were made to the following detections to remove known false positives:  
+    - Privilege escalation detection  (forged PAC) 
     - Encryption downgrade activity (Skeleton Key)
     - Unusual protocol implementation
     - Broken trust
 
 ## Improved triage of suspicious activities
 
--  NEW! ATA 1.8 enables you to run the following actions suspicious activities during the triage process:
+-  NEW! ATA 1.8 enables you to run the following actions suspicious activities during the triage process: 
     - **Exclude entities** from raising future suspicious activities to prevent ATA from alerting when it detects benign true positives (such as an admin running remote code or detecting security scanners).
     - **Suppress recurring** suspicious activities from alerting.
     - **Delete suspicious activities** from the attack time line.
--  The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line was redesigned. In ATA 1.8, you will be able to see many more suspicious activities on a single screen, containing better information for triage and investigation purposes.
+-  The process for following up on suspicious activity alerts is now more efficient. The suspicious activities time line was redesigned. In ATA 1.8, you will be able to see many more suspicious activities on a single screen, containing better information for triage and investigation purposes. 
 
-## New reports to help you investigate
+## New reports to help you investigate 
 -  NEW! The **Summary report** was added to enable you to see all the summarized data from ATA, including suspicious activities, health issues and more. You can even  define a customized report that is automatically generated on a recurring basis.
 -  NEW! The **Sensitive groups report** was added to enable you to see all the changes made in sensitive groups over a certain period.
 
@@ -74,7 +74,7 @@ These release notes provide information about updates, new features, bug fixes a
 ## Security improvements
 
 -  NEW! **Single-sign-on for ATA management**. ATA supports single sign-on integrated with Windows authentication - if you've already logged onto your computer, ATA will use that token to log you into the ATA Console. You can also log in using a smartcard. Silent installation scripts for the ATA Gateway and ATA Lightweight Gateway now use the logged on user's context, without the need to provide credentials.
--  Local System privileges were removed from the ATA Gateway process, so you can now use virtual accounts (available on stand-alone ATA Gateways only), managed service accounts and group managed service accounts to run the ATA Gateway process.
+-  Local System privileges were removed from the ATA Gateway process, so you can now use virtual accounts (available on stand-alone ATA Gateways only), managed service accounts and group managed service accounts to run the ATA Gateway process.   
 -  Auditing logs for ATA Center and Gateways were added and all actions are now logged in the Windows Event Log.
 -  Support was added for KSP Certificates for the ATA Center.
 
@@ -91,28 +91,28 @@ These release notes provide information about updates, new features, bug fixes a
 
 ### ATA Gateway on Windows Server Core
 
-**Symptoms**: Upgrading an ATA Gateway to 1.8 on Windows Server 2012R2 Core with .Net framework 4.7 or later may fail with the error: *Microsoft Advanced Threat Analytics Gateway has stopped working*.
+**Symptoms**: Upgrading an ATA Gateway to 1.8 on Windows Server 2012R2 Core with .Net framework 4.7 may fail with the error: *Microsoft Advanced Threat Analytics Gateway has stopped working*. 
 
 ![Gateway core error](./media/gateway-core-error.png)
 
 On Windows Server 2016 Core you may not see the error, but the process will fail when you try to install, and events 1000 and 1001 (process crash) will be logged in the application Event Log on the server.
 
-**Description**: There is a problem with the .NET framework 4.7 that causes applications that uses WPF technology (such as ATA) to fail to load. [See KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on) for more information.
+**Description**: There is a problem with the .NET framework 4.7 that causes applications that uses WPF technology (such as ATA) to fail to load. [See KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on) for more information. 
 
-**Workaround**: Uninstall .Net 4.7 or later [See KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) to revert the .NET version to .NET 4.6.2 and then update your ATA Gateway to version 1.8. After the upgrade of ATA you can reinstall .NET 4.7.  There will be an update to correct this problem in a future release.
+**Workaround**: Uninstall .Net 4.7 [See KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) to revert the .NET version to .NET 4.6.2 and then update your ATA Gateway to version 1.8. After the upgrade of ATA you can reinstall .NET 4.7.  There will be an update to correct this problem in a future release.
 
 ### Lightweight Gateway event log permissions
 
-**Symptoms**: When you upgrade ATA to version 1.8, apps or services that were previously granted permissions to access the Security Event Log may lose the permissions.
+**Symptoms**: When you upgrade ATA to version 1.8, apps or services that were previously granted permissions to access the Security Event Log may lose the permissions. 
 
 **Description**: In order to make ATA easier to deploy, ATA 1.8 accesses your Security Event Log directly, without necessitating Windows Event Forwarding configuration. At the same time, ATA runs as a low-permission local service to maintain tighter security. In order to provide access for ATA to read the events, the ATA service grants itself permissions to the Security Event Log. When this happens, permissions previously set for other services may be disabled.
 
-**Workaround**: Run the following Windows PowerShell script. This removes the incorrectly added permissions in the registry from ATA, and adds them via a different API. This may restore permissions for other apps. If it does not, they will need to be restored manually. There will be an update to correct this problem in a future release.
+**Workaround**: Run the following Windows PowerShell script. This removes the incorrectly added permissions in the registry from ATA, and adds them via a different API. This may restore permissions for other apps. If it does not, they will need to be restored manually. There will be an update to correct this problem in a future release. 
 
        $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
         try {
       $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
-      $ATASddl = "O:BAG:SYD:" + $ATADaclEntry
+      $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
       if($SecurityDescriptor.CustomSD -eq $ATASddl) {
     Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
       }
@@ -130,7 +130,7 @@ On Windows Server 2016 Core you may not see the error, but the process will fail
 **Symptoms**: After upgrading to ATA 1.8 the ATA Gateway service may fail to start. In the ATA error log you may see the following exception:
 *System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.*
 
-**Description**: Starting from ATA 1.8, the ATA Gateway communicates with the ATA Center using the http protocol. If the machine on which you installed the ATA Gateway uses a proxy server to connect to the ATA Center, it can break this communication.
+**Description**: Starting from ATA 1.8, the ATA Gateway communicates with the ATA Center using the http protocol. If the machine on which you installed the ATA Gateway uses a proxy server to connect to the ATA Center, it can break this communication. 
 
 **Workaround**: Disable the use of a proxy server on the ATA Gateway service account. There will be an update to correct this problem in a future release.
 

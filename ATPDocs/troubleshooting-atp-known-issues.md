@@ -6,7 +6,7 @@ description: Describes how you can troubleshoot issues in Azure ATP.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

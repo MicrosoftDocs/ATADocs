@@ -6,7 +6,7 @@ description: This article provides an overview of Azure ATP's Microsoft LAPS usa
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

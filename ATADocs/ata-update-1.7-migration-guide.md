@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics update to 1.7 migration guide
 description: Procedures to update ATA to version 1.7
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

@@ -4,9 +4,9 @@
 title: Troubleshooting Advanced Threat Analytics using the logs
 description: Describes how you can use the ATA logs to troubleshoot issues
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 8/27/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

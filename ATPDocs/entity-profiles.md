@@ -6,7 +6,7 @@ description: Describes how to investigate users from the user profiles screen in
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

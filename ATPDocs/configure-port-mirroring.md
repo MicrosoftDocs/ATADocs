@@ -6,7 +6,7 @@ description: Describes port mirroring options and how to configure them for Azur
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -6,7 +6,7 @@ description: Explains how to configure Azure ATP to make remote calls to SAM
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

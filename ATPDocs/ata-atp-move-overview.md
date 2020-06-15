@@ -6,7 +6,7 @@ description: Learn how to move an existing Advanced Threat Analytics installatio
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

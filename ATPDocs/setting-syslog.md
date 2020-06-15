@@ -6,7 +6,7 @@ description: Describes how to have Azure ATP notify you (by email or by Azure AT
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
