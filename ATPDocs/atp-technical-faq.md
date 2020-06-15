@@ -81,7 +81,7 @@ Azure ATP's additional capabilities:
 
 Azure ATP is a part of Microsoft 365 Security – securing the hybrid organization:
 
-- Azure ATP, together with Microsoft Cloud App Security (MCAS) and Azure AD Identity Protection, provides a unified investigation experience for user activities, on-premises and in the cloud, and provides enhanced User and Entity Behavior Analytics (UEBA) detections.
+- Azure ATP, together with Microsoft Cloud App Security and Azure Active Directory (Azure AD) Identity Protection, provides a unified investigation experience for user activities, on-premises and in the cloud, and provides enhanced User and Entity Behavior Analytics (UEBA) detections.
 - ATA has no integration with other Microsoft online security solutions
 
 Scalable and secure, leveraging the power of the cloud:
@@ -97,11 +97,7 @@ Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5
 
 ### Does Azure ATP need only a single license or does it require a license for every user I want to protect?
 
-Azure ATP requires licensing for every user.
-
-### Is this going to be a part of Azure Active Directory or on-premises Active Directory?
-
-The Azure ATP solution is currently a standalone offering. It is not a part of Azure Active Directory or on-premises Active Directory.
+Azure ATP requires all users in Azure AD to be licensed
 
 ### Is my data isolated from other customer data?
 
