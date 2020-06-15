@@ -33,6 +33,15 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## Azure ATP release 2.117
+
+Released June 14, 2021
+
+- **Feature enhancement: Additional device details sent toMicrosoft Cloud App Security**  
+We've extended the device information we send to Cloud App Security including device names, IP addresses, account UPNs and used port. For more information about our integration with Cloud App Security, see [Using Azure ATP with Cloud App Security](atp-mcas-integration.md).
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.116
 
 Released June 7, 2020
@@ -42,6 +51,13 @@ Released June 7, 2020
 ## Azure ATP release 2.115
 
 Released May 31, 2020
+
+- **New security assessments**  
+Azure ATP security assessments now includes the following new assessments:
+  - **Unsecure SID History attributes**  
+    This assessment reports on SID History attributes that can be used by malicious attackers to gain access to your environment. For more information, see [Security assessment: Unsecure SID History attributes](atp-cas-isp-unsecure-sid-history-attribute.md).
+  - **Microsoft LAPS usage**  
+    This assessment reports on local administrator accounts not using Microsoft's "Local Administrator Password Solution" (LAPS) to secure their passwords. Using LAPS simplifies password management and also helps defend against cyberattacks. For more information, see [Security assessment: Microsoft LAPS usage](atp-cas-isp-laps.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
