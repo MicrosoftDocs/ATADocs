@@ -6,7 +6,7 @@ description: Provides samples of suspicious activity logs sent from Azure ATP to
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 06/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

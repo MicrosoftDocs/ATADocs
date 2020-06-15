@@ -6,7 +6,7 @@ description: This article provides an overview of Azure ATP's entities with an u
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

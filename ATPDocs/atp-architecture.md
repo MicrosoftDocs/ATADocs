@@ -6,7 +6,7 @@ description: Describes the architecture of Azure Advanced Threat Analytics (ATP)
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/23/2019
 ms.topic: article
 ms.collection: M365-security-compliance

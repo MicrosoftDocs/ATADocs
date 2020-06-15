@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics Database Management
 description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

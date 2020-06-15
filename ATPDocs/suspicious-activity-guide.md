@@ -6,7 +6,7 @@ d|Description: This article provides a list of the security alerts issued by Azu
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
