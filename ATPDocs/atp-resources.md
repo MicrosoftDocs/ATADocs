@@ -6,7 +6,7 @@ description: This article provides a list of helpful resources for Azure ATP
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

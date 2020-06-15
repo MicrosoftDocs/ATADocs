@@ -6,7 +6,7 @@ description: This article is a reference of previous releases updates to Azure A
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/17/2019
 ms.topic: reference
 ms.collection: M365-security-compliance

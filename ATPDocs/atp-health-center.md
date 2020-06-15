@@ -6,7 +6,7 @@ description: Use the Azure ATP health center to check how the Azure ATP service 
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 1/3/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

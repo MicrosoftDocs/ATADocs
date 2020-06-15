@@ -6,7 +6,7 @@ description: Describes your options for configuring Windows Event Forwarding wit
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

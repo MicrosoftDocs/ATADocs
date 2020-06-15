@@ -6,7 +6,7 @@ description: Describes how to log into the Azure ATP portal and the components o
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -6,7 +6,7 @@ description: Describes how to investigate suspicious activities performed by use
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance

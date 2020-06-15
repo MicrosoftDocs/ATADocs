@@ -30,7 +30,7 @@ In this quickstart, you'll install the Azure ATP sensor on a domain controller. 
 
 - An [Azure ATP instance](install-atp-step1.md) that's [connected to Active Directory](install-atp-step2.md).
 - A downloaded copy of your [ATP sensor setup package](install-atp-step3.md) and the access key.
-- Make sure Microsoft .Net Framework 4.7 is installed on the machine. If .Net Framework 4.7 isn't installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
+- Make sure Microsoft .Net Framework 4.7 or later is installed on the machine. If Microsoft .Net Framework 4.7 or later isn't installed, the Azure ATP sensor setup package installs it, which may require a reboot of the server.
 
 ## Install the sensor
 

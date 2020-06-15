@@ -6,7 +6,7 @@ description: In this step of installing ATP, you configure data sources.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

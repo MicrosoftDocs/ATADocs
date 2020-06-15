@@ -6,7 +6,7 @@ description: Overview of Azure ATP features within Microsoft Cloud App Security.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 01/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

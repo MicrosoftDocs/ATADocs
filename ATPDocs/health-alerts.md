@@ -6,7 +6,7 @@ description: Describes how you can use the Azure ATP logs to troubleshoot issues
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance

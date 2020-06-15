@@ -4,9 +4,9 @@
 title: Working with suspicious activities in Advanced Threat Analytics
 description: Describes how to review suspicious activities identified by ATA
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 4/29/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
