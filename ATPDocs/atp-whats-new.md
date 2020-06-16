@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/23/2020
+ms.date: 06/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -37,7 +37,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 Released June 14, 2021
 
-- **Feature enhancement: Additional device details sent toMicrosoft Cloud App Security**  
+- **Feature enhancement: Additional activity details available in the unified SecOps experience**  
 We've extended the device information we send to Cloud App Security including device names, IP addresses, account UPNs and used port. For more information about our integration with Cloud App Security, see [Using Azure ATP with Cloud App Security](atp-mcas-integration.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
