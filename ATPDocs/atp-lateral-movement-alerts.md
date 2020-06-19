@@ -304,7 +304,7 @@ In this detection, an Azure ATP security alert is triggered when SMBv3 packet su
 
 **TP, B-TP, or FP?**
 
-1. Are the involved domain controllers up-to-date and patched against CVE-2020-1040?
+1. Are the involved domain controllers up-to-date and patched against CVE-2020-0796?
     - If the computers are up-to-date and patched, we expect the attack to fail, **Close** the security alert as a failed attempt.
 
 **Understand the scope of the breach**
