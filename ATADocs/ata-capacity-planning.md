@@ -30,7 +30,7 @@ ms.suite: ems
 
 This article helps you determine how many ATA servers are needed to monitor your network. It helps you estimate how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
 
-> [!NOTE] 
+> [!NOTE]
 > The ATA Center can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
 
 ## Using the sizing tool
@@ -41,25 +41,20 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 - ATA Center Storage: Match the **Avg Packets/sec** field in the ATA Center table results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
 - ATA Gateway: Match the **Busy Packets/sec** field in the ATA Gateway table in the results file to the **PACKETS PER SECOND** field in the [ATA Gateway table](#ata-gateway-sizing) or the [ATA Lightweight Gateway table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
 
-
 ![Sample capacity planning tool](media/capacity-tool.png)
-
 
 > [!NOTE]
 > Because different environments vary and have multiple special and unexpected network traffic characteristics, after you initially deploy ATA and run the sizing tool, you may need to adjust and fine tune your deployment for capacity.
-
 
 If for some reason you cannot use the ATA Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller,  calculate the daily average and the busiest period (15 minutes) average.
 The following sections provide instructions about how to collect the packets/sec counter from one Domain Controller.
 
-
 > [!NOTE]
 > Because different environments vary and have multiple special and unexpected network traffic characteristics, after you initially deploy ATA and run the sizing tool, you may need to adjust and fine tune your deployment for capacity.
 
-
 ### ATA Center Sizing
+
 The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics.
- 
 
 |Packets per second from all DCs|CPU (cores&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -84,8 +79,8 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > - For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 > - When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
 
-
 ## Choosing the right gateway type for your deployment
+
 In an ATA deployment any combination of the ATA Gateway types is supported:
 
 - Only ATA Gateways
@@ -101,57 +96,48 @@ When deciding the Gateway deployment type, consider the following benefits:
 
 The following are examples of scenarios in which domain controllers should be covered by the ATA Lightweight Gateway:
 
-
 - Branch sites
 
 - Virtual domain controllers deployed in the cloud (IaaS)
 
-
 The following are examples of scenarios in which domain controllers should be covered by the ATA Gateway:
-
 
 - Headquarter data centers (having domain controllers with more than 10,000 packets per seconds)
 
-
 ### ATA Lightweight Gateway Sizing
 
-An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
-
+An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates.
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
 |1,000|2|6|
 |5,000|6|16|
-	|10,000|10|24|
+|10,000|10|24|
 
 &#42;Total number of packets-per-second on the domain controller being monitored by the specific ATA Lightweight Gateway.
 
-&#42;&#42;Total number of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
+&#42;&#42;Total number of non-hyper threaded cores that this domain controller has installed.  
+While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
 
 &#42;&#42;&#42;Total amount of memory that this domain controller has installed.
 
-> [!NOTE]	
-> -   If the domain controller does not have the resources required by the ATA Lightweight Gateway, domain controller performance is not effected, but the ATA Lightweight Gateway might not operate as expected.
-> -   When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. For more information on running ATA Center as a virtual machine, see [ATA Center requirements](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory))
-> -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
-
+> [!NOTE]
+>
+> - If the domain controller does not have the resources required by the ATA Lightweight Gateway, domain controller performance is not effected, but the ATA Lightweight Gateway might not operate as expected.
+> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory))
+> - For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
+> - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ### ATA Gateway Sizing
 
 Consider the following issues when deciding how many ATA Gateways to deploy.
 
--	**Active Directory forests and domains**<br>
-	ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. Do not configure a single ATA deployment to monitor network traffic of domain controllers from different forests.
-
--	**Port Mirroring**<br>
-Port mirroring considerations might require you to deploy multiple ATA Gateways per data center or branch site.
-
--	**Capacity**<br>
-	An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored. 
-<br>
-
-
+- **Active Directory forests and domains**  
+  ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. Do not configure a single ATA deployment to monitor network traffic of domain controllers from different forests.
+- **Port Mirroring**  
+Port mirroring considerations might require you to deploy multiple ATA Gateways per data Gateway or branch site.
+- **Capacity**  
+  An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored.
 
 |Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|
 |---------------------------|-------------------------|---------------|
@@ -167,18 +153,18 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 
 &#42;&#42;Hyper-threading must be disabled.
 
-> [!NOTE] 
-> -   When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. For more information on running ATA Center as a virtual machine, see [ATA Center requirements](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
-> -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
-
-
+> [!NOTE]
+>
+> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
+> - For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
+> - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
 ## Related Videos
+
 - [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-
 ## See Also
+
 - [ATA sizing tool](https://aka.ms/atasizingtool)
 - [ATA prerequisites](ata-prerequisites.md)
 - [ATA architecture](ata-architecture.md)
