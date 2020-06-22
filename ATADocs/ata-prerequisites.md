@@ -307,7 +307,7 @@ The following table lists the minimum ports that the ATA Lightweight Gateway req
 > - NTLM over RPC (TCP Port 135) for resolution purposes
 > - NetBIOS (UDP port 137) for resolution purposes
 
-### Dynamic memory
+## Dynamic memory
 
 > [!NOTE]
 > When running ATA services as a virtual machine (VM) the service requires all memory be allocated to the VM, all the time.
