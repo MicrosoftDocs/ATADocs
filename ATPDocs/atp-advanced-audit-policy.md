@@ -6,7 +6,7 @@ description: This article provides an overview of Azure ATP's Advanced Audit Pol
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -6,7 +6,7 @@ description: Explains what Microsoft Advanced Threat Analytics (ATA) is and what
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 7/24/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

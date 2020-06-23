@@ -6,7 +6,7 @@ description: Collect accounting information for Azure ATP by integrating a VPN.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/04/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
