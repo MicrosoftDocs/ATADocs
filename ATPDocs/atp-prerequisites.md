@@ -248,21 +248,21 @@ The Azure ATP standalone sensor requires at least one Management adapter and at 
 
 The following table lists the minimum ports that the Azure ATP standalone sensor requires configured on the management adapter:
 
-|Protocol|Transport|Port|To/From|Direction|
+|Protocol|Transport|Port|From|To|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Internet ports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP Sensor|Azure ATP cloud service|Outbound|
 |**Internal ports**|||||
-|LDAP|TCP and UDP|389|Domain controllers|Outbound|
-|Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
-|LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
-|LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
-|Kerberos|TCP and UDP|88|Domain controllers|Outbound|
+|LDAP|TCP and UDP|389|Domain controllers|Azure ATP Sensor|Outbound|
+|Secure LDAP (LDAPS)|TCP|636|Domain controllers|Azure ATP Sensor|Outbound|
+|LDAP to Global Catalog|TCP|3268|Domain controllers|Azure ATP Sensor|Outbound|
+|LDAPS to Global Catalog|TCP|3269|Domain controllers|Azure ATP Sensor|Outbound|
+|Kerberos|TCP and UDP|88|Domain controllers|Azure ATP Sensor|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
-|Windows Time|UDP|123|Domain controllers|Outbound|
-|DNS|TCP and UDP|53|DNS Servers|Outbound|
-|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
-|RADIUS|UDP|1813|RADIUS|Inbound|
+|Windows Time|UDP|123|Domain controllers|Azure ATP Sensor|Outbound|
+|DNS|TCP and UDP|53|DNS Servers|Azure ATP Sensor|Outbound|
+|Syslog (optional)|TCP/UDP|514, depending on configuration|Azure ATP Sensor|SIEM Server|Inbound|
+|RADIUS|UDP|1813|RADIUS|Azure ATP Sensor|Inbound|
 
 > [!NOTE]
 >
