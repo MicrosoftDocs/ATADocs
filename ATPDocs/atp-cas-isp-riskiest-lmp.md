@@ -31,7 +31,7 @@ ms.suite: ems
 
 ## What are Risky lateral movement paths?
 
-Azure ATP continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths a considered risky of they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
+Azure ATP continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
 
 Learn more about LMP:
 
