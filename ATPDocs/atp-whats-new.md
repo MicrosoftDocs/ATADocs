@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/16/2020
+ms.date: 06/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -33,9 +33,28 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+<!--
+- **Feature enhancement: New *Excluded domain controllers* tab in Excel report**  
+We've added a tab for *excluded domain controllers* to the domain coverage Excel download. Use this tab to view a list of excluded servers. For information about downloading the report, see [Domain controller status](atp-sensor-monitoring.md#domain-controller-status).
+-->
+
+## Azure ATP release 2.118
+
+Released June 28, 2020
+
+- **New security assessments**  
+Azure ATP security assessments now includes the following new assessments:
+  - **Riskiest lateral movement paths**  
+    This assessment continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the sensitive account to credential theft by malicious actors. For more information, see [Security assessment: Riskiest lateral movement paths (LMP)](atp-cas-isp-riskiest-lmp.md).
+  - **Unsecure account attributes**  
+    This assessment Azure ATP continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment. For more information, see [Security assessment: Unsecure account attributes](atp-cas-isp-unsecure-account-attributes.md).
+
+- **Updated sensitivity definition**  
+We are expanding our sensitivity definition for on-premises accounts to include entities that are allowed to use Active Directory replication.
+
 ## Azure ATP release 2.117
 
-Released June 14, 2021
+Released June 14, 2020
 
 - **Feature enhancement: Additional activity details available in the unified SecOps experience**  
 We've extended the device information we send to Cloud App Security including device names, IP addresses, account UPNs and used port. For more information about our integration with Cloud App Security, see [Using Azure ATP with Cloud App Security](atp-mcas-integration.md).
