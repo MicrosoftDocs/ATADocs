@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/23/2019
+ms.date: 07/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -27,22 +27,23 @@ ms.suite: ems
 
 # Configure endpoint proxy and Internet connectivity settings for your Azure ATP Sensor
 
-Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to operate successfully. In some organizations, the domain controllers aren’t directly connected to the internet, but are connected through a web proxy connection. Each Azure ATP sensor requires that you use the Microsoft Windows Internet (WinINET) proxy configuration to report sensor data and communicate with the Azure ATP service. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Azure ATP cloud service.
+Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection.
 
-When configuring the proxy, remember that the embedded Azure ATP sensor service runs in system context using the **LocalService** account, and that the Azure ATP Sensor Updater service runs in the system context using **LocalSystem** account.
+Use one of the following methods to configure your proxy server.
 
-> [!NOTE]
-> If you're using Transparent proxy or WPAD in your network topology, you don't need to configure WinINET for your proxy.
+- [Configure proxy server using the command line](#configure-proxy-server-using-the-command-line)
+- [Configure proxy server using WinINet](#configure-proxy-server-using-wininet)
+- [Configure proxy server using the registry](#configure-proxy-server-using-the-registry)
 
-## Configure the proxy
+## Configure proxy server using the command line
 
-You can configure your proxy settings during sensor installation, by using the parameters defined in [Silent installation, proxy authentication settings](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication).
+You can configure your proxy server during sensor installation using the following command line switches.
 
-### Proxy authentication
+### Syntax
 
-Use the following commands to complete proxy authentication:
+"Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="<Proxy URL>"] [ProxyUserName="<Username>"] [ProxyUserPassword="<Password>"]
 
-**Syntax**:
+### Switch descriptions
 
 > [!div class="mx-tableFixed"]
 >
@@ -51,6 +52,17 @@ Use the following commands to complete proxy authentication:
 > |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Azure ATP sensor.|
+
+## Configure proxy server using WinINet
+
+You can configure your proxy server using Microsoft Windows Internet (WinINet) proxy configuration, to allow Azure ATP sensor to report diagnostic data and communicate with Azure ATP cloud service when a computer is not permitted to connect to the Internet. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Azure ATP cloud service.
+
+When configuring the proxy, remember that the embedded Azure ATP sensor service runs in system context using the **LocalService** account, and that the Azure ATP Sensor Updater service runs in the system context using **LocalSystem** account.
+
+> [!NOTE]
+> If you're using Transparent proxy or WPAD in your network topology, you don't need to configure WinINet for your proxy.
+
+## Configure proxy server using the registry
 
 You can also configure your proxy server manually using a registry-based static proxy, to allow Azure ATP sensor to report diagnostic data and communicate with Azure ATP cloud service when a computer is not permitted to connect to the Internet.
 
