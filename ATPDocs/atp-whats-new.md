@@ -33,10 +33,13 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
-<!--
+## Azure ATP release 2.119
+
+Released July 5, 2020
+
 - **Feature enhancement: New *Excluded domain controllers* tab in Excel report**  
-We've added a tab for *excluded domain controllers* to the domain coverage Excel download. Use this tab to view a list of excluded servers. For information about downloading the report, see [Domain controller status](atp-sensor-monitoring.md#domain-controller-status).
--->
+To improve the accuracy of our domain controller coverage calculation, we will be excluding domain controllers with external trusts from the calculation toward achieving 100% coverage. Excluded domain controllers will be surfaced in the new *excluded domain controllers* tab in the domain coverage Excel report download. For information about downloading the report, see [Domain controller status](atp-sensor-monitoring.md#domain-controller-status).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.118
 
