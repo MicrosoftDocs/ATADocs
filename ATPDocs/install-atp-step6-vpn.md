@@ -43,6 +43,7 @@ To enable VPN integration, make sure you set the following parameters:
 
 -	Open port UDP 1813 on your Azure ATP sensors and/or Azure ATP standalone sensors.
 
+Note: By enabling "Radius Accounting" the ATP sensor will enable a pre-provisioned Windows firewall policy called "Azure Advanced Threat Protection Sensor" to allow incoming RADIUS Accounting on port UDP 1813.
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 
