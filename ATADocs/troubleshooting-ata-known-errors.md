@@ -6,7 +6,7 @@ description: Describes how you can troubleshoot known issues in Advanced Threat 
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/22/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -86,8 +86,8 @@ This section details possible errors in the deployments of ATA and the steps req
 >
 > |Issue|Description|Resolution|
 > |-------------|----------|---------|
-> |No traffic received from the domain controller, but monitoring alerts are observed|No traffic was received from a domain controller using port mirroring through an ATA Gateway|On the ATA Gateway capture NIC, disable these features in **Advanced Settings**:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|
-> |This monitoring alert is displayed: Some network traffic is not being analyzed|If you have an ATA Gateway or Lightweight Gateway on VMware virtual machines, you might receive this monitoring alert. This happens because of a configuration mismatch in VMware.|Set the following settings to 0 or Disabled in the virtual machine NIC configuration: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|
+> |No traffic received from the domain controller, but health alerts are observed|No traffic was received from a domain controller using port mirroring through an ATA Gateway|On the ATA Gateway capture NIC, disable these features in **Advanced Settings**:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|
+> |This health alert is displayed: Some network traffic is not being analyzed|If you have an ATA Gateway or Lightweight Gateway on VMware virtual machines, you might receive this health alert. This happens because of a configuration mismatch in VMware.|Set the following settings to 0 or Disabled in the virtual machine NIC configuration: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload|
 
 ## Multi Processor Group mode
 

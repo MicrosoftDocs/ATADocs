@@ -4,9 +4,9 @@
 title: What's new in ATA version 1.7
 description: Lists what was new in ATA version 1.7 along with known issues
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 1/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

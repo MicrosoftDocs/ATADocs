@@ -6,7 +6,7 @@ description: Step two of installing ATA helps you configure the domain connectiv
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/30/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

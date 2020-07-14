@@ -6,7 +6,7 @@ description: Overview of Azure ATP activity filtering and policies with Microsof
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

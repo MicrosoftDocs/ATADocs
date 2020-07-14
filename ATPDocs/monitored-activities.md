@@ -6,7 +6,7 @@ description: Describes each activity type monitored by Azure Advanced Threat Pro
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -83,7 +83,7 @@ The information monitored by Azure ATP is presented in the form of activities. A
 
 |Monitored activity|Description|
 |---------------------|------------------|
-|Directory Service Replication|Used tried to replicate the directory service.|
+|Directory Service Replication|User tried to replicate the directory service.|
 |DNS Query|Type of query user performed against the domain controller (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
 |Private Data Retrieval|User attempted/succeeded to query private data using LSARPC protocol.|
 |Service Creation|User attempted to remotely create a specific service to a remote machine.|

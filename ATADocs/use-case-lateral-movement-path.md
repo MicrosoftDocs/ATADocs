@@ -6,7 +6,7 @@ description: This article describes how to detect lateral movement path attacks 
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 06/14/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

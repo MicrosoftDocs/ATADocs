@@ -6,7 +6,7 @@ description: In this step of installing ATP, you configure data sources.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -31,7 +31,7 @@ To enhance detection capabilities, Azure ATP needs the following Windows events:
 
 > [!NOTE]
 >
-> - Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
+> - Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 > - It is important to run the Azure ATP auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events.
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. Azure ATP uses Windows event 4776 and 8004 for NTLM, which enhances various detections and events 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045, and 8004 for enhancing detection of sensitive group modifications and service creation. These can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
@@ -50,7 +50,7 @@ When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentica
 
 ## SIEM/Syslog
 
-Azure ATP Stanalone sensors are configured by default to receive Syslog data. For Azure ATP Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
+Azure ATP Standalone sensors are configured by default to receive Syslog data. For Azure ATP Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
 
 > [!NOTE]
 > Azure ATP only listens on IPv4 and not IPv6.
@@ -90,7 +90,7 @@ Azure ATP supports SIEM events in the following formats:
     9. The result code of the NTLM
 - The order is important and nothing else should be included in the message.
 
-### HP Arcsight
+### MicroFocus ArcSight
 
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
@@ -106,7 +106,6 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
   - dhost = the computer receiving the event (the DC in this case)
   - duser = the user authenticating
 - The order is not important for the _Extension_ part
-
 - There must be a custom key and keyLable for these two fields:
   - "EventSource"
   - "Reason or Error Code" = The result code of the NTLM
@@ -148,6 +147,7 @@ QRadar enables event collection via an agent. If the data is gathered using an a
 The fields needed are:
 
 - The agent type for the collection
+
 - The Windows event log provider name
 - The Windows event log source
 - The DC fully qualified domain name

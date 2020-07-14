@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics role groups for access management
 description: Walks you through working with ATA role groups.
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -45,7 +45,7 @@ ATA introduces three types of Role group: ATA Administrators, ATA Users, and ATA
 |Provide Input for Suspicious Activities|Available|Available|Not available|
 |Change status of Suspicious Activities|Available|Available|Not available|
 |Share/Export suspicious activity via email/get link|Available|Available|Not available|
-|Change status of Monitoring Alerts|Available|Available|Not available|
+|Change status of Health Alerts|Available|Available|Not available|
 |Update ATA Configuration|Available|Not available|Not available|
 |Gateway – Add|Available|Not available|Not available|
 |Gateway – Delete |Available|Not available|Not available|

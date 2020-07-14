@@ -6,7 +6,7 @@ description: Describes how to update and delay update of sensors in Azure ATP.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 12/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

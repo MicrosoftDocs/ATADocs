@@ -6,7 +6,7 @@ description: Describes how to set up your firewall or proxy to allow communicati
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -48,7 +48,7 @@ Use the following commands to complete proxy authentication:
 >
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Azure ATP sensor.|
 

@@ -6,7 +6,7 @@ description: This describes how to silently install Azure ATP.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -31,25 +31,23 @@ This article provides guidance and instructions for Azure ATP switches and silen
 
 ## Prerequisites
 
-Azure ATP requires the installation of Microsoft .NET Framework 4.7. 
+Azure ATP requires the installation of Microsoft .NET Framework 4.7 or later.
 
-When you install Azure ATP, .Net Framework 4.7 is automatically installed as part of the deployment of Azure ATP.
+When you install Azure ATP, .Net Framework 4.7 is automatically installed as part of the deployment of Azure ATP if .Net Framework 4.7 or later is not installed already.
 
-> [!IMPORTANT] 
-> Make sure that you have the latest version of .Net Framework installed. If a previous version of .Net is installed, your Azure ATP silent installation will get stuck in a loop and fail to install. 
+> [!IMPORTANT]
+> Make sure that you have the latest version of .Net Framework installed. If a previous version of .Net is installed, your Azure ATP silent installation will get stuck in a loop and fail to install.
 
-> [!NOTE] 
+> [!NOTE]
 > The installation of .Net framework 4.7 may require rebooting the server. When installing the Azure ATP sensor on domain controllers, consider scheduling a maintenance window for the domain controllers.
 Using Azure ATP silent installation, the installer is configured to automatically restart the server at the end of the installation (if necessary). Make sure to run silent installation only during a maintenance window. Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart.
 
 To track your deployment progress, monitor the Azure ATP installer logs, which are located in **%AppData%\Local\Temp**.
 
-
 ## Azure ATP sensor silent installation
 
 > [!NOTE]
-> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 which may include rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
-
+> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
 
 Use the following command to perform a fully silent install of the Azure ATP sensor:
 
@@ -71,7 +69,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-> 
+>
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -81,7 +79,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 **Installation parameters**:
 
 > [!div class="mx-tableFixed"]
-> 
+>
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
 > |InstallationPath|InstallationPath=""|No|Sets the path for the installation of AATP Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
@@ -100,10 +98,10 @@ Use the following commands to complete proxy authentication:
 
 
 > [!div class="mx-tableFixed"]
-> 
+>
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="https\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Azure ATP sensor.|
 
@@ -119,7 +117,7 @@ Use the following command to silently update the Azure ATP sensor:
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-> 
+>
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
@@ -142,7 +140,7 @@ Use the following command to perform a silent uninstall of the Azure ATP sensor:
 **Installation options**:
 
 > [!div class="mx-tableFixed"]
-> 
+>
 > |Name|Syntax|Mandatory for silent uninstallation?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|

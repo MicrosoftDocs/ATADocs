@@ -6,7 +6,7 @@ description: Explains what Azure Advanced Threat Protection (Azure ATP) is and w
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/05/2020
 ms.topic: article
 ms.collection: M365-security-compliance

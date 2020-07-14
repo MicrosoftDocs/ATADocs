@@ -6,8 +6,8 @@ description: Describes the requirements for a successful deployment of Azure ATP
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 03/15/2020
+manager: shsagir
+ms.date: 07/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -49,7 +49,7 @@ This prerequisite guide is divided into the following sections to ensure you hav
 [Azure ATP standalone sensor](#azure-atp-standalone-sensor-requirements): The Azure ATP Standalone Sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
 
 > [!NOTE]
-> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
+> Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 
 ## Before you start
 
@@ -133,7 +133,7 @@ The domain controller can be a read-only domain controller (RODC).
 
 For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
-During installation, the .Net Framework 4.7 is installed and might require a reboot of the domain controller, if a restart is already pending.
+During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the domain controller, if a restart is already pending.
 
 > [!NOTE]
 > A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
@@ -141,7 +141,7 @@ During installation, the .Net Framework 4.7 is installed and might require a reb
 ### Server specifications
 
 The Azure ATP sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
-For optimal performance, set the **Power Option** of the Azure ATP sensor to **High Performance**.
+For optimal performance, set the **Power Option** of the machine running the Azure ATP sensor to **High Performance**.
 
 Azure ATP sensors can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers, and the amount of resources installed.
 
@@ -167,16 +167,16 @@ The sensor is not supported on domain controllers running Windows 2008 R2 with B
 
 The following table lists the minimum ports that the Azure ATP sensor requires:
 
-|Protocol|Transport|Port|To/From|Direction|
+|Protocol|Transport|Port|From|To|Direction|
 |------------|-------------|--------|-----------|-------------|
-|**Internet ports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
-|SSL(localhost)|TCP|444|localhost|Both|
-|**Internal ports**|||||
-|DNS|TCP and UDP|53|DNS Servers|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|All devices on network|Outbound|
-|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
-|RADIUS|UDP|1813|RADIUS|Inbound|
+|**Internet ports**||||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP sensor|Azure ATP cloud service|Outbound|
+|SSL(localhost)|TCP|444|Azure ATP sensor|localhost|Both|
+|**Internal ports**||||||
+|DNS|TCP and UDP|53|Azure ATP sensor|DNS Servers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP sensor|All devices on network|Outbound|
+|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP sensor|Inbound|
+|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
 
 ### Windows Event logs
 
@@ -191,7 +191,7 @@ Azure ATP detection relies on the following specific Windows Event logs that the
 This section lists the requirements for the Azure ATP standalone sensor.
 
 > [!NOTE]
-> Azure ATP standalone sensors do not support all data source types, resulting in missed detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
+> Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
 
 ### General
 
@@ -208,7 +208,7 @@ For information on using virtual machines with the Azure ATP standalone sensor, 
 
 ### Server specifications
 
-For optimal performance, set the **Power Option** of the Azure ATP standalone sensor to **High Performance**.<br>
+For optimal performance, set the **Power Option** of the machine running the Azure ATP standalone sensor to **High Performance**.<br>
 Azure ATP standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
 >[!NOTE]
@@ -248,21 +248,21 @@ The Azure ATP standalone sensor requires at least one Management adapter and at 
 
 The following table lists the minimum ports that the Azure ATP standalone sensor requires configured on the management adapter:
 
-|Protocol|Transport|Port|To/From|Direction|
+|Protocol|Transport|Port|From|To|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Internet ports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP cloud service|Outbound|
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP Sensor|Azure ATP cloud service|Outbound|
 |**Internal ports**|||||
-|LDAP|TCP and UDP|389|Domain controllers|Outbound|
-|Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
-|LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
-|LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
-|Kerberos|TCP and UDP|88|Domain controllers|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|All devices on network|Outbound|
-|Windows Time|UDP|123|Domain controllers|Outbound|
-|DNS|TCP and UDP|53|DNS Servers|Outbound|
-|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Inbound|
-|RADIUS|UDP|1813|RADIUS|Inbound|
+|LDAP|TCP and UDP|389|Azure ATP Sensor|Domain controllers|Outbound|
+|Secure LDAP (LDAPS)|TCP|636|Azure ATP Sensor|Domain controllers|Outbound|
+|LDAP to Global Catalog|TCP|3268|Azure ATP Sensor|Domain controllers|Outbound|
+|LDAPS to Global Catalog|TCP|3269|Azure ATP Sensor|Domain controllers|Outbound|
+|Kerberos|TCP and UDP|88|Azure ATP Sensor|Domain controllers|Outbound|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|Azure ATP Sensor|All devices on network|Outbound|
+|Windows Time|UDP|123|Azure ATP Sensor|Domain controllers|Outbound|
+|DNS|TCP and UDP|53|Azure ATP Sensor|DNS Servers|Outbound|
+|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP Sensor|Inbound|
+|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
 
 > [!NOTE]
 >
