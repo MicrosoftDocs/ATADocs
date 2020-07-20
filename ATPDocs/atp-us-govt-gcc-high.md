@@ -36,5 +36,5 @@ The Azure ATP GCC High offering is built on the Microsoft Azure Government Cloud
 
 ## Next steps
 
-- [Learn more about Government GCC High](/enterprise-mobility-security/solutions/ems-security-govt-description)
+- [Learn more about Government GCC High](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

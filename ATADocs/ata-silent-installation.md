@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/15/2019
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -114,10 +114,11 @@ To update the ATA Center silently. In large environments, the ATA Center update 
 ## Uninstall the ATA Center silently
 
 Use the following command to perform a silent uninstall of the ATA Center:
+
 **Syntax**:
 
 ```dos
-Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/Help] [--DeleteExistingDatabaseData]
+"Microsoft ATA Center Setup.exe" [/quiet] [/Uninstall] [/Help] [--DeleteExistingDatabaseData]
 ```
 
 **Installation options**:
@@ -156,7 +157,7 @@ Use the following command to silently install the ATA Gateway:
 **Syntax**:
 
 ```dos
-Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] [ConsoleAccountName="<AccountName>"] [ConsoleAccountPassword="<AccountPassword>"]
+"Microsoft ATA Gateway Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] [ConsoleAccountName="<AccountName>"] [ConsoleAccountPassword="<AccountPassword>"]
 ```
 
 > [!NOTE]
@@ -197,7 +198,7 @@ Use the following command to silently update the ATA Gateway:
 **Syntax**:
 
 ```dos
-Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+"Microsoft ATA Gateway Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
 
 **Installation options**:
@@ -215,7 +216,7 @@ Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArgumen
 To update the ATA Gateway silently:
 
 ```dos
-Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+"Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
 ## Uninstall the ATA Gateway silently
@@ -225,7 +226,7 @@ Use the following command to perform a silent uninstall of the ATA Gateway:
 **Syntax**:
 
 ```dos
-Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
+"Microsoft ATA Gateway Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
 **Installation options**:
@@ -243,7 +244,7 @@ Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
 To silently uninstall the ATA Gateway from the server:
 
 ```dos
-Microsoft ATA Gateway Setup.exe /quiet /uninstall
+"Microsoft ATA Gateway Setup.exe" /quiet /uninstall
 ```
 
 ## See Also
