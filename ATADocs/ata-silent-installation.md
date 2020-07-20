@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/15/2019
+ms.date: 07/20/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -38,8 +38,7 @@ ATA version 1.9 requires the installation of Microsoft .NET Framework 4.6.1.
 When you install or update ATA, .Net Framework 4.6.1 is automatically installed as part of the deployment of Microsoft ATA.
 
 > [!Note]
-> The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
-When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
+> The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers. When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). Because of a Windows Installer bug, the norestart flag cannot be reliably used to make sure the server does not restart, so make sure to only run silent installation during a maintenance window.
 
 To track the progress of the deployment, monitor ATA installer logs, which are located in **%AppData%\Local\Temp**.
 
@@ -70,24 +69,16 @@ Use the following command to install the ATA Center:
 >
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |---|---|---|---|
-> |InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-> |DatabaseDataPath|DatabaseDataPath= "<DBPath>"|No|Sets the path for the ATA Database data folder. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
-> |CertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the ATA Center. This Certificate is used to secure communication for ATA Gateway to the ATA Center and to validate the identity of the ATA Console website. If not set, the installation generates a self-signed certificate.|
+>|InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
+>|DatabaseDataPath|DatabaseDataPath= "<DBPath>"|No|Sets the path for the ATA Database data folder. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
+>|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the ATA Center. This Certificate is used to secure communication for ATA Gateway to the ATA Center and to validate the identity of the ATA Console website. If not set, the installation generates a self-signed certificate.|
 
-**Examples**:
+**Example**:
 
-To install the ATA Center with default installation paths and a single IP address:
-
-```dos
-"Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
-CenterPort=444 ConsoleIpAddress=192.168.0.10
-```
-
-To install the ATA Center with default installation paths, two IP addresses, and user-defined certificate thumbprints:
+To install the ATA Center with default installation paths and user-defined certificate thumbprint:
 
 ```dos
-"Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
-ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
+"Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
 ```
 
 ## Update the ATA Center
@@ -105,7 +96,7 @@ Use the following command to update the ATA Center:
 > [!div class="mx-tableFixed"]
 >
 > |Name|Syntax|Mandatory for silent installation?|Description|
-> |-------------|----------|---------|---------|
+> |---|---|---|---|
 > |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
@@ -135,7 +126,7 @@ Use the following command to perform a silent uninstall of the ATA Center:
 > [!div class="mx-tableFixed"]
 >
 > |Name|Syntax|Mandatory for silent uninstallation?|Description|
-> |-------------|----------|---------|---------|
+> |---|---|---|---|
 > |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
 > |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Center from the server.|
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
@@ -145,7 +136,7 @@ Use the following command to perform a silent uninstall of the ATA Center:
 > [!div class="mx-tableFixed"]
 >
 > |Name|Syntax|Mandatory for silent uninstallation?|Description|
-> |-------------|----------|---------|---------|
+> |---|---|---|---|
 > |DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
 
 **Examples**:
@@ -166,7 +157,7 @@ Use the following command to silently install the ATA Gateway:
 **Syntax**:
 
 ```dos
-Microsoft ATA Gateway Setup.exe [/quiet] [/Help] NetFrameworkCommandLineArguments="/q"] [ConsoleAccountName="<AccountName>"] [ConsoleAccountPassword="<AccountPassword>"]
+"Microsoft ATA Gateway Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] [ConsoleAccountName="<AccountName>"] [ConsoleAccountPassword="<AccountPassword>"]
 ```
 
 > [!NOTE]
@@ -186,11 +177,11 @@ Microsoft ATA Gateway Setup.exe [/quiet] [/Help] NetFrameworkCommandLineArgument
 
 > [!div class="mx-tableFixed"]
 >
-> |Name|Syntax|Mandatory for silent installation? |Description|
+> |Name|Syntax|Mandatory for silent installation?|Description|
 > |---|---|---|---|
-> |InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center
-> |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
-> |ConsoleAccountPassword |ConsoleAccountPassword="<AccountPassword>" |Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
+>|InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center
+>|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
+>|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 
 **Examples**:
 
@@ -235,7 +226,7 @@ Use the following command to perform a silent uninstall of the ATA Gateway:
 **Syntax**:
 
 ```dos
-Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
+"Microsoft ATA Gateway Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
 **Installation options**:
@@ -253,7 +244,7 @@ Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
 To silently uninstall the ATA Gateway from the server:
 
 ```dos
-Microsoft ATA Gateway Setup.exe /quiet /uninstall
+"Microsoft ATA Gateway Setup.exe" /quiet /uninstall
 ```
 
 ## See Also
