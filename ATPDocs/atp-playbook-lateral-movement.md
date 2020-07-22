@@ -257,7 +257,7 @@ Azure ATP detections and alert information are of critical value to any Digital 
 
 ## Pull the Active Directory Database (NTDS.dit) from Domain Controller
 
-Active Directory Database **NTDS.dit** contains information about all users in domain including password hashes. Thus, it is a main target for attackers to harvest it first, then use various tools to perform offline brute force attack on it.
+Active Directory Database **NTDS.dit** contains information about all users in domain including password hashes. Thus, it is a main target for attackers to harvest it first, then use various tools to perform offline brute force attack on it. The following steps demonstrate how stealing NTDS.dit could happpen:
 
 1. Use the same elevated command prompt that you passed *SamiraA* kerberos ticket to in the previous section.
 2. Traverse to where PsExec is located and execute the following command.
@@ -270,7 +270,7 @@ Active Directory Database **NTDS.dit** contains information about all users in d
    ```
 > [!NOTE]
 >If attacker tries to copy the NTDS.dit file directly from a Domain Controller the access will be denied. To workaround that attackers create a volume shadow copy and copy the NTDIS.dit from. [VSSadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin) is used for that purpose. 
->The command above assumes that this is the first time creating a volume shadow. That is why it's referenced with number **1** "HarddiskVolumeShadowCopy**1**". If there are other volume shadows you can adjust that number to match.
+>The command above assumes that this is the first time creating a volume shadow. That is why it's referenced with number **1** in "HarddiskVolumeShadowCopy**1**". If there are other volume shadows you can adjust that number to match.
 
 ### Data exfiltration over SMB
 
@@ -281,7 +281,7 @@ Detecting the steps that precedes offline brute force attack over **NTDS.dit** a
 Azure ATP detected stealing a copy of the NTDS.dit file from Domain Controller and transferring it to AdminPC over SMB protocol. That is reported as **Data exfiltration over SMB**.
 The Azure ATP portal shows from which Domain Controller **NTDS.dit** was transferred to which device. Indicating the size of the file and the time of occurrence.
 
-![Azure ATP detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-ntdsditdetection.png)
+![Azure ATP detects Data exfiltration over SMB when stealing NTDS.dit from Domain Controller](media/playbook-escalation-ntdsditdetection.png)
 
 ## Next steps
 The next phase in the attack kill chain is domain dominance.
