@@ -99,13 +99,14 @@ To enable access to Azure ATP, we recommend allowing traffic to the following UR
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Azure ATP. For more information about service tags, see [Virtual network service tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
-Alternatively, you if you require more granular control, consider allowing traffic to the relevant endpoints from the following table:
+Alternatively, if you require more granular control, consider allowing traffic to the relevant endpoints from the following table:
 
 |Service location|*.atp.azure.com DNS record|
 |----|----|
-|US |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
-|Europe|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
-|Asia|triprd1wcasse1sensorapi.atp.azure.com|
+|US |triprd1wcusw2sensorapi.atp.azure.com<br>triprd1wcuswb3sensorapi.atp.azure.com<br>triprd1wcuse3sensorapi.atp.azure.com|
+|Europe|triprd1wceun2sensorapi.atp.azure.com<br>triprd1wceuw3sensorapi.atp.azure.com|
+|Asia|triprd1wcasse2sensorapi.atp.azure.com|
+|UK|triprd1wcuks2sensorapi.atp.azure.com|
 
 > [!NOTE]
 >
