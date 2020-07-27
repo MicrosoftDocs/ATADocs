@@ -38,9 +38,6 @@ While seemingly harmless, any authenticated user can remotely connect to a domai
 
 Due to the possibility for exposure, domain controllers and Active Directory admin systems need to have the **Print spooler** service disabled. The recommended way to do this is using a Group Policy Object (GPO).
 
-> [!NOTE]
-> The domain controller role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. Therefore, the security recommendation to disable the **Print spooler** service is a trade-off between security and the ability to perform print pruning. To address the issue, you may want to consider periodically pruning stale print queue objects, either manually or using an automation script.
-
 While this security assessment focuses on domain controllers, any server is potentially at risk to this type of attack.
 
    > [!NOTE]
