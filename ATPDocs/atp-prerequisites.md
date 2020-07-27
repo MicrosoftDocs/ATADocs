@@ -133,7 +133,7 @@ The domain controller can be a read-only domain controller (RODC).
 
 For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
-During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the domain controller.A reboot might also be required if there is a restart already pending.
+During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the domain controller, if a restart is already pending.
 
 > [!NOTE]
 > A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
