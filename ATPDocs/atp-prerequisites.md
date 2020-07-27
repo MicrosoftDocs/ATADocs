@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/05/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -133,7 +133,7 @@ The domain controller can be a read-only domain controller (RODC).
 
 For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
 
-During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the domain controller. A reboot might also be required if there is one already pending.
+During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the domain controller.A reboot might also be required if there is a restart already pending.
 
 > [!NOTE]
 > A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the Azure ATP binaries, Azure ATP logs, and performance logs.
@@ -171,12 +171,16 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |------------|-------------|--------|-----------|-------------|
 |**Internet ports**||||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP sensor|Azure ATP cloud service|Outbound|
-|SSL(localhost)|TCP|444|Azure ATP sensor|localhost|Both|
+|SSL (localhost)|TCP|444|Azure ATP sensor|localhost|Both|
 |**Internal ports**||||||
 |DNS|TCP and UDP|53|Azure ATP sensor|DNS Servers|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP sensor|All devices on network|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP sensor|Inbound|
 |RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
+|**NNR ports**||||||
+|NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|Inbound|
+|NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
+|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
 
 ### Windows Event logs
 
@@ -263,6 +267,10 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 |DNS|TCP and UDP|53|Azure ATP Sensor|DNS Servers|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP Sensor|Inbound|
 |RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
+|**NNR ports**||||||
+|NTLM over RPC|TCP|135|ATP sensors|All devices on network|Inbound|
+|NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
+|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
 
 > [!NOTE]
 >
