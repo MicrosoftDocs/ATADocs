@@ -171,12 +171,16 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |------------|-------------|--------|-----------|-------------|
 |**Internet ports**||||||
 |SSL (*.atp.azure.com)|TCP|443|Azure ATP sensor|Azure ATP cloud service|Outbound|
-|SSL(localhost)|TCP|444|Azure ATP sensor|localhost|Both|
+|SSL (localhost)|TCP|444|Azure ATP sensor|localhost|Both|
 |**Internal ports**||||||
 |DNS|TCP and UDP|53|Azure ATP sensor|DNS Servers|Outbound|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP sensor|All devices on network|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP sensor|Inbound|
-|RADIUS|UDP|1813|Azure ATP sensor|RADIUS|Inbound|
+|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
+|**NNR ports**||||||
+|NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|Inbound|
+|NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
+|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
 
 ### Windows Event logs
 
@@ -262,7 +266,11 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 |Windows Time|UDP|123|Azure ATP Sensor|Domain controllers|Outbound|
 |DNS|TCP and UDP|53|Azure ATP Sensor|DNS Servers|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP Sensor|Inbound|
-|RADIUS|UDP|1813|Azure ATP Sensor|RADIUS|Inbound|
+|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
+|**NNR ports**||||||
+|NTLM over RPC|TCP|135|ATP sensors|All devices on network|Inbound|
+|NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
+|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
 
 > [!NOTE]
 >
