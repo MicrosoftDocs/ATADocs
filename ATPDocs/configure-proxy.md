@@ -93,9 +93,9 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 To enable access to Azure ATP, we recommend allowing traffic to the following URLs. The URLs automatically map to the correct service location for your Azure ATP instance.
 
-- `<your-instance-name>.atp.azure.com` – for console connectivity. For example, "contoso-corp.atp.azure.com"
+- `<your-instance-name>.atp.azure.com` – for console connectivity. For example, `contoso-corp.atp.azure.com`
 
-- `<your-instance-name>sensorapi.atp.azure.com` – for sensors connectivity. For example, "contoso-corpsensorapi.atp.azure.com"
+- `<your-instance-name>sensorapi.atp.azure.com` – for sensors connectivity. For example, `contoso-corpsensorapi.atp.azure.com`
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Azure ATP. For more information about service tags, see [Virtual network service tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
