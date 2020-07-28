@@ -355,7 +355,7 @@ Released July 7, 2019
 Released July 1, 2019
 
 - **New location support: Azure UK data center**  
-Azure ATP instances are now supported in the Azure UK data center. To learn more about creating Azure ATP instances and their corresponding data center locations, see [Step 1 of Azure ATP installation](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
+Azure ATP instances are now supported in the Azure UK data center. To learn more about creating Azure ATP instances and their corresponding data center locations, see [Step 1 of Azure ATP installation](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step1).
 
 - **Feature enhancement: New name and features for the Suspicious additions to sensitive groups alert (external ID 2024)**  
 The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  

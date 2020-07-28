@@ -56,7 +56,7 @@ Once you enable Syslog notifications, you can set the following:
 1. Enter the **Service endpoint** URL.
 1. Select the **Transport** protocol (TCP or UDP).
 1. Select the format (RFC 3164 or RFC 5424).
-1. Select **Send text Syslog message** and then verify the message is received in your Syslog infrastructure solution.
+1. Select **Send test Syslog message** and then verify the message is received in your Syslog infrastructure solution.
 1. Click **Save**.
 
 To review or modify your Syslog settings.
