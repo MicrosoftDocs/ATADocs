@@ -104,7 +104,7 @@ Alternatively, if you require more granular control, consider allowing traffic t
 |Service location|*.atp.azure.com DNS record|
 |----|----|
 |US |`triprd1wcusw2sensorapi.atp.azure.com`<br>`triprd1wcuswb3sensorapi.atp.azure.com`<br>`triprd1wcuse3sensorapi.atp.azure.com`|
-|US GCC High|`https://triff1wcva1sensorapi.atp.azure.us`|
+|US GCC High|`https://triff1wcva2sensorapi.atp.azure.us`|
 |Europe|`triprd1wceun2sensorapi.atp.azure.com`<br>`triprd1wceuw3sensorapi.atp.azure.com`|
 |Asia|`triprd1wcasse2sensorapi.atp.azure.com`|
 |UK|`triprd1wcuks2sensorapi.atp.azure.com`|
