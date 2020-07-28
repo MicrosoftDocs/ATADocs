@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/28/2020
+ms.date: 07/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -35,7 +35,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 ## Azure ATP release 2.120
 
-Released July 19, 2020
+Released July 26, 2020
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
