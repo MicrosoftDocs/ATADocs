@@ -36,47 +36,32 @@ In this quickstart, you'll install the Azure ATP sensor on a domain controller. 
 
 Perform the following steps on the domain controller.
 
-1. Verify the machine has connectivity to the relevant Azure ATP cloud service endpoint(s):
-   - Europe
-      - `https://triprd1wceuw1sensorapi.atp.azure.com`
-      - `https://triprd1wceun1sensorapi.atp.azure.com`
-   - US
-      - `https://triprd1wcuse1sensorapi.atp.azure.com`
-      - `https://triprd1wcusw1sensorapi.atp.azure.com`
-      - `https://triprd1wcuswb1sensorapi.atp.azure.com`
-   - US GCC High
-      - `https://triff1wcva1sensorapi.atp.azure.us`
-   - Asia
-      - `https://triprd1wcasse1sensorapi.atp.azure.com`
-
-2. Extract the installation files from the zip file. Installing directly from the zip file will fail.
-
-3. Run **Azure ATP sensor setup.exe** and follow the setup wizard.
-
-4. On the **Welcome** page, select your language and click **Next**.
+1. Verify the machine has connectivity to the relevant [Azure ATP cloud service](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) endpoint(s):
+1. Extract the installation files from the zip file. Installing directly from the zip file will fail.
+1. Run **Azure ATP sensor setup.exe** and follow the setup wizard.
+1. On the **Welcome** page, select your language and click **Next**.
 
     ![Azure ATP standalone sensor installation language](media/sensor-install-language.png)
 
-5. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it's a domain controller, the Azure ATP sensor is installed. If it's a dedicated server, the Azure ATP standalone sensor is installed.
+1. The installation wizard automatically checks if the server is a domain controller or a dedicated server. If it's a domain controller, the Azure ATP sensor is installed. If it's a dedicated server, the Azure ATP standalone sensor is installed.
 
     For example, for an Azure ATP sensor, the following screen is displayed to let you know that an Azure ATP sensor is installed on your dedicated server:
 
     ![Azure ATP sensor installation](media/sensor-install-deployment-type.png)
 
-   Click **Next**.
+    Click **Next**.
 
     > [!NOTE]
     > A warning is issued if the domain controller or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from clicking **Next**, and proceeding with the installation. It can still be the right option for the installation of Azure ATP in a small lab test environment where less room for data storage is required. For production environments, it is highly recommended to work with Azure ATP's [capacity planning](atp-capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
-6. Under **Configure the sensor**, enter the installation path and the access key that you copied from the previous step, based on your environment:
+1. Under **Configure the sensor**, enter the installation path and the access key that you copied from the previous step, based on your environment:
 
     ![Azure ATP sensor configuration image](media/sensor-install-config.png)
 
-      - Installation path: The location where the Azure ATP sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
+    - Installation path: The location where the Azure ATP sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
+    - Access key: Retrieved from the Azure ATP portal in the previous step.
 
-      - Access key: Retrieved from the Azure ATP portal in the previous step.
-
-7. Click **Install**. The following components are installed and configured during the installation of the Azure ATP sensor:
+1. Click **Install**. The following components are installed and configured during the installation of the Azure ATP sensor:
 
     - KB 3047154 (for Windows Server 2012 R2 only)
 
