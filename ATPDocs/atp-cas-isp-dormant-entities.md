@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection dormant entities security assessments | Microsoft Docs
+title: Azure Advanced Threat Protection dormant entities security assessments
 description: This article provides an overview of Azure ATP's dormant entities in sensitive groups identity security posture assessment report.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 07/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

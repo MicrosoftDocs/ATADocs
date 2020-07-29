@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection for US Government GCC Highs | Microsoft Docs
+title: Azure Advanced Threat Protection for US Government GCC Highs
 description: This article provides an overview of Azure ATP's US Government for GCC High offering.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 02/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -36,5 +36,5 @@ The Azure ATP GCC High offering is built on the Microsoft Azure Government Cloud
 
 ## Next steps
 
-- [Learn more about Government GCC High](/enterprise-mobility-security/solutions/ems-security-govt-description)
+- [Learn more about Government GCC High](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

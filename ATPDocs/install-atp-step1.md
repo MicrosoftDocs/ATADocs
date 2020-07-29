@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create your Azure ATP instance quickstart | Microsoft Docs
+title: Create your Azure ATP instance quickstart
 description: Quickstart for creating the instance for your Azure ATP deployment which is the first step to install Azure ATP.
 keywords:
 author: shsagir
@@ -63,7 +63,7 @@ After you verified that your network meets the sensor requirements, start the cr
 
     ![Manage role groups](media/creation-manage-role-groups.png)
 
-- Data retention – previously deleted Azure ATP instances don't appear in the UI. For more information on Azure ATP data retention, see [Aure ATP data security and privacy](atp-privacy-compliance.md).
+- Data retention – previously deleted Azure ATP instances don't appear in the UI. For more information on Azure ATP data retention, see [Azure ATP data security and privacy](atp-privacy-compliance.md).
 
 ## Next steps
 

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Understanding the Advanced Threat Analytics console | Microsoft Docs
+title: Understanding the Advanced Threat Analytics console
 description: Describes how to log into the ATA console and the components of the console
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

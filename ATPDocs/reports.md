@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Working with Azure ATP Reports | Microsoft Docs
+title: Working with Azure ATP Reports
 description: Describes how you can generate reports in Azure ATP to monitor your network.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/26/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Troubleshooting Azure ATP known issues | Microsoft Docs
+title: Troubleshooting Azure ATP known issues
 description: Describes how you can troubleshoot issues in Azure ATP.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 02/18/2020
+manager: shsagir
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -114,13 +114,13 @@ Suggested possible workarounds:
 
 - If your machine has less than 64 logical cores and is running on a HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
-## Windows Defender ATP integration issue
+## Microsoft Defender ATP integration issue
 
-Azure Advanced Threat Protection enables you to integrate Azure ATP with Windows Defender ATP. See [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md) for more information.
+Azure Advanced Threat Protection enables you to integrate Azure ATP with Microsoft Defender ATP. See [Integrate Azure ATP with Microsoft Defender ATP](integrate-wd-atp.md) for more information.
 
 ## VMware virtual machine sensor issue
 
-If you have an Azure ATP sensor on VMware virtual machines, you might receive the monitoring alert **Some network traffic is not being analyzed**. This can happen  because of a configuration mismatch in VMware.
+If you have an Azure ATP sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
@@ -142,7 +142,7 @@ If LSO is enabled, use the following command to disable it:
 
 ## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
 
-If you receive the following monitoring alert: **Directory services user credentials are incorrect**
+If you receive the following health alert: **Directory services user credentials are incorrect**
 
 **Sensor log entries:**
 
@@ -159,7 +159,19 @@ The sensor failed to retrieve the designated gMSA account from the Azure ATP por
 
 **Resolution:**
 
-Make sure that the gMSA account's credentials are correct and that the sensor has been granted permissions to retrieve the account's credentials.
+Make sure that the gMSA account's credentials are correct and that the sensor has been granted permission to retrieve the account's credentials. In the applied policy, you may need to add the gMSA account to the **Log on as a service** user right assignments.
+
+## Report downloads cannot contain more than 300,000 entries
+
+Azure ATP does not support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
+
+**Cause:**
+
+This is an engineering limitation.
+
+**Resolution:**
+
+No known resolution.
 
 ## See Also
 

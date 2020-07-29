@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Azure ATP SIEM log reference | Microsoft Docs
+title: Azure ATP SIEM log reference
 description: Provides samples of suspicious activity logs sent from Azure ATP to your SIEM.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 01/22/2020
+manager: shsagir
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Azure ATP SIEM log reference
 
-Azure ATP can forward security alert and monitoring alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
+Azure ATP can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
 
 ## Sample Azure ATP security alerts in CEF format
 
@@ -36,16 +36,16 @@ The following fields and their values are forwarded to your SIEM:
 
 |Detail|Explanation|
 |---------|---------------|
-|start|start time of the alert|
-|suser|account (usually the user account) involved in the alert|
-|machine account|account (usually the user account) involved in the alert|
-|outcome|when relevant, a success or failure of the suspicious activity in the alert|
-|msg|description of the alert|
-|cnt|for alerts that have a count of the number of times that activity happened (for example, brute force has an amount of guessed passwords)|
-|app |protocol used in this alert|
-|externalId|event type ID Azure ATP writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Cloud App Security, this field is populated with the corresponding Cloud App Security alert ID.|
-|cs#label|customer strings allowed by CEF, where cs#label is the name of the new field |
-|cs#|customer strings allowed by CEF, where cs# is the value.|
+|start|Time the alert started|
+|suser|Account (usually the user account) involved in the alert|
+|shost|Account (usually the machine account) involved in the alert|
+|outcome|When relevant, success or failure of the suspicious activity in the alert|
+|msg|Description of the alert|
+|cnt|For alerts that have a count of the number of times the activity happened (for example, brute force has an amount of guessed passwords)|
+|app |Protocol used in this alert|
+|externalId|Event ID Azure ATP writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Cloud App Security, this field is populated with the corresponding Cloud App Security alert ID.|
+|cs#label|Customer strings allowed by CEF, where cs#label is the name of the new field |
+|cs#|Customer strings allowed by CEF, where cs# is the value.|
 
 - For example: `cs1Label=url cs1=https\://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa`  
 The cs1 field is the alert URL.
@@ -58,7 +58,7 @@ The cs2 field identifies if the alert is new or updated.
 
 ## Sample logs
 
-The log examples comply with RFC 5242, but Azure ATP also supports RFC 3164.
+The log examples comply with RFC 5424, but Azure ATP also supports RFC 3164.
 
 Priorities:
 

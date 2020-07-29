@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Working with ATA audit logs | Microsoft Docs
+title: Working with ATA audit logs
 description: This article describes how to work with ATA audit logs in the Windows Event Log.
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -34,7 +34,7 @@ The ATA audit logs are kept in the Windows Event Logs under **Applications and S
 
 The ATA Center audit log contains:
 -	Suspicious activity information
--	Monitoring alerts (health page)
+-	Health alerts (health page)
 -	ATA Console logins
 -	All configuration changes*
 

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection multi-forest support | Microsoft Docs
+title: Azure Advanced Threat Protection multi-forest support
 description: Support for multiple Active Directory forests in Azure ATP.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 02/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -37,7 +37,7 @@ The ability to support multiple Active Directory forests enables the following:
 
 - View and investigate activities performed by users across multiple forests, from a single pane of glass.
 - Improved detection and reduced false positives by providing advanced Active Directory integration and account resolution.
-- Greater control and easier deployment. Improved monitoring alerts and reporting for cross-org coverage when your domain controllers are all monitored from a single Azure ATP console.
+- Greater control and easier deployment. Improved health alerts and reporting for cross-org coverage when your domain controllers are all monitored from a single Azure ATP console.
 
 ## Azure ATP detection activity across multiple forests
 

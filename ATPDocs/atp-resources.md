@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: List of helpful resources for Azure Advanced Threat Protection | Microsoft Docs
+title: List of helpful resources for Azure Advanced Threat Protection
 description: This article provides a list of helpful resources for Azure ATP
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -51,7 +51,7 @@ Use these resources to help you set up Azure ATP, connect to Active Directory, d
 
 - [Try Azure ATP (part of EMS E5)](https://aka.ms/aatptrial)  The trial is valid for 90 days.
 - [Azure ATP Set up](install-atp-step1.md) Follow these steps to deploy Azure ATP in your environment.
-- [Integrate Azure ATP with Windows Defender ATP](integrate-wd-atp.md)
+- [Integrate Azure ATP with Microsoft Defender ATP](integrate-wd-atp.md)
 
 ## Azure ATP settings
 

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics frequently asked questions | Microsoft Docs
+title: Advanced Threat Analytics frequently asked questions
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

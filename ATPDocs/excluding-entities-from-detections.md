@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Excluding entities from detections in Azure Advanced Threat Protection | Microsoft Docs
+title: Excluding entities from detections in Azure Advanced Threat Protection
 description: Describes how to stop Azure ATP from detecting specific entity activities as suspicious
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 11/11/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -63,7 +63,7 @@ Some of the detections provide tips that help you decide what to exclude.
 
 Each exclusion depends on the context, in some you can set users while for others you can set computers or IP addresses. 
 
-When you have the possibility of excluding an IP address or a computer, you can exclude one or the other - you don’t need to provide both.
+When you have the possibility of excluding an IP address or a computer, you can exclude one or the other - you don't need to provide both.
 
 > [!NOTE]
 > Configuration pages can be modified by Azure ATP admins only.
@@ -72,5 +72,5 @@ When you have the possibility of excluding an IP address or a computer, you can 
 ## See Also
 
 - [Azure ATP Security Alert guide](suspicious-activity-guide.md)
-- [Integrating with Windows Defender ATP](integrate-wd-atp.md)
+- [Integrating with Microsoft Defender ATP](integrate-wd-atp.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: ATA suspicious activity guide | Microsoft Docs
+title: ATA suspicious activity guide
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

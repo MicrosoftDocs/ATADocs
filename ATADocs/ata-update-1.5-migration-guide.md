@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics update to 1.5 migration guide | Microsoft Docs
+title: Advanced Threat Analytics update to 1.5 migration guide
 description: Procedures to update ATA to version 1.5
 keywords:
-author: rkarlin
-ms.author: rkarlin
-manager: rkarlin
+author: shsagir
+ms.author: shsagir
+manager: shsagir
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -38,7 +38,7 @@ The update to ATA 1.5 provides improvements in the following areas:
 
 -   Better UI responsiveness for suspicious activities with thousands of entities involved
 
--   Improved auto-resolution of monitoring alerts
+-   Improved auto-resolution of health alerts
 
 -   Additional performance counters for enhanced monitoring and troubleshooting
 

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Advanced Threat Analytics personal data policy| Microsoft Docs
+title: Advanced Threat Analytics personal data policy
 description: Provides links to information about how to delete private information and personal data from ATA.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -43,7 +43,7 @@ Personal data about users and entities in ATA is derived from the user's object 
 
 ## Deleting personal data 
 
-Although data in ATA is replicated and always updated from AD, when an entity is deleted in AD, the entity’s data in ATA is maintained for purposes of security investigation. 
+Although data in ATA is replicated and always updated from AD, when an entity is deleted in AD, the entity's data in ATA is maintained for purposes of security investigation. 
 
 To permanently delete user-related data from the ATA database, follow this procedure: 
 
@@ -93,4 +93,4 @@ To disable data collection:
 
 ## Additional resources
 
-- For information about ATA trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+- For information about ATA trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/gdpr).

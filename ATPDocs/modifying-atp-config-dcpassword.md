@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Change Azure Advanced Threat Protection config - domain connectivity password | Microsoft Docs
+title: Change Azure Advanced Threat Protection config - domain connectivity password
 description: Describes how to change the Domain Connectivity Password on the Azure ATP standalone sensor.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 02/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -60,5 +60,5 @@ Follow this procedure to update the Domain Connectivity password on the Azure AT
 
 ## See Also
 
-- [Integration with Windows Defender ATP](integrate-wd-atp.md)
+- [Integration with Microsoft Defender ATP](integrate-wd-atp.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

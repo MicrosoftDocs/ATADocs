@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: How to investigate users and computers with Azure ATP | Microsoft Docs
+title: How to investigate users and computers with Azure ATP
 description: Describes how to investigate suspicious activities performed by users, entities, computers, or devices using Azure Advanced Threat Protection (ATP) 
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
+manager: shsagir
 ms.date: 09/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
