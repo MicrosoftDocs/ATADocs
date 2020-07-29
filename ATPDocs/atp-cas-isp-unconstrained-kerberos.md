@@ -62,7 +62,7 @@ Either disable delegation or use one of the following Kerberos constrained deleg
 
     1. Select **Trust this computer for delegation to specified services only**.
 
-        ![Constrained Kerberos delegation](media/atp-cas-isp-unconstrained-kerberos-2.png)
+        ![Unconstrained Kerberos delegation remediation](media/atp-cas-isp-unconstrained-kerberos-1.png)
 
     2. Specify the **Services to which this account can present delegated credentials**.
 
@@ -72,6 +72,8 @@ Resource-based KCD is configured using PowerShell. You use the [Set-ADComputer](
 ### Constrained delegation
 
 Review the sensitive users listed in the recommendations and remove them from the services to which the affected account can present delegated credentials.
+
+![Constrained Kerberos delegation remediation](media/atp-cas-isp-unconstrained-kerberos-2.png)
 
 ### Resource-based constrained delegation (RBCD)
 
