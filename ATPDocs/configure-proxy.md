@@ -29,7 +29,7 @@ ms.suite: ems
 
 Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection.
 
-We recommend using the command line to configure your proxy server as doing so ensures that only the Azure ATP sensor service communicates through the proxy solution.
+We recommend using the command line to configure your proxy server as doing so ensures that only the Azure ATP sensor service communicates through the proxy.
 
 ## Configure proxy server using the command line
 
@@ -51,7 +51,7 @@ You can configure your proxy server during sensor installation using the followi
 
 ## Alternative methods to configure your proxy server
 
-You can use one of the following alternative methods to configure your proxy server.
+You can use one of the following alternative methods to configure your proxy server. When configuring the proxy settings using these methods, other services running in the context as Local System or Local Service will also direct traffic through the proxy.
 
 - [Configure proxy server using WinINet](#configure-proxy-server-using-wininet)
 - [Configure proxy server using the registry](#configure-proxy-server-using-the-registry)
