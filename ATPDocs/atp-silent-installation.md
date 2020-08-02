@@ -56,7 +56,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 
 **Powershell syntax**:
 
-```dos
+```powershell
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
