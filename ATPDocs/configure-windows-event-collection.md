@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/19/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -120,8 +120,8 @@ Advanced Security Audit Policy is enabled via **Default Domain Controllers Polic
 
 These events can be collected automatically by the Azure ATP sensor or, if the Azure ATP sensor is not deployed, they can be forwarded to the Azure ATP standalone sensor in one of the following ways:
 
-- [configuring the Azure ATP standalone sensor](configure-event-forwarding.md) to listen for SIEM events
-- [Configuring Windows Event Forwarding](configure-event-forwarding.md)
+- [Configure the Azure ATP standalone sensor](configure-event-forwarding.md) to listen for SIEM events
+- [Configure Windows Event Forwarding](configure-event-forwarding.md)
 
 > [!NOTE]
 >
