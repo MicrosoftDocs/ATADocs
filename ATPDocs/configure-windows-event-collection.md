@@ -80,6 +80,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
         ![Audit Security Group Management](media/atp-advanced-audit-policy-check-step-4.png)
 
+    <a name="ntlm-authentication-using-windows-event-8004"></a>
     **For Local Policies (Event ID: 8004)**
 
     > [!NOTE]
