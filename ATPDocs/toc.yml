@@ -153,8 +153,6 @@
     items:
     - name: Configure the Azure ATP sensor
       href: install-atp-step5.md
-    - name: Advanced Audit Policy check
-      href: atp-advanced-audit-policy.md
     - name: Configure Windows Event collection
       href: configure-windows-event-collection.md
     - name: Proxy configuration

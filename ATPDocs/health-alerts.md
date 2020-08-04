@@ -34,7 +34,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts Azure ATP’s ability to detect suspicious activities related to domain controllers monitored by this Azure ATP sensor.| Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a directory service account for every deployed forest.|Medium|
+|The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts Azure ATP's ability to detect suspicious activities related to domain controllers monitored by this Azure ATP sensor.| Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a directory service account for every deployed forest.|Medium|
 
 ## All/Some of the capture network adapters on a sensor are not available
 
@@ -52,7 +52,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The listed Azure ATP sensors are failing to resolve IP addresses to device names more than 90% of the time using the following methods:<br />- NTLM over RPC<br />- NetBIOS<br />- Reverse DNS|This impacts Azure ATP’s detections capabilities and might increase the amount of false positive alarms.|- For NTLM over RPC: Check that port 135 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />- For reverse DNS: Check that the sensors can reach the DNS server and that Reverse Lookup Zones are enabled.<br />- For NetBIOS: Check that port 137 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />Additionally, make sure that the network configuration (such as firewalls) is not preventing communication to the relevant ports.|Low|
+|The listed Azure ATP sensors are failing to resolve IP addresses to device names more than 90% of the time using the following methods:<br />- NTLM over RPC<br />- NetBIOS<br />- Reverse DNS|This impacts Azure ATP's detections capabilities and might increase the amount of false positive alarms.|- For NTLM over RPC: Check that port 135 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />- For reverse DNS: Check that the sensors can reach the DNS server and that Reverse Lookup Zones are enabled.<br />- For NetBIOS: Check that port 137 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />Additionally, make sure that the network configuration (such as firewalls) is not preventing communication to the relevant ports.|Low|
 
 ## No traffic received from domain controller
 
@@ -94,7 +94,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|There has been no communication from the Azure ATP sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Azure ATP sensor. This impacts ATA’s ability to detect suspicious activities, since network traffic will not be able to reach the Azure ATP cloud service.|Check that the port used for the communication between the Azure ATP sensor and Azure ATP cloud service is not blocked by any routers or firewalls.|Medium|
+|There has been no communication from the Azure ATP sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Azure ATP sensor. This impacts ATA's ability to detect suspicious activities, since network traffic will not be able to reach the Azure ATP cloud service.|Check that the port used for the communication between the Azure ATP sensor and Azure ATP cloud service is not blocked by any routers or firewalls.|Medium|
 
 ## Some domain controllers are unreachable by a sensor
 
@@ -120,11 +120,13 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 |----|----|----|----|
 |The Azure ATP sensor is receiving Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
 
+<!--
 ## Windows events missing from domain controller audit policy
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
 | Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](atp-advanced-audit-policy.md) and modify as needed. | Medium|
+-->
 
 ## See Also
 
