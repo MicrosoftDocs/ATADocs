@@ -42,14 +42,15 @@ The following security alerts help you identify and remediate **Lateral Movement
 
 > [!div class="checklist"]
 >
-> * Remote code execution over DNS (external ID 2036)
-> * Suspected identity theft (pass-the-hash) (external ID 2017)
-> * Suspected identity theft (pass-the-ticket) (external ID 2018)
-> * Suspected NTLM authentication tampering (external ID 2039)
-> * Suspected NTLM relay attack (Exchange account)  (external ID 2037)
-> * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
-> * Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
-> * Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
+> - Remote code execution over DNS (external ID 2036)
+> - Suspected identity theft (pass-the-hash) (external ID 2017)
+> - Suspected identity theft (pass-the-ticket) (external ID 2018)
+> - Suspected NTLM authentication tampering (external ID 2039)
+> - Suspected NTLM relay attack (Exchange account)  (external ID 2037)
+> - Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
+> - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
+
+<!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
 
 ## Remote code execution over DNS (external ID 2036)
 
@@ -159,7 +160,7 @@ There are custom applications that forward tickets on behalf of users. These app
 
 ## Suspected NTLM authentication tampering (external ID 2039)
 
-In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040), announcing discovery of a new tampering vulnerability in Microsoft Windows, when a “man-in-the-middle” attack is able to successfully bypass NTLM MIC (Message Integrity Check) protection.
+In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040), announcing discovery of a new tampering vulnerability in Microsoft Windows, when a "man-in-the-middle" attack is able to successfully bypass NTLM MIC (Message Integrity Check) protection.
 
 Malicious actors that successfully exploit this vulnerability have the ability to downgrade NTLM security features, and may successfully create authenticated sessions on behalf of other accounts. Unpatched Windows Servers are at risk from this vulnerability.
 
@@ -186,7 +187,7 @@ In this detection, an Azure ATP security alert is triggered when NTLM authentica
 
 **Prevention**
 
-• Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
+* Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
 
 ## Suspected NTLM relay attack (Exchange account) (external ID 2037)
 
@@ -215,7 +216,7 @@ In this detection, an alert is triggered when Azure ATP identify use of Exchange
     1. Find the tool that preformed the attack and remove it.
     2. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 2. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
-
+<!--
 ## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 
 *Previous name:* Encryption downgrade activity
@@ -262,7 +263,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/).
 2. Make sure the domain functional level is set to support strong encryption cyphers.
 3. Give preference to using applications that support strong encryption cyphers.
-
+-->
 ## Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 
 *Previous name:* Unusual Kerberos protocol implementation (potential overpass-the-hash attack)
