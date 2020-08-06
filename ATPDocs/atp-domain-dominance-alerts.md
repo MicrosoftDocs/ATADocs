@@ -304,6 +304,10 @@ Encryption downgrade is a method of weakening Kerberos by downgrading the encryp
 
 In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by Azure ATP.
 
+**Learning period**
+
+This alert has a learning period of 5 days from the start of domain controller monitoring.
+
 **TP, B-TP, or FP**
 
 Some legitimate resources don't support strong encryption ciphers and may trigger this alert.
