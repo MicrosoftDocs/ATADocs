@@ -234,6 +234,11 @@
             "source_path": "ATPDocs/monitoring-alerts.md",
             "redirect_url": "/azure-advanced-threat-protection/health-alerts",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/atp-advanced-audit-policy.md",
+            "redirect_url": "/azure-advanced-threat-protection/configure-windows-event-collection",
+            "redirect_document_id": false
         }
     ]
 }
