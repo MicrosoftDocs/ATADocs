@@ -4,7 +4,7 @@
 title: Azure ATP Security Alert Lateral Movement Playbook
 description: The Azure ATP playbook describes how to simulate Lateral Movement threats for detection by Azure ATP.
 ms.service: azure-advanced-threat-protection
-ms.topic: tutorial
+ms.topic: how-to
 author: shsagir
 ms.author: shsagir
 ms.date: 03/03/2019
