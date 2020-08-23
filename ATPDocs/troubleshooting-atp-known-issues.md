@@ -81,8 +81,7 @@ Run the following PowerShell cmdlet to veriFy that the Azure ATP service trusted
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
 ```
 
-Output:
-```powershell
+```Output
 Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
 Issuer       : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
 Thumbprint   : D4DE20D05E66FC53FE1A50882C78DB2852CAE474
