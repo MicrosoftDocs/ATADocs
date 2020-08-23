@@ -109,14 +109,16 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 
 ## Azure ATP Network Name Resolution (NNR) requirements
 
-Network Name Resolution (NNR) is a main component of Azure ATP functionality. For the Azure ATP service to work properly, at least one of the following NNR methods must be accessible for Azure ATP sensors:
+Network Name Resolution (NNR) is a main component of Azure ATP functionality. To resolve IP addresses to computer names, Azure ATP sensors look up the IP addresses using the following methods:
 
-1. **NTLM over RPC** (TCP Port 135)
-2. **NetBIOS** (UDP port 137)
-3. **RDP** (TCP port 3389) - only the first packet of Client hello
-4. **Queries of the DNS server using reverse DNS lookup of the IP address** (UDP 53)
+- NTLM over RPC (TCP Port 135)
+- NetBIOS (UDP port 137)
+- RDP (TCP port 3389) - only the first packet of **Client hello**
+- Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-For methods 1, 2 and 3 to work, the relevant ports must be opened inbound from the Azure ATP sensors to devices on the network. To learn more about Azure ATP and NNR, see [Azure ATP NNR policy](atp-nnr-policy.md).
+For the first three methods to work, the relevant ports must be opened inbound from the Azure ATP sensors to devices on the network. To learn more about Azure ATP and NNR, see [Azure ATP NNR policy](atp-nnr-policy.md).
+
+For the best results, we recommend using all of the methods. If this is not possible, you should use the DNS lookup method and at least one of the other methods.
 
 ## Azure ATP sensor requirements
 
@@ -177,10 +179,12 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP sensor|All devices on network|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP sensor|Inbound|
 |RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
-|**NNR ports**||||||
+|**NNR ports**\*||||||
 |NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|Inbound|
 |NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
 |RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
+
+\* One of these ports is required, but we recommend opening all of them.
 
 ### Windows Event logs
 
@@ -267,10 +271,12 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 |DNS|TCP and UDP|53|Azure ATP Sensor|DNS Servers|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP Sensor|Inbound|
 |RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
-|**NNR ports**||||||
+|**NNR ports** \*||||||
 |NTLM over RPC|TCP|135|ATP sensors|All devices on network|Inbound|
 |NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
 |RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
+
+\* One of these ports is required, but we recommend opening all of them.
 
 > [!NOTE]
 >
