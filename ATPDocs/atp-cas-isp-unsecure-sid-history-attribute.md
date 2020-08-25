@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/30/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 
 # Security assessment: Unsecure SID History attributes
 
@@ -59,6 +58,9 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
         ```powershell
         Set-ADUser -Identity <account> -Remove @{SIDHistory='S-1-5-21-...'}
         ```
+
+> [!NOTE]
+> This assessment is updated in near real time.
 
 ## See Also
 

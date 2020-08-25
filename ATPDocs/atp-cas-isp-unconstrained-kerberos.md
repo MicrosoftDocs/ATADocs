@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/15/2019
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -49,6 +49,9 @@ The following is a description of the risk posed by different delegation types:
 
     ![Unsecure Kerberos delegation security assessment](media/atp-cas-isp-kerberos-delegation-2.png)
 1. Take appropriate action on those at-risk users, such as removing their unconstrained attribute or changing it to a more secure constrained delegation.
+
+> [!NOTE]
+> This assessment is updated every 24 hours.
 
 ## Remediation
 
