@@ -2,7 +2,7 @@
 # required metadata
 
 title: Understanding Azure ATP health alerts
-description: Describes how you can use the Azure ATP logs to troubleshoot issues
+description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
 keywords:
 author: shsagir
 ms.author: shsagir
