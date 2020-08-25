@@ -8,7 +8,7 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
@@ -67,7 +67,7 @@ Ensure that the sensor can browse to *.atp.azure.com through the configured prox
 
 ## Proxy authentication problem presents as a connection error
 
-If during sensor installation you receive the following error:  **The sensor failed to connect to service.**
+If during sensor installation you receive the following error: **The sensor failed to connect to service.**
 
 **Cause:**
 

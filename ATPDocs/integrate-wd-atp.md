@@ -8,7 +8,7 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 02/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
@@ -79,7 +79,7 @@ To enable this feature, you need a license for both Azure ATP and Microsoft Defe
 
 After Azure ATP and Microsoft Defender ATP are fully integrated, in the Azure ATP portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Microsoft Defender ATP includes a badge to show that it is integrated with Microsoft Defender ATP.
 
- ![Microsoft Defender ATP alerts](./media/profile-alerts-wd.png)
+ ![Microsoft Defender ATP alerts profile](./media/profile-alerts-wd.png)
 
 If the entity contains alerts in Microsoft Defender ATP, there is a number next to the badge to let you know how many alerts were raised.
 
