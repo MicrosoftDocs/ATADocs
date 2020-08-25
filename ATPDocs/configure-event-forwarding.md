@@ -8,7 +8,7 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
@@ -29,7 +29,7 @@ ms.suite: ems
 > [!NOTE]
 > The Azure ATP sensor automatically reads events locally, without the need to configure event forwarding.
 
-To enhance detection capabilities, Azure ATP needs the following Windows events: 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, and 7041. These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by configuring Windows Event Forwarding.
+To enhance detection capabilities, Azure ATP needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by configuring Windows Event Forwarding.
 
 > [!NOTE]
 >

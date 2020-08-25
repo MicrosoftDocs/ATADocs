@@ -8,7 +8,7 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 07/27/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
@@ -86,7 +86,7 @@ This section lists information you should gather as well as accounts and network
 
 - Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as an Azure ATP Honeytoken user. For more information about using Honeytokens, see [Configure exclusions and Honeytoken user](install-atp-step7.md).
 
-- Optional: When deploying the standalone sensor, it is necessary to forward Windows events 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045, and 8004 to Azure ATP to further enhance Azure ATP authentication based detections, additions to sensitive groups and suspicious service creation detections.  Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+- Optional: When deploying the standalone sensor, it is necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to Azure ATP to further enhance Azure ATP authentication based detections, additions to sensitive groups and suspicious service creation detections.  Azure ATP sensor receives these events automatically. In Azure ATP standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
 
 ## Azure ATP portal requirements
 
@@ -109,14 +109,16 @@ Access to the Azure ATP portal is via a browser, supporting the following browse
 
 ## Azure ATP Network Name Resolution (NNR) requirements
 
-Network Name Resolution (NNR) is a main component of Azure ATP functionality. For the Azure ATP service to work properly, at least one of the following NNR methods must be accessible for Azure ATP sensors:
+Network Name Resolution (NNR) is a main component of Azure ATP functionality. To resolve IP addresses to computer names, Azure ATP sensors look up the IP addresses using the following methods:
 
-1. **NTLM over RPC** (TCP Port 135)
-2. **NetBIOS** (UDP port 137)
-3. **RDP** (TCP port 3389) - only the first packet of Client hello
-4. **Queries of the DNS server using reverse DNS lookup of the IP address** (UDP 53)
+- NTLM over RPC (TCP Port 135)
+- NetBIOS (UDP port 137)
+- RDP (TCP port 3389) - only the first packet of **Client hello**
+- Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-For methods 1, 2 and 3 to work, the relevant ports must be opened inbound from the Azure ATP sensors to devices on the network. To learn more about Azure ATP and NNR, see [Azure ATP NNR policy](atp-nnr-policy.md).
+For the first three methods to work, the relevant ports must be opened inbound from the Azure ATP sensors to devices on the network. To learn more about Azure ATP and NNR, see [Azure ATP NNR policy](atp-nnr-policy.md).
+
+For the best results, we recommend using all of the methods. If this is not possible, you should use the DNS lookup method and at least one of the other methods.
 
 ## Azure ATP sensor requirements
 
@@ -177,14 +179,16 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP sensor|All devices on network|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP sensor|Inbound|
 |RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
-|**NNR ports**||||||
+|**NNR ports**\*||||||
 |NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|Inbound|
 |NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
 |RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
 
+\* One of these ports is required, but we recommend opening all of them.
+
 ### Windows Event logs
 
-Azure ATP detection relies on the following specific Windows Event logs that the sensor parses from your domain controllers: 4726, 4728, 4729, 4730, 4732, 4733, 4743, 4753, 4756, 4757, 4758, 4763, 4776, 7045, and 8004. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, [Advanced audit policy check](atp-advanced-audit-policy.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md#ntlm-authentication-using-windows-event-8004) as needed by the service, review your [NTLM audit settings](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
+Azure ATP detection relies on specific [Windows Event logs](configure-windows-event-collection.md#configure-event-collection) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, [Advanced audit policy check](atp-advanced-audit-policy.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md#configure-audit-policies) as needed by the service, review your [NTLM audit settings](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
 
 > [!NOTE]
 >
@@ -267,10 +271,12 @@ The following table lists the minimum ports that the Azure ATP standalone sensor
 |DNS|TCP and UDP|53|Azure ATP Sensor|DNS Servers|Outbound|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP Sensor|Inbound|
 |RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
-|**NNR ports**||||||
+|**NNR ports** \*||||||
 |NTLM over RPC|TCP|135|ATP sensors|All devices on network|Inbound|
 |NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
 |RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
+
+\* One of these ports is required, but we recommend opening all of them.
 
 > [!NOTE]
 >

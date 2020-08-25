@@ -8,7 +8,7 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 04/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
@@ -52,9 +52,9 @@ If during sensor installation you receive the following error:  **The sensor fai
 
 **Deployment log entries:**
 
-[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
-[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]  
-[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]  
+[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]
+[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]
+[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]
 [1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
 
 **Cause:**
@@ -65,16 +65,55 @@ In some cases, when communicating via a proxy, during authentication it might re
 
 Ensure that the sensor can browse to *.atp.azure.com through the configured proxy without authentication. For more information see, [Configure proxy to enable communication](configure-proxy.md).
 
+## Proxy authentication problem presents as a connection error
+
+If during sensor installation you receive the following error: **The sensor failed to connect to service.**
+
+**Cause:**
+
+The issue can be caused by a Transparent proxy configuration error on Server Core, such as the root certificates required by Azure ATP are not current or missing.
+
+**Resolution:**
+
+Run the following PowerShell cmdlet to veriFy that the Azure ATP service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root".
+
+```powershell
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
+```
+
+```Output
+Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+Issuer       : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+Thumbprint   : D4DE20D05E66FC53FE1A50882C78DB2852CAE474
+FriendlyName : DigiCert Baltimore Root
+NotBefore    : 5/12/2000 11:46:00 AM
+NotAfter     : 5/12/2025 4:59:00 PM
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+```
+
+If you do not see the expected output, use the following steps:
+
+1. Download the [Baltimore CyberTrust root certificate](https://cacert.omniroot.com/bc2025.crt) to the Server Core machine.
+1. Run the following PowerShell cmdlet to install the certificate.
+
+    ```powershell
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+    ```
+
 ## Silent installation error when attempting to use Powershell
 
 If during silent sensor installation you attempt to use Powershell and receive the following error:
 
-    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
+```powershell
+"Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ... Unexpected token '"/quiet"' in expression or statement."
+```
 
 **Cause:**
+
 Failure to include the ./ prefix required to install when using Powershell causes this error.
 
 **Resolution:**
+
 Use the complete command to successfully install.
 
 ```powershell
@@ -146,7 +185,7 @@ If you receive the following health alert: **Directory services user credentials
 
 **Sensor log entries:**
 
-2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]  
+2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]
 2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync finished [UserName=account_name Domain=domain1.test.local IsSuccess=False]
 
 **Sensor Updater log entries:**

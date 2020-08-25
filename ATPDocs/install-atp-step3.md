@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 ms.date: 02/19/2020
-ms.topic: conceptual
+ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
