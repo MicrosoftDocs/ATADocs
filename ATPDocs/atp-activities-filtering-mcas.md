@@ -50,11 +50,11 @@ Azure ATP activities can be accessed from the main Cloud App Security **Investig
 To access Azure ATP activities by user:
 
 1. Filter the **Alerts** queue using the USER NAME field.
-    ![Alerts queue](media/atp-mcas-alerts-queue.png)
+    ![Filter alerts by username](media/atp-mcas-alerts-queue.png)
 1. Click the user name on any of the alerts in the resulting list to open the **User page** of the user you wish to investigate.
 
 1. Filter activities of the user using the available fields, or add a new filter rule using the + button.
-    ![Alerts queue](media/atp-mcas-activity-filter.png)
+    ![Filter activities of the user](media/atp-mcas-activity-filter.png)
 
 ## Create activity policies in Cloud App Security
 

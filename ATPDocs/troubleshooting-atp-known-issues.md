@@ -67,7 +67,7 @@ Ensure that the sensor can browse to *.atp.azure.com through the configured prox
 
 ## Proxy authentication problem presents as a connection error
 
-If during sensor installation you receive the following error:  **The sensor failed to connect to service.**
+If during sensor installation you receive the following error: **The sensor failed to connect to service.**
 
 **Cause:**
 
