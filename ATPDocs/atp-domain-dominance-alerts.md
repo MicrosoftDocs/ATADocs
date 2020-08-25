@@ -35,7 +35,7 @@ Typically, cyber attacks are launched against any accessible entity, such as a l
 4. **Domain dominance**
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
-To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md).
+To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
 The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by Azure ATP in your network. In this tutorial, learn how to understand, classify, prevent, and remediate the following attacks:
 
