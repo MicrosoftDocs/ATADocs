@@ -8,7 +8,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 08/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -56,6 +56,9 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 
     > [!NOTE]
     > Wait 24 hours and then check that the recommendation no longer appears in the list.
+
+> [!NOTE]
+> This assessment is updated every 24 hours.
 
 ## See Also
 

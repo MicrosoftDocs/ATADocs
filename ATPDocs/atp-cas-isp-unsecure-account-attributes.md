@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 06/23/2020
+ms.date: 08/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -24,7 +24,6 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
 
 # Security assessment: Unsecure account attributes
 
@@ -45,6 +44,9 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 1. Use the report table to discover which of your accounts have unsecure attributes.
     ![Review top impacted entities and create an action plan](media/atp-cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
+
+> [!NOTE]
+> This assessment is updated in near real time.
 
 ## Remediation
 

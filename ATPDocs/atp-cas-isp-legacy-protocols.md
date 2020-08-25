@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/03/2020
+ms.date: 08/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -54,6 +54,9 @@ To retire the use of legacy protocols, your organization must first discover whi
 1. Take appropriate action on those entities to discover dependencies.
 1. Stop legacy protocol use and eventually, [disable the protocols completely](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/).
 1. [Drop the MIC 2 & stop using LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+
+> [!NOTE]
+> This assessment is updated in near real time.
 
 ## Next steps
 

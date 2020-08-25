@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/08/2019
+ms.date: 08/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -26,26 +26,31 @@ ms.suite: ems
 ---
 
 
-# Security assessment: Dormant entities in **sensitive** groups 
+# Security assessment: Dormant entities in **sensitive** groups
 
-## What are **sensitive** dormant entities? 
-Azure ATP discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired. 
+## What are **sensitive** dormant entities?
 
-However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant [sensitive entities](sensitive-accounts.md) are targets of opportunity for malicious actors to gain sensitive access to your organization. 
+Azure ATP discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.
 
-## What risk do dormant entities create in **sensitive** groups? 
+However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant [sensitive entities](sensitive-accounts.md) are targets of opportunity for malicious actors to gain sensitive access to your organization.
 
-Organizations that fail to secure their dormant user accounts leave the door unlocked to their sensitive data safe.  
+## What risk do dormant entities create in **sensitive** groups?
 
-Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. As easy and quiet path deep into your organization is through **sensitive** user and service accounts that are no longer in use. 
+Organizations that fail to secure their dormant user accounts leave the door unlocked to their sensitive data safe.
 
-It doesn't matter if the cause is employee turnover or resource mismanagement -skipping this step leaves your organization's most sensitive entities vulnerable and exposed.   
+Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. As easy and quiet path deep into your organization is through **sensitive** user and service accounts that are no longer in use.
 
-## How do I use this security assessment? 
-1. Use the report table to discover which of your sensitive accounts are dormant. 
-1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.  
+It doesn't matter if the cause is employee turnover or resource mismanagement -skipping this step leaves your organization's most sensitive entities vulnerable and exposed.
 
+## How do I use this security assessment?
+
+1. Use the report table to discover which of your sensitive accounts are dormant.
+1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
+
+> [!NOTE]
+> This assessment is updated in near real time.
 
 ## See Also
+
 - [Azure ATP activities filtering in Cloud App Security](atp-activities-filtering-mcas.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
