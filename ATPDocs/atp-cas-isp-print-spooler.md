@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/08/2019
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -49,6 +49,9 @@ While this security assessment focuses on domain controllers, any server is pote
 
     ![Disable Print spooler service security assessment](media/atp-cas-isp-print-spooler-2.png)
 1. Take appropriate action on the at-risk domain controllers and actively remove the Print spooler service either manually, through GPO or other types of remote commands.
+
+> [!NOTE]
+> This assessment is updated in near real time.
 
 ## Remediation
 

@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/17/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -43,6 +43,9 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 1. Use the report table to discover which of your domain controllers are unmonitored.
     ![Remediate unmonitored domain controllers](media/atp-cas-isp-unmonitored-domain-controller-1.png)
 1. Take appropriate action on those domain controllers by [installing and configuring monitoring sensors](atp-sensor-monitoring.md#domain-controller-status).
+
+> [!NOTE]
+> This assessment is updated in near real time.
 
 ## See Also
 
