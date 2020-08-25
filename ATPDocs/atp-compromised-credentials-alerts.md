@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure ATP compromised credentials phase security alerts
-d|Description: This article explains the Azure ATP alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
+description: This article explains the Azure ATP alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
 keywords:
 author: shsagir
 ms.author: shsagir
@@ -35,7 +35,7 @@ Typically, cyber-attacks are launched against any accessible entity, such as a l
 4. [Domain dominance](atp-domain-dominance-alerts.md)
 5. [Exfiltration](atp-exfiltration-alerts.md)
 
-To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md).
+To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
 The following security alerts help you identify and remediate **Compromised credential** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn how to understand, classify, remediate and prevent the following types of attacks:
 
@@ -287,7 +287,7 @@ Azure ATP learns the entity behavior for users VPN connections over a sliding pe
 
 The VPN-behavior model is based on the machines users log in to and the locations the users connect from.
 
-An alert is opened when there is a deviation from the user’s behavior based on a machine learning algorithm.
+An alert is opened when there is a deviation from the user's behavior based on a machine learning algorithm.
 
 **Learning period**
 
