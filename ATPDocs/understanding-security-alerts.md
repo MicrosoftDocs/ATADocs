@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure ATP security alert tutorial
-d|Description: This article explains how to use and understand Azure ATP security alerts.
+description: This article explains how to use and understand Azure ATP security alerts.
 keywords:
 author: shsagir
 ms.author: shsagir

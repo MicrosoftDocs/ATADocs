@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure ATP security alert guide
-d|Description: This article provides a list of the security alerts issued by Azure ATP.
+description: This article provides a list of the security alerts issued by Azure ATP.
 keywords:
 author: shsagir
 ms.author: shsagir
