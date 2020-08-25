@@ -6,7 +6,7 @@ description: Step two of installing Azure ATP helps you configure the domain con
 author: shsagir
 ms.author: shsagir
 ms.date: 01/15/2020
-ms.topic: conceptual
+ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 
