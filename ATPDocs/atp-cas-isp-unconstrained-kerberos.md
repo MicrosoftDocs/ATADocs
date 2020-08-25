@@ -8,7 +8,7 @@ author: shsagir
 ms.author: shsagir
 manager: shsagir
 ms.date: 09/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179

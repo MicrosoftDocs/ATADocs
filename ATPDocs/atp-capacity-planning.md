@@ -6,7 +6,7 @@ description: Helps you plan your deployment and decide how many Azure ATP server
 author: shsagir
 ms.author: shsagir
 ms.date: 05/20/2020
-ms.topic: quickstart
+ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 
