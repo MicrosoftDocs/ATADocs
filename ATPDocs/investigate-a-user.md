@@ -2,7 +2,7 @@
 # required metadata
 
 title: Azure ATP user investigation tutorial
-d|Description: This article explains how to user Azure ATP security alerts to investigate a suspicious user.
+description: This article explains how to user Azure ATP security alerts to investigate a suspicious user.
 keywords:
 author: shsagir
 ms.author: shsagir
