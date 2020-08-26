@@ -44,12 +44,12 @@ In this tutorial, learn how to understand, classify, remediate, and prevent the 
 
 > [!div class="checklist"]
 >
-> * Account enumeration reconnaissance (external ID 2003)
-> * Active Directory attributes reconnaissance (LDAP) (external ID NNNN)
-> * Network mapping reconnaissance (DNS) (external ID 2007)
-> * Security principal reconnaissance (LDAP) (external ID 2038)
-> * User and Group membership reconnaissance (SAMR) (external ID 2021)
-> * User and IP address reconnaissance (SMB) (external ID 2012)
+> - Account enumeration reconnaissance (external ID 2003)
+> - Active Directory attributes reconnaissance (LDAP) (external ID NNNN)
+> - Network mapping reconnaissance (DNS) (external ID 2007)
+> - Security principal reconnaissance (LDAP) (external ID 2038)
+> - User and Group membership reconnaissance (SAMR) (external ID 2021)
+> - User and IP address reconnaissance (SMB) (external ID 2012)
 
 ## Account enumeration reconnaissance (external ID 2003)
 
@@ -128,13 +128,39 @@ Attackers are known to use a dictionary of randomized account names to find exis
 
 **Description**
 
-LDAP reconnaissance is used by attackers to gain critical information on the domain environment that helps to map the domain structure as well as privileged accounts for later steps of the attack kill chain. The Lightweight Directory Access Protocol (LDAP) is one the most popular methods to query the Active Directory by both legitimate user or adversary.
+Active Directory reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory.
 
 **Learning period**
 
-None
+Not applicable
 
 **TP, B-TP, or FP**
+
+1. Click on the alert to view the queries that were performed.
+1. Check if the source computer is supposed to make these queries?
+    - If yes, close the security alert as an **FP**. If it's an ongoing activity, exclude the suspicious activity.
+1. Click on the source computer and go to its profile page.
+    - Do you see any unusual activities that occurred around the time of the queries?
+        - Look for searches for logged in users or accessed resources.
+    - If Microsoft Defender ATP integration is enabled, click on its icon to further investigate the machine.
+        - Look for unusual processes and alerts that occurred around the time of the queries
+
+
+- Do you see additional users who belong to a different domain?  
+     A server misconfiguration such as Exchange/Skype or ADSF can cause additional users that belong to different domains.
+    - Look at the configuration of the problematic service to fix the misconfiguration.
+
+
+Check what happened around the time of the queries, searching for unusual activities, such as: who was logged in, which resources where accessed. If you enabled Windows Defender ATP integration, click the Windows Defender ATP badge 
+
+to further investigate the machine. In Windows Defender ATP you can see which processes and alerts occurred around the time of the alert.
+
+
+
+    1. Is this source computer expected to generate this activity?
+    2. If the computer and activity are expected, **Close** the security alert and exclude that computer as a **B-TP** activity.
+
+
 
 1. Check if the source computer is a DNS server.
 
@@ -214,7 +240,7 @@ It is important to preventing future attacks using AXFR queries by securing your
 
 **Description**
 
-Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory.  LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
+Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
 In order to allow Azure ATP to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Azure ATP deployment. Once the Azure ATP initial learning phase is completed, alerts are generated on computers which perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
 
@@ -249,7 +275,7 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 3. [Replace the user account by Group Managed Service Account (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
-> Security principal reconnaissance  (LDAP) alerts are supported by ATP sensors only.
+> Security principal reconnaissance (LDAP) alerts are supported by ATP sensors only.
 
 ## User and Group membership reconnaissance (SAMR) (external ID 2021)
 
