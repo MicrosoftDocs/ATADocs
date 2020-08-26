@@ -32,7 +32,7 @@ The Azure ATP GCC High offering utilizes the same underlying technologies and ca
 
 ## Get started with US Government GCC High
 
-The Azure ATP GCC High offering is built on the Microsoft Azure Government Cloud and is designed to inter-operate with Office 365 GCC High. Use Azure ATP public documentation as a [starting point](install-atp-step1.md) for deploying and operating the service and refer to the [Service Description](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description) which details all changes from functionality or features specific to the GCC High environment.  
+The Azure ATP GCC High offering is built on the Microsoft Azure Government Cloud and is designed to inter-operate with Microsoft 365 GCC High. Use Azure ATP public documentation as a [starting point](install-atp-step1.md) for deploying and operating the service and refer to the [Service Description](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description) which details all changes from functionality or features specific to the GCC High environment.  
 
 ## Next steps
 

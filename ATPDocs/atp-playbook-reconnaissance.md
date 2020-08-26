@@ -162,7 +162,7 @@ We can see when JeffL signed onto the VictimPC, using the Kerberos protocol. Add
 
 ![JeffL's logical activity timeline](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-Many activities are logged in the Logical Activity timeline making it a major capability to performing Digital Forensics and Incident Response (DFIR). You can even see activities when the initial detection wasn't from Azure ATP but from Microsoft Defender ATP, Office 365, and others.
+Many activities are logged in the Logical Activity timeline making it a major capability to performing Digital Forensics and Incident Response (DFIR). You can even see activities when the initial detection wasn't from Azure ATP but from Microsoft Defender ATP, Microsoft 365, and others.
 
 Taking a look at **ContosoDC's page**, we can also see the computers JeffL logged into.
 
