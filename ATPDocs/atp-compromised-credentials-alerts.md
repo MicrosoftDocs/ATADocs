@@ -192,7 +192,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 1. Check if the source computer is running its own NTLM or SMB stack type of application.
     1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
-    2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
+    2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
 
 **Understand the scope of the breach**
 
