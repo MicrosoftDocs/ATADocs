@@ -49,7 +49,7 @@ To ensure Windows clients and servers allow your Azure ATP account to perform SA
 
 3. **AATP Service** (the Azure ATP service created during installation) now has the privileges needed to perform SAM-R in the environment.
 
-For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## See Also
 

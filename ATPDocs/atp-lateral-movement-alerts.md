@@ -131,7 +131,7 @@ Successfully resolving IPs to computers in the organization is critical to ident
 
     If the answer to any of the previous questions is **yes**, check if the source and destinations computers are the same. If they are the same, it is an **FP** and there were no real attempts at **pass-the-ticket**.
 
-The [Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) feature of RDP connections, when used with Windows 10 on Windows Server 2016 and newer, can cause **B-TP** alerts.
+The [Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard) feature of RDP connections, when used with Windows 10 on Windows Server 2016 and newer, can cause **B-TP** alerts.
 Using the alert evidence, check if the user made a remote desktop connection from the source computer to the destination computer.
 
 1. Check for correlating evidence.
@@ -183,7 +183,7 @@ In this detection, an Azure ATP security alert is triggered when NTLM authentica
 1. Contain the source computers
 2. Find the tool that performed the attack and remove it.
 3. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-4. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
+4. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
 
 **Prevention**
 
@@ -215,7 +215,7 @@ In this detection, an alert is triggered when Azure ATP identify use of Exchange
 1. Contain the source computers
     1. Find the tool that preformed the attack and remove it.
     2. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
+2. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
 <!--
 ## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 
@@ -260,7 +260,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 **Prevention**
 
-1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/).
+1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type).
 2. Make sure the domain functional level is set to support strong encryption cyphers.
 3. Give preference to using applications that support strong encryption cyphers.
 -->

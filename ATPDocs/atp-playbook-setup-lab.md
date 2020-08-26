@@ -38,7 +38,7 @@ In this tutorial you will:
    - Go ahead and [hydrate Active Directory (AD) with users](#bkmk_hydrate).
 1. An [Azure ATP instance](install-atp-step1.md) that is [connected to AD](install-atp-step2.md).
 1. [Download](install-atp-step3.md) and [install the latest version of the Azure ATP sensor](install-atp-step4.md) on your lab's domain controller.
-1. Familiarity with [Privileged Access Workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+1. Familiarity with [Privileged Access Workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## Recommendations
 
@@ -203,7 +203,7 @@ To run the Azure ATP Security Alert playbooks, the following tools are needed.
 |----|-----|
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](https://docs.microsoft.com/sysinternals/downloads/psexec) |
+| PsExec | [Microsoft Docs](/sysinternals/downloads/psexec) |
 | NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
 
 We thank the authors of these research tools for enabling the community to better understand cyber risks and impacts.
@@ -277,4 +277,3 @@ Test your Azure ATP lab environment using the Azure ATP Security Alert playbooks
 ## Join the Community
 
 Do you have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
-

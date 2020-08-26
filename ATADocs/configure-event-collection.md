@@ -35,7 +35,7 @@ ms.suite: ems
 To enhance detection capabilities, ATA needs the following Windows events: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. These can either be read automatically by the ATA Lightweight Gateway or in case the ATA Lightweight Gateway is not deployed, it can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by configuring Windows Event Forwarding.
 
 > [!NOTE]
-> If you are using Server Core, [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) can be used to create and manage subscriptions to events that are forwarded from remote computers.
+> If you are using Server Core, [wecutil](/windows-server/administration/windows-commands/wecutil) can be used to create and manage subscriptions to events that are forwarded from remote computers.
 
 ### WEF configuration for ATA Gateway's with port mirroring
 
@@ -98,7 +98,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     6.	After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATA Gateway.
 
 
-For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
+For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## See Also
 - [Install ATA](install-ata-step1.md)

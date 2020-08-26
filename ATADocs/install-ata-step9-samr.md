@@ -55,7 +55,7 @@ To ensure that Windows clients and servers allow the ATA service account to perf
 
 3. The **ATA Service** (the ATA service created during installation) now has the proper privileges to perform SAM-R in the environment.
 
- For more information on SAM-R and Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+ For more information on SAM-R and Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 > [!div class="step-by-step"]

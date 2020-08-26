@@ -32,7 +32,7 @@ In this quickstart, you'll create your Azure ATP instance in the Azure ATP porta
 ## Prerequisites
 
 - An [Azure ATP license](atp-technical-faq.md#licensing-and-privacy).
-- You need to be a [global administrator or security administrator on the tenant](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Azure ATP portal.
+- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Azure ATP portal.
 - Review the [Azure ATP architecture](atp-architecture.md) article.
 - Review the [Azure ATP prerequisites](atp-prerequisites.md) article.
 
@@ -59,7 +59,7 @@ After you verified that your network meets the sensor requirements, start the cr
     > [!NOTE]
     > To signin to Azure ATP, you'll need to sign in with a user assigned an Azure ATP role with rights to access the Azure ATP portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
-3. Click **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups.
+3. Click **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups.
 
     ![Manage role groups](media/creation-manage-role-groups.png)
 
@@ -74,4 +74,3 @@ After you verified that your network meets the sensor requirements, start the cr
 ## Join the Community
 
 Have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://aka.ms/azureatpcommunity) today!
-

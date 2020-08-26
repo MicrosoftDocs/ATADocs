@@ -58,7 +58,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
 
 1. Check if the registered query domain belongs to a trusted source, such as your antivirus provider.
     - Consider it a **B-TP** activity if the domain is known and trusted, and DNS queries are permitted. *Close* the security alert, and exclude the domain from future alerts.
-    - If the registered query domain is not trusted, identify the process creating the request on the source computer. Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to assist with this task.
+    - If the registered query domain is not trusted, identify the process creating the request on the source computer. Use [Process Monitor](/sysinternals/downloads/procmon) to assist with this task.
 
 **Understand the scope of the breach**
 

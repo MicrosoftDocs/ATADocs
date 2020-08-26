@@ -61,13 +61,13 @@ For complete user investigation features across the hybrid environment, you must
 >[!NOTE]
 >
 > - If you don't have a subscription for Cloud App Security, you will still be able to use the Cloud App Security portal to investigate Azure ATP alerts and deep dive on users and their on-premise managed activities, but you won't receive related insights from your cloud applications.
-> - Azure ATP administrators may require new permissions to access Cloud App Security. To learn how to assign permissions to Cloud App Security, see [Manage admin access](https://docs.microsoft.com/cloud-app-security/manage-admins).
+> - Azure ATP administrators may require new permissions to access Cloud App Security. To learn how to assign permissions to Cloud App Security, see [Manage admin access](/cloud-app-security/manage-admins).
 
-See [Azure ATP integration](https://docs.microsoft.com/cloud-app-security/aatp-integration) to learn how to quickly enable Azure ATP in Cloud App Security.
+See [Azure ATP integration](/cloud-app-security/aatp-integration) to learn how to quickly enable Azure ATP in Cloud App Security.
 
 ## Azure ATP in Cloud App Security
 
-See the [Cloud App Security quickstart](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Cloud App Security portal.
+See the [Cloud App Security quickstart](/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Cloud App Security portal.
 
 Access your Azure ATP data and new hybrid features within Cloud App Security alerts, activities, and user pages.
 
@@ -85,11 +85,11 @@ If both your services (Azure ATP and Cloud App Security) are currently configure
 
 ## Activities
 
-Azure ATP alerts are displayed within the Cloud App Security **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Cloud App Security. See [Azure ATP activities using Microsoft Cloud App Security](https://docs.microsoft.com/azure-advanced-threat-protection/atp-activities-filtering-mcas) to learn how to filter and create new activity policies.
+Azure ATP alerts are displayed within the Cloud App Security **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Cloud App Security. See [Azure ATP activities using Microsoft Cloud App Security](./atp-activities-filtering-mcas.md) to learn how to filter and create new activity policies.
 
 ## User pages
 
-User pages contain the [Investigation Priority Score](https://docs.microsoft.com/cloud-app-security/tutorial-ueba) of each user and an activity log of all actions.
+User pages contain the [Investigation Priority Score](/cloud-app-security/tutorial-ueba) of each user and an activity log of all actions.
 
 To access a user page of a system user:
 1. Open **Alerts** from the main menu.
@@ -104,7 +104,7 @@ To access a user page of a system user:
 
 ## Next steps
 
-See [Azure ATP activities using Microsoft Cloud App Security](https://docs.microsoft.com/azure-advanced-threat-protection/atp-activities-filtering-mcas) to learn how to filter and create new activity policies.
+See [Azure ATP activities using Microsoft Cloud App Security](./atp-activities-filtering-mcas.md) to learn how to filter and create new activity policies.
 
 ## Join the Community
 

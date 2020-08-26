@@ -90,7 +90,7 @@ To validate that the Azure ATP sensor has been successfully deployed, check the 
 ## Next steps
 
 - [Proxy configuration](configure-proxy.md)
-- [Advanced Audit Policy](atp-advanced-audit-policy.md)
+- [Advanced Audit Policy](./configure-windows-event-collection.md)
 - [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
 
 ## Join the Community
