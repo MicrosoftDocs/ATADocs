@@ -97,7 +97,7 @@ To enable access to Azure ATP, we recommend allowing traffic to the following UR
 
 - `<your-instance-name>sensorapi.atp.azure.com` – for sensors connectivity. For example, `contoso-corpsensorapi.atp.azure.com`
 
-You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Azure ATP. For more information about service tags, see [Virtual network service tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
+You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Azure ATP. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
 Alternatively, if you require more granular control, consider allowing traffic to the relevant endpoints from the following table:
 

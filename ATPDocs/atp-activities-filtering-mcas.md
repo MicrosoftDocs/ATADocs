@@ -29,7 +29,7 @@ ms.suite: ems
 
 This article is designed to help you understand how to filter and create action policies for Azure ATP activities using Microsoft Cloud App Security.
 
-For more information about how to complete your integration, see [Azure ATP Cloud App Security integration](https://docs.microsoft.com/cloud-app-security/aatp-integration).
+For more information about how to complete your integration, see [Azure ATP Cloud App Security integration](/cloud-app-security/aatp-integration).
 
 Using Azure ATP with Microsoft Cloud App Security offers activity analysis and alerts based on User and Entity Behavior Analytics (UEBA), identifying the riskiest behaviors in your enterprise, providing a comprehensive investigation priority score, as well as activity filtering and customizable activity policies.
 
@@ -77,7 +77,7 @@ To create a new activity policy:
 
 ## Next steps
 
-Learn more about Investigation priority scoring and additional features of [Microsoft Cloud App Security](https://docs.microsoft.com/cloud-app-security/) functionality.
+Learn more about Investigation priority scoring and additional features of [Microsoft Cloud App Security](/cloud-app-security/) functionality.
 
 ## Join the Community
 

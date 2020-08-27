@@ -52,7 +52,7 @@ Attackers add users to highly privileged groups. They do so to gain access to mo
 For a definition of sensitive groups in ATA, see [Working with the ATA console](working-with-ata-console.md#sensitive-groups).
 
 
-The detection relies on [events audited on domain controllers](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
+The detection relies on [events audited on domain controllers](./configure-event-collection.md).
 To make sure your domain controllers audit the needed events, use the tool referenced in [ATA Auditing (AuditPol, Advanced Audit Settings Enforcement, Lightweight Gateway Service discovery)](https://aka.ms/ataauditingblog).
 
 **Investigation**
@@ -65,7 +65,7 @@ To make sure your domain controllers audit the needed events, use the tool refer
 
 Minimize the number of users who are authorized to modify sensitive groups.
 
-Set up [Privileged Access Management for Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
+Set up [Privileged Access Management for Active Directory](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) if applicable.
 
 ## Broken trust between computers and domain
 
@@ -107,7 +107,7 @@ In this detection, an alert is triggered when ATA detects a massive number of si
 
 **Remediation**
 
-[Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+[Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
 ## Encryption downgrade activity
 
@@ -209,9 +209,9 @@ tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
 
 **Description**
 
-Attackers with domain admin rights can compromise your [KRBTGT account](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Attackers can use the KRBTGT account to create a Kerberos ticket granting ticket (TGT) providing authorization to any resource. The ticket  expiration can be set to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve and maintain persistency in your network.
+Attackers with domain admin rights can compromise your [KRBTGT account](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn745899(v=ws.11)#Sec_KRBTGT). Attackers can use the KRBTGT account to create a Kerberos ticket granting ticket (TGT) providing authorization to any resource. The ticket  expiration can be set to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve and maintain persistency in your network.
 
-In this detection, an alert is triggered when a Kerberos ticket granting ticket (TGT) is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx)
+In this detection, an alert is triggered when a Kerberos ticket granting ticket (TGT) is used for more than the allowed time permitted as specified in the [Maximum lifetime for user ticket](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj852169(v=ws.11))
 security policy.
 
 **Investigation**
@@ -273,8 +273,8 @@ Validate the following permissions:
 
 - Replicate directory changes all  
 
-For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
-You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) or create a Windows PowerShell script to determine who in the domain has these permissions.
+For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration).
+You can leverage [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 ## Massive object deletion
 
@@ -283,7 +283,7 @@ You can leverage [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepla
 In some scenarios, attackers perform denial of service (DoS) attacks rather than only stealing information. Deleting a large number of accounts is one method of attempting a DoS attack. 
 
 In this detection, an alert is triggered any time more than 5% of all accounts are deleted. The detection requires read access to the deleted object container.  
-For information about configuring read-only permissions on the deleted object container, see **Changing permissions on a deleted object container** in [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+For information about configuring read-only permissions on the deleted object container, see **Changing permissions on a deleted object container** in [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 **Investigation**
 
@@ -291,7 +291,7 @@ Review the list of deleted accounts and determine if there is a pattern or a bus
 
 **Remediation**
 
-Remove permissions for users who can delete accounts in Active Directory. For more information, see [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+Remove permissions for users who can delete accounts in Active Directory. For more information, see [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
 
 ## Privilege escalation using forged authorization data
 
@@ -312,7 +312,7 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 **Remediation**
 
 Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) and
-all member servers and domain controllers up to 2012 R2 are up-to-date with KB2496930. For more information, see [Silver PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) and [Forged PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+all member servers and domain controllers up to 2012 R2 are up-to-date with KB2496930. For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
 
 ## Reconnaissance using account enumeration
 
@@ -339,7 +339,7 @@ If the answer to either of these questions is yes, **Close** the suspicious acti
 
 **Remediation**
 
-[Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+[Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
 
 ## Reconnaissance using Directory Services queries
@@ -394,8 +394,8 @@ There are several query types in the DNS protocol. ATA detects the AXFR (Transfe
 
 **Remediation**
 
-Securing an internal DNS server to prevent reconnaissance using DNS from occurring can be accomplished by disabling or restricting zone transfers only to specified IP addresses. For more information on restricting zone transfers, see [Restrict Zone Transfers](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
-Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Securing an internal DNS server to prevent reconnaissance using DNS from occurring can be accomplished by disabling or restricting zone transfers only to specified IP addresses. For more information on restricting zone transfers, see [Restrict Zone Transfers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770432(v=ws.11)).
 
 ## Reconnaissance using SMB session enumeration
 
@@ -443,7 +443,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 1. Restrict remote access to domain controllers from non-Tier 0 machines.
 
-2. Implement [privileged access](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
+2. Implement [privileged access](/windows-server/identity/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
 
 ## Sensitive account credentials exposed & Services exposing account credentials
 
@@ -485,7 +485,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Remediation**
 
-[Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+[Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
 ## Suspicious service creation <a name="suspicious-service-creation"></a>
 

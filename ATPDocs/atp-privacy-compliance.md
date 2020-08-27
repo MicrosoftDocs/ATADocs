@@ -47,7 +47,7 @@ Azure ATP's personal user data is derived from the user's object in the Active D
 
 - After a user is deleted from the organization's Active Directory, Azure ATP automatically deletes the user profile and any related network activity within a year. You can also [delete](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) any security alerts that contain personal data.
 
-- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects container permission is used by the Azure ATP service, see the Deleted Objects container recommendation in [Azure ATP prerequisites](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#before-you-start).
+- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects container permission is used by the Azure ATP service, see the Deleted Objects container recommendation in [Azure ATP prerequisites](./atp-prerequisites.md#before-you-start).
 
 ## Export personal data
 
@@ -59,7 +59,7 @@ Azure ATP implements the audit of personal data changes, including the deleting 
 
 ## Additional resources
 
-- For information about Azure ATP trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](https://docs.microsoft.com/microsoft-365/compliance/gdpr?view=o365-worldwide).
+- For information about Azure ATP trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](/microsoft-365/compliance/gdpr?view=o365-worldwide).
 
 ## Security and privacy for Azure ATP US Government GCC High customers
-For additional information on Azure ATP compliance standards and location of customer data for US Government GCC High customers, review the [Enterprise Mobility + Security for US Government service description](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description).
+For additional information on Azure ATP compliance standards and location of customer data for US Government GCC High customers, review the [Enterprise Mobility + Security for US Government service description](/enterprise-mobility-security/solutions/ems-govt-service-description).

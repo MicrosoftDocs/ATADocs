@@ -44,7 +44,7 @@ Released November 11, 2018
 
 - **Feature enhancement: Default domain exclusions added to Suspicious Communication over DNS alert**<br> New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Excluding entities from detections](excluding-entities-from-detections.md), to learn more. 
 
-- **Documentation enhancements: SIEM log update, Known Issues guidance**<br> externalId mapping and additional explanations were added to SIEM log descriptions. See [SIEM log reference](cef-format-sa.md), to learn more. <br>Additional article for currently unresolved Known Issues guidance was added. See, [Azure ATP Known Issues](known-issues.md), to learn more.  
+- **Documentation enhancements: SIEM log update, Known Issues guidance**<br> externalId mapping and additional explanations were added to SIEM log descriptions. See [SIEM log reference](cef-format-sa.md), to learn more. <br>Additional article for currently unresolved Known Issues guidance was added. See, [Azure ATP Known Issues](./troubleshooting-atp-known-issues.md), to learn more.  
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -76,7 +76,7 @@ Azure ATP's [Remote Code Execution Attempt security alert](suspicious-activity-g
 <br>Recent content changes to Azure ATP documentation include new articles providing a complete list of all Azure ATP monitored activities, activity filtering instructions, as well as a redesign of the documentation site structure for improved usability:
   - [Azure ATP monitored activities](monitored-activities.md) 
   - [Azure ATP activity filtering](atp-activities-search.md) 
-  - [Azure ATP documentation](https://docs.microsoft.com/azure-advanced-threat-protection/)  
+  - [Azure ATP documentation](./index.yml)  
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -140,7 +140,7 @@ Azure Advanced Threat Protection now checks your domain controller's existing Ad
   -  Verify ideal settings and make changes based on the health alert recommendations provided.
   -  A single aggregated health alert will be issued for all of your domain controllers including remediation suggestions (if/as needed).
 
-Review how to [Configure Advanced Audit Policies](atp-advanced-audit-policy.md) to ensure your system is configured correctly. 
+Review how to [Configure Advanced Audit Policies](./configure-windows-event-collection.md) to ensure your system is configured correctly. 
 - This version also includes fixes and improvements for multiple issues.
 
 ## Azure ATP release 2.46
