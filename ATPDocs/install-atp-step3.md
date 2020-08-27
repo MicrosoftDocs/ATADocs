@@ -42,9 +42,9 @@ Click **Download** in the list of steps at the top of the page to go to the **Se
  To reach the sensor configuration screen later, click the **settings icon** (upper right corner), select **Configuration**, then, under **System**, click **sensor**.  
 
 1. Click **sensor**.
-2. Save the package locally.
-3. Copy the **Access** **key**. The access key is required for the Azure ATP sensor to connect to your Azure ATP instance. The access key is a one-time-password for sensor deployment, after which all communication is performed using certificates for authentication and TLS encryption. Use the **Regenerate** button if you ever need to regenerate the new access key, you can, and it won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
-4. Copy the package to the dedicated server or domain controller onto which you're installing the Azure ATP sensor. Alternatively, you can open the Azure ATP portal from the dedicated server or domain controller and skip this step.
+1. Save the package locally.
+1. Copy the **Access** **key**. The access key is required for the Azure ATP sensor to connect to your Azure ATP instance. The access key is a one-time-password for sensor deployment, after which all communication is performed using certificates for authentication and TLS encryption. Use the **Regenerate** button if you ever need to regenerate the new access key, you can, and it won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
+1. Copy the package to the dedicated server or domain controller onto which you're installing the Azure ATP sensor. Alternatively, you can open the Azure ATP portal from the dedicated server or domain controller and skip this step.
 
 The zip file includes the following files:
 

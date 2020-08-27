@@ -56,7 +56,7 @@ In this guide you will:
 - Validate that all domain controllers you plan to use have sufficient internet access to the Azure ATP service. Check and confirm your domain controllers meet the [Azure ATP proxy configuration requirements](configure-proxy.md).
 
 > [!NOTE]
-> This migration guide is designed for Azure ATP sensors only. For more information, see [choosing the right sensor for your deployment](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> This migration guide is designed for Azure ATP sensors only.
 
 ## Plan
 
@@ -86,9 +86,9 @@ Complete your move to Azure ATP in two easy steps:
 
 1. [Create your new Azure ATP instance](install-atp-step1.md)
 
-2. Uninstall the ATA Lightweight Gateway on all domain controllers.
+1. Uninstall the ATA Lightweight Gateway on all domain controllers.
 
-3. Install the Azure ATP Sensor on all domain controllers:
+1. Install the Azure ATP Sensor on all domain controllers:
     - [Download the Azure ATP sensor files](install-atp-step3.md).
     - [Retrieve your Azure ATP Access Key](install-atp-step3.md#download-the-setup-package).
     - [Install Azure ATP sensors on your domain controllers](install-atp-step4.md).

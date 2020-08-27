@@ -89,23 +89,23 @@ To provide you with cross-product insights, your entity profile provides entitie
 
 Azure ATP imports user and group information from Azure Active Directory, enabling you to identify which users are automatically considered sensitive because they are members of the following groups in Active Directory:
 
--	Administrators
--	Power Users
--	Account Operators
--	Server Operators
--	Print Operators
--	Backup Operators
--	Replicators
--	Remote Desktop Users 
--	Network Configuration Operators 
--	Incoming Forest Trust Builders
--	Domain Admins
--	Domain Controllers
--	Group Policy Creator Owners 
--	read-only Domain Controllers 
--	Enterprise Read-only Domain Controllers 
--	Schema Admins 
--	Enterprise Admins
+- Administrators
+- Power Users
+- Account Operators
+- Server Operators
+- Print Operators
+- Backup Operators
+- Replicators
+- Remote Desktop Users 
+- Network Configuration Operators 
+- Incoming Forest Trust Builders
+- Domain Admins
+- Domain Controllers
+- Group Policy Creator Owners 
+- read-only Domain Controllers 
+- Enterprise Read-only Domain Controllers 
+- Schema Admins 
+- Enterprise Admins
 
 In addition, you can **manually tag** entities as sensitive within Azure ATP. This is important because some Azure ATP detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, Azure ATP will consider them sensitive. For more information, see [Working with sensitive accounts](sensitive-accounts.md).
 

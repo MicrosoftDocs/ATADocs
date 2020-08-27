@@ -85,7 +85,7 @@ Configure the security roles of your tenant in Azure Active Directory (AAD) Admi
 Recent content changes to Azure ATP documentation include new articles providing a complete list of all Azure ATP monitored activities, activity filtering instructions, as well as a redesign of the documentation site structure for improved usability:
   - [Azure ATP monitored activities](monitored-activities.md)
   - [Azure ATP activity filtering](atp-activities-search.md)
-  - [Azure ATP documentation](/azure-advanced-threat-protection)
+  - [Azure ATP documentation](index.yml)
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 

@@ -72,7 +72,7 @@ To determine if this query was a **TP**, **BTP** or **FP**, click the alert to g
 
 1. Check if the source computer was supposed to perform this type of query. Examples of a **B-TP** in this case could be Microsoft Exchange servers or human resource systems.
 
-2. Check the account domains.
+1. Check the account domains.
     - Do you see additional users who belong to a different domain?  
      A server misconfiguration such as Exchange/Skype or ADSF can cause additional users that belong to different domains.
     - Look at the configuration of the problematic service to fix the misconfiguration.
@@ -98,7 +98,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
 
       If you answered **yes** to one of the previous questions, *Close* the security alert, it is probably a **B-TP** activity.
 
-2. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names.
+1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names.
     - Check the guessed account names for additional suspicious activities.
     - Check to see if any of the matched accounts are sensitive accounts.
 
@@ -189,7 +189,7 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 **Understand the scope of the breach**
 
 1. Check the queries that were performed (such as Domain admins, or all users in a domain) and determine if the queries were successful. Investigate each exposed group search for suspicious activities made on the group, or by member users of the group.
-2. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](investigate-a-computer.md).
     - Using the LDAP queries, check if any resource access activity occurred on any of the exposed SPNs.
 
 **Suggested remediation and steps for prevention**
@@ -198,12 +198,12 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
     1. Find the tool that performed the attack and remove it.
     2. Is the computer running a scanning tool that performs a variety of LDAP queries?
     3. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Reset the password if SPN resource access was made that runs under a user account (not machine account).
+1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 **Kerberoasting specific suggested steps for prevention and remediation**
 
 1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Require use of [long and complex passwords for users with service principal accounts](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
+1. Require use of [long and complex passwords for users with service principal accounts](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
 3. [Replace the user account by Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
@@ -224,16 +224,16 @@ In this detection, an alert is triggered when an SMB session enumeration is perf
 Security scanners and applications may legitimately query domain controllers for open SMB sessions.
 
 1. Is this source computer supposed to generate activities of this type?
-2. Is there some kind of security scanner running on the source computer?
+1. Is there some kind of security scanner running on the source computer?
     If the answer is yes, it is probably a B-TP activity. *Close* the security alert and exclude that computer.
-3. Check the users that performed the operation.
+1. Check the users that performed the operation.
     Are those users supposed to perform those actions?
     If the answer is yes, *Close* the security alert as a B-TP activity.
 
 **Understand the scope of the breach**
 
 1. Investigate the source computer.
-2. On the alert page, check if there are any exposed users. To further investigate each exposed user, check their profile. We recommend you begin your investigation with sensitive and high investigation priority users.
+1. On the alert page, check if there are any exposed users. To further investigate each exposed user, check their profile. We recommend you begin your investigation with sensitive and high investigation priority users.
 
 **Suggested remediation and steps for prevention**
 
@@ -266,16 +266,16 @@ Four weeks per domain controller starting from the first network activity of SAM
 **Understand the scope of the breach**
 
 1. Check the queries that were performed, for example, Enterprise admins, or Administrator,  and determine if they were successful.
-2. Investigate each exposed user using the user investigation guide.
-3. Investigate the source computer.
+1. Investigate each exposed user using the user investigation guide.
+1. Investigate the source computer.
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
-2. Find and remove the tool that performed the attack.
-3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-4. Reset the source user password and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-5. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
+1. Find and remove the tool that performed the attack.
+1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the source user password and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
 
 > [!NOTE]
 > To disable any Azure ATP security alert, contact support.

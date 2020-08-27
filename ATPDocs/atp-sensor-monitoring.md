@@ -42,7 +42,7 @@ Azure ATP continuously monitors your environment for unmonitored domain controll
 
     ![Azure ATP sensor status monitoring](media/atp-sensors-status-monitoring.png)
 
-2. Your currently monitored and unmonitored domain controllers are displayed at the top of the screen. To download the monitoring status details of your domain controllers, select **Download Details**.
+1. Your currently monitored and unmonitored domain controllers are displayed at the top of the screen. To download the monitoring status details of your domain controllers, select **Download Details**.
 
 The domain controller coverage Excel download provides the following information for all detected domain controllers in your organization:
 

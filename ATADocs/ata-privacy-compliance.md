@@ -49,7 +49,7 @@ To permanently delete user-related data from the ATA database, follow this proce
 
 1. [Download](https://aka.ms/ata-gdpr-script) the MongoDB script (gdpr.js).  
 
-2. Copy the script into the ATA folder (located at `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB` and run the following command from the ATA Center machine: 
+1. Copy the script into the ATA folder (located at `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB` and run the following command from the ATA Center machine: 
 
 Use the ATA GDPR database script to delete entities and delete entity activity data, as described in the following sections.
 
@@ -89,7 +89,7 @@ For more information, see [Manage system-generated logs](manage-telemetry-settin
 To disable data collection:
 
 1. Log in to the ATA Console, click the three dots in the toolbar and select **About**. 
-2. Uncheck the box for **Send us usage information to help improve your customer experience in the future**. 
+1. Uncheck the box for **Send us usage information to help improve your customer experience in the future**. 
 
 ## Additional resources
 

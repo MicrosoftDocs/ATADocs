@@ -35,32 +35,32 @@ This article explains the basics of how to work with Advanced Threat Analytics.
 After logging in to the ATA Console, you are automatically taken to the open **Suspicious Activities Time Line**. Suspicious activities are listed in chronological order with the newest suspicious activities on the top of the time line.
 Each suspicious activity has the following information:
 
--   Entities involved, including users, computers, servers, domain controllers, and resources.
+- Entities involved, including users, computers, servers, domain controllers, and resources.
 
--   Times and time frame of the suspicious activities.
+- Times and time frame of the suspicious activities.
 
--   Severity of the suspicious activity, High, Medium, or Low.
+- Severity of the suspicious activity, High, Medium, or Low.
 
--   Status: Open, closed, or suppressed.
+- Status: Open, closed, or suppressed.
 
--   Ability to
+- Ability to
 
-    -   Share the suspicious activity with other people in your organization via email.
+    - Share the suspicious activity with other people in your organization via email.
 
-    -   Export the suspicious activity to Excel.
+    - Export the suspicious activity to Excel.
 
 > [!NOTE]
-> -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
-> -   If you click on an entity, it takes you to the entity profile of the user or computer.
+> - When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
+> - If you click on an entity, it takes you to the entity profile of the user or computer.
 
 ![ATA suspicious activities timeline image](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## Filter suspicious activities list
 To filter the suspicious activities list:
 
-1.  In the **Filter by** pane on the left side of the screen, select one of the following options: **All**, **Open**, **Closed**, or **Suppressed**.
+1. In the **Filter by** pane on the left side of the screen, select one of the following options: **All**, **Open**, **Closed**, or **Suppressed**.
 
-2.  To further filter the list, select **High**, **Medium**, or **Low**.
+1. To further filter the list, select **High**, **Medium**, or **Low**.
 
 **Suspicious activity severity**
 
