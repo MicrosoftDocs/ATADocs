@@ -70,7 +70,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 
     ![Enable syslog listener UDP image](media/ATA-enable-siem-forward-events.png)
 
-2. Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATA Gateways. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+1. Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATA Gateways. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
 ATA supports SIEM events in the following formats:  
 

@@ -82,8 +82,8 @@ By default, preview detections are enabled in Azure ATP.
 To disable preview detections:
 
 1. In the Azure ATP console, click the settings cog.
-2. In the left menu, under Preview, click **Detections**.
-3. Use the slider to turn the preview detections on and off.
+1. In the left menu, under Preview, click **Detections**.
+1. Use the slider to turn the preview detections on and off.
 
 ![preview detections](media/preview-detections.png)
 
@@ -93,7 +93,7 @@ To filter the security alert list:
 
 1. In the **Filter by** pane on the left side of the screen, select one of the following options: **All**, **Open**, **Closed**, or **Suppressed**.
 
-2. To further filter the list, select **High**, **Medium**, or **Low**.
+1. To further filter the list, select **High**, **Medium**, or **Low**.
 
 **Suspicious activity severity**
 

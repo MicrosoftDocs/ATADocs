@@ -33,15 +33,15 @@ ms.suite: ems
 
 If your ATA Center does not start, perform the following troubleshooting procedure:
 
-1.	Run the following Windows PowerShell command:
+1. Run the following Windows PowerShell command:
     `Get-Service Pla | Select Status`
 to make sure the Performance counter service is running. If it's not, then it's a platform issue, and you need to make sure you get this service running again.
-2.	If it was running, Try to restart it, and see if it resolves the issue:
+1. If it was running, Try to restart it, and see if it resolves the issue:
     `Restart-Service Pla`
-3.	Try to create a new data collector manually (any will suffice, even just collect machine CPU for example).
+1. Try to create a new data collector manually (any will suffice, even just collect machine CPU for example).
 If it can start, the platform is probably fine. If not, it is still a platform issue.
 
-4.	Try to manually recreate the ATA data collector, using an elevated prompt, running these commands:
+1. Try to manually recreate the ATA data collector, using an elevated prompt, running these commands:
 
         sc stop ATACenter
         logman stop "Microsoft ATA Center"
@@ -68,7 +68,7 @@ This happens because as part of the Lightweight Gateway installation process, AT
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
-2. Then restart the Pla service. The ATA Lightweight Gateway will automatically detect the change and restart the service.
+1. Then restart the Pla service. The ATA Lightweight Gateway will automatically detect the change and restart the service.
 
 
 ## See Also

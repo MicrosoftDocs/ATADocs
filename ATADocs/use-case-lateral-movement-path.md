@@ -27,31 +27,29 @@ ms.suite: ems
 
 # Investigate lateral movement paths with ATA
 
-
 *Applies to: Advanced Threat Analytics version 1.9*
 
-Even when you do your best to protect your sensitive users, and your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths to access sensitive accounts. In lateral movement attacks, the attacker takes advantage of instances when sensitive users sign in to a machine where a non-sensitive user has local rights. Attackers can then move laterally, accessing the less sensitive user and then moving across the computer to gain credentials for the sensitive user. 
+Even when you do your best to protect your sensitive users, and your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths to access sensitive accounts. In lateral movement attacks, the attacker takes advantage of instances when sensitive users sign in to a machine where a non-sensitive user has local rights. Attackers can then move laterally, accessing the less sensitive user and then moving across the computer to gain credentials for the sensitive user.
 
 ## What is a lateral movement path?
 
-Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the [Suspicious activity guide](suspicious-activity-guide.md). Attackers use lateral movement to identify the administrators in your network and learn which machines they can access. With this information, and further moves, the attacker can take advantage of the data on your domain controllers. 
+Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts. This can be done using the methods described in the [Suspicious activity guide](suspicious-activity-guide.md). Attackers use lateral movement to identify the administrators in your network and learn which machines they can access. With this information, and further moves, the attacker can take advantage of the data on your domain controllers.
 
 ATA enables you to take preemptive action on your network to prevent attackers from succeeding at lateral movement.
 
 ## Discovery your at-risk sensitive accounts
 
-To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, in a specific timeframe, follow these steps: 
+To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, in a specific timeframe, follow these steps:
 
 1. In the ATA console menu, click the reports icon ![reports icon](media/ata-report-icon.png).
 
-2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. 
+1. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data.
 
-   ![reports](media/reports.png)
+    ![Screenshot showing report date selection](media/reports.png)
 
-3. Click **Download**.
+1. Click **Download**.
 
-4. The Excel file that is created provides you with details about your sensitive accounts at risk. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should be concerned about. Note that the paths are paths that existed previously, and may not be available today.
-
+1. The Excel file that is created provides you with details about your sensitive accounts at risk. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should be concerned about. Note that the paths are paths that existed previously, and may not be available today.
 
 ## Investigate
 
@@ -59,14 +57,13 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATA
 
 1. In the ATA console, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](media/lateral-movement-icon.png) or ![path icon](media/paths-icon.png). This is available if there was a lateral movement path in the last two days.
 
-2. In the user profile page that opens, click the **Lateral movement paths** tab.
+1. In the user profile page that opens, click the **Lateral movement paths** tab.
 
-3. The graph that is displayed provides a map of the possible paths to the sensitive user. The graph shows connections that have been made over the last two days.
+1. The graph that is displayed provides a map of the possible paths to the sensitive user. The graph shows connections that have been made over the last two days.
 
-4. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, you can follow the **Logged into by** gray arrows to see where Samira signed in with their privileged credentials. In this case, Samira's sensitive credentials were saved on the computer REDMOND-WA-DEV. Then, see which other users signed in to which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group **Contoso All** has the ability to access user credentials from that resource.  
+1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, you can follow the **Logged into by** gray arrows to see where Samira signed in with their privileged credentials. In this case, Samira's sensitive credentials were saved on the computer REDMOND-WA-DEV. Then, see which other users signed in to which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group **Contoso All** has the ability to access user credentials from that resource.
 
-   ![User profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
-
+    ![User profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
 
 ## Preventative best practices
 
@@ -82,9 +79,7 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATA
 > [!TIP]
 > For instructions about how to set your servers to allow ATA to perform the SAM-R operations needed for lateral movement path detection, [configure SAM-R](install-ata-step9-samr.md).
 
-
-
-
 ## See also
+
 - [Work with suspicious activities](working-with-suspicious-activities.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

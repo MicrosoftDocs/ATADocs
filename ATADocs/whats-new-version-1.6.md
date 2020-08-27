@@ -31,19 +31,19 @@ These release notes provide information about known issues in this version of  A
 ## What's new in the ATA 1.6 update?
 The update to ATA 1.6 provides improvements in the following areas:
 
--   New detections
+- New detections
 
--   Improvements to existing detections
+- Improvements to existing detections
 
--   The ATA Lightweight Gateway
+- The ATA Lightweight Gateway
 
--   Automatic updates
+- Automatic updates
 
--   Improved ATA Center performance
+- Improved ATA Center performance
 
--   Lower storage requirements
+- Lower storage requirements
 
--   Support for IBM QRadar
+- Support for IBM QRadar
 
 ### New detections
 
@@ -121,21 +121,21 @@ If you see either of these errors, run the following workaround:
 
 **Workaround**: 
 
-1.	Move the folder "data_old" to a temporary folder (usually located in %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
-2.	Uninstall the ATA Center v1.5, and delete all database data.
+1. Move the folder "data_old" to a temporary folder (usually located in %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
+1. Uninstall the ATA Center v1.5, and delete all database data.
 ![Uninstall ATA 1.5](http://i.imgur.com/x4nJycx.png)
-3.	Reinstall ATA Center v1.5. Make sure to use the same configuration as the previous ATA 1.5 installation (Certificates, IP addresses, DB path, etc.).
-4.	Stop these services in the following order:
-	1.	Microsoft Advanced Threat Analytics Center
-	2.	MongoDB
-5.	Replace the MongoDB database files with the files in the “data_old” folder.
-6.	Start these services in the following order:
-	1.	MongoDB
-	2.	Microsoft Advanced Threat Analytics Center
-7.	Review the logs to verify that the product is running without errors.
-8.	[Download](https://aka.ms/ataremoveduplicateprofiles "Download") the "RemoveDuplicateProfiles.exe" tool and copy it to the main installation path (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
-9.	From an elevated command prompt, run `RemoveDuplicateProfiles.exe` and wait until it completes successfully.
-10.	From here:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**, type the following command:
+1. Reinstall ATA Center v1.5. Make sure to use the same configuration as the previous ATA 1.5 installation (Certificates, IP addresses, DB path, etc.).
+1. Stop these services in the following order:
+    1. Microsoft Advanced Threat Analytics Center
+    2. MongoDB
+1. Replace the MongoDB database files with the files in the “data_old” folder.
+1. Start these services in the following order:
+    1. MongoDB
+    2. Microsoft Advanced Threat Analytics Center
+1. Review the logs to verify that the product is running without errors.
+8. [Download](https://aka.ms/ataremoveduplicateprofiles "Download") the "RemoveDuplicateProfiles.exe" tool and copy it to the main installation path (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+1. From an elevated command prompt, run `RemoveDuplicateProfiles.exe` and wait until it completes successfully.
+10. From here:  …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin directory: **Mongo ATA**, type the following command:
 
           db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 

@@ -292,13 +292,13 @@ Released September 8, 2019
 
 Released September 1, 2019
 
--   ersion includes improvements and bug fixes for internal sensor infrastructure.
+- ersion includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.92
 
 Released August 25, 2019
 
--   ersion includes improvements and bug fixes for internal sensor infrastructure.
+- ersion includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.91
 
@@ -355,7 +355,7 @@ Until now, Azure ATP provided entity device operating system information based o
     The addition of enriched device operating system identification data helps identify unregistered and non-Windows devices, while simultaneously aiding in your investigation process. For learn more about Network Name Resolution in Azure ATP, see [Understanding Network Name Resolution (NNR)](atp-nnr-policy.md).  
 
 - **New feature: Authenticated proxy - preview**  
-Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Configure the proxy](configure-proxy.md#configure-the-proxy).
+Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Configure the proxy](configure-proxy.md).
 
 - **Feature enhancement: Automated domain synchronizer process**  
 The process of designating and tagging domain controllers as domain synchronizer candidates during setup and ongoing configuration is now fully automated. The toggle option to manually select domain controllers as domain synchronizer candidates is removed.

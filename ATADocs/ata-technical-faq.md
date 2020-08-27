@@ -43,8 +43,8 @@ Look at the most recent error in the current error log (Where ATA is installed u
 ## How can I test ATA?
 You can simulate suspicious activities which is an end to end test by doing one of the following:
 
-1.  DNS reconnaissance by using Nslookup.exe
-2.  Remote execution by using psexec.exe
+1. DNS reconnaissance by using Nslookup.exe
+1. Remote execution by using psexec.exe
 
 
 This needs to run remotely against the domain controller being monitored and not from the ATA Gateway.
@@ -102,9 +102,9 @@ Most virtual domain controllers can be covered by the ATA Lightweight Gateway, t
 
 If a virtual domain controller can't be covered by the ATA Lightweight Gateway, you can have either a virtual or physical ATA Gateway as described in [Configure port mirroring](configure-port-mirroring.md).  <br />The easiest way is to have a virtual ATA Gateway on every host where a virtual domain controller exists.<br />If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
--   When the virtual domain controller moves to another host, preconfigure the ATA Gateway in that host to receive the traffic from the recently moved virtual domain controller.
--   Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it is moved, the ATA Gateway moves with it.
--   There are some virtual switches that can send traffic between hosts.
+- When the virtual domain controller moves to another host, preconfigure the ATA Gateway in that host to receive the traffic from the recently moved virtual domain controller.
+- Make sure that you affiliate the virtual ATA Gateway with the virtual domain controller so that if it is moved, the ATA Gateway moves with it.
+- There are some virtual switches that can send traffic between hosts.
 
 ## How do I back up ATA?
 
@@ -127,7 +127,7 @@ The ATA Gateway needs a minimum of two network adapters:<br>1. A NIC to connect 
 ATA has a bi-directional integration with SIEMs as follows:
 
 1. ATA can be configured to send a Syslog alert, to any SIEM server using the CEF format, when a suspicious activity is detected.
-2. ATA can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-ata-step6.md).
+1. ATA can be configured to receive Syslog messages for Windows events from  [these SIEMs](install-ata-step6.md).
 
 ## Can ATA monitor domain controllers virtualized on your IaaS solution?
 Yes, you can use the ATA Lightweight Gateway to monitor domain controllers that are in any IaaS solution.

@@ -68,17 +68,17 @@ Each update is tested and validated on all supported operating systems to cause 
 To set a sensor to delayed update:
 
 1. From the Azure ATP portal, click on the settings icon and select **Configuration**.
-2. Click on the **Updates** tab.
-3. In the table row next to each sensor you want to delay, set the **Delayed update** slider to **On**.
-4. Click **Save**.
+1. Click on the **Updates** tab.
+1. In the table row next to each sensor you want to delay, set the **Delayed update** slider to **On**.
+1. Click **Save**.
  
 ## Sensor update process
 
 Every few minutes, Azure ATP sensors check whether they have the latest version. After the Azure ATP cloud service is updated to a newer version, the Azure ATP sensor service starts the update process:
 
 1. Azure ATP cloud service updates to the latest version.
-2. Azure ATP sensor updater service learns that there is an updated version.
-3. Sensors that are not set to **Delayed update** start the update process on a sensor by sensor basis:
+1. Azure ATP sensor updater service learns that there is an updated version.
+1. Sensors that are not set to **Delayed update** start the update process on a sensor by sensor basis:
    1. Azure ATP sensor updater service pulls the updated version from the cloud service (in cab file format).
    2. Azure ATP sensor updater validates the file signature.
    3. Azure ATP sensor updater service extracts the cab file to a new folder in the sensor's installation folder. By default it is extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
@@ -90,7 +90,7 @@ Every few minutes, Azure ATP sensors check whether they have the latest version.
    7. Sensor receives clearance from the Azure cloud service. You can verify sensor status in the **Updates** page.
    8. The next sensor starts the update process. 
 
-4. 72 hours after the Azure ATP cloud service is updated, sensors selected for **Delayed update** start their update process according to the same update process as automatically updated sensors.
+1. 72 hours after the Azure ATP cloud service is updated, sensors selected for **Delayed update** start their update process according to the same update process as automatically updated sensors.
 
 ![Sensor update](media/sensor-update.png)
 

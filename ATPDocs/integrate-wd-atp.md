@@ -65,15 +65,15 @@ To enable this feature, you need a license for both Azure ATP and Microsoft Defe
 1. In the Azure ATP portal, open **Configuration**.
 
     ![Azure ATP Configuration menu](media/atp-configuration-wd.png)
-2. In the Configurations list, select **Microsoft Defender ATP** and set the integration toggle to **On**.
+1. In the Configurations list, select **Microsoft Defender ATP** and set the integration toggle to **On**.
 
     ![Enable Windows Defender integration](media/enable-integration.png)
 
-3. In the [Microsoft Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**.
+1. In the [Microsoft Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**.
 
     ![Microsoft Defender ATP enable integration](media/wd-atp-enable.png)
 
-4. To check the status of the integration, in the Azure ATP portal, go to **Settings** > **Microsoft Defender ATP integration**. You can see the status of the integration and if something is wrong, you'll see an error.
+1. To check the status of the integration, in the Azure ATP portal, go to **Settings** > **Microsoft Defender ATP integration**. You can see the status of the integration and if something is wrong, you'll see an error.
 
 ## How it works
 

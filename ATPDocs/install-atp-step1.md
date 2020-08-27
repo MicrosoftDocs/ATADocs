@@ -42,7 +42,7 @@ After you verified that your network meets the sensor requirements, start the cr
 
 1. Go to [the Azure ATP portal](https://portal.atp.azure.com)*.
 
-2. Sign in with your Azure Active Directory user account.
+1. Sign in with your Azure Active Directory user account.
 
 \* GCC High customers must use the [Azure ATP GCC High](http://portal.atp.azure.us) portal.
 
@@ -52,14 +52,14 @@ After you verified that your network meets the sensor requirements, start the cr
 
     ![Create Azure ATP instance](media/create-instance.png)
 
-2. Your Azure ATP instance is automatically named with the Azure AD initial domain name and created in the data center located closest to your Azure AD.
+1. Your Azure ATP instance is automatically named with the Azure AD initial domain name and created in the data center located closest to your Azure AD.
 
     ![Azure instance created](media/instance-created.png)
 
     > [!NOTE]
     > To signin to Azure ATP, you'll need to sign in with a user assigned an Azure ATP role with rights to access the Azure ATP portal. For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](atp-role-groups.md).
 
-3. Click **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups.
+1. Click **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups.
 
     ![Manage role groups](media/creation-manage-role-groups.png)
 

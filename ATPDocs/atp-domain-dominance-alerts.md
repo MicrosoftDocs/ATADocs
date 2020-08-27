@@ -76,15 +76,15 @@ Advanced security scanners may legitimately generate this type of activity again
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. If a [source user](investigate-a-user.md) exists, investigate.
+1. If a [source user](investigate-a-user.md) exists, investigate.
 
 **Suggested remediation and steps for prevention**
 
 1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
+1. Contain the source computer.
     * Find the tool that performed the attack and remove it.
     * Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. The stolen private key is never changed. Meaning the actor can always use the stolen key to decrypt protected data in the target domain. A methodological way to change this private key does not exist.
+1. The stolen private key is never changed. Meaning the actor can always use the stolen key to decrypt protected data in the target domain. A methodological way to change this private key does not exist.
     * To create a key, use the current private key, create a key, and re-encrypt every domain master key with the new private key.
 
 ## Remote code execution attempt (external ID 2019)
@@ -106,25 +106,25 @@ Administrative workstations, IT team members, and service accounts can all perfo
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md) and [user](investigate-a-user.md).
-2. Investigate the [domain controller](investigate-a-computer.md).
+1. Investigate the [domain controller](investigate-a-computer.md).
 
 **Suggested remediation and steps for prevention:**
 
 **Remediation**
 
 1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the domain controllers by:
+1. Contain the domain controllers by:
     * Remediate the remote code execution attempt.
     * Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. Contain the source computer.
+1. Contain the source computer.
     * Find the tool that performed the attack and remove it.
     * Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 **Prevention**
 
 1. Restrict remote access to domain controllers from non-Tier 0 machines.
-2. Implement [privileged access](/windows-server/identity/securing-privileged-access/securing-privileged-access). allowing only hardened machines to connect to domain controllers for admins.
-3. Implement less-privileged access on domain machines to allow specific users the right to create services.
+1. Implement [privileged access](/windows-server/identity/securing-privileged-access/securing-privileged-access). allowing only hardened machines to connect to domain controllers for admins.
+1. Implement less-privileged access on domain machines to allow specific users the right to create services.
 
 > [!NOTE]
 > Remote code execution attempt alerts on attempted use of Powershell commands are only supported by ATP sensors.
@@ -140,7 +140,7 @@ A domain controller shadow (DCShadow) attack is an attack designed to change dir
 In a DCShadow attack, RPC, and LDAP are used to:
 
 1. Register the machine account as a domain controller (using domain admin rights).
-2. Perform replication (using the granted replication rights) over DRSUAPI and send changes to directory objects.
+1. Perform replication (using the granted replication rights) over DRSUAPI and send changes to directory objects.
 
 In this Azure ATP detection, a security alert is triggered when a machine in the network tries to register as a rogue domain controller.
 
@@ -166,7 +166,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
+1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Suggested remediation and steps for prevention:**
 
@@ -182,8 +182,8 @@ Servers and applications might replicate data from Active Directory, such as Azu
 Validate the following permissions:
 
 1. Replicate directory changes.
-2. Replicate directory changes all.
-3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who has these permissions in the domain.
+1. Replicate directory changes all.
+1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who has these permissions in the domain.
 
 > [!NOTE]
 > Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by ATP sensors only.
@@ -228,15 +228,15 @@ Servers and applications might replicate data from Active Directory, such as Azu
     * Find the tool that performed the attack and remove it.
     * Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
     Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Remediate the data that was replicated on the domain controllers.
+1. Remediate the data that was replicated on the domain controllers.
 
 **Prevention:**
 
 Validate the following permissions:
 
 1. Replicate directory changes.
-2. Replicate directory changes all.
-3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
+1. Replicate directory changes all.
+1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 > [!NOTE]
 > Suspicious replication request (potential DCShadow attack) alerts are supported by ATP sensors only.
@@ -282,7 +282,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 **Remediation:**
 
 1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
+1. Contain the source computer.
     * Find the tool that performed the attack and remove it.
     * Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
@@ -291,8 +291,8 @@ Servers and applications might replicate data from Active Directory, such as Azu
 Validate the following permissions:
 
 1. Replicate directory changes.
-2. Replicate directory changes all.
-3. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
+1. Replicate directory changes all.
+1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 ## Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)
 
@@ -333,23 +333,23 @@ Applications might authenticate using a lower encryption cipher. Some are authen
 **Understand the scope of the breach**
 
 1. Investigate the [source computer and resources](investigate-a-computer.md) that were accessed.
-2. Investigate the [users](investigate-a-computer.md).
+1. Investigate the [users](investigate-a-computer.md).
 
 **Suggested remediation and steps for prevention**
 
 **Remediation**
 
 1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
+1. Contain the source computer.
     * Find the tool that performed the attack and remove it.
     * Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
     * If you have Microsoft Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-2. Contain the resources that were accessed by this ticket.
-3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+1. Contain the resources that were accessed by this ticket.
+1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted.
     * **Plan carefully before performing the KRBTGT double reset. The KRBTGT double reset impacts all computers, servers, and users in the environment.**
 
-4. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
+1. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
 
 ## Suspected Golden Ticket usage (forged authorization data) (external ID 2013)
 
@@ -364,7 +364,7 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 For computers that are patched with MS14-068 (domain controller) or MS11-013 (server) attempted attacks will not succeed, and will generate Kerberos error.
 
 1. Check which resources were accessed in the security alert evidence list, and if the attempts were successful or failed.
-2. Check if the accessed computers were patched, as described above?
+1. Check if the accessed computers were patched, as described above?
     * If the computers were patched, **Close** the security alert as a **B-TP** activity.
 
 Some Operating Systems or applications are known to modify the authorization data. For example, Linux and Unix services have their own authorization mechanism which may trigger the alert.
@@ -375,18 +375,18 @@ Some Operating Systems or applications are known to modify the authorization dat
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. If there is a [source user](investigate-a-user.md), investigate.
-3. Check which resources were accessed successfully and [investigate](investigate-a-computer.md).
+1. If there is a [source user](investigate-a-user.md), investigate.
+1. Check which resources were accessed successfully and [investigate](investigate-a-computer.md).
 
 **Suggested remediation and steps for prevention**
 
 1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer
+1. Contain the source computer
     * Find the tool that preformed the attack and remove it.
     * Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
-4. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
+1. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
 
 ## Suspected Golden Ticket usage (nonexistent account) (external ID 2027)
 
@@ -400,8 +400,8 @@ Attackers with domain admin rights can compromise the KRBTGT account. Using the 
 
 Changes in Active Directory can take time to synchronize.
 1. Is the user a known and valid domain user?
-2. Has the user been recently added?
-3. Was the user been recently deleted from Active Directory?
+1. Has the user been recently added?
+1. Was the user been recently deleted from Active Directory?
 
 If the answer is **yes** to all of the previous questions, **Close** the alert, as a **B-TP** activity.
 
@@ -415,8 +415,8 @@ If the answer is **yes** to all of the previous questions, **Close** the alert, 
     * Find the tool that performed the attack and remove it.
     * Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
     * If you have Microsoft Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-2. Contain the resources that were accessed by this ticket.
-3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+1. Contain the resources that were accessed by this ticket.
+1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
 
 ## Suspected Golden Ticket usage (ticket anomaly) (external ID 2032)
@@ -434,7 +434,7 @@ Federation services might generate tickets that will trigger this alert.
 **Understand the scope of the breach**
 
 1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
-2. Investigate the [source user](investigate-a-user.md).
+1. Investigate the [source user](investigate-a-user.md).
 
 **Suggested remediation and steps for prevention**
 
@@ -442,8 +442,8 @@ Federation services might generate tickets that will trigger this alert.
     * Find the tool that performed the attack and remove it.
     * Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
     * If you have Microsoft Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-2. Contain the resources that were accessed by this ticket.
-3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+1. Contain the resources that were accessed by this ticket.
+1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are  broken and cannot work again until renewed or in some cases, the service is restarted.
 
     **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
@@ -459,9 +459,9 @@ Attackers with domain admin rights can compromise the KRBTGT account. Using the 
 **TP, B-TP, or FP**
 
 1. In the last few hours, was there any change made to the **Maximum lifetime for user ticket** setting in group policy, that might affect the alert?
-2. Is the Azure ATP Standalone Sensor involved in this alert a virtual machine?
+1. Is the Azure ATP Standalone Sensor involved in this alert a virtual machine?
     * If the Azure ATP standalone sensor is involved, was it recently resumed from a saved state?
-3. Is there a time synchronization problem in the network, where not all of the computers are synchronized?
+1. Is there a time synchronization problem in the network, where not all of the computers are synchronized?
     * Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
 
 If the answer to the previous questions is **yes**, **Close** the security alert as a **B-TP** activity.
@@ -469,7 +469,7 @@ If the answer to the previous questions is **yes**, **Close** the security alert
 **Understand the scope of the breach**
 
 1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
-2. Investigate the [compromised user](investigate-a-user.md).
+1. Investigate the [compromised user](investigate-a-user.md).
 
 **Suggested remediation and steps for prevention**
 
@@ -477,8 +477,8 @@ If the answer to the previous questions is **yes**, **Close** the security alert
     * Find the tool that performed the attack and remove it.
     * Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
     * If you have Microsoft Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
-2. Contain the resources accessed by this ticket.
-3. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
+1. Contain the resources accessed by this ticket.
+1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     * Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services are broken, and won't work again until they are renewed or in some cases, the service is restarted.
 
     **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
@@ -496,13 +496,13 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 **Understand the scope of the breach**
 
 1. Investigate the [domain controller](investigate-a-computer.md).
-2. Check if Skeleton Key has affected your domain controllers by [using the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-3. Investigate the [users](investigate-a-user.md) and [computers](investigate-a-computer.md) involved.
+1. Check if Skeleton Key has affected your domain controllers by [using the scanner written by the Azure ATP team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
+1. Investigate the [users](investigate-a-user.md) and [computers](investigate-a-computer.md) involved.
 
 **Suggested remediation and prevention steps**
 
 1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the domain controller.
+1. Contain the domain controller.
     * Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
     * Look for users logged on around the same time as the suspicious activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
@@ -530,9 +530,9 @@ Legitimate group modifications that occur rarely and the system didn't learn as 
 
 1. Investigate the users added to groups.
     * Focus on their activities after they were added to the sensitive groups.
-2. Investigate the source user.
+1. Investigate the source user.
     * Download the **Sensitive Group Modification** report to see what other modifications were made an who made them in the same time period.
-3. Investigate the computers the source user was logged into, around the time of the activity.
+1. Investigate the computers the source user was logged into, around the time of the activity.
 
 **Suggested remediation and steps for prevention**
 
@@ -546,7 +546,7 @@ Legitimate group modifications that occur rarely and the system didn't learn as 
 **Prevention:**
 
 1. To help prevent future attacks, minimize the number of users authorized to modify sensitive groups.
-2. Set up Privileged Access Management for Active Directory if applicable.
+1. Set up Privileged Access Management for Active Directory if applicable.
 
 ## Suspicious service creation (external ID 2026)
 
@@ -567,24 +567,24 @@ Some administrative tasks are legitimately performed against domain controllers 
 **Understand the scope of the breach**
 
 1. Investigate the [source user](investigate-a-user.md).
-2. Investigate the [destination computers](investigate-a-computer.md) the services were created on.
+1. Investigate the [destination computers](investigate-a-computer.md) the services were created on.
 
 **Suggested remediation and steps for prevention**
 
 **Remediation**
 
 1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the domain controllers.
+1. Contain the domain controllers.
     * Remediate the suspicious service.
     * Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. Locate the computer the source user was active on.
+1. Locate the computer the source user was active on.
     * Check the computers the user was logged into around the same time as the activity, and check if these computers are also compromised.
 
 **Prevention:**
 
 1. Restrict remote access to domain controllers from non-Tier 0 machines.
-2. Implement [privileged access](/windows-server/identity/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for administrators.
-3. Implement less-privileged access on domain machines to give only specific users the right to create services.
+1. Implement [privileged access](/windows-server/identity/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for administrators.
+1. Implement less-privileged access on domain machines to give only specific users the right to create services.
 
 > [!div class="nextstepaction"]
 > [Exfiltration alert tutorial](atp-exfiltration-alerts.md)

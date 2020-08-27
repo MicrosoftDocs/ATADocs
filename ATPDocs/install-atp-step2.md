@@ -60,7 +60,7 @@ The first time you open the Azure ATP portal, the following screen appears:
     |**Group managed service account** (required for gMSA account)|For gMSA account only, select **Group managed service account**.|
     |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user’s account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
-2. In the Azure ATP portal, click **Download sensor setup and install the first sensor** to continue.
+1. In the Azure ATP portal, click **Download sensor setup and install the first sensor** to continue.
 
 ## Next steps
 
