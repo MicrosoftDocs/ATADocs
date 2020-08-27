@@ -59,7 +59,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 1. From a command prompt type *gpedit.msc*.
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
-   ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 1. Double-click **Configure target Subscription Manager**.
 
@@ -93,7 +93,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     1. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status.
     1. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Azure ATP standalone sensor.
 
-For more information, see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
+For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## See Also
 

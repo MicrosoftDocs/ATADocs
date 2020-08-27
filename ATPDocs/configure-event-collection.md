@@ -41,7 +41,7 @@ In addition to collecting and analyzing network traffic to and from the domain c
 To configure Windows Event 8004 collection:
 
 1. Navigate to: Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options
-2. Set the **domain group policy** as follows:
+1. Set the **domain group policy** as follows:
     - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
     - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
     - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**

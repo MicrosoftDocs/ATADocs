@@ -102,7 +102,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
         ![Audit Outgoing NTLM traffic to remote servers](media/atp-advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
-    > If you choose to use a local security policy instead of using a group policy, make sure to add the **Account Logon**, **Account Management**, and **Security Options** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > If you choose to use a local security policy instead of using a group policy, make sure to add the **Account Logon**, **Account Management**, and **Security Options** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 1. After applying via GPO, the new events are visible under your **Windows Event logs**.
 
@@ -126,7 +126,7 @@ These events can be collected automatically by the Azure ATP sensor or, if the A
 > [!NOTE]
 >
 > - Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
-> - It is important to review and verify your [audit policies](atp-advanced-audit-policy.md) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
+> - It is important to review and verify your [audit policies]() before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
 
 ## See Also
 

@@ -38,7 +38,7 @@ In this tutorial you will:
    - Go ahead and [hydrate Active Directory (AD) with users](#bkmk_hydrate).
 1. An [Azure ATP instance](install-atp-step1.md) that is [connected to AD](install-atp-step2.md).
 1. [Download](install-atp-step3.md) and [install the latest version of the Azure ATP sensor](install-atp-step4.md) on your lab's domain controller.
-1. Familiarity with [Privileged Access Workstations](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+1. Familiarity with [Privileged Access Workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## Recommendations
 
@@ -118,9 +118,9 @@ To allow the Azure ATP Service to perform SAM-R enumeration correctly and build 
 
     ![Modify Group Policy to allow Azure ATP to use Lateral Movement path capabilities.](media/playbook-labsetup-localgrouppolicies3.png)
 
-2. Add the Azure ATP service account, AATPService, to the list of approved accounts able to perform this action on your modern Windows systems.
+1. Add the Azure ATP service account, AATPService, to the list of approved accounts able to perform this action on your modern Windows systems.
 
-    ![Add the service](./media/samr-add-service.png)
+    ![Add the service](media/samr-add-service.png)
 
 ### Add sensitive group to Azure ATP
 
@@ -128,15 +128,15 @@ Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to
 
 1. In the Azure ATP portal, click the **Configuration** cog in the menu bar.
 
-2. Under **Detection** click **Entity tags**.
+1. Under **Detection** click **Entity tags**.
 
     ![Azure ATP entity tags](media/entity-tags.png)
 
-3. In the **Sensitive** section, type the name "Helpdesk" for **Sensitive groups** and then click **+** sign to add them.
+1. In the **Sensitive** section, type the name "Helpdesk" for **Sensitive groups** and then click **+** sign to add them.
 
     ![Tag the "Helpdesk" as an Azure ATP sensitive group to enable  Lateral Movement Graphs and reports for this privileged group](media/playbook-labsetup-helpdesksensitivegroup.png)
 
-4. Click **Save**.
+1. Click **Save**.
 
 ### Azure ATP Lab base setup checklist
 
@@ -184,7 +184,7 @@ To simulate a working and managed network, create a Scheduled Task on the **Vict
     Register-ScheduledTask -TaskName "RonHD Cmd.exe - AATP SA Playbook" -Trigger $trigger -User $runAs -Password $ronHHDPass -Action $action
     ```
 
-2. Sign in to the machine as **JeffL**. The Cmd.exe process will start in context of RonHD after logon, simulating Helpdesk managing the machine.
+1. Sign in to the machine as **JeffL**. The Cmd.exe process will start in context of RonHD after logon, simulating Helpdesk managing the machine.
 
 ### Turn off antivirus on VictimPC
 
@@ -203,7 +203,7 @@ To run the Azure ATP Security Alert playbooks, the following tools are needed.
 |----|-----|
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](https://docs.microsoft.com/sysinternals/downloads/psexec) |
+| PsExec | [Microsoft Docs](/sysinternals/downloads/psexec) |
 | NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
 
 We thank the authors of these research tools for enabling the community to better understand cyber risks and impacts.
@@ -222,7 +222,7 @@ We thank the authors of these research tools for enabling the community to bette
 
    ```
 
-2. After running the script, **Helpdesk** is located in the local **Administrators** > **Members** list of **AdminPC**.
+1. After running the script, **Helpdesk** is located in the local **Administrators** > **Members** list of **AdminPC**.
 ![Helpdesk in the Local Admin Group for AdminPC](media/playbook-labsetup-localgrouppolicies1.png)
 
 ### Simulate domain activities from AdminPC
@@ -277,4 +277,3 @@ Test your Azure ATP lab environment using the Azure ATP Security Alert playbooks
 ## Join the Community
 
 Do you have more questions, or an interest in discussing Azure ATP and related security with others? Join the [Azure ATP Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
-

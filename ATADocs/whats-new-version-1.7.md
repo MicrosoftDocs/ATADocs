@@ -31,15 +31,15 @@ These release notes provide information about known issues in this version of Ad
 ## What's new in the ATA 1.7 update?
 The update to ATA 1.7 provides improvements in the following areas:
 
--   New & updated detections
+- New & updated detections
 
--   Role-based access control
+- Role-based access control
 
--   Support for Windows Server 2016 and Windows Server 2016 Core
+- Support for Windows Server 2016 and Windows Server 2016 Core
 
--   User experience improvements
+- User experience improvements
 
--   Minor changes
+- Minor changes
 
 
 ### New & updated detections
@@ -115,17 +115,17 @@ and run the following:
 
 1. Mongo.exe ATA (ATA must be capitalized) 
 
-2. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
+1. CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;
 
-3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
+1. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
 ### Export suspicious activity details to Excel may fail
 When trying to export suspicious activity details to an Excel file, the operation may fail with the following error:
 *Error [BsonClassMapSerializer`1] System.FormatException: An error occurred while deserializing the Activity property of class Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Element 'ResourceIdentifier' does not match any field or property of class Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 To resolve this issue, from an elevated command prompt, browse to the following location: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** and run the following commands:
-1.	`Mongo.exe ATA` (ATA must be capitalized)
-2.	`db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
+1. `Mongo.exe ATA` (ATA must be capitalized)
+2. `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## Minor changes
 

@@ -40,18 +40,18 @@ To configure, follow these steps:
 
     ![Azure ATP configuration settings](media/atp-config-menu.png)
 
-2. Under **Detection**, click **Entity tags**.
+1. Under **Detection**, click **Entity tags**.
 
-3. Under **Honeytoken accounts**, enter the Honeytoken account name and click the **+** sign. The Honeytoken accounts field is searchable and automatically displays entities in your network. Click **Save**.
+1. Under **Honeytoken accounts**, enter the Honeytoken account name and click the **+** sign. The Honeytoken accounts field is searchable and automatically displays entities in your network. Click **Save**.
 
     ![Honeytoken](media/honeytoken-sensitive.png)
 
-4. Click **Exclusions**. Enter a user account or IP address to be excluded from the detection, for each type of threat.
-5. Click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md) and the [security alert guide](suspicious-activity-guide.md).
+1. Click **Exclusions**. Enter a user account or IP address to be excluded from the detection, for each type of threat.
+1. Click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md) and the [security alert guide](suspicious-activity-guide.md).
 
     ![Excluding entities from detections](media/exclusions.png)
 
-6. Click **Save**.
+1. Click **Save**.
 
 Congratulations, you have successfully deployed Azure Advanced Threat Protection!
 
