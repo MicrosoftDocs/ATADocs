@@ -186,7 +186,6 @@ Write-Host "Press any key to continue..." -ForegroundColor Red
 ```
 
 ## Validate port mirroring using Net Mon
-
 1. Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the ATA Gateway that you want to validate.
 
     > [!IMPORTANT]
