@@ -120,7 +120,7 @@ To allow the Azure ATP Service to perform SAM-R enumeration correctly and build 
 
 2. Add the Azure ATP service account, AATPService, to the list of approved accounts able to perform this action on your modern Windows systems.
 
-    ![Add the service](./media/samr-add-service.png)
+    ![Add the service](media/samr-add-service.png)
 
 ### Add sensitive group to Azure ATP
 

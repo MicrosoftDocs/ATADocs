@@ -92,12 +92,12 @@ Every few minutes, Azure ATP sensors check whether they have the latest version.
 
 4. 72 hours after the Azure ATP cloud service is updated, sensors selected for **Delayed update** start their update process according to the same update process as automatically updated sensors.
 
-![Sensor update](./media/sensor-update.png)
+![Sensor update](media/sensor-update.png)
 
 
 For any sensor that fails to complete the update process, a relevant health alert is triggered, and is sent as a notification.
 
-![Sensor update failure](./media/sensor-outdated.png)
+![Sensor update failure](media/sensor-outdated.png)
 
 
 ## See Also

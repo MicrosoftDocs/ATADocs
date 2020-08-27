@@ -47,29 +47,29 @@ There are multiple ways to use and investigate LMPs. In the Azure ATP portal, se
 
 1. From the portal, search for a user or computer. Notice if a lateral movement badge was added to an entity profile. Badges will only display when an entity is discovered in a potential LMP within the last 48 hours.  
 
-   ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png).
+   ![lateral icon](media/lateral-movement-icon.png) or ![path icon](media/paths-icon.png).
 
 2. In the user profile page that opens, click the **Lateral movement paths** tab.
 
-   ![Azure ATP Lateral Movement Path (LMP) tab](./media/lateral-movement-path-tab.png)
+   ![Azure ATP Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
 
 3. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. If no activity was detected in the last two days, the graph will not appear. Use the **View a different date** option to display the graph for previous lateral movement path detections for the entity.
 
-   ![LMP view a different date](./media/atp-view-different-date.png)
+   ![LMP view a different date](media/atp-view-different-date.png)
 
 4. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** gray arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the SHAREPOINT-SRV computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group HelpDesk has the ability to access user credentials from that resource.  
 
-   ![Azure ATP Lateral Movement Path (LMP)](./media/atp-lmp.png)
+   ![Azure ATP Lateral Movement Path (LMP)](media/atp-lmp.png)
 
 ## Discover your at-risk sensitive accounts
 
 To discover all the sensitive accounts in your network that are exposed because of their connection to non-sensitive accounts, groups and machines in lateral movement paths, follow these steps. 
 
-1. In the Azure ATP portal menu, click the reports icon ![reports icon](./media/atp-report-icon.png).
+1. In the Azure ATP portal menu, click the reports icon ![reports icon](media/atp-report-icon.png).
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no potential lateral movement paths found, the report is grayed out. If there are potential lateral movement paths, the report automatically pre-selects the first date when there is relevant data. The lateral movement path report provides data for up to 60 days.
 
-   ![reports](./media/reports.png)
+   ![reports](media/reports.png)
 
 3. Click **Download**.
 

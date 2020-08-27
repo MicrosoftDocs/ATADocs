@@ -34,7 +34,7 @@ Lateral movement is when an attacker uses non-sensitive accounts to gain access 
 
 A key component of Azure ATP’s security insights are Lateral Movement Paths or LMPs. Azure ATP LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Azure ATP LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in future, and close attacker access before they achieve domain dominance.
 
-![Azure ATP Lateral Movement Path (LMP)](./media/atp-lmp.png)
+![Azure ATP Lateral Movement Path (LMP)](media/atp-lmp.png)
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
 
@@ -42,7 +42,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 Every computer or user profile discovered by Azure ATP to be in an LMP has  a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP. 
 
-![Azure ATP Lateral Movement Path (LMP) tab](./media/lateral-movement-path-tab.png)
+![Azure ATP Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
 
 The LMP for each entity provides different information depending on the sensitivity of the entity: 
 - Sensitive users – potential LMP(s) leading to this user are shown.
@@ -50,7 +50,7 @@ The LMP for each entity provides different information depending on the sensitiv
 
 Each time the tab is clicked, Azure ATP displays the most recently discovered LMP. Each potential LMP is saved for 48 hours following discovery. LMP history is available. View older LMPs that were discovered in the past by clicking on **View a different date**. 
 
-![Azure ATP Lateral Movement Path (LMP) display](./media/atp-lmp-complete.png)
+![Azure ATP Lateral Movement Path (LMP) display](media/atp-lmp-complete.png)
 
 Discover when potential LMPs were identified and which related entities are potentially involved. 
 
@@ -59,11 +59,11 @@ Discover when potential LMPs were identified and which related entities are pote
 From the Activities tab, an indication is given when a new potential LMP was identified:
 - Sensitive users – when a new path is identified to a sensitive user
 
-![Azure ATP Lateral Movement Path (LMP) sensitive identified](./media/atp-lmp-activities.png)
+![Azure ATP Lateral Movement Path (LMP) sensitive identified](media/atp-lmp-activities.png)
 
 - Non-sensitive users and computers – when this entity is identified in a potential LMP leading to a sensitive user.
 
-![Azure ATP Lateral Movement Path (LMP) non-sensitive identified](./media/atp-lateral-non-sensitive.png)
+![Azure ATP Lateral Movement Path (LMP) non-sensitive identified](media/atp-lateral-non-sensitive.png)
 
 ## LMP related entities
 LMP can now directly assists with your investigation process. Azure ATP security alert evidence lists provide the related entities that are involved in each potential lateral movement path. The evidence lists directly help your security response team increase or reduce the importance of the security alert and/or investigation of the related entities. For example, when a Pass the Ticket alert is issued, the source computer, compromised user and destination computer the stolen ticket was used from, are all part of the potential lateral movement path leading to a sensitive user. The existence of the detected LMP makes investigating the alert and watching the suspected user even more important to prevent your adversary from additional lateral moves. Trackable evidence is provided in LMPs to make it easier and faster for you to prevent attackers from moving forward in your network. 

@@ -42,11 +42,11 @@ ATA enables you to take preemptive action on your network to prevent attackers f
 
 To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, in a specific timeframe, follow these steps: 
 
-1. In the ATA console menu, click the reports icon ![reports icon](./media/ata-report-icon.png).
+1. In the ATA console menu, click the reports icon ![reports icon](media/ata-report-icon.png).
 
 2. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data. 
 
-   ![reports](./media/reports.png)
+   ![reports](media/reports.png)
 
 3. Click **Download**.
 
@@ -57,7 +57,7 @@ To discover which sensitive accounts in your network are vulnerable because of t
 
 Now that you know which sensitive accounts are at risk, you can deep dive in ATA to learn more and take preventative measures.
 
-1. In the ATA console, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](./media/lateral-movement-icon.png) or ![path icon](./media/paths-icon.png). This is available if there was a lateral movement path in the last two days.
+1. In the ATA console, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](media/lateral-movement-icon.png) or ![path icon](media/paths-icon.png). This is available if there was a lateral movement path in the last two days.
 
 2. In the user profile page that opens, click the **Lateral movement paths** tab.
 

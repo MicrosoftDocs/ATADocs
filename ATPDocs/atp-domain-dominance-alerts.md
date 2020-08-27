@@ -514,7 +514,7 @@ Attackers add users to highly privileged groups. Adding users is done to gain ac
 
 For a definition of sensitive groups in Azure ATP, see [Working with the sensitive accounts](sensitive-accounts.md).
 
-The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](./configure-windows-event-collection.md).
+The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](configure-windows-event-collection.md).
 
 **Learning period**
 

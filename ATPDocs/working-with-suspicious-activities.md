@@ -75,7 +75,7 @@ The Azure ATP research team constantly works on implementing new detections for 
 
 These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the Azure ATP console - not in the timeline or in entity profiles - and new alerts won’t be opened.
 
-![preview detection vpn](./media/preview-detection-vpn.png)
+![preview detection vpn](media/preview-detection-vpn.png)
 
 By default, preview detections are enabled in Azure ATP.
 
@@ -85,7 +85,7 @@ To disable preview detections:
 2. In the left menu, under Preview, click **Detections**.
 3. Use the slider to turn the preview detections on and off.
 
-![preview detections](./media/preview-detections.png)
+![preview detections](media/preview-detections.png)
 
 ## Filter security alerts list
 
@@ -114,7 +114,7 @@ To filter the security alert list:
 You can change the status of a security alert by clicking the current status of the security alert and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific alert to reveal the list of available actions.
 
-![Azure ATP Actions for security alerts](./media/atp-sa-actions.png)
+![Azure ATP Actions for security alerts](media/atp-sa-actions.png)
 
 **Security alert status**
 

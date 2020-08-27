@@ -85,7 +85,7 @@ If both your services (Azure ATP and Cloud App Security) are currently configure
 
 ## Activities
 
-Azure ATP alerts are displayed within the Cloud App Security **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Cloud App Security. See [Azure ATP activities using Microsoft Cloud App Security](./atp-activities-filtering-mcas.md) to learn how to filter and create new activity policies.
+Azure ATP alerts are displayed within the Cloud App Security **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Cloud App Security. See [Azure ATP activities using Microsoft Cloud App Security](atp-activities-filtering-mcas.md) to learn how to filter and create new activity policies.
 
 ## User pages
 
@@ -104,7 +104,7 @@ To access a user page of a system user:
 
 ## Next steps
 
-See [Azure ATP activities using Microsoft Cloud App Security](./atp-activities-filtering-mcas.md) to learn how to filter and create new activity policies.
+See [Azure ATP activities using Microsoft Cloud App Security](atp-activities-filtering-mcas.md) to learn how to filter and create new activity policies.
 
 ## Join the Community
 
