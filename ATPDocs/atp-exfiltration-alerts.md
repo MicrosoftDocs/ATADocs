@@ -58,7 +58,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
 
 1. Check if the registered query domain belongs to a trusted source, such as your antivirus provider.
     - Consider it a **B-TP** activity if the domain is known and trusted, and DNS queries are permitted. *Close* the security alert, and exclude the domain from future alerts.
-    - If the registered query domain is not trusted, identify the process creating the request on the source computer. Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to assist with this task.
+    - If the registered query domain is not trusted, identify the process creating the request on the source computer. Use [Process Monitor](/sysinternals/downloads/procmon) to assist with this task.
 
 **Understand the scope of the breach**
 
@@ -73,7 +73,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. If after your investigation, the registered query domain remains not trusted, we recommend blocking the destination domain to avoid all future communication.
+1. If after your investigation, the registered query domain remains not trusted, we recommend blocking the destination domain to avoid all future communication.
 
 > [!NOTE]
 > *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by Azure ATP but are known to or part of your organization can be closed.
@@ -92,17 +92,17 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 **Understand the scope of the breach**
 
 1. Investigate the [source users](investigate-a-user.md).
-2. Investigate the [source and destination computers](investigate-a-computer.md) of the copies.
+1. Investigate the [source and destination computers](investigate-a-computer.md) of the copies.
 
 **Suggested remediation and steps for prevention**
 
 1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
+1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Find the files that were copied and remove them.  
     Check if there were other activities on these files. Where they transferred to another place? Check if they were transferred outside the organization network?
     - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. If one of the files is the **ntds.dit** file:
+1. If one of the files is the **ntds.dit** file:
     - Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and won't work again until they are renewed or in some cases, the service is restarted.
 

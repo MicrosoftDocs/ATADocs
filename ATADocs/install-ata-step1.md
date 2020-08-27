@@ -46,7 +46,7 @@ After you have verified that the server meets the requirements, you can proceed 
 
 Perform the following steps on the ATA Center server.
 
-1. Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/) or from [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1. Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/) or from [MSDN](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget).
 
 1. Log in to the computer on to which you are installing the ATA Center as a user who is a member of the local administrators group.
 

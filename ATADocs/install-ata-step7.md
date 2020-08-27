@@ -35,30 +35,29 @@ ms.suite: ems
 
 ## Step 8. Configure IP address exclusions and Honeytoken user
 
-ATA enables the exclusion of specific IP addresses or users from a number of detections. 
+ATA enables the exclusion of specific IP addresses or users from a number of detections.
 
-For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.    
+For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps ATA ignore such scanners. An example of a *Pass-the-Ticket* exclusion is a NAT device.
 
 ATA also enables the configuration of a Honeytoken user, which is used as a trap for malicious actors - any authentication associated with this (normally dormant) account triggers an alert.
 
 To configure this, follow these steps:
 
-1.  From the ATA Console, click on the settings icon and select **Configuration**.
+1. From the ATA Console, click on the settings icon and select **Configuration**.
 
     ![ATA configuration settings](media/ATA-config-icon.png)
 
-2.  Under **Detection**, click **Entity tags**.
+1. Under **Detection**, click **Entity tags**.
 
-2. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network.
+1. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network.
 
-   ![Honeytoken](media/honeytoken.png)
+    ![Screenshot showing Honeytoken account name entry](media/honeytoken.png)
 
-3. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
+1. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
 
-   ![Exclusions](media/exclusions.png)
+    ![Screenshot showing exclusion of entities from detection](media/exclusions.png)
 
-4.  Click **Save**.
-
+1. Click **Save**.
 
 Congratulations, you have successfully deployed Microsoft Advanced Threat Analytics!
 
@@ -66,23 +65,21 @@ Check the attack time line to view detected suspicious activities and search for
 
 ATA starts scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, is not available until ATA has had time to build behavioral profiles (minimum of three weeks).
 
-To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
-
+To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 
 > [!div class="step-by-step"]
 > [« Step 7](vpn-integration-install-step.md)
 > [Step 9 »](install-ata-step9-samr.md)
 
-
 ## Related Videos
+
 - [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
-
 ## See Also
+
 - [ATA POC deployment guide](https://aka.ms/atapoc)
 - [ATA sizing tool](https://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
 - [ATA prerequisites](ata-prerequisites.md)
-

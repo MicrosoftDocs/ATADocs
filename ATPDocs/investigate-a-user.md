@@ -45,7 +45,7 @@ Check and investigate the user profile for the following details and activities:
      2. What is their role within the organization?
      3. Are they significant in the organizational tree?
 
-2. Suspicious activities to [investigate](investigate-entity.md):
+1. Suspicious activities to [investigate](investigate-entity.md):
      1. Does the user have other opened alerts in Azure ATP, or in other security tools such as Windows Defender-ATP, Azure Security Center and/or Microsoft CAS?
      2. Did the user have failed log ons?
      3. Which resources did the user access?  

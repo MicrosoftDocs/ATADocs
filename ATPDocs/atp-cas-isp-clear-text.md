@@ -45,7 +45,7 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
     ![Review top impacted entities and create an action plan](media/atp-cas-isp-clear-text-2.png)
 1. Research why those entities are using LDAP in clear text.
 1. Remediate the issues and stop the exposure.
-1. After confirming remediation, we recommend you require domain controller level LDAP signing. To learn more about LDAP server signing, see [Domain controller LDAP server signing requirements](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
+1. After confirming remediation, we recommend you require domain controller level LDAP signing. To learn more about LDAP server signing, see [Domain controller LDAP server signing requirements](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
 
 > [!NOTE]
 > This assessment is updated in near real time.

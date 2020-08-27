@@ -40,9 +40,9 @@ Follow these steps to update to ATA version 1.9:
 1.  [Download the update version of ATA 1.9 from the Download Center](https://www.microsoft.com/download/details.aspx?id=56725)  or the full version from the [Eval center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
 In the migration version, the file can be used only for updating from ATA 1.8. In the version from the Eval center, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
 
-2.  Update the ATA Center
+1. Update the ATA Center
 
-4.  Update the ATA Gateways
+1. Update the ATA Gateways
 
     > [!IMPORTANT]
     > Update all the ATA Gateways to make sure ATA functions properly.
@@ -51,11 +51,11 @@ In the migration version, the file can be used only for updating from ATA 1.8. I
 
 1. Back up your database: (optional)
 
-   -   If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut down the virtual machine first.
+   - If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut down the virtual machine first.
 
-   -   If the ATA Center is running on a physical server, see the [Disaster recovery](disaster-recovery.md) article for information about backing up the database.
+   - If the ATA Center is running on a physical server, see the [Disaster recovery](disaster-recovery.md) article for information about backing up the database.
 
-2. Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
+1. Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
 
    - On the **Welcome** page, choose your language and click **Next**.
 
@@ -70,11 +70,11 @@ In the migration version, the file can be used only for updating from ATA 1.8. I
 
    - Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
 
-3. After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
+1. After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
 
     ![Update success screen](media/migration-center-success.png)
 
-4. In the **Updates** screen, if you already set your ATA Gateways to automatically update, they update at this point, if not, click **Update** next to each ATA Gateway.
+1. In the **Updates** screen, if you already set your ATA Gateways to automatically update, they update at this point, if not, click **Update** next to each ATA Gateway.
   
     ![Update gateways image](media/migration-update-gw.png)
 

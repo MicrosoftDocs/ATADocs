@@ -75,7 +75,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
 > - The storage latency for read and write activities should be below 10 ms.
 > - The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
-> - When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. For more information on running ATA Center as a virtual machine, see [ATA Center requirements](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
+> - When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. For more information on running ATA Center as a virtual machine, see [ATA Center requirements](ata-prerequisites.md#dynamic-memory)
 > - For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 > - When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
 
@@ -124,7 +124,7 @@ While hyper threading is acceptable for the ATA Lightweight Gateway, when planni
 > [!NOTE]
 >
 > - If the domain controller does not have the resources required by the ATA Lightweight Gateway, domain controller performance is not effected, but the ATA Lightweight Gateway might not operate as expected.
-> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory))
+> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](ata-prerequisites.md#dynamic-memory))
 > - For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 > - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
@@ -155,7 +155,7 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 
 > [!NOTE]
 >
-> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory)
+> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](ata-prerequisites.md#dynamic-memory)
 > - For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
 > - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 

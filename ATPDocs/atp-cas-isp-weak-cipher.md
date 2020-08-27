@@ -56,7 +56,7 @@ Disable clients and servers that you want to stop from using RC4 cipher suites b
 > - [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128]
     "Enabled"=dword:00000000
 
-To learn more about downloading and updating the registry edits, see the [Microsoft Security Advisory](https://docs.microsoft.com/security-updates/SecurityAdvisories/2013/2868725).
+To learn more about downloading and updating the registry edits, see the [Microsoft Security Advisory](/security-updates/SecurityAdvisories/2013/2868725).
 
 ## Next steps
 
