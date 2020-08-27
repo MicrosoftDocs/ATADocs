@@ -56,11 +56,7 @@ To enable VPN integration, make sure you set the following parameters:
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 
-<<<<<<< HEAD
 If you're using a third-party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
-=======
-If you're using a third party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
->>>>>>> d7d56c7ce29c0301bba23da7d544ed683ea58f8d
 
 ## Configure RADIUS Accounting on the VPN system
 
@@ -88,21 +84,13 @@ To configure VPN data in ATA:
 
 1. Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
 
-<<<<<<< HEAD
     ![Configure ATA VPN](media/vpn.png)
-=======
-  ![Configure ATA VPN](media/vpn.png)
->>>>>>> d7d56c7ce29c0301bba23da7d544ed683ea58f8d
 
 After this is enabled, all ATA Gateways and Lightweight Gateways listen on port 1813 for RADIUS accounting events.
 
 Your setup is complete, and you can now see VPN activity in the users' profile page:
 
-<<<<<<< HEAD
 ![VPN setup](media/vpn-user.png)
-=======
-    ![VPN setup](media/vpn-user.png)
->>>>>>> d7d56c7ce29c0301bba23da7d544ed683ea58f8d
 
 After the ATA Gateway receives the VPN events and sends them to the ATA Center for processing, the ATA Center needs access to *ti.ata.azure.com* using HTTPS (port 443) to be able to resolve the external IP addresses in the VPN events to their geographic location.
 
