@@ -30,35 +30,35 @@ These release notes provide information about known issues in version 1.4 of  Ad
 
 ## What's new in this version?
 
--   Support for Windows Event Forwarding (WEF) to send events directly from the domain controllers to the ATA gateway.
+- Support for Windows Event Forwarding (WEF) to send events directly from the domain controllers to the ATA gateway.
 
--   Pass-The-Hash detection enhancements on corporate resources by combining DPI (Deep Packet Inspection) and Windows event logs.
+- Pass-The-Hash detection enhancements on corporate resources by combining DPI (Deep Packet Inspection) and Windows event logs.
 
--   Enhancements for the support of non-domain joined devices and non-Windows devices for detection and visibility.
+- Enhancements for the support of non-domain joined devices and non-Windows devices for detection and visibility.
 
--   Performance improvements to support more traffic per ATA Gateway.
+- Performance improvements to support more traffic per ATA Gateway.
 
--   Performance improvements to support more ATA Gateways per ATA Center.
+- Performance improvements to support more ATA Gateways per ATA Center.
 
--   A new automatic name resolution process was added which matches computer names and IP addresses – this unique capability saves precious time in the investigation process and provide strong evidence for security analysts
+- A new automatic name resolution process was added which matches computer names and IP addresses – this unique capability saves precious time in the investigation process and provide strong evidence for security analysts
 
--   Improved ability to collect input from users to automatically fine-tune the detection process.
+- Improved ability to collect input from users to automatically fine-tune the detection process.
 
--   Automatic detection for NAT devices.
+- Automatic detection for NAT devices.
 
--   Automatic failover when domain controllers are not reachable.
+- Automatic failover when domain controllers are not reachable.
 
--   System health monitoring and notifications now provide the overall health state of the deployment as well as specific issues related to configuration and connectivity.
+- System health monitoring and notifications now provide the overall health state of the deployment as well as specific issues related to configuration and connectivity.
 
--   Visibility into sites and locations where entities operate.
+- Visibility into sites and locations where entities operate.
 
--   Multi-domain support.
+- Multi-domain support.
 
--   Support for Single Label Domains (SLD).
+- Support for Single Label Domains (SLD).
 
--   Support for modifying the IP address and certificate of the ATA Gateways and ATA Center.
+- Support for modifying the IP address and certificate of the ATA Gateways and ATA Center.
 
--   Telemetry to help improve customer experience.
+- Telemetry to help improve customer experience.
 
 ## Known issues
 The following known issues exist in this version.
@@ -78,17 +78,17 @@ If the ATA installation opens instead of the uninstallation when you attempt to 
 
 **ATA Center**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center
 
--   Add a new String value named `InstallationPath` with a value of `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. This is the default installation folder. If you changed the installation folder, enter the path where ATA is installed.
+- Add a new String value named `InstallationPath` with a value of `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. This is the default installation folder. If you changed the installation folder, enter the path where ATA is installed.
 
     ![Registry editor for ATA Center installation path](media/ATA-uninstall-center-bug.jpg)
 
 **ATA Gateway**
 
--   HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
+- HKLM\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Gateway
 
--   Add a new String value named `InstallationPath` with a value of `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. This is the default installation folder.  If you changed the installation folder, enter the path where ATA is installed.
+- Add a new String value named `InstallationPath` with a value of `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. This is the default installation folder.  If you changed the installation folder, enter the path where ATA is installed.
 
     ![Registry editor for ATA Gateway installation path](media/ATA-GW-uninstall-bug.jpg)
 

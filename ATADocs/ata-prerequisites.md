@@ -61,7 +61,7 @@ This section lists information you should gather as well as accounts and network
 
 - Do not install Microsoft Message Analyzer on an ATA Gateway or Lightweight Gateway. The Message Analyzer driver conflicts with the ATA Gateway and Lightweight Gateway drivers. If you run Wireshark on ATA Gateway, you will need to restart the Microsoft Advanced Threat Analytics Gateway Service after you have stopped the Wireshark capture. If not, the Gateway stops capturing traffic. Running Wireshark on an ATA Lightweight Gateway does not interfere with the ATA Lightweight Gateway.
 
-- Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) article.
+- Recommended: User should have read-only permissions on the Deleted Objects container. This allows ATA to detect bulk deletion of objects in the domain. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
 
 - Optional: A user account of a user with no network activities. This account is configurable as an ATA Honeytoken user. To configure an account as a Honeytoken user, only the username is required. For Honeytoken configuration information, see [Configure IP address exclusions and Honeytoken user](install-ata-step7.md).
 
@@ -93,7 +93,7 @@ When working on a physical server, the ATA database necessitates that you **disa
 For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
 The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed. For more information, see [ATA capacity planning](ata-capacity-planning.md).
 
-For Windows Operating systems 2008R2 and 2012, Gateway is not supported in a [Multi Processor Group](https://docs.microsoft.com/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
+For Windows Operating systems 2008R2 and 2012, Gateway is not supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-ata-known-errors.md#multi-processor-group-mode).
 
 ### Time synchronization
 
@@ -132,7 +132,7 @@ The following table lists the minimum ports that have to be opened for the ATA C
 
 To install and deploy ATA more quickly, you can install self-signed certificates during installation. If you have chosen to use self-signed certificates, after the initial deployment it is recommended to replace self-signed certificates with certificates from an internal Certification Authority to be used by the ATA Center.
 
-Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install all the CRL distribution points for the whole chain.
+Make sure the ATA Center and ATA Gateways have access to your CRL distribution point. If they don't have Internet access, follow [the procedure to manually import a CRL](/previous-versions/tn-archive/aa996972(v=exchg.65)), taking care to install all the CRL distribution points for the whole chain.
 
 The certificate must have:
 

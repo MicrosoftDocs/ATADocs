@@ -31,19 +31,19 @@ These release notes provide information about known issues in this version of  A
 ## What's new in the ATA 1.5 update?
 The update to ATA 1.5 provides improvements in the following areas:
 
--   Faster detection times
+- Faster detection times
 
--   Enhanced automatic detection algorithm for NAT (network address translation) devices
+- Enhanced automatic detection algorithm for NAT (network address translation) devices
 
--   Enhanced name resolution process for non-domain joined devices
+- Enhanced name resolution process for non-domain joined devices
 
--   Support for data migration during product updates
+- Support for data migration during product updates
 
--   Better UI responsiveness for suspicious activities with thousands of entities involved
+- Better UI responsiveness for suspicious activities with thousands of entities involved
 
--   Improved auto-resolution of health alerts
+- Improved auto-resolution of health alerts
 
--   Additional performance counters for enhanced monitoring and troubleshooting
+- Additional performance counters for enhanced monitoring and troubleshooting
 
 ## Known issues
 The following known issues exist in this version.

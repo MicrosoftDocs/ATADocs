@@ -37,7 +37,7 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
 ## Back up your ATA Center configuration
 
 1. The ATA Center configuration is backed up to a file every 4 hours. Locate the latest backup copy of the ATA Center configuration and save it on a separate computer. For a full explanation of how to locate these files, see [Export and import the ATA configuration](ata-configuration-file.md). 
-2. Export the ATA Center certificate.
+1. Export the ATA Center certificate.
     1. In the certificate manager, navigate to **Certificates (Local Computer)** -> **Personal** ->**Certificates**, and select **ATA Center**.
     2. Right-click **ATA Center** and select **All Tasks** followed by **Export**. 
      ![ATA Center Certificate](media/ata-center-cert.png)
@@ -50,12 +50,12 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
 ## Recover your ATA Center
 
 1. Create a new Windows Server machine using the same IP address and computer name as the previous ATA Center machine.
-2. Import the certificate you backed up earlier, to the new server.
-3. Follow the instructions to [Deploy the ATA Center](install-ata-step1.md) on the newly created Windows Server. There is no need to deploy the 
+1. Import the certificate you backed up earlier, to the new server.
+1. Follow the instructions to [Deploy the ATA Center](install-ata-step1.md) on the newly created Windows Server. There is no need to deploy the 
 ATA Gateways again. When prompted for a certificate, provide the certificate you exported when backing up the ATA Center configuration. 
  ![ATA Center restore](media/disaster-recovery-deploymentss.png)
-4. Stop the ATA Center service.
-5. Import the backed-up ATA Center configuration:
+1. Stop the ATA Center service.
+1. Import the backed-up ATA Center configuration:
     1. Remove the default ATA Center System Profile document from the MongoDB: 
         1. Go to **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Run `mongo.exe ATA` 

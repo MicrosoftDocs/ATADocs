@@ -35,7 +35,7 @@ Activities detected by Azure ATP on your network can be searched and filtered fo
 
 From the Azure ATP timeline, select any entity in your network (DC, machine, or user) as the filter access point. Next, select to filter by the **Security Alert**, **Activity** type, or any combination. Once the filter is applied, the threat timeline of the entity is updated with the filtered information. Your filtered alerts and activities can also be downloaded to continue your investigation or tracking in other tools. 
 
-![Filter alerts and activities](./media/activities-filter.png)
+![Filter alerts and activities](media/activities-filter.png)
 
 To filter alerts and activities:
  1. Select the entity to investigate from the Azure ATP timeline. 
