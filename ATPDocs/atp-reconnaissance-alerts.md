@@ -125,7 +125,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
     1. Find the tool that performed the attack and remove it.
     1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
     1. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-1. Enforce [Complex and long passwords](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
+1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
 
 ## Active Directory attributes reconnaissance (LDAP) (external ID 2210)
 
@@ -209,7 +209,7 @@ Security scanners and legitimate applications can  generate DNS queries.
 
 It is important to preventing future attacks using AXFR queries by securing your internal DNS server.
 
-- Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+- Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
 ## Security principal reconnaissance (LDAP) (external ID 2038)
 

@@ -41,7 +41,7 @@ The ATA Health Center lets you know that there's a problem by raising an alert (
 ### Managing ATA health
 To check up on your system's overall health, click the Health Center icon in the menu bar ![ATA Health Center icon](media/ATA-red-dot.png)
 
--   All open alerts can be managed by setting them to **Close**, **Suppress**, or **Delete** by clicking the three dots in the corner of the alert and making your selection.
+- All open alerts can be managed by setting them to **Close**, **Suppress**, or **Delete** by clicking the three dots in the corner of the alert and making your selection.
 
 -   **Open**: All new suspicious activities appear in this list.
 

@@ -66,7 +66,7 @@ Following proper investigation, all Azure ATP security alerts can be classified 
 For each alert, ask the following questions to determine the alert classification and help decide what to do next:
 
 1. How common is this specific security alert in your environment?
-2. Was the alert triggered by the same types of computers or users?
+1. Was the alert triggered by the same types of computers or users?
    For example, servers with the same role or users from the same group/department? If the computers or users were similar, you may decide to exclude it to avoid additional future FP alerts.
 
 Note: An increase of alerts of the exact same type typically reduces the suspicious/importance level of the alert. For repeated alerts, verify configurations, and use security alert details and definitions to understand exactly what is happening that trigger the repeats.

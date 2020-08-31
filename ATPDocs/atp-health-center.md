@@ -41,7 +41,7 @@ The Azure ATP health center lets you know that there's a problem by raising an a
 ### Managing Azure ATP health
 To check up on the overall health of your Azure ATP instance, click the Health Center icon in the menu bar ![Azure ATP health center icon](media/atp-red-dot.png)
 
--   All open issues can be managed by setting them to **Close**,  or **Suppress**, by clicking the three dots in the corner of the alert and making your selection.
+- All open issues can be managed by setting them to **Close**,  or **Suppress**, by clicking the three dots in the corner of the alert and making your selection.
 
 -   **Open**: All new suspicious activities appear in this list.
 

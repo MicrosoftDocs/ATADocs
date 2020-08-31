@@ -41,7 +41,7 @@ While your company may invest significant time and effort on hardening identitie
 
 ### Access
 
-Azure ATP security assessments are available using the Microsoft Cloud App Security portal after turning on the Azure ATP integration. To learn how to integrate Azure ATP into Cloud App Security, see [Azure ATP integration](https://docs.microsoft.com/cloud-app-security/aatp-integration).
+Azure ATP security assessments are available using the Microsoft Cloud App Security portal after turning on the Azure ATP integration. To learn how to integrate Azure ATP into Cloud App Security, see [Azure ATP integration](/cloud-app-security/aatp-integration).
 
 ### Licensing
 
@@ -49,7 +49,7 @@ Accessing Azure ATP security assessment reports in Cloud App Security do not req
 
 ## Access Azure ATP using Cloud App Security
 
-See the [Cloud App Security quick start](https://docs.microsoft.com/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Cloud App Security portal.
+See the [Cloud App Security quick start](/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Cloud App Security portal.
 
 **Identity security posture assessments**
 

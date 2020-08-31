@@ -35,9 +35,9 @@ You can interact with the database using the default command line or using a use
 ## Interacting with the database
 The default and most basic way to query the database is using the Mongo shell:
 
-1.  Open a command-line window and change the path to the MongoDB bin folder. The default path is: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
+1. Open a command-line window and change the path to the MongoDB bin folder. The default path is: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
 
-2.  Run: `mongo.exe ATA`. Make sure to type ATA with all capital letters.
+1. Run: `mongo.exe ATA`. Make sure to type ATA with all capital letters.
 
 > [!div class="mx-tableFixed"]
 > 

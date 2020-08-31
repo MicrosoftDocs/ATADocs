@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/03/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -44,7 +44,7 @@ Attack Surface Reduction can be achieved by disabling support for insecure legac
 - LanMan (LM) / NTLMv1
 - Digest Authentication
 
-To retire the use of legacy protocols, your organization must first discover which internal entities and applications rely on them. The **Legacy protocols usage** assessment report table surfaces the top discovered entities using legacy protocols (for now, NTLMv1). Using the report, you can immediately review any top impacted entities and take action on them, stopping use of these protocols and eventually, disabling them altogether. To learn more about the dangers of using legacy protocols, see [Stop using LAN manager and NTLMv1!](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/) and [Drop The MIC 2 & Exploiting LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+To retire the use of legacy protocols, your organization must first discover which internal entities and applications rely on them. The **Legacy protocols usage** assessment report table surfaces the top discovered entities using legacy protocols (for now, NTLMv1). Using the report, you can immediately review any top impacted entities and take action on them, stopping use of these protocols and eventually, disabling them altogether. To learn more about the dangers of using legacy protocols, see [Stop using LAN manager and NTLMv1!](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1) and [Drop The MIC 2 & Exploiting LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
 
 ## How do I use this security assessment?
 
@@ -52,8 +52,11 @@ To retire the use of legacy protocols, your organization must first discover whi
 
     ![Prevent usage of legacy protocols](media/atp-cas-isp-legacy-protocols-2.png)
 1. Take appropriate action on those entities to discover dependencies.
-1. Stop legacy protocol use and eventually, [disable the protocols completely](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/).
+1. Stop legacy protocol use and eventually, [disable the protocols completely](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 1. [Drop the MIC 2 & stop using LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+
+> [!NOTE]
+> This assessment is updated in near real time.
 
 ## Next steps
 

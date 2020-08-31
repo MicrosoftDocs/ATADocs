@@ -116,9 +116,9 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
    The output shows all users in the Contoso.Azure domain.
 
-   ![Enumerate all users in the domain](media/playbook-recon-dsenumeration-netusers.png)
+    ![Enumerate all users in the domain](media/playbook-recon-dsenumeration-netusers.png)
 
-2. Let's try to enumerate all groups in the domain. Execute the following command:
+1. Let's try to enumerate all groups in the domain. Execute the following command:
 
     ``` cmd
     net group /domain
@@ -126,19 +126,19 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
    The output shows all groups in the Contoso.Azure domain. Notice the one Security Group that isn't a default group: **Helpdesk**.
 
-   ![Enumerate all groups in the domain](media/playbook-recon-dsenumeration-netgroups.png)
+    ![Enumerate all groups in the domain](media/playbook-recon-dsenumeration-netgroups.png)
 
-3. Now, let's try to enumerate only the Domain Admins group. Execute the following command:
+1. Now, let's try to enumerate only the Domain Admins group. Execute the following command:
 
     ``` cmd
     net group "Domain Admins" /domain
     ```
 
-   ![Enumerate all members of the Domain Admins group](media/playbook-recon-dsenumeration-netdomainadmins.png)
+    ![Enumerate all members of the Domain Admins group](media/playbook-recon-dsenumeration-netdomainadmins.png)
 
     Acting as an attacker, we've learned there are two members of the Domain Admins group: **SamiraA** and **ContosoAdmin** (built-in Administrator for the Domain Controller). Knowing no security boundary exists between our Domain and Forest, our next leap is to try to enumerate the Enterprise Admins.
 
-4. To attempt to enumerate the Enterprise Admins, execute the following command:
+1. To attempt to enumerate the Enterprise Admins, execute the following command:
 
     ``` cmd
    net group "Enterprise Admins" /domain
@@ -146,7 +146,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
    We learned that there's only one Enterprise Admin, ContosoAdmin. This information wasn't important since we already knew there isn't a security boundary between our Domain and the Forest.
 
-   ![Enterprise Admins enumerated in the domain](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
+    ![Enterprise Admins enumerated in the domain](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
 
 With the information gathered in our reconnaissance, we now know about the Helpdesk Security Group. Although that information isn't interesting *yet*. We also know that **SamiraA** is a member of the Domain Admins group. If we can harvest SamiraA's credential, we can gain access the Domain Controller itself.
 
@@ -162,7 +162,7 @@ We can see when JeffL signed onto the VictimPC, using the Kerberos protocol. Add
 
 ![JeffL's logical activity timeline](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-Many activities are logged in the Logical Activity timeline making it a major capability to performing Digital Forensics and Incident Response (DFIR). You can even see activities when the initial detection wasn't from Azure ATP but from Microsoft Defender ATP, Office 365, and others.
+Many activities are logged in the Logical Activity timeline making it a major capability to performing Digital Forensics and Incident Response (DFIR). You can even see activities when the initial detection wasn't from Azure ATP but from Microsoft Defender ATP, Microsoft 365, and others.
 
 Taking a look at **ContosoDC's page**, we can also see the computers JeffL logged into.
 

@@ -59,7 +59,7 @@ When creating your Azure ATP instance, the basic settings necessary are configur
 
 - [VPN integration](install-atp-step6-vpn.md)
 - [SAM-R required permissions](install-atp-step8-samr.md)
-- [Audit policy settings](atp-advanced-audit-policy.md) – Audit your domain controller health before and after an ATP deployment.
+- [Audit policy settings](configure-windows-event-collection.md) – Audit your domain controller health before and after an ATP deployment.
 
 ## Work with Azure ATP
 
