@@ -75,7 +75,7 @@ The issue can be caused by a Transparent proxy configuration error on Server Cor
 
 **Resolution:**
 
-Run the following PowerShell cmdlet to veriFy that the Azure ATP service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root".
+Run the following PowerShell cmdlet to verify that the Azure ATP service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root".
 
 ```powershell
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
