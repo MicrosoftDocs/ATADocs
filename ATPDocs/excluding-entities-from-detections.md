@@ -35,7 +35,7 @@ For example, if you have a security scanner that does DNS recon or an admin who 
 ## Entities excluded by default from raising alerts
  For certain alerts, such as **Suspicious communication over DNS**, automatic domain exclusions are added by Azure ATP based on customer feedback and research. 
  
-![Suspicious communication over DNS auto exclusions](./media/dns-auto-exclusions.png) 
+![Suspicious communication over DNS auto exclusions](media/dns-auto-exclusions.png) 
 
 ## Exclude entities from raising alerts
 
@@ -44,11 +44,11 @@ There are two ways you can manually exclude entities, either directly from the s
 - **From the security alert**: In the Activity timeline, when you receive an alert on an activity for a user, computer or IP address that **is** allowed to perform the particular activity, and may do so frequently, do the following:
   - Right-click the three dots at the end of the row for the security alert on that entity and select **Close and exclude**. This adds the user, computer, or IP address to the exclusions list for that security alert. It closes the security alert and the alert is no longer listed in the **Open** events list in the **Alert timeline**.
 
-    ![Exclude entity](./media/exclude-in-sa.png)
+    ![Exclude entity](media/exclude-in-sa.png)
 
 - **From the Configuration page**:  To review or modify any exclusions: under **Configuration**, click **Exclusions** and then select the security alert to apply the exclusion to, such as **DNS reconnaissance**.
 
-    ![Exclusion configuration](./media/exclusions.png)
+    ![Exclusion configuration](media/exclusions.png)
 
 To add an entity from the **Exclusions** configuration: enter the entity name, then click the plus, and then click **Save** at the bottom of the page.
 

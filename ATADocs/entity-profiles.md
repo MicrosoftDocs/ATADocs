@@ -55,9 +55,9 @@ At the top, you can view the summary tiles that give you a quick overview of wha
 
 For computers you can see:
 - How many open suspicious activities there are for the machine
--  How many users logged into the machine
+- How many users logged into the machine
 - How many resources the computer accessed
--  How many locations VPN was accessed from on the computer
+- How many locations VPN was accessed from on the computer
 - A list of which IP addresses the computer has used
   
   ![entity menu computer](media/entity-computer.png)

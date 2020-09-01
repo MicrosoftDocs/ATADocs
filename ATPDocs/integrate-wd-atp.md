@@ -64,37 +64,37 @@ To enable this feature, you need a license for both Azure ATP and Microsoft Defe
 
 1. In the Azure ATP portal, open **Configuration**.
 
-    ![Azure ATP Configuration menu](./media/atp-configuration-wd.png)
-2. In the Configurations list, select **Microsoft Defender ATP** and set the integration toggle to **On**.
+    ![Azure ATP Configuration menu](media/atp-configuration-wd.png)
+1. In the Configurations list, select **Microsoft Defender ATP** and set the integration toggle to **On**.
 
-    ![Enable Windows Defender integration](./media/enable-integration.png)
+    ![Enable Windows Defender integration](media/enable-integration.png)
 
-3. In the [Microsoft Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**.
+1. In the [Microsoft Defender ATP portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **Azure ATP integration** to **ON**.
 
-    ![Microsoft Defender ATP enable integration](./media/wd-atp-enable.png)
+    ![Microsoft Defender ATP enable integration](media/wd-atp-enable.png)
 
-4. To check the status of the integration, in the Azure ATP portal, go to **Settings** > **Microsoft Defender ATP integration**. You can see the status of the integration and if something is wrong, you'll see an error.
+1. To check the status of the integration, in the Azure ATP portal, go to **Settings** > **Microsoft Defender ATP integration**. You can see the status of the integration and if something is wrong, you'll see an error.
 
 ## How it works
 
 After Azure ATP and Microsoft Defender ATP are fully integrated, in the Azure ATP portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Microsoft Defender ATP includes a badge to show that it is integrated with Microsoft Defender ATP.
 
- ![Microsoft Defender ATP alerts profile](./media/profile-alerts-wd.png)
+ ![Microsoft Defender ATP alerts profile](media/profile-alerts-wd.png)
 
 If the entity contains alerts in Microsoft Defender ATP, there is a number next to the badge to let you know how many alerts were raised.
 
- ![Azure ATP alerts](./media/atp-integrated-wd-icon-alerts.png)
+ ![Azure ATP alerts](media/atp-integrated-wd-icon-alerts.png)
 
 If you click on the badge, you are brought to the Microsoft Defender ATP portal where you can view and mitigate the alerts. If the entity is not recognized by Microsoft Defender ATP, the badge is grayed out.
 
- ![Microsoft Defender ATP gray](./media/wd-grey.png)
+ ![Microsoft Defender ATP gray](media/wd-grey.png)
 
 From the Microsoft Defender ATP portal, click on an endpoint to view Azure ATP alerts. If you click on the alerts for this entity in Microsoft Defender ATP, the entity's profile page opens in Azure ATP.
 
  > [!NOTE]
  > Currently, Azure ATP integration with Microsoft Defender ATP supports only users and machines from the on-premises AD. Users from Azure AD and virtual machines that are managed in Azure will not be displayed as part of the integration
 
-![Microsoft Defender ATP alerts](./media/wd-atp-alerts.png)
+![Microsoft Defender ATP alerts](media/wd-atp-alerts.png)
 
 ## See Also
 

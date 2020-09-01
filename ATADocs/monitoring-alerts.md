@@ -2,7 +2,7 @@
 # required metadata
 
 title: Understanding ATA health alerts
-description: Describes how you can use the ATA logs to troubleshoot issues
+description: Describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
 keywords:
 author: shsagir
 ms.author: shsagir
@@ -93,11 +93,11 @@ This article describes all the health alerts for each component, listing the cau
 ### All domain controllers are unreachable by a Gateway
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers.|This impacts ATA’s ability to detect suspicious activities related to domain controllers monitored by this ATA Gateway.| Make sure the domain controllers are up and running and that this ATA Gateway can open LDAP connections to them.|Medium|
+|The ATA Gateway is currently offline due to connectivity issues to all the configured domain controllers.|This impacts ATA's ability to detect suspicious activities related to domain controllers monitored by this ATA Gateway.| Make sure the domain controllers are up and running and that this ATA Gateway can open LDAP connections to them.|Medium|
 ### Gateway stopped communicating
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|There has been no communication from the ATA Gateway. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the ATA Gateway. This impacts ATA’s ability to detect suspicious activities, since network traffic will not be able to reach the ATA Center.|Check that the port used for the communication between the ATA Gateway and ATA Center service is not blocked by any routers or firewalls.|Medium|
+|There has been no communication from the ATA Gateway. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the ATA Gateway. This impacts ATA's ability to detect suspicious activities, since network traffic will not be able to reach the ATA Center.|Check that the port used for the communication between the ATA Gateway and ATA Center service is not blocked by any routers or firewalls.|Medium|
 ### No traffic received from domain controller
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|

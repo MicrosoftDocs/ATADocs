@@ -42,9 +42,9 @@ For more information, see [Working with suspicious activities](working-with-susp
 
 ## What's next?
 
--   For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)
+- For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)
 
--   To get started deploying ATA: [Install ATA](install-ata-step1.md)
+- To get started deploying ATA: [Install ATA](install-ata-step1.md)
 
 
 ## See Also

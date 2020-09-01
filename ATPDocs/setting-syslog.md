@@ -63,7 +63,7 @@ To review or modify your Syslog settings.
 
 1. Click **Notifications**, and then, under **Syslog notifications** click **Configure** and enter the following information:
 
-   ![Azure ATP Syslog server settings image](media/atp-syslog.png)
+    ![Azure ATP Syslog server settings image](media/atp-syslog.png)
 
 1. You can select which events to send to your Syslog server. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
 

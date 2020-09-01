@@ -34,21 +34,21 @@ The ATA performance counters provide insight into how well each component of ATA
 
 **ATA component process**:
 
-1.  When a component reaches its maximum size, it blocks the previous component from sending more entities to it.
+1. When a component reaches its maximum size, it blocks the previous component from sending more entities to it.
 
-2.  Then, eventually the previous component will start to increase **its** own size until it blocks the component before it, from sending more entities.
+1. Then, eventually the previous component will start to increase **its** own size until it blocks the component before it, from sending more entities.
 
-3.  This happens all the way back to the NetworkListener component, which will drop traffic when it can no longer forward entities.
+1. This happens all the way back to the NetworkListener component, which will drop traffic when it can no longer forward entities.
 
 
 ## Retrieving performance monitor files for troubleshooting
 
 To retrieve the performance monitor files (BLG) from the various ATA components:
-1.  Open perfmon.
-2.  Stop the data collector set named: **Microsoft ATA Gateway** or **Microsoft ATA Center**.
-3.  Go to the data collector set folder (by default, this is "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" or “C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets”).
-4.  Copy the BLG file that was most recently modified.
-5.  Restart the data collector set named: **Microsoft ATA Gateway** or **Microsoft ATA Center**.
+1. Open perfmon.
+1. Stop the data collector set named: **Microsoft ATA Gateway** or **Microsoft ATA Center**.
+1. Go to the data collector set folder (by default, this is "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" or “C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets”).
+1. Copy the BLG file that was most recently modified.
+1. Restart the data collector set named: **Microsoft ATA Gateway** or **Microsoft ATA Center**.
 
 
 ## ATA Gateway performance counters
@@ -73,8 +73,8 @@ Here is the list of the main ATA Gateway counters to pay attention to:
 > |Microsoft ATA Gateway\EntitySender Batch Send Time|The amount of time it took to send the last batch.|Should be less than 1000 milliseconds most of the time|Check if there are any networking issues between the ATA Gateway and the ATA Center.|
 > 
 > [!NOTE]
-> -   Timed counters are in milliseconds.
-> -   It is sometimes more convenient to monitor the full list of the counters by using the **Report** graph type (example: real-time monitoring of all the counters)
+> - Timed counters are in milliseconds.
+> - It is sometimes more convenient to monitor the full list of the counters by using the **Report** graph type (example: real-time monitoring of all the counters)
 
 ## ATA Lightweight Gateway performance counters
 The performance counters can be used for quota management in the Lightweight Gateway, to make sure that ATA doesn't drain too many resources from the domain controllers on which it is installed.
@@ -121,8 +121,8 @@ Here is the list of the main ATA Center counters to pay attention to:
 > 
 > 
 > [!NOTE]
-> -   Timed counters are in milliseconds
-> -   It is sometimes more convenient to monitor the full list of the counters using the graph type for Report (example: real-time monitoring of all the counters).
+> - Timed counters are in milliseconds
+> - It is sometimes more convenient to monitor the full list of the counters using the graph type for Report (example: real-time monitoring of all the counters).
 
 ## Operating system counters
 The following table lists the main operating system counters to pay attention to:

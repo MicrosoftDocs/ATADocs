@@ -37,55 +37,55 @@ ms.suite: ems
 
 Collected anonymized data includes the following parameters:
 
--   Performance counters from both the ATA Center and the ATA Gateway
+- Performance counters from both the ATA Center and the ATA Gateway
 
--   Product ID from licensed copies of ATA
+- Product ID from licensed copies of ATA
 
--   Deployment date of the ATA Center
+- Deployment date of the ATA Center
 
--   Number of deployed ATA Gateways
+- Number of deployed ATA Gateways
 
--   The following anonymized Active Directory information:
+- The following anonymized Active Directory information:
 
-    -   Domain ID for the domain whose name would be the first domain when sorted alphabetically
+    - Domain ID for the domain whose name would be the first domain when sorted alphabetically
 
-    -   Number of domain controllers
+    - Number of domain controllers
 
-    -   Number of domain controllers monitored by ATA via port mirroring
+    - Number of domain controllers monitored by ATA via port mirroring
 
-    -   Number of Sites
+    - Number of Sites
 
-    -   Number of Computers
+    - Number of Computers
 
-    -   Number of Groups
+    - Number of Groups
 
-    -   Number of Users
+    - Number of Users
 
--   Suspicious Activities  – The following anonymized data is collected for each suspicious activity:
+- Suspicious Activities  – The following anonymized data is collected for each suspicious activity:
 
     (Computer names, user names, and IP addresses are **not** collected)
 
-    -   Suspicious activity type
+    - Suspicious activity type
 
-    -   Suspicious activity ID
+    - Suspicious activity ID
 
-    -   Status
+    - Status
 
-    -   Start and End Time
+    - Start and End Time
 
-    -   Input provided
+    - Input provided
 
 - Health issues – The following anonymized data is collected for each health issue:
 
     (Computer names, user names, and IP addresses are not collected)
 
-    -   Health issue type
+    - Health issue type
 
-    -   Health issue ID
+    - Health issue ID
 
-    -   Status
+    - Status
 
-    -   Start and End Time
+    - Start and End Time
 
 - ATA Console URL addresses - URL addresses when using the ATA Console, that is, which pages in the ATA Console are visited.
 
@@ -93,9 +93,9 @@ Collected anonymized data includes the following parameters:
 ### Disable data collection
 Perform the following steps to stop collecting and sending telemetry data to Microsoft:
 
-1.  Log in to the ATA Console, click the three dots in the toolbar and select **About**.
+1. Log in to the ATA Console, click the three dots in the toolbar and select **About**.
 
-2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
+1. Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
 
 ## See Also
 - [Troubleshooting ATA using the event log](troubleshooting-ata-using-logs.md)

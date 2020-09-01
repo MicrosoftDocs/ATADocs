@@ -69,7 +69,7 @@ For more information on honeytoken accounts, see [Configure detection exclusions
 **Understand the scope of the breach**
 
 1. Investigate the [source user](investigate-a-user.md).
-2. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](investigate-a-computer.md).
 
     > [!NOTE]
     > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.  
@@ -108,7 +108,7 @@ It is important to check if any login attempts ended with successful authenticat
 
       If the answer to the questions above is **yes**,  **Close** the security alert as a B-TP activity.
 
-2. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
+1. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
     - Check if there is a script running on the source computer with wrong/old credentials?
     - If the answer to the previous question is **yes**, stop and edit, or delete the script. **Close** the security alert as a B-TP activity.
 
@@ -129,11 +129,11 @@ It is important to check if any login attempts ended with successful authenticat
 **Suggested remediation and steps for prevention**
 
 1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
+1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-4. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
+1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 
 ## Suspected Brute Force attack (LDAP) (external ID 2004)
 
@@ -155,7 +155,7 @@ It is important to check if any login attempts ended with successful authenticat
 
      If the answer to the previous questions is **yes**,  **Close** the security alert as a B-TP activity.
 
-2. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
+1. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
     - Check if there is a script running on the source computer with wrong/old credentials?
 
       If the answer to the previous question is **yes**, stop and edit, or delete the script. **Close** the security alert as a B-TP activity.
@@ -163,17 +163,17 @@ It is important to check if any login attempts ended with successful authenticat
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. On the alert page, check which users, if any, were guessed successfully. For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
+1. On the alert page, check which users, if any, were guessed successfully. For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
 
 **Suggested remediation and steps for prevention**
 
 1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
+1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-4. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
-5. Prevent future usage of LDAP clear text protocol in your organization.
+1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
+1. Prevent future usage of LDAP clear text protocol in your organization.
 
 ## Suspected Brute Force attack (SMB) (external ID 2033)
 
@@ -192,21 +192,21 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 1. Check if the source computer is running its own NTLM or SMB stack type of application.
     1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
-    2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
+    2. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
 
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. Investigate the [source user](investigate-a-user.md)) (if there is a source user).
+1. Investigate the [source user](investigate-a-user.md)) (if there is a source user).
 
 **Suggested remediation and steps for prevention**
 
 1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer
+1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
     2. Search for users logged on around the time of the activity, as they may also be compromised.
     3. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
+1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 4. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## Suspected WannaCry ransomware attack (external ID 2035)
@@ -232,7 +232,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. Investigate the [compromised user](investigate-a-user.md).
+1. Investigate the [compromised user](investigate-a-user.md).
 
 **Suggested remediation and steps for prevention**
 
@@ -240,7 +240,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
     - [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
     - WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [WannaCry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
     - Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Patch all of your machines, making sure to apply security updates.
+1. Patch all of your machines, making sure to apply security updates.
     - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## Suspected use of Metasploit hacking framework (external ID 2034)
@@ -255,7 +255,7 @@ Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in no
 
 1. Check if the source computer is running an attack tool such as Metasploit or Medusa.
 
-2. If yes, it is a true positive. Follow the instructions in **understand the scope of the breach**, above.
+1. If yes, it is a true positive. Follow the instructions in **understand the scope of the breach**, above.
 
 Occasionally, applications implement their own NTLM or SMB stack.
 
@@ -266,15 +266,15 @@ Occasionally, applications implement their own NTLM or SMB stack.
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. If there is a source user, [investigate the user](investigate-a-user.md).
+1. If there is a source user, [investigate the user](investigate-a-user.md).
 
 **Suggested remediation and steps for prevention**
 
 1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Contain the source computer.
+1. Contain the source computer.
     1. Find the tool that performed the attack and remove it.
     2. Search for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-3. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 4. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## Suspicious VPN connection (external ID 2025)
@@ -304,14 +304,14 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 **Understand the scope of the breach**
 
 1. Investigate the [source computer](investigate-a-computer.md).
-2. If there is a source user, [investigate the user](investigate-a-user.md).
+1. If there is a source user, [investigate the user](investigate-a-user.md).
 
 **Suggested remediation and steps for prevention**
 
 1. Reset the password of the user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Consider blocking this user from connecting using VPN.
-3. Consider blocking this computer from connecting using VPN.
-4. Check if there are other users connected through VPN from these locations, and check if they are compromised.
+1. Consider blocking this user from connecting using VPN.
+1. Consider blocking this computer from connecting using VPN.
+1. Check if there are other users connected through VPN from these locations, and check if they are compromised.
 
 > [!div class="nextstepaction"]
 > [Lateral Movement alert tutorial](atp-lateral-movement-alerts.md)

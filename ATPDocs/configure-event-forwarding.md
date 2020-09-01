@@ -59,7 +59,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 1. From a command prompt type *gpedit.msc*.
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
-   ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Local policy group editor image](media/wef%201%20local%20group%20policy%20editor.png)
 
 1. Double-click **Configure target Subscription Manager**.
 

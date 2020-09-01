@@ -33,6 +33,22 @@ For details of earlier Azure ATP releases until (and including) release 2.55, se
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+## Azure ATP release 2.124
+
+Released August 30, 2020
+
+- **New security alerts**  
+Azure ATP security alerts now includes the following new detections:
+  - **Active Directory attributes reconnaissance (LDAP) (external ID 2210)**  
+In this detection, an Azure ATP security alert is triggered when an attacker is suspected of successfully gaining critical information about the domain for use in their attack kill chain. For more information, see [Active Directory attributes reconnaissance](atp-reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
+  - **Suspected rogue Kerberos certificate usage (external ID 2047)**  
+In this detection, an Azure ATP security alert is triggered when an attacker that has gained control over the organization by compromising the certificate authority server is suspected of generating certificates that can be used as backdoor accounts in future attacks, such as moving laterally in your network. For more information, see [Suspected rogue Kerberos certificate usage](atp-lateral-movement-alerts.md#suspected-rogue-kerberos-certificate-usage-external-id-2047).
+  - **Suspected golden ticket usage (ticket anomaly using RBCD) (external ID 2040)**  
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket-granting ticket (TGT) that provides authorization to any resource.  
+This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence using Resource Based Constrained Delegation (RBCD). Forged Golden Tickets of this type have unique characteristics this new detection is designed to identify.
+For more information, see [Suspected golden ticket usage (ticket anomaly using RBCD)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-using-rbcd-external-id-2040).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Azure ATP release 2.123
 
 Released August 23, 2020
@@ -292,13 +308,13 @@ Released September 8, 2019
 
 Released September 1, 2019
 
--   ersion includes improvements and bug fixes for internal sensor infrastructure.
+- ersion includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.92
 
 Released August 25, 2019
 
--   ersion includes improvements and bug fixes for internal sensor infrastructure.
+- ersion includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.91
 
@@ -355,7 +371,7 @@ Until now, Azure ATP provided entity device operating system information based o
     The addition of enriched device operating system identification data helps identify unregistered and non-Windows devices, while simultaneously aiding in your investigation process. For learn more about Network Name Resolution in Azure ATP, see [Understanding Network Name Resolution (NNR)](atp-nnr-policy.md).  
 
 - **New feature: Authenticated proxy - preview**  
-Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Configure the proxy](./configure-proxy.md#configure-the-proxy).
+Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Configure the proxy](configure-proxy.md).
 
 - **Feature enhancement: Automated domain synchronizer process**  
 The process of designating and tagging domain controllers as domain synchronizer candidates during setup and ongoing configuration is now fully automated. The toggle option to manually select domain controllers as domain synchronizer candidates is removed.
@@ -373,13 +389,13 @@ Released July 7, 2019
 Released July 1, 2019
 
 - **New location support: Azure UK data center**  
-Azure ATP instances are now supported in the Azure UK data center. To learn more about creating Azure ATP instances and their corresponding data center locations, see [Step 1 of Azure ATP installation](./install-atp-step1.md).
+Azure ATP instances are now supported in the Azure UK data center. To learn more about creating Azure ATP instances and their corresponding data center locations, see [Step 1 of Azure ATP installation](install-atp-step1.md).
 
 - **Feature enhancement: New name and features for the Suspicious additions to sensitive groups alert (external ID 2024)**  
-The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](./atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).  
+The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **New documentation feature: Guide for moving from Advanced Threat Analytics to Azure ATP**  
-This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](./ata-atp-move-overview.md).
+This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](ata-atp-move-overview.md).
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -388,7 +404,7 @@ This new article includes prerequisites, planning guidance, as well as configura
 Released June 23, 2019
 
 - **Feature enhancement: Suspicious service creation alert (external ID 2026)**  
-This alert now features an improved alert page with additional evidence and a new description. For more information, see [Suspicious service creation security alert](./atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026).
+This alert now features an improved alert page with additional evidence and a new description. For more information, see [Suspicious service creation security alert](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026).
 
 - **Instance naming support: Support added for digit only domain prefix**  
 Support added for Azure ATP instance creation using initial domain prefixes that only contain digits. For example, use of digit only initial domain prefixes such as  123456.contoso.com are now supported.

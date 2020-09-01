@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/01/2020
+ms.date: 08/31/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -25,16 +25,15 @@ ms.suite: ems
 
 ---
 
-
 # Tutorial: Reconnaissance alerts
 
-Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. **Reconnaissance**
-2. [Compromised credentials](atp-compromised-credentials-alerts.md)
-3. [Lateral Movements](atp-lateral-movement-alerts.md)
-4. [Domain dominance](atp-domain-dominance-alerts.md)
-5. [Exfiltration](atp-exfiltration-alerts.md)
+1. [Compromised credentials](atp-compromised-credentials-alerts.md)
+1. [Lateral Movements](atp-lateral-movement-alerts.md)
+1. [Domain dominance](atp-domain-dominance-alerts.md)
+1. [Exfiltration](atp-exfiltration-alerts.md)
 
 To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
@@ -44,11 +43,12 @@ In this tutorial, learn how to understand, classify, remediate, and prevent the 
 
 > [!div class="checklist"]
 >
-> * Account enumeration reconnaissance (external ID 2003)
-> * Network mapping reconnaissance (DNS) (external ID 2007)
-> * Security principal reconnaissance (LDAP) (external ID 2038)
-> * User and IP address reconnaissance (SMB) (external ID 2012)
-> * User and Group membership reconnaissance (SAMR) (external ID 2021)
+> - Account enumeration reconnaissance (external ID 2003)
+> - Active Directory attributes reconnaissance (LDAP) (external ID 2210)
+> - Network mapping reconnaissance (DNS) (external ID 2007)
+> - Security principal reconnaissance (LDAP) (external ID 2038)
+> - User and Group membership reconnaissance (SAMR) (external ID 2021)
+> - User and IP address reconnaissance (SMB) (external ID 2012)
 
 ## Account enumeration reconnaissance (external ID 2003)
 
@@ -64,6 +64,10 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 In this alert detection, Azure ATP detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Azure ATP detects it as a suspicious activity.
 
+**Learning period**
+
+Not applicable
+
 **TP, B-TP, or FP**
 
 Some servers and applications query domain controllers to determine if accounts exist in legitimate usage scenarios.
@@ -72,7 +76,7 @@ To determine if this query was a **TP**, **BTP** or **FP**, click the alert to g
 
 1. Check if the source computer was supposed to perform this type of query. Examples of a **B-TP** in this case could be Microsoft Exchange servers or human resource systems.
 
-2. Check the account domains.
+1. Check the account domains.
     - Do you see additional users who belong to a different domain?  
      A server misconfiguration such as Exchange/Skype or ADSF can cause additional users that belong to different domains.
     - Look at the configuration of the problematic service to fix the misconfiguration.
@@ -98,11 +102,11 @@ Attackers are known to use a dictionary of randomized account names to find exis
 
       If you answered **yes** to one of the previous questions, *Close* the security alert, it is probably a **B-TP** activity.
 
-2. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names.
+1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names.
     - Check the guessed account names for additional suspicious activities.
     - Check to see if any of the matched accounts are sensitive accounts.
 
-### Understand the scope of the breach
+**Understand the scope of the breach**
 
 1. Investigate the source computer
 1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment, and can use brute force to attempt to access your domain using the discovered user names. Investigate the existing accounts using the [user investigation guide](investigate-a-user.md).
@@ -115,13 +119,52 @@ Attackers are known to use a dictionary of randomized account names to find exis
 
 1. Check if this server is exposed to the internet using any open ports. For example, is the server open using RDP to the internet?
 
-### Suggested remediation and steps for prevention
+**Suggested remediation and steps for prevention**
 
 1. Contain the source [computer](investigate-a-computer.md).
     1. Find the tool that performed the attack and remove it.
     1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
     1. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
+
+## Active Directory attributes reconnaissance (LDAP) (external ID 2210)
+
+**Description**
+
+Active Directory LDAP reconnaissance is used by attackers to gain critical information about the domain environment. This information can help attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
+
+**Learning period**
+
+Not applicable
+
+**TP, B-TP, or FP**
+
+1. Click on the alert to view the queries that were performed.
+    - Check if the source computer is supposed to make these queries
+        - If yes, close the security alert as an **FP**. If it's an ongoing activity, exclude the suspicious activity.
+1. Click on the source computer and go to its profile page.
+    - Look for any unusual activities that occurred around the time of the queries such as the following types of search: logged in users, accessed resources, and other probing queries.
+    - If Microsoft Defender ATP integration is enabled, click on its icon to further investigate the machine.
+        - Look for unusual processes and alerts that occurred around the time of the queries
+1. Check exposed accounts.
+    - Look for unusual activities.
+
+If you answered yes to questions 2 or 3, consider this alert a **TP** and follow the instructions in **Understand the scope of the breach**.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](investigate-a-computer.md).
+1. Is the computer running a scanning tool that performs various of LDAP queries?
+    - Investigate whether the specific queried users and groups in the attack are privileged or high-value accounts (that is, CEO, CFO, IT management, etc.). If so, look at other activities on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
+1. Check the queries and their attributes, and determine if they were successful. Investigate each exposed group, search for suspicious activities made on the group or by member users of the group.
+1. Can you see SAM-R, DNS, or SMB reconnaissance behavior on the source computer?
+
+**Suggested remediation and steps for prevention**
+
+1. Contain the source computer
+    1. Find the tool that performed the attack and remove it.
+    1. If the computer is running a scanning tool that performs a variety of LDAP queries,look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 ## Network mapping reconnaissance (DNS) (external ID 2007)
 
@@ -159,8 +202,8 @@ Security scanners and legitimate applications can  generate DNS queries.
 **Remediation:**
 
 - Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+  - Find the tool that performed the attack and remove it.
+  - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 **Prevention:**
 
@@ -172,7 +215,7 @@ It is important to preventing future attacks using AXFR queries by securing your
 
 **Description**
 
-Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory.  LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
+Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
 In order to allow Azure ATP to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Azure ATP deployment. Once the Azure ATP initial learning phase is completed, alerts are generated on computers which perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
 
@@ -184,60 +227,30 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 
 1. Click on the source computer and go to its profile page.
     1. Is this source computer expected to generate this activity?
-    2. If the computer and activity are expected, **Close** the security alert and exclude that computer as a **B-TP** activity.
+    1. If the computer and activity are expected, **Close** the security alert and exclude that computer as a **B-TP** activity.
 
 **Understand the scope of the breach**
 
 1. Check the queries that were performed (such as Domain admins, or all users in a domain) and determine if the queries were successful. Investigate each exposed group search for suspicious activities made on the group, or by member users of the group.
-2. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](investigate-a-computer.md).
     - Using the LDAP queries, check if any resource access activity occurred on any of the exposed SPNs.
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
-    2. Is the computer running a scanning tool that performs a variety of LDAP queries?
-    3. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Reset the password if SPN resource access was made that runs under a user account (not machine account).
+    1. Is the computer running a scanning tool that performs a variety of LDAP queries?
+    1. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 **Kerberoasting specific suggested steps for prevention and remediation**
 
 1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-2. Require use of [long and complex passwords for users with service principal accounts](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
-3. [Replace the user account by Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+1. Require use of [long and complex passwords for users with service principal accounts](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).
+1. [Replace the user account by Group Managed Service Account (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
-> Security principal reconnaissance  (LDAP) alerts are supported by ATP sensors only.
-
-## User and IP address reconnaissance (SMB) (external ID 2012)
-
-*Previous name:* Reconnaissance using SMB Session Enumeration
-
-### Description
-
-Enumeration using Server Message Block (SMB) protocol enables attackers to get information about where users recently logged on. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
-
-In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller.
-
-**TP, B-TP, or FP**
-
-Security scanners and applications may legitimately query domain controllers for open SMB sessions.
-
-1. Is this source computer supposed to generate activities of this type?
-2. Is there some kind of security scanner running on the source computer?
-    If the answer is yes, it is probably a B-TP activity. *Close* the security alert and exclude that computer.
-3. Check the users that performed the operation.
-    Are those users supposed to perform those actions?
-    If the answer is yes, *Close* the security alert as a B-TP activity.
-
-**Understand the scope of the breach**
-
-1. Investigate the source computer.
-2. On the alert page, check if there are any exposed users. To further investigate each exposed user, check their profile. We recommend you begin your investigation with sensitive and high investigation priority users.
-
-**Suggested remediation and steps for prevention**
-
-Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
+> Security principal reconnaissance (LDAP) alerts are supported by ATP sensors only.
 
 ## User and Group membership reconnaissance (SAMR) (external ID 2021)
 
@@ -266,16 +279,46 @@ Four weeks per domain controller starting from the first network activity of SAM
 **Understand the scope of the breach**
 
 1. Check the queries that were performed, for example, Enterprise admins, or Administrator,  and determine if they were successful.
-2. Investigate each exposed user using the user investigation guide.
-3. Investigate the source computer.
+1. Investigate each exposed user using the user investigation guide.
+1. Investigate the source computer.
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
-2. Find and remove the tool that performed the attack.
-3. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-4. Reset the source user password and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-5. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
+1. Find and remove the tool that performed the attack.
+1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the source user password and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
+
+## User and IP address reconnaissance (SMB) (external ID 2012)
+
+*Previous name:* Reconnaissance using SMB Session Enumeration
+
+### Description
+
+Enumeration using Server Message Block (SMB) protocol enables attackers to get information about where users recently logged on. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
+
+In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller.
+
+**TP, B-TP, or FP**
+
+Security scanners and applications may legitimately query domain controllers for open SMB sessions.
+
+1. Is this source computer supposed to generate activities of this type?
+1. Is there some kind of security scanner running on the source computer?
+    If the answer is yes, it is probably a B-TP activity. *Close* the security alert and exclude that computer.
+1. Check the users that performed the operation.
+    Are those users supposed to perform those actions?
+    If the answer is yes, *Close* the security alert as a B-TP activity.
+
+**Understand the scope of the breach**
+
+1. Investigate the source computer.
+1. On the alert page, check if there are any exposed users. To further investigate each exposed user, check their profile. We recommend you begin your investigation with sensitive and high investigation priority users.
+
+**Suggested remediation and steps for prevention**
+
+Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
 
 > [!NOTE]
 > To disable any Azure ATP security alert, contact support.
