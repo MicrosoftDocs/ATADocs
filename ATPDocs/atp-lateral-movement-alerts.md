@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/23/2020
+ms.date: 08/31/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -25,16 +25,15 @@ ms.suite: ems
 
 ---
 
-
 # Tutorial: Lateral movement alerts
 
-Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](atp-reconnaissance-alerts.md)
-2. [Compromised credentials](atp-compromised-credentials-alerts.md)
-3. **Lateral Movements**
-4. [Domain dominance](atp-domain-dominance-alerts.md)
-5. [Exfiltration](atp-exfiltration-alerts.md)
+1. [Compromised credentials](atp-compromised-credentials-alerts.md)
+1. **Lateral Movements**
+1. [Domain dominance](atp-domain-dominance-alerts.md)
+1. [Exfiltration](atp-exfiltration-alerts.md)
 
 To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
@@ -48,6 +47,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > - Suspected NTLM authentication tampering (external ID 2039)
 > - Suspected NTLM relay attack (Exchange account)  (external ID 2037)
 > - Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
+> - Suspected rogue Kerberos certificate usage (external ID 2047)
 > - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
 
 <!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
@@ -59,6 +59,10 @@ The following security alerts help you identify and remediate **Lateral Movement
 12/11/2018 Microsoft published [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626), announcing that a newly discovered remote code execution vulnerability exists in Windows Domain Name System (DNS) servers. In this vulnerability, servers fail to properly handle requests. An attacker who successfully exploits the vulnerability can run arbitrary code in the context of the Local System Account. Windows servers currently configured as DNS servers are at risk from this vulnerability.
 
 In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting the CVE-2018-8626 security vulnerability are made against a domain controller in the network.
+
+**Learning period**
+
+Not applicable
 
 **TP, B-TP or FP**
 
@@ -80,10 +84,10 @@ In this detection, an Azure ATP security alert is triggered when DNS queries sus
 
 1. Contain the domain controllers.
     1. Remediate the remote code execution attempt.
-    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    1. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Contain the source computer.
     1. Find the tool that performed the attack and remove it.
-    2. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    1. Look for users also logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 **Prevention**
 
@@ -96,6 +100,10 @@ In this detection, an Azure ATP security alert is triggered when DNS queries sus
 **Description**
 
 Pass-the-Hash is a lateral movement technique in which attackers steal a user's NTLM hash from one computer and use it to gain access to another computer.
+
+**Learning period**
+
+Not applicable
 
 **TP, B-TP, or FP?**
 1. Determine if the hash was used from computers the user is using regularly?
@@ -120,6 +128,10 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user's 
 **Description**
 
 Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerberos ticket from one computer and use it to gain access to another computer by reusing the stolen ticket. In this detection, a Kerberos ticket is seen used on two (or more) different computers.
+
+**Learning period**
+
+Not applicable
 
 **TP, B-TP, or FP?**
 
@@ -166,10 +178,14 @@ Malicious actors that successfully exploit this vulnerability have the ability t
 
 In this detection, an Azure ATP security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
 
+**Learning period**
+
+Not applicable
+
 **TP, B-TP, or FP?**
 
 1. Are the involved computers, including domain controllers, up-to-date and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040)?
-  - If the computers are up-to-date and patched, we expect the authentication to fail. If the authentication ailed, **Close** the security alert as a failed attempt.
+    - If the computers are up-to-date and patched, we expect the authentication to fail. If the authentication ailed, **Close** the security alert as a failed attempt.
 
 **Understand the scope of the breach**
 
@@ -187,7 +203,7 @@ In this detection, an Azure ATP security alert is triggered when NTLM authentica
 
 **Prevention**
 
-* Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
+- Make sure all devices in the environment are up-to-date, and patched against [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040).
 
 ## Suspected NTLM relay attack (Exchange account) (external ID 2037)
 
@@ -199,11 +215,15 @@ Once the relay server receives the NTLM authentication, it provides a challenge 
 
 In this detection, an alert is triggered when Azure ATP identify use of Exchange account credentials from a suspicious source.
 
+**Learning period**
+
+Not applicable
+
 **TP, B-TP, or FP?**
 
 1. Check the source computers behind the IP addresses.
     1. If the source computer is an Exchange Server, **Close** the security alert as an **FP** activity.
-    2. Determine if the source account should authenticate using NTLM from these computers? If they should authenticate, **Close** the security alert, and exclude these computers as a **B-TP** activity.
+    1. Determine if the source account should authenticate using NTLM from these computers? If they should authenticate, **Close** the security alert, and exclude these computers as a **B-TP** activity.
 
 **Understand the scope of the breach**
 
@@ -213,9 +233,10 @@ In this detection, an alert is triggered when Azure ATP identify use of Exchange
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computers
-    1. Find the tool that preformed the attack and remove it.
-    2. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    1. Find the tool that performed the attack and remove it.
+    1. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
+
 <!--
 ## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 
@@ -226,6 +247,10 @@ In this detection, an alert is triggered when Azure ATP identify use of Exchange
 Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
 
 In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
+
+**Learning period**
+
+Not applicable
 
 **TP, B-TP, or FP?**
 
@@ -238,9 +263,9 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 1. Do all source users share something?
     1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
-    2. Check the resources accessed by those tickets.
+    1. Check the resources accessed by those tickets.
        - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
-    3. If there is only one accessed resource, check if it is a valid resource for these users to access.
+    1. If there is only one accessed resource, check if it is a valid resource for these users to access.
 
       If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
@@ -264,6 +289,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 1. Make sure the domain functional level is set to support strong encryption cyphers.
 1. Give preference to using applications that support strong encryption cyphers.
 -->
+
 ## Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 
 *Previous name:* Unusual Kerberos protocol implementation (potential overpass-the-hash attack)
@@ -271,6 +297,10 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 **Description**
 
 Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While Microsoft Windows accepts this type of network traffic without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as over-pass-the-hash, Brute Force, and advanced ransomware exploits such as WannaCry, are used.
+
+**Learning period**
+
+Not applicable
 
 **TP, B-TP, or FP?**
 
@@ -295,13 +325,48 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 
 <!-- REMOVE BOOKMARK FROM TITLE WHEN PREVIEW REMOVED -->
 
-## <a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406"></a>Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
+<a name="suspected-smb-packet-manipulation-cve-2020-0796-exploitation-external-id-2406"></a>
+
+## Suspected rogue Kerberos certificate usage (external ID 2047)
+
+**Description**
+
+Rouge certificate attack is a persistence technique used by attackers after gaining control over the organization. Attackers compromise the Certificate Authority (CA) server and generate certificates that can be used as backdoor accounts in future attacks.
+
+**Learning period**
+
+Not applicable
+
+**TP, B-TP, or FP**
+
+- Determine if the account regularly logs into the computer?
+  - If the certificate is regularly used from computers, **Close** the alert as an **FP**.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](investigate-a-computer.md).
+2. Investigate the [source user](investigate-a-user.md).
+3. Check which resources were accessed successfully and [investigate](investigate-a-computer.md).
+
+**Suggested remediation and steps for prevention**
+
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Contain the source computer
+    - Find the tool that performed the attack and remove it.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Find the certificate used in the CA server and revoke the certificate by invalidating the TLS/SSL before its scheduled expiration date.
+
+## Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
 
 **Description**
 
 03/12/2020 Microsoft published [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796), announcing that a newly remote code execution vulnerability exists in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests. An attacker who successfully exploited the vulnerability could gain the ability to execute code on the target server or client. Unpatched Windows servers are at risk from this vulnerability.
 
 In this detection, an Azure ATP security alert is triggered when SMBv3 packet suspected of exploiting the CVE-2020-0796 security vulnerability are made against a domain controller in the network.
+
+**Learning period**
+
+Not applicable
 
 **TP, B-TP, or FP?**
 
