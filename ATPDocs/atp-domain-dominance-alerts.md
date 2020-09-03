@@ -501,7 +501,7 @@ Not applicable
     1. Are all the users who were logged into the computer supposed to be logged into it?
     1. Are the privileges appropriate for the account?
 1. Should the users who were logged in have access to these resources?
-    - If you enabled Windows Defender ATP integration, click on its icon to further investigate.
+    - If you enabled Microsoft Defender ATP integration, click on its icon to further investigate.
 
 If the answer to any of the previous questions is yes, Close the security alert as a **FP**.
 
