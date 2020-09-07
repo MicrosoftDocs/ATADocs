@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/28/2020
+ms.date: 09/07/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -75,10 +75,11 @@ The issue can be caused by a Transparent proxy configuration error on Server Cor
 
 **Resolution:**
 
-Run the following PowerShell cmdlet to verify that the Azure ATP service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root".
+Run the following PowerShell cmdlet to verify that the Azure ATP service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root" and the "DigiCert Global Root".
 
 ```powershell
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"}
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
 ```
 
 ```Output
@@ -89,15 +90,24 @@ FriendlyName : DigiCert Baltimore Root
 NotBefore    : 5/12/2000 11:46:00 AM
 NotAfter     : 5/12/2025 4:59:00 PM
 Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+
+Subject      : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
+Issuer       : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
+Thumbprint   : DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+FriendlyName : DigiCert Global Root G2
+NotBefore    : 01/08/2013 15:00:00
+NotAfter     : 15/01/2038 14:00:00
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
 ```
 
 If you do not see the expected output, use the following steps:
 
-1. Download the [Baltimore CyberTrust root certificate](https://cacert.omniroot.com/bc2025.crt) to the Server Core machine.
+1. Download the [Baltimore CyberTrust root certificate](https://cacert.omniroot.com/bc2025.crt) and [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) to the Server Core machine.
 1. Run the following PowerShell cmdlet to install the certificate.
 
     ```powershell
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootG2.crt" -CertStoreLocation Cert:\LocalMachine\Root
     ```
 
 ## Silent installation error when attempting to use Powershell
