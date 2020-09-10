@@ -70,7 +70,7 @@ Either disable delegation or use one of the following Kerberos constrained deleg
     2. Specify the **Services to which this account can present delegated credentials**.
 
 - **Resource-based constrained delegation:** Restricts which entities can impersonate this account.  
-Resource-based KCD is configured using PowerShell. You use the [Set-ADComputer](/powershell/module/addsadministration/set-adcomputer?view=win10-ps) or [Set-ADUser](/powershell/module/addsadministration/set-aduser?view=win10-ps) cmdlets, depending on whether the impersonating account is a computer account or a user account / service account.
+Resource-based KCD is configured using PowerShell. You use the [Set-ADComputer](/powershell/module/addsadministration/set-adcomputer?view=win10-ps&preserve-view=true) or [Set-ADUser](/powershell/module/addsadministration/set-aduser?view=win10-ps&preserve-view=true) cmdlets, depending on whether the impersonating account is a computer account or a user account / service account.
 
 ### Constrained delegation
 

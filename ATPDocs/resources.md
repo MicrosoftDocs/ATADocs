@@ -79,7 +79,7 @@ Blog: [Azure ATP blog](https://aka.ms/aatpblog)
 
 Public Community: [Azure ATP Tech Community](https://aka.ms/AatpCom)
 
-Private Community: [Azure ATP Yammer Group](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
+Private Community: [Azure ATP Yammer Group](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all&preserve-view=true)
 
 Channel 9: [Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
