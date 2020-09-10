@@ -103,5 +103,5 @@ For any sensor that fails to complete the update process, a relevant health aler
 ## See Also
 
 - [Configure event forwarding](configure-event-forwarding.md)
-- [Azure ATP prerequisites](atp-prerequisites.md)
+- [Azure ATP prerequisites](prerequisites.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

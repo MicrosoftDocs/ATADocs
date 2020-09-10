@@ -72,5 +72,5 @@ When you have the possibility of excluding an IP address or a computer, you can 
 ## See Also
 
 - [Azure ATP Security Alert guide](suspicious-activity-guide.md)
-- [Integrating with Microsoft Defender ATP](integrate-wd-atp.md)
+- [Integrating with Microsoft Defender ATP](integrate-msde.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

@@ -82,7 +82,7 @@ Security insights are never too late to prevent the next attack and remediate da
 
 **Tip** – When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose to **View a different date** and check for previous potential lateral movement paths. The **LMP to sensitive users report** is always available if LMPs were discovered and provides you with information about potential lateral movement paths detected to sensitive users. 
 
-**Tip** - For instructions on how to set your clients and servers to allow Azure ATP to perform the SAM-R operations needed for lateral movement path detection, see [configure SAM-R](install-atp-step8-samr.md).
+**Tip** - For instructions on how to set your clients and servers to allow Azure ATP to perform the SAM-R operations needed for lateral movement path detection, see [configure SAM-R](install-step8-samr.md).
 
 
 ## Investigating LMPs
@@ -91,6 +91,6 @@ For instructions on how to identify and investigate using Azure ATP Lateral Move
 
 ## See Also
 - [Investigating Azure ATP LMPs](investigate-lateral-movement-path.md)
-- [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
+- [Configure Azure ATP to make remote calls to SAM](install-step8-samr.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
