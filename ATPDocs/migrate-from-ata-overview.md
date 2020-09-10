@@ -51,7 +51,7 @@ In this guide you will:
 
 - Azure ATP requires .Net Framework 4.7 or later and may require a domain controller (restart) if your current .Net Framework version is not 4.7 or later.
 
-- Make sure your domain controllers meet all the [Azure ATP sensor requirements](prerequisites.md#azure-sensor-requirements) and your environment meets all [Azure ATP requirements](prerequisites.md).
+- Make sure your domain controllers meet all the [Azure ATP sensor requirements](prerequisites.md#azure-atp-sensor-requirements) and your environment meets all [Azure ATP requirements](prerequisites.md).
 
 - Validate that all domain controllers you plan to use have sufficient internet access to the Azure ATP service. Check and confirm your domain controllers meet the [Azure ATP proxy configuration requirements](configure-proxy.md).
 
