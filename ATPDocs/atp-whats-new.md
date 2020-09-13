@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/26/2020
+ms.date: 09/13/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -32,6 +32,12 @@ This article is updated frequently to let you know what's new in the latest rele
 For details of earlier Azure ATP releases until (and including) release 2.55, see the [Azure ATP release reference](atp-release-reference.md).
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+## Azure ATP release 2.126
+
+Released September 13, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.125
 
