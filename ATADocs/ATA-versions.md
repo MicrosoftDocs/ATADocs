@@ -32,6 +32,11 @@ Microsoft ATA support is defined by the Microsoft Lifecycle Policy for [ATA 1.x]
 
 ATA updates a few times a year with each update version supported for 12 months from its general availability (GA) release date, or 6 months after a newer update is available.
 
+> [!NOTE]
+> **Support lifecycle**
+>
+> The [mainstream support](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics) of Microsoft Advanced Threat Analytics (ATA) will be ended on January 12, 2021, and the extended support will be continued until January 13, 2026.
+
 ## Version History
 
 |VERSION|BUILD NUMBER|AVAILABILITY DATE|SUPPORT END DATE|
@@ -47,7 +52,8 @@ ATA updates a few times a year with each update version supported for 12 months 
 |1.8.1|1.8.6765|02-AUG-2017|02-AUG-2018|
 |1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
-|1.9.2|1.9.7478|28-MAR-2019||
+|1.9.2|1.9.7478|28-MAR-2019|14-MAR-2021|
+|1.9.3|1.9.7561|14-SEP-2020||
 
 ## See Also
 
