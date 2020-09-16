@@ -6,7 +6,7 @@ description: Explains the different support options for Microsoft Advanced Threa
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 01/26/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
