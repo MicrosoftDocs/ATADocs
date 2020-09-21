@@ -75,7 +75,7 @@ ATA is a standalone on-premises solution with multiple components, such as the A
 
 Azure ATP is a cloud-based security solution that leverages your on-premises Active Directory (Azure AD) signals. The solution is highly scalable and is frequently updated.
 
-The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. Find more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 In contrast to the ATA sensor, the Azure ATP sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Azure ATP to deliver additional detections.
 
