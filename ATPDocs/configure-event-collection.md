@@ -168,5 +168,5 @@ Make sure to have \t between the key=value pairs.
 
 - [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
 - [Azure ATP SIEM log reference](cef-format-sa.md)
-- [Azure ATP prerequisites](atp-prerequisites.md)
+- [Azure ATP prerequisites](prerequisites.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

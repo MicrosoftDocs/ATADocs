@@ -91,6 +91,6 @@ In this tutorial, you've learned how to use LMPs to investigate suspicious activ
 ## See Also
 
 - [Understanding Azure ATP Lateral Movement Paths](use-case-lateral-movement-path.md)
-- [Configure Azure ATP to make remote calls to SAM](install-atp-step8-samr.md)
+- [Configure Azure ATP to make remote calls to SAM](install-step8-samr.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
