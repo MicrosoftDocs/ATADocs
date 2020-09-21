@@ -46,7 +46,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The credentials for the directory services user account are incorrect.|This impacts sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Connect to your Active Directory Forest](install-atp-step2.md#prerequisites) page.|Medium|
+|The credentials for the directory services user account are incorrect.|This impacts sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Connect to your Active Directory Forest](install-step2.md#prerequisites) page.|Medium|
 
 ## Low success rate of active name resolution
 
@@ -64,19 +64,19 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Azure ATP sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP portal.|Medium|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Azure ATP sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the Azure ATP portal.|Medium|
 
 ## Read-only user password expired
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the Azure ATP sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-atp-config-dcpassword.md) and then update the password in the Azure ATP portal.|High|
+|The read-only user password, used to get directory data, expired.|All the Azure ATP sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the Azure ATP portal.|High|
 
 ## Sensor outdated
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|An Azure ATP sensor is outdated.|An Azure ATP sensor is running a version that cannot communicate with the Azure ATP cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the Azure ATP sensor](install-atp-step4.md).|Medium|
+|An Azure ATP sensor is outdated.|An Azure ATP sensor is running a version that cannot communicate with the Azure ATP cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the Azure ATP sensor](install-step4.md).|Medium|
 
 ## Sensor reached a memory resource limit
 
@@ -112,7 +112,7 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](atp-capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
+|The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
 
 ## Some Windows events could not be analyzed
 
@@ -130,8 +130,8 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 ## See Also
 
-- [Azure ATP prerequisites](atp-prerequisites.md)
-- [Azure ATP capacity planning](atp-capacity-planning.md)
+- [Azure ATP prerequisites](prerequisites.md)
+- [Azure ATP capacity planning](capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)

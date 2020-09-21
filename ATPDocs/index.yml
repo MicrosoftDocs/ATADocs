@@ -23,13 +23,13 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Azure Advanced Threat Protection?
-            url: what-is-atp.md
+            url: what-is.md
       - linkListType: architecture
         links:
           - text: Azure ATP architecture
-            url: atp-architecture.md
+            url: architecture.md
           - text: Azure ATP using Cloud App Security
-            url: atp-mcas-integration.md
+            url: mcas-integration.md
       - linkListType: video
         links:
           - text: Introduction to Azure ATP
@@ -43,25 +43,25 @@ landingContent:
           - text: Security alerts
             url: understanding-security-alerts.md
           - text: Health alerts
-            url: atp-health-center.md
+            url: health-center.md
           - text: Monitor your domain controllers
-            url: atp-sensor-monitoring.md
+            url: sensor-monitoring.md
   - title: Explore different ways to use Azure ATP
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Identity security posture assessments
-            url: atp-isp-overview.md  
+            url: isp-overview.md  
           - text: Azure ATP security alert lab
-            url: atp-playbook-lab-overview.md
+            url: playbook-lab-overview.md
           - text: Exclude entities from detections
             url: excluding-entities-from-detections.md
           - text: Search and filter monitored activities 
-            url: atp-activities-search.md
+            url: activities-search.md
           - text: Use exclusions and honeytoken accounts
-            url: install-atp-step7.md
+            url: install-step7.md
           - text: Advanced Threat Analytics (ATA) to Azure ATP move
-            url: ata-atp-move-overview.md
+            url: migrate-from-ata-overview.md
   - title: Manage and remediate security alerts
     linkLists:
       - linkListType: how-to-guide
@@ -89,18 +89,18 @@ landingContent:
       - linkListType: deploy
         links:
           - text: Use Azure ATP with Cloud App Security
-            url: atp-mcas-integration.md
+            url: mcas-integration.md
           - text: Filter activities and set policies
-            url: atp-activities-filtering-mcas.md
+            url: activities-filtering-mcas.md
   - title: Resources and support
     linkLists:
       - linkListType: reference
         links:
           - text: Frequently asked questions
-            url: atp-technical-faq.md
+            url: technical-faq.md
           - text: Support and information
-            url: atp-support.md
+            url: support.md
           - text: ATP readiness roadmap
-            url: atp-resources.md
+            url: resources.md
           - text: Azure ATP data security and privacy 
-            url: atp-privacy-compliance.md
+            url: privacy-compliance.md

@@ -131,7 +131,7 @@ These events can be collected automatically by the Azure ATP sensor or, if the A
 ## See Also
 
 - [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
-- [Azure ATP prerequisites](atp-prerequisites.md)
+- [Azure ATP prerequisites](prerequisites.md)
 - [Azure ATP SIEM log reference](cef-format-sa.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
