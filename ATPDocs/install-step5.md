@@ -25,6 +25,9 @@ ms.suite: ems
 
 # Configure Azure ATP sensor settings
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 In this article, you'll learn how to correctly configure Azure ATP sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of Azure ATP's full capabilities.
 
 ## Prerequisites

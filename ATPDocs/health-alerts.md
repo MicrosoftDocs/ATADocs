@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Understanding Azure ATP sensor health alerts
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
 ## All domain controllers are unreachable by a sensor

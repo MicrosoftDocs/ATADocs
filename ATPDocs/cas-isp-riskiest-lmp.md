@@ -29,6 +29,9 @@ ms.suite: ems
 
 # Security assessment: Riskiest lateral movement paths (LMP)
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 ## What are Risky lateral movement paths?
 
 Azure ATP continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.

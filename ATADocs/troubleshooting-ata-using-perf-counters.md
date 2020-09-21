@@ -29,6 +29,10 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
+
 The ATA performance counters provide insight into how well each component of ATA is performing. The components in ATA process data sequentially, so that when there's a problem, it might cause partial dropped traffic somewhere along the chain of components. In order to fix the problem, you have to figure out which component is backfiring and fix the problem at the beginning of the chain. Use the data found in the performance counters to understand how each component is functioning.
     Refer to [ATA architecture](ata-architecture.md) to understand the flow of internal ATA components.
 

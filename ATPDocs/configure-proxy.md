@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Configure endpoint proxy and Internet connectivity settings for your Azure ATP Sensor
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 Each Azure Advanced Threat Protection (ATP) sensor requires Internet connectivity to the Azure ATP cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection.
 
 We recommend using the command line to configure your proxy server as doing so ensures that only the Azure ATP sensor services communicate through the proxy.

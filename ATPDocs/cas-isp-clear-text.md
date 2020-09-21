@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Security assessment: Entities exposing credentials in clear text
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 ![Prevent clear text credentials exposure in Cloud App Security](media/atp-cas-isp-clear-text-1.png)
 
 ## What information does the prevent clear text security assessment provide?

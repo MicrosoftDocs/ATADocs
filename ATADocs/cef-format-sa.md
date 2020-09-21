@@ -31,6 +31,10 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
+
 ATA can forward security and health alert events to your SIEM. Alerts are forwarded in the CEF format. A sample of each type of security alert log to be sent to your SIEM, is below.
 
 ## Sample ATA security alerts in CEF format

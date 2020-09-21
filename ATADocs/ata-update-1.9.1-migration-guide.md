@@ -27,6 +27,8 @@ ms.suite: ems
 
 # ATA version 1.9.1
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
 
 This article describes issues fixed in Update 1 for Microsoft Advanced Threat Analytics (ATA) version 1.9. The build number of this update is 1.9.7412.
 

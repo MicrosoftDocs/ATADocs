@@ -29,6 +29,10 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
+
 This article describes how to quickly recover your ATA Center and restore ATA functionality when the ATA Center functionality is lost but the ATA Gateways are still working. 
 
 >[!NOTE]

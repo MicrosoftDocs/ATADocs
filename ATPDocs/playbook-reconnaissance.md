@@ -21,6 +21,9 @@ ms.reviewer: itargoet
 
 # Tutorial: Reconnaissance playbook
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 The second tutorial in this four part series for Azure ATP security alerts is a reconnaissance playbook. The purpose of the Azure ATP security alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Azure ATP's *discrete* detections, and focuses on Azure ATP's *signature*-based capabilities. This playbook doesn't include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](playbook-lab-overview.md).
 
 This playbook illustrates the threat detections and security alerts services of Azure ATP for simulated attacks from common, real-world, publicly available hacking and attack tools.

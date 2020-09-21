@@ -29,6 +29,10 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
+
 ATA can notify you when it detects a suspicious activity. For ATA to be able to send email notifications, you must first configure the **Email server settings**.
 
 1. On the ATA Center server, click the **Microsoft Advanced Threat Analytics Management** icon on the desktop.

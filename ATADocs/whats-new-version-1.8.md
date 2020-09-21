@@ -27,6 +27,10 @@ ms.suite: ems
 
 # What's new in ATA version 1.8
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
+
 The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=55536)  or the full version can be downloaded from the [Eval center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
 These release notes provide information about updates, new features, bug fixes and known issues in this version of Advanced Threat Analytics.

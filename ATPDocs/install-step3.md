@@ -25,6 +25,9 @@ ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ---
 # Quickstart: Download the Azure ATP sensor setup package
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 In this quickstart, you'll download the Azure ATP sensor setup package from the portal.
 
 ## Prerequisites

@@ -30,6 +30,10 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
+
 The ATA reports section in the console enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
 To access the reports page, click the report icon in the menu bar: ![report icon](media/ata-report-icon.png).

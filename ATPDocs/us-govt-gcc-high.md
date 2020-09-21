@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Azure ATP for US Government GCC High
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 The Azure ATP GCC High offering utilizes the same underlying technologies and capabilities as the commercial instance of Azure ATP. A list of feature variances can be found in the [Service Description](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description).
 
 ## Get started with US Government GCC High
