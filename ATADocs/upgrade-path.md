@@ -44,7 +44,7 @@ This article provides information about available Advanced Threat Analytics vers
 |1.9|1.9.7312|
 |1.9 Update 1|1.9.7412|
 |1.9 Update 2|1.9.7478|
-|1.9 Update 2|1.9.7561|
+|1.9 Update 3|1.9.7561|
 
 ## Upgrade paths
 
