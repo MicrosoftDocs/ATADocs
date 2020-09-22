@@ -27,8 +27,7 @@ ms.suite: ems
 
 # Use activity filters and create action policies with Azure ATP in Microsoft Cloud App Security
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+[!INCLUDE [Rebranding notice](includes/banner.md)]
 
 This article is designed to help you understand how to filter and create action policies for Azure ATP activities using Microsoft Cloud App Security.
 

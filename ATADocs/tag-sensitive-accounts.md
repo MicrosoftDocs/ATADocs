@@ -28,11 +28,9 @@ ms.suite: ems
 # Tag sensitive accounts
 
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
-
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 You can manually tag groups or accounts as sensitive to enhance detections. It is important to make sure this is updated because some ATA detections, such as sensitive group modification detection and lateral movement path, rely on which groups and accounts are considered sensitive. Previously, ATA automatically considered an entity *sensitive* if it was a member of a specific list of groups. You can now manually tag other users or groups as sensitive, such as board members, company executives, director of sales, etc., and ATA will consider them sensitive.
 

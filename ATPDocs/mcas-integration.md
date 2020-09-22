@@ -26,8 +26,7 @@ ms.suite: ems
 
 # Using Azure ATP with Microsoft Cloud App Security
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+[!INCLUDE [Rebranding notice](includes/banner.md)]
 
 This article is designed to help you understand and navigate the enhanced investigation experience when using the Microsoft Cloud App Security portal with Azure ATP.
 

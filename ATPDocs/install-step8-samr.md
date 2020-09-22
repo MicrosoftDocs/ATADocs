@@ -27,8 +27,7 @@ ms.suite: ems
 
 # Configure Azure ATP to make remote calls to SAM
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+[!INCLUDE [Rebranding notice](includes/banner.md)]
 
 Azure ATP [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Azure ATP Service account created during Azure ATP installation  [Step 2. Connect to AD](install-step2.md).
 

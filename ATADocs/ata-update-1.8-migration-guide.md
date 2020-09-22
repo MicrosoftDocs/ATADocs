@@ -27,9 +27,7 @@ ms.suite: ems
 
 # Updating ATA to version 1.8
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
-
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE] 
 > If ATA is not installed in your environment, download the full version of ATA, which includes version 1.8 and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).

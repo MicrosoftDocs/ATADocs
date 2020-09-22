@@ -27,9 +27,7 @@ ms.suite: ems
 
 # ATA update to 1.6 migration guide
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
-
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 The update to ATA 1.6 provides improvements in the following areas:
 
 - New detections

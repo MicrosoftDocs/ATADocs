@@ -26,9 +26,7 @@ ms.suite: ems
 
 # ATA version 1.9.2
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
-
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 We’re happy to announce the availability of Microsoft Advanced Threat Analytics 1.9 Update 2.
 

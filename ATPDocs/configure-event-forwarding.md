@@ -26,8 +26,7 @@ ms.suite: ems
 
 # Configuring Windows Event Forwarding
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+[!INCLUDE [Rebranding notice](includes/banner.md)]
 
 > [!NOTE]
 > The Azure ATP sensor automatically reads events locally, without the need to configure event forwarding.

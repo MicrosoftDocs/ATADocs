@@ -30,8 +30,7 @@ ms.suite: ems
 # Azure Advanced Threat Protection information and support 
 
 
-> [!IMPORTANT]
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+[!INCLUDE [Rebranding notice](includes/banner.md)]
 
 Use the following resources to help you learn about, deploy, and support Azure Advanced Threat Protection for your organization.
 
