@@ -28,6 +28,8 @@ ms.suite: ems
 
 # Work with Azure ATP health and events
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## Azure ATP health center 
 
 The Azure ATP health center lets you know how your Azure ATP instance is performing and alerts you when there are problems.

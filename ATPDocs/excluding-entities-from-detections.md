@@ -28,6 +28,9 @@ ms.suite: ems
 
 
 # Excluding entities from detections
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 This article explains how to exclude entities from triggering alerts. Certain entities are excluded to minimize true benign positives while making sure you can catch the true positives. In order to keep Azure ATP from creating noise about activities that, from specific users, may be part of your normal rhythm of business, you can quiet - or exclude - specific entities from raising alerts. In addition, certain popular entities are excluded by default. 
 
 For example, if you have a security scanner that does DNS recon or an admin who remotely runs scripts on the domain controller - and these are sanctioned activities whose intent is part of the normal IT operation in your organization, these can be excluded. For more information about each Azure ATP detection to help you decide which entities to exclude, see the [Security Alert guide](suspicious-activity-guide.md).

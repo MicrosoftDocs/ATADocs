@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Updating ATA to version 1.9
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 > [!NOTE] 
 > If ATA is not installed in your environment, download the full version of ATA, which includes version 1.9 and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
 

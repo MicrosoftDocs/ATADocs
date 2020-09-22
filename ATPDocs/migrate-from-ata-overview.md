@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Advanced Threat Analytics (ATA) to Azure Advanced Threat Protection (Azure ATP)
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 > [!NOTE]
 > The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 

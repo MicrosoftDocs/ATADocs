@@ -12,7 +12,8 @@
           "DeployUse/**",
           "PlanDesign/**",
           "Troubleshoot/**",
-          "**/Token/**"
+          "**/Token/**",
+          "**/includes/**"
         ]
       }
     ],

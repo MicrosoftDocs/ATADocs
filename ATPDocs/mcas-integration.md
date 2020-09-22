@@ -26,6 +26,8 @@ ms.suite: ems
 
 # Using Azure ATP with Microsoft Cloud App Security
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 This article is designed to help you understand and navigate the enhanced investigation experience when using the Microsoft Cloud App Security portal with Azure ATP.
 
 Leveraging existing on-premise detections and abnormal behavior analytics, accessing Azure ATP using the Microsoft Cloud App Security portal provides the added ability to detect and alert on sensitive data exfiltration across your enterprise as well as filter activities and create actionable policies. This hybrid offering analyzes activity and alerts based on User and Entity Behavior Analytics (UEBA) to determine risky behaviors, and provides an  investigation priority score to streamline your incident response for compromised identities.

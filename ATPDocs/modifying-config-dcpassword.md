@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Change Azure ATP portal configuration - domain connectivity password
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## Change the domain connectivity password
 
 If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service stops for all deployed sensors.

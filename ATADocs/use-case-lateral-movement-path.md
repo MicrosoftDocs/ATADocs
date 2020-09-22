@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Investigate lateral movement paths with ATA
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Even when you do your best to protect your sensitive users, and your admins have complex passwords that they change frequently, their machines are hardened, and their data is stored securely, attackers can still use lateral movement paths to access sensitive accounts. In lateral movement attacks, the attacker takes advantage of instances when sensitive users sign in to a machine where a non-sensitive user has local rights. Attackers can then move laterally, accessing the less sensitive user and then moving across the computer to gain credentials for the sensitive user.
 

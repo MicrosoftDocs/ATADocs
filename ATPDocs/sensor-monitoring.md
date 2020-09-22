@@ -30,6 +30,8 @@ ms.suite: ems
 
 # Monitoring your domain controller coverage
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 As soon as the first Azure ATP sensor is installed and configured on any domain controller in your network, Azure ATP begins monitoring your environment for domain controllers.
 
 Once an Azure ATP sensor is installed and configured on a domain controller in your network, the sensor communicates with the Azure ATP service on a constant basis sending sensor status, health and version information, and collected Active Directory events and changes.

@@ -26,6 +26,8 @@ ms.suite: ems
 ---
 
 # What&#39;s new in ATA version 1.4
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 These release notes provide information about known issues in version 1.4 of  Advanced Threat Analytics.
 
 ## What's new in this version?

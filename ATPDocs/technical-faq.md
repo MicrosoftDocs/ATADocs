@@ -26,6 +26,8 @@ ms.suite: ems
 ---
 # Azure ATP frequently asked questions
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 This article provides a list of frequently asked questions and answers about Azure ATP divided into the following categories:
 
 - [What is Azure ATP](#what-is-azure-atp)

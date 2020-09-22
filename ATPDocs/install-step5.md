@@ -25,6 +25,8 @@ ms.suite: ems
 
 # Configure Azure ATP sensor settings
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 In this article, you'll learn how to correctly configure Azure ATP sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of Azure ATP's full capabilities.
 
 ## Prerequisites

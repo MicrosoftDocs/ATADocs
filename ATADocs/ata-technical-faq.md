@@ -26,7 +26,9 @@ ms.suite: ems
 ---
 # ATA frequently asked questions
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
 

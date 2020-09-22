@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Security assessment: Unsecure Kerberos delegation
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## What is Kerberos delegation?
 
 Kerberos delegation is a delegation setting that allows applications to request end-user access credentials to access resources on behalf of the originating user.

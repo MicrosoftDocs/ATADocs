@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Configure event collection
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 To enhance detection capabilities, Azure ATP needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]

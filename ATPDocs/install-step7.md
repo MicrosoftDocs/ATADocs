@@ -28,6 +28,8 @@ ms.suite: ems
 
 # Configure detection exclusions and honeytoken accounts
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 Azure ATP enables the exclusion of specific IP addresses or users from a number of detections.
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps Azure ATP ignore such scanners.

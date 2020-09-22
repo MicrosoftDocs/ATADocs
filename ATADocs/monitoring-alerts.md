@@ -29,7 +29,9 @@ ms.suite: ems
 
 # Understanding ATA health alerts
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The ATA Health Center lets you know when there's a problem with the ATA deployment, by raising a health alert.
 This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.

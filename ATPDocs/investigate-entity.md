@@ -28,6 +28,8 @@ ms.suite: ems
 
 # Tutorial: Investigate an entity
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 > [!NOTE]
 > The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 

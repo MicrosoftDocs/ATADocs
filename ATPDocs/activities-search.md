@@ -28,6 +28,8 @@ ms.suite: ems
 
 # Azure ATP monitored activities search and filter 
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 > [!NOTE]
 > The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 

@@ -28,6 +28,8 @@ ms.suite: ems
 
 # Security assessment: Unmonitored domain controllers
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## What are unmonitored domain controllers?
 
 An essential part of the Azure ATP solution requires that its sensors are deployed on all organizational domain controllers, providing a comprehensive view for all user activities from every device.

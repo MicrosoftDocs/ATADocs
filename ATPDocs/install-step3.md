@@ -25,6 +25,8 @@ ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ---
 # Quickstart: Download the Azure ATP sensor setup package
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 In this quickstart, you'll download the Azure ATP sensor setup package from the portal.
 
 ## Prerequisites

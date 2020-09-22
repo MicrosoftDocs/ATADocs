@@ -27,7 +27,9 @@ ms.suite: ems
 
 # ATA silent installation
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article provides instructions for silently installing ATA.
 
