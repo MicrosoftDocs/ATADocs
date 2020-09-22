@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/27/2020
+ms.date: 09/22/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -126,14 +126,21 @@ This section lists the requirements for the Azure ATP sensor.
 
 ### General
 
-> [!NOTE]
-> Make sure [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) is installed when using Server 2019. Azure ATP Sensors already installed on 2019 servers without this update will be automatically stopped.
+The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Server Core but not Nano Server), Windows Server 2019\* (including Server Core but not Nano Server) as shown in the following table.
 
-The Azure ATP sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Windows Server Core but not Windows Nano Server), Windows Server 2019 (including Windows Core but not Windows Nano Server).
+| Operating system version   | Server with Desktop Experience | Server Core | Nano Server    |
+| -------------------------- | ------------------------------ | ----------- | -------------- |
+| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Not applicable |
+| Windows Server 2012        | &#10004;                       | &#10004;    | Not applicable |
+| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Not applicable |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
+| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
+
+\* Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044). Sensors installed on Server 2019 without this update will be automatically stopped.
 
 The domain controller can be a read-only domain controller (RODC).
 
-For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to *.atp.azure.com.
+For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to \*.atp.azure.com.
 
 During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the domain controller.A reboot might also be required if there is a restart already pending.
 
