@@ -41,11 +41,11 @@ After the ATA Gateway was installed, perform the following steps to configure th
 
 1. In the ATA Console, go to **Configuration** and, under **System**, select **Gateways**.
 
-    ![Configure gateway settings image](media/ata-gw-config-1.png)
+    ![Configure gateway settings phase 1](media/ata-gw-config-1.png)
 
 1. Click on the Gateway you want to configure and enter the following information:
 
-    ![Configure gateway settings image](media/ATA-Gateways-config-2.png)
+    ![Configure gateway settings phase 2](media/ATA-Gateways-config-2.png)
 
     - **Description**: Enter a description for the ATA Gateway (optional).
     - **Port Mirrored Domain Controllers (FQDN)** (required for the ATA Gateway, this cannot be changed for the ATA Lightweight Gateway): Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**
