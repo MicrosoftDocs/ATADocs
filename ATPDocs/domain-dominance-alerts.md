@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Tutorial: Domain dominance alerts
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](reconnaissance-alerts.md)

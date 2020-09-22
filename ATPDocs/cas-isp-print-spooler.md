@@ -26,6 +26,8 @@ ms.suite: ems
 ---
 # Security assessment: Domain controllers with Print spooler service available
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ![Disable Print spooler service](media/atp-cas-isp-print-spooler-1.png)
 
 ## What is the **Print spooler** service?

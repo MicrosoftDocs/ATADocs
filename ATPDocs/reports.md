@@ -28,6 +28,8 @@ ms.suite: ems
 
 # Azure ATP Reports
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 The Azure ATP reports section in the Azure ATP portal enables you to schedule or immediately generate and download reports that provide you with system and entity status information. From the reports feature, you can create reports about system health, security alerts and potential lateral movement paths detected in your environment.
 
 To access the reports page, click the report icon in the menu bar: ![report icon](media/atp-report-icon.png).

@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Security assessment: Microsoft LAPS usage
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## What is Microsoft LAPS?
 
 Microsoft's "Local Administrator Password Solution" (LAPS) provides management of local administrator account passwords for domain-joined computers. Passwords are randomized and stored in Active Directory (AD), protected by ACLs, so only eligible users can read it or request its reset.

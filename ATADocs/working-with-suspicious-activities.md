@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Working with Suspicious Activities
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article explains the basics of how to work with Advanced Threat Analytics.
 

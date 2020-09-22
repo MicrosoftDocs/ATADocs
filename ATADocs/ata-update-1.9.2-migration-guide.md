@@ -26,6 +26,7 @@ ms.suite: ems
 
 # ATA version 1.9.2
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 We’re happy to announce the availability of Microsoft Advanced Threat Analytics 1.9 Update 2.
 

@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Azure Advanced Threat Protection multi-forest support
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## Multi-forest support set up
 
 Azure ATP supports organizations with multiple forests, giving you the ability to easily monitor activity and profile users across forests.

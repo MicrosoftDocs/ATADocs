@@ -28,6 +28,8 @@ ms.suite: ems
 
 # Security assessment: Dormant entities in **sensitive** groups
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## What are **sensitive** dormant entities?
 
 Azure ATP discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.

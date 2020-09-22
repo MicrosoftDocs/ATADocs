@@ -25,7 +25,9 @@ ms.suite: ems
 ---
 # Support for Microsoft Advanced Threat Analytics (ATA) versions
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Microsoft ATA support is defined by the Microsoft Lifecycle Policy for [ATA 1.x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X), with mainstream support ending on January 12, 2021.
 

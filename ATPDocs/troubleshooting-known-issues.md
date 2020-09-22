@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Troubleshooting Azure ATP Known Issues
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## Sensor failure communication error
 
 If you receive the following sensor failure error:

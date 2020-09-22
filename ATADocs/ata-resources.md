@@ -27,7 +27,9 @@ ms.suite: ems
 
 # ATA readiness roadmap
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article provides you a readiness roadmap that will assist you to get started with Advanced Threat Analytics.
 

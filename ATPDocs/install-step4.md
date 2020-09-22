@@ -24,6 +24,8 @@ ms.suite: ems
 
 # Quickstart: Install the Azure ATP sensor
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 In this quickstart, you'll install the Azure ATP sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](silent-installation.md) article.
 
 ## Prerequisites

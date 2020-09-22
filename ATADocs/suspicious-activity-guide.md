@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Advanced Threat Analytics suspicious activity guide
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Following proper investigation, any suspicious activity can be classified as:
 

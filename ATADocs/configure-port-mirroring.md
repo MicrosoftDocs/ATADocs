@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Configure Port Mirroring
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE] 
 > This article is relevant only if you deploy ATA Gateways instead of ATA Lightweight Gateways. To determine if you need to use ATA Gateways, see [Choosing the right gateways for your deployment](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).

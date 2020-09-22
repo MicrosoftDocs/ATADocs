@@ -26,6 +26,8 @@ ms.suite: ems
 ---
 
 # ATA update to 1.7 migration guide
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 The update to ATA 1.7 provides improvements in the following areas:
 
 - New detections

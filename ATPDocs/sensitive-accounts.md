@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Working with sensitive accounts
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## Sensitive entities
 
 The following list of groups are considered **Sensitive** by Azure ATP. Any entity that is a member of one of these groups is considered sensitive:

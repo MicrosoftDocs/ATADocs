@@ -28,7 +28,9 @@ ms.suite: ems
 
 
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 After the initial deployment, modifications to the ATA Center should be made carefully. Use the following procedures when updating the console URL, and the certificate.
 
@@ -74,7 +76,7 @@ The URL is used in the following scenarios:
 
 Replace the certificate by following this process:
 
-1. Before the current certificate expires, create a new certificate and make sure it's installed on the ATA Center server. <br></br>It is recommended that you choose a certificate from an internal certificate authority, but it is also possible to create a new self-signed certificate. For more information, see [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps).
+1. Before the current certificate expires, create a new certificate and make sure it's installed on the ATA Center server. <br></br>It is recommended that you choose a certificate from an internal certificate authority, but it is also possible to create a new self-signed certificate. For more information, see [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserve-view=true).
 
 1. In the ATA settings, under **Center**, select this newly created certificate. At this point, the ATA Center service is still bound to the original certificate. 
 

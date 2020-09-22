@@ -27,6 +27,8 @@ ms.suite: ems
 
 # Security assessment: Unsecure account attributes
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## What are unsecure account attributes?
 
 Azure ATP continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
