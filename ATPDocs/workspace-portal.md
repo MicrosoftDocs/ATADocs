@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 # Working with the Azure ATP portal
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > All Azure ATP features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).

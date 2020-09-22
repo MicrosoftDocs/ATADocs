@@ -26,7 +26,7 @@ ms.suite: ems
 ---
 # Azure ATP switches and silent installation
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article provides guidance and instructions for Azure ATP switches and silent installation.
 

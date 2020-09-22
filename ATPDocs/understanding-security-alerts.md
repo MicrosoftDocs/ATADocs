@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Tutorial: Understanding security alerts
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Azure ATP security alerts explain in clear language and graphics, which suspicious activities were identified on your network and the actors and computers involved in the threats. Alerts are graded for severity, color-coded to make them easy to visually filter, and organized by threat phase. Each alert is designed to help you quickly understand exactly what is happening on your network. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 

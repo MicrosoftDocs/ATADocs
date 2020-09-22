@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configure Azure ATP to make remote calls to SAM
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Azure ATP [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Azure ATP Service account created during Azure ATP installation  [Step 2. Connect to AD](install-step2.md).
 

@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Work with Azure ATP health and events
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Azure ATP health center 
 

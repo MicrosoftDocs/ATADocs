@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Configuring Windows Event Forwarding
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > The Azure ATP sensor automatically reads events locally, without the need to configure event forwarding.

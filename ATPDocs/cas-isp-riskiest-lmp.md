@@ -29,7 +29,7 @@ ms.suite: ems
 
 # Security assessment: Riskiest lateral movement paths (LMP)
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## What are Risky lateral movement paths?
 

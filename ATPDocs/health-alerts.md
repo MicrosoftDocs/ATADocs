@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Understanding Azure ATP sensor health alerts
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 

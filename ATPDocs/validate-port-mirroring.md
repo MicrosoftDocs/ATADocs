@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Validate Port Mirroring
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is relevant only if you deploy deploy Azure ATP Standalone Sensor instead of Azure ATP Sensor.
 

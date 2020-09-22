@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Azure ATP readiness guide
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article provides you with a readiness roadmap list of resources that help you get started with Azure Advanced Threat Protection.
 

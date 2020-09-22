@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Change Azure ATP portal configuration - domain connectivity password
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Change the domain connectivity password
 

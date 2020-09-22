@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Update Azure ATP sensors
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Keeping your Azure Advanced Threat Protection sensors up-to-date, provides the best possible protection for your organization.
 

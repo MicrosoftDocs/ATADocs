@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Configure port mirroring
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is relevant only if you deploy Azure ATP standalone sensors instead of Azure ATP sensors.
 

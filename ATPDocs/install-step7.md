@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Configure detection exclusions and honeytoken accounts
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Azure ATP enables the exclusion of specific IP addresses or users from a number of detections.
 

@@ -26,7 +26,7 @@ ms.service: azure-advanced-threat-protection
 
 # Quickstart: Plan capacity for Azure ATP
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In this quickstart, you determine how many Azure ATP sensors you need.
 

@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Release reference of Azure Advanced Threat Protection (Azure ATP)
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is a reference of all Azure ATP releases until (and including) release 2.55. For recent Azure ATP release updates (2.56 and newer), see [Azure ATP what's new](whats-new.md).
 

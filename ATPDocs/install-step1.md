@@ -24,7 +24,7 @@ ms.suite: ems
 ---
 # Quickstart: Create your Azure ATP instance
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In this quickstart, you'll create your Azure ATP instance in the Azure ATP portal. In Azure ATP, you'll have a single instance, previously called a workspace. A single instance enables you to manage multiple forests from a single pane of glass.
 

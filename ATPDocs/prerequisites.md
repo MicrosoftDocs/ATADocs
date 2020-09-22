@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure ATP prerequisites
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article describes the requirements for a successful deployment of Azure ATP in your environment.
 

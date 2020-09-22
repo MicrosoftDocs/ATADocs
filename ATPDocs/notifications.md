@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Set Azure ATP notifications
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Azure ATP can notify you when it detects a suspicious activity and issues a security alert or a health alert via email. 
 

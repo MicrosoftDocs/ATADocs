@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Security assessment: Microsoft LAPS usage
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## What is Microsoft LAPS?
 

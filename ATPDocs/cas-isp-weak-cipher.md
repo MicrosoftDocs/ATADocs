@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Security assessment: Weak cipher usage
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## What are weak ciphers?
 

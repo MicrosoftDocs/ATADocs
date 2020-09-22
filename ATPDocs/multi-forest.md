@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Azure Advanced Threat Protection multi-forest support
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Multi-forest support set up
 

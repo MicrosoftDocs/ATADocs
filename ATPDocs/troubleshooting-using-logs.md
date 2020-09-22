@@ -27,7 +27,7 @@ ms.suite:
 
 # Troubleshooting Azure Advanced Threat Protection (ATP) sensor using the ATP logs
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The ATP logs provide insight into what each component of Azure ATP sensor is doing at any given point in time.
 

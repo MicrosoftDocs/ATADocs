@@ -24,7 +24,7 @@ ms.service: azure-advanced-threat-protection
 
 # Quickstart: Connect to your Active Directory Forest
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In this quickstart, you'll connect Azure ATP to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](multi-forest.md) article.
 

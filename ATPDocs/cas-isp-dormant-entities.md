@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Security assessment: Dormant entities in **sensitive** groups
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## What are **sensitive** dormant entities?
 

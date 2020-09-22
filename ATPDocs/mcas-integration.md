@@ -26,7 +26,7 @@ ms.suite: ems
 
 # Using Azure ATP with Microsoft Cloud App Security
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is designed to help you understand and navigate the enhanced investigation experience when using the Microsoft Cloud App Security portal with Azure ATP.
 

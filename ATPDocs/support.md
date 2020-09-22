@@ -30,7 +30,7 @@ ms.suite: ems
 # Azure Advanced Threat Protection information and support 
 
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Use the following resources to help you learn about, deploy, and support Azure Advanced Threat Protection for your organization.
 

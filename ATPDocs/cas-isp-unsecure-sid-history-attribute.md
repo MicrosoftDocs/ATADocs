@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Security assessment: Unsecure SID History attributes
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## What is an unsecure SID History attribute?
 

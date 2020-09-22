@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Working with sensitive accounts
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Sensitive entities
 

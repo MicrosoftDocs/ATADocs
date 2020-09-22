@@ -20,7 +20,7 @@ ms.reviewer: itargoet
 
 # Tutorial: Setup an ATP security alert lab 
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
  The purpose of the Azure ATP Security Alert lab is to illustrate **Azure ATP**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first tutorial in a four part series walks you through creating a lab environment for testing against Azure ATP's *discrete* detections. The security alert lab focuses on Azure ATP’s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days. For more information about each tutorial in this series, see the [ATP security alert lab overview](playbook-lab-overview.md). 
 

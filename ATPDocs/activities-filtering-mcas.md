@@ -27,7 +27,7 @@ ms.suite: ems
 
 # Use activity filters and create action policies with Azure ATP in Microsoft Cloud App Security
 
-[!INCLUDE [Rebranding notice](includes/banner.md)]
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is designed to help you understand how to filter and create action policies for Azure ATP activities using Microsoft Cloud App Security.
 
