@@ -31,6 +31,10 @@ ms.suite: ems
 
 *Applies to: Advanced Threat Analytics version 1.9*
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
+
 The ATA Health Center lets you know when there's a problem with the ATA deployment, by raising a health alert.
 This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 ## ATA Center Issues

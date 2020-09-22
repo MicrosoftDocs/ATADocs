@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Change Azure ATP portal configuration - domain connectivity password
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 ## Change the domain connectivity password
 
 If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service stops for all deployed sensors.

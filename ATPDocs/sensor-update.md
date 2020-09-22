@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Update Azure ATP sensors
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 Keeping your Azure Advanced Threat Protection sensors up-to-date, provides the best possible protection for your organization.
 
 The Azure ATP service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. Azure ATP sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the Azure ATP sensor and sensor detection capabilities. 

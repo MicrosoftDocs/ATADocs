@@ -27,6 +27,9 @@ ms.suite:
 
 # Troubleshooting Azure Advanced Threat Protection (ATP) sensor using the ATP logs
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 The ATP logs provide insight into what each component of Azure ATP sensor is doing at any given point in time.
 
 The Azure ATP logs are located in a subfolder called **Logs** where ATP is installed; the default location is: **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. In the default installation location, it can be found at: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.

@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Security assessment: Unmonitored domain controllers
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 ## What are unmonitored domain controllers?
 
 An essential part of the Azure ATP solution requires that its sensors are deployed on all organizational domain controllers, providing a comprehensive view for all user activities from every device.

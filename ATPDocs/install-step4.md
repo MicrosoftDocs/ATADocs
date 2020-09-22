@@ -24,6 +24,9 @@ ms.suite: ems
 
 # Quickstart: Install the Azure ATP sensor
 
+> [!IMPORTANT]
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813).  We’ll be updating names in products and in the docs in the near future.
+
 In this quickstart, you'll install the Azure ATP sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](silent-installation.md) article.
 
 ## Prerequisites
