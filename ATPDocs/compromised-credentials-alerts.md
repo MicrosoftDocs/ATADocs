@@ -47,6 +47,7 @@ The following security alerts help you identify and remediate **Compromised cred
 > * Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
 > * Suspected Brute Force attack (LDAP) (external ID 2004)
 > * Suspected Brute Force attack (SMB) (external ID 2033)
+> * Suspected Netlogon privilege elevation attempt (external ID 2411)
 > * Suspected WannaCry ransomware attack (external ID 2035)
 > * Suspected use of Metasploit hacking framework (external ID 2034)
 > * Suspicious VPN connection (external ID 2025)
@@ -74,15 +75,15 @@ For more information on honeytoken accounts, see [Configure detection exclusions
 1. Investigate the [source computer](investigate-a-computer.md).
 
     > [!NOTE]
-    > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.  
-    > Using Windows Event 4776 to capture this information, the source field for this information is occasionally overwritten by the device or software to display only Workstation or MSTSC. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the relevant domain controllers to get the true source computer name.  
+    > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.
+    > Using Windows Event 4776 to capture this information, the source field for this information is occasionally overwritten by the device or software to display only Workstation or MSTSC. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the relevant domain controllers to get the true source computer name.
     > To enable NTLM auditing, turn on Windows Event 8004 (NTLM authentication event that includes information about the source computer, user account, and the server the source machine tried to access).
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    * Find the tool that performed the attack and remove it.
+    * Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 ## Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
 
@@ -105,23 +106,23 @@ In a password spray, after successfully enumerating a list of valid users from t
 It is important to check if any login attempts ended with successful authentication.
 
 1. If any login attempts ended successfully, check if  any of the **Guessed accounts** are normally used from that source computer.
-    - Is there any chance these accounts failed because a wrong password was used?
-    - Check with the user(s) if they generated the activity, (failed to login a fe times and then succeeded).
+    * Is there any chance these accounts failed because a wrong password was used?
+    * Check with the user(s) if they generated the activity, (failed to login a fe times and then succeeded).
 
       If the answer to the questions above is **yes**,  **Close** the security alert as a B-TP activity.
 
 1. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
-    - Check if there is a script running on the source computer with wrong/old credentials?
-    - If the answer to the previous question is **yes**, stop and edit, or delete the script. **Close** the security alert as a B-TP activity.
+    * Check if there is a script running on the source computer with wrong/old credentials?
+    * If the answer to the previous question is **yes**, stop and edit, or delete the script. **Close** the security alert as a B-TP activity.
 
 **Understand the scope of the breach**
 
 1. Investigate the source computer.
 1. On the alert page, check which, if any, users were guessed successfully.
-    - For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
+    * For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
 
     > [!NOTE]
-    > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access. Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account  attempted to access.  
+    > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access. Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account  attempted to access.
     > Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name. Using Windows Event 4776 to capture this information, the information source field is occasionally overwritten by the device or software and only displays Workstation or MSTSC as the information source. In addition, the source computer might not actually exist on your network. This is possible because adversaries commonly target open, internet-accessible servers from outside the network and then use it to enumerate your users. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the domain controllers to get the accessed resource server name. You should also investigate this server, check if it is opened to the internet, and if you can, close it.
 
 1. When you learn which server sent the authentication validation, investigate the server by checking events, such as Windows Event 4624, to better understand the authentication process.
@@ -132,8 +133,8 @@ It is important to check if any login attempts ended with successful authenticat
 
 1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    * Find the tool that performed the attack and remove it.
+    * Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 
@@ -152,13 +153,13 @@ In this detection, an alert is triggered when Azure ATP detects a massive number
 It is important to check if any login attempts ended with successful authentication.
 
 1. If any login attempts ended successfully, are any of the **Guessed accounts** normally used from that source computer?
-    - Is there any chance these accounts failed because a wrong password was used?
-    - Check with the user(s) if they generated the activity, (failed to login a few times and then succeeded).
+    * Is there any chance these accounts failed because a wrong password was used?
+    * Check with the user(s) if they generated the activity, (failed to login a few times and then succeeded).
 
      If the answer to the previous questions is **yes**,  **Close** the security alert as a B-TP activity.
 
 1. If there are no **Guessed accounts**, check if any of the **Attacked accounts** are normally used from the source computer.
-    - Check if there is a script running on the source computer with wrong/old credentials?
+    * Check if there is a script running on the source computer with wrong/old credentials?
 
       If the answer to the previous question is **yes**, stop and edit, or delete the script. **Close** the security alert as a B-TP activity.
 
@@ -171,8 +172,8 @@ It is important to check if any login attempts ended with successful authenticat
 
 1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    * Find the tool that performed the attack and remove it.
+    * Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 1. Prevent future usage of LDAP clear text protocol in your organization.
@@ -209,7 +210,40 @@ Occasionally, applications implement their own NTLM or SMB stack.
     2. Search for users logged on around the time of the activity, as they may also be compromised.
     3. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
-4. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)
+
+Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) announcing that a new vulnerability exists that allows elevation of privileges to the domain controller.
+
+An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*.
+
+**Learning period**
+
+None
+
+**TP, B-TP, or FP**
+
+If the source computer is a domain controller (DC), failed or low certainty resolution can prevent Azure ATP from being able to confirm its identification.
+
+1. If the source computer is a domain controller, **Close** the alert as a **B-TP** activity.
+
+1. If this source computer is supposed to generate this type of activity and is expected to continue generating this type of activity in the future, **Close** the security alert as a **B-TP** activity and exclude the computer to avoid additional benign alerts.
+
+Otherwise, consider this alert a **TP** and follow the instructions in **Understand the scope of the breach**.
+
+**Understand the scope of the breach**
+
+1. Investigate [source computer](investigate-a-computer.md), check for malicious scripts or tools that made the connection to the DC.
+
+1. Investigate the destination DC for any suspicious activities that happened after the vulnerability was used.
+
+**Remediation:**
+
+1. Patch all of your machines making sure to apply security updates.
+1. Review [our guidance](https://support.microsoft.com/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc) on managing changes in Netlogon secure channel connection which relate to and can prevent this vulnerability.
+1. Contain the source computer.
+    * Find the tool that performed the attack and remove it.
 
 ## Suspected WannaCry ransomware attack (external ID 2035)
 
@@ -223,7 +257,7 @@ Attackers use tools that implement various protocols in non-standard ways. While
 
 1. Check if WannaCry is running on the source computer.
 
-    - If WannaCry is running, this alert is a **TP**. Follow the instructions in **understand the scope of the breach**, above.
+    * If WannaCry is running, this alert is a **TP**. Follow the instructions in **understand the scope of the breach**, above.
 
 Occasionally, applications implement their own NTLM or SMB stack.
 
@@ -239,11 +273,11 @@ Occasionally, applications implement their own NTLM or SMB stack.
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
-    - [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
-    - WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [WannaCry Ransomware](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
-    - Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    * [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+    * WanaKiwi can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [WannaCry Ransomware](https://answers.microsoft.com/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+    * Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Patch all of your machines, making sure to apply security updates.
-    - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+    * [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## Suspected use of Metasploit hacking framework (external ID 2034)
 
