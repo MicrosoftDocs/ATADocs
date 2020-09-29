@@ -35,7 +35,14 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 > [!IMPORTANT]
 >
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names in future releases.
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.127 onwards.
+
+## Azure ATP release 2.128
+
+Released September 27, 2020
+
+- We are removing the **Mail notification** toggles for turning on email notifications. To receive email notifications, simply add an address. For more information, see [Set notifications](notifications.md).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.127
 
