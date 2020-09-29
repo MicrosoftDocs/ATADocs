@@ -35,14 +35,21 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 > [!IMPORTANT]
 >
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names in future releases.
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.127 onwards.
+
+## Azure ATP release 2.128
+
+Released September 27, 2020
+
+- We are removing the **Mail notification** toggles for turning on email notifications. To receive email notifications, simply add an address. For more information, see [Set notifications](notifications.md).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.127
 
 Released September 20, 2020
 
 - **New security alert: Suspected Netlogon privilege elevation attempt (external ID 2411)**  
-Azure ATP's *Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)* security alert is now available. In this detection, an Azure ATP security alert is triggered when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*. For more information, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation external id 2411).
+Azure ATP's *Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)* security alert is now available. In this detection, an Azure ATP security alert is triggered when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*. For more information, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.126
