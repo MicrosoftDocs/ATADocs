@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/04/2018
+ms.date: 09/29/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -30,26 +30,25 @@ ms.suite: ems
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP can notify you when it detects a suspicious activity and issues a security alert or a health alert via email. 
+Azure ATP can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
 
 To receive notifications to a specific email address, set the following parameters:
-
 
 1. In the Azure ATP portal, select the settings option on the toolbar and select **Configuration**.
 
     ![Azure ATP configuration settings icon](media/atp-config-menu.png)
 
 1. Click **Notifications**.
-1. Under **Mail notifications**, specify which notifications should be sent via email - they can be sent for new alerts (suspicious activities) and new health issues. 
- 
-   > [!NOTE]
-   > Email alerts for suspicious activities are only sent when the suspicious activity is created.
- 
+1. Under **Mail notifications**, add email addresses for the notifications you want to receive - they can be sent for new alerts (suspicious activities) and new health issues.
+
+    > [!NOTE]
+    >
+    > - Emails are only sent for notifications with defined email addresses.
+    > - Email alerts for suspicious activities are only sent when the suspicious activity is created.
+
 1. Click **Save**.
 
     ![Azure ATP notifications](media/atp-notifications.png)
-
-
 
 ## See Also
 
