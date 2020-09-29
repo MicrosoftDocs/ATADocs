@@ -212,6 +212,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
 1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+<a name="suspected-netlogon-priv-elev-2411"></a>
 ## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)
 
 Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) announcing that a new vulnerability exists that allows elevation of privileges to the domain controller.
