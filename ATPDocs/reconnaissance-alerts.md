@@ -248,8 +248,8 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 **Kerberoasting specific suggested steps for prevention and remediation**
 
 1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-1. Require use of [long and complex passwords for users with service principal accounts](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).
-1. [Replace the user account by Group Managed Service Account (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
+1. Require use of [long and complex passwords for users with service principal accounts](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
+1. [Replace the user account by Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
 > Security principal reconnaissance (LDAP) alerts are supported by ATP sensors only.
