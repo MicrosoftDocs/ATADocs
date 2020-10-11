@@ -333,7 +333,7 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 
 **Description**
 
-Rouge certificate attack is a persistence technique used by attackers after gaining control over the organization. Attackers compromise the Certificate Authority (CA) server and generate certificates that can be used as backdoor accounts in future attacks.
+Rogue certificate attack is a persistence technique used by attackers after gaining control over the organization. Attackers compromise the Certificate Authority (CA) server and generate certificates that can be used as backdoor accounts in future attacks.
 
 **Learning period**
 
