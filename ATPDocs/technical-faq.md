@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/21/2020
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -101,7 +101,7 @@ Azure ATP is available as part of Enterprise Mobility + Security 5 suite (EMS E5
 
 ### Does Azure ATP need only a single license or does it require a license for every user I want to protect?
 
-Azure ATP requires all users in Azure AD to be licensed
+For information about Azure ATP licensing requirements, see [Azure ATP licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
 
 ### Is my data isolated from other customer data?
 
