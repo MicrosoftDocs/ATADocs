@@ -43,6 +43,8 @@ Released October 18, 2020
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
+## Azure ATP release 2.128
+
 Released September 27, 2020
 
 - We are removing the **Mail notification** toggles for turning on email notifications. To receive email notifications, simply add an address. For more information, see [Set notifications](notifications.md).
