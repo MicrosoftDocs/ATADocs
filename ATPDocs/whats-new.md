@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/13/2020
+ms.date: 10/18/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -37,7 +37,11 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.127 onwards.
 
-## Azure ATP release 2.128
+## Azure ATP release 2.129
+
+Released October 18, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 Released September 27, 2020
 
