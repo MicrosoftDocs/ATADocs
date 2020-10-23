@@ -189,9 +189,9 @@ The following table lists the minimum ports that the Azure ATP sensor requires:
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP sensor|Inbound|
 |RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
 |**NNR ports**\*||||||
-|NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|Inbound|
-|NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
-|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
+|NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|Outbound|
+|NetBIOS|UDP|137|ATP sensors|All devices on network|Outbound|
+|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Outbound|
 
 \* One of these ports is required, but we recommend opening all of them.
 
