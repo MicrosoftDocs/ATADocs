@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/22/2020
+ms.date: 10/25/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -178,20 +178,19 @@ The sensor is not supported on domain controllers running Windows 2008 R2 with B
 
 The following table lists the minimum ports that the Azure ATP sensor requires:
 
-|Protocol|Transport|Port|From|To|Direction|
-|------------|-------------|--------|-----------|-------------|
-|**Internet ports**||||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP sensor|Azure ATP cloud service|Outbound|
-|SSL (localhost)|TCP|444|Azure ATP sensor|localhost|Both|
-|**Internal ports**||||||
-|DNS|TCP and UDP|53|Azure ATP sensor|DNS Servers|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP sensor|All devices on network|Outbound|
-|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP sensor|Inbound|
-|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
-|**NNR ports**\*||||||
-|NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|Inbound|
-|NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
-|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
+|Protocol|Transport|Port|From|To|
+|------------|-------------|--------|-----------|
+|**Internet ports**|||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP sensor|Azure ATP cloud service|
+|SSL (localhost)|TCP|444|Azure ATP sensor|localhost|
+|**Internal ports**|||||
+|DNS|TCP and UDP|53|Azure ATP sensor|DNS Servers|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Azure ATP sensor|All devices on network|
+|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|
+|**NNR ports**\*|||||
+|NTLM over RPC|TCP|Port 135|ATP sensors|All devices on network|
+|NetBIOS|UDP|137|ATP sensors|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|
 
 \* One of these ports is required, but we recommend opening all of them.
 
@@ -265,25 +264,26 @@ The Azure ATP standalone sensor requires at least one Management adapter and at 
 
 The following table lists the minimum ports that the Azure ATP standalone sensor requires configured on the management adapter:
 
-|Protocol|Transport|Port|From|To|Direction|
-|------------|-------------|--------|-----------|-------------|
-|**Internet ports**|||||
-|SSL (*.atp.azure.com)|TCP|443|Azure ATP Sensor|Azure ATP cloud service|Outbound|
-|**Internal ports**|||||
-|LDAP|TCP and UDP|389|Azure ATP Sensor|Domain controllers|Outbound|
-|Secure LDAP (LDAPS)|TCP|636|Azure ATP Sensor|Domain controllers|Outbound|
-|LDAP to Global Catalog|TCP|3268|Azure ATP Sensor|Domain controllers|Outbound|
-|LDAPS to Global Catalog|TCP|3269|Azure ATP Sensor|Domain controllers|Outbound|
-|Kerberos|TCP and UDP|88|Azure ATP Sensor|Domain controllers|Outbound|
-|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|Azure ATP Sensor|All devices on network|Outbound|
-|Windows Time|UDP|123|Azure ATP Sensor|Domain controllers|Outbound|
-|DNS|TCP and UDP|53|Azure ATP Sensor|DNS Servers|Outbound|
-|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP Sensor|Inbound|
-|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|Inbound|
-|**NNR ports** \*||||||
-|NTLM over RPC|TCP|135|ATP sensors|All devices on network|Inbound|
-|NetBIOS|UDP|137|ATP sensors|All devices on network|Inbound|
-|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|Inbound|
+|Protocol|Transport|Port|From|To|
+|------------|-------------|--------|-----------|
+|**Internet ports**||||
+|SSL (*.atp.azure.com)|TCP|443|Azure ATP Sensor|Azure ATP cloud service|
+|SSL (localhost)|TCP|444|Azure ATP sensor|localhost|
+|**Internal ports**||||
+|LDAP|TCP and UDP|389|Azure ATP Sensor|Domain controllers|
+|Secure LDAP (LDAPS)|TCP|636|Azure ATP Sensor|Domain controllers|
+|LDAP to Global Catalog|TCP|3268|Azure ATP Sensor|Domain controllers|
+|LDAPS to Global Catalog|TCP|3269|Azure ATP Sensor|Domain controllers|
+|Kerberos|TCP and UDP|88|Azure ATP Sensor|Domain controllers|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|Azure ATP Sensor|All devices on network|
+|Windows Time|UDP|123|Azure ATP Sensor|Domain controllers|
+|DNS|TCP and UDP|53|Azure ATP Sensor|DNS Servers|
+|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Azure ATP Sensor|
+|RADIUS|UDP|1813|RADIUS|Azure ATP sensor|
+|**NNR ports** \*|||||
+|NTLM over RPC|TCP|135|ATP sensors|All devices on network|
+|NetBIOS|UDP|137|ATP sensors|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|ATP sensors|All devices on network|
 
 \* One of these ports is required, but we recommend opening all of them.
 
