@@ -1,8 +1,7 @@
 ---
 # required metadata
-
-title: Troubleshooting Azure ATP known issues
-description: Describes how you can troubleshoot issues in Azure ATP.
+title: Troubleshooting Microsoft Defender for Identity known issues
+description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
 keywords:
 author: shsagir
 ms.author: shsagir
@@ -11,21 +10,13 @@ ms.date: 09/07/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Troubleshooting Azure ATP Known Issues
+# Troubleshooting [!INCLUDE [Product long](includes/product-long.md)] Known Issues
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
@@ -42,11 +33,11 @@ connection failed because connected host has failed to respond...
 
 **Resolution:**
 
-Make sure that communication is not blocked for localhost, TCP port 444. To learn more about Azure ATP prerequisites, see [ports](prerequisites.md#ports).
+Make sure that communication is not blocked for localhost, TCP port 444. To learn more about [!INCLUDE [Product long](includes/product-long.md)] prerequisites, see [ports](prerequisites.md#ports).
 
 ## Deployment log location
 
-The Azure ATP deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%). For more information, see [Troubleshooting ATP using logs](troubleshooting-using-logs.md)
+The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md)
 
 ## Proxy authentication problem presents as a licensing error
 
@@ -61,7 +52,7 @@ If during sensor installation you receive the following error:  **The sensor fai
 
 **Cause:**
 
-In some cases, when communicating via a proxy, during authentication it might respond to the Azure ATP sensor with error 401 or 403 instead of error 407. The Azure ATP sensor will interpret error 401 or 403 as a licensing issue and not as a proxy authentication issue.
+In some cases, when communicating via a proxy, during authentication it might respond to the [!INCLUDE [Product short](includes/product-short.md)] sensor with error 401 or 403 instead of error 407. The [!INCLUDE [Product short](includes/product-short.md)] sensor will interpret error 401 or 403 as a licensing issue and not as a proxy authentication issue.
 
 **Resolution:**
 
@@ -73,11 +64,11 @@ If during sensor installation you receive the following error: **The sensor fail
 
 **Cause:**
 
-The issue can be caused by a Transparent proxy configuration error on Server Core, such as the root certificates required by Azure ATP are not current or missing.
+The issue can be caused by a Transparent proxy configuration error on Server Core, such as the root certificates required by [!INCLUDE [Product short](includes/product-short.md)] are not current or missing.
 
 **Resolution:**
 
-Run the following PowerShell cmdlet to verify that the Azure ATP service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root" and the "DigiCert Global Root".
+Run the following PowerShell cmdlet to verify that the [!INCLUDE [Product short](includes/product-short.md)] service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root" and the "DigiCert Global Root".
 
 ```powershell
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
@@ -132,13 +123,13 @@ Use the complete command to successfully install.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## Azure ATP sensor NIC teaming issue <a name="nic-teaming"></a>
+## [!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue <a name="nic-teaming"></a>
 
-If you attempt to install the ATP sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the ATP sensor on a machine configured with NIC teaming, follow these instructions:
+If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, follow these instructions:
 
 1. Download the Npcap version 0.9984 installer from  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-0.9984.exe).
     - Alternatively, request the OEM version of the Npcap driver (that supports silent installation) from the support team.
-    - Copies of Npcap do not count towards the five copy, five computer or fiver user licensing limitation if they are installed and used solely in conjunction with Azure ATP. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
+    - Copies of Npcap do not count towards the five copy, five computer or fiver user licensing limitation if they are installed and used solely in conjunction with [!INCLUDE [Product short](includes/product-short.md)]. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 If you have not yet installed the sensor:
 
@@ -157,7 +148,7 @@ If you already installed the sensor:
 
 ## Multi Processor Group mode
 
-For Windows Operating systems 2008R2 and 2012, Azure ATP Sensor is not supported in a Multi Processor Group mode.
+For Windows Operating systems 2008R2 and 2012, [!INCLUDE [Product short](includes/product-short.md)] Sensor is not supported in a Multi Processor Group mode.
 
 Suggested possible workarounds:
 
@@ -165,13 +156,13 @@ Suggested possible workarounds:
 
 - If your machine has less than 64 logical cores and is running on a HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
-## Microsoft Defender ATP integration issue
+## Microsoft Defender for Endpoint integration issue
 
-Azure Advanced Threat Protection enables you to integrate Azure ATP with Microsoft Defender ATP. See [Integrate Azure ATP with Microsoft Defender ATP](integrate-msde.md) for more information.
+[!INCLUDE [Product short](includes/product-short.md)] enables you to integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint. See [Integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint](integrate-mde.md) for more information.
 
 ## VMware virtual machine sensor issue
 
-If you have an Azure ATP sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
+If you have a [!INCLUDE [Product short](includes/product-short.md)] sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
@@ -206,7 +197,7 @@ If you receive the following health alert: **Directory services user credentials
 
 **Cause:**
 
-The sensor failed to retrieve the designated gMSA account from the Azure ATP portal.
+The sensor failed to retrieve the designated gMSA account from the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
 **Resolution:**
 
@@ -214,7 +205,7 @@ Make sure that the gMSA account's credentials are correct and that the sensor ha
 
 ## Report downloads cannot contain more than 300,000 entries
 
-Azure ATP does not support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
+[!INCLUDE [Product short](includes/product-short.md)] does not support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
 
 **Cause:**
 
@@ -226,8 +217,8 @@ No known resolution.
 
 ## See Also
 
-- [Azure ATP prerequisites](prerequisites.md)
-- [Azure ATP capacity planning](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

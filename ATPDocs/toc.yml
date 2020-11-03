@@ -1,27 +1,27 @@
-- name: Azure Advanced Threat Protection Documentation
+- name: Microsoft Defender for Identity Documentation
   href: index.yml
 - name: Overview
   items:
-  - name: What is Azure Advanced Threat Protection?
+  - name: What is Microsoft Defender for Identity?
     href: what-is.md
-  - name: Azure ATP architecture
+  - name: Defender for Identity architecture
     href: architecture.md
-  - name: Azure ATP prerequisites
+  - name: Defender for Identity prerequisites
     href: prerequisites.md
-  - name: Azure ATP for US Government
+  - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-  - name: What's new in Azure ATP
+  - name: What's new in Defender for Identity
     href: whats-new.md
 - name: Quickstarts
   expanded: true
   items:
-  - name: Create your Azure ATP instance
+  - name: Create your Defender for Identity instance
     href: install-step1.md
   - name: Connect to Active Directory
     href: install-step2.md
-  - name: Download the Azure ATP sensor package
+  - name: Download the Defender for Identity sensor package
     href: install-step3.md
-  - name: Install the Azure ATP sensor
+  - name: Install the Defender for Identity sensor
     href: install-step4.md
 - name: Tutorials
   items:
@@ -45,9 +45,9 @@
     href: investigate-entity.md
 - name: Concepts
   items:
-  - name: Azure ATP portal
+  - name: Defender for Identity portal
     href: workspace-portal.md
-  - name: Azure ATP security alerts
+  - name: Defender for Identity security alerts
     href: suspicious-activity-guide.md
   - name: Monitored activities
     href: monitored-activities.md
@@ -61,13 +61,13 @@
     href: reports.md
   - name: User roles
     href: role-groups.md
-  - name: Azure ATP multi-forest support
+  - name: Defender for Identity multi-forest support
     href: multi-forest.md
 - name: How-to guides
   items:
-  - name: Azure ATP using Microsoft Cloud App Security
+  - name: Defender for Identity using Microsoft Cloud App Security
     items:
-    - name: Use Azure ATP with Cloud App Security
+    - name: Use Defender for Identity with Cloud App Security
       href: mcas-integration.md
     - name: Filter activities and set policies
       href: activities-filtering-mcas.md
@@ -111,7 +111,7 @@
       href: playbook-domain-dominance.md
   - name: Understanding security alerts
     href: understanding-security-alerts.md
-  - name: Plan your Azure ATP capacity
+  - name: Plan your Defender for Identity capacity
     href: capacity-planning.md
   - name: Manage security alerts
     href: working-with-suspicious-activities.md
@@ -127,39 +127,39 @@
     href: sensor-monitoring.md
   - name: Change domain connectivity password
     href: modifying-config-dcpassword.md
-  - name: Set Azure ATP notifications
+  - name: Set Defender for Identity notifications
     href: notifications.md
   - name: Health alerts
     items:
-    - name: Work with Azure ATP health center
+    - name: Work with Defender for Identity health center
       href: health-center.md
-    - name: Manage Azure ATP health alerts
+    - name: Manage Defender for Identity health alerts
       href: health-alerts.md
-  - name: Azure ATP sensor delayed update
+  - name: Defender for Identity sensor delayed update
     href: sensor-update.md
   - name: Troubleshooting known issues
     href: troubleshooting-known-issues.md
   - name: Troubleshoot using logs
     href: troubleshooting-using-logs.md
-  - name: Integrate with Microsoft Defender ATP
-    href: integrate-msde.md
+  - name: Integrate with Microsoft Defender for Endpoint
+    href: integrate-mde.md
   - name: VPN integration
     href: install-step6-vpn.md
   - name: Integrate with Syslog
     href: setting-syslog.md
   - name: Silent installation
     href: silent-installation.md
-  - name: Configure the Azure ATP sensor
+  - name: Configure the Defender for Identity sensor
     items:
-    - name: Configure the Azure ATP sensor
+    - name: Configure the Defender for Identity sensor
       href: install-step5.md
     - name: Configure Windows Event collection
       href: configure-windows-event-collection.md
     - name: Proxy configuration
       href: configure-proxy.md
-    - name: Configure Azure ATP to make remote calls to SAM
+    - name: Configure Defender for Identity to make remote calls to SAM
       href: install-step8-samr.md
-  - name: Azure ATP standalone sensor setup
+  - name: Defender for Identity standalone sensor setup
     items:
     - name: Configure port mirroring
       href: configure-port-mirroring.md
@@ -169,17 +169,17 @@
       href: configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: configure-event-forwarding.md
-  - name: Move from ATA to Azure ATP
+  - name: Move from ATA to Defender for Identity
     items:
-    - name: Advanced Threat Analytics (ATA) to Azure ATP
+    - name: Advanced Threat Analytics (ATA) to Defender for Identity
       href: migrate-from-ata-overview.md
 - name: Reference
   items:
   - name: SIEM log reference
     href: cef-format-sa.md
-  - name: Azure ATP known issues
+  - name: Defender for Identity known issues
     href: ./troubleshooting-known-issues.md
-  - name: Azure ATP release reference
+  - name: Defender for Identity release reference
     href: release-reference.md
 - name: Resources
   items:
@@ -187,7 +187,7 @@
     href: support.md
   - name: Frequently asked questions
     href: technical-faq.md
-  - name: Azure ATP readiness roadmap
+  - name: Defender for Identity readiness roadmap
     href: resources.md
-  - name: Azure ATP data security and privacy
+  - name: Defender for Identity data security and privacy
     href: privacy-compliance.md

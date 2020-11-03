@@ -1,28 +1,20 @@
 ---
 # required metadata
-
-title: Working with security alerts in Azure Advanced Threat Protection
-description: Describes how to review security alerts issued by Azure ATP
+title: Working with security alerts in Microsoft Defender for Identity
+description: Describes how to review security alerts issued by Microsoft Defender for Identity
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 01/26/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Working with Security Alerts
@@ -30,40 +22,37 @@ ms.suite: ems
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
-This article explains the basics of how to work with Azure ATP security alerts.
+This article explains the basics of how to work with [!INCLUDE [Product long](includes/product-long.md)] security alerts.
 
-## Review security alerts on the attack timeline <a name="review-suspicious-activities-on-the-attack-time-line"></a>
+<a name="review-suspicious-activities-on-the-attack-time-line"></a>
 
-After logging in to the Azure ATP portal, you're automatically taken to the open **Security Alerts Timeline**. Security alerts are listed in chronological order, with the newest alert on the top of the timeline.
+## Review security alerts on the attack timeline
+
+After logging in to the [!INCLUDE [Product short](includes/product-short.md)] portal, you're automatically taken to the open **Security Alerts Timeline**. Security alerts are listed in chronological order, with the newest alert on the top of the timeline.
 
 Each security alert has the following information:
 
 - Entities involved, including users, computers, servers, domain controllers, and resources.
 
 - Times and time frame of the suspicious activities which initiated the security alert.
-
 - Severity of the alert: High, Medium, or Low.
-
 - Status: Open, closed, or suppressed.
-
 - Ability to:
-
-    - Share the security alert with other people in your organization via email.
-
-    - Download the security alert in Excel format.
+  - Share the security alert with other people in your organization via email.
+  - Download the security alert in Excel format.
 
 > [!NOTE]
 >
 > - When you hover your mouse over a user or computer, a mini entity profile is displayed. The mini-profile provides additional information about the entity and includes the number of security alerts that the entity is linked to.
 > - Clicking on an entity, takes you to the entity profile of the user or computer.
 
-![Azure ATP security alerts timeline image](media/atp-sa-timeline.png)
+![[!INCLUDE [Product short](includes/product-short.md)] security alerts timeline image](media/sa-timeline.png)
 
 ## Security alert categories
 
-Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
+[!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
 
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
@@ -73,18 +62,18 @@ Azure ATP security alerts are divided into the following categories or phases, l
 
 ## Preview detections <a name="preview-detections"></a>
 
-The Azure ATP research team constantly works on implementing new detections for newly discovered attacks. Because Azure ATP is a cloud service, new detections are released quickly to enable Azure ATP customers to benefit from new detections as soon as possible.
+The [!INCLUDE [Product short](includes/product-short.md)] research team constantly works on implementing new detections for newly discovered attacks. Because [!INCLUDE [Product short](includes/product-short.md)] is a cloud service, new detections are released quickly to enable [!INCLUDE [Product short](includes/product-short.md)] customers to benefit from new detections as soon as possible.
 
-These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the Azure ATP console - not in the timeline or in entity profiles - and new alerts won’t be opened.
+These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the [!INCLUDE [Product short](includes/product-short.md)] console - not in the timeline or in entity profiles - and new alerts won't be opened.
 
-![preview detection vpn](media/preview-detection-vpn.png)
+![preview detection in timeline](media/preview-detection-in-timeline.png)
 
-By default, preview detections are enabled in Azure ATP.
+By default, preview detections are enabled in [!INCLUDE [Product short](includes/product-short.md)].
 
 To disable preview detections:
 
-1. In the Azure ATP console, click the settings cog.
-1. In the left menu, under Preview, click **Detections**.
+1. In the [!INCLUDE [Product short](includes/product-short.md)] console, select **Configuration**.
+1. In the left menu, under **Preview**, click **Detections**.
 1. Use the slider to turn the preview detections on and off.
 
 ![preview detections](media/preview-detections.png)
@@ -116,7 +105,7 @@ To filter the security alert list:
 You can change the status of a security alert by clicking the current status of the security alert and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific alert to reveal the list of available actions.
 
-![Azure ATP Actions for security alerts](media/atp-sa-actions.png)
+![[!INCLUDE [Product short](includes/product-short.md)] Actions for security alerts](media/sa-actions.png)
 
 **Security alert status**
 
@@ -124,16 +113,16 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 - **Close**: Is used to track security alerts that you identified, researched, and fixed for mitigated.
 
-- **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert Azure ATP doesn't reopen it. But if the alert stops for seven days, and is then seen again, a new alert is opened.
+- **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert [!INCLUDE [Product short](includes/product-short.md)] doesn't reopen it. But if the alert stops for seven days, and is then seen again, a new alert is opened.
 
 - **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all security alerts of the same type.
 
-- **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set Azure ATP to exclude a specific entity (user or computer) from alerting again for a certain type of activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the security alert as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each security alert you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket).
+- **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set [!INCLUDE [Product short](includes/product-short.md)] to exclude a specific entity (user or computer) from alerting again for a certain type of activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the security alert as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each security alert you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket).
 
 > [!NOTE]
-> The configuration pages can only be modified by Azure ATP admins.
+> The configuration pages can only be modified by [!INCLUDE [Product short](includes/product-short.md)] admins.
 
 ## See Also
 
-- [Working with the Azure ATP portal](workspace-portal.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Working with the [!INCLUDE [Product short](includes/product-short.md)] portal](workspace-portal.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

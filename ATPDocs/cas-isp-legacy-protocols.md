@@ -1,28 +1,19 @@
 ---
 # required metadata
-
-title: Azure Advanced Threat Protection legacy protocols identity security posture assessment
-description: This article provides an overview of Azure ATP's legacy protocol identification security posture assessment report.
+title: Microsoft Defender for Identity legacy protocols identity security posture assessment
+description: This article provides an overview of Microsoft Defender for Identity's legacy protocol identification security posture assessment report.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Security assessment: Legacy protocols usage
@@ -52,7 +43,7 @@ To retire the use of legacy protocols, your organization must first discover whi
 
 1. Use the report table to discover which of your top discovered entities are using legacy protocols.
 
-    ![Prevent usage of legacy protocols](media/atp-cas-isp-legacy-protocols-2.png)
+    ![Prevent usage of legacy protocols](media/cas-isp-legacy-protocols-2.png)
 1. Take appropriate action on those entities to discover dependencies.
 1. Stop legacy protocol use and eventually, [disable the protocols completely](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 1. [Drop the MIC 2 & stop using LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
@@ -62,5 +53,5 @@ To retire the use of legacy protocols, your organization must first discover whi
 
 ## Next steps
 
-- [Azure ATP activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

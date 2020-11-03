@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Azure Advanced Threat Protection documentation 
-summary: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
+title: Microsoft Defender for Identity documentation 
+summary: Microsoft Defender for Identity cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
 metadata:
-  title: Azure Advanced Threat Protection documentation
-  description: Azure Advanced Threat Protection (ATP) cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
+  title: Microsoft Defender for Identity documentation
+  description: Microsoft Defender for Identity cloud service helps protect your enterprise hybrid environments from multiple types of advanced targeted cyber attacks and insider threats. 
   services: service
   ms.service: azure-advanced-threat-protection
   ms.subservice: subservice
@@ -18,25 +18,25 @@ metadata:
 
 landingContent:
 
-  - title: About Azure Advanced Threat Protection (Azure ATP)
+  - title: About Microsoft Defender for Identity
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Azure Advanced Threat Protection?
+          - text: What is Microsoft Defender for Identity?
             url: what-is.md
       - linkListType: architecture
         links:
-          - text: Azure ATP architecture
+          - text: Defender for Identity architecture
             url: architecture.md
-          - text: Azure ATP using Cloud App Security
+          - text: Defender for Identity using Cloud App Security
             url: mcas-integration.md
       - linkListType: video
         links:
-          - text: Introduction to Azure ATP
+          - text: Introduction to Defender for Identity
             url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
-          - text: Azure ATP fundamentals
+          - text: Defender for Identity fundamentals
             url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
-  - title: Check out Azure ATP alerts      
+  - title: Check out Defender for Identity alerts      
     linkLists:
       - linkListType: get-started
         links:
@@ -46,13 +46,13 @@ landingContent:
             url: health-center.md
           - text: Monitor your domain controllers
             url: sensor-monitoring.md
-  - title: Explore different ways to use Azure ATP
+  - title: Explore different ways to use Defender for Identity
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Identity security posture assessments
             url: isp-overview.md  
-          - text: Azure ATP security alert lab
+          - text: Defender for Identity security alert lab
             url: playbook-lab-overview.md
           - text: Exclude entities from detections
             url: excluding-entities-from-detections.md
@@ -60,17 +60,17 @@ landingContent:
             url: activities-search.md
           - text: Use exclusions and honeytoken accounts
             url: install-step7.md
-          - text: Advanced Threat Analytics (ATA) to Azure ATP move
+          - text: Advanced Threat Analytics (ATA) to Defender for Identity move
             url: migrate-from-ata-overview.md
   - title: Manage and remediate security alerts
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Investigate Azure ATP alerts
+          - text: Investigate Defender for Identity alerts
             url: suspicious-activity-guide.md
           - text: Manage security alerts
             url: working-with-suspicious-activities.md
-          - text: Set Azure ATP notifications
+          - text: Set Defender for Identity notifications
             url: notifications.md
   - title: Investigate threats 
     linkLists:
@@ -84,11 +84,11 @@ landingContent:
             url: investigate-lateral-movement-path.md
           - text: Investigate entities
             url: investigate-entity.md
-  - title: Azure ATP using Microsoft Cloud App Security 
+  - title: Defender for Identity using Microsoft Cloud App Security 
     linkLists:
       - linkListType: deploy
         links:
-          - text: Use Azure ATP with Cloud App Security
+          - text: Use Defender for Identity with Cloud App Security
             url: mcas-integration.md
           - text: Filter activities and set policies
             url: activities-filtering-mcas.md
@@ -100,7 +100,7 @@ landingContent:
             url: technical-faq.md
           - text: Support and information
             url: support.md
-          - text: ATP readiness roadmap
+          - text: Defender for Identity readiness roadmap
             url: resources.md
-          - text: Azure ATP data security and privacy 
+          - text: Defender for Identity data security and privacy 
             url: privacy-compliance.md
