@@ -1,42 +1,32 @@
 ---
 # required metadata
-
-title: Set Azure Advanced Threat Protection notifications
-description: Describes how to set Azure ATP security alerts so you are notified when suspicious activities are detected.
+title: Set Microsoft Defender for Identity notifications
+description: Describes how to set Microsoft Defender for Identity security alerts so you are notified when suspicious activities are detected.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 09/29/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-
-# Set Azure ATP notifications
+# Set [!INCLUDE [Product long](includes/product-long.md)] notifications
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Azure ATP can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
+[!INCLUDE [Product long](includes/product-long.md)] can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
 
 To receive notifications to a specific email address, set the following parameters:
 
-1. In the Azure ATP portal, select the settings option on the toolbar and select **Configuration**.
+1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select the settings option on the toolbar and select **Configuration**.
 
-    ![Azure ATP configuration settings icon](media/atp-config-menu.png)
+    ![[!INCLUDE [Product short](includes/product-short.md)] configuration settings icon](media/config-menu.png)
 
 1. Click **Notifications**.
 1. Under **Mail notifications**, add email addresses for the notifications you want to receive - they can be sent for new alerts (suspicious activities) and new health issues.
@@ -48,11 +38,11 @@ To receive notifications to a specific email address, set the following paramete
 
 1. Click **Save**.
 
-    ![Azure ATP notifications](media/atp-notifications.png)
+    ![[!INCLUDE [Product short](includes/product-short.md)] notifications](media/notifications.png)
 
 ## See Also
 
 - [Configure event collection](configure-event-collection.md)
 
 - [Set Syslog settings](setting-syslog.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

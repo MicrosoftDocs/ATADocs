@@ -1,79 +1,73 @@
 ---
 # required metadata
-
-title: Understanding the Azure Advanced Threat Protection portal
-description: Describes how to log into the Azure ATP portal and the components of the portal
+title: Understanding the Microsoft Defender for Identity portal
+description: Describes how to log into the Microsoft Defender for Identity portal and the components of the portal
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 11/05/2019
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
-# Working with the Azure ATP portal
+
+# Working with the [!INCLUDE [Product long](includes/product-long.md)] portal
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> All Azure ATP features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).
+> All [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).
 
-Use the Azure ATP portal to monitor and respond to suspicious activity detected by ATP.
+Use the [!INCLUDE [Product long](includes/product-long.md)] portal to monitor and respond to suspicious activity detected by [!INCLUDE [Product short](includes/product-short.md)].
 
-Typing the `?` key provides keyboard shortcuts for Azure ATP portal accessibility.
+Typing the `?` key provides keyboard shortcuts for [!INCLUDE [Product short](includes/product-short.md)] portal accessibility.
 
-The Azure ATP portal provides a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The Azure ATP portal also displays alerts and notifications to highlight problems seen by Azure ATP or new activities that are deemed suspicious.
+The [!INCLUDE [Product short](includes/product-short.md)] portal provides a quick view of all suspicious activities in chronological order. It enables you to drill into details of any activity and perform actions based on those activities. The [!INCLUDE [Product short](includes/product-short.md)] portal also displays alerts and notifications to highlight problems seen by [!INCLUDE [Product short](includes/product-short.md)] or new activities that are deemed suspicious.
 
-This article describes how to work with the key elements of the Azure ATP portal.
+This article describes how to work with the key elements of the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
-## Enabling access to the Azure ATP portal
+## Enabling access to the [!INCLUDE [Product short](includes/product-short.md)] portal
 
-To successfully log in to the Azure ATP portal, you have to log in with a user assigned to an Azure Active Directory security group with access to the Azure ATP portal.
-For more information about role-based access control (RBAC) in Azure ATP, see [Working with Azure ATP role groups](role-groups.md).
+To successfully log in to the [!INCLUDE [Product short](includes/product-short.md)] portal, you have to log in with a user assigned to an Azure Active Directory security group with access to the [!INCLUDE [Product short](includes/product-short.md)] portal.
+For more information about role-based access control (RBAC) in [!INCLUDE [Product short](includes/product-short.md)], see [Working with [!INCLUDE [Product short](includes/product-short.md)] role groups](role-groups.md).
 
-## Logging into the Azure ATP portal
+## Logging into the [!INCLUDE [Product short](includes/product-short.md)] portal
 
-1. You can enter the Azure ATP portal either by logging in to the portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and selecting your instance, or browsing to the instance URL: `https://*instancename*.atp.azure.com`.
+1. You can enter the [!INCLUDE [Product short](includes/product-short.md)] portal either by logging in to the portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and selecting your instance, or browsing to the instance URL: `https://*instancename*.atp.azure.com`.
 
-1. Azure ATP supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Azure ATP uses that token to log you into the Azure ATP portal. You can also log in using a smartcard. Your permissions in Azure ATP correspond with your [administrator role](role-groups.md).
+1. [!INCLUDE [Product short](includes/product-short.md)] supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, [!INCLUDE [Product short](includes/product-short.md)] uses that token to log you into the [!INCLUDE [Product short](includes/product-short.md)] portal. You can also log in using a smartcard. Your permissions in [!INCLUDE [Product short](includes/product-short.md)] correspond with your [administrator role](role-groups.md).
 
    > [!NOTE]
-   > Make sure to log on to the computer from which you want to access the Azure ATP portal using your Azure ATP admin username and password. Alternatively, run your browser as a different user or log out of Windows and log on with your Azure ATP admin user. Unlike the Azure ATP portal, the new [Cloud App Security portal](https://portal.cloudappsecurity.com) offers multi-user login and requires no additional license to use with Azure ATP.
+   > Make sure to log on to the computer from which you want to access the [!INCLUDE [Product short](includes/product-short.md)] portal using your [!INCLUDE [Product short](includes/product-short.md)] admin username and password. Alternatively, run your browser as a different user or log out of Windows and log on with your [!INCLUDE [Product short](includes/product-short.md)] admin user. Unlike the [!INCLUDE [Product short](includes/product-short.md)] portal, the new [Cloud App Security portal](https://portal.cloudappsecurity.com) offers multi-user login and requires no additional license to use with [!INCLUDE [Product short](includes/product-short.md)].
 
 ### Attack time line
 
-The Attack time line is the default landing page you are taken to when you log in to the Azure ATP portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
+The Attack time line is the default landing page you are taken to when you log in to the [!INCLUDE [Product short](includes/product-short.md)] portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
-![Azure ATP attack timeline image](media/atp-sa-timeline.png)
+![[!INCLUDE [Product short](includes/product-short.md)] attack timeline image](media/sa-timeline.png)
 
 For more information, see [Working with security alerts](working-with-suspicious-activities.md).
 
 ### What's new
 
-After a new version of Azure ATP is released, the **What's new** window appears in the top right to let you know what was added in the latest version. It also provides you with a link to the version download.
+After a new version of [!INCLUDE [Product short](includes/product-short.md)] is released, the **What's new** window appears in the top right to let you know what was added in the latest version. It also provides you with a link to the version download.
 
 ### Filtering panel
 
 You can filter which suspicious activities are displayed in the attack time line or displayed in the entity profile suspicious activities tab based on Status and Severity.
 
-### Search bar <a name="search-bar"></a>
+<a name="search-bar"></a>
 
-In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in Azure ATP. To give it a try, just start typing. At the bottom of the search bar, the number of search results found is indicated.
+### Search bar
 
-![Azure ATP portal search image](media/atp-workspace-portal-search.png)
+In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in [!INCLUDE [Product short](includes/product-short.md)]. To give it a try, just start typing. At the bottom of the search bar, the number of search results found is indicated.
+
+![[!INCLUDE [Product short](includes/product-short.md)] portal search image](media/workspace-portal-search.png)
 
 If you click the number, you can access the search results page in which you can filter results by entity type for further investigation.
 
@@ -81,23 +75,23 @@ If you click the number, you can access the search results page in which you can
 
 ### Health center
 
-The Health center provides you with alerts when something isn't working properly in your Azure ATP instance.
+The Health center provides you with alerts when something isn't working properly in your [!INCLUDE [Product short](includes/product-short.md)] instance.
 
-![Azure ATP health center image](media/atp-health-issue.png)
+![[!INCLUDE [Product short](includes/product-short.md)] health center image](media/health-issue.png)
 
-Any time your system encounters a problem, such as a connectivity error or a disconnected Azure ATP standalone sensor, the Health Center icon lets you know by displaying a red dot.
+Any time your system encounters a problem, such as a connectivity error or a disconnected [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, the Health Center icon lets you know by displaying a red dot.
 
-![Azure ATP health center red dot image](media/atp-health-bar.png)
+![[!INCLUDE [Product short](includes/product-short.md)] health center red dot image](media/health-bar.png)
 
 ### Sensitive groups
 
-For information on sensitive groups in Azure ATP, see [Working with sensitive groups](sensitive-accounts.md).
+For information on sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with sensitive groups](sensitive-accounts.md).
 
 ### Mini profile
 
-If you hover your mouse over an entity, anywhere in the Azure ATP portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information, if available and relevant:
+If you hover your mouse over an entity, anywhere in the [!INCLUDE [Product short](includes/product-short.md)] portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information, if available and relevant:
 
-![Azure ATP mini profile image](media/atp-mini-profile.png)
+![[!INCLUDE [Product short](includes/product-short.md)] mini profile image](media/mini-profile.png)
 
 - Name
 - Title
@@ -108,14 +102,14 @@ If you hover your mouse over an entity, anywhere in the Azure ATP portal where t
 - Phone number
 - Domain
 - SAM name
-- Created on – When the entity was created in the Active Directory. If was created before Azure ATP started monitoring, it will not be displayed.
-- First seen – The first time Azure ATP observed an activity from this entity.
-- Last seen - The last time Azure ATP observed an activity from this entity.
+- Created on – When the entity was created in the Active Directory. If was created before [!INCLUDE [Product short](includes/product-short.md)] started monitoring, it will not be displayed.
+- First seen – The first time [!INCLUDE [Product short](includes/product-short.md)] observed an activity from this entity.
+- Last seen - The last time [!INCLUDE [Product short](includes/product-short.md)] observed an activity from this entity.
 - SA badge - Is displayed if there are suspicious activities associated with this entity.
-- WD ATP badge- Will be displayed if there are suspicious activities in Microsoft Defender ATP associated with this entity.
+- WD ATP badge- Will be displayed if there are suspicious activities in Microsoft Defender for Endpoint associated with this entity.
 - Lateral movement paths badge - Will be displayed if there have been lateral movement paths detected for this entity within the last two days.
 
 ## See Also
 
-- [Creating Azure ATP instances](install-step1.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Creating [!INCLUDE [Product short](includes/product-short.md)] instances](install-step1.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

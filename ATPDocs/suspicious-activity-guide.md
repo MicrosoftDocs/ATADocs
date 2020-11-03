@@ -1,48 +1,39 @@
 ---
 # required metadata
-
-title: Azure ATP security alert guide
-description: This article provides a list of the security alerts issued by Azure ATP.
+title: Microsoft Defender for Identity security alert guide
+description: This article provides a list of the security alerts issued by Microsoft Defender for Identity.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 04/23/2020
+ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Azure ATP Security Alerts
+# [!INCLUDE [Product long](includes/product-long.md)] Security Alerts
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
-> The Azure ATP features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
-Azure ATP security alerts explain the suspicious activities detected by Azure ATP sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+[!INCLUDE [Product long](includes/product-long.md)] security alerts explain the suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
-Azure ATP security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
+[!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
 
-  1. [Reconnaissance phase alerts](reconnaissance-alerts.md)
-  2. [Compromised credential phase alerts](compromised-credentials-alerts.md)
-  3. [Lateral movement phase alerts](lateral-movement-alerts.md)
-  4. [Domain dominance phase alerts](domain-dominance-alerts.md)
-  5. [Exfiltration phase alerts](exfiltration-alerts.md)
+1. [Reconnaissance phase alerts](reconnaissance-alerts.md)
+1. [Compromised credential phase alerts](compromised-credentials-alerts.md)
+1. [Lateral movement phase alerts](lateral-movement-alerts.md)
+1. [Domain dominance phase alerts](domain-dominance-alerts.md)
+1. [Exfiltration phase alerts](exfiltration-alerts.md)
 
-To learn more about the structure and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md).
+To learn more about the structure and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md).
 
 ## Security alert name mapping and unique external IDs
 
@@ -87,7 +78,6 @@ The following table lists the mapping between alert names, their corresponding u
 > |[Suspicious VPN connection](compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|2025|Medium|Persistence,<br>Defense evasion|
 > |[User and group membership reconnaissance (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Medium|Discovery|
 > |[User and IP address reconnaissance (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Medium|Discovery|
-
 
 # [Cloud App Security IDs](#tab/cloud-app-security)
 
@@ -139,4 +129,4 @@ The following table lists the mapping between alert names, their corresponding u
 
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Understanding security alerts](understanding-security-alerts.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

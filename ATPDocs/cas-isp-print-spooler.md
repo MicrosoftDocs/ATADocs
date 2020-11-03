@@ -1,34 +1,26 @@
 ---
 # required metadata
-
-title: Azure Advanced Threat Protection Print spooler identity security posture assessments
-description: This article provides an overview of Azure ATP's Print spooler identity security posture assessment reports.
+title: Microsoft Defender for Identity Print spooler identity security posture assessments
+description: This article provides an overview of Microsoft Defender for Identity's Print spooler identity security posture assessment reports.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
+
 # Security assessment: Domain controllers with Print spooler service available
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-![Disable Print spooler service](media/atp-cas-isp-print-spooler-1.png)
+![Disable Print spooler service](media/cas-isp-print-spooler-1.png)
 
 ## What is the **Print spooler** service?
 
@@ -36,7 +28,7 @@ Print spooler is a software service that manages printing processes. The spooler
 
 ## What risks does the **Print spooler** service on domain controllers introduce?
 
-While seemingly harmless, any authenticated user can remotely connect to a domain controllers print spooler service, and request an update on new print jobs. In addition, users can tell the domain controller to send the notification to the system with [unconstrained delegation](cas-isp-unconstrained-kerberos.md). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM).
+While seemingly harmless, any authenticated user can remotely connect to a domain controllers print spooler service, and request an update on new print jobs. Also, users can tell the domain controller to send the notification to the system with [unconstrained delegation](cas-isp-unconstrained-kerberos.md). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM).
 
 Due to the possibility for exposure, domain controllers and Active Directory admin systems need to have the **Print spooler** service disabled. The recommended way to do this is using a Group Policy Object (GPO).
 
@@ -49,7 +41,7 @@ While this security assessment focuses on domain controllers, any server is pote
 
 1. Use the report table to discover which of your domain controllers has the **Print spooler** service enabled.
 
-    ![Disable Print spooler service security assessment](media/atp-cas-isp-print-spooler-2.png)
+    ![Disable Print spooler service security assessment](media/cas-isp-print-spooler-2.png)
 1. Take appropriate action on the at-risk domain controllers and actively remove the Print spooler service either manually, through GPO or other types of remote commands.
 
 > [!NOTE]
@@ -61,5 +53,5 @@ Fix this specific issue by disabling the Print Spooler service on all servers th
 
 ## Next steps
 
-- [Azure ATP activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

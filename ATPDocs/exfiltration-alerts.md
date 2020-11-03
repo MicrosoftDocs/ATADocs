@@ -1,50 +1,41 @@
 ---
 # required metadata
-
-title: Azure ATP exfiltration alerts tutorial
-description: This article explains the Azure ATP alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
+title: Microsoft Defender for Identity exfiltration alerts tutorial
+description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/01/2020
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Tutorial: Exfiltration alerts
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Typically, cyber attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](reconnaissance-alerts.md)
-2. [Compromised credentials](compromised-credentials-alerts.md)
-3. [Lateral Movements](lateral-movement-alerts.md)
-4. [Domain dominance](domain-dominance-alerts.md)
-5. **Exfiltration**
+1. [Compromised credentials](compromised-credentials-alerts.md)
+1. [Lateral Movements](lateral-movement-alerts.md)
+1. [Domain dominance](domain-dominance-alerts.md)
+1. **Exfiltration**
 
-To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by Azure ATP in your network. In this tutorial, learn to understand, classify, prevent, and remediate the following attacks:
+The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, learn to understand, classify, prevent, and remediate the following attacks:
 
 > [!div class="checklist"]
 >
-> * Suspicious communication over DNS (external ID 2031)
-> * Data exfiltration over SMB (external ID 2030)
+> - Suspicious communication over DNS (external ID 2031)
+> - Data exfiltration over SMB (external ID 2030)
 
 ## Suspicious communication over DNS (external ID 2031)
 
@@ -78,13 +69,13 @@ Some companies legitimately use DNS for regular communication. To determine the 
 1. If after your investigation, the registered query domain remains not trusted, we recommend blocking the destination domain to avoid all future communication.
 
 > [!NOTE]
-> *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by Azure ATP but are known to or part of your organization can be closed.
+> *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by [!INCLUDE [Product short](includes/product-short.md)] but are known to or part of your organization can be closed.
 
 ## Data exfiltration over SMB (external ID 2030)
 
 **Description**
 
-Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. An Azure ATP **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
+Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. A [!INCLUDE [Product short](includes/product-short.md)] **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
 
 **TP, B-TP, or FP**
 
@@ -121,4 +112,4 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

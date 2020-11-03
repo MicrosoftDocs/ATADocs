@@ -1,54 +1,46 @@
 ---
 # required metadata
-
-title: Install Azure Advanced Threat Protection Silently
-description: This describes how to silently install Azure ATP.
+title: Install Microsoft Defender for Identity Silently
+description: This describes how to silently install Microsoft Defender for Identity.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 07/27/2020
+ms.date: 10/27/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
-# Azure ATP switches and silent installation
+
+# [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-This article provides guidance and instructions for Azure ATP switches and silent installation.
+This article provides guidance and instructions for [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation.
 
 ## Prerequisites
 
-Azure ATP requires the installation of Microsoft .NET Framework 4.7 or later.
+[!INCLUDE [Product short](includes/product-short.md)] requires the installation of Microsoft .NET Framework 4.7 or later.
 
-When you install Azure ATP, .Net Framework 4.7 is automatically installed as part of the deployment of Azure ATP if .Net Framework 4.7 or later is not installed already.
-
-> [!NOTE]
-> The installation of .Net framework 4.7 may require rebooting the server. When installing the Azure ATP sensor on domain controllers, consider scheduling a maintenance window for the domain controllers.
-
-Using Azure ATP silent installation, the installer is configured to automatically restart the server at the end of the installation (if necessary). Make sure to run silent installation only during a maintenance window. Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart.
-
-To track your deployment progress, monitor the Azure ATP installer logs, which are located in `%AppData%\Local\Temp`.
-
-## Azure ATP sensor silent installation
+When you install [!INCLUDE [Product short](includes/product-short.md)], .Net Framework 4.7 is automatically installed as part of the deployment of [!INCLUDE [Product short](includes/product-short.md)] if .Net Framework 4.7 or later is not installed already.
 
 > [!NOTE]
-> When silently deploying the Azure ATP sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- Azure ATP sensor. </br>Make the Azure ATP sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
+> The installation of .Net framework 4.7 may require rebooting the server. When installing the [!INCLUDE [Product short](includes/product-short.md)] sensor on domain controllers, consider scheduling a maintenance window for the domain controllers.
 
-Use the following command to perform a fully silent install of the Azure ATP sensor:
+Using [!INCLUDE [Product short](includes/product-short.md)] silent installation, the installer is configured to automatically restart the server at the end of the installation (if necessary). Make sure to run silent installation only during a maintenance window. Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart.
+
+To track your deployment progress, monitor the [!INCLUDE [Product short](includes/product-short.md)] installer logs, which are located in `%AppData%\Local\Temp`.
+
+## [!INCLUDE [Product short](includes/product-short.md)] sensor silent installation
+
+> [!NOTE]
+> When silently deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- [!INCLUDE [Product short](includes/product-short.md)] sensor. </br>Make the [!INCLUDE [Product short](includes/product-short.md)] sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
+
+Use the following command to perform a fully silent install of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
 **cmd.exe syntax**:
 
@@ -66,7 +58,7 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 > When using the Powershell syntax, omitting the **./** preface results in an error that prevents silent installation.
 
 > [!NOTE]
-> Copy the access key from the Azure ATP portal **Configuration** section, **Sensor** page.
+> Copy the access key from the [!INCLUDE [Product short](includes/product-short.md)] portal **Configuration** section, **Sensors** page.
 
 **Installation options**:
 
@@ -84,12 +76,12 @@ Use the following command to perform a fully silent install of the Azure ATP sen
 >
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |InstallationPath|InstallationPath=""|No|Sets the path for the installation of AATP Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
-> |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Azure ATP sensor with the Azure ATP instance.|
+> |InstallationPath|InstallationPath=""|No|Sets the path for the installation of [!INCLUDE [Product short](includes/product-short.md)] Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
+> |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the [!INCLUDE [Product short](includes/product-short.md)] sensor with the [!INCLUDE [Product short](includes/product-short.md)] instance.|
 
 **Examples**:
 
-Use the following command to silently install the Azure ATP sensor:
+Use the following command to silently install the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
@@ -105,13 +97,13 @@ Use the following commands to complete proxy authentication:
 >
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Azure ATP sensor.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Azure ATP sensor.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
 
-## Update the Azure ATP sensor
+## Update the [!INCLUDE [Product short](includes/product-short.md)] sensor
 
-Use the following command to silently update the Azure ATP sensor:
+Use the following command to silently update the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
 **Syntax**:
 
@@ -131,15 +123,15 @@ Use the following command to silently update the Azure ATP sensor:
 
 **Examples**:
 
-To update the Azure ATP sensor silently:
+To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silently:
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
-## Uninstall the Azure ATP sensor silently
+## Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently
 
-Use the following command to perform a silent uninstall of the Azure ATP sensor:
+Use the following command to perform a silent uninstall of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
 **Syntax**:
 
@@ -154,12 +146,12 @@ Use the following command to perform a silent uninstall of the Azure ATP sensor:
 > |Name|Syntax|Mandatory for silent uninstallation?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Azure ATP sensor from the server.|
+> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server.|
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Examples**:
 
-To silently uninstall the Azure ATP sensor from the server:
+To silently uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server:
 
 ```dos
 "Azure ATP sensor Setup.exe" /quiet /uninstall
@@ -167,7 +159,7 @@ To silently uninstall the Azure ATP sensor from the server:
 
 ## See Also
 
-- [Azure ATP prerequisites](prerequisites.md)
-- [Install the Azure ATP sensor](install-step4.md)
-- [Configure the Azure ATP sensor](install-step5.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [Install the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md)
+- [Configure the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step5.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

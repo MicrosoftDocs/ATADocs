@@ -1,77 +1,68 @@
 ---
 # required metadata
-
-title: Install Azure Advanced Threat Protection
-description: In this step of installing ATP, you configure data sources.
+title: Install Microsoft Defender for Identity
+description: In this step of installing Microsoft Defender for Identity, you configure data sources.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/19/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Configure event collection
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-To enhance detection capabilities, Azure ATP needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the Azure ATP sensor or in case the Azure ATP sensor is not deployed, it can be forwarded to the Azure ATP standalone sensor in one of two ways, by configuring the Azure ATP standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance detection capabilities, [!INCLUDE [Product long](includes/product-long.md)] needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or in case the [!INCLUDE [Product short](includes/product-short.md)] sensor is not deployed, it can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of two ways, by configuring the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
 >
-> - Azure ATP standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Azure ATP sensor.
-> - It is important to run the Azure ATP auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events.
+> - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> - It is important to run the [!INCLUDE [Product short](includes/product-short.md)] auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, Azure ATP can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Azure ATP with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
 
 ## NTLM authentication using Windows Event 8004
 
 To configure Windows Event 8004 collection:
 
-1. Navigate to: Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options
+1. Navigate to: *Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options*
 1. Set the **domain group policy** as follows:
     - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
     - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
     - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
 
-When Windows Event 8004 is parsed by Azure ATP Sensor, Azure ATP NTLM authentications activities are enriched with the server accessed  data.
+When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed  data.
 
 ## SIEM/Syslog
 
-Azure ATP Standalone sensors are configured by default to receive Syslog data. For Azure ATP Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
+[!INCLUDE [Product short](includes/product-short.md)] Standalone sensors are configured by default to receive Syslog data. For [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
 
 > [!NOTE]
-> Azure ATP only listens on IPv4 and not IPv6.
+> [!INCLUDE [Product short](includes/product-short.md)] only listens on IPv4 and not IPv6.
 
 > [!IMPORTANT]
 >
-> - Do not forward all the Syslog data to the Azure ATP sensor.
-> - Azure ATP supports UDP traffic from the SIEM/Syslog server.
+> - Do not forward all the Syslog data to the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> - [!INCLUDE [Product short](includes/product-short.md)] supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server.
 
 > [!NOTE]
-> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by Azure ATP.
+> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by [!INCLUDE [Product short](includes/product-short.md)].
 
-## Configuring the Azure ATP sensor to listen for SIEM events
+## Configuring the [!INCLUDE [Product short](includes/product-short.md)] sensor to listen for SIEM events
 
-- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the Azure ATP Standalone sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
-Azure ATP supports SIEM events in the following formats:
+[!INCLUDE [Product short](includes/product-short.md)] supports SIEM events in the following formats:
 
 ### RSA Security Analytics
 
@@ -82,7 +73,7 @@ Azure ATP supports SIEM events in the following formats:
 - "\n" character separator is required between all fields.
 - The fields, in order, are:
     1. RsaSA constant (must appear).
-    2. The timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). Preferably in milliseconds accuracy, this is important.
+    2. The timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably in milliseconds accuracy, this is important.
     3. The Windows event ID
     4. The Windows event provider name
     5. The Windows event log name
@@ -102,7 +93,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 - The header part (the part that's separated by a pipe) must exist (as stated in the protocol).
 - The following keys in the _Extension_ part must be present in the event:
   - externalId = the Windows event ID
-  - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). Preferably  in milliseconds accuracy, this is important.
+  - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably  in milliseconds accuracy, this is important.
   - cat = the Windows event log name
   - shost = the source host name
   - dhost = the computer receiving the event (the DC in this case)
@@ -134,7 +125,7 @@ Error Code: 0x0
   - EventCode = the Windows event ID
   - Logfile = the Windows event log name
   - SourceName = The Windows event provider name
-  - TimeGenerated = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
+  - TimeGenerated = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
   - ComputerName = the source host name
   - Message = the original event text from the Windows event
 - The Message Key and value MUST be last.
@@ -142,7 +133,7 @@ Error Code: 0x0
 
 ### QRadar
 
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because Azure ATP necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because [!INCLUDE [Product short](includes/product-short.md)] necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
 ```text
 <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -157,7 +148,7 @@ The fields needed are:
 - The DC fully qualified domain name
 - The Windows event ID
 
-TimeGenerated is the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to ATP). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
+TimeGenerated is the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
 
 Message is the original event text from the Windows event
 
@@ -168,7 +159,7 @@ Make sure to have \t between the key=value pairs.
 
 ## See Also
 
-- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
-- [Azure ATP SIEM log reference](cef-format-sa.md)
-- [Azure ATP prerequisites](prerequisites.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

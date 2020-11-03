@@ -1,35 +1,26 @@
 ---
 # required metadata
-
-title: Azure ATP reconnaissance phase security alerts
-description: This article explains the Azure ATP alerts issued when attacks typically part of reconnaissance phase efforts are detected against your organization.
+title: Microsoft Defender for Identity reconnaissance phase security alerts
+description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of reconnaissance phase efforts are detected against your organization.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/31/2020
+ms.date: 10/27/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Tutorial: Reconnaissance alerts
 
 [!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. **Reconnaissance**
 1. [Compromised credentials](compromised-credentials-alerts.md)
@@ -37,9 +28,9 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Domain dominance](domain-dominance-alerts.md)
 1. [Exfiltration](exfiltration-alerts.md)
 
-To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Reconnaissance** phase suspicious activities detected by Azure ATP in your network.
+The following security alerts help you identify and remediate **Reconnaissance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
 In this tutorial, learn how to understand, classify, remediate, and prevent the following types of attacks:
 
@@ -64,7 +55,7 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 **NTLM**: Attacker makes NTLM authentication requests using the dictionary of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the **WrongPassword (0xc000006a)** instead of **NoSuchUser (0xc0000064)** NTLM error.
 
-In this alert detection, Azure ATP detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Azure ATP detects it as a suspicious activity.
+In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, [!INCLUDE [Product short](includes/product-short.md)] detects it as a suspicious activity.
 
 **Learning period**
 
@@ -115,7 +106,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
     > [!NOTE]
     > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access.  
     > Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account attempted to access.  
-    > Azure ATP captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name. Using Windows Event 4776 to capture this information, the information source field is occasionally overwritten by the device or software and only displays Workstation or MSTSC as the information source. In addition, the source computer might not actually exist on your network. This is possible because adversaries commonly target open, internet-accessible servers from outside the network and then use it to enumerate your users. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the domain controllers to get the accessed resource server name. You should also investigate this server, check if it is opened to the internet, and if you can, close it.
+    > [!INCLUDE [Product short](includes/product-short.md)] captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name. Using Windows Event 4776 to capture this information, the information source field is occasionally overwritten by the device or software and only displays Workstation or MSTSC as the information source. In addition, the source computer might not actually exist on your network. This is possible because adversaries commonly target open, internet-accessible servers from outside the network and then use it to enumerate your users. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the domain controllers to get the accessed resource server name. You should also investigate this server, check if it is opened to the internet, and if you can, close it.
 
 1. When you learn which server sent the authentication validation, investigate the server by checking events, such as Windows Event 4624, to better understand the authentication process.
 
@@ -146,7 +137,7 @@ Not applicable
         - If yes, close the security alert as an **FP**. If it's an ongoing activity, exclude the suspicious activity.
 1. Click on the source computer and go to its profile page.
     - Look for any unusual activities that occurred around the time of the queries such as the following types of search: logged in users, accessed resources, and other probing queries.
-    - If Microsoft Defender ATP integration is enabled, click on its icon to further investigate the machine.
+    - If Microsoft Defender for Endpoint integration is enabled, click on its icon to further investigate the machine.
         - Look for unusual processes and alerts that occurred around the time of the queries
 1. Check exposed accounts.
     - Look for unusual activities.
@@ -176,7 +167,7 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack.
 
-There are several query types in the DNS protocol. This Azure ATP security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive amount of requests.
+There are several query types in the DNS protocol. This [!INCLUDE [Product short](includes/product-short.md)] security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive amount of requests.
 
 **Learning period**
 
@@ -187,7 +178,7 @@ This alert has a learning period of 8 days from the start of domain controller m
 1. Check if the source computer is a DNS server.
 
     - If the source computer **is** a DNS server, close the security alert as an **FP**.
-    - To prevent future **FPs**, verify that UDP port 53 is **open** between the Azure ATP sensor and the source computer.
+    - To prevent future **FPs**, verify that UDP port 53 is **open** between the [!INCLUDE [Product short](includes/product-short.md)] sensor and the source computer.
 
 Security scanners and legitimate applications can  generate DNS queries.
 
@@ -219,7 +210,7 @@ It is important to preventing future attacks using AXFR queries by securing your
 
 Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
-In order to allow Azure ATP to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Azure ATP deployment. Once the Azure ATP initial learning phase is completed, alerts are generated on computers which perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
+In order to allow [!INCLUDE [Product short](includes/product-short.md)] to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following [!INCLUDE [Product short](includes/product-short.md)] deployment. Once the [!INCLUDE [Product short](includes/product-short.md)] initial learning phase is completed, alerts are generated on computers which perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
 
 **Learning period**
 
@@ -252,7 +243,7 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 1. [Replace the user account by Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
-> Security principal reconnaissance (LDAP) alerts are supported by ATP sensors only.
+> Security principal reconnaissance (LDAP) alerts are supported by [!INCLUDE [Product short](includes/product-short.md)] sensors only.
 
 ## User and Group membership reconnaissance (SAMR) (external ID 2021)
 
@@ -261,7 +252,7 @@ In order to allow Azure ATP to accurately profile and learn legitimate users, no
 **Description**
 
 User and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
-In this detection, no alerts are triggered in the first month after Azure ATP is deployed (learning period). During the learning period, Azure ATP profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts.
+In this detection, no alerts are triggered in the first month after [!INCLUDE [Product short](includes/product-short.md)] is deployed (learning period). During the learning period, [!INCLUDE [Product short](includes/product-short.md)] profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts.
 
 **Learning period**
 
@@ -323,7 +314,7 @@ Security scanners and applications may legitimately query domain controllers for
 Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
 
 > [!NOTE]
-> To disable any Azure ATP security alert, contact support.
+> To disable any [!INCLUDE [Product short](includes/product-short.md)] security alert, contact support.
 
 > [!div class="nextstepaction"]
 > [Compromised credential alert tutorial](compromised-credentials-alerts.md)
@@ -337,6 +328,6 @@ Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blockin
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
-- [Azure ATP SIEM log reference](cef-format-sa.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](use-case-lateral-movement-path.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

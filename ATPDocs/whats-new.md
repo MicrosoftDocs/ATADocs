@@ -1,41 +1,44 @@
 ---
 # required metadata
-
-title: What's new in Azure Advanced Threat Protection (Azure ATP)
-description: This article is updated frequently to let you know what's new in the latest release of Azure Advanced Threat Protection (Azure ATP).
+title: What's new in Microsoft Defender for Identity
+description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/18/2020
+ms.date: 10/27/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 
-
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: ort
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# What's new in Azure Advanced Threat Protection (Azure ATP)
+# What's new in [!INCLUDE [Product long](includes/product-long.md)]
 
-This article is updated frequently to let you know what's new in the latest releases of Azure ATP.
+This article is updated frequently to let you know what's new in the latest releases of [!INCLUDE [Product long](includes/product-long.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP).
 
-For details of earlier Azure ATP releases until (and including) release 2.55, see the [Azure ATP release reference](release-reference.md).
+For details of earlier [!INCLUDE [Product short](includes/product-short.md)] releases until (and including) release 2.55, see the [[!INCLUDE [Product short](includes/product-short.md)] release reference](release-reference.md).
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
 > [!IMPORTANT]
 >
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.127 onwards.
+> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
+
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.131
+
+Released November 1, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.130
+
+Released October 25, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.129
 
@@ -495,7 +498,8 @@ Manual Sensitive tagging for Exchange Servers
     You can now manually tag entities as Exchange Servers during configuration.
 
     To manually tag an entity as an Exchange Server:
-    1. In the Azure ATP portal, access the **Configuration** menu.
+
+    1. In the Azure ATP portal, select **Configuration**.
     2. Under **Detection**, select **Entity tags**, then select **Sensitive**.
     3. Select **Exchange Servers** and then add the entity you wish to tag.
 
@@ -818,12 +822,12 @@ Additions and updates were made to Azure ATP articles describing Lateral Movemen
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
-For details of each Azure ATP release prior to (and including) release 2.55, see the [Azure ATP release reference](release-reference.md).
+For details of each [!INCLUDE [Product short](includes/product-short.md)] release prior to (and including) release 2.55, see the [[!INCLUDE [Product short](includes/product-short.md)] release reference](release-reference.md).
 
 ## See Also
 
-- [What is Azure Advanced Threat Protection?](what-is.md)
+- [What is [!INCLUDE [Product long](includes/product-long.md)]?](what-is.md)
 - [Frequently asked questions](technical-faq.md)
-- [Azure ATP prerequisites](prerequisites.md)
-- [Azure ATP capacity planning](capacity-planning.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
