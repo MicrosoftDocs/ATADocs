@@ -32,6 +32,8 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 Released November 1, 2020
 
+- **New security alert:  Suspected Kerberos SPN exposure (external ID 2410)**  
+[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, an Azure ATP security alert is triggered after an attacker completes the enumeration of service accounts and their respective SPNs, requests a Kerberos TGS ticket for the services, extracts the hashes from the tickets, and saves them for later use in an offline brute force attack. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#kerberos-spn-exposure-external-id-2410).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.130
@@ -50,7 +52,8 @@ Released October 18, 2020
 
 Released September 27, 2020
 
-- We are removing the **Mail notification** toggles for turning on email notifications. To receive email notifications, simply add an address. For more information, see [Set notifications](notifications.md).
+- **Modified email notifications configuration**  
+We are removing the **Mail notification** toggles for turning on email notifications. To receive email notifications, simply add an address. For more information, see [Set notifications](notifications.md).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Azure ATP release 2.127
