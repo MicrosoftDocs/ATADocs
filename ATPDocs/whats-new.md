@@ -28,6 +28,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+<!--
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.131
 
 Released November 1, 2020
@@ -35,6 +36,7 @@ Released November 1, 2020
 - **New security alert:  Suspected Kerberos SPN exposure (external ID 2410)**  
 [!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attackers intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
+-->
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.130
 
