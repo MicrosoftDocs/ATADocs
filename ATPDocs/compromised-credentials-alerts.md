@@ -34,14 +34,15 @@ The following security alerts help you identify and remediate **Compromised cred
 
 > [!div class="checklist"]
 >
-> - Honeytoken activity (external ID 2014)
-> - Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
-> - Suspected Brute Force attack (LDAP) (external ID 2004)
-> - Suspected Brute Force attack (SMB) (external ID 2033)
-> - Suspected Netlogon privilege elevation attempt (external ID 2411)
-> - Suspected WannaCry ransomware attack (external ID 2035)
-> - Suspected use of Metasploit hacking framework (external ID 2034)
-> - Suspicious VPN connection (external ID 2025)
+> - [Honeytoken activity (external ID 2014)](#honeytoken-activity-external-id-2014)
+> - [Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)](#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)
+> - [Suspected Brute Force attack (LDAP) (external ID 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
+> - [Suspected Brute Force attack (SMB) (external ID 2033)](#suspected-brute-force-attack-smb-external-id-2033)
+> - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
+> - [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](#suspected-netlogon-priv-elev-2411)
+> - [Suspected WannaCry ransomware attack (external ID 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
+> - [Suspected use of Metasploit hacking framework (external ID 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
+> - [Suspicious VPN connection (external ID 2025)](#suspicious-vpn-connection-external-id-2025)
 
 ## Honeytoken activity (external ID 2014)
 
@@ -180,7 +181,7 @@ Attackers use tools that implement various protocols such as SMB, Kerberos, and 
 **TP, B-TP, or FP**
 
 1. Check if the source computer is running an attack tool such as Hydra.
-    1. If the source computer is running an attack tool, this alert is a **TP**. Follow the instructions in **understand the scope of the breach**, above.
+    1. If the source computer is running an attack tool, this alert is a **TP**. Follow the instructions in **Understand the scope of the breach**.
 
 Occasionally, applications implement their own NTLM or SMB stack.
 
@@ -203,9 +204,37 @@ Occasionally, applications implement their own NTLM or SMB stack.
 1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+## Suspected Kerberos SPN exposure (external ID 2410)
+
+**Description**
+
+Attackers use tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.
+
+**Learning period**
+
+None
+
+**TP, B-TP, or FP**
+
+1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
+    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
+    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
+
+**Understand the scope of the breach**
+
+1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
+1. Investigate the [source computer](investigate-a-computer.md).
+
+**Remediation:**
+
+1. Contain the source computer.
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+
 <a name="suspected-netlogon-priv-elev-2411"></a>
 
-## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)
+## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)
 
 Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) announcing that a new vulnerability exists that allows elevation of privileges to the domain controller.
 
