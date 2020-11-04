@@ -43,7 +43,7 @@ The following security alerts help you identify and remediate **Domain dominance
 > - Suspected Golden Ticket usage (forged authorization data) (external ID 2013)
 > - Suspected Golden Ticket usage (nonexistent account) (external ID 2027)
 > - Suspected Golden Ticket usage (ticket anomaly) (external ID 2032)
-> - Suspected golden ticket usage (ticket anomaly using RBCD) (external ID 2040)
+> - Suspected Golden Ticket usage (ticket anomaly using RBCD) (external ID 2040)
 > - Suspected Golden Ticket usage (time anomaly) (external ID 2022)
 > - Suspected Skeleton Key attack (encryption downgrade) (external ID 2010)
 > - Suspicious additions to sensitive groups (external ID 2024)
@@ -475,7 +475,7 @@ Federation services might generate tickets that will trigger this alert.
 
     **Plan carefully before performing a KRBTGT double reset. The reset impacts all computers, servers, and users in the environment.**
 
-## Suspected golden ticket usage (ticket anomaly using RBCD) (external ID 2040)
+## Suspected Golden Ticket usage (ticket anomaly using RBCD) (external ID 2040)
 
 **Description**
 
