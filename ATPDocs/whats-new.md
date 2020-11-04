@@ -33,7 +33,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 Released November 1, 2020
 
 - **New security alert:  Suspected Kerberos SPN exposure (external ID 2410)**  
-[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, an Azure ATP security alert is triggered after an attacker completes the enumeration of service accounts and their respective SPNs, requests a Kerberos TGS ticket for the services, extracts the hashes from the tickets, and saves them for later use in an offline brute force attack. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#kerberos-spn-exposure-external-id-2410).
+[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, an Azure ATP security alert is triggered after an attacker completes the enumeration of service accounts and their respective SPNs, requests a Kerberos TGS ticket for the services, extracts the hashes from the tickets, and saves them for later use in an offline brute force attack. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.130
