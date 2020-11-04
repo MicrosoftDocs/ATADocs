@@ -204,6 +204,7 @@ Occasionally, applications implement their own NTLM or SMB stack.
 1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+<!--
 ## Suspected Kerberos SPN exposure (external ID 2410)
 
 **Description**
@@ -231,6 +232,7 @@ None
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+-->
 
 <a name="suspected-netlogon-priv-elev-2411"></a>
 
