@@ -38,14 +38,11 @@ The following security alerts help you identify and remediate **Compromised cred
 > - [Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)](#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)
 > - [Suspected Brute Force attack (LDAP) (external ID 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
 > - [Suspected Brute Force attack (SMB) (external ID 2033)](#suspected-brute-force-attack-smb-external-id-2033)
+> - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
 > - [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](#suspected-netlogon-priv-elev-2411)
 > - [Suspected WannaCry ransomware attack (external ID 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspected use of Metasploit hacking framework (external ID 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Suspicious VPN connection (external ID 2025)](#suspicious-vpn-connection-external-id-2025)
-
-<!--
-> - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
--->
 
 ## Honeytoken activity (external ID 2014)
 
@@ -207,7 +204,6 @@ Occasionally, applications implement their own NTLM or SMB stack.
 1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-<!--
 ## Suspected Kerberos SPN exposure (external ID 2410)
 
 **Description**
@@ -235,7 +231,6 @@ None
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
--->
 
 <a name="suspected-netlogon-priv-elev-2411"></a>
 
