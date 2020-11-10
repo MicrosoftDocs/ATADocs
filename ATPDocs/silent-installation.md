@@ -51,7 +51,7 @@ Use the following command to perform a fully silent install of the [!INCLUDE [Pr
 **Powershell syntax**:
 
 ```powershell
-./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+.\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
 > [!NOTE]
