@@ -132,7 +132,7 @@ Error Code: 0x0
 
 - Syslog header is optional.
 
-- There's a "\r\n" character separator between all required fields.
+- There's a "\r\n" character separator between all required fields. Note that these are the control characters CRLF (0D0A in hex) and not literal characters.
 - The fields are in key=value format.
 - The following keys must exist and have a value:
   - EventCode = the Windows event ID
