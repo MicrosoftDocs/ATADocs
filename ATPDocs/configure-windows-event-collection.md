@@ -29,7 +29,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 - 4729 - Member Removed from Global Security Group
 - 4730 - Global Security Group Deleted
 - 4732 - Member Added to Local Security Group
-- 4733 - Member Removed from Global Security Group
+- 4733 - Member Removed from Local Security Group
 - 4743 - Computer Account Deleted
 - 4753 - Global Distribution Group Deleted
 - 4756 - Member Added to Universal Security Group
