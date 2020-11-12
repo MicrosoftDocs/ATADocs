@@ -57,7 +57,7 @@ For complete user investigation features across the hybrid environment, you must
 > - If you don't have a subscription for Cloud App Security, you will still be able to use the Cloud App Security portal to investigate [!INCLUDE [Product short](includes/product-short.md)] alerts and deep dive on users and their on-premise managed activities, but you won't receive related insights from your cloud applications.
 > - [!INCLUDE [Product short](includes/product-short.md)] administrators may require new permissions to access Cloud App Security. To learn how to assign permissions to Cloud App Security, see [Manage admin access](/cloud-app-security/manage-admins).
 
-See [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/aatp-integration) to learn how to quickly enable [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security.
+See [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/mdi-integration) to learn how to quickly enable [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security.
 
 ## [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security
 
