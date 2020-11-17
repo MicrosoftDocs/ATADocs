@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The Advanced Threat Analytics architecture is detailed in this diagram:
 
 ![ATA architecture topology diagram](media/ATA-architecture-topology.jpg)

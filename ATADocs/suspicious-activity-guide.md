@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 Following proper investigation, any suspicious activity can be classified as:
 
 - **True positive**: A malicious action detected by ATA.
