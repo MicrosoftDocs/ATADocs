@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The configuration of ATA is stored in the "SystemProfile" collection in the database.
 This collection is backed up every 4 hours by the ATA Center service to files called: **SystemProfile_*timestamp*.json**. The 300 most recent versions are stored.
 This file is located in a subfolder called **Backup**. In the default ATA installed location it can be found here:  <em>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_</em>timestamp<em>.json</em>. 

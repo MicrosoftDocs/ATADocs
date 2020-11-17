@@ -31,8 +31,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The ATA Center event viewer logs events for ATA. This article provides a list of event IDs and provides a description of each.
 
 The events can be found here:

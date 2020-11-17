@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article explains the basics of how to work with Advanced Threat Analytics.
 
 ## Review suspicious activities on the attack time line

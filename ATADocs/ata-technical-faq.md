@@ -28,8 +28,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 ## Where can I get a license for Advanced Threat Analytics (ATA)?

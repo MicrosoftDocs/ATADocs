@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The ATA logs provide insight into what each component of ATA is doing at any given point in time.
 
 ## ATA Gateway logs

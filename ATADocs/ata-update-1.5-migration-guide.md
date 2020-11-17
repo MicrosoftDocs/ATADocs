@@ -27,7 +27,6 @@ ms.suite: ems
 
 # ATA update to 1.5 migration guide
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 The update to ATA 1.5 provides improvements in the following areas:
 
 - Faster detection times
