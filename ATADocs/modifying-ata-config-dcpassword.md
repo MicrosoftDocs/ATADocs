@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## Change the domain connectivity password
 
 If you modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the ATA Gateway service stops running on the ATA Gateways.

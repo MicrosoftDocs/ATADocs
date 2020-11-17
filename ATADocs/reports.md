@@ -30,8 +30,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The ATA reports section in the console enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
 To access the reports page, click the report icon in the menu bar: ![report icon](media/ata-report-icon.png).

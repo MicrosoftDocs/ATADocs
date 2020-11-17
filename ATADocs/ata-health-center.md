@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## ATA Health Center
 
 The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.

@@ -28,8 +28,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article provides information about available Advanced Threat Analytics versions and how to upgrade ATA depending on which version you have running.
 
 ## ATA versions

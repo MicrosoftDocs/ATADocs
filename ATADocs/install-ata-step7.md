@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!div class="step-by-step"]
 > [« Step 7](vpn-integration-install-step.md)
 > [Step 9 »](install-ata-step9-samr.md)
