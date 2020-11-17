@@ -1,46 +1,38 @@
 ---
 # required metadata
-
-title: Understanding Azure ATP health alerts
+title: Understanding Microsoft Defender for Identity health alerts
 description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 05/17/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
-
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Understanding Azure ATP sensor health alerts
+# Understanding [!INCLUDE [Product long](includes/product-long.md)] sensor health alerts
 
-The Azure ATP Health Center lets you know when there's a problem with your Azure ATP instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
+The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you know when there's a problem with your [!INCLUDE [Product short](includes/product-short.md)] instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
 ## All domain controllers are unreachable by a sensor
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts Azure ATP's ability to detect suspicious activities related to domain controllers monitored by this Azure ATP sensor.| Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a directory service account for every deployed forest.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s ability to detect suspicious activities related to domain controllers monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.| Make sure the domain controllers are up and running and that this [!INCLUDE [Product short](includes/product-short.md)] sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a directory service account for every deployed forest.|Medium|
 
 ## All/Some of the capture network adapters on a sensor are not available
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|All/Some of the selected capture network adapters on the Azure ATP sensor are disabled or disconnected.|Network traffic for some/all of the domain controllers is no longer captured by the Azure ATP sensor. This impacts the ability to detect suspicious activities, related to those domain controllers.|Make sure these selected capture network adapters on the Azure ATP sensor are enabled and connected.|Medium|
+|All/Some of the selected capture network adapters on the [!INCLUDE [Product short](includes/product-short.md)] sensor are disabled or disconnected.|Network traffic for some/all of the domain controllers is no longer captured by the [!INCLUDE [Product short](includes/product-short.md)] sensor. This impacts the ability to detect suspicious activities, related to those domain controllers.|Make sure these selected capture network adapters on the [!INCLUDE [Product short](includes/product-short.md)] sensor are enabled and connected.|Medium|
 
 ## Directory services user credentials are incorrect
 
@@ -52,86 +44,86 @@ The Azure ATP Health Center lets you know when there's a problem with your Azure
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The listed Azure ATP sensors are failing to resolve IP addresses to device names more than 90% of the time using the following methods:<br />- NTLM over RPC<br />- NetBIOS<br />- Reverse DNS|This impacts Azure ATP's detections capabilities and might increase the amount of false positive alarms.|- For NTLM over RPC: Check that port 135 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />- For reverse DNS: Check that the sensors can reach the DNS server and that Reverse Lookup Zones are enabled.<br />- For NetBIOS: Check that port 137 is open for inbound communication from Azure ATP sensors on all computers in the environment.<br />Additionally, make sure that the network configuration (such as firewalls) is not preventing communication to the relevant ports.|Low|
+|The listed [!INCLUDE [Product short](includes/product-short.md)] sensors are failing to resolve IP addresses to device names more than 90% of the time using the following methods:<br />- NTLM over RPC<br />- NetBIOS<br />- Reverse DNS|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s detections capabilities and might increase the amount of false positive alarms.|- For NTLM over RPC: Check that port 135 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] sensors on all computers in the environment.<br />- For reverse DNS: Check that the sensors can reach the DNS server and that Reverse Lookup Zones are enabled.<br />- For NetBIOS: Check that port 137 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] sensors on all computers in the environment.<br />Additionally, make sure that the network configuration (such as firewalls) is not preventing communication to the relevant ports.|Low|
 
 ## No traffic received from domain controller
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|No traffic was received from the domain controller via this Azure ATP sensor.|This might indicate that port mirroring from the domain controllers to the Azure ATP sensor is not configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the Azure ATP sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|
+|No traffic was received from the domain controller via this [!INCLUDE [Product short](includes/product-short.md)] sensor.|This might indicate that port mirroring from the domain controllers to the [!INCLUDE [Product short](includes/product-short.md)] sensor is not configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the [!INCLUDE [Product short](includes/product-short.md)] sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|
 
 ## Read-only user password to expire shortly
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Azure ATP sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the Azure ATP portal.|Medium|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the [!INCLUDE [Product short](includes/product-short.md)] sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the [!INCLUDE [Product short](includes/product-short.md)] portal.|Medium|
 
 ## Read-only user password expired
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the Azure ATP sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the Azure ATP portal.|High|
+|The read-only user password, used to get directory data, expired.|All the [!INCLUDE [Product short](includes/product-short.md)] sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the [!INCLUDE [Product short](includes/product-short.md)] portal.|High|
 
 ## Sensor outdated
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|An Azure ATP sensor is outdated.|An Azure ATP sensor is running a version that cannot communicate with the Azure ATP cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the Azure ATP sensor](install-step4.md).|Medium|
+|A [!INCLUDE [Product short](includes/product-short.md)] sensor is outdated.|A [!INCLUDE [Product short](includes/product-short.md)] sensor is running a version that cannot communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md).|Medium|
 
 ## Sensor reached a memory resource limit
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor stopped itself and restarts automatically to protect the domain controller from a low memory condition.|The Azure ATP sensor enforces memory limitations upon itself to prevent the domain controller from experiencing resource limitations. This happens when memory usage on the domain controller is high. Data from this domain controller is only partly monitored.|Increase the amount of memory (RAM) on the domain controller or add more domain controllers in this site to better distribute the load of this domain controller.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor stopped itself and restarts automatically to protect the domain controller from a low memory condition.|The [!INCLUDE [Product short](includes/product-short.md)] sensor enforces memory limitations upon itself to prevent the domain controller from experiencing resource limitations. This happens when memory usage on the domain controller is high. Data from this domain controller is only partly monitored.|Increase the amount of memory (RAM) on the domain controller or add more domain controllers in this site to better distribute the load of this domain controller.|Medium|
 
 ## Sensor service failed to start
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Monitor Azure ATP sensor logs to understand the root cause for Azure ATP sensor service failure.|High|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor service failed to start for at least 30 minutes.|This can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Monitor [!INCLUDE [Product short](includes/product-short.md)] sensor logs to understand the root cause for [!INCLUDE [Product short](includes/product-short.md)] sensor service failure.|High|
 
 ## Sensor stopped communicating
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|There has been no communication from the Azure ATP sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Azure ATP sensor. This impacts ATA's ability to detect suspicious activities, since network traffic will not be able to reach the Azure ATP cloud service.|Check that the port used for the communication between the Azure ATP sensor and Azure ATP cloud service is not blocked by any routers or firewalls.|Medium|
+|There has been no communication from the [!INCLUDE [Product short](includes/product-short.md)] sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the [!INCLUDE [Product short](includes/product-short.md)] sensor. This impacts ATA's ability to detect suspicious activities, since network traffic will not be able to reach the [!INCLUDE [Product short](includes/product-short.md)] cloud service.|Check that the port used for the communication between the [!INCLUDE [Product short](includes/product-short.md)] sensor and [!INCLUDE [Product short](includes/product-short.md)] cloud service is not blocked by any routers or firewalls.|Medium|
 
 ## Some domain controllers are unreachable by a sensor
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|An Azure ATP sensor has limited functionality due to connectivity issues to some of the configured domain controllers.|Pass the Hash detection might be less accurate when some domain controllers can't be queried by the Azure ATP sensor.|Make sure the domain controllers are up and running and that this Azure ATP sensor can open LDAP connections to them.|Medium|
+|A [!INCLUDE [Product short](includes/product-short.md)] sensor has limited functionality due to connectivity issues to some of the configured domain controllers.|Pass the Hash detection might be less accurate when some domain controllers can't be queried by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|Make sure the domain controllers are up and running and that this [!INCLUDE [Product short](includes/product-short.md)] sensor can open LDAP connections to them.|Medium|
 
-## Some forwarded events could not be analyzed
+## Some Windows events are not being analyzed
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more events than it can process.|Some forwarded events could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more events than it can process.|Some Windows events are not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Verify that only required events are forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensor or try to forward some of the events to another [!INCLUDE [Product short](includes/product-short.md)] sensor.|Medium|
 
 ## Some network traffic could not be analyzed
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is receiving more network traffic than it can process.|Some network traffic could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone Azure ATP sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more network traffic than it can process.|Some network traffic could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone [!INCLUDE [Product short](includes/product-short.md)] sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
 
-## Some Windows events could not be analyzed
+## Some ETW events are not being analyzed
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The Azure ATP sensor is receiving Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Azure ATP sensor.|Verify that only required events are forwarded to the Azure ATP sensor or try to forward some of the events to another Azure ATP sensor.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events are not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Verify that only required events are forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensor or try to forward some of the events to another [!INCLUDE [Product short](includes/product-short.md)] sensor.|Medium|
 
 <!--
 ## Windows events missing from domain controller audit policy
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Azure ATP coverage.|Review your [Advanced Audit policy](configure-windows-event-collection.md) and modify as needed. | Medium|
+| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete [!INCLUDE [Product short](includes/product-short.md)] coverage.|Review your [Advanced Audit policy](configure-windows-event-collection.md) and modify as needed. | Medium|
 -->
 
 ## See Also
 
-- [Azure ATP prerequisites](prerequisites.md)
-- [Azure ATP capacity planning](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

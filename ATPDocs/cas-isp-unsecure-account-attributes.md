@@ -1,35 +1,28 @@
 ---
 # required metadata
-
-title: Azure Advanced Threat Protection unsecure account attributes assessments
-description: This article provides an overview of Azure ATP's entities with unsecure attributes identity security posture assessment report.
+title: Microsoft Defender for Identity unsecure account attributes assessments
+description: This article provides an overview of Microsoft Defender for Identity's entities with unsecure attributes identity security posture assessment report.
 keywords:
 author: shsagir
 ms.author: shsagir
-manager: rkarlin
-ms.date: 08/25/2020
+manager: shsagir
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Security assessment: Unsecure account attributes
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## What are unsecure account attributes?
 
-Azure ATP continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
+[!INCLUDE [Product long](includes/product-long.md)] continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
 
 ## What risk do unsecure account attributes pose?
 
@@ -42,7 +35,7 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your accounts have unsecure attributes.
-    ![Review top impacted entities and create an action plan](media/atp-cas-isp-unsecure-account-attributes-1.png)
+    ![Review top impacted entities and create an action plan](media/cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
 > [!NOTE]
@@ -63,5 +56,5 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 
 ## See Also
 
-- [Azure ATP activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

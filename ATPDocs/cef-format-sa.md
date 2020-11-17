@@ -1,36 +1,29 @@
 ---
 # required metadata
 
-title: Azure ATP SIEM log reference
-description: Provides samples of suspicious activity logs sent from Azure ATP to your SIEM.
+title: Microsoft Defender for Identity SIEM log reference
+description: Provides samples of suspicious activity logs sent from Microsoft Defender for Identity to your SIEM.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 06/08/2020
+ms.date: 10/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arzinger
-
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Azure ATP SIEM log reference
+# [!INCLUDE [Product long](includes/product-long.md)] SIEM log reference
 
-Azure ATP can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-## Sample Azure ATP security alerts in CEF format
+[!INCLUDE [Product short](includes/product-short.md)] can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
+
+## Sample [!INCLUDE [Product short](includes/product-short.md)] security alerts in CEF format
 
 The following fields and their values are forwarded to your SIEM:
 
@@ -43,7 +36,7 @@ The following fields and their values are forwarded to your SIEM:
 |msg|Description of the alert|
 |cnt|For alerts that have a count of the number of times the activity happened (for example, brute force has an amount of guessed passwords)|
 |app |Protocol used in this alert|
-|externalId|Event ID Azure ATP writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Cloud App Security, this field is populated with the corresponding Cloud App Security alert ID.|
+|externalId|Event ID [!INCLUDE [Product short](includes/product-short.md)] writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Cloud App Security, this field is populated with the corresponding Cloud App Security alert ID.|
 |cs#label|Customer strings allowed by CEF, where cs#label is the name of the new field |
 |cs#|Customer strings allowed by CEF, where cs# is the value.|
 
@@ -54,11 +47,11 @@ The cs1 field is the alert URL.
 The cs2 field identifies if the alert is new or updated.
 
 > [!NOTE]
-> If you plan to create automation or scripts for Azure ATP SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
+> If you plan to create automation or scripts for [!INCLUDE [Product short](includes/product-short.md)] SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
 
 ## Sample logs
 
-The log examples comply with RFC 5424, but Azure ATP also supports RFC 3164.
+The log examples comply with RFC 5424, but [!INCLUDE [Product short](includes/product-short.md)] also supports RFC 3164.
 
 Priorities:
 
@@ -208,8 +201,8 @@ Priorities:
 
 ## See Also
 
-- [Azure ATP prerequisites](prerequisites.md)
-- [Azure ATP capacity planning](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

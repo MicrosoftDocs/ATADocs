@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Install ATA - Step 6
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!div class="step-by-step"]
 > [« Step 5](install-ata-step5.md)

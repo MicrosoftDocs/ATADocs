@@ -1,33 +1,26 @@
 ---
 # required metadata
-
-title: Azure ATP lateral movement security alerts
-description: This article explains the Azure ATP alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
+title: Microsoft Defender for Identity lateral movement security alerts
+description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/31/2020
+ms.date: 10/26/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Tutorial: Lateral movement alerts
 
-Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Azure ATP identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](reconnaissance-alerts.md)
 1. [Compromised credentials](compromised-credentials-alerts.md)
@@ -35,9 +28,9 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Domain dominance](domain-dominance-alerts.md)
 1. [Exfiltration](exfiltration-alerts.md)
 
-To learn more about how to understand the structure, and common components of all Azure ATP security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by Azure ATP in your network. In this tutorial, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
+The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
 >
@@ -58,7 +51,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 
 12/11/2018 Microsoft published [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626), announcing that a newly discovered remote code execution vulnerability exists in Windows Domain Name System (DNS) servers. In this vulnerability, servers fail to properly handle requests. An attacker who successfully exploits the vulnerability can run arbitrary code in the context of the Local System Account. Windows servers currently configured as DNS servers are at risk from this vulnerability.
 
-In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting the CVE-2018-8626 security vulnerability are made against a domain controller in the network.
+In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when DNS queries suspected of exploiting the CVE-2018-8626 security vulnerability are made against a domain controller in the network.
 
 **Learning period**
 
@@ -168,7 +161,7 @@ There are custom applications that forward tickets on behalf of users. These app
 1. Contain the source and destination computers.
 1. Find the tool that performed the attack and remove it.
 1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-1. If you have Microsoft Defender ATP installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
+1. If you have Microsoft Defender for Endpoint installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 
 ## Suspected NTLM authentication tampering (external ID 2039)
 
@@ -176,7 +169,7 @@ In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https:/
 
 Malicious actors that successfully exploit this vulnerability have the ability to downgrade NTLM security features, and may successfully create authenticated sessions on behalf of other accounts. Unpatched Windows Servers are at risk from this vulnerability.
 
-In this detection, an Azure ATP security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
+In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
 
 **Learning period**
 
@@ -213,7 +206,7 @@ An Exchange Server can be configured to trigger NTLM authentication with the Exc
 
 Once the relay server receives the NTLM authentication, it provides a challenge that was originally created by the target server. The client responds to the challenge, preventing an attacker from taking the response, and using it to continue NTLM negotiation with the target domain controller.
 
-In this detection, an alert is triggered when Azure ATP identify use of Exchange account credentials from a suspicious source.
+In this detection, an alert is triggered when [!INCLUDE [Product short](includes/product-short.md)] identify use of Exchange account credentials from a suspicious source.
 
 **Learning period**
 
@@ -244,7 +237,7 @@ Not applicable
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Azure ATP learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, [!INCLUDE [Product short](includes/product-short.md)] learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
 
 In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
 
@@ -296,7 +289,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 **Description**
 
-Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While Microsoft Windows accepts this type of network traffic without warnings, Azure ATP is able to recognize potential malicious intent. The behavior is indicative of techniques such as over-pass-the-hash, Brute Force, and advanced ransomware exploits such as WannaCry, are used.
+Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While Microsoft Windows accepts this type of network traffic without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques such as over-pass-the-hash, Brute Force, and advanced ransomware exploits such as WannaCry, are used.
 
 **Learning period**
 
@@ -331,7 +324,7 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 
 **Description**
 
-Rouge certificate attack is a persistence technique used by attackers after gaining control over the organization. Attackers compromise the Certificate Authority (CA) server and generate certificates that can be used as backdoor accounts in future attacks.
+Rogue certificate attack is a persistence technique used by attackers after gaining control over the organization. Attackers compromise the Certificate Authority (CA) server and generate certificates that can be used as backdoor accounts in future attacks.
 
 **Learning period**
 
@@ -362,7 +355,7 @@ Not applicable
 
 03/12/2020 Microsoft published [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796), announcing that a newly remote code execution vulnerability exists in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests. An attacker who successfully exploited the vulnerability could gain the ability to execute code on the target server or client. Unpatched Windows servers are at risk from this vulnerability.
 
-In this detection, an Azure ATP security alert is triggered when SMBv3 packet suspected of exploiting the CVE-2020-0796 security vulnerability are made against a domain controller in the network.
+In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when SMBv3 packet suspected of exploiting the CVE-2020-0796 security vulnerability are made against a domain controller in the network.
 
 **Learning period**
 
@@ -403,4 +396,4 @@ Not applicable
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

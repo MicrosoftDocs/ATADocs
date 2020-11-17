@@ -1,41 +1,32 @@
 ---
 # required metadata
-
-title: Azure Advanced Threat Protection riskiest lateral movement paths assessments
-description: This article provides an overview of Azure ATP's sensitive entities with the riskiest lateral movement paths identity security posture assessment report.
+title: Microsoft Defender for Identity riskiest lateral movement paths assessments
+description: This article provides an overview of Microsoft Defender for Identity's sensitive entities with the riskiest lateral movement paths identity security posture assessment report.
 keywords:
-
 author: shsagir
 ms.author: shsagir
 manager: rkarlin
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
-
 
 # Security assessment: Riskiest lateral movement paths (LMP)
 
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
 ## What are Risky lateral movement paths?
 
-Azure ATP continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
+[!INCLUDE [Product long](includes/product-long.md)] continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
 
 Learn more about LMP:
 
-- [Azure ATP Lateral Movement Paths (LMPs)](use-case-lateral-movement-path.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths (LMPs)](use-case-lateral-movement-path.md)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
 ## What risk do risky lateral movement paths pose?
@@ -49,7 +40,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your **sensitive** accounts have risky LMPs.
-    ![Review top impacted entities and create an action plan](media/atp-cas-isp-riskiest-lmp-1.png)
+    ![Review top impacted entities and create an action plan](media/cas-isp-riskiest-lmp-1.png)
 1. Take appropriate action:
     - Remove the entity from the group as specified in the recommendation.
     - Remove the local administrator permissions for the entity from the device specified in the recommendation.
@@ -62,5 +53,5 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 
 ## See Also
 
-- [Azure ATP activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

@@ -27,7 +27,9 @@ ms.suite: ems
 
 # Change ATA configuration - domain connectivity password
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Change the domain connectivity password
 

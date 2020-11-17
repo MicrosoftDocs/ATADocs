@@ -1,44 +1,36 @@
 ---
 # required metadata
-
-title: Azure Advanced Threat Protection configure detection exclusions and honeytoken accounts
+title: Microsoft Defender for Identity configure detection exclusions and honeytoken accounts
 description: Configuration of detection exclusions and honeytoken user accounts.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/22/2019
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
-
 
 # Configure detection exclusions and honeytoken accounts
 
-Azure ATP enables the exclusion of specific IP addresses or users from a number of detections.
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
-For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps Azure ATP ignore such scanners.
+[!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses or users from a number of detections.
 
-Azure ATP also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
+For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps [!INCLUDE [Product short](includes/product-short.md)] ignore such scanners.
+
+[!INCLUDE [Product short](includes/product-short.md)] also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
 
 To configure, follow these steps:
 
-1. From the Azure ATP portal, click on the settings icon and select **Configuration**.
+1. From the [!INCLUDE [Product short](includes/product-short.md)] portal, click on the settings icon and select **Configuration**.
 
-    ![Azure ATP configuration settings](media/atp-config-menu.png)
+    ![[!INCLUDE [Product short](includes/product-short.md)] configuration settings](media/config-menu.png)
 
 1. Under **Detection**, click **Entity tags**.
 
@@ -53,15 +45,15 @@ To configure, follow these steps:
 
 1. Click **Save**.
 
-Congratulations, you have successfully deployed Azure Advanced Threat Protection!
+Congratulations, you have successfully deployed [!INCLUDE [Product long](includes/product-long.md)]!
 
 Check the attack timeline to view security alerts generated from detected activities and search for users or computers, and view their profiles.
 
-Azure ATP scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after Azure ATP deployment.The learning period for each alert is listed in the detailed [security alert guide](suspicious-activity-guide.md).
+[!INCLUDE [Product short](includes/product-short.md)] scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment.The learning period for each alert is listed in the detailed [security alert guide](suspicious-activity-guide.md).
 
 ## See Also
 
-- [Azure ATP sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
-- [Azure ATP prerequisites](prerequisites.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

@@ -26,7 +26,9 @@ ms.suite: ems
 
 # ATA capacity planning
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article helps you determine how many ATA servers are needed to monitor your network. It helps you estimate how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
 

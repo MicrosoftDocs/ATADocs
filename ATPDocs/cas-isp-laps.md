@@ -1,31 +1,25 @@
 ---
 # required metadata
 
-title: Azure Advanced Threat Protection Microsoft LAPS usage assessments
-description: This article provides an overview of Azure ATP's Microsoft LAPS usage identity security posture assessment report.
+title: Microsoft Defender for Identity Microsoft LAPS usage assessments
+description: This article provides an overview of Microsoft Defender for Identity's Microsoft LAPS usage identity security posture assessment report.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 08/25/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 2fe62047-75ef-4b2e-b4aa-72860e39b4e4
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Security assessment: Microsoft LAPS usage
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## What is Microsoft LAPS?
 
@@ -41,13 +35,13 @@ LAPS simplifies password management while helping customers implement additional
 
 1. Use the report table to discover which of your domains have some (or all) compatible Windows devices that are not protected by LAPS, or that have not had their LAPS managed password changed in the last 60 days.
 1. For domains that are partially protected, select the relevant row to view the list of devices not protected by LAPS in that domain.
-    ![Select domain with LAPS devices](media/atp-cas-isp-laps-1.png)
+    ![Select domain with LAPS devices](media/cas-isp-laps-1.png)
 1. Take appropriate action on those devices by downloading, installing and configuring or troubleshooting [Microsoft LAPS](https://go.microsoft.com/fwlink/?linkid=2104282) using the documentation provided in the download.
-    ![Remediate LAPS device](media/atp-cas-isp-laps-2.png)
+    ![Remediate LAPS device](media/cas-isp-laps-2.png)
 
 > [!NOTE]
 > This assessment is updated every 24 hours.
 
 ## See Also
 
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

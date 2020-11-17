@@ -1,8 +1,7 @@
 ---
 # required metadata
-
-title: Azure Advanced Threat Protection clear text exposure assessment
-description: This article provides an overview of Azure ATP's clear text exposure identity security posture assessment report.
+title: Microsoft Defender for Identity clear text exposure assessment
+description: This article provides an overview of Microsoft Defender for Identity's clear text exposure identity security posture assessment report.
 keywords:
 author: shsagir
 ms.author: shsagir
@@ -11,23 +10,17 @@ ms.date: 08/25/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Security assessment: Entities exposing credentials in clear text
 
-![Prevent clear text credentials exposure in Cloud App Security](media/atp-cas-isp-clear-text-1.png)
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
+![Prevent clear text credentials exposure in Cloud App Security](media/cas-isp-clear-text-1.png)
 
 ## What information does the prevent clear text security assessment provide?
 
@@ -42,7 +35,7 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 ## How do I use this security assessment to improve my organizational security posture?
 
 1. Review the security assessment for impacted entities.
-    ![Review top impacted entities and create an action plan](media/atp-cas-isp-clear-text-2.png)
+    ![Review top impacted entities and create an action plan](media/cas-isp-clear-text-2.png)
 1. Research why those entities are using LDAP in clear text.
 1. Remediate the issues and stop the exposure.
 1. After confirming remediation, we recommend you require domain controller level LDAP signing. To learn more about LDAP server signing, see [Domain controller LDAP server signing requirements](/windows/security/threat-protection/security-policy-settings/domain-controller-ldap-server-signing-requirements).
@@ -52,5 +45,5 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 
 ## Next steps
 
-- [Azure ATP activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

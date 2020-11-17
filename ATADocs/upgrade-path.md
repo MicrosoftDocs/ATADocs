@@ -26,7 +26,9 @@ ms.suite: ems
 ---
 # Recommended upgrade path for ATA
 
-*Applies to: Advanced Threat Analytics version 1.9*
+[!INCLUDE [Banner for top of topics](includes/banner.md)]
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article provides information about available Advanced Threat Analytics versions and how to upgrade ATA depending on which version you have running.
 

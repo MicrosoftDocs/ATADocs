@@ -1,34 +1,26 @@
 ---
 # required metadata
-
-title: Reference of older releases in Azure Advanced Threat Protection (Azure ATP)
-description: This article is a reference of previous releases updates to Azure Advanced Threat Protection (Azure ATP).
+title: Reference of older releases in Microsoft Defender for Identity
+description: This article is a reference of previous releases updates to Microsoft Defender for Identity.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 11/17/2019
+ms.date: 10/27/2020
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 
-
-
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: ort
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Release reference of Azure Advanced Threat Protection (Azure ATP)
+# Release reference of [!INCLUDE [Product long](includes/product-long.md)]
 
-This article is a reference of all Azure ATP releases until (and including) release 2.55. For recent Azure ATP release updates (2.56 and newer), see [Azure ATP what's new](whats-new.md).
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
+
+This article is a reference of all [!INCLUDE [Product short](includes/product-short.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP) releases until (and including) release 2.55. For recent [!INCLUDE [Product short](includes/product-short.md)] release updates (2.56 and newer), see [[!INCLUDE [Product short](includes/product-short.md)] what's new](whats-new.md).
 
 ## Azure ATP release 2.55
 
@@ -93,7 +85,7 @@ Recent content changes to Azure ATP documentation include new articles providing
 
 Released October 21, 2018
 
-- You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-msde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
+- You can now enable/disable **WD-ATP integration** from the Azure ATP portal [Configuration](integrate-mde.md#how-to-integrate-azure-atp-with-microsoft-defender-atp) screen. (To access this functionality, the Azure ATP user must be a Global or Security Administrator on the AAD tenant).
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -235,7 +227,7 @@ Released July 15, 2018
 Released July 5, 2018
 
 - **New detection added: Kerberos golden ticket - nonexistent account** (preview)  
-This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [Azure Advanced Threat Protection suspicious activity guide](suspicious-activity-guide.md)
+This new detection helps you protect your organization from attacks in which a golden ticket is created for an account that does not exist in your domain. For more information, see the [suspicious activity guide](suspicious-activity-guide.md)
 
 - This version includes fixes and improvements for multiple issues.
 
@@ -340,7 +332,7 @@ Released April 15, 2018
 
 Released April 8, 2018
 
-- You now have the ability to provide user feedback from the top navigation bar. Clicking the smiley face in the menu bar enables you to send an email to the Azure Advanced Threat Protection team with your feedback.
+- You now have the ability to provide user feedback from the top navigation bar. Clicking the smiley face in the menu bar enables you to send an email to the [!INCLUDE [Product long](includes/product-long.md)] team with your feedback.
 
 - This version includes fixes and improvements for multiple issues.
 
@@ -382,8 +374,8 @@ The Azure ATP sensor infrastructure was improved for performance: the aggregated
 
 ## See Also
 
-- [What is Azure Advanced Threat Protection?](what-is.md)
+- [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)
 - [Frequently asked questions](technical-faq.md)
-- [Azure ATP prerequisites](prerequisites.md)
-- [Azure ATP capacity planning](capacity-planning.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

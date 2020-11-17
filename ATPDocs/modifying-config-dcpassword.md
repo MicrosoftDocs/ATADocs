@@ -1,53 +1,45 @@
 ---
 # required metadata
-
-title: Change Azure Advanced Threat Protection config - domain connectivity password
-description: Describes how to change the Domain Connectivity Password on the Azure ATP standalone sensor.
+title: Change Microsoft Defender for Identity config - domain connectivity password
+description: Describes how to change the Domain Connectivity Password on the Microsoft Defender for Identity standalone sensor.
 keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 02/19/2020
+ms.date: 10/26/2020
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
-ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 
 # optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: itargoet
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
-# Change Azure ATP portal configuration - domain connectivity password
+# Change [!INCLUDE [Product long](includes/product-long.md)] portal configuration - domain connectivity password
+
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Change the domain connectivity password
 
-If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the Azure ATP sensor service stops for all deployed sensors.
+If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the [!INCLUDE [Product long](includes/product-long.md)] sensor service stops for all deployed sensors.
 
-If you suspect that this happened, look at the Microsoft.Tri.sensor-Errors.log file for the following errors:
-`The supplied credential is invalid.`
+If you suspect that this happened, look at the Microsoft.Tri.sensor-Errors.log file for the following errors: `The supplied credential is invalid.`
 
-Follow this procedure to update the Domain Connectivity password on the Azure ATP portal:
+Follow this procedure to update the Domain Connectivity password on the [!INCLUDE [Product short](includes/product-short.md)] portal:
 
 > [!NOTE]
 > This is the user name and password from the Active Directory on-premises deployment and not from Azure AD.
 
-1. Open the Azure ATP portal by accessing the portal URL.
+1. Open the [!INCLUDE [Product short](includes/product-short.md)] portal by accessing the portal URL.
 
 1. Select the settings option on the toolbar and select **Configuration**.
 
-    ![Azure ATP configuration settings icon](media/atp-config-menu.png)
+    ![[!INCLUDE [Product short](includes/product-short.md)] configuration settings icon](media/config-menu.png)
 
 1. Select **Directory Services**.
 
-    ![Azure ATP standalone sensor change password image](media/directory-services.png)
+    ![[!INCLUDE [Product short](includes/product-short.md)] standalone sensor change password image](media/directory-services.png)
 
 1. Under **Password**, change the password.
 
@@ -56,9 +48,10 @@ Follow this procedure to update the Domain Connectivity password on the Azure AT
 
 1. Click **Save**.
 
-1. In the Azure ATP portal, under **Configuration**, go to the **Sensor** page and check the status of the sensors.
+1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
+1. Under **System**, select **Sensors** page and check the status of the sensors.
 
 ## See Also
 
-- [Integration with Microsoft Defender ATP](integrate-msde.md)
-- [Check out the Azure ATP forum!](https://aka.ms/azureatpcommunity)
+- [Integration with Microsoft Defender for Endpoint](integrate-mde.md)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

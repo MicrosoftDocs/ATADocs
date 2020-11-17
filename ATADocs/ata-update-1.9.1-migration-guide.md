@@ -27,7 +27,7 @@ ms.suite: ems
 
 # ATA version 1.9.1
 
-
+[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 This article describes issues fixed in Update 1 for Microsoft Advanced Threat Analytics (ATA) version 1.9. The build number of this update is 1.9.7412.
 
 ## Fixed issues included in this update
