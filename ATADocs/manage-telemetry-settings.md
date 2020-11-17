@@ -28,8 +28,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
  > [!NOTE]

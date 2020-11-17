@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This section details possible errors in the deployments of ATA and the steps required for troubleshooting them.
 
 ## ATA Gateway and Lightweight Gateway errors

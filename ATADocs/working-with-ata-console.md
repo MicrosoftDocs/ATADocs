@@ -30,8 +30,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 Use the ATA console to monitor and respond to suspicious activity detected by ATA.
 
 Typing the `?` key provides keyboard shortcuts for ATA Portal accessibility. 

@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!div class="step-by-step"]
 > [« Step 1](install-ata-step1.md)
 > [Step 3 »](install-ata-step3.md)

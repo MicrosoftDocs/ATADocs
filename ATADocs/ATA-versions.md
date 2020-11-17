@@ -27,8 +27,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 Microsoft ATA support is defined by the Microsoft Lifecycle Policy for [ATA 1.x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X), with mainstream support ending on January 12, 2021.
 
 ATA updates are supported for 12 months from their general availability (GA) release date, or 6 months after a newer update is available.
