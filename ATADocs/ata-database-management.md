@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 If you need to move, backup or restore the ATA database, use these procedures for working with MongoDB.
 
 ## Backing up the ATA database

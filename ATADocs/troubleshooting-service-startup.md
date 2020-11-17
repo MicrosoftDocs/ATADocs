@@ -29,8 +29,6 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## Troubleshooting ATA Center service startup
 
 If your ATA Center does not start, perform the following troubleshooting procedure:
