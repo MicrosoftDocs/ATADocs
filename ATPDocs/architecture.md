@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Microsoft Defender for Identity architecture
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Product long](includes/product-long.md)] monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events directly from your domain controllers, then analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms [!INCLUDE [Product short](includes/product-short.md)] learns about your network, enables detection of anomalies, and warns you of suspicious activities.
 
 [!INCLUDE [Product short](includes/product-short.md)] architecture:

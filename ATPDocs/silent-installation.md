@@ -18,8 +18,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article provides guidance and instructions for [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation.
 
 ## Prerequisites

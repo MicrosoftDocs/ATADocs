@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Working with sensitive accounts
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## Sensitive entities
 
 The following list of groups are considered **Sensitive** by [!INCLUDE [Product long](includes/product-long.md)]. Any entity that is a member of one of these groups is considered sensitive:

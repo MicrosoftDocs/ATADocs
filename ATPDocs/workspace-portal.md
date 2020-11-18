@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Working with the [!INCLUDE [Product long](includes/product-long.md)] portal
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!NOTE]
 > All [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).
 

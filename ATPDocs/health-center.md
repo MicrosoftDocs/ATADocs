@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Work with [!INCLUDE [Product long](includes/product-long.md)] health and events
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## [!INCLUDE [Product long](includes/product-long.md)] health center
 
 The [!INCLUDE [Product long](includes/product-long.md)] health center lets you know how your [!INCLUDE [Product short](includes/product-short.md)] instance is performing and alerts you when there are problems.
