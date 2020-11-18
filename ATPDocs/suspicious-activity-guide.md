@@ -37,7 +37,7 @@ To learn more about the structure and common components of all [!INCLUDE [Produc
 
 The following table lists the mapping between alert names, their corresponding unique external IDs, and their Microsoft Cloud App Security alert IDs. When used with scripts or automation, Microsoft recommends use of alert external IDs in place of alert names, as only security alert external IDs are permanent, and not subject to change.
 
-# [External IDs](#tab/external)
+### [External IDs](#tab/external)
 
 > [!div class="mx-tdBreakAll"]
 > |Security alert name|Unique external ID|Severity|MITRE ATT&CK Matrix&trade;|
@@ -82,8 +82,7 @@ The following table lists the mapping between alert names, their corresponding u
 > |[User and Group membership reconnaissance (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Medium|Discovery|
 > |[User and IP address reconnaissance (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Medium|Discovery|
 
-
-# [Cloud App Security IDs](#tab/cloud-app-security)
+### [Cloud App Security IDs](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
 > |Security alert name|Cloud App Security alert ID|
@@ -130,6 +129,8 @@ The following table lists the mapping between alert names, their corresponding u
 
 <!-- FROM TOP TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|2008|Medium|Lateral movement|-->
 <!-- FROM BOTTOM TABLE |[Suspected over-pass-the-hash attack (encryption downgrade)](lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|ALERT_EXTERNAL_AATP_OVERPASS_THE_HASH_ENCRYPTION_DOWNGRADE_SECURITY_ALERT|-->
+
+---
 
 > [!NOTE]
 > To disable any security alert, contact support.
