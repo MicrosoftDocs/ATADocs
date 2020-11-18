@@ -18,8 +18,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] monitored activities search and filter
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!NOTE]
 > The [!INCLUDE [Product short](includes/product-short.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 

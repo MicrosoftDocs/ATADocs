@@ -19,8 +19,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] Reports
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The [!INCLUDE [Product long](includes/product-long.md)] reports section in the [!INCLUDE [Product short](includes/product-short.md)] portal enables you to schedule or immediately generate and download reports that provide you with system and entity status information. From the reports feature, you can create reports about system health, security alerts and potential lateral movement paths detected in your environment.
 
 To access the reports page, click the report icon in the menu bar: ![report icon](media/report-icon.png).

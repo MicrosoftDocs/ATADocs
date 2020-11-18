@@ -18,8 +18,6 @@ ms.suite:
 
 # Troubleshooting [!INCLUDE [Product long](includes/product-long.md)] sensor using the [!INCLUDE [Product short](includes/product-short.md)] logs
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The [!INCLUDE [Product short](includes/product-short.md)] logs provide insight into what each component of [!INCLUDE [Product long](includes/product-long.md)] sensor is doing at any given point in time.
 
 The [!INCLUDE [Product short](includes/product-short.md)] logs are located in a subfolder called **Logs** where [!INCLUDE [Product short](includes/product-short.md)] is installed; the default location is: **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. In the default installation location, it can be found at: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.

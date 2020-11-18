@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Configuring Windows Event Forwarding
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!NOTE]
 > The [!INCLUDE [Product long](includes/product-long.md)] sensor automatically reads events locally, without the need to configure event forwarding.
 

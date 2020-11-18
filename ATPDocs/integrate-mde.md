@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Integrate [!INCLUDE [Product long](includes/product-long.md)] with Microsoft Defender for Endpoint
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Product long](includes/product-long.md)] enables you to integrate [!INCLUDE [Product long](includes/product-long.md)] with Defender for Endpoint, for an even more complete threat protection solution. While [!INCLUDE [Product short](includes/product-short.md)] monitors the traffic on your domain controllers, Defender for Endpoint monitors your endpoints, together providing a single interface from which you can protect your environment.
 
 By integrating Defender for Endpoint into [!INCLUDE [Product short](includes/product-short.md)], you can leverage the full power of both services and secure your environment, including:

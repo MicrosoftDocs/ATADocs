@@ -17,8 +17,6 @@ ms.suite: ems
 
 # Quickstart: Connect to your Active Directory Forest
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-long.md)] to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](multi-forest.md) article.
 
 ## Prerequisites

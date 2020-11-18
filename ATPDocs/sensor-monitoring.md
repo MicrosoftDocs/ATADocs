@@ -19,8 +19,6 @@ ms.suite: ems
 
 # Monitoring your domain controller coverage
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 As soon as the first [!INCLUDE [Product long](includes/product-long.md)] sensor is installed and configured on any domain controller in your network, [!INCLUDE [Product short](includes/product-short.md)] begins monitoring your environment for domain controllers.
 
 Once a [!INCLUDE [Product short](includes/product-short.md)] sensor is installed and configured on a domain controller in your network, the sensor communicates with the [!INCLUDE [Product short](includes/product-short.md)] service on a constant basis sending sensor status, health and version information, and collected Active Directory events and changes.

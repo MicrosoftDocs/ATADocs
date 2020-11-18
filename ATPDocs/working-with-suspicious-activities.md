@@ -19,8 +19,6 @@ ms.suite: ems
 
 # Working with Security Alerts
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 > [!NOTE]
 > The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 

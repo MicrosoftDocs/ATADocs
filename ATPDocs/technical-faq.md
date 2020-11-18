@@ -18,8 +18,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] frequently asked questions
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article provides a list of frequently asked questions and answers about [!INCLUDE [Product long](includes/product-long.md)] divided into the following categories:
 
 - [What is [!INCLUDE [Product short](includes/product-short.md)]](#what-is-azure-atp)

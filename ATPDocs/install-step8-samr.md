@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Configure [!INCLUDE [Product long](includes/product-long.md)] to make remote calls to SAM
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Product long](includes/product-long.md)] [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the [!INCLUDE [Product short](includes/product-short.md)] Service account created during [!INCLUDE [Product short](includes/product-short.md)] installation  [Step 2. Connect to AD](install-step2.md).
 
 ## Configure SAM-R required permissions

@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Set [!INCLUDE [Product long](includes/product-long.md)] notifications
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Product long](includes/product-long.md)] can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
 
 To receive notifications to a specific email address, set the following parameters:

@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Configure detection exclusions and honeytoken accounts
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses or users from a number of detections.
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps [!INCLUDE [Product short](includes/product-short.md)] ignore such scanners.

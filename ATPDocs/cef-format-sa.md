@@ -19,8 +19,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] SIEM log reference
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Product short](includes/product-short.md)] can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
 
 ## Sample [!INCLUDE [Product short](includes/product-short.md)] security alerts in CEF format
