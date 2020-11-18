@@ -18,8 +18,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] readiness guide
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article provides you with a readiness roadmap list of resources that help you get started with [!INCLUDE [Product long](includes/product-long.md)].
 
 ## Understanding [!INCLUDE [Product long](includes/product-long.md)]

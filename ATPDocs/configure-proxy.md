@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Configure endpoint proxy and Internet connectivity settings for your [!INCLUDE [Product long](includes/product-long.md)] Sensor
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 Each [!INCLUDE [Product long](includes/product-long.md)] sensor requires Internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection.
 
 We recommend using the command line to configure your proxy server as doing so ensures that only the [!INCLUDE [Product short](includes/product-short.md)] sensor services communicate through the proxy.

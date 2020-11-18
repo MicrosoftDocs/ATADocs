@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Understanding [!INCLUDE [Product long](includes/product-long.md)] sensor health alerts
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you know when there's a problem with your [!INCLUDE [Product short](includes/product-short.md)] instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
 ## All domain controllers are unreachable by a sensor

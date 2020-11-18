@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Update [!INCLUDE [Product long](includes/product-long.md)] sensors
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up-to-date, provides the best possible protection for your organization.
 
 The [!INCLUDE [Product long](includes/product-long.md)] service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. [!INCLUDE [Product short](includes/product-short.md)] sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the [!INCLUDE [Product short](includes/product-short.md)] sensor and sensor detection capabilities.

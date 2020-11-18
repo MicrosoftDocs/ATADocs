@@ -18,8 +18,6 @@ ms.suite: ems
 
 # What is [!INCLUDE [Product long](includes/product-long.md)]?
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 [!INCLUDE [Product long](includes/product-long.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 
 [!INCLUDE [Product short](includes/product-short.md)] enables SecOp analysts and security professionals struggling to detect advanced attacks in hybrid environments to:

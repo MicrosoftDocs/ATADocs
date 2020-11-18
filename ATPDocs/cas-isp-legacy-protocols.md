@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Security assessment: Legacy protocols usage
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## What are legacy protocols?
 
 With all of the standard work enterprises perform to protect their infrastructure using patching and server hardening, one area that often remains overlooked is legacy protocol retirement. Without reducing legacy protocol exposure, credential theft remains relatively easy to accomplish.

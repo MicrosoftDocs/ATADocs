@@ -17,8 +17,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] prerequisites
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article describes the requirements for a successful deployment of [!INCLUDE [Product long](includes/product-long.md)] in your environment.
 
 >[!NOTE]
