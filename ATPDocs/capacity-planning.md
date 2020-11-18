@@ -16,8 +16,6 @@ ms.suite: ems
 
 # Plan capacity for [!INCLUDE [Product long](includes/product-long.md)]
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 In this guide, you determine how many [!INCLUDE [Product long](includes/product-long.md)] sensors you need.
 
 ## Prerequisites

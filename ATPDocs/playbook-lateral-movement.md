@@ -17,8 +17,6 @@ ms.suite: ems
 
 # Tutorial: Lateral movement playbook
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The lateral movement playbook is third in the four part tutorial series for [!INCLUDE [Product long](includes/product-long.md)] security alerts. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The playbook focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities and doesn't include advanced machine-learning, user, or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 
 This playbook shows some of the lateral movement path threat detections and security alerts services of [!INCLUDE [Product short](includes/product-short.md)] by mimicking an attack with common, real-world, publicly available hacking and attack tools.

@@ -16,8 +16,6 @@ ms.suite: ems
 
 # Configure [!INCLUDE [Product long](includes/product-long.md)] sensor settings
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 In this article, you'll learn how to correctly configure [!INCLUDE [Product long](includes/product-long.md)] sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of [!INCLUDE [Product short](includes/product-short.md)]'s full capabilities.
 
 ## Prerequisites

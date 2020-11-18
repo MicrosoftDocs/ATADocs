@@ -17,8 +17,6 @@ ms.suite: ems
 
 # Quickstart: Create your [!INCLUDE [Product long](includes/product-long.md)] instance
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 In this quickstart, you'll create your [!INCLUDE [Product long](includes/product-long.md)] instance in the [!INCLUDE [Product short](includes/product-short.md)] portal. In [!INCLUDE [Product short](includes/product-short.md)], you'll have a single instance, previously called a workspace. A single instance enables you to manage multiple forests from a single pane of glass.
 
 > [!IMPORTANT]

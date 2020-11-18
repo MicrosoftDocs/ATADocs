@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Change [!INCLUDE [Product long](includes/product-long.md)] portal configuration - domain connectivity password
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## Change the domain connectivity password
 
 If you need to modify the Domain Connectivity Password, make sure that the password you enter is correct. If it is not, the [!INCLUDE [Product long](includes/product-long.md)] sensor service stops for all deployed sensors.

@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Use activity filters and create action policies with [!INCLUDE [Product long](includes/product-long.md)] in Microsoft Cloud App Security
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article is designed to help you understand how to filter and create action policies for [!INCLUDE [Product short](includes/product-short.md)] activities using Microsoft Cloud App Security.
 
 For more information about how to complete your integration, see [[!INCLUDE [Product short](includes/product-short.md)] integration with Cloud App Security](/cloud-app-security/aatp-integration).

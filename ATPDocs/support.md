@@ -19,8 +19,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] information and support
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 Use the following resources to help you learn about, deploy, and support [!INCLUDE [Product long](includes/product-long.md)] for your organization.
 
 |To do this ...|...do this:|

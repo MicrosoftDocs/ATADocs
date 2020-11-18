@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Tutorial: Domain dominance playbook
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 The last tutorial in this four-part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a domain dominance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections using [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. The tutorials don't include [!INCLUDE [Product short](includes/product-short.md)] advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 
 This playbook shows some of the domain dominance threat detections and security alerts services of [!INCLUDE [Product short](includes/product-short.md)] using simulated attacks from common, real-world, publicly available hacking and attack tools. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance.

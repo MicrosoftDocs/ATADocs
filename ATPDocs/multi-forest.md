@@ -18,8 +18,6 @@ ms.suite: ems
 
 # [!INCLUDE [Product long](includes/product-long.md)] multi-forest support
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 ## Multi-forest support set up
 
 [!INCLUDE [Product long](includes/product-long.md)] supports organizations with multiple forests, giving you the ability to easily monitor activity and profile users across forests.

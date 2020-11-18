@@ -16,8 +16,6 @@ ms.suite: ems
 
 # Quickstart: Install the [!INCLUDE [Product long](includes/product-long.md)] sensor
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 In this quickstart, you'll install the [!INCLUDE [Product long](includes/product-long.md)] sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](silent-installation.md) article.
 
 ## Prerequisites

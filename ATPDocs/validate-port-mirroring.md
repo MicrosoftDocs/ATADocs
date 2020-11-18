@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Validate Port Mirroring
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article is relevant only if you deploy deploy [!INCLUDE [Product long](includes/product-long.md)] Standalone Sensor instead of [!INCLUDE [Product short](includes/product-short.md)] Sensor.
 
 > [!NOTE]

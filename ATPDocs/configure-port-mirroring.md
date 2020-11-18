@@ -18,8 +18,6 @@ ms.suite: ems
 
 # Configure port mirroring
 
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
-
 This article is relevant only if you deploy [!INCLUDE [Product long](includes/product-long.md)] standalone sensors instead of [!INCLUDE [Product short](includes/product-short.md)] sensors.
 
 > [!NOTE]
