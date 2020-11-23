@@ -164,7 +164,7 @@ If you have a [!INCLUDE [Product short](includes/product-short.md)] sensor on VM
 
 To resolve the issue:
 
-Set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
+On the Guest OS, set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
 
  ![VMware sensor issue](media/vm-sensor-issue.png)
 
