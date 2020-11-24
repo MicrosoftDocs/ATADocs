@@ -5,7 +5,7 @@ description: Describes the requirements for a successful deployment of Microsoft
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 10/26/2020
+ms.date: 11/24/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
@@ -130,7 +130,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
 | Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
 
-\* Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044). Sensors installed on Server 2019 without this update will be automatically stopped.
+\* Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) or newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
 The domain controller can be a read-only domain controller (RODC).
 
