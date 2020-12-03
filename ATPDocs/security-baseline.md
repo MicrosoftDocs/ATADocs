@@ -2,7 +2,7 @@
 title: Azure security baseline for Microsoft Defender for Identity
 description: The Microsoft Defender for Identity security baseline provides procedural guidance and resources for implementing the security recommendations specified in the Azure Security Benchmark.
 author: msmbaldwin
-ms.service: defender-for-identity
+ms.service: microsoft-defender-for-identity
 ms.topic: conceptual
 ms.date: 12/03/2020
 ms.author: mbaldwin
