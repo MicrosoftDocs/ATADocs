@@ -1,18 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Security Alert Lateral Movement Playbook
 description: The Microsoft Defender for Identity playbook describes how to simulate Lateral Movement threats for detection by Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Lateral movement playbook

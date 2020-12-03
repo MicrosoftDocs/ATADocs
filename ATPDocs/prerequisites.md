@@ -1,18 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 11/24/2020
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity 
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] prerequisites

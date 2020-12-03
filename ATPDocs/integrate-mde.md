@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity integration with Microsoft Defender for Endpoint
 description: How to integrate Microsoft Defender for Identity with Microsoft Defender for Endpoint for full threat detection coverage
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Integrate [!INCLUDE [Product long](includes/product-long.md)] with Microsoft Defender for Endpoint

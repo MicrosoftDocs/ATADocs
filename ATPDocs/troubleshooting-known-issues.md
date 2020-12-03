@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 09/07/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Troubleshooting [!INCLUDE [Product long](includes/product-long.md)] Known Issues

@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Configure Windows Event Forwarding in Microsoft Defender for Identity
 description: Describes your options for configuring Windows Event Forwarding with Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Configuring Windows Event Forwarding

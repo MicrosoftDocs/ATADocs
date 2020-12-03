@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Configure Port Mirroring when deploying Microsoft Defender for Identity
 description: Describes port mirroring options and how to configure them for Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Configure port mirroring

@@ -1,20 +1,8 @@
 ---
-# required metadata
-
 title: Microsoft Defender for Identity SIEM log reference
 description: Provides samples of suspicious activity logs sent from Microsoft Defender for Identity to your SIEM.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: arzinger
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] SIEM log reference

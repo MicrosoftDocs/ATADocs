@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity riskiest lateral movement paths assessments
 description: This article provides an overview of Microsoft Defender for Identity's sensitive entities with the riskiest lateral movement paths identity security posture assessment report.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: rkarlin
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Security assessment: Riskiest lateral movement paths (LMP)

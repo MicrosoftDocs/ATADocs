@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity role groups for access management
 description: Walks you through working with Microsoft Defender for Identity role groups.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 02/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] role groups

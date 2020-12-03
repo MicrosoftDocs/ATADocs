@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity security alert tutorial
 description: This article explains how to use and understand Microsoft Defender for Identity security alerts.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Understanding security alerts

@@ -1,20 +1,8 @@
 ---
-# required metadata
 title: Working with Microsoft Defender for Identity Reports
 description: Describes how you can generate reports in Microsoft Defender for Identity to monitor your network.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] Reports

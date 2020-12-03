@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Install Microsoft Defender for Identity
 description: In this step of installing Microsoft Defender for Identity, you configure data sources.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Configure event collection

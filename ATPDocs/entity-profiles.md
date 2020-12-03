@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Working with user profiles in the Microsoft Defender for Identity portal
 description: Describes how to investigate users from the user profiles screen in the Microsoft Defender for Identity portal
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Understanding entity profiles

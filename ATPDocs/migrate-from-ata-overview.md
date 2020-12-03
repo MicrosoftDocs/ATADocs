@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Advanced Threat Analytics to Microsoft Defender for Identity move
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Advanced Threat Analytics (ATA) to [!INCLUDE [Product long](includes/product-long.md)]

@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Reference of older releases in Microsoft Defender for Identity
 description: This article is a reference of previous releases updates to Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: ort
-ms.suite: ems
 ---
 
 # Release reference of [!INCLUDE [Product long](includes/product-long.md)]

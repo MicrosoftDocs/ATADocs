@@ -1,17 +1,8 @@
 ---
-# required metadata
 title: Planning your Microsoft Defender for Identity deployment
 description: Helps you plan your deployment and decide how many Microsoft Defender for Identity servers will be needed to support your network
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Plan capacity for [!INCLUDE [Product long](includes/product-long.md)]

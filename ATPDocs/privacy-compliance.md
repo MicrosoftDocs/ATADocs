@@ -1,18 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity personal data policy
 description: Provides links to information about how to delete private information and personal data from Microsoft Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: ophir
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] data security and privacy

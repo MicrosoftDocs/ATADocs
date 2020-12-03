@@ -1,18 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity security alert lab setup tutorial
 description: In this tutorial, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Setup a [!INCLUDE [Product long](includes/product-long.md)] security alert lab

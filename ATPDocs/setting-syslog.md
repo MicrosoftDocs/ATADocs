@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Setting Syslog settings in Microsoft Defender for Identity
 description: Describes how to have Microsoft Defender for Identity notify you (by email or by Defender for Identity event forwarding) when it detects suspicious activities
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Integrate with Syslog

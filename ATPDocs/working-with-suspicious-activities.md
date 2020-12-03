@@ -1,20 +1,8 @@
 ---
-# required metadata
 title: Working with security alerts in Microsoft Defender for Identity
 description: Describes how to review security alerts issued by Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Working with Security Alerts

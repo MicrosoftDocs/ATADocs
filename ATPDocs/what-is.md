@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: What is Microsoft Defender for Identity?
 description: Explains what Microsoft Defender for Identity is and what kinds of suspicious activities it can detect
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # What is [!INCLUDE [Product long](includes/product-long.md)]?

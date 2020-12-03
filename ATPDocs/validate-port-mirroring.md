@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Validate port mirroring in Microsoft Defender for Identity
 description: Describes how to validate that port mirroring is configured correctly in Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: microsoft-defender-for-identity
-
-# optional metadata
-ms.reviewer: bennyl
-ms.suite: ems
 ---
 
 # Validate Port Mirroring
