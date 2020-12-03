@@ -8,7 +8,7 @@ manager: shsagir
 ms.date: 11/24/2020
 ms.topic: overview
 ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
+ms.service: microsoft-defender-for-identity 
 
 # optional metadata
 ms.reviewer: itargoet
