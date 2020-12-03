@@ -7,7 +7,7 @@ ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: how-to
 ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
+ms.service: microsoft-defender-for-identity
 
 # optional metadata
 ms.reviewer: itargoet

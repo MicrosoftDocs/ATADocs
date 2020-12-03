@@ -9,7 +9,7 @@ manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
+ms.service: microsoft-defender-for-identity
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 
 # optional metadata
