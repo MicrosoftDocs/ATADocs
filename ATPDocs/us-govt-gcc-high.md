@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity for US Government GCC Highs
 description: This article provides an overview of Microsoft Defender for Identity's US Government for GCC High offering.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] for US Government GCC High

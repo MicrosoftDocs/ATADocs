@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity clear text exposure assessment
 description: This article provides an overview of Microsoft Defender for Identity's clear text exposure identity security posture assessment report.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 08/25/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Security assessment: Entities exposing credentials in clear text

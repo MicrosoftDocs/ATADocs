@@ -1,18 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Reconnaissance playbook tutorial
 description: The Microsoft Defender for Identity Reconnaissance playbook tutorial describes how to simulate Reconnaissance threats for detection by Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Reconnaissance playbook

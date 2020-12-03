@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Domain Dominance Playbook
 description: The Microsoft Defender for Identity domain dominance playbook describes how to simulate domain dominance attacks for detection by Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Domain dominance playbook
