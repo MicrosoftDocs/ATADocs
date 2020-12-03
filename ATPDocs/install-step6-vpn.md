@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Install Microsoft Defender for Identity VPN Integration
 description: Collect accounting information for Microsoft Defender for Identity by integrating a VPN.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Integrate VPN

@@ -1,18 +1,8 @@
 ---
-# required metadata
 title: Download the Microsoft Defender for Identity sensor setup package quickstart
 description: Step three of installing Microsoft Defender for Identity helps you download the Defender for Identity sensor setup package.
-keywords:
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Quickstart: Download the [!INCLUDE [Product long](includes/product-long.md)] sensor setup package

@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: How to investigate users and computers with Microsoft Defender for Identity
 description: Describes how to investigate suspicious activities performed by users, entities, computers, or devices using Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Investigate an entity
