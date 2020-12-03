@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Install Microsoft Defender for Identity Silently
 description: This describes how to silently install Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation

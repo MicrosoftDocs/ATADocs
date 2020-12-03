@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Monitor Microsoft Defender for Identity System Health and Events
 description: Use the health center to check how the Microsoft Defender for Identity service is working and be alerted to potential problems and view system events in the Event viewer.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Work with [!INCLUDE [Product long](includes/product-long.md)] health and events
