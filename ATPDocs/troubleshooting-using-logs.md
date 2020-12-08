@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Troubleshooting Microsoft Defender for Identity using the logs
 description: Describes how you can use the Microsoft Defender for Identity logs to troubleshoot issues
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer:
-ms.suite:
 ---
 
 # Troubleshooting [!INCLUDE [Product long](includes/product-long.md)] sensor using the [!INCLUDE [Product short](includes/product-short.md)] logs
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The [!INCLUDE [Product short](includes/product-short.md)] logs provide insight into what each component of [!INCLUDE [Product long](includes/product-long.md)] sensor is doing at any given point in time.
 

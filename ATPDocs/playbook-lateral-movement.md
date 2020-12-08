@@ -1,23 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Security Alert Lateral Movement Playbook
 description: The Microsoft Defender for Identity playbook describes how to simulate Lateral Movement threats for detection by Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Lateral movement playbook
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The lateral movement playbook is third in the four part tutorial series for [!INCLUDE [Product long](includes/product-long.md)] security alerts. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The playbook focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities and doesn't include advanced machine-learning, user, or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 

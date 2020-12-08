@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 09/07/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Troubleshooting [!INCLUDE [Product long](includes/product-long.md)] Known Issues
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Sensor failure communication error
 
@@ -166,7 +153,7 @@ If you have a [!INCLUDE [Product short](includes/product-short.md)] sensor on VM
 
 To resolve the issue:
 
-Set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
+On the Guest OS, set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
 
  ![VMware sensor issue](media/vm-sensor-issue.png)
 

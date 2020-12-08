@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Excluding entities from detections in Microsoft Defender for Identity
 description: Describes how to stop Microsoft Defender for Identity from detecting specific entity activities as suspicious
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Excluding entities from detections
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article explains how to exclude entities from triggering alerts. Certain entities are excluded to minimize true benign positives while making sure you can catch the true positives. In order to keep [!INCLUDE [Product long](includes/product-long.md)] from creating noise about activities that, from specific users, may be part of your normal rhythm of business, you can quiet - or exclude - specific entities from raising alerts. In addition, certain popular entities are excluded by default.
 

@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Configure Port Mirroring when deploying Microsoft Defender for Identity
 description: Describes port mirroring options and how to configure them for Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Configure port mirroring
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is relevant only if you deploy [!INCLUDE [Product long](includes/product-long.md)] standalone sensors instead of [!INCLUDE [Product short](includes/product-short.md)] sensors.
 

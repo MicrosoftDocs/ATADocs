@@ -1,25 +1,11 @@
 ---
-# required metadata
 title: Working with Microsoft Defender for Identity Reports
 description: Describes how you can generate reports in Microsoft Defender for Identity to monitor your network.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] Reports
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The [!INCLUDE [Product long](includes/product-long.md)] reports section in the [!INCLUDE [Product short](includes/product-short.md)] portal enables you to schedule or immediately generate and download reports that provide you with system and entity status information. From the reports feature, you can create reports about system health, security alerts and potential lateral movement paths detected in your environment.
 

@@ -1,22 +1,11 @@
 ---
-# required metadata
 title: Install Microsoft Defender for Identity sensor quickstart
 description: Step four of installing Microsoft Defender for Identity helps you to install the Defender for Identity sensor.
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Quickstart: Install the [!INCLUDE [Product long](includes/product-long.md)] sensor
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In this quickstart, you'll install the [!INCLUDE [Product long](includes/product-long.md)] sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](silent-installation.md) article.
 

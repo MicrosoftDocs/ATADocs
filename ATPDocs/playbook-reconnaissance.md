@@ -1,23 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Reconnaissance playbook tutorial
 description: The Microsoft Defender for Identity Reconnaissance playbook tutorial describes how to simulate Reconnaissance threats for detection by Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Reconnaissance playbook
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The second tutorial in this four part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a reconnaissance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections, and focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. This playbook doesn't include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 

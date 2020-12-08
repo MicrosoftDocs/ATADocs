@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity architecture
 description: Describes the architecture of Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Microsoft Defender for Identity architecture
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events directly from your domain controllers, then analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms [!INCLUDE [Product short](includes/product-short.md)] learns about your network, enables detection of anomalies, and warns you of suspicious activities.
 

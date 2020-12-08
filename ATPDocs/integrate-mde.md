@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity integration with Microsoft Defender for Endpoint
 description: How to integrate Microsoft Defender for Identity with Microsoft Defender for Endpoint for full threat detection coverage
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Integrate [!INCLUDE [Product long](includes/product-long.md)] with Microsoft Defender for Endpoint
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] enables you to integrate [!INCLUDE [Product long](includes/product-long.md)] with Defender for Endpoint, for an even more complete threat protection solution. While [!INCLUDE [Product short](includes/product-short.md)] monitors the traffic on your domain controllers, Defender for Endpoint monitors your endpoints, together providing a single interface from which you can protect your environment.
 

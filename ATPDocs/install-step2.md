@@ -1,23 +1,11 @@
 ---
-# required metadata
 title: Connect Microsoft Defender for Identity to Active Directory quickstart
 description: Step two of installing Microsoft Defender for Identity helps you configure the domain connectivity settings on your Defender for Identity cloud service
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: quickstart
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Quickstart: Connect to your Active Directory Forest
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-long.md)] to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](multi-forest.md) article.
 

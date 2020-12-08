@@ -1,22 +1,11 @@
 ---
-# required metadata
 title: Configure Microsoft Defender for Identity sensor settings conceptual
 description: Step five of installing Microsoft Defender for Identity helps you configure settings for your Defender for Identity standalone sensor.
-author: shsagir
-ms.author: shsagir
 ms.date: 09/15/2019
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Configure [!INCLUDE [Product long](includes/product-long.md)] sensor settings
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In this article, you'll learn how to correctly configure [!INCLUDE [Product long](includes/product-long.md)] sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of [!INCLUDE [Product short](includes/product-short.md)]'s full capabilities.
 

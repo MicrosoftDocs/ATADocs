@@ -1,23 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity security alert lab setup tutorial
 description: In this tutorial, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Setup a [!INCLUDE [Product long](includes/product-long.md)] security alert lab
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The purpose of the [!INCLUDE [Product long](includes/product-long.md)] Security Alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first tutorial in a four part series walks you through creating a lab environment for testing against [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The security alert lab focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 

@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity frequently asked questions
 description: Provides a list of frequently asked questions about Microsoft Defender for Identity and the associated answers
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] frequently asked questions
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article provides a list of frequently asked questions and answers about [!INCLUDE [Product long](includes/product-long.md)] divided into the following categories:
 

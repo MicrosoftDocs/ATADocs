@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Set Microsoft Defender for Identity notifications
 description: Describes how to set Microsoft Defender for Identity security alerts so you are notified when suspicious activities are detected.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Set [!INCLUDE [Product long](includes/product-long.md)] notifications
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
 

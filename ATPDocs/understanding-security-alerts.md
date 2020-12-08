@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity security alert tutorial
 description: This article explains how to use and understand Microsoft Defender for Identity security alerts.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Understanding security alerts
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] security alerts explain in clear language and graphics, which suspicious activities were identified on your network and the actors and computers involved in the threats. Alerts are graded for severity, color-coded to make them easy to visually filter, and organized by threat phase. Each alert is designed to help you quickly understand exactly what is happening on your network. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 

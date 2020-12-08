@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity in Microsoft Cloud App Security
 description: Overview of Microsoft Defender for Identity features within Microsoft Cloud App Security.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 01/05/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Using [!INCLUDE [Product long](includes/product-long.md)] with Microsoft Cloud App Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is designed to help you understand and navigate the enhanced investigation experience when using the Microsoft Cloud App Security portal with [!INCLUDE [Product long](includes/product-long.md)].
 

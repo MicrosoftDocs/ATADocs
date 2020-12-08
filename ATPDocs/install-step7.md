@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity configure detection exclusions and honeytoken accounts
 description: Configuration of detection exclusions and honeytoken user accounts.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Configure detection exclusions and honeytoken accounts
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 [!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses or users from a number of detections.
 

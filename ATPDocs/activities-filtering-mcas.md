@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity activity filtering and policies in Microsoft Cloud App Security
 description: Overview of Microsoft Defender for Identity activity filtering and policies with Microsoft Cloud App Security.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Use activity filters and create action policies with [!INCLUDE [Product long](includes/product-long.md)] in Microsoft Cloud App Security
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 This article is designed to help you understand how to filter and create action policies for [!INCLUDE [Product short](includes/product-short.md)] activities using Microsoft Cloud App Security.
 

@@ -1,25 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
-#ms.tgt_pltfrm:
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] information and support
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Use the following resources to help you learn about, deploy, and support [!INCLUDE [Product long](includes/product-long.md)] for your organization.
 

@@ -1,23 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity computer investigation tutorial
 description: This article explains how to use Microsoft Defender for Identity security alerts to investigate a suspicious computer.
-keywords:
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Investigate a computer
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).

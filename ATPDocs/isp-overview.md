@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity's identity security posture assessments
 description: This article provides an overview of Microsoft Defender for Identity's identity security posture assessment reports.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)]'s identity security posture assessments
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Typically, organizations of all sizes have limited visibility into whether or not their on-premises apps and services could introduce a security vulnerability to their organization. The problem of limited visibility is especially true with regards to use of unsupported or outdated components.
 

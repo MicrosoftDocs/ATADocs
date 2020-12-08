@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Understand and use Lateral Movement Paths with Microsoft Defender for Identity
 description: This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] Lateral Movement Paths (LMPs)
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).

@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Update your Microsoft Defender for Identity sensors
 description: Describes how to update and delay updates of sensors in Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Update [!INCLUDE [Product long](includes/product-long.md)] sensors
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up-to-date, provides the best possible protection for your organization.
 

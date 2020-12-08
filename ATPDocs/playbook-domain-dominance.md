@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Domain Dominance Playbook
 description: The Microsoft Defender for Identity domain dominance playbook describes how to simulate domain dominance attacks for detection by Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Domain dominance playbook
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 The last tutorial in this four-part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a domain dominance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections using [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. The tutorials don't include [!INCLUDE [Product short](includes/product-short.md)] advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 

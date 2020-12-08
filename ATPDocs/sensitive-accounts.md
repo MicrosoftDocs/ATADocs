@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Tag sensitive accounts with Microsoft Defender for Identity
 description: Describes how to tag sensitive accounts using Microsoft Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Working with sensitive accounts
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 ## Sensitive entities
 

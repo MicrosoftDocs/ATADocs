@@ -1,22 +1,11 @@
 ---
-# required metadata
 title: Planning your Microsoft Defender for Identity deployment
 description: Helps you plan your deployment and decide how many Microsoft Defender for Identity servers will be needed to support your network
-author: shsagir
-ms.author: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Plan capacity for [!INCLUDE [Product long](includes/product-long.md)]
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 In this guide, you determine how many [!INCLUDE [Product long](includes/product-long.md)] sensors you need.
 

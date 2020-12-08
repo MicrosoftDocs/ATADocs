@@ -1,24 +1,11 @@
 ---
-# required metadata
 title: Understanding the Microsoft Defender for Identity portal
 description: Describes how to log into the Microsoft Defender for Identity portal and the components of the portal
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Working with the [!INCLUDE [Product long](includes/product-long.md)] portal
-
-[!INCLUDE [Rebranding notice](includes/rebranding.md)]
 
 > [!NOTE]
 > All [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).
