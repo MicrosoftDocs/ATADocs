@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 12/09/2020
+ms.date: 12/06/2020
 ms.topic: overview
 
 # optional metadata
@@ -23,7 +23,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.133
 
-Released November 22, 2020
+Released December 6, 2020
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
