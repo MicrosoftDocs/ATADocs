@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Configure Windows Event collection Microsoft Defender for Identity
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Configure Windows Event collection

@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Network Name Resolution
 description: This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # What is Network Name Resolution?

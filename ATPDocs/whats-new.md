@@ -1,15 +1,8 @@
 ---
-# required metadata
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
-ms.date: 11/23/2020
+ms.date: 12/09/2020
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
 
 # optional metadata
 ms.reviewer: ort
