@@ -223,7 +223,7 @@ None
 
 ## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)
 
-Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) announcing that a new vulnerability exists that allows elevation of privileges to the domain controller.
+Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) announcing that a new vulnerability exists that allows the elevation of privileges to the domain controller.
 
 An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*.
 

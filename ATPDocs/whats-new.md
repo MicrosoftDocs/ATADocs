@@ -21,6 +21,13 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.134
+
+Released December 13, 2020
+
+- Our [recently released NetLogon detector](#azure-atp-release-2127-2) has been enhanced to also work when the Netlogon channel transaction occurs over an encrypted channel. For more information about the detector, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.133
 
 Released December 6, 2020
