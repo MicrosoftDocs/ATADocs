@@ -21,6 +21,13 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.134
+
+Released December 13, 2020
+
+- Our [recently released NetLogon detector](#azure-atp-release-2127-2) has been enhanced to also work when the Netlogon channel transaction occurs over an encrypted channel. For more information about the detector, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.133
 
 Released December 6, 2020
@@ -38,7 +45,7 @@ Released November 17, 2020
 Released November 8, 2020
 
 - **New security alert:  Suspected Kerberos SPN exposure (external ID 2410)**  
-[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attackers intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
+[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attacker's intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.130
@@ -64,6 +71,8 @@ We are removing the **Mail notification** toggles for turning on email notificat
 ## Azure ATP release 2.127
 
 Released September 20, 2020
+
+<a name="azure-atp-release-2127-2"></a>
 
 - **New security alert: Suspected Netlogon privilege elevation attempt (external ID 2411)**  
 Azure ATP's *Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)* security alert is now available. In this detection, an Azure ATP security alert is triggered when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*. For more information, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
