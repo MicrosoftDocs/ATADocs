@@ -1,141 +1,42 @@
 ---
 title: Uninstall Microsoft Defender for Identity sensor
-description: This describes how to uninstall Microsoft Defender for Identity sensor from domain controllers.
-ms.date: 12/15/2020
+description: This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
+ms.date: 12/22/2020
 ms.topic: how-to
 ---
 
 # Uninstall the [!INCLUDE [Product long](includes/product-long.md)] sensor
 
-This describes how to uninstall [!INCLUDE [Product long](includes/product-long.md)] sensor from domain controllers.
+This article describes how to uninstall the [!INCLUDE [Product long](includes/product-long.md)] sensor from domain controllers for the following scenarios:
 
+1. Uninstall a sensor from a domain controller
+1. Remove an orphaned sensor
+1. Remove a duplicate sensor
 
+## Uninstall a sensor from a domain controller
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor silent installation
+The following steps describe how to uninstall a sensor from a domain controller.
 
-> [!NOTE]
-> When silently deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- [!INCLUDE [Product short](includes/product-short.md)] sensor. </br>Make the [!INCLUDE [Product short](includes/product-short.md)] sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
+1. Log on to the domain controller with local administrator privileges.
+1. From the Windows **Start** menu, click **Settings** > **Control Panel** > **Add/ Remove Programs**.
+1. Locate the sensor and click **Remove**.
 
-Use the following command to perform a fully silent install of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+## Remove an orphaned sensor
 
-**cmd.exe syntax**:
+This scenario can occur when a domain controller was deleted without first uninstalling the sensor, and the sensor still appears in the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
-```dos
-"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
-```
+1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and under the **System** section, select **Sensors**.
+1. Locate the orphaned sensor and, at the end of the row, click **Delete** (trash can icon).
 
-**Powershell syntax**:
+    ![Delete orphaned [!INCLUDE [Product short](includes/product-short.md)] sensor from sensors page](media/delete-orphaned-sensor.png)
 
-```powershell
-.\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
-```
+## Remove a duplicate
 
-> [!NOTE]
-> When using the Powershell syntax, omitting the **./** preface results in an error that prevents silent installation.
+This scenario may occur after an in-place sensor upgrade, and the sensor appears twice in the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
-> [!NOTE]
-> Copy the access key from the [!INCLUDE [Product short](includes/product-short.md)] portal **Configuration** section, **Sensors** page.
-
-**Installation options**:
-
-> [!div class="mx-tableFixed"]
->
-> |Name|Syntax|Mandatory for silent installation?|Description|
-> |-------------|----------|---------|---------|
-> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
-
-**Installation parameters**:
-
-> [!div class="mx-tableFixed"]
->
-> |Name|Syntax|Mandatory for silent installation?|Description|
-> |-------------|----------|---------|---------|
-> |InstallationPath|InstallationPath=""|No|Sets the path for the installation of [!INCLUDE [Product short](includes/product-short.md)] Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
-> |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the [!INCLUDE [Product short](includes/product-short.md)] sensor with the [!INCLUDE [Product short](includes/product-short.md)] instance.|
-
-**Examples**:
-
-Use the following command to silently install the [!INCLUDE [Product short](includes/product-short.md)] sensor:
-
-```dos
-"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
-```
-
-## Proxy authentication
-
-Use the following commands to complete proxy authentication:
-
-**Syntax**:
-
-> [!div class="mx-tableFixed"]
->
-> |Name|Syntax|Mandatory for silent installation?|Description|
-> |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
-> |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
-
-## Update the [!INCLUDE [Product short](includes/product-short.md)] sensor
-
-Use the following command to silently update the [!INCLUDE [Product short](includes/product-short.md)] sensor:
-
-**Syntax**:
-
-```dos
-"Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
-```
-
-**Installation options**:
-
-> [!div class="mx-tableFixed"]
->
-> |Name|Syntax|Mandatory for silent installation?|Description|
-> |-------------|----------|---------|---------|
-> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
-
-**Examples**:
-
-To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silently:
-
-```dos
-"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
-```
-
-## Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently
-
-Use the following command to perform a silent uninstall of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
-
-**Syntax**:
-
-```dos
-"Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
-```
-
-**Installation options**:
-
-> [!div class="mx-tableFixed"]
->
-> |Name|Syntax|Mandatory for silent uninstallation?|Description|
-> |-------------|----------|---------|---------|
-> |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server.|
-> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-
-**Examples**:
-
-To silently uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server:
-
-```dos
-"Azure ATP sensor Setup.exe" /quiet /uninstall
-```
+1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and under the **System** section, select **Sensors**.
+1. Locate the orphaned sensor and, at the end of the row, click **Delete** (trash can icon).
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Install the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md)
-- [Configure the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step5.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently](silent-installation.md#uninstall-the-include-product-shortincludesproduct-shortmd-sensor-silently)
