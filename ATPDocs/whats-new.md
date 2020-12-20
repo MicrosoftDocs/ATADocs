@@ -25,7 +25,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 Released December 20, 2020
 
-- We improved our [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) alert to support new attributes related to the recent Solorigate campaign. The alert will now also detect the use of the *ADFSDump* tool, which was the initial tool used in the Solorigate campaign.
+- We've improved our [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) alert to support new attributes related to the recent Solorigate campaign. The alert will now also detect the use of the *ADFSDump* tool, which was the initial tool used in the Solorigate campaign.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.134
