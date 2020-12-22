@@ -30,7 +30,7 @@ This scenario can occur when a domain controller was deleted without first unins
 
     ![Delete orphaned [!INCLUDE [Product short](includes/product-short.md)] sensor from sensors page](media/delete-orphaned-sensor.png)
 
-## Remove a duplicate
+## Remove a duplicate sensor
 
 This scenario may occur after an in-place sensor upgrade, and the sensor appears twice in the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
