@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity domain dominance security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of domain dominance phase efforts are detected against your organization.
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
 ---
 
@@ -78,7 +78,7 @@ Advanced security scanners may legitimately generate this type of activity again
 
 **Description**
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. [!INCLUDE [Product short](includes/product-short.md)] detects PSexec, Remote WMI, and PowerShell connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. [!INCLUDE [Product short](includes/product-short.md)] detects PSexec, Remote WMI, and PowerShell connections.
 
 **Learning period**
 
@@ -608,7 +608,7 @@ Legitimate group modifications that occur rarely and the system didn't learn as 
 
 **Description**
 
-A suspicious service has been created on a domain controller in your organization. This alert relies on event 7045 to identify this suspicious activity.
+A suspicious service has been created on a domain controller or AD FS server in your organization. This alert relies on event 7045 to identify this suspicious activity.
 
 **Learning period**
 
