@@ -116,6 +116,8 @@ To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silen
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
+<a name="silently-uninstall-sensor"></a>
+
 ## Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently
 
 Use the following command to perform a silent uninstall of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
