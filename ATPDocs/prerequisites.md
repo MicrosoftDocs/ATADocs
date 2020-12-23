@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 11/24/2020
+ms.date: 12/23/2020
 ms.topic: overview
 ---
 
@@ -110,23 +110,23 @@ This section lists the requirements for the [!INCLUDE [Product short](includes/p
 
 ### General
 
-The [!INCLUDE [Product short](includes/product-short.md)] sensor supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Server Core but not Nano Server), Windows Server 2019\* (including Server Core but not Nano Server) as shown in the following table.
+The [!INCLUDE [Product short](includes/product-short.md)] sensor supports installation on a domain controller and Active Directory Federation Services (AD FS) running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Server Core but not Nano Server), Windows Server 2019\* (including Server Core but not Nano Server) as shown in the following table.
 
-| Operating system version   | Server with Desktop Experience | Server Core | Nano Server    |
-| -------------------------- | ------------------------------ | ----------- | -------------- |
-| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Not applicable |
-| Windows Server 2012        | &#10004;                       | &#10004;    | Not applicable |
-| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Not applicable |
-| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       |
-| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       |
+| Operating system version   | Server with Desktop Experience | Server Core | Nano Server    | Supported installations  |
+| -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
+| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Not applicable | Domain controller        |
+| Windows Server 2012        | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
+| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
+| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
 
 \* Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) or newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
 The domain controller can be a read-only domain controller (RODC).
 
-For your domain controllers to communicate with the cloud service, you must open port 443 in your firewalls and proxies to \*.atp.azure.com.
+For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to \*.atp.azure.com.
 
-During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the domain controller.A reboot might also be required if there is a restart already pending.
+During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there is a restart already pending.
 
 > [!NOTE]
 > A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
@@ -136,9 +136,9 @@ During installation, if .Net Framework 4.7 or later is not installed, the .Net F
 The [!INCLUDE [Product short](includes/product-short.md)] sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
 For optimal performance, set the **Power Option** of the machine running the [!INCLUDE [Product short](includes/product-short.md)] sensor to **High Performance**.
 
-[!INCLUDE [Product short](includes/product-short.md)] sensors can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers, and the amount of resources installed.
+[!INCLUDE [Product short](includes/product-short.md)] sensors can be deployed on domain controller or AD FS servers of various loads and sizes, depending on the amount of network traffic to and from the servers, and the amount of resources installed.
 
-For Windows Operating systems 2008R2 and 2012, [!INCLUDE [Product short](includes/product-short.md)] Sensor is not supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
+For Windows Operating systems 2008R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor is not supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > When running as a virtual machine, dynamic memory or any other memory ballooning feature is not supported.
@@ -179,6 +179,8 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 ### Windows Event logs
 
 [!INCLUDE [Product short](includes/product-short.md)] detection relies on specific [Windows Event logs](configure-windows-event-collection.md#configure-event-collection) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, [Advanced audit policy check](configure-windows-event-collection.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md#configure-audit-policies) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+
+For sensors running on AD FS servers, configure the auditing level to **Verbose**. For information on how to configure the auditing level, see [Event auditing information for AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016).
 
 > [!NOTE]
 > Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-step8-samr.md).
