@@ -162,11 +162,11 @@ Alternatively, you can use the following steps to disable the setting:
 1. Identify the name of the network adapter: `Get-NetAdapter`
 1. Use the following commands to configure the adapter:
 
-```powershell
-Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "IPv4 TSO Offload" -DisplayValue "Disabled" –NoRestart
-Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv4)" -DisplayValue "Disabled" –NoRestart
-Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv6)" -DisplayValue "Disabled" –NoRestart
-```
+    ```powershell
+    Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "IPv4 TSO Offload" -DisplayValue "Disabled" –NoRestart
+    Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv4)" -DisplayValue "Disabled" –NoRestart
+    Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv6)" -DisplayValue "Disabled" –NoRestart
+    ```
 
 1. Restart the domain controller.
 
