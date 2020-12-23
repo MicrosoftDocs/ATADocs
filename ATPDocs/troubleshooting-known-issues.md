@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 09/07/2020
+ms.date: 12/23/2020
 ms.topic: how-to
 ---
 
@@ -157,7 +157,20 @@ On the Guest OS, set the following to **Disabled** in the virtual machine's NIC 
 
  ![VMware sensor issue](media/vm-sensor-issue.png)
 
-Use the following command to check if Large Send Offload (LSO) is enabled or disabled:
+Alternatively, you can use the following steps to disable the setting:
+
+1. Identify the name of the network adapter: `Get-NetAdapter`
+1. Use the following commands to configure the adapter:
+
+```powershell
+Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "IPv4 TSO Offload" -DisplayValue "Disabled" –NoRestart
+Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv4)" -DisplayValue "Disabled" –NoRestart
+Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv6)" -DisplayValue "Disabled" –NoRestart
+```
+
+1. Restart the domain controller.
+
+Then, use the following command to check if Large Send Offload (LSO) is enabled or disabled:
 
 `Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
 
