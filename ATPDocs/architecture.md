@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity architecture
 description: Describes the architecture of Microsoft Defender for Identity
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: overview
 ---
 
@@ -25,7 +25,9 @@ Installed directly on your domain controllers, the [!INCLUDE [Product short](inc
 The [!INCLUDE [Product short](includes/product-short.md)] portal allows the creation of your [!INCLUDE [Product short](includes/product-short.md)] instance, displays the data received from [!INCLUDE [Product short](includes/product-short.md)] sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
 - **[!INCLUDE [Product short](includes/product-short.md)] sensor**  
-[!INCLUDE [Product short](includes/product-short.md)] sensors are installed directly on your domain controllers. The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
+[!INCLUDE [Product short](includes/product-short.md)] sensors can be directly installed on the following:
+  - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
+  - **AD FS**: The sensor directly monitors network traffic and authentication events.
 - **[!INCLUDE [Product short](includes/product-short.md)] cloud service**  
 [!INCLUDE [Product short](includes/product-short.md)] cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, and Asia. [!INCLUDE [Product short](includes/product-short.md)] cloud service is connected to Microsoft's intelligent security graph.
 
