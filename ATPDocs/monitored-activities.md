@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity monitored domain activities
 description: Describes each activity type monitored by Microsoft Defender for Identity
-ms.date: 10/26/2020
+ms.date: 12/24/2020
 ms.topic: conceptual
 ---
 
@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE [Product long](includes/product-long.md)] monitors information generated from your organization's Active Directory, network activities and event activities to detect suspicious activity. The monitored activity information enables [!INCLUDE [Product short](includes/product-short.md)] to help you determine the validity of each potential threat and correctly triage and respond.
 
-In the case of a valid threat, or **true positive**, [!INCLUDE [Product short](includes/product-short.md)] enables you to discover the scope of breach for each incident, investigate which entities are involved, and determine how to remediate them.
+In the case of a valid threat, or **true positive**, [!INCLUDE [Product short](includes/product-short.md)] enables you to discover the scope of the breach for each incident, investigate which entities are involved, and determine how to remediate them.
 
 The information monitored by [!INCLUDE [Product short](includes/product-short.md)] is presented in the form of activities. [!INCLUDE [Product short](includes/product-short.md)] currently supports monitoring of the following activity types:
 
@@ -20,6 +20,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 >
 > - This article is relevant for all [!INCLUDE [Product short](includes/product-short.md)] sensor types.
 > - [!INCLUDE [Product short](includes/product-short.md)] monitored activities appear on both the user and machine profile page.
+> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in [Cloud App Security](https://portal.cloudappsecurity.com/) and Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
 
 ## Monitored user activities: User account AD attribute changes
 
@@ -37,7 +38,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 |Account Password Not Required Changed|User account was changed allow logging in with a blank password.|
 |Account Smartcard Required Changed|Account changes to require users to log on to a device using a smart card.|
 |Account Supported Encryption Types Changed|Kerberos supported encryption types were changed (types: Des, AES 129, AES 256)|
-|Account Upn Name Changed|User's principle name was changed.|
+|Account UPN Name Changed|User's principle name was changed.|
 |Group Membership Changed|User was added/removed, to/from a group, by another user or by themselves.|
 |User Mail Changed|Users email attribute was changed.|
 |User Manager Changed|User's manager attribute was changed.|
