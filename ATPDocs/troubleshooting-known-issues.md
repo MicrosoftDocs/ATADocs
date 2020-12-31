@@ -201,7 +201,7 @@ The sensor failed to retrieve the designated gMSA account from the [!INCLUDE [Pr
 
 **Resolution:**
 
-Make sure that the gMSA account's credentials are correct and that the sensor has been granted permission to retrieve the account's credentials. In the applied policy, you may need to add the gMSA account to the **Log on as a service** user right assignments.
+Make sure that the gMSA account's credentials are correct and that the sensor has been granted permission to retrieve the account's credentials. While [!INCLUDE [Product short](includes/product-short.md)]  does not require the **Log on as a service** permission for gMSA accounts, this issue is often resolved by adding the permission to the account.
 
 ## Report downloads cannot contain more than 300,000 entries
 
