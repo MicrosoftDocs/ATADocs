@@ -155,22 +155,9 @@ To resolve the issue:
 
 On the Guest OS, set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
 
- ![VMware sensor issue](media/vm-sensor-issue.png)
+![VMware sensor issue](media/vm-sensor-issue.png)
 
-Alternatively, you can use the following steps to disable the setting:
-
-1. Identify the name of the network adapter: `Get-NetAdapter`
-1. Use the following commands to configure the adapter:
-
-    ```powershell
-    Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "IPv4 TSO Offload" -DisplayValue "Disabled" –NoRestart
-    Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv4)" -DisplayValue "Disabled" –NoRestart
-    Set-NetAdapterAdvancedProperty <Network_Adapter_Name> -DisplayName "Large Send Offload V2 (IPv6)" -DisplayValue "Disabled" –NoRestart
-    ```
-
-1. Restart the domain controller.
-
-Then, use the following command to check if Large Send Offload (LSO) is enabled or disabled:
+Use the following command to check if Large Send Offload (LSO) is enabled or disabled:
 
 `Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
 
@@ -181,6 +168,11 @@ If LSO is enabled, use the following command to disable it:
 `Disable-NetAdapterLso -Name {name of adapter}`
 
 ![Disable LSO status](media/disable-lso-vmware.png)
+
+> [!NOTE]
+>
+> - You may need to restart your machine to for these changes to take effect.
+> - These steps may vary depending on your VMWare version. Check VMWare documentation for information about how to disable LSO for your VMWare version.
 
 ## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
 
