@@ -171,7 +171,7 @@ If LSO is enabled, use the following command to disable it:
 
 > [!NOTE]
 >
-> - You may need to restart your machine to for these changes to take effect.
+> - You may need to restart your machine for these changes to take effect.
 > - These steps may vary depending on your VMWare version. Check VMWare documentation for information about how to disable LSO for your VMWare version.
 
 ## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
