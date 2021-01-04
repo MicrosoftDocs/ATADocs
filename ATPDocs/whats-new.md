@@ -25,11 +25,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 Released December 20, 2020
 
-- We've improved our [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) alert to support new attributes related to the recent [Solorigate campaign](https://www.microsoft.com/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/). There are many publicly available pen-testing tools like ADFSDump and ADFSpoof that help with extracting required information from ADFS configuration database to generate the forged security tokens.  The Microsoft 365 Defender team has created several high-fidelity detections related to this. A few of them include: 
- 
-  - Possible attempt to access ADFS key material which detects when a suspicious LDAP query is searching for sensitive key material in AD.
-  - ADFS private key extraction which detects ADFS private key extraction patterns from tools such as ADFSDump.
-
+- We've improved our [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) alert to support new attributes related to the recent [Solorigate campaign](https://www.microsoft.com/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/). The alert will now also detect the use of the *ADFSDump* tool, which was the initial tool used in the Solorigate campaign.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.134
