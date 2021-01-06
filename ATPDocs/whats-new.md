@@ -28,6 +28,8 @@ Released January 3, 2021
 - Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](prerequisites.md#azure-atp-sensor-requirements) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft defender for identity sensor for AD FS server, [download the latest deployment package](install-step3.md#download-the-setup-package) from the sensor configuration page.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.135
+
 Released December 20, 2020
 
 - We've improved our [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) alert to also detect techniques used to obtain the information needed in order to generate security tokens, such as seen as part of the [Solorigate campaign](https://aka.ms/solorigate).
