@@ -269,9 +269,9 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|[!INCLUDE [Product short](includes/product-short.md)] Sensor|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
 |**NNR ports** \*|||||
-|NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]s|All devices on network|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|All devices on network|
-|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|All devices on network|
+|NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 
 \* One of these ports is required, but we recommend opening all of them.
 
