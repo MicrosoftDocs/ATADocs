@@ -161,18 +161,18 @@ The sensor is not supported on domain controllers running Windows 2008 R2 with B
 The following table lists the minimum ports that the [!INCLUDE [Product short](includes/product-short.md)] sensor requires:
 
 |Protocol|Transport|Port|From|To|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Internet ports**|||||
-|SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
+|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
 |SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)] sensor|localhost|
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] sensor|DNS Servers|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
 |**NNR ports**\*|||||
-|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]s|All devices on network|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]s|All devices on network|
-|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]s|All devices on network|
+|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 
 \* One of these ports is required, but we recommend opening all of them.
 
@@ -253,9 +253,9 @@ The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requ
 The following table lists the minimum ports that the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requires configured on the management adapter:
 
 |Protocol|Transport|Port|From|To|
-|------------|-------------|--------|-----------|
+|------------|-------------|--------|-----------|---|
 |**Internet ports**||||
-|SSL (*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] Sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
+|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] Sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
 |SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)] sensor|localhost|
 |**Internal ports**||||
 |LDAP|TCP and UDP|389|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
