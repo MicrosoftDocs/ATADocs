@@ -169,7 +169,7 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
 |**Localhost ports**\*|Required for Sensor Service updater||||
-|SSL (localhost)|TCP|444|Sensor Updater Service|Sensor Service|
+|SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
 |**NNR ports**\*\*|||||
 |NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
@@ -270,7 +270,7 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|[!INCLUDE [Product short](includes/product-short.md)] Sensor|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
 |**Localhost ports**\*|Required for Sensor Service updater||||
-|SSL (localhost)|TCP|444|Sensor Updater Service|Sensor Service|
+|SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
 |**NNR ports**\*\*|||||
 |NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
