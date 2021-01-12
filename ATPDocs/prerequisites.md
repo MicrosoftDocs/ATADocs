@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 12/23/2020
+ms.date: 01/12/2021
 ms.topic: overview
 ---
 
@@ -164,17 +164,16 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |------------|-------------|--------|-----------|---|
 |**Internet ports**|||||
 |SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
-|SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)] sensor|localhost|
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] sensor|DNS Servers|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
-|**NNR ports**\*|||||
+|**Localhost ports**|Required for Sensor Service updater<br />By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.||||
+|SSL (localhost)|TCP|444|Sensor Updater Service|Sensor Service|
+|**NNR ports**|One of these ports is required, but we recommend opening all of them.||||
 |NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-
-\* One of these ports is required, but we recommend opening all of them.
 
 ### Windows Event logs
 
@@ -256,7 +255,6 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |------------|-------------|--------|-----------|---|
 |**Internet ports**||||
 |SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] Sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
-|SSL (localhost)|TCP|444|[!INCLUDE [Product short](includes/product-short.md)] sensor|localhost|
 |**Internal ports**||||
 |LDAP|TCP and UDP|389|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
 |Secure LDAP (LDAPS)|TCP|636|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
@@ -268,12 +266,12 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] Sensor|DNS Servers|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|[!INCLUDE [Product short](includes/product-short.md)] Sensor|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
-|**NNR ports** \*|||||
+|**Localhost ports**|Required for Sensor Service updater<br />By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.||||
+|SSL (localhost)|TCP|444|Sensor Updater Service|Sensor Service|
+|**NNR ports**|One of these ports is required, but we recommend opening all of them.||||
 |NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-
-\* One of these ports is required, but we recommend opening all of them.
 
 > [!NOTE]
 >
