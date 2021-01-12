@@ -175,7 +175,7 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 
-\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
+\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
 \*\* One of these ports is required, but we recommend opening all of them.
 
 ### Windows Event logs
@@ -276,7 +276,7 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 
-\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
+\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
 \*\* One of these ports is required, but we recommend opening all of them.
 
 > [!NOTE]
