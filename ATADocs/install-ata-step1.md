@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/07/2019
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -55,7 +55,7 @@ Perform the following steps on the ATA Center server.
 
 1. Log in to the computer on to which you are installing the ATA Center as a user who is a member of the local administrators group.
 
-1. Run **Microsoft ATA Center Setup.EXE** and follow the setup wizard.
+1. Run **Microsoft ATA Center Setup.EXE** with elevated privileges (**Run as administrator**) and follow the setup wizard.
 
     > [!NOTE]
     > Make sure to run the installation file from a local drive and not from a mounted ISO file to avoid issues in case a reboot is required as part of the installation.
