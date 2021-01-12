@@ -31,7 +31,7 @@ for Identity security baseline mapping file](https://github.com/MicrosoftDocs/Se
 
 **Guidance**: Use Azure Virtual Network Service Tags to define network access controls on network security groups or Azure Firewall configured for your Defender for Identity resources. You can use service tags in place of specific IP addresses when creating security rules. By specifying the service tag name (For example: "AzureAdvancedThreatProtection") in the appropriate source or destination field of a rule, you can allow or deny the traffic for the corresponding service. Microsoft manages the address prefixes encompassed by the service tag and automatically updates the service tag as addresses change.
 
-- [Enable access to Defender for Identity service URLs in the proxy server](./configure-proxy.md#enable-access-to--service-urls-in-the-proxy-server)
+- [Enable access to Defender for Identity service URLs in the proxy server](configure-proxy.md#enable-access-to--service-urls-in-the-proxy-server)
 
 - [Understand and using Service Tags](/azure/virtual-network/service-tags-overview)
 
@@ -101,7 +101,7 @@ Security administrator
 Limit the number of highly privileged accounts or roles and protect these accounts at an elevated level because users with this privilege can directly or indirectly read and modify every resource in your Azure environment.
 
 You can enable just-in-time (JIT) privileged access to Azure resources and Azure Active Directory (Azure AD) using Azure AD Privileged Identity Management (PIM). JIT grants temporary permissions to perform privileged tasks only when users need it. PIM can also generate security alerts when there is suspicious or unsafe activity in your Azure AD organization.
-- [Microsoft Defender for Identity role groups](./role-groups.md)
+- [Microsoft Defender for Identity role groups](role-groups.md)
 
 - [Administrator role permissions in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 
 
@@ -121,7 +121,7 @@ Ensure that you also restrict access to the management, identity, and security s
 
 All types of access controls should be aligned to your enterprise segmentation strategy to ensure consistent access control.
 
-- [Microsoft Defender for Identity role groups](./role-groups.md)
+- [Microsoft Defender for Identity role groups](role-groups.md)
 
 - [Azure Components and Reference model](/security/compass/microsoft-security-compass-introduction#azure-components-and-reference-model-2151) 
 
@@ -212,7 +212,7 @@ Note: Additional permissions might be required to get visibility into workloads 
 **Guidance**: Defender for Identity can notify you when it detects suspicious activities, by sending security and health alerts to your Syslog server through a nominated sensor.
 Forward any logs from Defender for Identity to your SIEM which can be used to set up custom threat detections. Ensure you are monitoring different types of Azure assets for potential threats and anomalies. Focus on getting high-quality alerts to reduce false positives for analysts to sort through. Alerts can be sourced from log data, agents, or other data.
 
-- [How to integrate with Syslog](./setting-syslog.md)
+- [How to integrate with Syslog](setting-syslog.md)
 - [Create custom analytics rules to detect threats](/azure/sentinel/tutorial-detect-threats-custom) 
 
 - [Cyber threat intelligence with Azure Sentinel](/azure/architecture/example-scenario/data/sentinel-threat-intelligence)
@@ -257,7 +257,7 @@ Defender for Identity offers to forward all security-related logs to your SIEM f
 - [How to collect platform logs and metrics with Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings) 
 - [How to onboard Azure Sentinel](/azure/sentinel/quickstart-onboard) 
 
-- [Integrate Defender for Identity with Syslog](./setting-syslog.md)
+- [Integrate Defender for Identity with Syslog](setting-syslog.md)
 
 **Azure Security Center monitoring**: Yes
 
