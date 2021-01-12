@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 09/07/2020
+ms.date: 01/12/2021
 ms.topic: how-to
 ---
 
@@ -155,7 +155,7 @@ To resolve the issue:
 
 On the Guest OS, set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
 
- ![VMware sensor issue](media/vm-sensor-issue.png)
+![VMware sensor issue](media/vm-sensor-issue.png)
 
 Use the following command to check if Large Send Offload (LSO) is enabled or disabled:
 
@@ -168,6 +168,11 @@ If LSO is enabled, use the following command to disable it:
 `Disable-NetAdapterLso -Name {name of adapter}`
 
 ![Disable LSO status](media/disable-lso-vmware.png)
+
+> [!NOTE]
+>
+> - You may need to restart your machine for these changes to take effect.
+> - These steps may vary depending on your VMWare version. Check VMWare documentation for information about how to disable LSO/TSO for your VMWare version.
 
 ## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
 
