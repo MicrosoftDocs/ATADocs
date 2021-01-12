@@ -1,7 +1,7 @@
 ---
 title: Install Microsoft Defender for Identity Silently
 description: This describes how to silently install Microsoft Defender for Identity.
-ms.date: 10/27/2020
+ms.date: 01/11/2021
 ms.topic: how-to
 ---
 
@@ -87,6 +87,8 @@ Use the following commands to complete proxy authentication:
 > |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
+
+For more information about proxy configuration, see [Configure endpoint proxy and Internet connectivity settings for your [!INCLUDE [Product long](includes/product-long.md)] Sensor](configure-proxy.md).
 
 ## Update the [!INCLUDE [Product short](includes/product-short.md)] sensor
 
