@@ -168,12 +168,15 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] sensor|DNS Servers|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
-|**Localhost ports**|Required for Sensor Service updater<br />By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.||||
+|**Localhost ports**\*|Required for Sensor Service updater||||
 |SSL (localhost)|TCP|444|Sensor Updater Service|Sensor Service|
-|**NNR ports**|One of these ports is required, but we recommend opening all of them.||||
+|**NNR ports**\*\*|||||
 |NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+
+\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
+\*\* One of these ports is required, but we recommend opening all of them.
 
 ### Windows Event logs
 
@@ -266,12 +269,15 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] Sensor|DNS Servers|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|[!INCLUDE [Product short](includes/product-short.md)] Sensor|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
-|**Localhost ports**|Required for Sensor Service updater<br />By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.||||
+|**Localhost ports**\*|Required for Sensor Service updater||||
 |SSL (localhost)|TCP|444|Sensor Updater Service|Sensor Service|
-|**NNR ports**|One of these ports is required, but we recommend opening all of them.||||
+|**NNR ports**\*\*|||||
 |NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+
+\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
+\*\* One of these ports is required, but we recommend opening all of them.
 
 > [!NOTE]
 >
