@@ -21,7 +21,7 @@ Perform the following steps on the domain controller.
 
 1. Verify the machine has connectivity to the relevant [[!INCLUDE [Product short](includes/product-short.md)] cloud service](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) endpoint(s):
 1. Extract the installation files from the zip file. Installing directly from the zip file will fail.
-1. Run **Azure ATP sensor setup.exe** and follow the setup wizard.
+1. Run **Azure ATP sensor setup.exe** with elevated privileges (**Run as administrator**) and follow the setup wizard.
 1. On the **Welcome** page, select your language and click **Next**.
 
     ![[!INCLUDE [Product short](includes/product-short.md)] standalone sensor installation language](media/sensor-install-language.png)
