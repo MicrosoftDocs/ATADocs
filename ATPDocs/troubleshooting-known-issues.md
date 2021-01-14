@@ -55,12 +55,22 @@ The issue can be caused by a Transparent proxy configuration error on Server Cor
 
 **Resolution:**
 
-Run the following PowerShell cmdlet to verify that the [!INCLUDE [Product short](includes/product-short.md)] service trusted root certificate exists on Server Core. The following example uses the "DigiCert Baltimore Root" and the "DigiCert Global Root".
+Run the following PowerShell cmdlet to verify that the [!INCLUDE [Product short](includes/product-short.md)] service trusted root certificate exists on Server Core.
+
+In the following example, use the "DigiCert Baltimore Root" certificate for all customers. In addition, use the "DigiCert Global Root G2" certificate for commercial customers or use the "DigiCert Global Root CA" certificate for US Government GCC High customers, as indicated.
 
 ```powershell
+# Certificate for all customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "D4DE20D05E66FC53FE1A50882C78DB2852CAE474"} | fl
+
+# Certificate for commercial customers
 Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
+
+# Certificate for US Government GCC High customers
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "a8985d3a65e5e5c4b2d7d66d40c6dd2fb19c5436"} | fl
 ```
+
+Output for certificate for all customers:
 
 ```Output
 Subject      : CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
@@ -70,7 +80,11 @@ FriendlyName : DigiCert Baltimore Root
 NotBefore    : 5/12/2000 11:46:00 AM
 NotAfter     : 5/12/2025 4:59:00 PM
 Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+```
 
+Output for certificate for commercial customers certificate:
+
+```Output
 Subject      : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
 Issuer       : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
 Thumbprint   : DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
@@ -80,14 +94,38 @@ NotAfter     : 15/01/2038 14:00:00
 Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
 ```
 
+Output for certificate for US Government GCC High customers:
+
+```Output
+Subject      : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+Issuer       : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+Thumbprint   : A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436
+FriendlyName : DigiCert
+NotBefore    : 11/9/2006 4:00:00 PM
+NotAfter     : 11/9/2031 4:00:00 PM
+Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid, System.Security.Cryptography.Oid}
+```
+
 If you do not see the expected output, use the following steps:
 
-1. Download the [Baltimore CyberTrust root certificate](https://cacert.omniroot.com/bc2025.crt) and [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) to the Server Core machine.
+1. Download the following certificates to the Server Core machine. For all customers download the [Baltimore CyberTrust root](https://cacert.omniroot.com/bc2025.crt) certificate.
+
+    In addition:
+
+    - For commercial customers, download the [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) certificate
+    - For US Government GCC High customers, download the [DigiCert Global Root CA](https://cacerts.digicert.com/DigiCertGlobalRootCA.crt) certificate
+
 1. Run the following PowerShell cmdlet to install the certificate.
 
     ```powershell
+    # For all customers, install certificate
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\bc2025.crt" -CertStoreLocation Cert:\LocalMachine\Root
+
+    # For commercial customers, install certificate
     Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootG2.crt" -CertStoreLocation Cert:\LocalMachine\Root
+
+    # For US Government GCC High customers, install certificate
+    Import-Certificate -FilePath "<PATH_TO_CERTIFICATE_FILE>\DigiCertGlobalRootCA.crt" -CertStoreLocation Cert:\LocalMachine\Root
     ```
 
 ## Silent installation error when attempting to use Powershell
