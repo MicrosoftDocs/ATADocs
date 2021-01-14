@@ -110,7 +110,7 @@ This section lists the requirements for the [!INCLUDE [Product short](includes/p
 
 ### General
 
-The [!INCLUDE [Product short](includes/product-short.md)] sensor supports installation on a domain controller and Active Directory Federation Services (AD FS) running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Server Core but not Nano Server), Windows Server 2019\* (including Server Core but not Nano Server) as shown in the following table.
+The [!INCLUDE [Product short](includes/product-short.md)] sensor supports installation on domain controllers or Active Directory Federation Services (AD FS) servers, as shown in the following table.
 
 | Operating system version   | Server with Desktop Experience | Server Core | Nano Server    | Supported installations  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
