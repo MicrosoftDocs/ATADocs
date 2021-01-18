@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Understanding Microsoft Defender for Identity health alerts
 description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Understanding [!INCLUDE [Product long](includes/product-long.md)] sensor health alerts

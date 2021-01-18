@@ -1,20 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
-ms.date: 10/27/2020
+ms.date: 12/20/2020
 ms.topic: conceptual
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
-#ms.tgt_pltfrm:
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] information and support
@@ -45,7 +33,7 @@ For other customers, use the support channels as follows:
 
 | Channels|Instructions|
 |------|-----|
-|Use the Azure portal|1. Select **New support request** from **Help + support** in the Azure portal. <br>2. When you are prompted, on the **Basics** blade, as the **Issue type**, choose **Technical**, as the **Service** under Security & Identity, choose **Azure Advanced Threat Protection**. <br>3. Make sure that one of the following options is selected:<br>- Subscription with technical support included. You see this option if you have a paid or trial subscription for Azure.<br>- Technical support included. You see this option if you don't have an Azure subscription.|
+|Use the Azure portal|1. Select **New support request** from **Help + support** in the Azure portal.<br>2. When you are prompted, on the **Basics** blade, as the **Issue type**, choose **Technical**, as the **Service** under Security & Identity, choose **[!INCLUDE [Product short](includes/product-short.md)]**.<br>3. Make sure that one of the following options is selected:<br>- Subscription with technical support included. You see this option if you have a paid or trial subscription for Azure.<br>- Technical support included. You see this option if you don't have an Azure subscription.|
 |Use the [!INCLUDE [Product short](includes/product-short.md)] portal| 1. Click on the "?" icon in the top navigation bar in [!INCLUDE [Product short](includes/product-short.md)] portal<br>2. Search for [!INCLUDE [Product short](includes/product-short.md)].<br>3. Open an incident ticket.<br>- Select "Support"<br>4. Open an incident ticket. If you succeed in entering the [!INCLUDE [Product short](includes/product-short.md)] portal, you can enter the [Online Assisted Support (OAS) portal](https://support.microsoft.com/assistedsupportproducts). |
 
 For additional support options, ask your Microsoft contact.

@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Install Microsoft Defender for Identity VPN Integration
 description: Collect accounting information for Microsoft Defender for Identity by integrating a VPN.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
-ms.date: 10/26/2020
+ms.date: 12/23/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Integrate VPN
@@ -34,7 +23,9 @@ To enable VPN integration, make sure you set the following parameters:
 - Open port UDP 1813 on your [!INCLUDE [Product short](includes/product-short.md)] sensors and/or [!INCLUDE [Product short](includes/product-short.md)] standalone sensors.
 
 > [!NOTE]
-> By enabling **Radius Accounting**, the [!INCLUDE [Product short](includes/product-short.md)] sensor will enable a pre-provisioned Windows firewall policy called **[!INCLUDE [Product long](includes/product-long.md)] Sensor** to allow incoming RADIUS Accounting on port UDP 1813.
+>
+> - By enabling **Radius Accounting**, the [!INCLUDE [Product short](includes/product-short.md)] sensor will enable a pre-provisioned Windows firewall policy called **[!INCLUDE [Product long](includes/product-long.md)] Sensor** to allow incoming RADIUS Accounting on port UDP 1813.
+> - VPN integration is not supported in environments adhering to Federal Information Processing Standards (FIPS)
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
 

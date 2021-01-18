@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity Print spooler identity security posture assessments
 description: This article provides an overview of Microsoft Defender for Identity's Print spooler identity security posture assessment reports.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
-ms.date: 10/26/2020
+ms.date: 01/11/2021
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Security assessment: Domain controllers with Print spooler service available
@@ -32,8 +21,10 @@ Due to the possibility for exposure, domain controllers and Active Directory adm
 
 While this security assessment focuses on domain controllers, any server is potentially at risk to this type of attack.
 
-   > [!NOTE]
-   > Make sure to investigate your **Print spooler** settings, configurations, and dependencies before disabling this service and preventing active printing workflows.
+> [!NOTE]
+>
+> - Make sure to investigate your **Print spooler** settings, configurations, and dependencies before disabling this service and preventing active printing workflows.
+> - The domain controller role [adds a thread to the spooler service](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#print-spooler) that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. Therefore, the security recommendation to disable the **Print spooler** service is a trade-off between security and the ability to perform print pruning. To address the issue, you should consider periodically pruning stale print queue objects, either manually or using an automation script.
 
 ## How do I use this security assessment?
 

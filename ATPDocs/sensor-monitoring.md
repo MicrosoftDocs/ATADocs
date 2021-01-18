@@ -1,20 +1,8 @@
 ---
-# required metadata
-
 title: Monitoring domain controllers and installed sensors installed on your domain controllers using Microsoft Defender for Identity
 description: Describes how to monitor Microsoft Defender for Identity sensors and sensor coverage using Defender for Identity
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/27/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Monitoring your domain controller coverage

@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 03/07/2019
+ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -32,7 +32,7 @@ ms.suite: ems
 > [!NOTE]
 > **Support lifecycle**
 >
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 > [!div class="step-by-step"]
 > [Step 2 »](install-ata-step2.md)
@@ -55,7 +55,7 @@ Perform the following steps on the ATA Center server.
 
 1. Log in to the computer on to which you are installing the ATA Center as a user who is a member of the local administrators group.
 
-1. Run **Microsoft ATA Center Setup.EXE** and follow the setup wizard.
+1. Run **Microsoft ATA Center Setup.EXE** with elevated privileges (**Run as administrator**) and follow the setup wizard.
 
     > [!NOTE]
     > Make sure to run the installation file from a local drive and not from a mounted ISO file to avoid issues in case a reboot is required as part of the installation.

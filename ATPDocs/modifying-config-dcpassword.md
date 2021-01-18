@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Change Microsoft Defender for Identity config - domain connectivity password
 description: Describes how to change the Domain Connectivity Password on the Microsoft Defender for Identity standalone sensor.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Change [!INCLUDE [Product long](includes/product-long.md)] portal configuration - domain connectivity password

@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Microsoft Defender for Identity reconnaissance phase security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of reconnaissance phase efforts are detected against your organization.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
-ms.date: 10/27/2020
+ms.date: 12/23/2020
 ms.topic: tutorial
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Tutorial: Reconnaissance alerts
@@ -53,7 +42,7 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 **NTLM**: Attacker makes NTLM authentication requests using the dictionary of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the **WrongPassword (0xc000006a)** instead of **NoSuchUser (0xc0000064)** NTLM error.
 
-In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, [!INCLUDE [Product short](includes/product-short.md)] detects it as a suspicious activity.
+In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, [!INCLUDE [Product short](includes/product-short.md)] detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
 **Learning period**
 

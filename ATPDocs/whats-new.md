@@ -1,15 +1,8 @@
 ---
-# required metadata
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
-ms.date: 10/27/2020
+ms.date: 01/17/2021
 ms.topic: overview
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
 
 # optional metadata
 ms.reviewer: ort
@@ -28,6 +21,39 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.137
+
+Released January 17, 2021
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.136
+
+Released January 3, 2021
+
+- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](prerequisites.md#azure-atp-sensor-requirements) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft defender for identity sensor for AD FS server, [download the latest deployment package](install-step3.md#download-the-setup-package) from the sensor configuration page.
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.135
+
+Released December 20, 2020
+
+- We've improved our [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) alert to also detect techniques used to obtain the information needed in order to generate security tokens, such as seen as part of the [Solorigate campaign](https://aka.ms/solorigate).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.134
+
+Released December 13, 2020
+
+- Our [recently released NetLogon detector](#azure-atp-release-2127-2) has been enhanced to also work when the Netlogon channel transaction occurs over an encrypted channel. For more information about the detector, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
+## [!INCLUDE [Product short](includes/product-short.md)] release 2.133
+
+Released December 6, 2020
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.132
 
 Released November 17, 2020
@@ -39,7 +65,7 @@ Released November 17, 2020
 Released November 8, 2020
 
 - **New security alert:  Suspected Kerberos SPN exposure (external ID 2410)**  
-[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attackers intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
+[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attacker's intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## [!INCLUDE [Product short](includes/product-short.md)] release 2.130
@@ -65,6 +91,8 @@ We are removing the **Mail notification** toggles for turning on email notificat
 ## Azure ATP release 2.127
 
 Released September 20, 2020
+
+<a name="azure-atp-release-2127-2"></a>
 
 - **New security alert: Suspected Netlogon privilege elevation attempt (external ID 2411)**  
 Azure ATP's *Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)* security alert is now available. In this detection, an Azure ATP security alert is triggered when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*. For more information, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).

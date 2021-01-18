@@ -63,6 +63,10 @@
     href: role-groups.md
   - name: Defender for Identity multi-forest support
     href: multi-forest.md
+  - name: Security
+    items:
+    - name: Security baseline
+      href: security-baseline.md
 - name: How-to guides
   items:
   - name: Defender for Identity using Microsoft Cloud App Security
@@ -169,6 +173,8 @@
       href: configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: configure-event-forwarding.md
+  - name: Uninstall a sensor
+    href: uninstall-sensor.md
   - name: Move from ATA to Defender for Identity
     items:
     - name: Advanced Threat Analytics (ATA) to Defender for Identity

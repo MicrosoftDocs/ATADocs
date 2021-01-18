@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Excluding entities from detections in Microsoft Defender for Identity
 description: Describes how to stop Microsoft Defender for Identity from detecting specific entity activities as suspicious
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
 ms.date: 10/26/2020
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # Excluding entities from detections

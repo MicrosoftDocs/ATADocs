@@ -1,19 +1,8 @@
 ---
-# required metadata
 title: Install Microsoft Defender for Identity Silently
 description: This describes how to silently install Microsoft Defender for Identity.
-keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
-ms.date: 10/27/2020
+ms.date: 01/11/2021
 ms.topic: how-to
-ms.collection: M365-security-compliance
-ms.service: azure-advanced-threat-protection
-
-# optional metadata
-ms.reviewer: itargoet
-ms.suite: ems
 ---
 
 # [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation
@@ -99,6 +88,8 @@ Use the following commands to complete proxy authentication:
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
 
+For more information about proxy configuration, see [Configure endpoint proxy and Internet connectivity settings for your [!INCLUDE [Product long](includes/product-long.md)] Sensor](configure-proxy.md).
+
 ## Update the [!INCLUDE [Product short](includes/product-short.md)] sensor
 
 Use the following command to silently update the [!INCLUDE [Product short](includes/product-short.md)] sensor:
@@ -126,6 +117,8 @@ To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silen
 ```dos
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
+
+<a name="silently-uninstall-sensor"></a>
 
 ## Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently
 
