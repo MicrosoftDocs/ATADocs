@@ -32,7 +32,7 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
 
 The first time you open the [!INCLUDE [Product short](includes/product-short.md)] portal, the following screen appears:
 
-![[!INCLUDE [Product short](includes/product-short.md)] welcome stage 1](media/directory-services.png)
+![Welcome stage 1, Directory Services settings](media/directory-services.png)
 
 1. Enter the following information and click **Save**:
 
