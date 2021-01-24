@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity in Microsoft Cloud App Security
 description: Overview of Microsoft Defender for Identity features within Microsoft Cloud App Security.
-ms.date: 01/05/2020
+ms.date: 01/24/2021
 ms.topic: how-to
 ---
 
