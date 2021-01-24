@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity in Microsoft Cloud App Security
 description: Overview of Microsoft Defender for Identity features within Microsoft Cloud App Security.
-ms.date: 01/05/2020
+ms.date: 01/24/2021
 ms.topic: how-to
 ---
 
@@ -58,7 +58,7 @@ Access your [!INCLUDE [Product short](includes/product-short.md)] data and new h
 
 ## Alert management
 
-When using [!INCLUDE [Product short](includes/product-short.md)] with Cloud app security, closing alerts in one service will not automatically close them in the other service. Decide where to manage and remediate alerts to avoid duplicated efforts.
+When using [!INCLUDE [Product short](includes/product-short.md)] with Cloud app security, closing alerts in one service will not automatically close them in the other service. More specifically, closing alerts in Cloud App Security will not close them in Defender for Identity, but closing alerts in Defender for Identity will synchronize the closure in Cloud App Security. Decide where to manage and remediate alerts to avoid duplicated efforts.
 
 ## SIEM notification
 
