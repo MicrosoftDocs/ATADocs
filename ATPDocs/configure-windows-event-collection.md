@@ -11,10 +11,15 @@ ms.topic: how-to
 
 To enhance threat detection capabilities, [!INCLUDE [Product short](includes/product-short.md)] needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by [!INCLUDE [Product short](includes/product-short.md)]:
 
+**For Active Directory Federation Services (AD FS) events**
+
 - 1202 - The Federation Service validated a new credential
 - 1203 - The Federation Service failed to validate a new credential
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
+
+**For Other events**
+
 - 4726 - User Account Deleted
 - 4728 - Member Added to Global Security Group
 - 4729 - Member Removed from Global Security Group
