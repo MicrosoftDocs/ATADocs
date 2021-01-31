@@ -28,7 +28,7 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 > [!NOTE]
 >
 > - This assessment is updated in near real time.
-> - This assessment might contain previously deleted entities if the prerequisites for [!INCLUDE [Product long](includes/product-long.md)] are not met.
+> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for [!INCLUDE [Product long](includes/product-long.md)] are not met.
 
 ## Remediation
 
