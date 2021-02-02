@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 01/12/2021
+ms.date: 02/02/2021
 ms.topic: how-to
 ---
 
@@ -209,7 +209,7 @@ No known resolution.
 
 ## Sensor fails to enumerate event logs
 
-If you observe a limited number or lack of security event alerts within the [!INCLUDE [Product short](includes/product-short.md)] console but no health alerts are triggered. 
+If you observe a limited number or lack of security event alerts or logical activities within the [!INCLUDE [Product short](includes/product-short.md)] console but no health alerts are triggered. 
 
 **Sensor log entries:**
 
@@ -226,7 +226,7 @@ A Discretionary Access Control List is limiting access to the required event log
 
 Ensure that the Discretionary Access Control List includes the following entry:
 
-`(A;;0x1;;;S-1-5-19)`
+`(A;;0x1;;;S-1-5-80-818380073-2995186456-1411405591-3990468014-3617507088)`
 
 ## See Also
 
