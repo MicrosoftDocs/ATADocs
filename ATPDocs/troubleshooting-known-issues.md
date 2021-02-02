@@ -207,6 +207,27 @@ This is an engineering limitation.
 
 No known resolution.
 
+## Sensor fails to enumerate event logs
+
+If you observe a limited number or lack of security event alerts within the [!INCLUDE [Product short](includes/product-short.md)] console but no health alerts are triggered. 
+
+**Sensor log entries:**
+
+Error EventLogException System.Diagnostics.Eventing.Reader.EventLogException: The handle is invalid
+   at void System.Diagnostics.Eventing.Reader.EventLogException.Throw(int errorCode)
+   at object System.Diagnostics.Eventing.Reader.NativeWrapper.EvtGetEventInfo(EventLogHandle handle, EvtEventPropertyId enumType)
+   at string System.Diagnostics.Eventing.Reader.EventLogRecord.get_ContainerLog()
+
+**Cause:**
+
+A Discretionary Access Control List is limiting access to the required event logs by the Local Service account.
+
+**Resolution:**
+
+Ensure that the Discretionary Access Control List includes the following entry:
+
+`(A;;0x1;;;S-1-5-19)`
+
 ## See Also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
