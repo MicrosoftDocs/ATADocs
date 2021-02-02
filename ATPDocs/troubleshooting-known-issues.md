@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 01/12/2021
+ms.date: 02/02/2021
 ms.topic: how-to
 ---
 
@@ -206,6 +206,27 @@ This is an engineering limitation.
 **Resolution:**
 
 No known resolution.
+
+## Sensor fails to enumerate event logs
+
+If you observe a limited number, or lack of, security event alerts or logical activities within the [!INCLUDE [Product short](includes/product-short.md)] console but no health alerts are triggered. 
+
+**Sensor log entries:**
+
+Error EventLogException System.Diagnostics.Eventing.Reader.EventLogException: The handle is invalid
+   at void System.Diagnostics.Eventing.Reader.EventLogException.Throw(int errorCode)
+   at object System.Diagnostics.Eventing.Reader.NativeWrapper.EvtGetEventInfo(EventLogHandle handle, EvtEventPropertyId enumType)
+   at string System.Diagnostics.Eventing.Reader.EventLogRecord.get_ContainerLog()
+
+**Cause:**
+
+A Discretionary Access Control List is limiting access to the required event logs by the Local Service account.
+
+**Resolution:**
+
+Ensure that the Discretionary Access Control List includes the following entry:
+
+`(A;;0x1;;;S-1-5-80-818380073-2995186456-1411405591-3990468014-3617507088)`
 
 ## See Also
 
