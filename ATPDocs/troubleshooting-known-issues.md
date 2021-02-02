@@ -209,7 +209,7 @@ No known resolution.
 
 ## Sensor fails to enumerate event logs
 
-If you observe a limited number or lack of security event alerts or logical activities within the [!INCLUDE [Product short](includes/product-short.md)] console but no health alerts are triggered. 
+If you observe a limited number, or lack of, security event alerts or logical activities within the [!INCLUDE [Product short](includes/product-short.md)] console but no health alerts are triggered. 
 
 **Sensor log entries:**
 
