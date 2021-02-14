@@ -12,7 +12,7 @@ ms.topic: how-to
 
 Use this guide to move from an existing ATA installation to the ([!INCLUDE [Product long](includes/product-long.md)]) service. The guide explains [!INCLUDE [Product short](includes/product-short.md)] prerequisites and requirements, and details how to plan and then complete your move. Validation steps and tips to take advantage of the latest threat protection and security solutions with [!INCLUDE [Product short](includes/product-short.md)] after installation are also included.
 
-To learn more about the differences between ATA and [!INCLUDE [Product short](includes/product-short.md)], see the [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.md#what-is-azure-atp).
+To learn more about the differences between ATA and [!INCLUDE [Product short](includes/product-short.md)], see the [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.yml).
 
 In this guide you will:
 

@@ -362,7 +362,7 @@ The Azure ATP sensor infrastructure was improved for performance: the aggregated
 ## See Also
 
 - [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)
-- [Frequently asked questions](technical-faq.md)
+- [Frequently asked questions](technical-faq.yml)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

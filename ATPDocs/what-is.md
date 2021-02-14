@@ -102,6 +102,6 @@ We recommend deploying [!INCLUDE [Product short](includes/product-short.md)] in 
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.yml)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

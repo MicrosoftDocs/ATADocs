@@ -52,7 +52,7 @@ After [!INCLUDE [Product short](includes/product-short.md)] is up and running, v
 
 ## Security best practices
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Frequently Asked Questions](technical-faq.md) - This article provides a list of frequently asked questions about [!INCLUDE [Product short](includes/product-short.md)] and provides insight and answers.
+- [[!INCLUDE [Product short](includes/product-short.md)] Frequently Asked Questions](technical-faq.yml) - This article provides a list of frequently asked questions about [!INCLUDE [Product short](includes/product-short.md)] and provides insight and answers.
 
 ## Community resources
 
