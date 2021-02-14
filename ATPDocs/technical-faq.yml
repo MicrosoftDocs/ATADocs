@@ -7,19 +7,19 @@ metadata:
 
 title: Microsoft Defender for Identity frequently asked questions
 summary: |
-  This article provides a list of frequently asked questions and answers about [!INCLUDE [Product long](includes/product-long.md)] divided into the following categories:
+  This article provides a list of frequently asked questions and answers about Microsoft Defender for Identity divided into the following categories:
 
 sections:
-  - name: What is [!INCLUDE [Product short](includes/product-short.md)]?
+  - name: What is Defender for Identity?
     questions:
-      - question: What can [!INCLUDE [Product short](includes/product-short.md)] detect?
+      - question: What can Defender for Identity detect?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] detects known malicious attacks and techniques, security issues, and risks against your network.
-          For the full list of [!INCLUDE [Product short](includes/product-short.md)] detections, see [What detections does [!INCLUDE [Product short](includes/product-short.md)] perform?](suspicious-activity-guide.md).
+          Defender for Identity detects known malicious attacks and techniques, security issues, and risks against your network.
+          For the full list of Defender for Identity detections, see [What detections does Defender for Identity perform?](suspicious-activity-guide.md).
 
-      - question: What data does [!INCLUDE [Product short](includes/product-short.md)] collect?
+      - question: What data does Defender for Identity collect?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites), and entity information (such as names, email addresses, and phone numbers).
+          Defender for Identity collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites), and entity information (such as names, email addresses, and phone numbers).
 
           Microsoft uses this data to:
 
@@ -29,33 +29,33 @@ sections:
 
           Microsoft does not mine your data for advertising or for any other purpose other than providing you the service.
 
-      - question: How many Directory Service credentials does [!INCLUDE [Product short](includes/product-short.md)] support?
+      - question: How many Directory Service credentials does Defender for Identity support?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] currently supports adding up to 10 different Directory Service credentials to support Active Directory environments with untrusted forests. If you require more accounts, open a support ticket.
+          Defender for Identity currently supports adding up to 10 different Directory Service credentials to support Active Directory environments with untrusted forests. If you require more accounts, open a support ticket.
 
-      - question: Does [!INCLUDE [Product short](includes/product-short.md)] only leverage traffic from Active Directory?
+      - question: Does Defender for Identity only leverage traffic from Active Directory?
         answer: |
-          In addition to analyzing Active Directory traffic using deep packet inspection technology, [!INCLUDE [Product short](includes/product-short.md)] also collects relevant Windows Events from your domain controller and creates entity profiles based on information from Active Directory Domain Services. [!INCLUDE [Product short](includes/product-short.md)] also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
+          In addition to analyzing Active Directory traffic using deep packet inspection technology, Defender for Identity also collects relevant Windows Events from your domain controller and creates entity profiles based on information from Active Directory Domain Services. Defender for Identity also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
 
-      - question: Does [!INCLUDE [Product short](includes/product-short.md)] monitor only domain-joined devices?
+      - question: Does Defender for Identity monitor only domain-joined devices?
         answer: |
-          No. [!INCLUDE [Product short](includes/product-short.md)] monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
+          No. Defender for Identity monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
 
-      - question: Does [!INCLUDE [Product short](includes/product-short.md)] monitor computer accounts as well as user accounts?
+      - question: Does Defender for Identity monitor computer accounts as well as user accounts?
         answer: |
-          Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, [!INCLUDE [Product short](includes/product-short.md)] monitors all computer accounts behavior and all other entities in the environment.
+          Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, Defender for Identity monitors all computer accounts behavior and all other entities in the environment.
 
-      - question: What is the difference between Advanced Threat Analytics (ATA) and [!INCLUDE [Product short](includes/product-short.md)]?
+      - question: What is the difference between Advanced Threat Analytics (ATA) and Defender for Identity?
         answer: |
           ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
 
-          [!INCLUDE [Product short](includes/product-short.md)] is a cloud-based security solution that leverages your on-premises Active Directory (Azure AD) signals. The solution is highly scalable and is frequently updated.
+          Defender for Identity is a cloud-based security solution that leverages your on-premises Active Directory (Azure AD) signals. The solution is highly scalable and is frequently updated.
 
           The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
-          In contrast to the ATA sensor, the [!INCLUDE [Product short](includes/product-short.md)] sensor also uses data sources such as Event Tracing for Windows (ETW) enabling [!INCLUDE [Product short](includes/product-short.md)] to deliver additional detections.
+          In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver additional detections.
 
-          [!INCLUDE [Product short](includes/product-short.md)]'s frequent updates include the following features and capabilities:
+          Defender for Identity's frequent updates include the following features and capabilities:
 
           - **Support for [multi-forest environments](multi-forest.md)**: Provides organizations visibility across AD forests.
 
@@ -69,20 +69,20 @@ sections:
 
   - name: Licensing and privacy
     questions:
-      - question: Where can I get a license for [!INCLUDE [Product long](includes/product-long.md)]?
+      - question: Where can I get a license for Microsoft Defender for Identity?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] is available as part of Enterprise Mobility + Security 5 suite (EMS E5), and as a standalone license. You can acquire a license directly from the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
+          Defender for Identity is available as part of Enterprise Mobility + Security 5 suite (EMS E5), and as a standalone license. You can acquire a license directly from the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or through the Cloud Solution Partner (CSP) licensing model.
 
-      - question: Does [!INCLUDE [Product short](includes/product-short.md)] need only a single license or does it require a license for every user I want to protect?
+      - question: Does Defender for Identity need only a single license or does it require a license for every user I want to protect?
         answer: |
-          For information about [!INCLUDE [Product short](includes/product-short.md)] licensing requirements, see [[!INCLUDE [Product short](includes/product-short.md)] licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
+          For information about Defender for Identity licensing requirements, see [Defender for Identity licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#azure-advanced-threat-protection).
 
       - question: Is my data isolated from other customer data?
         answer: Yes, your data is isolated through access authentication and logical segregation based on customer identifiers. Each customer can only access data collected from their own organization and generic data that Microsoft provides.
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |
-          No. When your [!INCLUDE [Product short](includes/product-short.md)] instance is created, it is stored automatically in the country data center closest to the geographical location of your AAD tenant. [!INCLUDE [Product short](includes/product-short.md)] data cannot be moved once your [!INCLUDE [Product short](includes/product-short.md)] instance is created to a different data center.
+          No. When your Defender for Identity instance is created, it is stored automatically in the country data center closest to the geographical location of your AAD tenant. Defender for Identity data cannot be moved once your Defender for Identity instance is created to a different data center.
 
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |
@@ -96,50 +96,50 @@ sections:
 
   - name: Deployment
     questions:
-      - question: How many [!INCLUDE [Product short](includes/product-short.md)] sensors do I need?
+      - question: How many Defender for Identity sensors do I need?
         answer: |
-          Every domain controller in the environment should be covered by a [!INCLUDE [Product short](includes/product-short.md)] sensor or standalone sensor. For more information, see [[!INCLUDE [Product short](includes/product-short.md)] sensor sizing](capacity-planning.md#sizing).
+          Every domain controller in the environment should be covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
 
-      - question: Does [!INCLUDE [Product short](includes/product-short.md)] work with encrypted traffic?
+      - question: Does Defender for Identity work with encrypted traffic?
         answer: Network protocols with encrypted traffic (for example, AtSvc and WMI) are not decrypted, but are analyzed by the sensors.
 
-      - question: Does [!INCLUDE [Product short](includes/product-short.md)] work with Kerberos Armoring?
+      - question: Does Defender for Identity work with Kerberos Armoring?
         answer: |
-          Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by [!INCLUDE [Product short](includes/product-short.md)], with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
+          Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by Defender for Identity, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
 
-      - question: How do I monitor a virtual domain controller using [!INCLUDE [Product short](includes/product-short.md)]?
+      - question: How do I monitor a virtual domain controller using Defender for Identity?
         answer: |
-          Most virtual domain controllers can be covered by the [!INCLUDE [Product short](includes/product-short.md)] sensor, to determine whether the [!INCLUDE [Product short](includes/product-short.md)] sensor is appropriate for your environment, see [[!INCLUDE [Product short](includes/product-short.md)] Capacity Planning](capacity-planning.md).
+          Most virtual domain controllers can be covered by the Defender for Identity sensor, to determine whether the Defender for Identity sensor is appropriate for your environment, see [Defender for Identity Capacity Planning](capacity-planning.md).
 
-          If a virtual domain controller can't be covered by the [!INCLUDE [Product short](includes/product-short.md)] sensor, you can have either a virtual or physical [!INCLUDE [Product short](includes/product-short.md)] standalone sensor as described in [Configure port mirroring](configure-port-mirroring.md).
-          The easiest way is to have a virtual [!INCLUDE [Product short](includes/product-short.md)] standalone sensor on every host where a virtual domain controller exists.
+          If a virtual domain controller can't be covered by the Defender for Identity sensor, you can have either a virtual or physical Defender for Identity standalone sensor as described in [Configure port mirroring](configure-port-mirroring.md).
+          The easiest way is to have a virtual Defender for Identity standalone sensor on every host where a virtual domain controller exists.
           If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
-          - When the virtual domain controller moves to another host, preconfigure the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in that host to receive the traffic from the recently moved virtual domain controller.
-          - Make sure that you affiliate the virtual [!INCLUDE [Product short](includes/product-short.md)] standalone sensor with the virtual domain controller so that if it is moved, the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor moves with it.
+          - When the virtual domain controller moves to another host, preconfigure the Defender for Identity standalone sensor in that host to receive the traffic from the recently moved virtual domain controller.
+          - Make sure that you affiliate the virtual Defender for Identity standalone sensor with the virtual domain controller so that if it is moved, the Defender for Identity standalone sensor moves with it.
           - There are some virtual switches that can send traffic between hosts.
 
-      - question: How do I configure the [!INCLUDE [Product short](includes/product-short.md)] sensors to communicate with [!INCLUDE [Product short](includes/product-short.md)] cloud service when I have a proxy?
+      - question: How do I configure the Defender for Identity sensors to communicate with Defender for Identity cloud service when I have a proxy?
         answer: |
-          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with [!INCLUDE [Product short](includes/product-short.md)] sensors](configure-proxy.md).
+          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with Defender for Identity sensors](configure-proxy.md).
 
-      - question: Can [!INCLUDE [Product short](includes/product-short.md)] monitored domain controllers be virtualized on your IaaS solution?
+      - question: Can Defender for Identity monitored domain controllers be virtualized on your IaaS solution?
         answer: |
-          Yes, you can use the [!INCLUDE [Product short](includes/product-short.md)] sensor to monitor domain controllers that are in any IaaS solution.
+          Yes, you can use the Defender for Identity sensor to monitor domain controllers that are in any IaaS solution.
 
-      - question: Can [!INCLUDE [Product short](includes/product-short.md)] support multi-domain and multi-forest?
+      - question: Can Defender for Identity support multi-domain and multi-forest?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](multi-forest.md).
+          Defender for Identity supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](multi-forest.md).
 
       - question: Can you see the overall health of the deployment?
         answer: |
-          Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with [!INCLUDE [Product short](includes/product-short.md)] health alerts.
+          Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Defender for Identity health alerts.
 
   - name: Operation
     questions:
-      - question: What kind of integration does [!INCLUDE [Product short](includes/product-short.md)] have with SIEMs?
+      - question: What kind of integration does Defender for Identity have with SIEMs?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a security alert is detected. See the [SIEM log reference](cef-format-sa.md) for more information .
+          Defender for Identity can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a security alert is detected. See the [SIEM log reference](cef-format-sa.md) for more information .
 
       - question: Why are certain accounts considered sensitive?
         answer: |
@@ -149,14 +149,14 @@ sections:
 
       - question: Do you have to write your own rules and create a threshold/baseline?
         answer: |
-          With [!INCLUDE [Product short](includes/product-short.md)], there is no need to create rules, thresholds, or baselines and then fine-tune. [!INCLUDE [Product short](includes/product-short.md)] analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. Three weeks after deployment, [!INCLUDE [Product short](includes/product-short.md)] starts to detect behavioral suspicious activities. On the other hand, [!INCLUDE [Product short](includes/product-short.md)] will start detecting known malicious attacks and security issues immediately after deployment.
+          With Defender for Identity, there is no need to create rules, thresholds, or baselines and then fine-tune. Defender for Identity analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. Three weeks after deployment, Defender for Identity starts to detect behavioral suspicious activities. On the other hand, Defender for Identity will start detecting known malicious attacks and security issues immediately after deployment.
 
-      - question: Which traffic does [!INCLUDE [Product short](includes/product-short.md)] generate in the network from domain controllers, and why?
+      - question: Which traffic does Defender for Identity generate in the network from domain controllers, and why?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] generates traffic from domain controllers to computers in the organization in one of three scenarios:
+          Defender for Identity generates traffic from domain controllers to computers in the organization in one of three scenarios:
 
           1. **Network Name resolution**
-          [!INCLUDE [Product short](includes/product-short.md)] captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, [!INCLUDE [Product short](includes/product-short.md)] needs to resolve IPs to computer accounts. To resolve IPs to computer names [!INCLUDE [Product short](includes/product-short.md)] sensors request the IP address for the computer name *behind* the IP address.
+          Defender for Identity captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, Defender for Identity needs to resolve IPs to computer accounts. To resolve IPs to computer names Defender for Identity sensors request the IP address for the computer name *behind* the IP address.
 
               Requests are made using one of four methods:
               - NTLM over RPC (TCP Port 135)
@@ -164,12 +164,12 @@ sections:
               - RDP (TCP port 3389)
               - Query the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-              After getting the computer name,  [!INCLUDE [Product short](includes/product-short.md)] sensors cross check the details in Active Directory to see if there is a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
+              After getting the computer name,  Defender for Identity sensors cross check the details in Active Directory to see if there is a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
           2. **Lateral Movement Path (LMP)**
-          To build potential LMPs to sensitive users, [!INCLUDE [Product short](includes/product-short.md)] requires information about the local administrators on computers. In this scenario, the [!INCLUDE [Product short](includes/product-short.md)] sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about [!INCLUDE [Product short](includes/product-short.md)] and SAM-R, See [Configure SAM-R required permissions](install-step8-samr.md).
+          To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](install-step8-samr.md).
 
           3. **Querying Active Directory using LDAP** for entity data
-          [!INCLUDE [Product short](includes/product-short.md)] sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.
+          Defender for Identity sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.
 
           |Protocol|Service|Port|Source| Direction|
           |---------|---------|---------|---------|--------|
@@ -180,22 +180,22 @@ sections:
 
       - question: Why don't activities always show both the source user and computer?
         answer: |
-          [!INCLUDE [Product short](includes/product-short.md)] captures activities over many different protocols. In some cases, [!INCLUDE [Product short](includes/product-short.md)] doesn't receive the data of the source user in the traffic. [!INCLUDE [Product short](includes/product-short.md)] attempts to correlate the session of the user to the activity, and when the attempt is successful, the source user of the activity is displayed. When user correlation attempts fail, only the source computer is displayed.
+          Defender for Identity captures activities over many different protocols. In some cases, Defender for Identity doesn't receive the data of the source user in the traffic. Defender for Identity attempts to correlate the session of the user to the activity, and when the attempt is successful, the source user of the activity is displayed. When user correlation attempts fail, only the source computer is displayed.
 
   - name: Troubleshooting
     questions:
-      - question: What should I do if the [!INCLUDE [Product short](includes/product-short.md)] sensor or standalone sensor doesn't start?
+      - question: What should I do if the Defender for Identity sensor or standalone sensor doesn't start?
         answer: |
-          Look at the most recent error in the current error [log](troubleshooting-using-logs.md) (Where [!INCLUDE [Product short](includes/product-short.md)] is installed under the "Logs" folder).
+          Look at the most recent error in the current error [log](troubleshooting-using-logs.md) (Where Defender for Identity is installed under the "Logs" folder).
 
   - name: See Also
     questions:
       - question: Where can I find out more?
         answer: |
 
-          - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-          - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
+          - [Defender for Identity prerequisites](prerequisites.md)
+          - [Defender for Identity capacity planning](capacity-planning.md)
           - [Configure event collection](configure-event-collection.md)
           - [Configuring Windows event forwarding](configure-event-forwarding.md)
           - [Troubleshooting](troubleshooting-known-issues.md)
-          - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+          - [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)

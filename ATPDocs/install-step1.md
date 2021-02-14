@@ -14,7 +14,7 @@ In this quickstart, you'll create your [!INCLUDE [Product long](includes/product
 
 ## Prerequisites
 
-- An [[!INCLUDE [Product long](includes/product-long.md)] license](technical-faq.yml).
+- An [[!INCLUDE [Product long](includes/product-long.md)] license](technical-faq.yml#licensing-and-privacy).
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the [!INCLUDE [Product short](includes/product-short.md)] portal.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
