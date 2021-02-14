@@ -1,3 +1,4 @@
+items:
 - name: Microsoft Defender for Identity Documentation
   href: index.yml
 - name: Overview
@@ -184,7 +185,7 @@
   - name: SIEM log reference
     href: cef-format-sa.md
   - name: Defender for Identity known issues
-    href: ./troubleshooting-known-issues.md
+    href: troubleshooting-known-issues.md
   - name: Defender for Identity release reference
     href: release-reference.md
 - name: Resources
@@ -192,7 +193,7 @@
   - name: Support and information
     href: support.md
   - name: Frequently asked questions
-    href: technical-faq.md
+    href: technical-faq.yml
   - name: Defender for Identity readiness roadmap
     href: resources.md
   - name: Defender for Identity data security and privacy

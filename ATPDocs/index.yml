@@ -97,7 +97,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Frequently asked questions
-            url: technical-faq.md
+            url: technical-faq.yml
           - text: Support and information
             url: support.md
           - text: Defender for Identity readiness roadmap
