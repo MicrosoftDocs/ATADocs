@@ -53,9 +53,9 @@ Make sure to gather the following information before starting your move:
 1. Alert exclusions
     - Exclusions are not transferable from ATA to [!INCLUDE [Product short](includes/product-short.md)], so details of each exclusion are required to [replicate the exclusions in [!INCLUDE [Product short](includes/product-short.md)]](excluding-entities-from-detections.md).
 1. Account details for HoneyToken accounts.
-    - If you don't already have dedicated HoneyToken accounts, learn more about [HoneyTokens in [!INCLUDE [Product short](includes/product-short.md)]](install-step7.md) and create new accounts to use for this purpose.
+    - If you don't already have dedicated HoneyToken accounts, learn more about [HoneyTokens in [!INCLUDE [Product short](includes/product-short.md)]](configure-detection-exclusions.md) and create new accounts to use for this purpose.
 1. Complete list of all entities (computers, groups, users) you wish to manually tag as Sensitive entities.
-    - Learn more about the importance of [Sensitive entities](sensitive-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)].
+    - Learn more about the importance of [Sensitive entities](manage-sensitive-honeytoken-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)].
 1. Report scheduling [details](reports.md) (list of reports and scheduled timing).
 
 > [!NOTE]
@@ -94,8 +94,8 @@ Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal and 
 | 3  | Configure [Syslog notifications](setting-syslog.md) | - [ ] |
 | 4  | [Integrate VPN](install-step6-vpn.md) information| - [ ] |
 | 5  | Configure [WDATP integration](integrate-mde.md)| - [ ] |
-| 6  | Set [HoneyTokens](install-step7.md) accounts| - [ ] |
-| 7  | Tag [Sensitive entities](sensitive-accounts.md)| - [ ] |
+| 6  | Set [HoneyTokens](configure-detection-exclusions.md) accounts| - [ ] |
+| 7  | Tag [Sensitive entities](manage-sensitive-honeytoken-accounts.md)| - [ ] |
 | 8  | Create [Security alert exclusions](excluding-entities-from-detections.md)| - [ ] |
 | 9 | [Email notification toggles](notifications.md) | - [ ] |
 | 10  | [Schedule report settings](reports.md) (list of reports and scheduled timing)| - [ ] |

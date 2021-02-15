@@ -87,7 +87,7 @@ We recommend deploying [!INCLUDE [Product short](includes/product-short.md)] in 
 ### Phase 1
 
 1. Set up [!INCLUDE [Product short](includes/product-short.md)] to protect your primary environments. [!INCLUDE [Product short](includes/product-short.md)]'s fast deployment model enables you to start protecting your organization today. [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-1. Set [sensitive accounts](sensitive-accounts.md) and [honeytoken accounts](install-step7.md).
+1. Set [sensitive accounts](manage-sensitive-honeytoken-accounts.md) and [honeytoken accounts](configure-detection-exclusions.md).
 1. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).
 
 ### Phase 2

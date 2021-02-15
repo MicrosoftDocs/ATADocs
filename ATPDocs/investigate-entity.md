@@ -88,7 +88,7 @@ To provide you with cross-product insights, your entity profile provides entitie
 - Schema Admins
 - Enterprise Admins
 
-In addition, you can **manually tag** entities as sensitive within [!INCLUDE [Product short](includes/product-short.md)]. This is important because some [!INCLUDE [Product short](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive. For more information, see [Working with sensitive accounts](sensitive-accounts.md).
+In addition, you can **manually tag** entities as sensitive within [!INCLUDE [Product short](includes/product-short.md)]. This is important because some [!INCLUDE [Product short](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive. For more information, see [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md).
 
 ## Review lateral movement paths
 

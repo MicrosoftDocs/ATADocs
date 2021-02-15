@@ -48,7 +48,7 @@ After [!INCLUDE [Product short](includes/product-short.md)] is up and running, v
 
 - [[!INCLUDE [Product short](includes/product-short.md)] security alert guide](suspicious-activity-guide.md) Learn to triage and take the next steps with your [!INCLUDE [Product short](includes/product-short.md)] detections.
 - [[!INCLUDE [Product short](includes/product-short.md)] lateral movement paths](use-case-lateral-movement-path.md)
-- [Tag groups as sensitive](sensitive-accounts.md) Gain visibility into credential exposure on sensitive security groups.
+- [Tag groups as sensitive](manage-sensitive-honeytoken-accounts.md) Gain visibility into credential exposure on sensitive security groups.
 
 ## Security best practices
 
@@ -66,5 +66,5 @@ Channel 9: [Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/M
 
 ## See Also
 
-- [Working with sensitive accounts](sensitive-accounts.md)
+- [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
