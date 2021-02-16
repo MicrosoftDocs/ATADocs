@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: quickstart
 ---
 
-# Quickstart: Install the [!INCLUDE [Product long](includes/product-long.md)] sensor
+# Quickstart: Install the Microsoft Defender for Identity sensor
 
 In this quickstart, you'll install the [!INCLUDE [Product long](includes/product-long.md)] sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](silent-installation.md) article.
 

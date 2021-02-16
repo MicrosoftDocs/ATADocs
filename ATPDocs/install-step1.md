@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: quickstart
 ---
 
-# Quickstart: Create your [!INCLUDE [Product long](includes/product-long.md)] instance
+# Quickstart: Create your Microsoft Defender for Identity instance
 
 In this quickstart, you'll create your [!INCLUDE [Product long](includes/product-long.md)] instance in the [!INCLUDE [Product short](includes/product-short.md)] portal. In [!INCLUDE [Product short](includes/product-short.md)], you'll have a single instance, previously called a workspace. A single instance enables you to manage multiple forests from a single pane of glass.
 
@@ -19,7 +19,7 @@ In this quickstart, you'll create your [!INCLUDE [Product long](includes/product
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
 
-## Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal
+## Sign in to the Defender for Identity portal
 
 After you verified that your network meets the sensor requirements, start the creation of your [!INCLUDE [Product short](includes/product-short.md)] instance.
 

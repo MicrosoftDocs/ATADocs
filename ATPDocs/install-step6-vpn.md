@@ -45,7 +45,7 @@ Perform the following steps on your RRAS server.
 
     ![VPN setup](media/vpn-set-accounting.png)
 
-### Configure VPN in [!INCLUDE [Product short](includes/product-short.md)]
+### Configure VPN in Defender for Identity
 
 [!INCLUDE [Product short](includes/product-short.md)] collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect suspicious VPN connections.
 

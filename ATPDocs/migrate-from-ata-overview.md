@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Advanced Threat Analytics (ATA) to [!INCLUDE [Product long](includes/product-long.md)]
+# Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
 > [!NOTE]
 > The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -65,7 +65,7 @@ Make sure to gather the following information before starting your move:
 
 Complete your move to [!INCLUDE [Product short](includes/product-short.md)] in two easy steps:
 
-### Step 1: Create and install [!INCLUDE [Product short](includes/product-short.md)] instance and sensors
+### Step 1: Create and install Defender for Identity instance and sensors
 
 1. [Create your new [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
 
@@ -76,7 +76,7 @@ Complete your move to [!INCLUDE [Product short](includes/product-short.md)] in t
     - [Retrieve your [!INCLUDE [Product short](includes/product-short.md)] Access Key](install-step3.md#download-the-setup-package).
     - [Install [!INCLUDE [Product short](includes/product-short.md)] sensors on your domain controllers](install-step4.md).
 
-### Step 2: Configure and validate [!INCLUDE [Product short](includes/product-short.md)] instance
+### Step 2: Configure and validate Defender for Identity instance
 
 - [Configure the Sensor](install-step5.md)
 

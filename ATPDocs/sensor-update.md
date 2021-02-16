@@ -5,13 +5,13 @@ ms.date: 10/27/2020
 ms.topic: how-to
 ---
 
-# Update [!INCLUDE [Product long](includes/product-long.md)] sensors
+# Update Microsoft Defender for Identity sensors
 
 Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up-to-date, provides the best possible protection for your organization.
 
 The [!INCLUDE [Product long](includes/product-long.md)] service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. [!INCLUDE [Product short](includes/product-short.md)] sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the [!INCLUDE [Product short](includes/product-short.md)] sensor and sensor detection capabilities.
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor update types
+## Defender for Identity sensor update types
 
 [!INCLUDE [Product short](includes/product-short.md)] sensors support two kinds of updates:
 

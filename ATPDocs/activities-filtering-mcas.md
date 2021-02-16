@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Use activity filters and create action policies with [!INCLUDE [Product long](includes/product-long.md)] in Microsoft Cloud App Security
+# Use activity filters and create action policies with Microsoft Defender for Identity in Microsoft Cloud App Security
 
 This article is designed to help you understand how to filter and create action policies for [!INCLUDE [Product short](includes/product-short.md)] activities using Microsoft Cloud App Security.
 
@@ -23,7 +23,7 @@ For complete user investigation features across the hybrid environment, you must
 >[!NOTE]
 >If you don't have a subscription for Cloud App Security, you can use the Cloud App Security portal to investigate [!INCLUDE [Product short](includes/product-short.md)] alerts and deep dive on users and their on-premise managed activities however insights related to your cloud applications will remain unavailable.
 
-## Filter [!INCLUDE [Product short](includes/product-short.md)] activities in Cloud App Security
+## Filter Defender for Identity activities in Cloud App Security
 
 [!INCLUDE [Product short](includes/product-short.md)] activities can be accessed from the main Cloud App Security **Investigate** menu by selecting the **Activity log** submenu, or from the **Alerts** menu by status, category, severity, application, user name, or policy.
 

@@ -17,7 +17,7 @@ This section describes how the flow of [!INCLUDE [Product short](includes/produc
 
 Installed directly on your domain controller or AD FS servers, the [!INCLUDE [Product short](includes/product-short.md)] sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, [!INCLUDE [Product short](includes/product-short.md)] sends only the parsed information to the [!INCLUDE [Product short](includes/product-short.md)] cloud service (only a percentage of the logs are sent).
 
-## [!INCLUDE [Product short](includes/product-short.md)] components
+## Defender for Identity components
 
 [!INCLUDE [Product short](includes/product-short.md)] consists of the following components:
 
@@ -31,7 +31,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] portal allows the crea
 - **[!INCLUDE [Product short](includes/product-short.md)] cloud service**  
 [!INCLUDE [Product short](includes/product-short.md)] cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, and Asia. [!INCLUDE [Product short](includes/product-short.md)] cloud service is connected to Microsoft's intelligent security graph.
 
-## [!INCLUDE [Product short](includes/product-short.md)] portal
+## Defender for Identity portal
 
 Use the [!INCLUDE [Product short](includes/product-short.md)] portal to:
 
@@ -45,7 +45,7 @@ Use the [!INCLUDE [Product short](includes/product-short.md)] portal to:
 > [!NOTE]
 > If no sensor is installed on your [!INCLUDE [Product short](includes/product-short.md)] instance within 60 days, the instance may be deleted and you'll need to recreate it.
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor
+## Defender for Identity sensor
 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor has the following core functionality:
 
@@ -56,7 +56,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor has the followi
 - Perform resolution of network entities (users, groups, and computers)
 - Transfer relevant data to the [!INCLUDE [Product short](includes/product-short.md)] cloud service
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor features
+## Defender for Identity sensor features
 
 [!INCLUDE [Product short](includes/product-short.md)] sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The [!INCLUDE [Product short](includes/product-short.md)] sensor also supports Event Tracing for Windows (ETW) which provides the log information for multiple detections. ETW-based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
 
