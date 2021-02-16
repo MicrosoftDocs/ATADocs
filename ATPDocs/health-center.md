@@ -5,19 +5,19 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Work with [!INCLUDE [Product long](includes/product-long.md)] health and events
+# Work with Microsoft Defender for Identity health and events
 
-## [!INCLUDE [Product long](includes/product-long.md)] health center
+## Microsoft Defender for Identity health center
 
 The [!INCLUDE [Product long](includes/product-long.md)] health center lets you know how your [!INCLUDE [Product short](includes/product-short.md)] instance is performing and alerts you when there are problems.
 
-## Working with the [!INCLUDE [Product short](includes/product-short.md)] health center
+## Working with the Defender for Identity health center
 
 The [!INCLUDE [Product short](includes/product-short.md)] health center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the navigation bar.
 
 ![[!INCLUDE [Product short](includes/product-short.md)] health center red dot toolbar](media/health-bar.png)
 
-### Managing [!INCLUDE [Product short](includes/product-short.md)] health
+### Managing Defender for Identity health
 
 To check up on the overall health of your [!INCLUDE [Product short](includes/product-short.md)] instance, select **Health** ![[!INCLUDE [Product short](includes/product-short.md)] health center icon](media/red-dot.png)
 

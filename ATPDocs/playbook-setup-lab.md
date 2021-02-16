@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: tutorial
 ---
 
-# Tutorial: Setup a [!INCLUDE [Product long](includes/product-long.md)] security alert lab
+# Tutorial: Setup a Microsoft Defender for Identity security alert lab
 
 The purpose of the [!INCLUDE [Product long](includes/product-long.md)] Security Alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first tutorial in a four part series walks you through creating a lab environment for testing against [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The security alert lab focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 
@@ -61,11 +61,13 @@ There's a "Helpdesk" Security Group (SG) of which Ron HelpDesk is a member. This
 | Samira Abbasi | SamiraA | At Contoso, this user is our Domain Admin. |
 | [!INCLUDE [Product short](includes/product-short.md)] Service | AATPService | [!INCLUDE [Product short](includes/product-short.md)]'s service account | account |
 
-## [!INCLUDE [Product short](includes/product-short.md)] base lab environment
+## Defender for Identity base lab environment
 
 To configure the base lab we'll add users and groups to Active Directory, edit a SAM policy, and a sensitive group in [!INCLUDE [Product short](includes/product-short.md)].
 
-### <a name="bkmk_hydrate"></a> Hydrate Active Directory users on ContosoDC
+<a name="bkmk_hydrate"></a>
+
+### Hydrate Active Directory users on ContosoDC
 
 To simplify the lab, we automated the process to create fictitious users and groups in Active Directory. This script is run as a prerequisite for this tutorial. You can use or modify the script to hydrate your lab's Active Directory environment. If you prefer not to use a script, you can do it manually.
 
@@ -90,8 +92,8 @@ Add-ADGroupMember -Identity "Helpdesk" -Members "RonHD"
 # Create new AD user JeffL
 New-ADUser -Name JeffL -DisplayName "Jeff Leatherman" -PasswordNeverExpires $true -AccountPassword $jefflSecurePass -Enabled $true
 
-# Take note of the "AATPService" user below which will be our service account for [!INCLUDE [Product short](includes/product-short.md)].
-# Create new AD user [!INCLUDE [Product short](includes/product-short.md)] Service
+# Take note of the "AATPService" user below which will be our service account for Defender for Identity.
+# Create new AD user Defender for Identity Service
 
 New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNeverExpires $true -AccountPassword $AATPService -Enabled $true
 ```
@@ -108,7 +110,7 @@ To allow the [!INCLUDE [Product short](includes/product-short.md)] Service to pe
 
     ![Add the service](media/samr-add-service.png)
 
-### Add sensitive group to [!INCLUDE [Product short](includes/product-short.md)]
+### Add sensitive group to Defender for Identity
 
 Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to use the Lateral Movement Graph feature of [!INCLUDE [Product short](includes/product-short.md)]. Tagging highly sensitive users and groups who aren't necessarily Domain Admins but do have privileges across numerous resources is a best practice.
 
@@ -121,7 +123,7 @@ Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to
     ![Tag the "Helpdesk" as a [!INCLUDE [Product short](includes/product-short.md)] sensitive group to enable  Lateral Movement Graphs and reports for this privileged group](media/playbook-labsetup-helpdesksensitivegroup.png)
 1. Click **Save**.
 
-### [!INCLUDE [Product short](includes/product-short.md)] Lab base setup checklist
+### Defender for Identity Lab base setup checklist
 
 At this point, you should have a base [!INCLUDE [Product short](includes/product-short.md)] lab. [!INCLUDE [Product short](includes/product-short.md)] should be ready to use and users are staged. Review the checklist to make sure that the base lab is complete.
 
@@ -153,7 +155,9 @@ Inspect the Administrators group on **VictimPC**, making sure it appears to have
 
 ![Helpdesk nd JeffV should be in the Local Admin Group for VictimPC](media/playbook-labsetup-localgrouppolicies2.png)
 
-### <a name="helpdesk-simulation"></a> Simulate helpdesk support on VictimPC
+<a name="helpdesk-simulation"></a>
+
+### Simulate helpdesk support on VictimPC
 
 To simulate a working and managed network, create a Scheduled Task on the **VictimPC** machine to run the "cmd.exe" process as **RonHD**.
 

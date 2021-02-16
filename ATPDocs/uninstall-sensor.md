@@ -5,7 +5,7 @@ ms.date: 12/22/2020
 ms.topic: how-to
 ---
 
-# Uninstall the [!INCLUDE [Product long](includes/product-long.md)] sensor
+# Uninstall the Microsoft Defender for Identity sensor
 
 This article describes how to uninstall the [!INCLUDE [Product long](includes/product-long.md)] sensor from domain controllers for the following scenarios:
 

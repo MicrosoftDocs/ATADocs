@@ -5,7 +5,7 @@ ms.date: 10/27/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] Lateral Movement Paths (LMPs)
+# Microsoft Defender for Identity Lateral Movement Paths (LMPs)
 
 > [!NOTE]
 > The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
@@ -18,7 +18,7 @@ A key component of [!INCLUDE [Product long](includes/product-long.md)]'s securit
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
 
-## Where can I find [!INCLUDE [Product short](includes/product-short.md)] LMPs?
+## Where can I find Defender for Identity LMPs?
 
 Every computer or user profile discovered by [!INCLUDE [Product short](includes/product-short.md)] to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
 

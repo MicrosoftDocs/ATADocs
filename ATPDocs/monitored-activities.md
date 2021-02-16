@@ -5,7 +5,7 @@ ms.date: 12/24/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] monitored activities
+# Microsoft Defender for Identity monitored activities
 
 > [!NOTE]
 > The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).

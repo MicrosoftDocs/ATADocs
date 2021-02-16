@@ -5,11 +5,11 @@ ms.date: 10/26/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] SIEM log reference
+# Microsoft Defender for Identity SIEM log reference
 
 [!INCLUDE [Product short](includes/product-short.md)] can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
 
-## Sample [!INCLUDE [Product short](includes/product-short.md)] security alerts in CEF format
+## Sample Defender for Identity security alerts in CEF format
 
 The following fields and their values are forwarded to your SIEM:
 

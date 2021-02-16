@@ -5,7 +5,7 @@ ms.date: 10/27/2020
 ms.topic: how-to
 ---
 
-# Troubleshooting [!INCLUDE [Product long](includes/product-long.md)] sensor using the [!INCLUDE [Product short](includes/product-short.md)] logs
+# Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs
 
 The [!INCLUDE [Product short](includes/product-short.md)] logs provide insight into what each component of [!INCLUDE [Product long](includes/product-long.md)] sensor is doing at any given point in time.
 
@@ -22,7 +22,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor has the followi
 > [!NOTE]
 > The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
 
-## [!INCLUDE [Product short](includes/product-short.md)] Deployment logs
+## Defender for Identity Deployment logs
 
 The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory for the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above %temp%).
 

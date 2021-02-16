@@ -5,7 +5,7 @@ ms.date: 01/27/2021
 ms.topic: overview
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] prerequisites
+# Microsoft Defender for Identity prerequisites
 
 This article describes the requirements for a successful deployment of [!INCLUDE [Product long](includes/product-long.md)] in your environment.
 
@@ -70,7 +70,7 @@ This section lists information you should gather as well as accounts and network
 
 <a name="azure-atp-portal-requirements"></a>
 
-## [!INCLUDE [Product short](includes/product-short.md)] portal requirements
+## Defender for Identity portal requirements
 
 Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is via a browser, supporting the following browsers and settings:
 
@@ -89,7 +89,7 @@ Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is vi
 > [!NOTE]
 > By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 200 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
 
-## [!INCLUDE [Product short](includes/product-short.md)] Network Name Resolution (NNR) requirements
+## Defender for Identity Network Name Resolution (NNR) requirements
 
 Network Name Resolution (NNR) is a main component of [!INCLUDE [Product short](includes/product-short.md)] functionality. To resolve IP addresses to computer names, [!INCLUDE [Product short](includes/product-short.md)] sensors look up the IP addresses using the following methods:
 
@@ -104,7 +104,7 @@ For the best results, we recommend using all of the methods. If this is not poss
 
 <a name="azure-atp-sensor-requirements"></a>
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor requirements
+## Defender for Identity sensor requirements
 
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
@@ -189,7 +189,7 @@ For sensors running on AD FS servers, configure the auditing level to **Verbose*
 
 <a name="azure-atp-standalone-sensor-requirements"></a>
 
-## [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requirements
+## Defender for Identity standalone sensor requirements
 
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor.
 

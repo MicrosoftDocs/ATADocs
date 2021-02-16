@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Configure endpoint proxy and Internet connectivity settings for your [!INCLUDE [Product long](includes/product-long.md)] Sensor
+# Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity Sensor
 
 Each [!INCLUDE [Product long](includes/product-long.md)] sensor requires Internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection.
 
@@ -71,7 +71,7 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>
 
-## Enable access to [!INCLUDE [Product short](includes/product-short.md)] service URLs in the proxy server
+## Enable access to Defender for Identity service URLs in the proxy server
 
 To enable access to [!INCLUDE [Product short](includes/product-short.md)], we recommend allowing traffic to the following URLs. The URLs automatically map to the correct service location for your [!INCLUDE [Product short](includes/product-short.md)] instance.
 

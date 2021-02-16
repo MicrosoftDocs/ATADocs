@@ -5,7 +5,7 @@ ms.date: 02/04/2021
 ms.topic: how-to
 ---
 
-# Troubleshooting [!INCLUDE [Product long](includes/product-long.md)] Known Issues
+# Troubleshooting Microsoft Defender for Identity Known Issues
 
 ## Sensor failure communication error
 
@@ -110,7 +110,9 @@ Use the complete command to successfully install.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue <a name="nic-teaming"></a>
+<a name="nic-teaming"></a>
+
+## Defender for Identity sensor NIC teaming issue
 
 If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, follow these instructions:
 

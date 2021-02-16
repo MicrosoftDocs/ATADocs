@@ -117,7 +117,7 @@ Includes all data [!INCLUDE [Product short](includes/product-short.md)] profiled
 
 ![Related entities](media/related-entities.png)
 
-### How can I use [!INCLUDE [Product short](includes/product-short.md)] information in an investigation?
+### How can I use Defender for Identity information in an investigation?
 
 Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -125,7 +125,7 @@ Investigations can be as detailed as needed. Here are some ideas of ways to inve
 - Do related users share resources, applications, or computers?
 - Is an account active even though its PasswordExpiryTime already passed?
 
-## [!INCLUDE [Product short](includes/product-short.md)] and NNR (Network Name Resolution)
+## Defender for Identity and NNR (Network Name Resolution)
 
 [!INCLUDE [Product short](includes/product-short.md)] detection capabilities rely on active Network Name Resolution (NNR) to resolve IPs to computers in your organization. Using NNR, [!INCLUDE [Product short](includes/product-short.md)] is able to correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, [!INCLUDE [Product short](includes/product-short.md)] profiles entities, including computers, and generates alerts.
 
