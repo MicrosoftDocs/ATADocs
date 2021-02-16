@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: quickstart
 ---
 
-# Quickstart: Download the [!INCLUDE [Product long](includes/product-long.md)] sensor setup package
+# Quickstart: Download the Microsoft Defender for Identity sensor setup package
 
 In this quickstart, you'll download the [!INCLUDE [Product long](includes/product-long.md)] sensor setup package from the portal.
 

@@ -64,7 +64,7 @@ Using WMI via the command line, try to create a process locally on the domain co
 
 Acting as an attacker, you've successfully created a new user in your lab by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. New credentials give an attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
 
-### Remote Code Execution Detection in [!INCLUDE [Product short](includes/product-short.md)]
+### Remote Code Execution Detection in Defender for Identity
 
 Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal to check what, if anything, [!INCLUDE [Product short](includes/product-short.md)] detected from our last simulated attack:
 
@@ -100,7 +100,7 @@ Using **mimikatz**, we'll attempt to export the master key from the domain contr
 
 As attackers, we now have the key to decrypt any DPAPI-encrypted file/sensitive data from *any* machine in the entire Forest.
 
-### DPAPI Detection in [!INCLUDE [Product short](includes/product-short.md)]
+### DPAPI Detection in Defender for Identity
 
 Using the [!INCLUDE [Product short](includes/product-short.md)] portal, let's verify that [!INCLUDE [Product short](includes/product-short.md)] successfully detected our DPAPI attack:
 
@@ -124,7 +124,7 @@ We've replicated the "krbtgt" account information to: `c:\\temp\\ContosoDC_krbtg
 
 ![Malicious Replication via mimikatz](media/playbook-dominance-maliciousrep_mimikatz.png)
 
-#### Malicious Replication Detection in [!INCLUDE [Product short](includes/product-short.md)]
+#### Malicious Replication Detection in Defender for Identity
 
 Using the [!INCLUDE [Product short](includes/product-short.md)] portal, verify the SOC is now aware of the malicious replication we simulated from VictimPC.
 
@@ -175,7 +175,7 @@ This command creates a new process, *notepad*, running in the context of RonHD. 
 > [!Important]
 > It is important that you restart ContosoDC after you execute the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
 
-### Skeleton Key attack Detection in [!INCLUDE [Product short](includes/product-short.md)]
+### Skeleton Key attack Detection in Defender for Identity
 
 What did [!INCLUDE [Product short](includes/product-short.md)] detect and report while all of this was happening?
 

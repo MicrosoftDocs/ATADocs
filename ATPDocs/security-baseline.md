@@ -31,7 +31,7 @@ for Identity security baseline mapping file](https://github.com/MicrosoftDocs/Se
 
 **Guidance**: Use Azure Virtual Network Service Tags to define network access controls on network security groups or Azure Firewall configured for your Defender for Identity resources. You can use service tags in place of specific IP addresses when creating security rules. By specifying the service tag name (For example: "AzureAdvancedThreatProtection") in the appropriate source or destination field of a rule, you can allow or deny the traffic for the corresponding service. Microsoft manages the address prefixes encompassed by the service tag and automatically updates the service tag as addresses change.
 
-- [Enable access to Defender for Identity service URLs in the proxy server](configure-proxy.md#enable-access-to--service-urls-in-the-proxy-server)
+- [Enable access to Defender for Identity service URLs in the proxy server](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server)
 
 - [Understand and using Service Tags](/azure/virtual-network/service-tags-overview)
 
@@ -45,12 +45,12 @@ for Identity security baseline mapping file](https://github.com/MicrosoftDocs/Se
 
 ### IM-1: Standardize Azure Active Directory as the central identity and authentication system
 
-**Guidance**: Defender for Identity uses Azure Active Directory (Azure AD) as the default identity and access management service. You should standardize Azure AD to govern your organization’s identity and access management in:
+**Guidance**: Defender for Identity uses Azure Active Directory (Azure AD) as the default identity and access management service. You should standardize Azure AD to govern your organization's identity and access management in:
 
 - Microsoft Cloud resources, such as the Azure portal, Azure Storage, Azure Virtual Machine (Linux and Windows), Azure Key Vault, PaaS, and SaaS applications.
 - Your organization's resources, such as applications on Azure or your corporate network resources.
 
-Securing Azure AD should be a high priority in your organization’s cloud security practice. Azure AD provides an identity secure score to help you assess identity security posture relative to Microsoft’s best practice recommendations. Use the score to gauge how closely your configuration matches best practice recommendations, and to make improvements in your security posture.
+Securing Azure AD should be a high priority in your organization's cloud security practice. Azure AD provides an identity secure score to help you assess identity security posture relative to Microsoft's best practice recommendations. Use the score to gauge how closely your configuration matches best practice recommendations, and to make improvements in your security posture.
 
 Note: Azure AD supports external identity that allows users without a Microsoft account to sign in to their applications and resources with their external identity.
 
@@ -233,7 +233,7 @@ Forward any logs from Defender for Identity to your SIEM which can be used to se
 
 - Users flagged for risk - A risky user is an indicator for a user account that might have been compromised.
 
-Azure Security Center can also alert on certain suspicious activities such as an excessive number of failed authentication attempts, deprecated accounts in the subscription. In addition to the basic security hygiene monitoring, Azure Security Center’s Threat Protection module can also collect more in-depth security alerts from individual Azure compute resources (virtual machines, containers, app service), data resources (SQL DB and storage), and Azure service layers. This capability allows you to see account anomalies inside the individual resources.
+Azure Security Center can also alert on certain suspicious activities such as an excessive number of failed authentication attempts, deprecated accounts in the subscription. In addition to the basic security hygiene monitoring, Azure Security Center's Threat Protection module can also collect more in-depth security alerts from individual Azure compute resources (virtual machines, containers, app service), data resources (SQL DB and storage), and Azure service layers. This capability allows you to see account anomalies inside the individual resources.
 
 - [Audit activity reports in the Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) 
 
@@ -250,7 +250,7 @@ Azure Security Center can also alert on certain suspicious activities such as an
 
 In addition, enable and onboard data to Azure Sentinel or a third-party SIEM.
 
-Many organizations choose to use Azure Sentinel for “hot” data that is used frequently and Azure Storage for “cold” data that is used less frequently.
+Many organizations choose to use Azure Sentinel for "hot" data that is used frequently and Azure Storage for "cold" data that is used less frequently.
 
 Defender for Identity offers to forward all security-related logs to your SIEM for centralized management.
 
@@ -291,7 +291,7 @@ Defender for Identity offers to forward all security-related logs to your SIEM f
 
 ### IR-3: Detection and analysis – create incidents based on high quality alerts
 
-**Guidance**: Ensure you have a process to create high-quality alerts and measure the quality of alerts. This allows you to learn lessons from past incidents and prioritize alerts for analysts, so they don’t waste time on false positives. 
+**Guidance**: Ensure you have a process to create high-quality alerts and measure the quality of alerts. This allows you to learn lessons from past incidents and prioritize alerts for analysts, so they don't waste time on false positives. 
 
 High-quality alerts can be built based on experience from past incidents, validated community sources, and tools designed to generate and clean up alerts by fusing and correlating diverse signal sources. 
 
@@ -397,21 +397,21 @@ Follow the Microsoft Cloud Penetration Testing Rules of Engagement to ensure you
 
 This strategy should include documented guidance, policy, and standards for the following elements: 
 
--	Data classification standard in accordance with the business risks
+-  Data classification standard in accordance with the business risks
 
--	Security organization visibility into risks and asset inventory 
+-  Security organization visibility into risks and asset inventory 
 
--	Security organization approval of Azure services for use 
+-  Security organization approval of Azure services for use 
 
--	Security of assets through their lifecycle
+-  Security of assets through their lifecycle
 
--	Required access control strategy in accordance with organizational data classification
+-  Required access control strategy in accordance with organizational data classification
 
--	Use of Azure native and third-party data protection capabilities
+-  Use of Azure native and third-party data protection capabilities
 
--	Data encryption requirements for in-transit and at-rest use cases
+-  Data encryption requirements for in-transit and at-rest use cases
 
--	Appropriate cryptographic standards
+-  Appropriate cryptographic standards
 
 For more information, see the following references:
 - [Azure Security Architecture Recommendation - Storage, data, and encryption](/azure/architecture/framework/security/storage-data-encryption?amp;bc=%2fsecurity%2fcompass%2fbreadcrumb%2ftoc.json&toc=%2fsecurity%2fcompass%2ftoc.json)
@@ -472,21 +472,21 @@ Ensure that the segmentation strategy is implemented consistently across control
 
 ### GS-5: Define network security strategy
 
-**Guidance**: Establish an Azure network security approach as part of your organization’s overall security access control strategy.  
+**Guidance**: Establish an Azure network security approach as part of your organization's overall security access control strategy.  
 
 This strategy should include documented guidance, policy, and standards for the following elements: 
 
--	Centralized network management and security responsibility
+-  Centralized network management and security responsibility
 
--	Virtual network segmentation model aligned with the enterprise segmentation strategy
+-  Virtual network segmentation model aligned with the enterprise segmentation strategy
 
--	Remediation strategy in different threat and attack scenarios
+-  Remediation strategy in different threat and attack scenarios
 
--	Internet edge and ingress and egress strategy
+-  Internet edge and ingress and egress strategy
 
--	Hybrid cloud and on-premises interconnectivity strategy
+-  Hybrid cloud and on-premises interconnectivity strategy
 
--	Up-to-date network security artifacts (e.g. network diagrams, reference network architecture)
+-  Up-to-date network security artifacts (e.g. network diagrams, reference network architecture)
 
 For more information, see the following references:
 - [Azure Security Best Practice 11 - Architecture. Single unified security strategy](/azure/cloud-adoption-framework/security/security-top-10#11-architecture-establish-a-single-unified-security-strategy)
@@ -503,19 +503,19 @@ For more information, see the following references:
 
 ### GS-6: Define identity and privileged access strategy
 
-**Guidance**: Establish an Azure identity and privileged access approaches as part of your organization’s overall security access control strategy.  
+**Guidance**: Establish an Azure identity and privileged access approaches as part of your organization's overall security access control strategy.  
 
 This strategy should include documented guidance, policy, and standards for the following elements: 
 
--	A centralized identity and authentication system and its interconnectivity with other internal and external identity systems
+-  A centralized identity and authentication system and its interconnectivity with other internal and external identity systems
 
--	Strong authentication methods in different use cases and conditions
+-  Strong authentication methods in different use cases and conditions
 
--	Protection of highly privileged users
+-  Protection of highly privileged users
 
--	Anomaly user activities monitoring and handling  
+-  Anomaly user activities monitoring and handling  
 
--	User identity and access review and reconciliation process
+-  User identity and access review and reconciliation process
 
 For more information, see the following references:
 
@@ -537,19 +537,19 @@ For more information, see the following references:
 
 This strategy should include documented guidance, policy, and standards for the following elements: 
 
--	The security operations (SecOps) organization’s role and responsibilities 
+-  The security operations (SecOps) organization's role and responsibilities 
 
--	A well-defined incident response process aligning with NIST or another industry framework 
+-  A well-defined incident response process aligning with NIST or another industry framework 
 
--	Log capture and retention to support threat detection, incident response, and compliance needs
+-  Log capture and retention to support threat detection, incident response, and compliance needs
 
--	Centralized visibility of and correlation information about threats, using SIEM, native Azure capabilities, and other sources 
+-  Centralized visibility of and correlation information about threats, using SIEM, native Azure capabilities, and other sources 
 
--	Communication and notification plan with your customers, suppliers, and public parties of interest
+-  Communication and notification plan with your customers, suppliers, and public parties of interest
 
--	Use of Azure native and third-party platforms for incident handling, such as logging and threat detection, forensics, and attack remediation and eradication
+-  Use of Azure native and third-party platforms for incident handling, such as logging and threat detection, forensics, and attack remediation and eradication
 
--	Processes for handling incidents and post-incident activities, such as lessons learned and evidence retention
+-  Processes for handling incidents and post-incident activities, such as lessons learned and evidence retention
 
 For more information, see the following references:
 

@@ -5,7 +5,7 @@ ms.date: 10/27/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] Reports
+# Microsoft Defender for Identity Reports
 
 The [!INCLUDE [Product long](includes/product-long.md)] reports section in the [!INCLUDE [Product short](includes/product-short.md)] portal enables you to schedule or immediately generate and download reports that provide you with system and entity status information. From the reports feature, you can create reports about system health, security alerts and potential lateral movement paths detected in your environment.
 

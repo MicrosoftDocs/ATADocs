@@ -5,7 +5,7 @@ ms.date: 12/20/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] information and support
+# Microsoft Defender for Identity information and support
 
 Use the following resources to help you learn about, deploy, and support [!INCLUDE [Product long](includes/product-long.md)] for your organization.
 

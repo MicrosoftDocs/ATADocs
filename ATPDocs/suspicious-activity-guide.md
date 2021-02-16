@@ -5,7 +5,7 @@ ms.date: 10/27/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] Security Alerts
+# Microsoft Defender for Identity Security Alerts
 
 > [!NOTE]
 > The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).

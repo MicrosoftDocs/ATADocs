@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Plan capacity for [!INCLUDE [Product long](includes/product-long.md)]
+# Plan capacity for Microsoft Defender for Identity
 
 In this guide, you determine how many [!INCLUDE [Product long](includes/product-long.md)] sensors you need.
 
@@ -27,7 +27,9 @@ The recommended and simplest way to determine capacity for your [!INCLUDE [Produ
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
 1. Match your **Busy Packets/sec** field to the **PACKETS PER SECOND** field in the [[!INCLUDE [Product short](includes/product-short.md)] sensor table](#sizing) section of this article. Use the fields to determine the memory and CPU that will be used by the sensor.
 
-## <a name="sizing"></a> [!INCLUDE [Product short](includes/product-short.md)] sensor sizing
+<a name="sizing"></a>
+
+## Defender for Identity sensor sizing
 
 A [!INCLUDE [Product short](includes/product-short.md)] sensor can support the monitoring of a domain controller based on the amount of network traffic the domain controller generates. The following table is an estimate. The final amount that the sensor parses is dependent on the amount of traffic and the distribution of traffic.
 
@@ -68,7 +70,9 @@ It's recommended that you don't work with hyper-threaded cores. Working with hyp
 |VMWare|Ensure that the amount of memory configured and the reserved memory are the same, or select the following option in the VM setting – **Reserve all guest memory (All locked)**.|
 |Other virtualization host|Refer to the vendor supplied documentation on how to ensure that memory is fully allocated to the VM at all times. |
 
-## <a name="manual-sizing"></a> Domain controller traffic estimation
+<a name="manual-sizing"></a>
+
+## Domain controller traffic estimation
 
 If for some reason you can't use the [!INCLUDE [Product short](includes/product-short.md)] Sizing Tool, manually gather the packet/sec counter information from all your domain controllers. Gather the information for 24 hours with a low collection interval, approximately 5 seconds. Then, for each domain controller, calculate the daily average and the busiest period (15 minutes) average. The following sections present the instruction for how to collect the packets/sec counter from one domain controller.
 

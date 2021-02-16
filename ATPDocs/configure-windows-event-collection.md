@@ -97,7 +97,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 1. After applying via GPO, the new events are visible under your **Windows Event logs**.
 
 <!--
-## [!INCLUDE [Product short](includes/product-short.md)] Advanced Audit Policy check
+## Defender for Identity Advanced Audit Policy check
 
 To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, [!INCLUDE [Product short](includes/product-short.md)] automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
 

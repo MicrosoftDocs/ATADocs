@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Integrate [!INCLUDE [Product long](includes/product-long.md)] with Microsoft Defender for Endpoint
+# Integrate Microsoft Defender for Identity with Microsoft Defender for Endpoint
 
 [!INCLUDE [Product long](includes/product-long.md)] enables you to integrate [!INCLUDE [Product long](includes/product-long.md)] with Defender for Endpoint, for an even more complete threat protection solution. While [!INCLUDE [Product short](includes/product-short.md)] monitors the traffic on your domain controllers, Defender for Endpoint monitors your endpoints, together providing a single interface from which you can protect your environment.
 
@@ -42,7 +42,7 @@ To enable this feature, you need a license for both [!INCLUDE [Product short](in
 
 <a name="how-to-integrate-azure-atp-with-microsoft-defender-atp"></a>
 
-## How to integrate [!INCLUDE [Product short](includes/product-short.md)] with Defender for Endpoint
+## How to integrate Defender for Identity with Defender for Endpoint
 
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
 

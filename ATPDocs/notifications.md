@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Set [!INCLUDE [Product long](includes/product-long.md)] notifications
+# Set Microsoft Defender for Identity notifications
 
 [!INCLUDE [Product long](includes/product-long.md)] can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
 

@@ -70,7 +70,7 @@ ls -d contoso.azure
 
 If **ContsoDC** is your first deployed sensor, wait 15 minutes to allow the database backend to finish deploying the necessary micro services.
 
-### Network-mapping reconnaissance (DNS) Detected in [!INCLUDE [Product short](includes/product-short.md)]
+### Network-mapping reconnaissance (DNS) Detected in Defender for Identity
 
 Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. After recently installing the environment, you'll  need to go to the **Logical Activities** timeline to see the detected activity.
 
@@ -140,7 +140,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
 With the information gathered in our reconnaissance, we now know about the Helpdesk Security Group. Although that information isn't interesting *yet*. We also know that **SamiraA** is a member of the Domain Admins group. If we can harvest SamiraA's credential, we can gain access the Domain Controller itself.
 
-### Directory Service Enumeration Detected in [!INCLUDE [Product short](includes/product-short.md)]
+### Directory Service Enumeration Detected in Defender for Identity
 
 If our lab had *real live activity for 30 days with [!INCLUDE [Product short](includes/product-short.md)] installed*, the activity we just did as JeffL would potentially be classified as abnormal. Abnormal activity would show up in the Suspicious Activity timeline. However, since we just installed the environment, we'll need to go to the Logical Activities timeline.
 
@@ -182,7 +182,7 @@ NetSess.exe ContosoDC
 
 We already know that SamiraA is a Domain Admin. This attack gave us SamiraA's IP address as 10.0.24.6. As an attacker, we learned exactly who we need to compromise. We also got the network location where that credential is logged in.
 
-### User and IP Address reconnaissance (SMB) Detected in [!INCLUDE [Product short](includes/product-short.md)]
+### User and IP Address reconnaissance (SMB) Detected in Defender for Identity
 
 Now we can see what [!INCLUDE [Product short](includes/product-short.md)] detected for us:
 

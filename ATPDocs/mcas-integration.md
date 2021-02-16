@@ -5,7 +5,7 @@ ms.date: 01/24/2021
 ms.topic: how-to
 ---
 
-# Using [!INCLUDE [Product long](includes/product-long.md)] with Microsoft Cloud App Security
+# Using Microsoft Defender for Identity with Microsoft Cloud App Security
 
 This article is designed to help you understand and navigate the enhanced investigation experience when using the Microsoft Cloud App Security portal with [!INCLUDE [Product long](includes/product-long.md)].
 
@@ -28,7 +28,7 @@ Integrating with [!INCLUDE [Product short](includes/product-short.md)], the Clou
 - [!INCLUDE [Product long](includes/product-long.md)], which uses machine learning and behavioral analytics to identify attacks across your on-premises network
 - Azure Active Directory Identity Protection, which detects and proactively prevents user and sign-in risks to identities in the cloud
 
-## Access [!INCLUDE [Product short](includes/product-short.md)]
+## Access Defender for Identity
 
 Choose to continue to use [!INCLUDE [Product short](includes/product-short.md)] within the [!INCLUDE [Product short](includes/product-short.md)] portal, or, you can access [!INCLUDE [Product short](includes/product-short.md)] alerts and identity scoring using the Microsoft Cloud App Security portal. In either workflow, [!INCLUDE [Product short](includes/product-short.md)] set-up and configuration tasks continue to be handled within the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
@@ -46,7 +46,7 @@ For complete user investigation features across the hybrid environment, you must
 
 See [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/mdi-integration) to learn how to quickly enable [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security.
 
-## [!INCLUDE [Product short](includes/product-short.md)] in Cloud App Security
+## Defender for Identity in Cloud App Security
 
 See the [Cloud App Security quickstart](/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Cloud App Security portal.
 

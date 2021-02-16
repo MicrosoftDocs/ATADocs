@@ -9,7 +9,7 @@ ms.reviewer: ort
 ms.suite: ems
 ---
 
-# What's new in [!INCLUDE [Product long](includes/product-long.md)]
+# What's new in Microsoft Defender for Identity
 
 This article is updated frequently to let you know what's new in the latest releases of [!INCLUDE [Product long](includes/product-long.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP).
 
