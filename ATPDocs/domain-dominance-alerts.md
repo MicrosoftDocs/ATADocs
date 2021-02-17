@@ -565,7 +565,7 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. [!INCLUDE [Product short](includes/product-short.md)] profiles continuously.
 
-For a definition of sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with the sensitive accounts](sensitive-accounts.md).
+For a definition of sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with the sensitive accounts](manage-sensitive-honeytoken-accounts.md).
 
 The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](configure-windows-event-collection.md).
 

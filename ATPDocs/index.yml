@@ -59,7 +59,7 @@ landingContent:
           - text: Search and filter monitored activities 
             url: activities-search.md
           - text: Use exclusions and honeytoken accounts
-            url: install-step7.md
+            url: configure-detection-exclusions.md
           - text: Advanced Threat Analytics (ATA) to Defender for Identity move
             url: migrate-from-ata-overview.md
   - title: Manage and remediate security alerts

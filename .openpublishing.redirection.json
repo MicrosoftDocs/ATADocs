@@ -227,292 +227,307 @@
         },
         {
             "source_path": "ATPDocs/known-issues.md",
-            "redirect_url": "/azure-advanced-threat-protection/troubleshooting-known-issues",
+            "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/monitoring-alerts.md",
-            "redirect_url": "/azure-advanced-threat-protection/health-alerts",
+            "redirect_url": "/defender-for-identity/health-alerts",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/advanced-audit-policy.md",
-            "redirect_url": "/azure-advanced-threat-protection/configure-windows-event-collection",
+            "redirect_url": "/defender-for-identity/configure-windows-event-collection",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/ata-atp-move-overview.md",
-            "redirect_url": "/azure-advanced-threat-protection/migrate-from-ata-overview",
+            "redirect_url": "/defender-for-identity/migrate-from-ata-overview",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-activities-filtering-mcas.md",
-            "redirect_url": "/azure-advanced-threat-protection/activities-filtering-mcas",
+            "redirect_url": "/defender-for-identity/activities-filtering-mcas",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-activities-search.md",
-            "redirect_url": "/azure-advanced-threat-protection/activities-search",
+            "redirect_url": "/defender-for-identity/activities-search",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-architecture.md",
-            "redirect_url": "/azure-advanced-threat-protection/architecture",
+            "redirect_url": "/defender-for-identity/architecture",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-capacity-planning.md",
-            "redirect_url": "/azure-advanced-threat-protection/capacity-planning",
+            "redirect_url": "/defender-for-identity/capacity-planning",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-clear-text.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-clear-text",
+            "redirect_url": "/defender-for-identity/cas-isp-clear-text",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-dormant-entities.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-dormant-entities",
+            "redirect_url": "/defender-for-identity/cas-isp-dormant-entities",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-laps.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-laps",
+            "redirect_url": "/defender-for-identity/cas-isp-laps",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-legacy-protocols.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-legacy-protocols",
+            "redirect_url": "/defender-for-identity/cas-isp-legacy-protocols",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-print-spooler.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-print-spooler",
+            "redirect_url": "/defender-for-identity/cas-isp-print-spooler",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-riskiest-lmp.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-riskiest-lmp",
+            "redirect_url": "/defender-for-identity/cas-isp-riskiest-lmp",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-unconstrained-kerberos.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-unconstrained-kerberos",
+            "redirect_url": "/defender-for-identity/cas-isp-unconstrained-kerberos",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-unmonitored-domain-controller.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-unmonitored-domain-controller",
+            "redirect_url": "/defender-for-identity/cas-isp-unmonitored-domain-controller",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-unsecure-account-attributes.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-unsecure-account-attributes",
+            "redirect_url": "/defender-for-identity/cas-isp-unsecure-account-attributes",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-unsecure-sid-history-attribute.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-unsecure-sid-history-attribute",
+            "redirect_url": "/defender-for-identity/cas-isp-unsecure-sid-history-attribute",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-cas-isp-weak-cipher.md",
-            "redirect_url": "/azure-advanced-threat-protection/cas-isp-weak-cipher",
+            "redirect_url": "/defender-for-identity/cas-isp-weak-cipher",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-compromised-credentials-alerts.md",
-            "redirect_url": "/azure-advanced-threat-protection/compromised-credentials-alerts",
+            "redirect_url": "/defender-for-identity/compromised-credentials-alerts",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-domain-dominance-alerts.md",
-            "redirect_url": "/azure-advanced-threat-protection/domain-dominance-alerts",
+            "redirect_url": "/defender-for-identity/domain-dominance-alerts",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-exfiltration-alerts.md",
-            "redirect_url": "/azure-advanced-threat-protection/exfiltration-alerts",
+            "redirect_url": "/defender-for-identity/exfiltration-alerts",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-health-center.md",
-            "redirect_url": "/azure-advanced-threat-protection/health-center",
+            "redirect_url": "/defender-for-identity/health-center",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-isp-overview.md",
-            "redirect_url": "/azure-advanced-threat-protection/isp-overview",
+            "redirect_url": "/defender-for-identity/isp-overview",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-lateral-movement-alerts.md",
-            "redirect_url": "/azure-advanced-threat-protection/lateral-movement-alerts",
+            "redirect_url": "/defender-for-identity/lateral-movement-alerts",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-mcas-integration.md",
-            "redirect_url": "/azure-advanced-threat-protection/mcas-integration",
+            "redirect_url": "/defender-for-identity/mcas-integration",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-multi-forest.md",
-            "redirect_url": "/azure-advanced-threat-protection/multi-forest",
+            "redirect_url": "/defender-for-identity/multi-forest",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-nnr-policy.md",
-            "redirect_url": "/azure-advanced-threat-protection/nnr-policy",
+            "redirect_url": "/defender-for-identity/nnr-policy",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-playbook-domain-dominance.md",
-            "redirect_url": "/azure-advanced-threat-protection/playbook-domain-dominance",
+            "redirect_url": "/defender-for-identity/playbook-domain-dominance",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-playbook-lab-overview.md",
-            "redirect_url": "/azure-advanced-threat-protection/playbook-lab-overview",
+            "redirect_url": "/defender-for-identity/playbook-lab-overview",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-playbook-lateral-movement.md",
-            "redirect_url": "/azure-advanced-threat-protection/playbook-lateral-movement",
+            "redirect_url": "/defender-for-identity/playbook-lateral-movement",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-playbook-reconnaissance.md",
-            "redirect_url": "/azure-advanced-threat-protection/playbook-reconnaissance",
+            "redirect_url": "/defender-for-identity/playbook-reconnaissance",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-playbook-setup-lab.md",
-            "redirect_url": "/azure-advanced-threat-protection/playbook-setup-lab",
+            "redirect_url": "/defender-for-identity/playbook-setup-lab",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-prerequisites.md",
-            "redirect_url": "/azure-advanced-threat-protection/prerequisites",
+            "redirect_url": "/defender-for-identity/prerequisites",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-privacy-compliance.md",
-            "redirect_url": "/azure-advanced-threat-protection/privacy-compliance",
+            "redirect_url": "/defender-for-identity/privacy-compliance",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-reconnaissance-alerts.md",
-            "redirect_url": "/azure-advanced-threat-protection/reconnaissance-alerts",
+            "redirect_url": "/defender-for-identity/reconnaissance-alerts",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-release-reference.md",
-            "redirect_url": "/azure-advanced-threat-protection/release-reference",
+            "redirect_url": "/defender-for-identity/release-reference",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-resources.md",
-            "redirect_url": "/azure-advanced-threat-protection/resources",
+            "redirect_url": "/defender-for-identity/resources",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-role-groups.md",
-            "redirect_url": "/azure-advanced-threat-protection/role-groups",
+            "redirect_url": "/defender-for-identity/role-groups",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-sensor-monitoring.md",
-            "redirect_url": "/azure-advanced-threat-protection/sensor-monitoring",
+            "redirect_url": "/defender-for-identity/sensor-monitoring",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-silent-installation.md",
-            "redirect_url": "/azure-advanced-threat-protection/silent-installation",
+            "redirect_url": "/defender-for-identity/silent-installation",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-support.md",
-            "redirect_url": "/azure-advanced-threat-protection/support",
+            "redirect_url": "/defender-for-identity/support",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-technical-faq.md",
-            "redirect_url": "/azure-advanced-threat-protection/technical-faq",
+            "redirect_url": "/defender-for-identity/technical-faq",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-us-govt-gcc-high.md",
-            "redirect_url": "/azure-advanced-threat-protection/us-govt-gcc-high",
+            "redirect_url": "/defender-for-identity/us-govt-gcc-high",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/atp-whats-new.md",
-            "redirect_url": "/azure-advanced-threat-protection/whats-new",
+            "redirect_url": "/defender-for-identity/whats-new",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step1.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step1",
+            "redirect_url": "/defender-for-identity/install-step1",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step2.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step2",
+            "redirect_url": "/defender-for-identity/install-step2",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step3.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step3",
+            "redirect_url": "/defender-for-identity/install-step3",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step4.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step4",
+            "redirect_url": "/defender-for-identity/install-step4",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step5.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step5",
+            "redirect_url": "/defender-for-identity/install-step5",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step6-vpn.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step6-vpn",
+            "redirect_url": "/defender-for-identity/install-step6-vpn",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step7.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step7",
+            "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step7.md",
+            "redirect_url": "/defender-for-identity/configure-detection-exclusions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/excluding-entities-from-detections.md",
+            "redirect_url": "/defender-for-identity/configure-detection-exclusions",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/install-atp-step8-samr.md",
-            "redirect_url": "/azure-advanced-threat-protection/install-step8-samr",
+            "redirect_url": "/defender-for-identity/install-step8-samr",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/modifying-atp-config-dcpassword.md",
-            "redirect_url": "/azure-advanced-threat-protection/modifying-config-dcpassword",
+            "redirect_url": "/defender-for-identity/modifying-config-dcpassword",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/troubleshooting-atp-known-issues.md",
-            "redirect_url": "/azure-advanced-threat-protection/troubleshooting-known-issues",
+            "redirect_url": "/defender-for-identity/troubleshooting-known-issues",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/troubleshooting-atp-using-logs.md",
-            "redirect_url": "/azure-advanced-threat-protection/troubleshooting-using-logs",
+            "redirect_url": "/defender-for-identity/troubleshooting-using-logs",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/integrate-wd-atp.md",
-            "redirect_url": "/azure-advanced-threat-protection/integrate-msde",
+            "redirect_url": "/defender-for-identity/integrate-msde",
             "redirect_document_id": false
         },
         {
             "source_path": "ATPDocs/what-is-atp.md",
-            "redirect_url": "/azure-advanced-threat-protection/what-is",
+            "redirect_url": "/defender-for-identity/what-is",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/sensitive-accounts.md",
+            "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
             "redirect_document_id": false
         }
     ]

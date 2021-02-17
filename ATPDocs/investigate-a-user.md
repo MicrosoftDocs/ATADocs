@@ -24,7 +24,7 @@ ms.topic: tutorial
 Check and investigate the user profile for the following details and activities:
 
 1. Who is the [user](entity-profiles.md)?
-    1. Is the user a [sensitive user](sensitive-accounts.md) (such as admin, or on a watchlist, etc.)?
+    1. Is the user a [sensitive user](manage-sensitive-honeytoken-accounts.md) (such as admin, or on a watchlist, etc.)?
     1. What is their role within the organization?
     1. Are they significant in the organizational tree?
 
