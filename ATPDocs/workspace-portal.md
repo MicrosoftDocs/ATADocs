@@ -72,7 +72,7 @@ Any time your system encounters a problem, such as a connectivity error or a dis
 
 ### Sensitive groups
 
-For information on sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with sensitive groups](sensitive-accounts.md).
+For information on sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with sensitive groups](manage-sensitive-honeytoken-accounts.md).
 
 ### Mini profile
 

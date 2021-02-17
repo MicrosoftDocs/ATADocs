@@ -145,7 +145,7 @@ sections:
         answer: |
           This happens when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
 
-          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](sensitive-accounts.md).
+          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](manage-sensitive-honeytoken-accounts.md).
 
       - question: Do you have to write your own rules and create a threshold/baseline?
         answer: |
