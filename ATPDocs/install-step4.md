@@ -14,10 +14,7 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 - An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that's [connected to Active Directory](install-step2.md).
 - A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](install-step3.md) and the access key.
 - Make sure Microsoft .Net Framework 4.7 or later is installed on the machine. If Microsoft .Net Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
-- Additional requirements for sensor installation on AD FS servers:
-    - For an external Microsoft SQL Server database, make sure that:
-        -  The login (**Security** > **Logins**) used to connect to the server has **db_datareader** role for the **AdfsConfiguration** database.
-        - The database permissions for the login (**Database** -> **Properties** -> **Permissions**) has **connect** and **select** permissions.
+- For sensor installations on AD FS servers, allow the **Directory service** (Configuration > Directory services > Username) account permissions *connect*, *log in*, *read*, and *select* to the  **AdfsConfiguration** database
 
 ## Install the sensor
 

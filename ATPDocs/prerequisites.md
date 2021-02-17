@@ -124,7 +124,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 
 The domain controller can be a read-only domain controller (RODC).
 
-For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to \*.atp.azure.com.
+For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to \*.atp.azure.com. For AD FS servers, make sure you install the sensor on the server itself and not on the Web Application Proxy server. If you are installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or if that is not possible, it should be installed on the primary node.
 
 During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there is a restart already pending.
 
