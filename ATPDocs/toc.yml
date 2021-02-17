@@ -121,7 +121,7 @@ items:
   - name: Manage security alerts
     href: working-with-suspicious-activities.md
   - name: Exclude entities from detections
-    href: excluding-entities-from-detections.md
+    href: ./configure-detection-exclusions.md
   - name: Search and filter monitored activities
     href: activities-search.md
   - name: Manage sensitive or honeytoken accounts
