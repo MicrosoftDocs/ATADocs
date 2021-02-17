@@ -124,7 +124,7 @@ items:
     href: excluding-entities-from-detections.md
   - name: Search and filter monitored activities
     href: activities-search.md
-  - name: Manage honeytoken and sensitive accounts
+  - name: Manage sensitive or honeytoken accounts
     href: manage-sensitive-honeytoken-accounts.md
   - name: Configure detection exclusions
     href: configure-detection-exclusions.md

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity configure detection exclusions
 description: Configuration of detection exclusions.
-ms.date: 10/26/2020
+ms.date: 02/17/2021
 ms.topic: how-to
 ---
 

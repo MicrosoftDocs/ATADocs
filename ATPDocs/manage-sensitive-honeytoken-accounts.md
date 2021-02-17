@@ -1,11 +1,11 @@
 ---
-title: Manage honeytoken or sensitive accounts with Microsoft Defender for Identity
-description: Describes how to manage honeytoken or sensitive accounts using Microsoft Defender for Identity
-ms.date: 02/15/2021
+title: Manage sensitive or honeytoken accounts with Microsoft Defender for Identity
+description: Describes how to manage sensitive or honeytoken accounts using Microsoft Defender for Identity
+ms.date: 02/17/2021
 ms.topic: how-to
 ---
 
-# Manage honeytoken and sensitive accounts
+# Manage sensitive or honeytoken accounts
 
 This article explains how to apply entity tags to sensitive accounts. This is important because some [!INCLUDE [Short long](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
 
@@ -45,7 +45,7 @@ In addition to these groups, [!INCLUDE [Product short](includes/product-short.md
 
 ## Manually tagging entities
 
-You can also manually tag entities as honeytoken or sensitive accounts. If you manually tag additional users or groups, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive.
+You can also manually tag entities as sensitive or honeytoken accounts. If you manually tag additional users or groups, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive.
 
 ### To manually tag entities
 
@@ -64,7 +64,7 @@ To tag entities, do the following:
     1. Click the plus icon **(+)**.
 
     > [!TIP]
-    > The honeytoken or sensitive account field is searchable and will autofill with entities in your network.
+    > The sensitive or honeytoken account field is searchable and will autofill with entities in your network.
 
     ![[!INCLUDE [Product short](includes/product-short.md)] sensitive account sample](media/sensitive-account-sample.png)
 
