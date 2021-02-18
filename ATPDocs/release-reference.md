@@ -25,7 +25,7 @@ Azure ATP's [Suspicious communication over DNS](suspicious-activity-guide.md) se
 Released November 11, 2018
 
 - **Feature enhancement: Default domain exclusions added to Suspicious Communication over DNS alert**  
-New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Excluding entities from detections](./configure-detection-exclusions.md), to learn more.
+New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Configure detection exclusions](configure-detection-exclusions.md), to learn more.
 
 - **Documentation enhancements: SIEM log update, Known Issues guidance**  
 **externalId** mapping and additional explanations were added to SIEM log descriptions. See [SIEM log reference](cef-format-sa.md), to learn more.
