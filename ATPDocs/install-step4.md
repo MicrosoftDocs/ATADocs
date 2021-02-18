@@ -1,7 +1,7 @@
 ---
 title: Install Microsoft Defender for Identity sensor quickstart
 description: Step four of installing Microsoft Defender for Identity helps you to install the Defender for Identity sensor.
-ms.date: 02/16/2021
+ms.date: 02/17/2021
 ms.topic: quickstart
 ---
 
@@ -14,7 +14,7 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 - An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that's [connected to Active Directory](install-step2.md).
 - A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](install-step3.md) and the access key.
 - Make sure Microsoft .Net Framework 4.7 or later is installed on the machine. If Microsoft .Net Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
-- For sensor installations on AD FS servers, allow the **Directory service** (Configuration > Directory services > Username) account permissions *connect*, *log in*, *read*, and *select* to the  **AdfsConfiguration** database
+- For sensor installations on AD FS servers, if you are using an external SQL server, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
 
 ## Install the sensor
 
