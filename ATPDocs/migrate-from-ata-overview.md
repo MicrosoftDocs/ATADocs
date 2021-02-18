@@ -96,7 +96,7 @@ Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal and 
 | 5  | Configure [WDATP integration](integrate-mde.md)| - [ ] |
 | 6  | Set [HoneyTokens](configure-detection-exclusions.md) accounts| - [ ] |
 | 7  | Tag [Sensitive entities](manage-sensitive-honeytoken-accounts.md)| - [ ] |
-| 8  | Create [Security alert exclusions](excluding-entities-from-detections.md)| - [ ] |
+| 8  | Create [Security alert exclusions](configure-detection-exclusions.md)| - [ ] |
 | 9 | [Email notification toggles](notifications.md) | - [ ] |
 | 10  | [Schedule report settings](reports.md) (list of reports and scheduled timing)| - [ ] |
 | 11  | Configure [Role based permissions](role-groups.md) | - [ ] |

@@ -179,7 +179,7 @@ Make sure to have \t between the key=value pairs.
 
 ## See Also
 
-- [ATA POC deployment guide](https://aka.ms/atapoc)
+- [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [ATA sizing tool](https://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)

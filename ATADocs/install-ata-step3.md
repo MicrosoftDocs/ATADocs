@@ -66,7 +66,7 @@ The zip file includes the following files:
 - [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## See Also
-- [ATA POC deployment guide](https://aka.ms/atapoc)
+- [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [ATA sizing tool](https://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
