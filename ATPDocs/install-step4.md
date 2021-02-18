@@ -1,7 +1,7 @@
 ---
 title: Install Microsoft Defender for Identity sensor quickstart
 description: Step four of installing Microsoft Defender for Identity helps you to install the Defender for Identity sensor.
-ms.date: 10/26/2020
+ms.date: 02/17/2021
 ms.topic: quickstart
 ---
 
@@ -14,12 +14,13 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 - An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that's [connected to Active Directory](install-step2.md).
 - A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](install-step3.md) and the access key.
 - Make sure Microsoft .Net Framework 4.7 or later is installed on the machine. If Microsoft .Net Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
+- For sensor installations on AD FS servers, if you are using an external SQL server, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
 
 ## Install the sensor
 
 Perform the following steps on the domain controller.
 
-1. Verify the machine has connectivity to the relevant [[!INCLUDE [Product short](includes/product-short.md)] cloud service](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) endpoint(s):
+1. Verify the machine has connectivity to the relevant [[!INCLUDE [Product short](includes/product-short.md)] cloud service](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) endpoint(s).
 1. Extract the installation files from the zip file. Installing directly from the zip file will fail.
 1. Run **Azure ATP sensor setup.exe** with elevated privileges (**Run as administrator**) and follow the setup wizard.
 1. On the **Welcome** page, select your language and click **Next**.
@@ -55,6 +56,23 @@ Perform the following steps on the domain controller.
 
     - [!INCLUDE [Product short](includes/product-short.md)] sensor service and [!INCLUDE [Product short](includes/product-short.md)] sensor updater service
     - Microsoft Visual C++ 2013 Redistributable
+
+## Post-installation steps for AD FS servers
+
+Use the following steps to configure Defender for Identity once you've completed the installation of the sensor on an AD FS server.
+
+1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**
+
+1. Under **System**, select **Sensors**.
+
+    ![[!INCLUDE [Product short](includes/product-short.md)] sensor configuration page](media/sensor-config.png)
+
+1. Select the sensor you installed on the AD FS server.
+1. In the popup window, in the **Resolver Domain Controller** field, enter the FQDN of the resolver domain controllers, and then click the plus icon **(+)**, and then click **Save**.  
+
+    ![[!INCLUDE [Product short](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
+
+    Initializing the sensor may take a couple of minutes, at which time the the AD FS sensor service status should change from **stopped** to **running**.
 
 ## Next steps
 
