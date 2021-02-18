@@ -62,7 +62,7 @@ To ensure that Windows clients and servers allow the ATA service account to perf
 > [« Step 8](install-ata-step7.md)
 
 ## See Also
-- [ATA POC deployment guide](https://aka.ms/atapoc)
+- [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [ATA sizing tool](https://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Configure event collection](configure-event-collection.md)
