@@ -54,7 +54,7 @@ landingContent:
             url: isp-overview.md  
           - text: Defender for Identity security alert lab
             url: playbook-lab-overview.md
-          - text: Exclude entities from detections
+          - text: Configure detection exclusions
             url: configure-detection-exclusions.md
           - text: Search and filter monitored activities 
             url: activities-search.md
