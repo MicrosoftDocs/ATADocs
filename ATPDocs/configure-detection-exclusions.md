@@ -29,7 +29,7 @@ To configure exclusions from the configuration page, do the following:
     1. Click the plus icon **(+)**.
 
     > [!TIP]
-    > The user or computer field is searchable and will autofill with entities in your network. For more information, see [Configure detection exclusions](configure-detection-exclusions) and the [security alert guide](suspicious-activity-guide.md).
+    > The user or computer field is searchable and will autofill with entities in your network. For more information, see the [security alert guide](suspicious-activity-guide.md).
 
     ![Excluding entities from detections](media/exclusions.png)
 
