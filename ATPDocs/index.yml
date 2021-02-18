@@ -55,7 +55,7 @@ landingContent:
           - text: Defender for Identity security alert lab
             url: playbook-lab-overview.md
           - text: Exclude entities from detections
-            url: ./configure-detection-exclusions.md
+            url: configure-detection-exclusions.md
           - text: Search and filter monitored activities 
             url: activities-search.md
           - text: Use exclusions and honeytoken accounts
