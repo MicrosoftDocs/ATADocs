@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/14/2021
+ms.date: 02/21/2021
 ms.topic: overview
 
 # optional metadata
@@ -20,6 +20,14 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 > [!IMPORTANT]
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
+
+## Defender for Identity release 2.141
+
+Released February 21, 2021
+
+- **New security alert: Suspected AS-REP Roasting attack (external ID 2412)**  
+[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected AS-REP Roasting attack (external ID 2412)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker targets accounts with disabled Kerberos preauthentication, and attempts to obtain Kerberos TGT data. The attacker's intent may be to extract the credentials from the data using offline password cracking attacks. For more information, see [Kerberos AS-REP Roasting exposure (external ID 2412)](compromised-credentials-alerts.md#suspected-as-rep-roasting-attack-external-id-2412).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.140
 
@@ -83,7 +91,7 @@ Released November 17, 2020
 
 Released November 8, 2020
 
-- **New security alert:  Suspected Kerberos SPN exposure (external ID 2410)**  
+- **New security alert: Suspected Kerberos SPN exposure (external ID 2410)**  
 [!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attacker's intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity compromised credentials phase security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
-ms.date: 12/23/2020
+ms.date: 02/21/2021
 ms.topic: tutorial
 ---
 
@@ -26,7 +26,7 @@ The following security alerts help you identify and remediate **Compromised cred
 > - [Suspected Brute Force attack (LDAP) (external ID 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
 > - [Suspected Brute Force attack (SMB) (external ID 2033)](#suspected-brute-force-attack-smb-external-id-2033)
 > - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
-> - [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](#suspected-netlogon-priv-elev-2411)
+> - [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](#suspected-netlogon-priv-elev-2411)
 > - [Suspected WannaCry ransomware attack (external ID 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspected use of Metasploit hacking framework (external ID 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Suspicious VPN connection (external ID 2025)](#suspicious-vpn-connection-external-id-2025)
@@ -155,7 +155,7 @@ It is important to check if any login attempts ended with successful authenticat
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
-1. Prevent future usage of LDAP clear text protocol in your organization.
+1. Prevent future usage of LDAP clear text protocol in your organization.
 
 ## Suspected Brute Force attack (SMB) (external ID 2033)
 
@@ -197,17 +197,17 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 Attackers use tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.
 
-**Learning period**
+**Learning period**
 
 None
 
-**TP, B-TP, or FP**
+**TP, B-TP, or FP**
 
 1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
-    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
-    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
+    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
+    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
 
-**Understand the scope of the breach**
+**Understand the scope of the breach**
 
 1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
 1. Investigate the [source computer](investigate-a-computer.md).
@@ -227,21 +227,21 @@ Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-g
 
 An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*.
 
-**Learning period**
+**Learning period**
 
 None
 
-**TP, B-TP, or FP**
+**TP, B-TP, or FP**
 
 If the source computer is a domain controller (DC), failed or low certainty resolution can prevent [!INCLUDE [Product short](includes/product-short.md)] from being able to confirm its identification.
 
-1. If the source computer is a domain controller, **Close** the alert as a **B-TP** activity.
+1. If the source computer is a domain controller, **Close** the alert as a **B-TP** activity.
 
-1. If this source computer is supposed to generate this type of activity and is expected to continue generating this type of activity in the future, **Close** the security alert as a **B-TP** activity and exclude the computer to avoid additional benign alerts.
+1. If this source computer is supposed to generate this type of activity and is expected to continue generating this type of activity in the future, **Close** the security alert as a **B-TP** activity and exclude the computer to avoid additional benign alerts.
 
-Otherwise, consider this alert a **TP** and follow the instructions in **Understand the scope of the breach**.
+Otherwise, consider this alert a **TP** and follow the instructions in **Understand the scope of the breach**.
 
-**Understand the scope of the breach**
+**Understand the scope of the breach**
 
 1. Investigate [source computer](investigate-a-computer.md), check for malicious scripts or tools that made the connection to the DC.
 
@@ -253,6 +253,32 @@ Otherwise, consider this alert a **TP** and follow the instructions in **U
 1. Review [our guidance](https://support.microsoft.com/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc) on managing changes in Netlogon secure channel connection which relate to and can prevent this vulnerability.
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
+
+## Suspected AS-REP Roasting attack (external ID 2412)
+
+Attackers use tools to detect accounts with their *Kerberos preauthentication* disabled and send AS-REQ requests without the encrypted timestamp. In response they receive AS-REP messages with TGT data, which may be encrypted with an insecure algorithm such as RC4, and save them for later use in an offline password cracking attack (similar to Kerberoasting) and expose plaintext credentials.
+
+**Learning period**
+
+None
+
+**TP, B-TP, or FP**
+
+1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
+    1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
+    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
+
+**Understand the scope of the breach**
+
+1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
+1. Investigate the [source computer](investigate-a-computer.md).
+
+**Remediation:**
+
+1. Contain the source computer.
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Enable Kerberos preauthentication. For more information about account attributes and how to remediate them, see [Unsecure account attributes](cas-isp-unsecure-account-attributes.md).
 
 ## Suspected WannaCry ransomware attack (external ID 2035)
 
