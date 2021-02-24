@@ -27,6 +27,7 @@ The following security alerts help you identify and remediate **Compromised cred
 > - [Suspected Brute Force attack (SMB) (external ID 2033)](#suspected-brute-force-attack-smb-external-id-2033)
 > - [Suspected Kerberos SPN exposure (external ID 2410)](#suspected-kerberos-spn-exposure-external-id-2410)
 > - [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](#suspected-netlogon-priv-elev-2411)
+> - [Suspected AS-REP Roasting attack (external ID 2412)](#suspected-as-rep-roasting-attack-external-id-2412)
 > - [Suspected WannaCry ransomware attack (external ID 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspected use of Metasploit hacking framework (external ID 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Suspicious VPN connection (external ID 2025)](#suspicious-vpn-connection-external-id-2025)
