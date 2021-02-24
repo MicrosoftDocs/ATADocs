@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] monitored activities search and filter
+# Microsoft Defender for Identity monitored activities search and filter
 
 > [!NOTE]
 > The [!INCLUDE [Product short](includes/product-short.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).

@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] multi-forest support
+# Microsoft Defender for Identity multi-forest support
 
 ## Multi-forest support set up
 
@@ -19,7 +19,7 @@ The ability to support multiple Active Directory forests enables the following:
 - Improved detection and reduced false positives by providing advanced Active Directory integration and account resolution.
 - Greater control and easier deployment. Improved health alerts and reporting for cross-org coverage when your domain controllers are all monitored from a single [!INCLUDE [Product short](includes/product-short.md)] console.
 
-## [!INCLUDE [Product short](includes/product-short.md)] detection activity across multiple forests
+## Defender for Identity detection activity across multiple forests
 
 To detect cross-forest activities, [!INCLUDE [Product short](includes/product-short.md)] sensors query domain controllers in remote forests to create profiles for all entities involved, (including users and computers from remote forests).
 

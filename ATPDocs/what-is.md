@@ -5,7 +5,7 @@ ms.date: 12/23/2020
 ms.topic: overview
 ---
 
-# What is [!INCLUDE [Product long](includes/product-long.md)]?
+# What is Microsoft Defender for Identity?
 
 [!INCLUDE [Product long](includes/product-long.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 
@@ -52,25 +52,25 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 
 [!INCLUDE [Product short](includes/product-short.md)] is designed to reduce general alert noise, providing only relevant, important security alerts in a simple, real-time organizational attack timeline. The [!INCLUDE [Product short](includes/product-short.md)] attack timeline view allows you to easily stay focused on what matters, leveraging the intelligence of smart analytics. Use [!INCLUDE [Product short](includes/product-short.md)] to quickly investigate threats, and gain insights across the organization for users, devices, and network resources. Seamless integration with Microsoft Defender for Endpoint provides another layer of enhanced security by additional detection and protection against advanced persistent threats on the operating system.
 
-## Additional resources for [!INCLUDE [Product short](includes/product-short.md)]
+## Additional resources for Defender for Identity
 
 ### Start a free trial
 
 [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
 
-### Follow [!INCLUDE [Product short](includes/product-short.md)] on Microsoft Tech Community
+### Follow Defender for Identity on Microsoft Tech Community
 
 [https://aka.ms/MDIcommunity](https://aka.ms/MDIcommunity "[!INCLUDE [Product short](includes/product-short.md)] on Microsoft Tech Community")
 
-### Join the [!INCLUDE [Product short](includes/product-short.md)] Yammer community
+### Join the Defender for Identity Yammer community
 
 [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "[!INCLUDE [Product short](includes/product-short.md)] Yammer community")
 
-### Visit the [!INCLUDE [Product short](includes/product-short.md)] product page
+### Visit the Defender for Identity product page
 
 [https://www.microsoft.com/microsoft-365/security/identity-defender](https://www.microsoft.com/microsoft-365/security/identity-defender "[!INCLUDE [Product short](includes/product-short.md)] product page")
 
-### Learn more about [!INCLUDE [Product short](includes/product-short.md)] architecture
+### Learn more about Defender for Identity architecture
 
 [[!INCLUDE [Product short](includes/product-short.md)] Architecture](architecture.md)
 
@@ -87,7 +87,7 @@ We recommend deploying [!INCLUDE [Product short](includes/product-short.md)] in 
 ### Phase 1
 
 1. Set up [!INCLUDE [Product short](includes/product-short.md)] to protect your primary environments. [!INCLUDE [Product short](includes/product-short.md)]'s fast deployment model enables you to start protecting your organization today. [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-1. Set [sensitive accounts](sensitive-accounts.md) and [honeytoken accounts](install-step7.md).
+1. Set [sensitive accounts](manage-sensitive-honeytoken-accounts.md) and [honeytoken accounts](configure-detection-exclusions.md).
 1. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).
 
 ### Phase 2
@@ -102,6 +102,6 @@ We recommend deploying [!INCLUDE [Product short](includes/product-short.md)] in 
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.yml)
 - [Working with security alerts](working-with-suspicious-activities.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

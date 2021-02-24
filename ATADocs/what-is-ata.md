@@ -7,7 +7,7 @@ keywords:
 author: shsagir
 ms.author: shsagir
 manager: shsagir
-ms.date: 7/24/2018
+ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:
@@ -30,6 +30,11 @@ ms.suite: ems
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
 Advanced Threat Analytics (ATA) is an on-premises platform that helps protect your enterprise from multiple types of advanced targeted cyber attacks and insider threats.
+
+> [!NOTE]
+> **Support lifecycle**
+>
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## How ATA works
 
@@ -120,5 +125,5 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
 
 ## See Also
-[ATA suspicious activity playbook](https://aka.ms/ataplaybook)
+[ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

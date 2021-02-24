@@ -5,7 +5,7 @@ ms.date: 10/27/2020
 ms.topic: conceptual
 ---
 
-# Working with the [!INCLUDE [Product long](includes/product-long.md)] portal
+# Working with the Microsoft Defender for Identity portal
 
 > [!NOTE]
 > All [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).
@@ -18,12 +18,12 @@ The [!INCLUDE [Product short](includes/product-short.md)] portal provides a quic
 
 This article describes how to work with the key elements of the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
-## Enabling access to the [!INCLUDE [Product short](includes/product-short.md)] portal
+## Enabling access to the Defender for Identity portal
 
 To successfully log in to the [!INCLUDE [Product short](includes/product-short.md)] portal, you have to log in with a user assigned to an Azure Active Directory security group with access to the [!INCLUDE [Product short](includes/product-short.md)] portal.
 For more information about role-based access control (RBAC) in [!INCLUDE [Product short](includes/product-short.md)], see [Working with [!INCLUDE [Product short](includes/product-short.md)] role groups](role-groups.md).
 
-## Logging into the [!INCLUDE [Product short](includes/product-short.md)] portal
+## Logging into the Defender for Identity portal
 
 1. You can enter the [!INCLUDE [Product short](includes/product-short.md)] portal either by logging in to the portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and selecting your instance, or browsing to the instance URL: `https://*instancename*.atp.azure.com`.
 
@@ -72,7 +72,7 @@ Any time your system encounters a problem, such as a connectivity error or a dis
 
 ### Sensitive groups
 
-For information on sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with sensitive groups](sensitive-accounts.md).
+For information on sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with sensitive groups](manage-sensitive-honeytoken-accounts.md).
 
 ### Mini profile
 

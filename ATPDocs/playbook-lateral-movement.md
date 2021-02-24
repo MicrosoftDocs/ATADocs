@@ -126,7 +126,7 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
 
 You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an Overpass-the-Hash attack in our lab. We converted the NTLM hash that was compromised earlier and used it to obtain a Kerberos TGT. That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC.
 
-### Overpass-the-Hash Detected in [!INCLUDE [Product short](includes/product-short.md)]
+### Overpass-the-Hash Detected in Defender for Identity
 
 Looking at the [!INCLUDE [Product short](includes/product-short.md)] console, we can see the following things:
 
@@ -228,7 +228,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 
 Success! Through our mock attacks, we gained administrator access on our domain controller and succeeded in compromising our lab's Active Directory Domain/Forest.
 
-### Pass the Ticket detection in [!INCLUDE [Product short](includes/product-short.md)]
+### Pass the Ticket detection in Defender for Identity
 
 Most security tools have no way to detect when a legitimate credential was used to access a legitimate resource. In contrast, what does [!INCLUDE [Product short](includes/product-short.md)] detect and alert on in this chain of events?
 

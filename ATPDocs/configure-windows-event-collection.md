@@ -11,6 +11,15 @@ ms.topic: how-to
 
 To enhance threat detection capabilities, [!INCLUDE [Product short](includes/product-short.md)] needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by [!INCLUDE [Product short](includes/product-short.md)]:
 
+**For Active Directory Federation Services (AD FS) events**
+
+- 1202 - The Federation Service validated a new credential
+- 1203 - The Federation Service failed to validate a new credential
+- 4624 - An account was successfully logged on
+- 4625 - An account failed to log on
+
+**For Other events**
+
 - 4726 - User Account Deleted
 - 4728 - Member Added to Global Security Group
 - 4729 - Member Removed from Global Security Group
@@ -88,7 +97,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 1. After applying via GPO, the new events are visible under your **Windows Event logs**.
 
 <!--
-## [!INCLUDE [Product short](includes/product-short.md)] Advanced Audit Policy check
+## Defender for Identity Advanced Audit Policy check
 
 To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, [!INCLUDE [Product short](includes/product-short.md)] automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
 

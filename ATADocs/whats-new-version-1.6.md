@@ -137,7 +137,7 @@ If you see either of these errors, run the following workaround:
     1. MongoDB
     2. Microsoft Advanced Threat Analytics Center
 1. Review the logs to verify that the product is running without errors.
-1. [Download](https://aka.ms/ataremoveduplicateprofiles "Download") the "RemoveDuplicateProfiles.exe" tool and copy it to the main installation path (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
+1. [Download](/samples/browse/?redirectedfrom=TechNet-Gallery "Download") the "RemoveDuplicateProfiles.exe" tool and copy it to the main installation path (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)
 1. From an elevated command prompt, run `RemoveDuplicateProfiles.exe` and wait until it completes successfully.
 1. From here: `…\Microsoft Advanced Threat Analytics\Center\MongoDB\bin` directory: **Mongo ATA**, type the following command:
 

@@ -1,11 +1,15 @@
 ---
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
+<<<<<<< HEAD
 ms.date: 02/24/2021
+=======
+ms.date: 02/17/2021
+>>>>>>> 2435028c254a31fa8f96c8fee5994b43d8504534
 ms.topic: overview
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] prerequisites
+# Microsoft Defender for Identity prerequisites
 
 This article describes the requirements for a successful deployment of [!INCLUDE [Product long](includes/product-long.md)] in your environment.
 
@@ -55,7 +59,7 @@ This section lists information you should gather as well as accounts and network
     > [!NOTE]
     >
     > - For sensor machines running Windows Server 2012 and above, we recommend using a **gMSA** account for its improved security and automatic password management.
-    > - If you have multiple sensors, some running Windows Server 2008 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must also use at least one **standard** AD user account.
+    > - If you have multiple sensors, some running Windows Server 2008 R2 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must also use at least one **standard** AD user account.
     > - If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
 
 - If you run Wireshark on [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, restart the [!INCLUDE [Product short](includes/product-short.md)] sensor service after you've stopped the Wireshark capture. If you don't restart the sensor service, the sensor stops capturing traffic.
@@ -64,13 +68,13 @@ This section lists information you should gather as well as accounts and network
 
 - **Deleted Objects** container Recommendation: User should have read-only permissions on the Deleted Objects container. Read-only permissions on this container allows [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
 
-- Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Configure exclusions and Honeytoken user](install-step7.md).
+- Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Configure exclusions and Honeytoken user](configure-detection-exclusions.md).
 
 - Optional: When deploying the standalone sensor, it is necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to [!INCLUDE [Product short](includes/product-short.md)] to further enhance [!INCLUDE [Product short](includes/product-short.md)] authentication based detections, additions to sensitive groups and suspicious service creation detections.  [!INCLUDE [Product short](includes/product-short.md)] sensor receives these events automatically. In [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
 
 <a name="azure-atp-portal-requirements"></a>
 
-## [!INCLUDE [Product short](includes/product-short.md)] portal requirements
+## Defender for Identity portal requirements
 
 Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is via a browser, supporting the following browsers and settings:
 
@@ -89,7 +93,7 @@ Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is vi
 > [!NOTE]
 > By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 200 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
 
-## [!INCLUDE [Product short](includes/product-short.md)] Network Name Resolution (NNR) requirements
+## Defender for Identity Network Name Resolution (NNR) requirements
 
 Network Name Resolution (NNR) is a main component of [!INCLUDE [Product short](includes/product-short.md)] functionality. To resolve IP addresses to computer names, [!INCLUDE [Product short](includes/product-short.md)] sensors look up the IP addresses using the following methods:
 
@@ -105,7 +109,7 @@ For the best results, we recommend using all of the methods. If this is not poss
 
 <a name="azure-atp-sensor-requirements"></a>
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor requirements
+## Defender for Identity sensor requirements
 
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
@@ -125,7 +129,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 
 The domain controller can be a read-only domain controller (RODC).
 
-For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to \*.atp.azure.com.
+For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to `*.atp.azure.com`. If you are installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node.
 
 During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there is a restart already pending.
 
@@ -192,7 +196,7 @@ For sensors running on AD FS servers, configure the auditing level to **Verbose*
 
 <a name="azure-atp-standalone-sensor-requirements"></a>
 
-## [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requirements
+## Defender for Identity standalone sensor requirements
 
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor.
 

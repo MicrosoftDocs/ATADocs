@@ -54,12 +54,12 @@ landingContent:
             url: isp-overview.md  
           - text: Defender for Identity security alert lab
             url: playbook-lab-overview.md
-          - text: Exclude entities from detections
-            url: excluding-entities-from-detections.md
+          - text: Configure detection exclusions
+            url: configure-detection-exclusions.md
           - text: Search and filter monitored activities 
             url: activities-search.md
           - text: Use exclusions and honeytoken accounts
-            url: install-step7.md
+            url: configure-detection-exclusions.md
           - text: Advanced Threat Analytics (ATA) to Defender for Identity move
             url: migrate-from-ata-overview.md
   - title: Manage and remediate security alerts
@@ -97,7 +97,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Frequently asked questions
-            url: technical-faq.md
+            url: technical-faq.yml
           - text: Support and information
             url: support.md
           - text: Defender for Identity readiness roadmap

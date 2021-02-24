@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity unsecure account attributes assessments
 description: This article provides an overview of Microsoft Defender for Identity's entities with unsecure attributes identity security posture assessment report.
-ms.date: 10/26/2020
+ms.date: 01/18/2021
 ms.topic: how-to
 ---
 
@@ -15,7 +15,7 @@ ms.topic: how-to
 
 Organizations that fail to secure their account attributes leave the door unlocked for malicious actors.
 
-Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Accounts configured with unsecure attributes are windows of opportunities for attackers and can expose risks.
+Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Accounts configured with unsecure attributes are windows of opportunity for attackers and can expose risks.
 
 For example, if the attribute *PasswordNotRequired* is enabled, an attacker can easy access to the account. This is especially risky if the account has privileged access to other resources.
 
@@ -26,7 +26,9 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
 > [!NOTE]
-> This assessment is updated in near real time.
+>
+> - This assessment is updated in near real time.
+> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for [!INCLUDE [Product long](includes/product-long.md)] are not met.
 
 ## Remediation
 
@@ -34,7 +36,7 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 
 | Recommended action | Remediation | Reason |
 | --- | --- | --- |
-| Remove Use Kerberos DES encryption types for this account| Remove this setting from account properties in Active Directory (AD) | Removing this setting requires a Kerberos pre-authentication for the account resulting in improved security. |
+| Remove Do not require Kerberos preauthentication| Remove this setting from account properties in Active Directory (AD) | Removing this setting requires a Kerberos pre-authentication for the account resulting in improved security. |
 | Remove Store password using reversible encryption | Remove this setting from account properties in AD | Removing this setting prevents easy decryption of the account's password. |
 | Remove Password not required | Remove this setting from account properties in AD | Removing this setting requires a password to be used with the account and helps prevent unauthorized access to resources. |
 | Remove Password stored with weak encryption | Reset the account password | Changing the account's password enables stronger encryption algorithms to be used for its protection. |

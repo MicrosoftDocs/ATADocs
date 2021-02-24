@@ -1,3 +1,4 @@
+items:
 - name: Microsoft Defender for Identity Documentation
   href: index.yml
 - name: Overview
@@ -119,14 +120,14 @@
     href: capacity-planning.md
   - name: Manage security alerts
     href: working-with-suspicious-activities.md
-  - name: Exclude entities from detections
-    href: excluding-entities-from-detections.md
-  - name: Manage sensitive accounts
-    href: sensitive-accounts.md
+  - name: Configure detection exclusions
+    href: configure-detection-exclusions.md
   - name: Search and filter monitored activities
     href: activities-search.md
-  - name: Use exclusions and honeytoken accounts
-    href: install-step7.md
+  - name: Manage sensitive or honeytoken accounts
+    href: manage-sensitive-honeytoken-accounts.md
+  - name: Configure detection exclusions
+    href: configure-detection-exclusions.md
   - name: Monitor domain controllers
     href: sensor-monitoring.md
   - name: Change domain connectivity password
@@ -184,7 +185,7 @@
   - name: SIEM log reference
     href: cef-format-sa.md
   - name: Defender for Identity known issues
-    href: ./troubleshooting-known-issues.md
+    href: troubleshooting-known-issues.md
   - name: Defender for Identity release reference
     href: release-reference.md
 - name: Resources
@@ -192,7 +193,7 @@
   - name: Support and information
     href: support.md
   - name: Frequently asked questions
-    href: technical-faq.md
+    href: technical-faq.yml
   - name: Defender for Identity readiness roadmap
     href: resources.md
   - name: Defender for Identity data security and privacy

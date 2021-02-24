@@ -5,7 +5,7 @@ ms.date: 12/20/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] information and support
+# Microsoft Defender for Identity information and support
 
 Use the following resources to help you learn about, deploy, and support [!INCLUDE [Product long](includes/product-long.md)] for your organization.
 
@@ -50,7 +50,7 @@ To view system status for [!INCLUDE [Product short](includes/product-short.md)],
 
 Troubleshooting:
 
-- If you have a question about how something works, check whether your question is already answered in [Frequently asked questions](technical-faq.md).
+- If you have a question about how something works, check whether your question is already answered in [Frequently asked questions](technical-faq.yml).
 
 - If you have a question about a prerequisite for [!INCLUDE [Product short](includes/product-short.md)], see [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md).
 

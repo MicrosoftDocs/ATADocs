@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: tutorial
 ---
 
-# Tutorial overview: [!INCLUDE [Product long](includes/product-long.md)] security alert lab
+# Tutorial overview: Microsoft Defender for Identity security alert lab
 
 The purpose of the [!INCLUDE [Product long](includes/product-long.md)] Security Alert lab tutorial is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This four part tutorial explains how to install and configure a working environment to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. This lab focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. The lab doesn't include advanced machine-learning and user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days.
 

@@ -5,11 +5,11 @@ ms.date: 10/27/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] readiness guide
+# Microsoft Defender for Identity readiness guide
 
 This article provides you with a readiness roadmap list of resources that help you get started with [!INCLUDE [Product long](includes/product-long.md)].
 
-## Understanding [!INCLUDE [Product long](includes/product-long.md)]
+## Understanding Microsoft Defender for Identity
 
 [!INCLUDE [Product long](includes/product-long.md)] is a cloud service that helps identify and protect your enterprise from multiple types of advanced targeted cyber-attacks and insider threats.
 
@@ -26,7 +26,7 @@ To learn more about [!INCLUDE [Product short](includes/product-short.md)]:
 - [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool) - The sizing tool automates collection of the amount of traffic [!INCLUDE [Product short](includes/product-short.md)] monitors. It automatically provides supportability and resource recommendations for sensors.
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning guidance](capacity-planning.md)
 
-## Deploy [!INCLUDE [Product short](includes/product-short.md)]
+## Deploy Defender for Identity
 
 Use these resources to help you set up [!INCLUDE [Product short](includes/product-short.md)], connect to Active Directory, download the sensor package, set up event collection, and optionally integrate with your VPN, and set up honeytoken accounts and exclusions.
 
@@ -34,7 +34,7 @@ Use these resources to help you set up [!INCLUDE [Product short](includes/produc
 - [[!INCLUDE [Product short](includes/product-short.md)] Set up](install-step1.md) Follow these steps to deploy [!INCLUDE [Product short](includes/product-short.md)] in your environment.
 - [Integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint](integrate-mde.md)
 
-## [!INCLUDE [Product short](includes/product-short.md)] settings
+## Defender for Identity settings
 
 When creating your [!INCLUDE [Product short](includes/product-short.md)] instance, the basic settings necessary are configured automatically. There are several additional configurable settings in [!INCLUDE [Product short](includes/product-short.md)] to improve detection and alert accuracy for your environment, such as VPN integration, SAM required permissions, and advanced audit policy settings.
 
@@ -42,17 +42,17 @@ When creating your [!INCLUDE [Product short](includes/product-short.md)] instanc
 - [SAM-R required permissions](install-step8-samr.md)
 - [Audit policy settings](configure-windows-event-collection.md) – Audit your domain controller health before and after a [!INCLUDE [Product short](includes/product-short.md)] deployment.
 
-## Work with [!INCLUDE [Product short](includes/product-short.md)]
+## Work with Defender for Identity
 
 After [!INCLUDE [Product short](includes/product-short.md)] is up and running, view security alerts in the [!INCLUDE [Product short](includes/product-short.md)] portal activity timeline. The activity timeline is the default landing page after logging in to the [!INCLUDE [Product short](includes/product-short.md)] portal. By default, all open security alerts are shown on the activity timeline. You can also see the severity assigned to each alert. Investigate each alert by drilling down into the entities (computers, devices, users) to open their profile pages with more information. Lateral movement paths show potential moves that can be made in your network and sensitive users at risk. Investigate and remediate exposure using the lateral movement path detection graphs. These resources help you work with [!INCLUDE [Product short](includes/product-short.md)]'s security alerts:
 
 - [[!INCLUDE [Product short](includes/product-short.md)] security alert guide](suspicious-activity-guide.md) Learn to triage and take the next steps with your [!INCLUDE [Product short](includes/product-short.md)] detections.
 - [[!INCLUDE [Product short](includes/product-short.md)] lateral movement paths](use-case-lateral-movement-path.md)
-- [Tag groups as sensitive](sensitive-accounts.md) Gain visibility into credential exposure on sensitive security groups.
+- [Tag groups as sensitive](manage-sensitive-honeytoken-accounts.md) Gain visibility into credential exposure on sensitive security groups.
 
 ## Security best practices
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Frequently Asked Questions](technical-faq.md) - This article provides a list of frequently asked questions about [!INCLUDE [Product short](includes/product-short.md)] and provides insight and answers.
+- [[!INCLUDE [Product short](includes/product-short.md)] Frequently Asked Questions](technical-faq.yml) - This article provides a list of frequently asked questions about [!INCLUDE [Product short](includes/product-short.md)] and provides insight and answers.
 
 ## Community resources
 
@@ -66,5 +66,5 @@ Channel 9: [Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/M
 
 ## See Also
 
-- [Working with sensitive accounts](sensitive-accounts.md)
+- [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

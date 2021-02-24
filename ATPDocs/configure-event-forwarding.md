@@ -17,7 +17,7 @@ To enhance detection capabilities, [!INCLUDE [Product short](includes/product-sh
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 > - Check that the domain controller is properly configured to capture the required events.
 
-## WEF configuration for [!INCLUDE [Product short](includes/product-short.md)] standalone sensor's with port mirroring
+## WEF configuration for Defender for Identity standalone sensor's with port mirroring
 
 After you configured port mirroring from the domain controllers to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding.
 

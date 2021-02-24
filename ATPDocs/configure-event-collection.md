@@ -45,7 +45,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 > [!NOTE]
 > If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by [!INCLUDE [Product short](includes/product-short.md)].
 
-## Configuring the [!INCLUDE [Product short](includes/product-short.md)] sensor to listen for SIEM events
+## Configuring the Defender for Identity sensor to listen for SIEM events
 
 - Configure your SIEM or Syslog server to forward all required events to the IP address of one of the [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 

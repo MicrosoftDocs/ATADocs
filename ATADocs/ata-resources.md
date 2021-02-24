@@ -64,7 +64,7 @@ These resources will help you download and install the ATA Center, connect to Ac
 
 [Download ATA](https://aka.ms/ataeval) - Before deploying ATA, if you haven't made the decision to purchase ATA, you can download the evaluation version.
 
-[ATA POC playbook](https://aka.ms/atapoc) - Guide to all the steps necessary to do a successful POC deployment of ATA.
+[ATA POC playbook](/samples/browse/?redirectedfrom=TechNet-Gallery) - Guide to all the steps necessary to do a successful POC deployment of ATA.
 
 [ATA deployment video](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes) - This video provides an overview of ATA deployment steps in less than 10 minutes.
 
@@ -80,7 +80,7 @@ The basic necessary settings in ATA are configured as part of the installation w
 
 After ATA is up and running, you can view suspicious activities that are detected in the Attack timeline. This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can also see the severity assigned to each activity. Investigate each suspicious activity by drilling down into the entities (computers, devices, users) to open their profile pages that provide more information. These resources will help you work with ATA's suspicious activities:
 
-[ATA suspicious activity playbook](https://aka.ms/ataplaybook) - This article walks you through credential theft attack techniques using readily available research tools on the internet. At each point of the attack, you can see how ATA helps you gain visibility into these threats.
+[ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery) - This article walks you through credential theft attack techniques using readily available research tools on the internet. At each point of the attack, you can see how ATA helps you gain visibility into these threats.
 
 [ATA suspicious activity guide](suspicious-activity-guide.md)
 

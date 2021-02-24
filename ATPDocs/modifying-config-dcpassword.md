@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Change [!INCLUDE [Product long](includes/product-long.md)] portal configuration - domain connectivity password
+# Change Microsoft Defender for Identity portal configuration - domain connectivity password
 
 ## Change the domain connectivity password
 

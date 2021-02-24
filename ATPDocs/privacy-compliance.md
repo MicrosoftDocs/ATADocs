@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: conceptual
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] data security and privacy
+# Microsoft Defender for Identity data security and privacy
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -39,6 +39,6 @@ In [!INCLUDE [Product short](includes/product-short.md)] you have the ability to
 
 - For information about [!INCLUDE [Product short](includes/product-short.md)] trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
-## Security and privacy for [!INCLUDE [Product short](includes/product-short.md)] US Government GCC High customers
+## Security and privacy for Defender for Identity US Government GCC High customers
 
 For additional information on [!INCLUDE [Product short](includes/product-short.md)] compliance standards and location of customer data for US Government GCC High customers, review the [Enterprise Mobility + Security for US Government service description](/enterprise-mobility-security/solutions/ems-govt-service-description).

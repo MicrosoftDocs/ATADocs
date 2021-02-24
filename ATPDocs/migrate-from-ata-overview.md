@@ -5,14 +5,14 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Advanced Threat Analytics (ATA) to [!INCLUDE [Product long](includes/product-long.md)]
+# Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
 > [!NOTE]
 > The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 Use this guide to move from an existing ATA installation to the ([!INCLUDE [Product long](includes/product-long.md)]) service. The guide explains [!INCLUDE [Product short](includes/product-short.md)] prerequisites and requirements, and details how to plan and then complete your move. Validation steps and tips to take advantage of the latest threat protection and security solutions with [!INCLUDE [Product short](includes/product-short.md)] after installation are also included.
 
-To learn more about the differences between ATA and [!INCLUDE [Product short](includes/product-short.md)], see the [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.md#what-is-azure-atp).
+To learn more about the differences between ATA and [!INCLUDE [Product short](includes/product-short.md)], see the [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.yml).
 
 In this guide you will:
 
@@ -53,9 +53,9 @@ Make sure to gather the following information before starting your move:
 1. Alert exclusions
     - Exclusions are not transferable from ATA to [!INCLUDE [Product short](includes/product-short.md)], so details of each exclusion are required to [replicate the exclusions in [!INCLUDE [Product short](includes/product-short.md)]](excluding-entities-from-detections.md).
 1. Account details for HoneyToken accounts.
-    - If you don't already have dedicated HoneyToken accounts, learn more about [HoneyTokens in [!INCLUDE [Product short](includes/product-short.md)]](install-step7.md) and create new accounts to use for this purpose.
+    - If you don't already have dedicated HoneyToken accounts, learn more about [HoneyTokens in [!INCLUDE [Product short](includes/product-short.md)]](configure-detection-exclusions.md) and create new accounts to use for this purpose.
 1. Complete list of all entities (computers, groups, users) you wish to manually tag as Sensitive entities.
-    - Learn more about the importance of [Sensitive entities](sensitive-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)].
+    - Learn more about the importance of [Sensitive entities](manage-sensitive-honeytoken-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)].
 1. Report scheduling [details](reports.md) (list of reports and scheduled timing).
 
 > [!NOTE]
@@ -65,7 +65,7 @@ Make sure to gather the following information before starting your move:
 
 Complete your move to [!INCLUDE [Product short](includes/product-short.md)] in two easy steps:
 
-### Step 1: Create and install [!INCLUDE [Product short](includes/product-short.md)] instance and sensors
+### Step 1: Create and install Defender for Identity instance and sensors
 
 1. [Create your new [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
 
@@ -76,7 +76,7 @@ Complete your move to [!INCLUDE [Product short](includes/product-short.md)] in t
     - [Retrieve your [!INCLUDE [Product short](includes/product-short.md)] Access Key](install-step3.md#download-the-setup-package).
     - [Install [!INCLUDE [Product short](includes/product-short.md)] sensors on your domain controllers](install-step4.md).
 
-### Step 2: Configure and validate [!INCLUDE [Product short](includes/product-short.md)] instance
+### Step 2: Configure and validate Defender for Identity instance
 
 - [Configure the Sensor](install-step5.md)
 
@@ -94,9 +94,9 @@ Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal and 
 | 3  | Configure [Syslog notifications](setting-syslog.md) | - [ ] |
 | 4  | [Integrate VPN](install-step6-vpn.md) information| - [ ] |
 | 5  | Configure [WDATP integration](integrate-mde.md)| - [ ] |
-| 6  | Set [HoneyTokens](install-step7.md) accounts| - [ ] |
-| 7  | Tag [Sensitive entities](sensitive-accounts.md)| - [ ] |
-| 8  | Create [Security alert exclusions](excluding-entities-from-detections.md)| - [ ] |
+| 6  | Set [HoneyTokens](configure-detection-exclusions.md) accounts| - [ ] |
+| 7  | Tag [Sensitive entities](manage-sensitive-honeytoken-accounts.md)| - [ ] |
+| 8  | Create [Security alert exclusions](configure-detection-exclusions.md)| - [ ] |
 | 9 | [Email notification toggles](notifications.md) | - [ ] |
 | 10  | [Schedule report settings](reports.md) (list of reports and scheduled timing)| - [ ] |
 | 11  | Configure [Role based permissions](role-groups.md) | - [ ] |

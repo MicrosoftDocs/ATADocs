@@ -5,7 +5,7 @@ ms.date: 10/27/2020
 ms.topic: reference
 ---
 
-# Release reference of [!INCLUDE [Product long](includes/product-long.md)]
+# Release reference of Microsoft Defender for Identity
 
 This article is a reference of all [!INCLUDE [Product short](includes/product-short.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP) releases until (and including) release 2.55. For recent [!INCLUDE [Product short](includes/product-short.md)] release updates (2.56 and newer), see [[!INCLUDE [Product short](includes/product-short.md)] what's new](whats-new.md).
 
@@ -25,7 +25,7 @@ Azure ATP's [Suspicious communication over DNS](suspicious-activity-guide.md) se
 Released November 11, 2018
 
 - **Feature enhancement: Default domain exclusions added to Suspicious Communication over DNS alert**  
-New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Excluding entities from detections](excluding-entities-from-detections.md), to learn more.
+New addition of three popular domains to the default domain exclusion list. The exclusion list remains fully customizable. See [Configure detection exclusions](configure-detection-exclusions.md), to learn more.
 
 - **Documentation enhancements: SIEM log update, Known Issues guidance**  
 **externalId** mapping and additional explanations were added to SIEM log descriptions. See [SIEM log reference](cef-format-sa.md), to learn more.
@@ -362,7 +362,7 @@ The Azure ATP sensor infrastructure was improved for performance: the aggregated
 ## See Also
 
 - [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)
-- [Frequently asked questions](technical-faq.md)
+- [Frequently asked questions](technical-faq.yml)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

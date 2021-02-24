@@ -52,5 +52,5 @@ To review or modify your Syslog settings.
 
 ## See Also
 
-- [Working with sensitive accounts](sensitive-accounts.md)
+- [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)

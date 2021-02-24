@@ -5,7 +5,7 @@ ms.date: 01/11/2021
 ms.topic: how-to
 ---
 
-# [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation
+# Microsoft Defender for Identity switches and silent installation
 
 This article provides guidance and instructions for [!INCLUDE [Product long](includes/product-long.md)] switches and silent installation.
 
@@ -22,7 +22,7 @@ Using [!INCLUDE [Product short](includes/product-short.md)] silent installation,
 
 To track your deployment progress, monitor the [!INCLUDE [Product short](includes/product-short.md)] installer logs, which are located in `%AppData%\Local\Temp`.
 
-## [!INCLUDE [Product short](includes/product-short.md)] sensor silent installation
+## Defender for Identity sensor silent installation
 
 > [!NOTE]
 > When silently deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- [!INCLUDE [Product short](includes/product-short.md)] sensor. </br>Make the [!INCLUDE [Product short](includes/product-short.md)] sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
@@ -90,7 +90,7 @@ Use the following commands to complete proxy authentication:
 
 For more information about proxy configuration, see [Configure endpoint proxy and Internet connectivity settings for your [!INCLUDE [Product long](includes/product-long.md)] Sensor](configure-proxy.md).
 
-## Update the [!INCLUDE [Product short](includes/product-short.md)] sensor
+## Update the Defender for Identity sensor
 
 Use the following command to silently update the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
@@ -120,7 +120,7 @@ To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silen
 
 <a name="silently-uninstall-sensor"></a>
 
-## Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently
+## Uninstall the Defender for Identity sensor silently
 
 Use the following command to perform a silent uninstall of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
