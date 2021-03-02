@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity for US Government offerings
 description: This article provides an overview of Microsoft Defender for Identity's US Government offerings.
-ms.date: 02/24/2021
+ms.date: 03/01/2021
 ms.topic: overview
 ---
 
