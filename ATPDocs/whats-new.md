@@ -23,7 +23,6 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 ## Defender for Identity release 2.141
 
-
 Released February 21, 2021
 
 - **New security alert: Suspected AS-REP Roasting attack (external ID 2412)**  
