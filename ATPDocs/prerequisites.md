@@ -1,11 +1,7 @@
 ---
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-<<<<<<< HEAD
-ms.date: 02/24/2021
-=======
-ms.date: 02/17/2021
->>>>>>> 2435028c254a31fa8f96c8fee5994b43d8504534
+ms.date: 03/10/2021
 ms.topic: overview
 ---
 
@@ -182,7 +178,7 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |AFP\*\*\*|TCP|548|[!INCLUDE [Product short](includes/product-short.md)]|All Mac devices on the network|
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
-\*\* One of these ports is required, but we recommend opening all of them.
+\*\* One of these ports is required, but we recommend opening all of them.  
 \*\*\* Recommended for Mac devices as a fallback in case the DNS query fails.
 
 ### Windows Event logs
@@ -282,9 +278,11 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|AFP\*\*\*|TCP|548|[!INCLUDE [Product short](includes/product-short.md)]|All Mac devices on the network|
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
-\*\* One of these ports is required, but we recommend opening all of them.
+\*\* One of these ports is required, but we recommend opening all of them.  
+\*\*\* Recommended for Mac devices as a fallback in case the DNS query fails.
 
 > [!NOTE]
 >
