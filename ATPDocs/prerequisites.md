@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 03/10/2021
+ms.date: 02/17/2021
 ms.topic: overview
 ---
 
@@ -97,7 +97,6 @@ Network Name Resolution (NNR) is a main component of [!INCLUDE [Product short](i
 - NetBIOS (UDP port 137)
 - RDP (TCP port 3389) - only the first packet of **Client hello**
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
-- Queries the Apple File Protocol (AFP) service (TCP port 548)
 
 For the first three methods to work, the relevant ports must be opened inbound from the [!INCLUDE [Product short](includes/product-short.md)] sensors to devices on the network. To learn more about [!INCLUDE [Product short](includes/product-short.md)] and NNR, see [[!INCLUDE [Product short](includes/product-short.md)] NNR policy](nnr-policy.md).
 
@@ -175,11 +174,9 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|AFP\*\*\*|TCP|548|[!INCLUDE [Product short](includes/product-short.md)]|All Mac devices on the network|
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
-\*\* One of these ports is required, but we recommend opening all of them.  
-\*\*\* Recommended for Mac devices as a fallback in case the DNS query fails.
+\*\* One of these ports is required, but we recommend opening all of them.
 
 ### Windows Event logs
 
@@ -278,11 +275,9 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|AFP\*\*\*|TCP|548|[!INCLUDE [Product short](includes/product-short.md)]|All Mac devices on the network|
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
-\*\* One of these ports is required, but we recommend opening all of them.  
-\*\*\* Recommended for Mac devices as a fallback in case the DNS query fails.
+\*\* One of these ports is required, but we recommend opening all of them.
 
 > [!NOTE]
 >
