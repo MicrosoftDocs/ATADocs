@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Network Name Resolution
 description: This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
-ms.date: 10/26/2020
+ms.date: 03/10/2021
 ms.topic: conceptual
 ---
 
@@ -17,6 +17,7 @@ To resolve IP addresses to computer names, [!INCLUDE [Product short](includes/pr
 - NetBIOS (UDP port 137)
 - RDP (TCP port 3389) - only the first packet of **Client hello**
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
+- Queries the Apple File Protocol (AFP) service (TCP port 548)
 
 For the best results, we recommend using all of the methods. If this is not possible, you should use the DNS lookup method and at least one of the other methods.
 
@@ -53,12 +54,14 @@ After confirming the device, you can then determine if the alert is a **False Po
 
 |Protocol|Transport|Port|Device|Direction|
 |--------|--------|------|-------|------|
-|NTLM over RPC*|TCP|135|All devices on the network|Inbound|
+|NTLM over RPC\*|TCP|135|All devices on the network|Inbound|
 |NetBIOS*|UDP|137|All devices on the network|Inbound|
 |RDP*|TCP|3389|All devices on the network|Inbound|
 |DNS|UDP|53|Domain controllers|Outbound|
+|AFP\*\*|TCP|548|All Mac devices on the network|Outbound|
 
-\* One of these methods is required, but we recommend using all of them.
+\* One of these methods is required, but we recommend using all of them.  
+\*\* Recommended for Mac devices as a fallback in case the DNS query fails.
 
 To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each Sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
 
@@ -83,6 +86,8 @@ Each health alert provides specific details of the method, sensors, the problema
   - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
 - Reverse DNS:
   - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
+- Apple File Protocol (AFP):
+  - Check that TCP Port 548 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] Sensors, on all Mac computers in the environment.
 
 ## See Also
 
