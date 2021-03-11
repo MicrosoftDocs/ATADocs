@@ -36,6 +36,10 @@ landingContent:
             url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
           - text: Defender for Identity fundamentals
             url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
+      - linkListType: whats-new
+        links:
+          - text: Releases
+            url: whats-new.md
   - title: Check out Defender for Identity alerts      
     linkLists:
       - linkListType: get-started
