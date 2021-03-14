@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event collection Microsoft Defender for Identity
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 10/26/2020
+ms.date: 03/11/2021
 ms.topic: how-to
 ---
 
@@ -26,6 +26,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 - 4730 - Global Security Group Deleted
 - 4732 - Member Added to Local Security Group
 - 4733 - Member Removed from Local Security Group
+- 4741 - Computer Account Added
 - 4743 - Computer Account Deleted
 - 4753 - Global Distribution Group Deleted
 - 4756 - Member Added to Universal Security Group
@@ -60,7 +61,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
         | Audit policy | Subcategory | Triggers event IDs |
         | --- |---|---|
         | Account Logon | Audit Credential Validation | 4776 |
-        | Account Management | Audit Computer Account Management | 4743 |
+        | Account Management | Audit Computer Account Management | 4741, 4743 |
         | Account Management | Audit Distribution Group Management | 4753, 4763 |
         | Account Management | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | Account Management | Audit User Account Management | 4726 |
