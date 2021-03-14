@@ -1,12 +1,8 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/07/2021
+ms.date: 03/14/2021
 ms.topic: overview
-
-# optional metadata
-ms.reviewer: ort
-ms.suite: ems
 ---
 
 # What's new in Microsoft Defender for Identity
@@ -20,6 +16,13 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 > [!IMPORTANT]
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
+
+## Defender for Identity release 2.143
+
+Released March 14, 2021
+
+- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](configure-windows-event-collection.md) to be collected by [!INCLUDE [Product short](includes/product-short.md)]. Once configured, collected events will be available to view in the activity log as well as the Microsoft 365 Defender Advanced Hunting.
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.142
 
