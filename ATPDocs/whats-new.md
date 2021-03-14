@@ -21,7 +21,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 Released March 14, 2021
 
-- We've added Windows Event 4741 to detect computer accounts added to Active Directory activities. [Configure the new event](configure-windows-event-collection.md) to be collected by [!INCLUDE [Product short](includes/product-short.md)]. Once configured, collected events will be available to view in the activity log as well as the Microsoft 365 Defender Advanced Hunting.
+- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](configure-windows-event-collection.md) to be collected by [!INCLUDE [Product short](includes/product-short.md)]. Once configured, collected events will be available to view in the activity log as well as the Microsoft 365 Defender Advanced Hunting.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.142
