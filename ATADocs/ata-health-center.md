@@ -4,9 +4,9 @@
 title: Monitor Advanced Threat Analytics System Health and Events
 description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems and view system events in the Event viewer.
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics update to 1.9.3 migration guide
 description: Procedure to update ATA to version 1.9.3
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 09/14/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

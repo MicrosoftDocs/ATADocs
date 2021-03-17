@@ -4,9 +4,9 @@
 title: What threats does Advanced Threat Analytics detect?
 description: Lists the threats that Advanced Threat Analytics detects 
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

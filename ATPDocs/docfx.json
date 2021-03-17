@@ -38,9 +38,9 @@
       "extendBreadcrumb": true,
       "searchScope": ["Defender for Identity"],
 
-      "author": "shsagir",
-      "manager": "shsagir",
-      "ms.author": "shsagir",
+      "author": "dcurwin",
+      "manager": "dcurwin",
+      "ms.author": "dacurwin",
       "ms.collection": "M365-security-compliance",
       "ms.service": "microsoft-defender-for-identity",
       "ms.suite": "ems"
