@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics recommended upgrade path
 description: Provides instructions for upgrading your Advanced Threat Analytics (ATA) version.
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

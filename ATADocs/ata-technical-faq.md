@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics frequently asked questions
 description: Provides a list of frequently asked questions about ATA and the associated answers
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

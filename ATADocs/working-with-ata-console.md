@@ -4,9 +4,9 @@
 title: Understanding the Advanced Threat Analytics console
 description: Describes how to log into the ATA console and the components of the console
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

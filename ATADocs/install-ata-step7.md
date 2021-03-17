@@ -4,9 +4,9 @@
 title: Install Advanced Threat Analytics - Step 8
 description: In the final step of installing ATA, you configure the Honeytoken user.
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 6/14/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
