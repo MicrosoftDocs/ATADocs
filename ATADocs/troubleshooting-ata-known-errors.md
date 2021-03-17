@@ -4,9 +4,9 @@
 title: Troubleshooting ATA known issues | Microsoft Docs
 description: Describes how you can troubleshoot known issues in Advanced Threat Analytics
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 01/12/2021
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

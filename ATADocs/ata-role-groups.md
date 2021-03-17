@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics role groups for access management
 description: Walks you through working with ATA role groups.
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

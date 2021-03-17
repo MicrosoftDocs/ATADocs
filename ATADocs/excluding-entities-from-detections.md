@@ -4,9 +4,9 @@
 title: Excluding entities from detections in Advanced Threat Analytics
 description: Describes how to stop ATA from detecting specific entity activities as suspicious
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

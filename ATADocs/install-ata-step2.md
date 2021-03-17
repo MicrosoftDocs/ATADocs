@@ -4,9 +4,9 @@
 title: Install Advanced Threat Analytics - Step 2
 description: Step two of installing ATA helps you configure the domain connectivity settings on your ATA Center server
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 12/30/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

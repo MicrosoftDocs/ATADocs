@@ -4,9 +4,9 @@
 title: Working with ATA Reports
 description: Describes how you can generate reports in ATA to monitor your network.
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 3/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

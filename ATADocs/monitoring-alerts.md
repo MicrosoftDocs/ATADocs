@@ -4,9 +4,9 @@
 title: Understanding ATA health alerts
 description: Describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 02/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance

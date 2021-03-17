@@ -4,9 +4,9 @@
 title: ATA SIEM log reference | Microsoft Docs 
 description: Provides samples of security alert logs sent from ATA to your SIEM. 
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

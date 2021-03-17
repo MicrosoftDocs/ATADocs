@@ -4,9 +4,9 @@
 title: Advanced Threat Analytics prerequisites
 description: Describes the requirements for a successful deployment of ATA in your environment
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics

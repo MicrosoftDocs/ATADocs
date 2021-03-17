@@ -4,9 +4,9 @@
 title: Troubleshooting Advanced Threat Analytics service startup
 description: Describes how you can troubleshoot ATA startup issues
 keywords:
-author: shsagir
-ms.author: shsagir
-manager: shsagir
+author: dcurwin
+ms.author: dacurwin
+manager: dcurwin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
