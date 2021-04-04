@@ -62,11 +62,11 @@ This section lists information you should gather as well as accounts and network
 
 - If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#nic-teaming).
 
-- **Deleted Objects** container Recommendation: User should have read-only permissions on the Deleted Objects container. Read-only permissions on this container allows [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
+- **Deleted Objects** container Recommendation: User should have read-only permissions on the Deleted Objects container. Read-only permissions on this container allow [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
 
 - Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Configure exclusions and Honeytoken user](configure-detection-exclusions.md).
 
-- Optional: When deploying the standalone sensor, it is necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to [!INCLUDE [Product short](includes/product-short.md)] to further enhance [!INCLUDE [Product short](includes/product-short.md)] authentication based detections, additions to sensitive groups and suspicious service creation detections.  [!INCLUDE [Product short](includes/product-short.md)] sensor receives these events automatically. In [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
+- Optional: When deploying the standalone sensor, it's necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to [!INCLUDE [Product short](includes/product-short.md)] to further enhance [!INCLUDE [Product short](includes/product-short.md)] authentication-based detections, additions to sensitive groups, and suspicious service creation detections.  [!INCLUDE [Product short](includes/product-short.md)] sensor receives these events automatically. In [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that isn't available via the domain controller network traffic.
 
 <a name="azure-atp-portal-requirements"></a>
 
@@ -100,7 +100,7 @@ Network Name Resolution (NNR) is a main component of [!INCLUDE [Product short](i
 
 For the first three methods to work, the relevant ports must be opened inbound from the [!INCLUDE [Product short](includes/product-short.md)] sensors to devices on the network. To learn more about [!INCLUDE [Product short](includes/product-short.md)] and NNR, see [[!INCLUDE [Product short](includes/product-short.md)] NNR policy](nnr-policy.md).
 
-For the best results, we recommend using all of the methods. If this is not possible, you should use the DNS lookup method and at least one of the other methods.
+For the best results, we recommend using all of the methods. If this isn't possible, you should use the DNS lookup method and at least one of the other methods.
 
 <a name="azure-atp-sensor-requirements"></a>
 
@@ -124,9 +124,9 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 
 The domain controller can be a read-only domain controller (RODC).
 
-For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to `*.atp.azure.com`. If you are installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node.
+For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to `*.atp.azure.com`. If you're installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node.
 
-During installation, if .Net Framework 4.7 or later is not installed, the .Net Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there is a restart already pending.
+During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there is a restart already pending.
 
 > [!NOTE]
 > A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
@@ -138,10 +138,10 @@ For optimal performance, set the **Power Option** of the machine running the [!I
 
 [!INCLUDE [Product short](includes/product-short.md)] sensors can be deployed on domain controller or AD FS servers of various loads and sizes, depending on the amount of network traffic to and from the servers, and the amount of resources installed.
 
-For Windows Operating systems 2008R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor is not supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
+For Windows Operating systems 2008R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
-> When running as a virtual machine, dynamic memory or any other memory ballooning feature is not supported.
+> When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
 
 For more information about the [!INCLUDE [Product short](includes/product-short.md)] sensor hardware requirements, see [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md).
 
@@ -154,7 +154,7 @@ The servers and domain controllers onto which the sensor is installed must have 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor monitors the local traffic on all of the domain controller's network adapters.  
 After deployment, use the [!INCLUDE [Product short](includes/product-short.md)] portal to modify which network adapters are monitored.
 
-The sensor is not supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
+The sensor isn't supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
 ### Ports
 
@@ -216,7 +216,7 @@ For optimal performance, set the **Power Option** of the machine running the [!I
 [!INCLUDE [Product short](includes/product-short.md)] standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
 >[!NOTE]
-> When running as a virtual machine, dynamic memory or any other memory ballooning feature is not supported.
+> When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
 
 For more information about the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor hardware requirements, see [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md).
 
@@ -285,8 +285,8 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/aatpsizingtool>)
 - [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)
 - [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
 - [Network Name Resolution (NNR)](nnr-policy.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

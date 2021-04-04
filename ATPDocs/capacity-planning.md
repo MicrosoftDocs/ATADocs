@@ -11,7 +11,7 @@ In this guide, you determine how many [!INCLUDE [Product long](includes/product-
 
 ## Prerequisites
 
-- Download the [[!INCLUDE [Product short](includes/product-short.md)] Sizing Tool](https://aka.ms/aatpsizingtool).
+- Download the [[!INCLUDE [Product short](includes/product-short.md)] Sizing Tool](<https://aka.ms/aatpsizingtool>).
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
 
@@ -21,7 +21,7 @@ The recommended and simplest way to determine capacity for your [!INCLUDE [Produ
 
 1. Run the [!INCLUDE [Product short](includes/product-short.md)] Sizing Tool, **TriSizingTool.exe**, from the zip file you downloaded.
 1. When the tool finishes running, open the Excel file results.
-1. In the Excel file, locate and click on the **Azure ATP Summary** sheet. The other sheet isn't needed since it's for ATA planning.
+1. In the Excel file, locate and select the **Azure ATP Summary** sheet. The other sheet isn't needed since it's for ATA planning.
     ![Sample capacity planning tool](media/capacity-tool.png)
 
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
@@ -62,12 +62,12 @@ It's recommended that you don't work with hyper-threaded cores. Working with hyp
 ### Dynamic memory
 
 > [!NOTE]
-> When running as a virtual machine (VM) all memory is required to be allocated to VM at all times.
+> When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
 
 |VM running on|Description|
 |------------|-------------|
-|Hyper-V|Ensure that **Enable Dynamic Memory** is not enabled for the VM.|
-|VMWare|Ensure that the amount of memory configured and the reserved memory are the same, or select the following option in the VM setting – **Reserve all guest memory (All locked)**.|
+|Hyper-V|Ensure that **Enable Dynamic Memory** isn't enabled for the VM.|
+|VMware|Ensure that the amount of memory configured and the reserved memory are the same, or select the following option in the VM setting – **Reserve all guest memory (All locked)**.|
 |Other virtualization host|Refer to the vendor supplied documentation on how to ensure that memory is fully allocated to the VM at all times. |
 
 <a name="manual-sizing"></a>
@@ -88,7 +88,7 @@ To determine packets per second, do the following steps on each domain controlle
 
     ![Data collector sets image](media/traffic-estimation-2.png)
 
-1. Right click **User Defined** and select **New** &gt; **Data Collector Set**.
+1. Right-click **User Defined** and select **New** &gt; **Data Collector Set**.
 
     ![New data collector set image](media/traffic-estimation-3.png)
 
@@ -98,9 +98,9 @@ To determine packets per second, do the following steps on each domain controlle
 
     ![Type of data for new data collector set image](media/traffic-estimation-5.png)
 
-1. Under **Which performance counters would you like to log**, click **Add**.
+1. Under **Which performance counters would you like to log**, select **Add**.
 
-1. Expand **Network Adapter** and select **Packets/sec** and select the proper instance. If you aren't sure, you can select **&lt;All instances&gt;** and click **Add** and **OK**.
+1. Expand **Network Adapter** and select **Packets/sec** and select the proper instance. If you aren't sure, you can select **&lt;All instances&gt;** and select **Add** and **OK**.
 
     > [!NOTE]
     > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
@@ -111,7 +111,7 @@ To determine packets per second, do the following steps on each domain controlle
 
 1. Set the location where you want the data to be saved.
 
-1. Under **Create the data collector set**,  select **Start this data collector set now**, and click **Finish**.
+1. Under **Create the data collector set**,  select **Start this data collector set now**, and select **Finish**.
 
     You should now see the data collector set you created with a green triangle indicating that it's working.
 
@@ -127,11 +127,11 @@ To determine packets per second, do the following steps on each domain controlle
 
 ## Next steps
 
-In this guide, you determined how many [!INCLUDE [Product short](includes/product-short.md)] sensors you need. You also determined sizing for the sensors. Continue to the create a [!INCLUDE [Product short](includes/product-short.md)] instance quickstart guide.
+In this guide, you determined how many [!INCLUDE [Product short](includes/product-short.md)] sensors you need. You also determined sizing for the sensors. Continue to the Create a [!INCLUDE [Product short](includes/product-short.md)] instance quickstart guide.
 
 > [!div class="nextstepaction"]
 > [Create your [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
 
 ## Join the Community
 
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) today!
+Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!
