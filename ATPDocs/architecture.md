@@ -81,8 +81,8 @@ To enhance [!INCLUDE [Product short](includes/product-short.md)] detection cover
 ## Next steps
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/trisizingtool)
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](capacity-planning.md##use-the-sizing-tool)
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
