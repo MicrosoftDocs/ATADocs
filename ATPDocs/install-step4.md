@@ -13,8 +13,8 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 
 - An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that's [connected to Active Directory](install-step2.md).
 - A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](install-step3.md) and the access key.
-- Make sure Microsoft .Net Framework 4.7 or later is installed on the machine. If Microsoft .Net Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
-- For sensor installations on AD FS servers, if you are using an external SQL server, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
+- Make sure Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
+- For sensor installations on AD FS servers, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
 
 ## Install the sensor
 
@@ -23,7 +23,7 @@ Perform the following steps on the domain controller.
 1. Verify the machine has connectivity to the relevant [[!INCLUDE [Product short](includes/product-short.md)] cloud service](configure-proxy.md#enable-access-to-azure-atp-service-urls-in-the-proxy-server) endpoint(s).
 1. Extract the installation files from the zip file. Installing directly from the zip file will fail.
 1. Run **Azure ATP sensor setup.exe** with elevated privileges (**Run as administrator**) and follow the setup wizard.
-1. On the **Welcome** page, select your language and click **Next**.
+1. On the **Welcome** page, select your language and select **Next**.
 
     ![[!INCLUDE [Product short](includes/product-short.md)] standalone sensor installation language](media/sensor-install-language.png)
 
@@ -33,7 +33,7 @@ Perform the following steps on the domain controller.
 
     ![[!INCLUDE [Product short](includes/product-short.md)] sensor installation](media/sensor-install-deployment-type.png)
 
-    Click **Next**.
+    Select **Next**.
 
     > [!NOTE]
     > A warning is issued if the domain controller or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from clicking **Next**, and proceeding with the installation. It can still be the right option for the installation of [!INCLUDE [Product short](includes/product-short.md)] in a small lab test environment where less room for data storage is required. For production environments, it is highly recommended to work with [!INCLUDE [Product short](includes/product-short.md)]'s [capacity planning](capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
@@ -45,7 +45,7 @@ Perform the following steps on the domain controller.
     - Installation path: The location where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
     - Access key: Retrieved from the [!INCLUDE [Product short](includes/product-short.md)] portal in the previous step.
 
-1. Click **Install**. The following components are installed and configured during the installation of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+1. Select **Install**. The following components are installed and configured during the installation of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
     - KB 3047154 (for Windows Server 2012 R2 only)
 
@@ -68,11 +68,11 @@ Use the following steps to configure Defender for Identity once you've completed
     ![[!INCLUDE [Product short](includes/product-short.md)] sensor configuration page](media/sensor-config.png)
 
 1. Select the sensor you installed on the AD FS server.
-1. In the popup window, in the **Resolver Domain Controller** field, enter the FQDN of the resolver domain controllers, and then click the plus icon **(+)**, and then click **Save**.  
+1. In the popup window, in the **Resolver Domain Controller** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  
 
     ![[!INCLUDE [Product short](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
 
-    Initializing the sensor may take a couple of minutes, at which time the the AD FS sensor service status should change from **stopped** to **running**.
+    Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
 
 ## Next steps
 
@@ -80,4 +80,4 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor is designed to 
 
 ## Join the Community
 
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) today!
+Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!
