@@ -126,8 +126,6 @@ items:
     href: activities-search.md
   - name: Manage sensitive or honeytoken accounts
     href: manage-sensitive-honeytoken-accounts.md
-  - name: Configure detection exclusions
-    href: configure-detection-exclusions.md
   - name: Monitor domain controllers
     href: sensor-monitoring.md
   - name: Change domain connectivity password
