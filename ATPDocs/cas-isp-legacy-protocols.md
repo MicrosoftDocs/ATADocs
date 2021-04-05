@@ -33,6 +33,12 @@ To retire the use of legacy protocols, your organization must first discover whi
     ![Prevent usage of legacy protocols](media/cas-isp-legacy-protocols-2.png)
 1. Take appropriate action on those entities to discover dependencies.
 1. Stop legacy protocol use and eventually, [disable the protocols completely](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
+
+    >[!IMPORTANT]
+    >[!INCLUDE [Product long](includes/product-long.md)] doesn't guarantee to catch every instance of legacy protocols, such as NTLMv1. So, as with any modifications to your environment, it's recommended to test any changes before pushing them into production. Disabling those protocols without testing might cause those legacy apps to break.
+    >
+    >If legacy protocols remain in use, you run the risk of services becoming unavailable. If insecure legacy protocols are still in use, in the interest of security it's recommended to chart out a plan to retire or migrate the devices that still require these protocols.
+
 1. [Drop the MIC 2 & stop using LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
 
 > [!NOTE]
@@ -41,4 +47,4 @@ To retire the use of legacy protocols, your organization must first discover whi
 ## Next steps
 
 - [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
