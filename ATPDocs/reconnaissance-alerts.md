@@ -52,7 +52,7 @@ Not applicable
 
 Some servers and applications query domain controllers to determine if accounts exist in legitimate usage scenarios.
 
-To determine if this query was a **TP**, **BTP** or **FP**, click the alert to get to its detail page:
+To determine if this query was a **TP**, **BTP**, or **FP**, select the alert to get to its detail page:
 
 1. Check if the source computer was supposed to perform this type of query. Examples of a **B-TP** in this case could be Microsoft Exchange servers or human resource systems.
 
@@ -61,7 +61,7 @@ To determine if this query was a **TP**, **BTP** or **FP**, click the alert to g
      A server misconfiguration such as Exchange/Skype or ADSF can cause additional users that belong to different domains.
     - Look at the configuration of the problematic service to fix the misconfiguration.
 
-    If you answered **yes** to the questions above, it is a **B-TP** activity. *Close* the security alert.
+    If you answered **yes** to the questions above, it's a **B-TP** activity. *Close* the security alert.
 
 As the next step, look at the source computer:
 
@@ -70,7 +70,7 @@ As the next step, look at the source computer:
     If yes, stop and edit or delete the script.
     - Is the application an administrative or security script/application that is supposed to run in the environment?
 
-      If you answered **yes** to previous question, *Close* the security alert and exclude that computer. It is probably a **B-TP** activity.
+      If you answered **yes** to previous question, *Close* the security alert and exclude that computer. It's probably a **B-TP** activity.
 
 Now, look at the accounts:
 
@@ -80,7 +80,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
     - If the non-existing accounts look familiar, they may be disabled accounts or belong to employees who left the company.
     - Check for an application or script that checks to determine which accounts still exist in Active Directory.
 
-      If you answered **yes** to one of the previous questions, *Close* the security alert, it is probably a **B-TP** activity.
+      If you answered **yes** to one of the previous questions, *Close* the security alert, it's probably a **B-TP** activity.
 
 1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names.
     - Check the guessed account names for additional suspicious activities.
@@ -104,7 +104,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
 1. Contain the source [computer](investigate-a-computer.md).
     1. Find the tool that performed the attack and remove it.
     1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
-    1. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    1. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
 
 ## Active Directory attributes reconnaissance (LDAP) (external ID 2210)
@@ -119,12 +119,12 @@ Not applicable
 
 **TP, B-TP, or FP**
 
-1. Click on the alert to view the queries that were performed.
+1. Select the alert to view the queries that were performed.
     - Check if the source computer is supposed to make these queries
         - If yes, close the security alert as an **FP**. If it's an ongoing activity, exclude the suspicious activity.
-1. Click on the source computer and go to its profile page.
+1. Select the source computer and go to its profile page.
     - Look for any unusual activities that occurred around the time of the queries such as the following types of search: logged in users, accessed resources, and other probing queries.
-    - If Microsoft Defender for Endpoint integration is enabled, click on its icon to further investigate the machine.
+    - If Microsoft Defender for Endpoint integration is enabled, select its icon to further investigate the machine.
         - Look for unusual processes and alerts that occurred around the time of the queries
 1. Check exposed accounts.
     - Look for unusual activities.
@@ -135,7 +135,7 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
 
 1. Investigate the [source computer](investigate-a-computer.md).
 1. Is the computer running a scanning tool that performs various of LDAP queries?
-    - Investigate whether the specific queried users and groups in the attack are privileged or high-value accounts (that is, CEO, CFO, IT management, etc.). If so, look at other activities on the endpoint as well and monitor computers that the queried accounts are logged into, as they are probably targets for lateral movement.
+    - Investigate whether the specific queried users and groups in the attack are privileged or high-value accounts (that is, CEO, CFO, IT management, etc.). If so, look at other activities on the endpoint as well and monitor computers that the queried accounts are logged into, as they're probably targets for lateral movement.
 1. Check the queries and their attributes, and determine if they were successful. Investigate each exposed group, search for suspicious activities made on the group or by member users of the group.
 1. Can you see SAM-R, DNS, or SMB reconnaissance behavior on the source computer?
 
@@ -143,10 +143,10 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
 
 1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
-    1. If the computer is running a scanning tool that performs a variety of LDAP queries,look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    1. If the computer is running a scanning tool that performs a variety of LDAP queries, look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
-## Network mapping reconnaissance (DNS) (external ID 2007)
+## Network-mapping reconnaissance (DNS) (external ID 2007)
 
 *Previous name:* Reconnaissance using DNS
 
@@ -154,11 +154,11 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack.
 
-There are several query types in the DNS protocol. This [!INCLUDE [Product short](includes/product-short.md)] security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive amount of requests.
+There are several query types in the DNS protocol. This [!INCLUDE [Product short](includes/product-short.md)] security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive number of requests.
 
 **Learning period**
 
-This alert has a learning period of 8 days from the start of domain controller monitoring.
+This alert has a learning period of eight days from the start of domain controller monitoring.
 
 **TP, B-TP, or FP**
 
@@ -183,11 +183,11 @@ Security scanners and legitimate applications can  generate DNS queries.
 
 - Contain the source computer.
   - Find the tool that performed the attack and remove it.
-  - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+  - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 
 **Prevention:**
 
-It is important to preventing future attacks using AXFR queries by securing your internal DNS server.
+It's important to preventing future attacks using AXFR queries by securing your internal DNS server.
 
 - Secure your internal DNS server to prevent reconnaissance using DNS by disabling zone transfers or by [restricting zone transfers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) only to specified IP addresses. Modifying zone transfers is one task among a checklist that should be addressed for [securing your DNS servers from both internal and external attacks](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
@@ -197,7 +197,7 @@ It is important to preventing future attacks using AXFR queries by securing your
 
 Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
-In order to allow [!INCLUDE [Product short](includes/product-short.md)] to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following [!INCLUDE [Product short](includes/product-short.md)] deployment. Once the [!INCLUDE [Product short](includes/product-short.md)] initial learning phase is completed, alerts are generated on computers which perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
+To allow [!INCLUDE [Product short](includes/product-short.md)] to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following [!INCLUDE [Product short](includes/product-short.md)] deployment. Once the [!INCLUDE [Product short](includes/product-short.md)] initial learning phase is completed, alerts are generated on computers that perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
 
 **Learning period**
 
@@ -205,7 +205,7 @@ In order to allow [!INCLUDE [Product short](includes/product-short.md)] to accur
 
 **TP, B-TP, or FP**
 
-1. Click on the source computer and go to its profile page.
+1. Select the source computer and go to its profile page.
     1. Is this source computer expected to generate this activity?
     1. If the computer and activity are expected, **Close** the security alert and exclude that computer as a **B-TP** activity.
 
@@ -219,13 +219,13 @@ In order to allow [!INCLUDE [Product short](includes/product-short.md)] to accur
 
 1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
-    1. Is the computer running a scanning tool that performs a variety of LDAP queries?
-    1. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+    1. Is the computer running a scanning tool that performs various LDAP queries?
+    1. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 **Kerberoasting specific suggested steps for prevention and remediation**
 
-1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the passwords of the compromised users and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Require use of [long and complex passwords for users with service principal accounts](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
 1. [Replace the user account by Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
@@ -247,7 +247,7 @@ Four weeks per domain controller starting from the first network activity of SAM
 
 **TP, B-TP, or FP**
 
-1. Click the source computer to go to its profile page.
+1. Select the source computer to go to its profile page.
     - Is the source computer supposed to generate activities of this type?
       - If yes, *Close* the security alert and exclude that computer, as a  **B-TP** activity.
     - Check the user/s that performed the operation.
@@ -266,8 +266,8 @@ Four weeks per domain controller starting from the first network activity of SAM
 
 1. Contain the source computer.
 1. Find and remove the tool that performed the attack.
-1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
-1. Reset the source user password and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
+1. Reset the source user password and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
 
 ## User and IP address reconnaissance (SMB) (external ID 2012)
@@ -286,7 +286,7 @@ Security scanners and applications may legitimately query domain controllers for
 
 1. Is this source computer supposed to generate activities of this type?
 1. Is there some kind of security scanner running on the source computer?
-    If the answer is yes, it is probably a B-TP activity. *Close* the security alert and exclude that computer.
+    If the answer is yes, it's probably a B-TP activity. *Close* the security alert and exclude that computer.
 1. Check the users that performed the operation.
     Are those users supposed to perform those actions?
     If the answer is yes, *Close* the security alert as a B-TP activity.
@@ -298,7 +298,8 @@ Security scanners and applications may legitimately query domain controllers for
 
 **Suggested remediation and steps for prevention**
 
-Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) to harden your environment against this attack.
+1. Contain the source computer.
+1. Find and remove the tool that performed the attack.
 
 > [!NOTE]
 > To disable any [!INCLUDE [Product short](includes/product-short.md)] security alert, contact support.
@@ -317,4 +318,4 @@ Use the [Net Cease tool](https://gallery.technet.microsoft.com/Net-Cease-Blockin
 - [Exfiltration alerts](exfiltration-alerts.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](use-case-lateral-movement-path.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
