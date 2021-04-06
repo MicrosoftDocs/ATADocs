@@ -1,5 +1,5 @@
 ---
-title: Create your Microsoft Defender for Identity instance quickstar
+title: Create your Microsoft Defender for Identity instance quickstart
 description: Quickstart for creating the instance for your Microsoft Defender for Identity deployment which is the first step to install Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
