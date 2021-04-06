@@ -132,7 +132,7 @@ At this point, you should have a base [!INCLUDE [Product short](includes/product
 | 1 | [!INCLUDE [Product short](includes/product-short.md)] Sensor installed on ContosoDC (prerequisite step) | - [ ] | |
 | 2 | Users and groups are created in Active Directory | - [ ] | |
 | 3 | [!INCLUDE [Product short](includes/product-short.md)] service account privileges configured correctly for SAMR | - [ ] | |
-| 4 | Helpdesk security group added as a **Sensitive group** in [!INCLUDE [Product short](includes/product-short.md)] | - [ ] |](includes/product-other.md)]| - [ ] |
+| 4 | Helpdesk security group added as a **Sensitive group** in [!INCLUDE [Product short](includes/product-short.md)] | - [ ] | !INCLUDE [Product short](includes/product-other.md)]|
 
 ## Set up the lab workstations
 
