@@ -59,8 +59,6 @@ landingContent:
         links:
           - text: Suspicious activity guide
             url: suspicious-activity-guide.md
-          - text: ATA attack simulation playbook
-            url: https://gallery.technet.microsoft.com/ATA-Playbook-ef0a8e38
   - title: Learn more about ATA
     linkLists:
       - linkListType: reference
