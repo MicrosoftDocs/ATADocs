@@ -1,5 +1,5 @@
 ---
-title: Create your Microsoft Defender for Identity instance quickstar
+title: Create your Microsoft Defender for Identity instance quickstart
 description: Quickstart for creating the instance for your Microsoft Defender for Identity deployment which is the first step to install Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
@@ -14,7 +14,7 @@ In this quickstart, you'll create your [!INCLUDE [Product long](includes/product
 
 ## Prerequisites
 
-- An [[!INCLUDE [Product long](includes/product-long.md)] license](technical-faq.yml#licensing-and-privacy).
+- An [[!INCLUDE [Product long](includes/product-long.md)] license](https://docs.microsoft.com/en-us/defender-for-identity/technical-faq#licensing-and-privacy).
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the [!INCLUDE [Product short](includes/product-short.md)] portal.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
