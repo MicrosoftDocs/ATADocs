@@ -138,9 +138,7 @@ First check the description of the alert to see which of the above three detecti
 1. Golden Ticket – Follow the instructions of the [Golden Ticket](#golden-ticket) suspicious activities.
     Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
-1. Overpass-the-Hash – If the involved account isn't sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it's a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Also see using the [Reset the KRBTGT account password/keys
-
-    tool](<https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51>). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
+1. Overpass-the-Hash – If the involved account isn't sensitive, then reset the password of that account. This prevents the attacker from creating new Kerberos tickets from the password hash, although the existing tickets can still be used until they expire. If it's a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account). Since this is a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Honeytoken activity
 
@@ -179,8 +177,7 @@ Was the hash used from a computer owned or used regularly by the targeted user? 
 
 1. If the involved account isn't sensitive, reset the password of that account. Resetting the password prevents the attacker from creating new Kerberos tickets from the password hash. Existing tickets are still usable until they expire.
 
-1. If the involved account is sensitive, consider resetting the KRBTGT account twice, as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all domain Kerberos tickets, so plan around the impact before doing so. See
-the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also refer to using the [Reset the KRBTGT account password/keys tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). As this is typically a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
+1. If the involved account is sensitive, consider resetting the KRBTGT account twice, as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all domain Kerberos tickets, so plan around the impact before doing so. See guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account). As this is typically a lateral movement technique, follow the best practices of [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Identity theft using Pass-the-Ticket attack
 
@@ -198,8 +195,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 1. If the involved account isn't sensitive, then reset the password of that account. Password resent prevents the attacker from creating new Kerberos tickets from the password hash. Any existing tickets remain usable until expired.
 
-1. If it's a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), also see using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
+1. If it's a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Kerberos Golden Ticket activity<a name="golden-ticket"></a>
 
@@ -220,8 +216,7 @@ security policy.
 
 **Remediation**
 
-Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in [KRBTGT Account Password Reset Scripts now available for customers](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), using the [Reset the KRBTGT account password/keys
-tool](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so.
+Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so.
 Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Malicious data protection private information request
