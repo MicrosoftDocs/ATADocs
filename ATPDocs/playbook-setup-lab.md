@@ -127,12 +127,12 @@ Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to
 
 At this point, you should have a base [!INCLUDE [Product short](includes/product-short.md)] lab. [!INCLUDE [Product short](includes/product-short.md)] should be ready to use and users are staged. Review the checklist to make sure that the base lab is complete.
 
-| Step  | Step | Action | Status |
+| Step  | Task | Action |
 |--|--|--|
 | 1 | [!INCLUDE [Product short](includes/product-short.md)] Sensor installed on ContosoDC (prerequisite step) | - [ ] |
 | 2 | Users and groups are created in Active Directory | - [ ] |
 | 3 | [!INCLUDE [Product short](includes/product-short.md)] service account privileges configured correctly for SAMR | - [ ] |
-| 4 | Helpdesk security group added as a **Sensitive group** in [!INCLUDE [Product short](includes/product-short.md)] | - [ ] |](includes/product-other.md)]| - [ ] |
+| 4 | Helpdesk security group added as a **Sensitive group** in [!INCLUDE [Product short](includes/product-short.md)] | - [ ] |
 
 ## Set up the lab workstations
 
