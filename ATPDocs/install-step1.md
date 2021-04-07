@@ -1,6 +1,6 @@
 ---
 title: Create your Microsoft Defender for Identity instance quickstart
-description: Quickstart for creating the instance for your Microsoft Defender for Identity deployment which is the first step to install Defender for Identity.
+description: Quickstart for creating the instance for your Microsoft Defender for Identity deployment, which is the first step to install Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
 ---
@@ -14,7 +14,7 @@ In this quickstart, you'll create your [!INCLUDE [Product long](includes/product
 
 ## Prerequisites
 
-- An [[!INCLUDE [Product long](includes/product-long.md)] license](https://docs.microsoft.com/defender-for-identity/technical-faq#licensing-and-privacy).
+- An [[!INCLUDE [Product long](includes/product-long.md)] license](/defender-for-identity/technical-faq#licensing-and-privacy).
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the [!INCLUDE [Product short](includes/product-short.md)] portal.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
@@ -23,15 +23,15 @@ In this quickstart, you'll create your [!INCLUDE [Product long](includes/product
 
 After you verified that your network meets the sensor requirements, start the creation of your [!INCLUDE [Product short](includes/product-short.md)] instance.
 
-1. Go to [the [!INCLUDE [Product short](includes/product-short.md)] portal](https://portal.atp.azure.com)*.
+1. Go to [the [!INCLUDE [Product short](includes/product-short.md)] portal](<https://portal.atp.azure.com>)*.
 
 1. Sign in with your Azure Active Directory user account.
 
-\* GCC High customers must use the [[!INCLUDE [Product short](includes/product-short.md)] GCC High](http://portal.atp.azure.us) portal.
+\* GCC High customers must use the [[!INCLUDE [Product short](includes/product-short.md)] GCC High](<http://portal.atp.azure.us>) portal.
 
 ## Create your instance
 
-1. Click **Create instance**.
+1. Select **Create instance**.
 
     ![Create [!INCLUDE [Product short](includes/product-short.md)] instance](media/create-instance.png)
 
@@ -56,4 +56,4 @@ After you verified that your network meets the sensor requirements, start the cr
 
 ## Join the Community
 
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) today!
+Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!
