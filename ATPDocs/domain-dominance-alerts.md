@@ -549,7 +549,7 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 **Understand the scope of the breach**
 
 1. Investigate the [domain controller](investigate-a-computer.md).
-1. Check if Skeleton Key has affected your domain controllers by [using the scanner written by the [!INCLUDE [Product short](includes/product-short.md)] team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
+1. Check if Skeleton Key has affected your domain controllers.
 1. Investigate the [users](investigate-a-user.md) and [computers](investigate-a-computer.md) involved.
 
 **Suggested remediation and prevention steps**

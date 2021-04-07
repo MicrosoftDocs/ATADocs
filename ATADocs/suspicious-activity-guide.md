@@ -123,7 +123,7 @@ There are three detection types:
 
 First check the description of the alert to see which of the above three detection types you're dealing with. For further information, download the Excel spreadsheet.
 
-1. Skeleton Key – You can check if Skeleton Key has affected your domain controllers by using the [the scanner written by the ATA team](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). If the scanner finds malware on 1 or more of your domain controllers, it's a true positive.
+1. Skeleton Key - Check if Skeleton Key has affected your domain controllers.
 1. Golden Ticket – In the Excel spreadsheet, go to the **Network activity** tab. You'll see that the relevant downgraded field is **Request Ticket Encryption Type**, and **Source Computer Supported Encryption Types** lists stronger encryption methods.
     1.Check the source computer and account, or if there are multiple source computers and accounts check if they have something in common (for example, all the marketing personnel use a specific app that might be causing the alert to be triggered). There are cases in which a custom application that is rarely used is authenticating using a lower encryption cipher. Check if there are any such custom apps on the source computer. If so, it's probably a benign true positive and you can **Suppress** it.
     1.Check the resource accessed by those tickets. If there's one resource they're all accessing, validate it, and make sure it's a valid resource they're supposed to access. Also, verify if the target resource supports strong encryption methods. You can check this in Active Directory by checking the attribute `msDS-SupportedEncryptionTypes`, of the resource service account.
@@ -359,9 +359,6 @@ In this detection, no alerts would be triggered in the first month after ATA is 
 1. If there's no information about the account that was involved, you can go to the endpoint and check which account was logged in at the time of the alert.
 
 **Remediation**
-
-Use the [SAMRi10 tool](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) to harden your environment against this technique.
-If the tool isn't applicable to your domain controller:
 
 1. Is the computer running a vulnerability scanning tool?
 1. Investigate whether the specific queried users and groups in the attack are privileged or high value accounts (that is, CEO, CFO, IT management, and so on).  If so, look at other activity on the endpoint as well and monitor computers that the queried accounts are logged into, as they're probably targets for lateral movement.
