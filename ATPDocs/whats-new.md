@@ -17,6 +17,12 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## Defender for Identity release 2.144
+
+Released April 12, 2021
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.143
 
 Released March 14, 2021
