@@ -35,7 +35,7 @@ This prerequisite guide is divided into the following sections to ensure you hav
 
 This section lists information you should gather as well as accounts and network entity information you should have before starting [!INCLUDE [Product short](includes/product-short.md)] installation.
 
-- Acquire a license for Enterprise Mobility + Security 5 (EMS E5) or Microsoft 365 E5 (M365 E5) directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. Standalone [!INCLUDE [Product short](includes/product-short.md)] licenses are also available.
+- Acquire a license for Enterprise Mobility + Security E5 (EMS E5/A5), Microsoft 365 E5 (M365 E5/A5/G5) or Microsoft 365 E5/A5/G5 Security directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. Standalone [!INCLUDE [Product short](includes/product-short.md)] licenses are also available.
 
 - Verify the domain controller(s) you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on have internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
 
