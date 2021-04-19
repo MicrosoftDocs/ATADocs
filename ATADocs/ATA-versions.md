@@ -52,7 +52,9 @@ ATA updates are supported for 12 months from their general availability (GA) rel
 |1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01-JUL-2018|01-JUL-2019|
 |1.9.2|1.9.7478|28-MAR-2019|14-MAR-2021|
-|1.9.3|1.9.7576|14-SEP-2020||
+|1.9.3|1.9.7576|14-SEP-2020|13-JAN-2026<sup>*</sup>|
+
+\* This date refers to the end of Extended Support.
 
 ## See Also
 
