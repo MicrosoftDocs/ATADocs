@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Using Microsoft Defender for Identity with Microsoft Cloud App Security
 
-This article is designed to help you understand and navigate the enhanced investigation experience when using the Microsoft Cloud App Security portal with [!INCLUDE [Product long](includes/product-long.md)].
+This article is designed to help you understand how Microsoft Defender for Identity functionality is represented in the Microsoft Cloud App Security portal.
 
-Leveraging existing on-premise detections and abnormal behavior analytics, accessing [!INCLUDE [Product short](includes/product-short.md)] using the Microsoft Cloud App Security portal provides the added ability to detect and alert on sensitive data exfiltration across your enterprise as well as filter activities and create actionable policies. This hybrid offering analyzes activity and alerts based on User and Entity Behavior Analytics (UEBA) to determine risky behaviors, and provides an  investigation priority score to streamline your incident response for compromised identities.
+Leveraging existing on-premise detections and abnormal behavior analytics, accessing Defender for Identity using the Microsoft Cloud App Security portal provides the ability to detect and alert on sensitive data exfiltration across your enterprise. This hybrid offering analyzes activity and alerts based on User and Entity Behavior Analytics (UEBA) to determine risky behaviors, and provides an investigation priority score to streamline your incident response for compromised identities.
 
 In this article you'll learn:
 
@@ -27,10 +27,6 @@ Integrating with [!INCLUDE [Product short](includes/product-short.md)], the Clou
 - Microsoft Cloud App Security, which identifies attacks within a cloud session, covering not only Microsoft products but also third-party applications
 - [!INCLUDE [Product long](includes/product-long.md)], which uses machine learning and behavioral analytics to identify attacks across your on-premises network
 - Azure Active Directory Identity Protection, which detects and proactively prevents user and sign-in risks to identities in the cloud
-
-## Access Defender for Identity
-
-Choose to continue to use [!INCLUDE [Product short](includes/product-short.md)] within the [!INCLUDE [Product short](includes/product-short.md)] portal, or, you can access [!INCLUDE [Product short](includes/product-short.md)] alerts and identity scoring using the Microsoft Cloud App Security portal. In either workflow, [!INCLUDE [Product short](includes/product-short.md)] set-up and configuration tasks continue to be handled within the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
 ## Prerequisites
 
@@ -50,19 +46,17 @@ See [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-a
 
 See the [Cloud App Security quickstart](/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Cloud App Security portal.
 
-Access your [!INCLUDE [Product short](includes/product-short.md)] data and new hybrid features within Cloud App Security alerts, activities, and user pages.
-
 ## Alerts
 
 [!INCLUDE [Product short](includes/product-short.md)] alerts are displayed within the Cloud App Security **Alerts** queue. Additional alert filtering options are available only when viewing alerts using Cloud App Security. [!INCLUDE [Product short](includes/product-short.md)] alerts are filtered using the application filter to **Active Directory**.
 
 ## Alert management
 
-When using [!INCLUDE [Product short](includes/product-short.md)] with Cloud app security, closing alerts in one service will not automatically close them in the other service. More specifically, closing alerts in Cloud App Security will not close them in Defender for Identity, but closing alerts in Defender for Identity will synchronize the closure in Cloud App Security. Decide where to manage and remediate alerts to avoid duplicated efforts.
+When using [!INCLUDE [Product short](includes/product-short.md)] with Cloud app security, closing alerts in one service won't automatically close them in the other service. More specifically, closing alerts in Cloud App Security won't close them in Defender for Identity, but closing alerts in Defender for Identity will synchronize the closure in Cloud App Security. Decide where to manage and remediate alerts to avoid duplicated efforts.
 
 ## SIEM notification
 
-If both your services ([!INCLUDE [Product short](includes/product-short.md)] and Cloud App Security) are currently configured to send alert notifications to a SIEM, after enabling [!INCLUDE [Product short](includes/product-short.md)] integration in Cloud App Security, you'll start to receive duplicate SIEM notifications for the same alert. One alert will be issued from each service and they will have different alert IDs. To avoid duplication and confusion, decide where you intend to perform alert management, and then stop SIEM notifications being sent from the other service.
+If both your services ([!INCLUDE [Product short](includes/product-short.md)] and Cloud App Security) are currently configured to send alert notifications to a SIEM, after enabling [!INCLUDE [Product short](includes/product-short.md)] integration in Cloud App Security, you'll start to receive duplicate SIEM notifications for the same alert. One alert will be issued from each service and they'll have different alert IDs. To avoid duplication and confusion, decide where you intend to perform alert management, and then stop SIEM notifications being sent from the other service.
 
 ## Activities
 
@@ -84,10 +78,6 @@ To access a user page of a system user:
 
     ![Activity log](media/mcas-activity-filter.png)
 
-## Next steps
-
-See [[!INCLUDE [Product short](includes/product-short.md)] activities using Microsoft Cloud App Security](activities-filtering-mcas.md) to learn how to filter and create new activity policies.
-
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
+Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
