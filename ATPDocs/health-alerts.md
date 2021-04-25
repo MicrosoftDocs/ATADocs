@@ -31,13 +31,13 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The listed [!INCLUDE [Product short](includes/product-short.md)] sensors are failing to resolve IP addresses to device names more than 90% of the time using the following methods:<br />- NTLM over RPC<br />- NetBIOS<br />- Reverse DNS|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s detections capabilities and might increase the amount of false positive alarms.|- For NTLM over RPC: Check that port 135 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] sensors on all computers in the environment.<br />- For reverse DNS: Check that the sensors can reach the DNS server and that Reverse Lookup Zones are enabled.<br />- For NetBIOS: Check that port 137 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] sensors on all computers in the environment.<br />Additionally, make sure that the network configuration (such as firewalls) is not preventing communication to the relevant ports.|Low|
+|The listed [!INCLUDE [Product short](includes/product-short.md)] sensors are failing to resolve IP addresses to device names more than 90% of the time using the following methods:<br />- NTLM over RPC<br />- NetBIOS<br />- Reverse DNS|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s detections capabilities and might increase the number of false positive alarms.|- For NTLM over RPC: Check that port 135 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] sensors on all computers in the environment.<br />- For reverse DNS: Check that the sensors can reach the DNS server and that Reverse Lookup Zones are enabled.<br />- For NetBIOS: Check that port 137 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] sensors on all computers in the environment.<br />Additionally, make sure that the network configuration (such as firewalls) isn't preventing communication to the relevant ports.|Low|
 
 ## No traffic received from domain controller
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|No traffic was received from the domain controller via this [!INCLUDE [Product short](includes/product-short.md)] sensor.|This might indicate that port mirroring from the domain controllers to the [!INCLUDE [Product short](includes/product-short.md)] sensor is not configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the [!INCLUDE [Product short](includes/product-short.md)] sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|
+|No traffic was received from the domain controller via this [!INCLUDE [Product short](includes/product-short.md)] sensor.|This might indicate that port mirroring from the domain controllers to the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the [!INCLUDE [Product short](includes/product-short.md)] sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|
 
 ## Read-only user password to expire shortly
 
@@ -55,7 +55,7 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|A [!INCLUDE [Product short](includes/product-short.md)] sensor is outdated.|A [!INCLUDE [Product short](includes/product-short.md)] sensor is running a version that cannot communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md).|Medium|
+|A [!INCLUDE [Product short](includes/product-short.md)] sensor is outdated.|A [!INCLUDE [Product short](includes/product-short.md)] sensor is running a version that can't communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md).|Medium|
 
 ## Sensor reached a memory resource limit
 
@@ -73,7 +73,7 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|There has been no communication from the [!INCLUDE [Product short](includes/product-short.md)] sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the [!INCLUDE [Product short](includes/product-short.md)] sensor. This impacts ATA's ability to detect suspicious activities, since network traffic will not be able to reach the [!INCLUDE [Product short](includes/product-short.md)] cloud service.|Check that the port used for the communication between the [!INCLUDE [Product short](includes/product-short.md)] sensor and [!INCLUDE [Product short](includes/product-short.md)] cloud service is not blocked by any routers or firewalls.|Medium|
+|There has been no communication from the [!INCLUDE [Product short](includes/product-short.md)] sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the [!INCLUDE [Product short](includes/product-short.md)] sensor. This impacts ATA's ability to detect suspicious activities, since network traffic won't be able to reach the [!INCLUDE [Product short](includes/product-short.md)] cloud service.|Check that the port used for the communication between the [!INCLUDE [Product short](includes/product-short.md)] sensor and [!INCLUDE [Product short](includes/product-short.md)] cloud service is not blocked by any routers or firewalls.|Medium|
 
 ## Some domain controllers are unreachable by a sensor
 
@@ -85,19 +85,19 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more events than it can process.|Some Windows events are not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Verify that only required events are forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensor or try to forward some of the events to another [!INCLUDE [Product short](includes/product-short.md)] sensor.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more events than it can process.|Some Windows events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Verify that only required events are forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensor or try to forward some of the events to another [!INCLUDE [Product short](includes/product-short.md)] sensor.|Medium|
 
 ## Some network traffic could not be analyzed
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more network traffic than it can process.|Some network traffic could not be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone [!INCLUDE [Product short](includes/product-short.md)] sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you are using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more network traffic than it can process.|Some network traffic couldn't be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone [!INCLUDE [Product short](includes/product-short.md)] sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you're using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine:<br></br>- TsoEnable<br></br>- LargeSendOffload(IPv4)<br></br>- IPv4 TSO Offload<br></br>Also, consider disabling IPv4 Giant TSO Offload. For more information, see your VMware documentation.|Medium|
 
 ## Some ETW events are not being analyzed
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events are not being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Verify that only required events are forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensor or try to forward some of the events to another [!INCLUDE [Product short](includes/product-short.md)] sensor.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Make sure the sensor machine is sized correctly according to the [sizing tool](capacity-planning.md). If it is, contact support. |Medium|
 
 <!--
 ## Windows events missing from domain controller audit policy
@@ -113,4 +113,4 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
