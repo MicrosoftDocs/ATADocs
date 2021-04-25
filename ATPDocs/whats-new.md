@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 04/13/2021
+ms.date: 04/25/2021
 ms.topic: overview
 ---
 
@@ -16,6 +16,12 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 > [!IMPORTANT]
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
+
+## Defender for Identity release 2.145
+
+Released April 22, 2021
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.144
 
@@ -909,4 +915,4 @@ For details of each [!INCLUDE [Product short](includes/product-short.md)] releas
 - [Frequently asked questions](technical-faq.yml)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
