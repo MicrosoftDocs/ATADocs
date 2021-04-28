@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "ATPDocs/security-baseline.md",
+            "redirect_url": "/security/benchmark/azure/baselines/defender-for-identity-security-baseline",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "ATADocs/DeployUse/ata-configuration-file.md",
             "redirect_url": "/advanced-threat-analytics/ata-configuration-file",
             "redirect_document_id": false

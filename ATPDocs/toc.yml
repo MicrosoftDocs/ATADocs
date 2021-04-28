@@ -67,7 +67,7 @@ items:
   - name: Security
     items:
     - name: Security baseline
-      href: security-baseline.md
+      href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
 - name: How-to guides
   items:
   - name: Defender for Identity using Microsoft Cloud App Security
