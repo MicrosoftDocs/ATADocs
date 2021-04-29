@@ -88,7 +88,7 @@ After ATA is up and running, you can view suspicious activities that are detecte
 
 [ATA best practices](https://aka.ms/atasecbestpractices) - Best practices for securing ATA.
 
-[ATA frequently asked questions](ata-technical-faq.md) - This article provides a list of frequently asked questions about ATA and provides insight and answers.
+[ATA frequently asked questions](/ata-technical-faq.yml) - This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 ## Additional resources
 
