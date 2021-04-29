@@ -66,5 +66,5 @@ landingContent:
         - text: What's new in ATA?
           url: whats-new-version-1.9.md
         - text: Frequently asked questions
-          url: ata-technical-faq.md
+          url: ata-technical-faq.yml
 
