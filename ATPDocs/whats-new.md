@@ -17,6 +17,14 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## Defender for Identity release 2.146
+
+Released May 2, 2021
+
+- Email notifications for both health issues and security alerts will now have the investigation URL for both Microsoft Defender for Identity and Microsoft 365 security center.
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.145
 
 Released April 22, 2021
