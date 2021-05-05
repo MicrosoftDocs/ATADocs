@@ -44,6 +44,14 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, [!INCLUDE [Product short](includes/product-short.md)] detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
+**MITRE**
+
+|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
+|---------|---------|
+|Secondary MITRE tactic    |         |
+|MITRE attack technique  | [Account Discovery](https://attack.mitre.org/techniques/T1087/)        |
+|MITRE attack sub-technique | [Domain Account](https://attack.mitre.org/techniques/T1087/002/)        |
+
 **Learning period**
 
 Not applicable
