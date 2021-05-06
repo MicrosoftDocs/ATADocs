@@ -23,15 +23,30 @@ To ensure Windows clients and servers allow your [!INCLUDE [Product short](inclu
 
     ![Locate the policy](media/samr-policy-location.png)
 
-1. Add the [!INCLUDE [Product short](includes/product-short.md)] service to the list of approved accounts able to perform this action on your modern Windows systems.
+1. Add the [!INCLUDE [Product short](includes/product-short.md)] service account to the list of approved accounts able to perform this action on your modern Windows systems.
 
     ![Add the service](media/samr-add-service.png)
 
-3. **AATP Service** (the [!INCLUDE [Product short](includes/product-short.md)] service created during installation) now has the privileges needed to perform SAM-R in the environment.
+1. **AATP Service** (the [!INCLUDE [Product short](includes/product-short.md)] service account created during installation) now has the privileges needed to perform SAM-R in the environment.
 
 For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+
+### Access this computer from the network setting
+
+If you've defined the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting in any GPO that applies to computers in your domain, you need to add the Defender for Identity service account to the list of allowed accounts for that setting:
+
+>[!NOTE]
+>The setting is not enabled by default. If you have not enabled it previously, you don't need to modify it to allow Defender for Identity to make remote calls to SAM.
+
+To add the service account, go to the policy and navigate to **Computer Configuration** -> **Policies** -> **Windows Settings** -> **Local Policies** -> **User Right Assignment**. Then open the setting **Access this computer from the network**.
+
+![Access this computer from the network setting](media/access-computer-from-network.png)
+
+Then add the [!INCLUDE [Product short](includes/product-short.md)] service account to the list of approved accounts.
+
+![Add the service account](media/add-service-account.png)
 
 ## See Also
 
 - [Investigating lateral movement path attacks with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
