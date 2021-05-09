@@ -21,6 +21,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 
 Released May 9, 2021
 
+- Based on customer feedback, we're increasing the default number of allowed sensors from 200 to 350, and the Directory Services credentials from 10 to 30.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.146
