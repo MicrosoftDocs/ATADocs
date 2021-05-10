@@ -111,4 +111,8 @@ To do this, click the three dots at the top right corner of a specific alert to 
 ## See Also
 
 - [Working with the [!INCLUDE [Product short](includes/product-short.md)] portal](workspace-portal.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+
+## Learn more
+
+- Try our interactive guide: [Detect suspicious activities and potential attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Detect%20suspicious%20activities%20and%20potential%20attacks%20with%20Microsoft%20Defender%20for%20Identity)
