@@ -75,4 +75,8 @@ In this tutorial, you've learned how to use LMPs to investigate suspicious activ
 - [Understanding [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths](use-case-lateral-movement-path.md)
 - [Configure [!INCLUDE [Product short](includes/product-short.md)] to make remote calls to SAM](install-step8-samr.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+
+## Learn more
+
+- Try our interactive guide: [Investigate and respond to attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Investigate%20and%20respond%20to%20attacks%20with%20Microsoft%20Defender%20for%20Identity)

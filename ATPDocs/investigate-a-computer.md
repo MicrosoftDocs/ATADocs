@@ -38,7 +38,7 @@ Check and investigate the computer profile for the following details and activit
     1. Were there failed logons?
 
 - If Microsoft Defender for Endpoint integration is enabled, click the Microsoft Defender for Endpoint badge to further investigate the computer. In Microsoft Defender for Endpoint you can see which processes and alerts occurred around the same time as the alert.
-    - Were any new programs deployed or installed?
+  - Were any new programs deployed or installed?
 
 ## Next steps
 
@@ -50,4 +50,8 @@ Check and investigate the computer profile for the following details and activit
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+
+## Learn more
+
+- Try our interactive guide: [Investigate and respond to attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Investigate%20and%20respond%20to%20attacks%20with%20Microsoft%20Defender%20for%20Identity)

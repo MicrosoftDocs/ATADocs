@@ -28,7 +28,7 @@ The entity profile provides you with a comprehensive entity page, designed for f
 
 To access an entity profile page, click on the name of the entity, such as a username, in the security alert timeline. You can also see a mini-version of the entity profile in the security alert page by hovering over the entity name.
 
-The entity profile lets you view entity activities, view directory data, and view [lateral movement paths](use-case-lateral-movement-path.md) for the entity. For more information about entities, see [Understanding entity profiles ](entity-profiles.md).
+The entity profile lets you view entity activities, view directory data, and view [lateral movement paths](use-case-lateral-movement-path.md) for the entity. For more information about entities, see [Understanding entity profiles](entity-profiles.md).
 
 ## Check entity tags
 
@@ -105,4 +105,8 @@ Before you move on with your investigation, it's important to know if the entity
 ## See also
 
 - [Working with security alerts](working-with-suspicious-activities.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+
+## Learn more
+
+- Try our interactive guide: [Investigate and respond to attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Investigate%20and%20respond%20to%20attacks%20with%20Microsoft%20Defender%20for%20Identity)
