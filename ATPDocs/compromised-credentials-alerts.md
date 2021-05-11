@@ -43,6 +43,14 @@ SQL-Admin). Any activity from them might indicate malicious behavior.
 
 For more information on honeytoken accounts, see [Configure detection exclusions and honeytoken accounts](configure-detection-exclusions.md).
 
+**MITRE**
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Discovery](https://attack.mitre.org/tactics/TA0007)        |
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
+
 **TP, B-TP, or FP**
 
 1. Check if the owner of the source computer used the Honeytoken account to authenticate, using the method described in the suspicious activity page (for example, Kerberos, LDAP, NTLM).
@@ -76,6 +84,13 @@ In a brute-force attack, the attacker attempts to authenticate with multiple pas
 In this detection, an alert is triggered when many authentication failures occur using Kerberos, NTLM, or use of a password spray is detected. Using Kerberos or NTLM, this type of attack is typically committed either *horizontal*, using a small set of passwords across many users, *vertical* with a large set of passwords on a few users, or any combination of the two.
 
 In a password spray, after successfully enumerating a list of valid users from the domain controller, attackers try ONE carefully crafted password against ALL of the known user accounts (one password to many accounts). If the initial password spray fails, they try again, utilizing a different carefully crafted password, normally after waiting 30 minutes between attempts. The wait time allows attackers to avoid triggering most time-based account lockout thresholds. Password spray has quickly become a favorite technique of both attackers and pen testers. Password spray attacks have proven to be effective at gaining an initial foothold in an organization, and for making subsequent lateral moves, trying to escalate privileges. The minimum period before an alert can be triggered is one week.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006) |
+|---------|---------|
+|MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
+|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
 
 **Learning period**
 
@@ -128,6 +143,13 @@ In a brute-force attack, the attacker attempts to authenticate with many differe
 
 In this detection, an alert is triggered when [!INCLUDE [Product short](includes/product-short.md)] detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006) |
+|---------|---------|
+|MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
+|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
+
 **TP, B-TP, or FP**
 
 It is important to check if any login attempts ended with successful authentication.
@@ -165,6 +187,13 @@ It is important to check if any login attempts ended with successful authenticat
 **Description**
 
 Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of brute force techniques.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
+|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
 
 **TP, B-TP, or FP**
 
@@ -289,6 +318,13 @@ None
 
 Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|MITRE attack technique  |   [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)      |
+|MITRE attack sub-technique |    N/A     |
+
 **TP, B-TP, or FP**
 
 1. Check if WannaCry is running on the source computer.
@@ -322,6 +358,13 @@ Occasionally, applications implement their own NTLM or SMB stack.
 **Description**
 
 Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques such as use of the Metasploit hacking framework.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|MITRE attack technique  |   [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)      |
+|MITRE attack sub-technique |    N/A     |
 
 **TP, B-TP, or FP**
 
@@ -360,6 +403,14 @@ Occasionally, applications implement their own NTLM or SMB stack.
 The VPN-behavior model is based on the machines users log in to and the locations the users connect from.
 
 An alert is opened when there is a deviation from the user's behavior based on a machine learning algorithm.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)        |
+|MITRE attack technique  | [External Remote Services (T1133)](https://attack.mitre.org/techniques/T1133/)        |
+|MITRE attack sub-technique |     N/A    |
 
 **Learning period**
 

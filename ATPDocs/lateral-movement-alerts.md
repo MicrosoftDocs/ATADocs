@@ -40,6 +40,14 @@ The following security alerts help you identify and remediate **Lateral Movement
 
 In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when DNS queries suspected of exploiting the CVE-2018-8626 security vulnerability are made against a domain controller in the network.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|Secondary MITRE tactic    |  [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)       |
+|MITRE attack technique  |   [Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068/), [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)      |
+|MITRE attack sub-technique |  N/A       |
+
 **Learning period**
 
 Not applicable
@@ -81,6 +89,13 @@ Not applicable
 
 Pass-the-Hash is a lateral movement technique in which attackers steal a user's NTLM hash from one computer and use it to gain access to another computer.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|MITRE attack technique  | [Use Alternate Authentication Material (T1550)](https://attack.mitre.org/techniques/T1550/)       |
+|MITRE attack sub-technique | [Pass the Hash (T1550.002)](https://attack.mitre.org/techniques/T1550/002/)         |
+
 **Learning period**
 
 Not applicable
@@ -108,6 +123,13 @@ Not applicable
 **Description**
 
 Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerberos ticket from one computer and use it to gain access to another computer by reusing the stolen ticket. In this detection, a Kerberos ticket is seen used on two (or more) different computers.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|MITRE attack technique  | [Use Alternate Authentication Material (T1550)](https://attack.mitre.org/techniques/T1550/)       |
+|MITRE attack sub-technique | [Pass the Ticket (T1550.003)](https://attack.mitre.org/techniques/T1550/002/)         |
 
 **Learning period**
 
@@ -158,6 +180,14 @@ Malicious actors that successfully exploit this vulnerability have the ability t
 
 In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)     |
+|MITRE attack technique  | [Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068/), [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)        |
+|MITRE attack sub-technique |   N/A      |
+
 **Learning period**
 
 Not applicable
@@ -194,6 +224,14 @@ An Exchange Server can be configured to trigger NTLM authentication with the Exc
 Once the relay server receives the NTLM authentication, it provides a challenge that was originally created by the target server. The client responds to the challenge, preventing an attacker from taking the response, and using it to continue NTLM negotiation with the target domain controller.
 
 In this detection, an alert is triggered when [!INCLUDE [Product short](includes/product-short.md)] identify use of Exchange account credentials from a suspicious source.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)     |
+|MITRE attack technique  | [Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068/), [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/), [Man-in-the-Middle (T1557)](https://attack.mitre.org/techniques/T1557/)        |
+|MITRE attack sub-technique |   [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)     |
 
 **Learning period**
 
@@ -278,6 +316,13 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While Microsoft Windows accepts this type of network traffic without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques such as over-pass-the-hash, Brute Force, and advanced ransomware exploits such as WannaCry, are used.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|MITRE attack technique  |  [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/),[Use Alternate Authentication Material (T1550)](https://attack.mitre.org/techniques/T1550/)      |
+|MITRE attack sub-technique | [Pass the Has (T1550.002)](https://attack.mitre.org/techniques/T1550/002/), [Pass the Ticket (T1550.003)](https://attack.mitre.org/techniques/T1550/003/)        |
+
 **Learning period**
 
 Not applicable
@@ -313,6 +358,14 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 
 Rogue certificate attack is a persistence technique used by attackers after gaining control over the organization. Attackers compromise the Certificate Authority (CA) server and generate certificates that can be used as backdoor accounts in future attacks.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003), [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)       |
+|MITRE attack technique  |  N/A       |
+|MITRE attack sub-technique |  N/A       |
+
 **Learning period**
 
 Not applicable
@@ -343,6 +396,13 @@ Not applicable
 03/12/2020 Microsoft published [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796), announcing that a newly remote code execution vulnerability exists in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests. An attacker who successfully exploited the vulnerability could gain the ability to execute code on the target server or client. Unpatched Windows servers are at risk from this vulnerability.
 
 In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when SMBv3 packet suspected of exploiting the CVE-2020-0796 security vulnerability are made against a domain controller in the network.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|MITRE attack technique  |   [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)      |
+|MITRE attack sub-technique |    N/A     |
 
 **Learning period**
 

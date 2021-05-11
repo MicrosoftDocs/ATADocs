@@ -48,9 +48,8 @@ In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] d
 
 |Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
 |---------|---------|
-|Secondary MITRE tactic    |         |
-|MITRE attack technique  | [Account Discovery](https://attack.mitre.org/techniques/T1087/)        |
-|MITRE attack sub-technique | [Domain Account](https://attack.mitre.org/techniques/T1087/002/)        |
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
+|MITRE attack sub-technique | [Domain Account (T0187.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 **Learning period**
 
@@ -121,6 +120,13 @@ Attackers are known to use a dictionary of randomized account names to find exis
 
 Active Directory LDAP reconnaissance is used by attackers to gain critical information about the domain environment. This information can help attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
 
+**MITRE**
+
+|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Indirect Command Execution (T1202)](https://attack.mitre.org/techniques/T1202/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Groups (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)        |
+
 **Learning period**
 
 Not applicable
@@ -164,6 +170,13 @@ Your DNS server contains a map of all the computers, IP addresses, and services 
 
 There are several query types in the DNS protocol. This [!INCLUDE [Product short](includes/product-short.md)] security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive number of requests.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007) |
+|---------|---------|
+|MITRE attack technique  |   [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Network Service Scanning (T1046)](https://attack.mitre.org/techniques/T1046/), [Remote System Discovery (T1018)](https://attack.mitre.org/techniques/T1018/)     |
+|MITRE attack sub-technique |  N/A       |
+
 **Learning period**
 
 This alert has a learning period of eight days from the start of domain controller monitoring.
@@ -206,6 +219,14 @@ It's important to preventing future attacks using AXFR queries by securing your 
 Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
 To allow [!INCLUDE [Product short](includes/product-short.md)] to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following [!INCLUDE [Product short](includes/product-short.md)] deployment. Once the [!INCLUDE [Product short](includes/product-short.md)] initial learning phase is completed, alerts are generated on computers that perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007)  |
+|---------|---------|
+|Secondary MITRE tactic    |[Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)         |
+|MITRE attack technique  |  [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)     |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 **Learning period**
 
@@ -253,6 +274,13 @@ In this detection, no alerts are triggered in the first month after [!INCLUDE [P
 
 Four weeks per domain controller starting from the first network activity of SAMR against the specific DC.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007) |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
+|MITRE attack sub-technique |  [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Group (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)       |
+
 **TP, B-TP, or FP**
 
 1. Select the source computer to go to its profile page.
@@ -287,6 +315,13 @@ Four weeks per domain controller starting from the first network activity of SAM
 Enumeration using Server Message Block (SMB) protocol enables attackers to get information about where users recently logged on. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
 
 In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007) |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [System Network Connections Discovery (T1049)](https://attack.mitre.org/techniques/T1049/)        |
+|MITRE attack sub-technique |  [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)       |
 
 **TP, B-TP, or FP**
 

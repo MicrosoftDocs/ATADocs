@@ -30,6 +30,14 @@ The following security alerts help you identify and remediate **Exfiltration** p
 
 Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. A [!INCLUDE [Product short](includes/product-short.md)] **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
 
+**MITRE**
+
+|Primary MITRE tactic  |[Exfiltration (TA0010)](https://attack.mitre.org/tactics/TA0010)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008),[Command and Control (TA0011)](https://attack.mitre.org/tactics/TA0011)        |
+|MITRE attack technique  | [Remote File Copy (T1544)](https://attack.mitre.org/techniques/T1544/), [Automated Exfiltration (T1020)](https://attack.mitre.org/techniques/T1020/), [Data Transfer Size Limits (T1030)](https://attack.mitre.org/techniques/T1030/), [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570) ](https://attack.mitre.org/techniques/T1570/)      |
+|MITRE attack sub-technique | [Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)        |
+
 **TP, B-TP, or FP**
 
 1. Are these users supposed to copy these files, to this computer?
@@ -63,6 +71,13 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 **Description**
 
 The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. Enabling an attacker on a compromised machine, to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Exfiltration (TA0010)](https://attack.mitre.org/tactics/TA0010)  |
+|---------|---------|
+|MITRE attack technique  | [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Exfiltration Over C2 Channel (T1041)](https://attack.mitre.org/techniques/T1041/), [Scheduled Transfer (T1029)](https://attack.mitre.org/techniques/T1029/), [Automated Exfiltration (T1020)](https://attack.mitre.org/techniques/T1020/), [Application Layer Protocol (T1071)](https://attack.mitre.org/techniques/T1071/)       |
+|MITRE attack sub-technique | [DNS (T1071.004)](https://attack.mitre.org/techniques/T1071/004/), [Exfiltration over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)       |
 
 **TP, B-TP, or FP?**
 
