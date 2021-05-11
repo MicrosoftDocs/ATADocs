@@ -27,7 +27,7 @@ To detect cross-forest activities, [!INCLUDE [Product short](includes/product-sh
 - Add additional credentials on the Directory services page to support any untrusted forests in your environment.
   - Only one credential is required to support all forests with a two-way trust.
   - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
-  - There is a default limit of 10 untrusted forests per [!INCLUDE [Product short](includes/product-short.md)] instance. Contact support if your organization has more than 10 forests.
+  - There is a default limit of 30 untrusted forests per [!INCLUDE [Product short](includes/product-short.md)] instance. Contact support if your organization has more than 30 forests.
 
 ![[!INCLUDE [Product short](includes/product-short.md)] welcome stage 1](media/directory-services-add-no-trust-forests.png)
 
