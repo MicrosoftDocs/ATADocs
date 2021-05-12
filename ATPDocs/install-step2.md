@@ -22,6 +22,7 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
     >
     > - For sensor machines running Windows Server 2012 and above, we recommend using a **gMSA** account for its improved security and automatic password management.
     > - If you have multiple sensors, some running Windows Server 2008 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must also use at least one **standard** AD user account.
+    > - By default, Defender for Identity supports up to 30 credentials. If you want to add more credentials, contact Defender for Identity support.
 
 ### How to set up a gMSA account
 
@@ -53,4 +54,4 @@ The first time you open the [!INCLUDE [Product short](includes/product-short.md)
 
 ## Join the Community
 
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) today!
+Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!

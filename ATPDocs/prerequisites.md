@@ -87,7 +87,7 @@ Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is vi
  ![[!INCLUDE [Product short](includes/product-short.md)] architecture diagram](media/architecture-topology.png)
 
 > [!NOTE]
-> By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 200 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
+> By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 350 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
 
 ## Defender for Identity Network Name Resolution (NNR) requirements
 
