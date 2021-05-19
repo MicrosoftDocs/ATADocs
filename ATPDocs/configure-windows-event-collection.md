@@ -17,6 +17,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 - 1203 - The Federation Service failed to validate a new credential
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
+- 4662 - An operation was performed on an object
 
 **For Other events**
 
@@ -65,6 +66,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
         | Account Management | Audit Distribution Group Management | 4753, 4763 |
         | Account Management | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | Account Management | Audit User Account Management | 4726 |
+        | DS Access | Audit Directory Service Access | 4662 |
         | System | Audit Security System Extension | 7045 |
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.

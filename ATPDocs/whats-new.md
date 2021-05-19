@@ -17,6 +17,13 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## Defender for Identity release 2.149
+
+Released May 23, 2021
+
+- If you [configure and collect](configure-windows-event-collection.md) event ID 4662, Defender for Identity will report which user made the [Update Sequence Number (USN)](/powershell/module/activedirectory/get-adreplicationuptodatenessvectortable#description) change to various Active Directory object properties.
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.147
 
 Released May 9, 2021
