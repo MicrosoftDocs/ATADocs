@@ -17,10 +17,11 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 - 1203 - The Federation Service failed to validate a new credential
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
-- 4662 - An operation was performed on an object
+
 
 **For Other events**
 
+- 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
 - 4728 - Member Added to Global Security Group
 - 4729 - Member Removed from Global Security Group
