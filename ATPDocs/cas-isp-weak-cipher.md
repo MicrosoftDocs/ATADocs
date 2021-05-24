@@ -9,7 +9,7 @@ ms.topic: how-to
 
 ## What are weak ciphers?
 
-Cryptography relies on ciphers to encrypt our data. For example, RC4 (Rivest Cipher 4 also known as ARC4 or ARCFOUR meaning Alleged RC4) is one. While RC4 is remarkable for its simplicity and speed, multiple vulnerabilities have been discovered since the original release of RC4, rendering it insecure. RC4 is especially vulnerable when the beginning of the output key stream is not discarded, or when non-random or related keys are used.
+Cryptography relies on ciphers to encrypt our data. For example, RC4 (Rivest Cipher 4 also known as ARC4 or ARCFOUR meaning Alleged RC4) is one. While RC4 is remarkable for its simplicity and speed, multiple vulnerabilities have been discovered since the original release of RC4, rendering it insecure. RC4 is especially vulnerable when the beginning of the output key stream isn't discarded, or when non-random or related keys are used.
 
 ## How do I use this security assessment to improve my organizational security posture?
 
@@ -24,19 +24,12 @@ Cryptography relies on ciphers to encrypt our data. For example, RC4 (Rivest Cip
 
 ## Remediation
 
-Disable clients and servers that you want to stop from using RC4 cipher suites by setting the following registry keys. Once disabled, any server or client that communicates with another client or server that requires use of RC4 can then prevent a connection from occurring. Clients, where this setting is deployed, will be unable to connect to sites that require RC4, and servers that deploy this setting will be unable to service clients that require use RC4.
-
 > [!NOTE]
 > Make sure to test the following settings in a controlled environment before enabling them in production.
->
-> - [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128]
-    "Enabled"=dword:00000000
-> - [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128]
-    "Enabled"=dword:00000000
-> - [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128]
-    "Enabled"=dword:00000000
 
-To learn more about downloading and updating the registry edits, see the [Microsoft Security Advisory](/security-updates/SecurityAdvisories/2013/2868725).
+To remediate weak cipher usage, modify the msDS-SupportedEncryptionTypes AD attribute on the applicable devices and accounts, and remove the weak ciphers based on [these bit flags](/openspecs/windows_protocols/ms-kile/6cfc7b50-11ed-4b4d-846d-6f08f0812919).
+
+After ensuring that devices and accounts are no longer using the weak ciphers, then modify the domain controller security policy to drop the weak ciphers from the [Network security: Configure encryption types allowed for Kerberos](/windows/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos) setting.
 
 ## Next steps
 
