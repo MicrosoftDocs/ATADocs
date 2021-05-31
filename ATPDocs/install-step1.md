@@ -35,7 +35,7 @@ After you verified that your network meets the sensor requirements, start the cr
 
     ![Create [!INCLUDE [Product short](includes/product-short.md)] instance](media/create-instance.png)
 
-1. Your [!INCLUDE [Product short](includes/product-short.md)] instance is automatically named with the Azure AD initial domain name and created in the data center located closest to your Azure AD.
+1. Your [!INCLUDE [Product short](includes/product-short.md)] instance is automatically named with the Azure AD fully qualified domain name and created in the data center located closest to your Azure AD.
 
     ![Azure instance created](media/instance-created.png)
 
