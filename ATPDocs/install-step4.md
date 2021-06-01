@@ -76,7 +76,7 @@ Use the following steps to configure Defender for Identity once you've completed
 
 ## Next steps
 
-The [!INCLUDE [Product short](includes/product-short.md)] sensor is designed to have minimal impact on your domain controller resources and network activity. To create a performance assessment, see [Plan capacity for [!INCLUDE [Product short](includes/product-short.md)]](capacity-planning.md).
+- Learn how to correctly [configure Microsoft Defender for Identity sensor settings](install-step5.md) to start seeing data.
 
 ## Join the Community
 
