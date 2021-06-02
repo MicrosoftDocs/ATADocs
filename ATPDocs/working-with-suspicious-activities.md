@@ -10,8 +10,6 @@ ms.topic: how-to
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/manage-security-alerts). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
 
-[https://docs.microsoft.com/en-us/microsoft-365/security/defender-identity/manage-security-alerts](/microsoft-365/security/defender-identity/manage-security-alerts)
-
 This article explains the basics of how to work with [!INCLUDE [Product long](includes/product-long.md)] security alerts.
 
 <a name="review-suspicious-activities-on-the-attack-time-line"></a>
