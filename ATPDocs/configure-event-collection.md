@@ -12,7 +12,6 @@ To enhance detection capabilities, [!INCLUDE [Product long](includes/product-lon
 > [!NOTE]
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-> - It is important to run the [!INCLUDE [Product short](includes/product-short.md)] auditing script before configuring event collection to ensure that the domain controllers are properly configured to record the necessary events.
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
 
