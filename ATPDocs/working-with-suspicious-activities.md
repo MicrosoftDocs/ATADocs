@@ -8,7 +8,9 @@ ms.topic: how-to
 # Working with Security Alerts
 
 > [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/manage-security-alerts). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+
+[https://docs.microsoft.com/en-us/microsoft-365/security/defender-identity/manage-security-alerts](/microsoft-365/security/defender-identity/manage-security-alerts)
 
 This article explains the basics of how to work with [!INCLUDE [Product long](includes/product-long.md)] security alerts.
 
@@ -22,7 +24,7 @@ Each security alert has the following information:
 
 - Entities involved, including users, computers, servers, domain controllers, and resources.
 
-- Times and time frame of the suspicious activities which initiated the security alert.
+- Times and time frame of the suspicious activities that initiated the security alert.
 - Severity of the alert: High, Medium, or Low.
 - Status: Open, closed, or suppressed.
 - Ability to:
