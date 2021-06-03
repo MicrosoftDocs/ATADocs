@@ -24,7 +24,7 @@ Attack Surface Reduction can be achieved by disabling support for insecure legac
 - LanMan (LM) / NTLMv1
 - Digest Authentication
 
-To retire the use of legacy protocols, your organization must first discover which internal entities and applications rely on them. The **Legacy protocols usage** assessment report table surfaces the top discovered entities using legacy protocols (for now, NTLMv1). Using the report, you can immediately review any top impacted entities and take action on them, stopping use of these protocols and eventually, disabling them altogether. To learn more about the dangers of using legacy protocols, see [Stop using LAN manager and NTLMv1!](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1) and [Drop The MIC 2 & Exploiting LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
+To retire the use of legacy protocols, your organization must first discover which internal entities and applications rely on them. The **Legacy protocols usage** assessment report table surfaces the top discovered entities using legacy protocols (for now, NTLMv1). Using the report, you can immediately review any top impacted entities and take action on them, stopping use of these protocols and eventually, disabling them altogether. To learn more about the dangers of using legacy protocols, see [Stop using LAN manager and NTLMv1!](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 
 ## How do I use this security assessment?
 
@@ -36,8 +36,6 @@ To retire the use of legacy protocols, your organization must first discover whi
 
     >[!IMPORTANT]
     >[!INCLUDE [Product long](includes/product-long.md)] may not detect every instance of legacy protocols. So, as with any modifications to your environment, it's recommended to test any changes before pushing them into production. Disabling those protocols without testing might cause legacy apps to break.
-
-1. [Drop the MIC 2 & stop using LMv2 Clients](https://www.preempt.com/blog/active-directory-ntlm-attacks/).
 
 > [!NOTE]
 > This assessment is updated in near real time.
