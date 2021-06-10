@@ -23,6 +23,17 @@ Access to the [!INCLUDE [Product short](includes/product-short.md)] portal (port
 > [!NOTE]
 > Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is granted only to users within the [!INCLUDE [Product short](includes/product-short.md)] security groups, within your Azure Active Directory, as well as global and security admins of the tenant.
 
+## Required permissions for the Microsoft 365 Defender experience
+
+To access the Defender for Identity experience in [in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md), you need the following required permissions:
+
+- For Defender for Identity alerts, activities, and security assessments in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles or Microsoft Cloud App Security internal roles.  For details, see [Microsoft Defender for Identity integration prerequisites](/cloud-app-security/mdi-integration#prerequisites).
+
+    >[!NOTE]
+    >The currently supported Cloud App Security roles are **Global admin**, **Security reader**, and **Compliance admin.**
+
+- For onboarding and managing Defender for Identity settings in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles, and that you're a member of the relevant [Microsoft Defender for Identity Azure AD groups](#types-of-defender-for-identity-security-groups).
+
 ## Types of Defender for Identity security groups
 
 [!INCLUDE [Product short](includes/product-short.md)] provides three types of security groups: Azure ATP *(instance name)* Administrators, Azure ATP *(instance name)* Users, and Azure ATP *(instance name)* Viewers. The following table describes the type of access in the [!INCLUDE [Product short](includes/product-short.md)] portal available for each role. Depending on which role you assign, various screens and menu options in [!INCLUDE [Product short](includes/product-short.md)] portal are unavailable for those users, as follows:
@@ -51,17 +62,6 @@ When users try to access a page that isn't available for their role group, they'
 ## Add and remove users
 
 [!INCLUDE [Product short](includes/product-short.md)] uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Only Azure AD users can be added or removed from security groups.
-
-## Required permissions for the Microsoft 365 Defender experience
-
-To access the Defender for Identity experience in [in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md), you need the following required permissions:
-
-- For Defender for Identity alerts, activities, and security assessments in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles or Microsoft Cloud App Security internal roles.  For details, see [Microsoft Defender for Identity integration prerequisites](/cloud-app-security/mdi-integration#prerequisites).
-
-    >[!NOTE]
-    >The currently supported Cloud App Security roles are **Global admin**, **Security reader**, and **Compliance admin.**
-
-- For onboarding and managing Defender for Identity settings in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles, and that you're a member of the relevant [Microsoft Defender for Identity Azure AD groups](#types-of-defender-for-identity-security-groups).
 
 ## See Also
 
