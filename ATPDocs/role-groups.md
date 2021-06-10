@@ -54,11 +54,14 @@ When users try to access a page that isn't available for their role group, they'
 
 ## Required permissions for the Microsoft 365 Defender experience
 
-The Defender for Identity experience is now [available in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md). To get the required permissions, follow these steps:
+To access the Defender for Identity experience in [in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md), you need the following required permissions:
 
-- For Defender for Identity alerts, activities, and security assessments in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles and Microsoft Cloud App Security internal roles. The required Cloud App Security roles are **Global admin**, **Security reader**, and **Compliance admin.** For details, see [Microsoft Defender for Identity integration prerequisites](/cloud-app-security/mdi-integration#prerequisites).
+- For Defender for Identity alerts, activities, and security assessments in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles or Microsoft Cloud App Security internal roles.  For details, see [Microsoft Defender for Identity integration prerequisites](/cloud-app-security/mdi-integration#prerequisites).
 
-- For onboarding and managing Defender for Identity settings in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles, and that you're a member of the relevant [Azure AD Azure ATP groups](#types-of-defender-for-identity-security-groups).
+    >[!NOTE]
+    >The currently supported Cloud App Security roles are **Global admin**, **Security reader**, and **Compliance admin.**
+
+- For onboarding and managing Defender for Identity settings in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles, and that you're a member of the relevant [Microsoft Defender for Identity Azure AD groups](#types-of-defender-for-identity-security-groups).
 
 ## See Also
 
