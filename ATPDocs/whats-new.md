@@ -47,7 +47,7 @@ Released May 9, 2021
 
 Released May 2, 2021
 
-- Email notifications for both health issues and security alerts will now have the investigation URL for both Microsoft Defender for Identity and Microsoft 365 security center.
+- Email notifications for both health issues and security alerts will now have the investigation URL for both Microsoft Defender for Identity and Microsoft 365 Defender.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
