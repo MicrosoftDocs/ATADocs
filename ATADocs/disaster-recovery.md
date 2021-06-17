@@ -40,7 +40,7 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
 1. Export the ATA Center certificate.
     1. In the certificate manager, navigate to **Certificates (Local Computer)** -> **Personal** ->**Certificates**, and select **ATA Center**.
     2. Right-click **ATA Center** and select **All Tasks** followed by **Export**. 
-     ![ATA Center Certificate](media/ata-center-cert.png)
+     ![ATA Center Certificate.](media/ata-center-cert.png)
     3. Follow the instructions to export the certificate, making sure to export the private key as well.
     4. Back up the exported certificate file on a separate computer.
 
@@ -53,7 +53,7 @@ This article describes how to quickly recover your ATA Center and restore ATA fu
 1. Import the certificate you backed up earlier, to the new server.
 1. Follow the instructions to [Deploy the ATA Center](install-ata-step1.md) on the newly created Windows Server. There is no need to deploy the 
 ATA Gateways again. When prompted for a certificate, provide the certificate you exported when backing up the ATA Center configuration. 
- ![ATA Center restore](media/disaster-recovery-deploymentss.png)
+ ![ATA Center restore.](media/disaster-recovery-deploymentss.png)
 1. Stop the ATA Center service.
 1. Import the backed-up ATA Center configuration:
     1. Remove the default ATA Center System Profile document from the MongoDB: 

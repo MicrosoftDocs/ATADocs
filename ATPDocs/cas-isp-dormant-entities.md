@@ -24,7 +24,7 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your sensitive accounts are dormant.
-    ![Remediate dormant entities ini sensitive groups](media/cas-isp-dormant-entities-sensitive-groups-1.png)
+    ![Remediate dormant entities ini sensitive groups.](media/cas-isp-dormant-entities-sensitive-groups-1.png)
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
 
 > [!NOTE]
@@ -33,4 +33,4 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 ## See Also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

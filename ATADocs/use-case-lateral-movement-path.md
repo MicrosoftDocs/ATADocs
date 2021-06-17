@@ -41,11 +41,11 @@ ATA enables you to take preemptive action on your network to prevent attackers f
 
 To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, in a specific timeframe, follow these steps:
 
-1. In the ATA console menu, click the reports icon ![reports icon](media/ata-report-icon.png).
+1. In the ATA console menu, click the reports icon ![reports icon.](media/ata-report-icon.png).
 
 1. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data.
 
-    ![Screenshot showing report date selection](media/reports.png)
+    ![Screenshot showing report date selection.](media/reports.png)
 
 1. Click **Download**.
 
@@ -55,7 +55,7 @@ To discover which sensitive accounts in your network are vulnerable because of t
 
 Now that you know which sensitive accounts are at risk, you can deep dive in ATA to learn more and take preventative measures.
 
-1. In the ATA console, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon](media/lateral-movement-icon.png) or ![path icon](media/paths-icon.png). This is available if there was a lateral movement path in the last two days.
+1. In the ATA console, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon.](media/lateral-movement-icon.png) or ![path icon](media/paths-icon.png). This is available if there was a lateral movement path in the last two days.
 
 1. In the user profile page that opens, click the **Lateral movement paths** tab.
 
@@ -63,7 +63,7 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATA
 
 1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in this map, you can follow the **Logged into by** gray arrows to see where Samira signed in with their privileged credentials. In this case, Samira's sensitive credentials were saved on the computer REDMOND-WA-DEV. Then, see which other users signed in to which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group **Contoso All** has the ability to access user credentials from that resource.
 
-    ![User profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
+    ![User profile lateral movement paths.](media/user-profile-lateral-movement-paths.png)
 
 ## Preventative best practices
 

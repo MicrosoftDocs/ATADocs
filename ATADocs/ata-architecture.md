@@ -31,12 +31,12 @@ ms.suite: ems
 
 The Advanced Threat Analytics architecture is detailed in this diagram:
 
-![ATA architecture topology diagram](media/ATA-architecture-topology.jpg)
+![ATA architecture topology diagram.](media/ATA-architecture-topology.jpg)
 
 ATA monitors your domain controller network traffic by utilizing port mirroring to an ATA Gateway using physical or virtual switches. If you deploy the ATA Lightweight Gateway directly on your domain controllers, it removes the requirement for port mirroring. In addition, ATA can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats.
 This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATA: the ATA Gateway, ATA Lightweight Gateway (which has the same core functionality as the ATA Gateway), and the ATA Center.
 
-![ATA traffic flow diagram](media/ATA-traffic-flow.jpg)
+![ATA traffic flow diagram.](media/ATA-traffic-flow.jpg)
 
 ## ATA Components
 

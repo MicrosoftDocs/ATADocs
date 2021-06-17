@@ -96,7 +96,7 @@ ATA 1.8 includes an additional technique to detect golden ticket attacks.
 
 **Symptoms**: Upgrading an ATA Gateway to 1.8 on Windows Server 2012R2 Core with .Net framework 4.7 may fail with the error: *Microsoft Advanced Threat Analytics Gateway has stopped working*.
 
-![Gateway core error](media/gateway-core-error.png)
+![Gateway core error.](media/gateway-core-error.png)
 
 On Windows Server 2016 Core you may not see the error, but the process will fail when you try to install, and events 1000 and 1001 (process crash) will be logged in the application Event Log on the server.
 

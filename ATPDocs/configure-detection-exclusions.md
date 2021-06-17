@@ -21,7 +21,7 @@ To configure exclusions from the configuration page, do the following:
 
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] configuration settings](media/config-menu.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
 
 1. Under **Detection**, select **Exclusions**.
 1. For each detection that you want to configure, do the following:
@@ -31,7 +31,7 @@ To configure exclusions from the configuration page, do the following:
     > [!TIP]
     > The user or computer field is searchable and will autofill with entities in your network. For more information, see the [security alert guide](suspicious-activity-guide.md).
 
-    ![Excluding entities from detections](media/exclusions.png)
+    ![Excluding entities from detections.](media/exclusions.png)
 
 1. Click **Save**.
 
@@ -44,11 +44,11 @@ To configure exclusions from a security alert, do the following:
 
 1. To the right of the alert, select **More [...]** > **Close and exclude**. The action closes the alert and it is no longer listed in the **Open** events list in the **Alert timeline**. The action also adds the user, computer, or IP address to the exclusions list for that alert.
 
-    ![Exclude entity](media/exclude-in-sa.png)
+    ![Exclude entity.](media/exclude-in-sa.png)
 
 [!INCLUDE [Product short](includes/product-short.md)] scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment. The learning period for each alert is listed in the detailed [security alert guide](suspicious-activity-guide.md).
 
 ## See Also
 
 - [Configure event collection](configure-event-collection.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

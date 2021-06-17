@@ -449,4 +449,4 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

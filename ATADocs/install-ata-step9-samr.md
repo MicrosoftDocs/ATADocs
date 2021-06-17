@@ -47,11 +47,11 @@ To ensure that Windows clients and servers allow the ATA service account to perf
    - Policy Name: Network access - Restrict clients allowed to make remote calls to SAM
    - Location: Computer configuration, Windows settings, Security settings, Local policies, Security options
   
-    ![Locate the policy](media/samr-policy-location.png)
+    ![Locate the policy.](media/samr-policy-location.png)
 
 1. Add the ATA service to the list of approved accounts able to perform this action on your modern Windows systems.
 
-    ![Add the service](media/samr-add-service.png)
+    ![Add the service.](media/samr-add-service.png)
 
 1. The **ATA Service** (the ATA service created during installation) now has the proper privileges to perform SAM-R in the environment.
 
@@ -66,11 +66,11 @@ If you've defined the [Access this computer from the network](/windows/security/
 
 To add the service account, go to the policy and navigate to **Computer Configuration** -> **Policies** -> **Windows Settings** -> **Local Policies** -> **User Right Assignment**. Then open the setting **Access this computer from the network**.
 
-![Access this computer from the network setting](media/access-computer-from-network.png)
+![Access this computer from the network setting.](media/access-computer-from-network.png)
 
 Then add the ATA service account to the list of approved accounts.
 
-![Add the service account](media/add-service-account.png)
+![Add the service account.](media/add-service-account.png)
 
 > [!div class="step-by-step"]
 > [« Step 8](install-ata-step7.md)

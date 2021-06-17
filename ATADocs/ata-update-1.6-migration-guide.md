@@ -88,18 +88,18 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
     3.  Read the End-User License Agreement and if you accept the terms, click **Next**.
 
     4.  It is now possible to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
-    ![Keep ATA up-to-date image](media/ata_ms_update.png)
+    ![Keep ATA up-to-date image.](media/ata_ms_update.png)
      This adjusts the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
-    ![Windows auto-update image](media/ata_installupdatesautomatically.png)
+    ![Windows auto-update image.](media/ata_installupdatesautomatically.png)
 
     5.  Before installation begins, ATA performs a readiness check. Review the results of the check to make sure the prerequisites are configured successfully and that you have at least the minimum amount of disk space. 
-    ![ATA readiness check image](media/ata_install_readinesschecks.png)
+    ![ATA readiness check image.](media/ata_install_readinesschecks.png)
 
     6.  Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
 
 1. After updating the ATA Center, the ATA Gateways will report that they are now outdated.
 
-    ![Outdated gateways image](media/ATA-center-outdated.png)
+    ![Outdated gateways image.](media/ATA-center-outdated.png)
 
 > [!IMPORTANT] 
 > Update all the ATA Gateways to make sure ATA functions properly.
@@ -113,7 +113,7 @@ To download the ATA Gateway package:
 
 1. On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
 
-    ![Configuration settings icon](media/ATA-config-icon.png)
+    ![Configuration settings icon.](media/ATA-config-icon.png)
 
 1. In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
 
@@ -141,7 +141,7 @@ The zip file includes the following files:
 
 You know that all the ATA Gateways have been successfully updated when all the ATA Gateways report that they are successfully synced and the message that an updated ATA Gateway package is available is no longer displayed.
 
-![Updated gateways image](media/ATA-gw-updated.png)
+![Updated gateways image.](media/ATA-gw-updated.png)
 
 
 ## See Also

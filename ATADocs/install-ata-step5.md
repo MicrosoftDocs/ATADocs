@@ -39,11 +39,11 @@ After the ATA Gateway was installed, perform the following steps to configure th
 
 1. In the ATA Console, go to **Configuration** and, under **System**, select **Gateways**.
 
-    ![Configure gateway settings phase 1](media/ata-gw-config-1.png)
+    ![Configure gateway settings phase 1.](media/ata-gw-config-1.png)
 
 1. Click on the Gateway you want to configure and enter the following information:
 
-    ![Configure gateway settings phase 2](media/ATA-Gateways-config-2.png)
+    ![Configure gateway settings phase 2.](media/ATA-Gateways-config-2.png)
 
     - **Description**: Enter a description for the ATA Gateway (optional).
     - **Port Mirrored Domain Controllers (FQDN)** (required for the ATA Gateway, this cannot be changed for the ATA Lightweight Gateway): Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**
@@ -84,7 +84,7 @@ To validate that the ATA Gateway has been successfully deployed, check the follo
 1. In the console, search for something in the search bar, such as a user or a group on your domain.
 1. Open Performance Monitor. In the Performance tree, click on **Performance Monitor** and then click the plus icon to **Add a Counter**. Expand **Microsoft ATA Gateway** and scroll down to **Network Listener PEF Captured Messages/Sec** and add it. Then, make sure you see activity on the graph.
 
-    ![Add performance counters image](media/ATA-performance-monitoring-add-counters.png)
+    ![Add performance counters image.](media/ATA-performance-monitoring-add-counters.png)
 
 ### Set anti-virus exclusions
 

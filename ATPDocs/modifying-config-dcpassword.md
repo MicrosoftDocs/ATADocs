@@ -22,11 +22,11 @@ Follow this procedure to update the Domain Connectivity password on the [!INCLUD
 
 1. Select the settings option on the toolbar and select **Configuration**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] configuration settings icon](media/config-menu.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings icon](media/config-menu.png)
 
 1. Select **Directory Services**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] standalone sensor change password image](media/directory-services.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] standalone sensor change password image](media/directory-services.png)
 
 1. Under **Password**, change the password.
 
@@ -41,4 +41,4 @@ Follow this procedure to update the Domain Connectivity password on the [!INCLUD
 ## See Also
 
 - [Integration with Microsoft Defender for Endpoint](integrate-mde.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

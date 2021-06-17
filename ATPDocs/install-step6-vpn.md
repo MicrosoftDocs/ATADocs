@@ -39,11 +39,11 @@ Perform the following steps on your RRAS server.
 1. Right-click the server name and click **Properties**.
 1. In the **Security** tab, under **Accounting provider**, select **RADIUS Accounting** and click **Configure**.
 
-    ![RADIUS setup](media/radius-setup.png)
+    ![RADIUS setup.](media/radius-setup.png)
 
 1. In the **Add RADIUS Server** window, type the **Server name** of the closest [!INCLUDE [Product short](includes/product-short.md)] sensor (which has network connectivity). For high availability you can add additional [!INCLUDE [Product short](includes/product-short.md)] sensors as RADIUS Servers. Under **Port**, make sure the default of 1813 is configured. Click **Change** and type a new shared secret string of alphanumeric characters. Take note of the new shared secret string as you'll need to fill it out later during [!INCLUDE [Product short](includes/product-short.md)] Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and click **OK** on all open dialog boxes.
 
-    ![VPN setup](media/vpn-set-accounting.png)
+    ![VPN setup.](media/vpn-set-accounting.png)
 
 ### Configure VPN in Defender for Identity
 
@@ -54,7 +54,7 @@ To configure VPN data in [!INCLUDE [Product short](includes/product-short.md)]:
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, click on the configuration cog and then **VPN**.
 1. Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
 
-    ![Configure [!INCLUDE [Product short](includes/product-short.md)] VPN](media/vpn-radius.png)
+    ![Configure [!INCLUDE [Product short.](includes/product-short.md)] VPN](media/vpn-radius.png)
 
 After this is enabled, all [!INCLUDE [Product short](includes/product-short.md)] sensors listen on port 1813 for RADIUS accounting events, and your VPN setup is complete.
 
@@ -65,4 +65,4 @@ After this is enabled, all [!INCLUDE [Product short](includes/product-short.md)]
 - [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
 - [Configure event collection](configure-event-collection.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Domain controllers with Print spooler service available
 
-![Disable Print spooler service](media/cas-isp-print-spooler-1.png)
+![Disable Print spooler service.](media/cas-isp-print-spooler-1.png)
 
 ## What is the **Print spooler** service?
 
@@ -30,7 +30,7 @@ While this security assessment focuses on domain controllers, any server is pote
 
 1. Use the report table to discover which of your domain controllers has the **Print spooler** service enabled.
 
-    ![Disable Print spooler service security assessment](media/cas-isp-print-spooler-2.png)
+    ![Disable Print spooler service security assessment.](media/cas-isp-print-spooler-2.png)
 1. Take appropriate action on the at-risk domain controllers and actively remove the Print spooler service either manually, through GPO or other types of remote commands.
 
 > [!NOTE]
@@ -43,4 +43,4 @@ Fix this specific issue by disabling the Print Spooler service on all servers th
 ## Next steps
 
 - [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

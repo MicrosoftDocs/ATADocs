@@ -443,4 +443,4 @@ Not applicable
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

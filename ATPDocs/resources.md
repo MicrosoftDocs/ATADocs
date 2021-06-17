@@ -67,4 +67,4 @@ Channel 9: [Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/M
 ## See Also
 
 - [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

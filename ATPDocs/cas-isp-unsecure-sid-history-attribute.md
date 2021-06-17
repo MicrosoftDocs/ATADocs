@@ -24,7 +24,7 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your accounts have an unsecure SID History attribute.
-    ![Review top impacted entities and create an action plan](media/cas-isp-unsecure-sid-history-attribute-1.png)
+    ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-sid-history-attribute-1.png)
 1. Take appropriate action to remove SID History attribute from the accounts using PowerShell using the following steps:
 
     1. Identify the SID in the SIDHistory attribute on the account.
@@ -45,4 +45,4 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 ## See Also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

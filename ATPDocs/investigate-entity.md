@@ -60,7 +60,7 @@ The user account control flags are also imported from Active Directory. [!INCLUD
 
 [!INCLUDE [Product short](includes/product-short.md)] lets you know if these flags are On or Off in Azure Active Directory. Colored icons and the corresponding toggle indicate the status of each flag. In the example below, only **Password never expires** is On in Active Directory.
 
- ![user account control flags](media/user-access-flags.png)
+ ![user account control flags.](media/user-access-flags.png)
 
 ## Cross-check with Windows Defender
 
