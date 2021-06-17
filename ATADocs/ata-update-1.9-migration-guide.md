@@ -60,23 +60,23 @@ In the migration version, the file can be used only for updating from ATA 1.8. I
    - On the **Welcome** page, choose your language and click **Next**.
 
    - If you didn't enable automatic updates in version 1.8, you are prompted to set ATA to use Microsoft Update for ATA to remain up-to-date.  In the Microsoft Update page, select **Use Microsoft Update when I check for updates (recommended)**.
-     ![Keep ATA up-to-date image](media/ata_ms_update.png)
+     ![Keep ATA up-to-date image.](media/ata_ms_update.png)
      
      This adjusts the Windows settings to enable updates for  ATA. 
     
    - The **Partial data migration** screen lets you know that previously captured network traffic, events, entities and detection related data is deleted. All detections work immediately with the exception of abnormal behavior detection, abnormal group modification, Reconnaissance using Directory Services (SAM-R), and encryption downgrade detections which take up to three weeks to build a complete profile after the required learning time. 
      
-     ![ATA partial migration](media/partial-migration.png)
+     ![ATA partial migration.](media/partial-migration.png)
 
    - Click **Update**. After you click Update, ATA is offline until the update procedure is complete.
 
 1. After the ATA Center update completes successfully, click **Launch** to open the **Update** screen in the ATA console for the ATA Gateways.
 
-    ![Update success screen](media/migration-center-success.png)
+    ![Update success screen.](media/migration-center-success.png)
 
 1. In the **Updates** screen, if you already set your ATA Gateways to automatically update, they update at this point, if not, click **Update** next to each ATA Gateway.
   
-    ![Update gateways image](media/migration-update-gw.png)
+    ![Update gateways image.](media/migration-update-gw.png)
 
   
 > [!IMPORTANT] 

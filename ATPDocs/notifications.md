@@ -13,7 +13,7 @@ To receive notifications to a specific email address, set the following paramete
 
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select the settings option on the toolbar and select **Configuration**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] configuration settings icon](media/config-menu.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings icon](media/config-menu.png)
 
 1. Click **Notifications**.
 1. Under **Mail notifications**, add email addresses for the notifications you want to receive - they can be sent for new alerts (suspicious activities) and new health issues.
@@ -25,11 +25,11 @@ To receive notifications to a specific email address, set the following paramete
 
 1. Click **Save**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] notifications](media/notifications.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] notifications](media/notifications.png)
 
 ## See Also
 
 - [Configure event collection](configure-event-collection.md)
 
 - [Set Syslog settings](setting-syslog.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

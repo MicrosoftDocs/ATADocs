@@ -33,7 +33,7 @@ Additional relevant information and related data about what happened to help in 
 - **Excel download**  
 Detailed Excel download report for analysis
 
-![[!INCLUDE [Product short](includes/product-short.md)] security alert structure](media/security-alert-structure.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] security alert structure](media/security-alert-structure.png)
 
 ## Security alert classifications
 
@@ -101,7 +101,7 @@ Each [!INCLUDE [Product short](includes/product-short.md)] alert Excel download 
   - Network Activities
   - Event Activities
 
-![Involved entities](media/involved-entities.png)
+![Involved entities.](media/involved-entities.png)
 
 ### Related entities
 
@@ -115,7 +115,7 @@ Includes the data [!INCLUDE [Product short](includes/product-short.md)] learned 
 
 Includes all data [!INCLUDE [Product short](includes/product-short.md)] profiled on the entity. [!INCLUDE [Product short](includes/product-short.md)] uses the network and event activities captured to learn about the environment's users and computers. [!INCLUDE [Product short](includes/product-short.md)] profiles relevant information per entity. This information contributes [!INCLUDE [Product short](includes/product-short.md)]'s threat identification capabilities.
 
-![Related entities](media/related-entities.png)
+![Related entities.](media/related-entities.png)
 
 ### How can I use Defender for Identity information in an investigation?
 
@@ -145,7 +145,7 @@ Download report data appears in two columns:
 - **Source/Destination computer**
   - *Resolution method* – provides the NNR methods used to resolve the IP to computer in the organization.
 
-![Network activities](media/network-activities.png)
+![Network activities.](media/network-activities.png)
 
 For more information about how to work with [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
 
@@ -154,4 +154,4 @@ For more information about how to work with [!INCLUDE [Product short](includes/p
 - [Investigate a user](investigate-a-user.md)
 - [Investigate a computer](investigate-a-computer.md)
 - [Working with lateral movement paths](use-case-lateral-movement-path.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

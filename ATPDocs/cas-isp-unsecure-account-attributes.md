@@ -22,7 +22,7 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your accounts have unsecure attributes.
-    ![Review top impacted entities and create an action plan](media/cas-isp-unsecure-account-attributes-1.png)
+    ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
 > [!NOTE]
@@ -46,4 +46,4 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 ## See Also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

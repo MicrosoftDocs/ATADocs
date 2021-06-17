@@ -46,14 +46,14 @@ To enable this feature, you need a license for both [!INCLUDE [Product short](in
 
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] Configuration menu](media/msde-configuration.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] Configuration menu](media/msde-configuration.png)
 1. In the Configurations list, select **Microsoft Defender for Endpoint** and set the integration toggle to **On**.
 
-    ![Enable Windows Defender integration](media/msde-enable-integration.png)
+    ![Enable Windows Defender integration.](media/msde-enable-integration.png)
 
 1. In the [Defender for Endpoint portal](https://securitycenter.windows.com/preferences/advanced), go to **Settings**, **Advanced features** and set **[!INCLUDE [Product long](includes/product-long.md)] integration** to **ON**.
 
-    ![Defender for Endpoint enable integration](media/msde-enable.png)
+    ![Defender for Endpoint enable integration.](media/msde-enable.png)
 
 1. To check the status of the integration, in the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Settings** > **Microsoft Defender for Endpoint integration**. You can see the status of the integration and if something is wrong, you'll see an error.
 
@@ -61,22 +61,22 @@ To enable this feature, you need a license for both [!INCLUDE [Product short](in
 
 After [!INCLUDE [Product short](includes/product-short.md)] and Defender for Endpoint are fully integrated, in the [!INCLUDE [Product short](includes/product-short.md)] portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Defender for Endpoint includes a badge to show that it is integrated with Defender for Endpoint.
 
- ![Defender for Endpoint alerts profile](media/profile-alerts-msde.png)
+ ![Defender for Endpoint alerts profile.](media/profile-alerts-msde.png)
 
 If the entity contains alerts in Defender for Endpoint, there is a number next to the badge to let you know how many alerts were raised.
 
- ![[!INCLUDE [Product short](includes/product-short.md)] alerts](media/msde-icon-alerts.png)
+ ![[!INCLUDE [Product short.](includes/product-short.md)] alerts](media/msde-icon-alerts.png)
 
 If you click on the badge, you are brought to the Defender for Endpoint portal where you can view and mitigate the alerts. If the entity is not recognized by Defender for Endpoint, the badge is grayed out.
 
- ![Defender for Endpoint gray](media/msde-grey.png)
+ ![Defender for Endpoint gray.](media/msde-grey.png)
 
 From the Defender for Endpoint portal, click on an endpoint to view [!INCLUDE [Product short](includes/product-short.md)] alerts. If you click on the alerts for this entity in Defender for Endpoint, the entity's profile page opens in [!INCLUDE [Product short](includes/product-short.md)].
 
  > [!NOTE]
  > Currently, [!INCLUDE [Product short](includes/product-short.md)] integration with Defender for Endpoint supports only users and machines from the on-premises AD. Users from Azure AD and virtual machines that are managed in Azure will not be displayed as part of the integration
 
-![Defender for Endpoint alerts](media/msde-alerts.png)
+![Defender for Endpoint alerts.](media/msde-alerts.png)
 
 ## See Also
 
@@ -84,4 +84,4 @@ From the Defender for Endpoint portal, click on an endpoint to view [!INCLUDE [P
 - [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
 - [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)
 - [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

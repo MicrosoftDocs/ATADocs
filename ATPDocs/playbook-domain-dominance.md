@@ -54,13 +54,13 @@ Using WMI via the command line, try to create a process locally on the domain co
    PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
    ```
 
-    ![Use remote code execution (PsExec), to add the new user to the Admin group on the domain controller](media/playbook-dominance-psexec_addtoadmins.png)
+    ![Use remote code execution (PsExec), to add the new user to the Admin group on the domain controller.](media/playbook-dominance-psexec_addtoadmins.png)
 
 1. Go to **Active Directory Users and Computers (ADUC)** on **ContosoDC** and find the **InsertedUser**.
 
 1. Right click on **Properties** and check membership.
 
-    ![View the properties of "InsertedUser"](media/playbook-dominance-inserteduser_properties.png)
+    ![View the properties of "InsertedUser."](media/playbook-dominance-inserteduser_properties.png)
 
 Acting as an attacker, you've successfully created a new user in your lab by using WMI. You've also added the new user to the Administrators group by using PsExec. From a persistence perspective, another legitimate, independent credential was created on the domain controller. New credentials give an attacker persistent access to the domain controller in case the previous credential access gained was discovered and removed.
 
@@ -68,7 +68,7 @@ Acting as an attacker, you've successfully created a new user in your lab by usi
 
 Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal to check what, if anything, [!INCLUDE [Product short](includes/product-short.md)] detected from our last simulated attack:
 
-![[!INCLUDE [Product short](includes/product-short.md)] detecting WMI remote code execution](media/playbook-dominance-wmipsexecdetected.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] detecting WMI remote code execution](media/playbook-dominance-wmipsexecdetected.png)
 
 [!INCLUDE [Product short](includes/product-short.md)] detected both the WMI and PsExec remote code executions.
 
@@ -80,7 +80,7 @@ As [!INCLUDE [Product short](includes/product-short.md)] learns who is inserted 
 
 Access the **Administrator** page in the [!INCLUDE [Product short](includes/product-short.md)] portal using the Search tool. The [!INCLUDE [Product short](includes/product-short.md)] detection of the user insertion is displayed in the Admin Group activity timeline.
 
-![View added user to sensitive security group](media/playbook-dominance-admininserteduser.png)
+![View added user to sensitive security group.](media/playbook-dominance-admininserteduser.png)
 
 ### Data Protection API (DPAPI)
 
@@ -94,7 +94,7 @@ Using **mimikatz**, we'll attempt to export the master key from the domain contr
    mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
    ```
 
-    ![Use of mimikatz to export the DPAPI backup key from Active Directory](media/playbook-dominance-dpapi_mimikatz.png)
+    ![Use of mimikatz to export the DPAPI backup key from Active Directory.](media/playbook-dominance-dpapi_mimikatz.png)
 
 1. Verify the master key file export occurred. Look in the directory from which you ran mimikatz.exe from to see the created .der, .pfx, .pvk, and .key files. Copy the legacy key from the command prompt.
 
@@ -104,7 +104,7 @@ As attackers, we now have the key to decrypt any DPAPI-encrypted file/sensitive 
 
 Using the [!INCLUDE [Product short](includes/product-short.md)] portal, let's verify that [!INCLUDE [Product short](includes/product-short.md)] successfully detected our DPAPI attack:
 
-![[!INCLUDE [Product short](includes/product-short.md)] detected DPAPI request](media/playbook-dominance-dpapidetected.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] detected DPAPI request](media/playbook-dominance-dpapidetected.png)
 
 ### Malicious Replication
 
@@ -122,13 +122,13 @@ mimikatz.exe "lsadump::dcsync /domain:contoso.azure /user:krbtgt" "exit" >> c:\t
 
 We've replicated the "krbtgt" account information to: `c:\\temp\\ContosoDC_krbtgt-export.txt`
 
-![Malicious Replication via mimikatz](media/playbook-dominance-maliciousrep_mimikatz.png)
+![Malicious Replication via mimikatz.](media/playbook-dominance-maliciousrep_mimikatz.png)
 
 #### Malicious Replication Detection in Defender for Identity
 
 Using the [!INCLUDE [Product short](includes/product-short.md)] portal, verify the SOC is now aware of the malicious replication we simulated from VictimPC.
 
-![Malicious replication being detected by [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-dominance-maliciousrep_detected.png)
+![Malicious replication being detected by [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-dominance-maliciousrep_detected.png)
 
 ### Skeleton Key
 
@@ -150,7 +150,7 @@ Let's use a Skeleton Key to see how this type of attack works:
 
 1. You successfully patched the LSASS process on **ContosoDC**.
 
-    ![Skeleton Key attack via mimikatz](media/playbook-dominance-skeletonkey.png)
+    ![Skeleton Key attack via mimikatz.](media/playbook-dominance-skeletonkey.png)
 
 ### Exploiting the Skeleton Key Patched LSASS
 
@@ -162,7 +162,7 @@ runas /user:ronhd@contoso.azure "notepad"
 
 When prompted, use the wrong password on purpose. This action proves that the account *still* has a password after executing the attack.
 
-![Use of *wrong* password after Skeleton Key attack (this method works exactly as described)](media/playbook-dominance-skeletonkey_wrong.png)
+![Use of *wrong* password after Skeleton Key attack (this method works exactly as described).](media/playbook-dominance-skeletonkey_wrong.png)
 
 But Skeleton Key adds an additional password to each account. Do the "runas" command again but this time use "mimikatz" as the password.
 
@@ -179,7 +179,7 @@ This command creates a new process, *notepad*, running in the context of RonHD. 
 
 What did [!INCLUDE [Product short](includes/product-short.md)] detect and report while all of this was happening?
 
-![Skeleton Key attack detected by [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-dominance-skeletonkey_detected.png)
+![Skeleton Key attack detected by [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-dominance-skeletonkey_detected.png)
 
 [!INCLUDE [Product short](includes/product-short.md)] successfully detected the suspicious pre-authentication encryption method used for this user.
 
@@ -193,7 +193,7 @@ After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malici
    whoami /user
    ```
 
-    ![SID for golden ticket user](media/playbook-dominance-golden_whoamisid.png)
+    ![SID for golden ticket user.](media/playbook-dominance-golden_whoamisid.png)
 
 1. Identify and copy the Domain SID highlighted in the above screenshot.
 
@@ -203,13 +203,13 @@ After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malici
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
    ```
 
-    ![Generate the Golden Ticket](media/playbook-dominance-golden_generate.png)
+    ![Generate the Golden Ticket.](media/playbook-dominance-golden_generate.png)
 
    The `/ptt` part of the command allowed us to immediately pass the generated ticket into memory.
 
 1. Let's make sure the credential is in memory.  Execute `klist` in the console.
 
-    ![klist results after passing the generated ticket](media/playbook-dominance-golden_klist.png)
+    ![klist results after passing the generated ticket.](media/playbook-dominance-golden_klist.png)
 
 1. Acting as an attacker, execute the following Pass-the-Ticket command to use it against the DC:
 
@@ -219,7 +219,7 @@ After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malici
 
    Success! You generated a **fake** Golden Ticket for SamiraA.
 
-    ![Execute Golden Ticket via mimikatz](media/playbook-dominance-golden_ptt.png)
+    ![Execute Golden Ticket via mimikatz.](media/playbook-dominance-golden_ptt.png)
 
 Why did it work? The Golden Ticket Attack works because the ticket generated was properly signed with the 'KRBTGT' key we harvested earlier. This ticket allows us, as the attacker, to gain access to ContosoDC and add ourselves to any Security Group that we wish to use.
 
@@ -227,7 +227,7 @@ Why did it work? The Golden Ticket Attack works because the ticket generated was
 
 [!INCLUDE [Product short](includes/product-short.md)] uses multiple methods to detect suspected attacks of this type. In this exact scenario, [!INCLUDE [Product short](includes/product-short.md)] detected the encryption downgrade of the fake ticket.
 
-![Golden Ticket being detected](media/playbook-dominance-golden_detected.png)
+![Golden Ticket being detected.](media/playbook-dominance-golden_detected.png)
 
 > [!Important]
 >Reminder. As long as the KRBTGT harvested by an attacker remains valid within an environment, the tickets generated with it also remain valid. In this case, the attacker achieves persistent domain dominance until the [KRBTGT is reset, twice](/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
@@ -236,7 +236,7 @@ Why did it work? The Golden Ticket Attack works because the ticket generated was
 
 - [[!INCLUDE [Product short](includes/product-short.md)] Security Alert Guide](suspicious-activity-guide.md)
 - [Investigate lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
 
 ## Join the Community
 

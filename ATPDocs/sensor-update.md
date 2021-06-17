@@ -73,14 +73,14 @@ Every few minutes, [!INCLUDE [Product short](includes/product-short.md)] sensors
 
 1. 72 hours after the [!INCLUDE [Product short](includes/product-short.md)] cloud service is updated, sensors selected for **Delayed update** start their update process according to the same update process as automatically updated sensors.
 
-![Sensor update](media/sensor-update.png)
+![Sensor update.](media/sensor-update.png)
 
 For any sensor that fails to complete the update process, a relevant health alert is triggered, and is sent as a notification.
 
-![Sensor update failure](media/sensor-outdated.png)
+![Sensor update failure.](media/sensor-outdated.png)
 
 ## See Also
 
 - [Configure event forwarding](configure-event-forwarding.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

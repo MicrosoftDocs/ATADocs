@@ -17,7 +17,7 @@ Once a [!INCLUDE [Product short](includes/product-short.md)] sensor is installed
 
 1. To check the status of your detected monitored and unmonitored domain controllers and their status, go to the **Configuration** area of the [!INCLUDE [Product short](includes/product-short.md)] portal and, under the **System** section, select **Sensors**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] sensor status monitoring](media/sensors-status-monitoring.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor status monitoring](media/sensors-status-monitoring.png)
 
 1. Your currently monitored and unmonitored domain controllers are displayed at the top of the screen. To download the monitoring status details of your domain controllers, select **Download Details**.
 
@@ -41,7 +41,7 @@ Managing your fleet of sensors and domain controllers can be challenging. To mak
 1. Select the filter option on the **domain controller** column in the domain controller table list.
 1. Enter the name you wish to search. Wildcards are not currently supported in the search field.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] search domain controller](media/search-sensor.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] search domain controller](media/search-sensor.png)
 
 > [!NOTE]
 > [!INCLUDE [Product short](includes/product-short.md)] portal configuration pages can be modified by [!INCLUDE [Product short](includes/product-short.md)] admins only.
@@ -51,4 +51,4 @@ Managing your fleet of sensors and domain controllers can be challenging. To mak
 - [[!INCLUDE [Product short](includes/product-short.md)] Architecture](architecture.md)
 - [Configuring [!INCLUDE [Product short](includes/product-short.md)] sensors](install-step5.md)
 - [Multi-forest support](multi-forest.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

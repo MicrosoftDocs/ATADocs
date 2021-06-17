@@ -45,7 +45,7 @@ For more information about role-based access control (RBAC) in ATA, see [Working
 
 1. In the ATA Center server, click the **Microsoft ATA Console** icon on the desktop or open a browser and browse to the ATA Console.
 
-    ![ATA server icon](media/ata-server-icon.png)
+    ![ATA server icon.](media/ata-server-icon.png)
 
    >[!NOTE]
    > You can also open a browser from either the ATA Center or the ATA Gateway and browse to the IP address you configured in the ATA Center installation for the ATA Console.    
@@ -73,7 +73,7 @@ These are the key elements of the ATA console.
 
 This is the default landing page you are taken to when you log in to the ATA Console. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
-![ATA attack timeline image](media/ATA-Suspicious-Activity-Timeline.jpg)
+![ATA attack timeline image.](media/ATA-Suspicious-Activity-Timeline.jpg)
 
 For more information, see [Working with suspicious activities](working-with-suspicious-activities.md).
 
@@ -81,7 +81,7 @@ For more information, see [Working with suspicious activities](working-with-susp
 
 When a new suspicious activity is detected, the notification bar opens automatically on the right-hand side. If there are new suspicious activities since the last time you logged in, the notification bar will open after you have successfully logged in. You can click the arrow on the right at any time to access the notification bar.
 
-![ATA notification bar image](media/notification-bar-1.7.png)
+![ATA notification bar image.](media/notification-bar-1.7.png)
 
 ### What's new
 
@@ -95,15 +95,15 @@ You can filter which suspicious activities are displayed in the attack time line
 
 In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in ATA. To give it a try, just start typing.
 
-![ATA console search image](media/ATA-console-search.png)
+![ATA console search image.](media/ATA-console-search.png)
 
 ### Health Center
 
 The Health Center provides you with alerts when something isn't working properly in your ATA deployment.
 
-![ATA health center image](media/ATA-Health-Issue.jpg)
+![ATA health center image.](media/ATA-Health-Issue.jpg)
 
-Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon lets you know by displaying a red dot. ![ATA health center red dot image](media/ATA-Health-Center-Alert-red-dot.png)
+Any time your system encounters a problem, such as a connectivity error or a disconnected ATA Gateway, the Health Center icon lets you know by displaying a red dot. ![ATA health center red dot image.](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### Sensitive groups
 
@@ -133,7 +133,7 @@ The following list of groups are considered **Sensitive** by ATA. Any entity tha
 
 If you hover your mouse over an entity, anywhere in the console where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information if available:
 
-![ATA mini profile image](media/ATA-mini-profile.jpg)
+![ATA mini profile image.](media/ATA-mini-profile.jpg)
 
 - Name
 

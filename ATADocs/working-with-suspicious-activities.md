@@ -53,7 +53,7 @@ Each suspicious activity has the following information:
 > - When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
 > - If you click on an entity, it takes you to the entity profile of the user or computer.
 
-![ATA suspicious activities timeline image](media/ATA-Suspicious-Activity-Timeline.JPG)
+![ATA suspicious activities timeline image.](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## Filter suspicious activities list
 To filter the suspicious activities list:
@@ -81,7 +81,7 @@ To filter the suspicious activities list:
 You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific suspicious activity to reveal the list of available actions.
 
-![ATA Actions for suspicious activities](media/sa-actions.png)
+![ATA Actions for suspicious activities.](media/sa-actions.png)
 
 **Suspicious activity status**
 

@@ -21,11 +21,11 @@ To ensure Windows clients and servers allow your [!INCLUDE [Product short](inclu
    - Policy Name: Network access - Restrict clients allowed to make remote calls to SAM
    - Location: Computer configuration, Windows settings, Security settings, Local policies, Security options
 
-    ![Locate the policy](media/samr-policy-location.png)
+    ![Locate the policy.](media/samr-policy-location.png)
 
 1. Add the [!INCLUDE [Product short](includes/product-short.md)] service account to the list of approved accounts able to perform this action on your modern Windows systems.
 
-    ![Add the service](media/samr-add-service.png)
+    ![Add the service.](media/samr-add-service.png)
 
 1. **AATP Service** (the [!INCLUDE [Product short](includes/product-short.md)] service account created during installation) now has the privileges needed to perform SAM-R in the environment.
 
@@ -40,11 +40,11 @@ If you've defined the [Access this computer from the network](/windows/security/
 
 To add the service account, go to the policy and navigate to **Computer Configuration** -> **Policies** -> **Windows Settings** -> **Local Policies** -> **User Right Assignment**. Then open the setting **Access this computer from the network**.
 
-![Access this computer from the network setting](media/access-computer-from-network.png)
+![Access this computer from the network setting.](media/access-computer-from-network.png)
 
 Then add the [!INCLUDE [Product short](includes/product-short.md)] service account to the list of approved accounts.
 
-![Add the service account](media/add-service-account.png)
+![Add the service account.](media/add-service-account.png)
 
 ## See Also
 

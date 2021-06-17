@@ -21,7 +21,7 @@ If it's a sensitive user, you see the icon under the user's name.
 
 To view all the activities performed by the user, or performed on an entity, click on the **Activities** tab.
 
- ![user profile activities](media/user-profile-activities.png)
+ ![user profile activities.](media/user-profile-activities.png)
 
 By default, the main pane of the entity profile displays a timeline of the entity's activities with a history of up to six months back, from which you can also drill down into the entities accessed by the user, or for entities, users who accessed the entity.
 
@@ -33,7 +33,7 @@ Using the **Filter by** button above the activity timeline, you can filter the a
 
 The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. [!INCLUDE [Product short](includes/product-short.md)] also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, [!INCLUDE [Product short](includes/product-short.md)] lists members of the group.
 
-![user profile directory data](media/user-profile-dir-data.png)
+![user profile directory data.](media/user-profile-dir-data.png)
 
 In the **User access control** section, [!INCLUDE [Product short](includes/product-short.md)] surfaces security settings that may need your attentions. You can see important flags about the user, such as if the the user can press enter to bypass the password, and if the user has a password that never expires, etc.
 
@@ -47,9 +47,9 @@ If a potential LMP was not detected for the entity during the past two days, the
 
 For more information, see [Lateral movement paths](use-case-lateral-movement-path.md).
 
- ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
+ ![user profile lateral movement paths.](media/user-profile-lateral-movement-paths.png)
 
 ## See Also
 
 - [Investigate lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

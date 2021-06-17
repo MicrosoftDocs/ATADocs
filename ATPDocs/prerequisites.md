@@ -84,7 +84,7 @@ Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is vi
     > [!NOTE]
     > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
- ![[!INCLUDE [Product short](includes/product-short.md)] architecture diagram](media/architecture-topology.png)
+ ![[!INCLUDE [Product short.](includes/product-short.md)] architecture diagram](media/architecture-topology.png)
 
 > [!NOTE]
 > By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 350 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
@@ -238,7 +238,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requ
 
     - The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![Configure DNS suffix in advanced TCP/IP settings](media/dns-suffix.png)
+        ![Configure DNS suffix in advanced TCP/IP settings.](media/dns-suffix.png)
 
         > [!NOTE]
         > If the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is a member of the domain, this may be configured automatically.

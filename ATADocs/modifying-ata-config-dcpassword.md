@@ -42,11 +42,11 @@ To correct this, follow this procedure to update the Domain Connectivity passwor
 
 1. Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.png)
+    ![ATA configuration settings icon.](media/ATA-config-icon.png)
 
 1. Select **Directory Services**.
 
-    ![ATA Gateway change password image](media/ATA-GW-change-DC-password.png)
+    ![ATA Gateway change password image.](media/ATA-GW-change-DC-password.png)
 
 1. Under **Password**, change the password.
 

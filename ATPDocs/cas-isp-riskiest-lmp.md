@@ -27,7 +27,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your **sensitive** accounts have risky LMPs.
-    ![Review top impacted entities and create an action plan](media/cas-isp-riskiest-lmp-1.png)
+    ![Review top impacted entities and create an action plan.](media/cas-isp-riskiest-lmp-1.png)
 1. Take appropriate action:
     - Remove the entity from the group as specified in the recommendation.
     - Remove the local administrator permissions for the entity from the device specified in the recommendation.
@@ -41,4 +41,4 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 ## See Also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

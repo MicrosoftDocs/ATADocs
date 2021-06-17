@@ -37,7 +37,7 @@ ms.suite: ems
 
 The first time you open the ATA Console, the following screen appears:
 
-![ATA welcome stage 1](media/ATA_1.7-welcome-provide-username.png)
+![ATA welcome stage 1.](media/ATA_1.7-welcome-provide-username.png)
 
 1. Enter the following information and click **Save**:
 
@@ -50,7 +50,7 @@ The first time you open the ATA Console, the following screen appears:
 1. You can click **Test connection** to test connectivity to the domain and check that the credentials supplied provide access. This works if the ATA Center has connectivity to the domain.
 
     After it is saved, the welcome message in the Console will change to the following message:
-![ATA welcome stage 1 finished](media/ATA_1.7-welcome-provide-username-finished.png)
+![ATA welcome stage 1 finished.](media/ATA_1.7-welcome-provide-username-finished.png)
 
 1. In the Console, click **Download Gateway setup and install the first Gateway** to continue.
 

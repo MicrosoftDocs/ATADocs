@@ -195,19 +195,19 @@ To resolve the issue:
 
 On the Guest OS, set the following to **Disabled** in the virtual machine's NIC configuration: **IPv4 TSO Offload**.
 
-![VMware sensor issue](media/vm-sensor-issue.png)
+![VMware sensor issue.](media/vm-sensor-issue.png)
 
 Use the following command to check if Large Send Offload (LSO) is enabled or disabled:
 
 `Get-NetAdapterAdvancedProperty | Where-Object DisplayName -Match "^Large*"`
 
-![Check LSO status](media/missing-network-traffic-health-alert.png)
+![Check LSO status.](media/missing-network-traffic-health-alert.png)
 
 If LSO is enabled, use the following command to disable it:
 
 `Disable-NetAdapterLso -Name {name of adapter}`
 
-![Disable LSO status](media/disable-lso-vmware.png)
+![Disable LSO status.](media/disable-lso-vmware.png)
 
 > [!NOTE]
 >

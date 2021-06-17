@@ -50,7 +50,7 @@ This article provides information about available Advanced Threat Analytics vers
 
 Refer to the upgrade path diagram to determine the correct upgrade path for your current installation.
 
-![ATA version upgrade path](media/upgrade-path-ata.png)
+![ATA version upgrade path.](media/upgrade-path-ata.png)
 
 ## See Also
 

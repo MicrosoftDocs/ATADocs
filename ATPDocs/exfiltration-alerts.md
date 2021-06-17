@@ -114,4 +114,4 @@ Some companies legitimately use DNS for regular communication. To determine the 
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

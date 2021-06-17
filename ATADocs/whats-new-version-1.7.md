@@ -109,7 +109,7 @@ This issue will occur if the certificate used by the ATA Center was changed prio
 To verify this issue, review the **Microsoft.Tri.Gateway.Updater.log** on the ATA Gateway and look for the following exceptions:
 **System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Failed to validate certificate thumbprint**
 
-![ATA update gateway bug](media/17update_gatewaybug.png)
+![ATA update gateway bug.](media/17update_gatewaybug.png)
 
 In order to resolve this issue, after changing the certificate, from an elevated command prompt, browse to the following location: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 
 and run the following:

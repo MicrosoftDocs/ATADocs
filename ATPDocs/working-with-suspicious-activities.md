@@ -34,7 +34,7 @@ Each security alert has the following information:
 > - When you hover your mouse over a user or computer, a mini entity profile is displayed. The mini-profile provides additional information about the entity and includes the number of security alerts that the entity is linked to.
 > - Clicking on an entity, takes you to the entity profile of the user or computer.
 
-![[!INCLUDE [Product short](includes/product-short.md)] security alerts timeline image](media/sa-timeline.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] security alerts timeline image](media/sa-timeline.png)
 
 ## Security alert categories
 
@@ -52,7 +52,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] research team constant
 
 These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the [!INCLUDE [Product short](includes/product-short.md)] console - not in the timeline or in entity profiles - and new alerts won't be opened.
 
-![preview detection in timeline](media/preview-detection-in-timeline.png)
+![preview detection in timeline.](media/preview-detection-in-timeline.png)
 
 By default, preview detections are enabled in [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -62,7 +62,7 @@ To disable preview detections:
 1. In the left menu, under **Preview**, click **Detections**.
 1. Use the slider to turn the preview detections on and off.
 
-![preview detections](media/preview-detections.png)
+![preview detections.](media/preview-detections.png)
 
 ## Filter security alerts list
 
@@ -91,7 +91,7 @@ To filter the security alert list:
 You can change the status of a security alert by clicking the current status of the security alert and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific alert to reveal the list of available actions.
 
-![[!INCLUDE [Product short](includes/product-short.md)] Actions for security alerts](media/sa-actions.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] Actions for security alerts](media/sa-actions.png)
 
 **Security alert status**
 

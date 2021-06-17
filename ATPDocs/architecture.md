@@ -11,7 +11,7 @@ ms.topic: overview
 
 [!INCLUDE [Product short](includes/product-short.md)] architecture:
 
-![[!INCLUDE [Product short](includes/product-short.md)] architecture topology diagram](media/architecture-topology.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] architecture topology diagram](media/architecture-topology.png)
 
 This section describes how the flow of [!INCLUDE [Product short](includes/product-short.md)]'s network and event capturing works, and drills down to describe the functionality of the main components: the [!INCLUDE [Product short](includes/product-short.md)] portal, [!INCLUDE [Product short](includes/product-short.md)] sensor, and [!INCLUDE [Product short](includes/product-short.md)] cloud service.
 

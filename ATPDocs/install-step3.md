@@ -19,7 +19,7 @@ After configuring the domain connectivity settings, you can download the [!INCLU
 
 Click **Download** in the list of steps at the top of the page to go to the **Sensors** page.
 
-![[!INCLUDE [Product short](includes/product-short.md)] sensor configuration settings](media/sensor-config.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration settings](media/sensor-config.png)
 
 To reach the sensor configuration screen later, select **Configuration**, and then under **System**, click **Sensors**.  
 
@@ -41,4 +41,4 @@ The zip file includes the following files:
 
 ## Join the Community
 
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) today!
+Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!

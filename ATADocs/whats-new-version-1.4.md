@@ -83,7 +83,7 @@ If the ATA installation opens instead of the uninstallation when you attempt to 
 
 - Add a new String value named `InstallationPath` with a value of `C:\Program Files\Microsoft Advanced Threat Analytics\Center`. This is the default installation folder. If you changed the installation folder, enter the path where ATA is installed.
 
-    ![Registry editor for ATA Center installation path](media/ATA-uninstall-center-bug.jpg)
+    ![Registry editor for ATA Center installation path.](media/ATA-uninstall-center-bug.jpg)
 
 **ATA Gateway**
 
@@ -91,7 +91,7 @@ If the ATA installation opens instead of the uninstallation when you attempt to 
 
 - Add a new String value named `InstallationPath` with a value of `C:\Program Files\Microsoft Advanced Threat Analytics\Gateway`. This is the default installation folder.  If you changed the installation folder, enter the path where ATA is installed.
 
-    ![Registry editor for ATA Gateway installation path](media/ATA-GW-uninstall-bug.jpg)
+    ![Registry editor for ATA Gateway installation path.](media/ATA-GW-uninstall-bug.jpg)
 
 After uninstalling, delete the installation folder on both the ATA Center and the ATA Gateway.  If you installed the Database in a separate folder, delete the Database folder on the ATA Center.
 
