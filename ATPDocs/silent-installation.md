@@ -153,4 +153,4 @@ To silently uninstall the [!INCLUDE [Product short](includes/product-short.md)] 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [Install the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md)
 - [Configure the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step5.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

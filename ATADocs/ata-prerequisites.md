@@ -48,7 +48,7 @@ The ATA System works on active directory forest boundary and supports Forest Fun
 
 [ATA Console](#ata-console): This section lists browser requirements for running the ATA Console.
 
-![ATA architecture diagram](media/ATA-architecture-topology.jpg)
+![ATA architecture diagram.](media/ATA-architecture-topology.jpg)
 
 ## Before you start
 
@@ -195,7 +195,7 @@ The ATA Gateway requires at least one Management adapter and at least one Captur
   - Preferred and alternate DNS servers
   - The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-    ![Configure DNS suffix in advanced TCP/IP settings](media/ATA-DNS-Suffix.png)
+    ![Configure DNS suffix in advanced TCP/IP settings.](media/ATA-DNS-Suffix.png)
 
     > [!NOTE]
     > If the ATA Gateway is a member of the domain, this may be configured automatically.

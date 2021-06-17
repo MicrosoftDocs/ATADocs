@@ -41,7 +41,7 @@ If it's a sensitive user you'll see the icon under the user's name.
 
 To view all the activities performed by the user, or performed on an entity, click on the **Activities** tab. 
 
- ![user profile activities](media/user-profile-activities.png)
+ ![user profile activities.](media/user-profile-activities.png)
 
 By default, the main pane of the entity profile displays a timeline of the entity's activities with a history of up to 6 months back, from which you can also drill down into the entities accessed by the user, or for entities, users who accessed the entity.
 
@@ -51,7 +51,7 @@ At the top, you can view the summary tiles that give you a quick overview of wha
 - How many resources the user accessed
 - From which locations the user logged into VPN
 
-  ![entity menu](media/entity-menu.png)
+  ![entity menu.](media/entity-menu.png)
 
 For computers you can see:
 - How many open suspicious activities there are for the machine
@@ -60,7 +60,7 @@ For computers you can see:
 - How many locations VPN was accessed from on the computer
 - A list of which IP addresses the computer has used
   
-  ![entity menu computer](media/entity-computer.png)
+  ![entity menu computer.](media/entity-computer.png)
 
 Using the **Filter by** button above the activity timeline, you can filter the activities by activity type. You can also filter out a specific (noisy) type of activity. This is really helpful for investigation when you want to understand the basics of what an entity is doing in the network. You can also go to a specific date, and you can export the activities as filtered to Excel. The exported file provides a page for directory services changes (things that changed in Active Directory for the account) and a separate page for activities. 
 
@@ -68,7 +68,7 @@ Using the **Filter by** button above the activity timeline, you can filter the a
 
 The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. ATA also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, ATA lists members of the group.
 
- ![user profile directory data](media/user-profile-dir-data.png)
+ ![user profile directory data.](media/user-profile-dir-data.png)
 
 In the **User access control** section, ATA surfaces security settings that may need your attentions. You can see important flags about the user, such as can the user press enter to bypass the password, does the user have a password that never expires, etc. 
 
@@ -78,7 +78,7 @@ By clicking the **Lateral movement paths** tab you can view a fully dynamic and 
 
 The map provides you with a list of how many hops between computers or users an attacker would have to and from this user to compromise a sensitive account, and if the user themselves has a sensitive account, you can see how many resources and accounts are directly connected. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). 
 
- ![user profile lateral movement paths](media/user-profile-lateral-movement-paths.png)
+ ![user profile lateral movement paths.](media/user-profile-lateral-movement-paths.png)
 
 
 ## See Also

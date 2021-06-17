@@ -52,11 +52,11 @@ See the [Cloud App Security quick start](/cloud-app-security/getting-started-wit
 To access identity security posture assessments:
 
 1. Open the **Microsoft Cloud App Security** portal.
-    ![Access [!INCLUDE [Product short](includes/product-short.md)] identity security posture reports in Cloud App Security](media/cas-isp-report-1.png)
+    ![Access [!INCLUDE [Product short.](includes/product-short.md)] identity security posture reports in Cloud App Security](media/cas-isp-report-1.png)
 1. Select **Investigate** from the left menu, then click **Identity security posture** from the drop-down menu.
 1. Click the identity security posture assessment you wish to review from the **Security assessment reports** list that opens.
 
 ## Next steps
 
 - [Learn more about using Cloud App Security with [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

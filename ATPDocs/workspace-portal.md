@@ -36,7 +36,7 @@ For more information about role-based access control (RBAC) in [!INCLUDE [Produc
 
 The Attack time line is the default landing page you are taken to when you log in to the [!INCLUDE [Product short](includes/product-short.md)] portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
-![[!INCLUDE [Product short](includes/product-short.md)] attack timeline image](media/sa-timeline.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] attack timeline image](media/sa-timeline.png)
 
 For more information, see [Working with security alerts](working-with-suspicious-activities.md).
 
@@ -54,21 +54,21 @@ You can filter which suspicious activities are displayed in the attack time line
 
 In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in [!INCLUDE [Product short](includes/product-short.md)]. To give it a try, just start typing. At the bottom of the search bar, the number of search results found is indicated.
 
-![[!INCLUDE [Product short](includes/product-short.md)] portal search image](media/workspace-portal-search.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] portal search image](media/workspace-portal-search.png)
 
 If you click the number, you can access the search results page in which you can filter results by entity type for further investigation.
 
-![search results](media/search-results.png)
+![search results.](media/search-results.png)
 
 ### Health center
 
 The Health center provides you with alerts when something isn't working properly in your [!INCLUDE [Product short](includes/product-short.md)] instance.
 
-![[!INCLUDE [Product short](includes/product-short.md)] health center image](media/health-issue.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] health center image](media/health-issue.png)
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, the Health Center icon lets you know by displaying a red dot.
 
-![[!INCLUDE [Product short](includes/product-short.md)] health center red dot image](media/health-bar.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] health center red dot image](media/health-bar.png)
 
 ### Sensitive groups
 
@@ -78,7 +78,7 @@ For information on sensitive groups in [!INCLUDE [Product short](includes/produc
 
 If you hover your mouse over an entity, anywhere in the [!INCLUDE [Product short](includes/product-short.md)] portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information, if available and relevant:
 
-![[!INCLUDE [Product short](includes/product-short.md)] mini profile image](media/mini-profile.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] mini profile image](media/mini-profile.png)
 
 - Name
 - Title
@@ -99,4 +99,4 @@ If you hover your mouse over an entity, anywhere in the [!INCLUDE [Product short
 ## See Also
 
 - [Creating [!INCLUDE [Product short](includes/product-short.md)] instances](install-step1.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

@@ -53,11 +53,11 @@ To tag entities, do the following:
 
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] configuration settings](media/config-menu.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
 
 1. Under **Detection**, select **Entity tags**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] entity tags](media/entity-tags.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] entity tags](media/entity-tags.png)
 
 1. For each account that you want to configure, do the following:
     1. Under **Honeytoken accounts** or **Sensitive**, enter the account name.
@@ -66,11 +66,11 @@ To tag entities, do the following:
     > [!TIP]
     > The sensitive or honeytoken account field is searchable and will autofill with entities in your network.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] sensitive account sample](media/sensitive-account-sample.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] sensitive account sample](media/sensitive-account-sample.png)
 
 1. Click **Save**.
 
 ## See also
 
 - [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

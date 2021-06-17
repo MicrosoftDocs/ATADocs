@@ -34,7 +34,7 @@ ATA provides detection for the following various phases of an advanced attack: r
 The detection of each phase results in several suspicious activities relevant for the phase in question, where each suspicious activity correlates to different flavors of possible attacks.
 These phases in the kill-chain where ATA currently provides detections are highlighted in the following image:
 
-![ATA focus on lateral activity in attack kill chain](media/attack-kill-chain-small.jpg)
+![ATA focus on lateral activity in attack kill chain.](media/attack-kill-chain-small.jpg)
 
 
 For more information, see [Working with suspicious activities](working-with-suspicious-activities.md) and the [ATA suspicious activity guide](suspicious-activity-guide.md).

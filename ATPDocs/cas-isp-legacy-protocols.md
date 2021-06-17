@@ -30,7 +30,7 @@ To retire the use of legacy protocols, your organization must first discover whi
 
 1. Use the report table to discover which of your top discovered entities are using legacy protocols.
 
-    ![Prevent usage of legacy protocols](media/cas-isp-legacy-protocols-2.png)
+    ![Prevent usage of legacy protocols.](media/cas-isp-legacy-protocols-2.png)
 1. Take appropriate action on those entities to discover dependencies.
 1. Stop legacy protocol use and eventually, [disable the protocols completely](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 

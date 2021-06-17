@@ -76,7 +76,7 @@ To access a user page of a system user:
 1. From the **Investigate** menu, select **Activity log**.
 1. Filter the Activity log queue by user.
 
-    ![Activity log](media/mcas-activity-filter.png)
+    ![Activity log.](media/mcas-activity-filter.png)
 
 ## Join the Community
 

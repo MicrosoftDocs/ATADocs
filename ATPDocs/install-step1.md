@@ -33,18 +33,18 @@ After you verified that your network meets the sensor requirements, start the cr
 
 1. Select **Create instance**.
 
-    ![Create [!INCLUDE [Product short](includes/product-short.md)] instance](media/create-instance.png)
+    ![Create [!INCLUDE [Product short.](includes/product-short.md)] instance](media/create-instance.png)
 
 1. Your [!INCLUDE [Product short](includes/product-short.md)] instance is automatically named with the Azure AD fully qualified domain name and created in the data center located closest to your Azure AD.
 
-    ![Azure instance created](media/instance-created.png)
+    ![Azure instance created.](media/instance-created.png)
 
     > [!NOTE]
     > To sign in to [!INCLUDE [Product short](includes/product-short.md)], you'll need to sign in with a user assigned a [!INCLUDE [Product short](includes/product-short.md)] role with rights to access the [!INCLUDE [Product short](includes/product-short.md)] portal. For more information about role-based access control (RBAC) in [!INCLUDE [Product short](includes/product-short.md)], see [Working with [!INCLUDE [Product short](includes/product-short.md)] role groups](role-groups.md).
 
 1. Select **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups.
 
-    ![Manage role groups](media/creation-manage-role-groups.png)
+    ![Manage role groups.](media/creation-manage-role-groups.png)
 
 - Data retention – previously deleted [!INCLUDE [Product short](includes/product-short.md)] instances don't appear in the UI. For more information on [!INCLUDE [Product short](includes/product-short.md)] data retention, see [[!INCLUDE [Product short](includes/product-short.md)] data security and privacy](privacy-compliance.md).
 

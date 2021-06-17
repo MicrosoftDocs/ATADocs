@@ -80,7 +80,7 @@ For a complete list of the detections and their descriptions, see [What Suspicio
 
 ATA detects these suspicious activities and surfaces the information in the ATA Console including a clear view of Who, What, When and How. As you can see, by monitoring this simple, user-friendly dashboard, you are alerted that ATA suspects a Pass-the-Ticket attack was attempted on Client 1 and Client 2 computers in your network.
 
- ![sample ATA screen pass-the-ticket](media/pass_the_ticket_sa.png)
+ ![sample ATA screen pass-the-ticket.](media/pass_the_ticket_sa.png)
 
 **Abnormal behavior** is detected by ATA using behavioral analytics and leveraging Machine Learning to uncover questionable activities and abnormal behavior in users and devices in your network, including:
 
@@ -93,7 +93,7 @@ ATA detects these suspicious activities and surfaces the information in the ATA 
 
 You can view suspicious activities of this type in the ATA Dashboard. In the following example, ATA alerts you when a user accesses four computers that are not ordinarily accessed by this user, which could be a cause for alarm.
 
- ![sample ATA screen abnormal behavior](media/abnormal-behavior-sa.png) 
+ ![sample ATA screen abnormal behavior.](media/abnormal-behavior-sa.png) 
 
 ATA also detects **security issues and risks**, including:
 
@@ -103,7 +103,7 @@ ATA also detects **security issues and risks**, including:
 
 You can view suspicious activities of this type in the ATA Dashboard. In the following example, ATA is letting you know that there is a broken trust relationship between a computer in your network and the domain.
 
-  ![sample ATA screen broken trust](media/broken-trust-sa.png)
+  ![sample ATA screen broken trust.](media/broken-trust-sa.png)
 
 
 ## Known issues

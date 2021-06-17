@@ -39,13 +39,13 @@ After configuring the domain connectivity settings, you can download the ATA Gat
 
 Click **Download Gateway Setup** in the list of steps at the top of the page to go to the **Gateways** page.
 
-![ATA gateway configuration settings](media/ATA_1.7-welcome-download-gateway.PNG)
+![ATA gateway configuration settings.](media/ATA_1.7-welcome-download-gateway.PNG)
 
 > [!NOTE] 
 > To reach the Gateway configuration screen later, click the **settings icon** (upper right corner) and select **Configuration**, then, under **System**, click **Gateways**.  
 
 1. Click **Gateway Setup**.
-  ![Download ATA Gateway Setup](media/download-gateway-setup.png)
+  ![Download ATA Gateway Setup.](media/download-gateway-setup.png)
 1. Save the package locally.
 1. Copy the package to the dedicated server or domain controller onto which you are installing the ATA Gateway. Alternatively, you can open the ATA Console from the dedicated server or domain controller and skip this step.
 

@@ -25,13 +25,13 @@ Perform the following steps on the domain controller or AD FS server.
 1. Run **Azure ATP sensor setup.exe** with elevated privileges (**Run as administrator**) and follow the setup wizard.
 1. On the **Welcome** page, select your language and select **Next**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] standalone sensor installation language](media/sensor-install-language.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] standalone sensor installation language](media/sensor-install-language.png)
 
 1. The installation wizard automatically checks if the server is a domain controller/ AD FS server or a dedicated server. If it's a domain controller / AD FS server, the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. If it's a dedicated server, the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is installed.
 
     For example, for a [!INCLUDE [Product short](includes/product-short.md)] sensor, the following screen is displayed to let you know that a [!INCLUDE [Product short](includes/product-short.md)] sensor is installed on your dedicated server:
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] sensor installation](media/sensor-install-deployment-type.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor installation](media/sensor-install-deployment-type.png)
 
     Select **Next**.
 
@@ -40,7 +40,7 @@ Perform the following steps on the domain controller or AD FS server.
 
 1. Under **Configure the sensor**, enter the installation path and the access key that you copied from the previous step, based on your environment:
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] sensor configuration image](media/sensor-install-config.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration image](media/sensor-install-config.png)
 
     - Installation path: The location where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
     - Access key: Retrieved from the [!INCLUDE [Product short](includes/product-short.md)] portal in the previous step.
@@ -65,12 +65,12 @@ Use the following steps to configure Defender for Identity once you've completed
 
 1. Under **System**, select **Sensors**.
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] sensor configuration page](media/sensor-config.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration page](media/sensor-config.png)
 
 1. Select the sensor you installed on the AD FS server.
 1. In the popup window, in the **Resolver Domain Controller** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
 
     Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
 

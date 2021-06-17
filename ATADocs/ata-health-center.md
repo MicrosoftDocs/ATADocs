@@ -34,12 +34,14 @@ ms.suite: ems
 The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.
 
 ## Working with the ATA Health Center
+
 The ATA Health Center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
 
-![ATA Health Center red dot toolbar](media/ATA-Health-Center-Alert-red-dot.png)
+![ATA Health Center red dot toolbar.](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### Managing ATA health
-To check up on your system's overall health, click the Health Center icon in the menu bar ![ATA Health Center icon](media/ATA-red-dot.png)
+
+To check up on your system's overall health, click the Health Center icon in the menu bar ![ATA Health Center icon.](media/ATA-red-dot.png)
 
 - All open alerts can be managed by setting them to **Close**, **Suppress**, or **Delete** by clicking the three dots in the corner of the alert and making your selection.
 
@@ -56,7 +58,7 @@ To check up on your system's overall health, click the Health Center icon in the
 
 
 
-![ATA Health Center issues image](media/ATA-Health-Issue.JPG)
+![ATA Health Center issues image.](media/ATA-Health-Issue.JPG)
 
 
 

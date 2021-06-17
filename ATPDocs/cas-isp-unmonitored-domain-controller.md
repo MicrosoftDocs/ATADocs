@@ -20,7 +20,7 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 ## How do I use this security assessment?
 
 1. Use the report table to discover which of your domain controllers are unmonitored.
-    ![Remediate unmonitored domain controllers](media/cas-isp-unmonitored-domain-controller-1.png)
+    ![Remediate unmonitored domain controllers.](media/cas-isp-unmonitored-domain-controller-1.png)
 1. Take appropriate action on those domain controllers by [installing and configuring monitoring sensors](sensor-monitoring.md#domain-controller-status).
 
 > [!NOTE]
@@ -29,4 +29,4 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 ## See Also
 
 - [Monitoring your domain controller coverage](sensor-monitoring.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

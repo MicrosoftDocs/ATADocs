@@ -28,7 +28,7 @@ When the [!INCLUDE [Product short](includes/product-short.md)] sensor finds the 
 
 In cases where no name is retrieved, an **unresolved computer profile by IP** is created with the IP and the relevant detected activity.
 
-![Unresolved computer profile](media/unresolved-computer-profile.png)
+![Unresolved computer profile.](media/unresolved-computer-profile.png)
 
 NNR data is crucial for detecting the following threats:
 
@@ -47,7 +47,7 @@ After confirming the device, you can then determine if the alert is a **False Po
 - Suspected DCSync attack (replication of directory services) – the alert was triggered from a domain controller.
 - Network mapping reconnaissance (DNS) – the alert was triggered from a DNS Server.
 
-    ![Evidence certainty](media/nnr-high-certainty.png)
+    ![Evidence certainty.](media/nnr-high-certainty.png)
 
 ### Prerequisites
 
@@ -67,7 +67,7 @@ To make sure [!INCLUDE [Product short](includes/product-short.md)] is working id
 
 Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
 
-![Low success rate Network Name Resolution (NNR) alert](media/nnr-success-rate.png)
+![Low success rate Network Name Resolution (NNR) alert.](media/nnr-success-rate.png)
 
 ### Configuration recommendations
 
@@ -88,4 +88,4 @@ Each health alert provides specific details of the method, sensors, the problema
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [Configure event collection](configure-event-collection.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

@@ -50,14 +50,14 @@ Modify the Advanced Audit Policies of your domain controller using the following
     > [!NOTE]
     > You can use the Default Domain Controllers Policy or a dedicated GPO to set these policies.
 
-    ![Edit domain controller policy](media/advanced-audit-policy-check-step-1.png)
+    ![Edit domain controller policy.](media/advanced-audit-policy-check-step-1.png)
 
 1. From the window that opens, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** and depending on the policy you want to enable, do the following:
 
     **For Advanced Audit Policy Configuration**
 
     1. Go to **Advanced Audit Policy Configuration** > **Audit Policies**.
-        ![Advanced Audit Policy Configuration](media/advanced-audit-policy-check-step-2.png)
+        ![Advanced Audit Policy Configuration.](media/advanced-audit-policy-check-step-2.png)
     1. Under **Audit Policies**, edit each of the following policies and select **Configure the following audit events** for both **Success** and **Failure** events.
 
         | Audit policy | Subcategory | Triggers event IDs |
@@ -72,7 +72,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
-        ![Audit Security Group Management](media/advanced-audit-policy-check-step-4.png)
+        ![Audit Security Group Management.](media/advanced-audit-policy-check-step-4.png)
 
     <a name="ntlm-authentication-using-windows-event-8004"></a>
     **For Local Policies (Event ID: 8004)**
@@ -93,7 +93,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
         For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
 
-        ![Audit Outgoing NTLM traffic to remote servers](media/advanced-audit-policy-check-step-3.png)
+        ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
 
     > [!NOTE]
     > If you choose to use a local security policy instead of using a group policy, make sure to add the **Account Logon**, **Account Management**, and **Security Options** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
@@ -105,7 +105,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
 To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, [!INCLUDE [Product short](includes/product-short.md)] automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
 
-![Advanced Audit Policy Health Alert](media/health-alert-audit.png)
+![Advanced Audit Policy Health Alert.](media/health-alert-audit.png)
 
 Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events.
 -->
@@ -128,4 +128,4 @@ These events can be collected automatically by the [!INCLUDE [Product short](inc
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

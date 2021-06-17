@@ -29,7 +29,7 @@ To detect cross-forest activities, [!INCLUDE [Product short](includes/product-sh
   - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
   - There is a default limit of 30 untrusted forests per [!INCLUDE [Product short](includes/product-short.md)] instance. Contact support if your organization has more than 30 forests.
 
-![[!INCLUDE [Product short](includes/product-short.md)] welcome stage 1](media/directory-services-add-no-trust-forests.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] welcome stage 1](media/directory-services-add-no-trust-forests.png)
 
 ### Requirements
 
@@ -66,4 +66,4 @@ When [!INCLUDE [Product short](includes/product-short.md)] maps your forests, it
 - [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
 - [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)
 - [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

@@ -22,11 +22,11 @@ After the [!INCLUDE [Product short](includes/product-short.md)] sensor is instal
 
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and, under **System**, select **Sensors**.
 
-    ![Sensor page](media/sensor-config.png)
+    ![Sensor page.](media/sensor-config.png)
 
 1. Click on the sensor you want to configure and enter the following information:
 
-    ![Configure sensor settings](media/sensor-config-2.png)
+    ![Configure sensor settings.](media/sensor-config-2.png)
 
     - **Description**: Enter a description for the [!INCLUDE [Product short](includes/product-short.md)] sensor (optional).
     - **Domain Controllers (FQDN)** (required for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, this can't be changed for the [!INCLUDE [Product short](includes/product-short.md)] sensor): Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**
@@ -77,4 +77,4 @@ To validate that the [!INCLUDE [Product short](includes/product-short.md)] senso
 
 ## Join the Community
 
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://aka.ms/MDIcommunity) today!
+Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!

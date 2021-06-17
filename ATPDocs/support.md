@@ -46,7 +46,7 @@ To view system status for [!INCLUDE [Product short](includes/product-short.md)],
 
 #### On-demand videos
 
-- Microsoft Ignite 2018 sessions for [[!INCLUDE [Product short](includes/product-short.md)]](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
+- Microsoft Ignite 2018 sessions for [[!INCLUDE [Product short](includes/product-short.md)]](<https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor>).
 
 Troubleshooting:
 
@@ -60,4 +60,4 @@ Troubleshooting:
 
 ### Community resources
 
-We recommend the [tech community group for [!INCLUDE [Product short](includes/product-short.md)]](https://aka.ms/MDIcommunity). This resource provides direct responses from the [!INCLUDE [Product short](includes/product-short.md)] team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.
+We recommend the [tech community group for [!INCLUDE [Product short](includes/product-short.md)]](<https://aka.ms/MDIcommunity>). This resource provides direct responses from the [!INCLUDE [Product short](includes/product-short.md)] team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.

@@ -43,7 +43,7 @@ To review or modify your Syslog settings.
 
 1. Click **Notifications**, and then, under **Syslog notifications** click **Configure** and enter the following information:
 
-    ![[!INCLUDE [Product short](includes/product-short.md)] Syslog server settings image](media/syslog.png)
+    ![[!INCLUDE [Product short.](includes/product-short.md)] Syslog server settings image](media/syslog.png)
 
 1. You can select which events to send to your Syslog server. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
 
@@ -53,4 +53,4 @@ To review or modify your Syslog settings.
 ## See Also
 
 - [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

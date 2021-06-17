@@ -14,7 +14,7 @@ Lateral movement is when an attacker uses non-sensitive accounts to gain access 
 
 A key component of [!INCLUDE [Product long](includes/product-long.md)]'s security insights are Lateral Movement Paths or LMPs. [!INCLUDE [Product short](includes/product-short.md)] LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, [!INCLUDE [Product short](includes/product-short.md)] LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
 
-![[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Path (LMP)](media/lmp.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP)](media/lmp.png)
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
 
@@ -22,7 +22,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 Every computer or user profile discovered by [!INCLUDE [Product short](includes/product-short.md)] to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
 
-![[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
 
 The LMP for each entity provides different information depending on the sensitivity of the entity:
 
@@ -31,7 +31,7 @@ The LMP for each entity provides different information depending on the sensitiv
 
 Each time the tab is clicked, [!INCLUDE [Product short](includes/product-short.md)] displays the most recently discovered LMP. Each potential LMP is saved for 48 hours following discovery. LMP history is available. View older LMPs that were discovered in the past by clicking on **View a different date**.
 
-![[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Path (LMP) display](media/lmp-complete.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP) display](media/lmp-complete.png)
 
 Discover when potential LMPs were identified and which related entities are potentially involved.
 
@@ -41,11 +41,11 @@ From the Activities tab, an indication is given when a new potential LMP was ide
 
 - Sensitive users – when a new path is identified to a sensitive user
 
-![[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Path (LMP) sensitive identified](media/lmp-activities.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP) sensitive identified](media/lmp-activities.png)
 
 - Non-sensitive users and computers – when this entity is identified in a potential LMP leading to a sensitive user.
 
-![[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Path (LMP) non-sensitive identified](media/lateral-non-sensitive.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP) non-sensitive identified](media/lateral-non-sensitive.png)
 
 ## LMP related entities
 
@@ -78,4 +78,4 @@ For instructions on how to identify and investigate using [!INCLUDE [Product sho
 - [Investigating [!INCLUDE [Product short](includes/product-short.md)] LMPs](investigate-lateral-movement-path.md)
 - [Configure [!INCLUDE [Product short](includes/product-short.md)] to make remote calls to SAM](install-step8-samr.md)
 - [Working with security alerts](working-with-suspicious-activities.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

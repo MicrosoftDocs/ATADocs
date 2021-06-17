@@ -22,7 +22,7 @@ The recommended and simplest way to determine capacity for your [!INCLUDE [Produ
 1. Run the [!INCLUDE [Product short](includes/product-short.md)] Sizing Tool, **TriSizingTool.exe**, from the zip file you downloaded.
 1. When the tool finishes running, open the Excel file results.
 1. In the Excel file, locate and select the **Azure ATP Summary** sheet. The other sheet isn't needed since it's for ATA planning.
-    ![Sample capacity planning tool](media/capacity-tool.png)
+    ![Sample capacity planning tool.](media/capacity-tool.png)
 
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
 1. Match your **Busy Packets/sec** field to the **PACKETS PER SECOND** field in the [[!INCLUDE [Product short](includes/product-short.md)] sensor table](#sizing) section of this article. Use the fields to determine the memory and CPU that will be used by the sensor.
@@ -82,21 +82,21 @@ To determine packets per second, do the following steps on each domain controlle
 
 1. Open Performance Monitor.
 
-    ![Performance monitor image](media/traffic-estimation-1.png)
+    ![Performance monitor image.](media/traffic-estimation-1.png)
 
 1. Expand **Data Collector Sets**.
 
-    ![Data collector sets image](media/traffic-estimation-2.png)
+    ![Data collector sets image.](media/traffic-estimation-2.png)
 
 1. Right-click **User Defined** and select **New** &gt; **Data Collector Set**.
 
-    ![New data collector set image](media/traffic-estimation-3.png)
+    ![New data collector set image.](media/traffic-estimation-3.png)
 
 1. Enter a name for the collector set and select **Create Manually (Advanced)**.
 
 1. Under **What type of data do you want to include?** select  **Create data logs, and Performance counter**.
 
-    ![Type of data for new data collector set image](media/traffic-estimation-5.png)
+    ![Type of data for new data collector set image.](media/traffic-estimation-5.png)
 
 1. Under **Which performance counters would you like to log**, select **Add**.
 
@@ -105,7 +105,7 @@ To determine packets per second, do the following steps on each domain controlle
     > [!NOTE]
     > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
 
-    ![Add performance counters image](media/traffic-estimation-7.png)
+    ![Add performance counters image.](media/traffic-estimation-7.png)
 
 1. Change the **Sample interval** to **five seconds**.
 
@@ -117,13 +117,13 @@ To determine packets per second, do the following steps on each domain controlle
 
 1. After 24 hours, stop the data collector set, by right-clicking the data collector set and selecting **Stop**.
 
-    ![Stop data collector set image](media/traffic-estimation-12.png)
+    ![Stop data collector set image.](media/traffic-estimation-12.png)
 
 1. In File Explorer, browse to the folder where the .blg file was saved and double-click it to open it in Performance Monitor.
 
 1. Select the Packets/sec counter, and record the average and maximum values.
 
-    ![Packets per second counter image](media/traffic-estimation-14.png)
+    ![Packets per second counter image.](media/traffic-estimation-14.png)
 
 ## Next steps
 

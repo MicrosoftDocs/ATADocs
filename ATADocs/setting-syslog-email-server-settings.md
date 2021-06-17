@@ -37,7 +37,7 @@ ATA can notify you when it detects a suspicious activity. For ATA to be able to 
 
 1. Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.png)
+    ![ATA configuration settings icon.](media/ATA-config-icon.png)
 
 1. In the **notifications** section, under **Mail server**, enter the following information:
 
@@ -49,7 +49,7 @@ ATA can notify you when it detects a suspicious activity. For ATA to be able to 
    |         Authentication          | Enable if your SMTP server requires authentication. **Note:** If you enable authentication, you must provide a user name and password of an email account that has permission to connect to the SMTP server. |        Default is disabled         |
    |      Send from (required)       |                                                                        Enter an email address from whom the email will be sent from.                                                                         | For example:<br />ATA@contoso.com  |
 
-    ![ATA email server settings image](media/ata-email-server.png)
+    ![ATA email server settings image.](media/ata-email-server.png)
 
 ## Provide ATA with your Syslog server settings
 ATA can notify you when it detects a suspicious activity by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
@@ -70,7 +70,7 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
 
 1. Select the settings option on the toolbar and select **Configuration**.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.png)
+    ![ATA configuration settings icon.](media/ATA-config-icon.png)
 
 1. Under Notifications section, Select **Syslog server** and enter the following information:
 
@@ -80,7 +80,7 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
    |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
    |Format|This is the format that ATA uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
 
-    ![ATA Syslog server settings image](media/ata-syslog-server-settings.png)
+    ![ATA Syslog server settings image.](media/ata-syslog-server-settings.png)
 
 
 

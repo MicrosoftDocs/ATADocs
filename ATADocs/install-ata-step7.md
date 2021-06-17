@@ -45,17 +45,17 @@ To configure this, follow these steps:
 
 1. From the ATA Console, click on the settings icon and select **Configuration**.
 
-    ![ATA configuration settings](media/ATA-config-icon.png)
+    ![ATA configuration settings.](media/ATA-config-icon.png)
 
 1. Under **Detection**, click **Entity tags**.
 
 1. Under **Honeytoken accounts** enter the Honeytoken account name. The Honeytoken accounts field is searchable and automatically displays entities in your network.
 
-    ![Screenshot showing Honeytoken account name entry](media/honeytoken.png)
+    ![Screenshot showing Honeytoken account name entry.](media/honeytoken.png)
 
 1. Click **Exclusions**. For each type of threat, enter a user account or IP address to be excluded from the detection of these threats and click the *plus* sign. The **Add entity** (user or computer) field is searchable and will autofill with entities in your network. For more information, see [Excluding entities from detections](excluding-entities-from-detections.md)
 
-    ![Screenshot showing exclusion of entities from detection](media/exclusions.png)
+    ![Screenshot showing exclusion of entities from detection.](media/exclusions.png)
 
 1. Click **Save**.
 

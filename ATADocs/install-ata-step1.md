@@ -66,11 +66,11 @@ Perform the following steps on the ATA Center server.
 1. Read the Microsoft Software License Terms, after accepting the terms, click the acceptance check box, then click **Next**.
 
 1. We recommend setting ATA to update automatically. If Windows isn't set to update automatically on your computer, you'll see the **Use Microsoft Update to help keep your computer secure and up to date** screen.
-    ![Keep ATA up to date image](media/ata_ms_update.png)
+    ![Keep ATA up to date image.](media/ata_ms_update.png)
 
 1. Select **Use Microsoft Update when I check for updates (recommended)**. This adjusts the Windows settings to enable updates for other Microsoft products (including ATA).
 
-    ![Windows auto-update image](media/ata_installupdatesautomatically.png)
+    ![Windows auto-update image.](media/ata_installupdatesautomatically.png)
 
 1. On the **Configure the Center** page, enter the following information based on your environment:
 
@@ -80,7 +80,7 @@ Perform the following steps on the ATA Center server.
     |Database Data Path|This is the location where the MongoDB database files are located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments, you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](ata-capacity-planning.md) for sizing information.|
     |Center Service SSL Certificate|This is the certificate that is used by the ATA Console and ATA Center service.|Click the key icon to select an installed certificate or use the checkbox to create a self-signed certificate.|
 
-    ![ATA center configuration image](media/ATA-Center-Configuration.png)
+    ![ATA center configuration image.](media/ATA-Center-Configuration.png)
 
     > [!NOTE]
     > Make sure to pay attention to health alerts regarding the Center Service SSL Certificate status and expiration warnings. If the certificate expires, you'll need to completely re-deploy ATA.

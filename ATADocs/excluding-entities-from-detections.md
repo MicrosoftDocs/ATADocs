@@ -39,11 +39,11 @@ There are two ways in which you can exclude entities, from the suspicious activi
 
 - **From the suspicious activity**: In the Suspicious activity timeline, when you receive an alert on an activity for a user or computer or IP address that is allowed to perform the particular activity and may do so frequently, right-click the three dots at the end of the row for the suspicious activity on that entity, and select **Close and exclude**. <br></br>This adds the user, computer, or IP address to the exclusions list for that suspicious activity. It  closes the suspicious activity and it is no longer listed in the **Open** events list in the **Suspicious activity timeline**.
 
-    ![Exclude entity](media/exclude-in-sa.png)
+    ![Exclude entity.](media/exclude-in-sa.png)
 
 - **From the Configuration page**:  To review or modify any exclusions: under **Configuration**, click **Exclusions** and then select the suspicious activity, such as **Sensitive account credentials exposed**.
 
-    ![Exclusion configuration](media/exclusions-config-page.png)
+    ![Exclusion configuration.](media/exclusions-config-page.png)
 
 To remove an entity from the **Exclusions** configuration: click the minus next to the entity name and then click **Save** at the bottom of the page.
 

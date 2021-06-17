@@ -14,7 +14,7 @@ Activities detected by [!INCLUDE [Product short](includes/product-short.md)] on 
 
 From the [!INCLUDE [Product short](includes/product-short.md)] timeline, select any entity in your network (DC, machine, or user) as the filter access point. Next, select to filter by the **Security Alert**, **Activity** type, or any combination. Once the filter is applied, the threat timeline of the entity is updated with the filtered information. Your filtered alerts and activities can also be downloaded to continue your investigation or tracking in other tools.
 
-![Filter alerts and activities](media/activities-filter.png)
+![Filter alerts and activities.](media/activities-filter.png)
 
 To filter alerts and activities:
 
@@ -29,4 +29,4 @@ To filter alerts and activities:
 - [Investigating entities](investigate-entity.md)
 - [Health alerts](health-alerts.md)
 - [Working with Security Alerts](working-with-suspicious-activities.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

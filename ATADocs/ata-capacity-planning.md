@@ -34,6 +34,7 @@ This article helps you determine how many ATA servers are needed to monitor your
 > The ATA Center can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
 
 ## Using the sizing tool
+
 The recommended and simplest way to determine capacity for your ATA deployment is to use the [ATA Sizing Tool](https://aka.ms/atasizingtool). Run the ATA Sizing Tool and from the Excel file results, use the following fields to determine the ATA capacity you need:
 
 - ATA Center CPU and Memory: Match the **Busy Packets/sec** field in the ATA Center table results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
@@ -41,7 +42,7 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 - ATA Center Storage: Match the **Avg Packets/sec** field in the ATA Center table results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
 - ATA Gateway: Match the **Busy Packets/sec** field in the ATA Gateway table in the results file to the **PACKETS PER SECOND** field in the [ATA Gateway table](#ata-gateway-sizing) or the [ATA Lightweight Gateway table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
 
-![Sample capacity planning tool](media/capacity-tool.png)
+![Sample capacity planning tool.](media/capacity-tool.png)
 
 > [!NOTE]
 > Because different environments vary and have multiple special and unexpected network traffic characteristics, after you initially deploy ATA and run the sizing tool, you may need to adjust and fine tune your deployment for capacity.
@@ -69,6 +70,7 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 
 &#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
+>
 > - The ATA Center can handle an aggregated maximum of 1M packets per second from all  monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M and some environments may exceed ATA capacity. Contact us at azureatpfeedback@microsoft.com for assistance in planning and estimating large environments.
 
 > - If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it is not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.

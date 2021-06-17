@@ -99,4 +99,4 @@ Alternatively, if you require more granular control, consider allowing traffic t
 ## See Also
 
 - [Configure event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](https://aka.ms/MDIcommunity)
+- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

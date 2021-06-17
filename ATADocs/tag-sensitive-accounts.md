@@ -36,11 +36,11 @@ You can manually tag groups or accounts as sensitive to enhance detections. It i
 
 1. Under **Detection,** click **Entity tags**.
 
-    ![ATA entity tags](media/entity-tags.png)
+    ![ATA entity tags.](media/entity-tags.png)
 
 1. In the **Sensitive** section, type the name of the **Sensitive accounts** and **Sensitive groups** and then click **+** sign to add them.
 
-    ![ATA sensitive account sample](media/sensitive-account-sample.png)
+    ![ATA sensitive account sample.](media/sensitive-account-sample.png)
 
 1. Click **Save**.
 

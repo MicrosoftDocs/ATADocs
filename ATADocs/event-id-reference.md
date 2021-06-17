@@ -35,7 +35,7 @@ The ATA Center event viewer logs events for ATA. This article provides a list of
 
 The events can be found here:
 
-![event ID location](media/event-id-location.png)
+![event ID location.](media/event-id-location.png)
 
 ## ATA health events
 

@@ -66,7 +66,7 @@ ls -d contoso.azure
 
 - Replace contosodc.contoso.azure and contoso.azure with the FQDN of your [!INCLUDE [Product short](includes/product-short.md)] sensor and domain name respectively.
 
- ![nslookup command attempt to copy the DNS server -failure](media/playbook-recon-nslookup.png)
+ ![nslookup command attempt to copy the DNS server -failure.](media/playbook-recon-nslookup.png)
 
 If **ContsoDC** is your first deployed sensor, wait 15 minutes to allow the database backend to finish deploying the necessary micro services.
 
@@ -76,13 +76,13 @@ Getting visibility of this type of attempt (failed or successful) is vital for d
 
 In the [!INCLUDE [Product short](includes/product-short.md)] Search, type **VictimPC**, then click on it to view the timeline.
 
-![DNS reconnaissance detected by [!INCLUDE [Product short](includes/product-short.md)], high-level view](media/playbook-recon-nslookupdetection1.png)
+![DNS reconnaissance detected by [!INCLUDE [Product short.](includes/product-short.md)], high-level view](media/playbook-recon-nslookupdetection1.png)
 
 Look for the "AXFR query" activity. [!INCLUDE [Product short](includes/product-short.md)] detects this type of reconnaissance against your DNS.
 
 - If you have a large number of activities, click **Filter by** and deselect all types except **DNS query**.
 
-![Detailed view of the DNS reconnaissance detection in [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-recon-nslookupdetection2.png)
+![Detailed view of the DNS reconnaissance detection in [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-recon-nslookupdetection2.png)
 
 If your security analyst determined this activity originated from a security scanner, the specific device can be excluded from further detection alerts. In the top-right area of the alert, click on the three dots. Then, select **Close and exclude MySecurityScanner**. Ensuring this alert doesn't show up again when detected from "MySecurityScanner".
 
@@ -106,7 +106,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
     The output shows all users in the Contoso.Azure domain.
 
-    ![Enumerate all users in the domain](media/playbook-recon-dsenumeration-netusers.png)
+    ![Enumerate all users in the domain.](media/playbook-recon-dsenumeration-netusers.png)
 
 1. Let's try to enumerate all groups in the domain. Execute the following command:
 
@@ -116,7 +116,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
     The output shows all groups in the Contoso.Azure domain. Notice the one Security Group that isn't a default group: **Helpdesk**.
 
-    ![Enumerate all groups in the domain](media/playbook-recon-dsenumeration-netgroups.png)
+    ![Enumerate all groups in the domain.](media/playbook-recon-dsenumeration-netgroups.png)
 
 1. Now, let's try to enumerate only the Domain Admins group. Execute the following command:
 
@@ -124,7 +124,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
     net group "Domain Admins" /domain
     ```
 
-    ![Enumerate all members of the Domain Admins group](media/playbook-recon-dsenumeration-netdomainadmins.png)
+    ![Enumerate all members of the Domain Admins group.](media/playbook-recon-dsenumeration-netdomainadmins.png)
 
     Acting as an attacker, we've learned there are two members of the Domain Admins group: **SamiraA** and **ContosoAdmin** (built-in Administrator for the Domain Controller). Knowing no security boundary exists between our Domain and Forest, our next leap is to try to enumerate the Enterprise Admins.
 
@@ -136,7 +136,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
     We learned that there's only one Enterprise Admin, ContosoAdmin. This information wasn't important since we already knew there isn't a security boundary between our Domain and the Forest.
 
-    ![Enterprise Admins enumerated in the domain](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
+    ![Enterprise Admins enumerated in the domain.](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
 
 With the information gathered in our reconnaissance, we now know about the Helpdesk Security Group. Although that information isn't interesting *yet*. We also know that **SamiraA** is a member of the Domain Admins group. If we can harvest SamiraA's credential, we can gain access the Domain Controller itself.
 
@@ -146,21 +146,21 @@ If our lab had *real live activity for 30 days with [!INCLUDE [Product short](in
 
 In the [!INCLUDE [Product short](includes/product-short.md)] Search, let's see what JeffL's Logical Activity timeline looks like:
 
-![Search the logical activity timeline for a specific entity](media/playbook-recon-dsenumeration-searchlogicalactivity.png)
+![Search the logical activity timeline for a specific entity.](media/playbook-recon-dsenumeration-searchlogicalactivity.png)
 
 We can see when JeffL signed onto the VictimPC, using the Kerberos protocol. Additionally, we see that JeffL, from VictimPC, enumerated all the users in the domain.
 
-![JeffL's logical activity timeline](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
+![JeffL's logical activity timeline.](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
 Many activities are logged in the Logical Activity timeline making it a major capability to performing Digital Forensics and Incident Response (DFIR). You can even see activities when the initial detection wasn't from [!INCLUDE [Product short](includes/product-short.md)] but from Microsoft Defender for Endpoint, Microsoft 365, and others.
 
 Taking a look at **ContosoDC's page**, we can also see the computers JeffL logged into.
 
-![JeffL logged on computers](media/playbook-recon-dsenumeration-jeffvloggedin.png)
+![JeffL logged on computers.](media/playbook-recon-dsenumeration-jeffvloggedin.png)
 
 We can also get Directory Data, including JeffL's Memberships and Access Controls, all from within [!INCLUDE [Product short](includes/product-short.md)].
 
-![JeffL's directory data in [!INCLUDE [Product short](includes/product-short.md)]](media/playbook-recon-dsenumeration-jeffvdirectorydata.png)
+![JeffL's directory data in [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-recon-dsenumeration-jeffvdirectorydata.png)
 
 Now, our attention will be shift towards SMB Session Enumeration.
 
@@ -178,7 +178,7 @@ Run JoeWare's **NetSess** tool against ContosoDC in context of an authenticated 
 NetSess.exe ContosoDC
 ```
 
-![Attackers use SMB reconnaissance to identify users and their IP addresses](media/playbook-recon-smbrecon.png)
+![Attackers use SMB reconnaissance to identify users and their IP addresses.](media/playbook-recon-smbrecon.png)
 
 We already know that SamiraA is a Domain Admin. This attack gave us SamiraA's IP address as 10.0.24.6. As an attacker, we learned exactly who we need to compromise. We also got the network location where that credential is logged in.
 
@@ -186,7 +186,7 @@ We already know that SamiraA is a Domain Admin. This attack gave us SamiraA's IP
 
 Now we can see what [!INCLUDE [Product short](includes/product-short.md)] detected for us:
 
-![[!INCLUDE [Product short](includes/product-short.md)] Detecting SMB reconnaissance](media/playbook-recon-smbrecon-detection1.png)
+![[!INCLUDE [Product short.](includes/product-short.md)] Detecting SMB reconnaissance](media/playbook-recon-smbrecon-detection1.png)
 
 Not only are we alerted on this activity, we're also alerted on the exposed accounts and their respective IP addresses *at that point in time*. As the Security Operations Center (SOC), we don't just have the attempt and its status, but also what was sent back to the attacker. This information aids our investigation.
 
