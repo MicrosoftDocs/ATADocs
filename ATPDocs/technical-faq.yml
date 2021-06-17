@@ -31,7 +31,7 @@ sections:
 
       - question: How many Directory Service credentials does Defender for Identity support?
         answer: |
-          Defender for Identity currently supports adding up to 10 different Directory Service credentials to support Active Directory environments with untrusted forests. If you require more accounts, open a support ticket.
+          Defender for Identity currently supports adding up to 30 different Directory Service credentials to support Active Directory environments with untrusted forests. If you require more accounts, open a support ticket.
 
       - question: Does Defender for Identity only leverage traffic from Active Directory?
         answer: |
