@@ -18,8 +18,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
-
-**For Other events**
+**For other events**
 
 - 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
@@ -67,7 +66,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
         | Account Management | Audit Distribution Group Management | 4753, 4763 |
         | Account Management | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | Account Management | Audit User Account Management | 4726 |
-        | DS Access | Audit Directory Service Access | 4662 |
+        | DS Access | Audit Directory Service Access | 4662 - For this event, it's also necessary to [Configure object auditing](#configure-object-auditing).  |
         | System | Audit Security System Extension | 7045 |
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
@@ -110,9 +109,40 @@ To make it easier to verify the current status of each of your domain controller
 Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events.
 -->
 
+### Configure object auditing
+
+To collect 4662 events, it's also necessary to configure object auditing on the user objects.
+
+1. Go to the **Active Directory Users and Computers** console.
+1. Find the **Domain Users** group.
+
+    ![Find Domain Users group.](media/domain-users-group.png)
+
+1. Right-click **Domain Users** and select **Properties**. Go to the **Security** tab, and select **Advanced**.
+
+    ![Advanced security properties.](media/domain-users-advanced.png)
+
+1. In **Advanced Security Settings for Domain Users**, choose the **Auditing** tab. Select **Add**.
+
+    ![Select auditing tab.](media/auditing-tab.png)
+
+1. Click **Select a principal**.
+
+    ![Select a principal.](media/select-a-principal.png)
+
+1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
+
+    ![Select everyone.](media/select-everyone.png)
+
+1. You'll then return to **Auditing Entry for Domain Users**. Under **Permissions**, select **Full Control**. All the permissions will be selected, and when triggered, appear as 4662 events. You can then uncheck **List** and **Read** permissions, since Defender for Identity only detects changes to directory services.
+
+    ![Select permissions.](media/select-permissions.png)
+
+1. Select **OK**.
+
 ## Configure event collection
 
-These events can be collected automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or, if the [!INCLUDE [Product short](includes/product-short.md)] sensor is not deployed, they can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of the following ways:
+These events can be collected automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or, if the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't deployed, they can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of the following ways:
 
 - [Configure the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor](configure-event-forwarding.md) to listen for SIEM events
 - [Configure Windows Event Forwarding](configure-event-forwarding.md)
@@ -120,11 +150,11 @@ These events can be collected automatically by the [!INCLUDE [Product short](inc
 > [!NOTE]
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-> - It is important to review and verify your [audit policies]() before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
+> - It is important to review and verify your audit policies before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/aatpsizingtool>)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
