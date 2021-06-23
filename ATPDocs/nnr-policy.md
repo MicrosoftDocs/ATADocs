@@ -18,12 +18,12 @@ To resolve IP addresses to computer names, [!INCLUDE [Product short](includes/pr
 - RDP (TCP port 3389) - only the first packet of **Client hello**
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-For the best results, we recommend using all of the methods. If this is not possible, you should use the DNS lookup method and at least one of the other methods.
+For the best results, we recommend using all of the methods. If this isn't possible, you should use the DNS lookup method and at least one of the other methods.
 
 > [!NOTE]
 > No authentication is performed on any of the ports.
 
-[!INCLUDE [Product short](includes/product-short.md)] evaluates and determines the device operating system based on network traffic. After retrieving the computer name, the [!INCLUDE [Product short](includes/product-short.md)] sensor checks Active Directory and uses TCP fingerprints to see if there is a correlated computer object with the same computer name. Using TCP fingerprints helps identify unregistered and non-Windows devices, aiding in your investigation process.
+[!INCLUDE [Product short](includes/product-short.md)] evaluates and determines the device operating system based on network traffic. After retrieving the computer name, the [!INCLUDE [Product short](includes/product-short.md)] sensor checks Active Directory and uses TCP fingerprints to see if there's a correlated computer object with the same computer name. Using TCP fingerprints helps identify unregistered and non-Windows devices, aiding in your investigation process.
 When the [!INCLUDE [Product short](includes/product-short.md)] sensor finds the correlation, the sensor associates the IP to the computer object.
 
 In cases where no name is retrieved, an **unresolved computer profile by IP** is created with the IP and the relevant detected activity.
@@ -40,7 +40,7 @@ To improve your ability to determine if an alert is a **True Positive (TP)** or 
 
 For example, when computer names are resolved with  **high certainty** it increases the confidence in the resulting security alert as a **True Positive** or **TP**.
 
-The evidence includes the time, IP and computer name the IP was resolved to. When the resolution certainty is **low**, use this information to investigate and verify which device was the true source of the IP at this time.
+The evidence includes the time, IP, and computer name the IP was resolved to. When the resolution certainty is **low**, use this information to investigate and verify which device was the true source of the IP at this time.
 After confirming the device, you can then determine if the alert is a **False Positive** or **FP**, similar to the following examples:
 
 - Suspected identity theft (pass-the-ticket) – the alert was triggered for the same computer.
@@ -49,7 +49,7 @@ After confirming the device, you can then determine if the alert is a **False Po
 
     ![Evidence certainty.](media/nnr-high-certainty.png)
 
-### Prerequisites
+## Prerequisites
 
 |Protocol|Transport|Port|Device|Direction|
 |--------|--------|------|-------|------|
@@ -69,7 +69,7 @@ Each health alert provides specific details of the method, sensors, the problema
 
 ![Low success rate Network Name Resolution (NNR) alert.](media/nnr-success-rate.png)
 
-### Configuration recommendations
+## Configuration recommendations
 
 - NTLM over RPC:
   - Check that TCP Port 135 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] Sensors, on all computers in the environment.
@@ -81,6 +81,8 @@ Each health alert provides specific details of the method, sensors, the problema
 - RDP:
   - Check that TCP Port 3389 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] Sensors, on all computers in the environment.
   - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
+  >[!NOTE]
+  >Customized RDP ports aren't supported.
 - Reverse DNS:
   - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
 
