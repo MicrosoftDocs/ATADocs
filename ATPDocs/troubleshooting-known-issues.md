@@ -156,7 +156,7 @@ If you attempt to install the [!INCLUDE [Product short](includes/product-short.m
 
 1. Download the Npcap version 1.0 installer from  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-1.00.exe).
     - Alternatively, request the OEM version of the Npcap driver (that supports silent installation) from the support team.
-    - Copies of Npcap do not count towards the five copy, five computer, or five user licensing limitation if they are installed and used solely in conjunction with [!INCLUDE [Product short](includes/product-short.md)]. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
+    - Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with [!INCLUDE [Product short](includes/product-short.md)]. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 If you haven't yet installed the sensor:
 
@@ -235,6 +235,44 @@ The sensor failed to retrieve the designated gMSA account from the [!INCLUDE [Pr
 **Resolution:**
 
 Make sure that the gMSA account's credentials are correct and that the sensor has been granted permission to retrieve the account's credentials. While [!INCLUDE [Product short](includes/product-short.md)]  doesn't require the **Log on as a service** permission for gMSA accounts, this issue is often resolved by adding the permission to the account.
+
+## Sensor service fails to start
+
+**Sensor log entries:**
+
+Warn DirectoryServicesClient CreateLdapConnectionAsync failed to retrieve group managed service account password. [DomainControllerDnsName=DC1.CONTOSO.LOCAL Domain=contoso.local UserName=AATP_gMSA]
+
+**Cause:**
+
+The domain controller hasn't been given rights to access the password of the gSMA account.
+
+**Resolution:**
+
+Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory with the domain controller and standalone sensors included. If this doesn't exist, we recommend that you create one.
+
+You can use the following command to check if the machine or security group has been added to the parameter. Replace *AccountName* with the name you created.
+
+```powershell
+Get-ADServiceAccount AccountName -Properties PrincipalsAllowedToRetrieveManagedPassword
+```
+
+The results should look like this:
+
+![Powershell results.](media/retrieve-password-results.png)
+
+In this example, we can see that the domain controller *AATPDemo* has been added. If the domain controller or the security group hasn't been added, we can use the following command below to add it. Replace *Host1* with the name of the domain controller or the name of the security group.
+
+```powershell
+Set-ADServiceAccount gmsaAccountName -PrincipalsAllowedToRetrieveManagedPassword Host1
+```
+
+If the domain controller or security group is already added, but you're still seeing the error, you can try the following steps:
+
+- **Option 1**: Reboot the server to sync the recent changes
+- **Option 2**:
+    1. Stop **AATPSensor** and **AATPSensorUpdater**
+    1. Cache service account to server: `Install-ADServiceAccount AccountName`
+    1. Start **AATPSensor**
 
 ## Report downloads cannot contain more than 300,000 entries
 
