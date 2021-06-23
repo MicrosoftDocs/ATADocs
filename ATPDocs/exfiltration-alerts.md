@@ -35,7 +35,7 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 |Primary MITRE tactic  |[Exfiltration (TA0010)](https://attack.mitre.org/tactics/TA0010)  |
 |---------|---------|
 |Secondary MITRE tactic    | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008),[Command and Control (TA0011)](https://attack.mitre.org/tactics/TA0011)        |
-|MITRE attack technique  | [Remote File Copy (T1544)](https://attack.mitre.org/techniques/T1544/), [Automated Exfiltration (T1020)](https://attack.mitre.org/techniques/T1020/), [Data Transfer Size Limits (T1030)](https://attack.mitre.org/techniques/T1030/), [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570) ](https://attack.mitre.org/techniques/T1570/)      |
+|MITRE attack technique  | [Automated Exfiltration (T1020)](https://attack.mitre.org/techniques/T1020/), [Data Transfer Size Limits (T1030)](https://attack.mitre.org/techniques/T1030/), [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570) ](https://attack.mitre.org/techniques/T1570/)      |
 |MITRE attack sub-technique | [Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)        |
 
 **TP, B-TP, or FP**
