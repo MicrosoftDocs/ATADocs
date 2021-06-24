@@ -150,9 +150,9 @@ In this [!INCLUDE [Product short](includes/product-short.md)] detection, a secur
 
 **MITRE**
 
-|Primary MITRE tactic  | [Defense Evasion](https://attack.mitre.org/tactics/TA0005)  |
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)  |
 |---------|---------|
-|MITRE attack technique  | [Rogue Domain Controller](https://attack.mitre.org/techniques/T1207/)        |
+|MITRE attack technique  | [Rogue Domain Controller (T1207)](https://attack.mitre.org/techniques/T1207/)        |
 |MITRE attack sub-technique |   N/A      |
 
 **Learning period**
@@ -214,9 +214,9 @@ In this detection, an alert is triggered when a suspicious replication request i
 
 **MITRE**
 
-|Primary MITRE tactic  | [Defense Evasion](https://attack.mitre.org/tactics/TA0005)  |
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)  |
 |---------|---------|
-|MITRE attack technique  | [Rogue Domain Controller](https://attack.mitre.org/techniques/T1207/)        |
+|MITRE attack technique  | [Rogue Domain Controller (T1207)](https://attack.mitre.org/techniques/T1207/)        |
 |MITRE attack sub-technique |   N/A      |
 
 **Learning period**
