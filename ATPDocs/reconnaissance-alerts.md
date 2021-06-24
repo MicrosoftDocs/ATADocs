@@ -49,7 +49,7 @@ In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] d
 |Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
 |---------|---------|
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
-|MITRE attack sub-technique | [Domain Account (T0187.002)](https://attack.mitre.org/techniques/T1087/002/)        |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 **Learning period**
 
