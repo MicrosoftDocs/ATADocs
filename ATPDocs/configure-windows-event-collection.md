@@ -11,6 +11,8 @@ ms.topic: how-to
 
 To enhance threat detection capabilities, [!INCLUDE [Product short](includes/product-short.md)] needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by [!INCLUDE [Product short](includes/product-short.md)]:
 
+## Relevant Windows Events
+
 **For Active Directory Federation Services (AD FS) events**
 
 - 1202 - The Federation Service validated a new credential
