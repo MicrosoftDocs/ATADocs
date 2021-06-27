@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 In [!INCLUDE [Product short](includes/product-short.md)] you can view identifiable personal data from the [[!INCLUDE [Product long](includes/product-long.md)] portal](workspace-portal.md) using the [search bar](workspace-portal.md#search-bar).
 
-Search for a specific user or computer, and click on the entity to bring you to the user or computer [profile page](entity-profiles.md). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
+Search for a specific user or computer, and select the entity to bring you to the user or computer [profile page](entity-profiles.md). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
 
 [!INCLUDE [Product short](includes/product-short.md)] personal data is gathered from Active Directory through the [!INCLUDE [Product short](includes/product-short.md)] sensor and stored in a backend database.
 
@@ -39,6 +39,13 @@ In [!INCLUDE [Product short](includes/product-short.md)] you have the ability to
 
 - For information about [!INCLUDE [Product short](includes/product-short.md)] trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
+> [!IMPORTANT]
+> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
+
 ## Security and privacy for Defender for Identity US Government GCC High customers
 
 For additional information on [!INCLUDE [Product short](includes/product-short.md)] compliance standards and location of customer data for US Government GCC High customers, review the [Enterprise Mobility + Security for US Government service description](/enterprise-mobility-security/solutions/ems-govt-service-description).
+
+## See also
+
+- More information about privacy can be found in the [Defender for Identity FAQ](technical-faq.yml#licensing-and-privacy)
