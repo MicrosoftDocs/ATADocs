@@ -107,7 +107,7 @@ In deployments in which the database path is manually moved, ATA deployment does
 
 When updating to ATA 1.6, the update process may fail with the following error code:
 
-![Update ATA to 1.6 error.](http://i.imgur.com/QrLSApr.png)
+![Update ATA to 1.6 error.](https://i.imgur.com/QrLSApr.png)
 
 If you see this error, review the deployment log in: **C:\Users\<User>\AppData\Local\Temp**, and look for the following exception:
 
@@ -127,7 +127,7 @@ If you see either of these errors, run the following workaround:
 
 1. Move the folder "data_old" to a temporary folder (usually located in %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin).
 1. Uninstall the ATA Center v1.5, and delete all database data.
-![Uninstall ATA 1.5.](http://i.imgur.com/x4nJycx.png)
+![Uninstall ATA 1.5.](https://i.imgur.com/x4nJycx.png)
 1. Reinstall ATA Center v1.5. Make sure to use the same configuration as the previous ATA 1.5 installation (Certificates, IP addresses, DB path, etc.).
 1. Stop these services in the following order:
     1. Microsoft Advanced Threat Analytics Center
@@ -145,7 +145,7 @@ If you see either of these errors, run the following workaround:
 db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 ```
 
-![Update workaround.](http://i.imgur.com/Nj99X2f.png)
+![Update workaround.](https://i.imgur.com/Nj99X2f.png)
 
 This should return a `WriteResult({ "nRemoved" : XX })` where "XX" is the number of Suspicious Activities that were deleted. If the number is greater than 0, exit the command prompt, and continue with the update process.
 
