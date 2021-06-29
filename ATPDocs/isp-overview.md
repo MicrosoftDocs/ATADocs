@@ -21,7 +21,7 @@ While your company may invest significant time and effort on hardening identitie
 
 ### Access
 
-[!INCLUDE [Product short](includes/product-short.md)] security assessments are available using the Microsoft Cloud App Security portal after turning on the [!INCLUDE [Product short](includes/product-short.md)] integration. To learn how to integrate [!INCLUDE [Product short](includes/product-short.md)] into Cloud App Security, see [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/aatp-integration).
+[!INCLUDE [Product short](includes/product-short.md)] security assessments are available using the Microsoft Cloud App Security portal after turning on the [!INCLUDE [Product short](includes/product-short.md)] integration. To learn how to integrate [!INCLUDE [Product short](includes/product-short.md)] into Cloud App Security, see [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/mdi-integration).
 
 ### Licensing
 

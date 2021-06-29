@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article is designed to help you understand how to filter and create action policies for [!INCLUDE [Product short](includes/product-short.md)] activities using Microsoft Cloud App Security.
 
-For more information about how to complete your integration, see [[!INCLUDE [Product short](includes/product-short.md)] integration with Cloud App Security](/cloud-app-security/aatp-integration).
+For more information about how to complete your integration, see [[!INCLUDE [Product short](includes/product-short.md)] integration with Cloud App Security](/cloud-app-security/mdi-integration).
 
 Core [!INCLUDE [Product short](includes/product-short.md)] functionality can be represented in the Microsoft Cloud App Security portal. This provides a singular administration experience around investigating risky users in your enterprise, and the ability to filter activity based on both on-premises and cloud identity events.
 
