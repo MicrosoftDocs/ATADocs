@@ -27,7 +27,7 @@ After you verified that your network meets the sensor requirements, start the cr
 
 1. Sign in with your Azure Active Directory user account.
 
-\* GCC High customers must use the [[!INCLUDE [Product short](includes/product-short.md)] GCC High](<http://portal.atp.azure.us>) portal.
+\* GCC High customers must use the [[!INCLUDE [Product short](includes/product-short.md)] GCC High](<https://portal.atp.azure.us>) portal.
 
 ## Create your instance
 
