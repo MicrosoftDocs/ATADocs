@@ -48,4 +48,4 @@ For additional information on [!INCLUDE [Product short](includes/product-short.m
 
 ## See also
 
-- More information about privacy can be found in the [Defender for Identity FAQ](technical-faq.yml#licensing-and-privacy)
+- More information about privacy can be found in the [Defender for Identity FAQ](/defender-for-identity/technical-faq#licensing-and-privacy)
