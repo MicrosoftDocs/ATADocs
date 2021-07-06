@@ -72,7 +72,7 @@ These resources will help you download and install the ATA Center, connect to Ac
 
 The basic necessary settings in ATA are configured as part of the installation wizard. However, there are a number of other settings that you can configure to fine-tune ATA that makes detections more accurate for your environment, such as SIEM integration and audit settings.
 
-[Audit settings](https://aka.ms/ataauditingblog) – Audit your domain controller health before and after an ATA deployment.
+[Audit settings](https://ciberesponce.com/azure-atp-advanced-audit-policies/) – Audit your domain controller health before and after an ATA deployment.
 
 [ATA general documentation](index.yml)
 
@@ -88,7 +88,7 @@ After ATA is up and running, you can view suspicious activities that are detecte
 
 [ATA best practices](https://aka.ms/atasecbestpractices) - Best practices for securing ATA.
 
-[ATA frequently asked questions](/ata-technical-faq.yml) - This article provides a list of frequently asked questions about ATA and provides insight and answers.
+[ATA frequently asked questions](ata-technical-faq.yml) - This article provides a list of frequently asked questions about ATA and provides insight and answers.
 
 ## Additional resources
 
