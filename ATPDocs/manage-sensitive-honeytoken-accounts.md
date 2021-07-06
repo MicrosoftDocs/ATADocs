@@ -13,7 +13,7 @@ This article explains how to apply entity tags to sensitive accounts. This is im
 
 ## Sensitive entities
 
-The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Azure Active Directory groups is considered sensitive:
+The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Azure Active Directory groups (including nested groups and their members) is considered sensitive:
 
 - Administrators
 - Power Users
