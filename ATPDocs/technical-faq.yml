@@ -150,7 +150,7 @@ sections:
           
           We recommend that new sensor deployments use Npcap and over time customers should create a plan to switch to Npcap for sensors that are already deployed. Sensors that are already deployed will need to be uninstalled before installing Npcap driver. 
           
-          See the [Defender for Identity sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue) for more information on deploying the sensor with Npcap.
+          See [Install the Npcap driver](install-step4.md#install-the-npcap-driver) for more information on deploying the sensor with Npcap.
           
       - question: Why Npcap?
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
