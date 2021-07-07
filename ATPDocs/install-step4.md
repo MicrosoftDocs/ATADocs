@@ -16,6 +16,27 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 - Make sure Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
 - For sensor installations on Active Directory Federation Services (AD FS) servers, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
 
+## Install the Npcap driver
+
+- Download the Npcap version 1.0 installer from <https://nmap.org/npcap/>.
+  - Alternatively, request the OEM version of the Npcap driver (that supports silent installation) from the support team.
+  - Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with Defender for Identity. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
+
+- If you haven't yet installed the sensor:
+  1. Uninstall WinPcap, if it was installed.
+  1. Install Npcap with the following options: **loopback_support=no** and **winpcap_mode=yes**.
+     - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
+
+  1. Install the sensor package.
+
+- If you already installed the sensor with WinPcap and need to update to use NPCAP:
+  1. Uninstall the sensor.
+  1. Uninstall WinPcap.
+  1. Install Npcap with the following options: **loopback_support=no** and **winpcap_mode=yes**.
+     - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
+
+  1. Reinstall the sensor package.
+
 ## Install the sensor
 
 Perform the following steps on the domain controller or AD FS server.
