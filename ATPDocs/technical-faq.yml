@@ -135,6 +135,37 @@ sections:
         answer: |
           Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Defender for Identity health alerts.
 
+  - name: WinPcap and Npcap drivers
+    questions: 
+
+      - question: What recommendations about WinPcap and Npcap drivers are changing?
+        answer: The Microsoft Defender for Identity team is currently recommending that all customers deploy the Npcap driver before deploying the sensor on a domain controller. This will ensure that Npcap driver will be used instead of the WinPcap driver. 
+
+      - question: Why are we moving away from WinPcap?
+        answer: WinPcap is no longer supported and since it’s no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
+          
+      - question: Why Npcap?
+        answer: Npcap is supported, while WinPcap is no longer a supported product.  
+
+      - question: What version of Npcap is supported? 
+        answer: The recommended and officially supported version of Npcap is version 1.00. Other versions are not supported. As of “**XXX date”**, Npcap version 1.00 is included as part of the sensor installation package downloaded from the Defender for Identity console. 
+
+      - question: What additional benefits will we get by using Npcap? 
+        answer: The Defender for Identity team has been working closely with the Npcap team over the last months to ensure optimal performance of the sensor. The Npcap driver will provide better performance and stability over the WinPcap driver. 
+
+      - question: I have more than 5 domain controllers in my organization. Do I need to purchase an Npcap license if I’m using Npcap on these domain controllers? 
+        answer: |
+          No, Npcap has an exemption to the usual limit of 5 installs. You can install it on unlimited systems where it is only used with the Defender for Identity sensor.
+          
+          See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE),  and search for Microsoft Defender for Identity. 
+          
+      - question: I would like to script the deployment of Npcap, do I need to purchase the OEM version? 
+        answer: No, you don't need to purchase the OEM version. Download the sensor installation package from the Defender for Identity console after “**XXX date**”, which includes the OEM version of Npcap.
+
+      - question: How should I deploy Npcap? 
+        answer: |
+          Follow the instructions in [Install the Npcap driver](install-step4.md#install-the-npcap-driver).
+
   - name: Operation
     questions:
       - question: What kind of integration does Defender for Identity have with SIEMs?
