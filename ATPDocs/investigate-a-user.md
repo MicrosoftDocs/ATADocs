@@ -1,5 +1,5 @@
 ---
-title: AzMicrosoft Defender for Identity user investigation tutorial
+title: Microsoft Defender for Identity user investigation tutorial
 description: This article explains how to user Microsoft Defender for Identity security alerts to investigate a suspicious user.
 ms.date: 10/26/2020
 ms.topic: tutorial
