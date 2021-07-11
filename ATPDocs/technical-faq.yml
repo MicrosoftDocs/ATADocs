@@ -143,14 +143,6 @@ sections:
 
       - question: Why are we moving away from WinPcap?
         answer: WinPcap is no longer supported and since it’s no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
-
-      - question: WinPcap has a known vulnerability. Should I replace WinPcap for my existing sensors with Npcap? 
-        answer: |
-          The WinPcap vulnerability is only exposed during the installation of WinPcap. There are no known vulnerabilities with WinPcap post-installation.
-          
-          We recommend that new sensor deployments use Npcap and over time customers should create a plan to switch to Npcap for sensors that are already deployed. Sensors that are already deployed will need to be uninstalled before installing Npcap driver. 
-          
-          See [Install the Npcap driver](install-step4.md#install-the-npcap-driver) for more information on deploying the sensor with Npcap.
           
       - question: Why Npcap?
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
