@@ -21,6 +21,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 
 > [!div class="checklist"]
 >
+> - Suspected exploitation attempt on Windows Print Spooler service (external ID 2415) 
 > - Remote code execution over DNS (external ID 2036)
 > - Suspected identity theft (pass-the-hash) (external ID 2017)
 > - Suspected identity theft (pass-the-ticket) (external ID 2018)
@@ -29,7 +30,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > - Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 > - Suspected rogue Kerberos certificate usage (external ID 2047)
 > - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
-> - Suspected exploitation attempt on Windows Print Spooler service (external ID 2415) 
+
 
 <!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
 
@@ -53,7 +54,7 @@ This functionally allows any attacker who enters the network to instantly elevat
 Not applicable.
 
 **TP, B-TP or FP**
-1. Determine whether the Print Spooler service is frequently used over the networkto install printer drivers on domain controllers. This should rarely happen.
+1. Determine whether the Print Spooler service is frequently used over the network to install printer drivers on domain controllers. This should rarely happen.
 2. Check if the source computer is running an attack tool such as Mimikatz or Impacket.
 3. If the answers to these questions is yes, it's a true positive. Follow the instructions in the next section to understand the scope of the breach.
 
@@ -67,7 +68,7 @@ Not applicable.
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time that the activity occurred. These users might also be compromised. If you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the *Confirm user compromised* action in the Microsoft Cloud App Security portal.
 2. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-3452](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
-3. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](cas-isp-print-spooler.md)
+3. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](cas-isp-print-spooler.md).
 
  
 
