@@ -32,6 +32,42 @@ The following security alerts help you identify and remediate **Lateral Movement
 
 <!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
 
+## Suspected exploitation attempt on Windows Print Spooler service (external ID 2415)
+
+**Description**
+
+Adversaries might exploit the Windows Print Spooler service to perform privileged file operations in an improper manner. An attacker who has (or obtains) the ability to execute code on the target, and successfully exploits the vulnerability, could run arbitrary code with SYSTEM privileges on a target system. If run against a domain controller, the attack would allow a compromised non-administrator account to perform actions against a domain controller as SYSTEM.
+
+This functionally allows any attacker who enters the network to instantly elevate privileges to Domain Administrator, steal all domain credentials, and distribute further malware as a Domain Admin.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|MITRE attack technique    |  [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)       |
+|MITRE attack sub-technique |  N/A       |
+
+**Learning period**
+Not applicable.
+
+**TP, B-TP or FP**
+1. Determine if the Print Spooler service over the network is used frequently to install printer drivers on domain controllers. This should rarely happen.
+2. Check if the source computer is running an attack tool such as Mimikatz or Impacket.
+3. If the answers to these questions if yes, it's a true positive. Follow the next instructions to understand the scope of the breach.
+
+**Understand the scope of the breach**
+1. Investigate the source computer using [these instructions](investigate-a-computer.md) 
+2. Investigate the target domain controller, and identify activities that occurred after the attack.
+
+**Suggested remediation**
+1 Contain the source computer.
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time that the activity occurred. These users might also be compromised. If you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the *Confirm user compromised* action in the Microsoft Cloud App Security portal.
+2. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-3452](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
+3. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](cas-isp-print-spooler.md)
+
+ 
+
 ## Remote code execution over DNS (external ID 2036)
 
 **Description**
