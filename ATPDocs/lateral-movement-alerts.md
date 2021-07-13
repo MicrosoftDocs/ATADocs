@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity lateral movement security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
-ms.date: 10/26/2020
+ms.date: 07/13/2021
 ms.topic: tutorial
 ---
 
@@ -21,7 +21,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 
 > [!div class="checklist"]
 >
-> - Suspected exploitation attempt on Windows Print Spooler service (external ID 2415) 
+> - Suspected exploitation attempt on Windows Print Spooler service (external ID 2415)
 > - Remote code execution over DNS (external ID 2036)
 > - Suspected identity theft (pass-the-hash) (external ID 2017)
 > - Suspected identity theft (pass-the-ticket) (external ID 2018)
