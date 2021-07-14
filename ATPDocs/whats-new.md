@@ -29,7 +29,7 @@ Released July 11, 2021
 Released July 4, 2021
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
-- Version includes a new security alert: Suspected Windows Print Spooler service exploitation attempt (CVE-2021-1675 exploitation) (external ID 2415).
+- Version includes a new security alert: Suspected Windows Print Spooler service exploitation attempt (CVE-2021-34527 exploitation) (external ID 2415).
 
   In this detection, Defender for Identity triggers a security alert whenever an attacker triesis  to exploit the Windows Print Spooler Service against the domain controller. This attack vector is associated with the print spooler exploitation, and is known as PrintNightmare. [Learn more](lateral-movement-alerts.md) about this alert.
 
