@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/11/2021
+ms.date: 07/14/2021
 ms.topic: overview
 ---
 
@@ -22,6 +22,7 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 Released July 11, 2021
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
+- Version includes added improvements for the print spooler exploitation known as PrintNightmare detection, to cover more attack scenarios.
 
 ## Defender for Identity release 2.153
 
