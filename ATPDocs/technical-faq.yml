@@ -148,7 +148,7 @@ sections:
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
 
       - question: What version of Npcap is supported? 
-        answer: The recommended and officially supported version of Npcap is version 1.00. Other versions are not supported. As of “**XXX date”**, Npcap version 1.00 is included as part of the sensor installation package downloaded from the Defender for Identity console. 
+        answer: The recommended and officially supported version of Npcap is version 1.00. Other versions are not supported. 
 
       - question: What additional benefits will we get by using Npcap? 
         answer: The Defender for Identity team has been working closely with the Npcap team over the last months to ensure optimal performance of the sensor. The Npcap driver will provide better performance and stability over the WinPcap driver. 
