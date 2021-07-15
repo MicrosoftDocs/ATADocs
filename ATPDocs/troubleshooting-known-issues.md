@@ -108,7 +108,7 @@ Extensions   : {System.Security.Cryptography.Oid, System.Security.Cryptography.O
 
 If you don't see the expected output, use the following steps:
 
-1. Download the following certificates to the Server Core machine. For all customers, download the [Baltimore CyberTrust root](https://cacert.omniroot.com/bc2025.crt) certificate.
+1. Download the following certificates to the Server Core machine. For all customers, download the [Baltimore CyberTrust root](https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt) certificate.
 
     In addition:
 
