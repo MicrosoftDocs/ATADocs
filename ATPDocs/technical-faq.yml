@@ -158,7 +158,10 @@ sections:
           No, Npcap has an exemption to the usual limit of 5 installs. You can install it on unlimited systems where it is only used with the Defender for Identity sensor.
           
           See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE),  and search for Microsoft Defender for Identity. 
-          
+
+      - question: Is Npcap also relevant for ATA? 
+        answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.0.
+
       - question: I would like to script the deployment of Npcap, do I need to purchase the OEM version? 
         answer: No, you don't need to purchase the OEM version. Download the sensor installation package version 2.156 and above from the Defender for Identity console, which includes the OEM version of Npcap.
 
