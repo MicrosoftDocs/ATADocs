@@ -27,6 +27,9 @@ In this tutorial you will:
 
 2. [Completion of the reconnaissance playbook tutorial](playbook-reconnaissance.md)
 
+> [!WARNING]
+> The third-party hacking tools in this lab are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
+
 ## Lateral Movement
 
 From our simulated attacks in the previous tutorial, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered and seeing [!INCLUDE [Product short](includes/product-short.md)]'s alerts on the movement. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA's computer credentials were exposed. We'll mimic various attack methods to try to move laterally across the domain.

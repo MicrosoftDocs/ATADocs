@@ -29,6 +29,9 @@ In this tutorial, you'll simulate attempts to achieve persistent domain dominanc
 
 2. [Completion of the lateral movement playbook tutorial](playbook-lateral-movement.md)
 
+> [!WARNING]
+> The third-party hacking tools in this lab are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
+
 ## Domain Dominance
 
 In the cyber-attack kill chain, during the phase of domain dominance, an attacker has already gained legitimate credentials to access your domain controller. Attacker access to your domain controller means all levels of damage to your network can be accomplished. Beside the immediate damage, attackers, especially sophisticated ones, like to place additional *insurance policies* into environments they've compromised. These attacks ensure even if an attacker's initial compromise and actions are discovered, they'll still have additional avenues of persistence in your domain, increasing their chances of long-term success.
