@@ -177,11 +177,12 @@ sections:
               1. Install Npcap with the following options: **loopback_support=no** and **winpcap_mode=yes**.
                 - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
 
-            - If you already installed the sensor with WinPcap and need to update to use NPCAP:
+            - If you already installed the sensor with WinPcap and need to update to use Npcap:
               1. Uninstall the sensor.
               1. Uninstall WinPcap.
               1. Install Npcap with the following options: **loopback_support=no** and **winpcap_mode=yes**.
                 - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
+              1. Reinstall the sensor.
 
   - name: Operation
     questions:
