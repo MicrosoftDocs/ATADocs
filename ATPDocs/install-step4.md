@@ -21,7 +21,7 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 -  Download the Npcap version 1.0 installer from <https://nmap.org/npcap/>.
 
     >[!NOTE]
-    >Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with Defender for Identity. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
+    >Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with Defender for Identity. For more information, see [Npcap licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
 
 - If you haven't yet installed the sensor:
   1. Uninstall WinPcap, if it was installed.
