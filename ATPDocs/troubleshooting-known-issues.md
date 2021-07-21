@@ -152,7 +152,7 @@ Use the complete command to successfully install.
 
 ## Defender for Identity sensor NIC teaming issue
 
-If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, follow the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
+If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, make sure you deploy the Npcap driver by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 ## Multi Processor Group mode
 
