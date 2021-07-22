@@ -17,6 +17,13 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## Defender for Identity release 2.156
+
+Released July 25, 2021
+
+- Starting from this version, we are adding the Npcap driver executable to the sensor installation package. For more information, see [WinPcap and Npcap drivers](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.155
 
 Released July 18, 2021
