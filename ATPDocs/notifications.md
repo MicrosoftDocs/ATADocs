@@ -7,6 +7,9 @@ ms.topic: how-to
 
 # Set Microsoft Defender for Identity notifications
 
+> [!NOTE]
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/notifications). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+
 [!INCLUDE [Product long](includes/product-long.md)] can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
 
 To receive notifications to a specific email address, set the following parameters:
