@@ -182,7 +182,7 @@ Without turning off antivirus solutions first, you'll be unable to download some
 ### Stage common hacker tools
 
 > [!WARNING]
-> The following tools are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. These tools should be run in a test lab environment **only**.
+> The following tools are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
 
 To run the [!INCLUDE [Product short](includes/product-short.md)] Security Alert playbooks, the following tools are needed.
 
