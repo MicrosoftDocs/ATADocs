@@ -152,26 +152,7 @@ Use the complete command to successfully install.
 
 ## Defender for Identity sensor NIC teaming issue
 
-If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, follow these instructions:
-
-1. Download the Npcap version 1.0 installer from  [https://nmap.org/npcap/](https://nmap.org/npcap/dist/npcap-1.00.exe).
-    - Alternatively, request the OEM version of the Npcap driver (that supports silent installation) from the support team.
-    - Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with [!INCLUDE [Product short](includes/product-short.md)]. For more information, see [NPCAP licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
-
-If you haven't yet installed the sensor:
-
-1. Uninstall WinPcap, if it was installed.
-1. Install Npcap with the following options: loopback_support=no & winpcap_mode=yes.
-    - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
-1. Install the sensor package.
-
-If you already installed the sensor:
-
-1. Uninstall the sensor.
-1. Uninstall WinPcap.
-1. Install Npcap with the following options: loopback_support=no & winpcap_mode=yes
-    - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode.
-1. Reinstall the sensor package.
+If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, make sure you deploy the Npcap driver by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 ## Multi Processor Group mode
 
