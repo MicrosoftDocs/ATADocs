@@ -16,7 +16,7 @@ This article explains how to apply entity tags to sensitive accounts. This is im
 
 ## Sensitive entities
 
-The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive by [!INCLUDE [Product short](includes/product-short.md)], you are not required to do anything else:
+The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
 
 - Administrators
 - Power Users
