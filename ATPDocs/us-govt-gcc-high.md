@@ -13,7 +13,14 @@ The [!INCLUDE [Product long](includes/product-long.md)] GCC High offering utiliz
 
 The [!INCLUDE [Product short](includes/product-short.md)] GCC, GCC High, and Department of Defense (DoD) offerings are built on the Microsoft Azure Government Cloud and is designed to inter-operate with Microsoft 365 GCC, GCC High, and DoD. Use [!INCLUDE [Product short](includes/product-short.md)] public documentation as a [starting point](install-step1.md) for deploying and operating the service and refer to the [Service Description](/enterprise-mobility-security/solutions/ems-mdi-govt-service-description), which details all changes from functionality or features specific to the GCC, GCC High, and DoD environments.
 
-To access Microsoft Defender for Identity GCC, visit this link: <https://portal.gcc.atp.azure.com>
+To access Microsoft Defender for Identity for US Government offerings, use the appropriate addresses in this table:
+
+|US Government offering  |Portal  |Workspace |Agent endpoint  |
+|---------|---------|---------|---------|
+|DoD    |   `portal.azure.atp.us`      |    `<workspacename>.atp.azure.us`     |  `triff1wcva2sensorapi.atp.azure.us`       |
+|GCC-H   |  `portal.azure.atp.us`       |     `<workspacename>.atp.azure.us`    |  `triff1wcva2sensorapi.atp.azure.us`       |
+|GCC     |     `portal.gcc.atp.azure.com`    |    `<workspacename>.gcc.atp.azure.com`     |     `trigcc1wcaz1sensorapi.gcc.atp.azure.com`    |
+
 
 ## Next steps
 
