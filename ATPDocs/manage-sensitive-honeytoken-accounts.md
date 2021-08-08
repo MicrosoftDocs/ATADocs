@@ -16,7 +16,7 @@ This article explains how to apply entity tags to sensitive accounts. This is im
 
 ## Sensitive entities
 
-The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Azure Active Directory groups (including nested groups and their members) is considered sensitive:
+The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
 
 - Administrators
 - Power Users
@@ -37,7 +37,7 @@ The following list of groups are considered **Sensitive** by [!INCLUDE [Short lo
 - Microsoft Exchange Servers
 
   > [!NOTE]
-  > Until September, 2018, Remote Desktop Users were also automatically considered Sensitive by [!INCLUDE [Product short](includes/product-short.md)]. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
+  > Until September, 2018, Remote Desktop Users were also automatically considered sensitive by [!INCLUDE [Product short](includes/product-short.md)]. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
 
 In addition to these groups, [!INCLUDE [Product short](includes/product-short.md)] identifies the following high value asset servers and automatically tags them as **Sensitive**:
 
