@@ -32,7 +32,7 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](de
     >[!NOTE]
     >The currently supported Cloud App Security roles are **Global admin**, **Security reader**, and **Compliance admin.**
 
-- For Defender for Identity settings in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles or you're a member of the Azure ATP (instance name) Administrators Azure AD group.  For more information on the Azure AD groups, see [Microsoft Defender for Identity Azure AD groups](#types-of-defender-for-identity-security-groups).
+- For Defender for Identity settings in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles or you're a member of the **Azure ATP (instance name) Administrators** or the **Azure ATP (instance name) Users** Azure AD groups.  For more information on the Azure AD groups, see [Microsoft Defender for Identity Azure AD groups](#types-of-defender-for-identity-security-groups).
 
 ## Types of Defender for Identity security groups
 
