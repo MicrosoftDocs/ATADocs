@@ -25,12 +25,14 @@ Access to the [!INCLUDE [Product short](includes/product-short.md)] portal (port
 
 ## Required permissions for the Microsoft 365 Defender experience
 
-To access the Defender for Identity experience in [in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md), you need the following permissions:
+To onboard and manage Defender for Identity experience in [in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md), ensure that you have the sufficient Azure Active Directory roles or that you're a member of the relevant [Microsoft Defender for Identity Azure AD groups](#types-of-defender-for-identity-security-groups).
 
-- For Defender for Identity alerts, activities, and security assessments in Microsoft 365 Defender, ensure that you have the sufficient Azure Active Directory roles or Microsoft Cloud App Security internal roles.  For details, see [Microsoft Defender for Identity integration prerequisites](/cloud-app-security/mdi-integration#prerequisites).
+## Required permissions for Microsoft Cloud App Security integration
 
-    >[!NOTE]
-    >The currently supported Cloud App Security roles are **Global admin**, **Security reader**, and **Compliance admin.**
+If Defender for Identity is integrated with Cloud App Security, ensure you have the sufficient Azure Active Directory roles or Microsoft Cloud App Security internal roles.  For details, see [Microsoft Defender for Identity integration prerequisites](/cloud-app-security/mdi-integration#prerequisites).
+
+>[!NOTE]
+>The currently supported Cloud App Security roles are **Global admin**, **Security reader**, and **Compliance admin.**
 
 ## Types of Defender for Identity security groups
 
