@@ -154,17 +154,6 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
 1. Select **OK**. Then repeat the steps above, but for **Applies to**, select **Descendant Group Objects**, and then another time select **Descendant Computer Objects**.
 
-## Configure event collection
-
-These events can be collected automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or, if the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't deployed, they can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of the following ways:
-
-- [Configure the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor](configure-event-forwarding.md) to listen for SIEM events
-- [Configure Windows Event Forwarding](configure-event-forwarding.md)
-
-> [!NOTE]
->
-> - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-
 ### Auditing for specific detections
 
 Some detections require auditing specific Active Directory objects. To do so, follow the steps above, but note the changes below regarding which objects to audit and which permissions to include.
@@ -214,6 +203,19 @@ Some detections require auditing specific Active Directory objects. To do so, fo
     ![Auditing settings for Configuration.](media/audit-configuration.png)
 
 1. Select **OK**.
+
+## Configure event collection
+
+These events can be collected automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or, if the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't deployed, they can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of the following ways:
+
+- [Configure the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor](configure-event-forwarding.md) to listen for SIEM events
+- [Configure Windows Event Forwarding](configure-event-forwarding.md)
+
+> [!NOTE]
+>
+> - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+
+
 
 ## See Also
 
