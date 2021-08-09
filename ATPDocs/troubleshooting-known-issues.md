@@ -219,8 +219,7 @@ Make sure that the gMSA account's credentials are correct and that the sensor ha
 >
 > The sensor service runs as *LocalService* but performs impersonation of the defined directory services account (gMSA) for Active Directory connections.
 >
-> - If the user right assignment **Log on as a service** isn't defined, then the gMSA account impersonation by the sensor will be successful.
-> - If the user rights assignment policy **Log on as a service** is configured, then impersonation will fail unless the gMSA account is also provided this user right.
+> If the user rights assignment policy **Log on as a service** is configured, then impersonation will fail unless the gMSA account is also provided this user right.
 
 ## Sensor service fails to start
 
