@@ -75,6 +75,8 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
         ![Audit Security Group Management.](media/advanced-audit-policy-check-step-4.png)
 
+1. From an elevated command prompt type `gpupdate /force`.
+
 1. After applying via GPO, the new events are visible under your **Windows Event logs**.
 
 > [!NOTE]
@@ -113,9 +115,12 @@ To make it easier to verify the current status of each of your domain controller
 Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events.
 -->
 
-### Configure object auditing
+## Configure object auditing
 
-To collect 4662 events, it's also necessary to configure object auditing on the user objects. Here's an example to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
+To collect 4662 events, it's also necessary to configure object auditing on the user objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
+
+> [!NOTE]
+> It is important to [review and verify your audit policies](#configure-audit-policies) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
 
 1. Go to the **Active Directory Users and Computers** console.
 1. Select the domain or OU that contains the users, groups, or computers you want to audit.
@@ -159,7 +164,56 @@ These events can be collected automatically by the [!INCLUDE [Product short](inc
 > [!NOTE]
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-> - It is important to review and verify your audit policies before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
+
+### Auditing for specific detections
+
+Some detections require auditing specific Active Directory objects. To do so, follow the steps above, but note the changes below regarding which objects to audit and which permissions to include.
+
+#### Enable auditing on an ADFS object
+
+1. Go to the **Active Directory Users and Computers** console, and choose the domain you want to enable the logs on.
+1. Navigate to **Program Data** > **Microsoft** > **ADFS**.
+
+    ![ADFS container.](media/adfs-container.png)
+
+1. Right-click **ADFS** and select **Properties**.
+1. Go to the **Security** tab, and select **Advanced**.
+1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
+1. Click **Select a principal**.
+1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
+1. You'll then return to **Auditing Entry**. Make the following selections:
+
+    - For **Type** select **All**.
+    - For **Applies to** select **This object and all descendant objects**.
+    - Under **Permissions**, select **Read all properties** and **Write all properties**.
+
+    ![Auditing settings for ADFS.](media/audit-adfs.png)
+
+1. Select **OK**.
+
+#### Enable auditing on an Exchange object
+
+1. Open ADSI Edit. To do this, select **Start**, select **Run**, type *ADSIEdit.msc*, and then select **OK**.
+1. On the **Action** menu, select **Connect to**.
+1. In the **Connection Settings** dialog box under **Select a well known Naming Context**, select **Configuration**, and then select **OK**.
+1. Expand the **Configuration** container. Under the **Configuration** container, you'll see the **Configuration** node. It will begin with *“CN=Configuration,DC=..."*
+1. Right-click the **Configuration** node and select **Properties**.
+
+    ![Configuration node properties.](media/configuration-properties.png)
+
+1. Go to the **Security** tab, and select **Advanced**.
+1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
+1. Click **Select a principal**.
+1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
+1. You'll then return to **Auditing Entry**. Make the following selections:
+
+    - For **Type** select **All**.
+    - For **Applies to** select **This object and all descendant objects**.
+    - Under **Permissions**, select **Write all properties**.
+
+    ![Auditing settings for Configuration.](media/audit-configuration.png)
+
+1. Select **OK**.
 
 ## See Also
 
