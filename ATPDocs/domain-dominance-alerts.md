@@ -54,7 +54,7 @@ In this detection, a [!INCLUDE [Product short](includes/product-short.md)] alert
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 
@@ -97,7 +97,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -157,7 +157,7 @@ In this [!INCLUDE [Product short](includes/product-short.md)] detection, a secur
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -221,7 +221,7 @@ In this detection, an alert is triggered when a suspicious replication request i
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -290,7 +290,7 @@ In this detection, an alert is triggered when a replication request is initiated
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -407,7 +407,7 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -454,7 +454,7 @@ Attackers with domain admin rights can compromise the KRBTGT account. Using the 
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -496,7 +496,7 @@ Attackers with domain admin rights can compromise the KRBTGT account. Using the 
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -537,7 +537,7 @@ Attackers with domain admin rights can compromise the KRBTGT account. Using the 
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -582,7 +582,7 @@ Attackers with domain admin rights can compromise the KRBTGT account. Using the 
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -711,7 +711,7 @@ A suspicious service has been created on a domain controller or AD FS server in 
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
