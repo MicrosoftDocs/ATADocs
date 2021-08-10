@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/01/2021
+ms.date: 08/09/2021
 ms.topic: overview
 ---
 
@@ -17,9 +17,20 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+## Defender for Identity release 2.158
+
+Released August 8, 2021
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+- Version includes a new security alert: Suspicious network connection over Encrypting File System Remote Protocol (external ID 2416).  
+In this detection, Microsoft Defender for Identity will trigger a security alert whenever an attacker is trying to exploit the EFS-RPC against the domain controller. This attack vector is associated with the recent PetitPotam attack. To learn more about the alert, see [Suspicious network connection over Encrypting File System Remote Protocol (external ID 2415)](lateral-movement-alerts.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol-external-id-2415).
+
+- Version includes a new security alert: Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)  
+In this detection, Microsoft Defender for Identity will trigger a security alert whenever an attacker tries to change the "msExchExternalHostName" attribute on the Exchange object for remote code execution. To learn more about this alert, see [Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)](lateral-movement-alerts.md#exchange-server-remote-code-execution-cve-2021-26855-external-id-2414). This detection relies on Windows event 4662, so it must be enabled beforehand. For information on how to configure and collect this event, see [Configure Windows Event collection](configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object).
+
 ## Defender for Identity release 2.157
 
-Released Aug 1, 2021
+Released August 1, 2021
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 

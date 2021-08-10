@@ -30,6 +30,8 @@ The following security alerts help you identify and remediate **Lateral Movement
 > - Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 > - Suspected rogue Kerberos certificate usage (external ID 2047)
 > - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
+> - Suspicious network connection over Encrypting File System Remote Protocol (external ID 2415)
+> - Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)
 
 
 <!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
@@ -54,11 +56,13 @@ This functionally allows any attacker who enters the network to instantly elevat
 Not applicable.
 
 **TP, B-TP or FP**
+
 1. Determine whether the Print Spooler service is frequently used over the network to install printer drivers on domain controllers. This should rarely happen.
 2. Check if the source computer is running an attack tool such as Mimikatz or Impacket.
 3. If the answers to these questions is yes, it's a true positive. Follow the instructions in the next section to understand the scope of the breach.
 
 **Understand the scope of the breach**
+
 1. Investigate the source computer using [these instructions](investigate-a-computer.md).
 2. Investigate the target domain controller, and identify activities that occurred after the attack.
 
@@ -69,8 +73,6 @@ Not applicable.
     - Look for users who were logged on around the same time that the activity occurred. These users might also be compromised. If you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the *Confirm user compromised* action in the Microsoft Cloud App Security portal.
 2. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-3452](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
 3. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](cas-isp-print-spooler.md).
-
- 
 
 ## Remote code execution over DNS (external ID 2036)
 
@@ -141,6 +143,7 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user's 
 Not applicable
 
 **TP, B-TP, or FP?**
+
 1. Determine if the hash was used from computers the user is using regularly?
     - If the hash was used from computers used regularly, **Close** the alert as an **FP**.
 
@@ -473,6 +476,79 @@ Not applicable
 
 > [!div class="nextstepaction"]
 > [Domain dominance alert tutorial](domain-dominance-alerts.md)
+
+## Suspicious network connection over Encrypting File System Remote Protocol (external ID 2415)
+
+**Description**
+
+Adversaries may exploit the Encrypting File System Remote Protocol to improperly perform privileged file operations.
+
+In this attack, the attacker can escalate privileges in an Active Directory network by coercing authentication from machine accounts and relaying to the certificate service.
+
+This attack allows an attacker to take over an Active Directory (AD) Domain by exploiting a flaw in the Encrypting File System Remote (EFSRPC) Protocol and chaining it with a flaw in Active Directory Certificate Services.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|MITRE attack technique    |  [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)       |
+|MITRE attack sub-technique |  N/A       |
+
+**Learning period**
+
+None
+  
+**TP, B-TP, or FP**
+
+1. Check if the source computer is running an attack tool such as ADCSPwn, or if the originating device is a network scanner.
+1. If the answer to the questions above is yes, it's a true positive. Follow the instructions in **Understand the scope of the breach** below.
+1. Investigate the file name the attacker was trying forcing the authentication with. *PetitPotam.exe* is a good example for an attacking tool using this vulnerability.
+
+**Understand the scope of the breach**
+
+1. Investigate the source computer.
+1. Investigate the target domain controller, and identify activities that occurred after the attack.
+  
+**Remediation:**
+
+1. Contain the source computer.
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time that the activity occurred. These users might also be compromised. If you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [Confirm user compromised](/cloud-app-security/accounts#governance-actions) action in the Microsoft Cloud App Security portal.
+
+## Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)
+
+**Description**
+
+Some Exchange vulnerabilities can be used in combination to allow unauthenticated remote code execution on devices running Exchange Server. Microsoft has also observed subsequent web shell implantation, code execution, and data exfiltration activities during attacks. This threat may be exacerbated by the fact that numerous organizations publish Exchange Server deployments to the internet to support mobile and work-from-home scenarios. In many of the observed attacks, one of the first steps attackers took following successful exploitation of CVE-2021-26855, which allows unauthenticated remote code execution, was to establish persistent access to the compromised environment via a web shell.
+
+Adversaries may create authentication bypass vulnerability results from having to treat requests to static resources as authenticated requests on the backend, because files such as scripts and images must be available even without authentication.
+
+**Prerequisites**
+
+Defender for Identity needs Windows Event 4662 to be enabled and collected to monitor for this attack. For information on how to configure and collect this event, see [Configure Windows Event collection](configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object).
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|MITRE attack technique    |  [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)       |
+|MITRE attack sub-technique |  N/A       |
+
+**Learning period**
+
+None
+
+1. Check if the source computer should have changed the attribute of the Exchange server object.
+1. If not, it might be a true positive. Follow the instructions in **Understand the scope of the breach** below.
+
+**Understand the scope of the breach**
+
+1. Investigate the Exchange object in Active Directory and identify activities that occurred after the attack. For more information about indicators of compromise from this attack, see [HAFNIUM targeting Exchange Servers with 0-day exploits](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/)
+1. Once this object has been modified, the first stage of the attack has likely begun.
+
+**Remediation**
+
+Update your Exchange servers with the latest security patches. The vulnerabilities are addressed in the [March 2021 Exchange Server Security Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-march-2021-exchange-server-security-updates/ba-p/2175901).
 
 ## See Also
 
