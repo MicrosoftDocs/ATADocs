@@ -44,9 +44,9 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 
 Modify the Advanced Audit Policies of your domain controller using the following instructions:
 
-1. Log in to the Server as **Domain Administrator**.
-1. Load the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
-1. Expand the **Domain Controllers Organizational Units**, right-click on **Default Domain Controllers Policy**, and then select **Edit**.
+1. Log in to the server as **Domain Administrator**.
+1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
+1. Expand the **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**.
 
     > [!NOTE]
     > You can use the Default Domain Controllers Policy or a dedicated GPO to set these policies.
@@ -75,31 +75,35 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
         ![Audit Security Group Management.](media/advanced-audit-policy-check-step-4.png)
 
-    <a name="ntlm-authentication-using-windows-event-8004"></a>
-    **For Local Policies (Event ID: 8004)**
-
-    > [!NOTE]
-    >
-    > - Domain group policies to collect Windows Event 8004 should **only** be applied to domain controllers.
-    > - When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed data.
-
-    1. Go to **Local Policies** > **Security Options**.
-    1. Under **Security Options**, configure the specified security policies, as follows
-
-        | Security policy setting | Value |
-        |---|---|
-        | Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers | Audit all |
-        | Network security: Restrict NTLM: Audit NTLM authentication in this domain | Enable all |
-        | Network security: Restrict NTLM: Audit Incoming NTLM Traffic | Enable auditing for all accounts |
-
-        For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
-
-        ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
-
-    > [!NOTE]
-    > If you choose to use a local security policy instead of using a group policy, make sure to add the **Account Logon**, **Account Management**, and **Security Options** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+1. From an elevated command prompt type `gpupdate /force`.
 
 1. After applying via GPO, the new events are visible under your **Windows Event logs**.
+
+> [!NOTE]
+> If you choose to use a local security policy instead of using a group policy, make sure to add the **Account Logon**, **Account Management**, and **Security Options** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+
+### Event ID 8004
+
+To audit Event ID 8004, additional configuration steps are required.
+
+> [!NOTE]
+>
+> - Domain group policies to collect Windows Event 8004 should **only** be applied to domain controllers.
+> - When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed data.
+
+1. Following the steps above, open **Group Policy Management** and navigate to the **Default Domain Controllers Policy**.
+1. Go to **Local Policies** > **Security Options**.
+1. Under **Security Options**, configure the specified security policies, as follows
+
+    | Security policy setting | Value |
+    |---|---|
+    | Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers | Audit all |
+    | Network security: Restrict NTLM: Audit NTLM authentication in this domain | Enable all |
+    | Network security: Restrict NTLM: Audit Incoming NTLM Traffic | Enable auditing for all accounts |
+
+    For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
+
+    ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
 
 <!--
 ## Defender for Identity Advanced Audit Policy check
@@ -111,20 +115,24 @@ To make it easier to verify the current status of each of your domain controller
 Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events.
 -->
 
-### Configure object auditing
+## Configure object auditing
 
-To collect 4662 events, it's also necessary to configure object auditing on the user objects.
+To collect 4662 events, it's also necessary to configure object auditing on the user objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
+
+> [!NOTE]
+> It is important to [review and verify your audit policies](#configure-audit-policies) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
 
 1. Go to the **Active Directory Users and Computers** console.
-1. Find the **Domain Users** group.
+1. Select the domain or OU that contains the users, groups, or computers you want to audit.
+1. Right-click the container (the domain or OU) and select **Properties**.
 
-    ![Find Domain Users group.](media/domain-users-group.png)
+    ![Container properties.](media/container-properties.png)
 
-1. Right-click **Domain Users** and select **Properties**. Go to the **Security** tab, and select **Advanced**.
+1. Go to the **Security** tab, and select **Advanced**.
 
-    ![Advanced security properties.](media/domain-users-advanced.png)
+    ![Advanced security properties.](media/security-advanced.png)
 
-1. In **Advanced Security Settings for Domain Users**, choose the **Auditing** tab. Select **Add**.
+1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
 
     ![Select auditing tab.](media/auditing-tab.png)
 
@@ -136,9 +144,63 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
     ![Select everyone.](media/select-everyone.png)
 
-1. You'll then return to **Auditing Entry for Domain Users**. Under **Permissions**, select **Full Control**. All the permissions will be selected, and when triggered, appear as 4662 events. You can then uncheck **List** and **Read** permissions, since Defender for Identity only detects changes to directory services.
+1. You'll then return to **Auditing Entry**. Make the following selections:
+
+    - For **Type** select **Success**.
+    - For **Applies to** select **Descendant User objects.**
+    - Under **Permissions**, select **Full Control**. All the permissions will be selected, and when triggered, appear as 4662 events. You can then uncheck **List** and **Read** permissions, since Defender for Identity only detects changes to directory services.
 
     ![Select permissions.](media/select-permissions.png)
+
+1. Select **OK**. Then repeat the steps above, but for **Applies to**, select **Descendant Group Objects**, and then another time select **Descendant Computer Objects**.
+
+### Auditing for specific detections
+
+Some detections require auditing specific Active Directory objects. To do so, follow the steps above, but note the changes below regarding which objects to audit and which permissions to include.
+
+#### Enable auditing on an ADFS object
+
+1. Go to the **Active Directory Users and Computers** console, and choose the domain you want to enable the logs on.
+1. Navigate to **Program Data** > **Microsoft** > **ADFS**.
+
+    ![ADFS container.](media/adfs-container.png)
+
+1. Right-click **ADFS** and select **Properties**.
+1. Go to the **Security** tab, and select **Advanced**.
+1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
+1. Click **Select a principal**.
+1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
+1. You'll then return to **Auditing Entry**. Make the following selections:
+
+    - For **Type** select **All**.
+    - For **Applies to** select **This object and all descendant objects**.
+    - Under **Permissions**, select **Read all properties** and **Write all properties**.
+
+    ![Auditing settings for ADFS.](media/audit-adfs.png)
+
+1. Select **OK**.
+
+#### Enable auditing on an Exchange object
+
+1. Open ADSI Edit. To do this, select **Start**, select **Run**, type *ADSIEdit.msc*, and then select **OK**.
+1. On the **Action** menu, select **Connect to**.
+1. In the **Connection Settings** dialog box under **Select a well known Naming Context**, select **Configuration**, and then select **OK**.
+1. Expand the **Configuration** container. Under the **Configuration** container, you'll see the **Configuration** node. It will begin with *“CN=Configuration,DC=..."*
+1. Right-click the **Configuration** node and select **Properties**.
+
+    ![Configuration node properties.](media/configuration-properties.png)
+
+1. Go to the **Security** tab, and select **Advanced**.
+1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
+1. Click **Select a principal**.
+1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
+1. You'll then return to **Auditing Entry**. Make the following selections:
+
+    - For **Type** select **All**.
+    - For **Applies to** select **This object and all descendant objects**.
+    - Under **Permissions**, select **Write all properties**.
+
+    ![Auditing settings for Configuration.](media/audit-configuration.png)
 
 1. Select **OK**.
 
@@ -152,7 +214,8 @@ These events can be collected automatically by the [!INCLUDE [Product short](inc
 > [!NOTE]
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-> - It is important to review and verify your audit policies before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
+
+
 
 ## See Also
 
