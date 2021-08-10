@@ -53,7 +53,7 @@ This functionally allows any attacker who enters the network to instantly elevat
 
 **Learning period**
 
-Not applicable.
+None
 
 **TP, B-TP or FP**
 
@@ -92,7 +92,7 @@ In this detection, a [!INCLUDE [Product short](includes/product-short.md)] secur
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP or FP**
 
@@ -140,7 +140,7 @@ Pass-the-Hash is a lateral movement technique in which attackers steal a user's 
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 
@@ -176,7 +176,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 
@@ -233,7 +233,7 @@ In this detection, a [!INCLUDE [Product short](includes/product-short.md)] secur
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 
@@ -278,7 +278,7 @@ In this detection, an alert is triggered when [!INCLUDE [Product short](includes
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 
@@ -311,7 +311,7 @@ In an over-pass-the-hash attack, an attacker can use a weak stolen hash to creat
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 
@@ -368,7 +368,7 @@ Attackers use tools that implement various protocols such as Kerberos and SMB in
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 
@@ -411,7 +411,7 @@ Rogue certificate attack is a persistence technique used by attackers after gain
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -449,7 +449,7 @@ In this detection, a [!INCLUDE [Product short](includes/product-short.md)] secur
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP?**
 

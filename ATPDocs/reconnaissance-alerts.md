@@ -53,7 +53,7 @@ In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] d
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
@@ -129,7 +129,7 @@ Active Directory LDAP reconnaissance is used by attackers to gain critical infor
 
 **Learning period**
 
-Not applicable
+None
 
 **TP, B-TP, or FP**
 
