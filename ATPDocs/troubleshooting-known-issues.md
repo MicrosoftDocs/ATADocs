@@ -148,8 +148,6 @@ Use the complete command to successfully install.
 ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
-<a name="nic-teaming"></a>
-
 ## Defender for Identity sensor NIC teaming issue
 
 If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, make sure you deploy the Npcap driver by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
@@ -216,6 +214,12 @@ The sensor failed to retrieve the designated gMSA account from the [!INCLUDE [Pr
 **Resolution:**
 
 Make sure that the gMSA account's credentials are correct and that the sensor has been granted permission to retrieve the account's credentials. While [!INCLUDE [Product short](includes/product-short.md)]  doesn't require the **Log on as a service** permission for gMSA accounts, this issue is often resolved by adding the permission to the account.
+
+> [!NOTE]
+>
+> The sensor service runs as *LocalService* but performs impersonation of the defined directory services account (gMSA) for Active Directory connections.
+>
+> If the user rights assignment policy **Log on as a service** is configured, then impersonation will fail unless the gMSA account is also provided this user right.
 
 ## Sensor service fails to start
 
