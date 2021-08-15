@@ -13,12 +13,18 @@ Using NNR, [!INCLUDE [Product short](includes/product-short.md)] can correlate b
 
 To resolve IP addresses to computer names, [!INCLUDE [Product short](includes/product-short.md)] sensors look up the IP addresses using the following methods:
 
+Primary methods:
 - NTLM over RPC (TCP Port 135)
 - NetBIOS (UDP port 137)
 - RDP (TCP port 3389) - only the first packet of **Client hello**
+
+Secondary methd:
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-For the best results, we recommend using all of the methods. If this isn't possible, you should use the DNS lookup method and at least one of the other methods.
+For the best results, we recommend using at least one of the primary methods. 
+Reverse DNS lookup of the IP address is only peformed when:
+- There is no response from any of the primary methods. 
+- Ther is a conflict in the response recevied from two or more primary methods. 
 
 > [!NOTE]
 > No authentication is performed on any of the ports.
