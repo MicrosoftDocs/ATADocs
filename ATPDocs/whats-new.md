@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/09/2021
+ms.date: 08/15/2021
 ms.topic: overview
 ---
 
@@ -16,6 +16,14 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 > [!IMPORTANT]
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
+
+## Defender for Identity release 2.159
+
+Released August 15, 2021
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+- Version includes an improvement to the newly published alert: Suspicious network connection over Encrypting File System Remote Protocol (external ID 2416).  
+We extended the support for this detection to trigger when a potential attacker communicating over an encrypted EFS-RPCchannel. Alerts triggered when the channel is encrypted will be treated as a Medium severity alert, as opposed to High when it’s not encrypted. To learn more about the alert, see [Suspicious network connection over Encrypting File System Remote Protocol (external ID 2415)](lateral-movement-alerts.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol-external-id-2415).
 
 ## Defender for Identity release 2.158
 
@@ -185,7 +193,7 @@ Released December 20, 2020
 
 Released December 13, 2020
 
-- Our [recently released NetLogon detector](#azure-atp-release-2127-2) has been enhanced to also work when the Netlogon channel transaction occurs over an encrypted channel. For more information about the detector, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
+- Our [recently released NetLogon detector](#azure-atp-release-2127) has been enhanced to also work when the Netlogon channel transaction occurs over an encrypted channel. For more information about the detector, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.133
@@ -231,8 +239,6 @@ We are removing the **Mail notification** toggles for turning on email notificat
 ## Azure ATP release 2.127
 
 Released September 20, 2020
-
-<a name="azure-atp-release-2127-2"></a>
 
 - **New security alert: Suspected Netlogon privilege elevation attempt (external ID 2411)**  
 Azure ATP's *Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)* security alert is now available. In this detection, an Azure ATP security alert is triggered when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*. For more information, see [Suspected Netlogon privilege elevation attempt](compromised-credentials-alerts.md#suspected-netlogon-priv-elev-2411).
