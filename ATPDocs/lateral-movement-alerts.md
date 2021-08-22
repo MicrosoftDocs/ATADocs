@@ -29,7 +29,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > - Suspected NTLM relay attack (Exchange account)  (external ID 2037)
 > - Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 > - Suspected rogue Kerberos certificate usage (external ID 2047)
-> - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
+> - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) (external ID 2406)
 > - Suspicious network connection over Encrypting File System Remote Protocol (external ID 2415)
 > - Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)
 
@@ -432,7 +432,7 @@ None
     - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Cloud App Security portal.
 1. Find the certificate used in the CA server and revoke the certificate by invalidating the TLS/SSL before its scheduled expiration date.
 
-## Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview) (external ID 2406)
+## Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (external ID 2406)
 
 **Description**
 
