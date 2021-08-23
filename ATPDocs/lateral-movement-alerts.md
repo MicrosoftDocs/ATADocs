@@ -30,7 +30,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > - Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 > - Suspected rogue Kerberos certificate usage (external ID 2047)
 > - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) (external ID 2406)
-> - Suspicious network connection over Encrypting File System Remote Protocol (external ID 2415)
+> - Suspicious network connection over Encrypting File System Remote Protocol (external ID 2416)
 > - Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)
 
 
@@ -477,7 +477,7 @@ None
 > [!div class="nextstepaction"]
 > [Domain dominance alert tutorial](domain-dominance-alerts.md)
 
-## Suspicious network connection over Encrypting File System Remote Protocol (external ID 2415)
+## Suspicious network connection over Encrypting File System Remote Protocol (external ID 2416)
 
 **Description**
 
