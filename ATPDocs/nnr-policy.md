@@ -24,7 +24,7 @@ Secondary methd:
 For the best results, we recommend using at least one of the primary methods. 
 Reverse DNS lookup of the IP address is only peformed when:
 - There is no response from any of the primary methods. 
-- Ther is a conflict in the response recevied from two or more primary methods. 
+- There is a conflict in the response recevied from two or more primary methods. 
 
 > [!NOTE]
 > No authentication is performed on any of the ports.
