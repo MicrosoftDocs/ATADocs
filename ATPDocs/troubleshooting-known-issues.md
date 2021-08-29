@@ -207,19 +207,40 @@ If you receive the following health alert: **Directory services user credentials
 
 2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync failed GMSA password could not be retrieved [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]
 
-**Cause:**
+The sensor failed to retrieve the password of the gMSA account.
 
-The sensor failed to retrieve the designated gMSA account from the [!INCLUDE [Product short](includes/product-short.md)] portal.
+### Cause 1
 
-**Resolution:**
+The domain controller hasn't been granted permission to retrieve the password of the gMSA account.
 
-Make sure that the gMSA account's credentials are correct and that the sensor has been granted permission to retrieve the account's credentials. While [!INCLUDE [Product short](includes/product-short.md)]  doesn't require the **Log on as a service** permission for gMSA accounts, this issue is often resolved by adding the permission to the account.
+**Resolution 1**:
 
-> [!NOTE]
->
-> The sensor service runs as *LocalService* but performs impersonation of the defined directory services account (gMSA) for Active Directory connections.
->
-> If the user rights assignment policy **Log on as a service** is configured, then impersonation will fail unless the gMSA account is also provided this user right.
+Validate that the domain controller computer has been granted permissions to retrieve the password of the gMSA account.
+
+### Cause 2
+
+The sensor service runs as *LocalService* and performs impersonation of the directory services account.
+
+If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a servicer** permission.
+
+**Resolution 2**:
+
+Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller.
+
+### Cause 3
+
+If the domain controller Kerberos ticket was issued before the domain controller was added to the security group with the proper permissions, this group won't be part of the Kerberos ticket. So it won't be able to retrieve the password of the gMSA account.
+
+**Resolution 3**:
+
+Do one of the following to resolve this issue:
+
+- Reboot the domain controller.
+- Purge the Kerberos ticket, forcing the domain controller to request a new Kerberos ticket. From an administrator command prompt on the domain controller, run the following command:
+
+    `klist -li 0:0x3e7 purge`
+
+- Assign the permission to retrieve the gMSA's password to a group the domain controller is already a member of, such as the Domain Controllers group.
 
 ## Sensor service fails to start
 
