@@ -227,6 +227,13 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 Attackers use tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
+|MITRE attack sub-technique |   [Kerberoasting (T1558.003)](https://attack.mitre.org/techniques/T1558/003/)    |
+
 **Learning period**
 
 None
@@ -256,6 +263,10 @@ None
 Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) announcing that a new vulnerability exists that allows the elevation of privileges to the domain controller.
 
 An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)  |
 
 **Learning period**
 
@@ -287,6 +298,13 @@ Otherwise, consider this alert a **TP** and follow the instructions in **Underst
 ## Suspected AS-REP Roasting attack (external ID 2412)
 
 Attackers use tools to detect accounts with their *Kerberos preauthentication* disabled and send AS-REQ requests without the encrypted timestamp. In response they receive AS-REP messages with TGT data, which may be encrypted with an insecure algorithm such as RC4, and save them for later use in an offline password cracking attack (similar to Kerberoasting) and expose plaintext credentials.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
+|MITRE attack sub-technique |   [AS-REP Roasting (T1558.004)](https://attack.mitre.org/techniques/T1558/004/)    |
 
 **Learning period**
 
