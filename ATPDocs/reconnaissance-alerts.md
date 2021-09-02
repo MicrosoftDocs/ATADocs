@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Identity reconnaissance phase security alerts
-description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of reconnaissance phase efforts are detected against your organization.
+description: This article explains Microsoft Defender for Identity alerts issued when attacks, part of reconnaissance phase efforts, are detected against your organization.
 ms.date: 12/23/2020
 ms.topic: tutorial
 ---
