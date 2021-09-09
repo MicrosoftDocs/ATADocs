@@ -16,7 +16,7 @@ ms.topic: overview
 - Identify and investigate suspicious user activities and advanced attacks throughout the kill chain
 - Provide clear incident information on a simple timeline for fast triage
 
-## Monitor and profile user behavior and activities
+## Monitor and analyze user behavior and activities
 
 [!INCLUDE [Product short](includes/product-short.md)] monitors and analyzes user activities and information across your network, such as permissions and group membership, creating a behavioral baseline for each user. [!INCLUDE [Product short](includes/product-short.md)] then identifies anomalies with adaptive built-in intelligence, giving you insights into suspicious activities and events, revealing the advanced threats, compromised users, and insider threats facing your organization. [!INCLUDE [Product short](includes/product-short.md)]'s proprietary sensors monitor organizational domain controllers, providing a comprehensive view for all user activities from every device.
 
