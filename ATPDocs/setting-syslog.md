@@ -17,7 +17,7 @@ Once you enable Syslog notifications, you can set the following:
 |Field|Description|
 |---------|---------------|
 |sensor|Select a designated sensor to be responsible for aggregating all the Syslog events and forwarding them to your SIEM server.|
-|Service endpoint|IP address or DNS name of the Syslog server and optionally change the port number (default 514)|
+|Service endpoint|IP address or DNS name of the Syslog server and optionally change the port number (default 514).<br><br>You can configure only one Syslog endpoint.|
 |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
 |Format|This is the format that [!INCLUDE [Product short](includes/product-short.md)] uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
 
