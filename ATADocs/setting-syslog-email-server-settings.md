@@ -18,7 +18,6 @@ ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
@@ -41,7 +40,6 @@ ATA can notify you when it detects a suspicious activity. For ATA to be able to 
 
 1. In the **notifications** section, under **Mail server**, enter the following information:
 
-
    |              Field              |                                                                                                 Description                                                                                                  |               Value                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
    | SMTP server endpoint (required) |                                                            Enter the FQDN of your SMTP server and optionally change the port number (default 25).                                                            | For example:<br />smtp.contoso.com |
@@ -52,6 +50,7 @@ ATA can notify you when it detects a suspicious activity. For ATA to be able to 
     ![ATA email server settings image.](media/ata-email-server.png)
 
 ## Provide ATA with your Syslog server settings
+
 ATA can notify you when it detects a suspicious activity by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
 
 1. Before configuring Syslog notifications, work with your SIEM admin to find out the following information:
@@ -76,13 +75,12 @@ ATA can notify you when it detects a suspicious activity by sending the notifica
 
    |Field|Description|
    |---------|---------------|
-   |Syslog server endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
+   |Syslog server endpoint|FQDN of the Syslog server and optionally change the port number (default 514) <br><br>You can configure only one Syslog endpoint.|
    |Transport|Can be UDP, TCP, or TLS (Secured Syslog)|
    |Format|This is the format that ATA uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
 
     ![ATA Syslog server settings image.](media/ata-syslog-server-settings.png)
 
+## See also
 
-
-## See Also
 [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
