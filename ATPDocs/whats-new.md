@@ -17,13 +17,18 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
+For more information on what's new with other Microsoft Defender security products see:
+
+- [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
+- [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-atp)
+- [What's new in Microsoft Cloud App Security](/cloud-app-security/release-notes)
+
 ## Defender for Identity release 2.161
 
 Released Sept 12, 2021
 
 - Version includes new monitored activity: gMSA account password was retrieved by a user. For more information, see [Microsoft Defender for Identity monitored activities](monitored-activities.md#monitored-user-activities-domain-controller-based-user-operations)
 - Version includes improvements and bug fixes for internal sensor infrastructure.
-
 
 ## Defender for Identity release 2.160
 
