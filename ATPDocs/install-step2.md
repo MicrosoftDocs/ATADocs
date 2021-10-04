@@ -14,7 +14,7 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
 
 ## Prerequisites
 
-- An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md).
+- A [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md).
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
 - At least one of the following directory services accounts with read access to all objects in the monitored domains:
   - A **standard** AD user account and password. Required for sensors running Windows Server 2008 R2 SP1.
@@ -38,12 +38,12 @@ The first time you open the [!INCLUDE [Product short](includes/product-short.md)
 
 ![Welcome stage 1, Directory Services settings.](media/directory-services.png)
 
-1. Enter the following information and click **Save**:
+1. Enter the following information and select **Save**:
 
     |Field|Comments|
     |---|---|
     |**Username** (required)|Enter the read-only AD username. For example: **DefenderForIdentityUser**. You must use a **standard** AD user or gMSA account. **Don't** use the UPN format for your username.<br />**NOTE:** We recommend that you avoid using accounts assigned to specific users.|
-    |**Password** (required for standard AD user account)|For AD user account only, enter the password for the read-only user. For example: **Pencil1**.|
+    |**Password** (required for standard AD user account)|For AD user account only, enter the password for the read-only user. For example: *Pencil1*.|
     |**Group managed service account** (required for gMSA account)|For gMSA account only, select **Group managed service account**.|
     |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user's account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
