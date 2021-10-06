@@ -30,7 +30,8 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
 ### How to set up a gMSA account
 
 1. Create a [gMSA account](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA). Make sure to check the [prerequisites](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_gMSA_Req) carefully.
-1. Create a new [security group containing all your domain controllers with sensors (running Windows Server 2012 or above)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_AddMemberHosts) with permissions to retrieve the gMSA account's password. (Recommended)
+2. Create a new [security group containing all your domain controllers with sensors (running Windows Server 2012 or above)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_AddMemberHosts) with permissions to retrieve the gMSA account's password. (Recommended)
+3. Grant the gMSA account "Log on as a service" right in the Default Domain Controllers Policy and any policy that impacts the machines on which the sensor is installed on. This ensures that the Azure Advanced Threat Protection Sensor service can start.
 
 ## Provide a username and password to connect to your Active Directory Forest
 
