@@ -221,7 +221,7 @@ Validate that the domain controller computer has been granted permissions to ret
 
 The sensor service runs as *LocalService* and performs impersonation of the directory services account.
 
-If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a servicer** permission.
+If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a service** permission.
 
 **Resolution 2**:
 
