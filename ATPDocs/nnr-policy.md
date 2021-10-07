@@ -18,7 +18,7 @@ Primary methods:
 - NetBIOS (UDP port 137)
 - RDP (TCP port 3389) - only the first packet of **Client hello**
 
-Secondary methd:
+Secondary method:
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
 For the best results, we recommend using at least one of the primary methods. 
