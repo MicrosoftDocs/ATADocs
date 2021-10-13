@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity for US Government offerings
 description: This article provides an overview of Microsoft Defender for Identity's US Government offerings.
-ms.date: 03/01/2021
+ms.date: 10/13/2021
 ms.topic: overview
 ---
 
@@ -21,6 +21,7 @@ To access Microsoft Defender for Identity for US Government offerings, use the a
 |GCC-H   |  `portal.azure.atp.us`       |     `<workspacename>.atp.azure.us`    |  `triff1wcva2sensorapi.atp.azure.us`       |
 |GCC     |     `portal.gcc.atp.azure.com`    |    `<workspacename>.gcc.atp.azure.com`     |     `trigcc1wcaz1sensorapi.gcc.atp.azure.com`    |
 
+You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or download [the service tags file](https://www.microsoft.com/download/details.aspx?id=56519).
 
 ## Next steps
 
