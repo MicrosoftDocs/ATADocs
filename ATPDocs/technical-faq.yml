@@ -100,6 +100,10 @@ sections:
         answer: |
           Every domain controller in the environment should be covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
 
+      - question: Do we need to install both the Defender for Identity sensor and the Defender for Endpoint sensor on domain controllers or Active Directory Federation Services (AD FS) servers?
+        answer: |
+          If you use both products, then to protect both the server and Active Directory, the two sensors must be installed. 
+
       - question: Does Defender for Identity work with encrypted traffic?
         answer: Network protocols with encrypted traffic (for example, AtSvc and WMI) are not decrypted, but are analyzed by the sensors.
 
