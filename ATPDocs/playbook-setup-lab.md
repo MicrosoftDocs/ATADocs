@@ -100,7 +100,7 @@ New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNever
 
 ### Configure SAM-R capabilities from ContosoDC
 
-To allow the [!INCLUDE [Product short](includes/product-short.md)] Service to perform SAM-R enumeration correctly and build Lateral Movement paths, you'll need to edit the SAM policy.
+To allow the [!INCLUDE [Product short](includes/product-short.md)] Service to perform SAM-R enumeration correctly and build Lateral Movement paths, you'll need to edit the SAM policy. A modification to Group Policy must be made to add the Defender for Identity service account in addition to the configured accounts listed in the **Network access** policy. Make sure to apply group policies to all computers **except domain controllers**.
 
 1. Find your SAM policy under: **Policies \> Windows Settings \> Security Settings \> Local Policies \> Security Options\> "Network access: Restrict clients allowed to make remote calls to SAM"**_
 
@@ -258,4 +258,4 @@ Test your [!INCLUDE [Product short](includes/product-short.md)] lab environment 
 
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
+Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
