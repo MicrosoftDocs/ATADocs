@@ -33,7 +33,7 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
 
 2. Create a new security group containing all the domain controllers that will run the sensors (running Windows Server 2012 or above).
     - If you are planning to use one gMSA for the whole forest, you can add all the domain controllers in to a universal group.
-    - If all the domain controllers are Windows 2012 and above, you can use the built-in Domain Controllers group.
+    - If all the domain controllers are Windows 2012 and above, you can use the built-in **Domain Controllers** group.
 
 3. Create the [gMSA account](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA) granting the group created in the previous step, the permissions to retrieve the gMSA's password (using the **PrincipalsAllowedToRetrieveManagedPassword** parameter).
 
