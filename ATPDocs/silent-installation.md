@@ -25,13 +25,13 @@ To track your deployment progress, monitor the [!INCLUDE [Product short](include
 ## Defender for Identity sensor silent installation
 
 > [!NOTE]
-> When silently deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- [!INCLUDE [Product short](includes/product-short.md)] sensor. </br>Make the [!INCLUDE [Product short](includes/product-short.md)] sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows).
+> When silently deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- [!INCLUDE [Product short](includes/product-short.md)] sensor. </br>Make the [!INCLUDE [Product short](includes/product-short.md)] sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/topic/the-net-framework-4-7-offline-installer-for-windows-f32bcb33-5f94-57ce-6120-62c9526a91f2).
 
 Use the following command to perform a fully silent install of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
 **cmd.exe syntax**:
 
-```dos
+```cmd
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 ```
 
@@ -70,7 +70,7 @@ Use the following command to perform a fully silent install of the [!INCLUDE [Pr
 
 Use the following command to silently install the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
-```dos
+```cmd
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 ```
 
@@ -96,7 +96,7 @@ Use the following command to silently update the [!INCLUDE [Product short](inclu
 
 **Syntax**:
 
-```dos
+```cmd
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
 
@@ -114,7 +114,7 @@ Use the following command to silently update the [!INCLUDE [Product short](inclu
 
 To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silently:
 
-```dos
+```cmd
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
@@ -126,7 +126,7 @@ Use the following command to perform a silent uninstall of the [!INCLUDE [Produc
 
 **Syntax**:
 
-```dos
+```cmd
 "Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
@@ -144,7 +144,7 @@ Use the following command to perform a silent uninstall of the [!INCLUDE [Produc
 
 To silently uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server:
 
-```dos
+```cmd
 "Azure ATP sensor Setup.exe" /quiet /uninstall
 ```
 
