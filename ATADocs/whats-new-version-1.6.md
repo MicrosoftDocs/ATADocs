@@ -141,7 +141,7 @@ If you see either of these errors, run the following workaround:
 1. From an elevated command prompt, run `RemoveDuplicateProfiles.exe` and wait until it completes successfully.
 1. From here: `…\Microsoft Advanced Threat Analytics\Center\MongoDB\bin` directory: **Mongo ATA**, type the following command:
 
-```dos
+```cmd
 db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 ```
 

@@ -43,7 +43,7 @@ If it can start, the platform is probably fine. If not, it is still a platform i
 
 1. Try to manually recreate the ATA data collector, using an elevated prompt, running these commands:
 
-```dos
+```cmd
 sc stop ATACenter
 logman stop "Microsoft ATA Center"
 logman export "Microsoft ATA Center" -xml c:\center.xml

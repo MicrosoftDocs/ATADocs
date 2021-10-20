@@ -51,7 +51,7 @@ To test DNS reconnaissance, we'll use the native command-line tool, *nslookup*, 
 
 Sign into **VictimPC**, using the compromised JeffL credentials. Run the following command:
 
-```dos
+```cmd
 nslookup
 ```
 
@@ -103,7 +103,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
 1. From **VictimPC**, execute the following command:
 
-    ```dos
+    ```cmd
     net user /domain
     ```
 
@@ -113,7 +113,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
 1. Let's try to enumerate all groups in the domain. Execute the following command:
 
-    ```dos
+    ```cmd
     net group /domain
     ```
 
@@ -123,7 +123,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
 1. Now, let's try to enumerate only the Domain Admins group. Execute the following command:
 
-    ```dos
+    ```cmd
     net group "Domain Admins" /domain
     ```
 
@@ -133,7 +133,7 @@ Any authenticated user or computer can potentially enumerate other users and gro
 
 1. To attempt to enumerate the Enterprise Admins, execute the following command:
 
-    ```dos
+    ```cmd
     net group "Enterprise Admins" /domain
     ```
 
@@ -177,7 +177,7 @@ Our next step is SMB Session Enumeration against the ContosoDC resource. We want
 
 Run JoeWare's **NetSess** tool against ContosoDC in context of an authenticated user, in this case, ContosoDC:
 
-```dos
+```cmd
 NetSess.exe ContosoDC
 ```
 
