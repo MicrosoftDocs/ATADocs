@@ -42,7 +42,7 @@ Perform the following steps on the domain controller or AD FS server.
 
     ![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration image](media/sensor-install-config.png)
 
-    - Installation path: The location where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. By default the path is  %programfiles%\Azure Advanced Threat Protection sensor. Leave the default value.
+    - Installation path: The location where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. By default the path is  `%programfiles%\Azure Advanced Threat Protection sensor`. Leave the default value.
     - Access key: Retrieved from the [!INCLUDE [Product short](includes/product-short.md)] portal in the previous step.
 
 1. Select **Install**. The following components are installed and configured during the installation of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
@@ -51,7 +51,7 @@ Perform the following steps on the domain controller or AD FS server.
 
         > [!IMPORTANT]
         >
-        > - Do not install KB 3047154 on a virtualization host (the host that is running the virtualization -  it is fine to run it on a virtual machine). This may cause port mirroring to stop working properly.
+        > - Don't install KB 3047154 on a virtualization host (the host that is running the virtualization -  it's fine to run it on a virtual machine). This may cause port mirroring to stop working properly.
         > - If Wireshark is installed on the [!INCLUDE [Product short](includes/product-short.md)] sensor machine, after you run Wireshark you need to restart the [!INCLUDE [Product short](includes/product-short.md)] sensor, because it uses the same drivers.
 
     - [!INCLUDE [Product short](includes/product-short.md)] sensor service and [!INCLUDE [Product short](includes/product-short.md)] sensor updater service
