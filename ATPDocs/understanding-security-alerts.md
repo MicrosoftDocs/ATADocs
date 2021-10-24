@@ -69,7 +69,7 @@ Note: An increase of alerts of the exact same type typically reduces the suspici
 
 To get more details on a security alert, download the detailed Excel alert report.
 
-1. Click the three dots in the upper right corner of any alert, select *Download Details*.
+1. Click the three dots in the upper right corner of any alert, then select **Download Details**.
 
 Each [!INCLUDE [Product short](includes/product-short.md)] alert Excel download provides the following information:
 
@@ -121,7 +121,7 @@ Includes all data [!INCLUDE [Product short](includes/product-short.md)] profiled
 
 Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by [!INCLUDE [Product short](includes/product-short.md)].
 
-- Check if all related users belong to the same group or department?
+- Check if all related users belong to the same group or department.
 - Do related users share resources, applications, or computers?
 - Is an account active even though its PasswordExpiryTime already passed?
 
