@@ -121,7 +121,7 @@ Includes all data [!INCLUDE [Product short](includes/product-short.md)] profiled
 
 Investigations can be as detailed as needed. Here are some ideas of ways to investigate using the data provided by [!INCLUDE [Product short](includes/product-short.md)].
 
-- Check if all related users belong to the same group or department,
+- Check if all related users belong to the same group or department.
 - Do related users share resources, applications, or computers?
 - Is an account active even though its PasswordExpiryTime already passed?
 
