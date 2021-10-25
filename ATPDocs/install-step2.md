@@ -18,7 +18,7 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
 - At least one of the following directory services accounts with read access to all objects in the monitored domains:
   - A **standard** AD user account and password. Required for sensors running Windows Server 2008 R2 SP1.
-  - A **group Managed Service Account** (gMSA). Requires Windows Server 2012 or above.  
+  - A **group Managed Service Account** (gMSA). Requires Windows Server 2012 or above.
   All sensors must have permissions to retrieve the gMSA account's password. For information about creating a gMSA account, see [Set up a gMSA account](#how-to-set-up-a-gmsa-account).
 
     > [!NOTE]
@@ -29,8 +29,14 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
 
 ### How to set up a gMSA account
 
-1. Create a [gMSA account](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA). Make sure to check the [prerequisites](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_gMSA_Req) carefully.
-2. Create a new [security group containing all your domain controllers with sensors (running Windows Server 2012 or above)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_AddMemberHosts) with permissions to retrieve the gMSA account's password. (Recommended)
+1. Read the group managed service accounts [prerequisites](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_gMSA_Req) carefully.
+
+2. Create a new security group containing all the domain controllers that will run the sensors (running Windows Server 2012 or above).
+    - If you're planning to use one gMSA for the whole forest, you can add all the domain controllers to a universal group.
+    - If all the domain controllers are Windows 2012 and above, you can use the built-in **Domain Controllers** group.
+
+3. Create the gMSA account using the cmdlet as explained in [this article](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA). For the **PrincipalsAllowedToRetrieveManagedPassword** parameter, enter the name of the security group you created in the previous step. This will grant the group permissions to retrieve the gMSA's password.
+
 >[!NOTE]
 >If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a service** permission. For more information, see [Sensor failed to retrieve group Managed Service Account (gMSA) credentials](troubleshooting-known-issues.md#cause-2).
 
