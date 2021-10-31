@@ -17,9 +17,9 @@ To access Microsoft Defender for Identity for US Government offerings, use the a
 
 |US Government offering  |Portal  |Workspace |Agent endpoint  |
 |---------|---------|---------|---------|
-|DoD    |   `portal.azure.atp.us`      |    `<workspacename>.atp.azure.us`     |  `triff1wcva2sensorapi.atp.azure.us`       |
-|GCC-H   |  `portal.azure.atp.us`       |     `<workspacename>.atp.azure.us`    |  `triff1wcva2sensorapi.atp.azure.us`       |
-|GCC     |     `portal.gcc.atp.azure.com`    |    `<workspacename>.gcc.atp.azure.com`     |     `trigcc1wcaz1sensorapi.gcc.atp.azure.com`    |
+|DoD    |   `portal.azure.atp.us`      |    `<workspacename>.atp.azure.us`     |  `sensorapi.atp.azure.us`       |
+|GCC-H   |  `portal.azure.atp.us`       |     `<workspacename>.atp.azure.us`    |  `sensorapi.atp.azure.us`       |
+|GCC     |     `portal.gcc.atp.azure.com`    |    `<workspacename>.gcc.atp.azure.com`     |     `sensorapi.gcc.atp.azure.com`    |
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or download [the service tags file](https://www.microsoft.com/download/details.aspx?id=56519).
 
