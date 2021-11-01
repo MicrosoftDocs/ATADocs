@@ -13,14 +13,14 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 
 ## Relevant Windows Events
 
-**For Active Directory Federation Services (AD FS) events**
+### For Active Directory Federation Services (AD FS) events
 
 - 1202 - The Federation Service validated a new credential
 - 1203 - The Federation Service failed to validate a new credential
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
-**For other events**
+### For other events
 
 - 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
@@ -150,7 +150,11 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
     - For **Applies to** select **Descendant User objects.**
     - Under **Permissions**, select **Full Control**. All the permissions will be selected, and when triggered, appear as 4662 events. You can then uncheck **List** and **Read** permissions, since Defender for Identity only detects changes to directory services.
 
-    ![Select permissions.](media/select-permissions.png)
+        ![Select permissions.](media/select-permissions.png)
+
+    - Under **Properties**, check all **Write** properties.
+
+        ![Select properties.](media/select-properties.png)
 
 1. Select **OK**. Then repeat the steps above, but for **Applies to**, select **Descendant Group Objects**, and then another time select **Descendant Computer Objects**.
 
@@ -214,8 +218,6 @@ These events can be collected automatically by the [!INCLUDE [Product short](inc
 > [!NOTE]
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-
-
 
 ## See Also
 
