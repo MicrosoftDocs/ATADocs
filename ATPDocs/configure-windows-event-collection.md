@@ -148,15 +148,13 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
     - For **Type** select **Success**.
     - For **Applies to** select **Descendant User objects.**
-    - Under **Permissions**, select **Full Control**. All the permissions will be selected, and when triggered, appear as 4662 events. You can then uncheck **List** and **Read** permissions, since Defender for Identity only detects changes to directory services.
+    - Under **Permissions**, scroll down and select **Clear all.** Scroll up and select **Full Control**. All the permissions will be selected. Then uncheck the **List contents**, **Read permissions**, and **Read all properties** permissions. Then select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
 
         ![Select permissions.](media/select-permissions.png)
 
-    - Under **Properties**, check all **Write** properties.
-
         ![Select properties.](media/select-properties.png)
 
-1. Select **OK**. Then repeat the steps above, but for **Applies to**, select **Descendant Group Objects**, and then another time select **Descendant Computer Objects**.
+1. Then repeat the steps above, but for **Applies to**, select **Descendant Group Objects**, and then again for **Descendant Computer Objects**.
 
 ### Auditing for specific detections
 
