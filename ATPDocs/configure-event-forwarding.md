@@ -36,7 +36,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 > [!Note]
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor. The following steps modify the local policy of the domain controller.
 
-1. Run the following command on each domain controller: *winrm quickconfig*.
+1. Run the following command on each domain controller: *winrm quickconfig*
 1. From a command prompt type *gpedit.msc*.
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
