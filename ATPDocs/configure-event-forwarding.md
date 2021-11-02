@@ -56,7 +56,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
 **Step 3: Perform the following steps on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor**
 
-1. Open an elevated command prompt and type *wecutil qc*. Leave the command window open.
+1. Open an elevated command prompt and type `wecutil qc`. Leave the command window open.
 1. Open **Event Viewer**.
 1. Right-click **Subscriptions** and select **Create Subscription**.
 
