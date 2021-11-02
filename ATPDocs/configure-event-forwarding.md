@@ -47,7 +47,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     1. Select **Enabled**.
     1. Under **Options**, click **Show**.
     1. Under **SubscriptionManagers**, enter the following value and click **OK**:
-        `Server=http\://\<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: `Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+        `Server=http://<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: `Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
 
     ![Configure target subscription image.](media/wef-2-config-target-sub-manager.png)
 
@@ -56,7 +56,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
 **Step 3: Perform the following steps on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor**
 
-1. Open an elevated command prompt and type *wecutil qc*
+1. Open an elevated command prompt and type `wecutil qc`. Leave the command window open.
 1. Open **Event Viewer**.
 1. Right-click **Subscriptions** and select **Create Subscription**.
 
@@ -71,7 +71,14 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         1. Click **By log** and select **Security**.
         1. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample:<br/>
         ![Query filter image.](media/wef-4-query-filter.png)
-    1. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status.
+    1. Return to the command window opened in the first step. Run the following commands, replacing *SubscriptionName* with the name you created for the subscription.
+
+        ```cmd
+        wecutil ss "SubscriptionName" /cm:"Custom"
+        wecutil ss "SubscriptionName" /HeartbeatInterval:5000
+        ```
+
+    1. Return to the **Event Viewer** console. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status.
     1. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor.
 
 For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
