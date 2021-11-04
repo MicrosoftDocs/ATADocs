@@ -79,7 +79,7 @@ To enable access to [!INCLUDE [Product short](includes/product-short.md)], we re
 
 - `<your-instance-name>sensorapi.atp.azure.com` – for sensors connectivity. For example, `contoso-corpsensorapi.atp.azure.com`
 
-You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the Azure IP Ranges and Service Tags – Public Cloud] (https://www.microsoft.com/download/details.aspx?id=56519) file or [download Azure IP Ranges and Service Tags – US Government Cloud] (https://www.microsoft.com/download/details.aspx?id=57063) file.  
+You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). Go to these links to [download the Azure IP Ranges and Service Tags – Public Cloud] (https://www.microsoft.com/download/details.aspx?id=56519) file or [download Azure IP Ranges and Service Tags – US Government Cloud] (https://www.microsoft.com/download/details.aspx?id=57063) file.  
 
 Alternatively, if you require more granular control, consider allowing traffic to the relevant endpoints from the following table:
 
