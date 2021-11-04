@@ -48,7 +48,9 @@ To review or modify your Syslog settings.
 1. You can select which events to send to your Syslog server. Under **Syslog notifications**, specify which notifications should be sent to your Syslog server - new security alerts, updated security alerts, and new health issues.
 
 > [!NOTE]
-> If you plan to create automation or scripts for [!INCLUDE [Product short](includes/product-short.md)] SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md).
+> - If you plan to create automation or scripts for [!INCLUDE [Product short](includes/product-short.md)] SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md).
+>
+> - When working with Syslog in TLS mode, make sure to install the required certificates on the designated sensor.
 
 ## See Also
 
