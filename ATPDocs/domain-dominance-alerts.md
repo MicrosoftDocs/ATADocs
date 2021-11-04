@@ -364,7 +364,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
       - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
    1. If there is only one resource being accessed, check if is a valid resource these users are supposed to access.
 
-      If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
+      If the answer to one of the previous questions is **yes**, it is likely to be a **B-TP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
 Applications might authenticate using a lower encryption cipher. Some are authenticating on behalf of users, such as IIS and SQL servers.
 
@@ -374,7 +374,7 @@ Applications might authenticate using a lower encryption cipher. Some are authen
     - Check the computer roles.
     Are they servers that work with these types of applications?
 
-     If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher,implement a stronger encryption cipher where possible, and **Close** the security alert.
+     If the answer to one of the previous questions is **yes**, it is likely to be a **B-TP** activity. Check if the resource can support a strong encryption cipher,implement a stronger encryption cipher where possible, and **Close** the security alert.
 
 **Understand the scope of the breach**
 
