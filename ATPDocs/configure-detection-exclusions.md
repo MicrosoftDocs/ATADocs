@@ -11,9 +11,12 @@ ms.topic: how-to
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps [!INCLUDE [Product short](includes/product-short.md)] ignore such scanners.
 
+>[!NOTE]
+>Of the most common domains with [Suspicious communication over DNS](exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts opened on them, we observed the domains that customers most excluded from the alert. These domains are added to the exclusions list by default, but you have the option to easily remove them.
+
 ## How to add detection exclusions
 
-There are two ways you can manually exclude users, computers, or IP addresses for a detection. You can either do so on the **Configuration** page under **Exclusions**, or directly from the security alert.
+There are two ways you can manually exclude users, computers, domains, or IP addresses for a detection. You can either do so on the **Configuration** page under **Exclusions**, or directly from the security alert.
 
 ### From the Configuration page
 
@@ -25,15 +28,15 @@ To configure exclusions from the configuration page, do the following:
 
 1. Under **Detection**, select **Exclusions**.
 1. For each detection that you want to configure, do the following:
-    1. Enter an IP address, computer, or user account to be excluded from the detection
-    1. Click the plus icon **(+)**.
+    1. Enter an IP address, computer, domain, or user account to be excluded from the detection
+    1. Select the plus icon **(+)**.
 
     > [!TIP]
     > The user or computer field is searchable and will autofill with entities in your network. For more information, see the [security alert guide](suspicious-activity-guide.md).
 
     ![Excluding entities from detections.](media/exclusions.png)
 
-1. Click **Save**.
+1. Select **Save**.
 
 ### From a security alert
 
@@ -42,7 +45,7 @@ To configure exclusions from a security alert, do the following:
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Timeline**.
 1. Identify an alert on an activity for a user, computer, or IP address that **is** allowed to perform the particular activity.
 
-1. To the right of the alert, select **More [...]** > **Close and exclude**. The action closes the alert and it is no longer listed in the **Open** events list in the **Alert timeline**. The action also adds the user, computer, or IP address to the exclusions list for that alert.
+1. To the right of the alert, select **More [...]** > **Close and exclude**. The action closes the alert and it's no longer listed in the **Open** events list in the **Alert timeline**. The action also adds the user, computer, or IP address to the exclusions list for that alert.
 
     ![Exclude entity.](media/exclude-in-sa.png)
 
