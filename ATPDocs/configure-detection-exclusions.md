@@ -7,12 +7,12 @@ ms.topic: how-to
 
 # Configure detection exclusions
 
+> [!NOTE]
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/exclusions). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+
 [!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses, computers, or users from a number of detections.
 
 For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps [!INCLUDE [Product short](includes/product-short.md)] ignore such scanners.
-
->[!NOTE]
->Of the most common domains with [Suspicious communication over DNS](exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts opened on them, we observed the domains that customers most excluded from the alert. These domains are added to the exclusions list by default, but you have the option to easily remove them.
 
 ## How to add detection exclusions
 
@@ -37,6 +37,9 @@ To configure exclusions from the configuration page, do the following:
     ![Excluding entities from detections.](media/exclusions.png)
 
 1. Select **Save**.
+
+>[!NOTE]
+>Of the most common domains with [Suspicious communication over DNS](exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts opened on them, we observed the domains that customers most excluded from the alert. These domains are added to the exclusions list by default, but you have the option to easily remove them.
 
 ### From a security alert
 
