@@ -69,8 +69,6 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 > [!NOTE]
 > This will affect all applications including Windows services which use WinINET with LocalService, LocalSytem context.
 
-<a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>
-
 ## Enable access to Defender for Identity service URLs in the proxy server
 
 To enable access to [!INCLUDE [Product short](includes/product-short.md)], we recommend allowing traffic to the following URLs. The URLs automatically map to the correct service location for your [!INCLUDE [Product short](includes/product-short.md)] instance.
@@ -79,17 +77,9 @@ To enable access to [!INCLUDE [Product short](includes/product-short.md)], we re
 
 - `<your-instance-name>sensorapi.atp.azure.com` – for sensors connectivity. For example, `contoso-corpsensorapi.atp.azure.com`
 
-You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). Go to these links to [download the Azure IP Ranges and Service Tags – Public Cloud] (https://www.microsoft.com/download/details.aspx?id=56519) file or [download Azure IP Ranges and Service Tags – US Government Cloud] (https://www.microsoft.com/download/details.aspx?id=57063) file.  
+You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
-Alternatively, if you require more granular control, consider allowing traffic to the relevant endpoints from the following table:
-
-|Service location|*.atp.azure.com DNS record|
-|----|----|
-|US |`triprd1wcusw2sensorapi.atp.azure.com`<br>`triprd1wcuswb3sensorapi.atp.azure.com`<br>`triprd1wcuse3sensorapi.atp.azure.com`|
-|US GCC High|`https://triff1wcva2sensorapi.atp.azure.us`|
-|Europe|`triprd1wceun2sensorapi.atp.azure.com`<br>`triprd1wceuw3sensorapi.atp.azure.com`|
-|Asia|`triprd1wcasse2sensorapi.atp.azure.com`|
-|UK|`triprd1wcuks2sensorapi.atp.azure.com`|
+If you would like to download the "Azure IP Ranges and Service Tags - Public Cloud" file, you can do so [here](https://www.microsoft.com/download/details.aspx?id=56519). For US Government offerings, see [Get started with US Government offerings](us-govt-gcc-high.md).
 
 > [!NOTE]
 >
