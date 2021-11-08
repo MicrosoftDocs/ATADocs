@@ -51,11 +51,11 @@ If during sensor installation you receive the following error: **The sensor fail
 
 **Cause:**
 
-The issue can be caused by a Transparent proxy configuration error on Server Core, such as the root certificates required by [!INCLUDE [Product short](includes/product-short.md)] are missing or not current.
+The issue can be caused when the trusted root certification authorities certificates required by Defender for Identity are missing. 
 
 **Resolution:**
 
-Run the following PowerShell cmdlet to verify that the [!INCLUDE [Product short](includes/product-short.md)] service trusted root certificate exists on Server Core.
+Run the following PowerShell cmdlet to verify that the required certificates are installed. 
 
 In the following example, use the "DigiCert Baltimore Root" certificate for all customers. In addition, use the "DigiCert Global Root G2" certificate for commercial customers or use the "DigiCert Global Root CA" certificate for US Government GCC High customers, as indicated.
 
