@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/02/2021
+ms.date: 11/08/2021
 ms.topic: overview
 ---
 
@@ -22,6 +22,12 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-atp)
 - [What's new in Microsoft Cloud App Security](/cloud-app-security/release-notes)
+
+## Defender for Identity release 2.163
+
+Released Nov 8, 2021
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.162
 
