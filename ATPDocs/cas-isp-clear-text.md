@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Entities exposing credentials in clear text
 
-![Prevent clear text credentials exposure in Cloud App Security.](media/cas-isp-clear-text-1.png)
+![Prevent clear text credentials exposure in Defender for Cloud Apps.](media/cas-isp-clear-text-1.png)
 
 ## What information does the prevent clear text security assessment provide?
 
@@ -32,5 +32,5 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 
 ## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Cloud App Security](activities-filtering-mcas.md)
+- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Defender for Cloud Apps](activities-filtering-mcas.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

@@ -21,7 +21,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-atp)
-- [What's new in Microsoft Cloud App Security](/cloud-app-security/release-notes)
+- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 ## Defender for Identity release 2.163
 
@@ -355,7 +355,7 @@ We are expanding our sensitivity definition for on-premises accounts to include 
 Released June 14, 2020
 
 - **Feature enhancement: Additional activity details available in the unified SecOps experience**  
-We've extended the device information we send to Cloud App Security including device names, IP addresses, account UPNs and used port. For more information about our integration with Cloud App Security, see [Using Azure ATP with Cloud App Security](mcas-integration.md).
+We've extended the device information we send to Defender for Cloud Apps including device names, IP addresses, account UPNs and used port. For more information about our integration with Defender for Cloud Apps, see [Using Azure ATP with Defender for Cloud Apps](mcas-integration.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -398,8 +398,8 @@ Brute Force attack is used by attackers to gain a foothold into your organizatio
 
 Released Mar 15, 2020
 
-- **New Azure ATP instances automatically integrate with Microsoft Cloud App Security**  
-When creating an Azure ATP instance (formerly workspace), the integration with Microsoft Cloud App Security is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Cloud App Security](mcas-integration.md).
+- **New Azure ATP instances automatically integrate with Microsoft Defender for Cloud Apps**  
+When creating an Azure ATP instance (formerly workspace), the integration with Microsoft Defender for Cloud Apps is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Defender for Cloud Apps](mcas-integration.md).
 
 - **New monitored activities**  
 The following activity monitors are now available:
@@ -481,10 +481,10 @@ Released Dec 23, 2019
 Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they are older than our max number of lapsed versions.
 
 - **Confirm compromise**  
-You can now confirm compromise of specific Microsoft 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Cloud App Security.
+You can now confirm compromise of specific Microsoft 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Defender for Cloud Apps.
 
 - **New experience banner**  
-On Azure ATP portal pages where a new experience is available in the Cloud App Security portal, new banners are displayed describing what's available with access links.
+On Azure ATP portal pages where a new experience is available in the Defender for Cloud Apps portal, new banners are displayed describing what's available with access links.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -516,8 +516,8 @@ Released Nov 17, 2019
 
 Released November 3, 2019
 
-- **Feature enhancement:  Added user interface notification of Cloud App Security portal availability to the Azure ATP portal**  
-Ensuring all users are aware of the availability of the enhanced features available using the Cloud App Security portal, notification was added for the portal from the existing Azure ATP alert timeline.
+- **Feature enhancement:  Added user interface notification of Defender for Cloud Apps portal availability to the Azure ATP portal**  
+Ensuring all users are aware of the availability of the enhanced features available using the Defender for Cloud Apps portal, notification was added for the portal from the existing Azure ATP alert timeline.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -671,7 +671,7 @@ Support added for Azure ATP instance creation using initial domain prefixes that
 Released June 18, 2019
 
 - **New public preview**  
-Azure ATP's identity threat investigation experience is now in **Public Preview**, and available to all Azure ATP protected tenants. See [Azure ATP Microsoft Cloud App Security investigation experience](mcas-integration.md) to learn more.
+Azure ATP's identity threat investigation experience is now in **Public Preview**, and available to all Azure ATP protected tenants. See [Azure ATP Microsoft Defender for Cloud Apps investigation experience](mcas-integration.md) to learn more.
 
 - **General availability**  
 Azure ATP support for untrusted forests is now in general availability. See [Azure ATP multi-forest](multi-forest.md) to learn more.

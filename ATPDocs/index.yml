@@ -28,7 +28,7 @@ landingContent:
         links:
           - text: Defender for Identity architecture
             url: architecture.md
-          - text: Defender for Identity using Cloud App Security
+          - text: Defender for Identity using Defender for Cloud Apps
             url: mcas-integration.md
       - linkListType: video
         links:
@@ -88,11 +88,11 @@ landingContent:
             url: investigate-lateral-movement-path.md
           - text: Investigate entities
             url: investigate-entity.md
-  - title: Defender for Identity using Microsoft Cloud App Security 
+  - title: Defender for Identity using Microsoft Defender for Cloud Apps 
     linkLists:
       - linkListType: deploy
         links:
-          - text: Use Defender for Identity with Cloud App Security
+          - text: Use Defender for Identity with Defender for Cloud Apps
             url: mcas-integration.md
           - text: Filter activities and set policies
             url: activities-filtering-mcas.md

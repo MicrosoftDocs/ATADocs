@@ -21,15 +21,15 @@ While your company may invest significant time and effort on hardening identitie
 
 ### Access
 
-[!INCLUDE [Product short](includes/product-short.md)] security assessments are available using the Microsoft Cloud App Security portal after turning on the [!INCLUDE [Product short](includes/product-short.md)] integration. To learn how to integrate [!INCLUDE [Product short](includes/product-short.md)] into Cloud App Security, see [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/mdi-integration).
+[!INCLUDE [Product short](includes/product-short.md)] security assessments are available using the Microsoft Defender for Cloud Apps portal after turning on the [!INCLUDE [Product short](includes/product-short.md)] integration. To learn how to integrate [!INCLUDE [Product short](includes/product-short.md)] into Defender for Cloud Apps, see [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/mdi-integration).
 
 ### Licensing
 
-Accessing [!INCLUDE [Product short](includes/product-short.md)] security assessment reports in Cloud App Security do not require a Cloud App Security license, only a [!INCLUDE [Product short](includes/product-short.md)] license is required.
+Accessing [!INCLUDE [Product short](includes/product-short.md)] security assessment reports in Defender for Cloud Apps do not require a Defender for Cloud Apps license, only a [!INCLUDE [Product short](includes/product-short.md)] license is required.
 
-## Access Defender for Identity using Cloud App Security
+## Access Defender for Identity using Defender for Cloud Apps
 
-See the [Cloud App Security quick start](/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Cloud App Security portal.
+See the [Defender for Cloud Apps quick start](/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Defender for Cloud Apps portal.
 
 **Identity security posture assessments**
 
@@ -51,12 +51,12 @@ See the [Cloud App Security quick start](/cloud-app-security/getting-started-wit
 
 To access identity security posture assessments:
 
-1. Open the **Microsoft Cloud App Security** portal.
-    ![Access [!INCLUDE [Product short.](includes/product-short.md)] identity security posture reports in Cloud App Security](media/cas-isp-report-1.png)
+1. Open the **Microsoft Defender for Cloud Apps** portal.
+    ![Access [!INCLUDE [Product short.](includes/product-short.md)] identity security posture reports in Defender for Cloud Apps](media/cas-isp-report-1.png)
 1. Select **Investigate** from the left menu, then click **Identity security posture** from the drop-down menu.
 1. Click the identity security posture assessment you wish to review from the **Security assessment reports** list that opens.
 
 ## Next steps
 
-- [Learn more about using Cloud App Security with [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
+- [Learn more about using Defender for Cloud Apps with [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

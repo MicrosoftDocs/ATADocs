@@ -72,9 +72,9 @@ items:
       href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
 - name: How-to guides
   items:
-  - name: Defender for Identity using Microsoft Cloud App Security
+  - name: Defender for Identity using Microsoft Defender for Cloud Apps
     items:
-    - name: Use Defender for Identity with Cloud App Security
+    - name: Use Defender for Identity with Defender for Cloud Apps
       href: mcas-integration.md
     - name: Filter activities and set policies
       href: activities-filtering-mcas.md

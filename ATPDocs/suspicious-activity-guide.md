@@ -24,7 +24,7 @@ To learn more about the structure and common components of all [!INCLUDE [Produc
 
 ## Security alert name mapping and unique external IDs
 
-The following table lists the mapping between alert names, their corresponding unique external IDs, and their Microsoft Cloud App Security alert IDs. When used with scripts or automation, Microsoft recommends use of alert external IDs in place of alert names, as only security alert external IDs are permanent, and not subject to change.
+The following table lists the mapping between alert names, their corresponding unique external IDs, and their Microsoft Defender for Cloud Apps alert IDs. When used with scripts or automation, Microsoft recommends use of alert external IDs in place of alert names, as only security alert external IDs are permanent, and not subject to change.
 
 ### [External IDs](#tab/external)
 
@@ -75,10 +75,10 @@ The following table lists the mapping between alert names, their corresponding u
 > |[User and Group membership reconnaissance (SAMR)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|2021|Medium|Discovery|
 > |[User and IP address reconnaissance (SMB)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|2012|Medium|Discovery|
 
-### [Cloud App Security IDs](#tab/cloud-app-security)
+### [Defender for Cloud Apps IDs](#tab/cloud-app-security)
 
 > [!div class="mx-tdBreakAll"]
-> |Security alert name|Cloud App Security alert ID|
+> |Security alert name|Defender for Cloud Apps alert ID|
 > |---|---|
 > |[Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|ALERT_EXTERNAL_AATP_ACCOUNT_ENUMERATION_SECURITY_ALERT|
 > |[Active Directory attributes reconnaissance (LDAP)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210)|ALERT_EXTERNAL_AATP_LDAP_SENSITIVE_ATTRIBUTE_RECONNAISSANCE_SECURITY_ALERT|
