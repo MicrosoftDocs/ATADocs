@@ -8,7 +8,7 @@ ms.topic: conceptual
 # Working with the Microsoft Defender for Identity portal
 
 > [!NOTE]
-> All [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [Cloud App Security portal](https://portal.cloudappsecurity.com).
+> All [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [Defender for Cloud Apps portal](https://portal.cloudappsecurity.com).
 
 Use the [!INCLUDE [Product long](includes/product-long.md)] portal to monitor and respond to suspicious activity detected by [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -30,7 +30,7 @@ For more information about role-based access control (RBAC) in [!INCLUDE [Produc
 1. [!INCLUDE [Product short](includes/product-short.md)] supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, [!INCLUDE [Product short](includes/product-short.md)] uses that token to log you into the [!INCLUDE [Product short](includes/product-short.md)] portal. You can also log in using a smartcard. Your permissions in [!INCLUDE [Product short](includes/product-short.md)] correspond with your [administrator role](role-groups.md).
 
    > [!NOTE]
-   > Make sure to log on to the computer from which you want to access the [!INCLUDE [Product short](includes/product-short.md)] portal using your [!INCLUDE [Product short](includes/product-short.md)] admin username and password. Alternatively, run your browser as a different user or log out of Windows and log on with your [!INCLUDE [Product short](includes/product-short.md)] admin user. Unlike the [!INCLUDE [Product short](includes/product-short.md)] portal, the new [Cloud App Security portal](https://portal.cloudappsecurity.com) offers multi-user login and requires no additional license to use with [!INCLUDE [Product short](includes/product-short.md)].
+   > Make sure to log on to the computer from which you want to access the [!INCLUDE [Product short](includes/product-short.md)] portal using your [!INCLUDE [Product short](includes/product-short.md)] admin username and password. Alternatively, run your browser as a different user or log out of Windows and log on with your [!INCLUDE [Product short](includes/product-short.md)] admin user. Unlike the [!INCLUDE [Product short](includes/product-short.md)] portal, the new [Defender for Cloud Apps portal](https://portal.cloudappsecurity.com) offers multi-user login and requires no additional license to use with [!INCLUDE [Product short](includes/product-short.md)].
 
 ### Attack time line
 

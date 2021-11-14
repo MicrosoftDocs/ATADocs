@@ -22,7 +22,7 @@ The following fields and their values are forwarded to your SIEM:
 |msg|Description of the alert|
 |cnt|For alerts that have a count of the number of times the activity happened (for example, brute force has an amount of guessed passwords)|
 |app |Protocol used in this alert|
-|externalId|Event ID [!INCLUDE [Product short](includes/product-short.md)] writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Cloud App Security, this field is populated with the corresponding Cloud App Security alert ID.|
+|externalId|Event ID [!INCLUDE [Product short](includes/product-short.md)] writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Defender for Cloud Apps, this field is populated with the corresponding Defender for Cloud Apps alert ID.|
 |cs#label|Customer strings allowed by CEF, where cs#label is the name of the new field |
 |cs#|Customer strings allowed by CEF, where cs# is the value.|
 
