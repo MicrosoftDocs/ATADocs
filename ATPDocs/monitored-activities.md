@@ -20,7 +20,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 >
 > - This article is relevant for all [!INCLUDE [Product short](includes/product-short.md)] sensor types.
 > - [!INCLUDE [Product short](includes/product-short.md)] monitored activities appear on both the user and machine profile page.
-> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in [Cloud App Security](https://portal.cloudappsecurity.com/) and Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
+> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in [Defender for Cloud Apps](https://portal.cloudappsecurity.com/) and Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
 
 ## Monitored user activities: User account AD attribute changes
 
