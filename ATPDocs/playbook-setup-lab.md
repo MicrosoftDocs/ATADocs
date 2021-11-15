@@ -119,20 +119,20 @@ Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to
 1. Under **Detection** select **Entity tags**.
 
     ![[!INCLUDE [Product short.](includes/product-short.md)] entity tags](media/entity-tags.png)
-1. In the **Sensitive** section, type the name "Helpdesk" for **Sensitive groups** and then click **+** sign to add them.
+1. In the **Sensitive** section, type the name "Helpdesk" for **Sensitive groups** and then select the **+** sign to add them.
     ![Tag the "Helpdesk" as a [!INCLUDE [Product short](includes/product-short.md)] sensitive group to enable  Lateral Movement Graphs and reports for this privileged group](media/playbook-labsetup-helpdesksensitivegroup.png)
-1. Click **Save**.
+1. Select **Save**.
 
 ### Defender for Identity Lab base setup checklist
 
 At this point, you should have a base [!INCLUDE [Product short](includes/product-short.md)] lab. [!INCLUDE [Product short](includes/product-short.md)] should be ready to use and users are staged. Review the checklist to make sure that the base lab is complete.
 
-| Step  | Task | Action |
+| Step  | Action | Status |
 |--|--|--|
-| 1 | [!INCLUDE [Product short](includes/product-short.md)] Sensor installed on ContosoDC (prerequisite step) | - [ ] |
-| 2 | Users and groups are created in Active Directory | - [ ] |
-| 3 | [!INCLUDE [Product short](includes/product-short.md)] service account privileges configured correctly for SAMR | - [ ] |
-| 4 | Helpdesk security group added as a **Sensitive group** in [!INCLUDE [Product short](includes/product-short.md)] | - [ ] |
+| 1 | [!INCLUDE [Product short](includes/product-short.md)] Sensor installed on ContosoDC (prerequisite step) | ☐ |
+| 2 | Users and groups are created in Active Directory | ☐ |
+| 3 | [!INCLUDE [Product short](includes/product-short.md)] service account privileges configured correctly for SAMR | ☐ |
+| 4 | Helpdesk security group added as a **Sensitive group** in [!INCLUDE [Product short](includes/product-short.md)] | ☐ |
 
 ## Set up the lab workstations
 
@@ -184,7 +184,7 @@ Without turning off antivirus solutions first, you'll be unable to download some
 > [!WARNING]
 > The following tools are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
 
-To run the [!INCLUDE [Product short](includes/product-short.md)] Security Alert playbooks, the following tools are needed.
+To run the [!INCLUDE [Product short](includes/product-short.md)] Security Alert playbooks, download and copy the following tools to **VictimPC**.
 
 | Tool | URL |
 |----|-----|
@@ -229,14 +229,14 @@ while ($true)
 
 Review the checklist to make sure that the workstation setup is complete.
 
-| Step | Act| Step | Action | Status |
+| Step | Action | Status |
 |--|--|--|
-| 1 | Add JeffL and Helpdesk as local administrators on VictimPC | - [ ] |
-| 2 | Create Scheduled Task running as RonHD on VictimPC | - [ ] |
-| 3 | Turn off antivirus solution on VictimPC | - [ ] |
-| 4 | Stage hacking tools on VictimPC | - [ ] |
-| 5 | Add Helpdesk and remove Domain Admins from AdminPC's local administrators group | - [ ] |
-| 6 | Run PowerShell script as Samira to simulate domain activities | - [ ] |rShell script as Samira to simulate domain activities | - [ ] |
+| 1 | Add JeffL and Helpdesk as local administrators on VictimPC | ☐ |
+| 2 | Create Scheduled Task running as RonHD on VictimPC | ☐ |
+| 3 | Turn off antivirus solution on VictimPC | ☐ |
+| 4 | Stage hacking tools on VictimPC | ☐ |
+| 5 | Add Helpdesk and remove Domain Admins from AdminPC's local administrators group | ☐ |
+| 6 | Run PowerShell script as Samira to simulate domain activities | ☐ |
 
 ## Mission accomplished!
 
