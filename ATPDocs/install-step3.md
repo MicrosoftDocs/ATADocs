@@ -36,7 +36,7 @@ The zip file includes the following files:
 
 - Configuration setting file with the required information to connect to the [!INCLUDE [Product short](includes/product-short.md)] cloud service
 
-- [The Npcap driver](install-step4.md#install-the-npcap-driver-recommended) that you'll need to install in the next step before installing the sensor
+- [The Npcap driver](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers) that you'll need to install in the next step before installing the sensor
 
 ## Next steps
 

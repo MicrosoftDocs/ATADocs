@@ -15,7 +15,7 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 - A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](install-step3.md) and the access key.
 - Make sure Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
 - For sensor installations on Active Directory Federation Services (AD FS) servers, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
-- [Install the Npcap driver (recommended)](#install-the-npcap-driver-recommended)
+- Install the [Npcap driver](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers). For download and installation instructions, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 ## Install the sensor
 
@@ -74,10 +74,6 @@ Use the following steps to configure Defender for Identity once you've completed
     ![[!INCLUDE [Product short.](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
 
     Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
-
-## Install the Npcap driver (recommended)
-
-Installing the Npcap driver is recommended, as explained [here](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers). For download and installation instructions, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 ## Next steps
 
