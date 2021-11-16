@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity Security Alert Lateral Movement Playbook
-description: The Microsoft Defender for Identity playbook describes how to simulate Lateral Movement threats for detection by Defender for Identity.
-ms.date: 10/26/2020
+title: Microsoft Defender for Identity security alert lateral movement playbook
+description: The Microsoft Defender for Identity playbook describes how to simulate lateral movement threats for detection by Defender for Identity.
+ms.date: 11/16/2021
 ms.topic: tutorial
 ---
 
@@ -25,7 +25,7 @@ In this tutorial you will:
 1. [A completed [!INCLUDE [Product short](includes/product-short.md)] security alert lab](playbook-setup-lab.md)
     - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the [!INCLUDE [Product short](includes/product-short.md)] testing procedures.
 
-2. [Completion of the reconnaissance playbook tutorial](playbook-reconnaissance.md)
+1. [Completion of the reconnaissance playbook tutorial](playbook-reconnaissance.md)
 
 > [!WARNING]
 > The third-party hacking tools in this lab are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
@@ -73,7 +73,7 @@ From the results, we learn RonHD is a member of the "Helpdesk" Security Group. W
 
 ### Mimikatz sekurlsa::pth
 
-Using a common technique called **Overpass-the-Hash**, the harvested NTLM hash is used to obtain a Ticket Granting Ticket (TGT). An attacker with a user's TGT, can masquerade as a compromised user such as RonHD. While masquerading as RonHD, we can access any domain resource the compromised user has access to or their respective Security Groups have access to.
+Using a common technique called **Overpass-the-Hash**, the harvested NTLM hash is used to obtain a Ticket Granting Ticket (TGT). An attacker with a user's TGT can masquerade as a compromised user such as RonHD. While masquerading as RonHD, we can access any domain resource the compromised user has access to or their respective Security Groups have access to.
 
 1. From **VictimPC**, change directory to the folder containing **Mimikatz.exe**. storage location on your filesystem and execute the following command:
 
@@ -100,7 +100,7 @@ We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
     ```powershell
     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
     Import-Module C:\tools\PowerSploit\PowerSploit.psm1 -Force
-    Get-NetLocalGroup 10.0.24.6
+    Get-NetLocalGroupMember 10.0.24.6 -GroupName Administrators
     ```
 
     ![Get local admins for 10.0.24.6 via PowerSploit.](media/playbook-lateral-adminpcsamr.png)
@@ -135,7 +135,7 @@ Looking at the [!INCLUDE [Product short](includes/product-short.md)] console, we
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
 
-[!INCLUDE [Product short](includes/product-short.md)] detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we click on RonHD's name in the alert, we're taken to the Logical Activity timeline of RonHD, where we can further our investigation.
+[!INCLUDE [Product short](includes/product-short.md)] detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we select RonHD's name in the alert, we're taken to the Logical Activity timeline of RonHD, where we can further our investigation.
 
 ![View the detection in the Logical Activity timeline.](media/playbook-lateral-opthlogicalactivity.png)
 
@@ -255,4 +255,4 @@ The next phase in the attack kill chain is domain dominance.
 
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
+Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
