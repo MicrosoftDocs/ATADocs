@@ -143,7 +143,7 @@ sections:
     questions: 
 
       - question: What recommendations about WinPcap and Npcap drivers are changing?
-        answer: The Microsoft Defender for Identity team is currently recommending that all customers deploy the Npcap driver before deploying the sensor on a domain controller. This will ensure that Npcap driver will be used instead of the WinPcap driver. 
+        answer: The Microsoft Defender for Identity team is currently recommending that all customers deploy the Npcap driver before deploying the sensor. This will ensure that Npcap driver will be used instead of the WinPcap driver. 
 
       - question: Why are we moving away from WinPcap?
         answer: WinPcap is no longer supported and since it’s no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
