@@ -100,12 +100,8 @@ To do this, click the three dots at the top right corner of a specific suspiciou
   > [!NOTE]
   > The configuration pages can only be modified by ATA admins.
 
+## See also
 
-## Related Videos
-- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
-
-
-## See Also
 - [ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modifying ATA configuration](modifying-ata-center-configuration.md)

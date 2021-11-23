@@ -332,10 +332,6 @@ Access to the ATA Console is via a browser, supporting the  browsers and setting
 
 - Minimum screen width resolution of 1700 pixels
 
-## Related Videos
-
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-
 ## See Also
 
 - [ATA sizing tool](https://aka.ms/atasizingtool)
