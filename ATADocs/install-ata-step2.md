@@ -58,11 +58,6 @@ The first time you open the ATA Console, the following screen appears:
 > [« Step 1](install-ata-step1.md)
 > [Step 3 »](install-ata-step3.md)
 
-## Related Videos
-
-- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-
 ## See Also
 
 - [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)

@@ -119,11 +119,7 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
 - To get started deploying ATA: [Install ATA](install-ata-step1.md)
 
-## Related Videos
-- [Joining the security community](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
-- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
+## See also
 
-
-## See Also
 - [ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

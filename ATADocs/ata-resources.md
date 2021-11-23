@@ -66,8 +66,6 @@ These resources will help you download and install the ATA Center, connect to Ac
 
 [ATA POC playbook](/samples/browse/?redirectedfrom=TechNet-Gallery) - Guide to all the steps necessary to do a successful POC deployment of ATA.
 
-[ATA deployment video](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes) - This video provides an overview of ATA deployment steps in less than 10 minutes.
-
 ## ATA settings
 
 The basic necessary settings in ATA are configured as part of the installation wizard. However, there are a number of other settings that you can configure to fine-tune ATA that makes detections more accurate for your environment, such as SIEM integration and audit settings.
@@ -89,10 +87,6 @@ After ATA is up and running, you can view suspicious activities that are detecte
 [ATA best practices](https://aka.ms/atasecbestpractices) - Best practices for securing ATA.
 
 [ATA frequently asked questions](ata-technical-faq.yml) - This article provides a list of frequently asked questions about ATA and provides insight and answers.
-
-## Additional resources
-
-[Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
 ## Community resources
 

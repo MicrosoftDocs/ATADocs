@@ -161,10 +161,6 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 > - For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
 > - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
-## Related Videos
-
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-
 ## See Also
 
 - [ATA sizing tool](https://aka.ms/atasizingtool)

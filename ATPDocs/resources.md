@@ -62,9 +62,7 @@ Public Community: [[!INCLUDE [Product short](includes/product-short.md)] Tech Co
 
 Private Community: [[!INCLUDE [Product short](includes/product-short.md)] Yammer Group](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all&preserve-view=true)
 
-Channel 9: [Microsoft Security Channel 9 page](https://channel9.msdn.com/Shows/Microsoft-Security/)
-
-## See Also
+## See also
 
 - [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
