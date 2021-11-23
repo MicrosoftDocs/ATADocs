@@ -98,12 +98,7 @@ After the ATA Gateway receives the VPN events and sends them to the ATA Center f
 > [« Step 6](install-ata-step5.md)
 > [Step 8 »](install-ata-step7.md)
 
-## Related Videos
-
-- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-
-## See Also
+## See also
 
 - [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [ATA sizing tool](https://aka.ms/aatpsizingtool)

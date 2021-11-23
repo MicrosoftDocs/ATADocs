@@ -88,17 +88,12 @@ Perform the following steps on the ATA Gateway server.
     
 1. After the installation completes, for the ATA Gateway, click **Launch** to open your browser and log in to the ATA Console, for the ATA Lightweight Gateway, click **Finish**.
 
-
 > [!div class="step-by-step"]
 > [« Step 3](install-ata-step3.md)
 > [Step 5 »](install-ata-step5.md)
 
+## See also
 
-## Related Videos
-- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-
-## See Also
 - [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [ATA sizing tool](https://aka.ms/atasizingtool)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

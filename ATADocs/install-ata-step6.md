@@ -172,12 +172,7 @@ Make sure to have \t between the key=value pairs.
 > [« Step 5](install-ata-step5.md)
 > [Step 7 »](vpn-integration-install-step.md)
 
-## Related Videos
-
-- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-
-## See Also
+## See also
 
 - [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [ATA sizing tool](https://aka.ms/atasizingtool)

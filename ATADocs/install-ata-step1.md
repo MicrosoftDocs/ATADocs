@@ -127,11 +127,6 @@ If you installed ATA in different directory, make sure to change the folder path
 > [« Pre-install](configure-port-mirroring.md)
 > [Step 2 »](install-ata-step2.md)
 
-## Related Videos
-
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-
 ## See Also
 
 - [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)

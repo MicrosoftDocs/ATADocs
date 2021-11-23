@@ -71,12 +71,7 @@ To check that ATA is up and running and catching breaches in your network, you c
 > [« Step 7](vpn-integration-install-step.md)
 > [Step 9 »](install-ata-step9-samr.md)
 
-## Related Videos
-
-- [ATA Deployment Overview](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Choosing the right ATA Gateway type](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
-
-## See Also
+## See also
 
 - [ATA POC deployment guide](/samples/browse/?redirectedfrom=TechNet-Gallery)
 - [ATA sizing tool](https://aka.ms/atasizingtool)
