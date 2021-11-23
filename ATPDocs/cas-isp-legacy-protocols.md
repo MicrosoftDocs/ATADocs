@@ -13,6 +13,9 @@ With all of the standard work enterprises perform to protect their infrastructur
 
 Most legacy protocols were drafted and created before today's security needs existed, and built before modern enterprise security requirements became clear. However, legacy protocols remain unchanged, and are easily transformed into vulnerable access points in every modern organization.
 
+>[!NOTE]
+>This assessment currently focuses on on-premises Active Directory legacy protocols. For information about legacy protocols in Azure Active Directory, see [How to block legacy authentication to Azure Active Directory with Conditional Access](/azure/active-directory/conditional-access/block-legacy-authentication).
+
 ## What risks do retained legacy protocols introduce?
 
 Modern cyber-attacks methods often make specific use of legacy protocols in their attack and often utilize them to target organizations that have yet to implement the proper mitigation.
