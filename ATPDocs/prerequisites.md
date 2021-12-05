@@ -129,7 +129,7 @@ For sensors running on domain controllers and AD FS to communicate with the clou
 During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there is a restart already pending.
 
 > [!NOTE]
-> A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
+> A minimum of 6 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
 
 ### Server specifications
 
