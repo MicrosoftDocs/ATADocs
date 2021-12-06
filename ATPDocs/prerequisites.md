@@ -198,7 +198,7 @@ This section lists the requirements for the [!INCLUDE [Product short](includes/p
 
 ### General
 
-The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
+The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor supports installation on a server running Windows Server 2012 R2, Windows Server 2016 and Windows Server 2019 (including Server Core).
 The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor can be installed on a server that is a member of a domain or workgroup.
 The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
