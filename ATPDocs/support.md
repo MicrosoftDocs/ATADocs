@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-ms.date: 12/20/2020
+ms.date: 12/07/2021
 ms.topic: conceptual
 ---
 
@@ -11,7 +11,7 @@ Use the following resources to help you learn about, deploy, and support [!INCLU
 
 |To do this ...|...do this:|
 |----|----|
-|See our most popular documentation|Read the top ten pages:<br>- [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)<br>-[Creating an instance](install-step1.md)<br>-[Understanding security alerts](understanding-security-alerts.md)<br>-[[!INCLUDE [Product short](includes/product-short.md)] security alerts](suspicious-activity-guide.md)<br>-[Investigate a computer](investigate-a-computer.md)<br>-[Investigate a user](investigate-a-user.md)<br>-[Investigate a lateral movement path](investigate-lateral-movement-path.md)
+|See our most popular documentation|Read the top 10 pages:<br>- [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)<br>-[Creating an instance](install-step1.md)<br>-[Understanding security alerts](understanding-security-alerts.md)<br>-[[!INCLUDE [Product short](includes/product-short.md)] security alerts](suspicious-activity-guide.md)<br>-[Investigate a computer](investigate-a-computer.md)<br>-[Investigate a user](investigate-a-user.md)<br>-[Investigate a lateral movement path](investigate-lateral-movement-path.md)
 |Engage with the product team and your peers|Visit the [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) for [!INCLUDE [Product short](includes/product-short.md)].|
 |Check subscription information and get a list of which features are supported|See [subscription information](/defender-for-identity/technical-faq#licensing-and-privacy) and the [feature list](https://www.microsoft.com/security/business/threat-protection/identity-defender) from the [!INCLUDE [Product short](includes/product-short.md)] website.|
 
@@ -29,10 +29,17 @@ If you have Premier Support, visit the [portal for Premier Support customers](ht
 
 For other customers, use the support channels as follows:
 
-| Channels|Instructions|
-|------|-----|
-|Use the Azure portal|1. Select **New support request** from **Help + support** in the Azure portal.<br>2. When you're prompted, on the **Basics** pane, as the **Issue type**, choose **Technical**, as the **Service** under Security & Identity, choose **[!INCLUDE [Product short](includes/product-short.md)]**.<br>3. Make sure that one of the following options is selected:<br>- Subscription with technical support included. You see this option if you have a paid or trial subscription for Azure.<br>- Technical support included. You see this option if you don't have an Azure subscription.|
-|Use the [!INCLUDE [Product short](includes/product-short.md)] portal| 1. Select the "?" icon in the top navigation bar in [!INCLUDE [Product short](includes/product-short.md)] portal<br>2. Search for [!INCLUDE [Product short](includes/product-short.md)].<br>3. Open an incident ticket.<br>- Select "Support"<br>4. Open an incident ticket. If you succeed in entering the [!INCLUDE [Product short](includes/product-short.md)] portal, you can enter the [Online Assisted Support (OAS) portal](https://support.microsoft.com/assistedsupportproducts). |
+1. If you are in the Defender for Identity Portal, select the "?" icon in the top navigation bar. If you are in the Azure portal, skip to step 3.
+1. Select **Support**.  This will open the Azure portal **Help + support** page.
+1. Select **Create a support request**.
+1. In the box **What is your issue related to?**, choose **Enterprise Mobility + Security services**.
+1. Enter a summary of your issue in the **Summary** box.  For **Issue type**, choose **Technical**.
+1. Under **Service type**, choose **Microsoft Defender for Identity**.
+1. Continue to fill out the details related to your support request.
+1. For **Support plan**, make sure that one of the two following options is selected:
+
+    - Subscription with technical support included. You see this option if you have a paid or trial subscription for Azure.
+    - Technical support included. You see this option if you don't have an Azure subscription.
 
 For more support options, ask your Microsoft contact.
 
@@ -40,7 +47,7 @@ For more support options, ask your Microsoft contact.
 
 #### System status page
 
-To view system status for [!INCLUDE [Product short](includes/product-short.md)], visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to whether the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the Sensor is able to send traffic to the cloud. You can access the **System status** from the [!INCLUDE [Product short](includes/product-short.md)] menu bar.
+To view system status for [!INCLUDE [Product short](includes/product-short.md)], visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the Sensor can send traffic to the cloud. You can access the **System status** from the [!INCLUDE [Product short](includes/product-short.md)] menu bar.
 
 #### Troubleshooting
 
