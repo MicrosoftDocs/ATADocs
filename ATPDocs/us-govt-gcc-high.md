@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity for US Government offerings
 description: This article provides an overview of Microsoft Defender for Identity's US Government offerings.
-ms.date: 10/13/2021
+ms.date: 12/09/2021
 ms.topic: overview
 ---
 
@@ -41,7 +41,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 ## Feature parity with the commercial environment
 
-Unless otherwise specified, new feature releases, including preview features, documented in [What's new with Defender for Identity](whats-new.md), will be available in GCC, GCC High, and DoD environments within three weeks of release in the Defender for Identity commercial environment. Preview features may not be supported in the GCC, GCC High, and DoD environments.
+Unless otherwise specified, new feature releases, including preview features, documented in [What's new with Defender for Identity](whats-new.md), will be available in GCC, GCC High, and DoD environments within three weeks of release in the Defender for Identity commercial environment. Preview features may not be supported in the GCC, GCC High, and DoD environments. Refer to the [Service Description](/enterprise-mobility-security/solutions/ems-mdi-govt-service-description) for a list of functionality or features specific to the GCC, GCC High, and DoD environments.
 
 ## Next steps
 
