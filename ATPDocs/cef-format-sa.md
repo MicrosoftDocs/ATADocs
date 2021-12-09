@@ -39,6 +39,9 @@ The cs2 field identifies if the alert is new or updated.
 
 The log examples comply with RFC 5424, but [!INCLUDE [Product short](includes/product-short.md)] also supports RFC 3164.
 
+>[!NOTE]
+>The list below is a sample of logs sent to a SIEM. For a full list of alert details, see [Security alert name mapping and unique external IDs](suspicious-activity-guide.md#security-alert-name-mapping-and-unique-external-ids).
+
 Priorities:
 
 - 3=Low
