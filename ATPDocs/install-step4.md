@@ -17,6 +17,9 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 - For sensor installations on Active Directory Federation Services (AD FS) servers, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
 - Install the [Npcap driver](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers). For download and installation instructions, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
+>[!NOTE]
+>When installing the sensor on Windows Server Core, follow the steps for [silent installation](silent-installation.md).
+
 ## Install the sensor
 
 Perform the following steps on the domain controller or AD FS server.
