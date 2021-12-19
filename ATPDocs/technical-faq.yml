@@ -178,7 +178,7 @@ sections:
 
             - If you haven't yet installed the sensor:
               1. Uninstall WinPcap, if it was installed.
-              1. Install Npcap with the following options: **loopback_support=no** and **winpcap_mode=yes**. Do NOT use the `/admin_only` option.
+              1. Install Npcap with the following options: **/loopback_support=no** and **/winpcap_mode=yes** and **/S** for a silent install. Do NOT use the `/admin_only` option.
                   - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
 
             - If you already installed the sensor with WinPcap and need to update to use Npcap:
