@@ -51,11 +51,11 @@ If during sensor installation you receive the following error: **The sensor fail
 
 **Cause:**
 
-The issue can be caused when the trusted root certification authorities certificates required by Defender for Identity are missing. 
+The issue can be caused when the trusted root certification authorities certificates required by Defender for Identity are missing.
 
 **Resolution:**
 
-Run the following PowerShell cmdlet to verify that the required certificates are installed. 
+Run the following PowerShell cmdlet to verify that the required certificates are installed.
 
 In the following example, use the "DigiCert Baltimore Root" certificate for all customers. In addition, use the "DigiCert Global Root G2" certificate for commercial customers or use the "DigiCert Global Root CA" certificate for US Government GCC High customers, as indicated.
 
@@ -312,6 +312,38 @@ A Discretionary Access Control List is limiting access to the required event log
 Ensure that the Discretionary Access Control List includes the following entry:
 
 `(A;;0x1;;;S-1-5-80-818380073-2995186456-1411405591-3990468014-3617507088)`
+
+## ApplyInternal failed two way SSL connection to service error
+
+If during the sensor installation you receive the following error: **ApplyInternal failed two way SSL connection to service** and the sensor log contains an entry similar to:
+
+```log
+2021-01-19 03:45:00.0000 Error CommunicationWebClient+<SendWithRetryAsync>d__9`1 ApplyInternal failed two way SSL connection to service. The issue can be caused by a proxy with SSL inspection enabled. [_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=7C039DA47E81E51F3DA3DF3DA7B5E1899B5B4AD0]
+```
+
+**Cause:**
+
+The issue can be caused when the **SystemDefaultTlsVersions** or **SchUseStrongCrypt**o registry values aren't set to their default value of 1.
+
+**Resolution:**
+
+Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry values are set to 1:
+
+```reg
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319]
+ 
+"SystemDefaultTlsVersions"=dword:00000001
+ 
+"SchUseStrongCrypto"=dword:00000001
+ 
+
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]
+ 
+"SystemDefaultTlsVersions"=dword:00000001
+ 
+"SchUseStrongCrypto"=dword:00000001
+```
 
 ## See Also
 
