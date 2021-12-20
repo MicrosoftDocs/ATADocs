@@ -180,8 +180,8 @@ sections:
           >[!NOTE]
           > - **[DOMAIN1\triservice]** -- the directory services user of the workspace
           > - **AdfsConfigurationV4** -- the name of the AD FS database (may vary)
-          > - **server=\.\pipe\MICROSOFT##WID\tsql\query** -- the connection string to the database
-
+          > - **server=\.\pipe\MICROSOFT##WID\tsql\query** -- the connection string to the database if you are using WID
+          > - If you don't know your AD FS connection string, see [To acquire the SQL connection string](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql#to-acquire-the-sql-connection-string).
 
   - name: WinPcap and Npcap drivers
     questions: 
