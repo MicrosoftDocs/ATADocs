@@ -139,9 +139,9 @@ sections:
         answer: |
           Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Defender for Identity health alerts.
 
-      - question: How do I grant access to the AD FS database if I'm using the Windows Internal Database (WID)?
+      - question: How do I grant access to the AD FS database via TSQL or PowerShell?
         answer: |
-          You can grant access to the AD FS database either through TSQL or through PowerShell.
+          Instead of using SQL Server Management Studio, you can grant access to the AD FS database either through TSQL or through PowerShell. For example, if you're using the Windows Internal Database (WID) or an external SQL server, these commands can be helpful.
 
           To grant access for the sensor to the AD FS database using TSQL:
 
