@@ -317,12 +317,10 @@ Ensure that the Discretionary Access Control List includes the following entry:
 
 If during the sensor installation you receive the following error: **ApplyInternal failed two way SSL connection to service** and the sensor log contains an entry similar to:
 
-```log
-2021-01-19 03:45:00.0000 Error CommunicationWebClient+<SendWithRetryAsync>d__9`1 
-ApplyInternal failed two way SSL connection to service. 
-The issue can be caused by a proxy with SSL inspection enabled. 
+2021-01-19 03:45:00.0000 Error CommunicationWebClient+\<SendWithRetryAsync\>d__9`1
+ApplyInternal failed two way SSL connection to service.
+The issue can be caused by a proxy with SSL inspection enabled.
 [_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=7C039DA47E81E51F3DA3DF3DA7B5E1899B5B4AD0]
-```
 
 **Cause:**
 
