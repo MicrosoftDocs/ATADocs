@@ -324,7 +324,7 @@ The issue can be caused by a proxy with SSL inspection enabled.
 
 **Cause:**
 
-The issue can be caused when the **SystemDefaultTlsVersions** or **SchUseStrongCrypt**o registry values aren't set to their default value of 1.
+The issue can be caused when the **SystemDefaultTlsVersions** or **SchUseStrongCrypto** registry values aren't set to their default value of 1.
 
 **Resolution:**
 
