@@ -250,7 +250,7 @@ Warn DirectoryServicesClient CreateLdapConnectionAsync failed to retrieve group 
 
 **Cause:**
 
-The domain controller hasn't been given rights to access the password of the gSMA account.
+The domain controller hasn't been given rights to access the password of the gMSA account.
 
 **Resolution:**
 
