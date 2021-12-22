@@ -130,6 +130,8 @@ items:
     href: manage-sensitive-honeytoken-accounts.md
   - name: Monitor domain controllers
     href: sensor-monitoring.md
+  - name: Directory Service Account recommendations
+    href: directory-service-accounts.md
   - name: Change domain connectivity password
     href: modifying-config-dcpassword.md
   - name: Set Defender for Identity notifications
