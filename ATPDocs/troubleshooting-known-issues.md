@@ -215,7 +215,7 @@ The domain controller hasn't been granted permission to retrieve the password of
 
 **Resolution 1**:
 
-Validate that the domain controller computer has been granted permissions to retrieve the password of the gMSA account.
+Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Granting the permissions to retrieve the gMSA account's password](directory-service-accounts.md#granting-the-permissions-to-retrieve-the-gmsa-accounts-password).
 
 ### Cause 2
 
@@ -225,7 +225,7 @@ If the user rights assignment policy **Log on as a service** is configured for t
 
 **Resolution 2**:
 
-Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller.
+Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
 
 ### Cause 3
 
@@ -238,7 +238,7 @@ Do one of the following to resolve this issue:
 - Reboot the domain controller.
 - Purge the Kerberos ticket, forcing the domain controller to request a new Kerberos ticket. From an administrator command prompt on the domain controller, run the following command:
 
-    `klist -li 0:0x3e7 purge`
+    `klist -li 0x3e7 purge`
 
 - Assign the permission to retrieve the gMSA's password to a group the domain controller is already a member of, such as the Domain Controllers group.
 

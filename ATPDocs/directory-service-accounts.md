@@ -21,9 +21,15 @@ The Directory Services Account (DSA) in Defender for Identity is used by the sen
 
 - Defender for Identity requests the list of members of the local administrator group from devices seen in network traffic, events, and ETW activities. This is done by making a [SAM-R](install-step8-samr.md) call to the device. This information is used to calculate potential lateral movement paths.
 
-## Permissions required for the DSA account
+>[!NOTE]
+>By default, Defender for Identity supports up to 30 credentials. If you want to add more credentials, contact Defender for Identity support.
 
-The DSA account requires read permissions on all the objects in Active Directory, including the Deleted Objects Container.
+## Permissions required for the DSA
+
+The DSA requires read permissions on all the objects in Active Directory, including the Deleted Objects Container.
+
+>[!NOTE]
+>**Deleted Objects** container recommendation: The DSA should have read-only permissions on the Deleted Objects container. Read-only permissions on this container allow [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
 
 ## Types of DSA accounts
 
@@ -50,7 +56,7 @@ In an untrusted multi-forest environment, a DSA account will be required for eac
 
 When the sensor starts, it will get a list of DSA entries configured in Defender for Identity.
 
-### One DSA entry is configured
+#### One DSA entry is configured
 
 The sensor will attempt to use the DSA entry configured during start-up and each time a SAM-R query is made.
 
@@ -58,14 +64,14 @@ The sensor will attempt to use the DSA entry configured during start-up and each
 
 - **gMSA account**: – the sensor will attempt to retrieve the password for the gMSA account from Active Directory (AD). After retrieving the password, the sensor will attempt to sign in to the domain.
 
-### Two or more DSA entries are configured
+#### Two or more DSA entries are configured
 
 When there are two or more DSA entries, the sensor will try DSA entries in the following order:
 
 >[!NOTE]
 >gMSA entries have a higher priority over regular entries.
 
-- The Sensor will look for a DSA entry with an exact match of the domain name of the sensor's domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
+- The sensor will look for a DSA entry with an exact match of the domain name of the sensor's domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
 
 - If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will pick a DSA entry at random.
 
@@ -156,9 +162,17 @@ If it has the permissions, the command will return a **True** message.
 
 ## Verify that the gMSA account has the required rights (if needed)
 
-Since the Sensor service runs as **LocalService** and performs impersonation of the DSA account, the impersonation will fail if the **User Rights Assignment \ Log on as a service** policy is configured and the **Log on as a service** right hasn't been granted to the gMSA account.
+The sensor (Azure Advanced Threat Protection Sensor) service runs as **LocalService** and performs impersonation of the DSA account. The impersonation will fail if the **Log on as a service** policy is configured but the permission hasn't been granted to the gMSA account, and you will receive a health alert: **Directory services user credentials are incorrect**.
 
-You can use **secpol.msc** to view the applied settings. If the setting has its add and remove buttons grayed out, it means that the setting is being applied using a Domain Group Policy Object and not set locally. In such a case, you can find the affecting GPO using **rsop.msc** and configure the required rights in it.
+If you receive the alert, you should check if the **Log on as a service** policy is configured.
+
+The **Log on as a service** policy can be configured either in a Group Policy setting or in a Local Security Policy.
+
+- To check the Local Policy, run **secpol.msc** and select **Local Policies**. Under **User Rights Assignment**, go to the **Log on as a service** policy setting. If the policy is enabled, add the gMSA account to the list of accounts that can log on as a service.
+
+- To check if the setting is set in Group Policy, run **rsop.msc** and see if the setting **Computer Configuration**  -> **Windows Settings** -> **Security Settings** -> **Local Policies** -> **User Rights Assignment** -> **Log on as a service** is set. If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
+
+![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)
 
 ![Log on as a service properties.](media/log-on-as-a-service.png)
 
