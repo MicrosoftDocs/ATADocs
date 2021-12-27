@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity compromised credentials phase security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
-ms.date: 02/21/2021
+ms.date: 12/27/2021
 ms.topic: tutorial
 ---
 
@@ -21,6 +21,7 @@ The following security alerts help you identify and remediate **Compromised cred
 
 > [!div class="checklist"]
 >
+> - [Suspicious modification of a sAMNameAccount attribute (CVE-2021-42278 and CVE-2021-42287 exploitation) (external ID 2419)](#suspicious-modification-of-a-samnameaccount-attribute-cve-2021-42278-and-cve-2021-42287-exploitation-external-id-2419)
 > - [Honeytoken activity (external ID 2014)](#honeytoken-activity-external-id-2014)
 > - [Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)](#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)
 > - [Suspected Brute Force attack (LDAP) (external ID 2004)](#suspected-brute-force-attack-ldap-external-id-2004)
@@ -31,6 +32,39 @@ The following security alerts help you identify and remediate **Compromised cred
 > - [Suspected WannaCry ransomware attack (external ID 2035)](#suspected-wannacry-ransomware-attack-external-id-2035)
 > - [Suspected use of Metasploit hacking framework (external ID 2034)](#suspected-use-of-metasploit-hacking-framework-external-id-2034)
 > - [Suspicious VPN connection (external ID 2025)](#suspicious-vpn-connection-external-id-2025)
+
+## Suspicious modification of a sAMNameAccount attribute (CVE-2021-42278 and CVE-2021-42287 exploitation) (external ID 2419)
+
+**Description**
+
+An attacker can create a straightforward path to a Domain Admin user in an Active Directory environment that isn't patched. This escalation attack allows attackers to easily elevate their privilege to that of a Domain Admin once they compromise a regular user in the domain.
+
+When performing an authentication using Kerberos, Ticket-Granting-Ticket (TGT) and the Ticket-Granting-Service (TGS) are requested from the Key Distribution Center (KDC). If a TGS was requested for an account that couldn't be found, the KDC will attempt to search it again with a trailing &dollar;.
+
+When processing the TGS request, the KDC will fail its lookup for the requestor machine *DC1* the attacker created. Therefore, the KDC will perform another lookup appending a trailing &dollar;. The lookup will succeed. As a result, the KDC will issue the ticket using the privileges of *DC1$*.
+
+Combining CVEs CVE-2021-42278 and CVE-2021-42287, an attacker with domain user credentials can leverage them for granting access as a domain admin.
+
+**Learning period**
+
+None
+  
+**TP, B-TP, or FP**
+
+1. Check and investigate the source computer and its original usage.
+1. Follow the instructions in **Understand the scope of the breach**.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](investigate-a-computer.md).
+2. Investigate the target domain controller and identify activities that occurred after the attack.
+  
+**Remediation:**
+
+1. Contain the source computer.
+
+    - Find the tool that performed the attack and remove it.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. If you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [Confirm user compromised](/defender-cloud-apps/accounts#governance-actions) action in the Defender for Cloud Apps portal.
 
 ## Honeytoken activity (external ID 2014)
 
