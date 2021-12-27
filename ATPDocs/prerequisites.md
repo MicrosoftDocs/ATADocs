@@ -39,30 +39,11 @@ This section lists information you should gather as well as accounts and network
 
 - Verify the domain controller(s) you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on have internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
 
-- At least one of the following directory services accounts with read access to all objects in the monitored domains:
-  - A **standard** AD user account and password. Required for sensors running Windows Server 2008 R2 SP1.
-  - A **group Managed Service Account** (gMSA). Requires Windows Server 2012 or above.  
-  All sensors must have permissions to retrieve the gMSA account's password.  
-  To learn about gMSA accounts, see [Getting Started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts#BKMK_CreateGMSA).
-
-    The following table shows which AD user accounts can be used with which server versions:
-
-    |Account type|Windows Server 2008 R2 SP1|Windows Server 2012 or above|
-    |---|---|---|
-    |**Standard** AD user account|Yes|Yes|
-    |**gMSA** account|No|Yes|
-
-    > [!NOTE]
-    >
-    > - For sensor machines running Windows Server 2012 and above, we recommend using a **gMSA** account for its improved security and automatic password management.
-    > - If you have multiple sensors, some running Windows Server 2008 R2 and others running Windows Server 2012 or above, in addition to the recommendation to use a **gMSA** account, you must also use at least one **standard** AD user account.
-    > - If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
+- At least one directory services account with read access to all objects in the monitored domains. For instructions on how to create the directory service account, see [Directory Service Account recommendations](directory-service-accounts.md).
 
 - If you run Wireshark on [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, restart the [!INCLUDE [Product short](includes/product-short.md)] sensor service after you've stopped the Wireshark capture. If you don't restart the sensor service, the sensor stops capturing traffic.
 
 - If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
-
-- **Deleted Objects** container Recommendation: User should have read-only permissions on the Deleted Objects container. Read-only permissions on this container allow [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
 
 - Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Manage sensitive or honeytoken accounts](manage-sensitive-honeytoken-accounts.md).
 
