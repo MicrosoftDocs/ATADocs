@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 12/6/2021
+ms.date: 12/27/2021
 ms.topic: overview
 ---
 
@@ -17,39 +17,47 @@ RSS feed: Get notified when this page is updated by copying and pasting the foll
 >
 > Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
-For more information on what's new with other Microsoft Defender security products see:
+For more information on what's new with other Microsoft Defender security products, see:
 
 - [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## Defender for Identity release 2.166
+
+Released December 27, 2021
+
+- Version includes a new security alert: [Suspicious modification of a sAMNameAccount attribute (CVE-2021-42278 and CVE-2021-42287 exploitation) (external ID 2419)](compromised-credentials-alerts.md#suspicious-modification-of-a-samnameaccount-attribute-cve-2021-42278-and-cve-2021-42287-exploitation-external-id-2419).  
+In response to the publishing of recent CVEs, Microsoft Defender for Identity will trigger a security alert whenever an attacker is trying to exploit CVE-2021-42278 and CVE-2021-42287. To learn more about this attack, [read the blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/sam-name-impersonation/ba-p/3042699).
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.165
 
-Released Dec 6, 2021
+Released December 6, 2021
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.164
 
-Released Nov 17, 2021
+Released November 17, 2021
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.163
 
-Released Nov 8, 2021
+Released November 8, 2021
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.162
 
-Released Nov 1, 2021
+Released November 1, 2021
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.161
 
-Released Sept 12, 2021
+Released September 12, 2021
 
 - Version includes new monitored activity: gMSA account password was retrieved by a user. For more information, see [Microsoft Defender for Identity monitored activities](monitored-activities.md#monitored-user-activities-domain-controller-based-user-operations)
 - Version includes improvements and bug fixes for internal sensor infrastructure.
@@ -305,7 +313,7 @@ Released September 6, 2020
 Released August 30, 2020
 
 - **New security alerts**  
-Azure ATP security alerts now includes the following new detections:
+Azure ATP security alerts now include the following new detections:
   - **Active Directory attributes reconnaissance (LDAP) (external ID 2210)**  
 In this detection, an Azure ATP security alert is triggered when an attacker is suspected of successfully gaining critical information about the domain for use in their attack kill chain. For more information, see [Active Directory attributes reconnaissance](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
   - **Suspected rogue Kerberos certificate usage (external ID 2047)**  
@@ -353,7 +361,7 @@ To improve the accuracy of our domain controller coverage calculation, we will b
 Released June 28, 2020
 
 - **New security assessments**  
-Azure ATP security assessments now includes the following new assessments:
+Azure ATP security assessments now include the following new assessments:
   - **Riskiest lateral movement paths**  
     This assessment continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the sensitive account to credential theft by malicious actors. For more information, see [Security assessment: Riskiest lateral movement paths (LMP)](cas-isp-riskiest-lmp.md).
   - **Unsecure account attributes**  
@@ -382,7 +390,7 @@ Released June 7, 2020
 Released May 31, 2020
 
 - **New security assessments**  
-Azure ATP security assessments now includes the following new assessments:
+Azure ATP security assessments now include the following new assessments:
   - **Unsecure SID History attributes**  
     This assessment reports on SID History attributes that can be used by malicious attackers to gain access to your environment. For more information, see [Security assessment: Unsecure SID History attributes](cas-isp-unsecure-sid-history-attribute.md).
   - **Microsoft LAPS usage**  
@@ -438,7 +446,7 @@ Released Mar 1, 2020
 Released Feb 23, 2020
 
 - **New security assessment: Unmonitored domain controllers**  
-Azure ATP security assessments now includes a report on unmonitored domain controllers, servers without a sensor, to help you in managing full coverage of your environment. For more information, see [Unmonitored domain controllers](cas-isp-unmonitored-domain-controller.md).
+Azure ATP security assessments now include a report on unmonitored domain controllers, servers without a sensor, to help you in managing full coverage of your environment. For more information, see [Unmonitored domain controllers](cas-isp-unmonitored-domain-controller.md).
 
 ## Azure ATP release 2.109
 
