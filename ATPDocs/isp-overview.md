@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Microsoft Defender for Identity's identity security posture assessments
 
-Typically, organizations of all sizes have limited visibility into whether or not their on-premises apps and services could introduce a security vulnerability to their organization. The problem of limited visibility is especially true with regards to use of unsupported or outdated components.
+Typically, organizations of all sizes have limited visibility into whether or not their on-premises apps and services could introduce a security vulnerability to their organization. The problem of limited visibility is especially true regarding use of unsupported or outdated components.
 
-While your company may invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an on-going project, it is easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization. Microsoft security research reveals that most identity attacks utilize common misconfigurations in Active Directory and continued use of legacy components (such as NTLMv1 protocol) to compromise identities and successfully breach your organization. To combat this effectively, [!INCLUDE [Product long](includes/product-long.md)] now offers proactive identity security posture assessments to detect and suggest improvement actions across your on-premise Active Directory configurations.
+While your company may invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an on-going project, it's easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization. Microsoft security research reveals that most identity attacks utilize common misconfigurations in Active Directory and continued use of legacy components (such as NTLMv1 protocol) to compromise identities and successfully breach your organization. To combat this effectively, [!INCLUDE [Product long](includes/product-long.md)] now offers proactive identity security posture assessments to detect and suggest improvement actions across your on-premise Active Directory configurations.
 
 ## What do Defender for Identity identity security posture assessments provide?
 
@@ -21,21 +21,21 @@ While your company may invest significant time and effort on hardening identitie
 
 ### Access
 
-[!INCLUDE [Product short](includes/product-short.md)] security assessments are available using the Microsoft Defender for Cloud Apps portal after turning on the [!INCLUDE [Product short](includes/product-short.md)] integration. To learn how to integrate [!INCLUDE [Product short](includes/product-short.md)] into Defender for Cloud Apps, see [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/mdi-integration).
+[!INCLUDE [Product short](includes/product-short.md)] security assessments are available using the [Microsoft Secure Score dashboard](/microsoft-365/security/defender/microsoft-secure-score). The assessments are available in the **Identity** category in Microsoft Secure Score.
+
+### What is Microsoft Secure Score?
+
+Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more improvement actions taken. It can be found at <https://security.microsoft.com/securescore> in the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
 
 ### Licensing
 
-Accessing [!INCLUDE [Product short](includes/product-short.md)] security assessment reports in Defender for Cloud Apps do not require a Defender for Cloud Apps license, only a [!INCLUDE [Product short](includes/product-short.md)] license is required.
+A [!INCLUDE [Product short](includes/product-short.md)] license is required.
 
-## Access Defender for Identity using Defender for Cloud Apps
-
-See the [Defender for Cloud Apps quick start](/cloud-app-security/getting-started-with-cloud-app-security) to familiarize yourself with the basics of using the Defender for Cloud Apps portal.
-
-**Identity security posture assessments**
+### Identity security posture assessments
 
 [!INCLUDE [Product short](includes/product-short.md)] offers the following identity security posture assessments. Each assessment is a downloadable report with instructions for use and tools for building an action plan to remediate or resolve.
 
-**Assessment reports**
+### Assessment reports
 
 - [Domain controllers with Print Spooler service available](cas-isp-print-spooler.md)
 - [Dormant entities in sensitive groups](cas-isp-dormant-entities.md)
@@ -51,12 +51,16 @@ See the [Defender for Cloud Apps quick start](/cloud-app-security/getting-starte
 
 To access identity security posture assessments:
 
-1. Open the **Microsoft Defender for Cloud Apps** portal.
-    ![Access [!INCLUDE [Product short.](includes/product-short.md)] identity security posture reports in Defender for Cloud Apps](media/cas-isp-report-1.png)
-1. Select **Investigate** from the left menu, then click **Identity security posture** from the drop-down menu.
-1. Click the identity security posture assessment you wish to review from the **Security assessment reports** list that opens.
+1. Open the [Microsoft Secure Score dashboard](https://security.microsoft.com/securescore).
+1. Select the **Improvement actions** tab. You can search for a particular improvement action, or filter the results (for example, by the category **Identity**).
+
+    ![Improvement actions.](media/improvement-actions.png)
+
+1. For more details about the assessment, select the **Improvement action**.
+
+    ![Select the assessment.](media/select-assessment.png)
 
 ## Next steps
 
-- [Learn more about using Defender for Cloud Apps with [!INCLUDE [Product short](includes/product-short.md)]](activities-filtering-mcas.md)
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
