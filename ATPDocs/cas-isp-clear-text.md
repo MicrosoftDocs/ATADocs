@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Entities exposing credentials in clear text
 
-![Prevent clear text credentials exposure in Defender for Cloud Apps.](media/cas-isp-clear-text-1.png)
+![Prevent clear text credentials exposure.](media/cas-isp-clear-text-1.png)
 
 ## What information does the prevent clear text security assessment provide?
 
