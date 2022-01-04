@@ -8,7 +8,7 @@ ms.topic: conceptual
 # Microsoft Defender for Identity Security Alerts
 
 > [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 [!INCLUDE [Product long](includes/product-long.md)] security alerts explain the suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
