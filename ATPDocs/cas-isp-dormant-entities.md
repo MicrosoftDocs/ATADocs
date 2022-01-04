@@ -23,7 +23,7 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 
 ## How do I use this security assessment?
 
-1. Use the report table to discover which of your sensitive accounts are dormant.
+1. Review the suggested improvement action to discover which of your sensitive accounts are dormant.
     ![Remediate dormant entities ini sensitive groups.](media/cas-isp-dormant-entities-sensitive-groups-1.png)
 1. Take appropriate action on those user accounts by removing their privileged access rights or by deleting the account.
 
