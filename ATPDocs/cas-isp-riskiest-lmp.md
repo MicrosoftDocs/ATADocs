@@ -33,10 +33,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
     - Remove the local administrator permissions for the entity from the device specified in the recommendation.
 
     > [!NOTE]
-    > Wait 24 hours and then check that the recommendation no longer appears in the list.
-
-> [!NOTE]
-> This assessment is updated every 24 hours.
+    > This assessment is updated every 24 hours, so wait 24 hours and then check that the recommendation no longer appears in the list.
 
 ## See Also
 
