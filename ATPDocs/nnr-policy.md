@@ -7,6 +7,9 @@ ms.topic: conceptual
 
 # What is Network Name Resolution?
 
+> [!NOTE]
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+
 Network Name Resolution (NNR) is a main component of  [!INCLUDE [Product long](includes/product-long.md)] functionality. [!INCLUDE [Product short](includes/product-short.md)] captures activities based on network traffic, Windows events, and ETW - these activities normally contain IP data.
 
 Using NNR, [!INCLUDE [Product short](includes/product-short.md)] can correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, [!INCLUDE [Product short](includes/product-short.md)] profiles entities, including computers, and generates security alerts for suspicious activities.
