@@ -39,7 +39,7 @@ You can also use the IP address ranges in our Azure service tag (**AzureAdvanced
 
 Use [this link](prerequisites.md#ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
 
-## How to migrate Defender for Identity from commercial to GCC
+## How to migrate from commercial to GCC
 
 1. Send the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
 1. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
