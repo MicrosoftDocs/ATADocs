@@ -39,6 +39,21 @@ You can also use the IP address ranges in our Azure service tag (**AzureAdvanced
 
 Use [this link](prerequisites.md#ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
 
+## How to migrate Defender for Identity from commercial to GCC
+
+1. Send the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
+1. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
+1. Create a new instance of Defender for Identity
+1. Download the new sensor agent package and copy the workspace key
+1. Uninstall existing sensor agents from the domain controllers
+1. Make sure sensors have access to `*.gcc.atp.azure.com` (directly or through proxy)
+1. Reinstall sensors with the new workspace key
+1. Migrate any settings after the initial sync (use the portals to compare)
+1. Eventually, delete the previous workspace (historic data will be lost)
+
+>[!NOTE]
+> No data is migrated from the commercial service.
+
 ## Feature parity with the commercial environment
 
 Unless otherwise specified, new feature releases, including preview features, documented in [What's new with Defender for Identity](whats-new.md), will be available in GCC, GCC High, and DoD environments within three weeks of release in the Defender for Identity commercial environment. Preview features may not be supported in the GCC, GCC High, and DoD environments. Refer to the [Service Description](/enterprise-mobility-security/solutions/ems-mdi-govt-service-description) for a list of functionality or features specific to the GCC, GCC High, and DoD environments.
