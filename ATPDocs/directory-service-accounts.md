@@ -73,7 +73,7 @@ When there are two or more DSA entries, the sensor will try DSA entries in the f
 
 - The sensor will look for a DSA entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
 
-- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will traverse the list with round robin.
+- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will traverse the list via round robin.
 
 For example, if these are the DSA entries configured:
 
