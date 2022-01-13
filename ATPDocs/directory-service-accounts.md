@@ -58,7 +58,7 @@ When the sensor starts, it will get a list of DSA entries configured in Defender
 
 #### One DSA entry is configured
 
-The sensor will attempt to use the DSA entry configured during start-up, as a reaction to a new domain contacting the DC, each time a SAM-R query is made or whenever such a connection needs to be recreated.
+The sensor will attempt to use the DSA entry configured during start-up, as a reaction to a new domain contacting the domain controller, each time a SAM-R query is made, or whenever such a connection needs to be recreated.
 
 - **Regular account**: the sensor will attempt to sign in to the domain controller using the username and password configured.
 
