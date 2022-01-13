@@ -58,7 +58,7 @@ When the sensor starts, it will get a list of DSA entries configured in Defender
 
 #### One DSA entry is configured
 
-The sensor will attempt to use the DSA entry configured during start-up and each time a SAM-R query is made.
+The sensor will attempt to use the DSA entry configured during start-up, as a reaction to a new domain contacting the domain controller, each time a SAM-R query is made, or whenever such a connection needs to be recreated.
 
 - **Regular account**: the sensor will attempt to sign in to the domain controller using the username and password configured.
 
@@ -71,9 +71,9 @@ When there are two or more DSA entries, the sensor will try DSA entries in the f
 >[!NOTE]
 >gMSA entries have a higher priority over regular entries.
 
-- The sensor will look for a DSA entry with an exact match of the domain name of the sensor's domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
+- The sensor will look for a DSA entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
 
-- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will pick a DSA entry at random.
+- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will traverse the list via round robin.
 
 For example, if these are the DSA entries configured:
 
@@ -115,7 +115,7 @@ When using a gMSA entry, the sensor needs to retrieve the gMSA's password from A
   >[!NOTE]
   >If you add a computer account to the universal group after the computer has received it’s Kerberos ticket, it will not be able to retrieve the gMSA’s password, until it requests a new Kerberos ticket. The Kerberos ticket has a list of groups that an entity is part a member of when the ticket is issued. In this case you can:
   >
-  > - Wait for new Kerberos ticket to be issued. (Kerberos tickets are normally valid for 8 hours)
+  > - Wait for new Kerberos ticket to be issued. (Kerberos tickets are normally valid for 10 hours)
   > - Reboot the server, when the server is rebooted, a new Kerberos ticket will be requested with the new group membership.
   > - Purge the existing Kerberos tickets. This will force the domain controller to request a new Kerberos ticket. From an administrator command prompt on the domain controller, run the following command: `klist purge -li 0x3e7`
 
