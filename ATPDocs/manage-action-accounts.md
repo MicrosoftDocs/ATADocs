@@ -1,6 +1,6 @@
 ---
 title: Manage action accounts
-description: Learn how to configure the Directory Service Account (DSA) to work with Microsoft Defender for Identity.
+description: Learn how to manage action accounts to work with Microsoft Defender for Identity.
 ms.date: 01/17/2022
 ms.topic: how-to
 ---
