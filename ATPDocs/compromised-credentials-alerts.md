@@ -237,7 +237,7 @@ Attackers use tools that implement various protocols such as SMB, Kerberos, and 
 Occasionally, applications implement their own NTLM or SMB stack.
 
 1. Check if the source computer is running its own NTLM or SMB stack type of application.
-    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
+    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **B-TP** activity.
     1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
 
 **Understand the scope of the breach**
@@ -276,7 +276,7 @@ None
 
 1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
     1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
-    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a T-BP activity, and exclude that computer.
+    1. If the source computer is found running that type of application, and it should continue doing so, Close the security alert as a B-TP activity, and exclude that computer.
 
 **Understand the scope of the breach**
 
@@ -348,7 +348,7 @@ None
 
 1. Check if the source computer is running an attack tool, such as PowerSploit or Rubeus.
     1. If yes, it is a true positive. Follow the instructions in **Understand the scope of the breach**.
-    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
+    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
 
 **Understand the scope of the breach**
 
@@ -386,8 +386,8 @@ Attackers use tools that implement various protocols in non-standard ways. While
 Occasionally, applications implement their own NTLM or SMB stack.
 
 1. Check if the source computer is running its own NTLM or SMB stack type of application.
-    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
-    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
+    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **B-TP** activity.
+    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
 
 **Understand the scope of the breach**
 
@@ -427,8 +427,8 @@ Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in no
 Occasionally, applications implement their own NTLM or SMB stack.
 
  1. Check if the source computer is running its own NTLM or SMB stack type of application.
-    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **T-BP** activity.
-    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **T-BP** activity, and exclude that computer.
+    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **B-TP** activity.
+    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
 
 **Understand the scope of the breach**
 
