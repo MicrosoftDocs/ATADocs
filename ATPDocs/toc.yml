@@ -132,6 +132,8 @@ items:
     href: sensor-monitoring.md
   - name: Directory Service Account recommendations
     href: directory-service-accounts.md
+  - name: Installing on Active Directory Federation Services
+    href: active-directory-federation-services.md
   - name: Manage action accounts
     href: manage-action-accounts.md
   - name: Change domain connectivity password
