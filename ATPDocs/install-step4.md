@@ -14,7 +14,7 @@ In this quickstart, you'll install the [!INCLUDE [Product long](includes/product
 - An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that's [connected to Active Directory](install-step2.md).
 - A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](install-step3.md) and the access key.
 - Make sure Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
-- For sensor installations on Active Directory Federation Services (AD FS) servers using SQL Server Management Studio, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database. For instructions on how to grant access to the AD FS database via TSQL or PowerShell, see [this explanation](/defender-for-identity/technical-faq#how-do-i-grant-access-to-the-ad-fs-database-via-tsql-or-powershell).
+- For sensor installations on Active Directory Federation Services (AD FS) servers, see [AD FS Prerequisites](active-directory-federation-services.md#prerequisites).
 - Install the [Npcap driver](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers). For download and installation instructions, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 >[!NOTE]
@@ -63,20 +63,7 @@ Perform the following steps on the domain controller or AD FS server.
 
 ## Post-installation steps for AD FS servers
 
-Use the following steps to configure Defender for Identity once you've completed the installation of the sensor on an AD FS server.
-
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**
-
-1. Under **System**, select **Sensors**.
-
-    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration page](media/sensor-config.png)
-
-1. Select the sensor you installed on the AD FS server.
-1. In the popup window, in the **Resolver Domain Controller** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  
-
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
-
-    Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
+If you installed the sensor on AD FS servers, follow the steps in [Post-installation steps for AD FS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-servers).
 
 ## Next steps
 
