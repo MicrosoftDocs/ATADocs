@@ -60,7 +60,7 @@ Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is vi
   - Internet Explorer version 11 and above
   - Google Chrome 30.0 and above
 - Minimum screen width resolution of 1700 pixels
-- Firewall/proxy open - To communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud service, *.atp.azure.com port 443 must be open in your firewall/proxy.
+- Firewall/proxy open - To communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud service, *.atp.azure.com port 443 must be open in your firewall/proxy. For more information about firewall/proxy configuration, see [Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity Sensor](configure-proxy.md).
 
     > [!NOTE]
     > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
