@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity role groups for access management
 description: Walks you through working with Microsoft Defender for Identity role groups.
-ms.date: 02/27/2020
+ms.date: 01/19/2022
 ms.topic: conceptual
 ---
 
@@ -62,6 +62,19 @@ When users try to access a page that isn't available for their role group, they'
 ## Add and remove users
 
 [!INCLUDE [Product short](includes/product-short.md)] uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Only Azure AD users can be added or removed from security groups.
+
+## Unified role-based access control (RBAC)
+
+You can now enable more granular role-based access control from the Microsoft 365 portal instead of using Defender for Identity's Azure AD groups. For more information, see [Custom roles in role-based access control for Microsoft 365 Defender](/microsoft-365/security/defender/custom-roles).
+
+>[!NOTE]
+>Once enabled, you can migrate existing Defender for Identity roles to the new format. However, if you change or add new roles, they must match these permissions to the role table to access the classic Defender for Identity experience.
+
+| Azure AD global role | Defender for Identity data source                            |
+| -------------------- | ------------------------------------------------------------ |
+| MDI Admin            | microsoft.xdr/configuration/security/read microsoft.xdr/configuration/security/manage microsoft.xdr/configuration/system/read microsoft.xdr/configuration/system/manage microsoft.xdr/secops/securitydata/alerts/manage microsoft.xdr/secops/securitydata/read |
+| MDI User             | microsoft.xdr/secops/securitydata/read microsoft.xdr/configuration/system/read microsoft.xdr/configuration/security/read microsoft.xdr/secops/securitydata/alerts/manage microsoft.xdr/configuration/security/manage |
+| MDI Viewer           | microsoft.xdr/secops/securitydata/read microsoft.xdr/configuration/system/read microsoft.xdr/configuration/security/read |
 
 ## See Also
 
