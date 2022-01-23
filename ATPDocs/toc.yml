@@ -18,12 +18,18 @@ items:
 - name: Quickstarts
   expanded: true
   items:
-  - name: Create your Defender for Identity instance
-    href: install-step1.md
-  - name: Connect to Active Directory
-    href: install-step2.md
-  - name: Download the Defender for Identity sensor package
-    href: install-step3.md
+  - name: Deploy with Microsoft 365 Defender
+    items:
+    - name: Deploy Defender for Identity with Microsoft 365 Defender
+      href: deploy-defender-identity.md
+  - name: Deploy with classic Defender for Identity portal
+    items:
+    - name: Create your Defender for Identity instance
+      href: install-step1.md
+    - name: Connect to Active Directory
+      href: install-step2.md
+    - name: Download the Defender for Identity sensor package
+      href: install-step3.md
   - name: Install the Defender for Identity sensor
     href: install-step4.md
 - name: Tutorials

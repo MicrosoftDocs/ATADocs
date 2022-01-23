@@ -7,6 +7,9 @@ ms.topic: how-to
 
 # Work with Microsoft Defender for Identity health and events
 
+> [!NOTE]
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/sensor-health). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+
 ## Microsoft Defender for Identity health center
 
 The [!INCLUDE [Product long](includes/product-long.md)] health center lets you know how your [!INCLUDE [Product short](includes/product-short.md)] instance is performing and alerts you when there are problems.
