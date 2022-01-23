@@ -193,14 +193,14 @@ Using the alert evidence, check if the user made a remote desktop connection fro
 
 1. Check for correlating evidence.
 1. If there is correlating evidence, check if the RDP connection was made using Remote Credential Guard.
-1. If the answer is yes, **Close** the security alert as a **T-BP** activity.
+1. If the answer is yes, **Close** the security alert as a **B-TP** activity.
 
 There are custom applications that forward tickets on behalf of users. These applications have delegation rights to user tickets.
 
 1. Is a custom application type like the one previously described, currently on the destination computers? Which services is the application running? Are the services acting on behalf of users, for example, accessing databases?
-    - If the answer is yes, **Close** the security alert as a **T-BP** activity.
+    - If the answer is yes, **Close** the security alert as a **B-TP** activity.
 1. Is the destination computer a delegation server?
-    - If the answer is yes, **Close** the security alert, and exclude that computer as a **T-BP** activity.
+    - If the answer is yes, **Close** the security alert, and exclude that computer as a **B-TP** activity.
 
 **Understand the scope of the breach**
 
@@ -318,7 +318,7 @@ None
 1. Determine if the smartcard configuration recently changed.
     - Did the accounts involved recently have smartcard configurations changes?
 
-      If the answer is yes, **Close** the security alert as a **T-BP** activity.
+      If the answer is yes, **Close** the security alert as a **B-TP** activity.
 
 Some legitimate resources don't support strong encryption ciphers and may trigger this alert.
 
@@ -328,7 +328,7 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
        - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
     1. If there is only one accessed resource, check if it is a valid resource for these users to access.
 
-      If the answer to one of the previous questions is **yes**, it is likely to be a **T-BP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
+      If the answer to one of the previous questions is **yes**, it is likely to be a **B-TP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
 
 **Understand the scope of the breach**
 
@@ -375,8 +375,8 @@ None
 Sometimes applications implement their own Kerberos stack, not in accordance with the Kerberos RFC.
 
 1. Check if the source computer is running an application with its own Kerberos stack, not in accordance with Kerberos RFC.
-1. If the source computer is running such an application, and it should **not** do this, fix the application configuration. **Close** the security alert as a **T-BP** activity.
-1. If the source computer is running such an application and it should continue to do so, **Close** the security alert as a **T-BP** activity and exclude the computer.
+1. If the source computer is running such an application, and it should **not** do this, fix the application configuration. **Close** the security alert as a **B-TP** activity.
+1. If the source computer is running such an application and it should continue to do so, **Close** the security alert as a **B-TP** activity and exclude the computer.
 
 **Understand the scope of the breach**
 

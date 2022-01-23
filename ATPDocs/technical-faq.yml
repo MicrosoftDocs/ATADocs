@@ -100,10 +100,6 @@ sections:
         answer: |
           Every domain controller in the environment should be covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
 
-      - question: Do we need to install both the Defender for Identity sensor and the Defender for Endpoint sensor on domain controllers or Active Directory Federation Services (AD FS) servers?
-        answer: |
-          If you use both products, then to protect both the server and Active Directory, the two sensors must be installed. 
-
       - question: Does Defender for Identity work with encrypted traffic?
         answer: Network protocols with encrypted traffic (for example, AtSvc and WMI) are not decrypted, but are analyzed by the sensors.
 
@@ -138,50 +134,6 @@ sections:
       - question: Can you see the overall health of the deployment?
         answer: |
           Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Defender for Identity health alerts.
-
-      - question: How do I grant access to the AD FS database via TSQL or PowerShell?
-        answer: |
-          Instead of using SQL Server Management Studio, you can grant access to the AD FS database either through TSQL or through PowerShell. For example, if you're using the Windows Internal Database (WID) or an external SQL server, these commands can be helpful.
-
-          To grant access for the sensor to the AD FS database using TSQL:
-
-          ```tsql
-          USE [master]
-          CREATE LOGIN [DOMAIN1\triservice] FROM WINDOWS WITH DEFAULT_DATABASE=[master]
-          USE [AdfsConfigurationV4]
-          CREATE USER [DOMAIN1\triservice] FOR LOGIN [DOMAIN1\triservice]
-          ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\triservice]
-          GRANT CONNECT TO [DOMAIN1\triservice]
-          GRANT SELECT TO [DOMAIN1\triservice]
-          GO
-          ```
-
-          To grant access for the sensor to the AD FS database using PowerShell:
-
-          ```
-          $ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\query;database=AdfsConfigurationV4;trusted_connection=true;'
-          $SQLConnection= New-Object System.Data.SQLClient.SQLConnection($ConnectionString)
-          $SQLConnection.Open()
-          $SQLCommand = $SQLConnection.CreateCommand()
-          $SQLCommand.CommandText = @"
-          USE [master]; 
-          CREATE LOGIN [DOMAIN1\triservice] FROM WINDOWS WITH DEFAULT_DATABASE=[master];
-          USE [AdfsConfigurationV4]; 
-          CREATE USER [DOMAIN1\triservice] FOR LOGIN [DOMAIN1\triservice]; 
-          ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\triservice]; 
-          GRANT CONNECT TO [DOMAIN1\triservice]; 
-          GRANT SELECT TO [DOMAIN1\triservice]; 
-          GO;
-          "@
-          $SqlDataReader = $SQLCommand.ExecuteReader()
-          $SQLConnection.Close()
-          ```
-
-          >[!NOTE]
-          > - **[DOMAIN1\triservice]** -- the directory services user of the workspace
-          > - **AdfsConfigurationV4** -- the name of the AD FS database (may vary)
-          > - **server=\.\pipe\MICROSOFT##WID\tsql\query** -- the connection string to the database if you are using WID
-          > - If you don't know your AD FS connection string, see [To acquire the SQL connection string](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql#to-acquire-the-sql-connection-string).
 
   - name: WinPcap and Npcap drivers
     questions: 
