@@ -70,7 +70,7 @@ You can now enable more granular role-based access control from the Microsoft 36
 >[!NOTE]
 >Once enabled, you can migrate existing Defender for Identity roles to the new format. However, if you change or add new roles, they must match these permissions to the role table to access the classic Defender for Identity experience.
 
-| Equivalent Defender for Identity role | Required Microsoft 365 unified RBAC permissions              |
+| Equivalent Defender for Identity role | Minimum required Microsoft 365 unified RBAC permissions              |
 | ------------------------------------- | ------------------------------------------------------------ |
 | MDI Admin                             | microsoft.xdr/configuration/security/manage <br />microsoft.xdr/configuration/system/manage <br />microsoft.xdr/secops/securitydata/alerts/manage <br />microsoft.xdr/secops/securitydata/read |
 | MDI User                              | microsoft.xdr/secops/securitydata/read <br />microsoft.xdr/configuration/system/read <br />microsoft.xdr/secops/securitydata/alerts/manage <br />microsoft.xdr/configuration/security/manage |
