@@ -15,7 +15,7 @@ In this quickstart, you'll learn how to deploy Microsoft Defender for Identity u
 ## Prerequisites
 
 - A [[!INCLUDE [Product long](includes/product-long.md)] license](/defender-for-identity/technical-faq#licensing-and-privacy).
-- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the [!INCLUDE [Product short](includes/product-short.md)] portal.
+- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
 
@@ -23,7 +23,7 @@ In this quickstart, you'll learn how to deploy Microsoft Defender for Identity u
 
 To begin the deployment of Defender for Identity, sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com). From the navigation menu, select any item, such as **Incidents & alerts**, **Hunting**, **Action center**, or **Threat analytics** to initiate the onboarding process.
 
-You'll then be given the option to deploy supported services, including Microsoft Defender for Identity.
+You'll then be given the option to deploy supported services, including Microsoft Defender for Identity. When you go to the Defender for Identity settings, the required cloud components will be auto-provisioned.
 
 For more information about these steps, see the following articles:
 
@@ -44,7 +44,7 @@ From the **Sensors** page, you can add a new sensor, and download the installer.
 
 ## Install the sensor
 
-Once you've downloaded the sensor package, you'll need to install it on your domain controllers. For instructions on how to install the sensor, see [Install the Microsoft Defender for Identity sensor](install-step4.md).
+Once you've downloaded the sensor package, you'll need to install it on your domain controllers and [AD FS servers](active-directory-federation-services.md). For instructions on how to install the sensor, see [Install the Microsoft Defender for Identity sensor](install-step4.md).
 
 ## Next steps
 
