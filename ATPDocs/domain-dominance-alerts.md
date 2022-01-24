@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Identity domain dominance security alerts
-description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of domain dominance phase efforts are detected against your organization.
+description: This article explains the Microsoft Defender for Identity alerts issued when attacks, typically part of domain dominance phase efforts, are detected against your organization.
 ms.date: 12/23/2020
 ms.topic: tutorial
 ---
@@ -62,8 +62,8 @@ Advanced security scanners may legitimately generate this type of activity again
 
 1. Check if the source computer is running an organization-approved advanced security scanner against Active Directory?
 
-    - If the answer is **yes**, and it should not be running, fix the application configuration. This alert is a **B-TP** and can be **Closed**.
-    - If the answer is **yes**, and it should always do this, **Close** the alert, and exclude that computer, it is probably a **B-TP** activity.
+    - If the answer is **yes**, and it shouldn't be running, fix the application configuration. This alert is a **B-TP** and can be **Closed**.
+    - If the answer is **yes**, and it should always do this, **Close** the alert, and exclude that computer, it's probably a **B-TP** activity.
 
 **Understand the scope of the breach**
 
@@ -412,7 +412,6 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
 |MITRE attack sub-technique |   [Golden Ticket (T1558.001)](https://attack.mitre.org/techniques/T1558/001/)    |
 
-
 **Learning period**
 
 None
@@ -492,7 +491,7 @@ If the answer is **yes** to all of the previous questions, **Close** the alert, 
 
 **Description**
 
-Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.
 
 **MITRE**
 
@@ -509,6 +508,7 @@ None
 **TP, B-TP, or FP**
 
 Federation services might generate tickets that will trigger this alert.
+
 1. Does the source computer host Federation services that generate these types of tickets?
     - If the source computer hosts services that generate these types of tickets, Close the security alert as a **B-TP** activity.
 
@@ -557,7 +557,7 @@ None
     1. Are all the users who were logged into the computer supposed to be logged into it?
     1. Are the privileges appropriate for the account?
 1. Should the users who were logged in have access to these resources?
-    - If you enabled Microsoft Defender for Endpoint integration, click on its icon to further investigate.
+    - If you enabled Microsoft Defender for Endpoint integration, select on its icon to further investigate.
 
 If the answer to any of the previous questions is yes, Close the security alert as a **FP**.
 
@@ -598,7 +598,7 @@ None
 1. Is the [!INCLUDE [Product short](includes/product-short.md)] Standalone Sensor involved in this alert a virtual machine?
     - If the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is involved, was it recently resumed from a saved state?
 1. Is there a time synchronization problem in the network, where not all of the computers are synchronized?
-    - Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
+    - Select the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
 
 If the answer to the previous questions is **yes**, **Close** the security alert as a **B-TP** activity.
 
