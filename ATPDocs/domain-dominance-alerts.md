@@ -275,7 +275,7 @@ Validate the following permissions:
 
 Active Directory replication is the process by which changes that are made on one domain controller are synchronized with all other domain controllers. Given necessary permissions, attackers can initiate a replication request, allowing them to retrieve the data stored in Active Directory, including password hashes.
 
-In this detection, an alert is triggered when a replication request is initiated from a computer that is not a domain controller.
+In this detection, an alert is triggered when a replication request is initiated from a computer that isn't a domain controller.
 
 > [!NOTE]
 > If you have domain controllers on which [!INCLUDE [Product short](includes/product-short.md)] sensors are not installed, those domain controllers are not covered by [!INCLUDE [Product short](includes/product-short.md)]. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by [!INCLUDE [Product short](includes/product-short.md)] as a domain controller. It is highly recommended to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on every domain controller to get full coverage.
