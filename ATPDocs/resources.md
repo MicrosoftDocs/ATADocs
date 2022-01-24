@@ -56,7 +56,7 @@ After [!INCLUDE [Product short](includes/product-short.md)] is up and running, v
 
 ## Community resources
 
-Blog: [[!INCLUDE [Product short](includes/product-short.md)] blog](https://https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance/label-name/Microsoft%20Defender%20for%20Identity)
+Blog: [[!INCLUDE [Product short](includes/product-short.md)] blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance/label-name/Microsoft%20Defender%20for%20Identity)
 
 Public Community: [[!INCLUDE [Product short](includes/product-short.md)] Tech Community](https://aka.ms/AatpCom)
 
