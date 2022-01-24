@@ -598,7 +598,7 @@ None
 1. Is the [!INCLUDE [Product short](includes/product-short.md)] Standalone Sensor involved in this alert a virtual machine?
     - If the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is involved, was it recently resumed from a saved state?
 1. Is there a time synchronization problem in the network, where not all of the computers are synchronized?
-    - Select the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
+    - Select the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there's a difference between "StartTime" and "DomainControllerStartTime".
 
 If the answer to the previous questions is **yes**, **Close** the security alert as a **B-TP** activity.
 
