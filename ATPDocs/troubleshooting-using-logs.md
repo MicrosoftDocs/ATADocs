@@ -24,11 +24,11 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor has the followi
 
 ## Defender for Identity Deployment logs
 
-The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory for the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above %temp%).
+The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. It will usually be found at **%USERPROFILE%\AppData\Local\Temp**. If it was deployed by a service, it might be found at **C:\Windows\Temp**.
 
 [!INCLUDE [Product short](includes/product-short.md)] sensor deployment logs:
 
-- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - This log file provides the entire process of sensor deployment and can be found in the temp folder mentioned previously, or in C:\Windows\Temp.
+- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - This log file provides the entire process of sensor deployment and can be found in the temp folder mentioned previously..
 
 - **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the [!INCLUDE [Product short](includes/product-short.md)] sensor. Its main use is tracking the [!INCLUDE [Product short](includes/product-short.md)] sensor deployment process.
 
