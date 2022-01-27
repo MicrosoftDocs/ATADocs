@@ -28,7 +28,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are lo
 
 [!INCLUDE [Product short](includes/product-short.md)] sensor deployment logs:
 
-- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - This log file provides the entire process of sensor deployment and can be found in the temp folder mentioned previously..
+- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - This log file provides the entire process of sensor deployment and can be found in the temp folder mentioned previously.
 
 - **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the [!INCLUDE [Product short](includes/product-short.md)] sensor. Its main use is tracking the [!INCLUDE [Product short](includes/product-short.md)] sensor deployment process.
 
