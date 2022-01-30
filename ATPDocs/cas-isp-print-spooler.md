@@ -28,7 +28,7 @@ While this security assessment focuses on domain controllers, any server is pote
 
 ## How do I use this security assessment?
 
-1. Use the report table to discover which of your domain controllers has the **Print spooler** service enabled.
+1. Review the suggested improvement action to discover which of your domain controllers has the **Print spooler** service enabled.
 
     ![Disable Print spooler service security assessment.](media/cas-isp-print-spooler-2.png)
 1. Take appropriate action on the at-risk domain controllers and actively remove the Print spooler service either manually, through GPO or other types of remote commands.
@@ -42,5 +42,5 @@ Fix this specific issue by disabling the Print Spooler service on all servers th
 
 ## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Defender for Cloud Apps](activities-filtering-mcas.md)
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

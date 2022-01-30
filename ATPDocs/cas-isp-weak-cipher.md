@@ -13,7 +13,7 @@ Cryptography relies on ciphers to encrypt our data. For example, RC4 (Rivest Cip
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the security assessment for weak cipher usage.
+1. Review the suggested improvement action for weak cipher usage.
     ![Review weak cipher usage assessment.](media/cas-isp-weak-cipher-2.png)
 1. Research why the identified clients and servers are using weak ciphers.
 1. Remediate the issues and disable use of RC4 and/or other weak ciphers (such as DES/3DES).
@@ -33,6 +33,6 @@ After ensuring that devices and accounts are no longer using the weak ciphers, t
 
 ## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Defender for Cloud Apps](activities-filtering-mcas.md)
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [How to disable RC4 - Tech Community blog post](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/decrypting-the-selection-of-supported-kerberos-encryption-types/ba-p/1628797)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

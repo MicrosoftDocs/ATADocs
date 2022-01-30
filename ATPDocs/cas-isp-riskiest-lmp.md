@@ -26,19 +26,16 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 
 ## How do I use this security assessment?
 
-1. Use the report table to discover which of your **sensitive** accounts have risky LMPs.
+1. Review the suggested improvement action to discover which of your **sensitive** accounts have risky LMPs.
     ![Review top impacted entities and create an action plan.](media/cas-isp-riskiest-lmp-1.png)
 1. Take appropriate action:
     - Remove the entity from the group as specified in the recommendation.
     - Remove the local administrator permissions for the entity from the device specified in the recommendation.
 
     > [!NOTE]
-    > Wait 24 hours and then check that the recommendation no longer appears in the list.
-
-> [!NOTE]
-> This assessment is updated every 24 hours.
+    > This assessment is updated every 24 hours, so wait 24 hours and then check that the recommendation no longer appears in the list.
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Defender for Cloud Apps](activities-filtering-mcas.md)
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

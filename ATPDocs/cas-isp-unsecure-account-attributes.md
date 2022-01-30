@@ -21,7 +21,7 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 
 ## How do I use this security assessment?
 
-1. Use the report table to discover which of your accounts have unsecure attributes.
+1. Review the suggested improvement action to discover which of your accounts have unsecure attributes.
     ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
@@ -45,5 +45,5 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Defender for Cloud Apps](activities-filtering-mcas.md)
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
