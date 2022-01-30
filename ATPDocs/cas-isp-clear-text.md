@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Entities exposing credentials in clear text
 
-![Prevent clear text credentials exposure in Defender for Cloud Apps.](media/cas-isp-clear-text-1.png)
+![Prevent clear text credentials exposure.](media/cas-isp-clear-text-1.png)
 
 ## What information does the prevent clear text security assessment provide?
 
@@ -21,7 +21,7 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the security assessment for impacted entities.
+1. Review the suggested improvement action.
     ![Review top impacted entities and create an action plan.](media/cas-isp-clear-text-2.png)
 1. Research why those entities are using LDAP in clear text.
 1. Remediate the issues and stop the exposure.
@@ -32,5 +32,5 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 
 ## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] activities filtering in Defender for Cloud Apps](activities-filtering-mcas.md)
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
