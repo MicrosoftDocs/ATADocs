@@ -24,16 +24,24 @@ We recommend you create the gMSA account Defender for Identity will use to take 
         ![Select properties of domain or OU.](media/domain-properties.png)
     1. Go the **Security** tab and select **Advanced**.
         ![Advanced security settings.](media/advanced-security.png)
-    1. Select **Add** and browse to your service accounts. Make sure **Service Accounts** is marked in **Object types**.
+    1. Select **Add**.
+    1. Choose **Select a principal**.
+        ![Choose select a principal.](media/select-principal.png)
+    1. Make sure **Service accounts** is marked in **Object types**.
         ![Select service accounts as object types.](media/object-types.png)
-    1. Select **Descendant User objects** and choose the following permissions:
-        - Permissions to enable force password reset:
-            - Reset password
-            - Read pwdLastSet
-            - Write pwdLastSet
-        - Permissions to disable user:
-            - Read userAccountControl
-            - Write userAccountControl
+    1. Enter the name of the gMSA account in the **Enter the object name to select** box and select **OK**.
+    1. Select **Descendant User objects** in the **Applies to** field and set the following permissions and properties:
+        ![Set permissions and properties.](media/permission-entry.png)
+        - To enable force password reset:
+            - Permissions:
+                - Reset password
+            - Properties:
+                - Read pwdLastSet
+                - Write pwdLastSet
+        - To disable user:
+            - Properties:
+                - Read userAccountControl
+                - Write userAccountControl
     1. Select **Descendant Group objects** and choose the following permissions:
         - Permissions to remove user from a group:
             - Applies to Descendant Group object
