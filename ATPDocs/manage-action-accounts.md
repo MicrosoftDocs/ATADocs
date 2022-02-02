@@ -21,9 +21,12 @@ We recommend you create the gMSA account Defender for Identity will use to take 
 1. Grant the required permissions to the gMSA account.
     1. Open **Active Directory Users and Computers**.
     1. Right-click the relevant domain or OU, and select **Properties**.
+
         ![Select properties of domain or OU.](media/domain-properties.png)
     1. Go the **Security** tab and select **Advanced**.
+
         ![Advanced security settings.](media/advanced-security.png)
+
     1. Select **Add**.
     1. Choose **Select a principal**.
         ![Choose select a principal.](media/select-principal.png)
