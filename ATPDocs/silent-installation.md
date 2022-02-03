@@ -42,7 +42,7 @@ Use the following command to perform a fully silent install of the [!INCLUDE [Pr
 ```
 
 > [!NOTE]
-> When using the Powershell syntax, omitting the **./** preface results in an error that prevents silent installation.
+> When using the Powershell syntax, omitting the `.\` preface results in an error that prevents silent installation.
 
 > [!NOTE]
 > Copy the access key from the [!INCLUDE [Product short](includes/product-short.md)] portal **Configuration** section, **Sensors** page.
