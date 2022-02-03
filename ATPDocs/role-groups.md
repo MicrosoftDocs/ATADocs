@@ -36,8 +36,8 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](de
 
 - For security assessments, now part of Microsoft Secure Score, ensure that you have:
 
-  - permissions to view Microsoft Secure Score improvement actions
-  - Microsoft Defender for Identity reader permissions (at the minimum)
+  - [Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score
+  - At minimum, [viewer permissions](#types-of-defender-for-identity-security-groups) for Microsoft Defender for Identity
 
 ## Types of Defender for Identity security groups
 
