@@ -2,7 +2,7 @@
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
 ms.date: 02/04/2021
-ms.topic: how-to
+ms.topic: troubleshooting
 ---
 
 # Troubleshooting Microsoft Defender for Identity Known Issues
@@ -194,7 +194,7 @@ If LSO is enabled, use the following command to disable it:
 > - You may need to restart your machine for these changes to take effect.
 > - These steps may vary depending on your VMWare version. Check VMWare documentation for information about how to disable LSO/TSO for your VMWare version.
 
-## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
+## Sensor failed to retrieve group managed service account (gMSA) credentials
 
 If you receive the following health alert: **Directory services user credentials are incorrect**
 
@@ -340,6 +340,24 @@ Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry valu
 "SystemDefaultTlsVersions"=dword:00000001
 "SchUseStrongCrypto"=dword:00000001
 ```
+
+## Problem installing the sensor on Windows Server 2019 with KB5009557 installed
+
+Installing the sensor on Windows Server 2019 with KB5009557 installed may fail with the error message:
+
+`JsonSerializerSettingsExtension+JsonSerializationBinder UpdateCurrentDomainAssemblyTypes GetSerializableMembers failed`
+
+**Resolution:**
+
+There are two possible workarounds for this issue:
+
+1. Install the sensor with PSExec:
+
+    ```cmd
+    psexec -s -i "C:\MDI\Azure ATP Sensor Setup.exe"
+    ```
+
+1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](silent-installation.md#defender-for-identity-sensor-silent-installation).
 
 ## See Also
 
