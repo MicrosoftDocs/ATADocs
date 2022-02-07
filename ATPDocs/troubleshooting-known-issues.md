@@ -343,6 +343,8 @@ Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry valu
 
 ## Problem installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions
 
+<a name="problem-installing-the-sensor-on-windows-server-2019-with-kb5009557-installed"></a>
+
 Installing the sensor may fail with the error message:
 
 `System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.`
