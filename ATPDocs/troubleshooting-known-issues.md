@@ -341,11 +341,11 @@ Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry valu
 "SchUseStrongCrypto"=dword:00000001
 ```
 
-## Problem installing the sensor on Windows Server 2019 with KB5009557 installed
+## Problem installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions
 
-Installing the sensor on Windows Server 2019 with KB5009557 installed may fail with the error message:
+Installing the sensor may fail with the error message:
 
-`JsonSerializerSettingsExtension+JsonSerializationBinder UpdateCurrentDomainAssemblyTypes GetSerializableMembers failed`
+`System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.`
 
 **Resolution:**
 
