@@ -7,6 +7,9 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity multi-forest support
 
+> [!NOTE]
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+
 ## Multi-forest support set up
 
 [!INCLUDE [Product long](includes/product-long.md)] supports organizations with multiple forests, giving you the ability to easily monitor activity and profile users across forests.

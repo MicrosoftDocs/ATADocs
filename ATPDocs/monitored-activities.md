@@ -8,7 +8,7 @@ ms.topic: conceptual
 # Microsoft Defender for Identity monitored activities
 
 > [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 [!INCLUDE [Product long](includes/product-long.md)] monitors information generated from your organization's Active Directory, network activities and event activities to detect suspicious activity. The monitored activity information enables [!INCLUDE [Product short](includes/product-short.md)] to help you determine the validity of each potential threat and correctly triage and respond.
 
@@ -20,7 +20,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 >
 > - This article is relevant for all [!INCLUDE [Product short](includes/product-short.md)] sensor types.
 > - [!INCLUDE [Product short](includes/product-short.md)] monitored activities appear on both the user and machine profile page.
-> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in [Defender for Cloud Apps](https://portal.cloudappsecurity.com/) and Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
+> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
 
 ## Monitored user activities: User account AD attribute changes
 

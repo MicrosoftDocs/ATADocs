@@ -7,6 +7,9 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity role groups
 
+> [!NOTE]
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+
 [!INCLUDE [Product long](includes/product-long.md)] offers role-based security to safeguard data according to an organization's specific security and compliance needs. [!INCLUDE [Product short](includes/product-short.md)] support three separate roles: Administrators, Users, and Viewers.
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]

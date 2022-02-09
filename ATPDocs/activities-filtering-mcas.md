@@ -3,6 +3,7 @@ title: Microsoft Defender for Identity activity filtering and policies in Micros
 description: Overview of Microsoft Defender for Identity activity filtering and policies with Microsoft Defender for Cloud Apps.
 ms.date: 10/26/2020
 ms.topic: how-to
+ROBOTS: NOINDEX
 ---
 
 # Use activity filters and create action policies with Microsoft Defender for Identity in Microsoft Defender for Cloud Apps
