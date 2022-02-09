@@ -8,7 +8,7 @@ ms.topic: tutorial
 # Tutorial: Investigate a computer
 
 > [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 [!INCLUDE [Product long](includes/product-long.md)] alert evidence provides clear indications when computers have been involved in suspicious activities or when indications exist that a machine is compromised. In this tutorial you'll use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar attacks in the future.  
 

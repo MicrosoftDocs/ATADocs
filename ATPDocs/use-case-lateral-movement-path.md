@@ -8,7 +8,7 @@ ms.topic: conceptual
 # Microsoft Defender for Identity Lateral Movement Paths (LMPs)
 
 > [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored log-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md).
 

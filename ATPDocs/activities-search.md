@@ -8,7 +8,7 @@ ms.topic: how-to
 # Microsoft Defender for Identity monitored activities search and filter
 
 > [!NOTE]
-> The [!INCLUDE [Product short](includes/product-short.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 Activities detected by [!INCLUDE [Product short](includes/product-short.md)] on your network can be searched and filtered for easy drill-down and organization during your research and investigation into security alerts.
 

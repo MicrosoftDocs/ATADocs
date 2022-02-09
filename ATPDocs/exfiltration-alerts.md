@@ -50,12 +50,12 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Find the files that were copied and remove them.  
     Check if there were other activities on these files. Where they transferred to another place? Check if they were transferred outside the organization network?
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. If one of the files is the **ntds.dit** file:
     - Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and won't work again until they are renewed or in some cases, the service is restarted.
@@ -99,7 +99,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. If after your investigation, the registered query domain remains not trusted, we recommend blocking the destination domain to avoid all future communication.
 
 > [!NOTE]
