@@ -16,7 +16,7 @@ We recommend you create the gMSA account Defender for Identity will use to take 
 
 ## Create and configure the action account
 
-1. On your domain controller, create a new gMSA account, following the instructions in [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
+1. On a domain controller in your domain, create a new gMSA account, following the instructions in [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
 
 1. Grant the required permissions to the gMSA account.
     1. Open **Active Directory Users and Computers**.
