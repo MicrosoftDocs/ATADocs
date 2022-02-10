@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/08/2022
+ms.date: 02/13/2022
 ms.topic: overview
 ---
 
@@ -22,6 +22,16 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## Defender for Identity release 2.173
+
+Released February 13, 2022
+
+- All Microsoft Defender for Identity features now available in the Microsoft 365 Defender portal. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/all-microsoft-defender-for-identity-features-now-available-in/ba-p/3130037).
+
+- This release fixes [issues when installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions](troubleshooting-known-issues.md#problem-installing-the-sensor-on-windows-server-2019-with-kb5009557-installed-or-on-a-server-with-hardened-eventlog-permissions).
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.172
 
