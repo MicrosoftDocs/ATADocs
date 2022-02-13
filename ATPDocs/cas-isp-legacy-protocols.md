@@ -31,7 +31,7 @@ To retire the use of legacy protocols, your organization must first discover whi
 
 ## How do I use this security assessment?
 
-1. Review the suggested improvement action to discover which of your top discovered entities are using legacy protocols.
+1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your top discovered entities are using legacy protocols.
 
     ![Prevent usage of legacy protocols.](media/cas-isp-legacy-protocols-2.png)
 1. Take appropriate action on those entities to discover dependencies.

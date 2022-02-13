@@ -23,7 +23,8 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 
 ## How do I use this security assessment?
 
-1. Review the suggested improvement action to discover which of your accounts have an unsecure SID History attribute.
+1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have an unsecure SID History attribute.
+
     ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-sid-history-attribute-1.png)
 1. Take appropriate action to remove SID History attribute from the accounts using PowerShell using the following steps:
 
