@@ -13,7 +13,8 @@ Cryptography relies on ciphers to encrypt our data. For example, RC4 (Rivest Cip
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the suggested improvement action for weak cipher usage.
+1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> for weak cipher usage.
+
     ![Review weak cipher usage assessment.](media/cas-isp-weak-cipher-2.png)
 1. Research why the identified clients and servers are using weak ciphers.
 1. Remediate the issues and disable use of RC4 and/or other weak ciphers (such as DES/3DES).
