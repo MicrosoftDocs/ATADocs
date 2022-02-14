@@ -22,7 +22,7 @@ For complete user investigation features across the hybrid environment, you must
 - A valid license for [!INCLUDE [Product long](includes/product-long.md)] connected to your Active Directory instance
 
 >[!NOTE]
->If you don't have a subscription for Defender for Cloud Apps, you can use the Defender for Cloud Apps portal to investigate [!INCLUDE [Product short](includes/product-short.md)] alerts and deep dive on users and their on-premise managed activities however insights related to your cloud applications will remain unavailable.
+>If you don't have a subscription for Defender for Cloud Apps, you can use the Defender for Cloud Apps portal to investigate [!INCLUDE [Product short](includes/product-short.md)] alerts and deep dive on users and their on-premises managed activities however insights related to your cloud applications will remain unavailable.
 
 ## Filter Defender for Identity activities in Defender for Cloud Apps
 
