@@ -9,12 +9,12 @@ ms.topic: how-to
 
 Typically, organizations of all sizes have limited visibility into whether or not their on-premises apps and services could introduce a security vulnerability to their organization. The problem of limited visibility is especially true regarding use of unsupported or outdated components.
 
-While your company may invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an on-going project, it's easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization. Microsoft security research reveals that most identity attacks utilize common misconfigurations in Active Directory and continued use of legacy components (such as NTLMv1 protocol) to compromise identities and successfully breach your organization. To combat this effectively, [!INCLUDE [Product long](includes/product-long.md)] now offers proactive identity security posture assessments to detect and suggest improvement actions across your on-premise Active Directory configurations.
+While your company may invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an on-going project, it's easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization. Microsoft security research reveals that most identity attacks utilize common misconfigurations in Active Directory and continued use of legacy components (such as NTLMv1 protocol) to compromise identities and successfully breach your organization. To combat this effectively, [!INCLUDE [Product long](includes/product-long.md)] now offers proactive identity security posture assessments to detect and suggest improvement actions across your on-premises Active Directory configurations.
 
 ## What do Defender for Identity identity security posture assessments provide?
 
 - Detections and contextual data on known exploitable components and misconfigurations, along with relevant paths for remediation.
-- [!INCLUDE [Product short](includes/product-short.md)] detects not only suspicious activities, but also actively monitors your on-premise identities and identity infrastructure for weak spots, using the existing [!INCLUDE [Product short](includes/product-short.md)] sensor.
+- [!INCLUDE [Product short](includes/product-short.md)] detects not only suspicious activities, but also actively monitors your on-premises identities and identity infrastructure for weak spots, using the existing [!INCLUDE [Product short](includes/product-short.md)] sensor.
 - Accurate assessment reports of your current organization security posture, enabling quick response and effect monitoring in a continuous cycle.
 
 ## How do I get started?
