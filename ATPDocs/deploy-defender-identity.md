@@ -36,7 +36,7 @@ For more information about these steps, see the following articles:
 
 Before you can connect Defender for Identity to Active Directory, you'll need at least one Directory Services account. For information about how to create and configure that account, see [Microsoft Defender for Identity Directory Service Account recommendations](directory-service-accounts.md).
 
-After you've created that account, provide the account details in the **Directory Service accounts** settings in Microsoft 365 Defender. For information on how to configure the settings, see [Microsoft Defender for Identity Directory Services account in Microsoft 365 Defender](/microsoft-365/security/defender/defender-identity/directory-service-accounts).
+After you've created that account, provide the account details in the **Directory Service accounts** settings in Microsoft 365 Defender. For information on how to configure the settings, see [Microsoft Defender for Identity Directory Services account in Microsoft 365 Defender](/microsoft-365/security/defender-identity/directory-service-accounts).
 
 ## Add a sensor
 
@@ -48,7 +48,7 @@ Once you've downloaded the sensor package, you'll need to install it on your dom
 
 ## Next steps
 
-- [Sensor health and settings](/microsoft-365/security/defender/defender-identity/sensor-health).
+- [Sensor health and settings](/microsoft-365/security/defender-identity/sensor-health).
 
 ## Join the community
 
