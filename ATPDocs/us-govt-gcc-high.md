@@ -41,7 +41,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 ## How to migrate from commercial to GCC
 
-1. Have your Microsoft contant send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
+1. Have your Microsoft contact send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
 2. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
 3. Create a new instance of Defender for Identity
 4. Configure a Directory Service Account
