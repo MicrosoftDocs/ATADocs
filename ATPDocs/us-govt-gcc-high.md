@@ -48,7 +48,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 5. Download the new sensor agent package and copy the workspace key
 6. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
 7. Uninstall existing sensor agents from the domain controllers (optionally remove the winpcap driver)
-8. (Optionally) [install the npcap driver (if removed winpcap)](technical-faq#how-do-i-download-and-install-the-npcap-driver)
+8. (Optionally) [install the npcap driver (if removed winpcap)](technical-faq.yml#how-do-i-download-and-install-the-npcap-driver)
 9. [Reinstall sensors with the new workspace key](install-step4#install-the-sensor)
 10. Migrate any settings after the initial sync (use the two portals to compare)
 11. Eventually, delete the previous workspace (historic data will be lost)
