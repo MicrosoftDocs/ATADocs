@@ -41,22 +41,24 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 ## How to migrate from commercial to GCC
 
-1. Send the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
-1. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
-1. Create a new instance of Defender for Identity
-1. Download the new sensor agent package and copy the workspace key
-1. Uninstall existing sensor agents from the domain controllers
-1. Make sure sensors have access to `*.gcc.atp.azure.com` (directly or through proxy)
-1. Reinstall sensors with the new workspace key
-1. Migrate any settings after the initial sync (use the portals to compare)
-1. Eventually, delete the previous workspace (historic data will be lost)
+1. Have your Microsoft contant send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
+2. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
+3. Create a new instance of Defender for Identity
+4. Configure a Directory Service Account
+5. Download the new sensor agent package and copy the workspace key
+6. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
+7. Uninstall existing sensor agents from the domain controllers (optionally remove the winpcap driver)
+8. (Optionally) [install the npcap driver (if removed winpcap)](technical-faq#how-do-i-download-and-install-the-npcap-driver)
+9. [Reinstall sensors with the new workspace key](install-step4#install-the-sensor)
+10. Migrate any settings after the initial sync (use the two portals to compare)
+11. Eventually, delete the previous workspace (historic data will be lost)
 
 >[!NOTE]
 > No data is migrated from the commercial service.
 
 ## Feature parity with the commercial environment
 
-Unless otherwise specified, new feature releases, including preview features, documented in [What's new with Defender for Identity](whats-new.md), will be available in GCC, GCC High, and DoD environments within three weeks of release in the Defender for Identity commercial environment. Preview features may not be supported in the GCC, GCC High, and DoD environments. Refer to the [Service Description](/enterprise-mobility-security/solutions/ems-mdi-govt-service-description) for a list of functionality or features specific to the GCC, GCC High, and DoD environments.
+Unless otherwise specified, new feature releases, including preview features, documented in [What's new with Defender for Identity](whats-new.md), will be available in GCC, GCC High, and DoD environments within 90 days of release in the Defender for Identity commercial environment. Preview features may not be supported in the GCC, GCC High, and DoD environments. Refer to the [Service Description](/enterprise-mobility-security/solutions/ems-mdi-govt-service-description) for a list of functionality or features specific to the GCC, GCC High, and DoD environments.
 
 ## Next steps
 
