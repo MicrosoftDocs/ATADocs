@@ -103,8 +103,7 @@ USE [AdfsConfigurationV4];
 CREATE USER [DOMAIN1\triservice] FOR LOGIN [DOMAIN1\triservice]; 
 ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\triservice]; 
 GRANT CONNECT TO [DOMAIN1\triservice]; 
-GRANT SELECT TO [DOMAIN1\triservice]; 
-GO;
+GRANT SELECT TO [DOMAIN1\triservice];
 "@
 $SqlDataReader = $SQLCommand.ExecuteReader()
 $SQLConnection.Close()
