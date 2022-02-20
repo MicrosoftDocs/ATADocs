@@ -40,7 +40,7 @@ After you've created that account, provide the account details in the **Director
 
 ## Add a sensor
 
-From the **Sensors** page, you can add a new sensor, and download the installer. For instructions on how to add and download the sensor package, see [Add a sensor](/microsoft-365/security/defender/defender-identity/sensor-health#add-a-sensor).
+From the **Sensors** page, you can add a new sensor, and download the installer. For instructions on how to add and download the sensor package, see [Add a sensor](/microsoft-365/security/defender-identity/sensor-health#add-a-sensor).
 
 ## Install the sensor
 
