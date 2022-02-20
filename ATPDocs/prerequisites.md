@@ -214,7 +214,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requ
 
     This adapter should be configured with the following settings:
 
-   - Static IP address including default gateway
+    - Static IP address including default gateway
 
    - Preferred and alternate DNS servers
 
