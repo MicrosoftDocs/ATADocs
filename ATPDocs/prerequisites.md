@@ -216,7 +216,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requ
 
     - Static IP address including default gateway
 
-   - Preferred and alternate DNS servers
+    - Preferred and alternate DNS servers
 
    - The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
