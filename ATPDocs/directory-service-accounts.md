@@ -123,7 +123,7 @@ When using a gMSA entry, the sensor needs to retrieve the gMSA's password from A
 
 In the following steps you'll create a specific group that can retrieve the account's password, create a gMSA account, and then test that the account is ready to use.
 
-Run the following PowerShell commands as an administrator
+Run the following PowerShell commands as an administrator:
 
 ```powershell
 # Set the variables:
@@ -136,15 +136,24 @@ Install-Module ActiveDirectory
 
 # Create the group and add the members
 $gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope Global -PassThru
-$gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } | 
+$gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
     ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
 
 # Create the gMSA:
 New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
 -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup.Name
+```
 
-# Install the gMSA account 
-Install-ADServiceAccount -Identity $gMSA_AccountName
+## Install the gMSA account
+
+To install the gMSA account, run locally (as an administrator) on each of the servers, the following command:
+
+```powershell
+# Install the required PowerShell module:
+Install-Module ActiveDirectory
+
+# Install the gMSA account
+Install-ADServiceAccount -Identity 'mdiSvc01'
 ```
 
 ## How to validate that the domain controller can retrieve the gMSA's password
@@ -158,7 +167,7 @@ Test-ADServiceAccount -Identity 'mdiSvc01'
 If it has the permissions, the command will return a **True** message.
 
 >[!NOTE]
->If you get an error message when running Test-ADServiceAccount, run `klist purge -li 0x3e7` and try again.
+>If you get an error message when running Test-ADServiceAccount, either restart the server or run `klist purge -li 0x3e7` and try again.
 
 ## Verify that the gMSA account has the required rights (if needed)
 
