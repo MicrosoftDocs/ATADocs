@@ -37,7 +37,8 @@ This section lists information you should gather as well as accounts and network
 
 - Acquire a license for Enterprise Mobility + Security E5 (EMS E5/A5), Microsoft 365 E5 (M365 E5/A5/G5) or Microsoft 365 E5/A5/G5 Security directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. Standalone [!INCLUDE [Product short](includes/product-short.md)] licenses are also available.
 
-- Verify the domain controller(s) you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on have internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
+- Verify that the servers you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on are able to reach the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. They should be able to access https://*your-instance-name*sensorapi.atp.azure.com (port 443). For example, https://*contoso-corp*sensorapi.atp.azure.com.<br><br>
+To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
 
 - At least one directory services account with read access to all objects in the monitored domains. For instructions on how to create the directory service account, see [Directory Service Account recommendations](directory-service-accounts.md).
 
