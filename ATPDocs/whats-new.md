@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/13/2022
+ms.date: 02/20/2022
 ms.topic: overview
 ---
 
@@ -22,6 +22,14 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## Defender for Identity release 2.174
+
+Released February 20, 2022
+
+- We've added the shost FQDN of the account involved in the alert to the message sent to the SIEM.  For more information, see [Microsoft Defender for Identity SIEM log reference](cef-format-sa.md).
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.173
 
