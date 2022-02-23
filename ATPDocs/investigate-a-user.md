@@ -29,7 +29,7 @@ Check and investigate the user profile for the following details and activities:
     1. Are they significant in the organizational tree?
 
 1. Suspicious activities to [investigate](investigate-entity.md):
-    1. Does the user have other opened alerts in [!INCLUDE [Product short](includes/product-short.md)], or in other security tools such as Microsoft Defender for Endpoint, Azure Security Center and/or Microsoft CAS?
+    1. Does the user have other opened alerts in [!INCLUDE [Product short](includes/product-short.md)], or in other security tools such as Microsoft Defender for Endpoint, Microsoft Defender for Cloud and/or Microsoft Defender for Cloud Apps?
     1. Did the user have failed log ons?
     1. Which resources did the user access?
     1. Did the user access high value resources?
