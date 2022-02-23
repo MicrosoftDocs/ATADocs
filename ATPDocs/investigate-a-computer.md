@@ -34,7 +34,7 @@ Check and investigate the computer profile for the following details and activit
     1. Did the [user](investigate-a-user.md) that accessed the computer perform other suspicious activities?
 
 - Additional suspicious activities to investigate:
-    1. Were other alerts opened around the same time as this alert in [!INCLUDE [Product short](includes/product-short.md)], or in other security tools such as Microsoft Defender for Endpoint, Azure Security Center and/or Microsoft CAS?
+    1. Were other alerts opened around the same time as this alert in [!INCLUDE [Product short](includes/product-short.md)], or in other security tools such as Microsoft Defender for Endpoint, Microsoft Defender for Cloud and/or Microsoft Defender for Cloud Apps?
     1. Were there failed logons?
 
 - If Microsoft Defender for Endpoint integration is enabled, click the Microsoft Defender for Endpoint badge to further investigate the computer. In Microsoft Defender for Endpoint you can see which processes and alerts occurred around the same time as the alert.
