@@ -45,12 +45,14 @@ We recommend you create the gMSA account Defender for Identity will use to take 
             - Properties:
                 - Read userAccountControl
                 - Write userAccountControl
-    1. Select **Descendant Group objects** and choose the following permissions:
-        - Permissions to remove user from a group:
-            - Applies to Descendant Group object
-            - Read members
-            - Write members
+    1. Select **Descendant Group objects** in the **Applies to** field and set the following properties:
+
+        - Read members
+        - Write members
     1. Select **OK**.
+
+> [!NOTE]
+> It's recommended to not use the same gMSA account you configured for Defender for Identity managed actions on servers other than domain controllers. If the server is compromised, an attacker could retrieve the password for the account and gain the ability to change passwords and disable accounts.
 
 ## Add the gMSA account in the Microsoft 365 Defender portal
 
@@ -63,7 +65,7 @@ We recommend you create the gMSA account Defender for Identity will use to take 
 
       ![Create action account.](media/manage-action-accounts.png)
 
-## See also
+## Next steps
 
-- [Connect to your Active Directory Forest](install-step2.md)
-- [Microsoft Defender for Identity Directory Service Account recommendations](directory-service-accounts.md)
+- [Directory Service Account recommendations](directory-service-accounts.md)
+- [Troubleshooting gMSA account issues](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)
