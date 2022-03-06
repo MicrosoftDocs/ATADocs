@@ -52,8 +52,8 @@ Make sure to gather the following information before starting your move:
 1. VPN integration
 1. Alert exclusions
     - Exclusions are not transferable from ATA to [!INCLUDE [Product short](includes/product-short.md)], so details of each exclusion are required to [replicate the exclusions in [!INCLUDE [Product short](includes/product-short.md)]](excluding-entities-from-detections.md).
-1. Account details for HoneyToken accounts.
-    - If you don't already have dedicated HoneyToken accounts, learn more about [HoneyTokens in [!INCLUDE [Product short](includes/product-short.md)]](configure-detection-exclusions.md) and create new accounts to use for this purpose.
+1. Account details for honeytoken accounts.
+    - If you don't already have dedicated honeytoken accounts, learn more about [honeytokens in [!INCLUDE [Product short](includes/product-short.md)]](manage-sensitive-honeytoken-accounts.md) and create new accounts to use for this purpose.
 1. Complete list of all entities (computers, groups, users) you wish to manually tag as Sensitive entities.
     - Learn more about the importance of [Sensitive entities](manage-sensitive-honeytoken-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)].
 1. Report scheduling [details](reports.md) (list of reports and scheduled timing).
