@@ -90,6 +90,11 @@ For the best results, we recommend using all of the methods. If this isn't possi
 
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
+> [!NOTE]
+> Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
+>
+>For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms.
+
 ### General
 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor supports installation on domain controllers or Active Directory Federation Services (AD FS) servers, as shown in the following table.
