@@ -75,7 +75,7 @@ None
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Configure detection exclusions and honeytoken accounts](configure-detection-exclusions.md).
+For more information on honeytoken accounts, see [Manage sensitive or honeytoken accounts](manage-sensitive-honeytoken-accounts.md).
 
 **MITRE**
 
