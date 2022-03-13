@@ -1,13 +1,13 @@
 ---
 title: Planning your Microsoft Defender for Identity deployment
-description: Helps you plan your deployment and decide how many Microsoft Defender for Identity servers will be needed to support your network
+description: Helps you plan your deployment and decide how many Microsoft Defenders for Identity servers will be needed to support your network
 ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
 # Plan capacity for Microsoft Defender for Identity
 
-In this guide, you determine how many [!INCLUDE [Product long](includes/product-long.md)] sensors you need.
+In this guide, you determine what resources you need for your Microsoft Defender for Identity sensors.
 
 ## Prerequisites
 
@@ -42,8 +42,8 @@ The following CPU and Random Access Memory (RAM) capacity refers to the **sensor
 |5k-10k|1.00|6.50|
 |10k-20k|2.00|9.00|
 |20k-50k|3.50|9.50|
-|50k-75k |3.50|9.50|
-|75k-100k|3.50|9.50|
+|50k-75k |5.50|11.50|
+|75k-100k|7.50|13.50|
 
 \* This includes physical cores, not hyper-threaded cores.  
 \*\* Random-access memory (RAM)
@@ -127,10 +127,7 @@ To determine packets per second, do the following steps on each domain controlle
 
 ## Next steps
 
-In this guide, you determined how many [!INCLUDE [Product short](includes/product-short.md)] sensors you need. You also determined sizing for the sensors. Continue to the Create a [!INCLUDE [Product short](includes/product-short.md)] instance quickstart guide.
-
-> [!div class="nextstepaction"]
-> [Create your [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
+- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
 
 ## Join the Community
 
