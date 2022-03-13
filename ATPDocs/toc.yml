@@ -5,205 +5,71 @@ items:
   items:
   - name: What is Microsoft Defender for Identity?
     href: what-is.md
-  - name: Defender for Identity architecture
-    href: architecture.md
-  - name: Defender for Identity prerequisites
-    href: prerequisites.md
-  - name: Defender for Identity in Microsoft 365 Defender
-    href: defender-for-identity-in-microsoft-365-defender.md
-  - name: Defender for Identity for US Government
-    href: us-govt-gcc-high.md
-  - name: What's new in Defender for Identity
-    href: whats-new.md
-- name: Quickstarts
+- name: Get started
   expanded: true
   items:
-  - name: Deploy with Microsoft 365 Defender
+  - name: Prepare
     items:
     - name: Deploy Defender for Identity with Microsoft 365 Defender
       href: deploy-defender-identity.md
-  - name: Deploy with classic Defender for Identity portal
+  - name: Deploy 
     items:
     - name: Create your Defender for Identity instance
       href: install-step1.md
-    - name: Connect to Active Directory
-      href: install-step2.md
-    - name: Download the Defender for Identity sensor package
-      href: install-step3.md
-  - name: Install the Defender for Identity sensor
-    href: install-step4.md
-- name: Tutorials
+  - name: Special scenarios
+    items:
+    - name: Create your Defender for Identity instance
+      href: install-step1.md
+  - name: Standalone sensor
+    items:
+    - name: Create your Defender for Identity instance
+      href: install-step1.md
+- name: Try
   items:
   - name: Reconnaissance alerts
     href: reconnaissance-alerts.md
-  - name: Compromised credential alerts
-    href: compromised-credentials-alerts.md
-  - name: Lateral movement alerts
-    href: lateral-movement-alerts.md
-  - name: Domain dominance alerts
-    href: domain-dominance-alerts.md
-  - name: Exfiltration alerts
-    href: exfiltration-alerts.md
-  - name: Investigate a user
-    href: investigate-a-user.md
-  - name: Investigate a computer
-    href: investigate-a-computer.md
-  - name: Investigate lateral movement paths
-    href: investigate-lateral-movement-path.md
-  - name: Investigate entities
-    href: investigate-entity.md
-- name: Concepts
+- name: Manage
   items:
-  - name: Defender for Identity portal
-    href: workspace-portal.md
-  - name: Defender for Identity security alerts
-    href: suspicious-activity-guide.md
-  - name: Monitored activities
-    href: monitored-activities.md
-  - name: Understanding entity profiles
-    href: entity-profiles.md
-  - name: Lateral movement paths
-    href: use-case-lateral-movement-path.md
-  - name: Understanding Network Name Resolution (NNR)
-    href: nnr-policy.md
-  - name: Reports
-    href: reports.md
-  - name: User roles
-    href: role-groups.md
-  - name: Defender for Identity multi-forest support
-    href: multi-forest.md
-  - name: Security
+  - name: Settings
     items:
-    - name: Security baseline
-      href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
-- name: How-to guides
+    - name: Create your Defender for Identity instance
+      href: install-step1.md
+  - name: Troubleshooting
+    items:
+    - name: Create your Defender for Identity instance
+      href: install-step1.md
+- name: Investigate and respond
   items:
-  - name: Identity security posture assessments
+  - name: Investigate
     items:
     - name: Understanding identity security posture
       href: isp-overview.md
-    - name: Domain controllers with Print spooler service available assessment
-      href: cas-isp-print-spooler.md
-    - name: Dormant entities in sensitive groups assessment
-      href: cas-isp-dormant-entities.md
-    - name: Entities exposing credentials in clear text assessment
-      href: cas-isp-clear-text.md
-    - name: LAPS usage assessment
-      href: cas-isp-laps.md
-    - name: Legacy protocols usage assessment
-      href: cas-isp-legacy-protocols.md
-    - name: Riskiest lateral movement paths
-      href: cas-isp-riskiest-lmp.md
-    - name: Unmonitored domain controllers
-      href: cas-isp-unmonitored-domain-controller.md
-    - name: Unsecure account attributes
-      href: cas-isp-unsecure-account-attributes.md
-    - name: Unsecure Kerberos delegation assessment
-      href: cas-isp-unconstrained-kerberos.md
-    - name: Unsecure SID History attributes
-      href: cas-isp-unsecure-sid-history-attribute.md
-    - name: Weak cipher usage assessment
-      href: cas-isp-weak-cipher.md
-  - name: Security alert lab
+  - name: Alerts
     items:
-    - name: Lab overview
-      href: playbook-lab-overview.md
-    - name: 1 - Lab setup
-      href: playbook-setup-lab.md
-    - name: 2 - Reconnaissance playbook
-      href: playbook-reconnaissance.md
-    - name: 3 - Lateral movement playbook
-      href: playbook-lateral-movement.md
-    - name: 4 - Domain dominance playbook
-      href: playbook-domain-dominance.md
-  - name: Understanding security alerts
-    href: understanding-security-alerts.md
-  - name: Plan your Defender for Identity capacity
-    href: capacity-planning.md
-  - name: Manage security alerts
-    href: working-with-suspicious-activities.md
-  - name: Configure detection exclusions
-    href: configure-detection-exclusions.md
-  - name: Search and filter monitored activities
-    href: activities-search.md
-  - name: Manage sensitive or honeytoken accounts
-    href: manage-sensitive-honeytoken-accounts.md
-  - name: Monitor domain controllers
-    href: sensor-monitoring.md
-  - name: Directory Service Account recommendations
-    href: directory-service-accounts.md
-  - name: Installing on Active Directory Federation Services
-    href: active-directory-federation-services.md
-  - name: Manage action accounts
-    href: manage-action-accounts.md
-  - name: Change domain connectivity password
-    href: modifying-config-dcpassword.md
-  - name: Set Defender for Identity notifications
-    href: notifications.md
-  - name: Health alerts
+    - name: Understanding identity security posture
+      href: isp-overview.md
+  - name: Security posture
     items:
-    - name: Work with Defender for Identity health center
-      href: health-center.md
-    - name: Manage Defender for Identity health alerts
-      href: health-alerts.md
-  - name: Defender for Identity sensor delayed update
-    href: sensor-update.md
-  - name: Troubleshooting known issues
-    href: troubleshooting-known-issues.md
-  - name: Troubleshoot using logs
-    href: troubleshooting-using-logs.md
-  - name: Integrate with Microsoft Defender for Endpoint
-    href: integrate-mde.md
-  - name: VPN integration
-    href: install-step6-vpn.md
-  - name: Integrate with Syslog
-    href: setting-syslog.md
-  - name: Silent installation
-    href: silent-installation.md
-  - name: Configure the Defender for Identity sensor
-    items:
-    - name: Configure the Defender for Identity sensor
-      href: install-step5.md
-    - name: Configure Windows Event collection
-      href: configure-windows-event-collection.md
-    - name: Proxy configuration
-      href: configure-proxy.md
-    - name: Configure Defender for Identity to make remote calls to SAM
-      href: install-step8-samr.md
-  - name: Defender for Identity standalone sensor setup
-    items:
-    - name: Configure port mirroring
-      href: configure-port-mirroring.md
-    - name: Validate port mirroring
-      href: validate-port-mirroring.md
-    - name: Configure event collection
-      href: configure-event-collection.md
-    - name: Configure Windows Event Forwarding
-      href: configure-event-forwarding.md
-  - name: Uninstall a sensor
-    href: uninstall-sensor.md
-  - name: Move from ATA to Defender for Identity
-    items:
-    - name: Advanced Threat Analytics (ATA) to Defender for Identity
-      href: migrate-from-ata-overview.md
+    - name: Understanding identity security posture
+      href: isp-overview.md
 - name: Reference
   items:
   - name: SIEM log reference
     href: cef-format-sa.md
-  - name: Defender for Identity known issues
-    href: troubleshooting-known-issues.md
-  - name: Defender for Identity release reference
-    href: release-reference.md
-- name: Resources
+- name: Classic Defender for Identity portal
   items:
-  - name: Support and information
-    href: support.md
-  - name: Frequently asked questions
-    href: technical-faq.yml
-  - name: Defender for Identity readiness roadmap
-    href: resources.md
-  - name: Defender for Identity data security and privacy
-    href: privacy-compliance.md
+  - name: Deploy
+    items:
+    - name: Understanding identity security posture
+      href: isp-overview.md
+  - name: Manage
+    items:
+    - name: Understanding identity security posture
+      href: isp-overview.md
+  - name: Investigate and respond
+    items:
+    - name: Understanding identity security posture
+      href: isp-overview.md
 - name: Microsoft 365 Defender Docs
   items: 
   - name: Microsoft 365 Defender
