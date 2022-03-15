@@ -671,6 +671,46 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "ATPDocs/release-reference.md",
+            "redirect_url": "/defender-for-identity/whats-new",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step1.md",
+            "redirect_url": "/defender-for-identity/deploy-defender-identity",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step2.md",
+            "redirect_url": "/defender-for-identity/directory-service-accounts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/reports.md",
+            "redirect_url": "/defender-for-identity/notifications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/setting-syslog.md",
+            "redirect_url": "/defender-for-identity/notifications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/modifying-config-dcpassword.md",
+            "redirect_url": "/defender-for-identity/directory-service-accounts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/health-center.md",
+            "redirect_url": "/defender-for-identity/sensor-health",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/integrate-mde.md",
+            "redirect_url": "/defender-for-identity/defender-for-identity-in-microsoft-365-defender",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "ATPDocs/sensitive-accounts.md",
             "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
             "redirect_document_id": false

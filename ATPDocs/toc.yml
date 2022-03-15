@@ -176,20 +176,54 @@ items:
     href: support.md
   - name: Defender for Identity data security and privacy
     href: privacy-compliance.md
+  - name: Security baseline
+    href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
 - name: Classic Defender for Identity portal
   items:
   - name: Deploy
     items:
-    - name: Understanding identity security posture
-      href: isp-overview.md
+    - name: Create your Defender for Identity instance 
+      href: classic-install-step1.md
+    - name: Connect to Active Directory
+      href: classic-install-step2.md
+    - name: Download the Defender for Identity sensor package
+      href: classic-install-step3.md
   - name: Manage
     items:
-    - name: Understanding identity security posture
-      href: isp-overview.md
+    - name: Defender for Identity portal
+      href: classic-workspace-portal.md
+    - name: Manage security alerts
+      href: classic-working-with-suspicious-activities.md
+    - name: Manage sensitive or honeytoken accounts
+      href: classic-manage-sensitive-honeytoken-accounts.md
+    - name: Reports
+      href: classic-reports.md
+    - name: Configure detection exclusions
+      href: classic-configure-detection-exclusions.md
+    - name: Monitor domain controllers
+      href: classic-sensor-monitoring.md
+    - name: VPN integration
+      href: classic-install-step6-vpn.md
+    - name: Integrate with Syslog
+      href: classic-setting-syslog.md
+    - name: Change domain connectivity password
+      href: classic-modifying-config-dcpassword.md
+    - name: Set Defender for Identity notifications
+      href: classic-notifications.md
+    - name: Work with Defender for Identity health center
+      href: classic-health-center.md
+    - name: Uninstall a sensor
+      href: classic-uninstall-sensor.md
+    - name: Integrate with Microsoft Defender for Endpoint
+      href: classic-integrate-mde.md
   - name: Investigate and respond
     items:
-    - name: Understanding identity security posture
-      href: isp-overview.md
+    - name: Understanding entity profiles
+      href: classic-entity-profiles.md
+    - name: Lateral movement paths
+      href: classic-use-case-lateral-movement-path.md
+    - name: Understanding Network Name Resolution (NNR)
+      href: nnr-policy.md
 - name: Microsoft 365 Defender Docs
   items: 
   - name: Microsoft 365 Defender
