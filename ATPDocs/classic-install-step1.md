@@ -1,11 +1,11 @@
 ---
-title: Create your Microsoft Defender for Identity instance quickstart
-description: Quickstart for creating the instance for your Microsoft Defender for Identity deployment, which is the first step to install Defender for Identity.
+title: Classic portal - Create your Microsoft Defender for Identity instance quickstart
+description: Classic portal -Quickstart for creating the instance for your Microsoft Defender for Identity deployment, which is the first step to install Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: quickstart
 ---
 
-# Quickstart: Create your Microsoft Defender for Identity instance
+# Classic portal: Quickstart -Create your Microsoft Defender for Identity instance
 
 In this quickstart, you'll create your [!INCLUDE [Product long](includes/product-long.md)] instance in the [!INCLUDE [Product short](includes/product-short.md)] portal. In [!INCLUDE [Product short](includes/product-short.md)], you'll have a single instance, previously called a workspace. A single instance enables you to manage multiple forests from a single pane of glass.
 

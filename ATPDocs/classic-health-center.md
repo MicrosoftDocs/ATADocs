@@ -1,11 +1,11 @@
 ---
-title: Monitor Microsoft Defender for Identity System Health and Events
-description: Use the health center to check how the Microsoft Defender for Identity service is working and be alerted to potential problems and view system events in the Event viewer.
+title: Classic portal - Monitor Microsoft Defender for Identity System Health and Events
+description: Classic portal - Use the health center to check how the Microsoft Defender for Identity service is working and be alerted to potential problems and view system events in the Event viewer.
 ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Work with Microsoft Defender for Identity health and events
+# Classic portal: Work with Microsoft Defender for Identity health and events
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/sensor-health). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).

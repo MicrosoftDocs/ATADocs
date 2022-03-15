@@ -1,11 +1,11 @@
 ---
-title: Connect Microsoft Defender for Identity to Active Directory quickstart
-description: Step two of installing Microsoft Defender for Identity helps you configure the domain connectivity settings on your Defender for Identity cloud service
+title: Classic portal - Connect Microsoft Defender for Identity to Active Directory quickstart
+description: Classic portal - Step two of installing Microsoft Defender for Identity helps you configure the domain connectivity settings on your Defender for Identity cloud service
 ms.date: 10/26/2020
 ms.topic: quickstart
 ---
 
-# Quickstart: Connect to your Active Directory Forest
+# Classic portal: Quickstart - Connect to your Active Directory Forest
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/directory-service-accounts). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).

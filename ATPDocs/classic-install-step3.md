@@ -1,11 +1,11 @@
 ---
-title: Download the Microsoft Defender for Identity sensor setup package quickstart
-description: Step three of installing Microsoft Defender for Identity helps you download the Defender for Identity sensor setup package.
+title: Classic portal - Download the Microsoft Defender for Identity sensor setup package quickstart
+description: Classic portal - Step three of installing Microsoft Defender for Identity helps you download the Defender for Identity sensor setup package.
 ms.date: 10/26/2020
 ms.topic: quickstart
 ---
 
-# Quickstart: Download the Microsoft Defender for Identity sensor setup package
+# Classic portal: Quickstart - Download the Microsoft Defender for Identity sensor setup package
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/sensor-health#add-a-sensor). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).

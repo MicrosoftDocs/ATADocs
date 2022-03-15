@@ -1,11 +1,11 @@
 ---
-title: Working with Microsoft Defender for Identity Reports
-description: Describes how you can generate reports in Microsoft Defender for Identity to monitor your network.
+title: Classic portal - Working with Microsoft Defender for Identity Reports
+description: Classic portal - Describes how you can generate reports in Microsoft Defender for Identity to monitor your network.
 ms.date: 10/27/2020
 ms.topic: conceptual
 ---
 
-# Microsoft Defender for Identity Reports
+# Classic portal: Microsoft Defender for Identity Reports
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/vpn-integration). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).

@@ -1,11 +1,11 @@
 ---
-title: Monitoring domain controllers and installed sensors installed on your domain controllers using Microsoft Defender for Identity
-description: Describes how to monitor Microsoft Defender for Identity sensors and sensor coverage using Defender for Identity
+title: Classic portal - Monitoring domain controllers and installed sensors installed on your domain controllers using Microsoft Defender for Identity
+description: Classic portal - Describes how to monitor Microsoft Defender for Identity sensors and sensor coverage using Defender for Identity
 ms.date: 10/27/2020
 ms.topic: how-to
 ---
 
-# Monitoring your domain controller coverage
+# Classic portal: Monitoring your domain controller coverage
 
 As soon as the first [!INCLUDE [Product long](includes/product-long.md)] sensor is installed and configured on any domain controller in your network, [!INCLUDE [Product short](includes/product-short.md)] begins monitoring your environment for domain controllers.
 

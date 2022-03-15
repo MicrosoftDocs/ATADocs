@@ -1,11 +1,11 @@
 ---
-title: Working with user profiles in the Microsoft Defender for Identity portal
-description: Describes how to investigate users from the user profiles screen in the Microsoft Defender for Identity portal
+title: Classic portal - Working with user profiles in the Microsoft Defender for Identity portal
+description: Classic portal - Describes how to investigate users from the user profiles screen in the Microsoft Defender for Identity portal
 ms.date: 10/26/2020
 ms.topic: conceptual
 ---
 
-# Understanding entity profiles
+# Classic portal: Understanding entity profiles
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender/investigate-users). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).

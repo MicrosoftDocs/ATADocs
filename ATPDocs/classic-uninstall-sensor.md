@@ -1,11 +1,11 @@
 ---
-title: Uninstall Microsoft Defender for Identity sensor
-description: This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
+title: Classic portal -Uninstall Microsoft Defender for Identity sensor
+description: Classic portal - This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
 ms.date: 12/22/2020
 ms.topic: how-to
 ---
 
-# Uninstall the Microsoft Defender for Identity sensor
+# Classic portal: Uninstall the Microsoft Defender for Identity sensor
 
 This article describes how to uninstall the [!INCLUDE [Product long](includes/product-long.md)] sensor from domain controllers for the following scenarios:
 

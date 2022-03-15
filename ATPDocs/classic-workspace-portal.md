@@ -1,11 +1,11 @@
 ---
-title: Understanding the Microsoft Defender for Identity portal
-description: Describes how to log into the Microsoft Defender for Identity portal and the components of the portal
+title: Classic portal - Understanding the Microsoft Defender for Identity portal
+description: Classic portal - Describes how to log into the Microsoft Defender for Identity portal and the components of the portal
 ms.date: 10/27/2020
 ms.topic: conceptual
 ---
 
-# Working with the Microsoft Defender for Identity portal
+# Classic portal: Working with the Microsoft Defender for Identity portal
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.

@@ -1,11 +1,11 @@
 ---
-title: Setting Syslog settings in Microsoft Defender for Identity
-description: Describes how to have Microsoft Defender for Identity notify you (by email or by Defender for Identity event forwarding) when it detects suspicious activities
+title: Classic portal - Setting Syslog settings in Microsoft Defender for Identity
+description: Classic portal - Describes how to have Microsoft Defender for Identity notify you (by email or by Defender for Identity event forwarding) when it detects suspicious activities
 ms.date: 10/27/2020
 ms.topic: how-to
 ---
 
-# Integrate with Syslog
+# Classic portal: Integrate with Syslog
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/notifications#syslog-notifications). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).

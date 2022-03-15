@@ -1,11 +1,11 @@
 ---
-title: Manage sensitive or honeytoken accounts with Microsoft Defender for Identity
-description: Describes how to manage sensitive or honeytoken accounts using Microsoft Defender for Identity
+title: Classic portal - Manage sensitive or honeytoken accounts with Microsoft Defender for Identity
+description: Classic portal - Describes how to manage sensitive or honeytoken accounts using Microsoft Defender for Identity
 ms.date: 02/17/2021
 ms.topic: how-to
 ---
 
-# Manage sensitive or honeytoken accounts
+# Classic portal: Manage sensitive or honeytoken accounts
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/entity-tags). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).

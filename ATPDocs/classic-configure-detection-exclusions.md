@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity configure detection exclusions
-description: Configuration of detection exclusions.
+title: Classic portal - Microsoft Defender for Identity configure detection exclusions
+description: Classic portal -Configuration of detection exclusions.
 ms.date: 02/17/2021
 ms.topic: how-to
 ---
 
-# Configure detection exclusions
+# Classic portal: Configure detection exclusions
 
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/exclusions). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
