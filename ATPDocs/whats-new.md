@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/06/2022
+ms.date: 03/16/2022
 ms.topic: overview
 ---
 
@@ -27,6 +27,14 @@ For more information on what's new with other Microsoft Defender security produc
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms.
+
+## Defender for Identity release 2.176
+
+Released March 16, 2022
+
+- Beginning with this version, when installing the sensor from a new package, the sensor's version under **Add/Remove Programs** will appear with the full version number (for example, 2.176.x.y), as opposed to the static 2.0.0.0 that was previously shown. It will continue to show that version (the one installed through the package) even though the version will be updated through the automatic updates from the Defender for Identity cloud services. The real version can be seen in the [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor) in the portal, in the executable path or in the file version.
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.175
 
