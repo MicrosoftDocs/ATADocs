@@ -46,7 +46,7 @@ Released March 6, 2022
 
 Released February 20, 2022
 
-- We've added the shost FQDN of the account involved in the alert to the message sent to the SIEM.  For more information, see [Microsoft Defender for Identity SIEM log reference](cef-format-sa.md).
+- We've added the **shost** FQDN of the account involved in the alert to the message sent to the SIEM.  For more information, see [Microsoft Defender for Identity SIEM log reference](cef-format-sa.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
