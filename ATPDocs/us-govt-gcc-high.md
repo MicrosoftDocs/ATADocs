@@ -55,6 +55,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 >[!NOTE]
 > No data is migrated from the commercial service.
+> If you also have Microsoft Defender for Cloud Apps deployed, it should be migrated before you start the Defender for Identity migration.
 
 ## Feature parity with the commercial environment
 
