@@ -3,6 +3,7 @@ title: Classic portal - Setting Syslog settings in Microsoft Defender for Identi
 description: Classic portal - Describes how to have Microsoft Defender for Identity notify you (by email or by Defender for Identity event forwarding) when it detects suspicious activities
 ms.date: 10/27/2020
 ms.topic: how-to
+ROBOTS: NOINDEX
 ---
 
 # Classic portal: Integrate with Syslog

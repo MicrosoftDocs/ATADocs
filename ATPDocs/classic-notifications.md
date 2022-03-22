@@ -3,6 +3,7 @@ title: Classic portal - Set Microsoft Defender for Identity notifications
 description: Classic portal - Describes how to set Microsoft Defender for Identity security alerts so you are notified when suspicious activities are detected.
 ms.date: 10/26/2020
 ms.topic: how-to
+ROBOTS: NOINDEX
 ---
 
 # Classic portal: Set Microsoft Defender for Identity notifications

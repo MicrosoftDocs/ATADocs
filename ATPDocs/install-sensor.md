@@ -1,13 +1,13 @@
 ---
-title: Install Microsoft Defender for Identity sensor quickstart
-description: Step four of installing Microsoft Defender for Identity helps you to install the Defender for Identity sensor.
+title: Install Microsoft Defender for Identity sensor
+description: Learn how to install Microsoft Defender for Identity sensors.
 ms.date: 02/17/2021
-ms.topic: quickstart
+ms.topic: how-to
 ---
 
-# Quickstart: Install the Microsoft Defender for Identity sensor
+# Install the Microsoft Defender for Identity sensor
 
-In this quickstart, you'll install the [!INCLUDE [Product long](includes/product-long.md)] sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](silent-installation.md) article.
+Learn how to install the [!INCLUDE [Product long](includes/product-long.md)] sensor on a domain controller. If you prefer a silent installation, see the [Silent installation](silent-installation.md) article.
 
 ## Prerequisites
 

@@ -82,23 +82,31 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 
 ## What's next?
 
-We recommend deploying [!INCLUDE [Product short](includes/product-short.md)] in three phases:
+We recommend working with [!INCLUDE [Product short](includes/product-short.md)] in three phases:
 
-### Phase 1
+### Phase 1 - Preparation
 
-1. Set up [!INCLUDE [Product short](includes/product-short.md)] to protect your primary environments. [!INCLUDE [Product short](includes/product-short.md)]'s fast deployment model enables you to start protecting your organization today. [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-1. Set [sensitive accounts](manage-sensitive-honeytoken-accounts.md) and [honeytoken accounts](configure-detection-exclusions.md).
-1. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).
+1. Review the [Defender for Identity prerequisites](prerequisites.md).
+1. [Plan capacity for Defender for Identity](capacity-planning.md).
+1. [Configure Windows Event collection](configure-windows-event-collection.md).
+1. Configure your [Directory Service accounts](directory-service-accounts.md).
+1. Add users to [Defender for Identity role groups](role-groups.md).
+1. [Configure endpoint proxy and Internet connectivity settings](configure-proxy.md).
+1. [Configure Defender for Identity to make remote calls to SAM](remote-calls-sam.md).
 
-### Phase 2
+### Phase 2 - Deployment
 
-1. Protect all the domain controllers and [forests](multi-forest.md) in your organization.
-1. Monitor all [alerts](working-with-suspicious-activities.md) – investigate lateral movement & domain dominance alerts.
-1. Work with the [Security Alert guide](suspicious-activity-guide.md) to understand threats and triage potential attacks.
+1. [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+1. [Install the Microsoft Defender for Identity sensors](install-sensor.md) on your domain controllers or AD FS servers.
+1. [Configure Microsoft Defender for Identity sensor settings](configure-sensor-settings.md) to start receiving data.
+1. Create [Defender for Identity action accounts](manage-action-accounts.md).
 
-### Phase 3
+### Phase 3 - Management
 
-1. Integrate [!INCLUDE [Product short](includes/product-short.md)] alerts into your SecOp workflows.
+1. Review and configure the [sensor settings](settings-overview.md).
+1. [Understand user and computer entity profiles](understand-entities.md).
+1. Review the [Defender for Identity Security Alerts](alerts-overview.md).
+1. Review [Defender for Identity's security posture assessments](security-assessment.md) and take action to improve any vulnerabilities.
 
 ## See Also
 

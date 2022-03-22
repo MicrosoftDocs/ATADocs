@@ -3,6 +3,7 @@ title: Classic portal - Monitor Microsoft Defender for Identity System Health an
 description: Classic portal - Use the health center to check how the Microsoft Defender for Identity service is working and be alerted to potential problems and view system events in the Event viewer.
 ms.date: 10/26/2020
 ms.topic: how-to
+ROBOTS: NOINDEX
 ---
 
 # Classic portal: Work with Microsoft Defender for Identity health and events

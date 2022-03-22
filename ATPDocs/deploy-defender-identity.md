@@ -1,13 +1,13 @@
 ---
 title: Deploy Defender for Identity with Microsoft 365 Defender
-description: Quickstart for deploying Microsoft Defender for Identity using Microsoft 365 Defender
+description: Learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender
 ms.date: 01/23/2022
-ms.topic: quickstart
+ms.topic: how-to
 ---
 
 # Deploy Microsoft Defender for Identity with Microsoft 365 Defender
 
-In this quickstart, you'll learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender.
+Learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender.
 
 > [!IMPORTANT]
 > Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.

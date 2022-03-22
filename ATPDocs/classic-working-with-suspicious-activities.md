@@ -3,6 +3,7 @@ title: Classic portal - Working with security alerts in Microsoft Defender for I
 description: Classic portal - Describes how to review security alerts issued by Microsoft Defender for Identity
 ms.date: 10/27/2020
 ms.topic: how-to
+ROBOTS: NOINDEX
 ---
 
 # Classic portal: Working with Security Alerts

@@ -3,6 +3,7 @@ title: Classic portal - Manage sensitive or honeytoken accounts with Microsoft D
 description: Classic portal - Describes how to manage sensitive or honeytoken accounts using Microsoft Defender for Identity
 ms.date: 02/17/2021
 ms.topic: how-to
+ROBOTS: NOINDEX
 ---
 
 # Classic portal: Manage sensitive or honeytoken accounts

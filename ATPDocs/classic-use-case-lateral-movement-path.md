@@ -3,6 +3,7 @@ title: Classic portal - Understand and use Lateral Movement Paths with Microsoft
 description: Classic portal - This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
 ms.date: 10/27/2020
 ms.topic: conceptual
+ROBOTS: NOINDEX
 ---
 
 # Classic portal: Microsoft Defender for Identity Lateral Movement Paths (LMPs)
