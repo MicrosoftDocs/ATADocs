@@ -31,9 +31,9 @@ The Microsoft 365 Defender portal allows the creation of your [!INCLUDE [Product
 - **[!INCLUDE [Product short](includes/product-short.md)] cloud service**  
 [!INCLUDE [Product short](includes/product-short.md)] cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, and Asia. [!INCLUDE [Product short](includes/product-short.md)] cloud service is connected to Microsoft's intelligent security graph.
 
-## Defender for Identity portal
+## Microsoft 365 Defender portal
 
-Use the [!INCLUDE [Product short](includes/product-short.md)] portal to:
+Use the Microsoft 365 Defender portal to:
 
 - Create your [!INCLUDE [Product short](includes/product-short.md)] instance
 - Integrate with other Microsoft security services
