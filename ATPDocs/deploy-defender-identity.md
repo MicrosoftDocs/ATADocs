@@ -12,13 +12,6 @@ Learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender
 > [!IMPORTANT]
 > Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
 
-## Prerequisites
-
-- A [[!INCLUDE [Product long](includes/product-long.md)] license](/defender-for-identity/technical-faq#licensing-and-privacy).
-- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
-- Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
-- Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
-
 ## Start using Microsoft 365 Defender
 
 To begin the deployment of Defender for Identity, sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com). From the navigation menu, select any item, such as **Incidents & alerts**, **Hunting**, **Action center**, or **Threat analytics** to initiate the onboarding process.

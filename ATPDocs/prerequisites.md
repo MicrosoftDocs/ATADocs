@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 02/17/2021
+ms.date: 03/23/2022
 ms.topic: overview
 ---
 
@@ -17,6 +17,8 @@ This article describes the requirements for a successful deployment of [!INCLUDE
 [!INCLUDE [Product short](includes/product-short.md)] protects your on-premises Active Directory users and/or users synced to your Azure Active Directory. To protect an environment made up of only AAD users, see [AAD Identity Protection](/azure/active-directory/identity-protection/overview).
 
 To create your [!INCLUDE [Product short](includes/product-short.md)] instance, you'll need an AAD tenant with at least one global/security administrator. Each [!INCLUDE [Product short](includes/product-short.md)] instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+
+You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
 
 This prerequisite guide is divided into the following sections to ensure you have everything you need to successfully deploy [!INCLUDE [Product short](includes/product-short.md)].
 
@@ -35,7 +37,7 @@ This prerequisite guide is divided into the following sections to ensure you hav
 
 This section lists information you should gather as well as accounts and network entity information you should have before starting [!INCLUDE [Product short](includes/product-short.md)] installation.
 
-- Acquire a license for Enterprise Mobility + Security E5 (EMS E5/A5), Microsoft 365 E5 (M365 E5/A5/G5) or Microsoft 365 E5/A5/G5 Security directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. Standalone [!INCLUDE [Product short](includes/product-short.md)] licenses are also available.
+- Acquire a license for Enterprise Mobility + Security E5 (EMS E5/A5), Microsoft 365 E5 (M365 E5/A5/G5) or Microsoft 365 E5/A5/G5 Security directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. Standalone [!INCLUDE [Product short](includes/product-short.md)] licenses are also available. For more information about license requirements, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy).
 
 - Verify that the servers you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on are able to reach the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. They should be able to access https://*your-instance-name*sensorapi.atp.azure.com (port 443). For example, https://*contoso-corp*sensorapi.atp.azure.com.<br><br>
 To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).

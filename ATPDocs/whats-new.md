@@ -9,13 +9,7 @@ ms.topic: overview
 
 This article is updated frequently to let you know what's new in the latest releases of [!INCLUDE [Product long](includes/product-long.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP).
 
-For details of earlier [!INCLUDE [Product short](includes/product-short.md)] releases until (and including) release 2.55, see the [[!INCLUDE [Product short](includes/product-short.md)] release reference](release-reference.md).
-
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
-
-> [!IMPORTANT]
->
-> Threat protection product names from Microsoft are changing. Read more about this and other updates [here](https://www.microsoft.com/security/blog/?p=91813). We'll be using the new names from release 2.129 onwards.
 
 For more information on what's new with other Microsoft Defender security products, see:
 
