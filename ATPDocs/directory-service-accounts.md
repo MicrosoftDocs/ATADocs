@@ -185,7 +185,31 @@ The **Log on as a service** policy can be configured either in a Group Policy se
 
 ![Log on as a service properties.](media/log-on-as-a-service.png)
 
+## Configure Directory Services account in Microsoft 365 Defender
+
+To connect the [sensor](sensor-health.md#add-a-sensor) with your Active Directory domains, you'll need to configure Directory Services accounts in Microsoft 365 Defender.
+
+1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
+
+    ![Go to Settings, then Identities.](media/settings-identities.png)
+
+1. Select **Directory Service accounts**. You'll see which accounts are associated with which domains.
+
+    ![Directory Service accounts.](media/directory-service-accounts.png)
+
+1. If you select an account, a pane will open with the settings for that account.
+
+    ![Account settings.](media/account-settings.png)
+
+1. To add a new Directory Services account, select **Create new account** and fill in the **Account name**, **Domain**, and **Password**. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
+
+    ![New Directory Service account.](media/new-directory-service-account.png)
+
+1. Select **Save**.
+
+> [!NOTE]
+> You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
+
 ## See also
 
-- [Connect to your Active Directory Forest](install-step2.md)
 - [Sensor failed to retrieve the gMSA credentials](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)
