@@ -108,15 +108,17 @@ To audit Event ID 8004, additional configuration steps are required.
 
 ## Event ID 1644
 
-Windows event 1644 is not collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating the following registry keys with the following values (DWORD values):  
+Windows event 1644 is not collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
 
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\15 Field Engineering = 5  
+```reg
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
+"15 Field Engineering"=dword:00000005
 
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold = 1  
-
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold = 1  
-
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs) = 1  
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters]
+"Expensive Search Results"=dword:00000001
+"Inefficient Search Results Threshold"=dword:00000001
+"Search Time Threshold (msecs)"=dword:00000001
+```
 
 <!--
 ## Defender for Identity Advanced Audit Policy check
