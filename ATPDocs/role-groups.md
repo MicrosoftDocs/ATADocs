@@ -7,9 +7,6 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity role groups
 
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
-
 [!INCLUDE [Product long](includes/product-long.md)] offers role-based security to safeguard data according to an organization's specific security and compliance needs. [!INCLUDE [Product short](includes/product-short.md)] support three separate roles: Administrators, Users, and Viewers.
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
@@ -18,13 +15,6 @@ Role groups enable access management for [!INCLUDE [Product short](includes/prod
 
 > [!NOTE]
 > Any global administrator or security administrator on the tenant's Azure Active Directory is automatically a [!INCLUDE [Product short](includes/product-short.md)] administrator.
-
-## Accessing the Defender for Identity portal
-
-Access to the [!INCLUDE [Product short](includes/product-short.md)] portal (portal.atp.azure.com) can only be accomplished by an Azure AD user who has the directory role of global administrator or security administrator. After entering the portal with the required role, you can create your [!INCLUDE [Product short](includes/product-short.md)] instance. [!INCLUDE [Product short](includes/product-short.md)] service creates three security groups in your Azure Active Directory tenant: Administrators, Users, Viewers.
-
-> [!NOTE]
-> Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is granted only to users within the [!INCLUDE [Product short](includes/product-short.md)] security groups, within your Azure Active Directory, as well as global and security admins of the tenant.
 
 ## Required permissions for the Microsoft 365 Defender experience
 
