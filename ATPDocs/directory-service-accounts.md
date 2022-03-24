@@ -187,7 +187,7 @@ The **Log on as a service** policy can be configured either in a Group Policy se
 
 ## Configure Directory Services account in Microsoft 365 Defender
 
-To connect the [sensor](sensor-health.md#add-a-sensor) with your Active Directory domains, you'll need to configure Directory Services accounts in Microsoft 365 Defender.
+To connect your sensors with your Active Directory domains, you'll need to configure Directory Services accounts in Microsoft 365 Defender.
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
