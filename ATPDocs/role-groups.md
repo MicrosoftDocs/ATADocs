@@ -61,9 +61,6 @@ When users try to access a page that isn't available for their role group, they'
 
 [!INCLUDE [Product short](includes/product-short.md)] uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Only Azure AD users can be added or removed from security groups.
 
-## See Also
+## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/aatpsizingtool>)
-- [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)
-- [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Configure endpoint proxy and Internet connectivity settings](configure-proxy.md)

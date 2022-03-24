@@ -210,6 +210,10 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 > [!NOTE]
 > You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
 
-## See also
+## Troubleshooting
 
 - [Sensor failed to retrieve the gMSA credentials](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)
+
+## Next steps
+
+- [Set up Defender for Identity role groups](role-groups.md)

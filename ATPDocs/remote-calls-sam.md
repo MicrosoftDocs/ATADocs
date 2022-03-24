@@ -46,7 +46,6 @@ Then add the [!INCLUDE [Product short](includes/product-short.md)] service accou
 
 ![Add the service account.](media/add-service-account.png)
 
-## See Also
+## Next steps
 
-- [Investigating lateral movement path attacks with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)

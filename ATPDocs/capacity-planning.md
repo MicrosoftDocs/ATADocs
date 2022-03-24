@@ -127,8 +127,4 @@ To determine packets per second, do the following steps on each domain controlle
 
 ## Next steps
 
-- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
-
-## Join the Community
-
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!
+- [Configure Windows Event collection](configure-windows-event-collection.md)

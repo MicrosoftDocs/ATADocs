@@ -5,7 +5,7 @@ ms.date: 10/26/2020
 ms.topic: how-to
 ---
 
-# Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity Sensor
+# Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor
 
 Each [!INCLUDE [Product long](includes/product-long.md)] sensor requires Internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection.
 
@@ -115,7 +115,6 @@ After the proxy has been configured to allow the sensor access to the MDI servic
 
     ![Certificate path.](media/certificate-path.png)
 
-## See Also
+## Next steps
 
-- [Configure event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md)

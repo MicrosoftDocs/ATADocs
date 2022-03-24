@@ -272,10 +272,6 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 >
 > - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-step8-samr.md).
 
-## See Also
+## Next step
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/aatpsizingtool>)
-- [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)
-- [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Network Name Resolution (NNR)](nnr-policy.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
