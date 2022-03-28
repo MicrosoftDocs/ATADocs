@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity role groups for access management
 description: Walks you through working with Microsoft Defender for Identity role groups.
-ms.date: 02/27/2020
+ms.date: 03/28/2022
 ms.topic: conceptual
 ---
 
@@ -34,7 +34,7 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](de
 
 ## Types of Defender for Identity security groups
 
-[!INCLUDE [Product short](includes/product-short.md)] provides three types of security groups: Azure ATP *(instance name)* Administrators, Azure ATP *(instance name)* Users, and Azure ATP *(instance name)* Viewers. The following table describes the type of access in the [!INCLUDE [Product short](includes/product-short.md)] portal available for each role. Depending on which role you assign, various screens and menu options in [!INCLUDE [Product short](includes/product-short.md)] portal are unavailable for those users, as follows:
+[!INCLUDE [Product short](includes/product-short.md)] provides three types of security groups: Azure ATP *(instance name)* Administrators, Azure ATP *(instance name)* Users, and Azure ATP *(instance name)* Viewers. The following table describes the type of access in Defender for Identity available for each role. Depending on which role you assign, various screens and options will be  unavailable for those users, as follows:
 
 |Activity |Azure ATP *(instance name)* Administrators|Azure ATP *(instance name)* Users|Azure ATP *(instance name)* Viewers|
 |----|----|----|----|
@@ -55,11 +55,9 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](de
 |Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Sensors (download, regenerate key, configure, delete)|Available|Not available|Not available|
 |View entity profiles and security alerts|Available|Available|Available|
 
-When users try to access a page that isn't available for their role group, they're redirected to the [!INCLUDE [Product short](includes/product-short.md)] unauthorized page.
-
 ## Add and remove users
 
-[!INCLUDE [Product short](includes/product-short.md)] uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/All%20groups). Only Azure AD users can be added or removed from security groups.
+[!INCLUDE [Product short](includes/product-short.md)] uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
 
 ## Next steps
 
