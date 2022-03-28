@@ -77,14 +77,14 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 
 - No syslog header.
 - The header part (the part that's separated by a pipe) must exist (as stated in the protocol).
-- The following keys in the _Extension_ part must be present in the event:
+- The following keys in the *Extension* part must be present in the event:
   - externalId = the Windows event ID
   - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably  in milliseconds accuracy, this is important.
   - cat = the Windows event log name
   - shost = the source host name
   - dhost = the computer receiving the event (the DC in this case)
   - duser = the user authenticating
-- The order is not important for the _Extension_ part
+- The order is not important for the *Extension* part
 - There must be a custom key and keyLable for these two fields:
   - "EventSource"
   - "Reason or Error Code" = The result code of the NTLM
@@ -145,7 +145,7 @@ Make sure to have \t between the key=value pairs.
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/mdi/sizingtool)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

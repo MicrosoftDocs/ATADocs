@@ -22,7 +22,7 @@ Installed directly on your domain controller or AD FS servers, the [!INCLUDE [Pr
 [!INCLUDE [Product short](includes/product-short.md)] consists of the following components:
 
 - **Microsoft 365 Defender portal**  
-The Microsoft 365 Defender portal allows the creation of your [!INCLUDE [Product short](includes/product-short.md)] instance, displays the data received from [!INCLUDE [Product short](includes/product-short.md)] sensors, and enables you to monitor, manage, and investigate threats in your network environment.
+The Microsoft 365 Defender portal creates your [!INCLUDE [Product short](includes/product-short.md)] instance, displays the data received from [!INCLUDE [Product short](includes/product-short.md)] sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
 - **[!INCLUDE [Product short](includes/product-short.md)] sensor**  
 [!INCLUDE [Product short](includes/product-short.md)] sensors can be directly installed on the following servers:

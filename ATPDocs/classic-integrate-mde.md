@@ -82,7 +82,7 @@ From the Defender for Endpoint portal, click on an endpoint to view [!INCLUDE [P
 ## See Also
 
 - [Investigating lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)
 - [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

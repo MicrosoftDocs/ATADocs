@@ -1,7 +1,7 @@
 ---
 title: What is Microsoft Defender for Identity?
 description: Explains what Microsoft Defender for Identity is and what kinds of suspicious activities it can detect
-ms.date: 12/23/2020
+ms.date: 03/28/2022
 ms.topic: overview
 ---
 
@@ -58,6 +58,10 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 
 [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
 
+### Defender for Identity roadmap
+
+[See the upcoming roadmap for Defender for Identity](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity)
+
 ### Follow Defender for Identity on Microsoft Tech Community
 
 [https://aka.ms/MDIcommunity](https://aka.ms/MDIcommunity "[!INCLUDE [Product short](includes/product-short.md)] on Microsoft Tech Community")
@@ -66,6 +70,10 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 
 [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "[!INCLUDE [Product short](includes/product-short.md)] Yammer community")
 
+### Defender for Identity blog
+
+[Defender for Identity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance/label-name/Microsoft%20Defender%20for%20Identity)
+
 ### Visit the Defender for Identity product page
 
 [https://www.microsoft.com/microsoft-365/security/identity-defender](https://www.microsoft.com/microsoft-365/security/identity-defender "[!INCLUDE [Product short](includes/product-short.md)] product page")
@@ -73,6 +81,10 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 ### Learn more about Defender for Identity architecture
 
 [[!INCLUDE [Product short](includes/product-short.md)] Architecture](architecture.md)
+
+### Frequently asked questions
+
+[[!INCLUDE [Product short](includes/product-short.md)] Frequently Asked Questions](technical-faq.yml)
 
 ### Watch our videos
 

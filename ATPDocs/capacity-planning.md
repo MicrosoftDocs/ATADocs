@@ -1,7 +1,7 @@
 ---
 title: Planning your Microsoft Defender for Identity deployment
 description: Helps you plan your deployment and decide how many Microsoft Defenders for Identity servers will be needed to support your network
-ms.date: 10/26/2020
+ms.date: 03/28/2022
 ms.topic: how-to
 ---
 
@@ -11,7 +11,7 @@ In this guide, you determine what resources you need for your Microsoft Defender
 
 ## Prerequisites
 
-- Download the [[!INCLUDE [Product short](includes/product-short.md)] Sizing Tool](<https://aka.ms/aatpsizingtool>).
+- Download the [[!INCLUDE [Product short](includes/product-short.md)] Sizing Tool](<https://aka.ms/mdi/sizingtool>).
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
 
@@ -26,6 +26,9 @@ The recommended and simplest way to determine capacity for your [!INCLUDE [Produ
 
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
 1. Match your **Busy Packets/sec** field to the **PACKETS PER SECOND** field in the [[!INCLUDE [Product short](includes/product-short.md)] sensor table](#sizing) section of this article. Use the fields to determine the memory and CPU that will be used by the sensor.
+
+> [!NOTE]
+> To ensure accurate results, only run the sizing tool before you've installed any Defender for Identity sensors in your environment.
 
 <a name="sizing"></a>
 

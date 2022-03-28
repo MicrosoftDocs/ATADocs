@@ -63,7 +63,7 @@ After this is enabled, all [!INCLUDE [Product short](includes/product-short.md)]
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [Configure event collection](configure-event-collection.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
