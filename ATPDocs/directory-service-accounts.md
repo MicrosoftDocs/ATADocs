@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Microsoft Defender for Identity Directory Service Account recommendations
 
+Learn how to create a Directory Service Account (DSA), and configure it to work with Microsoft Defender for Identity.
+
 ## Introduction
 
 The Directory Services Account (DSA) in Defender for Identity is used by the sensor to perform the following functions:
@@ -42,7 +44,7 @@ There are two types of DSA that can be used:
 | Type of DSA           | Pros                                                         | Cons                                                         |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. <li> Doesn't support cross-forest authentication  |
-| Regular user  account | <li> Supports all operating system versions  the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
+| Regular user  account | <li> Supports all the operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
 
 ## Number of DSA entries
 
@@ -81,7 +83,7 @@ For example, if these are the DSA entries configured:
 - DSA2.EMEA.contoso.com
 - DSA3.fabrikam.com
 
-These are the sensors and which DSA entry will be used first
+Then these are the sensors, and which DSA entry will be used first:
 
 | Domain controller FQDN | DSA entry that  will be used |
 | --------------------------- | -------------------------------- |
@@ -92,7 +94,7 @@ These are the sensors and which DSA entry will be used first
 
 >[!NOTE]
 >
-> - It is recommended in a multi-domain forest the DSA account be created in the domain with the largest number of domain controllers.
+> - In a multi-domain forest, it's recommended that the DSA account be created in the domain with the largest number of domain controllers.
 > - In multi-forest multi-domain environments, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
 
 >[!IMPORTANT]
@@ -171,7 +173,7 @@ If it has the permissions, the command will return a **True** message.
 
 ## Verify that the gMSA account has the required rights (if needed)
 
-The sensor (Azure Advanced Threat Protection Sensor) service runs as **LocalService** and performs impersonation of the DSA account. The impersonation will fail if the **Log on as a service** policy is configured but the permission hasn't been granted to the gMSA account, and you will receive a health alert: **Directory services user credentials are incorrect**.
+The sensor (Azure Advanced Threat Protection Sensor) service runs as **LocalService** and performs impersonation of the DSA account. The impersonation will fail if the **Log on as a service** policy is configured but the permission hasn't been granted to the gMSA account, and you'll receive a health alert: **Directory services user credentials are incorrect**.
 
 If you receive the alert, you should check if the **Log on as a service** policy is configured.
 
@@ -201,9 +203,16 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
     ![Account settings.](media/account-settings.png)
 
-1. To add a new Directory Services account, select **Create new account** and fill in the **Account name**, **Domain**, and **Password**. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
+1. To add Directory Services account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
 
-    ![New Directory Service account.](media/new-directory-service-account.png)
+    ![Add credentials.](media/new-directory-service-account.png)
+
+    |Field|Comments|
+    |---|---|
+    |**Account name** (required)|Enter the read-only AD username. For example: **DefenderForIdentityUser**. You must use a **standard** AD user or gMSA account. **Don't** use the UPN format for your username. When using a gMSA, the user string should end with the '$' sign. For example: mdisvc$<br />**NOTE:** We recommend that you avoid using accounts assigned to specific users.|
+    |**Password** (required for standard AD user accounts)|For AD user accounts only, enter the password for the read-only user. For example: *Pencil1*.|
+    |**Group managed service account** (required for gMSA accounts)|For gMSA accounts only, select **Group managed service account**.|
+    |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user's account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com|
 
 1. Select **Save**.
 
