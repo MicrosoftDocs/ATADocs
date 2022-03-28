@@ -31,7 +31,7 @@ For more information about these steps, see the following articles:
 
 Before you can connect Defender for Identity to Active Directory, you'll need at least one Directory Service account. For information about how to create and configure that account, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
-After you've created that account, provide the account details in the **Directory Service accounts** settings in Microsoft 365 Defender. For information on how to configure the settings, see [Microsoft Defender for Identity Directory Service account in Microsoft 365 Defender](directory-service-accounts.md#configure-directory-services-account-in-microsoft-365-defender).
+After you've created that account, provide the account details in the **Directory Service accounts** settings in Microsoft 365 Defender. For information on how to configure the settings, see [Microsoft Defender for Identity Directory Service account in Microsoft 365 Defender](directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender).
 
 ## Add a sensor
 
