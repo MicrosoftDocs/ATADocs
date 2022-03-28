@@ -17,7 +17,7 @@ In this quickstart, you'll connect [!INCLUDE [Product long](includes/product-lon
 
 - A [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md).
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
-- At least one directory services accounts with read access to all objects in the monitored domains. For instructions on how to create the directory service account, see [Directory Service Account recommendations](directory-service-accounts.md).
+- At least one Directory Service account with read access to all objects in the monitored domains. For instructions on how to create the Directory Service account, see [Directory Service account recommendations](directory-service-accounts.md).
 
 ## Provide a username and password to connect to your Active Directory Forest
 

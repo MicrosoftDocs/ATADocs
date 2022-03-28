@@ -1,17 +1,17 @@
 ---
-title: Directory Service Account recommendations
-description: Learn how to configure the Directory Service Account (DSA) to work with Microsoft Defender for Identity.
+title: Directory Service account recommendations
+description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
 ms.date: 12/22/2021
 ms.topic: how-to
 ---
 
-# Microsoft Defender for Identity Directory Service Account recommendations
+# Microsoft Defender for Identity Directory Service account recommendations
 
-Learn how to create a Directory Service Account (DSA), and configure it to work with Microsoft Defender for Identity.
+Learn how to create a Directory Service account (DSA), and configure it to work with Microsoft Defender for Identity.
 
 ## Introduction
 
-The Directory Services Account (DSA) in Defender for Identity is used by the sensor to perform the following functions:
+The Directory Service account (DSA) in Defender for Identity is used by the sensor to perform the following functions:
 
 - At startup, the sensor connects to the domain controller using LDAP with the DSA account credentials.
 
@@ -187,9 +187,9 @@ The **Log on as a service** policy can be configured either in a Group Policy se
 
 ![Log on as a service properties.](media/log-on-as-a-service.png)
 
-## Configure Directory Services account in Microsoft 365 Defender
+## Configure Directory Service account in Microsoft 365 Defender
 
-To connect your sensors with your Active Directory domains, you'll need to configure Directory Services accounts in Microsoft 365 Defender.
+To connect your sensors with your Active Directory domains, you'll need to configure Directory Service accounts in Microsoft 365 Defender.
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
@@ -203,7 +203,7 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
     ![Account settings.](media/account-settings.png)
 
-1. To add Directory Services account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
+1. To add Directory Service account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
 
     ![Add credentials.](media/new-directory-service-account.png)
 

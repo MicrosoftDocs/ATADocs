@@ -219,7 +219,7 @@ Validate that the computer running the sensor has been granted permissions to re
 
 ### Cause 2
 
-The sensor service runs as *LocalService* and performs impersonation of the directory services account.
+The sensor service runs as *LocalService* and performs impersonation of the Directory Service account.
 
 If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a service** permission.
 

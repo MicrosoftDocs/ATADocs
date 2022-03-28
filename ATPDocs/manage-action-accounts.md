@@ -67,5 +67,5 @@ We recommend you create the gMSA account Defender for Identity will use to take 
 
 ## Next steps
 
-- [Directory Service Account recommendations](directory-service-accounts.md)
+- [Directory Service account recommendations](directory-service-accounts.md)
 - [Troubleshooting gMSA account issues](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)

@@ -16,7 +16,7 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s ability to detect suspicious activities related to domain controllers monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.| Make sure the domain controllers are up and running and that this [!INCLUDE [Product short](includes/product-short.md)] sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a directory service account for every deployed forest.|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s ability to detect suspicious activities related to domain controllers monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.| Make sure the domain controllers are up and running and that this [!INCLUDE [Product short](includes/product-short.md)] sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a Directory Service account for every deployed forest.|Medium|
 
 ## All/Some of the capture network adapters on a sensor are not available
 

@@ -44,7 +44,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 1. Have your Microsoft contact send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
 2. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
 3. Create a new instance of Defender for Identity
-4. Configure a Directory Service Account
+4. Configure a Directory Service account
 5. Download the new sensor agent package and copy the workspace key
 6. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
 7. Uninstall existing sensor agents from the domain controllers (optionally remove the winpcap driver)
