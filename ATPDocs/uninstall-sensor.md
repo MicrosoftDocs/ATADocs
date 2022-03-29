@@ -39,4 +39,4 @@ This scenario may occur after an in-place sensor upgrade, and the sensor appears
 
 ## See Also
 
-- [Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently](silent-installation.md##uninstall-the-defender-for-identity-sensor-silently)
+- [Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently](silent-installation.md#uninstall-the-defender-for-identity-sensor-silently)
