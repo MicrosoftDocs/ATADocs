@@ -1,7 +1,7 @@
 ---
 title: Configure your proxy or firewall to enable Microsoft Defender for Identity communication with the sensor
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 10/26/2020
+ms.date: 03/29/2022
 ms.topic: how-to
 ---
 
@@ -90,7 +90,7 @@ If you would like to download the "Azure IP Ranges and Service Tags - Public Clo
 
 The Defender for Identity sensor requires network connectivity to the Defender for Identity service running in Azure. Most organizations control access to the internet via firewall or proxies.  When using a proxy, you can allow access port 443 via a single URL. For more information about the ports that the Defender for Identity requires, see [Required ports](prerequisites.md#ports).
 
-After the proxy has been configured to allow the sensor access to the MDI service, follow the steps below to confirm that everything is working as expected. This can be done:
+After the proxy has been configured to allow the sensor access to the Defender for Identity service, follow the steps below to confirm that everything is working as expected. This can be done:
 
 - before you deploy the sensor
 - if the sensor experiences connectivity issues after being installed
@@ -100,12 +100,12 @@ After the proxy has been configured to allow the sensor access to the MDI servic
     >[!NOTE]
     >If the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
 
-1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com.` Replace `<your_workspace_name>` with the name of your MDI workspace.
+1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com.` Replace `<your_workspace_name>` with the name of your Defender for Identity workspace.
 
     >[!IMPORTANT]
     >You must specify HTTPS, not HTTP, to properly test connectivity.
 
-1. **Result**: You should get an *Error 503 The service is unavailable*, which indicates you were successfully able to route to the MDI HTTPS endpoint.  This is the desired result.
+1. **Result**: You should get an *Error 503 The service is unavailable*, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint.  This is the desired result.
 
     ![Error 503 result.](media/error-503.png)
 

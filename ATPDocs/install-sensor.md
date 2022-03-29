@@ -47,7 +47,7 @@ Learn how to download and install the [!INCLUDE [Product long](includes/product-
 - Install the [Npcap driver](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers). For download and installation instructions, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 >[!NOTE]
->When installing the sensor on Windows Server Core, follow the steps for [silent installation](silent-installation.md).
+>When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](silent-installation.md#defender-for-identity-sensor-silent-installation).
 
 ## Install the sensor
 

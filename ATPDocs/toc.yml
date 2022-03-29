@@ -28,8 +28,6 @@ items:
       href: directory-service-accounts.md
     - name: User roles
       href: role-groups.md
-    - name: Proxy configuration
-      href: configure-proxy.md
     - name: Configure remote calls to SAM
       href: remote-calls-sam.md
   - name: Deploy 
@@ -38,12 +36,14 @@ items:
       href: deploy-defender-identity.md
     - name: Install the Defender for Identity sensor
       href: install-sensor.md
-    - name: Silent installation
-      href: silent-installation.md
+    - name: Proxy configuration
+      href: configure-proxy.md
     - name: Configure the Defender for Identity sensor
       href: configure-sensor-settings.md
     - name: Manage action accounts
       href: manage-action-accounts.md
+    - name: Silent installation
+      href: silent-installation.md
   - name: Special scenarios
     items:
     - name: Installing on Active Directory Federation Services
