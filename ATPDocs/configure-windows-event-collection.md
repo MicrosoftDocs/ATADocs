@@ -22,6 +22,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 
 ### For other events
 
+- 1644 - LDAP search
 - 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
 - 4728 - Member Added to Global Security Group
@@ -104,6 +105,20 @@ To audit Event ID 8004, additional configuration steps are required.
     For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
 
     ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
+
+## Event ID 1644
+
+Windows event 1644 is not collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
+
+```reg
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
+"15 Field Engineering"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters]
+"Expensive Search Results"=dword:00000001
+"Inefficient Search Results Threshold"=dword:00000001
+"Search Time Threshold (msecs)"=dword:00000001
+```
 
 <!--
 ## Defender for Identity Advanced Audit Policy check
