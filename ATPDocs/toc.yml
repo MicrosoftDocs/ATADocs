@@ -16,6 +16,8 @@ items:
 - name: Get started
   expanded: true
   items:
+  - name: Deploy Defender for Identity with Microsoft 365 Defender
+    href: deploy-defender-identity.md
   - name: Prepare
     items:
     - name: Defender for Identity prerequisites

@@ -7,12 +7,9 @@ ms.topic: how-to
 
 # Deploy Microsoft Defender for Identity with Microsoft 365 Defender
 
-Learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender.
+The deployment of Microsoft Defender for Identity with Microsoft 365 Defender has three phases - preparation, installation, and management.
 
-> [!IMPORTANT]
-> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
-
-After you've [prepared your environment](prerequisites.md), you can deploy Microsoft Defender for Identity using Microsoft 365 Defender.
+This article will outline the steps in each phase.
 
 ## Start using Microsoft 365 Defender
 
@@ -27,23 +24,32 @@ For more information about these steps, see the following articles:
 - [Deploy supported services](/microsoft-365/security/defender/deploy-supported-services)
 - [Frequently asked questions when turning on Microsoft 365 Defender](/microsoft-365/security/defender/m365d-enable-faq)
 
-## Connect to Active Directory
+> [!IMPORTANT]
+> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
 
-Before you can connect Defender for Identity to Active Directory, you'll need at least one Directory Service account. For information about how to create and configure that account, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
+## Preparation
 
-After you've created that account, provide the account details in the **Directory Service accounts** settings in Microsoft 365 Defender. For information on how to configure the settings, see [Microsoft Defender for Identity Directory Service account in Microsoft 365 Defender](directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender).
+1. Review the [Defender for Identity prerequisites](prerequisites.md).
+1. [Plan capacity for Defender for Identity](capacity-planning.md).
+1. [Configure Windows Event collection](configure-windows-event-collection.md).
+1. Configure your [Directory Service accounts](directory-service-accounts.md).
+1. Add users to [Defender for Identity role groups](role-groups.md).
+1. [Configure endpoint proxy and Internet connectivity settings](configure-proxy.md).
+1. [Configure Defender for Identity to make remote calls to SAM](remote-calls-sam.md).
 
-## Add a sensor
+## Installation
 
-From the **Sensors** page, you can add a new sensor, and download the installer. For instructions on how to download the sensor package, and install the sensors, see [Install a sensor](install-sensor.md).
+1. [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+1. [Install the Microsoft Defender for Identity sensors](install-sensor.md) on your domain controllers or AD FS servers.
+1. [Configure Microsoft Defender for Identity sensor settings](configure-sensor-settings.md) to start receiving data.
+1. Create [Defender for Identity action accounts](manage-action-accounts.md).
 
-## Configure the sensor
+## Management
 
-After you've installed the sensors, you'll need to configure them. For information on how to configure the sensors, see [Configure a sensor](configure-sensor-settings.md).
-
-## Manage action accounts
-
-After the sensors are configured, you'll want to add action accounts. For information on how to add action accounts, see [Manage action accounts](manage-action-accounts.md).
+1. Review and configure the [sensor settings](settings-overview.md).
+1. [Understand user and computer entity profiles](understand-entities.md).
+1. Review the [Defender for Identity Security Alerts](alerts-overview.md).
+1. Review [Defender for Identity's security posture assessments](security-assessment.md) and take action to improve any vulnerabilities.
 
 ## Next steps
 
