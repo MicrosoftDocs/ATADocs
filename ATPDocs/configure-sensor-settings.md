@@ -1,7 +1,7 @@
 ---
-title: Configure Microsoft Defender for Identity sensor settings conceptual
-description: Step five of installing Microsoft Defender for Identity helps you configure settings for your Defender for Identity standalone sensor.
-ms.date: 09/15/2019
+title: Configure Microsoft Defender for Identity sensor settings 
+description: Learn how to configure Microsoft Defender for Identity sensor settings 
+ms.date: 03/30/2022
 ms.topic: how-to
 ---
 
@@ -71,10 +71,6 @@ To validate that the [!INCLUDE [Product short](includes/product-short.md)] senso
 
 ## Next steps
 
-- [Proxy configuration](configure-proxy.md)
-- [Advanced Audit Policy](configure-windows-event-collection.md)
-- [Configure [!INCLUDE [Product short](includes/product-short.md)] to make remote calls to SAM](install-step8-samr.md)
-
-## Join the Community
-
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!
+> [!div class="step-by-step"]
+> [« Install the Defender for Identity sensor](install-sensor.md)
+> [Manage action accounts »](manage-action-accounts.md)

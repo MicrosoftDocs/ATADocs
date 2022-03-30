@@ -71,4 +71,6 @@ If you installed the sensor on AD FS servers, follow the steps in [Post-installa
 
 ## Next steps
 
-- Learn how to correctly [configure Microsoft Defender for Identity sensor settings](configure-sensor-settings.md) to start seeing data.
+> [!div class="step-by-step"]
+> [« Proxy configuration](configure-proxy.md)
+> [Configure the Defender for Identity sensor »](configure-sensor-settings.md)

@@ -300,7 +300,7 @@ Released January 17, 2021
 
 Released January 3, 2021
 
-- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](prerequisites.md#azure-atp-sensor-requirements) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft defender for identity sensor for AD FS server, [download the latest deployment package](install-step3.md#download-the-setup-package) from the sensor configuration page.
+- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](active-directory-federation-services.md) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft defender for identity sensor for AD FS server, [download the latest deployment package](install-step3.md#download-the-setup-package) from the sensor configuration page.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.135
@@ -1005,7 +1005,7 @@ The Azure ATP account enumeration reconnaissance detection now detects and issue
   - See [Remote code execution attempt](domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019) to learn more.  
 
 - **Windows Server 2019 LSASS issue and Azure ATP**  
-In response to customer feedback regarding Azure ATP usage with domain controllers running Windows Server 2019, this update includes additional logic to avoid triggering the reported behavior on Windows Server 2019 machines. Full support for Azure ATP sensor on Windows Server 2019 is planned for a future Azure ATP update, however installing and running Azure ATP on Windows Servers 2019 is **not** currently supported. See [Azure ATP sensor requirements](prerequisites.md#azure-atp-sensor-requirements) to learn more.
+In response to customer feedback regarding Azure ATP usage with domain controllers running Windows Server 2019, this update includes additional logic to avoid triggering the reported behavior on Windows Server 2019 machines. Full support for Azure ATP sensor on Windows Server 2019 is planned for a future Azure ATP update, however installing and running Azure ATP on Windows Servers 2019 is **not** currently supported. See [Azure ATP sensor requirements](prerequisites.md#) to learn more.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 

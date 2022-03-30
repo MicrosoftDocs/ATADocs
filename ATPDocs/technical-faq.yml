@@ -2,7 +2,7 @@
 metadata:
   title: Microsoft Defender for Identity frequently asked questions
   description: Provides a list of frequently asked questions about Microsoft Defender for Identity and the associated answers
-  ms.date: 10/27/2020
+  ms.date: 03/30/2022
   ms.topic: conceptual
 
 title: Microsoft Defender for Identity frequently asked questions
@@ -82,7 +82,7 @@ sections:
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |
-          No. When your Defender for Identity instance is created, it is stored automatically in the country data center closest to the geographical location of your AAD tenant.  Once your Defender for Identity instance is created, Defender for Identity data cannot be moved to a different data center.
+          No. When your Defender for Identity instance is created, it is stored automatically in the country data center closest to the geographical location of your Azure Active Directory tenant.  Once your Defender for Identity instance is created, Defender for Identity data cannot be moved to a different data center.
 
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |

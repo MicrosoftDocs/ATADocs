@@ -117,4 +117,6 @@ After the proxy has been configured to allow the sensor access to the Defender f
 
 ## Next steps
 
-- [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md)
+> [!div class="step-by-step"]
+> [« Download the Defender for Identity sensor](download-sensor.md)
+> [Install the Defender for Identity sensor »](install-sensor.md)

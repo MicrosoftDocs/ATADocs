@@ -34,7 +34,7 @@ In this guide you will:
 
 - [!INCLUDE [Product short](includes/product-short.md)] requires .Net Framework 4.7 or later and may require a domain controller (restart) if your current .Net Framework version is not 4.7 or later.
 
-- Make sure your domain controllers meet all the [[!INCLUDE [Product short](includes/product-short.md)] sensor requirements](prerequisites.md#azure-atp-sensor-requirements) and your environment meets all [[!INCLUDE [Product short](includes/product-short.md)] requirements](prerequisites.md).
+- Make sure your domain controllers meet all the [[!INCLUDE [Product short](includes/product-short.md)] sensor requirements](prerequisites.md#defender-for-identity-sensor-requirements) and your environment meets all [[!INCLUDE [Product short](includes/product-short.md)] requirements](prerequisites.md).
 
 - Validate that all domain controllers you plan to use have sufficient internet access to the [!INCLUDE [Product short](includes/product-short.md)] service. Check and confirm your domain controllers meet the [[!INCLUDE [Product short](includes/product-short.md)] proxy configuration requirements](configure-proxy.md).
 
@@ -132,4 +132,4 @@ Learn more about [[!INCLUDE [Product short](includes/product-short.md)]](what-is
 
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
+Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
