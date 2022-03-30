@@ -128,6 +128,11 @@ To determine packets per second, do the following steps on each domain controlle
 
     ![Packets per second counter image.](media/traffic-estimation-14.png)
 
+> [!NOTE]
+> By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 350 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
+
 ## Next steps
 
-- [Configure Windows Event collection](configure-windows-event-collection.md)
+> [!div class="step-by-step"]
+> [« Prerequisites](prerequisites.md)
+> [Configure Windows Event collection »](configure-windows-event-collection.md)

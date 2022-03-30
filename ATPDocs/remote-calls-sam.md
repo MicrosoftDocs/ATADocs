@@ -48,4 +48,6 @@ Then add the [!INCLUDE [Product short](includes/product-short.md)] Directory Ser
 
 ## Next steps
 
-- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+> [!div class="step-by-step"]
+> [« Role groups](role-groups.md)
+> [Download the Defender for Identity sensor »](download-sensor.md)

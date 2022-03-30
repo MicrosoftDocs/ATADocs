@@ -61,4 +61,7 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](de
 
 ## Next steps
 
-- [Configure endpoint proxy and Internet connectivity settings](configure-proxy.md)
+> [!div class="step-by-step"]
+> [« Directory Service accounts](directory-service-accounts.md)
+> [Configure remote calls to SAM »](remote-calls-sam.md)
+

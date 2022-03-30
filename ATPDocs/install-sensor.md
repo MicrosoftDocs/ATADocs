@@ -1,47 +1,19 @@
 ---
 title: Install the Microsoft Defender for Identity sensor
-description: Learn how to download and install the Microsoft Defender for Identity sensors on your domain controllers.
+description: Learn how to install the Microsoft Defender for Identity sensors on your domain controllers.
 ms.date: 03/28/2022
 ms.topic: how-to
 ---
 
 # Install the Microsoft Defender for Identity sensor
 
-Learn how to download and install the [!INCLUDE [Product long](includes/product-long.md)] sensor on domain controllers.
-
-## Add and download a sensor
-
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
-
-    ![Go to Settings, then Identities.](media/settings-identities.png)
-
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors.
-
-    [![Sensor page.](media//sensor-page.png)](media/sensor-page.png#lightbox)
-
-1. Select **Add sensor**.
-
-    ![Add sensor.](media/add-sensor.png)
-
-1. A pane will open, providing you with a button to download the sensor installer and a generated access key.
-
-    ![Download installer and access key.](media/installer-access-key.png)
-
-1. Select **Download installer** to save the package locally. The zip file includes the following files:
-
-    - The Defender for Identity sensor installer
-
-    - The configuration setting file with the required information to connect to the Defender for Identity cloud service
-
-1. Copy the **Access key**. The access key is required for the Defender for Identity sensor to connect to your Defender for Identity instance. The access key is a one-time-password for sensor deployment, after which all communication is performed using certificates for authentication and TLS encryption. Use the **Regenerate key** button if you ever need to regenerate the new access key. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
-
-1. Copy the package to the dedicated server or domain controller onto which you're installing the Defender for Identity sensor.
+Learn how to install the [!INCLUDE [Product long](includes/product-long.md)] sensor on domain controllers.
 
 ## Install the Defender for Identity sensor
 
 ### Prerequisites
 
-- A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](#add-and-download-a-sensor) and the access key.
+- A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](download-sensor.md) and the access key.
 - Make sure Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the [!INCLUDE [Product short](includes/product-short.md)] sensor setup package installs it, which may require a reboot of the server.
 - For sensor installations on Active Directory Federation Services (AD FS) servers, see [AD FS Prerequisites](active-directory-federation-services.md#prerequisites).
 - Install the [Npcap driver](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers). For download and installation instructions, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).

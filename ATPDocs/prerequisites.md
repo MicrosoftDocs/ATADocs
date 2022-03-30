@@ -14,21 +14,9 @@ This article describes the requirements for a successful deployment of [!INCLUDE
 
 [!INCLUDE [Product short](includes/product-short.md)] is composed of the [!INCLUDE [Product short](includes/product-short.md)] cloud service, which consists of the [!INCLUDE [Product short](includes/product-short.md)] portal and the [!INCLUDE [Product short](includes/product-short.md)] sensor. For more information about each [!INCLUDE [Product short](includes/product-short.md)] component, see [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md).
 
-[!INCLUDE [Product short](includes/product-short.md)] protects your on-premises Active Directory users and/or users synced to your Azure Active Directory. To protect an environment made up of only AAD users, see [AAD Identity Protection](/azure/active-directory/identity-protection/overview).
+[!INCLUDE [Product short](includes/product-short.md)] protects your on-premises Active Directory users and/or users synced to your Azure Active Directory (Azure AD). To protect an environment made up of only Azure AD users, see [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview).
 
-To create your [!INCLUDE [Product short](includes/product-short.md)] instance, you'll need an AAD tenant with at least one global/security administrator. Each [!INCLUDE [Product short](includes/product-short.md)] instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
-
-You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
-
-This prerequisite guide is divided into the following sections to ensure you have everything you need to successfully deploy [!INCLUDE [Product short](includes/product-short.md)].
-
-[Before you start](#before-you-start): Lists information to gather and accounts and network entities you'll need to have before starting to install.
-
-[[!INCLUDE [Product short](includes/product-short.md)] portal](#azure-atp-portal-requirements): Describes [!INCLUDE [Product short](includes/product-short.md)] portal browser requirements.
-
-[[!INCLUDE [Product short](includes/product-short.md)] sensor](#azure-atp-sensor-requirements): Lists [!INCLUDE [Product short](includes/product-short.md)] sensor hardware, and software requirements.
-
-[[!INCLUDE [Product short](includes/product-short.md)] standalone sensor](#azure-atp-standalone-sensor-requirements): The [!INCLUDE [Product short](includes/product-short.md)] Standalone Sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
+This article includes both [Defender for Identity sensor requirements](#defender-for-identity-sensor-requirements) and for [Defender for Identity standalone sensor requirements](#defender-for-identity-standalone-sensor-requirements). The Defender for Identity standalone sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
 
 > [!NOTE]
 > [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
@@ -48,30 +36,26 @@ To get your instance name, see the About page in the Identities settings section
 
 - If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
 
+- To create your [!INCLUDE [Product short](includes/product-short.md)] instance, you'll need an Azure AD tenant with at least one global/security administrator. Each [!INCLUDE [Product short](includes/product-short.md)] instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+
+- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
+
 - Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Manage sensitive or honeytoken accounts](manage-sensitive-honeytoken-accounts.md).
 
 - Optional: When deploying the standalone sensor, it's necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to [!INCLUDE [Product short](includes/product-short.md)] to further enhance [!INCLUDE [Product short](includes/product-short.md)] authentication-based detections, additions to sensitive groups, and suspicious service creation detections.  [!INCLUDE [Product short](includes/product-short.md)] sensor receives these events automatically. In [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that isn't available via the domain controller network traffic.
 
-<a name="azure-atp-portal-requirements"></a>
+## Microsoft 365 Defender portal requirements
 
-## Defender for Identity portal requirements
+Access Defender for Identity in the Microsoft 365 Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
 
-Access to the [!INCLUDE [Product short](includes/product-short.md)] portal is via a browser, supporting the following browsers and settings:
+## Defender for Identity firewall requirements
 
-- A browser that supports TLS 1.2, such as:
-  - Microsoft Edge
-  - Internet Explorer version 11 and above
-  - Google Chrome 30.0 and above
-- Minimum screen width resolution of 1700 pixels
 - Firewall/proxy open - To communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud service, *.atp.azure.com port 443 must be open in your firewall/proxy. For more information about firewall/proxy configuration, see [Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity Sensor](configure-proxy.md).
 
     > [!NOTE]
     > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
- ![[!INCLUDE [Product short.](includes/product-short.md)] architecture diagram](media/architecture-topology.png)
-
-> [!NOTE]
-> By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 350 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
+    ![[!INCLUDE [Product short.](includes/product-short.md)] architecture diagram](media/architecture-topology.png)
 
 ## Defender for Identity Network Name Resolution (NNR) requirements
 
@@ -85,8 +69,6 @@ Network Name Resolution (NNR) is a main component of [!INCLUDE [Product short](i
 For the first three methods to work, the relevant ports must be opened inbound from the [!INCLUDE [Product short](includes/product-short.md)] sensors to devices on the network. To learn more about [!INCLUDE [Product short](includes/product-short.md)] and NNR, see [[!INCLUDE [Product short](includes/product-short.md)] NNR policy](nnr-policy.md).
 
 For the best results, we recommend using all of the methods. If this isn't possible, you should use the DNS lookup method and at least one of the other methods.
-
-<a name="azure-atp-sensor-requirements"></a>
 
 ## Defender for Identity sensor requirements
 
@@ -115,7 +97,7 @@ The domain controller can be a read-only domain controller (RODC).
 
 For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to `*.atp.azure.com`. If you're installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node.
 
-During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there is a restart already pending.
+During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending.
 
 > [!NOTE]
 > A minimum of 6 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
@@ -176,8 +158,6 @@ For sensors running on AD FS servers, configure the auditing level to **Verbose*
 > [!NOTE]
 > Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-step8-samr.md).
 
-<a name="azure-atp-standalone-sensor-requirements"></a>
-
 ## Defender for Identity standalone sensor requirements
 
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor.
@@ -185,7 +165,7 @@ This section lists the requirements for the [!INCLUDE [Product short](includes/p
 > [!NOTE]
 > [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
-### General
+### General standalone sensor requirements
 
 The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor supports installation on a server running Windows Server 2012 R2, Windows Server 2016 and Windows Server 2019 (including Server Core).
 The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor can be installed on a server that is a member of a domain or workgroup.
@@ -198,7 +178,7 @@ For information on using virtual machines with the [!INCLUDE [Product short](inc
 > [!NOTE]
 > A minimum of 5 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
 
-### Server specifications
+### Server specifications for standalone sensors
 
 For optimal performance, set the **Power Option** of the machine running the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor to **High Performance**.
 
@@ -209,11 +189,11 @@ For optimal performance, set the **Power Option** of the machine running the [!I
 
 For more information about the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor hardware requirements, see [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md).
 
-### Time synchronization
+### Time synchronization for standalone sensors
 
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 
-### Network adapters
+### Network adapters for standalone sensors
 
 The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requires at least one Management adapter and at least one Capture adapter:
 
@@ -221,16 +201,16 @@ The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requ
 
     This adapter should be configured with the following settings:
 
-    - Static IP address including default gateway
+  - Static IP address including default gateway
 
-    - Preferred and alternate DNS servers
+  - Preferred and alternate DNS servers
 
-    - The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
+  - The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
 
-        ![Configure DNS suffix in advanced TCP/IP settings.](media/dns-suffix.png)
+    ![Configure DNS suffix in advanced TCP/IP settings.](media/dns-suffix.png)
 
-        > [!NOTE]
-        > If the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is a member of the domain, this may be configured automatically.
+    > [!NOTE]
+    > If the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is a member of the domain, this may be configured automatically.
 
 - **Capture adapter** - used to capture traffic to and from the domain controllers.
 
@@ -239,7 +219,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requ
     > - Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. For more information, see [Configure port mirroring](configure-port-mirroring.md). Typically, you need to work with the networking or virtualization team to configure port mirroring.
     > - Configure a static non-routable IP address (with /32 mask) for your environment with no default sensor gateway and no DNS server addresses. For example, 10.10.0.10/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
-### Ports
+### Ports for standalone sensors
 
 The following table lists the minimum ports that the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requires configured on the management adapter:
 
@@ -272,6 +252,8 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 >
 > - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-step8-samr.md).
 
-## Next step
+## Next steps
 
-- [Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
+> [!div class="step-by-step"]
+> [« Deploy Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+> [Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)

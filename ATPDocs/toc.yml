@@ -34,10 +34,12 @@ items:
       href: remote-calls-sam.md
   - name: Deploy 
     items:
-    - name: Install the Defender for Identity sensor
-      href: install-sensor.md
+    - name: Download the Defender for Identity sensor
+      href: download-sensor.md
     - name: Proxy configuration
       href: configure-proxy.md
+    - name: Install the Defender for Identity sensor
+      href: install-sensor.md
     - name: Configure the Defender for Identity sensor
       href: configure-sensor-settings.md
     - name: Manage action accounts

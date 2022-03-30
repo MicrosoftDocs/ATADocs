@@ -219,4 +219,7 @@ These events can be collected automatically by the [!INCLUDE [Product short](inc
 
 ## Next steps
 
-- [Configure Directory Service accounts](directory-service-accounts.md)
+> [!div class="step-by-step"]
+> [« Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
+> [Directory Service accounts »](directory-service-accounts.md)
+

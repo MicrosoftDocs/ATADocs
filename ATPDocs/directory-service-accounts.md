@@ -225,4 +225,7 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
 ## Next steps
 
-- [Set up Defender for Identity role groups](role-groups.md)
+> [!div class="step-by-step"]
+> [« Configure Windows Event collection](configure-windows-event-collection.md)
+> [Role groups »](role-groups.md)
+
