@@ -61,4 +61,5 @@ If you deploy Defender for Identity standalone sensors, you'll need to do the fo
 
 ## Next steps
 
-- [Defender for Identity prerequisites](prerequisites.md)
+> [!div class="step-by-step"]
+> [Defender for Identity prerequisites »](prerequisites.md)
