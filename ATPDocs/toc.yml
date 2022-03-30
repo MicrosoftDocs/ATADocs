@@ -28,14 +28,12 @@ items:
       href: configure-windows-event-collection.md
     - name: Directory Service accounts
       href: directory-service-accounts.md
-    - name: User roles
+    - name: Role groups
       href: role-groups.md
     - name: Configure remote calls to SAM
       href: remote-calls-sam.md
   - name: Deploy 
     items:
-    - name: Deploy Defender for Identity with Microsoft 365 Defender
-      href: deploy-defender-identity.md
     - name: Install the Defender for Identity sensor
       href: install-sensor.md
     - name: Proxy configuration
@@ -44,10 +42,10 @@ items:
       href: configure-sensor-settings.md
     - name: Manage action accounts
       href: manage-action-accounts.md
-    - name: Silent installation
-      href: silent-installation.md
   - name: Special scenarios
     items:
+    - name: Silent installation
+      href: silent-installation.md
     - name: Installing on Active Directory Federation Services
       href: active-directory-federation-services.md
     - name: Multi-forest support

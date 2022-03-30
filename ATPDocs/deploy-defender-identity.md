@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Deploy Microsoft Defender for Identity with Microsoft 365 Defender
 
-The deployment of Microsoft Defender for Identity with Microsoft 365 Defender has three phases - preparation, installation, and management.
+The deployment of Microsoft Defender for Identity with Microsoft 365 Defender has two phases - preparation and installation.
 
-This article will outline the steps in each phase.
+This article will outline the steps in each phase, and also provide instructions for special scenarios.
 
 ## Start using Microsoft 365 Defender
 
@@ -29,28 +29,36 @@ For more information about these steps, see the following articles:
 
 ## Preparation
 
-1. Review the [Defender for Identity prerequisites](prerequisites.md).
-1. [Plan capacity for Defender for Identity](capacity-planning.md).
+1. [Defender for Identity prerequisites](prerequisites.md).
+1. [Plan your Defender for Identity capacity](capacity-planning.md).
 1. [Configure Windows Event collection](configure-windows-event-collection.md).
-1. Configure your [Directory Service accounts](directory-service-accounts.md).
-1. Add users to [Defender for Identity role groups](role-groups.md).
-1. [Configure endpoint proxy and Internet connectivity settings](configure-proxy.md).
-1. [Configure Defender for Identity to make remote calls to SAM](remote-calls-sam.md).
+1. [Directory Service accounts](directory-service-accounts.md).
+1. [Role groups](role-groups.md).
+1. [Configure remote calls to SAM](remote-calls-sam.md).
 
 ## Installation
 
-1. [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
-1. [Install the Microsoft Defender for Identity sensors](install-sensor.md) on your domain controllers or AD FS servers.
-1. [Configure Microsoft Defender for Identity sensor settings](configure-sensor-settings.md) to start receiving data.
-1. Create [Defender for Identity action accounts](manage-action-accounts.md).
+1. [Install the Defender for Identity sensor](install-sensor.md).
+1. [Proxy configuration](configure-proxy.md).
+1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
+1. [Manage action accounts](manage-action-accounts.md).
 
-## Management
+## Special scenarios
 
-1. Review and configure the [sensor settings](settings-overview.md).
-1. [Understand user and computer entity profiles](understand-entities.md).
-1. Review the [Defender for Identity Security Alerts](alerts-overview.md).
-1. Review [Defender for Identity's security posture assessments](security-assessment.md) and take action to improve any vulnerabilities.
+1. [Silent installation](silent-installation.md)
+1. [Installing on Active Directory Federation Services)](active-directory-federation-services.md)
+1. [Multi-forest support](multi-forest.md)
+1. [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)
+
+### Standalone sensor
+
+If you deploy Defender for Identity standalone sensors, you'll need to do the following steps:
+
+1. [Configure port mirroring](configure-port-mirroring.md)
+1. [Validate Port Mirroring](validate-port-mirroring.md)
+1. [Configure event collection](configure-event-collection.md)
+1. [Configuring Windows Event Forwarding](configure-event-forwarding.md)
 
 ## Next steps
 
-- [Install the Microsoft Defender for Identity sensor](install-sensor.md)
+- [Defender for Identity prerequisites](prerequisites.md)
