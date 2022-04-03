@@ -8,7 +8,7 @@ ms.topic: conceptual
 # Working with the Microsoft Defender for Identity portal
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 Use the [!INCLUDE [Product long](includes/product-long.md)] portal to monitor and respond to suspicious activity detected by [!INCLUDE [Product short](includes/product-short.md)].
 

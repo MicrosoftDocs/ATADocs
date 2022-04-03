@@ -8,7 +8,7 @@ ms.topic: how-to
 # Working with Security Alerts
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/manage-security-alerts). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. 
 
 This article explains the basics of how to work with [!INCLUDE [Product long](includes/product-long.md)] security alerts.
 

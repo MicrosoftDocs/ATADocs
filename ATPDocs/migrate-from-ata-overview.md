@@ -8,7 +8,7 @@ ms.topic: how-to
 # Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
 > [!NOTE]
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 Use this guide to move from an existing ATA installation to the ([!INCLUDE [Product long](includes/product-long.md)]) service. The guide explains [!INCLUDE [Product short](includes/product-short.md)] prerequisites and requirements, and details how to plan and then complete your move. Validation steps and tips to take advantage of the latest threat protection and security solutions with [!INCLUDE [Product short](includes/product-short.md)] after installation are also included.
 
@@ -32,7 +32,7 @@ In this guide you will:
 
 - An Azure Active Directory tenant with at least one global/security administrator is required to create a [!INCLUDE [Product short](includes/product-short.md)] instance. Each [!INCLUDE [Product short](includes/product-short.md)] instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
-- [!INCLUDE [Product short](includes/product-short.md)] requires .Net Framework 4.7 or later and may require a domain controller (restart) if your current .Net Framework version is not 4.7 or later.
+- [!INCLUDE [Product short](includes/product-short.md)] requires .Net Framework 4.7 or later and may require a domain controller restart if your current .Net Framework version is not 4.7 or later.
 
 - Make sure your domain controllers meet all the [[!INCLUDE [Product short](includes/product-short.md)] sensor requirements](prerequisites.md#defender-for-identity-sensor-requirements) and your environment meets all [[!INCLUDE [Product short](includes/product-short.md)] requirements](prerequisites.md).
 
@@ -45,7 +45,7 @@ In this guide you will:
 
 Make sure to gather the following information before starting your move:
 
-1. Account details for your [Directory Services](install-step2.md) account.
+1. Account details for your [Directory Services](directory-service-accounts.md) account.
 1. Syslog notification [settings](setting-syslog.md).
 1. Email [notification details](notifications.md).
 1. ATA roles group membership
@@ -67,18 +67,17 @@ Complete your move to [!INCLUDE [Product short](includes/product-short.md)] in t
 
 ### Step 1: Create and install Defender for Identity instance and sensors
 
-1. [Create your new [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
+1. [Create your new [!INCLUDE [Product short](includes/product-short.md)] instance](deploy-defender-identity.md#start-using-microsoft-365-defender)
 
 1. Uninstall the ATA Lightweight Gateway on all domain controllers.
 
 1. Install the [!INCLUDE [Product short](includes/product-short.md)] Sensor on all domain controllers:
-    - [Download the [!INCLUDE [Product short](includes/product-short.md)] sensor files](install-step3.md).
-    - [Retrieve your [!INCLUDE [Product short](includes/product-short.md)] Access Key](install-step3.md#download-the-setup-package).
-    - [Install [!INCLUDE [Product short](includes/product-short.md)] sensors on your domain controllers](install-step4.md).
+    - [Download the [!INCLUDE [Product short](includes/product-short.md)] sensor files](download-sensor.md) and retrieve the access key.
+    - [Install [!INCLUDE [Product short](includes/product-short.md)] sensors on your domain controllers](install-sensor.md).
 
 ### Step 2: Configure and validate Defender for Identity instance
 
-- [Configure the Sensor](install-step5.md)
+- [Configure the Sensor](configure-sensor-settings.md)
 
 > [!NOTE]
 > Certain tasks in the following list cannot be completed before installing [!INCLUDE [Product short](includes/product-short.md)] sensors and then completing an initial sync, such as selecting entities for manual **Sensitive** tagging. Allow up to 2 hours for the initial sync to be completed.
@@ -104,7 +103,7 @@ Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal and 
 
 #### Validation
 
-Within the [!INCLUDE [Product short](includes/product-short.md)] portal:
+In the Microsoft 365 Defender portal:
 
 - Review any [health alerts](health-center.md) for signs of service issues.
 - Review [!INCLUDE [Product short](includes/product-short.md)] [Sensor error logs](troubleshooting-using-logs.md) for any unusual errors.

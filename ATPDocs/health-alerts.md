@@ -8,7 +8,7 @@ ms.topic: how-to
 # Understanding Microsoft Defender for Identity sensor health alerts
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/sensor-health). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you know when there's a problem with your [!INCLUDE [Product short](includes/product-short.md)] instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 

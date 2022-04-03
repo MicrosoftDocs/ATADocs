@@ -8,7 +8,7 @@ ms.topic: conceptual
 # Microsoft Defender for Identity multi-forest support
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 ## Multi-forest support set up
 

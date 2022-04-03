@@ -8,7 +8,7 @@ ms.topic: tutorial
 # Tutorial: Investigate a user
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. 
 
 [!INCLUDE [Product long](includes/product-long.md)] alert evidence and lateral movement paths provide clear indications when users have performed suspicious activities or indications exist that their account has been compromised. In this tutorial you'll use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar future attacks.
 

@@ -8,7 +8,7 @@ ms.topic: tutorial
 # Tutorial: Investigate an entity
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 In this tutorial you'll learn how to investigate entities connected to suspicious activities detected by [!INCLUDE [Product long](includes/product-long.md)]. After viewing a security alert in the timeline, you'll learn how to drill down into the entity involved in the alert, and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
 

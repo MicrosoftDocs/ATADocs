@@ -18,7 +18,7 @@ The Defender for Identity sensor supports installation on Active Directory Feder
 | Windows  Server 2016     | ✔                               | ✔            | ❌            |
 | Windows  Server 2019*    | ✔                               | ✔            | ❌            |
 
-For hardware requirements, see [Defender for Identity server specifications](prerequisites.md#server-specifications)
+For hardware requirements, see [Defender for Identity server specifications](prerequisites.md#server-specifications).
 
 ## Network requirements
 
@@ -47,7 +47,7 @@ For information on how to configure the auditing level, see [Event auditing info
 
 ### Installing the Microsoft Defender for Identity sensor on AD FS
 
-For information on installing the Microsoft Defender for Identity sensor on AD FS sensor, see [Install the Defender for Identity sensor](install-step4.md#install-the-sensor).
+For information on installing the Microsoft Defender for Identity sensor on AD FS sensor, see [Install the Defender for Identity sensor](install-sensor.md).
 
 ### Post-installation steps for AD FS servers
 
