@@ -115,7 +115,7 @@ Windows event 1644 is not collected by default on domain controllers and nee
 "15 Field Engineering"=dword:00000005
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters]
-"Expensive Search Results"=dword:00000001
+"Expensive Search Results Threshold"=dword:00000001
 "Inefficient Search Results Threshold"=dword:00000001
 "Search Time Threshold (msecs)"=dword:00000001
 ```
