@@ -64,18 +64,6 @@ items:
       href: configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: configure-event-forwarding.md
-- name: Try
-  items:
-    - name: Lab overview
-      href: playbook-lab-overview.md
-    - name: 1 - Lab setup
-      href: playbook-setup-lab.md
-    - name: 2 - Reconnaissance playbook
-      href: playbook-reconnaissance.md
-    - name: 3 - Lateral movement playbook
-      href: playbook-lateral-movement.md
-    - name: 4 - Domain dominance playbook
-      href: playbook-domain-dominance.md
 - name: Manage
   items:
   - name: Settings

@@ -27,16 +27,16 @@ The ability to support multiple Active Directory forests enables the following:
 To detect cross-forest activities, [!INCLUDE [Product short](includes/product-short.md)] sensors query domain controllers in remote forests to create profiles for all entities involved, (including users and computers from remote forests).
 
 - [!INCLUDE [Product short](includes/product-short.md)] sensors can be installed on domain controllers in all forests, even forests with no trust.
-- Add additional credentials on the Directory services page to support any untrusted forests in your environment.
+- [Add additional credentials](directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender) on the **Directory Service accounts** page to support any untrusted forests in your environment.
   - Only one credential is required to support all forests with a two-way trust.
   - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
   - There is a default limit of 30 untrusted forests per [!INCLUDE [Product short](includes/product-short.md)] instance. Contact support if your organization has more than 30 forests.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] welcome stage 1](media/directory-services-add-no-trust-forests.png)
+For detailed information about how to create a Directory Service account and configure it in the Microsoft 365 Defender portal, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
 ### Requirements
 
-- The user you configure in the [!INCLUDE [Product short](includes/product-short.md)] console under **Directory services** must be trusted in all the other forests and must have at least read-only permission to perform LDAP queries on the domain controllers.
+- The Directory Service account you configure must be trusted in all the other forests and must have at least read-only permission to perform LDAP queries on the domain controllers.
 - If [!INCLUDE [Product short](includes/product-short.md)] standalone sensors are installed on standalone machines, rather than directly on the domain controllers, make sure the machines are allowed to communicate with all of remote forest domain controllers using LDAP.
 
 - In order for [!INCLUDE [Product short](includes/product-short.md)] to communicate with the [!INCLUDE [Product short](includes/product-short.md)] sensors and [!INCLUDE [Product short](includes/product-short.md)] standalone sensors, open the following ports on each machine on which the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed:
@@ -66,7 +66,7 @@ When [!INCLUDE [Product short](includes/product-short.md)] maps your forests, it
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/aatpsizingtool>)
 - [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)
 - [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

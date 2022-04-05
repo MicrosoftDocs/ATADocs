@@ -82,25 +82,6 @@ Complete your move to [!INCLUDE [Product short](includes/product-short.md)] in t
 > [!NOTE]
 > Certain tasks in the following list cannot be completed before installing [!INCLUDE [Product short](includes/product-short.md)] sensors and then completing an initial sync, such as selecting entities for manual **Sensitive** tagging. Allow up to 2 hours for the initial sync to be completed.
 
-#### Configuration
-
-Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal and complete the following configuration tasks.
-
-| Step    | Action | Status |
-|--------------|------------|------------------|
-| 1  | Set [delayed updates on a selection of domain controllers](sensor-update.md) | - [ ] |
-| 2  | [Directory Services](install-step2.md) account details| - [ ] |
-| 3  | Configure [Syslog notifications](setting-syslog.md) | - [ ] |
-| 4  | [Integrate VPN](install-step6-vpn.md) information| - [ ] |
-| 5  | Configure [WDATP integration](integrate-mde.md)| - [ ] |
-| 6  | Set [HoneyTokens](configure-detection-exclusions.md) accounts| - [ ] |
-| 7  | Tag [Sensitive entities](manage-sensitive-honeytoken-accounts.md)| - [ ] |
-| 8  | Create [Security alert exclusions](configure-detection-exclusions.md)| - [ ] |
-| 9 | [Email notification toggles](notifications.md) | - [ ] |
-| 10  | [Schedule report settings](reports.md) (list of reports and scheduled timing)| - [ ] |
-| 11  | Configure [Role based permissions](role-groups.md) | - [ ] |
-| 12  | [SIEM notification configuration (IP address)](configure-event-collection.md#siemsyslog)| - [ ] |
-
 #### Validation
 
 In the Microsoft 365 Defender portal:

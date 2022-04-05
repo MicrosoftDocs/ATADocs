@@ -15,18 +15,6 @@ To enhance detection capabilities, [!INCLUDE [Product long](includes/product-lon
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
 
-## NTLM authentication using Windows Event 8004
-
-To configure Windows Event 8004 collection:
-
-1. Navigate to: *Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options*
-1. Set the **domain group policy** as follows:
-    - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
-    - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
-    - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
-
-When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed  data.
-
 ## SIEM/Syslog
 
 [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors are configured by default to receive Syslog data. For [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
@@ -143,9 +131,9 @@ Make sure to have \t between the key=value pairs.
 >[!NOTE]
 > Using WinCollect for Windows event collection is not supported.
 
-## See Also
+## See also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/mdi/sizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
