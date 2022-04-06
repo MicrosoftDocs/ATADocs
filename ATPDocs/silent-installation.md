@@ -78,34 +78,6 @@ Use the following command to silently install the [!INCLUDE [Product short](incl
 
 Once you've installed the sensors, continue to [Configure Microsoft Defender for Identity sensor settings](configure-sensor-settings.md).
 
-## Update the Defender for Identity sensor
-
-Use the following command to silently update the [!INCLUDE [Product short](includes/product-short.md)] sensor:
-
-**Syntax**:
-
-```cmd
-"Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
-```
-
-**Installation options**:
-
-> [!div class="mx-tableFixed"]
->
-> |Name|Syntax|Mandatory for silent installation?|Description|
-> |-------------|----------|---------|---------|
-> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
-
-**Examples**:
-
-To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silently:
-
-```cmd
-"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
-```
-
 ## Uninstall the Defender for Identity sensor silently
 
 Use the following command to perform a silent uninstall of the [!INCLUDE [Product short](includes/product-short.md)] sensor:

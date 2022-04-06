@@ -1,11 +1,55 @@
 ---
-title: Update your Microsoft Defender for Identity sensors
-description: Describes how to update and delay updates of sensors in Microsoft Defender for Identity.
-ms.date: 10/27/2020
+title: Manage your Microsoft Defender for Identity sensors
+description: Learn how to manage and update your Microsoft Defender for Identity sensors.
+ms.date: 04/06/2022
 ms.topic: how-to
 ---
 
-# Update Microsoft Defender for Identity sensors
+# Manage Microsoft Defender for Identity sensors
+
+This article explains how to configure and monitor Microsoft Defender for Identity sensors in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+
+>[!IMPORTANT]
+>As part of the convergence with Microsoft 365 Defender, some options and details have changed from their location in the Defender for Identity portal. Please read the details below to discover where to find both the familiar and new features.
+
+## View Defender for Identity sensor settings and status
+
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+
+    ![Go to Settings, then Identities.](media/settings-identities.png)
+
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, update status, health status, the number of health issues, and when the sensor was created.
+
+    [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
+
+    >[!NOTE]
+    >In the Defender for Identity portal, the sensor settings and health information were in separate locations. Note that in Microsoft 365 Defender they're now on the same page.
+
+1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
+
+    [![Sensor filters.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
+
+    ![Filtered sensor.](media/filtered-sensor.png)
+
+1. If you select one of the sensors, a pane will display with information about the sensor and its health status.
+
+    [![Sensor details.](media/sensor-details.png)](media/sensor-details.png#lightbox)
+
+1. If you select any of the health issues, you'll get a pane with more details about them. If you choose a closed issue, you can reopen it from here.
+
+    ![Issue details.](media/issue-details.png)
+
+1. If you select **Manage sensor**, a pane will open where you can configure the sensor details.
+
+    ![Manage sensor.](media/manage-sensor.png)
+
+    ![Configure sensor details.](media/configure-sensor-details.png)
+
+1. In the **Sensors** page, you can export your list of sensors to a .csv file by selecting **Export**.
+
+    ![Export list of sensors.](media/export-sensors.png)
+
+## Updating your sensors
 
 Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up-to-date, provides the best possible protection for your organization.
 
@@ -78,6 +122,34 @@ Every few minutes, [!INCLUDE [Product short](includes/product-short.md)] sensors
 For any sensor that fails to complete the update process, a relevant health alert is triggered, and is sent as a notification.
 
 ![Sensor update failure.](media/sensor-outdated.png)
+
+### Silently update the Defender for Identity sensor
+
+Use the following command to silently update the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+
+**Syntax**:
+
+```cmd
+"Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
+```
+
+**Installation options**:
+
+> [!div class="mx-tableFixed"]
+>
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+
+**Examples**:
+
+To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silently:
+
+```cmd
+"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
+```
 
 ## See Also
 
