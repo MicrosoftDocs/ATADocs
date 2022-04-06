@@ -62,11 +62,7 @@ To enable this feature, you need a license for both [!INCLUDE [Product short](in
 
 After [!INCLUDE [Product short](includes/product-short.md)] and Defender for Endpoint are fully integrated, in the [!INCLUDE [Product short](includes/product-short.md)] portal, in the mini-profile pop-up and in the entity profile page, each entity that exists in Defender for Endpoint includes a badge to show that it is integrated with Defender for Endpoint.
 
- ![Defender for Endpoint alerts profile.](media/profile-alerts-msde.png)
-
 If the entity contains alerts in Defender for Endpoint, there is a number next to the badge to let you know how many alerts were raised.
-
- ![[!INCLUDE [Product short.](includes/product-short.md)] alerts](media/msde-icon-alerts.png)
 
 If you click on the badge, you are brought to the Defender for Endpoint portal where you can view and mitigate the alerts. If the entity is not recognized by Defender for Endpoint, the badge is grayed out.
 

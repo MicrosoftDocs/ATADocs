@@ -53,11 +53,13 @@ For information on installing the Microsoft Defender for Identity sensor on AD F
 
 Use the following steps to configure Defender for Identity once you've completed the installation of the sensor on an AD FS server.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
-1. Under **System**, select **Sensors**.
+    ![Go to Settings, then Identities.](media/settings-identities.png)
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration page](media/sensor-config.png)
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors.
+
+    ![List of Defender for Identity sensors](media/sensor-list-adfs.png)
 
 1. Select the sensor you installed on the AD FS server.
 1. In the popup window, in the **Resolver Domain Controller** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  

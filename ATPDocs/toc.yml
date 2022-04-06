@@ -7,8 +7,6 @@ items:
     href: what-is.md
   - name: Defender for Identity architecture
     href: architecture.md
-  - name: Defender for Identity in Microsoft 365 Defender
-    href: defender-for-identity-in-microsoft-365-defender.md
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
   - name: What's new in Defender for Identity

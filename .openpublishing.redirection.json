@@ -707,7 +707,12 @@
         },
         {
             "source_path": "ATPDocs/integrate-mde.md",
-            "redirect_url": "/defender-for-identity/defender-for-identity-in-microsoft-365-defender",
+            "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/defender-for-identity-in-microsoft-365-defender.md",
+            "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
             "redirect_document_id": false
         },
         {
