@@ -28,7 +28,7 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The credentials for the directory services user account are incorrect.|This impacts sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Connect to your Active Directory Forest](install-step2.md#prerequisites) page.|Medium|
+|The credentials for the directory services user account are incorrect.|This impacts sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Directory Service account recommendations](directory-service-accounts.md) page.|Medium|
 
 ## Low success rate of active name resolution
 
@@ -46,19 +46,19 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the [!INCLUDE [Product short](includes/product-short.md)] sensors stop running and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the [!INCLUDE [Product short](includes/product-short.md)] portal.|Medium|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the [!INCLUDE [Product short](includes/product-short.md)] sensors stop running and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender) password.|Medium|
 
 ## Read-only user password expired
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the [!INCLUDE [Product short](includes/product-short.md)] sensors stop running (or will stop running soon) and no new data is collected.|[Change the domain connectivity password](modifying-config-dcpassword.md) and then update the password in the [!INCLUDE [Product short](includes/product-short.md)] portal.|High|
+|The read-only user password, used to get directory data, expired.|All the [!INCLUDE [Product short](includes/product-short.md)] sensors stop running (or will stop running soon) and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender) password.|High|
 
 ## Sensor outdated
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|A [!INCLUDE [Product short](includes/product-short.md)] sensor is outdated.|A [!INCLUDE [Product short](includes/product-short.md)] sensor is running a version that can't communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Installing the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md).|Medium|
+|A [!INCLUDE [Product short](includes/product-short.md)] sensor is outdated.|A [!INCLUDE [Product short](includes/product-short.md)] sensor is running a version that can't communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Download the Microsoft Defender for Identity sensor](download-sensor.md) and [Install the Microsoft Defender for Identity sensor](install-sensor.md).|Medium|
 
 ## Sensor reached a memory resource limit
 
@@ -76,7 +76,7 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|There has been no communication from the [!INCLUDE [Product short](includes/product-short.md)] sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the [!INCLUDE [Product short](includes/product-short.md)] sensor. This impacts ATA's ability to detect suspicious activities, since network traffic won't be able to reach the [!INCLUDE [Product short](includes/product-short.md)] cloud service.|Check that the port used for the communication between the [!INCLUDE [Product short](includes/product-short.md)] sensor and [!INCLUDE [Product short](includes/product-short.md)] cloud service is not blocked by any routers or firewalls.|Medium|
+|There has been no communication from the [!INCLUDE [Product short](includes/product-short.md)] sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the [!INCLUDE [Product short](includes/product-short.md)] sensor. This impacts Defender for Identity's ability to detect suspicious activities, since network traffic won't be able to reach the [!INCLUDE [Product short](includes/product-short.md)] cloud service.|Check that the port used for the communication between the [!INCLUDE [Product short](includes/product-short.md)] sensor and [!INCLUDE [Product short](includes/product-short.md)] cloud service is not blocked by any routers or firewalls.|Medium|
 
 ## Some domain controllers are unreachable by a sensor
 

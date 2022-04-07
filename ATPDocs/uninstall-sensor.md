@@ -1,7 +1,7 @@
 ---
 title: Uninstall Microsoft Defender for Identity sensor
 description: This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
-ms.date: 12/22/2020
+ms.date: 04/07/2022
 ms.topic: how-to
 ---
 
@@ -17,7 +17,7 @@ This article describes how to uninstall the [!INCLUDE [Product long](includes/pr
 
 The following steps describe how to uninstall a sensor from a domain controller.
 
-1. Sign in to the domain controller with local administrator privileges.
+1. Sign in to the domain controller with administrative privileges.
 1. From the Windows **Start** menu, select **Settings** > **Control Panel** > **Add/ Remove Programs**.
 1. Select the sensor installation, select **Uninstall**, and follow the instructions to remove the sensor.
 
@@ -25,8 +25,8 @@ The following steps describe how to uninstall a sensor from a domain controller.
 
 This scenario can occur when a domain controller was deleted without first uninstalling the sensor, and the sensor still appears in the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and under the **System** section, select **Sensors**.
-1. Locate the orphaned sensor and, at the end of the row, select **Delete** (trash can icon).
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**. Select the **Sensors** tab, which displays all your Defender for Identity sensors.
+1. Locate the orphaned sensor and select **Delete** (trash can icon).
 
     ![Delete orphaned [!INCLUDE [Product short.](includes/product-short.md)] sensor from sensors page](media/delete-orphaned-sensor.png)
 
@@ -34,9 +34,9 @@ This scenario can occur when a domain controller was deleted without first unins
 
 This scenario may occur after an in-place sensor upgrade, and the sensor appears twice in the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and under the **System** section, select **Sensors**.
-1. Locate the orphaned sensor and, at the end of the row, select **Delete** (trash can icon).
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**. Select the **Sensors** tab, which displays all your Defender for Identity sensors.
+1. Locate the orphaned sensor and select **Delete** (trash can icon).
 
-## See Also
+## See also
 
-- [Uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor silently](silent-installation.md#uninstall-the-defender-for-identity-sensor-silently)
+- [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md)
