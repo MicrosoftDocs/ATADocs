@@ -1,22 +1,40 @@
 ---
-title: Manage sensitive or honeytoken accounts with Microsoft Defender for Identity
-description: Describes how to manage sensitive or honeytoken accounts using Microsoft Defender for Identity
-ms.date: 02/17/2021
+title: Microsoft Defender for Identity entity tags in Microsoft 365 Defender 
+description: Learn how to apply Microsoft Defender for Identity entity tags in Microsoft 365 Defender 
+ms.date: 04/07/2022
 ms.topic: how-to
 ---
 
-# Manage sensitive or honeytoken accounts
+# Defender for Identity entity tags in Microsoft 365 Defender
 
 > [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. 
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 This article explains how to apply entity tags to sensitive accounts. This is important because some [!INCLUDE [Short long](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
 
 [!INCLUDE [Product short](includes/product-short.md)] also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
 
-## Sensitive entities
+## Entity tags
 
-The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
+In Microsoft 365 Defender, you can set three types of Defender for Identity entity tags: **Sensitive tags**, **Honeytoken tags**, and **Exchange server tags**.
+
+To set these tags, in [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+
+![Go to Settings, then Identities.](media/settings-identities.png)
+
+The tag settings will appear under **Entity tags**.
+
+![Tag setting types.](media/tag-settings.png)
+
+To set each type of tag, follow the instructions below.
+
+## Sensitive  tags
+
+The **Sensitive tag** is used to identify high value assets. The lateral movement path also relies on an entity's sensitivity status. Some entities are considered sensitive automatically by Defender for Identity, and others can be added manually.
+
+### Sensitive entities
+
+The groups in the following list are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
 
 - Administrators
 - Power Users
@@ -37,7 +55,7 @@ The following list of groups are considered **Sensitive** by [!INCLUDE [Short lo
 - Microsoft Exchange Servers
 
   > [!NOTE]
-  > Until September, 2018, Remote Desktop Users were also automatically considered sensitive by [!INCLUDE [Product short](includes/product-short.md)]. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
+  > Until September 2018, Remote Desktop Users were also automatically considered sensitive by [!INCLUDE [Product short](includes/product-short.md)]. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
 
 In addition to these groups, [!INCLUDE [Product short](includes/product-short.md)] identifies the following high value asset servers and automatically tags them as **Sensitive**:
 
@@ -46,32 +64,55 @@ In addition to these groups, [!INCLUDE [Product short](includes/product-short.md
 - DNS Server
 - Microsoft Exchange Server
 
-## Manually tagging entities
+### Manually tag as sensitive
 
-You can also manually tag entities as sensitive or honeytoken accounts. If you manually tag additional users or groups, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive.
+You can also manually tag users, devices, or groups as sensitive.
 
-### To manually tag entities
+1. Select **Sensitive**. You'll then see the existing sensitive **Users**, **Devices**, and **Groups**.
 
-To tag entities, do the following:
+    ![Sensitive entities.](media/sensitive-entities.png)
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
+1. Under each category, select **Tag...** to tag that type of entity. For example, under **Groups**, select **Tag groups.** A pane will open with the groups you can select to tag. To search for a group, enter its name in the search box.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
+    ![Add groups.](media/add-groups.png)
 
-1. Under **Detection**, select **Entity tags**.
+1. Select your group, and select **Add selection.**
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] entity tags](media/entity-tags.png)
+    ![Add selection.](media/add-selection.png)
 
-1. For each account that you want to configure, do the following:
-    1. Under **Honeytoken accounts** or **Sensitive**, enter the account name.
-    1. Click the plus icon **(+)**.
+## Honeytoken tags
 
-    > [!TIP]
-    > The sensitive or honeytoken account field is searchable and will autofill with entities in your network.
+Honeytoken entities are used as traps for malicious actors. Any authentication associated with these honeytoken entities triggers an alert.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] sensitive account sample](media/sensitive-account-sample.png)
+You can tag users or devices with the **Honeytoken** tag in the same way you tag sensitive accounts.
 
-1. Click **Save**.
+1. Select **Honeytoken**. You'll then see the existing honeytoken **Users** and **Devices**.
+
+    ![Honeytoken entities.](media/honeytoken-entities.png)
+
+1. Under each category, select **Tag...** to tag that type of entity. For example, under **Users**, select **Tag users.** A pane will open with the groups you can select to tag. To search for a group, enter its name in the search box.
+
+    ![Add users.](media/add-users.png)
+
+1. Select your user, and select **Add selection.**
+
+    ![Add selected user.](media/add-selected-user.png)
+
+## Exchange server tags
+
+Defender for Identity considers Exchange servers as high-value assets and automatically tags them as **Sensitive**. You can also manually tag devices as Exchange servers.
+
+1. Select **Exchange server**. You'll then see the existing devices labeled with the **Exchange server** tag.
+
+    ![Exchange servers.](media/exchange-servers.png)
+
+1. To tag a device as an Exchange server, select **Tag devices**.  A pane will open with the devices that you can select to tag. To search for a device, enter its name in the search box.
+
+    ![Add devices.](media/add-devices.png)
+
+1. Select your device, and select **Add selection.**
+
+    ![Select device.](media/select-device.png)
 
 ## See also
 

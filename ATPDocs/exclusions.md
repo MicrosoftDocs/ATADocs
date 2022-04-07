@@ -1,60 +1,97 @@
 ---
-title: Microsoft Defender for Identity configure detection exclusions
-description: Configuration of detection exclusions.
-ms.date: 02/17/2021
+title: Microsoft Defender for Identity detection exclusions in Microsoft 365 Defender
+description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft 365 Defender.
+ms.date: 04/07/2022
 ms.topic: how-to
 ---
 
-# Configure detection exclusions
+# Configure Defender for Identity detection exclusions in Microsoft 365 Defender
 
 > [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. 
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-[!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses, computers, or users from a number of detections.
+This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
-For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps [!INCLUDE [Product short](includes/product-short.md)] ignore such scanners.
+[!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses, computers, domains, or users from a number of detections.
 
-## How to add detection exclusions
-
-There are two ways you can manually exclude users, computers, domains, or IP addresses for a detection. You can either do so on the **Configuration** page under **Exclusions**, or directly from the security alert.
-
-### From the Configuration page
-
-To configure exclusions from the configuration page, do the following:
-
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
-
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
-
-1. Under **Detection**, select **Exclusions**.
-1. For each detection that you want to configure, do the following:
-    1. Enter an IP address, computer, domain, or user account to be excluded from the detection
-    1. Select the plus icon **(+)**.
-
-    > [!TIP]
-    > The user or computer field is searchable and will autofill with entities in your network. For more information, see the [security alert guide](suspicious-activity-guide.md).
-
-    ![Excluding entities from detections.](media/exclusions.png)
-
-1. Select **Save**.
+For example, a **DNS Reconnaissance** alert could be triggered by a security scanner that uses DNS as a scanning mechanism. Creating an exclusion helps Defender for Identity ignore such scanners and reduce false positives.
 
 >[!NOTE]
 >Of the most common domains with [Suspicious communication over DNS](exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts opened on them, we observed the domains that customers most excluded from the alert. These domains are added to the exclusions list by default, but you have the option to easily remove them.
 
-### From a security alert
+## How to add detection exclusions
 
-To configure exclusions from a security alert, do the following:
+1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Timeline**.
-1. Identify an alert on an activity for a user, computer, or IP address that **is** allowed to perform the particular activity.
+    ![Go to Settings, then Identities.](media/settings-identities.png)
 
-1. To the right of the alert, select **More [...]** > **Close and exclude**. The action closes the alert and it's no longer listed in the **Open** events list in the **Alert timeline**. The action also adds the user, computer, or IP address to the exclusions list for that alert.
+1. You'll then see **Excluded entities** in the left-hand menu.
 
-    ![Exclude entity.](media/exclude-in-sa.png)
+    ![Excluded entities.](media/excluded-entities.png)
 
-[!INCLUDE [Product short](includes/product-short.md)] scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment. The learning period for each alert is listed in the detailed [security alert guide](suspicious-activity-guide.md).
+You can then set exclusions by two methods: **Exclusions by detection rule** and **Global excluded entities**.
 
-## See Also
+## Exclusions by detection rule
+
+1. In the left-hand menu, select **Exclusions by detection rule**. You'll see a list of detection rules.
+
+    ![Exclusions by detection rule.](media/exclusions-by-detection-rule.png)
+
+1. For each detection you want to configure, do the following steps:
+
+    1. Select the rule. You can search for detections using the search bar. Once selected, a pane will open with the detection rule details.
+
+        ![Detection rule details.](media/detection-rule-details.png)
+
+    1. To add an exclusion, select the **Excluded entities** button, and then choose the exclusion type. Different excluded entities are available for each rule. They include users, devices, domains and IP addresses. In this example, the choices are **Exclude devices** and **Exclude IP addresses**.
+
+        ![Exclude devices or IP addresses.](media/exclude-devices-or-ip-addresses.png)
+
+    1. After choosing the exclusion type, you can add the exclusion. In the pane that opens, select the **+** button to add the exclusion.
+
+        ![Add an exclusion.](media/add-exclusion.png)
+
+    1. Then add the entity to be excluded. Select **+ Add** to add the entity to the list.
+
+        ![Add an entity to be excluded.](media/add-excluded-entity.png)
+
+    1. Then select **Exclude IP addresses** (in this example) to complete the exclusion.
+
+        ![Exclude IP addresses.](media/exclude-ip-addresses.png)
+
+    1. Once you've added exclusions, you can export the list or remove the exclusions by returning to the **Excluded entities** button. In this example, we've returned to **Exclude devices**. To export the list, select the down arrow button.
+
+        ![Return to Exclude devices.](media/return-to-exclude-devices.png)
+
+    1. To delete an exclusion, select the exclusion and select the trash icon.
+
+        ![Delete an exclusion.](media/delete-exclusion.png)
+
+## Global excluded entities
+
+You can now also configure exclusions by **Global excluded entities**. Global exclusions allow you to define certain entities (IP addresses, subnets, devices, or domains) to be excluded across all of the detections Defender for Identity has. So for example, if you exclude a device, it will only apply to those detections that have device identification as part of the detection.
+
+1. In the left-hand menu, select **Global excluded entities**. You'll see the categories of entities that you can exclude.
+
+    ![Global excluded entities.](media/global-excluded-entities.png)
+
+1. Choose an exclusion type. In this example, we selected **Exclude domains**.
+
+    ![Exclude domains.](media/exclude-domains.png)
+
+1. A pane will open where you can add a domain to be excluded. Add the domain you want to exclude.
+
+    ![Add a domain to be excluded.](media/add-excluded-domain.png)
+
+1. The domain will be added to the list. Select **Exclude domains** to complete the exclusion.
+
+    ![Select exclude domains.](media/select-exclude-domains.png)
+
+1. You'll then see the domain in the list of entities to be excluded from all detection rules. You can export the list, or remove the entities by selecting them and clicking the **Remove** button.
+
+    ![List of global excluded entries.](media/global-excluded-entries-list.png)
+
+## See also
 
 - [Configure event collection](configure-event-collection.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
