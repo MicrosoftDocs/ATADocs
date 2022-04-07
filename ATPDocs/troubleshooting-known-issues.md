@@ -24,7 +24,7 @@ Make sure that communication isn't blocked for localhost, TCP port 444. To learn
 
 ## Deployment log location
 
-The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md)
+The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md).
 
 ## Proxy authentication problem presents as a licensing error
 
@@ -161,10 +161,6 @@ Suggested possible workarounds:
 - If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multi Processor Group** mode.
 
 - If your machine has less than 64 logical cores and is running on an HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
-
-## Microsoft Defender for Endpoint integration issue
-
-[!INCLUDE [Product short](includes/product-short.md)] enables you to integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint. See [Integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint](integrate-mde.md) for more information.
 
 ## VMware virtual machine sensor issue
 
@@ -343,7 +339,7 @@ Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry valu
 
 <a name="problem-installing-the-sensor-on-windows-server-2019-with-kb5009557-installed"></a>
 
-## Problem installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions 
+## Problem installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions
 
 Installing the sensor may fail with the error message:
 
