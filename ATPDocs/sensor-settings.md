@@ -1,16 +1,13 @@
 ---
-title: Manage your Microsoft Defender for Identity sensors
+title: Manage and update Microsoft Defender for Identity sensors
 description: Learn how to manage and update your Microsoft Defender for Identity sensors.
 ms.date: 04/06/2022
 ms.topic: how-to
 ---
 
-# Manage Microsoft Defender for Identity sensors
+# Manage and update Microsoft Defender for Identity sensors
 
-This article explains how to configure and monitor Microsoft Defender for Identity sensors in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
-
->[!IMPORTANT]
->As part of the convergence with Microsoft 365 Defender, some options and details have changed from their location in the Defender for Identity portal. Please read the details below to discover where to find both the familiar and new features.
+This article explains how to configure and manage Microsoft Defender for Identity sensors in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 ## View Defender for Identity sensor settings and status
 
@@ -22,9 +19,6 @@ This article explains how to configure and monitor Microsoft Defender for Identi
 
     [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
-    >[!NOTE]
-    >In the Defender for Identity portal, the sensor settings and health information were in separate locations. Note that in Microsoft 365 Defender they're now on the same page.
-
 1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
 
     [![Sensor filters.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
@@ -34,10 +28,6 @@ This article explains how to configure and monitor Microsoft Defender for Identi
 1. If you select one of the sensors, a pane will display with information about the sensor and its health status.
 
     [![Sensor details.](media/sensor-details.png)](media/sensor-details.png#lightbox)
-
-1. If you select any of the health issues, you'll get a pane with more details about them. If you choose a closed issue, you can reopen it from here.
-
-    ![Issue details.](media/issue-details.png)
 
 1. If you select **Manage sensor**, a pane will open where you can configure the sensor details.
 
@@ -55,7 +45,7 @@ Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up-to-d
 
 The [!INCLUDE [Product long](includes/product-long.md)] service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. [!INCLUDE [Product short](includes/product-short.md)] sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the [!INCLUDE [Product short](includes/product-short.md)] sensor and sensor detection capabilities.
 
-## Defender for Identity sensor update types
+### Defender for Identity sensor update types
 
 [!INCLUDE [Product short](includes/product-short.md)] sensors support two kinds of updates:
 
@@ -73,10 +63,9 @@ The [!INCLUDE [Product long](includes/product-long.md)] service is typically upd
 
 > [!NOTE]
 >
-> - Control automatic sensor restarts (for **major** updates) in the [!INCLUDE [Product short](includes/product-short.md)] portal configuration page.
-> - [!INCLUDE [Product short](includes/product-short.md)] sensor always reserves at least 15% of the available memory and CPU available on the domain controller where it is installed. If the [!INCLUDE [Product short](includes/product-short.md)] service consumes too much memory, the service is automatically stopped and restarted by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater service.
+> - [!INCLUDE [Product short](includes/product-short.md)] sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the [!INCLUDE [Product short](includes/product-short.md)] service consumes too much memory, the service is automatically stopped and restarted by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater service.
 
-## Delayed sensor update
+### Delayed sensor update
 
 Given the rapid speed of ongoing [!INCLUDE [Product short](includes/product-short.md)] development and release updates, you may decide to define a subset group of your sensors as a delayed update ring, allowing for a gradual sensor update process. [!INCLUDE [Product short](includes/product-short.md)] enables you to choose how your sensors are updated and set each sensor as a **Delayed update** candidate.
 
@@ -86,38 +75,41 @@ The **delayed update** option enables you to select specific sensors as an autom
 
 > [!NOTE]
 > If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md).
+
 Authentication between your sensors and the Azure cloud service uses strong, certificate-based mutual authentication.
 
 Each update is tested and validated on all supported operating systems to cause minimal impact to your network and operations.
 
 To set a sensor to delayed update:
 
-1. From the [!INCLUDE [Product short](includes/product-short.md)] portal, click on the settings icon and select **Configuration**.
-1. Click on the **Updates** tab.
-1. In the table row next to each sensor you want to delay, set the **Delayed update** slider to **On**.
-1. Click **Save**.
+1. In the **Sensors** page, select the sensor you want to set for delayed updates.
+1. Select the **Enabled delayed update** button.
 
-## Sensor update process
+    ![Enable delayed update.](media/enable-delayed-update.png)
+
+1. In the confirmation window, select **Enable**.
+
+To disable delayed updates, select the sensor and then select the **Disabled delayed update** button.
+
+### Sensor update process
 
 Every few minutes, [!INCLUDE [Product short](includes/product-short.md)] sensors check whether they have the latest version. After the [!INCLUDE [Product short](includes/product-short.md)] cloud service is updated to a newer version, the [!INCLUDE [Product short](includes/product-short.md)] sensor service starts the update process:
 
 1. [!INCLUDE [Product short](includes/product-short.md)] cloud service updates to the latest version.
-1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service learns that there is an updated version.
-1. Sensors that are not set to **Delayed update** start the update process on a sensor by sensor basis:
+1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service learns that there's an updated version.
+1. Sensors that aren't set to **Delayed update** start the update process on a sensor by sensor basis:
     1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service pulls the updated version from the cloud service (in cab file format).
     1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater validates the file signature.
-    1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service extracts the cab file to a new folder in the sensor's installation folder. By default it is extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
+    1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service extracts the cab file to a new folder in the sensor's installation folder. By default it's extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
     1. [!INCLUDE [Product short](includes/product-short.md)] sensor service points to the new files extracted from the cab file.
     1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service restarts the [!INCLUDE [Product short](includes/product-short.md)] sensor service.
         > [!NOTE]
-        > Minor sensor updates install no MSI, changes no registry values or any system files. Even a pending restart does not impact a sensor update.
+        > Minor sensor updates install no MSI, change no registry values or any system files. Even a pending restart does not impact a sensor update.
     1. Sensors run based on the newly updated version.
-    1. Sensor receives clearance from the Azure cloud service. You can verify sensor status in the **Updates** page.
+    1. Sensor receives clearance from the Azure cloud service. You can verify sensor status in the **Sensors** page.
     1. The next sensor starts the update process.
 
-1. 72 hours after the [!INCLUDE [Product short](includes/product-short.md)] cloud service is updated, sensors selected for **Delayed update** start their update process according to the same update process as automatically updated sensors.
-
-![Sensor update.](media/sensor-update.png)
+1. Sensors selected for **Delayed update** start their update process 72 hours after the Defender for Identity cloud service is updated. These sensors will then use the same update process as automatically updated sensors.
 
 For any sensor that fails to complete the update process, a relevant health alert is triggered, and is sent as a notification.
 
