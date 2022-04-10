@@ -191,7 +191,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.
-    - Under **Permissions**, select **Read all properties** and **Write all properties**.
+    - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
 
     ![Auditing settings for ADFS.](media/audit-adfs.png)
 
@@ -215,7 +215,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.
-    - Under **Permissions**, select **Write all properties**.
+    - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Write all properties**.
 
     ![Auditing settings for Configuration.](media/audit-configuration.png)
 
