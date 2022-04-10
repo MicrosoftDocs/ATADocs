@@ -158,9 +158,9 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |**Localhost ports**\*|Required for Sensor Service updater||||
 |SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
 |**NNR ports**\*\*|||||
-|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
 \*\* One of these ports is required, but we recommend opening all of them.
