@@ -1,27 +1,17 @@
 ---
 title: Microsoft Defender for Identity support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-ms.date: 12/07/2021
+ms.date: 04/11/2022
 ms.topic: conceptual
 ---
 
-# Microsoft Defender for Identity information and support
+# Microsoft Defender for Identity support
 
-Use the following resources to help you learn about, deploy, and support [!INCLUDE [Product long](includes/product-long.md)] for your organization.
-
-|To do this ...|...do this:|
-|----|----|
-|See our most popular documentation|Read the top 10 pages:<br>- [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)<br>-[Creating an instance](install-step1.md)<br>-[Understanding security alerts](understanding-security-alerts.md)<br>-[[!INCLUDE [Product short](includes/product-short.md)] security alerts](suspicious-activity-guide.md)<br>-[Investigate a computer](investigate-a-computer.md)<br>-[Investigate a user](investigate-a-user.md)<br>-[Investigate a lateral movement path](investigate-lateral-movement-path.md)
-|Engage with the product team and your peers|Visit the [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) for [!INCLUDE [Product short](includes/product-short.md)].|
-|Check subscription information and get a list of which features are supported|See [subscription information](/defender-for-identity/technical-faq#licensing-and-privacy) and the [feature list](https://www.microsoft.com/security/business/threat-protection/identity-defender) from the [!INCLUDE [Product short](includes/product-short.md)] website.|
-
-## Information about new releases and updates
-
-For an up-to-date list of newly released features and recent changes in [!INCLUDE [Product short](includes/product-short.md)], check out [What's new in [!INCLUDE [Product short](includes/product-short.md)]](whats-new.md).
+This article provides information about support, troubleshooting options, and community resources.
 
 ## Support options and community resources
 
-This section provides information about support, troubleshooting options, and community resources.
+### Microsoft Support
 
 To contact Microsoft Support:
 
@@ -54,8 +44,6 @@ To view system status for [!INCLUDE [Product short](includes/product-short.md)],
 - If you have a question about how something works, check whether your question is already answered in [Frequently asked questions](technical-faq.yml).
 
 - If you have a question about a prerequisite for [!INCLUDE [Product short](includes/product-short.md)], see [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md).
-
-- If you have Microsoft Defender for Endpoint deployed in your environment and you want to integrate it with [!INCLUDE [Product short](includes/product-short.md)], see [Integrate with Microsoft Defender for Endpoint](integrate-mde.md).
 
 - For information regarding investigation security alerts, see the [security alert guide](suspicious-activity-guide.md).
 

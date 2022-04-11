@@ -1,7 +1,7 @@
 ---
 title: Working with user profiles in the Microsoft Defender for Identity portal
 description: Describes how to investigate users from the user profiles screen in the Microsoft Defender for Identity portal
-ms.date: 10/26/2020
+ms.date: 04/11/2022
 ms.topic: conceptual
 ---
 
@@ -10,9 +10,9 @@ ms.topic: conceptual
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-The entity profile provides you with a comprehensive entity page designed for a full deep-dive investigation of users, computers, devices, the resources they have access to, and their history. The profile page takes advantage of the new [!INCLUDE [Product short](includes/product-short.md)] logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a comprehensive entity page designed for a full deep-dive investigation of users, computers, devices, the resources they have access to, and their history. The profile page takes advantage of the [!INCLUDE [Product short](includes/product-short.md)] logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
-To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline.
+To access an entity profile page, select the name of the entity, such as a username, in the suspicious activity timeline.
 
 The left menu provides you with all the Active Directory information available on the entity - email address, domain, first seen date. If the entity is sensitive, it tells you why. For example, is the user tagged as sensitive or the member of a sensitive group?
 If it's a sensitive user, you see the icon under the user's name.

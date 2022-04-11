@@ -24,7 +24,7 @@ To learn more about the structure and common components of all [!INCLUDE [Produc
 
 ## Security alert name mapping and unique external IDs
 
-The following table lists the mapping between alert names, their corresponding unique external IDs, their severity, and their MITRE ATT&CK Matrix&trade;tactic. When used with scripts or automation, Microsoft recommends use of alert external IDs in place of alert names, as only security alert external IDs are permanent, and not subject to change.
+The following table lists the mapping between alert names, their corresponding unique external IDs, their severity, and their MITRE ATT&CK Matrix&trade; tactic. When used with scripts or automation, Microsoft recommends use of alert external IDs in place of alert names, as only security alert external IDs are permanent, and not subject to change.
 
 ### External IDs
 
