@@ -1,7 +1,7 @@
 ---
 title: Understanding Microsoft Defender for Identity health alerts
 description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 10/26/2020
+ms.date: 04/12/2022
 ms.topic: how-to
 ---
 
@@ -10,7 +10,26 @@ ms.topic: how-to
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you know when there's a problem with your [!INCLUDE [Product short](includes/product-short.md)] instance, by raising a health alert. This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
+The [!INCLUDE [Product long](includes/product-long.md)] **Global health issues** pane lets you know when there's a problem with your [!INCLUDE [Product short](includes/product-short.md)] instance, by raising a health alert. To access the pane, follow these steps:
+
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+
+    ![Go to Settings, then Identities.](media/settings-identities.png)
+
+1. Select the **Sensors** page.
+1. In the top-right corner, select **Global health issues**.
+
+    :::image type="content" source="media/global-health-issues-button.png" alt-text="Select Global health issues":::
+
+1. The **Global health issues** pane is displayed, where you can see **Open**, **Closed**, and **Suppressed** health issues.
+
+    :::image type="content" source="media/global-health-issues.png" alt-text="Global health issues pane":::
+
+1. Select any issue for more details, and the option to close or suppress the issue.
+
+    :::image type="content" source="media/global-health-issues-details.png" alt-text="Global health issues details":::
+
+This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
 ## All domain controllers are unreachable by a sensor
 
