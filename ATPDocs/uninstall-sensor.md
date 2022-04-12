@@ -37,6 +37,35 @@ This scenario may occur after an in-place sensor upgrade, and the sensor appears
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**. Select the **Sensors** tab, which displays all your Defender for Identity sensors.
 1. Locate the orphaned sensor and select **Delete** (trash can icon).
 
+## Uninstall the Defender for Identity sensor silently
+
+Use the following command to perform a silent uninstall of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+
+**Syntax**:
+
+```cmd
+"Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
+```
+
+**Installation options**:
+
+> [!div class="mx-tableFixed"]
+>
+> |Name|Syntax|Mandatory for silent uninstallation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
+> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+
+**Examples**:
+
+To silently uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server:
+
+```cmd
+"Azure ATP sensor Setup.exe" /quiet /uninstall
+```
+
+
 ## See also
 
 - [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md)

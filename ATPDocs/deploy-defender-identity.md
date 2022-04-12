@@ -45,7 +45,6 @@ For more information about these steps, see the following articles:
 
 ## Special scenarios
 
-1. [Silent installation](silent-installation.md)
 1. [Installing on Active Directory Federation Services)](active-directory-federation-services.md)
 1. [Multi-forest support](multi-forest.md)
 1. [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)

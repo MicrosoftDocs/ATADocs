@@ -355,9 +355,9 @@ There are two possible workarounds for this issue:
     psexec -s -i "C:\MDI\Azure ATP Sensor Setup.exe"
     ```
 
-1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](silent-installation.md#defender-for-identity-sensor-silent-installation).
+1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation).
 
-## See Also
+## See also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)

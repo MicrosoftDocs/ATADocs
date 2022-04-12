@@ -44,8 +44,6 @@ items:
       href: manage-action-accounts.md
   - name: Special scenarios
     items:
-    - name: Silent installation
-      href: silent-installation.md
     - name: Installing on Active Directory Federation Services
       href: active-directory-federation-services.md
     - name: Multi-forest support

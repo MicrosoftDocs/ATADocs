@@ -19,7 +19,7 @@ Learn how to install the [!INCLUDE [Product long](includes/product-long.md)] sen
 - Install the [Npcap driver](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers). For download and installation instructions, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 >[!NOTE]
->When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](silent-installation.md#defender-for-identity-sensor-silent-installation).
+>When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-sensor-silent-installation).
 
 ## Install the sensor
 
@@ -64,6 +64,62 @@ Perform the following steps on the domain controller or AD FS server.
 
 > [!NOTE]
 > Beginning with version 2.176, when installing the sensor from a new package, the sensor's version under **Add/Remove Programs** will appear with the full version number (for example, 2.176.x.y), as opposed to the static 2.0.0.0 that was previously shown. It will continue to show that version (the one installed through the package) even though the version will be updated through the automatic updates from the Defender for Identity cloud services. The real version can be seen in the [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor) in the portal, in the executable path or in the file version.
+
+## Defender for Identity sensor silent installation
+
+Using [!INCLUDE [Product short](includes/product-short.md)] silent installation, the installer is configured to automatically restart the server at the end of the installation (if necessary). Make sure to run silent installation only during a maintenance window. Because of a Windows Installer bug, the *norestart* flag cannot be reliably used to make sure the server does not restart.
+
+To track your deployment progress, monitor the [!INCLUDE [Product short](includes/product-short.md)] installer logs, which are located in `%AppData%\Local\Temp`.
+
+> [!NOTE]
+> When silently deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.7 or later which may include rebooting the domain controller</br>- [!INCLUDE [Product short](includes/product-short.md)] sensor. </br>Make the [!INCLUDE [Product short](includes/product-short.md)] sensor package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.7 offline deployment package](https://support.microsoft.com/topic/the-net-framework-4-7-offline-installer-for-windows-f32bcb33-5f94-57ce-6120-62c9526a91f2).
+
+Use the following command to perform a fully silent install of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+
+**cmd.exe syntax**:
+
+```cmd
+"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```
+
+**Powershell syntax**:
+
+```powershell
+.\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+```
+
+> [!NOTE]
+> When using the Powershell syntax, omitting the `.\` preface results in an error that prevents silent installation.
+
+> [!NOTE]
+> Copy the access key from the [!INCLUDE [Product short](includes/product-short.md)] portal **Configuration** section, **Sensors** page.
+
+**Installation options**:
+
+> [!div class="mx-tableFixed"]
+>
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+
+**Installation parameters**:
+
+> [!div class="mx-tableFixed"]
+>
+> |Name|Syntax|Mandatory for silent installation?|Description|
+> |-------------|----------|---------|---------|
+> |InstallationPath|InstallationPath=""|No|Sets the path for the installation of [!INCLUDE [Product short](includes/product-short.md)] Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
+> |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the [!INCLUDE [Product short](includes/product-short.md)] sensor with the [!INCLUDE [Product short](includes/product-short.md)] instance.|
+
+**Examples**:
+
+Use the following command to silently install the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+
+```cmd
+"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
+```
 
 ## Post-installation steps for AD FS servers
 
