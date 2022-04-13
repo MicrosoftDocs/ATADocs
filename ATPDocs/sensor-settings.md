@@ -29,6 +29,10 @@ This article explains how to configure and manage Microsoft Defender for Identit
 
     [![Sensor details.](media/sensor-details.png)](media/sensor-details.png#lightbox)
 
+1. If you select any of the health issues, you'll get a pane with more details about them. If you choose a closed issue, you can reopen it from here.
+
+    ![Issue details.](media/issue-details.png)
+
 1. If you select **Manage sensor**, a pane will open where you can configure the sensor details.
 
     ![Manage sensor.](media/manage-sensor.png)
@@ -143,7 +147,7 @@ To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silen
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
-## See Also
+## See also
 
 - [Configure event forwarding](configure-event-forwarding.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)

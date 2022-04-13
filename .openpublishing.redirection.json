@@ -562,7 +562,7 @@
         },
         {
             "source_path": "ATPDocs/sensor-monitoring.md",
-            "redirect_url": "/defender-for-identity/sensor-health",
+            "redirect_url": "/defender-for-identity/sensor-settings",
             "redirect_document_id": false
         },
         {
