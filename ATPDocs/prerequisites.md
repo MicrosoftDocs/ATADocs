@@ -12,37 +12,31 @@ This article describes the requirements for a successful deployment of [!INCLUDE
 >[!NOTE]
 > For information on how to plan resources and capacity, see [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md).
 
-[!INCLUDE [Product short](includes/product-short.md)] is composed of the [!INCLUDE [Product short](includes/product-short.md)] cloud service, which consists of the [!INCLUDE [Product short](includes/product-short.md)] portal and the [!INCLUDE [Product short](includes/product-short.md)] sensor. For more information about each [!INCLUDE [Product short](includes/product-short.md)] component, see [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md).
+[!INCLUDE [Product short](includes/product-short.md)] is composed of the [!INCLUDE [Product short](includes/product-short.md)] cloud service, the Microsoft 365 Defender portal and the [!INCLUDE [Product short](includes/product-short.md)] sensor. For more information about each [!INCLUDE [Product short](includes/product-short.md)] component, see [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md).
 
 [!INCLUDE [Product short](includes/product-short.md)] protects your on-premises Active Directory users and/or users synced to your Azure Active Directory (Azure AD). To protect an environment made up of only Azure AD users, see [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview).
 
 This article includes both [Defender for Identity sensor requirements](#defender-for-identity-sensor-requirements) and for [Defender for Identity standalone sensor requirements](#defender-for-identity-standalone-sensor-requirements). The Defender for Identity standalone sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
 
-> [!NOTE]
-> [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-
 ## Before you start
 
 This section lists information you should gather as well as accounts and network entity information you should have before starting [!INCLUDE [Product short](includes/product-short.md)] installation.
 
+### Licensing
+
 - Acquire a license for Enterprise Mobility + Security E5 (EMS E5/A5), Microsoft 365 E5 (M365 E5/A5/G5) or Microsoft 365 E5/A5/G5 Security directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. Standalone [!INCLUDE [Product short](includes/product-short.md)] licenses are also available. For more information about license requirements, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy).
 
-- Verify that the servers you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on are able to reach the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. They should be able to access https://*your-instance-name*sensorapi.atp.azure.com (port 443). For example, https://*contoso-corp*sensorapi.atp.azure.com.<br><br>
-To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
+### Accounts
 
 - At least one Directory Service account with read access to all objects in the monitored domains. For instructions on how to create the Directory Service account, see [Directory Service account recommendations](directory-service-accounts.md).
 
-- If you run Wireshark on [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, restart the [!INCLUDE [Product short](includes/product-short.md)] sensor service after you've stopped the Wireshark capture. If you don't restart the sensor service, the sensor stops capturing traffic.
+- Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Manage sensitive or honeytoken accounts](manage-sensitive-honeytoken-accounts.md).
 
-- If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
+### Permissions
 
 - To create your [!INCLUDE [Product short](includes/product-short.md)] instance, you'll need an Azure AD tenant with at least one global/security administrator. Each [!INCLUDE [Product short](includes/product-short.md)] instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
-
-- Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Manage sensitive or honeytoken accounts](manage-sensitive-honeytoken-accounts.md).
-
-- Optional: When deploying the standalone sensor, it's necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to [!INCLUDE [Product short](includes/product-short.md)] to further enhance [!INCLUDE [Product short](includes/product-short.md)] authentication-based detections, additions to sensitive groups, and suspicious service creation detections.  [!INCLUDE [Product short](includes/product-short.md)] sensor receives these events automatically. In [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that isn't available via the domain controller network traffic.
 
 ## Microsoft 365 Defender portal requirements
 
@@ -50,7 +44,8 @@ Access Defender for Identity in the Microsoft 365 Defender portal using Microsof
 
 ## Defender for Identity firewall requirements
 
-- Firewall/proxy open - To communicate with the [!INCLUDE [Product short](includes/product-short.md)] cloud service, *.atp.azure.com port 443 must be open in your firewall/proxy. For more information about firewall/proxy configuration, see [Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity Sensor](configure-proxy.md).
+- Verify that the servers you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on are able to reach the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. They should be able to access https://*your-instance-name*sensorapi.atp.azure.com (port 443). For example, https://*contoso-corp*sensorapi.atp.azure.com.<br><br>
+To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
 
     > [!NOTE]
     > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
@@ -123,9 +118,11 @@ The servers and domain controllers onto which the sensor is installed must have 
 ### Network adapters
 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor monitors the local traffic on all of the domain controller's network adapters.  
-After deployment, use the [!INCLUDE [Product short](includes/product-short.md)] portal to modify which network adapters are monitored.
+After deployment, use the Microsoft 365 Defender portal to modify which network adapters are monitored.
 
 The sensor isn't supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
+
+If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
 
 ### Ports
 
@@ -164,6 +161,8 @@ This section lists the requirements for the [!INCLUDE [Product short](includes/p
 
 > [!NOTE]
 > [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+
+When deploying the standalone sensor, it's necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to [!INCLUDE [Product short](includes/product-short.md)] to further enhance [!INCLUDE [Product short](includes/product-short.md)] authentication-based detections, additions to sensitive groups, and suspicious service creation detections.  The [!INCLUDE [Product short](includes/product-short.md)] sensor receives these events automatically. In the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that isn't available via the domain controller network traffic.
 
 ### General standalone sensor requirements
 
@@ -218,6 +217,11 @@ The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor requ
     >
     > - Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. For more information, see [Configure port mirroring](configure-port-mirroring.md). Typically, you need to work with the networking or virtualization team to configure port mirroring.
     > - Configure a static non-routable IP address (with /32 mask) for your environment with no default sensor gateway and no DNS server addresses. For example, 10.10.0.10/32. This ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
+
+>[!NOTE]
+>If you run Wireshark on [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, restart the [!INCLUDE [Product short](includes/product-short.md)] sensor service after you've stopped the Wireshark capture. If you don't restart the sensor service, the sensor stops capturing traffic.
+
+If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
 
 ### Ports for standalone sensors
 

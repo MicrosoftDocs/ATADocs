@@ -48,7 +48,7 @@ Perform the following steps on the domain controller or AD FS server.
     ![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration image](media/sensor-install-config.png)
 
     - Installation path: The location where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. By default the path is  `%programfiles%\Azure Advanced Threat Protection sensor`. Leave the default value.
-    - Access key: Retrieved from the [!INCLUDE [Product short](includes/product-short.md)] portal in the previous step.
+    - Access key: Retrieved from the Microsoft 365 Defender portal in the previous step.
 
 1. Select **Install**. The following components are installed and configured during the installation of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
 
@@ -92,7 +92,7 @@ Use the following command to perform a fully silent install of the [!INCLUDE [Pr
 > When using the Powershell syntax, omitting the `.\` preface results in an error that prevents silent installation.
 
 > [!NOTE]
-> Copy the access key from the [!INCLUDE [Product short](includes/product-short.md)] portal **Configuration** section, **Sensors** page.
+> Copy the access key from the Microsoft 365 Defender portal **Identity** section, **Sensors** page, **+Add sensor** button.
 
 **Installation options**:
 

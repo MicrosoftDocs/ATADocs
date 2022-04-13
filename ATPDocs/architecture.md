@@ -13,7 +13,7 @@ ms.topic: overview
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] architecture topology diagram](media/architecture-topology.png)
 
-This section describes how the flow of [!INCLUDE [Product short](includes/product-short.md)]'s network and event capturing works, and drills down to describe the functionality of the main components: the [!INCLUDE [Product short](includes/product-short.md)] portal, [!INCLUDE [Product short](includes/product-short.md)] sensor, and [!INCLUDE [Product short](includes/product-short.md)] cloud service.
+This section describes how the flow of [!INCLUDE [Product short](includes/product-short.md)]'s network and event capturing works, and drills down to describe the functionality of the main components: the Microsoft 365 Defender portal, [!INCLUDE [Product short](includes/product-short.md)] sensor, and [!INCLUDE [Product short](includes/product-short.md)] cloud service.
 
 Installed directly on your domain controller or AD FS servers, the [!INCLUDE [Product short](includes/product-short.md)] sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, [!INCLUDE [Product short](includes/product-short.md)] sends only the parsed information to the [!INCLUDE [Product short](includes/product-short.md)] cloud service (only a percentage of the logs are sent).
 
@@ -72,7 +72,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor includes a moni
 
 No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
 
-If the monitoring process causes the [!INCLUDE [Product short](includes/product-short.md)] sensor to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the [!INCLUDE [Product short](includes/product-short.md)] portal Health page.
+If the monitoring process causes the [!INCLUDE [Product short](includes/product-short.md)] sensor to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the [!INCLUDE [Product short](includes/product-short.md)] sensor page.
 
 ### Windows Events
 

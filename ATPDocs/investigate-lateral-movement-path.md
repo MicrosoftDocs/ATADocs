@@ -23,7 +23,7 @@ In this tutorial, you'll learn how to use [!INCLUDE [Product long](includes/prod
 
 ## Investigate
 
-There are multiple ways to use and investigate LMPs. In the [!INCLUDE [Product short](includes/product-short.md)] portal, search by entity and then explore by path or activity.
+There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defender portal, search by entity and then explore by path or activity.
 
 1. From the portal, search for a user or computer. Notice if a lateral movement badge was added to an entity profile. Badges will only display when an entity is discovered in a potential LMP within the last 48 hours.
 
