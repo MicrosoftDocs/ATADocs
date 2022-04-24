@@ -7,9 +7,6 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity Reports
 
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/vpn-integration). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
-
 The [!INCLUDE [Product long](includes/product-long.md)] reports section in the [!INCLUDE [Product short](includes/product-short.md)] portal enables you to schedule or immediately generate and download reports that provide you with system and entity status information. From the reports feature, you can create reports about system health, security alerts and potential lateral movement paths detected in your environment.
 
 To access the reports page, click the report icon in the menu bar: ![report icon.](media/report-icon.png).
