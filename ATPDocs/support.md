@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-ms.date: 12/07/2021
+ms.date: 04/20/2022
 ms.topic: conceptual
 ---
 
@@ -11,7 +11,7 @@ Use the following resources to help you learn about, deploy, and support [!INCLU
 
 |To do this ...|...do this:|
 |----|----|
-|See our most popular documentation|Read the top 10 pages:<br>- [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)<br>-[Creating an instance](install-step1.md)<br>-[Understanding security alerts](understanding-security-alerts.md)<br>-[[!INCLUDE [Product short](includes/product-short.md)] security alerts](suspicious-activity-guide.md)<br>-[Investigate a computer](investigate-a-computer.md)<br>-[Investigate a user](investigate-a-user.md)<br>-[Investigate a lateral movement path](investigate-lateral-movement-path.md)
+|See our most popular documentation|Read the top 10 pages:<br>- [What is [!INCLUDE [Product short](includes/product-short.md)]?](what-is.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md)<br>-  [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)<br>- [Creating an instance](install-step1.md)<br>- [Understanding security alerts](understanding-security-alerts.md)<br>- [[!INCLUDE [Product short](includes/product-short.md)] security alerts](suspicious-activity-guide.md)<br>- [Investigate a computer](investigate-a-computer.md)<br>- [Investigate a user](investigate-a-user.md)<br>- [Investigate a lateral movement path](investigate-lateral-movement-path.md)
 |Engage with the product team and your peers|Visit the [Tech Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) for [!INCLUDE [Product short](includes/product-short.md)].|
 |Check subscription information and get a list of which features are supported|See [subscription information](/defender-for-identity/technical-faq#licensing-and-privacy) and the [feature list](https://www.microsoft.com/security/business/threat-protection/identity-defender) from the [!INCLUDE [Product short](includes/product-short.md)] website.|
 
@@ -61,4 +61,4 @@ To view system status for [!INCLUDE [Product short](includes/product-short.md)],
 
 ### Community resources
 
-We recommend the [tech community group for [!INCLUDE [Product short](includes/product-short.md)]](<https://aka.ms/MDIcommunity>). This resource provides direct responses from the [!INCLUDE [Product short](includes/product-short.md)] team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.
+We recommend the [Tech Community group for [!INCLUDE [Product short](includes/product-short.md)]](<https://aka.ms/MDIcommunity>). This resource provides direct responses from the [!INCLUDE [Product short](includes/product-short.md)] team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.
