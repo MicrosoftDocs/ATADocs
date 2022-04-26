@@ -68,32 +68,20 @@ The sensor will attempt to use the DSA entry configured during start-up, as a re
 
 When there are two or more DSA entries, the sensor will try DSA entries in the following order:
 
->[!NOTE]
->gMSA entries have a higher priority over regular entries.
+1. Match between the DNS domain name of the target domain (emea.contoso.com) and the domain of DSA gMSA entry (emea.consoso.com).
+2. Match between the DNS domain name of the target domain (emea.contoso.com) and the domain of DSA regular entry (emea.consoso.com).
+3. Match in the root DNS name of the target domain (emea.constoso.com) and the domain name of DSA gMSA entry (contoso.com)
+4. Match in the root DNS name of the target domain (emea.constoso.com) and the domain name of DSA regular entry (contoso.com)
+5. Look for a "sibling domain" - target domain name emea.consoto.com and DSA gMSA entry domain name, apac.contoso.com.
+6. 5. Look for a "sibling domain" - target domain name emea.consoto.com and DSA regular entry domain name, apac.contoso.com.
+7. Round robin all other DSA gMSA entries
+8. Round robin all other DSA regular entries
 
-- The sensor will look for a DSA entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
-
-- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will traverse the list via round robin.
-
-For example, if these are the DSA entries configured:
-
-- DSA1.northamerica.contoso.com
-- DSA2.EMEA.contoso.com
-- DSA3.fabrikam.com
-
-These are the sensors and which DSA entry will be used first
-
-| Domain controller FQDN | DSA entry that  will be used |
-| --------------------------- | -------------------------------- |
-| **DC01.contoso.com**        | Round robin                      |
-| **DC02.Fabrikam.com**       | DSA3.fabrikam.com                |
-| **DC03.EMEA.contoso.com**   | DSA2.emea.contoso.com            |
-| **DC04.contoso.com**        | Round robin                      |
 
 >[!NOTE]
 >
-> - It is recommended in a multi-domain forest the DSA account be created in the domain with the largest number of domain controllers.
-> - In multi-forest multi-domain environments, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
+> - In a forest with a single DNS name space it is recommeded to create the DSA entry in root domain. You must give this account read permissions to all of the sub domains.
+>- In a forest with more than one name space tt is recommended to create the DSA entry in the root domain of each name space.
 
 >[!IMPORTANT]
 >If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup using any of the configured DSA accounts, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health alerts](health-alerts.md).
