@@ -80,8 +80,8 @@ When there are two or more DSA entries, the sensor will try DSA entries in the f
 
 >[!NOTE]
 >
-> - In a forest with a single DNS name space it is recommeded to create the DSA entry in root domain. You must give this account read permissions to all of the sub domains.
->- In a forest with more than one name space tt is recommended to create the DSA entry in the root domain of each name space.
+> - In a forest with a single DNS name space it is recommended to create the DSA entry in the root domain. You must give this account read permissions to all of the subdomains.
+>- In a forest with more than one namespace, it's recommended to create the DSA entry in the root domain of each namespace.
 
 >[!IMPORTANT]
 >If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup using any of the configured DSA accounts, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health alerts](health-alerts.md).
