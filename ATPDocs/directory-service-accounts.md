@@ -73,7 +73,7 @@ When there are two or more DSA entries, the sensor will try DSA entries in the f
 3. Match in the root DNS name of the target domain (emea.constoso.com) and the domain name of DSA gMSA entry (contoso.com)
 4. Match in the root DNS name of the target domain (emea.constoso.com) and the domain name of DSA regular entry (contoso.com)
 5. Look for a "sibling domain" - target domain name emea.consoto.com and DSA gMSA entry domain name, apac.contoso.com.
-6. 5. Look for a "sibling domain" - target domain name emea.consoto.com and DSA regular entry domain name, apac.contoso.com.
+6. Look for a "sibling domain" - target domain name emea.consoto.com and DSA regular entry domain name, apac.contoso.com.
 7. Round robin all other DSA gMSA entries
 8. Round robin all other DSA regular entries
 
