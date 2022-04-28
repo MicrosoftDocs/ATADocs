@@ -136,6 +136,8 @@ items:
     href: active-directory-federation-services.md
   - name: Manage action accounts
     href: manage-action-accounts.md
+  - name: Remediation actions
+    href: remediation-actions.md 
   - name: Change domain connectivity password
     href: modifying-config-dcpassword.md
   - name: Set Defender for Identity notifications
