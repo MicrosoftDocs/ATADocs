@@ -106,7 +106,7 @@ The [!INCLUDE [Product long](includes/product-long.md)] Health Center lets you k
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is running on Windows 2008 R2 which will be unsupported soon.|Starting June 15th 2022, Microsoft will no longer support the [!INCLUDE [Product short](includes/product-short.md)] sensor on devices running Windows Server 2008 R2. More details can be fount at: https://aka.ms/mdi/2008r2 |Upgrade the Operating System on this Domain Controller to at least Windows Server 2012.|Medium (Starting June 1st, 2022 the severity of this halth alert will be High)|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is running on Windows 2008 R2 which will be unsupported soon.|Starting June 15th 2022, Microsoft will no longer support the [!INCLUDE [Product short](includes/product-short.md)] sensor on devices running Windows Server 2008 R2. More details can be fount at: https://aka.ms/mdi/2008r2 |Upgrade the Operating System on this Domain Controller to at least Windows Server 2012.|Medium (Starting June 1st, 2022 the severity of this health alert will be High)|
 
 
 ## Sensor with Windows Server 2008 R2: Unsupported
