@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-ms.date: 04/11/2022
+ms.date: 04/20/2022
 ms.topic: conceptual
 ---
 
@@ -49,4 +49,4 @@ To view system status for [!INCLUDE [Product short](includes/product-short.md)],
 
 ### Community resources
 
-We recommend the [tech community group for [!INCLUDE [Product short](includes/product-short.md)]](<https://aka.ms/MDIcommunity>). This resource provides direct responses from the [!INCLUDE [Product short](includes/product-short.md)] team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.
+We recommend the [Tech Community group for [!INCLUDE [Product short](includes/product-short.md)]](<https://aka.ms/MDIcommunity>). This resource provides direct responses from the [!INCLUDE [Product short](includes/product-short.md)] team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.

@@ -43,8 +43,13 @@ There are two types of DSA that can be used:
 
 | Type of DSA           | Pros                                                         | Cons                                                         |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+<<<<<<< HEAD
 | gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. <li> Doesn't support cross-forest authentication  |
 | Regular user  account | <li> Supports all the operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
+=======
+| gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. |
+| Regular user  account | <li> Supports all operating system versions  the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
+>>>>>>> 26f25aeecf2b2315558efb90ebb03763819b0dcb
 
 ## Number of DSA entries
 
@@ -68,10 +73,16 @@ The sensor will attempt to use the DSA entry configured during start-up, as a re
 
 #### Two or more DSA entries are configured
 
-When there are two or more DSA entries, the sensor will try DSA entries in the following order:
+When there are two or more DSA entries, the sensor will try the DSA entries in the following order:
 
->[!NOTE]
->gMSA entries have a higher priority over regular entries.
+1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.consoso.com).
+2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.consoso.com).
+3. Match in the root DNS name of the target domain (for example, emea.constoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
+4. Match in the root DNS name of the target domain (for example, emea.constoso.com) and the domain name of DSA regular entry (for example, contoso.com)
+5. Look for a "sibling domain" - target domain name (for example, emea.consoto.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
+6. Look for a "sibling domain" - target domain name (for example, emea.consoto.com) and DSA regular entry domain name (for example, apac.contoso.com).
+7. Round robin all other DSA gMSA entries
+8. Round robin all other DSA regular entries
 
 - The sensor will look for a DSA entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
 

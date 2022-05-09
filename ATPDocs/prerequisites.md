@@ -85,6 +85,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 | Windows Server 2012 R2     | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
 | Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
+| Windows Server 2022        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
 
 \* Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) or newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
@@ -139,9 +140,9 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |**Localhost ports**\*|Required for Sensor Service updater||||
 |SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
 |**NNR ports**\*\*|||||
-|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
 \*\* One of these ports is required, but we recommend opening all of them.

@@ -25,9 +25,9 @@ Secondary method:
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
 For the best results, we recommend using at least one of the primary methods. 
-Reverse DNS lookup of the IP address is only peformed when:
+Reverse DNS lookup of the IP address is only performed when:
 - There is no response from any of the primary methods. 
-- There is a conflict in the response recevied from two or more primary methods. 
+- There is a conflict in the response received from two or more primary methods. 
 
 > [!NOTE]
 > No authentication is performed on any of the ports.

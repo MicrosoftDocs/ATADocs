@@ -42,6 +42,8 @@ items:
       href: configure-sensor-settings.md
     - name: Manage action accounts
       href: manage-action-accounts.md
+    - name: Remediation actions
+      href: remediation-actions.md 
   - name: Special scenarios
     items:
     - name: Installing on Active Directory Federation Services
