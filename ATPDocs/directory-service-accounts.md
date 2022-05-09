@@ -43,13 +43,8 @@ There are two types of DSA that can be used:
 
 | Type of DSA           | Pros                                                         | Cons                                                         |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-<<<<<<< HEAD
-| gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. <li> Doesn't support cross-forest authentication  |
-| Regular user  account | <li> Supports all the operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
-=======
 | gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. |
-| Regular user  account | <li> Supports all operating system versions  the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
->>>>>>> 26f25aeecf2b2315558efb90ebb03763819b0dcb
+| Regular user  account | <li> Supports all operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
 
 ## Number of DSA entries
 
@@ -239,4 +234,3 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 > [!div class="step-by-step"]
 > [« Configure Windows Event collection](configure-windows-event-collection.md)
 > [Role groups »](role-groups.md)
-
