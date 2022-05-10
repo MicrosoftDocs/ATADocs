@@ -601,6 +601,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "ATPDocs/investigate-entity.md",
+            "redirect_url": "/defender-for-identity/investigate-users-computers",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "ATPDocs/suspicious-activity-guide.md",
             "redirect_url": "/defender-for-identity/alerts-overview",
             "redirect_document_id": false

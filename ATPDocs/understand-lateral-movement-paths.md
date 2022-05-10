@@ -1,16 +1,13 @@
 ---
 title: Understand and use Lateral Movement Paths with Microsoft Defender for Identity
 description: This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
-ms.date: 10/27/2020
+ms.date: 05/10/2022
 ms.topic: conceptual
 ---
 
 # Microsoft Defender for Identity Lateral Movement Paths (LMPs)
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
-
-Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored log-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md).
+Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored log-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in [Microsoft Defender for Identity Security Alerts](alerts-overview.md).
 
 A key component of [!INCLUDE [Product long](includes/product-long.md)]'s security insights are Lateral Movement Paths or LMPs. [!INCLUDE [Product short](includes/product-short.md)] LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, [!INCLUDE [Product short](includes/product-short.md)] LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
 
