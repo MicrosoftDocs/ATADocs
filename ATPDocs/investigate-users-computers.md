@@ -7,48 +7,57 @@ ms.topic: conceptual
 
 # Investigate users and computers
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. 
+Microsoft Defender for Identity in Microsoft 365 Defender provides evidences when users, computers and devices have performed suspicious activities or show signs of being compromised.  This article gives investigation suggestions to help you determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar future attacks.
 
-[!INCLUDE [Product long](includes/product-long.md)] alert evidence and lateral movement paths provide clear indications when users have performed suspicious activities or indications exist that their account has been compromised. In this tutorial you'll use the investigation suggestions to help determine the risk to your organization, decide how to remediate, and determine the best way to prevent similar future attacks.
+## Investigation steps for suspicious users
 
-> [!div class="checklist"]
->
-> - Gather information about the user.
-> - Investigate activities that the user performed.
-> - Investigate resources the user accessed.
-> - Investigate lateral movement paths.
+For information on how to view user profiles in Microsoft 365 Defender, see [Investigate users](/microsoft-365/security/defender/investigate-users).
 
-## Recommended investigation steps for suspicious users
-
-Check and investigate the user profile for the following details and activities:
+If an alert or incident indicates that a user may be suspicious or compromised, check and investigate the user profile for the following details and activities:
 
 1. Who is the [user](entity-profiles.md)?
-    1. Is the user a [sensitive user](manage-sensitive-honeytoken-accounts.md) (such as admin, or on a watchlist, etc.)?
+    1. Is the user a [sensitive user](entity-tags.md) (such as admin, or on a watchlist, etc.)?
     1. What is their role within the organization?
     1. Are they significant in the organizational tree?
 
 1. Suspicious activities to [investigate](investigate-entity.md):
     1. Does the user have other opened alerts in [!INCLUDE [Product short](includes/product-short.md)], or in other security tools such as Microsoft Defender for Endpoint, Microsoft Defender for Cloud and/or Microsoft Defender for Cloud Apps?
-    1. Did the user have failed log ons?
+    1. Did the user have failed logons?
     1. Which resources did the user access?
     1. Did the user access high value resources?
     1. Was the user supposed to access the resources they accessed?
-    1. Which computers did the user log in to?
-    1. Was the user supposed to log in to those computers?
+    1. Which computers did the user sign in to?
+    1. Was the user supposed to sign in to those computers?
     1. Is there a [lateral movement path](use-case-lateral-movement-path.md) (LMP) between the user and a sensitive user?
 
-## See Also
+Use the answers to these questions to determine if the account appears compromised or if the suspicious activities imply malicious actions.
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+## Investigation steps for suspicious computers
+
+To access the computer profile page, select the specific computer mentioned in the alert that you wish to investigate. To assist your investigation, alert evidence lists all computers and users connected to each suspicious activity.
+
+Check and investigate the computer profile for the following details and activities:
+
+- What happened around the time of the suspicious activity?  
+    1. Which user was logged in to the computer?
+    1. Does that user normally log into or access the source or destination computer?
+    1. Which resources were accessed? By which users?
+      - If resources were accessed, were they high-value resources?
+    1. Was the user supposed to access those resources?
+    1. Did the user that accessed the computer perform other suspicious activities?
+
+- Additional suspicious activities to investigate:
+    1. Were other alerts opened around the same time as this alert in [!INCLUDE [Product short](includes/product-short.md)], or in other security tools such as Microsoft Defender for Endpoint, Microsoft Defender for Cloud and/or Microsoft Defender for Cloud Apps?
+    1. Were there failed logons?
+
+- If Microsoft Defender for Endpoint integration is enabled, select the Microsoft Defender for Endpoint badge to further investigate the computer. In Microsoft Defender for Endpoint, you can see which processes and alerts occurred around the same time as the alert.
+  - Were any new programs deployed or installed?
+
+Use the answers to these questions to determine if the computer appears compromised or if the suspicious activities imply malicious actions.
+
+## Next steps
+
+- [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](understand-lateral-movement-paths.md)
 
 ## Learn more
 
