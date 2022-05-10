@@ -1,117 +1,82 @@
 ---
-title: Working with security alerts in Microsoft Defender for Identity
-description: Describes how to review security alerts issued by Microsoft Defender for Identity
-ms.date: 10/27/2020
+title: Microsoft Defender for Identity security alerts in Microsoft 365 Defender
+description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft 365 Defender
+ms.date: 05/10/2022
 ms.topic: how-to
 ---
 
-# Working with Security Alerts
+# Defender for Identity security alerts in Microsoft 365 Defender
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+This article explains the basics of how to work with Microsoft Defender for Identity security alerts in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
-This article explains the basics of how to work with [!INCLUDE [Product long](includes/product-long.md)] security alerts.
+Defender for Identity alerts are natively integrated into Microsoft 365 Defender with a dedicated Identity alert page format.
 
-<a name="review-suspicious-activities-on-the-attack-time-line"></a>
+The Identity alert page gives Microsoft Defender for Identity customers better cross-domain signal enrichment and new automated identity response capabilities. It ensures that you stay secure and helps improve the efficiency of your security operations.
 
-## Review security alerts on the attack timeline
+One of the benefits of investigating alerts through [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender) is that Microsoft Defender for Identity alerts are further correlated with information obtained from each of the other products in the suite. These enhanced alerts are consistent with the other Microsoft 365 Defender alert formats originating from [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security) and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint). The new page effectively eliminates the need to navigate to another product portal to investigate alerts associated with identity.
 
-After logging in to the [!INCLUDE [Product short](includes/product-short.md)] portal, you're automatically taken to the open **Security Alerts Timeline**. Security alerts are listed in chronological order, with the newest alert on the top of the timeline.
+Alerts originating from Defender for Identity can now trigger the [Microsoft 365 Defender automated investigation and response (AIR)](/microsoft-365/security/defender/m365d-autoir) capabilities, including automatically remediating alerts and the mitigation of tools and processes that can contribute to the suspicious activity.
 
-Each security alert has the following information:
+> [!IMPORTANT]
+> As part of the convergence with Microsoft 365 Defender, some options and details have changed from their location in the Defender for Identity portal. Please read the details below to discover where to find both the familiar and new features.
 
-- Entities involved, including users, computers, servers, domain controllers, and resources.
+## Review security alerts
 
-- Times and time frame of the suspicious activities that initiated the security alert.
-- Severity of the alert: High, Medium, or Low.
-- Status: Open, closed, or suppressed.
-- Ability to:
-  - Share the security alert with other people in your organization via email.
-  - Download the security alert in Excel format.
+Alerts can be accessed from multiple locations, including the **Alerts** page, the **Incidents** page, the pages of individual **Devices**, and from the **Advanced hunting** page. In this example, we'll review the **Alerts page**.
 
-> [!NOTE]
->
-> - When you hover your mouse over a user or computer, a mini entity profile is displayed. The mini-profile provides additional information about the entity and includes the number of security alerts that the entity is linked to.
-> - Clicking on an entity, takes you to the entity profile of the user or computer.
+In [Microsoft 365 Defender](https://security.microsoft.com), go to **Incidents & alerts** and then to **Alerts**.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] security alerts timeline image](media/sa-timeline.png)
+:::image type="content" source="media/incidents-alerts.png" alt-text="The Alerts menu item" lightbox="media/incidents-alerts.png":::
 
-## Security alert categories
+To see alerts from Defender for Identity, on the top-right select **Filter**, and then under **Service sources** select **Microsoft Defender for Identity**, and select **Apply**:
 
-[!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
+:::image type="content" source="media/filter-defender-for-identity.png" alt-text="The filter for the Defender for Identity events" lightbox="media/filter-defender-for-identity.png":::
 
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+The alerts are displayed with information in the following columns: **Alert name**, **Tags**, **Severity**, **Investigation state**, **Status**, **Category**, **Detection source**, **Impacted assets**, **First activity**, and **Last activity**.
 
-## Preview detections
+:::image type="content" source="media/filtered-alerts.png" alt-text="The Defender for Identity events" lightbox="media/filtered-alerts.png":::
 
-The [!INCLUDE [Product short](includes/product-short.md)] research team constantly works on implementing new detections for newly discovered attacks. Because [!INCLUDE [Product short](includes/product-short.md)] is a cloud service, new detections are released quickly to enable [!INCLUDE [Product short](includes/product-short.md)] customers to benefit from new detections as soon as possible.
+## Manage alerts
 
-These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the [!INCLUDE [Product short](includes/product-short.md)] console - not in the timeline or in entity profiles - and new alerts won't be opened.
+If you click the **Alert name** for one of the alerts, you'll go to the page with details about the alert. In the left pane, you'll see a summary of **What happened**:
 
-![preview detection in timeline.](media/preview-detection-in-timeline.png)
+:::image type="content" source="media/what-happened.png" alt-text="The What happened pane" lightbox="media/what-happened.png":::
 
-By default, preview detections are enabled in [!INCLUDE [Product short](includes/product-short.md)].
+Above the **What happened** box are buttons for the **Accounts**, **Destination Host** and **Source Host** of the alert. For other alerts, you might see buttons for details about additional hosts, accounts, IP addresses, domains, and security groups. Select any of them to get more details about the entities involved.
 
-To disable preview detections:
+On the right pane, you'll see the **Alert details**. Here you can see more details and perform several tasks:
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] console, select **Configuration**.
-1. In the left menu, under **Preview**, click **Detections**.
-1. Use the slider to turn the preview detections on and off.
+- **Classify this alert** - Here you can designate this alert as a **True alert** or **False alert**
 
-![preview detections.](media/preview-detections.png)
+    :::image type="content" source="media/classify-alert.png" alt-text="The page on which you can classify an alert" lightbox="media/classify-alert.png":::
 
-## Filter security alerts list
+- **Alert state** - In **Set Classification**, you can classify the alert as **True** or **False**. In **Assigned to**, you can assign the alert to yourself or unassign it.
 
-To filter the security alert list:
+    :::image type="content" source="media/alert-state.png" alt-text="The Alert state pane" lightbox="media/alert-state.png":::
 
-1. In the **Filter by** pane on the left side of the screen, select one of the following options: **All**, **Open**, **Closed**, or **Suppressed**.
+- **Alert details** - Under **Alert details**, you can find more information about the specific alert, follow a link to documentation about the type of alert, see which incident the alert is associated with, review any automated investigations linked to this alert type, and see the impacted devices and users.
 
-1. To further filter the list, select **High**, **Medium**, or **Low**.
+   :::image type="content" source="media/alert-details.png" alt-text="The Alert details page" lightbox="media/alert-details.png":::
 
-**Suspicious activity severity**
+- **Comments & history** - Here you can add your comments to the alert, and see the history of all actions associated with the alert.
 
-- **Low**
+    :::image type="content" source="media/comments-history.png" alt-text="The Comments & history page" lightbox="media/comments-history.png":::
 
-    Indicates activities that can lead to attacks designed for malicious users or software to gain access to organizational data.
+- **Manage alert** - If you select **Manage alert**, you'll go to a pane that will allow you to edit the:
+  - **Status** - You can choose **New**, **Resolved** or **In progress**.
+  - **Classification** - You can choose **True alert** or **False alert**.
+  - **Comment** - You can add a comment about the alert.
 
-- **Medium**
+    If you select the three dots next to **Manage alert**, you can **Consult a threat expert**, **Export** the alert to an Excel file, or **Link to another incident**.
 
-    Indicates activities that can put specific identities at risk for more severe attacks that could result in identity theft or privileged escalation
+    :::image type="content" source="media/manage-alert.png" alt-text="The Manage alert option" lightbox="media/manage-alert.png":::
 
-- **High**
+    > [!NOTE]
+    > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft 365 Defender**. Each link will bring you to the relevant portal, and provide information about the alert there.
 
-    Indicates activities that can lead to identity theft, privilege escalation, or other high-impact attacks
+## See also
 
-## Managing security alerts
-
-You can change the status of a security alert by clicking the current status of the security alert and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
-To do this, click the three dots at the top right corner of a specific alert to reveal the list of available actions.
-
-![[!INCLUDE [Product short.](includes/product-short.md)] Actions for security alerts](media/sa-actions.png)
-
-**Security alert status**
-
-- **Open**: All new security alerts appear in this list.
-
-- **Close**: Is used to track security alerts that you identified, researched, and fixed for mitigated.
-
-- **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert [!INCLUDE [Product short](includes/product-short.md)] doesn't reopen it. But if the alert stops for seven days, and is then seen again, a new alert is opened.
-
-- **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all security alerts of the same type.
-
-- **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set [!INCLUDE [Product short](includes/product-short.md)] to exclude a specific entity (user or computer) from alerting again for a certain type of activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the security alert as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each security alert you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket).
-
-> [!NOTE]
-> The configuration pages can only be modified by [!INCLUDE [Product short](includes/product-short.md)] admins.
-
-## See Also
-
-- [Working with the [!INCLUDE [Product short](includes/product-short.md)] portal](workspace-portal.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Microsoft Defender for Identity Security Alerts](alerts-overview.md)
 
 ## Learn more
 
