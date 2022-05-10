@@ -36,6 +36,16 @@ The alerts are displayed with information in the following columns: **Alert name
 
 :::image type="content" source="media/filtered-alerts.png" alt-text="The Defender for Identity events" lightbox="media/filtered-alerts.png":::
 
+### Security alert categories
+
+[!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
+
+- [Reconnaissance alerts](reconnaissance-alerts.md)
+- [Compromised credential alerts](compromised-credentials-alerts.md)
+- [Lateral movement alerts](lateral-movement-alerts.md)
+- [Domain dominance alerts](domain-dominance-alerts.md)
+- [Exfiltration alerts](exfiltration-alerts.md)
+
 ## Manage alerts
 
 If you click the **Alert name** for one of the alerts, you'll go to the page with details about the alert. In the left pane, you'll see a summary of **What happened**:

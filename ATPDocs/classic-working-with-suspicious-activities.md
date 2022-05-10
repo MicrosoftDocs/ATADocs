@@ -13,8 +13,6 @@ ROBOTS: NOINDEX
 
 This article explains the basics of how to work with [!INCLUDE [Product long](includes/product-long.md)] security alerts.
 
-<a name="review-suspicious-activities-on-the-attack-time-line"></a>
-
 ## Review security alerts on the attack timeline
 
 After logging in to the [!INCLUDE [Product short](includes/product-short.md)] portal, you're automatically taken to the open **Security Alerts Timeline**. Security alerts are listed in chronological order, with the newest alert on the top of the timeline.
