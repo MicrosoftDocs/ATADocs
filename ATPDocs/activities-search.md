@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Monitored Activities Filter and Search
 description: This article provides an overview of how to filter and search monitored activities using Microsoft Defender for Identity.
-ms.date: 10/26/2020
+ms.date: 05/10/2022
 ms.topic: how-to
 ---
 

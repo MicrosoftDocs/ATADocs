@@ -7,9 +7,6 @@ ms.topic: conceptual
 
 # What is Network Name Resolution?
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
-
 Network Name Resolution (NNR) is a main component of  [!INCLUDE [Product long](includes/product-long.md)] functionality. [!INCLUDE [Product short](includes/product-short.md)] captures activities based on network traffic, Windows events, and ETW - these activities normally contain IP data.
 
 Using NNR, [!INCLUDE [Product short](includes/product-short.md)] can correlate between raw activities (containing IP addresses), and the relevant computers involved in each activity. Based on the raw activities, [!INCLUDE [Product short](includes/product-short.md)] profiles entities, including computers, and generates security alerts for suspicious activities.
@@ -17,17 +14,20 @@ Using NNR, [!INCLUDE [Product short](includes/product-short.md)] can correlate b
 To resolve IP addresses to computer names, [!INCLUDE [Product short](includes/product-short.md)] sensors look up the IP addresses using the following methods:
 
 Primary methods:
+
 - NTLM over RPC (TCP Port 135)
 - NetBIOS (UDP port 137)
 - RDP (TCP port 3389) - only the first packet of **Client hello**
 
 Secondary method:
+
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-For the best results, we recommend using at least one of the primary methods. 
+For the best results, we recommend using at least one of the primary methods.
 Reverse DNS lookup of the IP address is only performed when:
-- There is no response from any of the primary methods. 
-- There is a conflict in the response received from two or more primary methods. 
+
+- There is no response from any of the primary methods.
+- There is a conflict in the response received from two or more primary methods.
 
 > [!NOTE]
 > No authentication is performed on any of the ports.
