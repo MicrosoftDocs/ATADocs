@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity user investigation tutorial
-description: This article explains how to user Microsoft Defender for Identity security alerts to investigate a suspicious user.
-ms.date: 10/26/2020
-ms.topic: tutorial
+title: Investigate users and computers
+description: This article explains how to investigate suspicious users computers with Microsoft Defender for Identity.
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Investigate a user
+# Investigate users and computers
 
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. 

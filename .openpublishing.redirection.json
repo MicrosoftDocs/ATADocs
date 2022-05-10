@@ -582,7 +582,7 @@
         },
         {
             "source_path": "ATPDocs/entity-profiles.md",
-            "redirect_url": "/defender-for-identity/understand-entities",
+            "redirect_url": "/defender-for-identity/investigate-users-computers",
             "redirect_document_id": false
         },
         {

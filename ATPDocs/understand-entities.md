@@ -1,11 +1,11 @@
 ---
-title: Working with user profiles in the Microsoft Defender for Identity portal
-description: Describes how to investigate users from the user profiles screen in the Microsoft Defender for Identity portal
+title: Understanding entities
+description: Describes how to understand entities in Microsoft Defender for Identity
 ms.date: 04/11/2022
 ms.topic: conceptual
 ---
 
-# Understanding entity profiles
+# Understanding entities
 
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
