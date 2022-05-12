@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 05/01/2022
+ms.date: 05/12/2022
 ms.topic: overview
 ---
 
@@ -26,7 +26,22 @@ For more information on what's new with other Microsoft Defender security produc
 > [!NOTE]
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
->For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms.
+>For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
+
+## Defender for Identity release 2.180
+
+Released May 12, 2022
+
+- New security alert: Suspicious modification of a dNSHostName attribute (CVE-2022-26923)  
+In response to the publishing of a recent CVE, Microsoft Defender for Identity will trigger a security alert whenever an attacker is trying to exploit CVE-2022 -26923. To learn more about this attack, read [the blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/detecting-dnshostname-spoofing-with-microsoft-defender-for/ba-p/3352349).
+
+- In version 2.177, we released additional LDAP activities that can be covered by Defender for Identity. However, we found a bug that causes the events not to be presented and ingested in the Defender for Identity portal. This has been fixed in this release. From version 2.180 onward, when you enable event ID 1644 you don't just get visibility into LDAP activities over Active Directory Web Services, but also other LDAP activities will include  the user who performed the LDAP activity on the source computer. This applies for security alerts and logical activities that are based on LDAP events.
+
+- As a response to the recent KrbRelayUp exploitation, we've released a silent detector to help us evaluate our response to this exploitation. The silent detector will allow us to evaluate the effectiveness of the detection, and gather information based on events we're collecting. If this detection will be shown to be in high quality, we'll release a new security alert in the next version.
+
+- We've renamed **Remote code execution over DNS** to **Remote code execution attempt over DNS**, as it better reflects the logic behind these security alerts.
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.179
 
