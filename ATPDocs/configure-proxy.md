@@ -11,6 +11,9 @@ Each [!INCLUDE [Product long](includes/product-long.md)] sensor requires Interne
 
 We recommend using the command line to configure your proxy server as doing so ensures that only the [!INCLUDE [Product short](includes/product-short.md)] sensor services communicate through the proxy.
 
+> [!NOTE]
+> Microsoft does not provide a proxy server. The URLs will be accessible via the proxy server that you configure.
+
 ## Configure proxy server using the command line
 
 You can configure your proxy server during sensor installation using the following command-line switches.

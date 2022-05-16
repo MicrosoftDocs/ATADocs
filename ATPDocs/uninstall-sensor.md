@@ -32,10 +32,10 @@ This scenario can occur when a domain controller was deleted without first unins
 
 ## Remove a duplicate sensor
 
-This scenario may occur after an in-place sensor upgrade, and the sensor appears twice in the Microsoft 365 Defenderportal.
+This scenario may occur after an in-place sensor upgrade, and the sensor appears twice in the Microsoft 365 Defender portal.
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**. Select the **Sensors** tab, which displays all your Defender for Identity sensors.
-1. Locate the orphaned sensor and select **Delete** (trash can icon).
+1. Locate the duplicate sensor. It will be the one whose status is set to **Unknown**. Then, at the end of the row, select **Delete** (trash can icon).
 
 ## Uninstall the Defender for Identity sensor silently
 
@@ -64,7 +64,6 @@ To silently uninstall the [!INCLUDE [Product short](includes/product-short.md)] 
 ```cmd
 "Azure ATP sensor Setup.exe" /quiet /uninstall
 ```
-
 
 ## See also
 
