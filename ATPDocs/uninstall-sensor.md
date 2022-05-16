@@ -35,7 +35,7 @@ This scenario can occur when a domain controller was deleted without first unins
 This scenario may occur after an in-place sensor upgrade, and the sensor appears twice in the [!INCLUDE [Product short](includes/product-short.md)] portal.
 
 1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and under the **System** section, select **Sensors**.
-1. Locate the orphaned sensor and, at the end of the row, select **Delete** (trash can icon).
+1. Locate the duplicate sensor. It will be the one whose status is set to **Unknown**. Then, at the end of the row, select **Delete** (trash can icon).
 
 ## See Also
 
