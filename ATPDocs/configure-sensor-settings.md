@@ -31,15 +31,25 @@ After the [!INCLUDE [Product short](includes/product-short.md)] sensor is instal
 
     [![Sensor details.](media/sensor-details.png)](media/sensor-details.png#lightbox)
 
-1. If you select any of the health issues, you'll get a pane with more details about them. If you choose a closed issue, you can reopen it from here.
-
-   :::image type="content" source="media/issue-details.png" alt-text="The Issue details" lightbox="media/issue-details.png":::
-
 1. If you select **Manage sensor**, a pane will open where you can configure the sensor details.
 
    :::image type="content" source="media/manage-sensor.png" alt-text="The Manage sensor option" lightbox="media/manage-sensor.png":::
 
    :::image type="content" source="media/configure-sensor-details.png" alt-text="The page on which you configure settings for the sensor" lightbox="media/configure-sensor-details.png":::
+
+    You can configure the following sensor details:
+
+    - **Description**: Enter a description for the [!INCLUDE [Product short](includes/product-short.md)] sensor (optional).
+    - **Domain Controllers (FQDN)** (required for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, this can't be changed for the [!INCLUDE [Product short](includes/product-short.md)] sensor): Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **dc01.contoso.com**
+
+    The following information applies to the servers you enter in the **Domain Controllers** list:
+    - All domain controllers whose traffic is being monitored via port mirroring by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
+    - At least one domain controller in the list should be a global catalog. This enables [!INCLUDE [Product short](includes/product-short.md)] to resolve computer and user objects in other domains in the forest.
+
+    - **Capture Network adapters** (required):
+
+    - For [!INCLUDE [Product short](includes/product-short.md)] sensors, all network adapters that are used for communication with other computers in your organization.
+    - For [!INCLUDE [Product short](includes/product-short.md)] standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.
 
 1. In the **Sensors** page, you can export your list of sensors to a .csv file by selecting **Export**.
 
