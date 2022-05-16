@@ -1,7 +1,7 @@
 ---
 title: Configure Microsoft Defender for Identity sensor settings 
 description: Learn how to configure Microsoft Defender for Identity sensor settings 
-ms.date: 03/30/2022
+ms.date: 05/16/2022
 ms.topic: how-to
 ---
 
@@ -9,38 +9,41 @@ ms.topic: how-to
 
 In this article, you'll learn how to correctly configure [!INCLUDE [Product long](includes/product-long.md)] sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of [!INCLUDE [Product short](includes/product-short.md)]'s full capabilities.
 
-## Prerequisites
+## View and configure sensor settings
 
-- An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that's [connected to Active Directory](install-step2.md).
-- A downloaded copy of your [[!INCLUDE [Product short](includes/product-short.md)] sensor setup package](install-step3.md) and the access key.
+After the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed, do the following to view and configure [!INCLUDE [Product short](includes/product-short.md)] sensor settings.
 
-## Configure sensor settings
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
-After the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed, do the following to configure [!INCLUDE [Product short](includes/product-short.md)] sensor settings.
+   :::image type="content" source="media/settings-identities.png" alt-text="The option of Identities on the Settings page" lightbox="media/settings-identities.png":::
 
-1. Click **Launch** to open your browser and sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal.
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, update status, health status, the number of health issues, and when the sensor was created.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and, under **System**, select **Sensors**.
+    [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
-    ![Sensor page.](media/sensor-config.png)
+1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
 
-1. Click on the sensor you want to configure and enter the following information:
+    [![Sensor filters.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
 
-    ![Configure sensor settings.](media/sensor-config-2.png)
+    :::image type="content" source="media/filtered-sensor.png" alt-text="The Filtered sensor" lightbox="media/filtered-sensor.png":::
 
-    - **Description**: Enter a description for the [!INCLUDE [Product short](includes/product-short.md)] sensor (optional).
-    - **Domain Controllers (FQDN)** (required for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, this can't be changed for the [!INCLUDE [Product short](includes/product-short.md)] sensor): Enter the complete FQDN of your domain controller and click the plus sign to add it to the list. For example,  **dc01.contoso.com**
+1. If you select one of the sensors, a pane will display with information about the sensor and its health status.
 
-    The following information applies to the servers you enter in the **Domain Controllers** list:
-    - All domain controllers whose traffic is being monitored via port mirroring by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-    - At least one domain controller in the list should be a global catalog. This enables [!INCLUDE [Product short](includes/product-short.md)] to resolve computer and user objects in other domains in the forest.
+    [![Sensor details.](media/sensor-details.png)](media/sensor-details.png#lightbox)
 
-    - **Capture Network adapters** (required):
+1. If you select any of the health issues, you'll get a pane with more details about them. If you choose a closed issue, you can reopen it from here.
 
-    - For [!INCLUDE [Product short](includes/product-short.md)] sensors, all network adapters that are used for communication with other computers in your organization.
-    - For [!INCLUDE [Product short](includes/product-short.md)] standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.
+   :::image type="content" source="media/issue-details.png" alt-text="The Issue details" lightbox="media/issue-details.png":::
 
-1. Click **Save**.
+1. If you select **Manage sensor**, a pane will open where you can configure the sensor details.
+
+   :::image type="content" source="media/manage-sensor.png" alt-text="The Manage sensor option" lightbox="media/manage-sensor.png":::
+
+   :::image type="content" source="media/configure-sensor-details.png" alt-text="The page on which you configure settings for the sensor" lightbox="media/configure-sensor-details.png":::
+
+1. In the **Sensors** page, you can export your list of sensors to a .csv file by selecting **Export**.
+
+   :::image type="content" source="media/export-sensors.png" alt-text="The Export list of sensors" lightbox="media/export-sensors.png":::
 
 ## Validate installations
 
@@ -71,6 +74,9 @@ To validate that the [!INCLUDE [Product short](includes/product-short.md)] senso
 
 ## Next steps
 
-> [!div class="step-by-step"]
-> [« Install the Defender for Identity sensor](install-sensor.md)
-> [Manage action accounts »](manage-action-accounts.md)
+Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:
+
+- [Updating your sensors](sensor-settings.md#updating-your-sensors)
+- [Set entity tags: sensitive, honeytoken, and Exchange server](entity-tags.md)
+- [Configure detection exclusions](exclusions.md)
+- [Configure notifications: health issues, alerts, and Syslog](notifications.md)

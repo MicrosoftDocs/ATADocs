@@ -129,4 +129,4 @@ If you installed the sensor on AD FS servers, follow the steps in [Post-installa
 
 > [!div class="step-by-step"]
 > [« Proxy configuration](configure-proxy.md)
-> [Configure the Defender for Identity sensor »](configure-sensor-settings.md)
+> [Manage action accounts »](manage-action-accounts.md)

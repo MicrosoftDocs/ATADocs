@@ -69,5 +69,5 @@ We recommend you create the gMSA account Defender for Identity will use to take 
 ## Next steps
 
 > [!div class="step-by-step"]
-> [« Configure the Defender for Identity sensor](configure-sensor-settings.md)
-> [Manage sensors »](sensor-settings.md)
+> [« Install the Defender for Identity sensor](install-sensor.md)
+> [Configure the Defender for Identity sensor »](configure-sensor-settings.md)

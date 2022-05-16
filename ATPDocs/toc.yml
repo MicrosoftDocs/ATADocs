@@ -38,12 +38,10 @@ items:
       href: configure-proxy.md
     - name: Install the Defender for Identity sensor
       href: install-sensor.md
-    - name: Configure the Defender for Identity sensor
-      href: configure-sensor-settings.md
     - name: Manage action accounts
       href: manage-action-accounts.md
-    - name: Remediation actions
-      href: remediation-actions.md 
+    - name: Configure the Defender for Identity sensor
+      href: configure-sensor-settings.md
   - name: Special scenarios
     items:
     - name: Installing on Active Directory Federation Services
@@ -122,6 +120,10 @@ items:
       href: domain-dominance-alerts.md
     - name: Exfiltration alerts
       href: exfiltration-alerts.md
+  - name: Remediation
+    items:
+    - name: Remediation actions
+      href: remediation-actions.md 
   - name: Security posture
     items:
     - name: Overview
