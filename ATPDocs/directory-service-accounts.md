@@ -89,6 +89,11 @@ When there are two or more DSA entries, the sensor will try the DSA entries in t
 ## How to create a gMSA account for use with Defender for Identity
 
 The following steps can be followed to create a gMSA account to be used as the DSA entry for Defender for Identity. This doesn't provide full guidance on gMSA accounts. For additional information, review [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
+  
+
+>[!NOTE]
+>
+>- In a multi-forest environment, we recommend creating the gMSAs with a unique name for each forest or domain.
 
 ## Granting the permissions to retrieve the gMSA account's password
 
