@@ -68,12 +68,12 @@ The sensor will attempt to use the DSA entry configured during start-up, as a re
 
 When there are two or more DSA entries, the sensor will try the DSA entries in the following order:
 
-1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.consoso.com).
-2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.consoso.com).
-3. Match in the root DNS name of the target domain (for example, emea.constoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
-4. Match in the root DNS name of the target domain (for example, emea.constoso.com) and the domain name of DSA regular entry (for example, contoso.com)
-5. Look for a "sibling domain" - target domain name (for example, emea.consoto.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
-6. Look for a "sibling domain" - target domain name (for example, emea.consoto.com) and DSA regular entry domain name (for example, apac.contoso.com).
+1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.contoso.com).
+2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.contoso.com).
+3. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
+4. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA regular entry (for example, contoso.com)
+5. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
+6. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA regular entry domain name (for example, apac.contoso.com).
 7. Round robin all other DSA gMSA entries
 8. Round robin all other DSA regular entries
 
