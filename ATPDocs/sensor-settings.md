@@ -1,7 +1,7 @@
 ---
 title: Manage and update Microsoft Defender for Identity sensors
 description: Learn how to manage and update your Microsoft Defender for Identity sensors.
-ms.date: 04/06/2022
+ms.date: 05/22/2022
 ms.topic: how-to
 ---
 
@@ -57,14 +57,12 @@ The [!INCLUDE [Product long](includes/product-long.md)] service is typically upd
   - Frequent
   - Requires no MSI install, and no registry changes
   - Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
-  - Not restarted: Domain controller services and server OS
-
+  
 - Major version updates:
   - Rare
   - Contains significant changes
   - Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
-  - Possible restart required: Domain controller services and server OS
-
+  
 > [!NOTE]
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the [!INCLUDE [Product short](includes/product-short.md)] service consumes too much memory, the service is automatically stopped and restarted by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater service.
@@ -115,7 +113,7 @@ Every few minutes, [!INCLUDE [Product short](includes/product-short.md)] sensors
 
 1. Sensors selected for **Delayed update** start their update process 72 hours after the Defender for Identity cloud service is updated. These sensors will then use the same update process as automatically updated sensors.
 
-For any sensor that fails to complete the update process, a relevant health alert is triggered, and is sent as a notification.
+For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md#sensor-outdated) is triggered, and is sent as a notification.
 
 ![Sensor update failure.](media/sensor-outdated.png)
 
