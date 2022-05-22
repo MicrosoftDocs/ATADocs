@@ -1,7 +1,7 @@
 ---
 title: Update your Microsoft Defender for Identity sensors
 description: Describes how to update and delay updates of sensors in Microsoft Defender for Identity.
-ms.date: 10/27/2020
+ms.date: 05/18/2022
 ms.topic: how-to
 ---
 
@@ -19,17 +19,14 @@ The [!INCLUDE [Product long](includes/product-long.md)] service is typically upd
   - Frequent
   - Requires no MSI install, and no registry changes
   - Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
-  - Not restarted: Domain controller services and server OS
-
+  
 - Major version updates:
   - Rare
   - Contains significant changes
   - Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
-  - Possible restart required: Domain controller services and server OS
-
+  
 > [!NOTE]
 >
-> - Control automatic sensor restarts (for **major** updates) in the [!INCLUDE [Product short](includes/product-short.md)] portal configuration page.
 > - [!INCLUDE [Product short](includes/product-short.md)] sensor always reserves at least 15% of the available memory and CPU available on the domain controller where it is installed. If the [!INCLUDE [Product short](includes/product-short.md)] service consumes too much memory, the service is automatically stopped and restarted by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater service.
 
 ## Delayed sensor update
