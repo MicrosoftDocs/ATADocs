@@ -9,10 +9,7 @@ ms.topic: how-to
 
 Defender for Identity now allows you to create action accounts. These accounts are used to allow you to take actions on users directly from Defender for Identity.
 
-We recommend you create the gMSA account Defender for Identity will use to take actions now, to benefit from the Actions features when they're available.
-
->[!NOTE]
-> As those actions become available, we will announce them in the [What's new in Microsoft Defender for Identity](whats-new.md) page.
+We recommend you create the gMSA account Defender for Identity will use to run the available [remediation actions](remediation-actions.md).
 
 ## Create and configure the action account
 

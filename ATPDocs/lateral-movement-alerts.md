@@ -22,7 +22,7 @@ The following security alerts help you identify and remediate **Lateral Movement
 > [!div class="checklist"]
 >
 > - Suspected exploitation attempt on Windows Print Spooler service (external ID 2415)
-> - Remote code execution over DNS (external ID 2036)
+> - Remote code execution attempt over DNS (external ID 2036)
 > - Suspected identity theft (pass-the-hash) (external ID 2017)
 > - Suspected identity theft (pass-the-ticket) (external ID 2018)
 > - Suspected NTLM authentication tampering (external ID 2039)
@@ -74,7 +74,7 @@ None
 2. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-3452](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
 3. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](cas-isp-print-spooler.md).
 
-## Remote code execution over DNS (external ID 2036)
+## Remote code execution attempt over DNS (external ID 2036)
 
 **Description**
 

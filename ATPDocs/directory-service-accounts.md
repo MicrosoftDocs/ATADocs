@@ -70,12 +70,12 @@ The sensor will attempt to use the DSA entry configured during start-up, as a re
 
 When there are two or more DSA entries, the sensor will try the DSA entries in the following order:
 
-1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.consoso.com).
-2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.consoso.com).
-3. Match in the root DNS name of the target domain (for example, emea.constoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
-4. Match in the root DNS name of the target domain (for example, emea.constoso.com) and the domain name of DSA regular entry (for example, contoso.com)
-5. Look for a "sibling domain" - target domain name (for example, emea.consoto.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
-6. Look for a "sibling domain" - target domain name (for example, emea.consoto.com) and DSA regular entry domain name (for example, apac.contoso.com).
+1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.contoso.com).
+2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.contoso.com).
+3. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
+4. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA regular entry (for example, contoso.com)
+5. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
+6. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA regular entry domain name (for example, apac.contoso.com).
 7. Round robin all other DSA gMSA entries
 8. Round robin all other DSA regular entries
 
@@ -109,6 +109,11 @@ Then these are the sensors, and which DSA entry will be used first:
 ## How to create a gMSA account for use with Defender for Identity
 
 The following steps can be followed to create a gMSA account to be used as the DSA entry for Defender for Identity. This doesn't provide full guidance on gMSA accounts. For additional information, review [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
+  
+
+>[!NOTE]
+>
+>- In a multi-forest environment, we recommend creating the gMSAs with a unique name for each forest or domain.
 
 ## Granting the permissions to retrieve the gMSA account's password
 
