@@ -44,7 +44,6 @@ For more information about these steps, see the following articles:
 1. [Manage action accounts](manage-action-accounts.md).
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
-
 ## Special scenarios
 
 1. [Installing on Active Directory Federation Services](active-directory-federation-services.md)
