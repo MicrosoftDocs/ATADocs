@@ -87,6 +87,8 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 
 The domain controller can be a read-only domain controller (RODC).
 
+If you're installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node.
+
 During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending. So when installing the sensors, consider scheduling a maintenance window for the domain controllers.
 
 > [!NOTE]
