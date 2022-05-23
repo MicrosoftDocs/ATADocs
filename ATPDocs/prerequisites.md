@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 03/23/2022
+ms.date: 05/23/2022
 ms.topic: overview
 ---
 
@@ -30,13 +30,11 @@ This section lists information you should gather as well as accounts and network
 
 - At least one Directory Service account with read access to all objects in the monitored domains. For instructions on how to create the Directory Service account, see [Directory Service account recommendations](directory-service-accounts.md).
 
-- Optional **Honeytoken**: A user account of a user who has no network activities. This account is configured as a [!INCLUDE [Product short](includes/product-short.md)] Honeytoken user. For more information about using Honeytokens, see [Manage sensitive or honeytoken accounts](manage-sensitive-honeytoken-accounts.md).
-
 ### Permissions
 
 - To create your [!INCLUDE [Product short](includes/product-short.md)] instance, you'll need an Azure AD tenant with at least one global/security administrator. Each [!INCLUDE [Product short](includes/product-short.md)] instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
-- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
+- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
 ## Microsoft 365 Defender portal requirements
 
@@ -71,8 +69,6 @@ This section lists the requirements for the [!INCLUDE [Product short](includes/p
 
 > [!NOTE]
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
->
->For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms.
 
 ### General
 
@@ -91,8 +87,6 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 
 The domain controller can be a read-only domain controller (RODC).
 
-For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to `*.atp.azure.com`. If you're installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node.
-
 During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending. So when installing the sensors, consider scheduling a maintenance window for the domain controllers.
 
 > [!NOTE]
@@ -101,11 +95,12 @@ During installation, if .NET Framework 4.7 or later isn't installed, the .NET Fr
 ### Server specifications
 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
+
 For optimal performance, set the **Power Option** of the machine running the [!INCLUDE [Product short](includes/product-short.md)] sensor to **High Performance**.
 
 [!INCLUDE [Product short](includes/product-short.md)] sensors can be deployed on domain controller or AD FS servers of various loads and sizes, depending on the amount of network traffic to and from the servers, and the amount of resources installed.
 
-For Windows Operating systems 2008R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
+For Windows Operating systems 2008 R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
@@ -161,17 +156,17 @@ For sensors running on AD FS servers, configure the auditing level to **Verbose*
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor.
 
 > [!NOTE]
-> [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor on all your domain controllers.
 
 When deploying the standalone sensor, it's necessary to forward [Windows events](configure-windows-event-collection.md#configure-event-collection) to [!INCLUDE [Product short](includes/product-short.md)] to further enhance [!INCLUDE [Product short](includes/product-short.md)] authentication-based detections, additions to sensitive groups, and suspicious service creation detections.  The [!INCLUDE [Product short](includes/product-short.md)] sensor receives these events automatically. In the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, these events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that isn't available via the domain controller network traffic.
 
 ### General standalone sensor requirements
 
-The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor supports installation on a server running Windows Server 2012 R2, Windows Server 2016 and Windows Server 2019 (including Server Core).
+The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor supports installation on a server running Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 and Windows Server 2022 (including Server Core).
 The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor can be installed on a server that is a member of a domain or workgroup.
 The [!INCLUDE [Product short](includes/product-short.md)] standalone sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
-For your standalone sensor to communicate with the cloud service, port 443 in your firewalls and proxies to *.atp.azure.com must be open.
+For your standalone sensor to communicate with the cloud service, port 443 in your firewalls and proxies to *your-instance-namesensorapi.atp.azure.com* must be open. See the [Defender for Identity firewall requirements](#defender-for-identity-firewall-requirements) section for more details.
 
 For information on using virtual machines with the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 
@@ -231,24 +226,24 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 |Protocol|Transport|Port|From|To|
 |------------|-------------|--------|-----------|---|
 |**Internet ports**||||
-|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] Sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
+|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
 |**Internal ports**||||
-|LDAP|TCP and UDP|389|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
-|Secure LDAP (LDAPS)|TCP|636|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
-|LDAP to Global Catalog|TCP|3268|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
-|LDAPS to Global Catalog|TCP|3269|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
-|Kerberos|TCP and UDP|88|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
-|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|[!INCLUDE [Product short](includes/product-short.md)] Sensor|All devices on network|
-|Windows Time|UDP|123|[!INCLUDE [Product short](includes/product-short.md)] Sensor|Domain controllers|
-|DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] Sensor|DNS Servers|
-|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|[!INCLUDE [Product short](includes/product-short.md)] Sensor|
+|LDAP|TCP and UDP|389|[!INCLUDE [Product short](includes/product-short.md)] sensor|Domain controllers|
+|Secure LDAP (LDAPS)|TCP|636|[!INCLUDE [Product short](includes/product-short.md)] sensor|Domain controllers|
+|LDAP to Global Catalog|TCP|3268|[!INCLUDE [Product short](includes/product-short.md)] sensor|Domain controllers|
+|LDAPS to Global Catalog|TCP|3269|[!INCLUDE [Product short](includes/product-short.md)] sensor|Domain controllers|
+|Kerberos|TCP and UDP|88|[!INCLUDE [Product short](includes/product-short.md)] sensor|Domain controllers|
+|Netlogon (SMB, CIFS, SAM-R)|TCP and UDP|445|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|Windows Time|UDP|123|[!INCLUDE [Product short](includes/product-short.md)] sensor|Domain controllers|
+|DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] sensor|DNS Servers|
+|Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|[!INCLUDE [Product short](includes/product-short.md)] sensor|
 |RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
 |**Localhost ports**\*|Required for Sensor Service updater||||
 |SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
 |**NNR ports**\*\*|||||
-|NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
-|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)]|All devices on network|
+|NTLM over RPC|TCP|135|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
 \*\* One of these ports is required, but we recommend opening all of them.
