@@ -23,16 +23,15 @@ For example, if LDAP signing isn't enforced, an attacker can compromise domain a
 
 1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have unsecure configurations.
     ![Review top impacted entities and create an action plan.](media/unsecure-domain-configurations.png)
-1. Take appropriate action on those domains by modifying or removing the relevant configurations.
+1. Take appropriate action on these domains by modifying or removing the relevant configurations.
 
 > [!NOTE]
 >
 > - This assessment is updated in near real time.
-> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for [!INCLUDE [Product long](includes/product-long.md)] are not met.
 
 ## Remediation
 
-Use the remediation appropriate to the relevant attribute as described in the following table.
+Use the remediation appropriate to the relevant configurations as described in the following table.
 
 | Recommended action | Remediation | Reason |
 | --- | --- | --- |
