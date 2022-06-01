@@ -82,6 +82,10 @@ To validate that the [!INCLUDE [Product short](includes/product-short.md)] senso
     > [!NOTE]
     >If the domain controller you wish to test is your first deployed sensor, wait at least 15 minutes to allow the database backend to finish initial deployment of the necessary microservices before you attempt to verify the related logical activity for that domain controller.
 
+## Related videos
+
+- [Microsoft Defender for Identity settings](https://www.microsoft.com/videoplayer/embed/RWFVEX)
+
 ## Next steps
 
 Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:

@@ -70,6 +70,10 @@ Security insights are never too late to prevent the next attack and remediate da
 
 For instructions on how to identify and investigate using [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths, see [Investigate Lateral Movement Paths](investigate-lateral-movement-path.md).
 
+## Related videos
+
+- [Reducing lateral movement paths](https://www.microsoft.com/videoplayer/embed/RWAOfW)
+
 ## See Also
 
 - [Investigating [!INCLUDE [Product short](includes/product-short.md)] LMPs](investigate-lateral-movement-path.md)
