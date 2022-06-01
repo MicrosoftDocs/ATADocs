@@ -40,7 +40,7 @@ After the [!INCLUDE [Product short](includes/product-short.md)] sensor is instal
     You can configure the following sensor details:
 
     - **Description**: Enter a description for the [!INCLUDE [Product short](includes/product-short.md)] sensor (optional).
-    - **Domain Controllers (FQDN)** (required for the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, this can't be changed for the [!INCLUDE [Product short](includes/product-short.md)] sensor): Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **dc01.contoso.com**
+    - **Domain Controllers (FQDN)** (required for the [!INCLUDE [Product short](includes/product-short.md)] standalone and AD FS sensors, this can't be changed for the [!INCLUDE [Product short](includes/product-short.md)] sensor): Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **dc01.contoso.com**
 
     The following information applies to the servers you enter in the **Domain Controllers** list:
     - All domain controllers whose traffic is being monitored via port mirroring by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
@@ -71,10 +71,10 @@ To validate that the [!INCLUDE [Product short](includes/product-short.md)] senso
 1. Verify [!INCLUDE [Product short](includes/product-short.md)] connectivity on any domain device using the following steps:
     1. Open a command prompt
     1. Type `nslookup`
-    1. Type **server** then the FQDN or IP address of the domain controller where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. For example,
+    1. Type **server** and the FQDN or IP address of the domain controller where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. For example,
     `server contosodc.contoso.azure`
-        - Make sure to replace contosodc.contoso.azure and contoso.azure with the FQDN of your [!INCLUDE [Product short](includes/product-short.md)] sensor and domain name respectively.
     1. Type `ls -d contoso.azure`
+        - Make sure to replace contosodc.contoso.azure and contoso.azure with the FQDN of your [!INCLUDE [Product short](includes/product-short.md)] sensor and domain name respectively.
     1. Repeat steps 3 and 4 for each sensor you wish to test.
     1. From the [!INCLUDE [Product short](includes/product-short.md)] console, open the entity profile for the computer you ran the connectivity test from.
     1. Check the related logical activity and confirm connectivity.
