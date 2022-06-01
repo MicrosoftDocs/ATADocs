@@ -280,6 +280,22 @@ If the domain controller or security group is already added, but you're still se
     1. Cache service account to server: `Install-ADServiceAccount AccountName`
     1. Start **AATPSensor**
 
+
+## Access to the registry key 'Global' is denied
+
+The sensor service fails to start, and the sensor log contains an entry similar to:
+
+2021-01-19 03:45:00.0000 Error RegistryKey System.UnauthorizedAccessException: Access to the registry key 'Global' is denied.
+
+**Cause:**
+
+The gMSA configured to be used for this domain controller or AD FS server doens't have permissions to the performance counters registry keys.
+
+**Resolution:**
+
+Add the gMSA to the **Performance Monitor Users** group on the server.
+
+
 ## Report downloads cannot contain more than 300,000 entries
 
 [!INCLUDE [Product short](includes/product-short.md)] doesn't support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
