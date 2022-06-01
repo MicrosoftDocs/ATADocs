@@ -62,6 +62,10 @@ We recommend you create the gMSA account Defender for Identity will use to run t
 1. Your action account will be listed on the **Manage action accounts** page.
 
       ![Create action account.](media/manage-action-accounts.png)
+      
+## Related videos
+
+[Remediation actions in Defender for Identity](https://www.microsoft.com/en-us/videoplayer/embed/RE4U7Pe)
 
 ## Next steps
 

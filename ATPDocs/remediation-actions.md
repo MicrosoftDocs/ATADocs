@@ -32,6 +32,10 @@ These actions require setting up a privileged gMSA account that Microsoft Defend
 
 Currently, this feature requires the account signed into Microsoft 365 Defender to possess the **Security Administrator** role.
 
+## Related videos
+
+[Remediation actions in Defender for Identity](https://www.microsoft.com/en-us/videoplayer/embed/RE4U7Pe)
+
 ## See also
 
 [Microsoft Defender for Identity action accounts](manage-action-accounts.md)
