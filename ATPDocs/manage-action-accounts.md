@@ -14,7 +14,7 @@ We recommend you create the gMSA account Defender for Identity will use to run t
 ## Create and configure the action account
 
 1. On a domain controller in your domain, create a new gMSA account, following the instructions in [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
-1. Assign the "Log on as a service" right to the gMSA account on each server which runs the Defender for Identity sensor.
+1. Assign the "Log on as a service" right to the gMSA account on each domain controller that runs the Defender for Identity sensor.
 
 1. Grant the required permissions to the gMSA account.
     1. Open **Active Directory Users and Computers**.
