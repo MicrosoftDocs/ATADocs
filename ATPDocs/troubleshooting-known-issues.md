@@ -285,11 +285,11 @@ If the domain controller or security group is already added, but you're still se
 
 The sensor service fails to start, and the sensor log contains an entry similar to:
 
-2021-01-19 03:45:00.0000 Error RegistryKey System.UnauthorizedAccessException: Access to the registry key 'Global' is denied.
+`2021-01-19 03:45:00.0000 Error RegistryKey System.UnauthorizedAccessException: Access to the registry key 'Global' is denied.`
 
 **Cause:**
 
-The gMSA configured to be used for this domain controller or AD FS server doens't have permissions to the performance counters registry keys.
+The gMSA configured for this domain controller or AD FS server doesn't have permissions to the performance counter's registry keys.
 
 **Resolution:**
 
