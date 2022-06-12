@@ -110,7 +110,6 @@ Then these are the sensors, and which DSA entry will be used first:
 
 The following steps can be followed to create a gMSA account to be used as the DSA entry for Defender for Identity. This doesn't provide full guidance on gMSA accounts. For additional information, review [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
   
-
 >[!NOTE]
 >
 >- In a multi-forest environment, we recommend creating the gMSAs with a unique name for each forest or domain.
@@ -194,7 +193,7 @@ The **Log on as a service** policy can be configured either in a Group Policy se
 
 - To check if the setting is set in Group Policy, run **rsop.msc** and see if the setting **Computer Configuration**  -> **Windows Settings** -> **Security Settings** -> **Local Policies** -> **User Rights Assignment** -> **Log on as a service** is set. If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
 
-![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)
+[![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)](media/log-on-as-a-service-gpmc.png#lightbox)
 
 ![Log on as a service properties.](media/log-on-as-a-service.png)
 
