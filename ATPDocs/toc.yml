@@ -64,6 +64,8 @@ items:
   items:
   - name: Settings
     items:
+    - name: About page
+      href: settings-about.md   
     - name: Manage and update sensors
       href: sensor-settings.md
     - name: Uninstall a sensor
