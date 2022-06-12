@@ -22,7 +22,7 @@ The About page provides the following details:
 - Workspace ID
 - Workspace name
 
-This information can be helpful when troubleshooting issues and opening support tickets.
+This information can be helpful when troubleshooting issues and opening support tickets. Additionally, you can find the name of your instance (workspace) which is necessary for configuring your proxy or firewall.
 
 ## See also
 
