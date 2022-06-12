@@ -42,6 +42,9 @@ Access Defender for Identity in the Microsoft 365 Defender portal using Microsof
 
 ## Defender for Identity firewall requirements
 
+>[!NOTE]
+>The network requirements for US Government offerings can be found at [Microsoft Defender for Identity for US Government offerings](us-govt-gcc-high.md).
+
 - Verify that the servers you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on are able to reach the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. They should be able to access https://*your-instance-name*sensorapi.atp.azure.com (port 443). For example, https://*contoso-corp*sensorapi.atp.azure.com.<br><br>
 To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
 
@@ -49,6 +52,28 @@ To get your instance name, see the About page in the Identities settings section
     > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
     ![[!INCLUDE [Product short.](includes/product-short.md)] architecture diagram](media/architecture-topology.png)
+
+### Ports
+
+The following table lists the minimum ports that the [!INCLUDE [Product short](includes/product-short.md)] sensor requires:
+
+|Protocol|Transport|Port|From|To|
+|------------|-------------|--------|-----------|---|
+|**Internet ports**|||||
+|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
+|**Internal ports**|||||
+|DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] sensor|DNS Servers|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
+|**Localhost ports**\*|Required for Sensor Service updater||||
+|SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
+|**NNR ports**\*\*|||||
+|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
+
+\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
+\*\* One of these ports is required, but we recommend opening all of them.
 
 ## Defender for Identity Network Name Resolution (NNR) requirements
 
@@ -121,28 +146,6 @@ After deployment, use the Microsoft 365 Defender portal to modify which network 
 The sensor isn't supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
 If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
-
-### Ports
-
-The following table lists the minimum ports that the [!INCLUDE [Product short](includes/product-short.md)] sensor requires:
-
-|Protocol|Transport|Port|From|To|
-|------------|-------------|--------|-----------|---|
-|**Internet ports**|||||
-|SSL (\*.atp.azure.com)|TCP|443|[!INCLUDE [Product short](includes/product-short.md)] sensor|[!INCLUDE [Product short](includes/product-short.md)] cloud service|
-|**Internal ports**|||||
-|DNS|TCP and UDP|53|[!INCLUDE [Product short](includes/product-short.md)] sensor|DNS Servers|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
-|RADIUS|UDP|1813|RADIUS|[!INCLUDE [Product short](includes/product-short.md)] sensor|
-|**Localhost ports**\*|Required for Sensor Service updater||||
-|SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
-|**NNR ports**\*\*|||||
-|NTLM over RPC|TCP|Port 135|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
-|NetBIOS|UDP|137|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
-|RDP|TCP|3389, only the first packet of Client hello|[!INCLUDE [Product short](includes/product-short.md)] sensor|All devices on network|
-
-\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
-\*\* One of these ports is required, but we recommend opening all of them.
 
 ### Windows Event logs
 
