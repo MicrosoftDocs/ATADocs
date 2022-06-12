@@ -195,7 +195,7 @@ The **Log on as a service** policy can be configured either in a Group Policy se
 
 [![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)](media/log-on-as-a-service-gpmc.png#lightbox)
 
-![Log on as a service properties.](media/log-on-as-a-service.png)
+[![Log on as a service properties.](media/log-on-as-a-service.png)](media/log-on-as-a-service.png#lightbox)
 
 ## Configure Directory Service account in Microsoft 365 Defender
 
@@ -203,19 +203,19 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
-    ![Go to Settings, then Identities.](media/settings-identities.png)
+    [![Go to Settings, then Identities.](media/settings-identities.png)](media/settings-identities.png#lightbox)
 
 1. Select **Directory Service accounts**. You'll see which accounts are associated with which domains.
 
-    ![Directory Service accounts.](media/directory-service-accounts.png)
+    [![Directory Service accounts.](media/directory-service-accounts.png)](media/directory-service-accounts.png#lightbox)
 
 1. If you select an account, a pane will open with the settings for that account.
 
-    ![Account settings.](media/account-settings.png)
+    [![Account settings.](media/account-settings.png)](media/account-settings.png#lightbox)
 
 1. To add Directory Service account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
 
-    ![Add credentials.](media/new-directory-service-account.png)
+    [![Add credentials.](media/new-directory-service-account.png)](media/new-directory-service-account.png#lightbox)
 
     |Field|Comments|
     |---|---|
