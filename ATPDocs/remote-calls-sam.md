@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Configure Microsoft Defender for Identity to make remote calls to SAM
 
-[!INCLUDE [Product long](includes/product-long.md)] [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the [!INCLUDE [Product short](includes/product-short.md)] [Directory Service account](directory-service-accounts.md) you created.
+[!INCLUDE [Product long](includes/product-long.md)] [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the [!INCLUDE [Product short](includes/product-short.md)] [Directory Service account](directory-service-accounts.md) you configured.
 
 ## Configure SAM-R required permissions
 
@@ -27,7 +27,7 @@ To ensure Windows clients and servers allow your [!INCLUDE [Product short](inclu
 
     ![Add the service.](media/samr-add-service.png)
 
-1. **AATP Service** (the [!INCLUDE [Product short](includes/product-short.md)] Directory Service account created during installation) now has the privileges needed to perform SAM-R in the environment.
+1. The [!INCLUDE [Product short](includes/product-short.md)] Directory Service account now has the privileges needed to perform SAM-R in the environment.
 
 For more on SAM-R and this Group Policy, see [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
