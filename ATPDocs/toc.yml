@@ -104,18 +104,6 @@ items:
       href: cas-isp-unsecure-sid-history-attribute.md
     - name: Weak cipher usage assessment
       href: cas-isp-weak-cipher.md
-  - name: Security alert lab
-    items:
-    - name: Lab overview
-      href: playbook-lab-overview.md
-    - name: 1 - Lab setup
-      href: playbook-setup-lab.md
-    - name: 2 - Reconnaissance playbook
-      href: playbook-reconnaissance.md
-    - name: 3 - Lateral movement playbook
-      href: playbook-lateral-movement.md
-    - name: 4 - Domain dominance playbook
-      href: playbook-domain-dominance.md
   - name: Understanding security alerts
     href: understanding-security-alerts.md
   - name: Plan your Defender for Identity capacity
