@@ -54,8 +54,6 @@ landingContent:
         links:
           - text: Identity security posture assessments
             url: isp-overview.md  
-          - text: Defender for Identity security alert lab
-            url: playbook-lab-overview.md
           - text: Configure detection exclusions
             url: configure-detection-exclusions.md
           - text: Search and filter monitored activities 
