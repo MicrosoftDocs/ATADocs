@@ -32,6 +32,8 @@ If an alert or incident indicates that a user may be suspicious or compromised, 
 
 Use the answers to these questions to determine if the account appears compromised or if the suspicious activities imply malicious actions.
 
+![Investigate the user profile.](media/investigate-user.png)
+
 ## Investigation steps for suspicious devices
 
 To access the device profile page, select the specific devices mentioned in the alert that you wish to investigate. To assist your investigation, alert evidence lists all devices and users connected to each suspicious activity.
@@ -52,6 +54,8 @@ Check and investigate the device profile for the following details and activitie
     1. Were any new programs deployed or installed?
 
 Use the answers to these questions to determine if the device appears compromised or if the suspicious activities imply malicious actions.
+
+![Investigate the device profile.](media/investigate-device.png)
 
 ## Check the entity profile
 
