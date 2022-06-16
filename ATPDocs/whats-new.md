@@ -976,7 +976,7 @@ Learn more about [Suspected brute force attack (LDAP)](compromised-credentials-a
 - **New documentation feature: Security alert lab**  
 To explain the power of Azure ATP in detecting the real threats to your working environment, we've added a new **Security alert lab** to this documentation. The **Security alert lab** helps you quickly set up a lab or testing environment, and explains the best defensive posturing against common, real-world threats and attacks.  
 
-    The [step-by-step lab](playbook-lab-overview.md) is designed to ensure you spend minimal time building, and more time learning about your threat landscape and available Azure ATP alerts and protection. We're excited to hear your feedback.
+    The [step-by-step lab](/defender-for-identity/what-is) is designed to ensure you spend minimal time building, and more time learning about your threat landscape and available Azure ATP alerts and protection. We're excited to hear your feedback.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
