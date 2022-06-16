@@ -135,7 +135,7 @@ Advanced Security Audit Policy is enabled via **Default Domain Controllers Polic
 
 ## Configure object auditing
 
-To collect 4662 events, it's also necessary to configure object auditing on the user objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
+To collect 4662 events, it's also necessary to configure object auditing on the user, group and computer objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
 
 > [!NOTE]
 > It is important to [review and verify your audit policies](#configure-audit-policies) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
