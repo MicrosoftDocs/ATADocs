@@ -37,7 +37,7 @@ For more support options, ask your Microsoft contact.
 
 #### System status page
 
-To view system status for [!INCLUDE [Product short](includes/product-short.md)], visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the Sensor can send traffic to the cloud. You can access the **System status** from the [!INCLUDE [Product short](includes/product-short.md)] menu bar.
+To view system status for [!INCLUDE [Product short](includes/product-short.md)], visit the [**System status**](https://health.atp.azure.com/) page. This page gives you information as to if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the Sensor can send traffic to the cloud. You can access the **System status** from the [About page for Defender for Identity](settings-about.md).
 
 #### Troubleshooting
 
