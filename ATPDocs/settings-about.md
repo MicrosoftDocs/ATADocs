@@ -17,8 +17,8 @@ To access the About page, in  [Microsoft 365 Defender](https://security.microsof
 
 The About page provides the following details:
 
-- Workspace version: The sofwtare version running the cluster hosting your workspace.
-- Geolocation: The geo location for the workspace, where your data is stored.
+- Workspace version: The software version running the cluster hosting your workspace.
+- Geolocation: The geographic location of the workspace where your data is stored.
 - Workspace ID: The identifier of your workspace.
 - Workspace name: The name of your workspace instance.
 
