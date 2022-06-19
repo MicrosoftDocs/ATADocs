@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor
 
-Each [!INCLUDE [Product long](includes/product-long.md)] sensor requires Internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection.
+Each [!INCLUDE [Product long](includes/product-long.md)] sensor requires Internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection. SSL inspection and intercepting proxies are not supported for security reasons. Your proxy server should allow the data to directly pass from the [!INCLUDE [Product short](includes/product-short.md)] sensors to the relevant URLs without interception.
 
 We recommend using the command line to configure your proxy server as doing so ensures that only the [!INCLUDE [Product short](includes/product-short.md)] sensor services communicate through the proxy.
 
