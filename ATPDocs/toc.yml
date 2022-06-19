@@ -94,10 +94,8 @@ items:
       href: investigate-assets.md
   - name: Lateral movement paths
     items:
-    - name: Understand lateral movement paths
+    - name: Understand and investigate lateral movement paths
       href: understand-lateral-movement-paths.md
-    - name: Scenario - Investigate lateral movement paths
-      href: investigate-lateral-movement-path.md
   - name: Alerts
     items:
     - name: Alerts overview
@@ -208,6 +206,8 @@ items:
       href: classic-entity-profiles.md
     - name: Lateral movement paths
       href: classic-use-case-lateral-movement-path.md
+    - name: Investigate tateral movement paths
+      href: classic-investigate-lateral-movement-path.md
     - name: Understanding Network Name Resolution (NNR)
       href: nnr-policy.md
 - name: Microsoft 365 Defender Docs

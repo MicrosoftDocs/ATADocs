@@ -756,6 +756,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "ATPDocs/investigate-lateral-movement-path.md",
+            "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "ATPDocs/sensitive-accounts.md",
             "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
             "redirect_document_id": false
