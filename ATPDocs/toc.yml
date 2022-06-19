@@ -220,4 +220,5 @@ items:
     href: /microsoft-365/security/defender-endpoint/
   - name: Microsoft Defender for Cloud Apps
     href: /cloud-app-security/
-
+  - name: Microsoft Defender Vulnerability Management
+    href: /microsoft-365/security/defender-vulnerability-management/
