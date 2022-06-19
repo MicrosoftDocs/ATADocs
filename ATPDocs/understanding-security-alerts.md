@@ -22,18 +22,17 @@ In this article, you'll learn the structure of [!INCLUDE [Product short](include
 
 ## Security alert structure
 
-Each [!INCLUDE [Product short](includes/product-short.md)] security alert includes:
+Each [!INCLUDE [Product short](includes/product-short.md)] security alert includes an **Alert story**. This the chain of events  related to this alert in chronological order, and other important information related to the alert.
 
-- **Alert title**  
-Official [!INCLUDE [Product short](includes/product-short.md)] name of the alert.
-- **Description**  
-Brief explanation of what happened.
-- **Evidence**  
-Additional relevant information and related data about what happened to help in the investigation process.
-- **Excel download**  
-Detailed Excel download report for analysis
+On the alert page you can:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] security alert structure](media/security-alert-structure.png)
+- **Manage alert** - change the alert's status, assignment, and classification. You can also add a comment here.
+- **Export** - download a detailed Excel report for analysis
+- **Link alert to another incident** - link an alert to a new existing incident
+
+  [![Defender for Identity security alert structure](media/security-alert-structure.png)](media/security-alert-structure.png#lightbox)
+
+For more information about alerts, see [Investigate alerts in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-alerts).
 
 ## Security alert classifications
 
