@@ -70,7 +70,7 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
-    - name: Sensor health alerts
+    - name: Health alerts
       href: health-alerts.md
     - name: VPN integration
       href: vpn-integration.md
