@@ -44,7 +44,9 @@ LMP can now directly assist with your investigation process. [!INCLUDE [Product 
 
 ## Lateral Movement paths security assessment
 
-To discover which of your sensitive accounts have risky lateral movement paths, review the **Riskiest lateral movement paths (LMP)** security assessment. For more information, see [Security assessment: Riskiest lateral movement paths (LMP)](security-assessment-riskiest-lmp.md).
+Microsoft Defender for Identity continuously monitors your environment to identify sensitive accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the sensitive account to credential theft by malicious actors. To discover which of your sensitive accounts have risky lateral movement paths, review the **Riskiest lateral movement paths (LMP)** security assessment. Based on the recommendations, you can remove the entity from the group, or remove the local administrator permissions for the entity from the specified device.
+
+For more information, see [Security assessment: Riskiest lateral movement paths (LMP)](security-assessment-riskiest-lmp.md).
 
 ## Preventative best practices
 
