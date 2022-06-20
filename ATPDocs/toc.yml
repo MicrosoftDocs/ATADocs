@@ -106,8 +106,6 @@ items:
       href: manage-security-alerts.md
     - name: Monitored activities
       href: monitored-activities.md
-    - name: Search and filter monitored activities
-      href: activities-search.md
     - name: Understanding Network Name Resolution (NNR)
       href: nnr-policy.md
     - name: Reconnaissance alerts
@@ -206,7 +204,7 @@ items:
       href: classic-entity-profiles.md
     - name: Lateral movement paths
       href: classic-use-case-lateral-movement-path.md
-    - name: Investigate tateral movement paths
+    - name: Investigate lateral movement paths
       href: classic-investigate-lateral-movement-path.md
     - name: Understanding Network Name Resolution (NNR)
       href: nnr-policy.md

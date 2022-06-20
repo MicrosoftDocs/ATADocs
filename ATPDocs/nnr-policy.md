@@ -58,26 +58,6 @@ After confirming the device, you can then determine if the alert is a **False Po
 
     ![Evidence certainty.](media/nnr-high-certainty.png)
 
-## Prerequisites
-
-|Protocol|Transport|Port|Device|Direction|
-|--------|--------|------|-------|------|
-|NTLM over RPC*|TCP|135|All devices on the network|Inbound|
-|NetBIOS*|UDP|137|All devices on the network|Inbound|
-|RDP*|TCP|3389|All devices on the network|Inbound|
-|DNS|UDP|53|Domain controllers|Outbound|
-
-\* One of these methods is required, but we recommend using all of them.
-
-To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each Sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
-
-> [!NOTE]
-> To disable an optional NNR method in [!INCLUDE [Product short](includes/product-short.md)] to fit the needs of your environment, open a support call.
-
-Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
-
-![Low success rate Network Name Resolution (NNR) alert.](media/nnr-success-rate.png)
-
 ## Configuration recommendations
 
 - NTLM over RPC:
@@ -91,9 +71,23 @@ Each health alert provides specific details of the method, sensors, the problema
   - Check that TCP Port 3389 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] Sensors, on all computers in the environment.
   - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
   >[!NOTE]
-  >Customized RDP ports aren't supported.
+  >
+  > - Only one of these protocols is required, but we recommend using all of them.
+  > - Customized RDP ports aren't supported.
+
 - Reverse DNS:
   - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
+
+## Prerequisites
+
+To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each Sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
+
+> [!NOTE]
+> To disable an optional NNR method in [!INCLUDE [Product short](includes/product-short.md)] to fit the needs of your environment, open a support call.
+
+Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
+
+![Low success rate Network Name Resolution (NNR) alert.](media/nnr-success-rate.png)
 
 ## See Also
 

@@ -40,7 +40,9 @@ After the [!INCLUDE [Product short](includes/product-short.md)] sensor is instal
     You can configure the following sensor details:
 
     - **Description**: Enter a description for the [!INCLUDE [Product short](includes/product-short.md)] sensor (optional).
-    - **Domain Controllers (FQDN)** (required for the [!INCLUDE [Product short](includes/product-short.md)] standalone and AD FS sensors, this can't be changed for the [!INCLUDE [Product short](includes/product-short.md)] sensor): Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **dc01.contoso.com**
+    - **Domain Controllers (FQDN)**: This is required for the [!INCLUDE [Product short](includes/product-short.md)] standalone and AD FS sensors. (It can't be changed for the [!INCLUDE [Product short](includes/product-short.md)] sensor.) Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**.
+
+      ![Add domain controller.](media/add-domain-controller.png)
 
     The following information applies to the servers you enter in the **Domain Controllers** list:
     - All domain controllers whose traffic is being monitored via port mirroring by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
