@@ -10,9 +10,9 @@ ms.topic: how-to
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-## Health issues pane
+## Health issues page
 
-The [!INCLUDE [Product long](includes/product-long.md)] **Health issues** pane lets you know when there's a problem with your [!INCLUDE [Product short](includes/product-short.md)] instance, by raising a health alert. To access the pane, follow these steps:
+The [!INCLUDE [Product long](includes/product-long.md)] **Health issues** page lets you know when there's a problem with your [!INCLUDE [Product short](includes/product-short.md)] instance, by raising a health alert. To access the page, follow these steps:
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
@@ -20,13 +20,13 @@ The [!INCLUDE [Product long](includes/product-long.md)] **Health issues** pane l
 
 1. Under **General**, select **Health issues**.
 
-1. The **Health issues** pane is displayed, where you can see **Open**, **Closed**, and **Suppressed** health issues.
+1. The **Health issues** page is displayed, where you can see **Open**, **Closed**, and **Suppressed** health issues.
 
-    ![Health issues pane.](media/health-issues.png)
+    ![Health issues page.](media/health-issues.png)
 
 1. Select any issue for more details, and the option to close or suppress the issue.
 
-    :::image type="content" source="media/global-health-issues-details.png" alt-text="Global health issues details":::
+    :::image type="content" source="media/global-health-issues-details.png" alt-text="Health issues details":::
 
 > [!NOTE]
 > Sensor related health alerts can also be found in the [Sensor settings](sensor-settings.md) page.
