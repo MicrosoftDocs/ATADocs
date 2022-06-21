@@ -56,7 +56,7 @@ After confirming the device, you can then determine if the alert is a **False Po
 - Suspected DCSync attack (replication of directory services) – the alert was triggered from a domain controller.
 - Network mapping reconnaissance (DNS) – the alert was triggered from a DNS Server.
 
-    ![Evidence certainty.](media/nnr-high-certainty.png)
+    [![Evidence certainty.](media/nnr-high-certainty.png)](media/nnr-high-certainty.png#lightbox)
 
 ## Configuration recommendations
 
