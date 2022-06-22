@@ -56,7 +56,7 @@ In case the suggested articles aren't sufficient, you can open a service request
 
 ### Open a service request
 
-Learn how to open support tickets by contacting Defender for Identity support.
+After you've searched for your issue in **How can we help?** (and clicked the blue **Search** arrow), you can open a service request by selecting **Contact support** at the bottom of the pane.
 
 > [!NOTE]
 > If you have a premier support contract with Microsoft, you'll see the premier tag on the widget. If not, contact your Microsoft account manager.

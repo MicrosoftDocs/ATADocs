@@ -76,12 +76,12 @@ After confirming the device, you can then determine if the alert is a **False Po
 - Reverse DNS:
   - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
 
-## Prerequisites
+## Health alerts
 
 To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
 
 > [!NOTE]
-> To disable an optional NNR method in [!INCLUDE [Product short](includes/product-short.md)] to fit the needs of your environment, open a support call.
+> To disable an optional NNR method in [!INCLUDE [Product short](includes/product-short.md)] to fit the needs of your environment, open a support case.
 
 Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations. For more information about health alerts, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
