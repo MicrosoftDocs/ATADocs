@@ -33,11 +33,11 @@ For general information on admin roles, see [About admin roles](/microsoft-365/a
 
 Accessing the new support widget can be done in one of two ways:
 
-1. Clicking on the question mark on the top right of the portal and then clicking on "Microsoft support":
+1. Selecting the question mark on the top right of the portal and then selecting "Microsoft support":
 
    :::image type="content" source="media/contactsupport.png" alt-text="The Microsoft support icon in the Microsoft 365 Defender portal" lightbox="media/contactsupport.png":::
 
-2. Clicking on the **Need help?**  button in the bottom right of the Microsoft 365 Defender portal:
+2. Selecting the **Need help?** button in the bottom right of the Microsoft 365 Defender portal:
 
    :::image type="content" source="media/need-help-option.png" alt-text="The Need help button" lightbox="media/need-help-option.png":::
 
@@ -52,7 +52,7 @@ This option includes articles that might be related to the question you may ask.
 
 :::image type="content" source="media/contactsupport1.png" alt-text="How can we help?" lightbox="media/contactsupport1.png":::
 
-In case the suggested articles aren't sufficient, you can open a service request.
+In case the suggested articles aren't sufficient, you can open a service request by selecting **Contact support** at the bottom of the pane.
 
 ### Open a service request
 
@@ -65,15 +65,15 @@ Learn how to open support tickets by contacting Defender for Identity support.
 
 :::image type="content" source="media/contactsupport2.png" alt-text="The contact support 2" lightbox="media/contactsupport2.png"::: </br>
 
-1. Fill in a title and description for the issue you are facing, the phone number and email address where we may reach you.
-2. (Optional) Include up to five attachments that are relevant to the issue to provide additional context for the support case.
+1. Fill in a title and description for the issue you're facing, the phone number and email address where we may reach you.
+2. (Optional) Include up to five attachments that are relevant to the issue to provide more context for the support case.
 3. Select your time zone and an alternative language, if applicable. The request will be sent to Microsoft Support Team. The team will respond to your service request shortly.
 
 ## Self help
 
 ### System status page
 
-To view system status for [!INCLUDE [Product short](includes/product-short.md)], visit the [**System status**](https://aka.ms/mdi/health) page. This page gives you information as to if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the Sensor can send traffic to the cloud. You can access the **System status** from the [About page for Defender for Identity](settings-about.md).
+To view system status for [!INCLUDE [Product short](includes/product-short.md)], visit the [**System status**](https://aka.ms/mdi/health) page. This page gives you information about if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the sensor can send traffic to the cloud. You can access the **System status** from the [About page for Defender for Identity](settings-about.md).
 
 ### Troubleshooting
 
