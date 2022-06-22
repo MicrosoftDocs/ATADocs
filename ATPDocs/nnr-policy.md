@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Network Name Resolution
 description: This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
-ms.date: 10/26/2020
+ms.date: 06/22/2022
 ms.topic: conceptual
 ---
 
@@ -36,8 +36,6 @@ Reverse DNS lookup of the IP address is only performed when:
 When the [!INCLUDE [Product short](includes/product-short.md)] sensor finds the correlation, the sensor associates the IP to the computer object.
 
 In cases where no name is retrieved, an **unresolved computer profile by IP** is created with the IP and the relevant detected activity.
-
-![Unresolved computer profile.](media/unresolved-computer-profile.png)
 
 NNR data is crucial for detecting the following threats:
 
@@ -80,14 +78,12 @@ After confirming the device, you can then determine if the alert is a **False Po
 
 ## Prerequisites
 
-To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each Sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
+To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
 
 > [!NOTE]
 > To disable an optional NNR method in [!INCLUDE [Product short](includes/product-short.md)] to fit the needs of your environment, open a support call.
 
-Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
-
-![Low success rate Network Name Resolution (NNR) alert.](media/nnr-success-rate.png)
+Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations. For more information about health alerts, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
 ## See Also
 
