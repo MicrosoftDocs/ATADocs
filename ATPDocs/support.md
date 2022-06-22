@@ -71,9 +71,9 @@ Learn how to open support tickets by contacting Defender for Identity support.
 
 ## Self help
 
-### System status page
+### System health status
 
-To view system status for [!INCLUDE [Product short](includes/product-short.md)], visit the [**System status**](https://aka.ms/mdi/health) page. This page gives you information about if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the sensor can send traffic to the cloud. You can access the **System status** from the [About page for Defender for Identity](settings-about.md).
+The service health status for [!INCLUDE [Product short](includes/product-short.md)] is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health) page, under **Microsoft 365 Defender**. This page tells you if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
 
 ### Troubleshooting
 
