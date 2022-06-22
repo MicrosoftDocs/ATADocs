@@ -73,7 +73,7 @@ Learn how to open support tickets by contacting Defender for Identity support.
 
 ### System health status
 
-The service health status for [!INCLUDE [Product short](includes/product-short.md)] is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health) page, under **Microsoft 365 Defender**. This page gives you information about if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections and if the sensor can send traffic to the cloud.
+The service health status for [!INCLUDE [Product short](includes/product-short.md)] is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health) page, under **Microsoft 365 Defender**. This page tells you if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
 
 ### Troubleshooting
 
