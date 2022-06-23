@@ -276,7 +276,6 @@ If the domain controller or security group is already added, but you're still se
     1. Cache service account to server: `Install-ADServiceAccount AccountName`
     1. Start **AATPSensor**
 
-
 ## Access to the registry key 'Global' is denied
 
 The sensor service fails to start, and the sensor log contains an entry similar to:
@@ -290,7 +289,6 @@ The gMSA configured for this domain controller or AD FS server doesn't have perm
 **Resolution:**
 
 Add the gMSA to the **Performance Monitor Users** group on the server.
-
 
 ## Report downloads cannot contain more than 300,000 entries
 

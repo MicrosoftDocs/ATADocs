@@ -2,7 +2,7 @@
 
 title: Microsoft Defender for Identity Microsoft LAPS usage assessments
 description: This article provides an overview of Microsoft Defender for Identity's Microsoft LAPS usage identity security posture assessment report.
-ms.date: 01/03/2022
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
