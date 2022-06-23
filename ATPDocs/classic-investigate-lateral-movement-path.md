@@ -4,6 +4,7 @@ title: Investigating lateral movement paths with Microsoft Defender for Identity
 description: This article describes how to detect and investigate potential lateral movement path attacks with Microsoft Defender for Identity.
 ms.date: 10/26/2020
 ms.topic: tutorial
+ROBOTS: NOINDEX
 ---
 
 # Tutorial: Use Lateral Movement Paths (LMPs)

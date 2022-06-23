@@ -16,6 +16,9 @@ ms.topic: how-to
 - Check Point
 - Cisco ASA
 
+> [!NOTE]
+> Microsoft Defender for Identity supports alternate user principal names and not just the primary UPN.
+
 ## Prerequisites
 
 To enable VPN integration, make sure you set the following parameters:
