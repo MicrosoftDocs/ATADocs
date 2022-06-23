@@ -142,6 +142,8 @@ items:
       href: security-assessment-unmonitored-domain-controller.md
     - name: Unsecure account attributes
       href: security-assessment-unsecure-account-attributes.md
+    - name: Unsecure domain configurations
+      href: security-assessment-unsecure-domain-configurations.md
     - name: Unsecure Kerberos delegation assessment
       href: security-assessment-unconstrained-kerberos.md
     - name: Unsecure SID History attributes

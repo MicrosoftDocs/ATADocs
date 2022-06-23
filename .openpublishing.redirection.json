@@ -766,6 +766,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "ATPDocs/cas-isp-unsecure-domain-configurations.md",
+            "redirect_url": "/defender-for-identity/security-assessment-unsecure-domain-configurations",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "ATPDocs/sensitive-accounts.md",
             "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
             "redirect_document_id": false
