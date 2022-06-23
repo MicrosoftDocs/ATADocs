@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity dormant entities security assessments
 description: This article provides an overview of Microsoft Defender for Identity's dormant entities in sensitive groups identity security posture assessment report.
-ms.date: 10/26/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity using the logs
 description: Describes how you can use the Microsoft Defender for Identity logs to troubleshoot issues
-ms.date: 10/27/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 

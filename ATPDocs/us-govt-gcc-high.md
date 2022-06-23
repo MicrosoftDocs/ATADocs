@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity for US Government offerings
 description: This article provides an overview of Microsoft Defender for Identity's US Government offerings.
-ms.date: 12/09/2021
+ms.date: 06/23/2022
 ms.topic: overview
 ---
 
@@ -55,7 +55,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 >[!NOTE]
 > No data is migrated from the commercial service.
-> 
+>
 > If you also have Microsoft Defender for Cloud Apps deployed, it should be migrated before you start the Defender for Identity migration.
 
 ## Feature parity with the commercial environment

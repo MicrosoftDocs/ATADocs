@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity unsecure account attributes assessments
 description: This article provides an overview of Microsoft Defender for Identity's entities with unsecure attributes identity security posture assessment report.
-ms.date: 01/18/2021
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 

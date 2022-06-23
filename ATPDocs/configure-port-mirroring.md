@@ -1,7 +1,7 @@
 ---
 title: Configure Port Mirroring when deploying Microsoft Defender for Identity
 description: Describes port mirroring options and how to configure them for Microsoft Defender for Identity
-ms.date: 10/26/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 

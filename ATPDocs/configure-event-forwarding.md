@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event Forwarding in Microsoft Defender for Identity
 description: Describes your options for configuring Windows Event Forwarding with Microsoft Defender for Identity
-ms.date: 10/26/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
@@ -33,7 +33,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.**
 
-> [!Note]
+> [!NOTE]
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor. The following steps modify the local policy of the domain controller.
 
 1. Run the following command on each domain controller: *winrm quickconfig*

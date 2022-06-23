@@ -1,6 +1,6 @@
 ---
 title: Planning your Microsoft Defender for Identity deployment
-description: Helps you plan your deployment and decide how many Microsoft Defenders for Identity servers will be needed to support your network
+description: Helps you plan your deployment and decide how many Microsoft Defender for Identity servers will be needed to support your network
 ms.date: 03/28/2022
 ms.topic: how-to
 ---

@@ -1,7 +1,7 @@
 ---
 title: Validate port mirroring in Microsoft Defender for Identity
 description: Describes how to validate that port mirroring is configured correctly in Microsoft Defender for Identity
-ms.date: 10/27/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
