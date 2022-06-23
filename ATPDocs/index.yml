@@ -28,12 +28,6 @@ landingContent:
         links:
           - text: Defender for Identity architecture
             url: architecture.md
-      - linkListType: video
-        links:
-          - text: Introduction to Defender for Identity
-            url: https://www.youtube.com/watch?reload=9&v=EGY2m8yU_KE
-          - text: Defender for Identity fundamentals
-            url: https://www.youtube.com/watch?v=QXZIfH0wP3Q
       - linkListType: whats-new
         links:
           - text: Releases
@@ -43,56 +37,42 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Security alerts
-            url: understanding-security-alerts.md
+            url: alerts-overview.md
+          - text: Manage security alerts
+            url: manage-security-alerts.md
           - text: Health alerts
-            url: health-center.md
-          - text: Monitor your domain controllers
-            url: sensor-monitoring.md
+            url: health-alerts.md
   - title: Explore different ways to use Defender for Identity
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Identity security posture assessments
-            url: isp-overview.md  
+          - text: Security posture assessments
+            url: security-assessment.md  
           - text: Configure detection exclusions
-            url: configure-detection-exclusions.md
+            url: exclusions.md
           - text: Search and filter monitored activities 
-            url: activities-search.md
-          - text: Use exclusions and honeytoken accounts
-            url: configure-detection-exclusions.md
-          - text: Advanced Threat Analytics (ATA) to Defender for Identity move
+            url: monitored-activities.md
+          - text: Set entity tags
+            url: entity-tags.md
+          - text: Advanced Threat Analytics (ATA) to Defender for Identity migration
             url: migrate-from-ata-overview.md
-  - title: Manage and remediate security alerts
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Investigate Defender for Identity alerts
-            url: suspicious-activity-guide.md
-          - text: Manage security alerts
-            url: working-with-suspicious-activities.md
-          - text: Set Defender for Identity notifications
-            url: notifications.md
   - title: Investigate threats 
     linkLists:
       - linkListType: tutorial
         links:
-          - text: Investigate a user
-            url: investigate-a-user.md  
-          - text: Investigate a computer
-            url: investigate-a-computer.md
+          - text: Investigate assets
+            url: investigate-assets.md  
           - text: Investigate lateral movement paths
-            url: investigate-lateral-movement-path.md
-          - text: Investigate entities
-            url: investigate-entity.md
+            url: understand-lateral-movement-paths.md
+          - text: Remediation actions
+            url: remediation-actions.md
   - title: Resources and support
     linkLists:
       - linkListType: reference
         links:
           - text: Frequently asked questions
             url: technical-faq.yml
-          - text: Support and information
+          - text: Support
             url: support.md
-          - text: Defender for Identity readiness roadmap
-            url: resources.md
           - text: Defender for Identity data security and privacy 
             url: privacy-compliance.md
