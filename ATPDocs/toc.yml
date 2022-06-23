@@ -98,6 +98,8 @@ items:
       href: cas-isp-unmonitored-domain-controller.md
     - name: Unsecure account attributes
       href: cas-isp-unsecure-account-attributes.md
+    - name: Unsecure domain configurations
+      href: cas-isp-unsecure-domain-configurations.md
     - name: Unsecure Kerberos delegation assessment
       href: cas-isp-unconstrained-kerberos.md
     - name: Unsecure SID History attributes
