@@ -209,7 +209,11 @@ items:
     - name: Investigate lateral movement paths
       href: classic-investigate-lateral-movement-path.md
     - name: Understanding Network Name Resolution (NNR)
-      href: nnr-policy.md
+      href: classic-nnr-policy.md
+    - name: Investigate an entity
+      href: classic-investigate-entity.md
+    - name: Search and filter monitored activities
+      href: classic-activities-search.md
 - name: Microsoft 365 Defender Docs
   items: 
   - name: Microsoft 365 Defender
