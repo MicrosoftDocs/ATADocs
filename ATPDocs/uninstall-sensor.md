@@ -21,6 +21,9 @@ The following steps describe how to uninstall a sensor from a domain controller.
 1. From the Windows **Start** menu, select **Settings** > **Control Panel** > **Add/ Remove Programs**.
 1. Select the sensor installation, select **Uninstall**, and follow the instructions to remove the sensor.
 
+> [!IMPORTANT]
+> We recommend removing the sensor from the domain controller before demoting the domain controller.
+
 ## Remove an orphaned sensor
 
 This scenario can occur when a domain controller was deleted without first uninstalling the sensor, and the sensor still appears in the Microsoft 365 Defender portal.
