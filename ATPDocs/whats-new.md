@@ -32,6 +32,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 Released June 20, 2022
 
+- New security alert: Suspected DFSCoerce attack using Distributed File System Protocol  
+In response to the publishing of a recent attack tool that leverages a flow in the DFS protocol, Microsoft Defender for Identity will trigger a security alert whenever an attacker is using this attack method. To learn more about this attack, [read the blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/how-microsoft-defender-for-identity-protects-against-dfscoerce/ba-p/3562912).
+
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.182
