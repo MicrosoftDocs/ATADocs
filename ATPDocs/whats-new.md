@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 06/20/2022
+ms.date: 07/04/2022
 ms.topic: overview
 ---
 
