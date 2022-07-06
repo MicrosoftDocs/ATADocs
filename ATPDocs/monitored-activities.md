@@ -1,14 +1,11 @@
 ---
 title: Microsoft Defender for Identity monitored domain activities
 description: Describes each activity type monitored by Microsoft Defender for Identity
-ms.date: 12/24/2020
+ms.date: 05/10/2022
 ms.topic: conceptual
 ---
 
 # Microsoft Defender for Identity monitored activities
-
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
 [!INCLUDE [Product long](includes/product-long.md)] monitors information generated from your organization's Active Directory, network activities and event activities to detect suspicious activity. The monitored activity information enables [!INCLUDE [Product short](includes/product-short.md)] to help you determine the validity of each potential threat and correctly triage and respond.
 

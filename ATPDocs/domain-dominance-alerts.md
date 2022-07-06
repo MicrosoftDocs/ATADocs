@@ -1,11 +1,11 @@
 ---
 title: Microsoft Defender for Identity domain dominance security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks, typically part of domain dominance phase efforts, are detected against your organization.
-ms.date: 12/23/2020
-ms.topic: tutorial
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Domain dominance alerts
+# Domain dominance alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -17,7 +17,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, learn how to understand, classify, prevent, and remediate the following attacks:
+The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn how to understand, classify, prevent, and remediate the following attacks:
 
 > [!div class="checklist"]
 >
@@ -752,7 +752,7 @@ Some administrative tasks are legitimately performed against domain controllers 
 1. Implement less-privileged access on domain machines to give only specific users the right to create services.
 
 > [!div class="nextstepaction"]
-> [Exfiltration alert tutorial](exfiltration-alerts.md)
+> [Exfiltration alerts](exfiltration-alerts.md)
 
 ## See Also
 

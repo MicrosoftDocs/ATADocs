@@ -1,23 +1,15 @@
 ---
 title: Deploy Defender for Identity with Microsoft 365 Defender
-description: Quickstart for deploying Microsoft Defender for Identity using Microsoft 365 Defender
-ms.date: 01/23/2022
-ms.topic: quickstart
+description: Learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender
+ms.date: 03/24/2022
+ms.topic: how-to
 ---
 
 # Deploy Microsoft Defender for Identity with Microsoft 365 Defender
 
-In this quickstart, you'll learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender.
+The deployment of Microsoft Defender for Identity with Microsoft 365 Defender has two phases - preparation and deployment.
 
-> [!IMPORTANT]
-> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
-
-## Prerequisites
-
-- A [[!INCLUDE [Product long](includes/product-long.md)] license](/defender-for-identity/technical-faq#licensing-and-privacy).
-- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal.
-- Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
-- Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
+This article will outline the steps in each phase, and also provide instructions for special scenarios.
 
 ## Start using Microsoft 365 Defender
 
@@ -32,24 +24,42 @@ For more information about these steps, see the following articles:
 - [Deploy supported services](/microsoft-365/security/defender/deploy-supported-services)
 - [Frequently asked questions when turning on Microsoft 365 Defender](/microsoft-365/security/defender/m365d-enable-faq)
 
-## Connect to Active Directory
+> [!IMPORTANT]
+> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant. Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
 
-Before you can connect Defender for Identity to Active Directory, you'll need at least one Directory Services account. For information about how to create and configure that account, see [Microsoft Defender for Identity Directory Service Account recommendations](directory-service-accounts.md).
+## Preparation
 
-After you've created that account, provide the account details in the **Directory Service accounts** settings in Microsoft 365 Defender. For information on how to configure the settings, see [Microsoft Defender for Identity Directory Services account in Microsoft 365 Defender](/microsoft-365/security/defender-identity/directory-service-accounts).
+1. [Defender for Identity prerequisites](prerequisites.md).
+1. [Plan your Defender for Identity capacity](capacity-planning.md).
+1. [Configure Windows Event collection](configure-windows-event-collection.md).
+1. [Directory Service accounts](directory-service-accounts.md).
+1. [Role groups](role-groups.md).
+1. [Configure remote calls to SAM](remote-calls-sam.md).
 
-## Add a sensor
+## Deployment
 
-From the **Sensors** page, you can add a new sensor, and download the installer. For instructions on how to add and download the sensor package, see [Add a sensor](/microsoft-365/security/defender-identity/sensor-health#add-a-sensor).
+1. [Download the Defender for Identity sensor](download-sensor.md).
+1. [Proxy configuration](configure-proxy.md).
+1. [Install the Defender for Identity sensor](install-sensor.md).
+1. [Manage action accounts](manage-action-accounts.md).
+1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
-## Install the sensor
+## Special scenarios
 
-Once you've downloaded the sensor package, you'll need to install it on your domain controllers and [AD FS servers](active-directory-federation-services.md). For instructions on how to install the sensor, see [Install the Microsoft Defender for Identity sensor](install-step4.md).
+1. [Installing on Active Directory Federation Services](active-directory-federation-services.md)
+1. [Multi-forest support](multi-forest.md)
+1. [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)
+
+### Standalone sensor
+
+If you deploy Defender for Identity standalone sensors, you'll need to do the following steps:
+
+1. [Configure port mirroring](configure-port-mirroring.md)
+1. [Validate Port Mirroring](validate-port-mirroring.md)
+1. [Configure event collection](configure-event-collection.md)
+1. [Configuring Windows Event Forwarding](configure-event-forwarding.md)
 
 ## Next steps
 
-- [Sensor health and settings](/microsoft-365/security/defender-identity/sensor-health).
-
-## Join the community
-
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!
+> [!div class="step-by-step"]
+> [Defender for Identity prerequisites »](prerequisites.md)

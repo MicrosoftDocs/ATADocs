@@ -1,11 +1,11 @@
 ---
 title: Microsoft Defender for Identity compromised credentials phase security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
-ms.date: 12/27/2021
-ms.topic: tutorial
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Compromised credential alerts
+# Compromised credential alerts
 
 Typically, cyber-attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -17,7 +17,7 @@ Typically, cyber-attacks are launched against any accessible entity, such as a l
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Compromised credential** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, you'll learn how to understand, classify, remediate and prevent the following types of attacks:
+The following security alerts help you identify and remediate **Compromised credential** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn how to understand, classify, remediate and prevent the following types of attacks:
 
 > [!div class="checklist"]
 >
@@ -496,7 +496,7 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 1. Check if there are other users connected through VPN from these locations, and check if they are compromised.
 
 > [!div class="nextstepaction"]
-> [Lateral Movement alert tutorial](lateral-movement-alerts.md)
+> [Lateral Movement alerts](lateral-movement-alerts.md)
 
 ## See Also
 

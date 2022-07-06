@@ -1,7 +1,7 @@
 ---
 title: Manage action accounts
 description: Learn how to manage action accounts to work with Microsoft Defender for Identity.
-ms.date: 01/17/2022
+ms.date: 03/30/2022
 ms.topic: how-to
 ---
 
@@ -62,12 +62,13 @@ We recommend you create the gMSA account Defender for Identity will use to run t
 1. Your action account will be listed on the **Manage action accounts** page.
 
       ![Create action account.](media/manage-action-accounts.png)
-      
+
 ## Related videos
 
-[Remediation actions in Defender for Identity](https://www.microsoft.com/en-us/videoplayer/embed/RE4U7Pe)
+[Remediation actions in Defender for Identity](https://www.microsoft.com/videoplayer/embed/RE4U7Pe)
 
 ## Next steps
 
-- [Directory Service Account recommendations](directory-service-accounts.md)
-- [Troubleshooting gMSA account issues](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)
+> [!div class="step-by-step"]
+> [« Install the Defender for Identity sensor](install-sensor.md)
+> [Configure the Defender for Identity sensor »](configure-sensor-settings.md)

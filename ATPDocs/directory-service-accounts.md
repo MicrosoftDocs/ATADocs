@@ -1,15 +1,17 @@
 ---
-title: Directory Service Account recommendations
-description: Learn how to configure the Directory Service Account (DSA) to work with Microsoft Defender for Identity.
-ms.date: 12/22/2021
+title: Directory Service account recommendations
+description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
-# Microsoft Defender for Identity Directory Service Account recommendations
+# Microsoft Defender for Identity Directory Service account recommendations
+
+Learn how to create a Directory Service account (DSA), and configure it to work with Microsoft Defender for Identity.
 
 ## Introduction
 
-The Directory Services Account (DSA) in Defender for Identity is used by the sensor to perform the following functions:
+The Directory Service account (DSA) in Defender for Identity is used by the sensor to perform the following functions:
 
 - At startup, the sensor connects to the domain controller using LDAP with the DSA account credentials.
 
@@ -42,7 +44,7 @@ There are two types of DSA that can be used:
 | Type of DSA           | Pros                                                         | Cons                                                         |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. |
-| Regular user  account | <li> Supports all operating system versions  the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
+| Regular user  account | <li> Supports all operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
 
 ## Number of DSA entries
 
@@ -77,11 +79,29 @@ When there are two or more DSA entries, the sensor will try the DSA entries in t
 7. Round robin all other DSA gMSA entries
 8. Round robin all other DSA regular entries
 
+- The sensor will look for a DSA entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
+
+- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will traverse the list via round robin.
+
+For example, if these are the DSA entries configured:
+
+- DSA1.northamerica.contoso.com
+- DSA2.EMEA.contoso.com
+- DSA3.fabrikam.com
+
+Then these are the sensors, and which DSA entry will be used first:
+
+| Domain controller FQDN | DSA entry that  will be used |
+| --------------------------- | -------------------------------- |
+| **DC01.contoso.com**        | Round robin                      |
+| **DC02.Fabrikam.com**       | DSA3.fabrikam.com                |
+| **DC03.EMEA.contoso.com**   | DSA2.emea.contoso.com            |
+| **DC04.contoso.com**        | Round robin                      |
 
 >[!NOTE]
 >
-> - In a forest with a single DNS name space it is recommended to create the DSA entry in the root domain. You must give this account read permissions to all of the subdomains.
->- In a forest with more than one namespace, it's recommended to create the DSA entry in the root domain of each namespace.
+> - In a multi-domain forest, it's recommended that the DSA account be created in the domain with the largest number of domain controllers.
+> - In multi-forest multi-domain environments, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
 
 >[!IMPORTANT]
 >If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup using any of the configured DSA accounts, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health alerts](health-alerts.md).
@@ -90,7 +110,6 @@ When there are two or more DSA entries, the sensor will try the DSA entries in t
 
 The following steps can be followed to create a gMSA account to be used as the DSA entry for Defender for Identity. This doesn't provide full guidance on gMSA accounts. For additional information, review [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
   
-
 >[!NOTE]
 >
 >- In a multi-forest environment, we recommend creating the gMSAs with a unique name for each forest or domain.
@@ -164,7 +183,7 @@ If it has the permissions, the command will return a **True** message.
 
 ## Verify that the gMSA account has the required rights (if needed)
 
-The sensor (Azure Advanced Threat Protection Sensor) service runs as **LocalService** and performs impersonation of the DSA account. The impersonation will fail if the **Log on as a service** policy is configured but the permission hasn't been granted to the gMSA account, and you will receive a health alert: **Directory services user credentials are incorrect**.
+The sensor (Azure Advanced Threat Protection Sensor) service runs as **LocalService** and performs impersonation of the DSA account. The impersonation will fail if the **Log on as a service** policy is configured but the permission hasn't been granted to the gMSA account, and you'll receive a health alert: **Directory services user credentials are incorrect**.
 
 If you receive the alert, you should check if the **Log on as a service** policy is configured.
 
@@ -174,11 +193,48 @@ The **Log on as a service** policy can be configured either in a Group Policy se
 
 - To check if the setting is set in Group Policy, run **rsop.msc** and see if the setting **Computer Configuration**  -> **Windows Settings** -> **Security Settings** -> **Local Policies** -> **User Rights Assignment** -> **Log on as a service** is set. If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
 
-![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)
+[![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)](media/log-on-as-a-service-gpmc.png#lightbox)
 
-![Log on as a service properties.](media/log-on-as-a-service.png)
+[![Log on as a service properties.](media/log-on-as-a-service.png)](media/log-on-as-a-service.png#lightbox)
 
-## See also
+## Configure Directory Service account in Microsoft 365 Defender
 
-- [Connect to your Active Directory Forest](install-step2.md)
+To connect your sensors with your Active Directory domains, you'll need to configure Directory Service accounts in Microsoft 365 Defender.
+
+1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
+
+    [![Go to Settings, then Identities.](media/settings-identities.png)](media/settings-identities.png#lightbox)
+
+1. Select **Directory Service accounts**. You'll see which accounts are associated with which domains.
+
+    [![Directory Service accounts.](media/directory-service-accounts.png)](media/directory-service-accounts.png#lightbox)
+
+1. If you select an account, a pane will open with the settings for that account.
+
+    [![Account settings.](media/account-settings.png)](media/account-settings.png#lightbox)
+
+1. To add Directory Service account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
+
+    [![Add credentials.](media/new-directory-service-account.png)](media/new-directory-service-account.png#lightbox)
+
+    |Field|Comments|
+    |---|---|
+    |**Account name** (required)|Enter the read-only AD username. For example: **DefenderForIdentityUser**. You must use a **standard** AD user or gMSA account. **Don't** use the UPN format for your username. When using a gMSA, the user string should end with the '$' sign. For example: mdisvc$<br />**NOTE:** We recommend that you avoid using accounts assigned to specific users.|
+    |**Password** (required for standard AD user accounts)|For AD user accounts only, enter the password for the read-only user. For example: *Pencil1*.|
+    |**Group managed service account** (required for gMSA accounts)|For gMSA accounts only, select **Group managed service account**.|
+    |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user's account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com. For information on **Single Label Domains**, see [Microsoft support for Single Label Domains](/troubleshoot/windows-server/networking/single-label-domains-support-policy).|
+
+1. Select **Save**.
+
+> [!NOTE]
+> You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
+
+## Troubleshooting
+
 - [Sensor failed to retrieve the gMSA credentials](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)
+
+## Next steps
+
+> [!div class="step-by-step"]
+> [« Configure Windows Event collection](configure-windows-event-collection.md)
+> [Role groups »](role-groups.md)

@@ -1,11 +1,11 @@
 ---
 title: Microsoft Defender for Identity reconnaissance phase security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when attacks, part of reconnaissance phase efforts, are detected against your organization.
-ms.date: 12/23/2020
-ms.topic: tutorial
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Reconnaissance alerts
+# Reconnaissance alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -19,7 +19,7 @@ To learn more about how to understand the structure, and common components of al
 
 The following security alerts help you identify and remediate **Reconnaissance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
-In this tutorial, learn how to understand, classify, remediate, and prevent the following types of attacks:
+In this article, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
 >
@@ -348,7 +348,7 @@ Security scanners and applications may legitimately query domain controllers for
 > To disable any [!INCLUDE [Product short](includes/product-short.md)] security alert, contact support.
 
 > [!div class="nextstepaction"]
-> [Compromised credential alert tutorial](compromised-credentials-alerts.md)
+> [Compromised credential alerts](compromised-credentials-alerts.md)
 
 ## See Also
 

@@ -34,7 +34,7 @@ Currently, this feature requires the account signed into Microsoft 365 Defender 
 
 ## Related videos
 
-[Remediation actions in Defender for Identity](https://www.microsoft.com/en-us/videoplayer/embed/RE4U7Pe)
+[Remediation actions in Defender for Identity](https://www.microsoft.com/videoplayer/embed/RE4U7Pe)
 
 ## See also
 

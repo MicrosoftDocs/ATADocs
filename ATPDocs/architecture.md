@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity architecture
 description: Describes the architecture of Microsoft Defender for Identity
-ms.date: 12/23/2020
+ms.date: 06/23/2022
 ms.topic: overview
 ---
 
@@ -13,7 +13,7 @@ ms.topic: overview
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] architecture topology diagram](media/architecture-topology.png)
 
-This section describes how the flow of [!INCLUDE [Product short](includes/product-short.md)]'s network and event capturing works, and drills down to describe the functionality of the main components: the [!INCLUDE [Product short](includes/product-short.md)] portal, [!INCLUDE [Product short](includes/product-short.md)] sensor, and [!INCLUDE [Product short](includes/product-short.md)] cloud service.
+This section describes how the flow of [!INCLUDE [Product short](includes/product-short.md)]'s network and event capturing works, and drills down to describe the functionality of the main components: the Microsoft 365 Defender portal, [!INCLUDE [Product short](includes/product-short.md)] sensor, and [!INCLUDE [Product short](includes/product-short.md)] cloud service.
 
 Installed directly on your domain controller or AD FS servers, the [!INCLUDE [Product short](includes/product-short.md)] sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, [!INCLUDE [Product short](includes/product-short.md)] sends only the parsed information to the [!INCLUDE [Product short](includes/product-short.md)] cloud service (only a percentage of the logs are sent).
 
@@ -21,8 +21,8 @@ Installed directly on your domain controller or AD FS servers, the [!INCLUDE [Pr
 
 [!INCLUDE [Product short](includes/product-short.md)] consists of the following components:
 
-- **[!INCLUDE [Product short](includes/product-short.md)] portal**  
-The [!INCLUDE [Product short](includes/product-short.md)] portal allows the creation of your [!INCLUDE [Product short](includes/product-short.md)] instance, displays the data received from [!INCLUDE [Product short](includes/product-short.md)] sensors, and enables you to monitor, manage, and investigate threats in your network environment.
+- **Microsoft 365 Defender portal**  
+The Microsoft 365 Defender portal creates your [!INCLUDE [Product short](includes/product-short.md)] instance, displays the data received from [!INCLUDE [Product short](includes/product-short.md)] sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
 - **[!INCLUDE [Product short](includes/product-short.md)] sensor**  
 [!INCLUDE [Product short](includes/product-short.md)] sensors can be directly installed on the following servers:
@@ -31,9 +31,9 @@ The [!INCLUDE [Product short](includes/product-short.md)] portal allows the crea
 - **[!INCLUDE [Product short](includes/product-short.md)] cloud service**  
 [!INCLUDE [Product short](includes/product-short.md)] cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, and Asia. [!INCLUDE [Product short](includes/product-short.md)] cloud service is connected to Microsoft's intelligent security graph.
 
-## Defender for Identity portal
+## Microsoft 365 Defender portal
 
-Use the [!INCLUDE [Product short](includes/product-short.md)] portal to:
+Use the Microsoft 365 Defender portal to:
 
 - Create your [!INCLUDE [Product short](includes/product-short.md)] instance
 - Integrate with other Microsoft security services
@@ -72,7 +72,7 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor includes a moni
 
 No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
 
-If the monitoring process causes the [!INCLUDE [Product short](includes/product-short.md)] sensor to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the [!INCLUDE [Product short](includes/product-short.md)] portal Health page.
+If the monitoring process causes the [!INCLUDE [Product short](includes/product-short.md)] sensor to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the [!INCLUDE [Product short](includes/product-short.md)] sensor page.
 
 ### Windows Events
 
