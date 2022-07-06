@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/04/2022
+ms.date: 07/06/2022
 ms.topic: overview
 ---
 
@@ -24,13 +24,14 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## Defender for Identity release 2.184
 
-Released June 20, 2022
+Released July 6, 2022
 
 - **New security assessments**  
 Defender for Identity now includes the following new security assessment:
   - Unsecure domain configurations  
 Microsoft Defender for Identity continuously monitors your environment to identify domains with configuration values that expose a security risk, and reports on these domains to assist you in protecting your environment. For more information, see [Security assessment: Unsecure domain configurations](security-assessment-unsecure-domain-configurations.md).
 
+- The Defender for Identity installation package will now install the Npcap component instead of the WinPcap drivers. For more information, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
