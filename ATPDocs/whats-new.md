@@ -22,6 +22,18 @@ For more information on what's new with other Microsoft Defender security produc
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
 
+## Defender for Identity release 2.184
+
+Released June 20, 2022
+
+- **New security assessments**  
+Defender for Identity now includes the following new security assessment:
+  - Unsecure domain configurations  
+Microsoft Defender for Identity continuously monitors your environment to identify domains with configuration values that expose a security risk, and reports on these domains to assist you in protecting your environment. For more information, see [Security assessment: Unsecure domain configurations](security-assessment-unsecure-domain-configurations.md).
+
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.183.15436.10558 (Hotfix)
 
 Released June 20, 2022 (updated July 4, 2022)
