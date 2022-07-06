@@ -139,7 +139,7 @@ sections:
     questions: 
 
       - question: What recommendations about WinPcap and Npcap drivers are changing?
-        answer: The Microsoft Defender for Identity team is currently recommending that all customers deploy the Npcap driver before deploying the sensor. This will ensure that Npcap driver will be used instead of the WinPcap driver. 
+        answer: The Microsoft Defender for Identity team is recommending that all customers use the Npcap instead of the WinPcap drivers. Starting version 2.184, the installation package will install npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.
 
       - question: Why are we moving away from WinPcap?
         answer: WinPcap is no longer supported and since it’s no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
@@ -148,7 +148,7 @@ sections:
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
 
       - question: What version of Npcap is supported? 
-        answer: The recommended and officially supported version of Npcap is version 1.00. Other versions are not supported. 
+        answer: The recommended and officially supported version of Npcap is version 1.00. If you have the appropiate license, you can install a newer version of Npcap, but note that support will ask you to downgrade the Npcap just to validate that the issue is not related to the newer version installed.
 
       - question: What additional benefits will we get by using Npcap? 
         answer: The Defender for Identity team has been working closely with the Npcap team over the last months to ensure optimal performance of the sensor. The Npcap driver will provide better performance and stability over the WinPcap driver. 
@@ -160,31 +160,31 @@ sections:
           See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE),  and search for Microsoft Defender for Identity. 
 
       - question: Is Npcap also relevant for ATA? 
-        answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.0.
+        answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.00.
 
       - question: I would like to script the deployment of Npcap, do I need to purchase the OEM version? 
         answer: No, you don't need to purchase the OEM version. Download the sensor installation package version 2.156 and above from the Defender for Identity console, which includes the OEM version of Npcap.
 
       - question: How do I download and install the Npcap driver? 
         answer: |
-          -  You can obtain the NPCAP executables by [downloading the latest deployment package of the MDI sensor](install-step3.md).
+          -  You can obtain the Npcap executables by [downloading the latest deployment package of the MDI sensor](download-sensor.md).
 
               >[!NOTE]
               >Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with Defender for Identity. For more information, see [Npcap licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
 
             - If you haven't yet installed the sensor:
-              1. Uninstall WinPcap, if it was installed.
-              1. Install Npcap with the following options: **/loopback_support=no** and **/winpcap_mode=yes** and **/S** for a silent install. Do NOT use the `/admin_only` option.
-                  - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
+              1. Install the sensor (with an installation package of version 2.184 or greater).
 
             - If you already installed the sensor with WinPcap and need to update to use Npcap:
               1. Uninstall the sensor.
               1. Uninstall WinPcap.
-              1. Install Npcap with the following options: **loopback_support=no** and **winpcap_mode=yes**. Do NOT use the `/admin_only` option.
+              1. Reinstall the sensor (with an installation package of version 2.184 or greater).
+              
+            - If you want to manually install Npcap:
+              1. Install Npcap with the following options:
+                - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
+                - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S'
 
-                  - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
-                  
-              1. Reinstall the sensor.
 
   - name: Operation
     questions:
