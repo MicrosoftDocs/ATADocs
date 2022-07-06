@@ -1,11 +1,11 @@
 ---
 title: Microsoft Defender for Identity lateral movement security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
-ms.date: 07/13/2021
-ms.topic: tutorial
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Lateral movement alerts
+# Lateral movement alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -17,7 +17,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
+The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
 >
@@ -475,7 +475,7 @@ None
 1. Make sure all devices in the environment are up-to-date, and patched against [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796).
 
 > [!div class="nextstepaction"]
-> [Domain dominance alert tutorial](domain-dominance-alerts.md)
+> [Domain dominance alerts](domain-dominance-alerts.md)
 
 ## Suspicious network connection over Encrypting File System Remote Protocol (external ID 2416)
 

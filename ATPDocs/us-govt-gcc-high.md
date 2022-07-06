@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity for US Government offerings
 description: This article provides an overview of Microsoft Defender for Identity's US Government offerings.
-ms.date: 12/09/2021
+ms.date: 06/23/2022
 ms.topic: overview
 ---
 
@@ -29,9 +29,9 @@ To access Microsoft Defender for Identity for US Government offerings, use the a
 
 |US Government offering  |Portal  |Workspace |Agent endpoint  |
 |---------|---------|---------|---------|
-|DoD    |   `portal.atp.azure.us`      | `<workspacename>.atp.azure.us` |  `<your-instance-name>sensorapi.atp.azure.us`       |
-|GCC-H   |  `portal.atp.azure.us`       | `<workspacename>.atp.azure.us`    |  `<your-instance-name>sensorapi.atp.azure.us`       |
-|GCC     |     `portal.gcc.atp.azure.com`    | `<workspacename>.gcc.atp.azure.com` |     `<your-instance-name>sensorapi.gcc.atp.azure.com`    |
+|DoD    |   `security.microsoft.us`      | `<workspacename>.atp.azure.us` |  `<your-instance-name>sensorapi.atp.azure.us`       |
+|GCC-H   |  `security.microsoft.us`       | `<workspacename>.atp.azure.us`    |  `<your-instance-name>sensorapi.atp.azure.us`       |
+|GCC     |     `security.microsoft.com`    | `<workspacename>.gcc.atp.azure.com` |     `<your-instance-name>sensorapi.gcc.atp.azure.com`    |
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or download [the Azure IP Ranges and Service Tags – US Government Cloud file](https://www.microsoft.com/download/details.aspx?id=57063).
 
@@ -44,7 +44,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 1. Have your Microsoft contact send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
 2. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
 3. Create a new instance of Defender for Identity
-4. Configure a Directory Service Account
+4. Configure a Directory Service account
 5. Download the new sensor agent package and copy the workspace key
 6. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
 7. Uninstall existing sensor agents from the domain controllers
@@ -55,7 +55,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 >[!NOTE]
 > No data is migrated from the commercial service.
-> 
+>
 > If you also have Microsoft Defender for Cloud Apps deployed, it should be migrated before you start the Defender for Identity migration.
 
 ## Feature parity with the commercial environment

@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity security alert tutorial
+title: Understanding security alerts
 description: This article explains how to use and understand Microsoft Defender for Identity security alerts.
-ms.date: 10/27/2020
+ms.date: 04/11/2022
 ms.topic: how-to
 ---
 
@@ -9,7 +9,7 @@ ms.topic: how-to
 
 [!INCLUDE [Product long](includes/product-long.md)] security alerts explain in clear language and graphics, which suspicious activities were identified on your network and the actors and computers involved in the threats. Alerts are graded for severity, color-coded to make them easy to visually filter, and organized by threat phase. Each alert is designed to help you quickly understand exactly what is happening on your network. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
-In this tutorial, learn the structure of [!INCLUDE [Product short](includes/product-short.md)] security alerts, and how to use them:
+In this article, you'll learn the structure of [!INCLUDE [Product short](includes/product-short.md)] security alerts, and how to use them.
 
 > [!div class="checklist"]
 >
@@ -22,18 +22,17 @@ In this tutorial, learn the structure of [!INCLUDE [Product short](includes/prod
 
 ## Security alert structure
 
-Each [!INCLUDE [Product short](includes/product-short.md)] security alert includes:
+Each [!INCLUDE [Product short](includes/product-short.md)] security alert includes an **Alert story**. This the chain of events  related to this alert in chronological order, and other important information related to the alert.
 
-- **Alert title**  
-Official [!INCLUDE [Product short](includes/product-short.md)] name of the alert.
-- **Description**  
-Brief explanation of what happened.
-- **Evidence**  
-Additional relevant information and related data about what happened to help in the investigation process.
-- **Excel download**  
-Detailed Excel download report for analysis
+On the alert page you can:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] security alert structure](media/security-alert-structure.png)
+- **Manage alert** - change the alert's status, assignment, and classification. You can also add a comment here.
+- **Export** - download a detailed Excel report for analysis
+- **Link alert to another incident** - link an alert to a new existing incident
+
+  [![Defender for Identity security alert structure](media/security-alert-structure.png)](media/security-alert-structure.png#lightbox)
+
+For more information about alerts, see [Investigate alerts in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-alerts).
 
 ## Security alert classifications
 

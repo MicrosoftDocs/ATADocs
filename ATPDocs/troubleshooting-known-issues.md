@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 02/04/2021
+ms.date: 06/23/2022
 ms.topic: troubleshooting
 ---
 
@@ -24,7 +24,7 @@ Make sure that communication isn't blocked for localhost, TCP port 444. To learn
 
 ## Deployment log location
 
-The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md)
+The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md).
 
 ## Proxy authentication problem presents as a licensing error
 
@@ -162,10 +162,6 @@ Suggested possible workarounds:
 
 - If your machine has less than 64 logical cores and is running on an HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
-## Microsoft Defender for Endpoint integration issue
-
-[!INCLUDE [Product short](includes/product-short.md)] enables you to integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint. See [Integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint](integrate-mde.md) for more information.
-
 ## VMware virtual machine sensor issue
 
 If you have a [!INCLUDE [Product short](includes/product-short.md)] sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
@@ -219,7 +215,7 @@ Validate that the computer running the sensor has been granted permissions to re
 
 ### Cause 2
 
-The sensor service runs as *LocalService* and performs impersonation of the directory services account.
+The sensor service runs as *LocalService* and performs impersonation of the Directory Service account.
 
 If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a service** permission.
 
@@ -280,7 +276,6 @@ If the domain controller or security group is already added, but you're still se
     1. Cache service account to server: `Install-ADServiceAccount AccountName`
     1. Start **AATPSensor**
 
-
 ## Access to the registry key 'Global' is denied
 
 The sensor service fails to start, and the sensor log contains an entry similar to:
@@ -294,7 +289,6 @@ The gMSA configured for this domain controller or AD FS server doesn't have perm
 **Resolution:**
 
 Add the gMSA to the **Performance Monitor Users** group on the server.
-
 
 ## Report downloads cannot contain more than 300,000 entries
 
@@ -359,7 +353,7 @@ Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry valu
 
 <a name="problem-installing-the-sensor-on-windows-server-2019-with-kb5009557-installed"></a>
 
-## Problem installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions 
+## Problem installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions
 
 Installing the sensor may fail with the error message:
 
@@ -375,9 +369,9 @@ There are two possible workarounds for this issue:
     psexec -s -i "C:\MDI\Azure ATP Sensor Setup.exe"
     ```
 
-1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](silent-installation.md#defender-for-identity-sensor-silent-installation).
+1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation).
 
-## See Also
+## See also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)

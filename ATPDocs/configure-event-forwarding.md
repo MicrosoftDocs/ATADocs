@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event Forwarding in Microsoft Defender for Identity
 description: Describes your options for configuring Windows Event Forwarding with Microsoft Defender for Identity
-ms.date: 10/26/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
@@ -27,13 +27,13 @@ In this scenario, assume that the [!INCLUDE [Product short](includes/product-sho
 
 1. Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**.
 1. Select **Members**.
-1. If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice.
+1. If **Network Service** is not listed, select **Add**, type **Network Service** in the **Enter the object names to select** field. Then select **Check Names** and select **OK** twice.
 
 After adding the **Network Service** to the **Event Log Readers** group, reboot the domain controllers for the change to take effect.
 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.**
 
-> [!Note]
+> [!NOTE]
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor. The following steps modify the local policy of the domain controller.
 
 1. Run the following command on each domain controller: *winrm quickconfig*
@@ -46,12 +46,12 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
     1. Select **Enabled**.
     1. Under **Options**, click **Show**.
-    1. Under **SubscriptionManagers**, enter the following value and click **OK**:
+    1. Under **SubscriptionManagers**, enter the following value and select **OK**:
         `Server=http://<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: `Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
 
     ![Configure target subscription image.](media/wef-2-config-target-sub-manager.png)
 
-1. Click **OK**.
+1. Select **OK**.
 1. From an elevated command prompt type *gpupdate /force*.
 
 **Step 3: Perform the following steps on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor**
@@ -62,14 +62,14 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
     1. Enter a name and description for the subscription.
     1. For **Destination Log**, confirm that **Forwarded Events** is selected. For [!INCLUDE [Product short](includes/product-short.md)] to read the events, the destination log must be **Forwarded Events**.
-    1. Select **Source computer initiated** and click **Select Computers Groups**.
-        1. Click **Add Domain Computer**.
+    1. Select **Source computer initiated** and select **Select Computers Groups**.
+        1. Select **Add Domain Computer**.
         1. Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.
-        1. Click **OK**.
+        1. Select **OK**.
         ![Event Viewer image.](media/wef-3-event-viewer.png)
-    1. Click **Select Events**.
-        1. Click **By log** and select **Security**.
-        1. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample:<br/>
+    1. Select **Select Events**.
+        1. Select **By log** and then select **Security**.
+        1. In the **Includes/Excludes Event ID** field type the event number and select **OK**. For example, type 4776, like in the following sample:<br/>
         ![Query filter image.](media/wef-4-query-filter.png)
     1. Return to the command window opened in the first step. Run the following commands, replacing *SubscriptionName* with the name you created for the subscription.
 

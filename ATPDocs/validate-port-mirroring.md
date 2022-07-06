@@ -1,7 +1,7 @@
 ---
 title: Validate port mirroring in Microsoft Defender for Identity
 description: Describes how to validate that port mirroring is configured correctly in Microsoft Defender for Identity
-ms.date: 10/27/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
@@ -14,7 +14,7 @@ This article is relevant only if you deploy deploy [!INCLUDE [Product long](incl
 
 The following steps walk you through the process for validating that port mirroring is properly configured. For [!INCLUDE [Product short](includes/product-short.md)] to work properly, the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor must be able to see the traffic to and from the domain controller. The main data source used by [!INCLUDE [Product short](includes/product-short.md)] is deep packet inspection of the network traffic to and from your domain controllers. For [!INCLUDE [Product short](includes/product-short.md)] to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 
-## Validate port mirroring using Net Mon
+## Validate port mirroring using Network Monitor
 
 1. Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor that you want to validate.
 
@@ -27,15 +27,15 @@ The following steps walk you through the process for validating that port mirror
 
     1. Ensure that P-Mode is enabled.
 
-    1. Click **New Capture**.
+    1. Select **New Capture**.
 
         ![Create new capture tab image.](media/port-mirroring-capture.png)
 
-1. In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then click **Apply**.
+1. In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then select **Apply**.
 
     ![Apply KerberosV5 or LDAP filter image.](media/port-mirroring-filter-settings.png)
 
-1. Click **Start** to start the capture session. If you do not see traffic to and from the domain controller, review your port mirroring configuration.
+1. Select **Start** to start the capture session. If you do not see traffic to and from the domain controller, review your port mirroring configuration.
 
     ![Start capture session image.](media/port-mirroring-capture-traffic.png)
 
