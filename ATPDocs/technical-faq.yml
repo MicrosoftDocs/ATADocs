@@ -180,7 +180,7 @@ sections:
             - If you want to manually install Npcap:
               1. Install Npcap with the following options:
                 - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
-                - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S'
+                - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
 
 
   - name: Operation
