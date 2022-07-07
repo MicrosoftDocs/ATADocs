@@ -148,13 +148,13 @@ sections:
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
 
       - question: What version of Npcap is supported? 
-        answer: The recommended and officially supported version of Npcap is version 1.0. If you have the appropriate license, you can install a newer version of Npcap, but note that for troubleshooting, support will ask you to downgrade the Npcap version to validate that the issue is not related to the newer version installed.
+        answer: The recommended and officially supported version of Npcap is version 1.0. You can install a newer version of Npcap, but note that for troubleshooting, support will ask you to downgrade the Npcap version to validate that the issue is not related to the newer version installed.
 
       - question: I have more than 5 domain controllers in my organization. Do I need to purchase an Npcap license if I’m using Npcap on these domain controllers? 
         answer: |
           No, Npcap has an exemption to the usual limit of 5 installs. You can install it on unlimited systems where it is only used with the Defender for Identity sensor.
           
-          See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE),  and search for Microsoft Defender for Identity. 
+          See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE), and search for Microsoft Defender for Identity. 
 
       - question: Is Npcap also relevant for ATA? 
         answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.00.
@@ -165,9 +165,6 @@ sections:
       - question: How do I download and install the Npcap driver? 
         answer: |
           -  You can obtain the Npcap executables by [downloading the latest deployment package of the MDI sensor](download-sensor.md).
-
-              >[!NOTE]
-              >Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with Defender for Identity. For more information, see [Npcap licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
 
             - If you haven't yet installed the sensor:
               1. Install the sensor (with an installation package of version 2.184 or greater).
