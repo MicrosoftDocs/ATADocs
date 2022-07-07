@@ -31,7 +31,7 @@ Defender for Identity now includes the following new security assessment:
   - Unsecure domain configurations  
 Microsoft Defender for Identity continuously monitors your environment to identify domains with configuration values that expose a security risk, and reports on these domains to assist you in protecting your environment. For more information, see [Security assessment: Unsecure domain configurations](security-assessment-unsecure-domain-configurations.md).
 
-- The Defender for Identity installation package will now install the Npcap component instead of the WinPcap drivers. For more information, see [How do I download and install the Npcap driver](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
+- The Defender for Identity installation package will now install the Npcap component instead of the WinPcap drivers. For more information, see [WinPcap and Npcap drivers](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
