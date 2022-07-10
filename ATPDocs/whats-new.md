@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/06/2022
+ms.date: 07/10/2022
 ms.topic: overview
 ---
 
@@ -24,7 +24,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## Defender for Identity release 2.184
 
-Released July 6, 2022
+Released July 10, 2022
 
 - **New security assessments**  
 Defender for Identity now includes the following new security assessment:
