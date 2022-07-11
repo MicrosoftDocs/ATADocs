@@ -581,28 +581,8 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "ATPDocs/entity-profiles.md",
-            "redirect_url": "/defender-for-identity/investigate-users-computers",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "ATPDocs/use-case-lateral-movement-path.md",
             "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/investigate-a-user.md",
-            "redirect_url": "/defender-for-identity/investigate-users-computers",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/investigate-a-computer.md",
-            "redirect_url": "/defender-for-identity/investigate-users-computers",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "ATPDocs/investigate-entity.md",
-            "redirect_url": "/defender-for-identity/investigate-users-computers",
             "redirect_document_id": false
         },
         {
@@ -783,6 +763,31 @@
         {
             "source_path": "ATPDocs/understand-entities.md",
             "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/entity-profiles.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/investigate-a-computer.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/investigate-a-user.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/investigate-entity.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/sensor-health.md",
+            "redirect_url": "/defender-for-identity/health-alerts",
             "redirect_document_id": false
         },
         {
