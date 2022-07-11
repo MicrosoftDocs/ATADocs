@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 ## Search for and identify personal data
 
-In [!INCLUDE [Product short](includes/product-short.md)], you can view identifiable personal data from the [Microsoft 365 Defender portal](https://seccurity.microsoft.com) using the search bar.
+In [!INCLUDE [Product short](includes/product-short.md)], you can view identifiable personal data from the [Microsoft 365 Defender portal](https://security.microsoft.com) using the search bar.
 
 Search for a specific user or computer, and select the entity to bring you to the user or computer [profile page](entity-profiles.md). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
 
