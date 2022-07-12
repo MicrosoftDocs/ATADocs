@@ -111,7 +111,9 @@ To audit Event ID 8004, additional configuration steps are required.
 
 ## Event ID 1644
 
-Windows event 1644 is not collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
+Microsoft Defender for Identity can monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers.
+
+Windows event 1644 isn't collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
 
 ```reg
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
