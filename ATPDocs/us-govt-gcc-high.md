@@ -7,11 +7,11 @@ ms.topic: overview
 
 # Microsoft Defender for Identity for US Government offerings
 
-The [!INCLUDE [Product long](includes/product-long.md)] GCC High offering uses the same underlying technologies and capabilities as the commercial instance of [!INCLUDE [Product short](includes/product-short.md)]. A list of feature variances can be found in the [Service Description](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description).
+The [!INCLUDE [Product long](includes/product-long.md)] GCC High offering uses the same underlying technologies and capabilities as the commercial instance of [!INCLUDE [Product short](includes/product-short.md)].
 
 ## Get started with US Government offerings
 
-The [!INCLUDE [Product short](includes/product-short.md)] GCC, GCC High, and Department of Defense (DoD) offerings are built on the Microsoft Azure Government Cloud and are designed to inter-operate with Microsoft 365 GCC, GCC High, and DoD. Use [!INCLUDE [Product short](includes/product-short.md)] public documentation as a [starting point](install-step1.md) for deploying and operating the service and refer to the [Service Description](/enterprise-mobility-security/solutions/ems-mdi-govt-service-description), which details all changes from functionality or features specific to the GCC, GCC High, and DoD environments.
+The [!INCLUDE [Product short](includes/product-short.md)] GCC, GCC High, and Department of Defense (DoD) offerings are built on the Microsoft Azure Government Cloud and are designed to inter-operate with Microsoft 365 GCC, GCC High, and DoD. Use [!INCLUDE [Product short](includes/product-short.md)] public documentation as a [starting point](deploy-defender-identity.md) for deploying and operating the service.
 
 ## Licensing requirements
 
@@ -49,7 +49,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 6. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
 7. Uninstall existing sensor agents from the domain controllers
 8. (Optionally) [install the npcap driver](technical-faq.yml#how-do-i-download-and-install-the-npcap-driver)
-9. [Reinstall sensors with the new workspace key](install-step4.md#install-the-sensor)
+9. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
 10. Migrate any settings after the initial sync (use the two portals to compare)
 11. Eventually, delete the previous workspace (historic data will be lost)
 
@@ -60,9 +60,9 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 ## Feature parity with the commercial environment
 
-Unless otherwise specified, new feature releases, including preview features, documented in [What's new with Defender for Identity](whats-new.md), will be available in GCC, GCC High, and DoD environments within 90 days of release in the Defender for Identity commercial environment. Preview features may not be supported in the GCC, GCC High, and DoD environments. Refer to the [Service Description](/enterprise-mobility-security/solutions/ems-mdi-govt-service-description) for a list of functionality or features specific to the GCC, GCC High, and DoD environments.
+Unless otherwise specified, new feature releases, including preview features, documented in [What's new with Defender for Identity](whats-new.md), will be available in GCC, GCC High, and DoD environments within 90 days of release in the Defender for Identity commercial environment. Preview features may not be supported in the GCC, GCC High, and DoD environments.
 
 ## Next steps
 
-- [Learn more about Government offerings](/enterprise-mobility-security/solutions/ems-azure-atp-govt-service-description)
+- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
