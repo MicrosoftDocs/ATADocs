@@ -18,7 +18,7 @@ Role groups enable access management for [!INCLUDE [Product short](includes/prod
 
 ## Required permissions for the Microsoft 365 Defender experience
 
-To access the Defender for Identity experience in [in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md), you need the following permissions:
+To access the Defender for Identity experience in [in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender), you need the following permissions:
 
 - For Defender for Identity alerts and activities in Microsoft 365 Defender, ensure you have the sufficient Azure Active Directory roles or Microsoft Defender for Cloud Apps internal roles.  For details, see [Microsoft Defender for Identity integration prerequisites](/cloud-app-security/mdi-integration#prerequisites).
 
@@ -64,4 +64,3 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](de
 > [!div class="step-by-step"]
 > [« Directory Service accounts](directory-service-accounts.md)
 > [Configure remote calls to SAM »](remote-calls-sam.md)
-

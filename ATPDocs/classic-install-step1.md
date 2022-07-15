@@ -53,7 +53,7 @@ After you verified that your network meets the sensor requirements, start the cr
 
 > [!div class="step-by-step"]
 > [« Prerequisites](prerequisites.md)
-> [Step 2 - Connect to Active Directory »](install-step2.md)
+> [Step 2 - Connect to Active Directory »](/defender-for-identity/directory-service-accounts)
 
 ## Join the Community
 

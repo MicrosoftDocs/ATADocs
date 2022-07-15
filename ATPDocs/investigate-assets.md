@@ -15,12 +15,12 @@ For information on how to view user profiles in Microsoft 365 Defender, see [Inv
 
 If an alert or incident indicates that a user may be suspicious or compromised, check and investigate the user profile for the following details and activities:
 
-1. Who is the [user](entity-profiles.md)?
+1. Who is the [user](/defender-for-identity/investigate-assets)?
     1. Is the user a [sensitive user](entity-tags.md) (such as admin, or on a watchlist, etc.)?
     1. What is their role within the organization?
     1. Are they significant in the organizational tree?
 
-1. Suspicious activities to [investigate](investigate-entity.md):
+1. Suspicious activities to [investigate](/defender-for-identity/investigate-assets):
     1. Does the user have other opened alerts in [!INCLUDE [Product short](includes/product-short.md)], or in other security tools such as Microsoft Defender for Endpoint, Microsoft Defender for Cloud and/or Microsoft Defender for Cloud Apps?
     1. Did the user have failed logons?
     1. Which resources did the user access?
@@ -28,7 +28,7 @@ If an alert or incident indicates that a user may be suspicious or compromised, 
     1. Was the user supposed to access the resources they accessed?
     1. Which devices did the user sign in to?
     1. Was the user supposed to sign in to those devices?
-    1. Is there a [lateral movement path](use-case-lateral-movement-path.md) (LMP) between the user and a sensitive user?
+    1. Is there a [lateral movement path](/defender-for-identity/understand-lateral-movement-paths) (LMP) between the user and a sensitive user?
 
 Use the answers to these questions to determine if the account appears compromised or if the suspicious activities imply malicious actions.
 

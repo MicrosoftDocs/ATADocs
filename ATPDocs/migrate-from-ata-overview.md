@@ -46,7 +46,7 @@ In this guide you will:
 Make sure to gather the following information before starting your move:
 
 1. Account details for your [Directory Services](directory-service-accounts.md) account.
-1. Syslog notification [settings](setting-syslog.md).
+1. Syslog notification [settings](/defender-for-identity/notifications).
 1. Email [notification details](notifications.md).
 1. ATA roles group membership
 1. VPN integration
@@ -55,8 +55,8 @@ Make sure to gather the following information before starting your move:
 1. Account details for honeytoken accounts.
     - If you don't already have dedicated honeytoken accounts, learn more about [honeytokens in [!INCLUDE [Product short](includes/product-short.md)]](manage-sensitive-honeytoken-accounts.md) and create new accounts to use for this purpose.
 1. Complete list of all entities (computers, groups, users) you wish to manually tag as Sensitive entities.
-    - Learn more about the importance of [Sensitive entities](manage-sensitive-honeytoken-accounts.md) in [!INCLUDE [Product short](includes/product-short.md)].
-1. Report scheduling [details](reports.md) (list of reports and scheduled timing).
+    - Learn more about the importance of [Sensitive entities](/defender-for-identity/entity-tags) in [!INCLUDE [Product short](includes/product-short.md)].
+1. Report scheduling [details](/defender-for-identity/notifications) (list of reports and scheduled timing).
 
 > [!NOTE]
 > Do not uninstall the ATA Center until all ATA Gateways are removed. Uninstalling the ATA Center with ATA Gateways still running leaves your organization exposed with no threat protection.
@@ -86,7 +86,7 @@ Complete your move to [!INCLUDE [Product short](includes/product-short.md)] in t
 
 In the Microsoft 365 Defender portal:
 
-- Review any [health alerts](health-center.md) for signs of service issues.
+- Review any [health alerts](/defender-for-identity/health-alerts) for signs of service issues.
 - Review [!INCLUDE [Product short](includes/product-short.md)] [Sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
 
 ## After the move

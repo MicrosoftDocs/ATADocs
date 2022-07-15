@@ -37,17 +37,17 @@ A [!INCLUDE [Product short](includes/product-short.md)] license is required.
 
 ### Assessment reports
 
-- [Domain controllers with Print Spooler service available](cas-isp-print-spooler.md)
-- [Dormant entities in sensitive groups](cas-isp-dormant-entities.md)
-- [Entities exposing credentials in clear text](cas-isp-clear-text.md)
-- [Microsoft LAPS usage](cas-isp-laps.md)
-- [Legacy protocols usage](cas-isp-legacy-protocols.md)
-- [Riskiest lateral movement paths (LMP)](cas-isp-riskiest-lmp.md)
-- [Unmonitored domain controllers](cas-isp-unmonitored-domain-controller.md)
-- [Unsecure account attributes](cas-isp-unsecure-account-attributes.md)
-- [Unsecure Kerberos delegation](cas-isp-unconstrained-kerberos.md)
-- [Unsecure SID History attributes](cas-isp-unsecure-sid-history-attribute.md)
-- [Weak cipher usage](cas-isp-weak-cipher.md)
+- [Domain controllers with Print Spooler service available](/defender-for-identity/security-assessment-print-spooler)
+- [Dormant entities in sensitive groups](/defender-for-identity/security-assessment-dormant-entities)
+- [Entities exposing credentials in clear text](/defender-for-identity/security-assessment-clear-text)
+- [Microsoft LAPS usage](/defender-for-identity/security-assessment-laps)
+- [Legacy protocols usage](/defender-for-identity/security-assessment-legacy-protocols)
+- [Riskiest lateral movement paths (LMP)](/defender-for-identity/security-assessment-riskiest-lmp)
+- [Unmonitored domain controllers](/defender-for-identity/security-assessment-unmonitored-domain-controller)
+- [Unsecure account attributes](/defender-for-identity/security-assessment-unsecure-account-attributes)
+- [Unsecure Kerberos delegation](/defender-for-identity/security-assessment-unconstrained-kerberos)
+- [Unsecure SID History attributes](/defender-for-identity/security-assessment-unsecure-sid-history-attribute)
+- [Weak cipher usage](/defender-for-identity/security-assessment-weak-cipher)
 
 To access identity security posture assessments:
 

@@ -27,7 +27,7 @@ To filter alerts and activities:
 
 ## See Also
 
-- [Investigating entities](investigate-entity.md)
+- [Investigating entities](/defender-for-identity/investigate-assets)
 - [Health alerts](health-alerts.md)
-- [Working with Security Alerts](working-with-suspicious-activities.md)
+- [Working with Security Alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

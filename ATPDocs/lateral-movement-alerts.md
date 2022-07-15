@@ -63,7 +63,7 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the source computer using [these instructions](investigate-a-computer.md).
+1. Investigate the source computer using [these instructions](/defender-for-identity/investigate-assets).
 2. Investigate the target domain controller, and identify activities that occurred after the attack.
 
 **Suggested remediation**
@@ -72,7 +72,7 @@ None
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time that the activity occurred. These users might also be compromised. If you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection,you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 2. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-3452](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
-3. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](cas-isp-print-spooler.md).
+3. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](/defender-for-identity/security-assessment-print-spooler).
 
 ## Remote code execution attempt over DNS (external ID 2036)
 
@@ -106,7 +106,7 @@ None
 
 **Understand the scope of the breach**
 
-- Investigate the [source and destination computers](investigate-a-computer.md).
+- Investigate the [source and destination computers](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -149,8 +149,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source and destination computers](investigate-a-computer.md) further.
-1. Investigate the [compromised user](investigate-a-computer.md).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets) further.
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -204,8 +204,8 @@ There are custom applications that forward tickets on behalf of users. These app
 
 **Understand the scope of the breach**
 
-1. Investigate the [source and destination computers](investigate-a-computer.md).
-1. Investigate the [compromised user](investigate-a-computer.md).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -242,8 +242,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computers](investigate-a-computer.md).
-1. Investigate the [source account](investigate-a-user.md).
+1. Investigate the [source computers](/defender-for-identity/investigate-assets).
+1. Investigate the [source account](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -288,8 +288,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Continue [investigating the source computers](investigate-a-computer.md) behind the IP addresses involved.
-1. Investigate the [source account](investigate-a-user.md).
+1. Continue [investigating the source computers](/defender-for-identity/investigate-assets) behind the IP addresses involved.
+1. Investigate the [source account](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -332,8 +332,8 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. Investigate the [compromised user](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -380,8 +380,8 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. If there is a [source user](investigate-a-user.md), investigate.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. If there is a [source user](/defender-for-identity/investigate-assets), investigate.
 
 **Suggested remediation and steps for prevention**
 
@@ -420,9 +420,9 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-2. Investigate the [source user](investigate-a-user.md).
-3. Check which resources were accessed successfully and [investigate](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+2. Investigate the [source user](/defender-for-identity/investigate-assets).
+3. Check which resources were accessed successfully and [investigate](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -458,7 +458,7 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
 1. Investigate the destination DC.
 
 **Suggested remediation and steps for prevention**
@@ -552,9 +552,9 @@ Update your Exchange servers with the latest security patches. The vulnerabiliti
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)

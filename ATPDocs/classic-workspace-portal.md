@@ -39,7 +39,7 @@ The Attack time line is the default landing page you are taken to when you log i
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] attack timeline image](media/sa-timeline.png)
 
-For more information, see [Working with security alerts](working-with-suspicious-activities.md).
+For more information, see [Working with security alerts](/defender-for-identity/manage-security-alerts).
 
 ### What's new
 
@@ -73,7 +73,7 @@ Any time your system encounters a problem, such as a connectivity error or a dis
 
 ### Sensitive groups
 
-For information on sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with sensitive groups](manage-sensitive-honeytoken-accounts.md).
+For information on sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with sensitive groups](/defender-for-identity/entity-tags).
 
 ### Mini profile
 

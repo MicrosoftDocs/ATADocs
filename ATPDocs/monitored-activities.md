@@ -101,7 +101,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 
 ## See Also
 
-- [Managing security alerts](working-with-suspicious-activities.md)
-- [Security alert guide](suspicious-activity-guide.md)
-- [Investigate entities](investigate-entity.md)
+- [Managing security alerts](/defender-for-identity/manage-security-alerts)
+- [Security alert guide](/defender-for-identity/alerts-overview)
+- [Investigate entities](/defender-for-identity/investigate-assets)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

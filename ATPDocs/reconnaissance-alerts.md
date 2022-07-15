@@ -96,7 +96,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
 **Understand the scope of the breach**
 
 1. Investigate the source computer
-1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment, and can use brute force to attempt to access your domain using the discovered user names. Investigate the existing accounts using the [user investigation guide](investigate-a-user.md).
+1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment, and can use brute force to attempt to access your domain using the discovered user names. Investigate the existing accounts using the [user investigation guide](/defender-for-identity/investigate-assets).
     > [!NOTE]
     > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access.  
     > Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account attempted to access.  
@@ -108,7 +108,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
 
 **Suggested remediation and steps for prevention**
 
-1. Contain the source [computer](investigate-a-computer.md).
+1. Contain the source [computer](/defender-for-identity/investigate-assets).
     1. Find the tool that performed the attack and remove it.
     1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
     1. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
@@ -147,7 +147,7 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
 1. Is the computer running a scanning tool that performs various of LDAP queries?
     - Investigate whether the specific queried users and groups in the attack are privileged or high-value accounts (that is, CEO, CFO, IT management, etc.). If so, look at other activities on the endpoint as well and monitor computers that the queried accounts are logged into, as they're probably targets for lateral movement.
 1. Check the queries and their attributes, and determine if they were successful. Investigate each exposed group, search for suspicious activities made on the group or by member users of the group.
@@ -196,7 +196,7 @@ Security scanners and legitimate applications can  generate DNS queries.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -241,7 +241,7 @@ To allow [!INCLUDE [Product short](includes/product-short.md)] to accurately pro
 **Understand the scope of the breach**
 
 1. Check the queries that were performed (such as Domain admins, or all users in a domain) and determine if the queries were successful. Investigate each exposed group search for suspicious activities made on the group, or by member users of the group.
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
     - Using the LDAP queries, check if any resource access activity occurred on any of the exposed SPNs.
 
 **Suggested remediation and steps for prevention**
@@ -288,7 +288,7 @@ Four weeks per domain controller starting from the first network activity of SAM
       - If yes, *Close* the security alert and exclude that computer, as a  **B-TP** activity.
     - Check the user/s that performed the operation.
       - Do those users normally log into that source computer, or are they administrators that should be performing those specific actions?
-    - Check the user profile, and their related user activities. Understand their normal user behavior and search for additional suspicious activities using the [user investigation guide](investigate-a-user.md).
+    - Check the user profile, and their related user activities. Understand their normal user behavior and search for additional suspicious activities using the [user investigation guide](/defender-for-identity/investigate-assets).
 
       If you answered **yes** to the previous above, *Close* the alert as a **B-TP** activity.
 
@@ -352,13 +352,13 @@ Security scanners and applications may legitimately query domain controllers for
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Investigate a user](investigate-a-user.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Investigate a user](/defender-for-identity/investigate-assets)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

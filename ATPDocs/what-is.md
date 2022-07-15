@@ -99,5 +99,5 @@ Get started with [Deploy Microsoft Defender for Identity with Microsoft 365 Defe
 ## See Also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.yml)
-- [Working with security alerts](working-with-suspicious-activities.md)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

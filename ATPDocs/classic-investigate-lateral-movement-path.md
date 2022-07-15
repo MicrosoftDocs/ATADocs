@@ -12,7 +12,7 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. 
 
-Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are [credential theft](suspicious-activity-guide.md#) and [Pass the Ticket](suspicious-activity-guide.md) attacks. In both methods, non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
+Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are [credential theft](suspicious-activity-guide.md#) and [Pass the Ticket](/defender-for-identity/alerts-overview) attacks. In both methods, non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
 
 In this tutorial, you'll learn how to use [!INCLUDE [Product long](includes/product-long.md)] LMPs to [investigate](#investigate) potential lateral movement paths, and along with [!INCLUDE [Product short](includes/product-short.md)] security alerts, gain a better understanding of what happened in your network and how. In addition, you'll learn how to use the [LMP to sensitive account report](#discover-your-at-risk-sensitive-accounts) to discover all of the sensitive accounts with potential lateral movement paths discovered in your network by time period.
 
@@ -69,13 +69,13 @@ To review historical LMPs, select different available dates in the calendar sele
 In this tutorial, you've learned how to use LMPs to investigate suspicious activities. To learn more about entities involved in LMPs, continue to the investigate entities tutorial.
 
 > [!div class="nextstepaction"]
-> [Investigate entities](investigate-entity.md)
+> [Investigate entities](/defender-for-identity/investigate-assets)
 
 ## See Also
 
 - [Understanding [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths](use-case-lateral-movement-path.md)
 - [Configure [!INCLUDE [Product short](includes/product-short.md)] to make remote calls to SAM](install-step8-samr.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
 
 ## Learn more

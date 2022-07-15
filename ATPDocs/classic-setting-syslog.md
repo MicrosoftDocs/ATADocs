@@ -9,7 +9,7 @@ ROBOTS: NOINDEX
 # Classic portal: Integrate with Syslog
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/notifications#syslog-notifications). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/notifications#syslog-notifications). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender).
 
 [!INCLUDE [Product long](includes/product-long.md)] can notify you when it detects suspicious activities by sending security and health alerts to your Syslog server through a nominated sensor.
 
@@ -59,5 +59,5 @@ To review or modify your Syslog settings.
 
 ## See Also
 
-- [Working with sensitive accounts](manage-sensitive-honeytoken-accounts.md)
+- [Working with sensitive accounts](/defender-for-identity/entity-tags)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

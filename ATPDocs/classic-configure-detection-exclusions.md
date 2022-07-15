@@ -9,7 +9,7 @@ ROBOTS: NOINDEX
 # Classic portal: Configure detection exclusions
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/exclusions). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/exclusions). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender).
 
 [!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses, computers, or users from a number of detections.
 
@@ -33,7 +33,7 @@ To configure exclusions from the configuration page, do the following:
     1. Select the plus icon **(+)**.
 
     > [!TIP]
-    > The user or computer field is searchable and will autofill with entities in your network. For more information, see the [security alert guide](suspicious-activity-guide.md).
+    > The user or computer field is searchable and will autofill with entities in your network. For more information, see the [security alert guide](/defender-for-identity/alerts-overview).
 
     ![Excluding entities from detections.](media/exclusions.png)
 
@@ -53,7 +53,7 @@ To configure exclusions from a security alert, do the following:
 
     ![Exclude entity.](media/exclude-in-sa.png)
 
-[!INCLUDE [Product short](includes/product-short.md)] scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment. The learning period for each alert is listed in the detailed [security alert guide](suspicious-activity-guide.md).
+[!INCLUDE [Product short](includes/product-short.md)] scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
 
 ## See Also
 

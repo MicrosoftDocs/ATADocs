@@ -45,8 +45,8 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 
 **Understand the scope of the breach**
 
-1. Investigate the [source users](investigate-a-user.md).
-1. Investigate the [source and destination computers](investigate-a-computer.md) of the copies.
+1. Investigate the [source users](/defender-for-identity/investigate-assets).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets) of the copies.
 
 **Suggested remediation and steps for prevention**
 
@@ -93,7 +93,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
     - What IP is it correlated to?
     - Who is the owner of the domain?
     - Where is the IP?
-1. Investigate the [source and destination computers](investigate-a-computer.md).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -107,9 +107,9 @@ Some companies legitimately use DNS for regular communication. To determine the 
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)

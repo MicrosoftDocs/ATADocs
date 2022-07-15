@@ -146,11 +146,11 @@ Download report data appears in two columns:
 
 ![Network activities.](media/network-activities.png)
 
-For more information about how to work with [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Working with security alerts](working-with-suspicious-activities.md).
+For more information about how to work with [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Working with security alerts](/defender-for-identity/manage-security-alerts).
 
 ## See Also
 
-- [Investigate a user](investigate-a-user.md)
-- [Investigate a computer](investigate-a-computer.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Investigate a user](/defender-for-identity/investigate-assets)
+- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

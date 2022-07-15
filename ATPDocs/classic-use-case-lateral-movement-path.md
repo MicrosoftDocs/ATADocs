@@ -11,7 +11,7 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored log-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in the [Suspicious activity guide](suspicious-activity-guide.md).
+Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored log-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in the [Suspicious activity guide](/defender-for-identity/alerts-overview).
 
 A key component of [!INCLUDE [Product long](includes/product-long.md)]'s security insights are Lateral Movement Paths or LMPs. [!INCLUDE [Product short](includes/product-short.md)] LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, [!INCLUDE [Product short](includes/product-short.md)] LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
 
@@ -54,7 +54,7 @@ LMP can now directly assists with your investigation process. [!INCLUDE [Product
 
 ## Lateral Movement paths to sensitive accounts report
 
-LMP data is also available in the [Lateral Movement Paths to Sensitive Accounts report](investigate-lateral-movement-path.md). This report lists the sensitive accounts that are exposed via lateral movement paths and includes paths that were selected manually for a specific time period, or included in the time period for scheduled reports.  Customize the included date range using the calendar selection.
+LMP data is also available in the [Lateral Movement Paths to Sensitive Accounts report](/defender-for-identity/understand-lateral-movement-paths). This report lists the sensitive accounts that are exposed via lateral movement paths and includes paths that were selected manually for a specific time period, or included in the time period for scheduled reports.  Customize the included date range using the calendar selection.
 
 ## Preventative best practices
 
@@ -68,15 +68,15 @@ Security insights are never too late to prevent the next attack and remediate da
 
 **Tip** – When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose to **View a different date** and check for previous potential lateral movement paths. The **LMP to sensitive users report** is always available if LMPs were discovered and provides you with information about potential lateral movement paths detected to sensitive users.
 
-**Tip** - For instructions on how to set your clients and servers to allow [!INCLUDE [Product short](includes/product-short.md)] to perform the SAM-R operations needed for lateral movement path detection, see [configure SAM-R](install-step8-samr.md).
+**Tip** - For instructions on how to set your clients and servers to allow [!INCLUDE [Product short](includes/product-short.md)] to perform the SAM-R operations needed for lateral movement path detection, see [configure SAM-R](/defender-for-identity/remote-calls-sam).
 
 ## Investigating LMPs
 
-For instructions on how to identify and investigate using [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths, see [Investigate Lateral Movement Paths](investigate-lateral-movement-path.md).
+For instructions on how to identify and investigate using [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths, see [Investigate Lateral Movement Paths](/defender-for-identity/understand-lateral-movement-paths).
 
 ## See Also
 
 - [Investigating [!INCLUDE [Product short](includes/product-short.md)] LMPs](investigate-lateral-movement-path.md)
 - [Configure [!INCLUDE [Product short](includes/product-short.md)] to make remote calls to SAM](install-step8-samr.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

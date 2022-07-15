@@ -67,8 +67,8 @@ Advanced security scanners may legitimately generate this type of activity again
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. If a [source user](investigate-a-user.md) exists, investigate.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. If a [source user](/defender-for-identity/investigate-assets) exists, investigate.
 
 **Suggested remediation and steps for prevention**
 
@@ -109,8 +109,8 @@ Administrative workstations, IT team members, and service accounts can all perfo
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md) and [user](investigate-a-user.md).
-1. Investigate the [domain controller](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets) and [user](/defender-for-identity/investigate-assets).
+1. Investigate the [domain controller](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention:**
 
@@ -180,7 +180,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
 1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Suggested remediation and steps for prevention:**
@@ -244,7 +244,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the source [computer](investigate-a-computer.md).
+1. Investigate the source [computer](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -313,7 +313,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the source [computer](investigate-a-computer.md) and [user](investigate-a-user.md).
+1. Investigate the source [computer](/defender-for-identity/investigate-assets) and [user](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention:**
 
@@ -378,8 +378,8 @@ Applications might authenticate using a lower encryption cipher. Some are authen
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and resources](investigate-a-computer.md) that were accessed.
-1. Investigate the [users](investigate-a-computer.md).
+1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets) that were accessed.
+1. Investigate the [users](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -431,9 +431,9 @@ Some Operating Systems or applications are known to modify the authorization dat
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. If there is a [source user](investigate-a-user.md), investigate.
-1. Check which resources were accessed successfully and [investigate](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. If there is a [source user](/defender-for-identity/investigate-assets), investigate.
+1. Check which resources were accessed successfully and [investigate](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -475,7 +475,7 @@ If the answer is **yes** to all of the previous questions, **Close** the alert, 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -514,8 +514,8 @@ Federation services might generate tickets that will trigger this alert.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
-1. Investigate the [source user](investigate-a-user.md).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets).
+1. Investigate the [source user](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -563,12 +563,12 @@ If the answer to any of the previous questions is yes, Close the security alert 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and resources](investigate-a-computer.md) that were accessed.
-1. Investigate the [users](investigate-a-user.md).
+1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets) that were accessed.
+1. Investigate the [users](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention:**
 
-1. Follow the instructions in the [unsecure Kerberos delegation](cas-isp-unconstrained-kerberos.md) security assessment.
+1. Follow the instructions in the [unsecure Kerberos delegation](/defender-for-identity/security-assessment-unconstrained-kerberos) security assessment.
 1. Review the sensitive users listed in the alert and remove them from the resource.
 1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash](lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017) recommendations.
 
@@ -604,8 +604,8 @@ If the answer to the previous questions is **yes**, **Close** the security alert
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
-1. Investigate the [compromised user](investigate-a-user.md).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
 
@@ -639,9 +639,9 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 **Understand the scope of the breach**
 
-1. Investigate the [domain controller](investigate-a-computer.md).
+1. Investigate the [domain controller](/defender-for-identity/investigate-assets).
 1. Check if Skeleton Key has affected your domain controllers.
-1. Investigate the [users](investigate-a-user.md) and [computers](investigate-a-computer.md) involved.
+1. Investigate the [users](/defender-for-identity/investigate-assets) and [computers](/defender-for-identity/investigate-assets) involved.
 
 **Suggested remediation and prevention steps**
 
@@ -656,7 +656,7 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. [!INCLUDE [Product short](includes/product-short.md)] profiles continuously.
 
-For a definition of sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with the sensitive accounts](manage-sensitive-honeytoken-accounts.md).
+For a definition of sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with the sensitive accounts](/defender-for-identity/entity-tags).
 
 The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](configure-windows-event-collection.md).
 
@@ -731,8 +731,8 @@ Some administrative tasks are legitimately performed against domain controllers 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source user](investigate-a-user.md).
-1. Investigate the [destination computers](investigate-a-computer.md) the services were created on.
+1. Investigate the [source user](/defender-for-identity/investigate-assets).
+1. Investigate the [destination computers](/defender-for-identity/investigate-assets) the services were created on.
 
 **Suggested remediation and steps for prevention**
 
@@ -756,9 +756,9 @@ Some administrative tasks are legitimately performed against domain controllers 
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
