@@ -15,7 +15,7 @@ Print spooler is a software service that manages printing processes. The spooler
 
 ## What risks does the **Print spooler** service on domain controllers introduce?
 
-While seemingly harmless, any authenticated user can remotely connect to a domain controllers print spooler service, and request an update on new print jobs. Also, users can tell the domain controller to send the notification to the system with [unconstrained delegation](cas-isp-unconstrained-kerberos.md). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM).
+While seemingly harmless, any authenticated user can remotely connect to a domain controllers print spooler service, and request an update on new print jobs. Also, users can tell the domain controller to send the notification to the system with [unconstrained delegation](/defender-for-identity/security-assessment-unconstrained-kerberos). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM).
 
 Due to the possibility for exposure, domain controllers and Active Directory admin systems need to have the **Print spooler** service disabled. The recommended way to do this is using a Group Policy Object (GPO).
 

@@ -22,12 +22,12 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domain controllers are unmonitored.
 
     ![Install Defender for Identity Sensor on all Domain Controllers.](media/cas-isp-unmonitored-domain-controller-1.png)
-1. Take appropriate action on those domain controllers by [installing and configuring monitoring sensors](sensor-monitoring.md#domain-controller-status).
+1. Take appropriate action on those domain controllers by [installing and configuring monitoring sensors](/defender-for-identity/sensor-settings#domain-controller-status).
 
 > [!NOTE]
 > This assessment is updated in near real time.
 
 ## See Also
 
-- [Monitoring your domain controller coverage](sensor-monitoring.md)
+- [Monitoring your domain controller coverage](/defender-for-identity/sensor-settings)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

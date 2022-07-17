@@ -81,7 +81,7 @@ The service health status for [!INCLUDE [Product short](includes/product-short.m
 
 - If you have a question about a prerequisite for [!INCLUDE [Product short](includes/product-short.md)], see [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md).
 
-- For information regarding investigation security alerts, see the [security alert guide](suspicious-activity-guide.md).
+- For information regarding investigation security alerts, see the [security alert guide](/defender-for-identity/alerts-overview).
 
 ### Community resources
 
