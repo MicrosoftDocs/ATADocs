@@ -548,6 +548,6 @@ Apply the latest patches to all of your machines, and check all security updates
 
 ## See also
 
-- [ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
+- [ATA suspicious activity playbook](https://aka.ms/ataplaybook)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with suspicious activities](working-with-suspicious-activities.md)
