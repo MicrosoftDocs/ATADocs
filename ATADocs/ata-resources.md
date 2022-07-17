@@ -64,7 +64,7 @@ These resources will help you download and install the ATA Center, connect to Ac
 
 [Download ATA](https://aka.ms/ataeval) - Before deploying ATA, if you haven't made the decision to purchase ATA, you can download the evaluation version.
 
-[ATA POC playbook](/samples/browse/?redirectedfrom=TechNet-Gallery) - Guide to all the steps necessary to do a successful POC deployment of ATA.
+[ATA POC playbook](https://aka.ms/ataplaybook) - Guide to all the steps necessary to do a successful POC deployment of ATA.
 
 ## ATA settings
 
