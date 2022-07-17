@@ -150,7 +150,7 @@ For more information about how to work with [!INCLUDE [Product short](includes/p
 
 ## See Also
 
-- [Investigate a user](/defender-for-identity/investigate-assets)
-- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

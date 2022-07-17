@@ -67,8 +67,8 @@ Advanced security scanners may legitimately generate this type of activity again
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. If a [source user](/defender-for-identity/investigate-assets) exists, investigate.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If a [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) exists, investigate.
 
 **Suggested remediation and steps for prevention**
 
@@ -109,8 +109,9 @@ Administrative workstations, IT team members, and service accounts can all perfo
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets) and [user](/defender-for-identity/investigate-assets).
-1. Investigate the [domain controller](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) and [user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+1. Investigate the [domain controller](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices
+).
 
 **Suggested remediation and steps for prevention:**
 
@@ -180,7 +181,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Suggested remediation and steps for prevention:**
@@ -244,7 +245,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the source [computer](/defender-for-identity/investigate-assets).
+1. Investigate the source [computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
@@ -313,7 +314,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the source [computer](/defender-for-identity/investigate-assets) and [user](/defender-for-identity/investigate-assets).
+1. Investigate the source [computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) and [user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention:**
 
@@ -378,8 +379,8 @@ Applications might authenticate using a lower encryption cipher. Some are authen
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets) that were accessed.
-1. Investigate the [users](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) that were accessed.
+1. Investigate the [users](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -431,9 +432,9 @@ Some Operating Systems or applications are known to modify the authorization dat
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. If there is a [source user](/defender-for-identity/investigate-assets), investigate.
-1. Check which resources were accessed successfully and [investigate](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users), investigate.
+1. Check which resources were accessed successfully and [investigate](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
@@ -475,7 +476,7 @@ If the answer is **yes** to all of the previous questions, **Close** the alert, 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
@@ -514,8 +515,8 @@ Federation services might generate tickets that will trigger this alert.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets).
-1. Investigate the [source user](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -563,8 +564,8 @@ If the answer to any of the previous questions is yes, Close the security alert 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets) that were accessed.
-1. Investigate the [users](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) that were accessed.
+1. Investigate the [users](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention:**
 
@@ -604,8 +605,8 @@ If the answer to the previous questions is **yes**, **Close** the security alert
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets).
-1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -639,9 +640,9 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 **Understand the scope of the breach**
 
-1. Investigate the [domain controller](/defender-for-identity/investigate-assets).
+1. Investigate the [domain controller](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 1. Check if Skeleton Key has affected your domain controllers.
-1. Investigate the [users](/defender-for-identity/investigate-assets) and [computers](/defender-for-identity/investigate-assets) involved.
+1. Investigate the [users](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) and [computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) involved.
 
 **Suggested remediation and prevention steps**
 
@@ -731,8 +732,8 @@ Some administrative tasks are legitimately performed against domain controllers 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source user](/defender-for-identity/investigate-assets).
-1. Investigate the [destination computers](/defender-for-identity/investigate-assets) the services were created on.
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+1. Investigate the [destination computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) the services were created on.
 
 **Suggested remediation and steps for prevention**
 
@@ -756,7 +757,7 @@ Some administrative tasks are legitimately performed against domain controllers 
 
 ## See Also
 
-- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)

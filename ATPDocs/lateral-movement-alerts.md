@@ -63,7 +63,7 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the source computer using [these instructions](/defender-for-identity/investigate-assets).
+1. Investigate the source computer using [these instructions](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 2. Investigate the target domain controller, and identify activities that occurred after the attack.
 
 **Suggested remediation**
@@ -106,7 +106,7 @@ None
 
 **Understand the scope of the breach**
 
-- Investigate the [source and destination computers](/defender-for-identity/investigate-assets).
+- Investigate the [source and destination computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
@@ -149,8 +149,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets) further.
-1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) further.
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -204,8 +204,8 @@ There are custom applications that forward tickets on behalf of users. These app
 
 **Understand the scope of the breach**
 
-1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets).
-1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -242,8 +242,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computers](/defender-for-identity/investigate-assets).
-1. Investigate the [source account](/defender-for-identity/investigate-assets).
+1. Investigate the [source computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [source account](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -288,8 +288,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Continue [investigating the source computers](/defender-for-identity/investigate-assets) behind the IP addresses involved.
-1. Investigate the [source account](/defender-for-identity/investigate-assets).
+1. Continue [investigating the source computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) behind the IP addresses involved.
+1. Investigate the [source account](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -332,8 +332,9 @@ Some legitimate resources don't support strong encryption ciphers and may trigge
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users
+).
 
 **Suggested remediation and steps for prevention**
 
@@ -380,8 +381,9 @@ Sometimes applications implement their own Kerberos stack, not in accordance wit
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. If there is a [source user](/defender-for-identity/investigate-assets), investigate.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users
+), investigate.
 
 **Suggested remediation and steps for prevention**
 
@@ -420,8 +422,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-2. Investigate the [source user](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+2. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 3. Check which resources were accessed successfully and [investigate](/defender-for-identity/investigate-assets).
 
 **Suggested remediation and steps for prevention**
@@ -458,7 +460,7 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 1. Investigate the destination DC.
 
 **Suggested remediation and steps for prevention**
@@ -552,7 +554,7 @@ Update your Exchange servers with the latest security patches. The vulnerabiliti
 
 ## See Also
 
-- [Investigate a computer](/defender-for-identity/investigate-assets)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)

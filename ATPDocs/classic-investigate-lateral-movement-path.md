@@ -69,7 +69,7 @@ To review historical LMPs, select different available dates in the calendar sele
 In this tutorial, you've learned how to use LMPs to investigate suspicious activities. To learn more about entities involved in LMPs, continue to the investigate entities tutorial.
 
 > [!div class="nextstepaction"]
-> [Investigate entities](/defender-for-identity/investigate-assets)
+> [Investigate entities](/defender-for-identity/classic-investigate-entity)
 
 ## See Also
 

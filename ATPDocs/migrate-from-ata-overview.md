@@ -56,7 +56,7 @@ Make sure to gather the following information before starting your move:
     - If you don't already have dedicated honeytoken accounts, learn more about [honeytokens in [!INCLUDE [Product short](includes/product-short.md)]](manage-sensitive-honeytoken-accounts.md) and create new accounts to use for this purpose.
 1. Complete list of all entities (computers, groups, users) you wish to manually tag as Sensitive entities.
     - Learn more about the importance of [Sensitive entities](/defender-for-identity/entity-tags) in [!INCLUDE [Product short](includes/product-short.md)].
-1. Report scheduling [details](/defender-for-identity/notifications) (list of reports and scheduled timing).
+1. Report scheduling [details](/defender-for-identity/classic-reports) (list of reports and scheduled timing).
 
 > [!NOTE]
 > Do not uninstall the ATA Center until all ATA Gateways are removed. Uninstalling the ATA Center with ATA Gateways still running leaves your organization exposed with no threat protection.

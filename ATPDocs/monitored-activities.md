@@ -103,5 +103,5 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 
 - [Managing security alerts](/defender-for-identity/manage-security-alerts)
 - [Security alert guide](/defender-for-identity/alerts-overview)
-- [Investigate entities](/defender-for-identity/investigate-assets)
+- [Investigate assets](/defender-for-identity/investigate-assets)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

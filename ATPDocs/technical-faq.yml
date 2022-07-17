@@ -15,7 +15,7 @@ sections:
       - question: What can Defender for Identity detect?
         answer: |
           Defender for Identity detects known malicious attacks and techniques, security issues, and risks against your network.
-          For the full list of Defender for Identity detections, see [What detections does Defender for Identity perform?](/defender-for-identity/alerts-overview).
+          For the full list of Defender for Identity detections, see [Defender for Identity Security Alerts](/defender-for-identity/alerts-overview).
 
       - question: What data does Defender for Identity collect?
         answer: |

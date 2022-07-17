@@ -54,7 +54,7 @@ LMP can now directly assists with your investigation process. [!INCLUDE [Product
 
 ## Lateral Movement paths to sensitive accounts report
 
-LMP data is also available in the [Lateral Movement Paths to Sensitive Accounts report](/defender-for-identity/understand-lateral-movement-paths). This report lists the sensitive accounts that are exposed via lateral movement paths and includes paths that were selected manually for a specific time period, or included in the time period for scheduled reports.  Customize the included date range using the calendar selection.
+LMP data is also available in the [Lateral Movement Paths to Sensitive Accounts report](/defender-for-identity/classic-investigate-lateral-movement-path). This report lists the sensitive accounts that are exposed via lateral movement paths and includes paths that were selected manually for a specific time period, or included in the time period for scheduled reports.  Customize the included date range using the calendar selection.
 
 ## Preventative best practices
 
@@ -72,7 +72,7 @@ Security insights are never too late to prevent the next attack and remediate da
 
 ## Investigating LMPs
 
-For instructions on how to identify and investigate using [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths, see [Investigate Lateral Movement Paths](/defender-for-identity/understand-lateral-movement-paths).
+For instructions on how to identify and investigate using [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths, see [Investigate Lateral Movement Paths](/defender-for-identity/classic-investigate-lateral-movement-path).
 
 ## See Also
 

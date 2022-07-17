@@ -120,5 +120,5 @@ $SQLConnection.Close()
 
 ## See also
 
-- [Connect to your Active Directory Forest](/defender-for-identity/directory-service-accounts)
+- [Directory Service account recommendations](/defender-for-identity/directory-service-accounts)
 - [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md)

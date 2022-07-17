@@ -63,7 +63,7 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 2. Investigate the target domain controller and identify activities that occurred after the attack.
   
 **Remediation:**
@@ -100,8 +100,8 @@ For more information on honeytoken accounts, see [Manage sensitive or honeytoken
 
 **Understand the scope of the breach**
 
-1. Investigate the [source user](/defender-for-identity/investigate-assets).
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
     > [!NOTE]
     > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. [!INCLUDE [Product short](includes/product-short.md)] captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.
@@ -155,7 +155,7 @@ It is important to check if any login attempts ended with successful authenticat
 
 1. Investigate the source computer.
 1. On the alert page, check which, if any, users were guessed successfully.
-    - For each user that was guessed successfully, [check their profile](/defender-for-identity/investigate-assets) to investigate further.
+    - For each user that was guessed successfully, [check their profile](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) to investigate further.
 
     > [!NOTE]
     > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access. Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account  attempted to access.
@@ -208,8 +208,8 @@ It is important to check if any login attempts ended with successful authenticat
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. On the alert page, check which users, if any, were guessed successfully. For each user that was guessed successfully, [check their profile](/defender-for-identity/investigate-assets) to investigate further.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. On the alert page, check which users, if any, were guessed successfully. For each user that was guessed successfully, [check their profile](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) to investigate further.
 
 **Suggested remediation and steps for prevention**
 
@@ -249,8 +249,8 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. Investigate the [source user](/defender-for-identity/investigate-assets)) (if there is a source user).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)) (if there is a source user).
 
 **Suggested remediation and steps for prevention**
 
@@ -287,8 +287,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [exposed accounts](/defender-for-identity/investigate-assets). Check for malicious activity or suspicious behavior for these accounts.
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. Investigate the [exposed accounts](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users). Check for malicious activity or suspicious behavior for these accounts.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Remediation:**
 
@@ -325,7 +325,7 @@ Otherwise, consider this alert a **TP** and follow the instructions in **Underst
 
 **Understand the scope of the breach**
 
-1. Investigate [source computer](/defender-for-identity/investigate-assets), check for malicious scripts or tools that made the connection to the DC.
+1. Investigate [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices), check for malicious scripts or tools that made the connection to the DC.
 
 1. Investigate the destination DC for any suspicious activities that happened after the vulnerability was used.
 
@@ -359,8 +359,8 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [exposed accounts](/defender-for-identity/investigate-assets). Check for malicious activity or suspicious behavior for these accounts.
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
+1. Investigate the [exposed accounts](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users). Check for malicious activity or suspicious behavior for these accounts.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Remediation:**
 
@@ -398,8 +398,8 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. Investigate the [compromised user](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -439,8 +439,8 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -485,8 +485,8 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](/defender-for-identity/investigate-assets).
-1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
@@ -500,8 +500,8 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 
 ## See Also
 
-- [Investigate a computer](/defender-for-identity/investigate-assets)
-- [Investigate a user](/defender-for-identity/investigate-assets)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
+- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)

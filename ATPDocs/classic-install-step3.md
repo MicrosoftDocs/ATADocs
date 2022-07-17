@@ -9,13 +9,13 @@ ROBOTS: NOINDEX
 # Classic portal: Quickstart - Download the Microsoft Defender for Identity sensor setup package
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/sensor-health#add-a-sensor). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/sensor-health#add-a-sensor). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
 In this quickstart, you'll download the [!INCLUDE [Product long](includes/product-long.md)] sensor setup package from the portal.
 
 ## Prerequisites
 
-- An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that's [connected to Active Directory](/defender-for-identity/directory-service-accounts).
+- An [[!INCLUDE [Product short](includes/product-short.md)] instance](classic-install-step1.md) that's [connected to Active Directory](/defender-for-identity/classic-install-step2).
 
 ## Download the setup package
 
@@ -42,7 +42,7 @@ The zip file includes the following files:
 ## Next steps
 
 > [!div class="step-by-step"]
-> [« Step 2 - Connect to Active Directory](/defender-for-identity/directory-service-accounts)
+> [« Step 2 - Connect to Active Directory](/defender-for-identity/classic-install-step2)
 > [Step 4 - Install the [!INCLUDE [Product short](includes/product-short.md)] sensor »](install-step4.md)
 
 ## Join the Community

@@ -29,7 +29,7 @@ The entity profile provides you with a comprehensive entity page, designed for f
 
 To access an entity profile page, click on the name of the entity, such as a username, in the security alert timeline. You can also see a mini-version of the entity profile in the security alert page by hovering over the entity name.
 
-The entity profile lets you view entity activities, view directory data, and view [lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) for the entity. For more information about entities, see [Understanding entity profiles](/defender-for-identity/investigate-assets).
+The entity profile lets you view entity activities, view directory data, and view [lateral movement paths](/defender-for-identity/classic-use-case-lateral-movement-path) for the entity. For more information about entities, see [Understanding entity profiles](/defender-for-identity/classic-entity-profiles).
 
 ## Check entity tags
 
@@ -89,7 +89,7 @@ To provide you with cross-product insights, your entity profile provides entitie
 - Schema Admins
 - Enterprise Admins
 
-In addition, you can **manually tag** entities as sensitive within [!INCLUDE [Product short](includes/product-short.md)]. This is important because some [!INCLUDE [Product short](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive. For more information, see [Working with sensitive accounts](/defender-for-identity/entity-tags).
+In addition, you can **manually tag** entities as sensitive within [!INCLUDE [Product short](includes/product-short.md)]. This is important because some [!INCLUDE [Product short](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive. For more information, see [Working with sensitive accounts](/defender-for-identity/classic-manage-sensitive-honeytoken-accounts).
 
 ## Review lateral movement paths
 
