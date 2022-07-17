@@ -74,7 +74,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
     - If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut down the virtual machine first.
 
-    - If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://docs.mongodb.org/manual/core/backups/).
+    - If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://www.mongodb.com/docs/manual/core/backups/).
 
 1. Run the installation file, Microsoft ATA Center Setup.exe, and follow the instructions on the screen to install the update.
 
