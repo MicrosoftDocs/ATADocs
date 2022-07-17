@@ -11,7 +11,7 @@ ms.topic: how-to
 
 [!INCLUDE [Product long](includes/product-long.md)] discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.
 
-However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant [sensitive entities](manage-sensitive-honeytoken-accounts.md) are targets of opportunity for malicious actors to gain sensitive access to your organization.
+However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant [sensitive entities](/defender-for-identity/entity-tags) are targets of opportunity for malicious actors to gain sensitive access to your organization.
 
 ## What risk do dormant entities create in **sensitive** groups?
 

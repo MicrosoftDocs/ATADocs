@@ -154,7 +154,7 @@ If you attempt to install the [!INCLUDE [Product short](includes/product-short.m
 For sensors running on AD FS servers, configure the auditing level to **Verbose**. For information on how to configure the auditing level, see [Event auditing information for AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016).
 
 > [!NOTE]
-> Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-step8-samr.md).
+> Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](/defender-for-identity/understand-lateral-movement-paths). For more information, see [Configure SAM-R required permissions](/defender-for-identity/remote-calls-sam).
 
 ## Defender for Identity standalone sensor requirements
 
@@ -255,7 +255,7 @@ The following table lists the minimum ports that the [!INCLUDE [Product short](i
 
 > [!NOTE]
 >
-> - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](use-case-lateral-movement-path.md). For more information, see [Configure SAM-R required permissions](install-step8-samr.md).
+> - Using the Directory service user account, the sensor queries endpoints in your organization for local admins using SAM-R (network logon) in order to build the [lateral movement path graph](/defender-for-identity/understand-lateral-movement-paths). For more information, see [Configure SAM-R required permissions](/defender-for-identity/remote-calls-sam).
 
 ## Next steps
 

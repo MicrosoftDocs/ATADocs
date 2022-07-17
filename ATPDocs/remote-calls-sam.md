@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Configure Microsoft Defender for Identity to make remote calls to SAM
 
-[!INCLUDE [Product long](includes/product-long.md)] [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the [!INCLUDE [Product short](includes/product-short.md)] [Directory Service account](directory-service-accounts.md) you configured.
+[!INCLUDE [Product long](includes/product-long.md)] [lateral movement path](/defender-for-identity/understand-lateral-movement-paths) detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the [!INCLUDE [Product short](includes/product-short.md)] [Directory Service account](directory-service-accounts.md) you configured.
 
 ## Configure SAM-R required permissions
 

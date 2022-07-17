@@ -9,7 +9,7 @@ ROBOTS: NOINDEX
 # Classic portal: Understanding entity profiles
 
 > [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender/investigate-users). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender/investigate-users). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
 The entity profile provides you with a comprehensive entity page designed for a full deep-dive investigation of users, computers, devices, the resources they have access to, and their history. The profile page takes advantage of the new [!INCLUDE [Product short](includes/product-short.md)] logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
@@ -44,9 +44,9 @@ By clicking the Lateral movement paths tab, you can view a fully dynamic and cli
 
 The map provides you with a list of how many hops between computers or users an attacker would have to and from this user to compromise a sensitive account, and if the user has a sensitive account, you can see how many resources and accounts are directly connected.
 
-If a potential LMP was not detected for the entity during the past two days, the graph does not display. Select a different date using **View a different date** to view previous lateral movement paths graphs discovered for this entity. The [lateral movement path report](reports.md) is always available to provide you with information about the potential lateral movement paths discovered, and can be customized by time.
+If a potential LMP was not detected for the entity during the past two days, the graph does not display. Select a different date using **View a different date** to view previous lateral movement paths graphs discovered for this entity. The [lateral movement path report](/defender-for-identity/classic-reports) is always available to provide you with information about the potential lateral movement paths discovered, and can be customized by time.
 
-For more information, see [Lateral movement paths](use-case-lateral-movement-path.md).
+For more information, see [Lateral movement paths](/defender-for-identity/understand-lateral-movement-paths).
 
  ![user profile lateral movement paths.](media/user-profile-lateral-movement-paths.png)
 

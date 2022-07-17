@@ -86,5 +86,5 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 
 - [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md)
 - [Security assessment: Riskiest lateral movement paths (LMP)](security-assessment-riskiest-lmp.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

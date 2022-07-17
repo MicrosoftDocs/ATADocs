@@ -6,7 +6,6 @@
         "remediate",
         "unmonitored"
     ],
-    "workbench.colorTheme": "Tomorrow Night Blue",
     "markdownlint.config": {
         "MD028": false,
         "MD025": {

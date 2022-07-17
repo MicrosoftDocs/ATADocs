@@ -15,7 +15,7 @@ sections:
       - question: What can Defender for Identity detect?
         answer: |
           Defender for Identity detects known malicious attacks and techniques, security issues, and risks against your network.
-          For the full list of Defender for Identity detections, see [What detections does Defender for Identity perform?](suspicious-activity-guide.md).
+          For the full list of Defender for Identity detections, see [Defender for Identity Security Alerts](/defender-for-identity/alerts-overview).
 
       - question: What data does Defender for Identity collect?
         answer: |
@@ -59,7 +59,7 @@ sections:
 
           - **Support for [multi-forest environments](multi-forest.md)**: Provides organizations visibility across AD forests.
 
-          - **[Microsoft Secure Score posture assessments](isp-overview.md)**: Identifies common misconfigurations and exploitable components, as well as, providing remediation paths to reduce the attack surface.
+          - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components, as well as, providing remediation paths to reduce the attack surface.
 
           - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
 
@@ -190,7 +190,7 @@ sections:
         answer: |
           This happens when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
 
-          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](manage-sensitive-honeytoken-accounts.md).
+          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](/defender-for-identity/entity-tags).
 
       - question: Do you have to write your own rules and create a threshold/baseline?
         answer: |
@@ -211,7 +211,7 @@ sections:
 
               After getting the computer name,  Defender for Identity sensors cross check the details in Active Directory to see if there is a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
           2. **Lateral Movement Path (LMP)**
-          To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](install-step8-samr.md).
+          To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](/defender-for-identity/remote-calls-sam).
 
           3. **Querying Active Directory using LDAP** for entity data
           Defender for Identity sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.

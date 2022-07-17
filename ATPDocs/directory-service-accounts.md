@@ -21,7 +21,7 @@ The Directory Service account (DSA) in Defender for Identity is used by the sens
 
 - If the sensor sees activities from entities in other domains, it will query that domain via LDAP for information on the entity.
 
-- Defender for Identity requests the list of members of the local administrator group from devices seen in network traffic, events, and ETW activities. This is done by making a [SAM-R](install-step8-samr.md) call to the device. This information is used to calculate potential lateral movement paths.
+- Defender for Identity requests the list of members of the local administrator group from devices seen in network traffic, events, and ETW activities. This is done by making a [SAM-R](/defender-for-identity/remote-calls-sam) call to the device. This information is used to calculate potential lateral movement paths.
 
 >[!NOTE]
 >By default, Defender for Identity supports up to 30 credentials. If you want to add more credentials, contact Defender for Identity support.

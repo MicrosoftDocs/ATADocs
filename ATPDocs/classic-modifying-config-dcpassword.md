@@ -41,5 +41,5 @@ Follow this procedure to update the Domain Connectivity password on the [!INCLUD
 
 ## See Also
 
-- [Integration with Microsoft Defender for Endpoint](integrate-mde.md)
+- [Integration with Microsoft Defender for Endpoint](/microsoft-365/security/defender/classic-integrate-mde)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

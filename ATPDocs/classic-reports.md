@@ -19,7 +19,7 @@ Available reports are:
 
 - **Passwords exposed in cleartext**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. This report lists all source computer and account passwords detected by [!INCLUDE [Product short](includes/product-short.md)] being sent in clear text.
 
-- **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). This report collects potential lateral movement paths that were detected in the report period you select.
+- **Lateral movement paths to sensitive accounts**: This report lists the sensitive accounts that are exposed via lateral movement paths. For more information, see [Lateral movement paths](/defender-for-identity/classic-use-case-lateral-movement-path). This report collects potential lateral movement paths that were detected in the report period you select.
 
 There are two ways to generate a report: either on demand or by scheduling a report to be sent to your email periodically.
 

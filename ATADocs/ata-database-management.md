@@ -33,11 +33,11 @@ If you need to move, backup or restore the ATA database, use these procedures fo
 
 ## Backing up the ATA database
 
-Refer to the [relevant MongoDB documentation](https://docs.mongodb.org/manual/administration/backup/).
+Refer to the [relevant MongoDB documentation](https://www.mongodb.com/docs/manual/core/backups/).
 
 ## Restoring the ATA database
 
-Refer to the [relevant MongoDB documentation](https://docs.mongodb.org/manual/administration/backup/).
+Refer to the [relevant MongoDB documentation](https://www.mongodb.com/docs/manual/core/backups/).
 
 ## Moving the ATA database to another drive
 

@@ -427,7 +427,7 @@ Attackers who compromise administrative credentials or use a zero-day exploit ca
 
 1. Restrict remote access to domain controllers from non-Tier 0 machines.
 
-1. Implement [privileged access](/windows-server/identity/securing-privileged-access/securing-privileged-access) to allow only hardened machines to connect to domain controllers for admins.
+1. Implement [privileged access](/security/compass/overview) to allow only hardened machines to connect to domain controllers for admins.
 
 ## Sensitive account credentials exposed & Services exposing account credentials
 
@@ -468,7 +468,7 @@ In this detection, an alert is triggered when many authentication failures using
 
 **Remediation**
 
-[Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
+[Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) provide the necessary first level of security against brute-force attacks.
 
 ## Suspicious service creation <a name="suspicious-service-creation"></a>
 
@@ -537,7 +537,7 @@ To determine whether the activity is a WannaCry attack, perform the following st
 
 Apply the latest patches to all of your machines, and check all security updates are applied.
 
-1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+1. [Disable SMBv1](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858)
 
 1. [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
@@ -548,6 +548,6 @@ Apply the latest patches to all of your machines, and check all security updates
 
 ## See also
 
-- [ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
+- [ATA suspicious activity playbook](https://aka.ms/ataplaybook)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Working with suspicious activities](working-with-suspicious-activities.md)
