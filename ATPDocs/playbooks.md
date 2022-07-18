@@ -32,7 +32,7 @@ You should see activity in success or failure (connection refused) and the alert
 
 ![image1](media/playbooks/Image1.png)  
 
-Detail in the alert:  
+Detail in the alert:
 
 ![image1](media/playbooks/Image2.png)  
 
