@@ -30,11 +30,11 @@ ls -d msdemo.local
 
 You should see activity in success or failure (connection refused) and the alert:  
 
-![image1](media/playbooks/Image1.png)  
+![Network mapping reconnaissance alert.](media/playbooks/network-mapping-alert.png)  
 
 Detail in the alert:
 
-![image1](media/playbooks/Image2.png)  
+![Network mapping reconnaissance details.](media/playbooks/network-mapping-alert-details.png)  
 
 ## User and IP address reconnaissance
 
@@ -50,11 +50,11 @@ Tools available from : http://www.joeware.net/freetools/tools/netsess/
 
 You should see activity and the alert in the client machine timeline :  
 
-![image1](media/playbooks/Image3.png)  
+![User and IP address reconnaissance alert.](media/playbooks/user-ip-alert.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image4.png)  
+![User and IP address reconnaissance details.](media/playbooks/user-ip-alert-details.png)  
 
 ## User and group membership reconnaissance (SAMR)
 
@@ -70,13 +70,13 @@ net group "Enterprise Admins" /domain
 net group "Schema Admins" /domain
 ```
 
-You should see activity and the alert in the user timeline :  
+You should see activity and the alert in the user timeline:  
 
-![image1](media/playbooks/Image5.png)  
+![User and group membership reconnaissance alert.](media/playbooks/user-group-alert.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image6.png)
+![User and group membership reconnaissance alert details.](media/playbooks/user-group-alert-details.png)
 
 ## Security principal reconnaissance (LDAP)
 
@@ -90,15 +90,15 @@ Oradad.exe
 
 Tools available from : https://github.com/ANSSI-FR/ORADAD/releases
   
-You should see the activities and the alert in the client machine timeline :  
+You should see the activities and the alert in the client machine timeline:  
 
-![image1](media/playbooks/Image7a.png)  
+![Security principal reconnaissance alert.](media/playbooks/security-principal-alert.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image8.png)  
+![Security principal reconnaissance alert details.](media/playbooks/security-principal-alert-details.png)  
 
-## Honey Token activity
+## Honeytoken activity
 
 This lure account should be attractive for attackers (attractive name or sensitive group membership..) and be left unused by your organization; any activity from them might indicate malicious behavior (LDAP, NTLM or Kerberos logon attempts).
 
@@ -106,11 +106,11 @@ From MSTSC.exe or from an interactive logon, try to logon using this account wit
 
 You should see the logon activity and the alert in the Honey Token user timeline :  
 
-![image1](media/playbooks/Image9.png)  
+![Honeytoken activity alert.](media/playbooks/honeytoken-alert.png)  
 
 Detail in the alert (failed logon attempt):  
 
-![image1](media/playbooks/Image10.png)  
+![Honeytoken activity details.](media/playbooks/honeytoken-alert-details.png)  
 
 ## Active Directory attributes reconnaissance (LDAP)
 
@@ -136,17 +136,17 @@ repadmin /showattr * DC=msdemo,DC=local ou repadmin /showattr * DC=msdemo,DC=loc
 
 You should see the activities and the alert in the client machine timeline :  
 
-![image1](media/playbooks/Image11.png)  
+![Active Directory attributes reconnaissance alert.](media/playbooks/active-directory-attributes.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image12.png)  
+![Active Directory attributes reconnaissance alert details.](media/playbooks/active-directory-attributes-details.png)  
 
-## Account enumeration Reconnaissance
+## Account enumeration reconnaissance
 
 In this alert, Attacker makes Kerberos requests using a list of names to try to find a valid username in the domain; If a guess successfully determines a username, the attacker gets the WrongPassword (0xc000006a) instead of NoSuchUser (0xc0000064) NTLM error.
 
-Build a users.txt list of names by merging some names from https://github.com/jeanphorn/wordlist/blob/master/usernames.txt and add some valid name from your organization.
+Build a users.txt list of names by merging some names from https://github.com/jeanphorn/wordlist/blob/master/usernames.txt and add some valid names from your organization.
 
 Then, run the following command from a PowerShell session on a workstation :  
 
@@ -159,11 +159,11 @@ Tools available from : https://github.com/jeanphorn/wordlist & https://github.co
 
 You should see the activities and the alert in the client machine timeline :  
 
-![image1](media/playbooks/Image13.png)  
+![Account enumeration reconnaissance alert.](media/playbooks/account-enumeration.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image14a.png)  
+![Account enumeration reconnaissance details.](media/playbooks/account-enumeration-details.png)  
 
 ## Suspected AS-REP Roasting attack
 
@@ -181,11 +181,11 @@ Tools available from : https://github.com/GhostPack/Rubeus or https://github.com
 
 You should see the activities and the alert in the user timeline :  
 
-![image1](media/playbooks/Image15.png)  
+![Suspected AS-REP Roasting attack alert.](media/playbooks/as-rep-roasting.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image16.png)  
+![Suspected AS-REP Roasting attack alert details.](media/playbooks/as-rep-roasting-details.png)  
 
 ## Suspected Brute-Force Attack (Kerberos, NTLM and LDAP) & Password Spray attack
 
@@ -208,21 +208,21 @@ adlogin users.txt msdemo.local P@ssw0rd => for a password spray attack by using 
 
 You should see the activities and the alert in the client machine timeline :  
 
-![image1](media/playbooks/Image17.png)  
+![Suspected Password Spray attack alert.](media/playbooks/password-spray.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image18.png)  
+![Suspected Password Spray attack details.](media/playbooks/password-spray-details.png)  
 
-For a brute force attack just try to logon on few accounts with multiple passwords...
+For a brute force attack, try to logon on few accounts with multiple passwords.
 
-You should see the activities and the alert in the client machine timeline :  
+You should see the activities and the alert in the client machine timeline:  
 
-![image1](media/playbooks/Image19.png)  
+![Brute force attack alert.](media/playbooks/brute-force.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image20.png)  
+![Brute force attack alert details.](media/playbooks/brute-force-details.png)  
 
 ## Suspected identity theft (pass-the-ticket) & (pass-the-hash)
 
@@ -254,7 +254,7 @@ Tools available from : https://github.com/gentilkiwi/mimikatz/releases
   
 Detail in the alert:  
 
-![image1](media/playbooks/Image21.png)  
+![Suspected identity theft alert details](media/playbooks/identity-theft-details.png)  
 
 ## Malicious request of Data Protection API (DPAPI) master key
 
@@ -271,13 +271,13 @@ mimikatz # lsadump::backupkeys /system:msdemo-DC01 /export
 
 Tools available from : https://github.com/gentilkiwi/mimikatz/releases  
 
-You should see the activities and the alert in the user timeline :  
+You should see the activities and the alert in the user timeline:  
 
-![image1](media/playbooks/Image22.png)  
+![Malicious request of Data Protection API (DPAPI) master key alert.](media/playbooks/malicious-request.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image23.png)  
+![Malicious request of Data Protection API (DPAPI) master key alert details](media/playbooks/malicious-request-details.png)  
 
 ## Suspected skeleton key attack (encryption downgrade)
 
@@ -298,9 +298,9 @@ Tools available from : https://github.com/gentilkiwi/mimikatz/releases
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image24.png)  
+![Suspected skeleton key attack (encryption downgrade) alert details.](media/playbooks/skeleton-key-details.png)  
 
-## Suspected Neltogon privilege elevation attempt (CVE-2020-1472 exploitation)
+## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation)
   
 The alert is triggered if an attacker attempts to establish a vulnerable Netlogon secure channel connection to a DC, using the Netlogon Remote Protocol (MS-NRPC), also known as Netlogon Elevation of Privilege Vulnerability.
 
@@ -315,7 +315,7 @@ Tools available from : https://github.com/gentilkiwi/mimikatz/releases
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image25.png)  
+![Suspected Netlogon privilege elevation attempt alert details.](media/playbooks/netlogon-privilege-elevation-details.png)  
 
 ## Suspicious network connection over Encrypting File System Remote Protocol
 
@@ -332,7 +332,7 @@ Tools available from : https://github.com/gentilkiwi/mimikatz/releases
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image26.png)
+![Suspicious network connection over Encrypting File System Remote Protocol alert details.](media/playbooks/efsrpc-details.png)
 
 ## Suspected DCSync attack (replication of directory services)
 
@@ -350,11 +350,11 @@ Tools available from : https://github.com/gentilkiwi/mimikatz/releases
 
 You should see the activities and the alert in the client machine timeline :  
 
-![image1](media/playbooks/Image27.png)  
+![Suspected DCSync attack (replication of directory services) alert.](media/playbooks/dcsync.png)  
 
 In the alert Compay Segundo failed to retrieve the DCsync (not enough permission):  
 
-![image1](media/playbooks/Image28.png)  
+![Suspected DCSync attack (replication of directory services) alert details.](media/playbooks/dcsync-details.png)  
 
 ## Suspected DCShadow attack (domain controller promotion) & (domain controller replication request)
 
@@ -372,7 +372,7 @@ Tools available from : https://github.com/gentilkiwi/mimikatz/releases
 
 Detail in the alert :  
 
-![image1](media/playbooks/Image29.png)  
+![Suspected DCShadow attack (domain controller promotion) & (domain controller replication request) alert details.](media/playbooks/dcshadow-details.png)  
 
 ## Remote code execution attempts
 
@@ -388,7 +388,7 @@ Tools available from : https://docs.microsoft.com/en-us/sysinternals/downloads/
 
 Detail in the alert :  
 
-![image1](media/playbooks/Image30.png)
+![Remote code execution attempts alert details.](media/playbooks/remote-code-execution-details.png)
 
 ## Data exfiltration over SMB
 
@@ -406,11 +406,11 @@ Tools available from : https://docs.microsoft.com/en-us/sysinternals/downloads/
 
 Detail in the alert :  
 
-![image1](media/playbooks/Image31.png)
+![Data exfiltration over SMB alert details.](media/playbooks/data-exfiltration-smb-details.png)
 
 Keep in mind that MDI can also track files uploaded from workstation or server to a DC; this can be useful to detect abnormal activities (see https://github.com/DanielpFR/MDI/#tips-3--list-of-files-copied-from-a-client-to-dcs-over-the-last-30-days). You should see this type of activities from the user timeline :  
 
-![image1](media/playbooks/Image32.png)  
+![Files copied to a domain controller.](media/playbooks/files-copied-domain-controller.png)  
 
 ## Suspected Golden Ticket usage (encryption downgrade) & (nonexistent account) & (Time anomaly)
 
@@ -440,8 +440,8 @@ Tools available from : https://github.com/gentilkiwi/mimikatz/releases
 
 Detail in the alert :  
 
-![image1](media/playbooks/Image35.png)  
-![image1](media/playbooks/Image36.png)  
+![Suspected Golden Ticket encryption downgrade alert.](media/playbooks/golden-ticket-encryption-downgrade.png)  
+![Suspected Golden Ticket nonexistent account alert.](media/playbooks/golden-ticket-nonexistent-account.png)  
 
 ## Suspicious additions to sensitive groups
 
@@ -455,11 +455,11 @@ Tools available from : https://www.microsoft.com/en-us/download/details.aspx?id=
 
 You should see the activities and the alert in the user timeline :  
 
-![image1](media/playbooks/Image33.png)  
+![Suspicious additions to sensitive groups alert.](media/playbooks/additions-sensitive-groups.png)  
 
 Detail in the alert:  
 
-![image1](media/playbooks/Image34a.png)  
+![Suspicious additions to sensitive groups alert details.](media/playbooks/additions-sensitive-groups-details.png)  
 
 ## Next steps
 
