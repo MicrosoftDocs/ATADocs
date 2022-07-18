@@ -9,10 +9,12 @@ ms.topic: how-to
 
 Microsoft Defender for Identity is a powerful solution for detecting abnormal or suspicious activities from managed, unmanaged or even unknown machines targeting domain controllers.
 
-When running a playbook or a penetration test, ensure your Defender for Identity configuration is well configured and ready, especially with the machine learning period. The learning period is listed in the details for each alert.
+When running a playbook or a penetration test, ensure your Defender for Identity configuration is well configured. Make sure that [sensors are installed on all domain controllers](sensor-settings.md) and are in a [healthy state](health-alerts.md). Also, check that [Windows Event collection](configure-windows-event-collection.md) is properly configured.
 
-> [!NOTE]
-> The tools used below are just sample ones. Don't use hacking third party tools with production accounts.
+Many alerts require a machine learning period before generating alerts. The learning period is listed in the link to the details for each detection. Be sure to wait the required period to get the proper results.
+
+> [!WARNING]
+> The third-party hacking tools in this lab are presented for research purposes only. Microsoft does not own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment only.
 
 Then from a new machine (fresh install, managed, or unmanaged) try the following scenarios:
 
