@@ -164,7 +164,7 @@ sections:
 
       - question: How do I download and install or upgrade the Npcap driver? 
         answer: |
-          -  You can obtain the Npcap executables by [downloading the latest deployment package of the MDI sensor](download-sensor.md).
+          -  You can obtain the Npcap executables by [downloading the latest deployment package of the Defender for Identity sensor](download-sensor.md).
 
             - If you haven't yet installed the sensor:
               1. Install the sensor (with an installation package of version 2.184 or greater).
