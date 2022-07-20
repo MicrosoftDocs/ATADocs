@@ -118,6 +118,8 @@ items:
       href: domain-dominance-alerts.md
     - name: Exfiltration alerts
       href: exfiltration-alerts.md
+    - name: Playbook samples
+      href: playbooks.md
   - name: Remediation
     items:
     - name: Remediation actions

@@ -18,7 +18,7 @@ Many alerts require a machine learning period before generating alerts. The lear
 
 Then from a new machine (fresh install, managed, or unmanaged) try the following scenarios:
 
-## Network mapping reconnaissance (DNS)
+<!-- ## Network mapping reconnaissance (DNS)
 
 For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
 
@@ -40,7 +40,7 @@ You should see activity in success or failure (connection refused) and the alert
 
 Detail in the alert:
 
-![Network mapping reconnaissance details.](media/playbooks/network-mapping-alert-details.png)  
+![Network mapping reconnaissance details.](media/playbooks/network-mapping-alert-details.png)   -->
 
 ## User and IP address reconnaissance
 
@@ -399,7 +399,7 @@ You should see the activities and the alert in the client machine timeline:
 
 ![Suspected DCSync attack (replication of directory services) alert.](media/playbooks/dcsync.png)  
 
-In the alert, Compay Segundo failed to retrieve the DCsync (not enough permission):  
+In the alert, a user failed to retrieve the DCsync (not enough permission):  
 
 ![Suspected DCSync attack (replication of directory services) alert details.](media/playbooks/dcsync-details.png)  
 
