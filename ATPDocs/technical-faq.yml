@@ -162,7 +162,7 @@ sections:
       - question: I would like to script the deployment of Npcap, do I need to purchase the OEM version? 
         answer: No, you don't need to purchase the OEM version. Download the sensor installation package version 2.156 and above from the Defender for Identity console, which includes the OEM version of Npcap.
 
-      - question: How do I download and install the Npcap driver? 
+      - question: How do I download and install or upgrade the Npcap driver? 
         answer: |
           -  You can obtain the Npcap executables by [downloading the latest deployment package of the MDI sensor](download-sensor.md).
 
@@ -178,6 +178,14 @@ sections:
               1. Install Npcap with the following options:
                 - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
                 - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
+                
+            - If you want to manually upgrade Npcap:
+              1. Stop the MDI sensor services (AATPSensorUpdater and AATPSensor)
+              2. Remove the Npcap using the Add/Remove programs control panel (appwiz.cpl)
+              3. Install Npcap with the following options:
+                - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
+                - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
+              4. Start the MDI sensor services (AATPSensorUpdater and AATPSensor)
 
 
   - name: Operation
