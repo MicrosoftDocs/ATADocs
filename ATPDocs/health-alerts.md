@@ -138,7 +138,7 @@ This section describes all the health alerts for each component, listing the cau
 |The [!INCLUDE [Product short](includes/product-short.md)] sensor is running on Windows 2008 R2, which is unsupported.|Starting June 15, 2022, Microsoft will no longer support the [!INCLUDE [Product short](includes/product-short.md)] sensor on devices running Windows Server 2008 R2. More details can be found at: <https://aka.ms/mdi/2008r2> |Upgrade the Operating System on this Domain Controller to at least Windows Server 2012.|High|
 
 
-### Sensor with issues on capturing component
+### Sensor has issues with packet capturing component
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
