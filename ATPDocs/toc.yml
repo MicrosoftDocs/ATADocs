@@ -118,8 +118,20 @@ items:
       href: domain-dominance-alerts.md
     - name: Exfiltration alerts
       href: exfiltration-alerts.md
-    - name: Playbook samples
-      href: playbooks.md
+  - name: Security alert lab
+    items:
+    - name: Lab overview
+      href: playbook-lab-overview.md 
+    - name: Lab setup
+      href: playbook-setup-lab.md 
+    - name: Reconnaissance playbook
+      href: playbook-reconnaissance.md 
+    - name: Lateral movement playbook
+      href: playbook-lateral-movement.md 
+    - name: Domain dominance playbook
+      href: playbook-domain-dominance.md
+    - name: Alerts playbook
+      href: playbooks.md 
   - name: Remediation
     items:
     - name: Remediation actions
