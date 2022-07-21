@@ -135,7 +135,16 @@ This section describes all the health alerts for each component, listing the cau
 
 |Alert|Description|Resolution|Severity|
 |----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is running on Windows 2008 R2, which is unsupported.|Starting June 15, 2022, Microsoft will no longer support the [!INCLUDE [Product short](includes/product-short.md)] sensor on devices running Windows Server 2008 R2. More details can be fount at: <https://aka.ms/mdi/2008r2> |Upgrade the Operating System on this Domain Controller to at least Windows Server 2012.|High|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is running on Windows 2008 R2, which is unsupported.|Starting June 15, 2022, Microsoft will no longer support the [!INCLUDE [Product short](includes/product-short.md)] sensor on devices running Windows Server 2008 R2. More details can be found at: <https://aka.ms/mdi/2008r2> |Upgrade the Operating System on this Domain Controller to at least Windows Server 2012.|High|
+
+
+### Sensor has issues with packet capturing component
+
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is using WinPcap drivers instead of Npcap drivers.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Low|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is running an Npcap version older than the minimum required version.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Upgrade Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Medium|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is running an Npcap component that is not configured as required.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|
 
 <!--
 ## Windows events missing from domain controller audit policy
