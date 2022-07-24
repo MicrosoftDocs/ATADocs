@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/10/2022
+ms.date: 07/18/2022
 ms.topic: overview
 ---
 
@@ -21,6 +21,20 @@ For more information on what's new with other Microsoft Defender security produc
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
+
+## Defender for Identity release 2.185
+
+Released July 18, 2022
+
+- An issue was fixed where [Suspected Golden Ticket usage (nonexistent account) (external ID 2027)](domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027) would wrongfully detect macOS devices.
+
+- User actions: We've decided to divide the **Disable User** action on the user page into two different actions:
+  - Disable User – which disables the user on the Active Directory level
+  - Suspend User – which disables the user on the Azure Active Directory level
+
+  We understand that the time it takes to sync from Active Directory to Azure Active Directory can be crucial, so now you can choose to disable users in one after the other, to remove the dependency on the sync itself. Note that a user disabled only in Azure Active Directory will be overwritten by Active Directory, if the user is still active there.
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.184
 
