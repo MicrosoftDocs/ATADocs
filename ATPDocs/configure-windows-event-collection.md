@@ -111,7 +111,12 @@ To audit Event ID 8004, additional configuration steps are required.
 
 ## Event ID 1644
 
-Windows event 1644 is not collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
+Microsoft Defender for Identity can monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers.
+
+> [!NOTE]
+> Logging the 1644 events may impact server performance. While the [resource limitation feature](architecture.md#resource-limitations) can stop the Defender for Identity service if the server is running out of resources, it does not stop the event auditing at the operating system level. Therefore, to avoid performance issues, make sure your servers have sufficient memory, CPU, and disk resources.
+
+Windows event 1644 isn't collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
 
 ```reg
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
@@ -139,6 +144,8 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
 > [!NOTE]
 > It is important to [review and verify your audit policies](#configure-audit-policies) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
+>
+>If configured properly, this auditing should have minimal effect on server performance.
 
 1. Go to the **Active Directory Users and Computers** console.
 1. Select the domain or OU that contains the users, groups, or computers you want to audit.
