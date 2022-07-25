@@ -181,11 +181,14 @@ sections:
                 
             - If you want to manually upgrade Npcap:
               1. Stop the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)
+                  `Stop-Service -Name AATPSensorUpdater -Force; Stop-Service -Name AATPSensor -Force`
               2. Remove Npcap using **Add/Remove programs** in the control panel (*appwiz.cpl*)
               3. Install Npcap with the following options:
-                - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
-                - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
+                  - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
+                  - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
               4. Start the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)
+                  `Start-Service -Name AATPSensorUpdater; Start-Service -Name AATPSensor`
+
 
 
   - name: Operation
