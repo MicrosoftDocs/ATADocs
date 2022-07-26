@@ -142,7 +142,7 @@ sections:
         answer: The Microsoft Defender for Identity team recommends that all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.
 
       - question: Why are we moving away from WinPcap?
-        answer: WinPcap is no longer supported and since it’s no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
+        answer: WinPcap is no longer supported and since it's no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
           
       - question: Why Npcap?
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
@@ -150,7 +150,7 @@ sections:
       - question: What version of Npcap is supported? 
         answer: The recommended and officially supported version of Npcap is version 1.0. You can install a newer version of Npcap, but note that for troubleshooting, support will ask you to downgrade the Npcap version to validate that the issue is not related to the newer version installed.
 
-      - question: I have more than 5 domain controllers in my organization. Do I need to purchase an Npcap license if I’m using Npcap on these domain controllers? 
+      - question: I have more than 5 domain controllers in my organization. Do I need to purchase an Npcap license if I'm using Npcap on these domain controllers? 
         answer: |
           No, Npcap has an exemption to the usual limit of 5 installs. You can install it on unlimited systems where it is only used with the Defender for Identity sensor.
           
@@ -180,13 +180,13 @@ sections:
                 - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
                 
             - If you want to manually upgrade Npcap:
-              1. Stop the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)
+              1. Stop the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)  
                   `Stop-Service -Name AATPSensorUpdater -Force; Stop-Service -Name AATPSensor -Force`
               2. Remove Npcap using **Add/Remove programs** in the control panel (*appwiz.cpl*)
               3. Install Npcap with the following options:
                   - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
                   - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
-              4. Start the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)
+              4. Start the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)  
                   `Start-Service -Name AATPSensorUpdater; Start-Service -Name AATPSensor`
 
 
