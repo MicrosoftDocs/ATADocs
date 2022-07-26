@@ -15,7 +15,7 @@ This article explains how to configure and manage Microsoft Defender for Identit
 
     ![Go to Settings, then Identities.](media/settings-identities.png)
 
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, update status, health status, the number of health issues, and when the sensor was created.
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created.
 
     [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
