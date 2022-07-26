@@ -49,7 +49,7 @@ Attackers add users to highly privileged groups. They do so to gain access to mo
 For a definition of sensitive groups in ATA, see [Working with the ATA console](working-with-ata-console.md#sensitive-groups).
 
 The detection relies on [events audited on domain controllers](configure-event-collection.md).
-To make sure your domain controllers audit the needed events, use the tool referenced in [ATA Auditing (AuditPol, Advanced Audit Settings Enforcement, Lightweight Gateway Service discovery)](https://ciberesponce.com/azure-atp-advanced-audit-policies/).
+To make sure your domain controllers audit the needed events, use [this tool](https://github.com/microsoft/Azure-Advanced-Threat-Protection/tree/master/Auditing).
 
 **Investigation**
 
