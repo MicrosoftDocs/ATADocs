@@ -26,7 +26,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 
 ## How do I use this security assessment?
 
-1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your **sensitive** accounts have risky LMPs.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your **sensitive** accounts have risky LMPs.
 
     ![Review top impacted entities and create an action plan.](media/cas-isp-riskiest-lmp-1.png)
 1. Take appropriate action:
