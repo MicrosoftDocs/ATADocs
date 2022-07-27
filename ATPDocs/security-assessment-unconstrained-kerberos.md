@@ -25,7 +25,7 @@ The following is a description of the risk posed by different delegation types:
 
 ## How do I use this security assessment?
 
-1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your non-domain controller entities are configured for **unsecure Kerberos delegation**.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your non-domain controller entities are configured for **unsecure Kerberos delegation**.
 
     ![Unsecure Kerberos delegation security assessment.](media/cas-isp-kerberos-delegation-2.png)
 1. Take appropriate action on those at-risk users, such as removing their unconstrained attribute or changing it to a more secure constrained delegation.

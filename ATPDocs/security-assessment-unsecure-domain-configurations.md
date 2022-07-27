@@ -19,7 +19,7 @@ Malicious actors, much like thieves, often look for the easiest and quietest way
 
 ## How do I use this security assessment?
 
-1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have unsecure configurations.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your domains have unsecure configurations.
     ![Review top impacted entities and create an action plan.](media/unsecure-domain-configurations.png)
 1. Take appropriate action on these domains by modifying or removing the relevant configurations.
 

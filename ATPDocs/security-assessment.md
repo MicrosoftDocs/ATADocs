@@ -9,7 +9,7 @@ ms.topic: how-to
 
 Typically, organizations of all sizes have limited visibility into whether or not their on-premises apps and services could introduce a security vulnerability to their organization. The problem of limited visibility is especially true regarding use of unsupported or outdated components.
 
-While your company may invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an on-going project, it's easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization. Microsoft security research reveals that most identity attacks utilize common misconfigurations in Active Directory and continued use of legacy components (such as NTLMv1 protocol) to compromise identities and successfully breach your organization. To combat this effectively, [!INCLUDE [Product long](includes/product-long.md)] now offers proactive identity security posture assessments to detect and suggest improvement actions across your on-premises Active Directory configurations.
+While your company may invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an on-going project, it's easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization. Microsoft security research reveals that most identity attacks utilize common misconfigurations in Active Directory and continued use of legacy components (such as NTLMv1 protocol) to compromise identities and successfully breach your organization. To combat this effectively, [!INCLUDE [Product long](includes/product-long.md)] now offers proactive identity security posture assessments to detect and recommend actions across your on-premises Active Directory configurations.
 
 ## What do Defender for Identity's security posture assessments provide?
 
@@ -25,7 +25,7 @@ While your company may invest significant time and effort on hardening identitie
 
 ### What is Microsoft Secure Score?
 
-Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more improvement actions taken. It can be found at <https://security.microsoft.com/securescore> in the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
+Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at <https://security.microsoft.com/securescore> in the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
 
 ### Licensing
 
@@ -52,13 +52,13 @@ A [!INCLUDE [Product short](includes/product-short.md)] license is required.
 To access identity security posture assessments:
 
 1. Open the [Microsoft Secure Score dashboard](https://security.microsoft.com/securescore).
-1. Select the **Improvement actions** tab. You can search for a particular improvement action, or filter the results (for example, by the category **Identity**).
+1. Select the **Recommended actions** tab. You can search for a particular recommended action, or filter the results (for example, by the category **Identity**).
 
-    ![Improvement actions.](media/improvement-actions.png)
+    [![Recommended actions.](media/recommended-actions.png)](media/recommended-actions.png#lightbox)
 
-1. For more details about the assessment, select the **Improvement action**.
+1. For more details, select the assessment.
 
-    ![Select the assessment.](media/select-assessment.png)
+    [![Select the assessment.](media/select-assessment.png)](media/select-assessment.png#lightbox)
 
 ## Next steps
 
