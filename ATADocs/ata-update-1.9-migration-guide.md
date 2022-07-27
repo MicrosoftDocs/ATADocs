@@ -37,8 +37,8 @@ If you already have ATA version 1.8 deployed, this procedure walks you through t
 
 Follow these steps to update to ATA version 1.9:
 
-1.  [Download the update version of ATA 1.9 from the Download Center](https://www.microsoft.com/download/details.aspx?id=56725)  or the full version from the [Eval center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
-In the migration version, the file can be used only for updating from ATA 1.8. In the version from the Eval center, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
+1.  [Download the update version of ATA 1.9 from the Download Center](https://www.microsoft.com/download/details.aspx?id=56725).<br>
+In the migration version, the file can be used only for updating from ATA 1.8. 
 
 1. Update the ATA Center
 
