@@ -27,7 +27,7 @@ ms.suite: ems
 
 # What's new in ATA version 1.9
 
-The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=56725)  or the full version can be downloaded from the [Eval center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
+The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=56725).
 
 These release notes provide information about updates, new features, bug fixes, and known issues in this version of Advanced Threat Analytics.
 

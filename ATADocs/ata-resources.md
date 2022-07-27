@@ -62,7 +62,7 @@ If you are using physical servers, you should plan capacity. You can get help fr
 
 These resources will help you download and install the ATA Center, connect to Active Directory, download the ATA Gateway package, set up event collection, and optionally integrate with your VPN and set up honeytoken accounts and exclusions.
 
-[Download ATA](https://aka.ms/ataeval) - Before deploying ATA, if you haven't made the decision to purchase ATA, you can download the evaluation version.
+[Download ATA](install-ata-step1.md#step-1-download-and-install-the-ata-center)
 
 [ATA POC playbook](https://aka.ms/ataplaybook) - Guide to all the steps necessary to do a successful POC deployment of ATA.
 
