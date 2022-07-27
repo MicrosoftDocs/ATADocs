@@ -21,7 +21,7 @@ The increased risk is because unsecure traffic such as LDAP simple-bind is highl
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions>.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions>.
 
     ![Review top impacted entities and create an action plan.](media/cas-isp-clear-text-2.png)
 1. Research why those entities are using LDAP in clear text.

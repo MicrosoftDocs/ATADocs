@@ -21,7 +21,7 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 
 ## How do I use this security assessment?
 
-1. Review the suggested improvement action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have unsecure attributes.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to discover which of your accounts have unsecure attributes.
 
     ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
