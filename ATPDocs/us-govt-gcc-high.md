@@ -43,7 +43,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 1. Have your Microsoft contact send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
 2. Go to the Azure Portal > Azure Active Directory > Groups
-3. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding them a " - commercial" suffix:
+3. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
  - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial" 
  - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
  - "Azure ATP _instanceName_ Users" --> "Azure ATP _instanceName_ Users - commercial"
@@ -55,7 +55,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 9. Uninstall existing sensor agents from the domain controllers
 10. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
 11. Migrate any settings after the initial sync (use the two portals to compare)
-12. Eventually, delete the previous workspace (historic data will be lost)
+12. Eventually, delete the previous workspace (historical data will be lost)
 
 >[!NOTE]
 > No data is migrated from the commercial service.
