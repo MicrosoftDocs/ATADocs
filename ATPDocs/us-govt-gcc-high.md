@@ -42,7 +42,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 ## How to migrate from commercial to GCC
 
 1. Have your Microsoft contact send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
-2. Go to the Azure Portal > Azure Active Directory > Groups
+2. Go to the [Azure Portal](https://portal.azure.com/) > Azure Active Directory > Groups
 3. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
  - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial" 
  - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
