@@ -42,15 +42,20 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 ## How to migrate from commercial to GCC
 
 1. Have your Microsoft contact send an internal email with the tenant details to [AskGCC@microsoft.com](mailto:AskGCC@microsoft.com)
-2. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
-3. Create a new instance of Defender for Identity
-4. Configure a Directory Service account
-5. Download the new sensor agent package and copy the workspace key
-6. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
-7. Uninstall existing sensor agents from the domain controllers
-8. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
-9. Migrate any settings after the initial sync (use the two portals to compare)
-10. Eventually, delete the previous workspace (historic data will be lost)
+2. Go to the Azure Portal > Azure Active Directory > Groups
+3. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
+ - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial" 
+ - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
+ - "Azure ATP _instanceName_ Users" --> "Azure ATP _instanceName_ Users - commercial"
+4. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
+5. Create a new instance of Defender for Identity
+6. Configure a Directory Service account
+7. Download the new sensor agent package and copy the workspace key
+8. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
+9. Uninstall existing sensor agents from the domain controllers
+10. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
+11. Migrate any settings after the initial sync (use the two portals to compare)
+12. Eventually, delete the previous workspace (historical data will be lost)
 
 >[!NOTE]
 > No data is migrated from the commercial service.
