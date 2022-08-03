@@ -1,7 +1,7 @@
 ---
 title: Configure your proxy or firewall to enable Microsoft Defender for Identity communication with the sensor
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 03/29/2022
+ms.date: 08/03/2022
 ms.topic: how-to
 ---
 
@@ -86,7 +86,7 @@ If you would like to download the "Azure IP Ranges and Service Tags - Public Clo
 
 > [!NOTE]
 >
-> - To ensure maximal security and data privacy, [!INCLUDE [Product short](includes/product-short.md)] uses certificate based mutual authentication between each [!INCLUDE [Product short](includes/product-short.md)] sensor and the [!INCLUDE [Product short](includes/product-short.md)] cloud backend. If SSL inspection is used in your environment, make sure that the inspection is configured for mutual authentication so it does not interfere in the authentication process.
+> - To ensure maximal security and data privacy, [!INCLUDE [Product short](includes/product-short.md)] uses certificate based mutual authentication between each [!INCLUDE [Product short](includes/product-short.md)] sensor and the [!INCLUDE [Product short](includes/product-short.md)] cloud backend. SSL inspection and interception are not supported, as they interfere in the authentication process.
 > - Occasionally, the [!INCLUDE [Product short](includes/product-short.md)] service IP addresses may change. Therefore, if you manually configure IP addresses or if your proxy automatically resolves DNS names to their IP address and uses them, you should periodically check that the configured IP addresses are still up-to-date.
 
 ## Test proxy connectivity
