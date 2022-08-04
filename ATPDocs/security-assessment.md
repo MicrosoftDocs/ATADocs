@@ -45,6 +45,7 @@ A [!INCLUDE [Product short](includes/product-short.md)] license is required.
 - [Riskiest lateral movement paths (LMP)](/defender-for-identity/security-assessment-riskiest-lmp)
 - [Unmonitored domain controllers](/defender-for-identity/security-assessment-unmonitored-domain-controller)
 - [Unsecure account attributes](/defender-for-identity/security-assessment-unsecure-account-attributes)
+- [Unsecure domain configurations](/defender-for-identity/security-assessment-unsecure-domain-configurations)
 - [Unsecure Kerberos delegation](/defender-for-identity/security-assessment-unconstrained-kerberos)
 - [Unsecure SID History attributes](/defender-for-identity/security-assessment-unsecure-sid-history-attribute)
 - [Weak cipher usage](/defender-for-identity/security-assessment-weak-cipher)
