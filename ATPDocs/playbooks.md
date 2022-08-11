@@ -1,15 +1,15 @@
 ---
-title: Microsoft Defender for Identity security lab playbook
-description: Learn how to simulate threats in your environment using the Microsoft Defender for Identity security lab playbooks.
+title: # Attack simulations for Microsoft Defender for Identity (MDI)  
+description: Learn how to simulate threats in your environment using the Microsoft Defender for Identity security lab attack simulations.
 ms.date: 07/17/2022
 ms.topic: how-to
 ---
 
-# Playbook samples for Microsoft Defender for Identity
+# Attack simulations for Microsoft Defender for Identity (MDI)  
 
 Microsoft Defender for Identity is a powerful solution for detecting abnormal or suspicious activities from managed, unmanaged or even unknown machines targeting domain controllers.
 
-When running a playbook or a penetration test, ensure your Defender for Identity configuration is well configured. Make sure that [sensors are installed on all domain controllers](sensor-settings.md) and are in a [healthy state](health-alerts.md). Also, check that [Windows Event collection](configure-windows-event-collection.md) is properly configured.
+When running a lab or a pentesting ensure your Defender for Identity configuration is well configured. Make sure that [sensors are installed on all domain controllers](sensor-settings.md) and are in a [healthy state](health-alerts.md). Also, check that [Windows Event collection](configure-windows-event-collection.md) is properly configured.
 
 Many alerts require a machine learning period before generating alerts. The learning period is listed in the link to the details for each detection. Be sure to wait the required period to get the proper results.
 
@@ -18,7 +18,7 @@ Many alerts require a machine learning period before generating alerts. The lear
 
 Then from a new machine (fresh install, managed, or unmanaged) try the following scenarios:
 
-<!-- ## Network mapping reconnaissance (DNS)
+## Network mapping reconnaissance (DNS)
 
 For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
 
@@ -40,7 +40,7 @@ You should see activity in success or failure (connection refused) and the alert
 
 Detail in the alert:
 
-![Network mapping reconnaissance details.](media/playbooks/network-mapping-alert-details.png)   -->
+![Network mapping reconnaissance details.](media/playbooks/network-mapping-alert-details.png)   
 
 ## User and IP address reconnaissance
 
@@ -156,7 +156,7 @@ Detail in the alert:
 
 For details about this alert, see [Account enumeration reconnaissance (external ID 2003)](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003).
 
-In this alert, an attacker makes Kerberos requests using a list of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the WrongPassword (0xc000006a) instead of NoSuchUser (0xc0000064) NTLM error.
+In this alert, an attacker makes Kerberos (or NTLM) requests using a list of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the Preauthentication required instead of Security principal unknown Kerberos error or the WrongPassword (0xc000006a) instead of NoSuchUser (0xc0000064) NTLM error.
 
 Build a *users.txt* list of names by merging some names from <https://github.com/jeanphorn/wordlist/blob/master/usernames.txt> and add some valid names from your organization.
 
