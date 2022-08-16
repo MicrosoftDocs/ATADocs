@@ -112,6 +112,8 @@ Use the following command to perform a fully silent install of the [!INCLUDE [Pr
 > |-------------|----------|---------|---------|
 > |InstallationPath|InstallationPath=""|No|Sets the path for the installation of [!INCLUDE [Product short](includes/product-short.md)] Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
 > |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the [!INCLUDE [Product short](includes/product-short.md)] sensor with the [!INCLUDE [Product short](includes/product-short.md)] instance.|
+> |DelayedUpdate|DelayedUpdate=true|No|Sets the sensors' update mechanism to delay the update for 72 hours from the official release of each service update. See [Delayed sensor update](sensor-settings#delayed-sensor-update) for more details.|
+
 
 **Examples**:
 
