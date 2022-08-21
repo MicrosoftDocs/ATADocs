@@ -26,6 +26,8 @@ For more information on what's new with other Microsoft Defender security produc
 
 Released August 18, 2022
 
+- We have changed some of the logic behind how we trigger the [Suspected DCSync attack (replication of directory services) (external ID 2006)](domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006) alert. This detector now covers cases where the source device is behind multiple IP addresses.
+
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.186
