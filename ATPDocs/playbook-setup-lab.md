@@ -24,8 +24,8 @@ In this lab you will:
 1. [A lab domain controller and two lab workstations](#servers-and-computers).
     - Go ahead and [hydrate Active Directory (AD) with users](#hydrate-active-directory-users-on-contosodc).
 
-1. An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that is [connected to AD](/defender-for-identity/directory-service-accounts).
-1. [Download](/defender-for-identity/install-sensor) and [install the latest version of the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md) on your lab's domain controller.
+1. An [[!INCLUDE [Product short](includes/product-short.md)] instance](/defender-for-identity/deploy-defender-identity) that is [connected to AD](/defender-for-identity/directory-service-accounts).
+1. [Download](/defender-for-identity/download-sensor) and [install the latest version of the [!INCLUDE [Product short](includes/product-short.md)] sensor](/defender-for-identity/install-sensor-sensor) on your lab's domain controller.
 1. Familiarity with [Privileged Access Workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## Recommendations
