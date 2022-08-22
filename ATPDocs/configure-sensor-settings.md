@@ -17,7 +17,7 @@ After the [!INCLUDE [Product short](includes/product-short.md)] sensor is instal
 
    :::image type="content" source="media/settings-identities.png" alt-text="The option of Identities on the Settings page" lightbox="media/settings-identities.png":::
 
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created.
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created. For details about each column, see [Sensor details](sensor-settings.md#sensor-details).
 
     [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
