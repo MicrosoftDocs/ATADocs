@@ -1,11 +1,11 @@
 ---
-title: # Attack simulations for Microsoft Defender for Identity (MDI)  
+title: Attack simulations for Microsoft Defender for Identity 
 description: Learn how to simulate threats in your environment using the Microsoft Defender for Identity security lab attack simulations.
 ms.date: 07/17/2022
 ms.topic: how-to
 ---
 
-# Attack simulations for Microsoft Defender for Identity (MDI)  
+# Attack simulations for Microsoft Defender for Identity
 
 Microsoft Defender for Identity is a powerful solution for detecting abnormal or suspicious activities from managed, unmanaged or even unknown machines targeting domain controllers.
 
