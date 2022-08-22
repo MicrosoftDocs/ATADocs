@@ -91,7 +91,7 @@ The sensors page provides the following information about each sensor:
 
   * **Unreachable**: The domain controller was deleted from Active Directory. However, the sensor installation wasn't uninstalled and removed from the domain controller before it was decommissioned. You can safely delete this entry.
 
-* **Version**:  Displays the version the sensor installed.
+* **Version**:  Displays the sensor version installed.
 
 * **Delayed update**: Displays the sensor's delayed update mechanism state. Possible values are:
 
