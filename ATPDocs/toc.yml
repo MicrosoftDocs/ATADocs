@@ -130,7 +130,7 @@ items:
       href: playbook-lateral-movement.md 
     - name: Domain dominance playbook
       href: playbook-domain-dominance.md
-    - name: Alerts playbook
+    - name: Attack simulations
       href: playbooks.md 
   - name: Remediation
     items:
