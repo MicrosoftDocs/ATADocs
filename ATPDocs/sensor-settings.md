@@ -15,7 +15,7 @@ This article explains how to configure and manage Microsoft Defender for Identit
 
     ![Go to Settings, then Identities.](media/settings-identities.png)
 
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created.
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created. For details about each column, see [Sensor details](#sensor-details).
 
     [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
@@ -43,9 +43,79 @@ This article explains how to configure and manage Microsoft Defender for Identit
 
     ![Export list of sensors.](media/export-sensors.png)
 
+## Sensor details
+
+The sensors page provides the following information about each sensor:
+
+* **Sensor**: Displays the sensor's NetBIOS computer name.
+
+* **Type**:  Displays the type of the sensor. Possible values are:
+
+  * Domain controller sensor
+
+  * AD FS sensor
+
+  * Standalone sensor
+
+* **Domain**: Displays the fully qualified domain name of the Active Directory domain where the sensor is installed.
+
+* **Service Status**:  Displays the status of the sensor service on the server. Possible values are:
+
+  * **Running**: Sensor service is running
+
+  * **Starting**: Sensor service is starting
+
+  * **Disabled**: Sensor service is disabled
+
+  * **Stopped**: Sensor service is stopped
+
+  * **Unknown**: Sensor is disconnected or unreachable
+
+* **Sensor Status**:  Displays the overall status of the sensor. Possible values are:
+
+  * **Up to date**: Sensor is running a current version of the sensor.
+
+  * **Outdated**: Sensor is running a version of the software that is at least three versions behind the current version.
+
+  * **Updating**: Sensor software is being updated.
+
+  * **Update failed**: Sensor failed to update to a new version.
+
+  * **Not Configured**: Sensor requires more configuration before it's fully operational. This applies to sensors installed on AD FS servers or standalone sensors.
+
+  * **Start failed**: Sensor didn't pull configuration for more than 30 minutes.
+
+  * **Syncing**: Sensor has configuration updates pending, but it didn't yet pull the new configuration.
+
+  * **Disconnected**: The Defender for Identity service hasn't seen any communication from this sensor in 10 minutes.
+
+  * **Unreachable**: The domain controller was deleted from Active Directory. However, the sensor installation wasn't uninstalled and removed from the domain controller before it was decommissioned. You can safely delete this entry.
+
+* **Version**:  Displays the version the sensor installed.
+
+* **Delayed update**: Displays the sensor's delayed update mechanism state. Possible values are:
+
+  * Enabled
+
+  * Disabled
+
+* **Health status**: Displays the overall health status of the sensor with a colored icon representing the highest severity open health alert. Possible values are:
+
+  * **Healthy (green icon)**: No opened health issues
+
+  * **Not-healthy (yellow icon)**: The highest severity opened health issue is low
+
+  * **Not-healthy (orange icon)**: The highest severity opened health issue is medium
+
+  * **Not-healthy (red icon)**: The highest severity opened health issue is high
+
+* **Health issues**: Displays the count of opened health issues on the sensor.
+
+* **Created**: Displays the date the sensor was installed
+
 ## Updating your sensors
 
-Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up-to-date, provides the best possible protection for your organization.
+Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up to date, provides the best possible protection for your organization.
 
 The [!INCLUDE [Product long](includes/product-long.md)] service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. [!INCLUDE [Product short](includes/product-short.md)] sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the [!INCLUDE [Product short](includes/product-short.md)] sensor and sensor detection capabilities.
 
@@ -53,19 +123,19 @@ The [!INCLUDE [Product long](includes/product-long.md)] service is typically upd
 
 [!INCLUDE [Product short](includes/product-short.md)] sensors support two kinds of updates:
 
-- Minor version updates:
-  - Frequent
-  - Requires no MSI install, and no registry changes
-  - Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
+* Minor version updates:
+  * Frequent
+  * Requires no MSI install, and no registry changes
+  * Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
   
-- Major version updates:
-  - Rare
-  - Contains significant changes
-  - Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
+* Major version updates:
+  * Rare
+  * Contains significant changes
+  * Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
   
 > [!NOTE]
 >
-> - [!INCLUDE [Product short](includes/product-short.md)] sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the [!INCLUDE [Product short](includes/product-short.md)] service consumes too much memory, the service is automatically stopped and restarted by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater service.
+> * [!INCLUDE [Product short](includes/product-short.md)] sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the [!INCLUDE [Product short](includes/product-short.md)] service consumes too much memory, the service is automatically stopped and restarted by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater service.
 
 ### Delayed sensor update
 
@@ -147,6 +217,6 @@ To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silen
 
 ## See also
 
-- [Configure event forwarding](configure-event-forwarding.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+* [Configure event forwarding](configure-event-forwarding.md)
+* [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
+* [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
