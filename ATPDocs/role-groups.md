@@ -25,7 +25,7 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](/m
 |Create MDI Workspace|Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator|
 |MDI Settings|Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator <br> **Or** <br> Member of one of the following Azure AD groups (after the MDI Workspace is created): <li>Azure ATP {instance name} Administrator <li>Azure ATP {instance name} Users|
 |MDI security alerts and activities|Member of one of the Azure AD roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> Member of one of the following [Microsoft Defender for Cloud Apps internal roles](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps): <li>Global admin <li>Security reader <li>Compliance admin|
-|MDI security assessments <br> (now part of Microsoft Secure Score)|[Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> At minimum, [viewer permissions](#types-of-defender-for-identity-security-groups) for Microsoft Defender for Identity
+|MDI security assessments <br> (now part of Microsoft Secure Score)|[Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> Member of one of the following Azure AD groups (after the MDI Workspace is created): <li>Azure ATP {instance name} Administrator <li>Azure ATP {instance name} Users <li>Azure ATP {instance name} Viewers|
 
 
 ## Types of Defender for Identity security groups
