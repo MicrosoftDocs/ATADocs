@@ -93,7 +93,7 @@ For the best results, we recommend using all of the methods. If this isn't possi
 This section lists the requirements for the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
 > [!NOTE]
-> Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
+> Starting June 15 2022, Microsoft no longer supports the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 
 ### General
 
@@ -101,7 +101,6 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor supports instal
 
 | Operating system version   | Server with Desktop Experience | Server Core | Nano Server    | Supported installations  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
-| Windows Server 2008 R2 SP1 | &#10004;                       | &#10060;    | Not applicable | Domain controller        |
 | Windows Server 2012        | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
 | Windows Server 2012 R2     | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
@@ -127,7 +126,7 @@ For optimal performance, set the **Power Option** of the machine running the [!I
 
 [!INCLUDE [Product short](includes/product-short.md)] sensors can be deployed on domain controller or AD FS servers of various loads and sizes, depending on the amount of network traffic to and from the servers, and the amount of resources installed.
 
-For Windows Operating systems 2008 R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
+For Windows Server 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't supported in a [Multi Processor Group](/windows/win32/procthread/processor-groups) mode. For more information about multi-processor group mode, see [troubleshooting](troubleshooting-known-issues.md#multi-processor-group-mode).
 
 >[!NOTE]
 > When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
@@ -142,8 +141,6 @@ The servers and domain controllers onto which the sensor is installed must have 
 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor monitors the local traffic on all of the domain controller's network adapters.  
 After deployment, use the Microsoft 365 Defender portal to modify which network adapters are monitored.
-
-The sensor isn't supported on domain controllers running Windows 2008 R2 with Broadcom Network Adapter Teaming enabled.
 
 If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
 
