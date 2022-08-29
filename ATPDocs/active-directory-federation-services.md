@@ -22,7 +22,7 @@ For hardware requirements, see [Defender for Identity server specifications](pre
 
 ## Network requirements
 
-For sensors running on domain controllers and AD FS to communicate with the cloud service, you must open port 443 in your firewalls and proxies to `*.atp.azure.com`.
+For sensors running on AD FS servers to communicate with the MDI cloud service, you must open port 443 in your firewalls and proxies to `<your-instance-name>sensorapi.atp.azure.com`, for example contoso-corpsensorapi.atp.azure.com. For more information see [Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor](configure-proxy.md)
 
 ## AD FS Windows Event logs
 
