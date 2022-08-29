@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/18/2022
+ms.date: 08/25/2022
 ms.topic: overview
 ---
 
@@ -22,11 +22,17 @@ For more information on what's new with other Microsoft Defender security produc
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
 
+## Defender for Identity release 2.188
+
+Released August 28, 2022
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.187
 
 Released August 18, 2022
 
-- We have changed some of the logic behind how we trigger the [Suspected DCSync attack (replication of directory services) (external ID 2006)](domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006) alert. This detector now covers cases where the source IP address seen by the sensor appears to be a NAT device. 
+- We have changed some of the logic behind how we trigger the [Suspected DCSync attack (replication of directory services) (external ID 2006)](domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006) alert. This detector now covers cases where the source IP address seen by the sensor appears to be a NAT device.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
