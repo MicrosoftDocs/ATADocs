@@ -143,8 +143,8 @@ $gMSA_AccountName = 'mdiSvc01'
 $gMSA_HostsGroupName = 'mdiSvc01Group'
 $gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2'
 
-# Install the required PowerShell module:
-Install-Module ActiveDirectory
+# Import the required PowerShell module:
+Import-Module ActiveDirectory
 
 # Create the group and add the members
 $gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope Global -PassThru
@@ -161,8 +161,8 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 To install the gMSA account, run locally (as an administrator) on each of the servers, the following command:
 
 ```powershell
-# Install the required PowerShell module:
-Install-Module ActiveDirectory
+# Import the required PowerShell module:
+Import-Module ActiveDirectory
 
 # Install the gMSA account
 Install-ADServiceAccount -Identity 'mdiSvc01'
