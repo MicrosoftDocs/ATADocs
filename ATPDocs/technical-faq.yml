@@ -171,7 +171,10 @@ sections:
 
             - If you already installed the sensor with WinPcap and need to update to use Npcap:
               1. Uninstall the sensor.
+                  - Either using **Add/Remove programs** in the control panel (*appwiz.cpl*), or by running the following [uninstall command](uninstall-sensor.md#uninstall-the-defender-for-identity-sensor-silently):  
+                    `".\Azure ATP Sensor Setup.exe" /uninstall /quiet`
               1. Uninstall WinPcap.
+                  - Note: This is applicable only if WinPcap was manually installed prior to the sensor installation. In this case you would need to manually remove WinPcap.
               1. Reinstall the sensor (with an installation package of version 2.184 or greater).
               
             - If you want to manually install Npcap:
