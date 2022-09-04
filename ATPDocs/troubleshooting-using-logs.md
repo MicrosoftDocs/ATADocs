@@ -19,8 +19,10 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor has the followi
 
 - **Microsoft.Tri.Sensor.Updater.log** - This log is used for the sensor updater process, which is responsible for updating the [!INCLUDE [Product short](includes/product-short.md)] sensor if configured to do so automatically.
 
+- **Microsoft.Tri.Sensor.Updater-Errors.log** – This log contains just the errors that are caught by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater. Its main use is performing health checks and investigating issues that need to be correlated to specific times.
+
 > [!NOTE]
-> The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
+> The log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
 
 ## Defender for Identity Deployment logs
 
