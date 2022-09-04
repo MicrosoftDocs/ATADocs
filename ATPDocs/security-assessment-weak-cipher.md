@@ -22,6 +22,7 @@ Cryptography relies on ciphers to encrypt our data. For example, RC4 (Rivest Cip
 
 > [!NOTE]
 > This assessment is updated in near real time.
+> The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the report.
 
 ## Remediation
 
