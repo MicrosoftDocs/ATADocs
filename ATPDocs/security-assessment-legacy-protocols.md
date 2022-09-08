@@ -42,6 +42,7 @@ To retire the use of legacy protocols, your organization must first discover whi
 
 > [!NOTE]
 > This assessment is updated in near real time.
+> The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
 
 ## Next steps
 
