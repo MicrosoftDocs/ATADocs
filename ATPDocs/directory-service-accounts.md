@@ -68,7 +68,14 @@ The sensor will attempt to use the DSA entry configured during start-up, as a re
 
 #### Two or more DSA entries are configured
 
-When there are two or more DSA entries, the sensor will try the DSA entries in the following order:
+When there are two or more DSA entries, the following logic is applied:
+  
+  - The sensor will look for an entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to authenticate using the credentials in that entry. 
+  - If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will search the list for an entry for the parent domain (using DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
+  - If there isn't an entry for the parent domain or the parent domain entry failed to authenticate, the sensor will search the list for an entry for a "sibling domain" (again, using the DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
+  - If there isn't an entry for a sibling domain or the sibling domain entry failed to authenticate, the sensor will traverse the list via round robin and try to authenticate with each of the entries until it succeeds. DSA gMSA entries have higher priority than regular DSA entries.
+  
+For example, the sensor will try the DSA entries in the following order:
 
 1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.contoso.com).
 2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.contoso.com).
@@ -79,11 +86,8 @@ When there are two or more DSA entries, the sensor will try the DSA entries in t
 7. Round robin all other DSA gMSA entries
 8. Round robin all other DSA regular entries
 
-- The sensor will look for a DSA entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to sign in to the domain with the DSA entry settings.
 
-- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will traverse the list via round robin.
-
-For example, if these are the DSA entries configured:
+Another example, if these are the DSA entries configured:
 
 - DSA1.northamerica.contoso.com
 - DSA2.EMEA.contoso.com
@@ -94,8 +98,8 @@ Then these are the sensors, and which DSA entry will be used first:
 | Domain controller FQDN | DSA entry that  will be used |
 | --------------------------- | -------------------------------- |
 | **DC01.contoso.com**        | Round robin                      |
-| **DC02.Fabrikam.com**       | DSA3.fabrikam.com                |
-| **DC03.EMEA.contoso.com**   | DSA2.emea.contoso.com            |
+| **DC02.fabrikam.com**       | DSA3.fabrikam.com                |
+| **DC03.emea.contoso.com**   | DSA2.emea.contoso.com            |
 | **DC04.contoso.com**        | Round robin                      |
 
 >[!NOTE]
