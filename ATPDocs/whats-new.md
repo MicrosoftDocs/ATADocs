@@ -9,7 +9,7 @@ ms.topic: overview
 
 This article is updated frequently to let you know what's new in the latest releases of [!INCLUDE [Product long](includes/product-long.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP).
 
-RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
+RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
 
 For more information on what's new with other Microsoft Defender security products, see:
 
