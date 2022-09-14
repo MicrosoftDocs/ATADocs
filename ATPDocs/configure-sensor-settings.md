@@ -21,6 +21,9 @@ After the [!INCLUDE [Product short](includes/product-short.md)] sensor is instal
 
     [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
+    > [!NOTE]
+    > For information about how to configure delayed updates, see [Delayed sensor update](sensor-settings.md#delayed-sensor-update).
+
 1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
 
     [![Sensor filters.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
