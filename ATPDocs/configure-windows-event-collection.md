@@ -181,7 +181,11 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
         ![Select properties.](media/select-properties.png)
 
-1. Then repeat the steps above, but for **Applies to**, select **Descendant Group Objects**, and then again for **Descendant Computer Objects**.
+1. Then repeat the steps above, but for **Applies to**, select the following object types:
+   - **Descendant Group Objects**
+   - **Descendant Computer Objects**
+   - **Descendant msDS-GroupManagedServiceAccount Objects**
+   - **Descendant msDS-ManagedServiceAccount Objects**
 
 ### Auditing for specific detections
 

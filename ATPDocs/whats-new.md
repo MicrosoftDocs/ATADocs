@@ -27,7 +27,9 @@ For more information on what's new with other Microsoft Defender security produc
 Released September 19, 2022
 
 - **More activities to trigger honeytoken alerts**  
-Microsoft Defender for Identity offers the ability to define honeytoken accounts, which are used as traps for malicious actors. Any authentication associated with these honeytoken accounts (normally dormant), triggers a honeytoken activity (external ID 2014) alert. In this version, we have added more activities that if they happen against these accounts – will trigger an alert. From now on, any LDAP or SAMR query against these honeytokens will trigger an alert. In addition, based on event 5136, we can trigger an alert when one of the attributes of the honeytoken was changed and if the group membership of the honeytoken was changed. For more information, see [Configure Windows Event collection](configure-windows-event-collection.md).
+Microsoft Defender for Identity offers the ability to define honeytoken accounts, which are used as traps for malicious actors. Any authentication associated with these honeytoken accounts (normally dormant), triggers a honeytoken activity (external ID 2014) alert. New for this version, any LDAP or SAMR query against these honeytoken accounts will trigger an alert. In addition, if event 5136 is audited, an alert will be triggered when one of the attributes of the honeytoken was changed or if the group membership of the honeytoken was changed.
+
+ For more information, see [Configure Windows Event collection](configure-windows-event-collection.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
