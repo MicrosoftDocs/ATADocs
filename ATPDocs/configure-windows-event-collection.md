@@ -38,6 +38,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 - 4758 - Universal Security Group Deleted
 - 4763 - Universal Distribution Group Deleted
 - 4776 - Domain Controller Attempted to Validate Credentials for an Account (NTLM)
+- 5136 - A directory service object was modified
 - 7045 - New Service Installed
 - 8004 - NTLM Authentication
 
@@ -70,6 +71,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
         | Account Management | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | Account Management | Audit User Account Management | 4726 |
         | DS Access | Audit Directory Service Access | 4662 - For this event, it's also necessary to [Configure object auditing](#configure-object-auditing).  |
+        | DS Access | Audit Directory Service Changes | 5136  |
         | System | Audit Security System Extension | 7045 |
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
