@@ -31,7 +31,7 @@ We recommend you create the gMSA account Defender for Identity will use to run t
     1. Make sure **Service accounts** is marked in **Object types**.
         ![Select service accounts as object types.](media/object-types.png)
     1. Enter the name of the gMSA account in the **Enter the object name to select** box and select **OK**.
-    1. Select **Descendant User objects** in the **Applies to** field and set the following permissions and properties:
+    1. Select **Descendant User objects** in the **Applies to** field, leave the existing settings, and add the following permissions and properties:
         ![Set permissions and properties.](media/permission-entry.png)
         - To enable force password reset:
             - Permissions:
