@@ -186,7 +186,7 @@ To run the [!INCLUDE [Product short](includes/product-short.md)] Security Alert 
 |----|-----|
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](/sysinternals/downloads/psexec) |
+| PsExec | [PsExec documentation](/sysinternals/downloads/psexec) |
 | NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
 
 We thank the authors of these research tools for enabling the community to better understand cyber risks and impacts.
