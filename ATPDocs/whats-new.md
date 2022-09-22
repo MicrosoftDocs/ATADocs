@@ -30,6 +30,8 @@ Released September 19, 2022
 Microsoft Defender for Identity offers the ability to define honeytoken accounts, which are used as traps for malicious actors. Any authentication associated with these honeytoken accounts (normally dormant), triggers a honeytoken activity (external ID 2014) alert. New for this version, any LDAP or SAMR query against these honeytoken accounts will trigger an alert. In addition, if event 5136 is audited, an alert will be triggered when one of the attributes of the honeytoken was changed or if the group membership of the honeytoken was changed.
 
  For more information, see [Configure Windows Event collection](configure-windows-event-collection.md).
+ 
+- New health alert for verifying that the NTLM Auditing is enabled, as described in the [health alerts page](health-alerts.md#ntlm-auditing-is-not-enabled).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
