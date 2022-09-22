@@ -146,6 +146,12 @@ This section describes all the health alerts for each component, listing the cau
 |The [!INCLUDE [Product short](includes/product-short.md)] sensor is running an Npcap version older than the minimum required version.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Upgrade Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Medium|Sensors settings page|
 |The [!INCLUDE [Product short](includes/product-short.md)] sensor is running an Npcap component that is not configured as required.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors settings page|
 
+### NTLM Auditing is not enabled
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|NTLM Auditing is not enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server.|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#event-id-8004) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors settings page|
+
 <!--
 ## Windows events missing from domain controller audit policy
 
