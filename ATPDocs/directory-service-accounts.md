@@ -1,7 +1,7 @@
 ---
 title: Directory Service account recommendations
 description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
-ms.date: 06/23/2022
+ms.date: 09/25/2022
 ms.topic: how-to
 ---
 
@@ -28,10 +28,29 @@ The Directory Service account (DSA) in Defender for Identity is used by the sens
 
 ## Permissions required for the DSA
 
-The DSA requires read permissions on all the objects in Active Directory, including the Deleted Objects Container.
+The DSA requires read permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
+The read-only permissions on the Deleted Objects container allows [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory.
 
->[!NOTE]
->**Deleted Objects** container recommendation: The DSA should have read-only permissions on the Deleted Objects container. Read-only permissions on this container allow [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory. For information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
+Granting the required read permissions on the Deleted Objects Container can be accomplished using the following code example:
+
+```powershell
+# Declare the user or group that needs to have read access to the deleted objects container:
+$Identity = 'CONTOSO\mdisvc'
+
+# Get the deleted objects container's distinguished name:
+$distinguishedName = ([adsi]'').distinguishedName.Value
+$deletedObjectsDN = 'CN=Deleted Objects,{0}' -f $distinguishedName
+
+# Take ownership on the deleted objects container:
+$params = @("$deletedObjectsDN", '/takeOwnership')
+C:\Windows\System32\dsacls.exe $params
+
+# Grant the 'List Contents' and 'Read Property' permissions to the user or group:
+$params = @("$deletedObjectsDN", '/G', "$($Identity):LCRP")
+C:\Windows\System32\dsacls.exe $params
+```
+
+For more information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
 
 ## Types of DSA accounts
 
