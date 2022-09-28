@@ -25,7 +25,7 @@ Search for a specific user or computer, and select the entity to bring you to th
 
 - After a user is deleted from the organization's Active Directory, [!INCLUDE [Product short](includes/product-short.md)] automatically deletes the user profile and any related network activity within a year. You can also [delete](/defender-for-identity/manage-security-alerts#review-suspicious-activities-on-the-attack-time-line) any security alerts that contain personal data.
 
-- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the [!INCLUDE [Product short](includes/product-short.md)] service, see the Deleted Objects container recommendation in [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](directory-service-accounts.md#permissions-required-for-the-dsa).
+- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the [!INCLUDE [Product short](includes/product-short.md)] service, see the Deleted Objects container recommendation in [[!INCLUDE [Product short](includes/product-short.md)] Permissions required for the Directory Service account](directory-service-accounts.md#permissions-required-for-the-dsa).
 
 ## Export personal data
 
