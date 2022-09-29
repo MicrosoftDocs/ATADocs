@@ -34,7 +34,9 @@ The read-only permissions on the Deleted Objects container allows [!INCLUDE [Pro
 Granting the required read permissions on the Deleted Objects Container can be accomplished using the following code example:
 
 ```powershell
-# Declare the user or group that needs to have read access to the deleted objects container:
+# Declare the *user* or *group* that needs to have read access to the deleted objects container
+# Note that if the identity you want to grant the permissions to is a Group Managed Service Account (gMSA), 
+# you need first to create a security group, add the gMSA as a member and list that group as the identity below
 $Identity = 'CONTOSO\mdisvc'
 
 # Get the deleted objects container's distinguished name:
