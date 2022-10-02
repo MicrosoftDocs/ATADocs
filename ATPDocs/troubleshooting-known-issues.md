@@ -371,6 +371,25 @@ There are two possible workarounds for this issue:
 
 1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation).
 
+
+## Sensor installation fails due to certificate management client
+
+If sensor installation fails, and the Microsoft.Tri.Sensor.Deployment.Deployer.log file contains an entry similar to:
+
+2022-07-15 03:45:00.0000 Error IX509CertificateRequestCertificate2 Deployer failed [arguments=128Ve980dtms0035h6u3Bg==] System.Runtime.InteropServices.COMException (0x80090008): CertEnroll::CX509CertificateRequestCertificate::Encode: Invalid algorithm specified. 0x80090008 (-2146893816 NTE_BAD_ALGID)
+
+**Cause:**
+
+The issue can be caused when a certificate management client such as Entrust Entelligence Security Provider (EESP) is preventing the sensor installation to create a self-signed certificate on the machine.
+
+**Resolution:**
+
+Uninstall the certificate management client, install the MDI sensor, and then reinstall the certificate management client.
+
+Please note that the self signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation. 
+This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
+
+
 ## See also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
