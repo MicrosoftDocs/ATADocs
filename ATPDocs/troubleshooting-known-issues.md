@@ -374,20 +374,22 @@ There are two possible workarounds for this issue:
 
 ## Sensor installation fails due to certificate management client
 
-If sensor installation fails, and the Microsoft.Tri.Sensor.Deployment.Deployer.log file contains an entry similar to:
+If the sensor installation fails, and the Microsoft.Tri.Sensor.Deployment.Deployer.log file contains an entry similar to:
 
-2022-07-15 03:45:00.0000 Error IX509CertificateRequestCertificate2 Deployer failed [arguments=128Ve980dtms0035h6u3Bg==] System.Runtime.InteropServices.COMException (0x80090008): CertEnroll::CX509CertificateRequestCertificate::Encode: Invalid algorithm specified. 0x80090008 (-2146893816 NTE_BAD_ALGID)
+`2022-07-15 03:45:00.0000 Error IX509CertificateRequestCertificate2 Deployer failed [arguments=128Ve980dtms0035h6u3Bg==] System.Runtime.InteropServices.COMException (0x80090008): CertEnroll::CX509CertificateRequestCertificate::Encode: Invalid algorithm specified. 0x80090008 (-2146893816 NTE_BAD_ALGID)`
 
 **Cause:**
 
-The issue can be caused when a certificate management client such as Entrust Entelligence Security Provider (EESP) is preventing the sensor installation to create a self-signed certificate on the machine.
+The issue can be caused when a certificate management client such as Entrust Entelligence Security Provider (EESP) is preventing the sensor installation from creating a self-signed certificate on the machine.
 
 **Resolution:**
 
-Uninstall the certificate management client, install the MDI sensor, and then reinstall the certificate management client.
+Uninstall the certificate management client, install the Defender for Identity sensor, and then reinstall the certificate management client.
 
-Please note that the self signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation. 
-This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
+>[!NOTE]
+>
+>The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation. 
+> This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
 
 
 ## See also
