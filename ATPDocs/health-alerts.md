@@ -111,7 +111,7 @@ This section describes all the health alerts for each component, listing the cau
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more events than it can process.|Some Windows events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Verify that only required events are forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensor or try to forward some of the events to another [!INCLUDE [Product short](includes/product-short.md)] sensor.|Medium|Sensors settings page and health issues page|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more events than it can process.|Some Windows events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone [!INCLUDE [Product short](includes/product-short.md)] sensor, verify that only the required events are forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensor or try to forward some of the events to another [!INCLUDE [Product short](includes/product-short.md)] sensor.|Medium|Sensors settings page and health issues page|
 
 ### Some network traffic could not be analyzed
 
@@ -123,7 +123,7 @@ This section describes all the health alerts for each component, listing the cau
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Make sure the sensor machine is sized correctly according to the [sizing tool](capacity-planning.md). If it is, contact support.|Medium|Sensors settings page and health issues page|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required.|Medium|Sensors settings page and health issues page|
 
 ### Sensor with Windows Server 2008 R2: Will be unsupported soon
 
