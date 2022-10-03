@@ -148,7 +148,7 @@ The **delayed update** option enables you to select specific sensors as an autom
 > [!NOTE]
 > If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md).
 
-Authentication between your sensors and the Azure cloud service uses strong, certificate-based mutual authentication.
+Authentication between your sensors and the Azure cloud service uses strong, certificate-based mutual authentication. The client certificate is created at the sensor installation as a self-signed certificate, valid for 2 years. The Sensor Updater service is responsible for generating a new self-signed certificate before the existing certificate expires. The certificates are rolled with a 2-phase validation process against the backend to avoid a situation where a rolling certificate breaks the authentication.
 
 Each update is tested and validated on all supported operating systems to cause minimal impact to your network and operations.
 
