@@ -395,7 +395,7 @@ Uninstall the certificate management client, install the Defender for Identity s
 
 If the Sensor installation fails with an error code of 0x80070643, and the installation log file contains an entry similar to:
 
-`[22B8:27F0][2026-06-09T17:21:03]e000: Error 0x80070643: Failed to install MSI package.`
+`[22B8:27F0][2016-06-09T17:21:03]e000: Error 0x80070643: Failed to install MSI package.`
 
 **Cause:**
 
