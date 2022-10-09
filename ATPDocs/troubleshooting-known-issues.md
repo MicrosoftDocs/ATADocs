@@ -391,6 +391,24 @@ Uninstall the certificate management client, install the Defender for Identity s
 >The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation. 
 > This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
 
+## Sensor installation fails due to network connectivity issues
+
+If the Sensor installation fails with an error code of 0x80070643, and the installation log file contains an entry similar to:
+
+`[22B8:27F0][2026-06-09T17:21:03]e000: Error 0x80070643: Failed to install MSI package.`
+
+**Cause:**
+
+The issue can be caused when the installation process cannot access the [!INCLUDE [Product short](includes/product-short.md)] cloud services for the sensor registration.
+
+**Resolution:**
+
+Ensure that the sensor can browse to \*.atp.azure.com directly or through the configured proxy. If needed, set the proxy server settings for the installation using the command line:
+
+`"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
+
+For more information, see [Configure proxy server using the command line](configure-proxy.md#configure-proxy-server-using-the-command-line).
+
 
 ## See also
 
