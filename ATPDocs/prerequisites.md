@@ -115,12 +115,11 @@ If you're installing on an AD FS farm, we recommend installing the sensor on eac
 
 During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 is installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending. So when installing the sensors, consider scheduling a maintenance window for the domain controllers.
 
-> [!NOTE]
-> A minimum of 6 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
-
 ### Server specifications
 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
+
+A minimum of 6 GB of disk space is required and 10 GB is recommended. This includes space needed for the [!INCLUDE [Product short](includes/product-short.md)] binaries, [!INCLUDE [Product short](includes/product-short.md)] logs, and performance logs.
 
 For optimal performance, set the **Power Option** of the machine running the [!INCLUDE [Product short](includes/product-short.md)] sensor to **High Performance**.
 
