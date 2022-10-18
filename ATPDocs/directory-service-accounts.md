@@ -26,34 +26,6 @@ The Directory Service account (DSA) in Defender for Identity is used by the sens
 >[!NOTE]
 >By default, Defender for Identity supports up to 30 credentials. If you want to add more credentials, contact Defender for Identity support.
 
-## Permissions required for the DSA
-
-The DSA requires read permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
-The read-only permissions on the Deleted Objects container allows [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory.
-
-Granting the required read permissions on the Deleted Objects Container can be accomplished using the following code example:
-
-```powershell
-# Declare the *user* or *group* that needs to have read access to the deleted objects container
-# Note that if the identity you want to grant the permissions to is a Group Managed Service Account (gMSA), 
-# you need first to create a security group, add the gMSA as a member and list that group as the identity below
-$Identity = 'CONTOSO\mdisvc'
-
-# Get the deleted objects container's distinguished name:
-$distinguishedName = ([adsi]'').distinguishedName.Value
-$deletedObjectsDN = 'CN=Deleted Objects,{0}' -f $distinguishedName
-
-# Take ownership on the deleted objects container:
-$params = @("$deletedObjectsDN", '/takeOwnership')
-C:\Windows\System32\dsacls.exe $params
-
-# Grant the 'List Contents' and 'Read Property' permissions to the user or group:
-$params = @("$deletedObjectsDN", '/G', "$($Identity):LCRP")
-C:\Windows\System32\dsacls.exe $params
-```
-
-For more information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
-
 ## Types of DSA accounts
 
 There are two types of DSA that can be used:
@@ -180,6 +152,34 @@ $gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
 New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
 -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup.Name
 ```
+
+## Permissions required for the DSA
+
+The DSA requires read permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
+The read-only permissions on the Deleted Objects container allows [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory.
+
+Granting the required read permissions on the Deleted Objects Container can be accomplished using the following code example:
+
+```powershell
+# Declare the *user* or *group* that needs to have read access to the deleted objects container
+# Note that if the identity you want to grant the permissions to is a Group Managed Service Account (gMSA), 
+# you need first to create a security group, add the gMSA as a member and list that group as the identity below
+$Identity = 'CONTOSO\mdisvc'
+
+# Get the deleted objects container's distinguished name:
+$distinguishedName = ([adsi]'').distinguishedName.Value
+$deletedObjectsDN = 'CN=Deleted Objects,{0}' -f $distinguishedName
+
+# Take ownership on the deleted objects container:
+$params = @("$deletedObjectsDN", '/takeOwnership')
+C:\Windows\System32\dsacls.exe $params
+
+# Grant the 'List Contents' and 'Read Property' permissions to the user or group:
+$params = @("$deletedObjectsDN", '/G', "$($Identity):LCRP")
+C:\Windows\System32\dsacls.exe $params
+```
+
+For more information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
 
 ## Install the gMSA account
 
