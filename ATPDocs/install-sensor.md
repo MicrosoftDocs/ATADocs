@@ -20,6 +20,9 @@ Learn how to install the [!INCLUDE [Product long](includes/product-long.md)] sen
 >[!NOTE]
 >When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-sensor-silent-installation).
 
+>[!NOTE]
+>Installing the sensor on a machine that has WinPcap installed will result in the installation failing. For more information about MDI transition from WinPcap to Npcap please refer to the [MDI Technical FAQ](technical-faq.yml#winpcap-and-npcap-drivers)
+
 ## Install the sensor
 
 Perform the following steps on the domain controller or AD FS server.
