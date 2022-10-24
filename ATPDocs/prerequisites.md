@@ -141,7 +141,7 @@ The servers and domain controllers onto which the sensor is installed must have 
 The [!INCLUDE [Product short](includes/product-short.md)] sensor monitors the local traffic on all of the domain controller's network adapters.  
 After deployment, use the Microsoft 365 Defender portal to modify which network adapters are monitored.
 
-If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, see [[!INCLUDE [Product short](includes/product-short.md)] sensor NIC teaming issue](troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
+When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
 ### Windows Event logs
 

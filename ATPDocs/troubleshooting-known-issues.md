@@ -150,11 +150,11 @@ Use the complete command to successfully install.
 
 ## Defender for Identity sensor NIC teaming issue
 
-If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, make sure you deploy the Npcap driver by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
+When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
 ## Multi Processor Group mode
 
-For Windows Operating systems 2008R2 and 2012, [!INCLUDE [Product short](includes/product-short.md)] Sensor isn't supported in a Multi Processor Group mode.
+For Windows Operating systems 2008R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't supported in a Multi Processor Group mode.
 
 Suggested possible workarounds:
 
@@ -371,7 +371,6 @@ There are two possible workarounds for this issue:
 
 1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation).
 
-
 ## Sensor installation fails due to certificate management client
 
 If the sensor installation fails, and the Microsoft.Tri.Sensor.Deployment.Deployer.log file contains an entry similar to:
@@ -388,7 +387,7 @@ Uninstall the certificate management client, install the Defender for Identity s
 
 >[!NOTE]
 >
->The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation. 
+>The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation.
 > This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
 
 ## Sensor installation fails due to network connectivity issues
@@ -408,7 +407,6 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 `"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
 For more information, see [Configure proxy server using the command line](configure-proxy.md#configure-proxy-server-using-the-command-line).
-
 
 ## See also
 
