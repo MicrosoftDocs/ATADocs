@@ -16,6 +16,24 @@ Role groups enable access management for [!INCLUDE [Product short](includes/prod
 > [!NOTE]
 > Any global administrator or security administrator on the tenant's Azure Active Directory is automatically a [!INCLUDE [Product short](includes/product-short.md)] administrator.
 
+## Unified role-based access control (RBAC)
+
+You can now enable more granular role-based access control from the Microsoft 365 portal instead of using Defender for Identity's Azure AD groups. For more information, see [Custom roles in role-based access control for Microsoft 365 Defender](/microsoft-365/security/defender/custom-roles).
+
+>[!NOTE]
+>Once enabled, you can migrate existing Defender for Identity roles to the new format. However, if you change or add new roles, they must match these permissions to the role table to access the classic Defender for Identity experience.
+
+:::image type="content" source="media/choose-permissions.png" alt-text="Select permissions from each permission group.":::
+
+| Equivalent Defender for Identity role | Minimum required Microsoft 365 unified RBAC permissions      |
+| ------------------------------------- | ------------------------------------------------------------ |
+| MDI Admin                             | Configuration/Security settings/Read<br/>Configuration/Security settings/All permissions<br/>Configuration/System settings/Read<br/>Configuration/System settings/All permissions<br/>Security operations/Security data/Alerts (manage)<br/>Security operations/Security data /Security data basics (Read)<br/>Configuration/Authorization/All permissions Configuration/Authorization/Read |
+| MDI User                              | Security operations/Security data /Security data basics (Read)<br/>Configuration/System settings/Read<br/>Configuration/Security settings/Read<br/>Security operations/Security data/Alerts (manage)<br/>microsoft.xdr/configuration/security/manage |
+| MDI Viewer                            | Security operations/Security data /Security data basics (Read)<br/>Configuration/System settings/Read<br/>Configuration/Security settings/Read |
+
+> [!NOTE]
+> Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) may still contain Defender for Identity data which adheres to existing Defender for Cloud Apps permissions.
+
 ## Required permissions for the Microsoft 365 Defender experience
 
 To access the Defender for Identity experience in [in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), you need the following permissions:
@@ -25,8 +43,8 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](/m
 |Create MDI Workspace|Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator|
 |MDI Settings|Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator <br> **Or** <br> Member of one of the following Azure AD groups (after the MDI Workspace is created): <li>Azure ATP {instance name} Administrator <li>Azure ATP {instance name} Users|
 |MDI security alerts and activities|Member of one of the Azure AD roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> Member of one of the following [Microsoft Defender for Cloud Apps internal roles](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps): <li>Global admin <li>Security reader <li>Compliance admin|
-|MDI security assessments <br> (now part of Microsoft Secure Score)|[Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> Member of one of the following Azure AD groups (after the MDI Workspace is created): <li>Azure ATP {instance name} Administrator <li>Azure ATP {instance name} Users <li>Azure ATP {instance name} Viewers <br><br> **Note:** Users who are members of the Azure AD *Global Administrator* or *Security Administrator* roles, do not need the above group membership as the required permissions are inherited from the Azure AD role.|
-  
+|MDI security assessments <br> (now part of Microsoft Secure Score)|[Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> Member of one of the following Azure AD groups (after the MDI Workspace is created): <li>Azure ATP {instance name} Administrator <li>Azure ATP {instance name} Users <li>Azure ATP {instance name} Viewers <br><br> **Note:** Users who are members of the Azure AD *Global Administrator* or *Security Administrator* roles, don't need the above group membership as the required permissions are inherited from the Azure AD role.|
+
 ## Types of Defender for Identity security groups
 
 [!INCLUDE [Product short](includes/product-short.md)] provides three types of security groups: Azure ATP *(instance name)* Administrators, Azure ATP *(instance name)* Users, and Azure ATP *(instance name)* Viewers. The following table describes the type of access in Defender for Identity available for each role. Depending on which role you assign, various screens and options will be  unavailable for those users, as follows:
@@ -53,19 +71,6 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](/m
 ## Add and remove users
 
 [!INCLUDE [Product short](includes/product-short.md)] uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
-
-## Unified role-based access control (RBAC)
-
-You can now enable more granular role-based access control from the Microsoft 365 portal instead of using Defender for Identity's Azure AD groups. For more information, see [Custom roles in role-based access control for Microsoft 365 Defender](/microsoft-365/security/defender/custom-roles).
-
->[!NOTE]
->Once enabled, you can migrate existing Defender for Identity roles to the new format. However, if you change or add new roles, they must match these permissions to the role table to access the classic Defender for Identity experience.
-
-| Equivalent Defender for Identity role | Minimum required Microsoft 365 unified RBAC permissions              |
-| ------------------------------------- | ------------------------------------------------------------ |
-| MDI Admin                             | microsoft.xdr/configuration/security/manage <br />microsoft.xdr/configuration/system/manage <br />microsoft.xdr/secops/securitydata/alerts/manage <br />microsoft.xdr/secops/securitydata/read |
-| MDI User                              | microsoft.xdr/secops/securitydata/read <br />microsoft.xdr/configuration/system/read <br />microsoft.xdr/secops/securitydata/alerts/manage <br />microsoft.xdr/configuration/security/manage |
-| MDI Viewer                            | microsoft.xdr/secops/securitydata/read <br />microsoft.xdr/configuration/system/read <br />microsoft.xdr/configuration/security/read |
 
 ## See also
 
