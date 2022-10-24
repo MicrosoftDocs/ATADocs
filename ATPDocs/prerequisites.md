@@ -97,7 +97,7 @@ This section lists the requirements for the [!INCLUDE [Product short](includes/p
 
 ### General
 
-The [!INCLUDE [Product short](includes/product-short.md)] sensor supports installation on domain controllers or Active Directory Federation Services (AD FS) servers, as shown in the following table.
+The [!INCLUDE [Product short](includes/product-short.md)] sensor supports installation on the different operating system versions, as described in the following table.
 
 | Operating system version   | Server with Desktop Experience | Server Core | Nano Server    | Supported installations  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
