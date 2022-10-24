@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 09/19/2022
+ms.date: 10/23/2022
 ms.topic: overview
 ---
 
@@ -22,6 +22,14 @@ For more information on what's new with other Microsoft Defender security produc
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
 
+## Defender for Identity release 2.192
+
+Released October 23, 2022
+
+- New health alert for verifying that the NTLM Auditing is enabled, as described in the [health alerts page](health-alerts.md#ntlm-auditing-is-not-enabled).
+
+- Version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## Defender for Identity release 2.191
 
 Released September 19, 2022
@@ -30,10 +38,6 @@ Released September 19, 2022
 Microsoft Defender for Identity offers the ability to define honeytoken accounts, which are used as traps for malicious actors. Any authentication associated with these honeytoken accounts (normally dormant), triggers a honeytoken activity (external ID 2014) alert. New for this version, any LDAP or SAMR query against these honeytoken accounts will trigger an alert. In addition, if event 5136 is audited, an alert will be triggered when one of the attributes of the honeytoken was changed or if the group membership of the honeytoken was changed.
 
  For more information, see [Configure Windows Event collection](configure-windows-event-collection.md).
- 
-- New health alert for verifying that the NTLM Auditing is enabled, as described in the [health alerts page](health-alerts.md#ntlm-auditing-is-not-enabled).
-
-- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.190
 
