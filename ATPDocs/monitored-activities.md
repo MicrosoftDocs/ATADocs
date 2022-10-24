@@ -1,14 +1,11 @@
 ---
 title: Microsoft Defender for Identity monitored domain activities
 description: Describes each activity type monitored by Microsoft Defender for Identity
-ms.date: 12/24/2020
+ms.date: 05/10/2022
 ms.topic: conceptual
 ---
 
 # Microsoft Defender for Identity monitored activities
-
-> [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
 
 [!INCLUDE [Product long](includes/product-long.md)] monitors information generated from your organization's Active Directory, network activities and event activities to detect suspicious activity. The monitored activity information enables [!INCLUDE [Product short](includes/product-short.md)] to help you determine the validity of each potential threat and correctly triage and respond.
 
@@ -20,7 +17,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 >
 > - This article is relevant for all [!INCLUDE [Product short](includes/product-short.md)] sensor types.
 > - [!INCLUDE [Product short](includes/product-short.md)] monitored activities appear on both the user and machine profile page.
-> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in [Defender for Cloud Apps](https://portal.cloudappsecurity.com/) and Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
+> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
 
 ## Monitored user activities: User account AD attribute changes
 
@@ -104,7 +101,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 
 ## See Also
 
-- [Managing security alerts](working-with-suspicious-activities.md)
-- [Security alert guide](suspicious-activity-guide.md)
-- [Investigate entities](investigate-entity.md)
+- [Managing security alerts](/defender-for-identity/manage-security-alerts)
+- [Security alert guide](/defender-for-identity/alerts-overview)
+- [Investigate assets](/defender-for-identity/investigate-assets)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

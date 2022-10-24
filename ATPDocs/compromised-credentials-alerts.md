@@ -1,11 +1,11 @@
 ---
 title: Microsoft Defender for Identity compromised credentials phase security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typical of the compromised credentials phase are detected against your organization.
-ms.date: 12/27/2021
-ms.topic: tutorial
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Compromised credential alerts
+# Compromised credential alerts
 
 Typically, cyber-attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -17,7 +17,7 @@ Typically, cyber-attacks are launched against any accessible entity, such as a l
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Compromised credential** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, you'll learn how to understand, classify, remediate and prevent the following types of attacks:
+The following security alerts help you identify and remediate **Compromised credential** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn how to understand, classify, remediate and prevent the following types of attacks:
 
 > [!div class="checklist"]
 >
@@ -45,6 +45,13 @@ When processing the TGS request, the KDC will fail its lookup for the requestor 
 
 Combining CVEs CVE-2021-42278 and CVE-2021-42287, an attacker with domain user credentials can leverage them for granting access as a domain admin.
 
+**MITRE**
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134),[Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068),[Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558)     |
+|MITRE attack sub-technique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
+
 **Learning period**
 
 None
@@ -56,7 +63,7 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 2. Investigate the target domain controller and identify activities that occurred after the attack.
   
 **Remediation:**
@@ -64,7 +71,7 @@ None
 1. Contain the source computer.
 
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. If you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [Confirm user compromised](/defender-cloud-apps/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. If you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 ## Honeytoken activity (external ID 2014)
 
@@ -75,7 +82,7 @@ None
 Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused while having an attractive name to lure attackers (for example,
 SQL-Admin). Any activity from them might indicate malicious behavior.
 
-For more information on honeytoken accounts, see [Configure detection exclusions and honeytoken accounts](configure-detection-exclusions.md).
+For more information on honeytoken accounts, see [Manage sensitive or honeytoken accounts](/defender-for-identity/entity-tags).
 
 **MITRE**
 
@@ -93,8 +100,8 @@ For more information on honeytoken accounts, see [Configure detection exclusions
 
 **Understand the scope of the breach**
 
-1. Investigate the [source user](investigate-a-user.md).
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
     > [!NOTE]
     > If the authentication was made using NTLM, in some scenarios, there may not be enough information available about the server the source computer tried to access. [!INCLUDE [Product short](includes/product-short.md)] captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name.
@@ -105,7 +112,7 @@ For more information on honeytoken accounts, see [Configure detection exclusions
 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 ## Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)
 
@@ -148,7 +155,7 @@ It is important to check if any login attempts ended with successful authenticat
 
 1. Investigate the source computer.
 1. On the alert page, check which, if any, users were guessed successfully.
-    - For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
+    - For each user that was guessed successfully, [check their profile](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) to investigate further.
 
     > [!NOTE]
     > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access. Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account  attempted to access.
@@ -160,11 +167,11 @@ It is important to check if any login attempts ended with successful authenticat
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
-1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 
 ## Suspected Brute Force attack (LDAP) (external ID 2004)
@@ -201,16 +208,16 @@ It is important to check if any login attempts ended with successful authenticat
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. On the alert page, check which users, if any, were guessed successfully. For each user that was guessed successfully, [check their profile](investigate-a-user.md) to investigate further.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. On the alert page, check which users, if any, were guessed successfully. For each user that was guessed successfully, [check their profile](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) to investigate further.
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
-1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
 1. Prevent future usage of LDAP clear text protocol in your organization.
 
@@ -242,16 +249,16 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. Investigate the [source user](investigate-a-user.md)) (if there is a source user).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)) (if there is a source user).
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
     1. Search for users logged on around the time of the activity, as they may also be compromised.
-    1. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    1. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
@@ -280,15 +287,15 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [exposed accounts](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users). Check for malicious activity or suspicious behavior for these accounts.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Remediation:**
 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
-1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Reset the passwords of the exposed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 <a name="suspected-netlogon-priv-elev-2411"></a>
 
@@ -318,7 +325,7 @@ Otherwise, consider this alert a **TP** and follow the instructions in **Underst
 
 **Understand the scope of the breach**
 
-1. Investigate [source computer](investigate-a-computer.md), check for malicious scripts or tools that made the connection to the DC.
+1. Investigate [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices), check for malicious scripts or tools that made the connection to the DC.
 
 1. Investigate the destination DC for any suspicious activities that happened after the vulnerability was used.
 
@@ -352,15 +359,15 @@ None
 
 **Understand the scope of the breach**
 
-1. Investigate the [exposed accounts](investigate-a-user.md). Check for malicious activity or suspicious behavior for these accounts.
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [exposed accounts](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users). Check for malicious activity or suspicious behavior for these accounts.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Remediation:**
 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
-1. Enable Kerberos preauthentication. For more information about account attributes and how to remediate them, see [Unsecure account attributes](cas-isp-unsecure-account-attributes.md).
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Enable Kerberos preauthentication. For more information about account attributes and how to remediate them, see [Unsecure account attributes](/defender-for-identity/security-assessment-unsecure-account-attributes).
 
 ## Suspected WannaCry ransomware attack (external ID 2035)
 
@@ -391,15 +398,15 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. Investigate the [compromised user](investigate-a-user.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
     - [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
     - WannaCry can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [WannaCry Ransomware](https://www.microsoft.com/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/)
-    - Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Patch all of your machines, making sure to apply security updates.
     - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
@@ -432,16 +439,16 @@ Occasionally, applications implement their own NTLM or SMB stack.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. If there is a source user, [investigate the user](investigate-a-user.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     1. Find the tool that performed the attack and remove it.
-    1. Search for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
-1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    1. Search for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 ## Suspicious VPN connection (external ID 2025)
@@ -478,25 +485,25 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. If there is a source user, [investigate the user](investigate-a-user.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the password of the user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Consider blocking this user from connecting using VPN.
 1. Consider blocking this computer from connecting using VPN.
 1. Check if there are other users connected through VPN from these locations, and check if they are compromised.
 
 > [!div class="nextstepaction"]
-> [Lateral Movement alert tutorial](lateral-movement-alerts.md)
+> [Lateral Movement alerts](lateral-movement-alerts.md)
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Investigate a user](investigate-a-user.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
+- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)

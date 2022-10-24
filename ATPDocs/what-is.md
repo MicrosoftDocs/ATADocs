@@ -1,7 +1,7 @@
 ---
 title: What is Microsoft Defender for Identity?
 description: Explains what Microsoft Defender for Identity is and what kinds of suspicious activities it can detect
-ms.date: 12/23/2020
+ms.date: 03/28/2022
 ms.topic: overview
 ---
 
@@ -58,6 +58,10 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 
 [https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5")
 
+### Defender for Identity roadmap
+
+[See the upcoming roadmap for Defender for Identity](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity)
+
 ### Follow Defender for Identity on Microsoft Tech Community
 
 [https://aka.ms/MDIcommunity](https://aka.ms/MDIcommunity "[!INCLUDE [Product short](includes/product-short.md)] on Microsoft Tech Community")
@@ -65,6 +69,10 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 ### Join the Defender for Identity Yammer community
 
 [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "[!INCLUDE [Product short](includes/product-short.md)] Yammer community")
+
+### Defender for Identity blog
+
+[Defender for Identity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance/label-name/Microsoft%20Defender%20for%20Identity)
 
 ### Visit the Defender for Identity product page
 
@@ -74,34 +82,23 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 
 [[!INCLUDE [Product short](includes/product-short.md)] Architecture](architecture.md)
 
+### Frequently asked questions
+
+[[!INCLUDE [Product short](includes/product-short.md)] Frequently Asked Questions](technical-faq.yml)
+
 ### Watch our videos
 
-[Bolster your security posture with [!INCLUDE [Product short](includes/product-short.md)]](<https://techcommunity.microsoft.com/t5/video-hub/bolster-your-security-posture-with-microsoft-defender-for/m-p/1698841>) - Identify and proactively resolve known bad-practices, leaving your environment in a healthier state and more resilient to bad actors - watch the [YouTube video](https://youtu.be/nx5rrxVuRTk)
+[Bolster your security posture with [!INCLUDE [Product short](includes/product-short.md)]](<https://techcommunity.microsoft.com/t5/video-hub/bolster-your-security-posture-with-microsoft-defender-for/m-p/1698841>) - Identify and proactively resolve known bad-practices, leaving your environment in a healthier state and more resilient to bad actors. Watch the [YouTube video](https://youtu.be/nx5rrxVuRTk).
 
-[Incident Investigation with [!INCLUDE [Product short](includes/product-short.md)]](<https://techcommunity.microsoft.com/t5/video-hub/incident-investigation-with-microsoft-defender-for-identity/m-p/1698840>) - Learn how to Detect, investigate, and respond to advanced threats targeting identities and domain controllers with [!INCLUDE [Product short](includes/product-short.md)]. Starting with an alert in [!INCLUDE [Product short](includes/product-short.md)] we'll demonstrate how that information is correlated into an incident, how to hunt for threats using information captured by [!INCLUDE [Product short](includes/product-short.md)] and how we can initiate an automatic incident response to remediate the incident before it evolves into a bigger problem - watch the [YouTube video](https://youtu.be/geWU4It6S48)
+[Incident Investigation with [!INCLUDE [Product short](includes/product-short.md)]](<https://techcommunity.microsoft.com/t5/video-hub/incident-investigation-with-microsoft-defender-for-identity/m-p/1698840>) - Learn how to Detect, investigate, and respond to advanced threats targeting identities and domain controllers with [!INCLUDE [Product short](includes/product-short.md)]. Starting with an alert in [!INCLUDE [Product short](includes/product-short.md)] we'll demonstrate how that information is correlated into an incident, how to hunt for threats using information captured by [!INCLUDE [Product short](includes/product-short.md)] and how we can initiate an automatic incident response to remediate the incident before it evolves into a bigger problem. Watch the [YouTube video](https://youtu.be/geWU4It6S48).
 
 ## What's next?
 
-We recommend deploying [!INCLUDE [Product short](includes/product-short.md)] in three phases:
-
-### Phase 1
-
-1. Set up [!INCLUDE [Product short](includes/product-short.md)] to protect your primary environments. [!INCLUDE [Product short](includes/product-short.md)]'s fast deployment model enables you to start protecting your organization today. [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-1. Set [sensitive accounts](manage-sensitive-honeytoken-accounts.md) and [honeytoken accounts](configure-detection-exclusions.md).
-1. Review reports and [lateral movement paths](use-case-lateral-movement-path.md).
-
-### Phase 2
-
-1. Protect all the domain controllers and [forests](multi-forest.md) in your organization.
-1. Monitor all [alerts](working-with-suspicious-activities.md) – investigate lateral movement & domain dominance alerts.
-1. Work with the [Security Alert guide](suspicious-activity-guide.md) to understand threats and triage potential attacks.
-
-### Phase 3
-
-1. Integrate [!INCLUDE [Product short](includes/product-short.md)] alerts into your SecOp workflows.
+Get started with [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
 
 ## See Also
 
+- [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy)
 - [[!INCLUDE [Product short](includes/product-short.md)] frequently asked questions](technical-faq.yml)
-- [Working with security alerts](working-with-suspicious-activities.md)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

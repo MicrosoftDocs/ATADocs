@@ -46,7 +46,7 @@ If you already have ATA version 1.6 deployed, this procedure walks you through t
 
 Follow these steps to update to ATA version 1.7:
 
-1.  [Download update 1.7](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+1.  [Download update 1.7](install-ata-step1.md#step-1-download-and-install-the-ata-center)<br>
 In this version of, the same installation file (Microsoft ATA Center Setup.exe) is used for installing a new deployment of ATA and for upgrading existing deployments.
 
 1. Update the ATA Center
@@ -62,7 +62,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 
     - If the ATA Center is running as a virtual machine and you want to take a checkpoint, shut down the virtual machine first.
 
-    - If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://docs.mongodb.org/manual/core/backups/).
+    - If the ATA Center is running on a physical server, follow the recommended procedure to [back up MongoDB](https://www.mongodb.com/docs/manual/core/backups/).
 
 1. Run the installation file, **Microsoft ATA Center Setup.exe**, and follow the instructions on the screen to install the update.
 

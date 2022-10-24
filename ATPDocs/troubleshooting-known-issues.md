@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 02/04/2021
-ms.topic: how-to
+ms.date: 06/23/2022
+ms.topic: troubleshooting
 ---
 
 # Troubleshooting Microsoft Defender for Identity Known Issues
@@ -24,7 +24,7 @@ Make sure that communication isn't blocked for localhost, TCP port 444. To learn
 
 ## Deployment log location
 
-The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: C:\Users\Administrator\AppData\Local\Temp (or one directory above %temp%). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md)
+The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md).
 
 ## Proxy authentication problem presents as a licensing error
 
@@ -150,7 +150,7 @@ Use the complete command to successfully install.
 
 ## Defender for Identity sensor NIC teaming issue
 
-If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, make sure you deploy the Npcap driver by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-the-npcap-driver).
+If you attempt to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on a machine configured with NIC teaming, make sure you deploy the Npcap driver by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
 ## Multi Processor Group mode
 
@@ -161,10 +161,6 @@ Suggested possible workarounds:
 - If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multi Processor Group** mode.
 
 - If your machine has less than 64 logical cores and is running on an HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
-
-## Microsoft Defender for Endpoint integration issue
-
-[!INCLUDE [Product short](includes/product-short.md)] enables you to integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint. See [Integrate [!INCLUDE [Product short](includes/product-short.md)] with Microsoft Defender for Endpoint](integrate-mde.md) for more information.
 
 ## VMware virtual machine sensor issue
 
@@ -194,7 +190,7 @@ If LSO is enabled, use the following command to disable it:
 > - You may need to restart your machine for these changes to take effect.
 > - These steps may vary depending on your VMWare version. Check VMWare documentation for information about how to disable LSO/TSO for your VMWare version.
 
-## Sensor failed to retrieve group Managed Service Account (gMSA) credentials
+## Sensor failed to retrieve group managed service account (gMSA) credentials
 
 If you receive the following health alert: **Directory services user credentials are incorrect**
 
@@ -219,7 +215,7 @@ Validate that the computer running the sensor has been granted permissions to re
 
 ### Cause 2
 
-The sensor service runs as *LocalService* and performs impersonation of the directory services account.
+The sensor service runs as *LocalService* and performs impersonation of the Directory Service account.
 
 If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a service** permission.
 
@@ -279,6 +275,20 @@ If the domain controller or security group is already added, but you're still se
     1. Stop **AATPSensor** and **AATPSensorUpdater**
     1. Cache service account to server: `Install-ADServiceAccount AccountName`
     1. Start **AATPSensor**
+
+## Access to the registry key 'Global' is denied
+
+The sensor service fails to start, and the sensor log contains an entry similar to:
+
+`2021-01-19 03:45:00.0000 Error RegistryKey System.UnauthorizedAccessException: Access to the registry key 'Global' is denied.`
+
+**Cause:**
+
+The gMSA configured for this domain controller or AD FS server doesn't have permissions to the performance counter's registry keys.
+
+**Resolution:**
+
+Add the gMSA to the **Performance Monitor Users** group on the server.
 
 ## Report downloads cannot contain more than 300,000 entries
 
@@ -341,7 +351,66 @@ Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry valu
 "SchUseStrongCrypto"=dword:00000001
 ```
 
-## See Also
+<a name="problem-installing-the-sensor-on-windows-server-2019-with-kb5009557-installed"></a>
+
+## Problem installing the sensor on Windows Server 2019 with KB5009557 installed, or on a server with hardened EventLog permissions
+
+Installing the sensor may fail with the error message:
+
+`System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.`
+
+**Resolution:**
+
+There are two possible workarounds for this issue:
+
+1. Install the sensor with PSExec:
+
+    ```cmd
+    psexec -s -i "C:\MDI\Azure ATP Sensor Setup.exe"
+    ```
+
+1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation).
+
+
+## Sensor installation fails due to certificate management client
+
+If the sensor installation fails, and the Microsoft.Tri.Sensor.Deployment.Deployer.log file contains an entry similar to:
+
+`2022-07-15 03:45:00.0000 Error IX509CertificateRequestCertificate2 Deployer failed [arguments=128Ve980dtms0035h6u3Bg==] System.Runtime.InteropServices.COMException (0x80090008): CertEnroll::CX509CertificateRequestCertificate::Encode: Invalid algorithm specified. 0x80090008 (-2146893816 NTE_BAD_ALGID)`
+
+**Cause:**
+
+The issue can be caused when a certificate management client such as Entrust Entelligence Security Provider (EESP) is preventing the sensor installation from creating a self-signed certificate on the machine.
+
+**Resolution:**
+
+Uninstall the certificate management client, install the Defender for Identity sensor, and then reinstall the certificate management client.
+
+>[!NOTE]
+>
+>The self-signed certificate is renewed every 2 years, and the auto-renewal process might fail if the certificate management client prevents the self-signed certificate creation. 
+> This will cause the sensor to stop communicating with the backend, which will require a sensor reinstallation using the workaround mentioned above.
+
+## Sensor installation fails due to network connectivity issues
+
+If the sensor installation fails with an error code of 0x80070643, and the installation log file contains an entry similar to:
+
+`[22B8:27F0][2016-06-09T17:21:03]e000: Error 0x80070643: Failed to install MSI package.`
+
+**Cause:**
+
+The issue can be caused when the installation process cannot access the [!INCLUDE [Product short](includes/product-short.md)] cloud services for the sensor registration.
+
+**Resolution:**
+
+Ensure that the sensor can browse to \*.atp.azure.com directly or through the configured proxy. If needed, set the proxy server settings for the installation using the command line:
+
+`"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
+
+For more information, see [Configure proxy server using the command line](configure-proxy.md#configure-proxy-server-using-the-command-line).
+
+
+## See also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)

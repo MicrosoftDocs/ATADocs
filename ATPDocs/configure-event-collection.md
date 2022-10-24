@@ -1,7 +1,7 @@
 ---
 title: Install Microsoft Defender for Identity
 description: In this step of installing Microsoft Defender for Identity, you configure data sources.
-ms.date: 10/26/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
@@ -14,18 +14,6 @@ To enhance detection capabilities, [!INCLUDE [Product long](includes/product-lon
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
 In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
-
-## NTLM authentication using Windows Event 8004
-
-To configure Windows Event 8004 collection:
-
-1. Navigate to: *Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options*
-1. Set the **domain group policy** as follows:
-    - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
-    - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
-    - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
-
-When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed  data.
 
 ## SIEM/Syslog
 
@@ -77,14 +65,14 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 
 - No syslog header.
 - The header part (the part that's separated by a pipe) must exist (as stated in the protocol).
-- The following keys in the _Extension_ part must be present in the event:
+- The following keys in the *Extension* part must be present in the event:
   - externalId = the Windows event ID
   - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably  in milliseconds accuracy, this is important.
   - cat = the Windows event log name
   - shost = the source host name
   - dhost = the computer receiving the event (the DC in this case)
   - duser = the user authenticating
-- The order is not important for the _Extension_ part
+- The order is not important for the *Extension* part
 - There must be a custom key and keyLable for these two fields:
   - "EventSource"
   - "Reason or Error Code" = The result code of the NTLM
@@ -143,9 +131,9 @@ Make sure to have \t between the key=value pairs.
 >[!NOTE]
 > Using WinCollect for Windows event collection is not supported.
 
-## See Also
+## See also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
+- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

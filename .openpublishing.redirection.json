@@ -531,6 +531,241 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "ATPDocs/install-step8-samr.md",
+            "redirect_url": "/defender-for-identity/remote-calls-sam",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step4.md",
+            "redirect_url": "/defender-for-identity/install-sensor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step3.md",
+            "redirect_url": "/defender-for-identity/install-sensor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step5.md",
+            "redirect_url": "/defender-for-identity/configure-sensor-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/workspace-portal.md",
+            "redirect_url": "/defender-for-identity/what-is",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/sensor-update.md",
+            "redirect_url": "/defender-for-identity/sensor-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/sensor-monitoring.md",
+            "redirect_url": "/defender-for-identity/sensor-settings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step6-vpn.md",
+            "redirect_url": "/defender-for-identity/vpn-integration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/manage-sensitive-honeytoken-accounts.md",
+            "redirect_url": "/defender-for-identity/entity-tags",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/configure-detection-exclusions.md",
+            "redirect_url": "/defender-for-identity/exclusions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/use-case-lateral-movement-path.md",
+            "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/suspicious-activity-guide.md",
+            "redirect_url": "/defender-for-identity/alerts-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/working-with-suspicious-activities.md",
+            "redirect_url": "/defender-for-identity/manage-security-alerts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/isp-overview.md",
+            "redirect_url": "/defender-for-identity/security-assessment",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-print-spooler.md",
+            "redirect_url": "/defender-for-identity/security-assessment-print-spooler",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-dormant-entities.md",
+            "redirect_url": "/defender-for-identity/security-assessment-dormant-entities",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-clear-text.md",
+            "redirect_url": "/defender-for-identity/security-assessment-clear-text",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-laps.md",
+            "redirect_url": "/defender-for-identity/security-assessment-laps",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-legacy-protocols.md",
+            "redirect_url": "/defender-for-identity/security-assessment-legacy-protocols",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-riskiest-lmp.md",
+            "redirect_url": "/defender-for-identity/security-assessment-riskiest-lmp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-unmonitored-domain-controller.md",
+            "redirect_url": "/defender-for-identity/security-assessment-unmonitored-domain-controller",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-unsecure-account-attributes.md",
+            "redirect_url": "/defender-for-identity/security-assessment-unsecure-account-attributes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-unconstrained-kerberos.md",
+            "redirect_url": "/defender-for-identity/security-assessment-unconstrained-kerberos",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-unsecure-sid-history-attribute.md",
+            "redirect_url": "/defender-for-identity/security-assessment-unsecure-sid-history-attribute",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-weak-cipher.md",
+            "redirect_url": "/defender-for-identity/security-assessment-weak-cipher",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/release-reference.md",
+            "redirect_url": "/defender-for-identity/whats-new",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step1.md",
+            "redirect_url": "/defender-for-identity/deploy-defender-identity",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/install-step2.md",
+            "redirect_url": "/defender-for-identity/directory-service-accounts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/reports.md",
+            "redirect_url": "/defender-for-identity/notifications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/setting-syslog.md",
+            "redirect_url": "/defender-for-identity/notifications",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/modifying-config-dcpassword.md",
+            "redirect_url": "/defender-for-identity/directory-service-accounts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/health-center.md",
+            "redirect_url": "/defender-for-identity/sensor-health",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/integrate-mde.md",
+            "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/defender-for-identity-in-microsoft-365-defender.md",
+            "redirect_url": "/microsoft-365/security/defender/microsoft-365-defender",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/resources.md",
+            "redirect_url": "/defender-for-identity/what-is",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/silent-installation.md",
+            "redirect_url": "/defender-for-identity/install-sensor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/investigate-lateral-movement-path.md",
+            "redirect_url": "/defender-for-identity/understand-lateral-movement-paths",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/activities-search.md",
+            "redirect_url": "/defender-for-identity/monitored-activities",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/cas-isp-unsecure-domain-configurations.md",
+            "redirect_url": "/defender-for-identity/security-assessment-unsecure-domain-configurations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/activities-filtering-mcas.md",
+            "redirect_url": "/defender-for-identity/deploy-defender-identity",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/mcas-integration.md",
+            "redirect_url": "/defender-for-identity/deploy-defender-identity",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/understand-entities.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/entity-profiles.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/investigate-a-computer.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/investigate-a-user.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/investigate-entity.md",
+            "redirect_url": "/defender-for-identity/investigate-assets",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/sensor-health.md",
+            "redirect_url": "/defender-for-identity/health-alerts",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "ATPDocs/sensitive-accounts.md",
             "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
             "redirect_document_id": false

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Network Name Resolution
 description: This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
-ms.date: 10/26/2020
+ms.date: 06/22/2022
 ms.topic: conceptual
 ---
 
@@ -14,17 +14,20 @@ Using NNR, [!INCLUDE [Product short](includes/product-short.md)] can correlate b
 To resolve IP addresses to computer names, [!INCLUDE [Product short](includes/product-short.md)] sensors look up the IP addresses using the following methods:
 
 Primary methods:
+
 - NTLM over RPC (TCP Port 135)
 - NetBIOS (UDP port 137)
 - RDP (TCP port 3389) - only the first packet of **Client hello**
 
 Secondary method:
+
 - Queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-For the best results, we recommend using at least one of the primary methods. 
-Reverse DNS lookup of the IP address is only peformed when:
-- There is no response from any of the primary methods. 
-- There is a conflict in the response recevied from two or more primary methods. 
+For the best results, we recommend using at least one of the primary methods.
+Reverse DNS lookup of the IP address is only performed when:
+
+- There is no response from any of the primary methods.
+- There is a conflict in the response received from two or more primary methods.
 
 > [!NOTE]
 > No authentication is performed on any of the ports.
@@ -33,8 +36,6 @@ Reverse DNS lookup of the IP address is only peformed when:
 When the [!INCLUDE [Product short](includes/product-short.md)] sensor finds the correlation, the sensor associates the IP to the computer object.
 
 In cases where no name is retrieved, an **unresolved computer profile by IP** is created with the IP and the relevant detected activity.
-
-![Unresolved computer profile.](media/unresolved-computer-profile.png)
 
 NNR data is crucial for detecting the following threats:
 
@@ -53,27 +54,7 @@ After confirming the device, you can then determine if the alert is a **False Po
 - Suspected DCSync attack (replication of directory services) – the alert was triggered from a domain controller.
 - Network mapping reconnaissance (DNS) – the alert was triggered from a DNS Server.
 
-    ![Evidence certainty.](media/nnr-high-certainty.png)
-
-## Prerequisites
-
-|Protocol|Transport|Port|Device|Direction|
-|--------|--------|------|-------|------|
-|NTLM over RPC*|TCP|135|All devices on the network|Inbound|
-|NetBIOS*|UDP|137|All devices on the network|Inbound|
-|RDP*|TCP|3389|All devices on the network|Inbound|
-|DNS|UDP|53|Domain controllers|Outbound|
-
-\* One of these methods is required, but we recommend using all of them.
-
-To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each Sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
-
-> [!NOTE]
-> To disable an optional NNR method in [!INCLUDE [Product short](includes/product-short.md)] to fit the needs of your environment, open a support call.
-
-Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations.
-
-![Low success rate Network Name Resolution (NNR) alert.](media/nnr-success-rate.png)
+    [![Evidence certainty.](media/nnr-high-certainty.png)](media/nnr-high-certainty.png#lightbox)
 
 ## Configuration recommendations
 
@@ -88,9 +69,21 @@ Each health alert provides specific details of the method, sensors, the problema
   - Check that TCP Port 3389 is open for inbound communication from [!INCLUDE [Product short](includes/product-short.md)] Sensors, on all computers in the environment.
   - Check all network configuration (firewalls), as this can prevent communication to the relevant ports.
   >[!NOTE]
-  >Customized RDP ports aren't supported.
+  >
+  > - Only one of these protocols is required, but we recommend using all of them.
+  > - Customized RDP ports aren't supported.
+
 - Reverse DNS:
   - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
+
+## Health alerts
+
+To make sure [!INCLUDE [Product short](includes/product-short.md)] is working ideally and the environment is configured correctly, [!INCLUDE [Product short](includes/product-short.md)] checks the resolution status of each sensor and issues a health alert per method, providing a list of the [!INCLUDE [Product short](includes/product-short.md)] sensors with low success rate of active name resolution using each method.
+
+> [!NOTE]
+> To disable an optional NNR method in [!INCLUDE [Product short](includes/product-short.md)] to fit the needs of your environment, open a support case.
+
+Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations. For more information about health alerts, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
 ## See Also
 

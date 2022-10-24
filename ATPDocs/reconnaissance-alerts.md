@@ -1,11 +1,11 @@
 ---
 title: Microsoft Defender for Identity reconnaissance phase security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when attacks, part of reconnaissance phase efforts, are detected against your organization.
-ms.date: 12/23/2020
-ms.topic: tutorial
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Reconnaissance alerts
+# Reconnaissance alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -19,7 +19,7 @@ To learn more about how to understand the structure, and common components of al
 
 The following security alerts help you identify and remediate **Reconnaissance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
-In this tutorial, learn how to understand, classify, remediate, and prevent the following types of attacks:
+In this article, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
 
 > [!div class="checklist"]
 >
@@ -96,7 +96,7 @@ Attackers are known to use a dictionary of randomized account names to find exis
 **Understand the scope of the breach**
 
 1. Investigate the source computer
-1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment, and can use brute force to attempt to access your domain using the discovered user names. Investigate the existing accounts using the [user investigation guide](investigate-a-user.md).
+1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment, and can use brute force to attempt to access your domain using the discovered user names. Investigate the existing accounts using the [user investigation guide](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
     > [!NOTE]
     > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access.  
     > Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account attempted to access.  
@@ -108,10 +108,10 @@ Attackers are known to use a dictionary of randomized account names to find exis
 
 **Suggested remediation and steps for prevention**
 
-1. Contain the source [computer](investigate-a-computer.md).
+1. Contain the source [computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
     1. Find the tool that performed the attack and remove it.
     1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
-    1. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    1. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
 
 ## Active Directory attributes reconnaissance (LDAP) (external ID 2210)
@@ -147,7 +147,7 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 1. Is the computer running a scanning tool that performs various of LDAP queries?
     - Investigate whether the specific queried users and groups in the attack are privileged or high-value accounts (that is, CEO, CFO, IT management, etc.). If so, look at other activities on the endpoint as well and monitor computers that the queried accounts are logged into, as they're probably targets for lateral movement.
 1. Check the queries and their attributes, and determine if they were successful. Investigate each exposed group, search for suspicious activities made on the group or by member users of the group.
@@ -157,7 +157,7 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
 
 1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
-    1. If the computer is running a scanning tool that performs a variety of LDAP queries, look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    1. If the computer is running a scanning tool that performs a variety of LDAP queries, look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 ## Network-mapping reconnaissance (DNS) (external ID 2007)
@@ -196,7 +196,7 @@ Security scanners and legitimate applications can  generate DNS queries.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
@@ -204,7 +204,7 @@ Security scanners and legitimate applications can  generate DNS queries.
 
 - Contain the source computer.
   - Find the tool that performed the attack and remove it.
-  - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+  - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 **Prevention:**
 
@@ -241,7 +241,7 @@ To allow [!INCLUDE [Product short](includes/product-short.md)] to accurately pro
 **Understand the scope of the breach**
 
 1. Check the queries that were performed (such as Domain admins, or all users in a domain) and determine if the queries were successful. Investigate each exposed group search for suspicious activities made on the group, or by member users of the group.
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
     - Using the LDAP queries, check if any resource access activity occurred on any of the exposed SPNs.
 
 **Suggested remediation and steps for prevention**
@@ -249,12 +249,12 @@ To allow [!INCLUDE [Product short](includes/product-short.md)] to accurately pro
 1. Contain the source computer
     1. Find the tool that performed the attack and remove it.
     1. Is the computer running a scanning tool that performs various LDAP queries?
-    1. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    1. Look for users logged on around the same time as the activity occurred as they may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 **Kerberoasting specific suggested steps for prevention and remediation**
 
-1. Reset the passwords of the compromised users and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the passwords of the compromised users and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Require use of [long and complex passwords for users with service principal accounts](/windows/security/threat-protection/security-policy-settings/minimum-password-length).
 1. [Replace the user account by Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
@@ -288,7 +288,7 @@ Four weeks per domain controller starting from the first network activity of SAM
       - If yes, *Close* the security alert and exclude that computer, as a  **B-TP** activity.
     - Check the user/s that performed the operation.
       - Do those users normally log into that source computer, or are they administrators that should be performing those specific actions?
-    - Check the user profile, and their related user activities. Understand their normal user behavior and search for additional suspicious activities using the [user investigation guide](investigate-a-user.md).
+    - Check the user profile, and their related user activities. Understand their normal user behavior and search for additional suspicious activities using the [user investigation guide](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
       If you answered **yes** to the previous above, *Close* the alert as a **B-TP** activity.
 
@@ -302,8 +302,8 @@ Four weeks per domain controller starting from the first network activity of SAM
 
 1. Contain the source computer.
 1. Find and remove the tool that performed the attack.
-1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
-1. Reset the source user password and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Reset the source user password and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
 
 ## User and IP address reconnaissance (SMB) (external ID 2012)
@@ -348,17 +348,17 @@ Security scanners and applications may legitimately query domain controllers for
 > To disable any [!INCLUDE [Product short](includes/product-short.md)] security alert, contact support.
 
 > [!div class="nextstepaction"]
-> [Compromised credential alert tutorial](compromised-credentials-alerts.md)
+> [Compromised credential alerts](compromised-credentials-alerts.md)
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Investigate a user](investigate-a-user.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
+- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

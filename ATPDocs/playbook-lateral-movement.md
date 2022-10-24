@@ -2,16 +2,16 @@
 title: Microsoft Defender for Identity security alert lateral movement playbook
 description: The Microsoft Defender for Identity playbook describes how to simulate lateral movement threats for detection by Defender for Identity.
 ms.date: 11/16/2021
-ms.topic: tutorial
+ms.topic: how-to
 ---
 
-# Tutorial: Lateral movement playbook
+# Lateral movement playbook
 
-The lateral movement playbook is third in the four part tutorial series for [!INCLUDE [Product long](includes/product-long.md)] security alerts. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The playbook focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities and doesn't include advanced machine-learning, user, or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
+The lateral movement playbook is third in the four part lab series for [!INCLUDE [Product long](includes/product-long.md)] security alerts. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The playbook focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities and doesn't include advanced machine-learning, user, or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each lab in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 
 This playbook shows some of the lateral movement path threat detections and security alerts services of [!INCLUDE [Product short](includes/product-short.md)] by mimicking an attack with common, real-world, publicly available hacking and attack tools.
 
-In this tutorial you will:
+In this lab you will:
 
 > [!div class="checklist"]
 >
@@ -25,14 +25,14 @@ In this tutorial you will:
 1. [A completed [!INCLUDE [Product short](includes/product-short.md)] security alert lab](playbook-setup-lab.md)
     - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the [!INCLUDE [Product short](includes/product-short.md)] testing procedures.
 
-1. [Completion of the reconnaissance playbook tutorial](playbook-reconnaissance.md)
+1. [Completion of the reconnaissance playbook lab](playbook-reconnaissance.md)
 
 > [!WARNING]
 > The third-party hacking tools in this lab are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
 
 ## Lateral Movement
 
-From our simulated attacks in the previous tutorial, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered and seeing [!INCLUDE [Product short](includes/product-short.md)]'s alerts on the movement. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA's computer credentials were exposed. We'll mimic various attack methods to try to move laterally across the domain.
+From our simulated attacks in the previous lab, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered and seeing [!INCLUDE [Product short](includes/product-short.md)]'s alerts on the movement. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA's computer credentials were exposed. We'll mimic various attack methods to try to move laterally across the domain.
 
 ## Dump Credentials In-Memory from VictimPC
 

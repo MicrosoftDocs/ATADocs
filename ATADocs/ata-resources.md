@@ -62,15 +62,15 @@ If you are using physical servers, you should plan capacity. You can get help fr
 
 These resources will help you download and install the ATA Center, connect to Active Directory, download the ATA Gateway package, set up event collection, and optionally integrate with your VPN and set up honeytoken accounts and exclusions.
 
-[Download ATA](https://aka.ms/ataeval) - Before deploying ATA, if you haven't made the decision to purchase ATA, you can download the evaluation version.
+[Download ATA](install-ata-step1.md#step-1-download-and-install-the-ata-center)
 
-[ATA POC playbook](/samples/browse/?redirectedfrom=TechNet-Gallery) - Guide to all the steps necessary to do a successful POC deployment of ATA.
+[ATA POC playbook](https://aka.ms/ataplaybook) - Guide to all the steps necessary to do a successful POC deployment of ATA.
 
 ## ATA settings
 
 The basic necessary settings in ATA are configured as part of the installation wizard. However, there are a number of other settings that you can configure to fine-tune ATA that makes detections more accurate for your environment, such as SIEM integration and audit settings.
 
-[Audit settings](https://ciberesponce.com/azure-atp-advanced-audit-policies/) – Audit your domain controller health before and after an ATA deployment.
+[Audit settings](https://github.com/microsoft/Azure-Advanced-Threat-Protection/tree/master/Auditing) – Audit your domain controller health before and after an ATA deployment.
 
 [ATA general documentation](index.yml)
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Microsoft Defender for Identity using the logs
 description: Describes how you can use the Microsoft Defender for Identity logs to troubleshoot issues
-ms.date: 10/27/2020
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
@@ -19,16 +19,18 @@ The [!INCLUDE [Product short](includes/product-short.md)] sensor has the followi
 
 - **Microsoft.Tri.Sensor.Updater.log** - This log is used for the sensor updater process, which is responsible for updating the [!INCLUDE [Product short](includes/product-short.md)] sensor if configured to do so automatically.
 
+- **Microsoft.Tri.Sensor.Updater-Errors.log** – This log contains just the errors that are caught by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater. Its main use is performing health checks and investigating issues that need to be correlated to specific times.
+
 > [!NOTE]
-> The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
+> The log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
 
 ## Defender for Identity Deployment logs
 
-The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory for the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above %temp%).
+The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. It will usually be found at **%USERPROFILE%\AppData\Local\Temp**. If it was deployed by a service, it might be found at **C:\Windows\Temp**.
 
 [!INCLUDE [Product short](includes/product-short.md)] sensor deployment logs:
 
-- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - This log file provides the entire process of sensor deployment and can be found in the temp folder mentioned previously, or in C:\Windows\Temp.
+- **Azure Advanced Threat Protection Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** - This log file provides the entire process of sensor deployment and can be found in the temp folder mentioned previously.
 
 - **Azure Advanced Threat Protection Sensor_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the [!INCLUDE [Product short](includes/product-short.md)] sensor. Its main use is tracking the [!INCLUDE [Product short](includes/product-short.md)] sensor deployment process.
 

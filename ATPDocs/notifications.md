@@ -1,38 +1,92 @@
 ---
-title: Set Microsoft Defender for Identity notifications
-description: Describes how to set Microsoft Defender for Identity security alerts so you are notified when suspicious activities are detected.
-ms.date: 10/26/2020
+title: Microsoft Defender for Identity notifications in Microsoft 365 Defender
+description: Learn how to set Microsoft Defender for Identity notifications in Microsoft 365 Defender.
+ms.date: 04/07/2022
 ms.topic: how-to
 ---
 
-# Set Microsoft Defender for Identity notifications
+# Defender for Identity notifications in Microsoft 365 Defender
 
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/notifications). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](defender-for-identity-in-microsoft-365-defender.md).
+This article explains how to work with Microsoft Defender for Identity notifications in Microsoft 365 Defender.
 
-[!INCLUDE [Product long](includes/product-long.md)] can notify you when it detects a suspicious activity and issues a security alert or a health alert via email.
+## Health issues notifications
 
-To receive notifications to a specific email address, set the following parameters:
+In Microsoft 365 Defender, you can add recipients for email notifications of health issues in Defender for Identity.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select the settings option on the toolbar and select **Configuration**.
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings icon](media/config-menu.png)
+    ![Go to Settings, then Identities.](media/settings-identities.png)
 
-1. Click **Notifications**.
-1. Under **Mail notifications**, add email addresses for the notifications you want to receive - they can be sent for new alerts (suspicious activities) and new health issues.
+1. Select **Health issues notifications**.
+
+1. Enter the recipient's email address. Select **Add**.
+
+    ![Enter email address for health issues.](media/health-email-recipient.png)
+
+1. When Defender for Identity detects a health issue, the recipients will receive an email notification with the details.
+
+    ![Example of health issue email.](media/health-email.png)
 
     > [!NOTE]
-    >
-    > - Emails are only sent for notifications with defined email addresses.
-    > - Email alerts for suspicious activities are only sent when the suspicious activity is created.
+    > The email provides two links for further details about the issue. You can either go to the **MDI Health Center** or the new **Health Center in M365D**.
 
-1. Click **Save**.
+## Alert notifications
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] notifications](media/notifications.png)
+In Microsoft 365 Defender, you can add recipients for email notifications of detected alerts.
+
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+
+    ![Go to Settings, then Identities.](media/settings-identities.png)
+
+1. Select **Alert notifications**.
+
+1. Enter the recipient's email address. Select **Add**.
+
+    ![Enter email address for detected alerts.](media/alert-email-recipient.png)
+
+## Syslog notifications
+
+Defender for Identity can notify you when it detects suspicious activities by sending security and health alerts to your Syslog server through a nominated sensor.
+
+> [!NOTE]
+> To learn how to integrate Defender for Identity with Microsoft Sentinel, see [Microsoft 365 Defender integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
+
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+
+    ![Go to Settings, then Identities.](media/settings-identities.png)
+
+1. Select **Syslog notifications**.
+
+1. To enable syslog notification, set the **Syslog service** toggle to the **on** position.
+
+    ![Turn on syslog service.](media/syslog-service.png)
+
+1. Select **Configure service**. A pane will open where you can enter the details for the syslog service.
+
+    ![Enter syslog service details.](media/syslog-sensor.png)
+
+1. Enter the following details:
+
+    - **Sensor** - From the drop-down list, choose the sensor that will send the alerts.
+    - **Service endpoint** and **Port** - Enter the IP address or fully qualified domain name (FQDN) for the syslog server and specify the port number. You can configure only one Syslog endpoint.
+    - **Transport** - Select the **Transport** protocol (TCP or UDP).
+    - **Format** - Select the format (RFC 3164 or RFC 5424).
+
+1. Select **Send test SIEM notification** and then verify the message is received in your Syslog infrastructure solution.
+
+1. Select **Save**.
+
+1. Once you've configured the **Syslog service**, you can choose which types of notifications (alerts or health issues) to send to your Syslog server.
+
+    ![Syslog service configured.](media/syslog-configured.png)
+
+> [!NOTE]
+>
+> - If you plan to create automation or scripts for [!INCLUDE [Product short](includes/product-short.md)] SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md).
+>
+> - When working with Syslog in TLS mode, make sure to install the required certificates on the designated sensor.
 
 ## See Also
 
 - [Configure event collection](configure-event-collection.md)
-
-- [Set Syslog settings](setting-syslog.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

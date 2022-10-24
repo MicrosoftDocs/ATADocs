@@ -59,7 +59,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 1. From a command prompt type *gpedit.msc*.
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
-    ![Local policy group editor image.](media/wef%201%20local%20group%20policy%20editor.png)
+    ![Local policy group editor image.](media/wef-1-local-group-policy-editor.png)
 
 1. Double-click **Configure target Subscription Manager**.
    
@@ -70,7 +70,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
       
         *(For example: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
-        ![Configure target subscription image.](media/wef%202%20config%20target%20sub%20manager.png)
+        ![Configure target subscription image.](media/wef-2-config-target-sub-manager.png)
       
    4.  Click **OK**.
    5.  From an elevated command prompt type *gpupdate /force*. 
@@ -86,15 +86,15 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     3. Select **Source computer initiated** and click **Select Computers Groups**.
         1. Click **Add Domain Computer**.
         2. Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.  
-          ![Event Viewer image.](media/wef3%20event%20viewer.png)  
+          ![Event Viewer image.](media/wef-3-event-viewer.png)  
         3. Click **OK**.
     4. Click **Select Events**.
         1. Click **By log** and select **Security**.
         2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
 
-        ![Query filter image.](media/wef%204%20query%20filter.png)
+        ![Query filter image.](media/wef-4-query-filter.png)
 
-    5. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
+    5. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status.
     6. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATA Gateway.
 
 

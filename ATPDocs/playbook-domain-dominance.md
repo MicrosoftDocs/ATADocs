@@ -2,16 +2,16 @@
 title: Microsoft Defender for Identity Domain Dominance Playbook
 description: The Microsoft Defender for Identity domain dominance playbook describes how to simulate domain dominance attacks for detection by Defender for Identity
 ms.date: 10/26/2020
-ms.topic: tutorial
+ms.topic: how-to
 ---
 
-# Tutorial: Domain dominance playbook
+# Domain dominance playbook
 
-The last tutorial in this four-part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a domain dominance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections using [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. The tutorials don't include [!INCLUDE [Product short](includes/product-short.md)] advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
+The last lab in this four-part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a domain dominance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections using [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. The labs don't include [!INCLUDE [Product short](includes/product-short.md)] advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each lab in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 
 This playbook shows some of the domain dominance threat detections and security alerts services of [!INCLUDE [Product short](includes/product-short.md)] using simulated attacks from common, real-world, publicly available hacking and attack tools. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance.
 
-In this tutorial, you'll simulate attempts to achieve persistent domain dominance in order to review each of [!INCLUDE [Product short](includes/product-short.md)]'s detections for the following common methods:
+In this lab, you'll simulate attempts to achieve persistent domain dominance in order to review each of [!INCLUDE [Product short](includes/product-short.md)]'s detections for the following common methods:
 
 > [!div class="checklist"]
 >
@@ -27,7 +27,7 @@ In this tutorial, you'll simulate attempts to achieve persistent domain dominanc
 1. [A completed [!INCLUDE [Product short](includes/product-short.md)] security alert lab](playbook-setup-lab.md)
      - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the [!INCLUDE [Product short](includes/product-short.md)] testing procedures.
 
-2. [Completion of the lateral movement playbook tutorial](playbook-lateral-movement.md)
+2. [Completion of the lateral movement playbook](playbook-lateral-movement.md)
 
 > [!WARNING]
 > The third-party hacking tools in this lab are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
@@ -61,7 +61,7 @@ Using WMI via the command line, try to create a process locally on the domain co
 
 1. Go to **Active Directory Users and Computers (ADUC)** on **ContosoDC** and find the **InsertedUser**.
 
-1. Right click on **Properties** and check membership.
+1. Right-click on **Properties** and check membership.
 
     ![View the properties of "InsertedUser."](media/playbook-dominance-inserteduser_properties.png)
 
@@ -173,9 +173,9 @@ But Skeleton Key adds an additional password to each account. Do the "runas" com
 runas /user:ronhd@contoso.azure "notepad"
 ```
 
-This command creates a new process, *notepad*, running in the context of RonHD. **Skeleton Key can be done for _any_ account, including service accounts and computer accounts.**
+This command creates a new process, *notepad*, running in the context of RonHD. **Skeleton Key can be done for *any* account, including service accounts and computer accounts.**
 
-> [!Important]
+> [!IMPORTANT]
 > It is important that you restart ContosoDC after you execute the Skeleton Key attack. Without doing so, the LSASS.exe process on ContosoDC will be patched and modified, downgrading every authentication request to RC4.
 
 ### Skeleton Key attack Detection in Defender for Identity
@@ -232,7 +232,7 @@ Why did it work? The Golden Ticket Attack works because the ticket generated was
 
 ![Golden Ticket being detected.](media/playbook-dominance-golden_detected.png)
 
-> [!Important]
+> [!IMPORTANT]
 >Reminder. As long as the KRBTGT harvested by an attacker remains valid within an environment, the tickets generated with it also remain valid. In this case, the attacker achieves persistent domain dominance until the [KRBTGT is reset, twice](/windows-server/identity/ad-ds/manage/ad-forest-recovery-resetting-the-krbtgt-password).
 
 ## Next steps
@@ -240,7 +240,3 @@ Why did it work? The Golden Ticket Attack works because the ticket generated was
 - [[!INCLUDE [Product short](includes/product-short.md)] Security Alert Guide](suspicious-activity-guide.md)
 - [Investigate lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
-
-## Join the Community
-
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!

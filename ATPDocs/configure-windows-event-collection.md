@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event collection Microsoft Defender for Identity
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 03/11/2021
+ms.date: 06/23/2022
 ms.topic: how-to
 ---
 
@@ -22,6 +22,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 
 ### For other events
 
+- 1644 - LDAP search
 - 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
 - 4728 - Member Added to Global Security Group
@@ -37,6 +38,7 @@ To enhance threat detection capabilities, [!INCLUDE [Product short](includes/pro
 - 4758 - Universal Security Group Deleted
 - 4763 - Universal Distribution Group Deleted
 - 4776 - Domain Controller Attempted to Validate Credentials for an Account (NTLM)
+- 5136 - A directory service object was modified
 - 7045 - New Service Installed
 - 8004 - NTLM Authentication
 
@@ -69,15 +71,19 @@ Modify the Advanced Audit Policies of your domain controller using the following
         | Account Management | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | Account Management | Audit User Account Management | 4726 |
         | DS Access | Audit Directory Service Access | 4662 - For this event, it's also necessary to [Configure object auditing](#configure-object-auditing).  |
+        | DS Access | Audit Directory Service Changes | 5136  |
         | System | Audit Security System Extension | 7045 |
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
         ![Audit Security Group Management.](media/advanced-audit-policy-check-step-4.png)
 
-1. From an elevated command prompt type `gpupdate /force`.
+1. From an elevated command prompt type `gpupdate`.
 
-1. After applying via GPO, the new events are visible under your **Windows Event logs**.
+    > [!NOTE]
+    > This step should be performed on all domain controllers in the domain, or you can wait for the next refresh cycle to update them (by default within 90 minutes)
+
+1. After applying via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
 > [!NOTE]
 > If you choose to use a local security policy instead of using a group policy, make sure to add the **Account Logon**, **Account Management**, and **Security Options** audit logs in your local policy. If you are configuring the advanced audit policy, make sure to force the [audit policy subcategory](/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
@@ -105,6 +111,25 @@ To audit Event ID 8004, additional configuration steps are required.
 
     ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
 
+## Event ID 1644
+
+Microsoft Defender for Identity can monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers.
+
+> [!NOTE]
+> Logging the 1644 events may impact server performance. While the [resource limitation feature](architecture.md#resource-limitations) can stop the Defender for Identity service if the server is running out of resources, it does not stop the event auditing at the operating system level. Therefore, to avoid performance issues, make sure your servers have sufficient memory, CPU, and disk resources.
+
+Windows event 1644 isn't collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
+
+```reg
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
+"15 Field Engineering"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters]
+"Expensive Search Results Threshold"=dword:00000001
+"Inefficient Search Results Threshold"=dword:00000001
+"Search Time Threshold (msecs)"=dword:00000001
+```
+
 <!--
 ## Defender for Identity Advanced Audit Policy check
 
@@ -117,10 +142,12 @@ Advanced Security Audit Policy is enabled via **Default Domain Controllers Polic
 
 ## Configure object auditing
 
-To collect 4662 events, it's also necessary to configure object auditing on the user objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
+To collect 4662 events, it's also necessary to configure object auditing on the user, group and computer objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
 
 > [!NOTE]
 > It is important to [review and verify your audit policies](#configure-audit-policies) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
+>
+>If configured properly, this auditing should have minimal effect on server performance.
 
 1. Go to the **Active Directory Users and Computers** console.
 1. Select the domain or OU that contains the users, groups, or computers you want to audit.
@@ -154,7 +181,11 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
         ![Select properties.](media/select-properties.png)
 
-1. Then repeat the steps above, but for **Applies to**, select **Descendant Group Objects**, and then again for **Descendant Computer Objects**.
+1. Then repeat the steps above, but for **Applies to**, select the following object types:
+   - **Descendant Group Objects**
+   - **Descendant Computer Objects**
+   - **Descendant msDS-GroupManagedServiceAccount Objects**
+   - **Descendant msDS-ManagedServiceAccount Objects**
 
 ### Auditing for specific detections
 
@@ -176,7 +207,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.
-    - Under **Permissions**, select **Read all properties** and **Write all properties**.
+    - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
 
     ![Auditing settings for ADFS.](media/audit-adfs.png)
 
@@ -200,7 +231,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.
-    - Under **Permissions**, select **Write all properties**.
+    - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Write all properties**.
 
     ![Auditing settings for Configuration.](media/audit-configuration.png)
 
@@ -217,10 +248,8 @@ These events can be collected automatically by the [!INCLUDE [Product short](inc
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
-## See Also
+## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/aatpsizingtool>)
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+> [!div class="step-by-step"]
+> [« Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
+> [Directory Service accounts »](directory-service-accounts.md)

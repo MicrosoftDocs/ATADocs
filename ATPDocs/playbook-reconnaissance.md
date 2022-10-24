@@ -1,17 +1,17 @@
 ---
-title: Microsoft Defender for Identity Reconnaissance playbook tutorial
-description: The Microsoft Defender for Identity Reconnaissance playbook tutorial describes how to simulate Reconnaissance threats for detection by Defender for Identity.
+title: Microsoft Defender for Identity Reconnaissance playbook 
+description: The Microsoft Defender for Identity Reconnaissance playbook  describes how to simulate Reconnaissance threats for detection by Defender for Identity.
 ms.date: 10/26/2020
-ms.topic: tutorial
+ms.topic: how-to
 ---
 
-# Tutorial: Reconnaissance playbook
+# Reconnaissance playbook
 
-The second tutorial in this four part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a reconnaissance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections, and focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. This playbook doesn't include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
+The second lab in this four part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a reconnaissance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections, and focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. This playbook doesn't include alerts or detections based on advanced machine-learning, or user/entity based behavioral detections, as they require a learning period with real network traffic for up to 30 days. For more information about each lab in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 
 This playbook illustrates the threat detections and security alerts services of [!INCLUDE [Product short](includes/product-short.md)] for simulated attacks from common, real-world, publicly available hacking and attack tools.
 
-In this tutorial you will:
+In this lab you will:
 
 > [!div class="checklist"]
 >
@@ -77,17 +77,17 @@ If **ContsoDC** is your first deployed sensor, wait 15 minutes to allow the data
 
 Getting visibility of this type of attempt (failed or successful) is vital for domain threat protection. After recently installing the environment, you'll  need to go to the **Logical Activities** timeline to see the detected activity.
 
-In the [!INCLUDE [Product short](includes/product-short.md)] Search, type **VictimPC**, then click on it to view the timeline.
+In the [!INCLUDE [Product short](includes/product-short.md)] Search, type **VictimPC**, then select it to view the timeline.
 
 ![DNS reconnaissance detected by [!INCLUDE [Product short.](includes/product-short.md)], high-level view](media/playbook-recon-nslookupdetection1.png)
 
 Look for the "AXFR query" activity. [!INCLUDE [Product short](includes/product-short.md)] detects this type of reconnaissance against your DNS.
 
-- If you have a large number of activities, click **Filter by** and deselect all types except **DNS query**.
+- If you have a large number of activities, select **Filter by** and deselect all types except **DNS query**.
 
 ![Detailed view of the DNS reconnaissance detection in [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-recon-nslookupdetection2.png)
 
-If your security analyst determined this activity originated from a security scanner, the specific device can be excluded from further detection alerts. In the top-right area of the alert, click on the three dots. Then, select **Close and exclude MySecurityScanner**. Ensuring this alert doesn't show up again when detected from "MySecurityScanner".
+If your security analyst determined this activity originated from a security scanner, the specific device can be excluded from further detection alerts. In the top-right area of the alert, select the three dots. Then, select **Close and exclude MySecurityScanner**. Ensuring this alert doesn't show up again when detected from "MySecurityScanner".
 
 Detecting failures can be as insightful as detecting successful attacks against an environment. The [!INCLUDE [Product short](includes/product-short.md)] portal allows us to see the exact result of the actions done by a possible attacker. In our simulated DNS reconnaissance attack story, we, acting as attackers, were stopped from dumping the DNS records of the domain. Your SecOps team became aware of our attack attempt and which machine we used in our attempt from the [!INCLUDE [Product short](includes/product-short.md)] security alert.
 
@@ -202,4 +202,4 @@ The next phase in the attack kill chain is typically an attempt at lateral movem
 
 ## Join the Community
 
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) today!
+Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[Defender for Identity Community](https://aka.ms/MDIcommunity) today!

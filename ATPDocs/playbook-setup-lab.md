@@ -1,15 +1,15 @@
 ---
-title: Microsoft Defender for Identity security alert lab setup tutorial
-description: In this tutorial, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
+title: Microsoft Defender for Identity security alert lab setup 
+description: In this lab, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
 ms.date: 10/26/2020
-ms.topic: tutorial
+ms.topic: how-to
 ---
 
-# Tutorial: Setup a Microsoft Defender for Identity security alert lab
+# Setup a Microsoft Defender for Identity security alert lab
 
-The purpose of the [!INCLUDE [Product long](includes/product-long.md)] Security Alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first tutorial in a four part series walks you through creating a lab environment for testing against [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The security alert lab focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days. For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
+The purpose of the [!INCLUDE [Product long](includes/product-long.md)] Security Alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first lab in a four part series walks you through creating a lab environment for testing against [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The security alert lab focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days. For more information about each lab in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
 
-In this tutorial you will:
+In this lab you will:
 
 > [!div class="checklist"]
 >
@@ -22,10 +22,10 @@ In this tutorial you will:
 ## Prerequisites
 
 1. [A lab domain controller and two lab workstations](#servers-and-computers).
-    - Go ahead and [hydrate Active Directory (AD) with users](#bkmk_hydrate).
+    - Go ahead and [hydrate Active Directory (AD) with users](#hydrate-active-directory-users-on-contosodc).
 
-1. An [[!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md) that is [connected to AD](install-step2.md).
-1. [Download](install-step3.md) and [install the latest version of the [!INCLUDE [Product short](includes/product-short.md)] sensor](install-step4.md) on your lab's domain controller.
+1. An [[!INCLUDE [Product short](includes/product-short.md)] instance](/defender-for-identity/deploy-defender-identity) that is [connected to AD](/defender-for-identity/directory-service-accounts).
+1. [Download](/defender-for-identity/download-sensor) and [install the latest version of the [!INCLUDE [Product short](includes/product-short.md)] sensor](/defender-for-identity/install-sensor) on your lab's domain controller.
 1. Familiarity with [Privileged Access Workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## Recommendations
@@ -40,7 +40,7 @@ Your complete lab setup should look as similar as possible to the following diag
 
 This table details the computers, and the configurations needed. IP addresses are provided for reference purposes only so you can easily follow along.
 
-In the examples for these tutorials, the Forest NetBIOS name is **CONTOSO.AZURE**.
+In the examples for these labs, the Forest NetBIOS name is **CONTOSO.AZURE**.
 
 | FQDN | OS | IP | Purpose |
 |------|-------|---------|--------------|
@@ -65,11 +65,9 @@ There's a "Helpdesk" Security Group (SG) of which Ron HelpDesk is a member. This
 
 To configure the base lab we'll add users and groups to Active Directory, edit a SAM policy, and a sensitive group in [!INCLUDE [Product short](includes/product-short.md)].
 
-<a name="bkmk_hydrate"></a>
-
 ### Hydrate Active Directory users on ContosoDC
 
-To simplify the lab, we automated the process to create fictitious users and groups in Active Directory. This script is run as a prerequisite for this tutorial. You can use or modify the script to hydrate your lab's Active Directory environment. If you prefer not to use a script, you can do it manually.
+To simplify the lab, we automated the process to create fictitious users and groups in Active Directory. This script is run as a prerequisite for this lab. You can use or modify the script to hydrate your lab's Active Directory environment. If you prefer not to use a script, you can do it manually.
 
 As a Domain Admin, on ContosoDC, run the following to hydrate our Active Directory Users:
 
@@ -136,7 +134,7 @@ At this point, you should have a base [!INCLUDE [Product short](includes/product
 
 ## Set up the lab workstations
 
-Once you verify your base [!INCLUDE [Product short](includes/product-short.md)] lab is set up, you can start the workstation configuration to prepare for the next three tutorials in this series. We'll hydrate our VictimPC and AdminPC to make this lab look active.
+Once you verify your base [!INCLUDE [Product short](includes/product-short.md)] lab is set up, you can start the workstation configuration to prepare for the next three labs in this series. We'll hydrate our VictimPC and AdminPC to make this lab look active.
 
 ### VictimPC local policies
 
@@ -153,9 +151,7 @@ Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
 
 Inspect the Administrators group on **VictimPC**, making sure it appears to have at least Helpdesk and JeffL as members:
 
-![Helpdesk nd JeffV should be in the Local Admin Group for VictimPC.](media/playbook-labsetup-localgrouppolicies2.png)
-
-<a name="helpdesk-simulation"></a>
+![Helpdesk and JeffV should be in the Local Admin Group for VictimPC.](media/playbook-labsetup-localgrouppolicies2.png)
 
 ### Simulate helpdesk support on VictimPC
 
@@ -171,7 +167,7 @@ To simulate a working and managed network, create a Scheduled Task on the **Vict
     Register-ScheduledTask -TaskName "RonHD Cmd.exe - AATP SA Playbook" -Trigger $trigger -User $runAs -Password $ronHHDPass -Action $action
     ```
 
-1. Sign in to the machine as **JeffL**. The Cmd.exe process will start in context of RonHD after logon, simulating Helpdesk managing the machine.
+1. Sign in to the machine as **JeffL**. The Cmd.exe process will start in context of RonHD after sign-in, simulating Helpdesk managing the machine.
 
 ### Turn off antivirus on VictimPC
 
@@ -190,7 +186,7 @@ To run the [!INCLUDE [Product short](includes/product-short.md)] Security Alert 
 |----|-----|
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
-| PsExec | [Microsoft Docs](/sysinternals/downloads/psexec) |
+| PsExec | [PsExec documentation](/sysinternals/downloads/psexec) |
 | NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
 
 We thank the authors of these research tools for enabling the community to better understand cyber risks and impacts.
@@ -238,7 +234,7 @@ Review the checklist to make sure that the workstation setup is complete.
 | 5 | Add Helpdesk and remove Domain Admins from AdminPC's local administrators group | ☐ |
 | 6 | Run PowerShell script as Samira to simulate domain activities | ☐ |
 
-## Mission accomplished!
+## Mission accomplished
 
 Your [!INCLUDE [Product short](includes/product-short.md)] lab is now ready to use. The methods used in this set up were chosen knowing that resources must be managed (by *something* or *someone*) and management requires local admin privileges. There are other ways to simulate a management workflow in the lab, such as:
 

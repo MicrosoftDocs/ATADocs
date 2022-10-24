@@ -1,11 +1,11 @@
 ---
 title: Microsoft Defender for Identity domain dominance security alerts
-description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of domain dominance phase efforts are detected against your organization.
-ms.date: 12/23/2020
-ms.topic: tutorial
+description: This article explains the Microsoft Defender for Identity alerts issued when attacks, typically part of domain dominance phase efforts, are detected against your organization.
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Domain dominance alerts
+# Domain dominance alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -17,7 +17,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, learn how to understand, classify, prevent, and remediate the following attacks:
+The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn how to understand, classify, prevent, and remediate the following attacks:
 
 > [!div class="checklist"]
 >
@@ -62,20 +62,20 @@ Advanced security scanners may legitimately generate this type of activity again
 
 1. Check if the source computer is running an organization-approved advanced security scanner against Active Directory?
 
-    - If the answer is **yes**, and it should not be running, fix the application configuration. This alert is a **B-TP** and can be **Closed**.
-    - If the answer is **yes**, and it should always do this, **Close** the alert, and exclude that computer, it is probably a **B-TP** activity.
+    - If the answer is **yes**, and it shouldn't be running, fix the application configuration. This alert is a **B-TP** and can be **Closed**.
+    - If the answer is **yes**, and it should always do this, **Close** the alert, and exclude that computer, it's probably a **B-TP** activity.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. If a [source user](investigate-a-user.md) exists, investigate.
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If a [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) exists, investigate.
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. The stolen private key is never changed. Meaning the actor can always use the stolen key to decrypt protected data in the target domain. A methodological way to change this private key does not exist.
     - To create a key, use the current private key, create a key, and re-encrypt every domain master key with the new private key.
 
@@ -109,20 +109,21 @@ Administrative workstations, IT team members, and service accounts can all perfo
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md) and [user](investigate-a-user.md).
-1. Investigate the [domain controller](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) and [user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+1. Investigate the [domain controller](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices
+).
 
 **Suggested remediation and steps for prevention:**
 
 **Remediation**
 
-1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the domain controllers by:
     - Remediate the remote code execution attempt.
-    - Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the suspicious activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 **Prevention**
 
@@ -180,7 +181,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 1. Look at the Event Viewer to see [Active Directory events that it records in the directory services log](/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). You can use the log to monitor changes in Active Directory. By default, Active Directory only records critical error events, but if this alert recurs, enable this audit on the relevant domain controller for further investigation.
 
 **Suggested remediation and steps for prevention:**
@@ -190,7 +191,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
-    Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 **Prevention:**
 
@@ -244,7 +245,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the source [computer](investigate-a-computer.md).
+1. Investigate the source [computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
@@ -253,7 +254,7 @@ Servers and applications might replicate data from Active Directory, such as Azu
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
-    Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Remediate the data that was replicated on the domain controllers.
 
 **Prevention:**
@@ -275,7 +276,7 @@ Validate the following permissions:
 
 Active Directory replication is the process by which changes that are made on one domain controller are synchronized with all other domain controllers. Given necessary permissions, attackers can initiate a replication request, allowing them to retrieve the data stored in Active Directory, including password hashes.
 
-In this detection, an alert is triggered when a replication request is initiated from a computer that is not a domain controller.
+In this detection, an alert is triggered when a replication request is initiated from a computer that isn't a domain controller.
 
 > [!NOTE]
 > If you have domain controllers on which [!INCLUDE [Product short](includes/product-short.md)] sensors are not installed, those domain controllers are not covered by [!INCLUDE [Product short](includes/product-short.md)]. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by [!INCLUDE [Product short](includes/product-short.md)] as a domain controller. It is highly recommended to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on every domain controller to get full coverage.
@@ -313,16 +314,16 @@ Servers and applications might replicate data from Active Directory, such as Azu
 
 **Understand the scope of the breach**
 
-1. Investigate the source [computer](investigate-a-computer.md) and [user](investigate-a-user.md).
+1. Investigate the source [computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) and [user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention:**
 
 **Remediation:**
 
-1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 **Prevention:**
 
@@ -378,17 +379,17 @@ Applications might authenticate using a lower encryption cipher. Some are authen
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and resources](investigate-a-computer.md) that were accessed.
-1. Investigate the [users](investigate-a-computer.md).
+1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) that were accessed.
+1. Investigate the [users](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
 **Remediation**
 
-1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
     - If you have Microsoft Defender for Endpoint installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 1. Contain the resources that were accessed by this ticket.
 1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).
@@ -412,7 +413,6 @@ Known vulnerabilities in older versions of Windows Server allow attackers to man
 |MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
 |MITRE attack sub-technique |   [Golden Ticket (T1558.001)](https://attack.mitre.org/techniques/T1558/001/)    |
 
-
 **Learning period**
 
 None
@@ -432,16 +432,16 @@ Some Operating Systems or applications are known to modify the authorization dat
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer](investigate-a-computer.md).
-1. If there is a [source user](investigate-a-user.md), investigate.
-1. Check which resources were accessed successfully and [investigate](investigate-a-computer.md).
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users), investigate.
+1. Check which resources were accessed successfully and [investigate](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer
     - Find the tool that preformed the attack and remove it.
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and they will not work again until they are renewed or in some cases, the service is restarted. Plan carefully before performing the KRBTGT double reset, because it impacts all computers, servers and users in the environment.
 1. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
@@ -476,13 +476,13 @@ If the answer is **yes** to all of the previous questions, **Close** the alert, 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computers
     - Find the tool that performed the attack and remove it.
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
     - If you have Microsoft Defender for Endpoint installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 1. Contain the resources that were accessed by this ticket.
 1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).
@@ -492,7 +492,7 @@ If the answer is **yes** to all of the previous questions, **Close** the alert, 
 
 **Description**
 
-Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.
+Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, they can create a Kerberos ticket granting ticket (TGT) that provides authorization to any resource and set the ticket expiration to any arbitrary time. This fake TGT is called a "Golden Ticket" and allows attackers to achieve network persistence. Forged Golden Tickets of this type have unique characteristics this detection is specifically designed to identify.
 
 **MITRE**
 
@@ -509,19 +509,20 @@ None
 **TP, B-TP, or FP**
 
 Federation services might generate tickets that will trigger this alert.
+
 1. Does the source computer host Federation services that generate these types of tickets?
     - If the source computer hosts services that generate these types of tickets, Close the security alert as a **B-TP** activity.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
-1. Investigate the [source user](investigate-a-user.md).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computers
     - Find the tool that performed the attack and remove it.
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
     - If you have Microsoft Defender for Endpoint installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 1. Contain the resources that were accessed by this ticket.
 1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidancein the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).
@@ -557,18 +558,18 @@ None
     1. Are all the users who were logged into the computer supposed to be logged into it?
     1. Are the privileges appropriate for the account?
 1. Should the users who were logged in have access to these resources?
-    - If you enabled Microsoft Defender for Endpoint integration, click on its icon to further investigate.
+    - If you enabled Microsoft Defender for Endpoint integration, select on its icon to further investigate.
 
 If the answer to any of the previous questions is yes, Close the security alert as a **FP**.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and resources](investigate-a-computer.md) that were accessed.
-1. Investigate the [users](investigate-a-user.md).
+1. Investigate the [source computer and resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) that were accessed.
+1. Investigate the [users](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention:**
 
-1. Follow the instructions in the [unsecure Kerberos delegation](cas-isp-unconstrained-kerberos.md) security assessment.
+1. Follow the instructions in the [unsecure Kerberos delegation](/defender-for-identity/security-assessment-unconstrained-kerberos) security assessment.
 1. Review the sensitive users listed in the alert and remove them from the resource.
 1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account). Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. Also, because creating a Golden Ticket requires domain admin rights, implement [Pass the hash](lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017) recommendations.
 
@@ -598,20 +599,20 @@ None
 1. Is the [!INCLUDE [Product short](includes/product-short.md)] Standalone Sensor involved in this alert a virtual machine?
     - If the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is involved, was it recently resumed from a saved state?
 1. Is there a time synchronization problem in the network, where not all of the computers are synchronized?
-    - Click the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there is a difference between "StartTime" and "DomainControllerStartTime".
+    - Select the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there's a difference between "StartTime" and "DomainControllerStartTime".
 
 If the answer to the previous questions is **yes**, **Close** the security alert as a **B-TP** activity.
 
 **Understand the scope of the breach**
 
-1. Investigate the [source computer and accessed resources](investigate-a-computer.md).
-1. Investigate the [compromised user](investigate-a-user.md).
+1. Investigate the [source computer and accessed resources](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
     - If you have Microsoft Defender for Endpoint installed – use **klist.exe purge** to delete all the tickets of the specified logon session and prevent future usage of the tickets.
 1. Contain the resources accessed by this ticket.
 1. Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).
@@ -639,16 +640,16 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 **Understand the scope of the breach**
 
-1. Investigate the [domain controller](investigate-a-computer.md).
+1. Investigate the [domain controller](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 1. Check if Skeleton Key has affected your domain controllers.
-1. Investigate the [users](investigate-a-user.md) and [computers](investigate-a-computer.md) involved.
+1. Investigate the [users](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users) and [computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) involved.
 
 **Suggested remediation and prevention steps**
 
-1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the passwords of the compromised users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the domain controller.
     - Remove the malware. For more information, see [Skeleton Key Malware Analysis](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
-    - Look for users logged on around the same time as the suspicious activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the suspicious activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 ## Suspicious additions to sensitive groups (external ID 2024)
 
@@ -656,7 +657,7 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. [!INCLUDE [Product short](includes/product-short.md)] profiles continuously.
 
-For a definition of sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with the sensitive accounts](manage-sensitive-honeytoken-accounts.md).
+For a definition of sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with the sensitive accounts](/defender-for-identity/entity-tags).
 
 The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](configure-windows-event-collection.md).
 
@@ -691,10 +692,10 @@ Legitimate group modifications that occur rarely and the system didn't learn as 
 
 **Remediation:**
 
-1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
     - Look for the computer the source user was active on.
     - Check which computers the user was logged into around the same time as the activity. Check if these computers are compromised.
-    - If the users are compromised, reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - If the users are compromised, reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 
 **Prevention:**
 
@@ -731,17 +732,17 @@ Some administrative tasks are legitimately performed against domain controllers 
 
 **Understand the scope of the breach**
 
-1. Investigate the [source user](investigate-a-user.md).
-1. Investigate the [destination computers](investigate-a-computer.md) the services were created on.
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+1. Investigate the [destination computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) the services were created on.
 
 **Suggested remediation and steps for prevention**
 
 **Remediation**
 
-1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the domain controllers.
     - Remediate the suspicious service.
-    - Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Locate the computer the source user was active on.
     - Check the computers the user was logged into around the same time as the activity, and check if these computers are also compromised.
 
@@ -752,13 +753,13 @@ Some administrative tasks are legitimately performed against domain controllers 
 1. Implement less-privileged access on domain machines to give only specific users the right to create services.
 
 > [!div class="nextstepaction"]
-> [Exfiltration alert tutorial](exfiltration-alerts.md)
+> [Exfiltration alerts](exfiltration-alerts.md)
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)

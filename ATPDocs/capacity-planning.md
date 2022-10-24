@@ -1,17 +1,17 @@
 ---
 title: Planning your Microsoft Defender for Identity deployment
 description: Helps you plan your deployment and decide how many Microsoft Defender for Identity servers will be needed to support your network
-ms.date: 10/26/2020
+ms.date: 03/28/2022
 ms.topic: how-to
 ---
 
 # Plan capacity for Microsoft Defender for Identity
 
-In this guide, you determine how many [!INCLUDE [Product long](includes/product-long.md)] sensors you need.
+In this guide, you determine what resources you need for your Microsoft Defender for Identity sensors.
 
 ## Prerequisites
 
-- Download the [[!INCLUDE [Product short](includes/product-short.md)] Sizing Tool](<https://aka.ms/aatpsizingtool>).
+- Download the [[!INCLUDE [Product short](includes/product-short.md)] Sizing Tool](<https://aka.ms/mdi/sizingtool>).
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] architecture](architecture.md) article.
 - Review the [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md) article.
 
@@ -26,6 +26,9 @@ The recommended and simplest way to determine capacity for your [!INCLUDE [Produ
 
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
 1. Match your **Busy Packets/sec** field to the **PACKETS PER SECOND** field in the [[!INCLUDE [Product short](includes/product-short.md)] sensor table](#sizing) section of this article. Use the fields to determine the memory and CPU that will be used by the sensor.
+
+> [!NOTE]
+> To ensure accurate results, only run the sizing tool before you've installed any Defender for Identity sensors in your environment.
 
 <a name="sizing"></a>
 
@@ -42,8 +45,8 @@ The following CPU and Random Access Memory (RAM) capacity refers to the **sensor
 |5k-10k|1.00|6.50|
 |10k-20k|2.00|9.00|
 |20k-50k|3.50|9.50|
-|50k-75k |3.50|9.50|
-|75k-100k|3.50|9.50|
+|50k-75k |5.50|11.50|
+|75k-100k|7.50|13.50|
 
 \* This includes physical cores, not hyper-threaded cores.  
 \*\* Random-access memory (RAM)
@@ -125,13 +128,11 @@ To determine packets per second, do the following steps on each domain controlle
 
     ![Packets per second counter image.](media/traffic-estimation-14.png)
 
+> [!NOTE]
+> By default, [!INCLUDE [Product short](includes/product-short.md)] supports up to 350 sensors. If you want to install more sensors, contact [!INCLUDE [Product short](includes/product-short.md)] support.
+
 ## Next steps
 
-In this guide, you determined how many [!INCLUDE [Product short](includes/product-short.md)] sensors you need. You also determined sizing for the sensors. Continue to the Create a [!INCLUDE [Product short](includes/product-short.md)] instance quickstart guide.
-
-> [!div class="nextstepaction"]
-> [Create your [!INCLUDE [Product short](includes/product-short.md)] instance](install-step1.md)
-
-## Join the Community
-
-Have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://aka.ms/MDIcommunity>) today!
+> [!div class="step-by-step"]
+> [« Prerequisites](prerequisites.md)
+> [Configure Windows Event collection »](configure-windows-event-collection.md)

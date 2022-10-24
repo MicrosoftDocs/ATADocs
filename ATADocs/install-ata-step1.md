@@ -32,7 +32,7 @@ ms.suite: ems
 > [!NOTE]
 > **Support lifecycle**
 >
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 > [!div class="step-by-step"]
 > [Step 2 »](install-ata-step2.md)
@@ -51,7 +51,7 @@ After you have verified that the server meets the requirements, you can proceed 
 
 Perform the following steps on the ATA Center server.
 
-1. Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/) or from [MSDN](/powerapps/developer/common-data-service/org-service/subscribe-sdk-assembly-updates-using-nuget).
+1. Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from [MSDN](/power-apps/developer/data-platform/org-service/subscribe-sdk-assembly-updates-using-nuget).
 
 1. Log in to the computer on to which you are installing the ATA Center as a user who is a member of the local administrators group.
 

@@ -2,7 +2,7 @@
 metadata:
   title: Microsoft Defender for Identity frequently asked questions
   description: Provides a list of frequently asked questions about Microsoft Defender for Identity and the associated answers
-  ms.date: 10/27/2020
+  ms.date: 03/30/2022
   ms.topic: conceptual
 
 title: Microsoft Defender for Identity frequently asked questions
@@ -15,7 +15,7 @@ sections:
       - question: What can Defender for Identity detect?
         answer: |
           Defender for Identity detects known malicious attacks and techniques, security issues, and risks against your network.
-          For the full list of Defender for Identity detections, see [What detections does Defender for Identity perform?](suspicious-activity-guide.md).
+          For the full list of Defender for Identity detections, see [Defender for Identity Security Alerts](/defender-for-identity/alerts-overview).
 
       - question: What data does Defender for Identity collect?
         answer: |
@@ -49,9 +49,9 @@ sections:
         answer: |
           ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
 
-          Defender for Identity is a cloud-based security solution that leverages your on-premises Active Directory (Azure AD) signals. The solution is highly scalable and is frequently updated.
+          Defender for Identity is a cloud-based security solution that leverages your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
 
-          The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA will end Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+          The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
           In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver additional detections.
 
@@ -59,7 +59,7 @@ sections:
 
           - **Support for [multi-forest environments](multi-forest.md)**: Provides organizations visibility across AD forests.
 
-          - **[Identity Security Posture Assessments](isp-overview.md)**: Identifies common misconfigurations and exploitable components, as well as, providing remediation paths to reduce the attack surface.
+          - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components, as well as, providing remediation paths to reduce the attack surface.
 
           - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
 
@@ -82,7 +82,7 @@ sections:
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |
-          No. When your Defender for Identity instance is created, it is stored automatically in the country data center closest to the geographical location of your AAD tenant.  Once your Defender for Identity instance is created, Defender for Identity data cannot be moved to a different data center.
+          No. When your Defender for Identity instance is created, it is stored automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant.  Once your Defender for Identity instance is created, Defender for Identity data cannot be moved to a different region.
 
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |
@@ -139,52 +139,60 @@ sections:
     questions: 
 
       - question: What recommendations about WinPcap and Npcap drivers are changing?
-        answer: The Microsoft Defender for Identity team is currently recommending that all customers deploy the Npcap driver before deploying the sensor. This will ensure that Npcap driver will be used instead of the WinPcap driver. 
+        answer: The Microsoft Defender for Identity team recommends that all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.
 
       - question: Why are we moving away from WinPcap?
-        answer: WinPcap is no longer supported and since it’s no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
+        answer: WinPcap is no longer supported and since it's no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
           
       - question: Why Npcap?
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
 
       - question: What version of Npcap is supported? 
-        answer: The recommended and officially supported version of Npcap is version 1.00. Other versions are not supported. 
+        answer: The recommended and officially supported version of Npcap is version 1.0. You can install a newer version of Npcap, but note that for troubleshooting, support will ask you to downgrade the Npcap version to validate that the issue is not related to the newer version installed.
 
-      - question: What additional benefits will we get by using Npcap? 
-        answer: The Defender for Identity team has been working closely with the Npcap team over the last months to ensure optimal performance of the sensor. The Npcap driver will provide better performance and stability over the WinPcap driver. 
-
-      - question: I have more than 5 domain controllers in my organization. Do I need to purchase an Npcap license if I’m using Npcap on these domain controllers? 
+      - question: I have more than 5 domain controllers in my organization. Do I need to purchase an Npcap license if I'm using Npcap on these domain controllers? 
         answer: |
           No, Npcap has an exemption to the usual limit of 5 installs. You can install it on unlimited systems where it is only used with the Defender for Identity sensor.
           
-          See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE),  and search for Microsoft Defender for Identity. 
+          See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE), and search for Microsoft Defender for Identity. 
 
       - question: Is Npcap also relevant for ATA? 
-        answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.0.
+        answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.00.
 
       - question: I would like to script the deployment of Npcap, do I need to purchase the OEM version? 
         answer: No, you don't need to purchase the OEM version. Download the sensor installation package version 2.156 and above from the Defender for Identity console, which includes the OEM version of Npcap.
 
-      - question: How do I download and install the Npcap driver? 
+      - question: How do I download and install or upgrade the Npcap driver? 
         answer: |
-          -  You can obtain the NPCAP executables by [downloading the latest deployment package of the MDI sensor](install-step3.md).
-
-              >[!NOTE]
-              >Copies of Npcap don't count towards the five copy, five computer, or five user licensing limitation if they're installed and used solely in conjunction with Defender for Identity. For more information, see [Npcap licensing](https://github.com/nmap/npcap/blob/master/LICENSE).
+          -  You can obtain the Npcap executables by [downloading the latest deployment package of the Defender for Identity sensor](download-sensor.md).
 
             - If you haven't yet installed the sensor:
-              1. Uninstall WinPcap, if it was installed.
-              1. Install Npcap with the following options: **/loopback_support=no** and **/winpcap_mode=yes** and **/S** for a silent install. Do NOT use the `/admin_only` option.
-                  - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
+              1. Install the sensor (with an installation package of version 2.184 or greater).
 
             - If you already installed the sensor with WinPcap and need to update to use Npcap:
               1. Uninstall the sensor.
+                  - Either using **Add/Remove programs** in the control panel (*appwiz.cpl*), or by running the following [uninstall command](uninstall-sensor.md#uninstall-the-defender-for-identity-sensor-silently):  
+                    `".\Azure ATP Sensor Setup.exe" /uninstall /quiet`
               1. Uninstall WinPcap.
-              1. Install Npcap with the following options: **loopback_support=no** and **winpcap_mode=yes**. Do NOT use the `/admin_only` option.
-
+                  - Note: This is applicable only if WinPcap was manually installed prior to the sensor installation. In this case you would need to manually remove WinPcap.
+              1. Reinstall the sensor (with an installation package of version 2.184 or greater).
+              
+            - If you want to manually install Npcap:
+              1. Install Npcap with the following options:
+                - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
+                - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
+                
+            - If you want to manually upgrade Npcap:
+              1. Stop the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)  
+                  `Stop-Service -Name AATPSensorUpdater -Force; Stop-Service -Name AATPSensor -Force`
+              2. Remove Npcap using **Add/Remove programs** in the control panel (*appwiz.cpl*)
+              3. Install Npcap with the following options:
                   - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
-                  
-              1. Reinstall the sensor.
+                  - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
+              4. Start the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)  
+                  `Start-Service -Name AATPSensorUpdater; Start-Service -Name AATPSensor`
+
+
 
   - name: Operation
     questions:
@@ -196,7 +204,7 @@ sections:
         answer: |
           This happens when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
 
-          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](manage-sensitive-honeytoken-accounts.md).
+          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](/defender-for-identity/entity-tags).
 
       - question: Do you have to write your own rules and create a threshold/baseline?
         answer: |
@@ -217,7 +225,7 @@ sections:
 
               After getting the computer name,  Defender for Identity sensors cross check the details in Active Directory to see if there is a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
           2. **Lateral Movement Path (LMP)**
-          To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](install-step8-samr.md).
+          To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](/defender-for-identity/remote-calls-sam).
 
           3. **Querying Active Directory using LDAP** for entity data
           Defender for Identity sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.

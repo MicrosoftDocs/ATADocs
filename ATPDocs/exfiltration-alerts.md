@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity exfiltration alerts tutorial
+title: Microsoft Defender for Identity exfiltration alerts 
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
-ms.date: 10/26/2020
-ms.topic: tutorial
+ms.date: 05/10/2022
+ms.topic: conceptual
 ---
 
-# Tutorial: Exfiltration alerts
+# Exfiltration alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -17,7 +17,7 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this tutorial, learn to understand, classify, prevent, and remediate the following attacks:
+The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn to understand, classify, prevent, and remediate the following attacks:
 
 > [!div class="checklist"]
 >
@@ -45,17 +45,17 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 
 **Understand the scope of the breach**
 
-1. Investigate the [source users](investigate-a-user.md).
-1. Investigate the [source and destination computers](investigate-a-computer.md) of the copies.
+1. Investigate the [source users](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices) of the copies.
 
 **Suggested remediation and steps for prevention**
 
-1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+1. Reset the password of the source users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
     - Find the files that were copied and remove them.  
     Check if there were other activities on these files. Where they transferred to another place? Check if they were transferred outside the organization network?
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. If one of the files is the **ntds.dit** file:
     - Change the Kerberos Ticket Granting Ticket (KRBTGT) password twice according to the guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).
     - Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain. Invalidating all Kerberos tickets in the domain means **all** services will be broken and won't work again until they are renewed or in some cases, the service is restarted.
@@ -93,13 +93,13 @@ Some companies legitimately use DNS for regular communication. To determine the 
     - What IP is it correlated to?
     - Who is the owner of the domain?
     - Where is the IP?
-1. Investigate the [source and destination computers](investigate-a-computer.md).
+1. Investigate the [source and destination computers](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
 
 **Suggested remediation and steps for prevention**
 
 1. Contain the source computer.
     - Find the tool that performed the attack and remove it.
-    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can use the [**Confirm user compromised**](/cloud-app-security/accounts#governance-actions) action in the Defender for Cloud Apps portal.
+    - Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. If after your investigation, the registered query domain remains not trusted, we recommend blocking the destination domain to avoid all future communication.
 
 > [!NOTE]
@@ -107,9 +107,9 @@ Some companies legitimately use DNS for regular communication. To determine the 
 
 ## See Also
 
-- [Investigate a computer](investigate-a-computer.md)
-- [Working with security alerts](working-with-suspicious-activities.md)
-- [Working with lateral movement paths](use-case-lateral-movement-path.md)
+- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
+- [Working with security alerts](/defender-for-identity/manage-security-alerts)
+- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
