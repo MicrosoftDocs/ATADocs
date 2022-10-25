@@ -25,7 +25,11 @@ Make sure that communication isn't blocked for localhost, TCP port 444. To learn
 ## Deployment log location
 
 The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md).
-
+## "Stop legacy protocols communication" recommended action always marked as "Completed"
+The existing "Stop legacy protocols communication" recommended action as part of the Microsoft Secure Score is always marked as completed.  
+Due to an error, NTLM v1 authentication activities are not profiled correctly. As a result, the recommended action to remediate them is marked as completed.
+**Resolution:**  
+We are working to correctly profile the relevant activities as NTLM v1 authentication.
 ## Proxy authentication problem presents as a licensing error
 
 If during sensor installation you receive the following error:  **The sensor failed to register due to licensing issues.**
@@ -415,3 +419,4 @@ For more information, see [Configure proxy server using the command line](config
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+
