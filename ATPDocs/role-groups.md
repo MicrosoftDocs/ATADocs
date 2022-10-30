@@ -38,7 +38,7 @@ You can now enable more granular role-based access control from the Microsoft 36
 
 To access the Defender for Identity experience in [in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), you need the following permissions:
 
-- | Actions in Microsoft 365 Defender                            | Required permissions                                         |
+  | Actions in Microsoft 365 Defender                            | Required permissions                                         |
   | ------------------------------------------------------------ | ------------------------------------------------------------ |
   | Create MDI Workspace                                         | Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator |
   | MDI Settings                                                 | Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator <br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Configuration/Security settings/Read<br/> <li>Configuration/Security settings/All permissions<br/> <li>Configuration/System settings/Read<br/><li> Configuration/System settings/All permissions |
