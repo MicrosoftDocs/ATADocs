@@ -38,12 +38,12 @@ You can now enable more granular role-based access control from the Microsoft 36
 
 To access the Defender for Identity experience in [in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), you need the following permissions:
 
-|Actions in Microsoft 365 Defender|Required permissions|
-|---|---|
-|Create MDI Workspace|Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator|
-|MDI Settings|Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator <br> **Or** <br> Member of one of the following Azure AD groups (after the MDI Workspace is created): <li>Azure ATP {instance name} Administrator <li>Azure ATP {instance name} Users|
-|MDI security alerts and activities|Member of one of the Azure AD roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> Member of one of the following [Microsoft Defender for Cloud Apps internal roles](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps): <li>Global admin <li>Security reader <li>Compliance admin|
-|MDI security assessments <br> (now part of Microsoft Secure Score)|[Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> Member of one of the following Azure AD groups (after the MDI Workspace is created): <li>Azure ATP {instance name} Administrator <li>Azure ATP {instance name} Users <li>Azure ATP {instance name} Viewers <br><br> **Note:** Users who are members of the Azure AD *Global Administrator* or *Security Administrator* roles, don't need the above group membership as the required permissions are inherited from the Azure AD role.|
+- | Actions in Microsoft 365 Defender                            | Required permissions                                         |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | Create MDI Workspace                                         | Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator |
+  | MDI Settings                                                 | Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator <br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Configuration/Security settings/Read<br/> <li>Configuration/Security settings/All permissions<br/> <li>Configuration/System settings/Read<br/><li> Configuration/System settings/All permissions |
+  | MDI security alerts and activities                           | Member of one of the Azure AD roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Security operations/Security data/Alerts (Manage)<br/><li>Security operations/Security data /Security data basics (Read) |
+  | MDI security assessments <br> (now part of Microsoft Secure Score) | [Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac): <br><li>Security operations/Security data /Security data basics (Read)<br /><br> **Note:** Users who are members of the Azure AD *Global Administrator* or *Security Administrator* roles, don't need the above group membership as the required permissions are inherited from the Azure AD role. |
 
 ## Types of Defender for Identity security groups
 
