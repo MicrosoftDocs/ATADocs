@@ -39,10 +39,10 @@ If during sensor installation you receive the following error:  **The sensor fai
 
 **Deployment log entries:**
 
-[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]
-[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]
-[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]
-[1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642
+`[1C60:1AA8][2018-03-24T23:59:13]i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]`
+`[1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [validateCreateSensorResult=LicenseInvalid]]`
+`[1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [deploymentResultStatus=1602 isRestartRequired=False]]`
+`[1C60:15B8][2018-03-25T00:27:56]i500: Shutting down, exit code: 0x642`
 
 **Cause:**
 
@@ -203,12 +203,12 @@ If you receive the following health alert: **Directory services user credentials
 
 **Sensor log entries:**
 
-2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]
-2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync finished [UserName=account_name Domain=domain1.test.local IsSuccess=False]
+`2020-02-17 14:01:36.5315 Info ImpersonationManager CreateImpersonatorAsync started [UserName=account_name Domain=domain1.test.local IsGroupManagedServiceAccount=True]`
+`2020-02-17 14:01:36.5750 Info ImpersonationManager CreateImpersonatorAsync finished [UserName=account_name Domain=domain1.test.local IsSuccess=False]`
 
 **Sensor Updater log entries:**
 
-2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync failed GMSA password could not be retrieved [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]
+`2020-02-17 14:02:19.6258 Warn GroupManagedServiceAccountImpersonationHelper GetGroupManagedServiceAccountAccessTokenAsync failed GMSA password could not be retrieved [errorCode=AccessDenied AccountName=account_name DomainDnsName=domain1.test.local]`
 
 The sensor failed to retrieve the password of the gMSA account.
 
@@ -249,7 +249,7 @@ Do one of the following to resolve this issue:
 
 **Sensor log entries:**
 
-Warn DirectoryServicesClient CreateLdapConnectionAsync failed to retrieve group managed service account password. [DomainControllerDnsName=DC1.CONTOSO.LOCAL Domain=contoso.local UserName=AATP_gMSA]
+`Warn DirectoryServicesClient CreateLdapConnectionAsync failed to retrieve group managed service account password. [DomainControllerDnsName=DC1.CONTOSO.LOCAL Domain=contoso.local UserName=AATP_gMSA]`
 
 **Cause:**
 
@@ -257,31 +257,40 @@ The domain controller hasn't been given rights to access the password of the gMS
 
 **Resolution:**
 
-Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory with the domain controller and standalone sensors included. If this doesn't exist, we recommend that you create one.
+Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
 
-You can use the following command to check if the machine or security group has been added to the parameter. Replace *AccountName* with the name you created.
+You can use the following command to check if a computer account or security group has been added to the parameter. Replace *mdiSvc01* with the name you created.
 
 ```powershell
-Get-ADServiceAccount AccountName -Properties PrincipalsAllowedToRetrieveManagedPassword
+Get-ADServiceAccount mdiSvc01 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 The results should look like this:
 
-![Powershell results.](media/retrieve-password-results.png)
+![Powershell results.](media/troubleshooting-known-issues/gmsa-retrieve-password-results.png)
 
-In this example, we can see that the domain controller *AATPDemo* has been added. If the domain controller or the security group hasn't been added, we can use the following command below to add it. Replace *Host1* with the name of the domain controller or the name of the security group.
+In this example, we can see that a group named *mdiSvc01Group* has been added. If the domain controller or the security group hasn't been added, you can use the following commands to add it. Replace *mdiSvc01* with the name of gMSA, and replace *DC1* with the name of the domain controller, or *mdiSvc01Group* with the name of the security group.
 
 ```powershell
-Set-ADServiceAccount gmsaAccountName -PrincipalsAllowedToRetrieveManagedPassword Host1
+# To set the specific domain controller only:
+$specificDC = Get-ADComputer -Identity DC1
+Set-ADServiceAccount mdiSvc01 -PrincipalsAllowedToRetrieveManagedPassword $specificDC
+
+
+# To set a security group that contains the relevant computer accounts:
+$group = Get-ADGroup -Identity mdiSvc01Group
+Set-ADServiceAccount mdiSvc01 -PrincipalsAllowedToRetrieveManagedPassword $group
 ```
 
 If the domain controller or security group is already added, but you're still seeing the error, you can try the following steps:
 
 - **Option 1**: Reboot the server to sync the recent changes
 - **Option 2**:
-    1. Stop **AATPSensor** and **AATPSensorUpdater**
-    1. Cache service account to server: `Install-ADServiceAccount AccountName`
-    1. Start **AATPSensor**
+    1. Set the **AATPSensor** and **AATPSensorUpdater** services to Disabled
+    1. Stop the **AATPSensor** and **AATPSensorUpdater** services
+    1. Cache service account to server using the command: `Install-ADServiceAccount gMSA_AccountName`
+    1. Set the **AATPSensor** and **AATPSensorUpdater** services to Automatic
+    1. Start the **AATPSensorUpdater** service
 
 ## Access to the registry key 'Global' is denied
 
@@ -315,10 +324,10 @@ If you observe a limited number, or lack of, security event alerts or logical ac
 
 **Sensor log entries:**
 
-Error EventLogException System.Diagnostics.Eventing.Reader.EventLogException: The handle is invalid
+`Error EventLogException System.Diagnostics.Eventing.Reader.EventLogException: The handle is invalid
    at void System.Diagnostics.Eventing.Reader.EventLogException.Throw(int errorCode)
    at object System.Diagnostics.Eventing.Reader.NativeWrapper.EvtGetEventInfo(EventLogHandle handle, EvtEventPropertyId enumType)
-   at string System.Diagnostics.Eventing.Reader.EventLogRecord.get_ContainerLog()
+   at string System.Diagnostics.Eventing.Reader.EventLogRecord.get_ContainerLog()`
 
 **Cause:**
 
@@ -334,10 +343,10 @@ Ensure that the Discretionary Access Control List includes the following entry:
 
 If during the sensor installation you receive the following error: **ApplyInternal failed two way SSL connection to service** and the sensor log contains an entry similar to:
 
-2021-01-19 03:45:00.0000 Error CommunicationWebClient+\<SendWithRetryAsync\>d__9`1
+`2021-01-19 03:45:00.0000 Error CommunicationWebClient+\<SendWithRetryAsync\>d__9`1
 ApplyInternal failed two way SSL connection to service.
 The issue can be caused by a proxy with SSL inspection enabled.
-[_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=7C039DA47E81E51F3DA3DF3DA7B5E1899B5B4AD0]
+[_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=7C039DA47E81E51F3DA3DF3DA7B5E1899B5B4AD0]`
 
 **Cause:**
 
@@ -422,4 +431,5 @@ For more information, see [Configure proxy server using the command line](config
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+
 
