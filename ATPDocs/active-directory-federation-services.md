@@ -41,7 +41,7 @@ For information on how to configure the auditing level, see [Event auditing info
 
 ## AD FS database permissions
 
-For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (db_datareader) permissions on it for the relevant (Directory Services Account](directory-service-accounts.md) configured.
+For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (db_datareader) permissions on it for the relevant [Directory Services Account](directory-service-accounts.md) configured.
 If you have more than one AD FS server, then this should be performed on all of them as the database permissions are not replicated between them.
 
 ### How do I grant access to the AD FS database via TSQL or PowerShell?
