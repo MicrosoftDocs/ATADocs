@@ -39,40 +39,10 @@ For information on how to configure the auditing level, see [Event auditing info
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
-## Installing the sensor
+## AD FS database permissions
 
-### Prerequisites
-
- For sensor installations on Active Directory Federation Services (AD FS) servers, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
-
-### Installing the Microsoft Defender for Identity sensor on AD FS
-
-For information on installing the Microsoft Defender for Identity sensor on AD FS sensor, see [Install the Defender for Identity sensor](install-sensor.md).
-
-### Post-installation steps for AD FS servers
-
-Use the following steps to configure Defender for Identity once you've completed the installation of the sensor on an AD FS server.
-
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
-
-    ![Go to Settings, then Identities.](media/settings-identities.png)
-
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors.
-
-    ![List of Defender for Identity sensors](media/sensor-list-adfs.png)
-
-1. Select the sensor you installed on the AD FS server.
-1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  
-
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
-
-    Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
-
-## AD FS Frequently asked questions
-
-### Do we need to install both the Defender for Identity sensor and the Defender for Endpoint sensor on domain controllers or Active Directory Federation Services (AD FS) servers?
-
-If you use both products, then to protect both the server and Active Directory, the two sensors must be installed.
+For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (db_datareader) permissions on it for the relevant (Directory Services Account](directory-service-accounts.md) configured.
+If you have more than one AD FS server, then this should be performed on all of them as the database permissions are not replicated between them.
 
 ### How do I grant access to the AD FS database via TSQL or PowerShell?
 
@@ -117,6 +87,41 @@ $SQLConnection.Close()
 > - **AdfsConfigurationV4** - the name of the AD FS database (may vary)
 > - **server=\.\pipe\MICROSOFT##WID\tsql\query** - the connection string to the database if you are using WID
 > - If you don't know your AD FS connection string, see [To acquire the SQL connection string](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql#to-acquire-the-sql-connection-string).
+
+## Installing the sensor
+
+### Prerequisites
+
+ For sensor installations on Active Directory Federation Services (AD FS) servers, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
+
+### Installing the Microsoft Defender for Identity sensor on AD FS
+
+For information on installing the Microsoft Defender for Identity sensor on AD FS sensor, see [Install the Defender for Identity sensor](install-sensor.md).
+
+### Post-installation steps for AD FS servers
+
+Use the following steps to configure Defender for Identity once you've completed the installation of the sensor on an AD FS server.
+
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+
+    ![Go to Settings, then Identities.](media/settings-identities.png)
+
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors.
+
+    ![List of Defender for Identity sensors](media/sensor-list-adfs.png)
+
+1. Select the sensor you installed on the AD FS server.
+1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  
+
+    ![[!INCLUDE [Product short.](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
+
+    Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
+
+## AD FS Frequently asked questions
+
+### Do we need to install both the Defender for Identity sensor and the Defender for Endpoint sensor on domain controllers or Active Directory Federation Services (AD FS) servers?
+
+If you use both products, then to protect both the server and Active Directory, the two sensors must be installed.
 
 ## See also
 
