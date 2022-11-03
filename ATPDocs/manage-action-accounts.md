@@ -1,17 +1,19 @@
 ---
 title: Manage action accounts
 description: Learn how to manage action accounts to work with Microsoft Defender for Identity.
-ms.date: 03/30/2022
+ms.date: 11/03/2022
 ms.topic: how-to
 ---
 
 # Microsoft Defender for Identity action accounts
 
-Defender for Identity now allows you to create action accounts. These accounts are used to allow you to take actions on users directly from Defender for Identity.
+Defender for Identity allows you to take [remediation actions](remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
 
-We recommend you create the gMSA account Defender for Identity will use to run the available [remediation actions](remediation-actions.md).
+By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the LocalSystem account of the domain controller and perform the actions. However, you can change this default behavior by setting up a gMSA account and scope the permissions as you need.
 
-## Create and configure the action account
+:::image type="content" source="media/management-accounts.png" alt-text="Configure management accounts.":::
+
+## Create and configure a specific action account
 
 1. On a domain controller in your domain, create a new gMSA account, following the instructions in [Getting started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts).
 1. Assign the "Log on as a service" right to the gMSA account on each domain controller that runs the Defender for Identity sensor.
