@@ -12,22 +12,22 @@ Applies to:
 - Microsoft Defender for Identity
 - Microsoft 365 Defender
 
-If you've created [Microsoft Defender for Identity action accounts](manage-action-accounts.md), you can quickly respond to compromised users by disabling their accounts or reset their password. After taking action on users, you can check on the activity details in the action center.
+Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center. 
 
-Those response actions on users are available directly from the user page, the user side panel, the advanced hunting page, or in the action center.
+The response actions on users are available directly from the user page, the user side panel, the advanced hunting page, or in the action center.
 
-The following actions can be performed directly on the on-premises account:
+The following actions can be performed directly on the user account:
 
 - **Disable user in Active Directory**: This will temporarily prevent a user from logging in to the on-premises network. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network.
 - **Suspend user in Azure Active Directory**: This will temporarily prevent a user from logging in to Azure Active Directory. This can help prevent compromised users from attempting to exfiltrate data and minimizes the time between Disable user in Active Directory and the sync of this status to the cloud.
-- **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts
+- **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
 
 > [!NOTE]
 > For users with the **Password never expires** flag turned on, the password reset will only take place once the flag is removed.
 
 ## Prerequisites
 
-These actions require setting up a privileged gMSA account that Microsoft Defender for Identity uses to perform the actions. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+To be able to perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
 
 ## Permissions
 
@@ -40,3 +40,4 @@ Currently, this feature requires the account signed into Microsoft 365 Defender 
 ## See also
 
 [Microsoft Defender for Identity action accounts](manage-action-accounts.md)
+
