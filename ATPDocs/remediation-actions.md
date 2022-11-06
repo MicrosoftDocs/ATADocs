@@ -27,7 +27,7 @@ The following actions can be performed directly on the user account:
 
 ## Prerequisites
 
-To be able to perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+To perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
 
 ## Permissions
 
