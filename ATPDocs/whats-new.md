@@ -30,6 +30,8 @@ Released November 10, 2022
 
 - Some of the changes introduced in [Defender for Identity release 2.191](#defender-for-identity-release-2191) regarding honeytoken alerts were not enabled properly. Those issues have been resolved now.
 
+- At the end of November, integration with Microsoft Defender for Endpoint will no longer be supported. We highly recommend using the Microsoft 365 Defender portal (<http://security.micorosft.com>) which has the integration built-in.
+
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.193
