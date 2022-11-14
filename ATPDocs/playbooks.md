@@ -22,6 +22,9 @@ Then from a new machine (fresh install, managed, or unmanaged) try the following
 
 For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
 
+> [!Note]
+> To generate the alert again, perform the action from a different user or with a different command.
+
 This reconnaissance is used by attackers to map your network structure and target interesting computers for later steps in their attack.
 
 There are several query types in the DNS protocol. This Defender for Identity security alert detects suspicious requests, either requests using an AXFR (transfer) originating from non-DNS servers, or those using an excessive number of requests.
