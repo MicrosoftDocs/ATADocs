@@ -18,7 +18,7 @@ Search for a specific user or computer, and select the entity to bring you to th
 [!INCLUDE [Product short](includes/product-short.md)] personal data is gathered from Active Directory through the [!INCLUDE [Product short](includes/product-short.md)] sensor and stored in a backend database.
 
 ## Data sharing
-[!INCLUDE [Product short](includes/product-short.md)] shares data, including Customer Data, among the following Microsoft products also licensed by the customer.
+[!INCLUDE [Product short](includes/product-short.md)] shares data, including customer data, among the following Microsoft products also licensed by the customer.
 
 - Microsoft Defender for Cloud Apps
    
