@@ -17,6 +17,11 @@ Search for a specific user or computer, and select the entity to bring you to th
 
 [!INCLUDE [Product short](includes/product-short.md)] personal data is gathered from Active Directory through the [!INCLUDE [Product short](includes/product-short.md)] sensor and stored in a backend database.
 
+## Data sharing
+[!INCLUDE [Product short](includes/product-short.md)] shares data, including Customer Data, among the following Microsoft products also licensed by the customer.
+
+- Microsoft Defender for Cloud Apps
+   
 ## Update personal data
 
 [!INCLUDE [Product short](includes/product-short.md)]'s personal user data is derived from the user's object in the Active Directory of the organization. Therefore, changes made to the user profile in the organization AD are reflected in [!INCLUDE [Product short](includes/product-short.md)].
@@ -45,3 +50,4 @@ In [!INCLUDE [Product short](includes/product-short.md)] you have the ability to
 ## See also
 
 - More information about privacy can be found in the [Defender for Identity FAQ](/defender-for-identity/technical-faq#licensing-and-privacy)
+
