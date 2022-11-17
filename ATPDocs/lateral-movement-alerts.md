@@ -675,49 +675,6 @@ Occasionally, applications implement their own NTLM or SMB stack.
 1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-## Suspicious VPN connection (external ID 2025)
-
-*Previous name:* Suspicious VPN connection
-
-**Description**
-
-[!INCLUDE [Product short](includes/product-short.md)] learns the entity behavior for users VPN connections over a sliding period of one month.
-
-The VPN-behavior model is based on the machines users log in to and the locations the users connect from.
-
-An alert is opened when there is a deviation from the user's behavior based on a machine learning algorithm.
-
-**MITRE**
-
-|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)  |
-|---------|---------|
-|Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)        |
-|MITRE attack technique  | [External Remote Services (T1133)](https://attack.mitre.org/techniques/T1133/)        |
-|MITRE attack sub-technique |     N/A    |
-
-**Learning period**
-
-30 days from the first VPN connection, and at least 5 VPN connections in the last 30 days, per user.
-
-**TP, B-TP, or FP**
-
-1. Is the suspicious user supposed to be performing these operations?
-    1. Did the user recently change their location?
-    1. Is the user travelling and connecting from a new device?
-
-If the answer is yes to the questions above, **Close** the security alert as a **B-TP** activity.
-
-**Understand the scope of the breach**
-
-1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
-1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
-
-**Suggested remediation and steps for prevention**
-
-1. Reset the password of the user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
-1. Consider blocking this user from connecting using VPN.
-1. Consider blocking this computer from connecting using VPN.
-1. Check if there are other users connected through VPN from these locations, and check if they are compromised.
 
 ## See Also
 
