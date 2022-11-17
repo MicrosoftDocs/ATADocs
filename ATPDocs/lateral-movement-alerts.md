@@ -552,6 +552,173 @@ None
 
 Update your Exchange servers with the latest security patches. The vulnerabilities are addressed in the [March 2021 Exchange Server Security Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-march-2021-exchange-server-security-updates/ba-p/2175901).
 
+## Suspected Brute Force attack (SMB) (external ID 2033)
+
+*Previous name:* Unusual protocol implementation (potential use of malicious tools such as Hydra)
+
+**Description**
+
+Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of brute force techniques.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|MITRE attack technique  |  [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)       |
+|MITRE attack sub-technique |  [Password Guessing (T1110.001)](https://attack.mitre.org/techniques/T1110/001/), [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)       |
+
+**TP, B-TP, or FP**
+
+1. Check if the source computer is running an attack tool such as Hydra.
+    1. If the source computer is running an attack tool, this alert is a **TP**. Follow the instructions in **Understand the scope of the breach**.
+
+Occasionally, applications implement their own NTLM or SMB stack.
+
+1. Check if the source computer is running its own NTLM or SMB stack type of application.
+    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **B-TP** activity.
+    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [source user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)) (if there is a source user).
+
+**Suggested remediation and steps for prevention**
+
+1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Contain the source computer
+    1. Find the tool that performed the attack and remove it.
+    1. Search for users logged on around the time of the activity, as they may also be compromised.
+    1. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Enforce [Complex and long passwords](/windows/security/threat-protection/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against future brute-force attacks.
+1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+## Suspected WannaCry ransomware attack (external ID 2035)
+
+*Previous name:* Unusual protocol implementation (potential WannaCry ransomware attack)
+
+**Description**
+
+Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|MITRE attack technique  |   [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)      |
+|MITRE attack sub-technique |    N/A     |
+
+**TP, B-TP, or FP**
+
+1. Check if WannaCry is running on the source computer.
+
+    - If WannaCry is running, this alert is a **TP**. Follow the instructions in **understand the scope of the breach**, above.
+
+Occasionally, applications implement their own NTLM or SMB stack.
+
+1. Check if the source computer is running its own NTLM or SMB stack type of application.
+    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **B-TP** activity.
+    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+
+**Suggested remediation and steps for prevention**
+
+1. Contain the source computer.
+    - [Remove WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+    - WannaCry can decrypt the data in the hands of some ransom software, but only if the user has not restarted or turned off the computer. For more information, see [WannaCry Ransomware](https://www.microsoft.com/security/blog/2017/05/12/wannacrypt-ransomware-worm-targets-out-of-date-systems/)
+    - Look for users logged on around the time of the activity, as they might also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Patch all of your machines, making sure to apply security updates.
+    - [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+## Suspected use of Metasploit hacking framework (external ID 2034)
+
+*Previous name:* Unusual protocol implementation (potential use of Metasploit hacking tools)
+
+**Description**
+
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques such as use of the Metasploit hacking framework.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|MITRE attack technique  |   [Exploitation of Remote Services (T1210)](https://attack.mitre.org/techniques/T1210/)      |
+|MITRE attack sub-technique |    N/A     |
+
+**TP, B-TP, or FP**
+
+1. Check if the source computer is running an attack tool such as Metasploit or Medusa.
+
+1. If yes, it is a true positive. Follow the instructions in **understand the scope of the breach**, above.
+
+Occasionally, applications implement their own NTLM or SMB stack.
+
+ 1. Check if the source computer is running its own NTLM or SMB stack type of application.
+    1. If the source computer is found running that type of application, and it should not continue to run, fix the application configuration as needed. **Close** the security alert as a **B-TP** activity.
+    1. If the source computer is found running that type of application, and it should continue doing so, **Close** the security alert as a **B-TP** activity, and exclude that computer.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+
+**Suggested remediation and steps for prevention**
+
+1. Reset the passwords of the guessed users and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Contain the source computer.
+    1. Find the tool that performed the attack and remove it.
+    1. Search for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+## Suspicious VPN connection (external ID 2025)
+
+*Previous name:* Suspicious VPN connection
+
+**Description**
+
+[!INCLUDE [Product short](includes/product-short.md)] learns the entity behavior for users VPN connections over a sliding period of one month.
+
+The VPN-behavior model is based on the machines users log in to and the locations the users connect from.
+
+An alert is opened when there is a deviation from the user's behavior based on a machine learning algorithm.
+
+**MITRE**
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)        |
+|MITRE attack technique  | [External Remote Services (T1133)](https://attack.mitre.org/techniques/T1133/)        |
+|MITRE attack sub-technique |     N/A    |
+
+**Learning period**
+
+30 days from the first VPN connection, and at least 5 VPN connections in the last 30 days, per user.
+
+**TP, B-TP, or FP**
+
+1. Is the suspicious user supposed to be performing these operations?
+    1. Did the user recently change their location?
+    1. Is the user travelling and connecting from a new device?
+
+If the answer is yes to the questions above, **Close** the security alert as a **B-TP** activity.
+
+**Understand the scope of the breach**
+
+1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
+1. If there is a source user, [investigate the user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
+
+**Suggested remediation and steps for prevention**
+
+1. Reset the password of the user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
+1. Consider blocking this user from connecting using VPN.
+1. Consider blocking this computer from connecting using VPN.
+1. Check if there are other users connected through VPN from these locations, and check if they are compromised.
+
 ## See Also
 
 - [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
