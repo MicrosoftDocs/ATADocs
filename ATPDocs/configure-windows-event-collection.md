@@ -97,7 +97,7 @@ To audit Event ID 8004, additional configuration steps are required.
 > - Domain group policies to collect Windows Event 8004 should **only** be applied to domain controllers.
 > - When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed data.
 
-1. Following the steps above, open **Group Policy Management** and navigate to the **Default Domain Controllers Policy**.
+1. Following the initial steps mentioned [above](#configure-audit-policies), open **Group Policy Management** and navigate to the **Default Domain Controllers Policy**.
 1. Go to **Local Policies** > **Security Options**.
 1. Under **Security Options**, configure the specified security policies, as follows
 
