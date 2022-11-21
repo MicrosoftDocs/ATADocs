@@ -52,7 +52,9 @@ By default, the Microsoft Defender for Identity sensor installed on a domain con
     1. Select **OK**.
 
 > [!NOTE]
-> It's recommended to not use the same gMSA account you configured for Defender for Identity managed actions on servers other than domain controllers. If the server is compromised, an attacker could retrieve the password for the account and gain the ability to change passwords and disable accounts.
+> - It's not recommended to use the same gMSA account you configured for Defender for Identity managed actions on servers other than domain controllers. If the server is compromised, an attacker could retrieve the password for the account and gain the ability to change passwords and disable accounts.
+> 
+> - We don't recommend using the same account as the Directory Service account and the Manage Action account. This is because the Directory Service account requires only read-only permissions to Active Directory, and the Manage Action accounts needs write permissions on user accounts.
 
 ## Add the gMSA account in the Microsoft 365 Defender portal
 
