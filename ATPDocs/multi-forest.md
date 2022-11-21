@@ -63,7 +63,7 @@ When [!INCLUDE [Product short](includes/product-short.md)] maps your forests, it
 ## Known limitations
 
 - Interactive logons performed by users in one forest to access resources in another forest are not displayed in the [!INCLUDE [Product short](includes/product-short.md)] dashboard.
-- Each Defender for Identity sensor can only report to a single workspace. Each Azure tenant can have only a single workspace. Therefore, the sensor can only report to a single Azure tenant.
+- Each Defender for Identity sensor can only report to a single Defender for Identity workspace, and each Azure tenant can only host a single Defender for Identity workspace. Therefore, each sensor can only report to a single Azure tenant.
 
 ## See Also
 
