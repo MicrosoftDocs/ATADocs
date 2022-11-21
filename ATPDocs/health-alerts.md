@@ -137,7 +137,6 @@ This section describes all the health alerts for each component, listing the cau
 |----|----|----|----|----|
 |The [!INCLUDE [Product short](includes/product-short.md)] sensor is running on Windows 2008 R2, which is unsupported.|Starting June 15, 2022, Microsoft will no longer support the [!INCLUDE [Product short](includes/product-short.md)] sensor on devices running Windows Server 2008 R2. More details can be found at: <https://aka.ms/mdi/2008r2> |Upgrade the Operating System on this Domain Controller to at least Windows Server 2012.|High|Sensors settings page|
 
-
 ### Sensor has issues with packet capturing component
 
 |Alert|Description|Resolution|Severity|Displayed in|
@@ -151,6 +150,12 @@ This section describes all the health alerts for each component, listing the cau
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |NTLM Auditing is not enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server.|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#event-id-8004) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors settings page|
+
+### Directory Services Advanced Auditing is not enabled as required
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Directory Services Advanced Auditing is not enabled as required.|The Directory Services Advanced Auditing do not include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-audit-policies) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
 
 <!--
 ## Windows events missing from domain controller audit policy
