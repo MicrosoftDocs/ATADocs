@@ -86,7 +86,7 @@ Defender for Identity can notify you when it detects suspicious activities by se
 >
 > - When working with Syslog in TLS mode, make sure to install the required certificates on the designated sensor.
 > 
-> - The Defender for Identity events won’t be sent from Azure to your Syslog server directly. This is the purpose of the nominated sensor. The selected sensor will collect the data from the backend (in Azure) and send this to your Syslog server.
+> - The events won’t be sent from the Defender for Identity service to your Syslog server directly. This is the purpose of the nominated sensor. The selected sensor will collect the data from the Defender for Identity service and send it to your Syslog server.
 
 
 
