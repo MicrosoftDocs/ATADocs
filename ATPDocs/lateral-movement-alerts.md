@@ -17,24 +17,6 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Lateral Movement** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn how to understand, classify, remediate, and prevent the following types of attacks:
-
-> [!div class="checklist"]
->
-> - Suspected exploitation attempt on Windows Print Spooler service (external ID 2415)
-> - Remote code execution attempt over DNS (external ID 2036)
-> - Suspected identity theft (pass-the-hash) (external ID 2017)
-> - Suspected identity theft (pass-the-ticket) (external ID 2018)
-> - Suspected NTLM authentication tampering (external ID 2039)
-> - Suspected NTLM relay attack (Exchange account)  (external ID 2037)
-> - Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
-> - Suspected rogue Kerberos certificate usage (external ID 2047)
-> - Suspected SMB packet manipulation (CVE-2020-0796 exploitation) (external ID 2406)
-> - Suspicious network connection over Encrypting File System Remote Protocol (external ID 2416)
-> - Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)
-
-
-<!-- * Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)-->
 
 ## Suspected exploitation attempt on Windows Print Spooler service (external ID 2415)
 
@@ -298,59 +280,7 @@ None
     1. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
 
-<!--
-## Suspected overpass-the-hash attack (encryption downgrade) (external ID 2008)
 
-*Previous name:* Encryption downgrade activity
-
-**Description**
-
-Encryption downgrade is a method of weakening Kerberos using encryption downgrade of different fields of the protocol, normally encrypted using the highest levels of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, [!INCLUDE [Product short](includes/product-short.md)] learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
-
-In an over-pass-the-hash attack, an attacker can use a weak stolen hash to create a strong ticket, with a Kerberos AS request. In this detection,  instances are detected where the AS_REQ message encryption type from the source computer is downgraded, when compared to the previously learned behavior (the computer used AES).
-
-**Learning period**
-
-None
-
-**TP, B-TP, or FP?**
-
-1. Determine if the smartcard configuration recently changed.
-    - Did the accounts involved recently have smartcard configurations changes?
-
-      If the answer is yes, **Close** the security alert as a **B-TP** activity.
-
-Some legitimate resources don't support strong encryption ciphers and may trigger this alert.
-
-1. Do all source users share something?
-    1. For example, are all of your marketing personnel accessing a specific resource that could cause the alert to be triggered?
-    1. Check the resources accessed by those tickets.
-       - Check this in Active Directory by checking the attribute *msDS-SupportedEncryptionTypes*, of the resource service account.
-    1. If there is only one accessed resource, check if it is a valid resource for these users to access.
-
-      If the answer to one of the previous questions is **yes**, it is likely to be a **B-TP** activity. Check if the resource can support a strong encryption cipher, implement a stronger encryption cipher where possible, and **Close** the security alert.
-
-**Understand the scope of the breach**
-
-1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
-1. Investigate the [compromised user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users
-).
-
-**Suggested remediation and steps for prevention**
-
-**Remediation**
-
-1. Reset the password of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
-1. Contain the source computer.
-1. Find the tool that performed the attack and remove it.
-1. Look for users logged on around the time of the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
-
-**Prevention**
-
-1. Configure your domain to support strong encryption cyphers, and remove *Use Kerberos DES encryption types*. Learn more about [encryption types and Kerberos](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type).
-1. Make sure the domain functional level is set to support strong encryption cyphers.
-1. Give preference to using applications that support strong encryption cyphers.
--->
 
 ## Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 
