@@ -165,7 +165,7 @@ Build a *users.txt* list of names by merging some names from <https://github.com
 
 Then, run the following command from a PowerShell session on a workstation:  
 
-```PowerShell
+```powershell
 Import-Module .\adlogin.ps1
 adlogin users.txt msdemo.local P@ssw0rd!
 ```

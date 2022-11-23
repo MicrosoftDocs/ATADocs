@@ -37,7 +37,7 @@
       "breadcrumb_path": "/azure-advanced-threat-protection/bread/toc.json",
       "extendBreadcrumb": true,
       "searchScope": ["Defender for Identity"],
-
+      "titleSuffix": "Microsoft Defender for Identity",
       "author": "dcurwin",
       "manager": "dcurwin",
       "ms.author": "dacurwin",
