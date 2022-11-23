@@ -71,7 +71,7 @@ To simplify the lab, we automated the process to create fictitious users and gro
 
 As a Domain Admin, on ContosoDC, run the following to hydrate our Active Directory Users:
 
-```powerShell
+```powershell
 # Store the user passwords as variables
 $SamiraASecurePass = ConvertTo-SecureString -String 'NinjaCat123' -AsPlainText -Force
 $ronHdSecurePass = ConvertTo-SecureString -String 'FightingTiger$' -AsPlainText -Force
@@ -142,7 +142,7 @@ The next step for your lab is to complete the local policy setup. **VictimPC** h
 
 As the local administrator, set up local policies by running the automated PowerShell script:
 
-```powerShell
+```powershell
 # Add JeffL to local Administrators group on VictimPC
 Add-LocalGroupMember -Group "Administrators" -Member "Contoso\JeffL"
 # Add Helpdesk to local Administrators group on VictimPC
@@ -159,7 +159,7 @@ To simulate a working and managed network, create a Scheduled Task on the **Vict
 
 1. From an **elevated PowerShell console** on VictimPC run the following code:
 
-    ```powerShell
+    ```powershell
     $action = New-ScheduledTaskAction -Execute 'cmd.exe'
     $trigger = New-ScheduledTaskTrigger -AtLogOn
     $runAs = 'Contoso\RonHD'
@@ -197,7 +197,7 @@ We thank the authors of these research tools for enabling the community to bette
 
 1. Add **Helpdesk** to **AdminPC** and *remove* 'Domain Admins' from the Local Admin Group by running the following PowerShell script:
 
-    ```powerShell
+    ```powershell
     # Add Helpdesk to local Administrators group
     Add-LocalGroupMember -Group "Administrators" -Member "Contoso\Helpdesk"
     # Remove Domain Admins from local Administrators group
