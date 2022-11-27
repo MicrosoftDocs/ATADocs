@@ -9,16 +9,15 @@ ms.topic: conceptual
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-1. **Reconnaissance**
-1. [Compromised credentials](compromised-credentials-alerts.md)
-1. [Lateral Movements](lateral-movement-alerts.md)
-1. [Domain dominance](domain-dominance-alerts.md)
-1. [Exfiltration](exfiltration-alerts.md)
+1. [Persistence alerts](persistence-alerts.md)
+1. **Credential access**
+1. [Discovery alerts](discovery-alerts.md)
+1. [Lateral movement alerts](lateral-movement-alerts.md)
+1. [Other alerts](other-alerts.md)
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Reconnaissance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
-
+The following security alerts help you identify and remediate **Credential access** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
 ## Suspected Brute Force attack (LDAP) (external ID 2004)
 

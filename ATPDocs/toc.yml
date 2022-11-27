@@ -110,12 +110,12 @@ items:
       href: nnr-policy.md
     - name: Persistence alerts
       href: persistence-alerts.md
+    - name: Credential access alerts
+      href: credential-access-alerts.md
     - name: Discovery alerts
       href: discovery-alerts.md
     - name: Lateral movement alerts
       href: lateral-movement-alerts.md
-    - name: Credential access alerts
-      href: credential-access-alerts.md
     - name: Other alerts
       href: other-alerts.md
   - name: Security alert lab

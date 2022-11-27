@@ -9,14 +9,13 @@ ms.topic: conceptual
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-1. [Reconnaissance](reconnaissance-alerts.md)
-1. [Compromised credentials](compromised-credentials-alerts.md)
-1. **Lateral Movements**
-1. [Domain dominance](domain-dominance-alerts.md)
-1. [Exfiltration](exfiltration-alerts.md)
+1. [Persistence alerts](persistence-alerts.md)
+1. [Credential access alerts](credential-access-alerts.md)
+1. [Discovery alerts](discovery-alerts.md)
+1. **Lateral movement alerts**
+1. [Other alerts](other-alerts.md)
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
-
 
 ## Suspected exploitation attempt on Windows Print Spooler service (external ID 2415)
 
