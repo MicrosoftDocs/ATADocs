@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-1. [Persistence alerts](persistence-alerts.md)
+1. [Persistence alerts](persistence-privilege-escalation-alerts.md)
 1. **Credential access**
-1. [Discovery alerts](discovery-alerts.md)
+1. [Discovery alerts](reconnaissance-discovery-alerts.md)
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 

@@ -20,7 +20,7 @@ Then from a new machine (fresh install, managed, or unmanaged) try the following
 
 ## Network mapping reconnaissance (DNS)
 
-For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](discovery-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
+For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](reconnaissance-discovery-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
 
 > [!NOTE]
 > To generate the alert again, perform the action from a different user or with a different command.
@@ -47,7 +47,7 @@ Detail in the alert:
 
 ## User and IP address reconnaissance
 
-For details about this alert, see [User and IP address reconnaissance (SMB) (external ID 2012)](discovery-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012).
+For details about this alert, see [User and IP address reconnaissance (SMB) (external ID 2012)](reconnaissance-discovery-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012).
 
 In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller. Users and computers need at least to access the SYSVOL share in order to retrieve GPOs. Attackers can use this information to know where users recently signed in and move laterally in the network to get to a specific sensitive account.  
 
@@ -69,7 +69,7 @@ Detail in the alert:
 
 ## User and group membership reconnaissance (SAMR)
 
-For details about this alert, see [User and Group membership reconnaissance (SAMR) (external ID 2021)](discovery-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021).
+For details about this alert, see [User and Group membership reconnaissance (SAMR) (external ID 2021)](reconnaissance-discovery-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021).
 
 In this detection, user and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack using the SAMR protocol.
 
@@ -129,7 +129,7 @@ Detail in the alert (failed logon attempt):
 
 ## Active Directory attributes reconnaissance (LDAP)
 
-For details about this alert, see [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
+For details about this alert, see [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
 
 Active Directory LDAP attributes reconnaissance is used by attackers to gain critical information about the domain environment, such as accounts with DES or RC4 kerberos cipher, accounts with Kerberos Pre-Authentication disabled, and service accounts configured with Unconstrained Kerberos Delegation.
 
@@ -157,7 +157,7 @@ Detail in the alert:
 
 ## Account enumeration reconnaissance
 
-For details about this alert, see [Account enumeration reconnaissance (external ID 2003)](discovery-alerts.md#account-enumeration-reconnaissance-external-id-2003).
+For details about this alert, see [Account enumeration reconnaissance (external ID 2003)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-external-id-2003).
 
 In this alert, an attacker makes Kerberos (or NTLM) requests using a list of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the Preauthentication required instead of Security principal unknown Kerberos error or the WrongPassword (0xc000006a) instead of NoSuchUser (0xc0000064) NTLM error.
 
@@ -315,7 +315,7 @@ Detail in the alert:
 
 ## Suspected skeleton key attack (encryption downgrade)
 
-For details about this alert, see [Suspected skeleton key attack (encryption downgrade) (external ID 2010)](persistence-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010).
+For details about this alert, see [Suspected skeleton key attack (encryption downgrade) (external ID 2010)](persistence-privilege-escalation-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010).
 
 Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller.
   
@@ -343,7 +343,7 @@ Detail in the alert:
 
 ## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation)
 
-For details about this alert, see [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](other-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation-external-id-2411).
+For details about this alert, see [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](persistence-privilege-escalation-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation-external-id-2411).
   
 The alert is triggered if an attacker attempts to establish a vulnerable Netlogon secure channel connection to a DC, using the Netlogon Remote Protocol (MS-NRPC), also known as Netlogon Elevation of Privilege Vulnerability.
 
@@ -472,7 +472,7 @@ Keep in mind that Defender for Identity can also track files uploaded from works
 
 ## Suspected Golden Ticket usage (encryption downgrade) & (nonexistent account) & (Time anomaly)
 
-For details about this alert, see [Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)](persistence-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009), [Suspected Golden Ticket usage (nonexistent account) (external ID 2027)](persistence-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027), and [Suspected Golden Ticket usage (time anomaly) (external ID 2022)](persistence-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022).
+For details about this alert, see [Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009), [Suspected Golden Ticket usage (nonexistent account) (external ID 2027)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027), and [Suspected Golden Ticket usage (time anomaly) (external ID 2022)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022).
 
 Defender for Identity can detect six types of Golden Ticket attacks. Let's see two of them.
 
@@ -504,7 +504,7 @@ Detail in the alert:
 
 ## Suspicious additions to sensitive groups
 
-For details about this alert, see [Suspicious additions to sensitive groups (external ID 2024)](persistence-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).
+For details about this alert, see [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).
 
 Attackers could add users to highly privileged groups to gain access to more resources, and gain persistency. This alert needs a machine learning period (such as: this user usually doesn't perform this addition to sensitive groups).
 

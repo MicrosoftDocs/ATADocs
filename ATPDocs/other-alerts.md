@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-1. [Persistence alerts](persistence-alerts.md)
+1. [Persistence alerts](persistence-privilege-escalation-alerts.md)
 1. [Credential access alerts](credential-access-alerts.md)
-1. [Discovery alerts](discovery-alerts.md)
+1. [Discovery alerts](reconnaissance-discovery-alerts.md)
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. **Other**
 
@@ -384,45 +384,7 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 
     - Close all existing sessions tot the domain controllers.
 
-## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)
-
-Microsoft published [CVE-2020-1472](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1472) announcing that a new vulnerability exists that allows the elevation of privileges to the domain controller.
-
-An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol ([MS-NRPC](/openspecs/windows_protocols/ms-nrpc/ff8f970f-3e37-40f7-bd4b-af7336e4792f)), also known as *Netlogon Elevation of Privilege Vulnerability*.
-
-**MITRE**
-
-|Primary MITRE tactic  | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)  |
-
-**Learning period**
-
-None
-
-**TP, B-TP, or FP**
-
-If the source computer is a domain controller (DC), failed or low certainty resolution can prevent [!INCLUDE [Product short](includes/product-short.md)] from being able to confirm its identification.
-
-1. If the source computer is a domain controller, **Close** the alert as a **B-TP** activity.
-
-1. If this source computer is supposed to generate this type of activity and is expected to continue generating this type of activity in the future, **Close** the security alert as a **B-TP** activity and exclude the computer to avoid additional benign alerts.
-
-Otherwise, consider this alert a **TP** and follow the instructions in **Understand the scope of the breach**.
-
-**Understand the scope of the breach**
-
-1. Investigate [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices), check for malicious scripts or tools that made the connection to the DC.
-
-1. Investigate the destination DC for any suspicious activities that happened after the vulnerability was used.
-
-**Remediation:**
-
-1. Patch all of your machines making sure to apply security updates.
-1. Review [our guidance](https://support.microsoft.com/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc) on managing changes in Netlogon secure channel connection which relate to and can prevent this vulnerability.
-1. Contain the source computer.
-    - Find the tool that performed the attack and remove it.
-
-
-## See Also
+## See also
 
 - [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
 - [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
