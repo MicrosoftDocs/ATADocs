@@ -1,23 +1,23 @@
 ---
-title: Microsoft Defender for Identity discovery security alerts
-description: This article explains Microsoft Defender for Identity alerts issued when discovery attacks are detected against your organization.
-ms.date: 05/10/2022
+title: Microsoft Defender for Identity reconnaissance and discovery security alerts
+description: This article explains Microsoft Defender for Identity alerts issued when reconnaissance and discovery attacks are detected against your organization.
+ms.date: 11/29/2022
 ms.topic: conceptual
 ---
 
-# Discovery alerts
+# Reconnaissance and discovery alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
-1. [Persistence alerts](persistence-privilege-escalation-alerts.md)
+1. **Reconnaissance and discovery**
+1. [Persistence and privilege escalation alerts](persistence-privilege-escalation-alerts.md)
 1. [Credential access alerts](credential-access-alerts.md)
-1. **Discovery**
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Discovery** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
+The following security alerts help you identify and remediate **Reconnaissance and discovery** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
 ## Account enumeration reconnaissance (external ID 2003)
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity security alert guide
 description: This article provides a list of the security alerts issued by Microsoft Defender for Identity.
-ms.date: 03/22/2022
+ms.date: 11/29/2022
 ms.topic: conceptual
 ---
 
@@ -14,9 +14,9 @@ ms.topic: conceptual
 
 [!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
 
-1. [Persistence alerts](persistence-privilege-escalation-alerts.md)
+1. [Reconnaissance and discovery alerts](reconnaissance-discovery-alerts.md)
+1. [Persistence and privilege escalation alerts](persistence-privilege-escalation-alerts.md)
 1. [Credential access alerts](credential-access-alerts.md)
-1. [Discovery alerts](reconnaissance-discovery-alerts.md)
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
