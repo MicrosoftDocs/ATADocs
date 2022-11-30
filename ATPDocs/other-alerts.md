@@ -386,13 +386,9 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 
 ## See also
 
-- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
-- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
-- [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Investigate assets](investigate-assets.md)
+- [Understanding security alerts](understanding-security-alerts.md)
+- [Manage security alerts](/defender-for-identity/manage-security-alerts)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

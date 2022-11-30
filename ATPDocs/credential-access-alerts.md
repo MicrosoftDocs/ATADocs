@@ -19,6 +19,8 @@ To learn more about how to understand the structure, and common components of al
 
 The following security alerts help you identify and remediate **Credential access** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
+Credential Access consists of techniques for stealing credentials like account names and passwords. Techniques used to get credentials include keylogging or credential dumping. Using legitimate credentials can give adversaries access to systems, make them harder to detect, and provide the opportunity to create more accounts to help achieve their goals.
+
 ## Suspected Brute Force attack (LDAP) (external ID 2004)
 
 *Previous name:* Brute force attack using LDAP simple bind
@@ -481,17 +483,11 @@ Validate the following permissions:
 1. Replicate directory changes all.
 1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
+## See also
 
-
-## See Also
-
-- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
-- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
-- [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Investigate assets](investigate-assets.md)
+- [Understanding security alerts](understanding-security-alerts.md)
+- [Manage security alerts](/defender-for-identity/manage-security-alerts)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

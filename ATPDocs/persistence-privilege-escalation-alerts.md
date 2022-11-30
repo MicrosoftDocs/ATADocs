@@ -19,6 +19,8 @@ To learn more about how to understand the structure, and common components of al
 
 The following security alerts help you identify and remediate **Persistence and privilege escalation** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
+After the attacker uses techniques to keep access to different on-premise resources they start the Privilege Escalation phase, which consists of techniques that adversaries use to gain higher-level permissions on a system or network. Adversaries can often enter and explore a network with unprivileged access but require elevated permissions to follow through on their objectives. Common approaches are to take advantage of system weaknesses, misconfigurations, and vulnerabilities.
+
 ## Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)
 
 *Previous name:* Encryption downgrade activity
@@ -380,13 +382,9 @@ Otherwise, consider this alert a **TP** and follow the instructions in **Underst
 
 ## See also
 
-- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
-- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
-- [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Investigate assets](investigate-assets.md)
+- [Understanding security alerts](understanding-security-alerts.md)
+- [Manage security alerts](/defender-for-identity/manage-security-alerts)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

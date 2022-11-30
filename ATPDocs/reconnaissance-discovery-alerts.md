@@ -19,11 +19,15 @@ To learn more about how to understand the structure, and common components of al
 
 The following security alerts help you identify and remediate **Reconnaissance and discovery** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
 
+Reconnaissance and discovery consist of techniques an adversary may use to gain knowledge about the system and internal network. These techniques help adversaries observe the environment and orient themselves before deciding how to act. They also allow adversaries to explore what they can control and what’s around their entry point to discover how it could benefit their current objective. Native operating system tools are often used toward this post-compromise information-gathering objective. In Microsoft Defender for Identity, these alerts usually involve internal account enumeration with different techniques.
+
 ## Account enumeration reconnaissance (external ID 2003)
 
 *Previous name:* Reconnaissance using account enumeration
 
-**Description**
+**Severity**: Medium
+
+**Description**:
 
 In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as KrbGuess in an attempt to guess user names in the domain.
 
@@ -33,6 +37,8 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, [!INCLUDE [Product short](includes/product-short.md)] detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
+**Learning period**: None
+
 **MITRE**
 
 |Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
@@ -40,62 +46,7 @@ In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] d
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
-**Learning period**
-
-None
-
-**TP, B-TP, or FP**
-
-Some servers and applications query domain controllers to determine if accounts exist in legitimate usage scenarios.
-
-To determine if this query was a **TP**, **BTP**, or **FP**, select the alert to get to its detail page:
-
-1. Check if the source computer was supposed to perform this type of query. Examples of a **B-TP** in this case could be Microsoft Exchange servers or human resource systems.
-
-1. Check the account domains.
-    - Do you see additional users who belong to a different domain?  
-     A server misconfiguration such as Exchange/Skype or ADSF can cause additional users that belong to different domains.
-    - Look at the configuration of the problematic service to fix the misconfiguration.
-
-    If you answered **yes** to the questions above, it's a **B-TP** activity. *Close* the security alert.
-
-As the next step, look at the source computer:
-
-1. Is there a script or application running on the source computer that could generate this behavior?
-    - Is the script an old script running with old credentials?  
-    If yes, stop and edit or delete the script.
-    - Is the application an administrative or security script/application that is supposed to run in the environment?
-
-      If you answered **yes** to previous question, *Close* the security alert and exclude that computer. It's probably a **B-TP** activity.
-
-Now, look at the accounts:
-
-Attackers are known to use a dictionary of randomized account names to find existing account names in an organization.
-
-1. Do the non-existing accounts look familiar?
-    - If the non-existing accounts look familiar, they may be disabled accounts or belong to employees who left the company.
-    - Check for an application or script that checks to determine which accounts still exist in Active Directory.
-
-      If you answered **yes** to one of the previous questions, *Close* the security alert, it's probably a **B-TP** activity.
-
-1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment and can attempt to use brute force to access your domain using the discovered user names.
-    - Check the guessed account names for additional suspicious activities.
-    - Check to see if any of the matched accounts are sensitive accounts.
-
-**Understand the scope of the breach**
-
-1. Investigate the source computer
-1. If any of the guess attempts match existing account names, the attacker knows of the existence of accounts in your environment, and can use brute force to attempt to access your domain using the discovered user names. Investigate the existing accounts using the [user investigation guide](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
-    > [!NOTE]
-    > Examine the evidence to learn the authentication protocol used. If NTLM authentication was used, enable NTLM auditing of Windows Event 8004 on the domain controller to determine the resource server the users attempted to access.  
-    > Windows Event 8004 is the NTLM authentication event that includes information about the source computer, user account, and server that the source user account attempted to access.  
-    > [!INCLUDE [Product short](includes/product-short.md)] captures the source computer data based on Windows Event 4776, which contains the computer defined source computer name. Using Windows Event 4776 to capture this information, the information source field is occasionally overwritten by the device or software and only displays Workstation or MSTSC as the information source. In addition, the source computer might not actually exist on your network. This is possible because adversaries commonly target open, internet-accessible servers from outside the network and then use it to enumerate your users. If you frequently have devices that display as Workstation or MSTSC, make sure to enable NTLM auditing on the domain controllers to get the accessed resource server name. You should also investigate this server, check if it is opened to the internet, and if you can, close it.
-
-1. When you learn which server sent the authentication validation, investigate the server by checking events, such as Windows Event 4624, to better understand the authentication process.
-
-1. Check if this server is exposed to the internet using any open ports. For example, is the server open using RDP to the internet?
-
-**Suggested remediation and steps for prevention**
+**Suggested remediation and steps for prevention**:
 
 1. Contain the source [computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
     1. Find the tool that performed the attack and remove it.
@@ -241,7 +192,6 @@ Four weeks per domain controller starting from the first network activity of SAM
 1. Reset the source user password and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
 
-
 ## Active Directory attributes reconnaissance (LDAP) (external ID 2210)
 
 **Description**
@@ -288,16 +238,11 @@ If you answered yes to questions 2 or 3, consider this alert a **TP** and follow
     1. If the computer is running a scanning tool that performs a variety of LDAP queries, look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
+## See also
 
-## See Also
-
-- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
-- [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
-- [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Lateral movement alerts](lateral-movement-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
+- [Investigate assets](investigate-assets.md)
+- [Understanding security alerts](understanding-security-alerts.md)
+- [Manage security alerts](/defender-for-identity/manage-security-alerts)
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)

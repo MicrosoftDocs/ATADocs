@@ -17,6 +17,8 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 
 To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
+Lateral Movement consists of techniques that adversaries use to enter and control remote systems on a network. Following through on their primary objective often requires exploring the network to find their target and subsequently gaining access to it. Reaching their objective often involves pivoting through multiple systems and accounts to gain. Adversaries might install their own remote access tools to accomplish Lateral Movement or use legitimate credentials with native network and operating system tools, which may be stealthier. Microsoft Defender for Identity can cover different passing attacks (pass the ticket, pass the hash, etc.) or other exploitations against the domain controller, like PrintNightmare or remote code execution.
+
 ## Suspected exploitation attempt on Windows Print Spooler service (external ID 2415)
 
 **Description**
@@ -604,14 +606,11 @@ Occasionally, applications implement their own NTLM or SMB stack.
 1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+## See also
 
-## See Also
-
-- [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
-- [Working with security alerts](/defender-for-identity/manage-security-alerts)
+- [Investigate assets](investigate-assets.md)
+- [Understanding security alerts](understanding-security-alerts.md)
+- [Manage security alerts](/defender-for-identity/manage-security-alerts)
+- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
-- [Reconnaissance alerts](reconnaissance-alerts.md)
-- [Compromised credential alerts](compromised-credentials-alerts.md)
-- [Domain dominance alerts](domain-dominance-alerts.md)
-- [Exfiltration alerts](exfiltration-alerts.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
