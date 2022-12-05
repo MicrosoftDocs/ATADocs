@@ -85,6 +85,10 @@ Defender for Identity can notify you when it detects suspicious activities by se
 > - If you plan to create automation or scripts for [!INCLUDE [Product short](includes/product-short.md)] SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md).
 >
 > - When working with Syslog in TLS mode, make sure to install the required certificates on the designated sensor.
+> 
+> - The events won’t be sent from the Defender for Identity service to your Syslog server directly. This is the purpose of the nominated sensor. The selected sensor will collect the data from the Defender for Identity service and send it to your Syslog server.
+
+
 
 ## See Also
 
