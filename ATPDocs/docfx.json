@@ -42,7 +42,7 @@
       "ms.author": "dacurwin",
       "ms.collection": "M365-security-compliance",
       "ms.service": "microsoft-defender-for-identity",
-      "uhfHeaderID": "MSDocsHeader-MicrosoftDefender",
+      "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
       "ms.suite": "ems"
     },
     "fileMetadata": {},
