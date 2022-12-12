@@ -15,8 +15,12 @@ The Defender for Identity sensor supports installation on Active Directory Feder
 
 | Operating System Version | Server  with Desktop Experience | Server  Core | Nano  Server |
 | ------------------------ | ------------------------------- | ------------ | ------------ |
-| Windows  Server 2016     | ✔                               | ✔            | ❌            |
-| Windows  Server 2019*    | ✔                               | ✔            | ❌            |
+| Windows Server 2016      | ✔                               | ✔           | ❌           |
+| Windows Server 2019      | ✔                               | ✔           | ❌           |
+| Windows Server 2022      | ✔                               | ✔           | ❌           |
+
+>[!NOTE]
+> The Defender for Identity sensor is supported only on the Federation servers. It is not required on the Web Application Proxy (WAP) servers.
 
 For hardware requirements, see [Defender for Identity server specifications](prerequisites.md#server-specifications).
 
