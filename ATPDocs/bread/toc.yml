@@ -1,11 +1,3 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
-  items:
-  - name: Enterprise Mobility + Security
-    tocHref: /enterprise-mobility-security/
-    topicHref: /enterprise-mobility-security
-    items:
-    - name: Azure Threat Protection
-      tocHref: /azure-threat-protection/
-      topicHref: /azure-advanced-threat-protection
+- name: Microsoft Defender for Identity
+  tocHref: /defender-for-identity/
+  topicHref: /defender-for-identity/index
