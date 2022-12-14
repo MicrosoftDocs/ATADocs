@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Domain Dominance Playbook
 description: The Microsoft Defender for Identity domain dominance playbook describes how to simulate domain dominance attacks for detection by Defender for Identity
-ms.date: 10/26/2020
+ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
@@ -188,9 +188,9 @@ What did [!INCLUDE [Product short](includes/product-short.md)] detect and report
 
 ### Golden Ticket - Existing User
 
-After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malicious Replication](#malicious-replication), an attacker is able to sign tickets *as if they're the domain controller*. **Mimikatz**, the Domain SID, and the stolen "krbtgt" account are all required to accomplish this attack. Not only can we generate tickets for a user, we can generate tickets for users who don't even exist.
+After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malicious Replication](#malicious-replication), an attacker can sign tickets *as if they're the domain controller*. **Mimikatz**, the Domain SID, and the stolen "krbtgt" account are all required to accomplish this attack. Not only can we generate tickets for a user, we can generate tickets for users who don't even exist.
 
-1. As JeffL, run the below command on **VictimPC** to acquire the domain SID:
+1. As JeffL, run the following command on **VictimPC** to acquire the domain SID:
 
    ```cmd
    whoami /user
@@ -198,7 +198,7 @@ After stealing the "Golden Ticket", ("krbtgt" account explained [here via Malici
 
     ![SID for golden ticket user.](media/playbook-dominance-golden_whoamisid.png)
 
-1. Identify and copy the Domain SID highlighted in the above screenshot.
+1. Identify and copy the Domain SID highlighted in the previous screenshot.
 
 1. Using **mimikatz**, take the copied Domain SID, along with the stolen "krbtgt" user's NTLM hash to generate the TGT. Insert the following text into a cmd.exe as JeffL:
 
@@ -237,6 +237,6 @@ Why did it work? The Golden Ticket Attack works because the ticket generated was
 
 ## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Security Alert Guide](suspicious-activity-guide.md)
-- [Investigate lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
+- [Microsoft Defender for Identity Security Alerts](alerts-overview.md)
+- [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](understand-lateral-movement-paths.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
