@@ -1,13 +1,13 @@
 ---
 title: Microsoft Defender for Identity Security Alert lab  overview
 description: This overview describes the four parts of the Microsoft Defender for Identity Security Alert lab for simulating threats for detection by Defender for Identity.
-ms.date: 10/26/2020
+ms.date: 12/14/2022
 ms.topic: overview
 ---
 
 # Microsoft Defender for Identity security alert lab overview
 
-Want to test specific Defender for Identity alerts? Find a some examples of Defender for Identity alerts and how to trigger them in [Playbook samples for Microsoft Defender for Identity](playbooks.md).
+Want to test specific Defender for Identity alerts? Find examples of Defender for Identity alerts and how to trigger them in [Attack simulations for Microsoft Defender for Identity](playbooks.md).
 
 If you want to learn how to set up your Defender for Identity environment, and test it with a few alerts? Then continue reading this overview.
 
@@ -45,6 +45,6 @@ The last lab in the four part series is the domain dominance playbook. During th
 
 ## Next steps
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Security Alert Guide](suspicious-activity-guide.md)
-- [Investigate lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
+- [Microsoft Defender for Identity Security Alerts](alerts-overview.md)
+- [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](understand-lateral-movement-paths.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
