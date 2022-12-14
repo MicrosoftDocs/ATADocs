@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Reconnaissance playbook 
 description: The Microsoft Defender for Identity Reconnaissance playbook  describes how to simulate Reconnaissance threats for detection by Defender for Identity.
-ms.date: 10/26/2020
+ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
@@ -67,7 +67,7 @@ Let's try to transfer the domain.
 ls -d contoso.azure
 ```
 
-- Replace contosodc.contoso.azure and contoso.azure with the FQDN of your [!INCLUDE [Product short](includes/product-short.md)] sensor and domain name respectively.
+Replace contosodc.contoso.azure and contoso.azure with the FQDN of your [!INCLUDE [Product short](includes/product-short.md)] sensor and domain name respectively.
 
  ![nslookup command attempt to copy the DNS server -failure.](media/playbook-recon-nslookup.png)
 
@@ -83,7 +83,7 @@ In the [!INCLUDE [Product short](includes/product-short.md)] Search, type **Vict
 
 Look for the "AXFR query" activity. [!INCLUDE [Product short](includes/product-short.md)] detects this type of reconnaissance against your DNS.
 
-- If you have a large number of activities, select **Filter by** and deselect all types except **DNS query**.
+If you have a large number of activities, select **Filter by** and deselect all types except **DNS query**.
 
 ![Detailed view of the DNS reconnaissance detection in [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-recon-nslookupdetection2.png)
 
@@ -95,11 +95,11 @@ Detecting failures can be as insightful as detecting successful attacks against 
 
 Acting as an attacker, the next reconnaissance goal is an attempt to enumerate all users and groups in the Forest. [!INCLUDE [Product short](includes/product-short.md)] suppresses Directory Service enumeration activity from your Suspicious Activity timeline until a 30 day learning period is completed. In the learning period, [!INCLUDE [Product short](includes/product-short.md)] learns what is normal and abnormal for your network. After the 30 day learning period, abnormal Directory Service enumeration events invoke a security alert. During the 30 day learning period, you can see [!INCLUDE [Product short](includes/product-short.md)] detections of these activities using the activity timeline of an entity in your network. The [!INCLUDE [Product short](includes/product-short.md)] detections of these activities are shown in this lab.
 
-To demonstrate a common Directory Service reconnaissance method, we'll use the native Microsoft binary, *net*. After our attempt, examining the Activity timeline of JeffL, our compromised user, will show [!INCLUDE [Product short](includes/product-short.md)] detecting this activity.
+To demonstrate a common Directory Service reconnaissance method, we'll use the native Microsoft binary, *net*. After our attempt, examining the Activity timeline of **JeffL**, our compromised user, will show [!INCLUDE [Product short](includes/product-short.md)] detecting this activity.
 
 ### Directory Service Enumeration via *net* from VictimPC
 
-Any authenticated user or computer can potentially enumerate other users and groups in a domain. This enumeration ability is required for most applications to function properly. Our compromised user, JeffL, is an unprivileged domain account. In this simulated attack, we'll see exactly how even an unprivileged domain account can still provide valuable data points to an attacker.
+Any authenticated user or computer can potentially enumerate other users and groups in a domain. This enumeration ability is required for most applications to function properly. Our compromised user, **JeffL**, is an unprivileged domain account. In this simulated attack, we'll see exactly how even an unprivileged domain account can still provide valuable data points to an attacker.
 
 1. From **VictimPC**, execute the following command:
 
@@ -145,23 +145,23 @@ With the information gathered in our reconnaissance, we now know about the Helpd
 
 ### Directory Service Enumeration Detected in Defender for Identity
 
-If our lab had *real live activity for 30 days with [!INCLUDE [Product short](includes/product-short.md)] installed*, the activity we just did as JeffL would potentially be classified as abnormal. Abnormal activity would show up in the Suspicious Activity timeline. However, since we just installed the environment, we'll need to go to the Logical Activities timeline.
+If our lab had *real live activity for 30 days with [!INCLUDE [Product short](includes/product-short.md)] installed*, the activity we just did as **JeffL** would potentially be classified as abnormal. Abnormal activity would show up in the Suspicious Activity timeline. However, since we just installed the environment, we'll need to go to the Logical Activities timeline.
 
-In the [!INCLUDE [Product short](includes/product-short.md)] Search, let's see what JeffL's Logical Activity timeline looks like:
+In the [!INCLUDE [Product short](includes/product-short.md)] Search, let's see what **JeffL**'s Logical Activity timeline looks like:
 
 ![Search the logical activity timeline for a specific entity.](media/playbook-recon-dsenumeration-searchlogicalactivity.png)
 
-We can see when JeffL signed onto the VictimPC, using the Kerberos protocol. Additionally, we see that JeffL, from VictimPC, enumerated all the users in the domain.
+We can see when JeffL signed onto the VictimPC, using the Kerberos protocol. Additionally, we see that **JeffL**, from VictimPC, enumerated all the users in the domain.
 
 ![JeffL's logical activity timeline.](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
 Many activities are logged in the Logical Activity timeline making it a major capability to performing Digital Forensics and Incident Response (DFIR). You can even see activities when the initial detection wasn't from [!INCLUDE [Product short](includes/product-short.md)] but from Microsoft Defender for Endpoint, Microsoft 365, and others.
 
-Taking a look at **ContosoDC's page**, we can also see the computers JeffL logged into.
+Taking a look at **ContosoDC's page**, we can also see the computers **JeffL** logged into.
 
 ![JeffL logged on computers.](media/playbook-recon-dsenumeration-jeffvloggedin.png)
 
-We can also get Directory Data, including JeffL's Memberships and Access Controls, all from within [!INCLUDE [Product short](includes/product-short.md)].
+We can also get Directory Data, including **JeffL**'s Memberships and Access Controls, all from within [!INCLUDE [Product short](includes/product-short.md)].
 
 ![JeffL's directory data in [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-recon-dsenumeration-jeffvdirectorydata.png)
 

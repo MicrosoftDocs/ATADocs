@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity security alert lab setup 
 description: In this lab, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
-ms.date: 10/26/2020
+ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
@@ -26,7 +26,7 @@ In this lab you will:
 
 1. An [[!INCLUDE [Product short](includes/product-short.md)] instance](/defender-for-identity/deploy-defender-identity) that is [connected to AD](/defender-for-identity/directory-service-accounts).
 1. [Download](/defender-for-identity/download-sensor) and [install the latest version of the [!INCLUDE [Product short](includes/product-short.md)] sensor](/defender-for-identity/install-sensor) on your lab's domain controller.
-1. Familiarity with [Privileged Access Workstations](/windows-server/identity/securing-privileged-access/privileged-access-workstations) and [SAMR policy](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+1. Familiarity with [Privileged Access Workstations](/security/compass/privileged-access-devices) and [SAMR policy](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## Recommendations
 
@@ -110,16 +110,21 @@ To allow the [!INCLUDE [Product short](includes/product-short.md)] Service to pe
 
 ### Add sensitive group to Defender for Identity
 
-Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to use the Lateral Movement Graph feature of [!INCLUDE [Product short](includes/product-short.md)]. Tagging highly sensitive users and groups who aren't necessarily Domain Admins but do have privileges across numerous resources is a best practice.
+Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to use the Lateral Movement Graph feature of [!INCLUDE [Product short](includes/product-short.md)]. Tagging highly sensitive users and groups who aren't necessarily Domain Admins but do have privileges across many resources is a best practice.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
+1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
-1. Under **Detection** select **Entity tags**.
+    ![Go to Settings, then Identities.](media/settings-identities.png)
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] entity tags](media/entity-tags.png)
-1. In the **Sensitive** section, type the name "Helpdesk" for **Sensitive groups** and then select the **+** sign to add them.
-    ![Tag the "Helpdesk" as a [!INCLUDE [Product short](includes/product-short.md)] sensitive group to enable  Lateral Movement Graphs and reports for this privileged group](media/playbook-labsetup-helpdesksensitivegroup.png)
-1. Select **Save**.
+1. Under **Entity tags**, select **Sensitive**.
+
+    ![Tag setting types.](media/tag-settings.png)
+
+1. Under **Groups**, select **Tag groups**. A pane will open with the groups you can select to tag. In this example, select the **Helpdesk** group.
+
+    ![Tag the "Helpdesk" as a [!INCLUDE [Product short](includes/product-short.md)] sensitive group to enable  Lateral Movement Graphs and reports for this privileged group](media/playbook-lab-setup-helpdesk-sensitive-group.png)
+
+1. After choosing your group, select **Add selection**.
 
 ### Defender for Identity Lab base setup checklist
 
@@ -193,7 +198,7 @@ We thank the authors of these research tools for enabling the community to bette
 
 ### AdminPC local policies
 
-**AdminPC** needs **Helpdesk** added to the local Administrators group. Then, remove 'Domain Admins' from the local Administrators group. This step makes sure that Samira, a Domain Admin, isn't an Administrator of AdminPC. This is a best practice in credential hygiene. Do this step manually or use the PowerShell script provided.
+**AdminPC** needs **Helpdesk** added to the local Administrators group. Then, remove **Domain Admins** from the local Administrators group. This step makes sure that Samira, a Domain Admin, isn't an Administrator of AdminPC. This is a best practice in credential hygiene. Do this step manually or use the PowerShell script provided.
 
 1. Add **Helpdesk** to **AdminPC** and *remove* 'Domain Admins' from the Local Admin Group by running the following PowerShell script:
 
