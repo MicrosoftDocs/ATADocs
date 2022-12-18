@@ -33,7 +33,7 @@ You can configure your proxy server during sensor installation using the followi
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
 
 > [!NOTE]
-> As changing the sensor's proxy configuration (if installed via the command line as described above) requires removing and reinstalling the sensor, we recommend to create and use a custom DNS A record for the proxy server, that way you could change the proxy server's address when needed, and also use the hosts file for testing.
+> Since changing the sensor's proxy configuration (if installed via the command line as described above) requires removing and reinstalling the sensor, we recommend creating and using a custom DNS A record for the proxy server. With a custom DNS A record, you can change the proxy server's address when needed, and also use the hosts file for testing.
 
 ## Alternative methods to configure your proxy server
 
