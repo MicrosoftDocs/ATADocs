@@ -151,6 +151,12 @@ This section describes all the health alerts for each component, listing the cau
 |----|----|----|----|----|
 |Directory Services Advanced Auditing is not enabled as required.|The Directory Services Advanced Auditing configuration does not include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-audit-policies) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
 
+### Directory Services Object Auditing is not enabled as required
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Directory Services Object Auditing is not enabled as required.|The Directory Services Object Auditing configuration does not include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-object-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
+
 <!--
 ## Windows events missing from domain controller audit policy
 
