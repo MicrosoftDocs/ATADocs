@@ -35,7 +35,7 @@ The [!INCLUDE [Product long](includes/product-long.md)] **Health issues** page l
 
 This section describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
-Sensor specific health alerts are displayed in the Sensors settings page and domain related or aggregated health alerts are displayed in the Health issues page as detailed in the tables below. 
+Sensor specific health alerts are displayed in the **Sensors settings** page and domain related or aggregated health alerts are displayed in the **Health issues** page as detailed in the tables below. 
 
 ### A domain controller is unreachable by a sensor
 
