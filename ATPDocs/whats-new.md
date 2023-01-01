@@ -24,7 +24,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## Defender for Identity release 2.196
 
-Released January 2, 2022
+Released January 2, 2023
 
 - New health alert for verifying that Directory Services Object Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required).
 
