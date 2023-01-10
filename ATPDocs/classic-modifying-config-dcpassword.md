@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Change Microsoft Defender for Identity config - domain connectivity password
 description: Classic portal - Describes how to change the Domain Connectivity Password on the Microsoft Defender for Identity standalone sensor.
-ms.date: 10/26/2020
+ms.date: 11/23/2022
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---

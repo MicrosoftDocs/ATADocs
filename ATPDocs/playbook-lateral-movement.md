@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity security alert lateral movement playbook
 description: The Microsoft Defender for Identity playbook describes how to simulate lateral movement threats for detection by Defender for Identity.
-ms.date: 12/14/2022
+ms.date: 01/01/2023
 ms.topic: how-to
 ---
 

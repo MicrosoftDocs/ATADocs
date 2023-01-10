@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity lateral movement security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
-ms.date: 05/10/2022
+ms.date: 01/01/2023
 ms.topic: conceptual
 ---
 

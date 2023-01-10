@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Working with Microsoft Defender for Identity Reports
 description: Classic portal - Describes how you can generate reports in Microsoft Defender for Identity to monitor your network.
-ms.date: 10/27/2020
+ms.date: 10/24/2022
 ms.topic: conceptual
 ROBOTS: NOINDEX
 ---

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity activity filtering and policies in Microsoft Defender for Cloud Apps
 description: Overview of Microsoft Defender for Identity activity filtering and policies with Microsoft Defender for Cloud Apps.
-ms.date: 10/26/2020
+ms.date: 10/24/2022
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---

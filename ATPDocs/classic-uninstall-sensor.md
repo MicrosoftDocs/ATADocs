@@ -1,7 +1,7 @@
 ---
 title: Classic portal -Uninstall Microsoft Defender for Identity sensor
 description: Classic portal - This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
-ms.date: 12/22/2020
+ms.date: 10/24/2022
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---

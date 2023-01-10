@@ -1,7 +1,7 @@
 ---
 title: Configure your proxy or firewall to enable Microsoft Defender for Identity communication with the sensor
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 08/03/2022
+ms.date: 01/01/2023
 ms.topic: how-to
 ---
 
