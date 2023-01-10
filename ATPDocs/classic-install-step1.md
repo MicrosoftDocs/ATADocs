@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Create your Microsoft Defender for Identity instance quickstart
 description: Classic portal -Quickstart for creating the instance for your Microsoft Defender for Identity deployment, which is the first step to install Defender for Identity.
-ms.date: 10/26/2020
+ms.date: 10/24/2022
 ms.topic: quickstart
 ROBOTS: NOINDEX
 ---

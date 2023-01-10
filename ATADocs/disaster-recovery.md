@@ -7,7 +7,7 @@ keywords:
 author: dcurwin
 ms.author: dacurwin
 manager: dcurwin
-ms.date: 05/02/2019
+ms.date: 01/10/2023
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology:

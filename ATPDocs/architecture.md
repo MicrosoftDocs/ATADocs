@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity architecture
 description: Describes the architecture of Microsoft Defender for Identity
-ms.date: 06/23/2022
+ms.date: 12/14/2022
 ms.topic: overview
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Attack simulations for Microsoft Defender for Identity 
 description: Learn how to simulate threats in your environment using the Microsoft Defender for Identity security lab attack simulations.
-ms.date: 07/17/2022
+ms.date: 12/06/2022
 ms.topic: how-to
 ---
 

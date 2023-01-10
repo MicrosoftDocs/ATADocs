@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity entity tags in Microsoft 365 Defender 
 description: Learn how to apply Microsoft Defender for Identity entity tags in Microsoft 365 Defender 
-ms.date: 04/07/2022
+ms.date: 10/24/2022
 ms.topic: how-to
 ---
 

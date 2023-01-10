@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Understanding the Microsoft Defender for Identity portal
 description: Classic portal - Describes how to log into the Microsoft Defender for Identity portal and the components of the portal
-ms.date: 10/27/2020
+ms.date: 10/24/2022
 ms.topic: conceptual
 ROBOTS: NOINDEX
 ---
