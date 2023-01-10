@@ -182,9 +182,9 @@ Detail in the alert:
 
 ## Suspected Kerberos SPN exposure  
 
-For details about this alert, see [Suspected Kerberos SPN exposure (external ID 2410)](https://learn.microsoft.com/en-us/defender-for-identity/compromised-credentials-alerts#suspected-kerberos-spn-exposure-external-id-2410).
+For details about this alert, see [Suspected Kerberos SPN exposure (external ID 2410)](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 
-In this detection, Defender for Identity looks if an attacker uses tools to enumerate service accounts and their respective SPNs (Service principal names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.  
+In this detection, Defender for Identity looks if an attacker uses tools to enumerate service accounts and their respective SPNs (Service Principal Names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.  
 
 From a command line on a workstation run:  
 
