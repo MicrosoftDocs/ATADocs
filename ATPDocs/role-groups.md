@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity role groups for access management
 description: Walks you through working with Microsoft Defender for Identity role groups.
-ms.date: 10/24/2022
+ms.date: 12/14/2022
 ms.topic: conceptual
 ---
 

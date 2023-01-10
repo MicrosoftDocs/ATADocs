@@ -1,7 +1,7 @@
 ---
 title: Remediation actions in Microsoft Defender for Identity
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
-ms.date: 04/14/2022
+ms.date: 11/09/2022
 ms.topic: conceptual
 ---
 
