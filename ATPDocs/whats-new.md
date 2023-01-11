@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 01/02/2023
+ms.date: 01/11/2023
 ms.topic: overview
 ---
 
@@ -24,7 +24,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## Defender for Identity release 2.196
 
-Released January 2, 2023
+Released January 10, 2023
 
 - New health alert for verifying that Directory Services Object Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required).
 

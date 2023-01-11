@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Connect Microsoft Defender for Identity to Active Directory quickstart
 description: Classic portal - Step two of installing Microsoft Defender for Identity helps you configure the domain connectivity settings on your Defender for Identity cloud service
-ms.date: 10/26/2020
+ms.date: 10/24/2022
 ms.topic: quickstart
 ROBOTS: NOINDEX
 ---

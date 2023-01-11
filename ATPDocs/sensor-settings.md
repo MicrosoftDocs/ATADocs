@@ -1,7 +1,7 @@
 ---
 title: Manage and update Microsoft Defender for Identity sensors
 description: Learn how to manage and update your Microsoft Defender for Identity sensors.
-ms.date: 05/22/2022
+ms.date: 10/24/2022
 ms.topic: how-to
 ---
 

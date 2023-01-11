@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Monitoring domain controllers and installed sensors installed on your domain controllers using Microsoft Defender for Identity
 description: Classic portal - Describes how to monitor Microsoft Defender for Identity sensors and sensor coverage using Defender for Identity
-ms.date: 10/27/2020
+ms.date: 10/24/2022
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
