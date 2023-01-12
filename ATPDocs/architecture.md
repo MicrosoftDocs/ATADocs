@@ -33,6 +33,9 @@ The Microsoft 365 Defender portal creates your [!INCLUDE [Product short](include
 
 ## Microsoft 365 Defender portal
 
+> [!NOTE]
+> Since all major Microsoft Defender for Identity features are available in the Microsoft 365 Defender portal, the portal redirection setting will be automatically enabled for each tenant starting January 31, 2023. For more information, see [Redirecting accounts from Microsoft Defender for Identity to Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-mdi-redirection#what-to-expect).
+
 Use the Microsoft 365 Defender portal to:
 
 - Create your [!INCLUDE [Product short](includes/product-short.md)] instance
