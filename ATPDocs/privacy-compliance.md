@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity personal data policy
+title: Data security and privacy policy
 description: Provides links to information about how to delete private information and personal data from Microsoft Defender for Identity.
 ms.date: 12/14/2022
 ms.topic: conceptual

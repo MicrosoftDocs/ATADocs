@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity riskiest lateral movement paths assessments
+title: Lateral movement paths assessments
 description: This article provides an overview of Microsoft Defender for Identity's sensitive entities with the riskiest lateral movement paths identity security posture assessment report.
 ms.date: 11/13/2022
 ms.topic: how-to

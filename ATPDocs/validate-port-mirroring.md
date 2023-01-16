@@ -1,11 +1,11 @@
 ---
-title: Validate port mirroring in Microsoft Defender for Identity
+title: Validate port mirroring 
 description: Describes how to validate that port mirroring is configured correctly in Microsoft Defender for Identity
 ms.date: 10/24/2022
 ms.topic: how-to
 ---
 
-# Validate Port Mirroring
+# Validate port mirroring
 
 This article is relevant only if you deploy deploy [!INCLUDE [Product long](includes/product-long.md)] Standalone Sensor instead of [!INCLUDE [Product short](includes/product-short.md)] Sensor.
 

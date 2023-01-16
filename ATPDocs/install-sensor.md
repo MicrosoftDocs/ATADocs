@@ -1,5 +1,5 @@
 ---
-title: Install the Microsoft Defender for Identity sensor
+title: Install the sensor
 description: Learn how to install the Microsoft Defender for Identity sensors on your domain controllers.
 ms.date: 12/06/2022
 ms.topic: how-to
@@ -65,7 +65,7 @@ Perform the following steps on the domain controller or AD FS server.
 > Beginning with version 2.176, when installing the sensor from a new package, the sensor's version under **Add/Remove Programs** will appear with the full version number (for example, 2.176.x.y), as opposed to the static 2.0.0.0 that was previously shown. It will continue to show that version (the one installed through the package) even though the version will be updated through the automatic updates from the Defender for Identity cloud services. The real version can be seen in the [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor) in the portal, in the executable path or in the file version.
 
 > [!NOTE]
-> If you installed the sensor on AD FS servers, follow the steps in [Post-installation steps for AD FS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-servers) to complete the setup. These steps are required, or the sensor services will not start. 
+> If you installed the sensor on AD FS servers, follow the steps in [Post-installation steps for AD FS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-servers) to complete the setup. These steps are required, or the sensor services will not start.
 
 ## Defender for Identity sensor silent installation
 
@@ -115,7 +115,6 @@ Use the following command to perform a fully silent install of the [!INCLUDE [Pr
 > |InstallationPath|InstallationPath=""|No|Sets the path for the installation of [!INCLUDE [Product short](includes/product-short.md)] Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
 > |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the [!INCLUDE [Product short](includes/product-short.md)] sensor with the [!INCLUDE [Product short](includes/product-short.md)] instance.|
 > |DelayedUpdate|DelayedUpdate=true|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. See [Delayed sensor update](sensor-settings.md#delayed-sensor-update) for more details.|
-
 
 **Examples**:
 

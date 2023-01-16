@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity legacy protocols identity security posture assessment
+title: Legacy protocols assessment
 description: This article provides an overview of Microsoft Defender for Identity's legacy protocol identification security posture assessment report.
 ms.date: 10/24/2022
 ms.topic: how-to

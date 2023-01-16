@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity VPN integration in Microsoft 365 Defender 
+title: VPN integration in Microsoft 365 Defender 
 description: Learn how to collect accounting information by integrating a VPN for Microsoft Defender for Identity in Microsoft 365 Defender 
 ms.date: 10/24/2022
 ms.topic: how-to

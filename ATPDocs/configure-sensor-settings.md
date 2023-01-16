@@ -1,5 +1,5 @@
 ---
-title: Configure Microsoft Defender for Identity sensor settings 
+title: Configure sensor settings 
 description: Learn how to configure Microsoft Defender for Identity sensor settings 
 ms.date: 12/07/2022
 ms.topic: how-to
