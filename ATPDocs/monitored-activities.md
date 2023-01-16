@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity monitored domain activities
+title: Monitored activities
 description: Describes each activity type monitored by Microsoft Defender for Identity
 ms.date: 10/24/2022
 ms.topic: conceptual

@@ -106,11 +106,11 @@ Each [!INCLUDE [Product short](includes/product-short.md)] alert Excel download 
 
 In each alert, the last tab provides the **Related Entities**. Related entities are all entities involved in a suspicious activity, without the separation of the "role" they played in the alert. Each entity has two Json files, the Unique Entity Json and Unique Entity Profile Json. Use these two Json files to learn more about the entity and to help you investigate the alert.
 
-**Unique Entity Json**
+#### Unique Entity Json
 
 Includes the data [!INCLUDE [Product short](includes/product-short.md)] learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime*, and *PasswordExpiryTime*. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, *IsDomainController*, and *DnsName*.
 
-**Unique Entity Profile Json**
+#### Unique Entity Profile Json
 
 Includes all data [!INCLUDE [Product short](includes/product-short.md)] profiled on the entity. [!INCLUDE [Product short](includes/product-short.md)] uses the network and event activities captured to learn about the environment's users and computers. [!INCLUDE [Product short](includes/product-short.md)] profiles relevant information per entity. This information contributes [!INCLUDE [Product short](includes/product-short.md)]'s threat identification capabilities.
 

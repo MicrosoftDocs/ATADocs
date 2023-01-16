@@ -1,11 +1,11 @@
 ---
-title: Planning your Microsoft Defender for Identity deployment
+title: Plan capacity for deployment
 description: Helps you plan your deployment and decide how many Microsoft Defender for Identity servers will be needed to support your network
 ms.date: 10/24/2022
 ms.topic: how-to
 ---
 
-# Plan capacity for Microsoft Defender for Identity
+# Plan capacity for Microsoft Defender for Identity deployment
 
 In this guide, you determine what resources you need for your Microsoft Defender for Identity sensors.
 

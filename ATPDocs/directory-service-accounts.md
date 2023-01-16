@@ -63,22 +63,21 @@ The sensor will attempt to use the DSA entry configured during start-up, as a re
 
 When there are two or more DSA entries, the following logic is applied:
   
-  - The sensor will look for an entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to authenticate using the credentials in that entry. 
-  - If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will search the list for an entry for the parent domain (using DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
-  - If there isn't an entry for the parent domain or the parent domain entry failed to authenticate, the sensor will search the list for an entry for a "sibling domain" (again, using the DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
-  - If there isn't an entry for a sibling domain or the sibling domain entry failed to authenticate, the sensor will traverse the list via round robin and try to authenticate with each of the entries until it succeeds. DSA gMSA entries have higher priority than regular DSA entries.
+- The sensor will look for an entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to authenticate using the credentials in that entry.
+- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will search the list for an entry for the parent domain (using DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
+- If there isn't an entry for the parent domain or the parent domain entry failed to authenticate, the sensor will search the list for an entry for a "sibling domain" (again, using the DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
+- If there isn't an entry for a sibling domain or the sibling domain entry failed to authenticate, the sensor will traverse the list via round robin and try to authenticate with each of the entries until it succeeds. DSA gMSA entries have higher priority than regular DSA entries.
   
 For example, the sensor will try the DSA entries in the following order:
 
 1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.contoso.com).
-2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.contoso.com).
-3. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
-4. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA regular entry (for example, contoso.com)
-5. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
-6. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA regular entry domain name (for example, apac.contoso.com).
-7. Round robin all other DSA gMSA entries
-8. Round robin all other DSA regular entries
-
+1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.contoso.com).
+1. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
+1. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA regular entry (for example, contoso.com)
+1. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
+1. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA regular entry domain name (for example, apac.contoso.com).
+1. Round robin all other DSA gMSA entries
+1. Round robin all other DSA regular entries
 
 Another example, if these are the DSA entries configured:
 

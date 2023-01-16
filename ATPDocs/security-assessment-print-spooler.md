@@ -1,15 +1,15 @@
 ---
-title: Microsoft Defender for Identity Print spooler identity security posture assessments
+title: Print spooler assessment
 description: This article provides an overview of Microsoft Defender for Identity's Print spooler identity security posture assessment reports.
 ms.date: 10/24/2022
 ms.topic: how-to
 ---
 
-# Security assessment: Domain controllers with Print spooler service available
+# Security assessment: Domain controllers with the print spooler service available
 
 ![Disable Print spooler service.](media/cas-isp-print-spooler-1.png)
 
-## What is the **Print spooler** service?
+## What is the print spooler service?
 
 Print spooler is a software service that manages printing processes. The spooler accepts print jobs from computers and makes sure that printer resources are available. The spooler also schedules the order in which print jobs are sent to the print queue for printing. In the early days of personal computers, users had to wait until files printed before performing other actions. Thanks to modern print spoolers, printing now has minimal impact on overall user productivity.
 

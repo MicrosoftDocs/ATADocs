@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity for US Government offerings
+title: US Government offerings
 description: This article provides an overview of Microsoft Defender for Identity's US Government offerings.
 ms.date: 10/24/2022
 ms.topic: overview
@@ -42,19 +42,19 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 ## How to migrate from commercial to GCC
 
 1. Go to the [Azure Portal](https://portal.azure.com/) > Azure Active Directory > Groups
-2. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
- - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial" 
- - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
- - "Azure ATP _instanceName_ Users" --> "Azure ATP _instanceName_ Users - commercial"
-3. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
-4. Create a new instance of Defender for Identity
-5. Configure a Directory Service account
-6. Download the new sensor agent package and copy the workspace key
-7. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
-8. Uninstall existing sensor agents from the domain controllers
-9. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
-10. Migrate any settings after the initial sync (use the two portals to compare)
-11. Eventually, delete the previous workspace (historical data will be lost)
+1. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
+   - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial"
+   - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
+   - "Azure ATP _instanceName_ Users" --> "Azure ATP _instanceName_ Users - commercial"
+1. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
+1. Create a new instance of Defender for Identity
+1. Configure a Directory Service account
+1. Download the new sensor agent package and copy the workspace key
+1. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
+1. Uninstall existing sensor agents from the domain controllers
+1. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
+1. Migrate any settings after the initial sync (use the two portals to compare)
+1. Eventually, delete the previous workspace (historical data will be lost)
 
 >[!NOTE]
 > No data is migrated from the commercial service.

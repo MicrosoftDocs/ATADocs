@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity Reconnaissance playbook 
+title: Reconnaissance playbook 
 description: The Microsoft Defender for Identity Reconnaissance playbook  describes how to simulate Reconnaissance threats for detection by Defender for Identity.
 ms.date: 01/01/2023
 ms.topic: how-to

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity's security posture assessments
+title: Security posture assessments
 description: This article provides an overview of Microsoft Defender for Identity's identity security posture assessment reports.
 ms.date: 10/24/2022
 ms.topic: how-to
