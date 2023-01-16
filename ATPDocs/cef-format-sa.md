@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity SIEM log reference
+title: SIEM log reference
 description: Provides samples of suspicious activity logs sent from Microsoft Defender for Identity to your SIEM.
 ms.date: 10/24/2022
 ms.topic: conceptual

@@ -1,5 +1,5 @@
 ---
-title: Attack simulations for Microsoft Defender for Identity 
+title: Attack simulations 
 description: Learn how to simulate threats in your environment using the Microsoft Defender for Identity security lab attack simulations.
 ms.date: 12/06/2022
 ms.topic: how-to
@@ -22,7 +22,7 @@ Then from a new machine (fresh install, managed, or unmanaged) try the following
 
 For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
 
-> [!Note]
+> [!NOTE]
 > To generate the alert again, perform the action from a different user or with a different command.
 
 This reconnaissance is used by attackers to map your network structure and target interesting computers for later steps in their attack.
@@ -43,7 +43,7 @@ You should see activity in success or failure (connection refused) and the alert
 
 Detail in the alert:
 
-![Network mapping reconnaissance details.](media/playbooks/network-mapping-alert-details.png)   
+![Network mapping reconnaissance details.](media/playbooks/network-mapping-alert-details.png)
 
 ## User and IP address reconnaissance
 

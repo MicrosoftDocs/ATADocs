@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity Network Name Resolution
+title: Network Name Resolution
 description: This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
 ms.date: 10/24/2022
 ms.topic: conceptual
 ---
 
-# What is Network Name Resolution?
+# Network Name Resolution in Microsoft Defender for Identity
 
 Network Name Resolution (NNR) is a main component of  [!INCLUDE [Product long](includes/product-long.md)] functionality. [!INCLUDE [Product short](includes/product-short.md)] captures activities based on network traffic, Windows events, and ETW - these activities normally contain IP data.
 

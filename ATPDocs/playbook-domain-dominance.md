@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity Domain Dominance Playbook
+title: Domain dominance playbook
 description: The Microsoft Defender for Identity domain dominance playbook describes how to simulate domain dominance attacks for detection by Defender for Identity
 ms.date: 01/01/2023
 ms.topic: how-to

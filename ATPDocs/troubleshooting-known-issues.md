@@ -1,11 +1,11 @@
 ---
-title: Troubleshooting Microsoft Defender for Identity known issues
+title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
 ms.date: 11/09/2022
 ms.topic: troubleshooting
 ---
 
-# Troubleshooting Microsoft Defender for Identity Known Issues
+# Troubleshooting Microsoft Defender for Identity known issues
 
 ## Sensor failure communication error
 
@@ -27,6 +27,7 @@ Make sure that communication isn't blocked for localhost, TCP port 444. To learn
 The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md).
 
 ## "Stop legacy protocols communication" recommended action always marked as "Completed"
+
 The existing "Stop legacy protocols communication" recommended action as part of the Microsoft Secure Score is always marked as completed.  
 Due to an error, NTLM v1 authentication activities are not profiled correctly. As a result, the recommended action to remediate them is marked as completed.
 
@@ -343,7 +344,7 @@ Ensure that the Discretionary Access Control List includes the following entry:
 
 If during the sensor installation you receive the following error: **ApplyInternal failed two way SSL connection to service** and the sensor log contains an entry similar to:
 
-`2021-01-19 03:45:00.0000 Error CommunicationWebClient+\<SendWithRetryAsync\>d__9`1
+``2021-01-19 03:45:00.0000 Error CommunicationWebClient+\<SendWithRetryAsync\>d__9`1``
 ApplyInternal failed two way SSL connection to service.
 The issue can be caused by a proxy with SSL inspection enabled.
 [_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=7C039DA47E81E51F3DA3DF3DA7B5E1899B5B4AD0]`
@@ -431,5 +432,3 @@ For more information, see [Configure proxy server using the command line](config
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
-
-
