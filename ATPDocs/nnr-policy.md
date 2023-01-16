@@ -26,8 +26,8 @@ Secondary method:
 For the best results, we recommend using at least one of the primary methods.
 Reverse DNS lookup of the IP address is only performed when:
 
-- There is no response from any of the primary methods.
-- There is a conflict in the response received from two or more primary methods.
+- There's no response from any of the primary methods.
+- There's a conflict in the response received from two or more primary methods.
 
 > [!NOTE]
 > No authentication is performed on any of the ports.
@@ -41,7 +41,7 @@ NNR data is crucial for detecting the following threats:
 
 - Suspected identity theft (pass-the-ticket)
 - Suspected DCSync attack (replication of directory services)
-- Network mapping reconnaissance (DNS)
+- Network-mapping reconnaissance (DNS)
 
 To improve your ability to determine if an alert is a **True Positive (TP)** or **False Positive (FP)**, [!INCLUDE [Product short](includes/product-short.md)] includes the degree of certainty of computer naming resolving into the evidence of each security alert.
 
@@ -52,7 +52,7 @@ After confirming the device, you can then determine if the alert is a **False Po
 
 - Suspected identity theft (pass-the-ticket) – the alert was triggered for the same computer.
 - Suspected DCSync attack (replication of directory services) – the alert was triggered from a domain controller.
-- Network mapping reconnaissance (DNS) – the alert was triggered from a DNS Server.
+- Network-mapping reconnaissance (DNS) – the alert was triggered from a DNS Server.
 
     [![Evidence certainty.](media/nnr-high-certainty.png)](media/nnr-high-certainty.png#lightbox)
 

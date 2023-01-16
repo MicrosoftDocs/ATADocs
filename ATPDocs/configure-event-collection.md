@@ -7,13 +7,13 @@ ms.topic: how-to
 
 # Configure event collection
 
-To enhance detection capabilities, [!INCLUDE [Product long](includes/product-long.md)] needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or in case the [!INCLUDE [Product short](includes/product-short.md)] sensor is not deployed, it can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of two ways, by configuring the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance detection capabilities, [!INCLUDE [Product long](includes/product-long.md)] needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the Defender for Identity sensor or if the Defender for Identity sensor isn't deployed, it can be forwarded to the Defender for Identity standalone sensor in one of two ways, by configuring the [Defender for Identity standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
 >
 > - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that isn't available via the domain controller network traffic.
 
 ## SIEM/Syslog
 
@@ -34,13 +34,13 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 
 ## Configuring the Defender for Identity sensor to listen for SIEM events
 
-- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors. For more information about configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
 [!INCLUDE [Product short](includes/product-short.md)] supports SIEM events in the following formats:
 
 ### RSA Security Analytics
 
-&lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
+`<Syslog Header>RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0`
 
 - Syslog header is optional.
 
@@ -59,7 +59,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 
 ### MicroFocus ArcSight
 
-CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
+`CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code`
 
 - Must comply with the protocol definition.
 
@@ -72,14 +72,14 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
   - shost = the source host name
   - dhost = the computer receiving the event (the DC in this case)
   - duser = the user authenticating
-- The order is not important for the *Extension* part
+- The order isn't important for the *Extension* part
 - There must be a custom key and keyLable for these two fields:
   - "EventSource"
   - "Reason or Error Code" = The result code of the NTLM
 
 ### Splunk
 
-&lt;Syslog Header&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
+`<Syslog Header>\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=`
 
 The computer attempted to validate the credentials for an account.
 
@@ -103,11 +103,11 @@ Error Code: 0x0
   - ComputerName = the source host name
   - Message = the original event text from the Windows event
 - The Message Key and value MUST be last.
-- The order is not important for the key=value pairs.
+- The order isn't important for the key=value pairs.
 
 ### QRadar
 
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because [!INCLUDE [Product short](includes/product-short.md)] necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [https://www-01.ibm.com/support/docview.wss?uid=swg21700170](https://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because [!INCLUDE [Product short](includes/product-short.md)] needs millisecond data, it's necessary to set QRadar to use agentless Windows event collection. For more information, see [https://www-01.ibm.com/support/docview.wss?uid=swg21700170](https://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
 ```text
 <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
