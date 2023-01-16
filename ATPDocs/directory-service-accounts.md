@@ -108,7 +108,8 @@ The following steps can be followed to create a gMSA account to be used as the D
   
 >[!NOTE]
 >
->- In a multi-forest environment, we recommend creating the gMSAs with a unique name for each forest or domain.
+>- In multi-forest multi-domain environments, we recommend creating the gMSAs with a unique name for each forest or domain, and create a universal group in each domain, containing all sensors' computer accounts to enable all sensors retreive the gMSAs' passwords and perform the cross-domain authentications.
+  
 
 ## Granting the permissions to retrieve the gMSA account's password
 
@@ -146,10 +147,12 @@ Import-Module ActiveDirectory
 $gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope Global -PassThru
 $gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
     ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
-
+# Or, use the built-in 'Domain Controllers' group if the environment is a single forest, and will contain only domain controller sensors
+# $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'
+  
 # Create the gMSA:
 New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
--PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup.Name
+-PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroupName
 ```
 
 ## Permissions required for the DSA
