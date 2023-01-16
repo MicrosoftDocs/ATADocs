@@ -35,8 +35,8 @@ For more on SAM-R and this Group Policy, see [Network access: Restrict clients a
 
 If you've defined the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting in any GPO that applies to computers in your domain, you need to add the Defender for Identity Directory Service account to the list of allowed accounts for that setting:
 
->[!NOTE]
->The setting is not enabled by default. If you have not enabled it previously, you don't need to modify it to allow Defender for Identity to make remote calls to SAM.
+> [!NOTE]
+> The setting is not enabled by default. If you have not enabled it previously, you don't need to modify it to allow Defender for Identity to make remote calls to SAM.
 
 To add the Directory Service account, go to the policy and navigate to **Computer Configuration** -> **Policies** -> **Windows Settings** -> **Local Policies** -> **User Right Assignment**. Then open the setting **Access this computer from the network**.
 
@@ -45,6 +45,10 @@ To add the Directory Service account, go to the policy and navigate to **Compute
 Then add the [!INCLUDE [Product short](includes/product-short.md)] Directory Service account to the list of approved accounts.
 
 ![Add the Directory Service account.](media/add-service-account.png)
+
+>[!NOTE]
+> In the Microsoft recommended baselines, as part of the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/en-us/download/details.aspx?id=55319), we recommend replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connection from performing network logons. Please review the local policy settings before managing this setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
+
 
 ## Next steps
 
