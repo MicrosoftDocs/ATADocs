@@ -236,10 +236,6 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
     [![Directory Service accounts.](media/directory-service-accounts.png)](media/directory-service-accounts.png#lightbox)
 
-1. If you select an account, a pane will open with the settings for that account.
-
-    [![Account settings.](media/account-settings.png)](media/account-settings.png#lightbox)
-
 1. To add Directory Service account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
 
     [![Add credentials.](media/new-directory-service-account.png)](media/new-directory-service-account.png#lightbox)
@@ -252,6 +248,9 @@ To connect your sensors with your Active Directory domains, you'll need to confi
     |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user's account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com. For information on **Single Label Domains**, see [Microsoft support for Single Label Domains](/troubleshoot/windows-server/networking/single-label-domains-support-policy).|
 
 1. Select **Save**.
+1. (Optional) If you select an account, a pane will open with the settings for that account.
+
+    [![Account settings.](media/account-settings.png)](media/account-settings.png#lightbox)
 
 > [!NOTE]
 > You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
