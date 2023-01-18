@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity other security alerts
+title: Other security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when other attacks are detected against your organization.
-ms.date: 05/10/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 
-# Other alerts
+# Other security alerts
 
 Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
@@ -197,7 +197,6 @@ If the answer is yes to the questions above, **Close** the security alert as a *
 1. Consider blocking this computer from connecting using VPN.
 1. Check if there are other users connected through VPN from these locations, and check if they are compromised.
 
-
 ## Remote code execution attempt (external ID 2019)
 
 *Previous name:* Remote code execution attempt
@@ -355,7 +354,7 @@ Domain controllers hold the most sensitive organizational data. For most attacke
 |Primary MITRE tactic  |[Exfiltration (TA0010)](https://attack.mitre.org/tactics/TA0010)  |
 |---------|---------|
 |Secondary MITRE tactic    | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008),[Command and Control (TA0011)](https://attack.mitre.org/tactics/TA0011)        |
-|MITRE attack technique  | [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570) ](https://attack.mitre.org/techniques/T1570/)      |
+|MITRE attack technique  | [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570)](https://attack.mitre.org/techniques/T1570/)      |
 |MITRE attack sub-technique | [Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)        |
 
 **TP, B-TP, or FP**

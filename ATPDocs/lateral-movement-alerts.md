@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity lateral movement security alerts
+title: Lateral movement security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
-ms.date: 01/01/2023
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 
@@ -280,8 +280,6 @@ None
     1. Find the tool that performed the attack and remove it.
     1. Look for users logged on around the same time as the activity occurred, as they may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Force the use of sealed NTLMv2 in the domain, using the **Network security: LAN Manager authentication level** group policy. For more information, see [LAN Manager authentication level instructions](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for setting the group policy for domain controllers.
-
-
 
 ## Suspected overpass-the-hash attack (Kerberos) (external ID 2002)
 
@@ -614,4 +612,3 @@ Occasionally, applications implement their own NTLM or SMB stack.
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
-

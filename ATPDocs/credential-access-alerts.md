@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity credential access security alerts
+title: Credential access security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when credential access attacks are detected against your organization.
-ms.date: 05/10/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 
@@ -218,7 +218,6 @@ It is important to check if any login attempts ended with successful authenticat
     - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Reset the passwords of the source user and enable MFA or, if you have configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
-
 
 ## Security principal reconnaissance (LDAP) (external ID 2038)
 

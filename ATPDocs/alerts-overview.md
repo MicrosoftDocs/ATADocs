@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity security alert guide
+title: Security alerts
 description: This article provides a list of the security alerts issued by Microsoft Defender for Identity.
 ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 
-# Microsoft Defender for Identity Security Alerts
+# Security alerts in Microsoft Defender for Identity 
 
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.

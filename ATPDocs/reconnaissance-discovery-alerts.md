@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity reconnaissance and discovery security alerts
+title: Reconnaissance and discovery security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when reconnaissance and discovery attacks are detected against your organization.
-ms.date: 11/29/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 

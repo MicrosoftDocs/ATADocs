@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity persistence and privilege escalation security alerts
+title: Persistence and privilege escalation security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when persistence attacks are detected against your organization.
-ms.date: 11/29/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 
@@ -85,7 +85,6 @@ Applications might authenticate using a lower encryption cipher. Some are authen
     - **Plan carefully before performing the KRBTGT double reset. The KRBTGT double reset impacts all computers, servers, and users in the environment.**
 
 1. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
-
 
 ## Suspected Golden Ticket usage (nonexistent account) (external ID 2027)
 
