@@ -9,7 +9,7 @@ ms.author: dacurwin
 manager: dcurwin
 ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 
