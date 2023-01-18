@@ -39,68 +39,41 @@ In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] d
 
 **Learning period**: None
 
-**MITRE**
+**MITRE**:
 
 |Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
 |---------|---------|
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
-**Suggested remediation and steps for prevention**:
+**Suggested steps for prevention**:
 
-1. Contain the source [computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
-    1. Find the tool that performed the attack and remove it.
-    1. Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised.
-    1. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
 
 ## Network-mapping reconnaissance (DNS) (external ID 2007)
 
 *Previous name:* Reconnaissance using DNS
 
-**Description**
+**Severity**: Medium
+
+**Description**:
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack.
 
 There are several query types in the DNS protocol. This [!INCLUDE [Product short](includes/product-short.md)] security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive number of requests.
 
-**MITRE**
+**Learning period**:
+
+This alert has a learning period of eight days from the start of domain controller monitoring.
+
+**MITRE**:
 
 |Primary MITRE tactic  | [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007) |
 |---------|---------|
 |MITRE attack technique  |   [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Network Service Scanning (T1046)](https://attack.mitre.org/techniques/T1046/), [Remote System Discovery (T1018)](https://attack.mitre.org/techniques/T1018/)     |
 |MITRE attack sub-technique |  N/A       |
 
-**Learning period**
-
-This alert has a learning period of eight days from the start of domain controller monitoring.
-
-**TP, B-TP, or FP**
-
-1. Check if the source computer is a DNS server.
-
-    - If the source computer **is** a DNS server, close the security alert as an **FP**.
-    - To prevent future **FPs**, verify that UDP port 53 is **open** between the [!INCLUDE [Product short](includes/product-short.md)] sensor and the source computer.
-
-Security scanners and legitimate applications can  generate DNS queries.
-
-1. Check if this source computer is supposed to generate this type of activity?
-
-    - If this source computer is supposed to generate this type of activity, **Close** the security alert and exclude the computer as a **B-TP** activity.
-
-**Understand the scope of the breach**
-
-1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
-
-**Suggested remediation and steps for prevention**
-
-**Remediation:**
-
-- Contain the source computer.
-  - Find the tool that performed the attack and remove it.
-  - Look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
-
-**Prevention:**
+**Suggested steps for prevention**:
 
 It's important to preventing future attacks using AXFR queries by securing your internal DNS server.
 
@@ -110,133 +83,67 @@ It's important to preventing future attacks using AXFR queries by securing your 
 
 *Previous name:* Reconnaissance using SMB Session Enumeration
 
-### Description
+**Severity**: Medium
+
+**Description**:
 
 Enumeration using Server Message Block (SMB) protocol enables attackers to get information about where users recently logged on. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
 
 In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller.
 
-**MITRE**
+**Learning period**: None
+
+**MITRE**:
 
 |Primary MITRE tactic  | [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007) |
 |---------|---------|
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [System Network Connections Discovery (T1049)](https://attack.mitre.org/techniques/T1049/)        |
 |MITRE attack sub-technique |  [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)       |
 
-**TP, B-TP, or FP**
-
-Security scanners and applications may legitimately query domain controllers for open SMB sessions.
-
-1. Is this source computer supposed to generate activities of this type?
-1. Is there some kind of security scanner running on the source computer?
-    If the answer is yes, it's probably a B-TP activity. *Close* the security alert and exclude that computer.
-1. Check the users that performed the operation.
-    Are those users supposed to perform those actions?
-    If the answer is yes, *Close* the security alert as a B-TP activity.
-
-**Understand the scope of the breach**
-
-1. Investigate the source computer.
-1. On the alert page, check if there are any exposed users. To further investigate each exposed user, check their profile. We recommend you begin your investigation with sensitive and high investigation priority users.
-
-**Suggested remediation and steps for prevention**
-
-1. Contain the source computer.
-1. Find and remove the tool that performed the attack.
-
-> [!NOTE]
-> To disable any [!INCLUDE [Product short](includes/product-short.md)] security alert, contact support.
-
 ## User and Group membership reconnaissance (SAMR) (external ID 2021)
 
 *Previous name:* Reconnaissance using directory services queries
 
-**Description**
+**Severity**: Medium
+
+**Description**:
 
 User and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
 In this detection, no alerts are triggered in the first month after [!INCLUDE [Product short](includes/product-short.md)] is deployed (learning period). During the learning period, [!INCLUDE [Product short](includes/product-short.md)] profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts.
 
-**Learning period**
+**Learning period**:
 
 Four weeks per domain controller starting from the first network activity of SAMR against the specific DC.
 
-**MITRE**
+**MITRE**:
 
 |Primary MITRE tactic  | [Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007) |
 |---------|---------|
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
 |MITRE attack sub-technique |  [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Group (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)       |
 
-**TP, B-TP, or FP**
+**Suggested steps for prevention**:
 
-1. Select the source computer to go to its profile page.
-    - Is the source computer supposed to generate activities of this type?
-      - If yes, *Close* the security alert and exclude that computer, as a  **B-TP** activity.
-    - Check the user/s that performed the operation.
-      - Do those users normally log into that source computer, or are they administrators that should be performing those specific actions?
-    - Check the user profile, and their related user activities. Understand their normal user behavior and search for additional suspicious activities using the [user investigation guide](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users).
-
-      If you answered **yes** to the previous above, *Close* the alert as a **B-TP** activity.
-
-**Understand the scope of the breach**
-
-1. Check the queries that were performed, for example, Enterprise admins, or Administrator,  and determine if they were successful.
-1. Investigate each exposed user using the user investigation guide.
-1. Investigate the source computer.
-
-**Suggested remediation and steps for prevention**
-
-1. Contain the source computer.
-1. Find and remove the tool that performed the attack.
-1. Look for users logged on around the same time as the activity, as they may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
-1. Reset the source user password and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
 1. Apply Network access and restrict clients allowed to make remote calls to SAM group policy.
 
 ## Active Directory attributes reconnaissance (LDAP) (external ID 2210)
 
-**Description**
+**Severity**: Medium
+
+**Description**:
 
 Active Directory LDAP reconnaissance is used by attackers to gain critical information about the domain environment. This information can help attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
 
-**MITRE**
+**MITRE**:
 
 |Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
 |---------|---------|
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Indirect Command Execution (T1202)](https://attack.mitre.org/techniques/T1202/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Groups (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)        |
 
-**Learning period**
+**Learning period**:
 
 None
-
-**TP, B-TP, or FP**
-
-1. Select the alert to view the queries that were performed.
-    - Check if the source computer is supposed to make these queries
-        - If yes, close the security alert as an **FP**. If it's an ongoing activity, exclude the suspicious activity.
-1. Select the source computer and go to its profile page.
-    - Look for any unusual activities that occurred around the time of the queries such as the following types of search: logged in users, accessed resources, and other probing queries.
-    - If Microsoft Defender for Endpoint integration is enabled, select its icon to further investigate the machine.
-        - Look for unusual processes and alerts that occurred around the time of the queries
-1. Check exposed accounts.
-    - Look for unusual activities.
-
-If you answered yes to questions 2 or 3, consider this alert a **TP** and follow the instructions in **Understand the scope of the breach**.
-
-**Understand the scope of the breach**
-
-1. Investigate the [source computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices).
-1. Is the computer running a scanning tool that performs various of LDAP queries?
-    - Investigate whether the specific queried users and groups in the attack are privileged or high-value accounts (that is, CEO, CFO, IT management, etc.). If so, look at other activities on the endpoint as well and monitor computers that the queried accounts are logged into, as they're probably targets for lateral movement.
-1. Check the queries and their attributes, and determine if they were successful. Investigate each exposed group, search for suspicious activities made on the group or by member users of the group.
-1. Can you see SAM-R, DNS, or SMB reconnaissance behavior on the source computer?
-
-**Suggested remediation and steps for prevention**
-
-1. Contain the source computer
-    1. Find the tool that performed the attack and remove it.
-    1. If the computer is running a scanning tool that performs a variety of LDAP queries, look for users who were logged on around the same time as the activity occurred, as these users may also be compromised. Reset their passwords and enable MFA or, if you've configured the relevant high-risk user policies in Azure Active Directory Identity Protection, you can confirm the  user is compromised in the [Microsoft 365 Defender user page](/microsoft-365/security/defender/investigate-users).
-1. Reset the password if SPN resource access was made that runs under a user account (not machine account).
 
 ## See also
 
