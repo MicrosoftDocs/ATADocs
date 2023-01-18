@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity prerequisites
+title: Prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 05/23/2022
+ms.date: 11/03/2022
 ms.topic: overview
 ---
 
@@ -45,7 +45,7 @@ Access Defender for Identity in the Microsoft 365 Defender portal using Microsof
 >[!NOTE]
 >The network requirements for US Government offerings can be found at [Microsoft Defender for Identity for US Government offerings](us-govt-gcc-high.md).
 
-- Verify that the servers you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on are able to reach the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. They should be able to access https://*your-instance-name*sensorapi.atp.azure.com (port 443). For example, https://*contoso-corp*sensorapi.atp.azure.com.<br><br>
+- Verify that the servers you intend to install [!INCLUDE [Product short](includes/product-short.md)] sensors on are able to reach the [!INCLUDE [Product short](includes/product-short.md)] Cloud Service. They should be able to access `https://*your-instance-name*sensorapi.atp.azure.com` (port 443). For example, `https://*contoso-corp*sensorapi.atp.azure.com`.<br><br>
 To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>. The [!INCLUDE [Product short](includes/product-short.md)] sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for [!INCLUDE [Product short](includes/product-short.md)]](configure-proxy.md).
 
     > [!NOTE]

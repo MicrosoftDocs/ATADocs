@@ -1,7 +1,7 @@
 ---
-title: Remediation actions in Microsoft Defender for Identity
+title: Remediation actions
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
-ms.date: 04/14/2022
+ms.date: 11/09/2022
 ms.topic: conceptual
 ---
 
@@ -12,7 +12,7 @@ Applies to:
 - Microsoft Defender for Identity
 - Microsoft 365 Defender
 
-Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center. 
+Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center.
 
 The response actions on users are available directly from the user page, the user side panel, the advanced hunting page, or in the action center.
 
@@ -40,4 +40,3 @@ Currently, this feature requires the account signed into Microsoft 365 Defender 
 ## See also
 
 [Microsoft Defender for Identity action accounts](manage-action-accounts.md)
-

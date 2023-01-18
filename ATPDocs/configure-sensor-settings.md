@@ -1,7 +1,7 @@
 ---
-title: Configure Microsoft Defender for Identity sensor settings 
+title: Configure sensor settings 
 description: Learn how to configure Microsoft Defender for Identity sensor settings 
-ms.date: 05/16/2022
+ms.date: 12/07/2022
 ms.topic: how-to
 ---
 
@@ -21,8 +21,8 @@ After the [!INCLUDE [Product short](includes/product-short.md)] sensor is instal
 
     [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
-    > [!NOTE]
-    > For information about how to configure delayed updates, see [Delayed sensor update](sensor-settings.md#delayed-sensor-update).
+   > [!NOTE]
+   > For information about how to configure delayed updates, see [Delayed sensor update](sensor-settings.md#delayed-sensor-update).
 
 1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
 
@@ -68,24 +68,43 @@ To validate that the [!INCLUDE [Product short](includes/product-short.md)] senso
 
 1. If the service doesn't start, review the "Microsoft.Tri.sensor-Errors.log" file located in the following default folder, "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
 
-    >[!NOTE]
-    > The version of [!INCLUDE [Product short](includes/product-short.md)] updates frequently, to check the latest version, in the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and then **About**.
-
-1. Go to your [!INCLUDE [Product short](includes/product-short.md)] instance URL. In the [!INCLUDE [Product short](includes/product-short.md)] portal, search for something in the search bar, such as a user or group on your domain.
+   >[!NOTE]
+   > The version of [!INCLUDE [Product short](includes/product-short.md)] updates frequently, to check the latest version, in the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and then **About**.
 
 1. Verify [!INCLUDE [Product short](includes/product-short.md)] connectivity on any domain device using the following steps:
-    1. Open a command prompt
-    1. Type `nslookup`
-    1. Type **server** and the FQDN or IP address of the domain controller where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. For example,
-    `server contosodc.contoso.azure`
-    1. Type `ls -d contoso.azure`
-        - Make sure to replace contosodc.contoso.azure and contoso.azure with the FQDN of your [!INCLUDE [Product short](includes/product-short.md)] sensor and domain name respectively.
-    1. Repeat steps 3 and 4 for each sensor you wish to test.
-    1. From the [!INCLUDE [Product short](includes/product-short.md)] console, open the entity profile for the computer you ran the connectivity test from.
-    1. Check the related logical activity and confirm connectivity.
 
-    > [!NOTE]
-    >If the domain controller you wish to test is your first deployed sensor, wait at least 15 minutes to allow the database backend to finish initial deployment of the necessary microservices before you attempt to verify the related logical activity for that domain controller.
+     1. Open a command prompt
+     1. Type `nslookup`
+     1. Type **server** and the FQDN or IP address of the domain controller where the [!INCLUDE [Product short](includes/product-short.md)] sensor is installed. For example,
+    `server contosodc.contoso.azure`
+     1. Type `ls -d contoso.azure`
+        - Make sure to replace contosodc.contoso.azure and contoso.azure with the FQDN of your [!INCLUDE [Product short](includes/product-short.md)] sensor and domain name respectively.
+       1. Repeat the previous two steps for each sensor you wish to test.
+       1. From the [!INCLUDE [Product short](includes/product-short.md)] console, open the entity profile for the computer you ran the connectivity test from.
+   1. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/). In the top middle search box, type in the name of the user you used to perform the commands detailed above, select the name in the results to view the user's page and all its related activities and alerts.
+
+   > [!NOTE]
+   > If the domain controller you wish to test is your first deployed sensor, wait at least 15 minutes to allow the database backend to finish initial deployment of the necessary microservices before you attempt to verify the related logical activity for that domain controller.
+
+To validate that the [!INCLUDE [Product short](includes/product-short.md)] sensor has been successfully deployed on an AD FS server, check the following:
+
+1. Check that the service named **Azure Advanced Threat Protection sensor** is running. After you save the [!INCLUDE [Product short](includes/product-short.md)] sensor settings, it might take a few seconds for the service to start.
+1. If the service doesn't start, review the "Microsoft.Tri.sensor-Errors.log" file located in the following default folder, "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
+   > [!NOTE]
+   > The version of [!INCLUDE [Product short](includes/product-short.md)] updates frequently, to check the latest version, in the [!INCLUDE [Product short](includes/product-short.md)] portal, go to **Configuration** and then **About**.
+
+1. Use AD FS to authenticate a user to any application.
+1. Verify that the AD FS authentication was observed by [!INCLUDE [Product short](includes/product-short.md)] using the following steps:
+
+    1. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/). From the navigation menu, select **Hunting** and then **Advanced Hunting**. In the **Query** pane, type in and run the following query:
+
+        ```query
+        IdentityLogonEvents | where Protocol contains 'Adfs'
+        ```
+
+    1. The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**. You can select a specific row and see additional details in the **Inspect Record** left pane.
+
+    :::image type="content" source="media/adfs-logon-advanced-hunting.png" alt-text="See results of ADFS logon advanced hunting query." lightbox="media/adfs-logon-advanced-hunting.png":::
 
 ## Related videos
 

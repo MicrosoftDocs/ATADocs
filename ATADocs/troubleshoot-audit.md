@@ -7,9 +7,9 @@ keywords:
 author: dcurwin
 ms.author: dacurwin
 manager: dcurwin
-ms.date: 3/21/2018
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 

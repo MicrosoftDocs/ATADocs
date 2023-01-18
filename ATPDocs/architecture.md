@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity architecture
+title: Architecture
 description: Describes the architecture of Microsoft Defender for Identity
-ms.date: 06/23/2022
+ms.date: 12/14/2022
 ms.topic: overview
 ---
 
@@ -29,9 +29,12 @@ The Microsoft 365 Defender portal creates your [!INCLUDE [Product short](include
   - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
   - **AD FS**: The sensor directly monitors network traffic and authentication events.
 - **[!INCLUDE [Product short](includes/product-short.md)] cloud service**  
-[!INCLUDE [Product short](includes/product-short.md)] cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, and Asia. [!INCLUDE [Product short](includes/product-short.md)] cloud service is connected to Microsoft's intelligent security graph.
+[!INCLUDE [Product short](includes/product-short.md)] cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, Australia East, and Asia. [!INCLUDE [Product short](includes/product-short.md)] cloud service is connected to Microsoft's intelligent security graph.
 
 ## Microsoft 365 Defender portal
+
+> [!NOTE]
+> Since all major Microsoft Defender for Identity features are available in the Microsoft 365 Defender portal, the portal redirection setting will be automatically enabled for each tenant starting January 31, 2023. For more information, see [Redirecting accounts from Microsoft Defender for Identity to Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-mdi-redirection#what-to-expect).
 
 Use the Microsoft 365 Defender portal to:
 

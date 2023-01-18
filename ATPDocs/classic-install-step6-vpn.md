@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Install Microsoft Defender for Identity VPN Integration
 description: Classic portal - Collect accounting information for Microsoft Defender for Identity by integrating a VPN.
-ms.date: 12/23/2020
+ms.date: 10/24/2022
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---

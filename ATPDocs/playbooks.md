@@ -1,7 +1,7 @@
 ---
-title: Attack simulations for Microsoft Defender for Identity 
+title: Attack simulations 
 description: Learn how to simulate threats in your environment using the Microsoft Defender for Identity security lab attack simulations.
-ms.date: 07/17/2022
+ms.date: 12/06/2022
 ms.topic: how-to
 ---
 
@@ -180,11 +180,11 @@ Detail in the alert:
 
 ![Account enumeration reconnaissance details.](media/playbooks/account-enumeration-details.png)  
 
-## Suspected AS-REP Roasting attack
+## Suspected Kerberos SPN exposure  
 
 For details about this alert, see [Suspected AS-REP Roasting attack (external ID 2412)](credential-access-alerts.md#suspected-as-rep-roasting-attack-external-id-2412).
 
-In this detection, Defender for Identity looks if an attacker uses tools to detect accounts with their Kerberos preauthentication disabled and sends AS-REQ requests without the encrypted timestamp. In response, the attacker receives AS-REP messages with TGT data, which may be encrypted with an insecure algorithm such as RC4, and saves them for later use in an offline password cracking attack (similar to Kerberoasting) and exposes plaintext credentials.
+In this detection, Defender for Identity looks if an attacker uses tools to enumerate service accounts and their respective SPNs (Service Principal Names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.  
 
 From a command line on a workstation run:  
 

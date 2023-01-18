@@ -1,7 +1,7 @@
 ---
 title: Directory Service account recommendations
 description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
-ms.date: 09/25/2022
+ms.date: 01/10/2023
 ms.topic: how-to
 ---
 
@@ -63,22 +63,21 @@ The sensor will attempt to use the DSA entry configured during start-up, as a re
 
 When there are two or more DSA entries, the following logic is applied:
   
-  - The sensor will look for an entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to authenticate using the credentials in that entry. 
-  - If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will search the list for an entry for the parent domain (using DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
-  - If there isn't an entry for the parent domain or the parent domain entry failed to authenticate, the sensor will search the list for an entry for a "sibling domain" (again, using the DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
-  - If there isn't an entry for a sibling domain or the sibling domain entry failed to authenticate, the sensor will traverse the list via round robin and try to authenticate with each of the entries until it succeeds. DSA gMSA entries have higher priority than regular DSA entries.
+- The sensor will look for an entry with an exact match of the domain name of the target domain.  If an exact match is found, the sensor will attempt to authenticate using the credentials in that entry.
+- If there isn't an exact match of the domain name or the exact match entry failed to authenticate, the sensor will search the list for an entry for the parent domain (using DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
+- If there isn't an entry for the parent domain or the parent domain entry failed to authenticate, the sensor will search the list for an entry for a "sibling domain" (again, using the DNS FQDN, not the forest root/child relationships) and will attempt to authenticate using the credentials in that entry.
+- If there isn't an entry for a sibling domain or the sibling domain entry failed to authenticate, the sensor will traverse the list via round robin and try to authenticate with each of the entries until it succeeds. DSA gMSA entries have higher priority than regular DSA entries.
   
 For example, the sensor will try the DSA entries in the following order:
 
 1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA gMSA entry (for example, emea.contoso.com).
-2. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.contoso.com).
-3. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
-4. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA regular entry (for example, contoso.com)
-5. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
-6. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA regular entry domain name (for example, apac.contoso.com).
-7. Round robin all other DSA gMSA entries
-8. Round robin all other DSA regular entries
-
+1. Match between the DNS domain name of the target domain (for example, emea.contoso.com) and the domain of DSA regular entry (for example, emea.contoso.com).
+1. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA gMSA entry (for example, contoso.com)
+1. Match in the root DNS name of the target domain (for example, emea.contoso.com) and the domain name of DSA regular entry (for example, contoso.com)
+1. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA gMSA entry domain name (for example, apac.contoso.com).
+1. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA regular entry domain name (for example, apac.contoso.com).
+1. Round robin all other DSA gMSA entries
+1. Round robin all other DSA regular entries
 
 Another example, if these are the DSA entries configured:
 
@@ -109,7 +108,8 @@ The following steps can be followed to create a gMSA account to be used as the D
   
 >[!NOTE]
 >
->- In a multi-forest environment, we recommend creating the gMSAs with a unique name for each forest or domain.
+>- In multi-forest multi-domain environments, we recommend creating the gMSAs with a unique name for each forest or domain, and creating a universal group in each domain, containing all sensors' computer accounts to enable all sensors to retrieve the gMSAs' passwords and perform the cross-domain authentications.
+  
 
 ## Granting the permissions to retrieve the gMSA account's password
 
@@ -147,10 +147,12 @@ Import-Module ActiveDirectory
 $gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope Global -PassThru
 $gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
     ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
-
+# Or, use the built-in 'Domain Controllers' group if the environment is a single forest, and will contain only domain controller sensors
+# $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'
+  
 # Create the gMSA:
 New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
--PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup.Name
+-PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroupName
 ```
 
 ## Permissions required for the DSA
@@ -234,10 +236,6 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
     [![Directory Service accounts.](media/directory-service-accounts.png)](media/directory-service-accounts.png#lightbox)
 
-1. If you select an account, a pane will open with the settings for that account.
-
-    [![Account settings.](media/account-settings.png)](media/account-settings.png#lightbox)
-
 1. To add Directory Service account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
 
     [![Add credentials.](media/new-directory-service-account.png)](media/new-directory-service-account.png#lightbox)
@@ -245,11 +243,14 @@ To connect your sensors with your Active Directory domains, you'll need to confi
     |Field|Comments|
     |---|---|
     |**Account name** (required)|Enter the read-only AD username. For example: **DefenderForIdentityUser**. You must use a **standard** AD user or gMSA account. **Don't** use the UPN format for your username. When using a gMSA, the user string should end with the '$' sign. For example: mdisvc$<br />**NOTE:** We recommend that you avoid using accounts assigned to specific users.|
-    |**Password** (required for standard AD user accounts)|For AD user accounts only, enter the password for the read-only user. For example: *Pencil1*.|
+    |**Password** (required for standard AD user accounts)|For AD user accounts only, generate a strong password for the read-only user. For example: *PePR!BZ&}Y54UpC3aB*.|
     |**Group managed service account** (required for gMSA accounts)|For gMSA accounts only, select **Group managed service account**.|
     |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user's account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com. For information on **Single Label Domains**, see [Microsoft support for Single Label Domains](/troubleshoot/windows-server/networking/single-label-domains-support-policy).|
 
 1. Select **Save**.
+1. (Optional) If you select an account, a pane will open with the settings for that account.
+
+    [![Account settings.](media/account-settings.png)](media/account-settings.png#lightbox)
 
 > [!NOTE]
 > You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.

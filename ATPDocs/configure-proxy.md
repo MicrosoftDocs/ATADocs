@@ -1,7 +1,7 @@
 ---
-title: Configure your proxy or firewall to enable Microsoft Defender for Identity communication with the sensor
+title: Configure endpoint proxy and Internet connectivity settings
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 08/03/2022
+ms.date: 01/01/2023
 ms.topic: how-to
 ---
 
@@ -31,6 +31,9 @@ You can configure your proxy server during sensor installation using the followi
 > |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
+
+> [!NOTE]
+> Since changing the sensor's proxy configuration (if installed via the command line as described above) requires removing and reinstalling the sensor, we recommend creating and using a custom DNS A record for the proxy server. With a custom DNS A record, you can change the proxy server's address when needed, and also use the hosts file for testing.
 
 ## Alternative methods to configure your proxy server
 

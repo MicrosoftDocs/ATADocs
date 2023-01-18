@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity About page in Microsoft 365 Defender 
+title: About page in Microsoft 365 Defender 
 description: Learn how to collect important details about your Defender for Identity workspace in Microsoft 365 Defender.
-ms.date: 06/12/2022
+ms.date: 10/24/2022
 ms.topic: how-to
 ---
 

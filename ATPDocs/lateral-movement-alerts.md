@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity lateral movement security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
-ms.date: 05/10/2022
+ms.date: 01/01/2023
 ms.topic: conceptual
 ---
 
@@ -245,7 +245,7 @@ None
 
 **Description**
 
-An Exchange Server can be configured to trigger NTLM authentication with the Exchange Server account to a remote http server, run by an attacker. The server waits for the Exchange Server communication to relay its own sensitive authentication to any other server, or even more interestingly to Active Directory over LDAP, and grabs the authentication information.
+An Exchange Server computer account can be configured to trigger NTLM authentication with the Exchange Server computer account to a remote http server, run by an attacker. The server waits for the Exchange Server communication to relay its own sensitive authentication to any other server, or even more interestingly to Active Directory over LDAP, and grabs the authentication information.
 
 Once the relay server receives the NTLM authentication, it provides a challenge that was originally created by the target server. The client responds to the challenge, preventing an attacker from taking the response, and using it to continue NTLM negotiation with the target domain controller.
 
@@ -614,3 +614,4 @@ Occasionally, applications implement their own NTLM or SMB stack.
 - [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+

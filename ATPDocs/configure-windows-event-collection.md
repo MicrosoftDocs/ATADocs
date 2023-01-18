@@ -1,7 +1,7 @@
 ---
-title: Configure Windows Event collection Microsoft Defender for Identity
+title: Configure Windows Event collection
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 06/23/2022
+ms.date: 01/16/2023
 ms.topic: how-to
 ---
 
@@ -178,8 +178,6 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
     - Under **Permissions**, scroll down and select **Clear all.** Scroll up and select **Full Control**. All the permissions will be selected. Then uncheck the **List contents**, **Read permissions**, and **Read all properties** permissions. Then select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
 
         ![Select permissions.](media/select-permissions.png)
-
-        ![Select properties.](media/select-properties.png)
 
 1. Then repeat the steps above, but for **Applies to**, select the following object types:
    - **Descendant Group Objects**

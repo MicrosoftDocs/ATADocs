@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity personal data policy
+title: Data security and privacy policy
 description: Provides links to information about how to delete private information and personal data from Microsoft Defender for Identity.
-ms.date: 04/12/2022
+ms.date: 12/14/2022
 ms.topic: conceptual
 ---
 
@@ -18,10 +18,11 @@ Search for a specific user or computer, and select the entity to bring you to th
 [!INCLUDE [Product short](includes/product-short.md)] personal data is gathered from Active Directory through the [!INCLUDE [Product short](includes/product-short.md)] sensor and stored in a backend database.
 
 ## Data sharing
+
 [!INCLUDE [Product short](includes/product-short.md)] shares data, including customer data, among the following Microsoft products also licensed by the customer.
 
 - Microsoft Defender for Cloud Apps
-   
+
 ## Update personal data
 
 [!INCLUDE [Product short](includes/product-short.md)]'s personal user data is derived from the user's object in the Active Directory of the organization. Therefore, changes made to the user profile in the organization AD are reflected in [!INCLUDE [Product short](includes/product-short.md)].
@@ -45,9 +46,8 @@ In [!INCLUDE [Product short](includes/product-short.md)] you have the ability to
 - For information about [!INCLUDE [Product short](includes/product-short.md)] trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
 > [!IMPORTANT]
-> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
+> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
 
 ## See also
 
 - More information about privacy can be found in the [Defender for Identity FAQ](/defender-for-identity/technical-faq#licensing-and-privacy)
-

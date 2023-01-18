@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity security alert lateral movement playbook
+title: Lateral movement playbook
 description: The Microsoft Defender for Identity playbook describes how to simulate lateral movement threats for detection by Defender for Identity.
-ms.date: 11/16/2021
+ms.date: 01/01/2023
 ms.topic: how-to
 ---
 
@@ -30,7 +30,7 @@ In this lab you will:
 > [!WARNING]
 > The third-party hacking tools in this lab are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
 
-## Lateral Movement
+## Lateral movement
 
 From our simulated attacks in the previous lab, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered and seeing [!INCLUDE [Product short](includes/product-short.md)]'s alerts on the movement. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA's computer credentials were exposed. We'll mimic various attack methods to try to move laterally across the domain.
 

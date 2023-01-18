@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health alerts
 description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 04/12/2022
+ms.date: 01/01/2023
 ms.topic: how-to
 ---
 
@@ -35,11 +35,13 @@ The [!INCLUDE [Product long](includes/product-long.md)] **Health issues** page l
 
 This section describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
-### All domain controllers are unreachable by a sensor
+Sensor specific health alerts are displayed in the **Sensors settings** page and domain related or aggregated health alerts are displayed in the **Health issues** page as detailed in the tables below. 
+
+### A domain controller is unreachable by a sensor
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The [!INCLUDE [Product short](includes/product-short.md)] sensor is currently offline due to connectivity issues to all the configured domain controllers.|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s ability to detect suspicious activities related to domain controllers monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.| Make sure the domain controllers are up and running and that this [!INCLUDE [Product short](includes/product-short.md)] sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a Directory Service account for every deployed forest.|Medium|Sensors settings page|
+|The [!INCLUDE [Product short](includes/product-short.md)] sensor has limited functionality due to connectivity issues to the configured domain controller.|This impacts [!INCLUDE [Product short](includes/product-short.md)]'s ability to detect suspicious activities related to domain controllers monitored by this [!INCLUDE [Product short](includes/product-short.md)] sensor.| Make sure the domain controllers are up and running and that this [!INCLUDE [Product short](includes/product-short.md)] sensor can open LDAP connections to them. In addition, in **Settings** make sure to configure a Directory Service account for every deployed forest.|Medium|Sensors settings page|
 
 ### All/Some of the capture network adapters on a sensor are not available
 
@@ -101,12 +103,6 @@ This section describes all the health alerts for each component, listing the cau
 |----|----|----|----|----|
 |There has been no communication from the [!INCLUDE [Product short](includes/product-short.md)] sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the [!INCLUDE [Product short](includes/product-short.md)] sensor. This impacts Defender for Identity's ability to detect suspicious activities, since network traffic won't be able to reach the [!INCLUDE [Product short](includes/product-short.md)] cloud service.|Check that the port used for the communication between the [!INCLUDE [Product short](includes/product-short.md)] sensor and [!INCLUDE [Product short](includes/product-short.md)] cloud service is not blocked by any routers or firewalls.|Medium|Sensors settings page|
 
-### Some domain controllers are unreachable by a sensor
-
-|Alert|Description|Resolution|Severity|Displayed in|
-|----|----|----|----|----|
-|A [!INCLUDE [Product short](includes/product-short.md)] sensor has limited functionality due to connectivity issues to some of the configured domain controllers.|Pass the Hash detection might be less accurate when some domain controllers can't be queried by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|Make sure the domain controllers are up and running and that this [!INCLUDE [Product short](includes/product-short.md)] sensor can open LDAP connections to them.|Medium|Sensors settings page|
-
 ### Some Windows events are not being analyzed
 
 |Alert|Description|Resolution|Severity|Displayed in|
@@ -155,7 +151,19 @@ This section describes all the health alerts for each component, listing the cau
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Advanced Auditing is not enabled as required.|The Directory Services Advanced Auditing do not include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-audit-policies) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
+|Directory Services Advanced Auditing is not enabled as required.|The Directory Services Advanced Auditing configuration does not include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-audit-policies) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
+
+### Directory Services Object Auditing is not enabled as required
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Directory Services Object Auditing is not enabled as required.|The Directory Services Object Auditing configuration does not include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-object-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
+
+### Power mode is not configured for optimal processor performance
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Power mode is not configured for optimal processor performance.|The operating system's power mode is not configured to the optimal processor performance settings. This can impact the server's performance and the sensors' ability to detect suspicious activities.|Configure the power option of the machine running the Defender for Identity sensor to High Performance (or set both the minimum and maximum processor state to 100) as described in the [Server specifications](prerequisites.md#server-specifications) section, in the [Defender for Identity prerequisites](prerequisites.md) page.|Low|Sensors settings page|
 
 <!--
 ## Windows events missing from domain controller audit policy

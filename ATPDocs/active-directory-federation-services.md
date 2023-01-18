@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender for Identity on Active Directory Federation Services (AD FS) 
+title: Active Directory Federation Services (AD FS) 
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS) 
-ms.date: 06/23/2022
+ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
@@ -15,8 +15,12 @@ The Defender for Identity sensor supports installation on Active Directory Feder
 
 | Operating System Version | Server  with Desktop Experience | Server  Core | Nano  Server |
 | ------------------------ | ------------------------------- | ------------ | ------------ |
-| Windows  Server 2016     | ✔                               | ✔            | ❌            |
-| Windows  Server 2019*    | ✔                               | ✔            | ❌            |
+| Windows Server 2016      | ✔                               | ✔           | ❌           |
+| Windows Server 2019      | ✔                               | ✔           | ❌           |
+| Windows Server 2022      | ✔                               | ✔           | ❌           |
+
+>[!NOTE]
+> The Defender for Identity sensor is supported only on the Federation servers. It is not required on the Web Application Proxy (WAP) servers.
 
 For hardware requirements, see [Defender for Identity server specifications](prerequisites.md#server-specifications).
 
