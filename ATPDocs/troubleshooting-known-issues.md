@@ -358,6 +358,9 @@ The issue can be caused when the **SystemDefaultTlsVersions** or **SchUseStrongC
 Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry values are set to 1:
 
 ```reg
+
+Windows Registry Editor Version 5.00
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319] 
 "SystemDefaultTlsVersions"=dword:00000001
 "SchUseStrongCrypto"=dword:00000001
