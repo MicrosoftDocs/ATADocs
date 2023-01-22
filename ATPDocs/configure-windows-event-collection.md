@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event collection
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 01/16/2023
+ms.date: 01/22/2023
 ms.topic: how-to
 ---
 
@@ -121,6 +121,9 @@ Microsoft Defender for Identity can monitor additional LDAP queries in your netw
 Windows event 1644 isn't collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
 
 ```reg
+
+Windows Registry Editor Version 5.00
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
 "15 Field Engineering"=dword:00000005
 

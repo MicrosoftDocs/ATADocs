@@ -1,7 +1,7 @@
 ---
 title: Active Directory Federation Services (AD FS) 
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS) 
-ms.date: 12/14/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 

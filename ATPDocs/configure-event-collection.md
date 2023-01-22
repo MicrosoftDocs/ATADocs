@@ -1,7 +1,7 @@
 ---
 title: Configure event collection
 description: In this step of installing Microsoft Defender for Identity, you configure data sources.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 

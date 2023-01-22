@@ -1,7 +1,7 @@
 ---
 title: What is Microsoft Defender for Identity?
 description: Explains what Microsoft Defender for Identity is and what kinds of suspicious activities it can detect
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: overview
 ---
 

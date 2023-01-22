@@ -1,7 +1,7 @@
 ---
 title: Support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-ms.date: 10/24/2022
+ms.date: 01/22/2023
 ms.topic: conceptual
 ---
 
@@ -73,7 +73,7 @@ After you've searched for your issue in **How can we help?** (and clicked the bl
 
 ### System health status
 
-The service health status for [!INCLUDE [Product short](includes/product-short.md)] is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health) page, under **Microsoft 365 Defender**. This page tells you if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
+The service health status for [!INCLUDE [Product short](includes/product-short.md)] is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health), under **Microsoft 365 Defender**. This page tells you if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
 
 ### Troubleshooting
 

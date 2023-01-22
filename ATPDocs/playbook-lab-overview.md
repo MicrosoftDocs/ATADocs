@@ -1,7 +1,7 @@
 ---
 title: Security alert lab overview
 description: This overview describes the four parts of the Microsoft Defender for Identity Security Alert lab for simulating threats for detection by Defender for Identity.
-ms.date: 01/01/2023
+ms.date: 01/18/2023
 ms.topic: overview
 ---
 

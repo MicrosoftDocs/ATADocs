@@ -1,7 +1,7 @@
 ---
 title: Manage action accounts
 description: Learn how to manage action accounts to work with Microsoft Defender for Identity.
-ms.date: 11/23/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 

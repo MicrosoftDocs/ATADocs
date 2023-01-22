@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 11/09/2022
+ms.date: 01/22/2023
 ms.topic: troubleshooting
 ---
 
@@ -358,6 +358,9 @@ The issue can be caused when the **SystemDefaultTlsVersions** or **SchUseStrongC
 Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry values are set to 1:
 
 ```reg
+
+Windows Registry Editor Version 5.00
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319] 
 "SystemDefaultTlsVersions"=dword:00000001
 "SchUseStrongCrypto"=dword:00000001
