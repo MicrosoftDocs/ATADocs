@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity domain dominance security alerts
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks, typically part of domain dominance phase efforts, are detected against your organization.
-ms.date: 12/06/2022
+ms.date: 01/19/2023
 ms.topic: conceptual
 ---
 

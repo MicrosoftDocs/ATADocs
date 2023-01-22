@@ -1,7 +1,7 @@
 ---
 title: Deploying with Microsoft 365 Defender
 description: Learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender
-ms.date: 12/14/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Microsoft Defender for Identity integration with Microsoft Defender for Endpoint
 description: Classic portal - How to integrate Microsoft Defender for Identity with Microsoft Defender for Endpoint for full threat detection coverage
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---

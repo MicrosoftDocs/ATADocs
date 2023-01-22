@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Manage sensitive or honeytoken accounts with Microsoft Defender for Identity
 description: Classic portal - Describes how to manage sensitive or honeytoken accounts using Microsoft Defender for Identity
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
