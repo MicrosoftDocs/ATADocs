@@ -1,7 +1,7 @@
 ---
 title: Understand and investigate Lateral Movement Paths 
 description: This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 

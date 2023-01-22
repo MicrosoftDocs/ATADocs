@@ -1,7 +1,7 @@
 ---
 title: Multi-forest support
 description: Support for multiple Active Directory forests in Microsoft Defender for Identity.
-ms.date: 11/23/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 

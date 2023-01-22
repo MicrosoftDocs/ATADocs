@@ -1,7 +1,7 @@
 ---
 title: SIEM log reference
 description: Provides samples of suspicious activity logs sent from Microsoft Defender for Identity to your SIEM.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 

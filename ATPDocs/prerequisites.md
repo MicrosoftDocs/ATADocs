@@ -1,7 +1,7 @@
 ---
 title: Prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 11/03/2022
+ms.date: 01/18/2023
 ms.topic: overview
 ---
 

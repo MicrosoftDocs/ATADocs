@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Working with user profiles in the Microsoft Defender for Identity portal
 description: Classic portal - Describes how to investigate users from the user profiles screen in the Microsoft Defender for Identity portal
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ROBOTS: NOINDEX
 ---

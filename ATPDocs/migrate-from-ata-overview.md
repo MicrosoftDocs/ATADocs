@@ -1,7 +1,7 @@
 ---
 title: Move from Advanced Threat Analytics 
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
