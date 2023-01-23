@@ -20,7 +20,7 @@ The purpose of the [!INCLUDE [Product long](includes/product-long.md)] Security 
 The first lab in this four part series walks you through creating a lab for testing [!INCLUDE [Product short](includes/product-short.md)]'s discrete detections. The lab includes information about machines, users, and tools that are needed to set up the lab and complete its playbooks. The instructions assume you're comfortable setting up a domain controller and workstations for lab use along with other administrative tasks. The closer your lab is to the suggested lab setup, the easier it will be to follow [!INCLUDE [Product short](includes/product-short.md)] testing procedures. When your lab setup is complete, use the [!INCLUDE [Product short](includes/product-short.md)] Security Alert playbooks for testing.
 
 > [!div class="nextstepaction"]
-> [Setup an ATP security alert lab](playbook-setup-lab.md)
+> [Setup an [!INCLUDE [Product short](includes/product-short.md)] security alert lab](playbook-setup-lab.md)
 
 ## Reconnaissance playbook
 
