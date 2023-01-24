@@ -35,6 +35,11 @@ For more information about these steps, see the following articles:
 1. [Directory Service accounts](directory-service-accounts.md).
 1. [Role groups](role-groups.md).
 1. [Configure remote calls to SAM](remote-calls-sam.md).
+   
+
+> [!Note]
+> To test and see if your environment has the necessary prerequisites, you can run the Test-MdiReadiness.ps1 script. For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness).
+> 
 
 ## Deployment
 
@@ -63,3 +68,4 @@ If you deploy Defender for Identity standalone sensors, you'll need to do the fo
 
 > [!div class="step-by-step"]
 > [Defender for Identity prerequisites »](prerequisites.md)
+
