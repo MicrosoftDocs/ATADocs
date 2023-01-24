@@ -47,13 +47,13 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](/m
 
 ## Types of Defender for Identity security groups
 
-[!INCLUDE [Product short](includes/product-short.md)] provides three types of security groups: Azure ATP *(instance name)* Administrators, Azure ATP *(instance name)* Users, and Azure ATP *(instance name)* Viewers. The following table describes the type of access in Defender for Identity available for each role. Depending on which role you assign, various screens and options will be  unavailable for those users, as follows:
+[!INCLUDE [Product short](includes/product-short.md)] provides three types of security groups: Azure ATP *(Workspace name)* Administrators, Azure ATP *(Workspace name)* Users, and Azure ATP *(Workspace name)* Viewers. The following table describes the type of access in Defender for Identity available for each role. Depending on which role you assign, various screens and options will be  unavailable for those users, as follows:
 
-|Activity |Azure ATP *(instance name)* Administrators|Azure ATP *(instance name)* Users|Azure ATP *(instance name)* Viewers|
+|Activity |Azure ATP *(Workspace name)* Administrators|Azure ATP *(Workspace name)* Users|Azure ATP *(Workspace name)* Viewers|
 |----|----|----|----|
 |Change status of Health Alerts|Available|Not available|Not available|
 |Change status of Security Alerts (reopen, close, exclude, suppress)|Available|Available|Not available|
-|Delete instance|Available|Not available|Not available|
+|Delete Workspace|Available|Not available|Not available|
 |Download a report|Available|Available|Available|
 |Login|Available|Available|Available|
 |Share/Export security alerts (via email, get link, download details)|Available|Available|Available|
