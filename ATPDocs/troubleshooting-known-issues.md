@@ -428,6 +428,28 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 
 For more information, see [Configure proxy server using the command line](configure-proxy.md#configure-proxy-server-using-the-command-line).
 
+## Sensor service could not run and remains in Starting state
+
+The following errors will appear in the **System log** in **Event viewer**:
+
+- The Open procedure for service ".NETFramework" in DLL "C:\Windows\system32\mscoree.dll" failed with error code Access is denied. Performance data for this service will not be available.
+- The Open procedure for service "Lsa" in DLL "C:\Windows\System32\Secur32.dll" failed with error code Access is denied. Performance data for this service will not be available.
+- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code The device is not ready. Performance data for this service will not be available.
+
+The Microsoft.TriSensorError.log will contain an error similar to this:
+
+`Microsoft.Tri.Sensor.DirectoryServicesClient.TryCreateLdapConnectionAsync(DomainControllerConnectionData domainControllerConnectionData, bool isGlobalCatalog, bool isTraversing)
+2021-07-13 14:56:20.2976 Error DirectoryServicesClient Microsoft.Tri.Infrastructure.ExtendedException: Failed to communicate with configured domain controllers
+at new Microsoft.Tri.Sensor.DirectoryServicesClient(IConfigurationManager`
+
+**Cause:**
+
+NT Service\All Services do not have the right to logon as a service.
+
+**Resolution:**
+
+Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+
 ## See also
 
 - [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)

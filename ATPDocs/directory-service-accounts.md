@@ -110,7 +110,6 @@ The following steps can be followed to create a gMSA account to be used as the D
 >
 >- In multi-forest multi-domain environments, we recommend creating the gMSAs with a unique name for each forest or domain, and creating a universal group in each domain, containing all sensors' computer accounts to enable all sensors to retrieve the gMSAs' passwords and perform the cross-domain authentications.
   
-
 ## Granting the permissions to retrieve the gMSA account's password
 
 Before you create the gMSA account, consider how to assign permissions to retrieve the account's password.
@@ -223,6 +222,9 @@ The **Log on as a service** policy can be configured either in a Group Policy se
 [![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)](media/log-on-as-a-service-gpmc.png#lightbox)
 
 [![Log on as a service properties.](media/log-on-as-a-service.png)](media/log-on-as-a-service.png#lightbox)
+
+> [!NOTE]
+> If you use Group Policy to configure the **Log on as a service** setting, make sure you add both **NT Service\All Services** and the gMSA account you created.
 
 ## Configure Directory Service account in Microsoft 365 Defender
 
