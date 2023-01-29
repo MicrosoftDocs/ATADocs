@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Defender for Identity VPN integration in Microsoft 365 Defender
 
-[!INCLUDE [Product long](includes/product-long.md)] can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity as well as a new detection for abnormal VPN connections. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
+Microsoft Defender for Identity can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity as well as a new detection for abnormal VPN connections. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
 
-[!INCLUDE [Product short](includes/product-short.md)] integrates with your VPN solution by listening to RADIUS accounting events forwarded to the [!INCLUDE [Product short](includes/product-short.md)] sensors. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
+Defender for Identity integrates with your VPN solution by listening to RADIUS accounting events forwarded to the Defender for Identity sensors. This mechanism is based on standard RADIUS Accounting ([RFC 2866](https://tools.ietf.org/html/rfc2866)), and the following VPN vendors are supported:
 
 - Microsoft
 - F5
@@ -23,11 +23,11 @@ ms.topic: how-to
 
 To enable VPN integration, make sure you set the following parameters:
 
-- Open port UDP 1813 on your [!INCLUDE [Product short](includes/product-short.md)] sensors and/or [!INCLUDE [Product short](includes/product-short.md)] standalone sensors.
+- Open port UDP 1813 on your Defender for Identity sensors and/or Defender for Identity standalone sensors.
 
 > [!NOTE]
 >
-> - By enabling **Radius Accounting**, the [!INCLUDE [Product short](includes/product-short.md)] sensor will enable a pre-provisioned Windows firewall policy called **[!INCLUDE [Product long](includes/product-long.md)] Sensor** to allow incoming RADIUS Accounting on port UDP 1813.
+> - By enabling **Radius Accounting**, the Defender for Identity sensor will enable a pre-provisioned Windows firewall policy called **Microsoft Defender for Identity Sensor** to allow incoming RADIUS Accounting on port UDP 1813.
 > - VPN integration is not supported in environments adhering to Federal Information Processing Standards (FIPS)
 
 The example below uses Microsoft Routing and Remote Access Server (RRAS) to describe the VPN configuration process.
@@ -44,15 +44,15 @@ Perform the following steps on your RRAS server.
 
     ![RADIUS setup.](media/radius-setup.png)
 
-1. In the **Add RADIUS Server** window, type the **Server name** of the closest [!INCLUDE [Product short](includes/product-short.md)] sensor (which has network connectivity). For high availability, you can add additional [!INCLUDE [Product short](includes/product-short.md)] sensors as RADIUS Servers. Under **Port**, make sure the default of 1813 is configured. Select **Change** and type a new shared secret string of alphanumeric characters. Take note of the new shared secret string as you'll need to fill it out later during [!INCLUDE [Product short](includes/product-short.md)] Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and select **OK** on all open dialog boxes.
+1. In the **Add RADIUS Server** window, type the **Server name** of the closest Defender for Identity sensor (which has network connectivity). For high availability, you can add additional Defender for Identity sensors as RADIUS Servers. Under **Port**, make sure the default of 1813 is configured. Select **Change** and type a new shared secret string of alphanumeric characters. Take note of the new shared secret string as you'll need to fill it out later during Defender for Identity Configuration. Check the **Send RADIUS Account On and Accounting Off messages** box and select **OK** on all open dialog boxes.
 
     ![VPN setup.](media/vpn-set-accounting.png)
 
 ## Configure VPN in Defender for Identity
 
-[!INCLUDE [Product short](includes/product-short.md)] collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect suspicious VPN connections.
+Defender for Identity collects VPN data that helps profile the locations from which computers connect to the network and to be able to detect suspicious VPN connections.
 
-To configure VPN data in [!INCLUDE [Product short](includes/product-short.md)] in Microsoft 365 Defender:
+To configure VPN data in Defender for Identity in Microsoft 365 Defender:
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
@@ -69,7 +69,7 @@ After the Defender for Identity sensor receives the VPN events and sends them to
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/mdi/sizingtool>)
+- [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [Configure event collection](configure-event-collection.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

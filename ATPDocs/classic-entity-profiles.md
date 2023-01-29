@@ -11,7 +11,7 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender/investigate-users). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
-The entity profile provides you with a comprehensive entity page designed for a full deep-dive investigation of users, computers, devices, the resources they have access to, and their history. The profile page takes advantage of the new [!INCLUDE [Product short](includes/product-short.md)] logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a comprehensive entity page designed for a full deep-dive investigation of users, computers, devices, the resources they have access to, and their history. The profile page takes advantage of the new Defender for Identity logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
 To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline.
 
@@ -32,11 +32,11 @@ Using the **Filter by** button above the activity timeline, you can filter the a
 
 ## View directory data
 
-The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. [!INCLUDE [Product short](includes/product-short.md)] also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, [!INCLUDE [Product short](includes/product-short.md)] lists members of the group.
+The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. Defender for Identity also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, Defender for Identity lists members of the group.
 
 ![user profile directory data.](media/user-profile-dir-data.png)
 
-In the **User access control** section, [!INCLUDE [Product short](includes/product-short.md)] surfaces security settings that may need your attentions. You can see important flags about the user, such as if the the user can press enter to bypass the password, and if the user has a password that never expires, etc.
+In the **User access control** section, Defender for Identity surfaces security settings that may need your attentions. You can see important flags about the user, such as if the the user can press enter to bypass the password, and if the user has a password that never expires, etc.
 
 ## View lateral movement paths
 
@@ -52,5 +52,5 @@ For more information, see [Lateral movement paths](/defender-for-identity/unders
 
 ## See Also
 
-- [Investigate lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Investigate lateral movement paths with Defender for Identity](use-case-lateral-movement-path.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

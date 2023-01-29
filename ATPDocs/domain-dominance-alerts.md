@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Domain dominance alerts
 
-Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Microsoft Defender for Identity identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](reconnaissance-alerts.md)
 1. [Compromised credentials](compromised-credentials-alerts.md)
@@ -15,9 +15,9 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. **Domain dominance**
 1. [Exfiltration](exfiltration-alerts.md)
 
-To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn how to understand, classify, prevent, and remediate the following attacks:
+The following security alerts help you identify and remediate **Domain dominance** phase suspicious activities detected by Defender for Identity in your network. In this article, you'll learn how to understand, classify, prevent, and remediate the following attacks:
 
 > [!div class="checklist"]
 >
@@ -43,7 +43,7 @@ The following security alerts help you identify and remediate **Domain dominance
 **Description**
 
 The Data Protection API (DPAPI) is used by Windows to securely protect passwords saved by browsers, encrypted files, and other sensitive data. Domain controllers hold a backup master key that can be used to decrypt all secrets encrypted with DPAPI on domain-joined Windows machines. Attackers can use the master key to decrypt any secrets protected by DPAPI on all domain-joined machines.
-In this detection, a [!INCLUDE [Product short](includes/product-short.md)] alert is triggered when the DPAPI is used to retrieve the backup master key.
+In this detection, a Defender for Identity alert is triggered when the DPAPI is used to retrieve the backup master key.
 
 **MITRE**
 
@@ -85,7 +85,7 @@ Advanced security scanners may legitimately generate this type of activity again
 
 **Description**
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. [!INCLUDE [Product short](includes/product-short.md)] detects PSexec, Remote WMI, and PowerShell connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Defender for Identity detects PSexec, Remote WMI, and PowerShell connections.
 
 **MITRE**
 
@@ -132,7 +132,7 @@ Administrative workstations, IT team members, and service accounts can all perfo
 1. Implement less-privileged access on domain machines to allow specific users the right to create services.
 
 > [!NOTE]
-> Remote code execution attempt alerts on attempted use of Powershell commands are only supported by [!INCLUDE [Product short](includes/product-short.md)] sensors.
+> Remote code execution attempt alerts on attempted use of Powershell commands are only supported by Defender for Identity sensors.
 
 ## Suspected DCShadow attack (domain controller promotion) (external ID 2028)
 
@@ -147,7 +147,7 @@ In a DCShadow attack, RPC, and LDAP are used to:
 1. Register the machine account as a domain controller (using domain admin rights).
 1. Perform replication (using the granted replication rights) over DRSUAPI and send changes to directory objects.
 
-In this [!INCLUDE [Product short](includes/product-short.md)] detection, a security alert is triggered when a machine in the network tries to register as a rogue domain controller.
+In this Defender for Identity detection, a security alert is triggered when a machine in the network tries to register as a rogue domain controller.
 
 **MITRE**
 
@@ -162,7 +162,7 @@ None
 
 **TP, B-TP, or FP**
 
-If the source computer is a domain controller, failed or low certainty resolution can prevent [!INCLUDE [Product short](includes/product-short.md)] from being able to confirm identification.
+If the source computer is a domain controller, failed or low certainty resolution can prevent Defender for Identity from being able to confirm identification.
 
 1. Check if the source computer is a domain controller?
     If the answer is **yes**, **Close** the alert as a **B-TP** activity.
@@ -202,7 +202,7 @@ Validate the following permissions:
 1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who has these permissions in the domain.
 
 > [!NOTE]
-> Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by [!INCLUDE [Product short](includes/product-short.md)] sensors only.
+> Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by Defender for Identity sensors only.
 
 ## Suspected DCShadow attack (domain controller replication request) (external ID 2029)
 
@@ -211,7 +211,7 @@ Validate the following permissions:
 **Description**
 
 Active Directory replication is the process by which changes that are made on one domain controller are synchronized with other domain controllers. Given necessary permissions, attackers can grant rights for their machine account, allowing them to impersonate a domain controller. Attackers strive to initiate a malicious replication request, allowing them to change Active Directory objects on a genuine domain controller, which can give the attackers persistence in the domain.
-In this detection, an alert is triggered when a suspicious replication request is generated against a genuine domain controller protected by [!INCLUDE [Product short](includes/product-short.md)]. The behavior is indicative of techniques used in domain controller shadow attacks.
+In this detection, an alert is triggered when a suspicious replication request is generated against a genuine domain controller protected by Defender for Identity. The behavior is indicative of techniques used in domain controller shadow attacks.
 
 **MITRE**
 
@@ -226,7 +226,7 @@ None
 
 **TP, B-TP, or FP**
 
-If the source computer is a domain controller, failed or low certainty resolution can prevent [!INCLUDE [Product short](includes/product-short.md)] from identification.
+If the source computer is a domain controller, failed or low certainty resolution can prevent Defender for Identity from identification.
 
 1. Check if the source computer is a domain controller?
     If the answer is **yes**, **Close** the alert as a **B-TP** activity.
@@ -266,7 +266,7 @@ Validate the following permissions:
 1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 > [!NOTE]
-> Suspicious replication request (potential DCShadow attack) alerts are supported by [!INCLUDE [Product short](includes/product-short.md)] sensors only.
+> Suspicious replication request (potential DCShadow attack) alerts are supported by Defender for Identity sensors only.
 
 ## Suspected DCSync attack (replication of directory services) (external ID 2006)
 
@@ -279,7 +279,7 @@ Active Directory replication is the process by which changes that are made on on
 In this detection, an alert is triggered when a replication request is initiated from a computer that isn't a domain controller.
 
 > [!NOTE]
-> If you have domain controllers on which [!INCLUDE [Product short](includes/product-short.md)] sensors are not installed, those domain controllers are not covered by [!INCLUDE [Product short](includes/product-short.md)]. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by [!INCLUDE [Product short](includes/product-short.md)] as a domain controller. It is highly recommended to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on every domain controller to get full coverage.
+> If you have domain controllers on which Defender for Identity sensors are not installed, those domain controllers are not covered by Defender for Identity. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by Defender for Identity as a domain controller. It is highly recommended to install the Defender for Identity sensor on every domain controller to get full coverage.
 
 **MITRE**
 
@@ -295,7 +295,7 @@ None
 
 **TP, B-TP, or FP**
 
-If the source computer is a domain controller, failed or low certainty resolution can prevent [!INCLUDE [Product short](includes/product-short.md)] from identification.
+If the source computer is a domain controller, failed or low certainty resolution can prevent Defender for Identity from identification.
 
 1. Check if the source computer is a domain controller?
     If the answer is **yes**, **Close** the alert as a **B-TP** activity.
@@ -339,9 +339,9 @@ Validate the following permissions:
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different protocol fields that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, [!INCLUDE [Product short](includes/product-short.md)] learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer and/or user and matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos by downgrading the encryption level of different protocol fields that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Defender for Identity learns the Kerberos encryption types used by computers and users, and alerts you when a weaker cypher is used that is unusual for the source computer and/or user and matches known attack techniques.
 
-In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by [!INCLUDE [Product short](includes/product-short.md)].
+In a Golden Ticket alert, the encryption method of the TGT field of TGS_REQ (service request) message from the source computer was detected as downgraded compared to the previously learned behavior. This is not based on a time anomaly (as in the other Golden Ticket detection). In addition, in the case of this alert, there was no Kerberos authentication request associated with the previous service request, detected by Defender for Identity.
 
 **MITRE**
 
@@ -596,8 +596,8 @@ None
 **TP, B-TP, or FP**
 
 1. In the last few hours, was there any change made to the **Maximum lifetime for user ticket** setting in group policy, that might affect the alert?
-1. Is the [!INCLUDE [Product short](includes/product-short.md)] Standalone Sensor involved in this alert a virtual machine?
-    - If the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is involved, was it recently resumed from a saved state?
+1. Is the Defender for Identity Standalone Sensor involved in this alert a virtual machine?
+    - If the Defender for Identity standalone sensor is involved, was it recently resumed from a saved state?
 1. Is there a time synchronization problem in the network, where not all of the computers are synchronized?
     - Select the **Download details** button to view the Security Alert report Excel file, view the related network activities, and check if there's a difference between "StartTime" and "DomainControllerStartTime".
 
@@ -626,7 +626,7 @@ If the answer to the previous questions is **yes**, **Close** the security alert
 
 **Description**
 
-Encryption downgrade is a method of weakening Kerberos using a downgraded encryption level for different fields of the protocol that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, [!INCLUDE [Product short](includes/product-short.md)] learns the Kerberos encryption types used by computers and users. The alert is issued when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
+Encryption downgrade is a method of weakening Kerberos using a downgraded encryption level for different fields of the protocol that normally have the highest level of encryption. A weakened encrypted field can be an easier target to offline brute force attempts. Various attack methods utilize weak Kerberos encryption cyphers. In this detection, Defender for Identity learns the Kerberos encryption types used by computers and users. The alert is issued when a weaker cypher is used that is unusual for the source computer, and/or user, and matches known attack techniques.
 
 Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller. In this alert, the learned behavior of previous KRB_ERR message encryption from domain controller to the account requesting a ticket, was downgraded.
 
@@ -655,9 +655,9 @@ Skeleton Key is malware that runs on domain controllers and allows authenticatio
 
 **Description**
 
-Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. [!INCLUDE [Product short](includes/product-short.md)] profiles continuously.
+Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Defender for Identity profiles continuously.
 
-For a definition of sensitive groups in [!INCLUDE [Product short](includes/product-short.md)], see [Working with the sensitive accounts](/defender-for-identity/entity-tags).
+For a definition of sensitive groups in Defender for Identity, see [Working with the sensitive accounts](/defender-for-identity/entity-tags).
 
 The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](configure-windows-event-collection.md).
 
@@ -764,4 +764,4 @@ Some administrative tasks are legitimately performed against domain controllers 
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Exfiltration alerts](exfiltration-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

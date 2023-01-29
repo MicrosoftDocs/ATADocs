@@ -157,7 +157,7 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 ## Permissions required for the DSA
 
 The DSA requires read permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
-The read-only permissions on the Deleted Objects container allows [!INCLUDE [Product short](includes/product-short.md)] to detect user deletions from your Active Directory.
+The read-only permissions on the Deleted Objects container allows Defender for Identity to detect user deletions from your Active Directory.
 
 Granting the required read permissions on the Deleted Objects Container can be accomplished using the following code example:
 

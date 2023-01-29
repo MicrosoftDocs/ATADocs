@@ -13,17 +13,17 @@ ROBOTS: NOINDEX
 
 ## Microsoft Defender for Identity health center
 
-The [!INCLUDE [Product long](includes/product-long.md)] health center lets you know how your [!INCLUDE [Product short](includes/product-short.md)] instance is performing and alerts you when there are problems.
+The Microsoft Defender for Identity health center lets you know how your Defender for Identity instance is performing and alerts you when there are problems.
 
 ## Working with the Defender for Identity health center
 
-The [!INCLUDE [Product short](includes/product-short.md)] health center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the navigation bar.
+The Defender for Identity health center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the navigation bar.
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] health center red dot toolbar](media/health-bar.png)
 
 ### Managing Defender for Identity health
 
-To check up on the overall health of your [!INCLUDE [Product short](includes/product-short.md)] instance, select **Health** ![[!INCLUDE [Product short.](includes/product-short.md)] health center icon](media/red-dot.png)
+To check up on the overall health of your Defender for Identity instance, select **Health** ![[!INCLUDE [Product short.](includes/product-short.md)] health center icon](media/red-dot.png)
 
 - All open issues can be managed by setting them to **Close**,  or **Suppress**, by clicking the three dots in the corner of the alert and making your selection.
 
@@ -32,9 +32,9 @@ To check up on the overall health of your [!INCLUDE [Product short](includes/pro
 - **Close**: Is used to track suspicious activities that you identified, researched, and fixed for mitigated.
 
     > [!NOTE]
-    > [!INCLUDE [Product short](includes/product-short.md)] may reopen a closed activity if the same activity is detected again within a short period of time.
+    > Defender for Identity may reopen a closed activity if the same activity is detected again within a short period of time.
 
-- **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert [!INCLUDE [Product short](includes/product-short.md)] doesn't reopen it. But if the alert stops for seven days, and is then seen again, you're alerted again.
+- **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert Defender for Identity doesn't reopen it. But if the alert stops for seven days, and is then seen again, you're alerted again.
 
 - **Reopen**: You can reopen a closed or suppressed alert so that it appears as **Open** in the timeline again.
 
@@ -45,4 +45,4 @@ To check up on the overall health of your [!INCLUDE [Product short](includes/pro
 ## See Also
 
 - [Working with suspicious activities](/defender-for-identity/manage-security-alerts)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

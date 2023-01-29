@@ -7,7 +7,7 @@ ms.topic: overview
 
 # What's new in Microsoft Defender for Identity
 
-This article is updated frequently to let you know what's new in the latest releases of [!INCLUDE [Product long](includes/product-long.md)] (formerly Azure Advanced Threat Protection, also known as Azure ATP).
+This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity (formerly Azure Advanced Threat Protection, also known as Azure ATP).
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
 
@@ -448,7 +448,7 @@ Released April 12, 2021
 
 Released March 14, 2021
 
-- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](configure-windows-event-collection.md) to be collected by [!INCLUDE [Product short](includes/product-short.md)]. Once configured, collected events will be available to view in the activity log as well as the Microsoft 365 Defender Advanced Hunting.
+- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](configure-windows-event-collection.md) to be collected by Defender for Identity. Once configured, collected events will be available to view in the activity log as well as the Microsoft 365 Defender Advanced Hunting.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.142
@@ -462,7 +462,7 @@ Released March 7, 2021
 Released February 21, 2021
 
 - **New security alert: Suspected AS-REP Roasting attack (external ID 2412)**  
-[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected AS-REP Roasting attack (external ID 2412)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker targets accounts with disabled Kerberos preauthentication, and attempts to obtain Kerberos TGT data. The attacker's intent may be to extract the credentials from the data using offline password cracking attacks. For more information, see [Kerberos AS-REP Roasting exposure (external ID 2412)](compromised-credentials-alerts.md#suspected-as-rep-roasting-attack-external-id-2412).
+Defender for Identity's *Suspected AS-REP Roasting attack (external ID 2412)* security alert is now available. In this detection, a Defender for Identity security alert is triggered when an attacker targets accounts with disabled Kerberos preauthentication, and attempts to obtain Kerberos TGT data. The attacker's intent may be to extract the credentials from the data using offline password cracking attacks. For more information, see [Kerberos AS-REP Roasting exposure (external ID 2412)](compromised-credentials-alerts.md#suspected-as-rep-roasting-attack-external-id-2412).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.140
@@ -528,7 +528,7 @@ Released November 17, 2020
 Released November 8, 2020
 
 - **New security alert: Suspected Kerberos SPN exposure (external ID 2410)**  
-[!INCLUDE [Product short](includes/product-short.md)]'s *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attacker's intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
+Defender for Identity's *Suspected Kerberos SPN exposure (external ID 2410)* security alert is now available. In this detection, a Defender for Identity security alert is triggered when an attacker enumerates service accounts and their respective SPNs, and then requests Kerberos TGS tickets for the services. The attacker's intent may be to extract the hashes from the tickets and save them for later use in offline brute force attacks. For more information, see [Kerberos SPN exposure](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.130
@@ -1319,12 +1319,12 @@ Additions and updates were made to Azure ATP articles describing Lateral Movemen
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
-For details of each [!INCLUDE [Product short](includes/product-short.md)] release prior to (and including) release 2.55, see the [[!INCLUDE [Product short](includes/product-short.md)] release reference](release-reference.md).
+For details of each Defender for Identity release prior to (and including) release 2.55, see the [Defender for Identity release reference](release-reference.md).
 
 ## See Also
 
-- [What is [!INCLUDE [Product long](includes/product-long.md)]?](what-is.md)
+- [What is Microsoft Defender for Identity?](what-is.md)
 - [Frequently asked questions](technical-faq.yml)
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Defender for Identity capacity planning](capacity-planning.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
