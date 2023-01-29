@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Exfiltration alerts
 
-Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Microsoft Defender for Identity identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance](reconnaissance-alerts.md)
 1. [Compromised credentials](compromised-credentials-alerts.md)
@@ -15,9 +15,9 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Domain dominance](domain-dominance-alerts.md)
 1. **Exfiltration**
 
-To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network. In this article, you'll learn to understand, classify, prevent, and remediate the following attacks:
+The following security alerts help you identify and remediate **Exfiltration** phase suspicious activities detected by Defender for Identity in your network. In this article, you'll learn to understand, classify, prevent, and remediate the following attacks:
 
 > [!div class="checklist"]
 >
@@ -28,7 +28,7 @@ The following security alerts help you identify and remediate **Exfiltration** p
 
 **Description**
 
-Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. A [!INCLUDE [Product short](includes/product-short.md)] **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
+Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. A Defender for Identity **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
 
 **MITRE**
 
@@ -103,7 +103,7 @@ Some companies legitimately use DNS for regular communication. To determine the 
 1. If after your investigation, the registered query domain remains not trusted, we recommend blocking the destination domain to avoid all future communication.
 
 > [!NOTE]
-> *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by [!INCLUDE [Product short](includes/product-short.md)] but are known to or part of your organization can be closed.
+> *Suspicious communication over DNS* security alerts list the suspected domain. New domains, or domains recently added that are not yet known or recognized by Defender for Identity but are known to or part of your organization can be closed.
 
 ## See Also
 
@@ -114,4 +114,4 @@ Some companies legitimately use DNS for regular communication. To determine the 
 - [Compromised credential alerts](compromised-credentials-alerts.md)
 - [Lateral movement alerts](lateral-movement-alerts.md)
 - [Domain dominance alerts](domain-dominance-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

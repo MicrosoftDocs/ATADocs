@@ -73,16 +73,16 @@ After you've searched for your issue in **How can we help?** (and clicked the bl
 
 ### System health status
 
-The service health status for [!INCLUDE [Product short](includes/product-short.md)] is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health), under **Microsoft 365 Defender**. This page tells you if the [!INCLUDE [Product short](includes/product-short.md)] portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
+The service health status for Defender for Identity is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health), under **Microsoft 365 Defender**. This page tells you if the Defender for Identity portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
 
 ### Troubleshooting
 
 - If you have a question about how something works, check whether your question is already answered in [Frequently asked questions](technical-faq.yml).
 
-- If you have a question about a prerequisite for [!INCLUDE [Product short](includes/product-short.md)], see [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md).
+- If you have a question about a prerequisite for Defender for Identity, see [Defender for Identity prerequisites](prerequisites.md).
 
 - For information regarding investigation security alerts, see the [security alert guide](/defender-for-identity/alerts-overview).
 
 ### Community resources
 
-We recommend the [Tech Community group for [!INCLUDE [Product short](includes/product-short.md)]](<https://aka.ms/MDIcommunity>). This resource provides direct responses from the [!INCLUDE [Product short](includes/product-short.md)] team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.
+We recommend the [Tech Community group for Defender for Identity](<https://aka.ms/MDIcommunity>). This resource provides direct responses from the Defender for Identity team in addition to the benefit of shared experiences and knowledge from other administrators and consultants.

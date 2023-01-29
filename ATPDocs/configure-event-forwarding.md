@@ -8,22 +8,22 @@ ms.topic: how-to
 # Configuring Windows Event Forwarding
 
 > [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] sensor automatically reads events locally, without the need to configure event forwarding.
+> The Microsoft Defender for Identity sensor automatically reads events locally, without the need to configure event forwarding.
 
-To enhance detection capabilities, [!INCLUDE [Product short](includes/product-short.md)] needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These can either be read automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or in case the [!INCLUDE [Product short](includes/product-short.md)] sensor is not deployed, it can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of two ways, by configuring the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor to listen for SIEM events or by configuring Windows Event Forwarding.
+To enhance detection capabilities, Defender for Identity needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These can either be read automatically by the Defender for Identity sensor or in case the Defender for Identity sensor is not deployed, it can be forwarded to the Defender for Identity standalone sensor in one of two ways, by configuring the Defender for Identity standalone sensor to listen for SIEM events or by configuring Windows Event Forwarding.
 
 > [!NOTE]
 >
-> - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> - Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 > - Check that the domain controller is properly configured to capture the required events.
 
 ## WEF configuration for Defender for Identity standalone sensor's with port mirroring
 
-After you configured port mirroring from the domain controllers to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding.
+After you configured port mirroring from the domain controllers to the Defender for Identity standalone sensor, follow the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding.
 
 **Step 1: Add the network service account to the domain Event Log Readers Group.**
 
-In this scenario, assume that the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor is a member of the domain.
+In this scenario, assume that the Defender for Identity standalone sensor is a member of the domain.
 
 1. Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**.
 1. Select **Members**.
@@ -34,7 +34,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 **Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.**
 
 > [!NOTE]
-> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor. The following steps modify the local policy of the domain controller.
+> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Defender for Identity standalone sensor. The following steps modify the local policy of the domain controller.
 
 1. Run the following command on each domain controller: *winrm quickconfig*
 1. From a command prompt type *gpedit.msc*.
@@ -54,14 +54,14 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 1. Select **OK**.
 1. From an elevated command prompt type *gpupdate /force*.
 
-**Step 3: Perform the following steps on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor**
+**Step 3: Perform the following steps on the Defender for Identity standalone sensor**
 
 1. Open an elevated command prompt and type `wecutil qc`. Leave the command window open.
 1. Open **Event Viewer**.
 1. Right-click **Subscriptions** and select **Create Subscription**.
 
     1. Enter a name and description for the subscription.
-    1. For **Destination Log**, confirm that **Forwarded Events** is selected. For [!INCLUDE [Product short](includes/product-short.md)] to read the events, the destination log must be **Forwarded Events**.
+    1. For **Destination Log**, confirm that **Forwarded Events** is selected. For Defender for Identity to read the events, the destination log must be **Forwarded Events**.
     1. Select **Source computer initiated** and select **Select Computers Groups**.
         1. Select **Add Domain Computer**.
         1. Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.
@@ -79,11 +79,11 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         ```
 
     1. Return to the **Event Viewer** console. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status.
-    1. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor.
+    1. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Defender for Identity standalone sensor.
 
 For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## See Also
 
-- [Install [!INCLUDE [Product short](includes/product-short.md)]](install-step1.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Install Defender for Identity](install-step1.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

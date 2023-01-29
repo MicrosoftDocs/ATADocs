@@ -11,11 +11,11 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/manage-security-alerts). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
-This article explains the basics of how to work with [!INCLUDE [Product long](includes/product-long.md)] security alerts.
+This article explains the basics of how to work with Microsoft Defender for Identity security alerts.
 
 ## Review security alerts on the attack timeline
 
-After logging in to the [!INCLUDE [Product short](includes/product-short.md)] portal, you're automatically taken to the open **Security Alerts Timeline**. Security alerts are listed in chronological order, with the newest alert on the top of the timeline.
+After logging in to the Defender for Identity portal, you're automatically taken to the open **Security Alerts Timeline**. Security alerts are listed in chronological order, with the newest alert on the top of the timeline.
 
 Each security alert has the following information:
 
@@ -37,7 +37,7 @@ Each security alert has the following information:
 
 ## Security alert categories
 
-[!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
+Defender for Identity security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
 
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)
@@ -47,17 +47,17 @@ Each security alert has the following information:
 
 ## Preview detections
 
-The [!INCLUDE [Product short](includes/product-short.md)] research team constantly works on implementing new detections for newly discovered attacks. Because [!INCLUDE [Product short](includes/product-short.md)] is a cloud service, new detections are released quickly to enable [!INCLUDE [Product short](includes/product-short.md)] customers to benefit from new detections as soon as possible.
+The Defender for Identity research team constantly works on implementing new detections for newly discovered attacks. Because Defender for Identity is a cloud service, new detections are released quickly to enable Defender for Identity customers to benefit from new detections as soon as possible.
 
-These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the [!INCLUDE [Product short](includes/product-short.md)] console - not in the timeline or in entity profiles - and new alerts won't be opened.
+These detections are tagged with a preview badge, to help you identify the new detections and know that they are new to the product. If you turn off preview detections, they will not be displayed in the Defender for Identity console - not in the timeline or in entity profiles - and new alerts won't be opened.
 
 ![preview detection in timeline.](media/preview-detection-in-timeline.png)
 
-By default, preview detections are enabled in [!INCLUDE [Product short](includes/product-short.md)].
+By default, preview detections are enabled in Defender for Identity.
 
 To disable preview detections:
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] console, select **Configuration**.
+1. In the Defender for Identity console, select **Configuration**.
 1. In the left menu, under **Preview**, click **Detections**.
 1. Use the slider to turn the preview detections on and off.
 
@@ -98,19 +98,19 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 - **Close**: Is used to track security alerts that you identified, researched, and fixed for mitigated.
 
-- **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert [!INCLUDE [Product short](includes/product-short.md)] doesn't reopen it. But if the alert stops for seven days, and is then seen again, a new alert is opened.
+- **Suppress**: Suppressing an alert means you want to ignore it for now, and only be alerted again if there's a new instance. This means that if there's a similar alert Defender for Identity doesn't reopen it. But if the alert stops for seven days, and is then seen again, a new alert is opened.
 
 - **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all security alerts of the same type.
 
-- **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set [!INCLUDE [Product short](includes/product-short.md)] to exclude a specific entity (user or computer) from alerting again for a certain type of activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the security alert as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each security alert you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket).
+- **Exclude**: The ability to exclude an entity from raising more of a certain type of alerts. For example, you can set Defender for Identity to exclude a specific entity (user or computer) from alerting again for a certain type of activity, such as a specific admin who runs remote code or a security scanner that does DNS reconnaissance. In addition to being able to add exclusions directly on the security alert as it is detected in the time line, you can also go to the Configuration page to **Exclusions**, and for each security alert you can manually add and remove excluded entities or subnets (for example for Pass-the-Ticket).
 
 > [!NOTE]
-> The configuration pages can only be modified by [!INCLUDE [Product short](includes/product-short.md)] admins.
+> The configuration pages can only be modified by Defender for Identity admins.
 
 ## See Also
 
-- [Working with the [!INCLUDE [Product short](includes/product-short.md)] portal](workspace-portal.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Working with the Defender for Identity portal](workspace-portal.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
 
 ## Learn more
 

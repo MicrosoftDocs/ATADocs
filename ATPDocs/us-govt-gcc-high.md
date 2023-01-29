@@ -7,11 +7,11 @@ ms.topic: overview
 
 # Microsoft Defender for Identity for US Government offerings
 
-The [!INCLUDE [Product long](includes/product-long.md)] GCC High offering uses the same underlying technologies and capabilities as the commercial instance of [!INCLUDE [Product short](includes/product-short.md)].
+The Microsoft Defender for Identity GCC High offering uses the same underlying technologies and capabilities as the commercial instance of Defender for Identity.
 
 ## Get started with US Government offerings
 
-The [!INCLUDE [Product short](includes/product-short.md)] GCC, GCC High, and Department of Defense (DoD) offerings are built on the Microsoft Azure Government Cloud and are designed to inter-operate with Microsoft 365 GCC, GCC High, and DoD. Use [!INCLUDE [Product short](includes/product-short.md)] public documentation as a [starting point](deploy-defender-identity.md) for deploying and operating the service.
+The Defender for Identity GCC, GCC High, and Department of Defense (DoD) offerings are built on the Microsoft Azure Government Cloud and are designed to inter-operate with Microsoft 365 GCC, GCC High, and DoD. Use Defender for Identity public documentation as a [starting point](deploy-defender-identity.md) for deploying and operating the service.
 
 ## Licensing requirements
 
@@ -68,4 +68,4 @@ Unless otherwise specified, new feature releases, including preview features, do
 ## Next steps
 
 - [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

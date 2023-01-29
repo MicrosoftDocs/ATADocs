@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Download the Microsoft Defender for Identity sensor
 
-Learn how to download the [!INCLUDE [Product long](includes/product-long.md)] sensor for your domain controllers.
+Learn how to download the Microsoft Defender for Identity sensor for your domain controllers.
 
 ## Add and download a sensor
 

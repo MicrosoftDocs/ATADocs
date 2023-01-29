@@ -10,9 +10,9 @@ ms.topic: conceptual
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-[!INCLUDE [Product long](includes/product-long.md)] security alerts explain the suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
+Microsoft Defender for Identity security alerts explain the suspicious activities detected by Defender for Identity sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 
-[!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
+Defender for Identity security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain. Learn more about each phase, the alerts designed to detect each attack, and how to use the alerts to help protect your network using the following links:
 
 1. [Reconnaissance phase alerts](reconnaissance-alerts.md)
 1. [Compromised credential phase alerts](compromised-credentials-alerts.md)
@@ -20,7 +20,7 @@ ms.topic: conceptual
 1. [Domain dominance phase alerts](domain-dominance-alerts.md)
 1. [Exfiltration phase alerts](exfiltration-alerts.md)
 
-To learn more about the structure and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md).
+To learn more about the structure and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md).
 
 ## Security alert name mapping and unique external IDs
 
@@ -82,4 +82,4 @@ The following table lists the mapping between alert names, their corresponding u
 
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Understanding security alerts](understanding-security-alerts.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

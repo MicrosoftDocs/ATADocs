@@ -9,11 +9,11 @@ ms.topic: how-to
 
 ## What are Risky lateral movement paths?
 
-[!INCLUDE [Product long](includes/product-long.md)] continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
+Microsoft Defender for Identity continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.
 
 Learn more about LMP:
 
-- [[!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths (LMPs)](use-case-lateral-movement-path.md)
+- [Defender for Identity Lateral Movement Paths (LMPs)](use-case-lateral-movement-path.md)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
 ## What risk do risky lateral movement paths pose?
@@ -39,4 +39,4 @@ For example, the riskiest paths are more readily visible to attackers and, if co
 ## See Also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

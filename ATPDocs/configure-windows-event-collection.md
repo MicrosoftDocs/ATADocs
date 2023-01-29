@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Configure Windows Event collection
 
-[!INCLUDE [Product long](includes/product-long.md)] detection relies on specific Windows Event log entries to enhance some detections and provide additional information on who performed specific actions such as NTLM logons, security group modifications, and similar events. For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings can lead to the required events not being recorded in the Event Log and result in incomplete [!INCLUDE [Product short](includes/product-short.md)] coverage.
+Microsoft Defender for Identity detection relies on specific Windows Event log entries to enhance some detections and provide additional information on who performed specific actions such as NTLM logons, security group modifications, and similar events. For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings can lead to the required events not being recorded in the Event Log and result in incomplete Defender for Identity coverage.
 
-To enhance threat detection capabilities, [!INCLUDE [Product short](includes/product-short.md)] needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by [!INCLUDE [Product short](includes/product-short.md)]:
+To enhance threat detection capabilities, Defender for Identity needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by Defender for Identity:
 
 ## Relevant Windows Events
 
@@ -95,7 +95,7 @@ To audit Event ID 8004, additional configuration steps are required.
 > [!NOTE]
 >
 > - Domain group policies to collect Windows Event 8004 should **only** be applied to domain controllers.
-> - When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed data.
+> - When Windows Event 8004 is parsed by Defender for Identity Sensor, Defender for Identity NTLM authentications activities are enriched with the server accessed data.
 
 1. Following the initial steps mentioned [above](#configure-audit-policies), open **Group Policy Management** and navigate to the **Default Domain Controllers Policy**.
 1. Go to **Local Policies** > **Security Options**.
@@ -136,7 +136,7 @@ Windows Registry Editor Version 5.00
 <!--
 ## Defender for Identity Advanced Audit Policy check
 
-To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, [!INCLUDE [Product short](includes/product-short.md)] automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
+To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, Defender for Identity automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
 
 ![Advanced Audit Policy Health Alert.](media/health-alert-audit.png)
 
@@ -240,14 +240,14 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
 ## Configure event collection
 
-These events can be collected automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or, if the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't deployed, they can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of the following ways:
+These events can be collected automatically by the Defender for Identity sensor or, if the Defender for Identity sensor isn't deployed, they can be forwarded to the Defender for Identity standalone sensor in one of the following ways:
 
-- [Configure the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor](configure-event-forwarding.md) to listen for SIEM events
+- [Configure the Defender for Identity standalone sensor](configure-event-forwarding.md) to listen for SIEM events
 - [Configure Windows Event Forwarding](configure-event-forwarding.md)
 
 > [!NOTE]
 >
-> - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> - Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
 ## Next steps
 

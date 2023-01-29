@@ -7,36 +7,36 @@ ms.topic: how-to
 
 # Configure event collection
 
-To enhance detection capabilities, [!INCLUDE [Product long](includes/product-long.md)] needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the Defender for Identity sensor or if the Defender for Identity sensor isn't deployed, it can be forwarded to the Defender for Identity standalone sensor in one of two ways, by configuring the [Defender for Identity standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance detection capabilities, Microsoft Defender for Identity needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the Defender for Identity sensor or if the Defender for Identity sensor isn't deployed, it can be forwarded to the Defender for Identity standalone sensor in one of two ways, by configuring the [Defender for Identity standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
 >
-> - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> - Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that isn't available via the domain controller network traffic.
+In addition to collecting and analyzing network traffic to and from the domain controllers, Defender for Identity can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Defender for Identity with additional information that isn't available via the domain controller network traffic.
 
 ## SIEM/Syslog
 
-[!INCLUDE [Product short](includes/product-short.md)] Standalone sensors are configured by default to receive Syslog data. For [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
+Defender for Identity Standalone sensors are configured by default to receive Syslog data. For Defender for Identity Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
 
 > [!NOTE]
-> [!INCLUDE [Product short](includes/product-short.md)] only listens on IPv4 and not IPv6.
+> Defender for Identity only listens on IPv4 and not IPv6.
 
 > [!IMPORTANT]
 >
-> - Do not forward all the Syslog data to the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-> - [!INCLUDE [Product short](includes/product-short.md)] supports UDP traffic from the SIEM/Syslog server.
+> - Do not forward all the Syslog data to the Defender for Identity sensor.
+> - Defender for Identity supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server.
 
 > [!NOTE]
-> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by [!INCLUDE [Product short](includes/product-short.md)].
+> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by Defender for Identity.
 
 ## Configuring the Defender for Identity sensor to listen for SIEM events
 
-- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors. For more information about configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the Defender for Identity Standalone sensors. For more information about configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
-[!INCLUDE [Product short](includes/product-short.md)] supports SIEM events in the following formats:
+Defender for Identity supports SIEM events in the following formats:
 
 ### RSA Security Analytics
 
@@ -47,7 +47,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 - "\n" character separator is required between all fields.
 - The fields, in order, are:
     1. RsaSA constant (must appear).
-    2. The timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably in milliseconds accuracy, this is important.
+    2. The timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). Preferably in milliseconds accuracy, this is important.
     3. The Windows event ID
     4. The Windows event provider name
     5. The Windows event log name
@@ -67,7 +67,7 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 - The header part (the part that's separated by a pipe) must exist (as stated in the protocol).
 - The following keys in the *Extension* part must be present in the event:
   - externalId = the Windows event ID
-  - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably  in milliseconds accuracy, this is important.
+  - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). Preferably  in milliseconds accuracy, this is important.
   - cat = the Windows event log name
   - shost = the source host name
   - dhost = the computer receiving the event (the DC in this case)
@@ -99,7 +99,7 @@ Error Code: 0x0
   - EventCode = the Windows event ID
   - Logfile = the Windows event log name
   - SourceName = The Windows event provider name
-  - TimeGenerated = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
+  - TimeGenerated = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
   - ComputerName = the source host name
   - Message = the original event text from the Windows event
 - The Message Key and value MUST be last.
@@ -107,7 +107,7 @@ Error Code: 0x0
 
 ### QRadar
 
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because [!INCLUDE [Product short](includes/product-short.md)] needs millisecond data, it's necessary to set QRadar to use agentless Windows event collection. For more information, see [https://www-01.ibm.com/support/docview.wss?uid=swg21700170](https://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because Defender for Identity needs millisecond data, it's necessary to set QRadar to use agentless Windows event collection. For more information, see [https://www-01.ibm.com/support/docview.wss?uid=swg21700170](https://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
 
 ```text
 <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -122,7 +122,7 @@ The fields needed are:
 - The DC fully qualified domain name
 - The Windows event ID
 
-TimeGenerated is the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
+TimeGenerated is the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
 
 Message is the original event text from the Windows event
 
@@ -133,7 +133,7 @@ Make sure to have \t between the key=value pairs.
 
 ## See also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](<https://aka.ms/mdi/sizingtool>)
-- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
+- [Defender for Identity SIEM log reference](cef-format-sa.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

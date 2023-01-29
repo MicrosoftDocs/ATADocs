@@ -12,7 +12,7 @@ ms.topic: how-to
 
 This article explains how to apply entity tags to sensitive accounts. This is important because some [!INCLUDE [Short long](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
 
-[!INCLUDE [Product short](includes/product-short.md)] also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
+Defender for Identity also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
 
 ## Entity tags
 
@@ -55,9 +55,9 @@ The groups in the following list are considered **Sensitive** by [!INCLUDE [Shor
 - Microsoft Exchange Servers
 
   > [!NOTE]
-  > Until September 2018, Remote Desktop Users were also automatically considered sensitive by [!INCLUDE [Product short](includes/product-short.md)]. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
+  > Until September 2018, Remote Desktop Users were also automatically considered sensitive by Defender for Identity. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
 
-In addition to these groups, [!INCLUDE [Product short](includes/product-short.md)] identifies the following high value asset servers and automatically tags them as **Sensitive**:
+In addition to these groups, Defender for Identity identifies the following high value asset servers and automatically tags them as **Sensitive**:
 
 - Certificate Authority Server
 - DHCP Server
@@ -117,4 +117,4 @@ Defender for Identity considers Exchange servers as high-value assets and automa
 ## See also
 
 - [Working with suspicious activities](/defender-for-identity/manage-security-alerts)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

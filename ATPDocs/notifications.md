@@ -82,7 +82,7 @@ Defender for Identity can notify you when it detects suspicious activities by se
 
 > [!NOTE]
 >
-> - If you plan to create automation or scripts for [!INCLUDE [Product short](includes/product-short.md)] SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md).
+> - If you plan to create automation or scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For more information, see [Defender for Identity SIEM log reference](cef-format-sa.md).
 >
 > - When working with Syslog in TLS mode, make sure to install the required certificates on the designated sensor.
 >
@@ -91,4 +91,4 @@ Defender for Identity can notify you when it detects suspicious activities by se
 ## See Also
 
 - [Configure event collection](configure-event-collection.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
