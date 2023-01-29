@@ -1,7 +1,7 @@
 ---
 title: Unsecure SID History attributes assessment
 description: This article provides an overview of Microsoft Defender for Identity's entities with an unsecure SID History attributes identity security posture assessment report.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -11,7 +11,7 @@ ms.topic: how-to
 
 SID History is an attribute that supports [migration scenarios](/previous-versions/windows/it-pro/windows-server-2003/cc779590(v=ws.10)). Every user account has an associated [Security IDentifier (SID)](/windows/win32/secauthz/security-identifiers) which is used to track the security principal and the access the account has when connecting to resources. SID History enables access for another account to effectively be cloned to another and is extremely useful to ensure users retain access when moved (migrated) from one domain to another.
 
-The assessment checks for accounts with SID History attributes which [!INCLUDE [Product long](includes/product-long.md)] profiles to be risky.
+The assessment checks for accounts with SID History attributes which Microsoft Defender for Identity profiles to be risky.
 
 ## What risk does unsecure SID History attribute pose?
 
@@ -46,4 +46,4 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 ## See Also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

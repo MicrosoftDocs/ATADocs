@@ -1,7 +1,7 @@
 ---
 title: Understand and investigate Lateral Movement Paths 
 description: This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 
@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored sign-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in [Microsoft Defender for Identity Security Alerts](alerts-overview.md).
 
-A key component of [!INCLUDE [Product long](includes/product-long.md)]'s security insights are Lateral Movement Paths or LMPs. [!INCLUDE [Product short](includes/product-short.md)] LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, [!INCLUDE [Product short](includes/product-short.md)] LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
+A key component of Microsoft Defender for Identity's security insights are Lateral Movement Paths or LMPs. Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Defender for Identity LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP)](media/lmp.png)
 
@@ -17,7 +17,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 ## Where can I find Defender for Identity LMPs?
 
-Every computer or user profile discovered by [!INCLUDE [Product short](includes/product-short.md)] to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
+Every computer or user profile discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
 
@@ -26,7 +26,7 @@ The LMP for each entity provides different information depending on the sensitiv
 - Sensitive users – potential LMP(s) leading to this user are shown.
 - Non-sensitive users and computers – potential LMP(s) the entity is related to are shown.
 
-Each time the tab is clicked, [!INCLUDE [Product short](includes/product-short.md)] displays the most recently discovered LMP. Each potential LMP is saved for 48 hours following discovery. LMP history is available. View older LMPs that were discovered in the past by choosing **Select a date**. You can also choose a different user who initiated the LMP by selecting **Path initiator**.
+Each time the tab is clicked, Defender for Identity displays the most recently discovered LMP. Each potential LMP is saved for 48 hours following discovery. LMP history is available. View older LMPs that were discovered in the past by choosing **Select a date**. You can also choose a different user who initiated the LMP by selecting **Path initiator**.
 
 ## LMP discovery using advanced hunting
 
@@ -40,7 +40,7 @@ For instructions on how to run advanced hunting queries, see [Proactively hunt f
 
 ## LMP related entities
 
-LMP can now directly assist with your investigation process. [!INCLUDE [Product short](includes/product-short.md)] security alert evidence lists provide the related entities that are involved in each potential lateral movement path. The evidence lists directly help your security response team increase or reduce the importance of the security alert and/or investigation of the related entities. For example, when a Pass the Ticket alert is issued, the source computer, compromised user and destination computer the stolen ticket was used from, are all part of the potential lateral movement path leading to a sensitive user. The existence of the detected LMP makes investigating the alert and watching the suspected user even more important to prevent your adversary from additional lateral moves. Trackable evidence is provided in LMPs to make it easier and faster for you to prevent attackers from moving forward in your network.
+LMP can now directly assist with your investigation process. Defender for Identity security alert evidence lists provide the related entities that are involved in each potential lateral movement path. The evidence lists directly help your security response team increase or reduce the importance of the security alert and/or investigation of the related entities. For example, when a Pass the Ticket alert is issued, the source computer, compromised user and destination computer the stolen ticket was used from, are all part of the potential lateral movement path leading to a sensitive user. The existence of the detected LMP makes investigating the alert and watching the suspected user even more important to prevent your adversary from additional lateral moves. Trackable evidence is provided in LMPs to make it easier and faster for you to prevent attackers from moving forward in your network.
 
 ## Lateral Movement paths security assessment
 
@@ -62,7 +62,7 @@ Security insights are never too late to prevent the next attack and remediate da
 > When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose **Select a date** and check for previous potential lateral movement paths.
 
 > [!IMPORTANT]
-> For instructions on how to set your clients and servers to allow [!INCLUDE [Product short](includes/product-short.md)] to perform the SAM-R operations needed for lateral movement path detection, see [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md).
+> For instructions on how to set your clients and servers to allow Defender for Identity to perform the SAM-R operations needed for lateral movement path detection, see [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md).
 
 ## Investigate lateral movement paths
 
@@ -87,4 +87,4 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 - [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md)
 - [Security assessment: Riskiest lateral movement paths (LMP)](security-assessment-riskiest-lmp.md)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

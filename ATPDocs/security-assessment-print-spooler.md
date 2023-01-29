@@ -1,7 +1,7 @@
 ---
 title: Print spooler assessment
 description: This article provides an overview of Microsoft Defender for Identity's Print spooler identity security posture assessment reports.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -43,4 +43,4 @@ Fix this specific issue by disabling the Print Spooler service on all servers th
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -1,7 +1,7 @@
 ---
 title: Weak cipher assessment
 description: This article provides an overview of Microsoft Defender for Identity's weak cipher identity security posture assessment report.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -37,4 +37,4 @@ After ensuring that devices and accounts are no longer using the weak ciphers, t
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [How to disable RC4 - Tech Community blog post](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/decrypting-the-selection-of-supported-kerberos-encryption-types/ba-p/1628797)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

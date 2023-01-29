@@ -1,15 +1,15 @@
 ---
 title: Configure endpoint proxy and Internet connectivity settings
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 01/01/2023
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
 # Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor
 
-Each [!INCLUDE [Product long](includes/product-long.md)] sensor requires Internet connectivity to the [!INCLUDE [Product short](includes/product-short.md)] cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection. SSL inspection and intercepting proxies are not supported for security reasons. Your proxy server should allow the data to directly pass from the [!INCLUDE [Product short](includes/product-short.md)] sensors to the relevant URLs without interception.
+Each Microsoft Defender for Identity sensor requires Internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection. SSL inspection and intercepting proxies are not supported for security reasons. Your proxy server should allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
 
-We recommend using the command line to configure your proxy server as doing so ensures that only the [!INCLUDE [Product short](includes/product-short.md)] sensor services communicate through the proxy.
+We recommend using the command line to configure your proxy server as doing so ensures that only the Defender for Identity sensor services communicate through the proxy.
 
 > [!NOTE]
 > Microsoft does not provide a proxy server. The URLs will be accessible via the proxy server that you configure.
@@ -28,9 +28,9 @@ You can configure your proxy server during sensor installation using the followi
 >
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
+> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Defender for Identity sensor.|
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the [!INCLUDE [Product short](includes/product-short.md)] sensor.|
+> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Defender for Identity sensor.|
 
 > [!NOTE]
 > Since changing the sensor's proxy configuration (if installed via the command line as described above) requires removing and reinstalling the sensor, we recommend creating and using a custom DNS A record for the proxy server. With a custom DNS A record, you can change the proxy server's address when needed, and also use the hosts file for testing.
@@ -44,16 +44,16 @@ You can use one of the following alternative methods to configure your proxy ser
 
 ### Configure proxy server using WinINet
 
-You can configure your proxy server using Microsoft Windows Internet (WinINet) proxy configuration, to allow [!INCLUDE [Product short](includes/product-short.md)] sensor to report diagnostic data and communicate with [!INCLUDE [Product short](includes/product-short.md)] cloud service when a computer isn't permitted to connect to the Internet. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the [!INCLUDE [Product short](includes/product-short.md)] cloud service.
+You can configure your proxy server using Microsoft Windows Internet (WinINet) proxy configuration, to allow Defender for Identity sensor to report diagnostic data and communicate with Defender for Identity cloud service when a computer isn't permitted to connect to the Internet. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Defender for Identity cloud service.
 
-When configuring the proxy, remember that the embedded [!INCLUDE [Product short](includes/product-short.md)] sensor service runs in system context using the **LocalService** account, and that the [!INCLUDE [Product short](includes/product-short.md)] Sensor Updater service runs in the system context using **LocalSystem** account.
+When configuring the proxy, remember that the embedded Defender for Identity sensor service runs in system context using the **LocalService** account, and that the Defender for Identity Sensor Updater service runs in the system context using **LocalSystem** account.
 
 > [!NOTE]
 > If you're using Transparent proxy or WPAD in your network topology, you don't need to configure WinINet for your proxy.
 
 ### Configure proxy server using the registry
 
-You can also configure your proxy server manually using a registry-based static proxy, to allow [!INCLUDE [Product short](includes/product-short.md)] sensor to report diagnostic data and communicate with [!INCLUDE [Product short](includes/product-short.md)] cloud service when a computer isn't permitted to connect to the Internet.
+You can also configure your proxy server manually using a registry-based static proxy, to allow Defender for Identity sensor to report diagnostic data and communicate with Defender for Identity cloud service when a computer isn't permitted to connect to the Internet.
 
 > [!NOTE]
 > The registry changes should be applied only to LocalService and LocalSystem.
@@ -77,20 +77,20 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 ## Enable access to Defender for Identity service URLs in the proxy server
 
-To enable access to [!INCLUDE [Product short](includes/product-short.md)], we recommend allowing traffic to the following URLs. The URLs automatically map to the correct service location for your [!INCLUDE [Product short](includes/product-short.md)] instance.
+To enable access to Defender for Identity, we recommend allowing traffic to the following URLs. The URLs automatically map to the correct service location for your Defender for Identity instance.
 
 - `<your-instance-name>.atp.azure.com` – for console connectivity. For example, `contoso-corp.atp.azure.com`
 
 - `<your-instance-name>sensorapi.atp.azure.com` – for sensors connectivity. For example, `contoso-corpsensorapi.atp.azure.com`
 
-You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to [!INCLUDE [Product short](includes/product-short.md)]. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
+You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
 If you would like to download the "Azure IP Ranges and Service Tags - Public Cloud" file, you can do so [here](https://www.microsoft.com/download/details.aspx?id=56519). For US Government offerings, see [Get started with US Government offerings](us-govt-gcc-high.md).
 
 > [!NOTE]
 >
-> - To ensure maximal security and data privacy, [!INCLUDE [Product short](includes/product-short.md)] uses certificate based mutual authentication between each [!INCLUDE [Product short](includes/product-short.md)] sensor and the [!INCLUDE [Product short](includes/product-short.md)] cloud backend. SSL inspection and interception are not supported, as they interfere in the authentication process.
-> - Occasionally, the [!INCLUDE [Product short](includes/product-short.md)] service IP addresses may change. Therefore, if you manually configure IP addresses or if your proxy automatically resolves DNS names to their IP address and uses them, you should periodically check that the configured IP addresses are still up-to-date.
+> - To ensure maximal security and data privacy, Defender for Identity uses certificate based mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud backend. SSL inspection and interception are not supported, as they interfere in the authentication process.
+> - Occasionally, the Defender for Identity service IP addresses may change. Therefore, if you manually configure IP addresses or if your proxy automatically resolves DNS names to their IP address and uses them, you should periodically check that the configured IP addresses are still up-to-date.
 
 ## Test proxy connectivity
 

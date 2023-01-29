@@ -1,7 +1,7 @@
 ---
 title: How to investigate users and computers with Microsoft Defender for Identity
 description: Describes how to investigate suspicious activities performed by users, entities, computers, or devices using Microsoft Defender for Identity
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: tutorial
 ROBOTS: NOINDEX
 ---
@@ -11,7 +11,7 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-In this tutorial you'll learn how to investigate entities connected to suspicious activities detected by [!INCLUDE [Product long](includes/product-long.md)]. After viewing a security alert in the timeline, you'll learn how to drill down into the entity involved in the alert, and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
+In this tutorial you'll learn how to investigate entities connected to suspicious activities detected by Microsoft Defender for Identity. After viewing a security alert in the timeline, you'll learn how to drill down into the entity involved in the alert, and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
 
 > [!div class="checklist"]
 >
@@ -19,13 +19,13 @@ In this tutorial you'll learn how to investigate entities connected to suspiciou
 > - Check entity tags
 > - Check user account control flags
 > - Cross-check with Windows Defender
-> - Keep an eye on sensitive users and groups
+> - Keep an eye on sensitive users and groupsgit st
 > - Review potential lateral movement paths
 > - Check honeytoken status
 
 ## Check the entity profile
 
-The entity profile provides you with a comprehensive entity page, designed for full deep-dive investigation of users, computers, devices, and the resources they have access to along with their history. The profile page takes advantage of the new [!INCLUDE [Product short](includes/product-short.md)] logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a comprehensive entity page, designed for full deep-dive investigation of users, computers, devices, and the resources they have access to along with their history. The profile page takes advantage of the new Defender for Identity logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
 To access an entity profile page, click on the name of the entity, such as a username, in the security alert timeline. You can also see a mini-version of the entity profile in the security alert page by hovering over the entity name.
 
@@ -33,7 +33,7 @@ The entity profile lets you view entity activities, view directory data, and vie
 
 ## Check entity tags
 
-[!INCLUDE [Product short](includes/product-short.md)] pulls tags out of Active Directory to give you a single interface for monitoring your Active Directory users and entities.
+Defender for Identity pulls tags out of Active Directory to give you a single interface for monitoring your Active Directory users and entities.
 These tags provide you with information about the entity from Active Directory, including:
 
 - Partial: This user, computer or group was not synced from the domain, and was partially resolved via a global catalog. Some attributes are not available.
@@ -46,7 +46,7 @@ These tags provide you with information about the entity from Active Directory, 
 
 ## Check user account control flags
 
-The user account control flags are also imported from Active Directory. [!INCLUDE [Product short](includes/product-short.md)] entity directory data includes 10 flags that are effective for investigation:
+The user account control flags are also imported from Active Directory. Defender for Identity entity directory data includes 10 flags that are effective for investigation:
 
 - Password never expires
 - Trusted for delegation
@@ -59,7 +59,7 @@ The user account control flags are also imported from Active Directory. [!INCLUD
 - Kerberos pre-authentication not required
 - Account disabled
 
-[!INCLUDE [Product short](includes/product-short.md)] lets you know if these flags are On or Off in Azure Active Directory. Colored icons and the corresponding toggle indicate the status of each flag. In the example below, only **Password never expires** is On in Active Directory.
+Defender for Identity lets you know if these flags are On or Off in Azure Active Directory. Colored icons and the corresponding toggle indicate the status of each flag. In the example below, only **Password never expires** is On in Active Directory.
 
  ![user account control flags.](media/user-access-flags.png)
 
@@ -69,7 +69,7 @@ To provide you with cross-product insights, your entity profile provides entitie
 
 ## Keep an eye on sensitive users and groups
 
-[!INCLUDE [Product short](includes/product-short.md)] imports user and group information from Azure Active Directory, enabling you to identify which users are automatically considered sensitive because they are members of the following groups in Active Directory:
+Defender for Identity imports user and group information from Azure Active Directory, enabling you to identify which users are automatically considered sensitive because they are members of the following groups in Active Directory:
 
 - Administrators
 - Power Users
@@ -89,24 +89,24 @@ To provide you with cross-product insights, your entity profile provides entitie
 - Schema Admins
 - Enterprise Admins
 
-In addition, you can **manually tag** entities as sensitive within [!INCLUDE [Product short](includes/product-short.md)]. This is important because some [!INCLUDE [Product short](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive. For more information, see [Working with sensitive accounts](/defender-for-identity/classic-manage-sensitive-honeytoken-accounts).
+In addition, you can **manually tag** entities as sensitive within Defender for Identity. This is important because some Defender for Identity detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, Defender for Identity will consider them sensitive. For more information, see [Working with sensitive accounts](/defender-for-identity/classic-manage-sensitive-honeytoken-accounts).
 
 ## Review lateral movement paths
 
-[!INCLUDE [Product short](includes/product-short.md)] can help you prevent attacks that use lateral movement paths. Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts.
+Defender for Identity can help you prevent attacks that use lateral movement paths. Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts.
 
 If a lateral movement path exists for an entity, in the entity profile page, you will be able to click the **Lateral movement paths** tab. The diagram that is displayed provides you with a map of the possible paths to your sensitive user.
 
-For more information, see [Investigating lateral movement paths with [!INCLUDE [Product short](includes/product-short.md)]](use-case-lateral-movement-path.md).
+For more information, see [Investigating lateral movement paths with Defender for Identity](use-case-lateral-movement-path.md).
 
 ## Check honeytoken status
 
-Before you move on with your investigation, it's important to know if the entity is a honeytoken. You can tag accounts and entities as honeytokens in [!INCLUDE [Product short](includes/product-short.md)]. When you open the entity profile or mini-profile of an account or entity you tagged as a honeytoken, you will see the honeytoken badge. When investigating, the honeytoken badge alerts you that the activity under review was performed by an account that you tagged as a honeytoken.
+Before you move on with your investigation, it's important to know if the entity is a honeytoken. You can tag accounts and entities as honeytokens in Defender for Identity. When you open the entity profile or mini-profile of an account or entity you tagged as a honeytoken, you will see the honeytoken badge. When investigating, the honeytoken badge alerts you that the activity under review was performed by an account that you tagged as a honeytoken.
 
 ## See also
 
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
 
 ## Learn more
 

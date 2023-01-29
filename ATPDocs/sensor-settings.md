@@ -1,7 +1,7 @@
 ---
 title: Manage and update sensors
 description: Learn how to manage and update your Microsoft Defender for Identity sensors.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -115,33 +115,33 @@ The sensors page provides the following information about each sensor:
 
 ## Updating your sensors
 
-Keeping your [!INCLUDE [Product long](includes/product-long.md)] sensors up to date, provides the best possible protection for your organization.
+Keeping your Microsoft Defender for Identity sensors up to date, provides the best possible protection for your organization.
 
-The [!INCLUDE [Product long](includes/product-long.md)] service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. [!INCLUDE [Product short](includes/product-short.md)] sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the [!INCLUDE [Product short](includes/product-short.md)] sensor and sensor detection capabilities.
+The Microsoft Defender for Identity service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. Defender for Identity sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the Defender for Identity sensor and sensor detection capabilities.
 
 ### Defender for Identity sensor update types
 
-[!INCLUDE [Product short](includes/product-short.md)] sensors support two kinds of updates:
+Defender for Identity sensors support two kinds of updates:
 
 * Minor version updates:
   * Frequent
   * Requires no MSI install, and no registry changes
-  * Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
+  * Restarted: Defender for Identity sensor services
   
 * Major version updates:
   * Rare
   * Contains significant changes
-  * Restarted: [!INCLUDE [Product short](includes/product-short.md)] sensor services
+  * Restarted: Defender for Identity sensor services
   
 > [!NOTE]
 >
-> * [!INCLUDE [Product short](includes/product-short.md)] sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the [!INCLUDE [Product short](includes/product-short.md)] service consumes too much memory, the service is automatically stopped and restarted by the [!INCLUDE [Product short](includes/product-short.md)] sensor updater service.
+> * Defender for Identity sensors always reserve at least 15% of the available memory and CPU available on the domain controller where it is installed. If the Defender for Identity service consumes too much memory, the service is automatically stopped and restarted by the Defender for Identity sensor updater service.
 
 ### Delayed sensor update
 
-Given the rapid speed of ongoing [!INCLUDE [Product short](includes/product-short.md)] development and release updates, you may decide to define a subset group of your sensors as a delayed update ring, allowing for a gradual sensor update process. [!INCLUDE [Product short](includes/product-short.md)] enables you to choose how your sensors are updated and set each sensor as a **Delayed update** candidate.
+Given the rapid speed of ongoing Defender for Identity development and release updates, you may decide to define a subset group of your sensors as a delayed update ring, allowing for a gradual sensor update process. Defender for Identity enables you to choose how your sensors are updated and set each sensor as a **Delayed update** candidate.
 
-Sensors not selected for delayed update are updated automatically, each time the [!INCLUDE [Product short](includes/product-short.md)] service is updated. Sensors set to **Delayed update** are updated on a delay of 72 hours, following the official release of each service update.
+Sensors not selected for delayed update are updated automatically, each time the Defender for Identity service is updated. Sensors set to **Delayed update** are updated on a delay of 72 hours, following the official release of each service update.
 
 The **delayed update** option enables you to select specific sensors as an automatic update ring, on which all updates are rolled out automatically, and set the rest of your sensors to update on delay, giving you time to confirm that the automatically updated sensors were successful.
 
@@ -165,16 +165,16 @@ To disable delayed updates, select the sensor and then select the **Disabled del
 
 ### Sensor update process
 
-Every few minutes, [!INCLUDE [Product short](includes/product-short.md)] sensors check whether they have the latest version. After the [!INCLUDE [Product short](includes/product-short.md)] cloud service is updated to a newer version, the [!INCLUDE [Product short](includes/product-short.md)] sensor service starts the update process:
+Every few minutes, Defender for Identity sensors check whether they have the latest version. After the Defender for Identity cloud service is updated to a newer version, the Defender for Identity sensor service starts the update process:
 
-1. [!INCLUDE [Product short](includes/product-short.md)] cloud service updates to the latest version.
-1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service learns that there's an updated version.
+1. Defender for Identity cloud service updates to the latest version.
+1. Defender for Identity sensor updater service learns that there's an updated version.
 1. Sensors that aren't set to **Delayed update** start the update process on a sensor by sensor basis:
-    1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service pulls the updated version from the cloud service (in cab file format).
-    1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater validates the file signature.
-    1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service extracts the cab file to a new folder in the sensor's installation folder. By default it's extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
-    1. [!INCLUDE [Product short](includes/product-short.md)] sensor service points to the new files extracted from the cab file.
-    1. [!INCLUDE [Product short](includes/product-short.md)] sensor updater service restarts the [!INCLUDE [Product short](includes/product-short.md)] sensor service.
+    1. Defender for Identity sensor updater service pulls the updated version from the cloud service (in cab file format).
+    1. Defender for Identity sensor updater validates the file signature.
+    1. Defender for Identity sensor updater service extracts the cab file to a new folder in the sensor's installation folder. By default it's extracted to *C:\Program Files\Azure Advanced Threat Protection Sensor\<version number>*
+    1. Defender for Identity sensor service points to the new files extracted from the cab file.
+    1. Defender for Identity sensor updater service restarts the Defender for Identity sensor service.
         > [!NOTE]
         > Minor sensor updates install no MSI, change no registry values or any system files. Even a pending restart does not impact a sensor update.
     1. Sensors run based on the newly updated version.
@@ -189,7 +189,7 @@ For any sensor that fails to complete the update process, a relevant [health ale
 
 ### Silently update the Defender for Identity sensor
 
-Use the following command to silently update the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+Use the following command to silently update the Defender for Identity sensor:
 
 **Syntax**:
 
@@ -209,7 +209,7 @@ Use the following command to silently update the [!INCLUDE [Product short](inclu
 
 **Examples**:
 
-To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silently:
+To update the Defender for Identity sensor silently:
 
 ```cmd
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
@@ -218,5 +218,5 @@ To update the [!INCLUDE [Product short](includes/product-short.md)] sensor silen
 ## See also
 
 * [Configure event forwarding](configure-event-forwarding.md)
-* [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-* [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+* [Defender for Identity prerequisites](prerequisites.md)
+* [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

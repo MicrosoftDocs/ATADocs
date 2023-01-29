@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Monitored Activities Filter and Search
 description: This article provides an overview of how to filter and search monitored activities using Microsoft Defender for Identity.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
@@ -11,15 +11,15 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-Activities detected by [!INCLUDE [Product short](includes/product-short.md)] on your network can be searched and filtered for easy drill-down and organization during your research and investigation into security alerts.
+Activities detected by Defender for Identity on your network can be searched and filtered for easy drill-down and organization during your research and investigation into security alerts.
 
-From the [!INCLUDE [Product short](includes/product-short.md)] timeline, select any entity in your network (DC, machine, or user) as the filter access point. Next, select to filter by the **Security Alert**, **Activity** type, or any combination. Once the filter is applied, the threat timeline of the entity is updated with the filtered information. Your filtered alerts and activities can also be downloaded to continue your investigation or tracking in other tools.
+From the Defender for Identity timeline, select any entity in your network (DC, machine, or user) as the filter access point. Next, select to filter by the **Security Alert**, **Activity** type, or any combination. Once the filter is applied, the threat timeline of the entity is updated with the filtered information. Your filtered alerts and activities can also be downloaded to continue your investigation or tracking in other tools.
 
 ![Filter alerts and activities.](media/activities-filter.png)
 
 To filter alerts and activities:
 
- 1. Select the entity to investigate from the [!INCLUDE [Product short](includes/product-short.md)] timeline.
+ 1. Select the entity to investigate from the Defender for Identity timeline.
  2. Click **Filter by**, then select the alerts and/or activities to filter.
  3. Click **Apply**. The entity timeline is updated according to the filters you selected.
  4. To download the filtered activities, click **Download activities** and select the date range for your download report.
@@ -30,4 +30,4 @@ To filter alerts and activities:
 - [Investigating entities](/defender-for-identity/investigate-assets)
 - [Health alerts](health-alerts.md)
 - [Working with Security Alerts](/defender-for-identity/manage-security-alerts)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

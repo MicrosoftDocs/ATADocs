@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 11/09/2022
+ms.date: 01/22/2023
 ms.topic: troubleshooting
 ---
 
@@ -20,11 +20,11 @@ connection failed because connected host has failed to respond...
 
 **Resolution:**
 
-Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about [!INCLUDE [Product long](includes/product-long.md)] prerequisites, see [ports](prerequisites.md#ports).
+Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](prerequisites.md#ports).
 
 ## Deployment log location
 
-The [!INCLUDE [Product short](includes/product-short.md)] deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting [!INCLUDE [Product short](includes/product-short.md)] using logs](troubleshooting-using-logs.md).
+The Defender for Identity deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting Defender for Identity using logs](troubleshooting-using-logs.md).
 
 ## "Stop legacy protocols communication" recommended action always marked as "Completed"
 
@@ -47,7 +47,7 @@ If during sensor installation you receive the following error:  **The sensor fai
 
 **Cause:**
 
-In some cases, when communicating via a proxy, during authentication it might respond to the [!INCLUDE [Product short](includes/product-short.md)] sensor with error 401 or 403 instead of error 407. The [!INCLUDE [Product short](includes/product-short.md)] sensor will interpret error 401 or 403 as a licensing issue and not as a proxy authentication issue.
+In some cases, when communicating via a proxy, during authentication it might respond to the Defender for Identity sensor with error 401 or 403 instead of error 407. The Defender for Identity sensor will interpret error 401 or 403 as a licensing issue and not as a proxy authentication issue.
 
 **Resolution:**
 
@@ -162,7 +162,7 @@ When you install the Defender for Identity sensor on a machine configured with a
 
 ## Multi Processor Group mode
 
-For Windows Operating systems 2008R2 and 2012, the [!INCLUDE [Product short](includes/product-short.md)] sensor isn't supported in a Multi Processor Group mode.
+For Windows Operating systems 2008R2 and 2012, the Defender for Identity sensor isn't supported in a Multi Processor Group mode.
 
 Suggested possible workarounds:
 
@@ -172,7 +172,7 @@ Suggested possible workarounds:
 
 ## VMware virtual machine sensor issue
 
-If you have a [!INCLUDE [Product short](includes/product-short.md)] sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive the health alert **Some network traffic is not being analyzed**. This can happen because of a configuration mismatch in VMware.
 
 To resolve the issue:
 
@@ -309,7 +309,7 @@ Add the gMSA to the **Performance Monitor Users** group on the server.
 
 ## Report downloads cannot contain more than 300,000 entries
 
-[!INCLUDE [Product short](includes/product-short.md)] doesn't support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
+Defender for Identity doesn't support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
 
 **Cause:**
 
@@ -321,7 +321,7 @@ No known resolution.
 
 ## Sensor fails to enumerate event logs
 
-If you observe a limited number, or lack of, security event alerts or logical activities within the [!INCLUDE [Product short](includes/product-short.md)] console but no health alerts are triggered.
+If you observe a limited number, or lack of, security event alerts or logical activities within the Defender for Identity console but no health alerts are triggered.
 
 **Sensor log entries:**
 
@@ -358,6 +358,9 @@ The issue can be caused when the **SystemDefaultTlsVersions** or **SchUseStrongC
 Verify the **SystemDefaultTlsVersions** and **SchUseStrongCrypto** registry values are set to 1:
 
 ```reg
+
+Windows Registry Editor Version 5.00
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319] 
 "SystemDefaultTlsVersions"=dword:00000001
 "SchUseStrongCrypto"=dword:00000001
@@ -415,7 +418,7 @@ If the sensor installation fails with an error code of 0x80070643, and the insta
 
 **Cause:**
 
-The issue can be caused when the installation process cannot access the [!INCLUDE [Product short](includes/product-short.md)] cloud services for the sensor registration.
+The issue can be caused when the installation process cannot access the Defender for Identity cloud services for the sensor registration.
 
 **Resolution:**
 
@@ -425,10 +428,32 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 
 For more information, see [Configure proxy server using the command line](configure-proxy.md#configure-proxy-server-using-the-command-line).
 
+## Sensor service could not run and remains in Starting state
+
+The following errors will appear in the **System log** in **Event viewer**:
+
+- The Open procedure for service ".NETFramework" in DLL "C:\Windows\system32\mscoree.dll" failed with error code Access is denied. Performance data for this service will not be available.
+- The Open procedure for service "Lsa" in DLL "C:\Windows\System32\Secur32.dll" failed with error code Access is denied. Performance data for this service will not be available.
+- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code The device is not ready. Performance data for this service will not be available.
+
+The Microsoft.TriSensorError.log will contain an error similar to this:
+
+`Microsoft.Tri.Sensor.DirectoryServicesClient.TryCreateLdapConnectionAsync(DomainControllerConnectionData domainControllerConnectionData, bool isGlobalCatalog, bool isTraversing)
+2021-07-13 14:56:20.2976 Error DirectoryServicesClient Microsoft.Tri.Infrastructure.ExtendedException: Failed to communicate with configured domain controllers
+at new Microsoft.Tri.Sensor.DirectoryServicesClient(IConfigurationManager`
+
+**Cause:**
+
+NT Service\All Services do not have the right to logon as a service.
+
+**Resolution:**
+
+Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+
 ## See also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Defender for Identity capacity planning](capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

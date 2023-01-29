@@ -1,7 +1,7 @@
 ---
 title: About page in Microsoft 365 Defender 
 description: Learn how to collect important details about your Defender for Identity workspace in Microsoft 365 Defender.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -26,5 +26,5 @@ This information can be helpful when troubleshooting issues and opening support 
 
 ## See also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

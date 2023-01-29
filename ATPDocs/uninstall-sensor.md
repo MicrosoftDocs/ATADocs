@@ -1,13 +1,13 @@
 ---
 title: Uninstall the sensor
 description: This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
 # Uninstall the Microsoft Defender for Identity sensor
 
-This article describes how to uninstall the [!INCLUDE [Product long](includes/product-long.md)] sensor from domain controllers for the following scenarios:
+This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers for the following scenarios:
 
 1. Uninstall a sensor from a domain controller
 1. Remove an orphaned sensor
@@ -42,7 +42,7 @@ This scenario may occur after an in-place sensor upgrade, and the sensor appears
 
 ## Uninstall the Defender for Identity sensor silently
 
-Use the following command to perform a silent uninstall of the [!INCLUDE [Product short](includes/product-short.md)] sensor:
+Use the following command to perform a silent uninstall of the Defender for Identity sensor:
 
 **Syntax**:
 
@@ -57,12 +57,12 @@ Use the following command to perform a silent uninstall of the [!INCLUDE [Produc
 > |Name|Syntax|Mandatory for silent uninstallation?|Description|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server.|
+> |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Defender for Identity sensor from the server.|
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
 **Examples**:
 
-To silently uninstall the [!INCLUDE [Product short](includes/product-short.md)] sensor from the server:
+To silently uninstall the Defender for Identity sensor from the server:
 
 ```cmd
 "Azure ATP sensor Setup.exe" /quiet /uninstall

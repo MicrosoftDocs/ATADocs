@@ -1,34 +1,34 @@
 ---
 title: Microsoft Defender for Identity activity filtering and policies in Microsoft Defender for Cloud Apps
 description: Overview of Microsoft Defender for Identity activity filtering and policies with Microsoft Defender for Cloud Apps.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
 
 # Use activity filters and create action policies with Microsoft Defender for Identity in Microsoft Defender for Cloud Apps
 
-This article is designed to help you understand how to filter and create action policies for [!INCLUDE [Product short](includes/product-short.md)] activities using Microsoft Defender for Cloud Apps.
+This article is designed to help you understand how to filter and create action policies for Defender for Identity activities using Microsoft Defender for Cloud Apps.
 
-For more information about how to complete your integration, see [[!INCLUDE [Product short](includes/product-short.md)] integration with Defender for Cloud Apps](/cloud-app-security/mdi-integration).
+For more information about how to complete your integration, see [Defender for Identity integration with Defender for Cloud Apps](/cloud-app-security/mdi-integration).
 
-Core [!INCLUDE [Product short](includes/product-short.md)] functionality can be represented in the Microsoft Defender for Cloud Apps portal. This provides a singular administration experience around investigating risky users in your enterprise, and the ability to filter activity based on both on-premises and cloud identity events.
+Core Defender for Identity functionality can be represented in the Microsoft Defender for Cloud Apps portal. This provides a singular administration experience around investigating risky users in your enterprise, and the ability to filter activity based on both on-premises and cloud identity events.
 
 ## Prerequisites
 
 For complete user investigation features across the hybrid environment, you must have:
 
 - A valid license for Microsoft Defender for Cloud Apps
-- A valid license for [!INCLUDE [Product long](includes/product-long.md)] connected to your Active Directory instance
+- A valid license for Microsoft Defender for Identity connected to your Active Directory instance
 
 >[!NOTE]
->If you don't have a subscription for Defender for Cloud Apps, you can use the Defender for Cloud Apps portal to investigate [!INCLUDE [Product short](includes/product-short.md)] alerts and deep dive on users and their on-premises managed activities however insights related to your cloud applications will remain unavailable.
+>If you don't have a subscription for Defender for Cloud Apps, you can use the Defender for Cloud Apps portal to investigate Defender for Identity alerts and deep dive on users and their on-premises managed activities however insights related to your cloud applications will remain unavailable.
 
 ## Filter Defender for Identity activities in Defender for Cloud Apps
 
-[!INCLUDE [Product short](includes/product-short.md)] activities can be accessed from the main Defender for Cloud Apps **Investigate** menu by selecting the **Activity log** submenu, or from the **Alerts** menu by status, category, severity, application, user name, or policy.
+Defender for Identity activities can be accessed from the main Defender for Cloud Apps **Investigate** menu by selecting the **Activity log** submenu, or from the **Alerts** menu by status, category, severity, application, user name, or policy.
 
-To access [!INCLUDE [Product short](includes/product-short.md)] activities by user:
+To access Defender for Identity activities by user:
 
 1. Filter the **Alerts** queue using the USER NAME field.
     ![Filter alerts by username.](media/mcas-alerts-queue.png)
@@ -44,7 +44,7 @@ After filtering activities and identifying activity policies you'd like to imple
 To create a new activity policy:
 
 1. From any **Activity log** page, apply a filter (such as APP, User Name, Activity type).
-    - To filter to activities from [!INCLUDE [Product short](includes/product-short.md)] select the **Active Directory** option in the APP filter.
+    - To filter to activities from Defender for Identity select the **Active Directory** option in the APP filter.
     ![Create new activity policy.](media/mcas-create-new-policy.png)
 1. Select the **New policy from search** button.
 1. Add a **Policy name**.
@@ -62,4 +62,4 @@ Learn more about Investigation priority scoring and additional features of [Micr
 
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
+Do you have more questions, or an interest in discussing Defender for Identity and related security with others? Join the [Defender for Identity Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!

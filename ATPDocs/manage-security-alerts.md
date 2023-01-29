@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity security alerts in Microsoft 365 Defender
 description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft 365 Defender
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -38,7 +38,7 @@ The alerts are displayed with information in the following columns: **Alert name
 
 ### Security alert categories
 
-[!INCLUDE [Product short](includes/product-short.md)] security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
+Defender for Identity security alerts are divided into the following categories or phases, like the phases seen in a typical cyber-attack kill chain.
 
 - [Reconnaissance alerts](reconnaissance-alerts.md)
 - [Compromised credential alerts](compromised-credentials-alerts.md)

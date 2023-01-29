@@ -1,7 +1,7 @@
 ---
 title: Detection exclusions in Microsoft 365 Defender
 description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft 365 Defender.
-ms.date: 12/06/2022
+ms.date: 01/19/2023
 ms.topic: how-to
 ---
 
@@ -12,7 +12,7 @@ ms.topic: how-to
 
 This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
-[!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses, computers, domains, or users from a number of detections.
+Microsoft Defender for Identity enables the exclusion of specific IP addresses, computers, domains, or users from a number of detections.
 
 For example, a **DNS Reconnaissance** alert could be triggered by a security scanner that uses DNS as a scanning mechanism. Creating an exclusion helps Defender for Identity ignore such scanners and reduce false positives.
 
@@ -94,4 +94,4 @@ You can now also configure exclusions by **Global excluded entities**. Global ex
 ## See also
 
 - [Configure event collection](configure-event-collection.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

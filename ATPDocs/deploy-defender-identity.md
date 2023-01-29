@@ -1,7 +1,7 @@
 ---
 title: Deploying with Microsoft 365 Defender
 description: Learn how to deploy Microsoft Defender for Identity using Microsoft 365 Defender
-ms.date: 12/14/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -25,7 +25,7 @@ For more information about these steps, see the following articles:
 - [Frequently asked questions when turning on Microsoft 365 Defender](/microsoft-365/security/defender/m365d-enable-faq)
 
 > [!IMPORTANT]
-> Currently, [!INCLUDE [Product short](includes/product-short.md)] data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East, and Asia. Your instance is created automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant. Once created, [!INCLUDE [Product short](includes/product-short.md)] instances aren't movable.
+> Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East, and Asia. Your instance is created automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant. Once created, Defender for Identity instances aren't movable.
 
 ## Preparation
 
@@ -35,6 +35,11 @@ For more information about these steps, see the following articles:
 1. [Directory Service accounts](directory-service-accounts.md).
 1. [Role groups](role-groups.md).
 1. [Configure remote calls to SAM](remote-calls-sam.md).
+   
+
+> [!Note]
+> To test and see if your environment has the necessary prerequisites, you can run the Test-MdiReadiness.ps1 script. For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness).
+> 
 
 ## Deployment
 
@@ -63,3 +68,4 @@ If you deploy Defender for Identity standalone sensors, you'll need to do the fo
 
 > [!div class="step-by-step"]
 > [Defender for Identity prerequisites »](prerequisites.md)
+

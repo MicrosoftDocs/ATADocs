@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Manage sensitive or honeytoken accounts with Microsoft Defender for Identity
 description: Classic portal - Describes how to manage sensitive or honeytoken accounts using Microsoft Defender for Identity
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
@@ -13,7 +13,7 @@ ROBOTS: NOINDEX
 
 This article explains how to apply entity tags to sensitive accounts. This is important because some [!INCLUDE [Short long](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
 
-[!INCLUDE [Product short](includes/product-short.md)] also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
+Defender for Identity also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
 
 ## Sensitive entities
 
@@ -38,9 +38,9 @@ The following list of groups are considered **Sensitive** by [!INCLUDE [Short lo
 - Microsoft Exchange Servers
 
   > [!NOTE]
-  > Until September, 2018, Remote Desktop Users were also automatically considered sensitive by [!INCLUDE [Product short](includes/product-short.md)]. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
+  > Until September, 2018, Remote Desktop Users were also automatically considered sensitive by Defender for Identity. Remote Desktop entities or groups added after this date are no longer automatically marked as sensitive while Remote Desktop entities or groups added before this date may remain marked as Sensitive. This Sensitive setting can now be changed manually.
 
-In addition to these groups, [!INCLUDE [Product short](includes/product-short.md)] identifies the following high value asset servers and automatically tags them as **Sensitive**:
+In addition to these groups, Defender for Identity identifies the following high value asset servers and automatically tags them as **Sensitive**:
 
 - Certificate Authority Server
 - DHCP Server
@@ -49,13 +49,13 @@ In addition to these groups, [!INCLUDE [Product short](includes/product-short.md
 
 ## Manually tagging entities
 
-You can also manually tag entities as sensitive or honeytoken accounts. If you manually tag additional users or groups, such as board members, company executives, and sales directors, [!INCLUDE [Product short](includes/product-short.md)] will consider them sensitive.
+You can also manually tag entities as sensitive or honeytoken accounts. If you manually tag additional users or groups, such as board members, company executives, and sales directors, Defender for Identity will consider them sensitive.
 
 ### To manually tag entities
 
 To tag entities, do the following:
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
+1. In the Defender for Identity portal, select **Configuration**.
 
     ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
 
@@ -77,4 +77,4 @@ To tag entities, do the following:
 ## See also
 
 - [Working with suspicious activities](/defender-for-identity/manage-security-alerts)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

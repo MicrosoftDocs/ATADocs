@@ -1,13 +1,13 @@
 ---
 title: Download the sensor
 description: Learn how to download the Microsoft Defender for Identity sensors for your domain controllers.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
 # Download the Microsoft Defender for Identity sensor
 
-Learn how to download the [!INCLUDE [Product long](includes/product-long.md)] sensor for your domain controllers.
+Learn how to download the Microsoft Defender for Identity sensor for your domain controllers.
 
 ## Add and download a sensor
 

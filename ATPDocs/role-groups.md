@@ -1,20 +1,20 @@
 ---
 title: Role groups 
 description: Walks you through working with Microsoft Defender for Identity role groups.
-ms.date: 12/14/2022
+ms.date: 01/18/2023
 ms.topic: conceptual
 ---
 
 # Microsoft Defender for Identity role groups
 
-[!INCLUDE [Product long](includes/product-long.md)] offers role-based security to safeguard data according to an organization's specific security and compliance needs. [!INCLUDE [Product short](includes/product-short.md)] support three separate roles: Administrators, Users, and Viewers.
+Microsoft Defender for Identity offers role-based security to safeguard data according to an organization's specific security and compliance needs. Defender for Identity support three separate roles: Administrators, Users, and Viewers.
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Role groups enable access management for [!INCLUDE [Product short](includes/product-short.md)]. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to do their jobs. This article explains access management, [!INCLUDE [Product short](includes/product-short.md)] role authorization, and helps you get up and running with role groups in [!INCLUDE [Product short](includes/product-short.md)].
+Role groups enable access management for Defender for Identity. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to do their jobs. This article explains access management, Defender for Identity role authorization, and helps you get up and running with role groups in Defender for Identity.
 
 > [!NOTE]
-> Any global administrator or security administrator on the tenant's Azure Active Directory is automatically a [!INCLUDE [Product short](includes/product-short.md)] administrator.
+> Any global administrator or security administrator on the tenant's Azure Active Directory is automatically a Defender for Identity administrator.
 
 ## Unified role-based access control (RBAC)
 
@@ -47,30 +47,30 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](/m
 
 ## Types of Defender for Identity security groups
 
-[!INCLUDE [Product short](includes/product-short.md)] provides three types of security groups: Azure ATP *(instance name)* Administrators, Azure ATP *(instance name)* Users, and Azure ATP *(instance name)* Viewers. The following table describes the type of access in Defender for Identity available for each role. Depending on which role you assign, various screens and options will be  unavailable for those users, as follows:
+Defender for Identity provides three types of security groups: Azure ATP *(Workspace name)* Administrators, Azure ATP *(Workspace name)* Users, and Azure ATP *(Workspace name)* Viewers. The following table describes the type of access in Defender for Identity available for each role. Depending on which role you assign, various screens and options will be  unavailable for those users, as follows:
 
-|Activity |Azure ATP *(instance name)* Administrators|Azure ATP *(instance name)* Users|Azure ATP *(instance name)* Viewers|
+|Activity |Azure ATP *(Workspace name)* Administrators|Azure ATP *(Workspace name)* Users|Azure ATP *(Workspace name)* Viewers|
 |----|----|----|----|
 |Change status of Health Alerts|Available|Not available|Not available|
 |Change status of Security Alerts (reopen, close, exclude, suppress)|Available|Available|Not available|
-|Delete instance|Available|Not available|Not available|
+|Delete Workspace|Available|Not available|Not available|
 |Download a report|Available|Available|Available|
 |Login|Available|Available|Available|
 |Share/Export security alerts (via email, get link, download details)|Available|Available|Available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Updates|Available|Not available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Entity tags (sensitive and honeytoken)|Available|Available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Exclusions|Available|Available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Language|Available|Available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Notifications (email and syslog)|Available|Available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Preview detections|Available|Available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Scheduled reports|Available|Available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Data sources (directory services, SIEM, VPN, Defender for Endpoint)|Available|Not available|Not available|
-|Update [!INCLUDE [Product short](includes/product-short.md)] Configuration - Sensors (download, regenerate key, configure, delete)|Available|Not available|Not available|
+|Update Defender for Identity Configuration - Updates|Available|Not available|Not available|
+|Update Defender for Identity Configuration - Entity tags (sensitive and honeytoken)|Available|Available|Not available|
+|Update Defender for Identity Configuration - Exclusions|Available|Available|Not available|
+|Update Defender for Identity Configuration - Language|Available|Available|Not available|
+|Update Defender for Identity Configuration - Notifications (email and syslog)|Available|Available|Not available|
+|Update Defender for Identity Configuration - Preview detections|Available|Available|Not available|
+|Update Defender for Identity Configuration - Scheduled reports|Available|Available|Not available|
+|Update Defender for Identity Configuration - Data sources (directory services, SIEM, VPN, Defender for Endpoint)|Available|Not available|Not available|
+|Update Defender for Identity Configuration - Sensors (download, regenerate key, configure, delete)|Available|Not available|Not available|
 |View entity profiles and security alerts|Available|Available|Available|
 
 ## Add and remove users
 
-[!INCLUDE [Product short](includes/product-short.md)] uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
+Defender for Identity uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
 
 ## See also
 

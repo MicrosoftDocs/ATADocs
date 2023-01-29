@@ -1,7 +1,7 @@
 ---
 title: Dormant entities security assessment
 description: This article provides an overview of Microsoft Defender for Identity's dormant entities in sensitive groups identity security posture assessment report.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -9,7 +9,7 @@ ms.topic: how-to
 
 ## What are sensitive dormant entities?
 
-[!INCLUDE [Product long](includes/product-long.md)] discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.
+Microsoft Defender for Identity discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.
 
 However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant [sensitive entities](/defender-for-identity/entity-tags) are targets of opportunity for malicious actors to gain sensitive access to your organization.
 
@@ -34,4 +34,4 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 ## See Also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

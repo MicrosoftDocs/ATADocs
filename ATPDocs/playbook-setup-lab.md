@@ -1,13 +1,13 @@
 ---
 title: Security alert lab setup 
 description: In this lab, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
-ms.date: 01/01/2023
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
 # Setup a Microsoft Defender for Identity security alert lab
 
-The purpose of the [!INCLUDE [Product long](includes/product-long.md)] Security Alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first lab in a four part series walks you through creating a lab environment for testing against [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The security alert lab focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days. For more information about each lab in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
+The purpose of the Microsoft Defender for Identity Security Alert lab is to illustrate **Defender for Identity**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. This first lab in a four part series walks you through creating a lab environment for testing against Defender for Identity's *discrete* detections. The security alert lab focuses on Defender for Identity's *signature-based* capabilities. The lab doesn't include advanced machine-learning, user or entity-based behavioral detections since those detections require a learning period with real network traffic of up to 30 days. For more information about each lab in this series, see the [Defender for Identity security alert lab overview](playbook-lab-overview.md).
 
 In this lab you will:
 
@@ -15,7 +15,7 @@ In this lab you will:
 >
 > - Set up your lab server and computers
 > - Configure Active Directory with users and groups
-> - Set up and configure [!INCLUDE [Product short](includes/product-short.md)]
+> - Set up and configure Defender for Identity
 > - Setup local policies for your server and computers
 > - Mimic a helpdesk management scenario using a scheduled task
 
@@ -24,13 +24,13 @@ In this lab you will:
 1. [A lab domain controller and two lab workstations](#servers-and-computers).
     - Go ahead and [hydrate Active Directory (AD) with users](#hydrate-active-directory-users-on-contosodc).
 
-1. An [[!INCLUDE [Product short](includes/product-short.md)] instance](/defender-for-identity/deploy-defender-identity) that is [connected to AD](/defender-for-identity/directory-service-accounts).
-1. [Download](/defender-for-identity/download-sensor) and [install the latest version of the [!INCLUDE [Product short](includes/product-short.md)] sensor](/defender-for-identity/install-sensor) on your lab's domain controller.
+1. An [Defender for Identity instance](/defender-for-identity/deploy-defender-identity) that is [connected to AD](/defender-for-identity/directory-service-accounts).
+1. [Download](/defender-for-identity/download-sensor) and [install the latest version of the Defender for Identity sensor](/defender-for-identity/install-sensor) on your lab's domain controller.
 1. Familiarity with [Privileged Access Workstations](/security/compass/privileged-access-devices) and [SAMR policy](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 ## Recommendations
 
-We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the [!INCLUDE [Product short](includes/product-short.md)] testing procedures. After the lab setup is complete, you'll be ready to perform actions with the suggested hacking research tools and review [!INCLUDE [Product short](includes/product-short.md)]'s detections of these actions.
+We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Defender for Identity testing procedures. After the lab setup is complete, you'll be ready to perform actions with the suggested hacking research tools and review Defender for Identity's detections of these actions.
 
 Your complete lab setup should look as similar as possible to the following diagram:
 
@@ -44,13 +44,13 @@ In the examples for these labs, the Forest NetBIOS name is **CONTOSO.AZURE**.
 
 | FQDN | OS | IP | Purpose |
 |------|-------|---------|--------------|
-| ContosoDC.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Domain Controller with the [!INCLUDE [Product short](includes/product-short.md)] Sensor installed locally |
+| ContosoDC.contoso.azure | Windows Server 2012 R2 | 10.0.24.4 | Domain Controller with the Defender for Identity Sensor installed locally |
 | VictimPC.contoso.azure | Windows 10 | 10.0.24.5 |Victim's PC |
 | AdminPC.contoso.azure | Windows 10  | 10.0.24.6 | Domain Admin's PC (sometimes referred to as "Secure Admin Workstation" or "Privileged Admin Workstation") |
 
 ### Active Directory users and groups
 
-In this lab, there are three main users and one service account. The service account is for [!INCLUDE [Product short](includes/product-short.md)] and is used for both LDAP synchronization purposes and SAMR.
+In this lab, there are three main users and one service account. The service account is for Defender for Identity and is used for both LDAP synchronization purposes and SAMR.
 
 There's a "Helpdesk" Security Group (SG) of which Ron HelpDesk is a member. This SG mimics the Helpdesk. The SG is paired with a Group Policy Object that gives our Helpdesk members Local Admin rights on the respective computers. This setup is used to simulate a realistic administrative model in a production environment.
 
@@ -59,11 +59,11 @@ There's a "Helpdesk" Security Group (SG) of which Ron HelpDesk is a member. This
 | Jeff Leatherman | JeffL | Soon to be a victim of an impressively effective phishing attack |
 | Ron HelpDesk | RonHD | Ron is the "go-to-person" in Contoso's IT team. RonHD is a member of the "Helpdesk" security group. |
 | Samira Abbasi | SamiraA | At Contoso, this user is our Domain Admin. |
-| [!INCLUDE [Product short](includes/product-short.md)] Service | AATPService | [!INCLUDE [Product short](includes/product-short.md)]'s service account | account |
+| Defender for Identity Service | AATPService | Defender for Identity's service account | account |
 
 ## Defender for Identity base lab environment
 
-To configure the base lab we'll add users and groups to Active Directory, edit a SAM policy, and a sensitive group in [!INCLUDE [Product short](includes/product-short.md)].
+To configure the base lab we'll add users and groups to Active Directory, edit a SAM policy, and a sensitive group in Defender for Identity.
 
 ### Hydrate Active Directory users on ContosoDC
 
@@ -98,19 +98,19 @@ New-ADUser -Name AatpService -DisplayName "Azure ATP/ATA Service" -PasswordNever
 
 ### Configure SAM-R capabilities from ContosoDC
 
-To allow the [!INCLUDE [Product short](includes/product-short.md)] Service to perform SAM-R enumeration correctly and build Lateral Movement paths, you'll need to edit the SAM policy. A modification to Group Policy must be made to add the Defender for Identity service account in addition to the configured accounts listed in the **Network access** policy. Make sure to apply group policies to all computers **except domain controllers**.
+To allow the Defender for Identity Service to perform SAM-R enumeration correctly and build Lateral Movement paths, you'll need to edit the SAM policy. A modification to Group Policy must be made to add the Defender for Identity service account in addition to the configured accounts listed in the **Network access** policy. Make sure to apply group policies to all computers **except domain controllers**.
 
 1. Find your SAM policy under: **Policies \> Windows Settings \> Security Settings \> Local Policies \> Security Options\> "Network access: Restrict clients allowed to make remote calls to SAM"**_
 
     ![Modify Group Policy to allow [!INCLUDE [Product short.](includes/product-short.md)] to use Lateral Movement path capabilities.](media/playbook-labsetup-localgrouppolicies3.png)
 
-1. Add the [!INCLUDE [Product short](includes/product-short.md)] service account, AATPService, to the list of approved accounts able to perform this action on your modern Windows systems.
+1. Add the Defender for Identity service account, AATPService, to the list of approved accounts able to perform this action on your modern Windows systems.
 
     ![Add the service.](media/samr-add-service.png)
 
 ### Add sensitive group to Defender for Identity
 
-Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to use the Lateral Movement Graph feature of [!INCLUDE [Product short](includes/product-short.md)]. Tagging highly sensitive users and groups who aren't necessarily Domain Admins but do have privileges across many resources is a best practice.
+Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to use the Lateral Movement Graph feature of Defender for Identity. Tagging highly sensitive users and groups who aren't necessarily Domain Admins but do have privileges across many resources is a best practice.
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
@@ -122,24 +122,24 @@ Adding the "Helpdesk" Security Group as a **Sensitive group** will enable you to
 
 1. Under **Groups**, select **Tag groups**. A pane will open with the groups you can select to tag. In this example, select the **Helpdesk** group.
 
-    ![Tag the "Helpdesk" as a [!INCLUDE [Product short](includes/product-short.md)] sensitive group to enable  Lateral Movement Graphs and reports for this privileged group](media/playbook-lab-setup-helpdesk-sensitive-group.png)
+    ![Tag the "Helpdesk" as a Defender for Identity sensitive group to enable  Lateral Movement Graphs and reports for this privileged group](media/playbook-lab-setup-helpdesk-sensitive-group.png)
 
 1. After choosing your group, select **Add selection**.
 
 ### Defender for Identity Lab base setup checklist
 
-At this point, you should have a base [!INCLUDE [Product short](includes/product-short.md)] lab. [!INCLUDE [Product short](includes/product-short.md)] should be ready to use and users are staged. Review the checklist to make sure that the base lab is complete.
+At this point, you should have a base Defender for Identity lab. Defender for Identity should be ready to use and users are staged. Review the checklist to make sure that the base lab is complete.
 
 | Step  | Action | Status |
 |--|--|--|
-| 1 | [!INCLUDE [Product short](includes/product-short.md)] Sensor installed on ContosoDC (prerequisite step) | ☐ |
+| 1 | Defender for Identity Sensor installed on ContosoDC (prerequisite step) | ☐ |
 | 2 | Users and groups are created in Active Directory | ☐ |
-| 3 | [!INCLUDE [Product short](includes/product-short.md)] service account privileges configured correctly for SAMR | ☐ |
-| 4 | Helpdesk security group added as a **Sensitive group** in [!INCLUDE [Product short](includes/product-short.md)] | ☐ |
+| 3 | Defender for Identity service account privileges configured correctly for SAMR | ☐ |
+| 4 | Helpdesk security group added as a **Sensitive group** in Defender for Identity | ☐ |
 
 ## Set up the lab workstations
 
-Once you verify your base [!INCLUDE [Product short](includes/product-short.md)] lab is set up, you can start the workstation configuration to prepare for the next three labs in this series. We'll hydrate our VictimPC and AdminPC to make this lab look active.
+Once you verify your base Defender for Identity lab is set up, you can start the workstation configuration to prepare for the next three labs in this series. We'll hydrate our VictimPC and AdminPC to make this lab look active.
 
 ### VictimPC local policies
 
@@ -176,7 +176,7 @@ To simulate a working and managed network, create a Scheduled Task on the **Vict
 
 ### Turn off antivirus on VictimPC
 
-For testing purposes, turn off any antivirus solutions running in the lab environment. Doing so ensures we can focus on [!INCLUDE [Product short](includes/product-short.md)] during these exercises and not on antivirus evasion techniques.
+For testing purposes, turn off any antivirus solutions running in the lab environment. Doing so ensures we can focus on Defender for Identity during these exercises and not on antivirus evasion techniques.
 
 Without turning off antivirus solutions first, you'll be unable to download some of the tools in the next section. Additionally, if antivirus is enabled after the attack tools are staged, you'll need to redownload the tools after disabling antivirus again.
 
@@ -185,7 +185,7 @@ Without turning off antivirus solutions first, you'll be unable to download some
 > [!WARNING]
 > The following tools are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
 
-To run the [!INCLUDE [Product short](includes/product-short.md)] Security Alert playbooks, download and copy the following tools to **VictimPC**.
+To run the Defender for Identity Security Alert playbooks, download and copy the following tools to **VictimPC**.
 
 | Tool | URL |
 |----|-----|
@@ -241,7 +241,7 @@ Review the checklist to make sure that the workstation setup is complete.
 
 ## Mission accomplished
 
-Your [!INCLUDE [Product short](includes/product-short.md)] lab is now ready to use. The methods used in this set up were chosen knowing that resources must be managed (by *something* or *someone*) and management requires local admin privileges. There are other ways to simulate a management workflow in the lab, such as:
+Your Defender for Identity lab is now ready to use. The methods used in this set up were chosen knowing that resources must be managed (by *something* or *someone*) and management requires local admin privileges. There are other ways to simulate a management workflow in the lab, such as:
 
 - Logging in and out of VictimPC with RonHD's account
 - Adding another version of a Scheduled Task
@@ -252,11 +252,11 @@ For best results, choose a simulation method that you can automate in your lab f
 
 ## Next steps
 
-Test your [!INCLUDE [Product short](includes/product-short.md)] lab environment using the [!INCLUDE [Product short](includes/product-short.md)] Security Alert playbooks for each phase of the cyber-attack kill chain starting with the reconnaissance phase.
+Test your Defender for Identity lab environment using the Defender for Identity Security Alert playbooks for each phase of the cyber-attack kill chain starting with the reconnaissance phase.
 
 > [!div class="nextstepaction"]
-> [[!INCLUDE [Product short](includes/product-short.md)] Reconnaissance playbook](playbook-reconnaissance.md)
+> [Defender for Identity Reconnaissance playbook](playbook-reconnaissance.md)
 
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
+Do you have more questions, or an interest in discussing Defender for Identity and related security with others? Join the [Defender for Identity Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!

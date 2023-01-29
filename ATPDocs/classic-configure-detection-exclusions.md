@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Microsoft Defender for Identity configure detection exclusions
 description: Classic portal -Configuration of detection exclusions.
-ms.date: 12/06/2022
+ms.date: 01/19/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
@@ -11,9 +11,9 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/exclusions). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
-[!INCLUDE [Product long](includes/product-long.md)] enables the exclusion of specific IP addresses, computers, or users from a number of detections.
+Microsoft Defender for Identity enables the exclusion of specific IP addresses, computers, or users from a number of detections.
 
-For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps [!INCLUDE [Product short](includes/product-short.md)] ignore such scanners.
+For example, a **DNS Reconnaissance exclusion** could be a security scanner that uses DNS as a scanning mechanism. The exclusion helps Defender for Identity ignore such scanners.
 
 ## How to add detection exclusions
 
@@ -23,7 +23,7 @@ There are two ways you can manually exclude users, computers, domains, or IP add
 
 To configure exclusions from the configuration page, do the following:
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Configuration**.
+1. In the Defender for Identity portal, select **Configuration**.
 
     ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
 
@@ -46,16 +46,16 @@ To configure exclusions from the configuration page, do the following:
 
 To configure exclusions from a security alert, do the following:
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal, select **Timeline**.
+1. In the Defender for Identity portal, select **Timeline**.
 1. Identify an alert on an activity for a user, computer, or IP address that **is** allowed to perform the particular activity.
 
 1. To the right of the alert, select **More [...]** > **Close and exclude**. The action closes the alert and it's no longer listed in the **Open** events list in the **Alert timeline**. The action also adds the user, computer, or IP address to the exclusions list for that alert.
 
     ![Exclude entity.](media/exclude-in-sa.png)
 
-[!INCLUDE [Product short](includes/product-short.md)] scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
+Defender for Identity scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
 
 ## See Also
 
 - [Configure event collection](configure-event-collection.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

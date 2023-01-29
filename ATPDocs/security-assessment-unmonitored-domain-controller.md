@@ -1,7 +1,7 @@
 ---
 title: Unmonitored domain controllers assessment
 description: This article provides an overview of Microsoft Defender for Identity's unmonitored domain controllers identity security posture assessment report.
-ms.date: 10/24/2022
+ms.date: 01/18/2023
 ms.topic: how-to
 ---
 
@@ -9,13 +9,13 @@ ms.topic: how-to
 
 ## What are unmonitored domain controllers?
 
-An essential part of the [!INCLUDE [Product long](includes/product-long.md)] solution requires that its sensors are deployed on all organizational domain controllers, providing a comprehensive view for all user activities from every device.
+An essential part of the Microsoft Defender for Identity solution requires that its sensors are deployed on all organizational domain controllers, providing a comprehensive view for all user activities from every device.
 
-For this reason, [!INCLUDE [Product short](includes/product-short.md)] continuously monitors your environment to identify domain controllers without an installed [!INCLUDE [Product short](includes/product-short.md)] sensor, and reports on these unmonitored servers to assist you in managing full coverage of your environment.
+For this reason, Defender for Identity continuously monitors your environment to identify domain controllers without an installed Defender for Identity sensor, and reports on these unmonitored servers to assist you in managing full coverage of your environment.
 
 ## What risk do unmonitored domain controllers pose to an organization?
 
-In order to operate at maximum efficiency, all domain controllers must be monitored with [!INCLUDE [Product short](includes/product-short.md)] sensors. Organizations that fail to remediate unmonitored domain controllers, reduce visibility into their environment and potentially expose their assets to malicious actors.
+In order to operate at maximum efficiency, all domain controllers must be monitored with Defender for Identity sensors. Organizations that fail to remediate unmonitored domain controllers, reduce visibility into their environment and potentially expose their assets to malicious actors.
 
 ## How do I use this security assessment?
 
@@ -30,4 +30,4 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 ## See Also
 
 - [Monitoring your domain controller coverage](/defender-for-identity/sensor-settings)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
