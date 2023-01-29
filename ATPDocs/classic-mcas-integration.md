@@ -17,16 +17,16 @@ In this article you'll learn:
 > [!div class="checklist"]
 >
 > - Service overview
-> - New ways to access [!INCLUDE [Product short](includes/product-short.md)]
+> - New ways to access Defender for Identity
 > - Licensing prerequisites
-> - Where to find [!INCLUDE [Product short](includes/product-short.md)] tracked activities in Defender for Cloud Apps
+> - Where to find Defender for Identity tracked activities in Defender for Cloud Apps
 
 ## Service overview
 
-Integrating with [!INCLUDE [Product short](includes/product-short.md)], the Defender for Cloud Apps portal provides alerts and insights from:
+Integrating with Defender for Identity, the Defender for Cloud Apps portal provides alerts and insights from:
 
 - Microsoft Defender for Cloud Apps, which identifies attacks within a cloud session, covering not only Microsoft products but also third-party applications
-- [!INCLUDE [Product long](includes/product-long.md)], which uses machine learning and behavioral analytics to identify attacks across your on-premises network
+- Microsoft Defender for Identity, which uses machine learning and behavioral analytics to identify attacks across your on-premises network
 - Azure Active Directory Identity Protection, which detects and proactively prevents user and sign-in risks to identities in the cloud
 
 ## Prerequisites
@@ -34,14 +34,14 @@ Integrating with [!INCLUDE [Product short](includes/product-short.md)], the Defe
 For complete user investigation features across the hybrid environment, you must have:
 
 - A valid license for Microsoft Defender for Cloud Apps
-- A valid license for [!INCLUDE [Product long](includes/product-long.md)] connected to your Active Directory instance
+- A valid license for Microsoft Defender for Identity connected to your Active Directory instance
 
 >[!NOTE]
 >
-> - If you don't have a subscription for Defender for Cloud Apps, you will still be able to use the Defender for Cloud Apps portal to investigate [!INCLUDE [Product short](includes/product-short.md)] alerts and deep dive on users and their on-premises managed activities, but you won't receive related insights from your cloud applications.
-> - [!INCLUDE [Product short](includes/product-short.md)] administrators may require new permissions to access Defender for Cloud Apps. To learn how to assign permissions to Defender for Cloud Apps, see [Manage admin access](/cloud-app-security/manage-admins).
+> - If you don't have a subscription for Defender for Cloud Apps, you will still be able to use the Defender for Cloud Apps portal to investigate Defender for Identity alerts and deep dive on users and their on-premises managed activities, but you won't receive related insights from your cloud applications.
+> - Defender for Identity administrators may require new permissions to access Defender for Cloud Apps. To learn how to assign permissions to Defender for Cloud Apps, see [Manage admin access](/cloud-app-security/manage-admins).
 
-See [[!INCLUDE [Product short](includes/product-short.md)] integration](/cloud-app-security/mdi-integration) to learn how to quickly enable [!INCLUDE [Product short](includes/product-short.md)] in Defender for Cloud Apps.
+See [Defender for Identity integration](/cloud-app-security/mdi-integration) to learn how to quickly enable Defender for Identity in Defender for Cloud Apps.
 
 ## Defender for Identity in Defender for Cloud Apps
 
@@ -49,19 +49,19 @@ See the [Defender for Cloud Apps quickstart](/cloud-app-security/getting-started
 
 ## Alerts
 
-[!INCLUDE [Product short](includes/product-short.md)] alerts are displayed within the Defender for Cloud Apps **Alerts** queue. Additional alert filtering options are available only when viewing alerts using Defender for Cloud Apps. [!INCLUDE [Product short](includes/product-short.md)] alerts are filtered using the application filter to **Active Directory**.
+Defender for Identity alerts are displayed within the Defender for Cloud Apps **Alerts** queue. Additional alert filtering options are available only when viewing alerts using Defender for Cloud Apps. Defender for Identity alerts are filtered using the application filter to **Active Directory**.
 
 ## Alert management
 
-When using [!INCLUDE [Product short](includes/product-short.md)] with Defender for Cloud Apps, closing alerts in one service won't automatically close them in the other service. More specifically, closing alerts in Defender for Cloud Apps won't close them in Defender for Identity, but closing alerts in Defender for Identity will synchronize the closure in Defender for Cloud Apps. Decide where to manage and remediate alerts to avoid duplicated efforts.
+When using Defender for Identity with Defender for Cloud Apps, closing alerts in one service won't automatically close them in the other service. More specifically, closing alerts in Defender for Cloud Apps won't close them in Defender for Identity, but closing alerts in Defender for Identity will synchronize the closure in Defender for Cloud Apps. Decide where to manage and remediate alerts to avoid duplicated efforts.
 
 ## SIEM notification
 
-If both your services ([!INCLUDE [Product short](includes/product-short.md)] and Defender for Cloud Apps) are currently configured to send alert notifications to a SIEM, after enabling [!INCLUDE [Product short](includes/product-short.md)] integration in Defender for Cloud Apps, you'll start to receive duplicate SIEM notifications for the same alert. One alert will be issued from each service and they'll have different alert IDs. To avoid duplication and confusion, decide where you intend to perform alert management, and then stop SIEM notifications being sent from the other service.
+If both your services (Defender for Identity and Defender for Cloud Apps) are currently configured to send alert notifications to a SIEM, after enabling Defender for Identity integration in Defender for Cloud Apps, you'll start to receive duplicate SIEM notifications for the same alert. One alert will be issued from each service and they'll have different alert IDs. To avoid duplication and confusion, decide where you intend to perform alert management, and then stop SIEM notifications being sent from the other service.
 
 ## Activities
 
-[!INCLUDE [Product short](includes/product-short.md)] alerts are displayed within the Defender for Cloud Apps **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Defender for Cloud Apps. See [[!INCLUDE [Product short](includes/product-short.md)] activities using Microsoft Defender for Cloud Apps](activities-filtering-mcas.md) to learn how to filter and create new activity policies.
+Defender for Identity alerts are displayed within the Defender for Cloud Apps **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Defender for Cloud Apps. See [Defender for Identity activities using Microsoft Defender for Cloud Apps](activities-filtering-mcas.md) to learn how to filter and create new activity policies.
 
 ## User pages
 
@@ -81,4 +81,4 @@ To access a user page of a system user:
 
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
+Do you have more questions, or an interest in discussing Defender for Identity and related security with others? Join the [Defender for Identity Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!

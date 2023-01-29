@@ -7,11 +7,11 @@ ms.topic: how-to
 
 # Domain dominance playbook
 
-The last lab in this four-part series for [!INCLUDE [Product long](includes/product-long.md)] security alerts is a domain dominance playbook. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections using [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities. The labs don't include [!INCLUDE [Product short](includes/product-short.md)] advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each lab in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
+The last lab in this four-part series for Microsoft Defender for Identity security alerts is a domain dominance playbook. The purpose of the Defender for Identity security alert lab is to illustrate **Defender for Identity**'s capabilities in identifying and detecting potential attacks against your network. The lab explains how to test against some of Defender for Identity's *discrete* detections using Defender for Identity's *signature*-based capabilities. The labs don't include Defender for Identity advanced machine-learning, user, or entity-based behavioral detections and alerts. Those types of detections and alerts aren't included in testing because they require a learning period, and real network traffic for up to 30 days. For more information about each lab in this series, see the [Defender for Identity security alert lab overview](playbook-lab-overview.md).
 
-This playbook shows some of the domain dominance threat detections and security alerts services of [!INCLUDE [Product short](includes/product-short.md)] using simulated attacks from common, real-world, publicly available hacking and attack tools. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance.
+This playbook shows some of the domain dominance threat detections and security alerts services of Defender for Identity using simulated attacks from common, real-world, publicly available hacking and attack tools. The methods covered are typically used at this point in the cyber-attack kill chain to achieve persistent domain dominance.
 
-In this lab, you'll simulate attempts to achieve persistent domain dominance in order to review each of [!INCLUDE [Product short](includes/product-short.md)]'s detections for the following common methods:
+In this lab, you'll simulate attempts to achieve persistent domain dominance in order to review each of Defender for Identity's detections for the following common methods:
 
 > [!div class="checklist"]
 >
@@ -24,8 +24,8 @@ In this lab, you'll simulate attempts to achieve persistent domain dominance in 
 
 ## Prerequisites
 
-1. [A completed [!INCLUDE [Product short](includes/product-short.md)] security alert lab](playbook-setup-lab.md)
-     - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the [!INCLUDE [Product short](includes/product-short.md)] testing procedures.
+1. [A completed Defender for Identity security alert lab](playbook-setup-lab.md)
+     - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Defender for Identity testing procedures.
 
 2. [Completion of the lateral movement playbook](playbook-lateral-movement.md)
 
@@ -38,7 +38,7 @@ In the cyber-attack kill chain, during the phase of domain dominance, an attacke
 
 ### Remote Code Execution
 
-Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller. We'll try using these common tools together to perform remote code execution and gain domain controller persistency and then see what [!INCLUDE [Product short](includes/product-short.md)] shows us.
+Remote code execution is exactly what it sounds like. Attackers establish a way to remotely execute code against a resource, in this case, against a domain controller. We'll try using these common tools together to perform remote code execution and gain domain controller persistency and then see what Defender for Identity shows us.
 
 - Windows Management Instrumentation (WMI)
 - PsExec from SysInternals
@@ -69,19 +69,19 @@ Acting as an attacker, you've successfully created a new user in your lab by usi
 
 ### Remote Code Execution Detection in Defender for Identity
 
-Sign in to the [!INCLUDE [Product short](includes/product-short.md)] portal to check what, if anything, [!INCLUDE [Product short](includes/product-short.md)] detected from our last simulated attack:
+Sign in to the Defender for Identity portal to check what, if anything, Defender for Identity detected from our last simulated attack:
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] detecting WMI remote code execution](media/playbook-dominance-wmipsexecdetected.png)
 
-[!INCLUDE [Product short](includes/product-short.md)] detected both the WMI and PsExec remote code executions.
+Defender for Identity detected both the WMI and PsExec remote code executions.
 
-Because of encryption on the WMI session, certain values such as the actual WMI methods or the result of the attack aren't visible. However, [!INCLUDE [Product short](includes/product-short.md)]'s detection of these actions give us ideal information to take defensive action with.
+Because of encryption on the WMI session, certain values such as the actual WMI methods or the result of the attack aren't visible. However, Defender for Identity's detection of these actions give us ideal information to take defensive action with.
 
 VictimPC, the computer, should never be executing remote code against the Domain Controllers.
 
-As [!INCLUDE [Product short](includes/product-short.md)] learns who is inserted into which Security Groups over time,  similar suspicious activities are identified as anomalous activity in the timeline. Since this lab was recently built and is still within the learning period, this activity won't display as an alert. Security group modification detection by [!INCLUDE [Product short](includes/product-short.md)] can be validated by checking the activity timeline. [!INCLUDE [Product short](includes/product-short.md)] also allows you to generate reports on all Security Group modifications, which can be emailed to you proactively.
+As Defender for Identity learns who is inserted into which Security Groups over time,  similar suspicious activities are identified as anomalous activity in the timeline. Since this lab was recently built and is still within the learning period, this activity won't display as an alert. Security group modification detection by Defender for Identity can be validated by checking the activity timeline. Defender for Identity also allows you to generate reports on all Security Group modifications, which can be emailed to you proactively.
 
-Access the **Administrator** page in the [!INCLUDE [Product short](includes/product-short.md)] portal using the Search tool. The [!INCLUDE [Product short](includes/product-short.md)] detection of the user insertion is displayed in the Admin Group activity timeline.
+Access the **Administrator** page in the Defender for Identity portal using the Search tool. The Defender for Identity detection of the user insertion is displayed in the Admin Group activity timeline.
 
 ![View added user to sensitive security group.](media/playbook-dominance-admininserteduser.png)
 
@@ -105,7 +105,7 @@ As attackers, we now have the key to decrypt any DPAPI-encrypted file/sensitive 
 
 ### DPAPI Detection in Defender for Identity
 
-Using the [!INCLUDE [Product short](includes/product-short.md)] portal, let's verify that [!INCLUDE [Product short](includes/product-short.md)] successfully detected our DPAPI attack:
+Using the Defender for Identity portal, let's verify that Defender for Identity successfully detected our DPAPI attack:
 
 ![[!INCLUDE [Product short.](includes/product-short.md)] detected DPAPI request](media/playbook-dominance-dpapidetected.png)
 
@@ -129,7 +129,7 @@ We've replicated the "krbtgt" account information to: `c:\\temp\\ContosoDC_krbtg
 
 #### Malicious Replication Detection in Defender for Identity
 
-Using the [!INCLUDE [Product short](includes/product-short.md)] portal, verify the SOC is now aware of the malicious replication we simulated from VictimPC.
+Using the Defender for Identity portal, verify the SOC is now aware of the malicious replication we simulated from VictimPC.
 
 ![Malicious replication being detected by [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-dominance-maliciousrep_detected.png)
 
@@ -180,11 +180,11 @@ This command creates a new process, *notepad*, running in the context of RonHD. 
 
 ### Skeleton Key attack Detection in Defender for Identity
 
-What did [!INCLUDE [Product short](includes/product-short.md)] detect and report while all of this was happening?
+What did Defender for Identity detect and report while all of this was happening?
 
 ![Skeleton Key attack detected by [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-dominance-skeletonkey_detected.png)
 
-[!INCLUDE [Product short](includes/product-short.md)] successfully detected the suspicious pre-authentication encryption method used for this user.
+Defender for Identity successfully detected the suspicious pre-authentication encryption method used for this user.
 
 ### Golden Ticket - Existing User
 
@@ -228,7 +228,7 @@ Why did it work? The Golden Ticket Attack works because the ticket generated was
 
 #### Golden Ticket- Existing User attack detection
 
-[!INCLUDE [Product short](includes/product-short.md)] uses multiple methods to detect suspected attacks of this type. In this exact scenario, [!INCLUDE [Product short](includes/product-short.md)] detected the encryption downgrade of the fake ticket.
+Defender for Identity uses multiple methods to detect suspected attacks of this type. In this exact scenario, Defender for Identity detected the encryption downgrade of the fake ticket.
 
 ![Golden Ticket being detected.](media/playbook-dominance-golden_detected.png)
 
@@ -239,4 +239,4 @@ Why did it work? The Golden Ticket Attack works because the ticket generated was
 
 - [Microsoft Defender for Identity Security Alerts](alerts-overview.md)
 - [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](understand-lateral-movement-paths.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

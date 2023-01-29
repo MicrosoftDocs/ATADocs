@@ -9,7 +9,7 @@ ms.topic: how-to
 
 ## What are unsecure account attributes?
 
-[!INCLUDE [Product long](includes/product-long.md)] continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
+Microsoft Defender for Identity continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment.
 
 ## What risk do unsecure account attributes pose?
 
@@ -29,7 +29,7 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 > [!NOTE]
 >
 > - This assessment is updated in near real time.
-> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for [!INCLUDE [Product long](includes/product-long.md)] are not met.
+> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for Microsoft Defender for Identity are not met.
 
 ## Remediation
 
@@ -47,4 +47,4 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 ## See Also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

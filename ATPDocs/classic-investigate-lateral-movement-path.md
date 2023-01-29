@@ -14,7 +14,7 @@ ROBOTS: NOINDEX
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are [credential theft](suspicious-activity-guide.md#) and [Pass the Ticket](/defender-for-identity/alerts-overview) attacks. In both methods, non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored log-in credentials in accounts, groups and machines with sensitive accounts.
 
-In this tutorial, you'll learn how to use [!INCLUDE [Product long](includes/product-long.md)] LMPs to [investigate](#investigate) potential lateral movement paths, and along with [!INCLUDE [Product short](includes/product-short.md)] security alerts, gain a better understanding of what happened in your network and how. In addition, you'll learn how to use the [LMP to sensitive account report](#discover-your-at-risk-sensitive-accounts) to discover all of the sensitive accounts with potential lateral movement paths discovered in your network by time period.
+In this tutorial, you'll learn how to use Microsoft Defender for Identity LMPs to [investigate](#investigate) potential lateral movement paths, and along with Defender for Identity security alerts, gain a better understanding of what happened in your network and how. In addition, you'll learn how to use the [LMP to sensitive account report](#discover-your-at-risk-sensitive-accounts) to discover all of the sensitive accounts with potential lateral movement paths discovered in your network by time period.
 
 > [!div class="checklist"]
 >
@@ -46,7 +46,7 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 
 To discover all the sensitive accounts in your network that are exposed because of their connection to non-sensitive accounts, groups and machines in lateral movement paths, follow these steps.
 
-1. In the [!INCLUDE [Product short](includes/product-short.md)] portal menu, click the reports icon ![reports icon.](media/report-icon.png).
+1. In the Defender for Identity portal menu, click the reports icon ![reports icon.](media/report-icon.png).
 
 1. Under **Lateral movements paths to sensitive accounts**, if there are no potential lateral movement paths found, the report is grayed out. If there are potential lateral movement paths, the report automatically pre-selects the first date when there is relevant data. The lateral movement path report provides data for up to 60 days.
 
@@ -73,10 +73,10 @@ In this tutorial, you've learned how to use LMPs to investigate suspicious activ
 
 ## See Also
 
-- [Understanding [!INCLUDE [Product short](includes/product-short.md)] Lateral Movement Paths](use-case-lateral-movement-path.md)
-- [Configure [!INCLUDE [Product short](includes/product-short.md)] to make remote calls to SAM](install-step8-samr.md)
+- [Understanding Defender for Identity Lateral Movement Paths](use-case-lateral-movement-path.md)
+- [Configure Defender for Identity to make remote calls to SAM](install-step8-samr.md)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
 
 ## Learn more
 

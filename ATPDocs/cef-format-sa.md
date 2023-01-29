@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity SIEM log reference
 
-[!INCLUDE [Product short](includes/product-short.md)] can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
+Defender for Identity can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
 
 ## Sample Defender for Identity security alerts in CEF format
 
@@ -22,7 +22,7 @@ The following fields and their values are forwarded to your SIEM:
 |msg|Description of the alert|
 |cnt|For alerts that have a count of the number of times the activity happened (for example, brute force has an amount of guessed passwords)|
 |app |Protocol used in this alert|
-|externalId|Event ID [!INCLUDE [Product short](includes/product-short.md)] writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Defender for Cloud Apps, this field is populated with the corresponding Defender for Cloud Apps alert ID.|
+|externalId|Event ID Defender for Identity writes to the event log that corresponds to each type of alert. When forwarding alerts to Microsoft Defender for Cloud Apps, this field is populated with the corresponding Defender for Cloud Apps alert ID.|
 |cs#label|Customer strings allowed by CEF, where cs#label is the name of the new field |
 |cs#|Customer strings allowed by CEF, where cs# is the value.|
 
@@ -36,11 +36,11 @@ The cs2 field identifies if the alert is new or updated.
 The cs3 field identifies the fully qualified domain name of the source computer name.
 
 > [!NOTE]
-> If you plan to create automation or scripts for [!INCLUDE [Product short](includes/product-short.md)] SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](/defender-for-identity/alerts-overview#security-alert-name-mapping-and-unique-external-ids).
+> If you plan to create automation or scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](/defender-for-identity/alerts-overview#security-alert-name-mapping-and-unique-external-ids).
 
 ## Sample logs
 
-The log examples comply with RFC 5424, but [!INCLUDE [Product short](includes/product-short.md)] also supports RFC 3164.
+The log examples comply with RFC 5424, but Defender for Identity also supports RFC 3164.
 
 >[!NOTE]
 >The list below is a sample of logs sent to a SIEM. For a full list of alert details, see [Security alert name mapping and unique external IDs](/defender-for-identity/alerts-overview#security-alert-name-mapping-and-unique-external-ids).
@@ -193,8 +193,8 @@ Priorities:
 
 ## See Also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] capacity planning](capacity-planning.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Defender for Identity capacity planning](capacity-planning.md)
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
