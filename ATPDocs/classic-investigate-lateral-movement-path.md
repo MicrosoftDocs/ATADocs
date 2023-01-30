@@ -32,7 +32,7 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 
 1. In the user profile page that opens, click the **Lateral movement paths** tab.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
+    ![Defender for Identity Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
 
 1. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. If no activity was detected in the last two days, the graph will not appear. Use the **View a different date** option to display the graph for previous lateral movement path detections for the entity.
 
@@ -40,7 +40,7 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 
 1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** gray arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the SHAREPOINT-SRV computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. You can see this by looking at the **Administrator on** black arrows to see who has admin privileges on the resource. In this example, everyone in the group HelpDesk has the ability to access user credentials from that resource.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP)](media/lmp.png)
+    ![Defender for Identity Lateral Movement Path (LMP)](media/lmp.png)
 
 ## Discover your at-risk sensitive accounts
 

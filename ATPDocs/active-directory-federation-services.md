@@ -120,7 +120,7 @@ Use the following steps to configure Defender for Identity once you've completed
 1. Select the sensor you installed on the AD FS server.
 1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
+    ![Defender for Identity configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
 
     Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
 

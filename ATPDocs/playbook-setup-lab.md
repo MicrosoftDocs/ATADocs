@@ -34,7 +34,7 @@ We recommend following the lab setup instructions as closely as possible. The cl
 
 Your complete lab setup should look as similar as possible to the following diagram:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] testing lab setup](media/playbook-setup-lab.png)
+![Defender for Identity testing lab setup](media/playbook-setup-lab.png)
 
 ### Servers and computers
 
@@ -102,7 +102,7 @@ To allow the Defender for Identity Service to perform SAM-R enumeration correctl
 
 1. Find your SAM policy under: **Policies \> Windows Settings \> Security Settings \> Local Policies \> Security Options\> "Network access: Restrict clients allowed to make remote calls to SAM"**_
 
-    ![Modify Group Policy to allow [!INCLUDE [Product short.](includes/product-short.md)] to use Lateral Movement path capabilities.](media/playbook-labsetup-localgrouppolicies3.png)
+    ![Modify Group Policy to allow Defender for Identity to use Lateral Movement path capabilities.](media/playbook-labsetup-localgrouppolicies3.png)
 
 1. Add the Defender for Identity service account, AATPService, to the list of approved accounts able to perform this action on your modern Windows systems.
 

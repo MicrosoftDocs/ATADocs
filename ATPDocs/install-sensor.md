@@ -29,13 +29,13 @@ Perform the following steps on the domain controller or AD FS server.
 1. Run **Azure ATP sensor setup.exe** with elevated privileges (**Run as administrator**) and follow the setup wizard.
 1. On the **Welcome** page, select your language and select **Next**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] standalone sensor installation language](media/sensor-install-language.png)
+    ![Defender for Identity standalone sensor installation language](media/sensor-install-language.png)
 
 1. The installation wizard automatically checks if the server is a domain controller/ AD FS server or a dedicated server. If it's a domain controller / AD FS server, the Defender for Identity sensor is installed. If it's a dedicated server, the Defender for Identity standalone sensor is installed.
 
     For example, for a Defender for Identity sensor, the following screen is displayed to let you know that a Defender for Identity sensor is installed on your dedicated server:
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor installation](media/sensor-install-deployment-type.png)
+    ![Defender for Identity sensor installation](media/sensor-install-deployment-type.png)
 
     Select **Next**.
 
@@ -44,7 +44,7 @@ Perform the following steps on the domain controller or AD FS server.
 
 1. Under **Configure the sensor**, enter the installation path and the access key that you copied from the previous step, based on your environment:
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration image](media/sensor-install-config.png)
+    ![Defender for Identity sensor configuration image](media/sensor-install-config.png)
 
     - Installation path: The location where the Defender for Identity sensor is installed. By default the path is  `%programfiles%\Azure Advanced Threat Protection sensor`. Leave the default value.
     - Access key: Retrieved from the Microsoft 365 Defender portal in the previous step.

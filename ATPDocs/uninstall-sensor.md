@@ -31,7 +31,7 @@ This scenario can occur when a domain controller was deleted without first unins
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**. Select the **Sensors** tab, which displays all your Defender for Identity sensors.
 1. Locate the orphaned sensor and select **Delete** (trash can icon).
 
-    ![Delete orphaned [!INCLUDE [Product short.](includes/product-short.md)] sensor from sensors page](media/delete-orphaned-sensor.png)
+    ![Delete orphaned Defender for Identity sensor from sensors page](media/delete-orphaned-sensor.png)
 
 ## Remove a duplicate sensor
 

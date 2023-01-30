@@ -71,7 +71,7 @@ Acting as an attacker, you've successfully created a new user in your lab by usi
 
 Sign in to the Defender for Identity portal to check what, if anything, Defender for Identity detected from our last simulated attack:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] detecting WMI remote code execution](media/playbook-dominance-wmipsexecdetected.png)
+![Defender for Identity detecting WMI remote code execution](media/playbook-dominance-wmipsexecdetected.png)
 
 Defender for Identity detected both the WMI and PsExec remote code executions.
 
@@ -107,7 +107,7 @@ As attackers, we now have the key to decrypt any DPAPI-encrypted file/sensitive 
 
 Using the Defender for Identity portal, let's verify that Defender for Identity successfully detected our DPAPI attack:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] detected DPAPI request](media/playbook-dominance-dpapidetected.png)
+![Defender for Identity detected DPAPI request](media/playbook-dominance-dpapidetected.png)
 
 ### Malicious Replication
 
@@ -131,7 +131,7 @@ We've replicated the "krbtgt" account information to: `c:\\temp\\ContosoDC_krbtg
 
 Using the Defender for Identity portal, verify the SOC is now aware of the malicious replication we simulated from VictimPC.
 
-![Malicious replication being detected by [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-dominance-maliciousrep_detected.png)
+![Malicious replication being detected by Defender for Identity](media/playbook-dominance-maliciousrep_detected.png)
 
 ### Skeleton Key
 
@@ -182,7 +182,7 @@ This command creates a new process, *notepad*, running in the context of RonHD. 
 
 What did Defender for Identity detect and report while all of this was happening?
 
-![Skeleton Key attack detected by [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-dominance-skeletonkey_detected.png)
+![Skeleton Key attack detected by Defender for Identity](media/playbook-dominance-skeletonkey_detected.png)
 
 Defender for Identity successfully detected the suspicious pre-authentication encryption method used for this user.
 
