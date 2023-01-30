@@ -17,7 +17,7 @@ To receive notifications to a specific email address, set the following paramete
 
 1. In the Defender for Identity portal, select the settings option on the toolbar and select **Configuration**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings icon](media/config-menu.png)
+    ![Defender for Identity configuration settings icon](media/config-menu.png)
 
 1. Click **Notifications**.
 1. Under **Mail notifications**, add email addresses for the notifications you want to receive - they can be sent for new alerts (suspicious activities) and new health issues.
@@ -29,7 +29,7 @@ To receive notifications to a specific email address, set the following paramete
 
 1. Click **Save**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] notifications](media/notifications.png)
+    ![Defender for Identity notifications](media/notifications.png)
 
 ## See Also
 

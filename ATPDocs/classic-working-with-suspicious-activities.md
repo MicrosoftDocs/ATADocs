@@ -33,7 +33,7 @@ Each security alert has the following information:
 > - When you hover your mouse over a user or computer, a mini entity profile is displayed. The mini-profile provides additional information about the entity and includes the number of security alerts that the entity is linked to.
 > - Clicking on an entity, takes you to the entity profile of the user or computer.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] security alerts timeline image](media/sa-timeline.png)
+![Defender for Identity security alerts timeline image](media/sa-timeline.png)
 
 ## Security alert categories
 
@@ -90,7 +90,7 @@ To filter the security alert list:
 You can change the status of a security alert by clicking the current status of the security alert and selecting one of the following **Open**, **Suppressed**, **Closed**, or **Deleted**.
 To do this, click the three dots at the top right corner of a specific alert to reveal the list of available actions.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] Actions for security alerts](media/sa-actions.png)
+![Defender for Identity Actions for security alerts](media/sa-actions.png)
 
 **Security alert status**
 

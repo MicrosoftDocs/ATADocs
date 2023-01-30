@@ -11,7 +11,7 @@ Microsoft Defender for Identity monitors your domain controllers by capturing an
 
 Defender for Identity architecture:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] architecture topology diagram](media/architecture-topology.png)
+![Defender for Identity architecture topology diagram](media/architecture-topology.png)
 
 This section describes how the flow of Defender for Identity's network and event capturing works, and drills down to describe the functionality of the main components: the Microsoft 365 Defender portal, Defender for Identity sensor, and Defender for Identity cloud service.
 

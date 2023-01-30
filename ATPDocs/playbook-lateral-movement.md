@@ -133,7 +133,7 @@ You can see that, for this particular process, we have RonHD's TGT in memory. We
 
 Looking at the Defender for Identity console, we can see the following things:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
+![Defender for Identity detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
 
 Defender for Identity detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we select RonHD's name in the alert, we're taken to the Logical Activity timeline of RonHD, where we can further our investigation.
 
@@ -241,7 +241,7 @@ Most security tools have no way to detect when a legitimate credential was used 
 
 Defender for Identity detections and alert information are of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
+![Defender for Identity detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
 
 > [!NOTE]
 > This event will only display on the Defender for Identity console in **2 hours**. Events of this type are purposefully suppressed for this timeframe to reduce false positives.

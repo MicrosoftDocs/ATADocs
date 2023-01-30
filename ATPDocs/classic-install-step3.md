@@ -23,7 +23,7 @@ After configuring the domain connectivity settings, you can download the Defende
 
 Select **Download** in the list of steps at the top of the page to go to the **Sensors** page.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] sensor configuration settings](media/sensor-config.png)
+![Defender for Identity sensor configuration settings](media/sensor-config.png)
 
 To reach the sensor configuration screen later, select **Configuration**, and then under **System**, select **Sensors**.  
 

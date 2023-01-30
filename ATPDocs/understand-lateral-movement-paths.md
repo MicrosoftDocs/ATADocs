@@ -11,7 +11,7 @@ Lateral movement is when an attacker uses non-sensitive accounts to gain access 
 
 A key component of Microsoft Defender for Identity's security insights are Lateral Movement Paths or LMPs. Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Defender for Identity LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP)](media/lmp.png)
+![Defender for Identity Lateral Movement Path (LMP)](media/lmp.png)
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored sign-in credentials in accounts, groups and machines with sensitive accounts.
 
@@ -19,7 +19,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 Every computer or user profile discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
+![Defender for Identity Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
 
 The LMP for each entity provides different information depending on the sensitivity of the entity:
 

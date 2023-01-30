@@ -34,7 +34,7 @@ After you verified that your network meets the sensor requirements, start the cr
 
 1. Select **Create instance**.
 
-    ![Create [!INCLUDE [Product short.](includes/product-short.md)] instance](media/create-instance.png)
+    ![Create Defender for Identity instance](media/create-instance.png)
 
 1. Your Defender for Identity instance is automatically named with the Azure AD fully qualified domain name and created in the data center located closest to your Azure AD.
 
