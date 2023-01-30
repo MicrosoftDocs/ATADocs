@@ -37,7 +37,7 @@ For more information about role-based access control (RBAC) in Defender for Iden
 
 The Attack time line is the default landing page you are taken to when you log in to the Defender for Identity portal. By default, all open suspicious activities are shown on the attack time line. You can filter the attack time line to show All, Open, Dismissed or Suppressed suspicious activities. You can also see the severity assigned to each activity.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] attack timeline image](media/sa-timeline.png)
+![Defender for Identity attack timeline image](media/sa-timeline.png)
 
 For more information, see [Working with security alerts](/defender-for-identity/classic-working-with-suspicious-activities).
 
@@ -55,7 +55,7 @@ You can filter which suspicious activities are displayed in the attack time line
 
 In the top menu, you can find a search bar. You can search for a specific user, computer, or groups in Defender for Identity. To give it a try, just start typing. At the bottom of the search bar, the number of search results found is indicated.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] portal search image](media/workspace-portal-search.png)
+![Defender for Identity portal search image](media/workspace-portal-search.png)
 
 If you click the number, you can access the search results page in which you can filter results by entity type for further investigation.
 
@@ -65,11 +65,11 @@ If you click the number, you can access the search results page in which you can
 
 The Health center provides you with alerts when something isn't working properly in your Defender for Identity instance.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] health center image](media/health-issue.png)
+![Defender for Identity health center image](media/health-issue.png)
 
 Any time your system encounters a problem, such as a connectivity error or a disconnected Defender for Identity standalone sensor, the Health Center icon lets you know by displaying a red dot.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] health center red dot image](media/health-bar.png)
+![Defender for Identity health center red dot image](media/health-bar.png)
 
 ### Sensitive groups
 
@@ -79,7 +79,7 @@ For information on sensitive groups in Defender for Identity, see [Working with 
 
 If you hover your mouse over an entity, anywhere in the Defender for Identity portal where there is a single entity presented, such as a user, or a computer, a mini profile automatically opens displaying the following information, if available and relevant:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] mini profile image](media/mini-profile.png)
+![Defender for Identity mini profile image](media/mini-profile.png)
 
 - Name
 - Title

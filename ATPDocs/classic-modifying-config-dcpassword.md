@@ -23,11 +23,11 @@ Follow this procedure to update the Domain Connectivity password on the Defender
 
 1. Select the settings option on the toolbar and select **Configuration**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings icon](media/config-menu.png)
+    ![Defender for Identity configuration settings icon](media/config-menu.png)
 
 1. Select **Directory Services**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] standalone sensor change password image](media/directory-services.png)
+    ![Defender for Identity standalone sensor change password image](media/directory-services.png)
 
 1. Under **Password**, change the password.
 

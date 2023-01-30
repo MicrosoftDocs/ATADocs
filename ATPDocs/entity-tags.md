@@ -10,7 +10,7 @@ ms.topic: how-to
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
 
-This article explains how to apply entity tags to sensitive accounts. This is important because some [!INCLUDE [Short long](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
+This article explains how to apply entity tags to sensitive accounts. This is important because some Defender for Identity detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
 
 Defender for Identity also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
 
@@ -34,7 +34,7 @@ The **Sensitive tag** is used to identify high value assets. The lateral movemen
 
 ### Sensitive entities
 
-The groups in the following list are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
+The groups in the following list are considered **Sensitive** by Defender for Identity. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
 
 - Administrators
 - Power Users

@@ -11,13 +11,13 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/entity-tags). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
-This article explains how to apply entity tags to sensitive accounts. This is important because some [!INCLUDE [Short long](includes/product-short.md)] detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
+This article explains how to apply entity tags to sensitive accounts. This is important because some Defender for Identity detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
 
 Defender for Identity also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
 
 ## Sensitive entities
 
-The following list of groups are considered **Sensitive** by [!INCLUDE [Short long](includes/product-short.md)]. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
+The following list of groups are considered **Sensitive** by Defender for Identity. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
 
 - Administrators
 - Power Users
@@ -57,11 +57,11 @@ To tag entities, do the following:
 
 1. In the Defender for Identity portal, select **Configuration**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
+    ![Defender for Identity configuration settings](media/config-menu.png)
 
 1. Under **Detection**, select **Entity tags**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] entity tags](media/entity-tags.png)
+    ![Defender for Identity entity tags](media/entity-tags.png)
 
 1. For each account that you want to configure, do the following:
     1. Under **Honeytoken accounts** or **Sensitive**, enter the account name.
@@ -70,7 +70,7 @@ To tag entities, do the following:
     > [!TIP]
     > The sensitive or honeytoken account field is searchable and will autofill with entities in your network.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] sensitive account sample](media/sensitive-account-sample.png)
+    ![Defender for Identity sensitive account sample](media/sensitive-account-sample.png)
 
 1. Click **Save**.
 

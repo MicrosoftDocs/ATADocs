@@ -55,7 +55,7 @@ To configure VPN data in Defender for Identity:
 1. In the Defender for Identity portal, click on the configuration cog and then **VPN**.
 1. Turn on **Radius Accounting**, and type the **Shared Secret** you configured previously on your RRAS VPN Server. Then click **Save**.
 
-    ![Configure [!INCLUDE [Product short.](includes/product-short.md)] VPN](media/vpn-radius.png)
+    ![Configure Defender for Identity VPN](media/vpn-radius.png)
 
 After this is enabled, all Defender for Identity sensors listen on port 1813 for RADIUS accounting events, and your VPN setup is complete.
 
