@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Reconnaissance and discovery alerts
 
-Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Microsoft Defender for Identity identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. **Reconnaissance and discovery**
 1. [Persistence and privilege escalation alerts](persistence-privilege-escalation-alerts.md)
@@ -15,9 +15,9 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
-To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Reconnaissance and discovery** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
+The following security alerts help you identify and remediate **Reconnaissance and discovery** phase suspicious activities detected by Defender for Identity in your network.
 
 Reconnaissance and discovery consist of techniques an adversary may use to gain knowledge about the system and internal network. These techniques help adversaries observe the environment and orient themselves before deciding how to act. They also allow adversaries to explore what they can control and what’s around their entry point to discover how it could benefit their current objective. Native operating system tools are often used toward this post-compromise information-gathering objective. In Microsoft Defender for Identity, these alerts usually involve internal account enumeration with different techniques.
 
@@ -35,7 +35,7 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 **NTLM**: Attacker makes NTLM authentication requests using the dictionary of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the **WrongPassword (0xc000006a)** instead of **NoSuchUser (0xc0000064)** NTLM error.
 
-In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, [!INCLUDE [Product short](includes/product-short.md)] detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
+In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
 **Learning period**:
 
@@ -62,7 +62,7 @@ None
 
 Your DNS server contains a map of all the computers, IP addresses, and services in your network. This information is used by attackers to map your network structure and target interesting computers for later steps in their attack.
 
-There are several query types in the DNS protocol. This [!INCLUDE [Product short](includes/product-short.md)] security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive number of requests.
+There are several query types in the DNS protocol. This Defender for Identity security alert detects suspicious requests, either requests using an AXFR (transfer)  originating from non-DNS servers, or those using an excessive number of requests.
 
 **Learning period**:
 
@@ -113,7 +113,7 @@ None
 **Description**:
 
 User and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
-In this detection, no alerts are triggered in the first month after [!INCLUDE [Product short](includes/product-short.md)] is deployed (learning period). During the learning period, [!INCLUDE [Product short](includes/product-short.md)] profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts.
+In this detection, no alerts are triggered in the first month after Defender for Identity is deployed (learning period). During the learning period, Defender for Identity profiles which SAM-R queries are made from which computers, both enumeration and individual queries of sensitive accounts.
 
 **Learning period**:
 
@@ -154,6 +154,6 @@ None
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)
 - [Manage security alerts](/defender-for-identity/manage-security-alerts)
-- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
+- [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

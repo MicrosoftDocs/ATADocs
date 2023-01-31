@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Other security alerts
 
-Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Microsoft Defender for Identity identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance and discovery alerts](reconnaissance-discovery-alerts.md)
 1. [Persistence and privilege escalation alerts](persistence-privilege-escalation-alerts.md)
@@ -15,9 +15,9 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. **Other**
 
-To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Other** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
+The following security alerts help you identify and remediate **Other** phase suspicious activities detected by Defender for Identity in your network.
 
 ## Suspected DCShadow attack (domain controller promotion) (external ID 2028)
 
@@ -34,7 +34,7 @@ In a DCShadow attack, RPC, and LDAP are used to:
 1. Register the machine account as a domain controller (using domain admin rights).
 1. Perform replication (using the granted replication rights) over DRSUAPI and send changes to directory objects.
 
-In this [!INCLUDE [Product short](includes/product-short.md)] detection, a security alert is triggered when a machine in the network tries to register as a rogue domain controller.
+In this Defender for Identity detection, a security alert is triggered when a machine in the network tries to register as a rogue domain controller.
 
 **Learning period**:
 
@@ -56,7 +56,7 @@ Validate the following permissions:
 1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who has these permissions in the domain.
 
 > [!NOTE]
-> Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by [!INCLUDE [Product short](includes/product-short.md)] sensors only.
+> Suspicious domain controller promotion (potential DCShadow attack) alerts are supported by Defender for Identity sensors only.
 
 ## Suspected DCShadow attack (domain controller replication request) (external ID 2029)
 
@@ -67,7 +67,7 @@ Validate the following permissions:
 **Description**:
 
 Active Directory replication is the process by which changes that are made on one domain controller are synchronized with other domain controllers. Given necessary permissions, attackers can grant rights for their machine account, allowing them to impersonate a domain controller. Attackers strive to initiate a malicious replication request, allowing them to change Active Directory objects on a genuine domain controller, which can give the attackers persistence in the domain.
-In this detection, an alert is triggered when a suspicious replication request is generated against a genuine domain controller protected by [!INCLUDE [Product short](includes/product-short.md)]. The behavior is indicative of techniques used in domain controller shadow attacks.
+In this detection, an alert is triggered when a suspicious replication request is generated against a genuine domain controller protected by Defender for Identity. The behavior is indicative of techniques used in domain controller shadow attacks.
 
 **Learning period**:
 
@@ -89,7 +89,7 @@ Validate the following permissions:
 1. For more information, see [Grant Active Directory Domain Services permissions for profile synchronization in SharePoint Server 2013](/SharePoint/administration/user-profile-service-administration). You can use [AD ACL Scanner](/archive/blogs/pfesweplat/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool) or create a Windows PowerShell script to determine who in the domain has these permissions.
 
 > [!NOTE]
-> Suspicious replication request (potential DCShadow attack) alerts are supported by [!INCLUDE [Product short](includes/product-short.md)] sensors only.
+> Suspicious replication request (potential DCShadow attack) alerts are supported by Defender for Identity sensors only.
 
 ## Suspicious VPN connection (external ID 2025)
 
@@ -99,7 +99,7 @@ Validate the following permissions:
 
 **Description**:
 
-[!INCLUDE [Product short](includes/product-short.md)] learns the entity behavior for users VPN connections over a sliding period of one month.
+Defender for Identity learns the entity behavior for users VPN connections over a sliding period of one month.
 
 The VPN-behavior model is based on the machines users log in to and the locations the users connect from.
 
@@ -125,7 +125,7 @@ An alert is opened when there is a deviation from the user's behavior based on a
 
 **Description**:
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. [!INCLUDE [Product short](includes/product-short.md)] detects PSexec, Remote WMI, and PowerShell connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Defender for Identity detects PSexec, Remote WMI, and PowerShell connections.
 
 **Learning period**:
 
@@ -146,7 +146,7 @@ None
 1. Implement less-privileged access on domain machines to allow specific users the right to create services.
 
 > [!NOTE]
-> Remote code execution attempt alerts on attempted use of Powershell commands are only supported by [!INCLUDE [Product short](includes/product-short.md)] sensors.
+> Remote code execution attempt alerts on attempted use of Powershell commands are only supported by Defender for Identity sensors.
 
 ## Suspicious service creation (external ID 2026)
 
@@ -203,7 +203,7 @@ None
 
 **Description**:
 
-Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. A [!INCLUDE [Product short](includes/product-short.md)] **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
+Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. A Defender for Identity **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
 
 **Learning period**:
 
@@ -222,6 +222,6 @@ None
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)
 - [Manage security alerts](/defender-for-identity/manage-security-alerts)
-- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
+- [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -53,7 +53,7 @@ None
 
 12/11/2018 Microsoft published [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626), announcing that a newly discovered remote code execution vulnerability exists in Windows Domain Name System (DNS) servers. In this vulnerability, servers fail to properly handle requests. An attacker who successfully exploits the vulnerability can run arbitrary code in the context of the Local System Account. Windows servers currently configured as DNS servers are at risk from this vulnerability.
 
-In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when DNS queries suspected of exploiting the CVE-2018-8626 security vulnerability are made against a domain controller in the network.
+In this detection, a Defender for Identity security alert is triggered when DNS queries suspected of exploiting the CVE-2018-8626 security vulnerability are made against a domain controller in the network.
 
 **Learning period**:
 
@@ -123,7 +123,7 @@ In June 2019, Microsoft published [Security Vulnerability CVE-2019-1040](https:/
 
 Malicious actors that successfully exploit this vulnerability have the ability to downgrade NTLM security features, and may successfully create authenticated sessions on behalf of other accounts. Unpatched Windows Servers are at risk from this vulnerability.
 
-In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
+In this detection, a Defender for Identity security alert is triggered when NTLM authentication requests suspected of exploiting security vulnerability identified in [CVE-2019-1040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040) are made against a domain controller in the network.
 
 **Learning period**:
 
@@ -153,7 +153,7 @@ An Exchange Server computer account can be configured to trigger NTLM authentica
 
 Once the relay server receives the NTLM authentication, it provides a challenge that was originally created by the target server. The client responds to the challenge, preventing an attacker from taking the response, and using it to continue NTLM negotiation with the target domain controller.
 
-In this detection, an alert is triggered when [!INCLUDE [Product short](includes/product-short.md)] identify use of Exchange account credentials from a suspicious source.
+In this detection, an alert is triggered when Defender for Identity identify use of Exchange account credentials from a suspicious source.
 
 **Learning period**:
 
@@ -179,7 +179,7 @@ None
 
 **Description**:
 
-Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While Microsoft Windows accepts this type of network traffic without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques such as over-pass-the-hash, Brute Force, and advanced ransomware exploits such as WannaCry, are used.
+Attackers use tools that implement various protocols such as Kerberos and SMB in non-standard ways. While Microsoft Windows accepts this type of network traffic without warnings, Defender for Identity is able to recognize potential malicious intent. The behavior is indicative of techniques such as over-pass-the-hash, Brute Force, and advanced ransomware exploits such as WannaCry, are used.
 
 **Learning period**:
 
@@ -220,7 +220,7 @@ None
 
 03/12/2020 Microsoft published [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796), announcing that a newly remote code execution vulnerability exists in the way that the Microsoft Server Message Block 3.1.1 (SMBv3) protocol handles certain requests. An attacker who successfully exploited the vulnerability could gain the ability to execute code on the target server or client. Unpatched Windows servers are at risk from this vulnerability.
 
-In this detection, a [!INCLUDE [Product short](includes/product-short.md)] security alert is triggered when SMBv3 packet suspected of exploiting the CVE-2020-0796 security vulnerability are made against a domain controller in the network.
+In this detection, a Defender for Identity security alert is triggered when SMBv3 packet suspected of exploiting the CVE-2020-0796 security vulnerability are made against a domain controller in the network.
 
 **Learning period**:
 
@@ -299,7 +299,7 @@ Update your Exchange servers with the latest security patches. The vulnerabiliti
 
 **Description**:
 
-Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of brute force techniques.
+Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Defender for Identity is able to recognize potential malicious intent. The behavior is indicative of brute force techniques.
 
 **Learning period**:
 
@@ -325,7 +325,7 @@ None
 
 **Description**:
 
-Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
+Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Defender for Identity is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
 
 **Learning period**:
 
@@ -351,7 +351,7 @@ None
 
 **Description**:
 
-Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques such as use of the Metasploit hacking framework.
+Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, Defender for Identity is able to recognize potential malicious intent. The behavior is indicative of techniques such as use of the Metasploit hacking framework.
 
 **Learning period**:
 
@@ -373,6 +373,6 @@ None
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)
 - [Manage security alerts](/defender-for-identity/manage-security-alerts)
-- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
+- [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

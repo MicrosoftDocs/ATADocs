@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Credential access alerts
 
-Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. [!INCLUDE [Product long](includes/product-long.md)] identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
+Typically, cyberattacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets. Valuable assets can be sensitive accounts, domain administrators, or highly sensitive data. Microsoft Defender for Identity identifies these advanced threats at the source throughout the entire attack kill chain and classifies them into the following phases:
 
 1. [Reconnaissance and discovery alerts](reconnaissance-discovery-alerts.md)
 1. [Persistence and privilege escalation alerts](persistence-privilege-escalation-alerts.md)
@@ -15,9 +15,9 @@ Typically, cyberattacks are launched against any accessible entity, such as a lo
 1. [Lateral movement alerts](lateral-movement-alerts.md)
 1. [Other alerts](other-alerts.md)
 
-To learn more about how to understand the structure, and common components of all [!INCLUDE [Product short](includes/product-short.md)] security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
+To learn more about how to understand the structure, and common components of all Defender for Identity security alerts, see [Understanding security alerts](understanding-security-alerts.md). For information about **True positive (TP)**, **Benign true positive (B-TP)**, and **False positive (FP)**, see [security alert classifications](understanding-security-alerts.md#security-alert-classifications).
 
-The following security alerts help you identify and remediate **Credential access** phase suspicious activities detected by [!INCLUDE [Product short](includes/product-short.md)] in your network.
+The following security alerts help you identify and remediate **Credential access** phase suspicious activities detected by Defender for Identity in your network.
 
 Credential Access consists of techniques for stealing credentials like account names and passwords. Techniques used to get credentials include keylogging or credential dumping. Using legitimate credentials can give adversaries access to systems, make them harder to detect, and provide the opportunity to create more accounts to help achieve their goals.
 
@@ -31,9 +31,9 @@ Credential Access consists of techniques for stealing credentials like account n
 
 In a brute-force attack, the attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when [!INCLUDE [Product short](includes/product-short.md)] detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
+In this detection, an alert is triggered when Defender for Identity detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
-**Learning period**: 
+**Learning period**:
 
 None
 
@@ -83,7 +83,7 @@ None
 **Description**:
 
 The Data Protection API (DPAPI) is used by Windows to securely protect passwords saved by browsers, encrypted files, and other sensitive data. Domain controllers hold a backup master key that can be used to decrypt all secrets encrypted with DPAPI on domain-joined Windows machines. Attackers can use the master key to decrypt any secrets protected by DPAPI on all domain-joined machines.
-In this detection, a [!INCLUDE [Product short](includes/product-short.md)] alert is triggered when the DPAPI is used to retrieve the backup master key.
+In this detection, a Defender for Identity alert is triggered when the DPAPI is used to retrieve the backup master key.
 
 **Learning period**:
 
@@ -133,7 +133,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 
 Security principal reconnaissance is used by attackers to gain critical information about the domain environment. Information that helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
-To allow [!INCLUDE [Product short](includes/product-short.md)] to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following [!INCLUDE [Product short](includes/product-short.md)] deployment. Once the [!INCLUDE [Product short](includes/product-short.md)] initial learning phase is completed, alerts are generated on computers that perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
+To allow Defender for Identity to accurately profile and learn legitimate users, no alerts of this type are triggered in the first 10 days following Defender for Identity deployment. Once the Defender for Identity initial learning phase is completed, alerts are generated on computers that perform suspicious LDAP enumeration queries or queries targeted to sensitive groups that using methods not previously observed.
 
 **Learning period**:
 
@@ -153,7 +153,7 @@ To allow [!INCLUDE [Product short](includes/product-short.md)] to accurately pro
 1. [Replace the user account by Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview).
 
 > [!NOTE]
-> Security principal reconnaissance (LDAP) alerts are supported by [!INCLUDE [Product short](includes/product-short.md)] sensors only.
+> Security principal reconnaissance (LDAP) alerts are supported by Defender for Identity sensors only.
 
 ## Suspected Kerberos SPN exposure (external ID 2410)
 
@@ -235,7 +235,7 @@ SQL-Admin). Any activity from them might indicate malicious behavior.
 
 For more information on honeytoken accounts, see [Manage sensitive or honeytoken accounts](/defender-for-identity/entity-tags).
 
-**Learning period**: 
+**Learning period**:
 
 None
 
@@ -260,7 +260,7 @@ Active Directory replication is the process by which changes that are made on on
 In this detection, an alert is triggered when a replication request is initiated from a computer that isn't a domain controller.
 
 > [!NOTE]
-> If you have domain controllers on which [!INCLUDE [Product short](includes/product-short.md)] sensors are not installed, those domain controllers are not covered by [!INCLUDE [Product short](includes/product-short.md)]. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by [!INCLUDE [Product short](includes/product-short.md)] as a domain controller. It is highly recommended to install the [!INCLUDE [Product short](includes/product-short.md)] sensor on every domain controller to get full coverage.
+> If you have domain controllers on which Defender for Identity sensors are not installed, those domain controllers are not covered by Defender for Identity. When deploying a new domain controller on an unregistered or unprotected domain controller, it may not immediately be identified by Defender for Identity as a domain controller. It is highly recommended to install the Defender for Identity sensor on every domain controller to get full coverage.
 
 **Learning period**:
 
@@ -287,6 +287,6 @@ Validate the following permissions:
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)
 - [Manage security alerts](/defender-for-identity/manage-security-alerts)
-- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
+- [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

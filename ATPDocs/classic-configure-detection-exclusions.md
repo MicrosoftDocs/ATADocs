@@ -53,7 +53,7 @@ To configure exclusions from a security alert, do the following:
 
     ![Exclude entity.](media/exclude-in-sa.png)
 
-Defender for Identity scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after [!INCLUDE [Product short](includes/product-short.md)] deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
+Defender for Identity scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after Defender for Identity deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
 
 ## See Also
 
