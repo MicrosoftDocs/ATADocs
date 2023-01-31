@@ -145,25 +145,25 @@ Sensor specific health alerts are displayed in the **Sensors settings** page and
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|NTLM Auditing is not enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server.|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#event-id-8004) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors settings page|
+|NTLM Auditing is not enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a week, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#event-id-8004) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors settings page|
 
 ### Directory Services Advanced Auditing is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Advanced Auditing is not enabled as required.|The Directory Services Advanced Auditing configuration does not include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-audit-policies) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
+|Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Advanced Auditing configuration does not include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-audit-policies) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
 
 ### Directory Services Object Auditing is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Object Auditing is not enabled as required.|The Directory Services Object Auditing configuration does not include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-object-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
+|Directory Services Object Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Object Auditing configuration does not include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-object-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
 
 ### Power mode is not configured for optimal processor performance
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Power mode is not configured for optimal processor performance.|The operating system's power mode is not configured to the optimal processor performance settings. This can impact the server's performance and the sensors' ability to detect suspicious activities.|Configure the power option of the machine running the Defender for Identity sensor to High Performance (or set both the minimum and maximum processor state to 100) as described in the [Server specifications](prerequisites.md#server-specifications) section, in the [Defender for Identity prerequisites](prerequisites.md) page.|Low|Sensors settings page|
+|Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode is not configured to the optimal processor performance settings. This can impact the server's performance and the sensors' ability to detect suspicious activities.|Configure the power option of the machine running the Defender for Identity sensor to High Performance (or set both the minimum and maximum processor state to 100) as described in the [Server specifications](prerequisites.md#server-specifications) section, in the [Defender for Identity prerequisites](prerequisites.md) page.|Low|Sensors settings page|
 
 <!--
 ## Windows events missing from domain controller audit policy

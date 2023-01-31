@@ -25,7 +25,7 @@ To configure exclusions from the configuration page, do the following:
 
 1. In the Defender for Identity portal, select **Configuration**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] configuration settings](media/config-menu.png)
+    ![Defender for Identity configuration settings](media/config-menu.png)
 
 1. Under **Detection**, select **Exclusions**.
 1. For each detection that you want to configure, do the following:

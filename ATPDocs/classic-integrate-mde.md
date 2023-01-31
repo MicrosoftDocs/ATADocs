@@ -47,7 +47,7 @@ To enable this feature, you need a license for both Defender for Identity and De
 
 1. In the Defender for Identity portal, select **Configuration**.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] Configuration menu](media/msde-configuration.png)
+    ![Defender for Identity Configuration menu](media/msde-configuration.png)
 1. In the Configurations list, select **Microsoft Defender for Endpoint** and set the integration toggle to **On**.
 
     ![Enable Windows Defender integration.](media/msde-enable-integration.png)

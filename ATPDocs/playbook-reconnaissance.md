@@ -79,13 +79,13 @@ Getting visibility of this type of attempt (failed or successful) is vital for d
 
 In the Defender for Identity Search, type **VictimPC**, then select it to view the timeline.
 
-![DNS reconnaissance detected by [!INCLUDE [Product short.](includes/product-short.md)], high-level view](media/playbook-recon-nslookupdetection1.png)
+![DNS reconnaissance detected by Defender for Identity, high-level view](media/playbook-recon-nslookupdetection1.png)
 
 Look for the "AXFR query" activity. Defender for Identity detects this type of reconnaissance against your DNS.
 
 If you have a large number of activities, select **Filter by** and deselect all types except **DNS query**.
 
-![Detailed view of the DNS reconnaissance detection in [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-recon-nslookupdetection2.png)
+![Detailed view of the DNS reconnaissance detection in Defender for Identity](media/playbook-recon-nslookupdetection2.png)
 
 If your security analyst determined this activity originated from a security scanner, the specific device can be excluded from further detection alerts. In the top-right area of the alert, select the three dots. Then, select **Close and exclude MySecurityScanner**. Ensuring this alert doesn't show up again when detected from "MySecurityScanner".
 
@@ -163,7 +163,7 @@ Taking a look at **ContosoDC's page**, we can also see the computers **JeffL** l
 
 We can also get Directory Data, including **JeffL**'s Memberships and Access Controls, all from within Defender for Identity.
 
-![JeffL's directory data in [!INCLUDE [Product short.](includes/product-short.md)]](media/playbook-recon-dsenumeration-jeffvdirectorydata.png)
+![JeffL's directory data in Defender for Identity](media/playbook-recon-dsenumeration-jeffvdirectorydata.png)
 
 Now, our attention will be shift towards SMB Session Enumeration.
 
@@ -189,7 +189,7 @@ We already know that SamiraA is a Domain Admin. This attack gave us SamiraA's IP
 
 Now we can see what Defender for Identity detected for us:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] Detecting SMB reconnaissance](media/playbook-recon-smbrecon-detection1.png)
+![Defender for Identity Detecting SMB reconnaissance](media/playbook-recon-smbrecon-detection1.png)
 
 Not only are we alerted on this activity, we're also alerted on the exposed accounts and their respective IP addresses *at that point in time*. As the Security Operations Center (SOC), we don't just have the attempt and its status, but also what was sent back to the attacker. This information aids our investigation.
 

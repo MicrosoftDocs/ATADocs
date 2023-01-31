@@ -51,7 +51,7 @@ To get your instance name, see the About page in the Identities settings section
     > [!NOTE]
     > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
-    ![[!INCLUDE [Product short.](includes/product-short.md)] architecture diagram](media/architecture-topology.png)
+    ![Defender for Identity architecture diagram](media/architecture-topology.png)
 
 ### Ports
 
