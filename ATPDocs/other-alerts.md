@@ -186,7 +186,9 @@ None
 
 The DNS protocol in most organizations is typically not monitored and rarely blocked for malicious activity. Enabling an attacker on a compromised machine, to abuse the DNS protocol. Malicious communication over DNS can be used for data exfiltration, command, and control, and/or evading corporate network restrictions.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 
@@ -203,7 +205,9 @@ The DNS protocol in most organizations is typically not monitored and rarely blo
 
 Domain controllers hold the most sensitive organizational data. For most attackers, one of their top priorities is to gain domain controller access, to steal your most sensitive data. For example, exfiltration of the Ntds.dit file, stored on the DC, allows an attacker to forge Kerberos ticket granting tickets(TGT) providing authorization to any resource. Forged Kerberos TGTs enable the attacker to set the ticket expiration to any arbitrary time. A [!INCLUDE [Product short](includes/product-short.md)] **Data exfiltration over SMB** alert is triggered when suspicious transfers of data are observed from your monitored domain controllers.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 

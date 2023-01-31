@@ -33,7 +33,9 @@ In a brute-force attack, the attacker attempts to authenticate with many differe
 
 In this detection, an alert is triggered when [!INCLUDE [Product short](includes/product-short.md)] detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
-**Learning period**: None
+**Learning period**: 
+
+None
 
 **MITRE**:
 
@@ -233,7 +235,9 @@ SQL-Admin). Any activity from them might indicate malicious behavior.
 
 For more information on honeytoken accounts, see [Manage sensitive or honeytoken accounts](/defender-for-identity/entity-tags).
 
-**Learning period**: None
+**Learning period**: 
+
+None
 
 **MITRE**:
 

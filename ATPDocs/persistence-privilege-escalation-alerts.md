@@ -145,7 +145,9 @@ Encryption downgrade is a method of weakening Kerberos using a downgraded encryp
 
 Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller. In this alert, the learned behavior of previous KRB_ERR message encryption from domain controller to the account requesting a ticket, was downgraded.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 

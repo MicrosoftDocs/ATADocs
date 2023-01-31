@@ -301,7 +301,9 @@ Update your Exchange servers with the latest security patches. The vulnerabiliti
 
 Attackers use tools that implement various protocols such as SMB, Kerberos, and NTLM in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of brute force techniques.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 
@@ -325,7 +327,9 @@ Attackers use tools that implement various protocols such as SMB, Kerberos, and 
 
 Attackers use tools that implement various protocols in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques used by advanced ransomware, such as WannaCry.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 
@@ -349,7 +353,9 @@ Attackers use tools that implement various protocols in non-standard ways. While
 
 Attackers use tools that implement various protocols (SMB, Kerberos, NTLM) in non-standard ways. While this type of network traffic is accepted by Windows without warnings, [!INCLUDE [Product short](includes/product-short.md)] is able to recognize potential malicious intent. The behavior is indicative of techniques such as use of the Metasploit hacking framework.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 

@@ -37,7 +37,9 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 In this alert detection, [!INCLUDE [Product short](includes/product-short.md)] detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, [!INCLUDE [Product short](includes/product-short.md)] detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 
@@ -91,7 +93,9 @@ Enumeration using Server Message Block (SMB) protocol enables attackers to get i
 
 In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller.
 
-**Learning period**: None
+**Learning period**:
+
+None
 
 **MITRE**:
 
