@@ -16,7 +16,7 @@ Microsoft Defender for Identity in Microsoft 365 Defender provides evidence when
 
 If an alert or incident indicates that a user may be suspicious or compromised, check and investigate the user profile for the following details and activities:
 
-1. Who is the [user](#check-the-entity-profile)?
+1. Who is the user?
     1. Is the user a [sensitive user](entity-tags.md) (such as admin, or on a watchlist, etc.)?
     1. What is their role within the organization?
     1. Are they significant in the organizational tree?
@@ -43,31 +43,31 @@ You can find identity information in the following views: 
 - Advanced hunting queries  
 - Action center 
    
-![User's image](media/investigate-assets/image.png)
+![Investigate identity.](media/investigate-assets/image.png)
 
-Identity details
+### Identity details
 
 When you investigate a specific identity, you'll see the:
 
-- [Overview](/microsoft-365/security/defender/investigate-users)  
+- [Overview](/microsoft-365/security/defender/investigate-users#overview)  
    the Overview including identity details such as the Azure Active Directory (Azure AD) Identity risk level, the number of devices the user is signed in to, when the user was first and last seen, the user's accounts and more important information.  
    In addition, you can see the incidents and alerts visual view, investigation priority score, organization tree, entity tags and scored activities timeline.
-- [Active Alerts](/microsoft-365/security/defender/investigate-users) tab  
+- [Active Alerts](/microsoft-365/security/defender/investigate-users#alerts) tab  
    The alerts tab contains active alerts involving the user from the last 180 days in this tab. Information like alert severity and the time the alert was generated is available in this tab.
-- [Observed in organization](/microsoft-365/security/defender/investigate-users) tab  
+- [Observed in organization](/microsoft-365/security/defender/investigate-users#observed-in-organization) tab  
    This tab contains:
    - Devices - The devices the identity signed in to, including most and least used in the last 180 days.
    - Locations - The observed locations for the identity in the last 30 days.
    - Groups - all observed on-premises groups for the identity.
    - Lateral movement paths - all profiled lateral movement paths from the on-premises environment.
       
-- [Identity timeline](/microsoft-365/security/defender/investigate-users) tab  
+- [Identity timeline](/microsoft-365/security/defender/investigate-users#timeline) tab  
    The timeline represents activities and alerts observed from a user's identity in the last 30 days. It unifies the user's identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint workloads. By using the timeline, you can focus on activities a user performed or were performed on them in specific timeframes.
    
-- [Remediation actions](/microsoft-365/security/defender/investigate-users)  
+- [Remediation actions](/microsoft-365/security/defender/investigate-users#remediation-actions)  
    You can respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center.
    
-For more information about investigate an Identity in the Microsoft 365 Defender portal, see [Investigate users](https://https://learn.microsoft.com/en-us/microsoft-365/security/defender/investigate-users).
+For more information about investigate an Identity in the Microsoft 365 Defender portal, see [Investigate users](/microsoft-365/security/defender/investigate-users).
 
 ## Investigation steps for suspicious devices
 
@@ -90,9 +90,9 @@ Check and investigate the device profile for the following details and activitie
 
 Use the answers to these questions to determine if the device appears compromised or if the suspicious activities imply malicious actions.
 
-For more information about investigate a device in the Microsoft 365 Defender portal, see [Investigate devices](https://https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/investigate-machines).
+For more information about investigate a device in the Microsoft 365 Defender portal, see [Investigate devices](/microsoft-365/security/defender-endpoint/investigate-machines).
 
-![User's image](media/investigate-assets/image1.png)
+![Investigate device.](media/investigate-assets/image1.png)
 
 
 ## Next steps
