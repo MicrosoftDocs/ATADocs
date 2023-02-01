@@ -11,7 +11,8 @@ Microsoft Defender for Identity in Microsoft 365 Defender provides evidence when
 
 ## Investigation steps for suspicious users
 
-For information on how to view user profiles in Microsoft 365 Defender, see [Investigate users](/microsoft-365/security/defender/investigate-users).
+> [!Note]
+> For information on how to view user profiles in Microsoft 365 Defender, see [Investigate users](/microsoft-365/security/defender/investigate-users?view=o365-worldwide).
 
 If an alert or incident indicates that a user may be suspicious or compromised, check and investigate the user profile for the following details and activities:
 
@@ -32,7 +33,80 @@ If an alert or incident indicates that a user may be suspicious or compromised, 
 
 Use the answers to these questions to determine if the account appears compromised or if the suspicious activities imply malicious actions.
 
-![Investigate the user profile.](media/investigate-user.png)
+You can find identity information in the following views: 
+
+- Identities page 
+- Alerts queue 
+- Any individual alert/incident 
+- Device page 
+- Activity log 
+- Advanced hunting queries  
+- Action center 
+   
+#### ![User's image](media/investigate-assets/image.png)
+
+Check the Identity profile
+
+The entity profile provides you with a comprehensive entity page, designed for full deep-dive investigation of users, computers, devices, and the resources they have access to along with their history. The profile page takes advantage of the new Defender for Identity logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+
+To access an entity profile page, select the name of the entity, such as a username, in the security alert timeline. You can also see a mini-version of the entity profile in the security alert page by hovering over the entity name.
+
+The entity profile lets you view entity activities, view directory data, and view [lateral movement paths](understand-lateral-movement-paths.md) for the entity.
+
+## Check entity tags
+
+Defender for Identity pulls tags out of Active Directory to give you a single interface for monitoring your Active Directory users and entities.
+These tags provide you with information about the entity from Active Directory, including:
+
+- Partial: This user, computer or group wasn't synced from the domain, and was partially resolved via a global catalog. Some attributes aren't available.
+- Unresolved: This computer wasn't resolved to a valid entity in the active directory forest. No directory information is available.
+- Deleted: The entity was deleted from Active Directory.
+- Disabled: The entity is disabled in Active Directory.
+- Locked: The entity entered a wrong password too many times and is locked.
+- Expired: The entity is expired in Active Directory.
+- New: The entity was created less than 30 days ago.
+## Keep an eye on sensitive users and groups
+
+Defender for Identity imports user and group information from Azure Active Directory, enabling you to identify which users are automatically considered sensitive because they're members of the following groups in Active Directory:
+
+- Administrators
+- Power Users
+- Account Operators
+- Server Operators
+- Print Operators
+- Backup Operators
+- Replicators
+- Remote Desktop Users
+- Network Configuration Operators
+- Incoming Forest Trust Builders
+- Domain Admins
+- Domain Controllers
+- Group Policy Creator Owners
+- read-only Domain Controllers
+- Enterprise Read-only Domain Controllers
+- Schema Admins
+- Enterprise Admins
+In addition, you can **manually tag** entities as sensitive within Defender for Identity. This is important because some Defender for Identity detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, Defender for Identity will consider them sensitive. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](entity-tags.md).
+
+## Review lateral movement paths
+
+Defender for Identity can help you prevent attacks that use lateral movement paths. Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts.
+
+If a lateral movement path exists for an entity, in the entity profile page, you'll be able to select the **Lateral movement paths** tab. The diagram that is displayed provides you with a map of the possible paths to your sensitive user.
+
+For more information, see [Investigating lateral movement paths with Defender for Identity](understand-lateral-movement-paths.md).
+
+## Review lateral movement paths
+
+Defender for Identity can help you prevent attacks that use lateral movement paths. Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts.
+
+If a lateral movement path exists for an entity, in the entity profile page, you'll be able to select the **Lateral movement paths** tab. The diagram that is displayed provides you with a map of the possible paths to your sensitive user.
+
+For more information, see [Investigating lateral movement paths with Defender for Identity](understand-lateral-movement-paths.md).
+
+## Check honeytoken status
+
+Before you move on with your investigation, it's important to know if the entity is a honeytoken. You can tag accounts and entities as honeytokens in Defender for Identity. When you open the entity profile or mini-profile of an account or entity you tagged as a honeytoken, you'll see the honeytoken badge. When investigating, the honeytoken badge alerts you that the activity under review was performed by an account that you tagged as a honeytoken. For more information, see [Honeytoken tags](entity-tags.md#honeytoken-tags).
 
 ## Investigation steps for suspicious devices
 
@@ -55,64 +129,10 @@ Check and investigate the device profile for the following details and activitie
 
 Use the answers to these questions to determine if the device appears compromised or if the suspicious activities imply malicious actions.
 
-![Investigate the device profile.](media/investigate-device.png)
+For more information about investigate a device in Microsoft 365 Defender portal, see [Investigate devices](https://https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/investigate-machines?view=o365-worldwide).
 
-## Check the entity profile
+![User's image](media/investigate-assets/image1.png)
 
-The entity profile provides you with a comprehensive entity page, designed for full deep-dive investigation of users, computers, devices, and the resources they have access to along with their history. The profile page takes advantage of the new Defender for Identity logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
-
-To access an entity profile page, select the name of the entity, such as a username, in the security alert timeline. You can also see a mini-version of the entity profile in the security alert page by hovering over the entity name.
-
-The entity profile lets you view entity activities, view directory data, and view [lateral movement paths](understand-lateral-movement-paths.md) for the entity.
-
-## Check entity tags
-
-Defender for Identity pulls tags out of Active Directory to give you a single interface for monitoring your Active Directory users and entities.
-These tags provide you with information about the entity from Active Directory, including:
-
-- Partial: This user, computer or group wasn't synced from the domain, and was partially resolved via a global catalog. Some attributes aren't available.
-- Unresolved: This computer wasn't resolved to a valid entity in the active directory forest. No directory information is available.
-- Deleted: The entity was deleted from Active Directory.
-- Disabled: The entity is disabled in Active Directory.
-- Locked: The entity entered a wrong password too many times and is locked.
-- Expired: The entity is expired in Active Directory.
-- New: The entity was created less than 30 days ago.
-
-## Keep an eye on sensitive users and groups
-
-Defender for Identity imports user and group information from Azure Active Directory, enabling you to identify which users are automatically considered sensitive because they're members of the following groups in Active Directory:
-
-- Administrators
-- Power Users
-- Account Operators
-- Server Operators
-- Print Operators
-- Backup Operators
-- Replicators
-- Remote Desktop Users
-- Network Configuration Operators
-- Incoming Forest Trust Builders
-- Domain Admins
-- Domain Controllers
-- Group Policy Creator Owners
-- read-only Domain Controllers
-- Enterprise Read-only Domain Controllers
-- Schema Admins
-- Enterprise Admins
-
-In addition, you can **manually tag** entities as sensitive within Defender for Identity. This is important because some Defender for Identity detections, such as sensitive group modification detection and lateral movement path, rely on an entity's sensitivity status. If you manually tag additional users or groups as sensitive, such as board members, company executives, and sales directors, Defender for Identity will consider them sensitive. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](entity-tags.md).
-
-## Review lateral movement paths
-
-Defender for Identity can help you prevent attacks that use lateral movement paths. Lateral movement is when an attacker proactively uses non-sensitive accounts to gain access to sensitive accounts.
-
-If a lateral movement path exists for an entity, in the entity profile page, you'll be able to select the **Lateral movement paths** tab. The diagram that is displayed provides you with a map of the possible paths to your sensitive user.
-
-For more information, see [Investigating lateral movement paths with Defender for Identity](understand-lateral-movement-paths.md).
-
-## Check honeytoken status
-
-Before you move on with your investigation, it's important to know if the entity is a honeytoken. You can tag accounts and entities as honeytokens in Defender for Identity. When you open the entity profile or mini-profile of an account or entity you tagged as a honeytoken, you'll see the honeytoken badge. When investigating, the honeytoken badge alerts you that the activity under review was performed by an account that you tagged as a honeytoken. For more information, see [Honeytoken tags](entity-tags.md#honeytoken-tags).
 
 ## Next steps
 
@@ -121,3 +141,4 @@ Before you move on with your investigation, it's important to know if the entity
 ## Learn more
 
 - Try our interactive guide: [Investigate and respond to attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Investigate%20and%20respond%20to%20attacks%20with%20Microsoft%20Defender%20for%20Identity)
+
