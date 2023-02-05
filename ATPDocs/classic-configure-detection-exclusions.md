@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Microsoft Defender for Identity configure detection exclusions
 description: Classic portal -Configuration of detection exclusions.
-ms.date: 01/19/2023
+ms.date: 01/30/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---

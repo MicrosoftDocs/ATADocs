@@ -1,7 +1,7 @@
 ---
 title: How to investigate users and computers with Microsoft Defender for Identity
 description: Describes how to investigate suspicious activities performed by users, entities, computers, or devices using Microsoft Defender for Identity
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: tutorial
 ROBOTS: NOINDEX
 ---
