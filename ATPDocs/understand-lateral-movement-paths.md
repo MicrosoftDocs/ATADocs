@@ -74,7 +74,7 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 
 1. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. Use the **Select a date** option to display the graph for previous lateral movement path detections for the entity.
 
-    ![LMP view a different date.](media/view-different-date.png)
+    :::image type="content" source="media/view-different-date.png" alt-text="Lateral movement paths view a different date.":::
 
 1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** gray arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the *FinanceSrv53* computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. In this example, Elizabeth King has the ability to access user credentials from that resource.
 
