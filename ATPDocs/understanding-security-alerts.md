@@ -1,7 +1,7 @@
 ---
 title: Understanding security alerts
 description: This article explains how to use and understand Microsoft Defender for Identity security alerts.
-ms.date: 01/19/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 

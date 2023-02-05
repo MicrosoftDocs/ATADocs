@@ -1,7 +1,7 @@
 ---
 title: Weak cipher assessment
 description: This article provides an overview of Microsoft Defender for Identity's weak cipher identity security posture assessment report.
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 

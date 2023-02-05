@@ -1,7 +1,7 @@
 ---
 title: Security alert lab setup 
 description: In this lab, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
-ms.date: 01/18/2023
+ms.date: 02/05/2023
 ms.topic: how-to
 ---
 

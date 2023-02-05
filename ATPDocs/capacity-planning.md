@@ -1,7 +1,7 @@
 ---
 title: Plan capacity for deployment
 description: Helps you plan your deployment and decide how many Microsoft Defender for Identity servers will be needed to support your network
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 

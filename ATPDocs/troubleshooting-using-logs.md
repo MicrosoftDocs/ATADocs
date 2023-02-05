@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the sensor using logs
 description: Describes how you can use the Microsoft Defender for Identity logs to troubleshoot issues
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity exfiltration alerts 
 description: This article explains the Microsoft Defender for Identity alerts issued when attacks typically part of exfiltration phase efforts are detected against your organization.
-ms.date: 01/19/2023
+ms.date: 01/29/2023
 ms.topic: conceptual
 ---
 
