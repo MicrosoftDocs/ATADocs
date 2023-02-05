@@ -1,7 +1,7 @@
 ---
 title: Configure endpoint proxy and Internet connectivity settings
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 

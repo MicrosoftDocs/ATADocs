@@ -1,7 +1,7 @@
 ---
 title: Configure SAM-R to enable lateral movement path detection 
 description: Explains how to configure Microsoft Defender for Identity to make remote calls to SAM
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 

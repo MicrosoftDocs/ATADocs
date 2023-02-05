@@ -1,7 +1,7 @@
 ---
 title: About page in Microsoft 365 Defender 
 description: Learn how to collect important details about your Defender for Identity workspace in Microsoft 365 Defender.
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 

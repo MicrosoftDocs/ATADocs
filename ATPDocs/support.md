@@ -1,7 +1,7 @@
 ---
 title: Support
 description: Describes the process for getting support help for Microsoft Defender for Identity.
-ms.date: 01/22/2023
+ms.date: 01/29/2023
 ms.topic: conceptual
 ---
 

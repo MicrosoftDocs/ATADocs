@@ -1,7 +1,7 @@
 ---
 title: Investigate assets
 description: This article explains how to investigate suspicious users, computers, and devices with Microsoft Defender for Identity.
-ms.date: 01/18/2023
+ms.date: 02/01/2023
 ms.topic: conceptual
 ---
 
