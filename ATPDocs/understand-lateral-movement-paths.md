@@ -1,7 +1,7 @@
 ---
 title: Understand and investigate Lateral Movement Paths 
 description: This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
-ms.date: 01/30/2023
+ms.date: 02/08/2023
 ms.topic: conceptual
 ---
 
@@ -19,7 +19,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 Every computer or user profile discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
 
-![Defender for Identity Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
+    :::image type="content" source="media/view-different-date.png" alt-text="Lateral movement paths.":::
 
 The LMP for each entity provides different information depending on the sensitivity of the entity:
 
@@ -73,8 +73,6 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 1. In the user profile page that opens, select the **Lateral movement paths** tab.
 
 1. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. Use the **Select a date** option to display the graph for previous lateral movement path detections for the entity.
-
-    :::image type="content" source="media/view-different-date.png" alt-text="Lateral movement paths view a different date.":::
 
 1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** gray arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the *FinanceSrv53* computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. In this example, Elizabeth King has the ability to access user credentials from that resource.
 
