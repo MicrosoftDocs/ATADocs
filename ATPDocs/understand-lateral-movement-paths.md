@@ -19,7 +19,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 Every computer or user profile discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
 
-    :::image type="content" source="media/view-different-date.png" alt-text="Lateral movement paths.":::
+:::image type="content" source="media/view-different-date.png" alt-text="Lateral movement paths.":::
 
 The LMP for each entity provides different information depending on the sensitivity of the entity:
 
