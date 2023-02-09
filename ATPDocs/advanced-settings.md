@@ -15,10 +15,9 @@ Microsoft Defender for Identity security alerts explain the suspicious activitie
 
 Some of the Defender for Identity alerts heavily use profiling, deterministic detection, machine learning, and behavioral algorithms which Defender for Identity learned about your network. Full learning can take up to 30 days per domain controller.
 
-To learn more about which alerts have learning periods, see [Microsoft Defender for Identity Security Alerts](alerts-overview.md).
+There may be cases where you want to get notified on alerts, even when the profiling was not completed. For example, when you install a sensor on a new domain controller or when evaluating the product.
 
->[!NOTE]
->In some cases, you may want to get notified on alerts, even when the profiling was not completed. For example, when you install a sensor on a new domain controller or when evaluating the product.
+To learn more about which alerts have learning periods, see the alerts listed in [Microsoft Defender for Identity Security Alerts](alerts-overview.md).
 
 ## Removing the learning period
 
