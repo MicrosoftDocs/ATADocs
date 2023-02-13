@@ -17,7 +17,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 ## Where can I find Defender for Identity LMPs?
 
-Every computer or user profile discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
+Every identity discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** information under Observed in organization tab. 
 
 ![Defender for Identity Lateral Movement Path (LMP) tab](media/lateral-movement-path-tab.png)
 
@@ -68,15 +68,15 @@ Security insights are never too late to prevent the next attack and remediate da
 
 There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defender portal, search by entity and then explore by path or activity.
 
-1. From the portal, search for a user or computer. Notice if a lateral movement badge was added to an entity profile. Badges will only display when an entity is discovered in a potential LMP within the last 48 hours.
+1. From the portal, search for a user. Under Observed in organization (both Overview and Observed tab) you can see if the user is discovered in a potential LMP.
 
-1. In the user profile page that opens, select the **Lateral movement paths** tab.
+2. If the user is discoverd, select the **Observed in organization** tab and choose **Lateral movement paths**.
 
-1. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. Use the **Select a date** option to display the graph for previous lateral movement path detections for the entity.
+3. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. Use the **Select a date** option to display the graph for previous lateral movement path detections for the entity.
 
     ![LMP view a different date.](media/view-different-date.png)
 
-1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** gray arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the *FinanceSrv53* computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. In this example, Elizabeth King has the ability to access user credentials from that resource.
+1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the showen computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. In this example, Elizabeth King has the ability to access user credentials from that resource.
 
 ## Related videos
 
