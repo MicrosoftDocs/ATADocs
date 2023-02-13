@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network. Lateral movement is used by attackers to identify and gain access to the sensitive accounts and machines in your network that share stored sign-in credentials in accounts, groups and machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers. Lateral movement attacks are carried out using many of the methods described in [Microsoft Defender for Identity Security Alerts](alerts-overview.md).
 
-A key component of Microsoft Defender for Identity's security insights are Lateral Movement Paths or LMPs. Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Defender for Identity LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs assist in helping you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
+A key component of Microsoft Defender for Identity's security insights are Lateral Movement Paths or LMPs. Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Defender for Identity LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs help you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
 
 ![Defender for Identity Lateral Movement Path (LMP)](media/lmp.png)
 
@@ -17,7 +17,7 @@ Lateral movement attacks are typically accomplished using a number of different 
 
 ## Where can I find Defender for Identity LMPs?
 
-Every computer or user profile discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** tab. Computers and profiles with no tab have never been discovered within a potential LMP.
+Every identity discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** information under the **Observed in organization** tab.
 
 :::image type="content" source="media/view-different-date.png" alt-text="Lateral movement paths.":::
 
@@ -56,7 +56,7 @@ Security insights are never too late to prevent the next attack and remediate da
 
 - Verify that your users don't have unnecessary administrative permissions. In the example, check if everyone in the shared group actually requires admin rights on the exposed computer.
 
-- Make sure people only have access to necessary resources. In the example, Ron Harper significantly widens Nick Cowley's exposure. Is it necessary that Ron Harper be included in the group? Are there subgroups that could be created to minimize lateral movement exposure?
+- Make sure people only have access to necessary resources. In the example, Ron Harper significantly widens Nick Cowley's exposure. Is it necessary for Ron Harper to be included in the group? Are there subgroups that could be created to minimize lateral movement exposure?
 
 > [!TIP]
 > When no potential lateral movement path activity is detected for an entity in the past 48 hours, choose **Select a date** and check for previous potential lateral movement paths.
@@ -68,19 +68,19 @@ Security insights are never too late to prevent the next attack and remediate da
 
 There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defender portal, search by entity and then explore by path or activity.
 
-1. From the portal, search for a user or computer. Notice if a lateral movement badge was added to an entity profile. Badges will only display when an entity is discovered in a potential LMP within the last 48 hours.
+1. From the portal, search for a user. Under **Observed in organization** (in both the **Overview** and **Observed** tabs) you can see if the user is discovered in a potential LMP.
 
-1. In the user profile page that opens, select the **Lateral movement paths** tab.
+1. If the user is discovered, select the **Observed in organization** tab and choose **Lateral movement paths**.
 
-1. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48 hour time period. Use the **Select a date** option to display the graph for previous lateral movement path detections for the entity.
+1. The graph that is displayed provides a map of the possible paths to the sensitive user during the 48-hour time period. Use the **Select a date** option to display the graph for previous lateral movement path detections for the entity.
 
-1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** gray arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the *FinanceSrv53* computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. In this example, Elizabeth King has the ability to access user credentials from that resource.
+1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the displayed computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. In this example, Elizabeth King has the ability to access user credentials from that resource.
 
 ## Related videos
 
 - [Reducing lateral movement paths](https://www.microsoft.com/videoplayer/embed/RWAOfW)
 
-## See Also
+## See also
 
 - [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md)
 - [Security assessment: Riskiest lateral movement paths (LMP)](security-assessment-riskiest-lmp.md)
