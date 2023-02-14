@@ -154,7 +154,7 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
 1. Go to the **Active Directory Users and Computers** console.
 1. Select the domain or OU that contains the users, groups, or computers you want to audit.
-1. Select the **View** menu and select **Advanced Features**
+1. Select the **View** menu and select **Advanced Features**.
 1. Right-click the container (the domain or OU) and select **Properties**.
 
     ![Container properties.](media/container-properties.png)
