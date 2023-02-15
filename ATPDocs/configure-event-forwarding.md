@@ -85,5 +85,5 @@ For more information, see: [Configure the computers to forward and collect event
 
 ## See Also
 
-- [Install Defender for Identity](install-step1.md)
+- [Install Defender for Identity](/defender-for-identity/deploy-defender-identity)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

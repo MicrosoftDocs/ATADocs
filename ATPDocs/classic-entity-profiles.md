@@ -52,5 +52,5 @@ For more information, see [Lateral movement paths](/defender-for-identity/unders
 
 ## See Also
 
-- [Investigate lateral movement paths with Defender for Identity](use-case-lateral-movement-path.md)
+- [Investigate lateral movement paths with Defender for Identity](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
