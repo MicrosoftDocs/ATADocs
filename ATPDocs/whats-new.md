@@ -1325,7 +1325,7 @@ Additions and updates were made to Azure ATP articles describing Lateral Movemen
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
-For details of each Defender for Identity release prior to (and including) release 2.55, see the [Defender for Identity release reference](release-reference.md).
+For details of each Defender for Identity release prior to (and including) release 2.55, see the [Defender for Identity release reference](/defender-for-identity/whats-new).
 
 ## See Also
 

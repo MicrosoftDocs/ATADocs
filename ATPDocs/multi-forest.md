@@ -69,5 +69,5 @@ When Defender for Identity maps your forests, it uses a process that impacts the
 
 - [Defender for Identity sizing tool](<https://aka.ms/aatpsizingtool>)
 - [Defender for Identity architecture](architecture.md)
-- [Install Defender for Identity](install-step1.md)
+- [Install Defender for Identity](/defender-for-identity/classic-install-step1)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
