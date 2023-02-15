@@ -28,23 +28,17 @@ Released February 15, 2023
 
 - **Identity timeline is now available as part of the new Identity page in Microsoft 365 Defender**: The updated User page in Microsoft 365 Defender now has a new look and feel, with an expanded view of related assets and a new dedicated timeline tab. The timeline represents activities and alerts from the last 30 days, and it unifies the user’s identity entries across all available workloads (Defender for Identity/Defender for Cloud Apps/Defender for Endpoint). By using the timeline, you can easily focus on activities that the user performed (or were performed on them), in specific timeframes. For more information, see [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users)
 
-- **Further improvements for honeytoken alerts**: As part of our efforts to improve honeytoken alerts, we introduced several new scenarios to the honeytoken activity alert a [few releases ago](#defender-for-identity-release-2191). This includes alerting when:
+- **Further improvements for honeytoken alerts**: In [release 2.191](#defender-for-identity-release-2191) we introduced several new scenarios to the honeytoken activity alert.  
 
-  - a honeytoken account was **specifically** queried by LDAP or SAM-R.
-  - a honeytoken account was added to or removed from Active Directory groups.
-  - a honeytoken account's attributes were modified.
+  Based on customer feedback, we've decided to split the honeytoken activity alert into five separate alerts:
 
-  The improvements generated a lot of enthusiasm, with many customers repeatedly asking for the ability to exclude specific entities from alerts and minimize alert counts for known behaviors (such as applications that regularly send filtered LDAP queries on every user in Active Directory)."
+  - Honeytoken user was queried via SAM-R.
+  - Honeytoken user was queried via LDAP.
+  - Honeytoken user authentication activity
+  - Honeytoken user had attributes modified.
+  - Honeytoken group membership changed.
 
-  ​From this release, we've decided to split the honeytoken activity alert into five separate alerts:
-
-  - a honeytoken was queried via SAM-R.
-  - a honeytoken was queried via LDAP.
-  - a honeytoken authentication activity
-  - a honeytoken user had attributes modified.
-  - a honeytoken group membership changed.
-
-  Each of these alerts supports its own exclusions, providing a customized experience for your environment.
+  Additionally, we have added exclusions for these alerts, providing a customized experience for your environment.
 
   We're looking forward to hearing your feedback so we can continue to improve.
 
