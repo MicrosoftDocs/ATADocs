@@ -31,7 +31,7 @@ To perform the above actions, you need to configure the account that Microsoft D
 
 ## Permissions
 
-Currently, this feature requires the account signed into Microsoft 365 Defender to possess the **Security Administrator** role.
+Currently, this feature requires the account signed into Microsoft 365 Defender to possess the **Security Administrator** or **Security Operator** roles.
 
 ## Related videos
 
@@ -40,3 +40,4 @@ Currently, this feature requires the account signed into Microsoft 365 Defender 
 ## See also
 
 [Microsoft Defender for Identity action accounts](manage-action-accounts.md)
+
