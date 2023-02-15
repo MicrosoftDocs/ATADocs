@@ -48,7 +48,7 @@ Defender for Identity security alerts are divided into the following categories 
 
 ## Manage alerts
 
-If you click the **Alert name** for one of the alerts, you'll go to the page with details about the alert. In the left pane, you'll see a summary of **What happened**:
+If you select the **Alert name** for one of the alerts, you'll go to the page with details about the alert. In the left pane, you'll see a summary of **What happened**:
 
 :::image type="content" source="media/what-happened.png" alt-text="The What happened pane" lightbox="media/what-happened.png":::
 
@@ -77,9 +77,11 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
   - **Classification** - You can choose **True alert** or **False alert**.
   - **Comment** - You can add a comment about the alert.
 
-    If you select the three dots next to **Manage alert**, you can **Consult a threat expert**, **Export** the alert to an Excel file, or **Link to another incident**.
+    If you select the three dots next to **Manage alert**, you can **Link alert to another incident**, **Create suppression rule**, or **Ask Defender Experts**.
 
     :::image type="content" source="media/manage-alert.png" alt-text="The Manage alert option" lightbox="media/manage-alert.png":::
+
+    You can also export the alert to an Excel file. To do this, select **Export.**
 
     > [!NOTE]
     > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft 365 Defender**. Each link will bring you to the relevant portal, and provide information about the alert there.
