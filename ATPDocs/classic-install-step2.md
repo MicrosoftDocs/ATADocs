@@ -15,7 +15,7 @@ In this quickstart, you'll connect Microsoft Defender for Identity to Active Dir
 
 ## Prerequisites
 
-- A [Defender for Identity instance](/defender-for-identity/deploy-defender-identity).
+- A [Defender for Identity instance](/defender-for-identity/classic-install-step1).
 - Review the [Defender for Identity prerequisites](prerequisites.md) article.
 - At least one Directory Service account with read access to all objects in the monitored domains. For instructions on how to create the Directory Service account, see [Directory Service account recommendations](directory-service-accounts.md).
 
@@ -39,7 +39,7 @@ The first time you open the Defender for Identity portal, the following screen a
 ## Next steps
 
 > [!div class="step-by-step"]
-> [« Step 1 - Create Defender for Identity instance](/defender-for-identity/deploy-defender-identity)
+> [« Step 1 - Create Defender for Identity instance](/defender-for-identity/classic-install-step1)
 > [Step 3 - Download the sensor setup »](/defender-for-identity/classic-install-step3)
 
 ## Join the Community

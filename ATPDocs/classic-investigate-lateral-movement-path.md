@@ -73,7 +73,7 @@ In this tutorial, you've learned how to use LMPs to investigate suspicious activ
 
 ## See Also
 
-- [Understanding Defender for Identity Lateral Movement Paths](/defender-for-identity/understand-lateral-movement-paths)
+- [Understanding Defender for Identity Lateral Movement Paths](/defender-for-identity/classic-use-case-lateral-movement-path)
 - [Configure Defender for Identity to make remote calls to SAM](/defender-for-identity/remote-calls-sam)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

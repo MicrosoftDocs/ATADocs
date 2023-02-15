@@ -77,8 +77,8 @@ From the Defender for Endpoint portal, click on an endpoint to view Defender for
 
 ## See Also
 
-- [Investigating lateral movement paths with Defender for Identity](/defender-for-identity/understand-lateral-movement-paths)
+- [Investigating lateral movement paths with Defender for Identity](/defender-for-identity/classic-use-case-lateral-movement-path)
 - [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [Defender for Identity architecture](architecture.md)
-- [Install Defender for Identity](/defender-for-identity/deploy-defender-identity)
+- [Install Defender for Identity](/defender-for-identity/classic-install-step1)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

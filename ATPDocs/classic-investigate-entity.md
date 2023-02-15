@@ -97,7 +97,7 @@ Defender for Identity can help you prevent attacks that use lateral movement pat
 
 If a lateral movement path exists for an entity, in the entity profile page, you will be able to click the **Lateral movement paths** tab. The diagram that is displayed provides you with a map of the possible paths to your sensitive user.
 
-For more information, see [Investigating lateral movement paths with Defender for Identity](/defender-for-identity/understand-lateral-movement-paths).
+For more information, see [Investigating lateral movement paths with Defender for Identity](/defender-for-identity/classic-use-case-lateral-movement-path).
 
 ## Check honeytoken status
 

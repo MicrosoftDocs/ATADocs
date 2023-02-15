@@ -61,7 +61,7 @@ If both your services (Defender for Identity and Defender for Cloud Apps) are cu
 
 ## Activities
 
-Defender for Identity alerts are displayed within the Defender for Cloud Apps **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Defender for Cloud Apps. See [Defender for Identity activities using Microsoft Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity) to learn how to filter and create new activity policies.
+Defender for Identity alerts are displayed within the Defender for Cloud Apps **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Defender for Cloud Apps. See [Defender for Identity activities using Microsoft Defender for Cloud Apps](/defender-for-identity/classic-activities-filtering-mcas) to learn how to filter and create new activity policies.
 
 ## User pages
 

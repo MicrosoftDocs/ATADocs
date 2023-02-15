@@ -13,7 +13,7 @@ Microsoft Defender for Identity continuously monitors your environment to identi
 
 Learn more about LMP:
 
-- [Defender for Identity Lateral Movement Paths (LMPs)](/defender-for-identity/understand-lateral-movement-paths)
+- [Defender for Identity Lateral Movement Paths (LMPs)](/defender-for-identity/classic-use-case-lateral-movement-path)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
 ## What risk do risky lateral movement paths pose?

@@ -99,5 +99,5 @@ If you hover your mouse over an entity, anywhere in the Defender for Identity po
 
 ## See Also
 
-- [Creating Defender for Identity instances](/defender-for-identity/deploy-defender-identity)
+- [Creating Defender for Identity instances](/defender-for-identity/classic-install-step1)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
