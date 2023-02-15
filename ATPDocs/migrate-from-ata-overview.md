@@ -51,9 +51,9 @@ Make sure to gather the following information before starting your move:
 1. ATA roles group membership
 1. VPN integration
 1. Alert exclusions
-    - Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions in Defender for Identity](excluding-entities-from-detections.md).
+    - Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions in Defender for Identity](/defender-for-identity/exclusions).
 1. Account details for honeytoken accounts.
-    - If you don't already have dedicated honeytoken accounts, learn more about [honeytokens in Defender for Identity](manage-sensitive-honeytoken-accounts.md) and create new accounts to use for this purpose.
+    - If you don't already have dedicated honeytoken accounts, learn more about [honeytokens in Defender for Identity](/defender-for-identity/classic-manage-sensitive-honeytoken-accounts) and create new accounts to use for this purpose.
 1. Complete list of all entities (computers, groups, users) you wish to manually tag as Sensitive entities.
     - Learn more about the importance of [Sensitive entities](/defender-for-identity/entity-tags) in Defender for Identity.
 1. Report scheduling [details](/defender-for-identity/classic-reports) (list of reports and scheduled timing).

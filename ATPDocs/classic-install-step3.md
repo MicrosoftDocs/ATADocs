@@ -43,7 +43,7 @@ The zip file includes the following files:
 
 > [!div class="step-by-step"]
 > [« Step 2 - Connect to Active Directory](/defender-for-identity/classic-install-step2)
-> [Step 4 - Install the Defender for Identity sensor »](install-step4.md)
+> [Step 4 - Install the Defender for Identity sensor »](/defender-for-identity/install-sensor)
 
 ## Join the Community
 

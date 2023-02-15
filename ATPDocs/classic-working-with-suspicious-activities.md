@@ -109,7 +109,7 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 ## See Also
 
-- [Working with the Defender for Identity portal](workspace-portal.md)
+- [Working with the Defender for Identity portal](/defender-for-identity/classic-workspace-portal)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
 
 ## Learn more
