@@ -38,13 +38,6 @@ For example, an incident involving Attack Disruption, where response actions are
 
     :::image type="content" source="media/remove-excluded-users.png" alt-text="Remove excluded users.":::
 
-1. To turn off the feature, effectively excluding all users, select the toggle **Exclude all users from automated response**.
-
-    :::image type="content" source="media/exclude-all-users.png" alt-text="Exclude all users.":::
-
-> [!NOTE]
-> Excluding all users is not recommended as it presents risk to your organization. If possible, it's recommended to exclude specific user accounts instead.
-
 ## See also
 
 - [Configure event collection](configure-event-collection.md)
