@@ -1,7 +1,7 @@
 ---
 title: Automated response exclusions
 description: Learn how to configure Microsoft Defender for Identity automated response exclusions in Microsoft 365 Defender.
-ms.date: 02/02/2023
+ms.date: 02/16/2023
 ms.topic: how-to
 ---
 
