@@ -36,6 +36,8 @@ This section lists information you should gather as well as accounts and network
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
+For more information about required permissions, see [Role groups](role-groups.md).
+
 ## Microsoft 365 Defender portal requirements
 
 Access Defender for Identity in the Microsoft 365 Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
