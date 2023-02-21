@@ -20,7 +20,7 @@ Defender for Identity is a primary component of a Zero Trust strategy and your X
 
 ## Monitoring for Zero Trust
 
-When monitoring for Zero Trust, make sure review and mitigate open alerts from Defender for Identity together with your other security operations. You may also want to integrate Defender for Identity with Microsoft Defender for Cloud Apps to bring on-premises signals into any specific user's overall risk calculation.
+When monitoring for Zero Trust, make sure review and mitigate open alerts from Defender for Identity together with your other security operations. You may also want to integrate Defender for Identity with [Microsoft Defender for Cloud Apps](/defender-cloud-apps/) to bring on-premises signals into any specific user's overall risk calculation.
 
 For example, integrating with Defender for Identity alerts Azure AD if users are indulging in risky behavior while accessing on-premises, non-modern resources like File Shares. This behavior can then be factored into the overall user risk, and may require that you block the user from further access in the cloud.
 
