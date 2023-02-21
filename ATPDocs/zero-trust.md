@@ -3,8 +3,7 @@ title: Zero Trust with Microsoft Defender for Identity
 description: Explains how Microsoft Defender for Identity fits into an overall Zero Trust strategy when deploying Microsoft 365 Defender.
 ms.date: 02/21/2023
 ms.topic: conceptual
-ms.collection:
-  -       zerotrust-services
+ms.collection: zerotrust-services
 ---
 
 
@@ -20,12 +19,12 @@ Defender for Identity is a primary component of a Zero Trust strategy and your X
 
 ## Monitoring for Zero Trust
 
-When monitoring for Zero Trust, make sure review and mitigate open alerts from Defender for Identity together with your other security operations. You may also want to integrate Defender for Identity with [Microsoft Defender for Cloud Apps](/defender-cloud-apps/) to bring on-premises signals into any specific user's overall risk calculation.
+When monitoring for Zero Trust, make sure review and mitigate open alerts from Defender for Identity together with your other security operations. You may also want to use [advanced hunting queries in Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview) to look for threats across identities, devices, and cloud apps.
 
-For example, integrating with Defender for Identity alerts Azure AD if users are indulging in risky behavior while accessing on-premises, non-modern resources like File Shares. This behavior can then be factored into the overall user risk, and may require that you block the user from further access in the cloud.
+For example, you can use advanced hunting to discover an attacker's [lateral movement paths](understand-lateral-movement-paths.md), and then see if the same identity has been involved in other detections.
 
 > [!TIP]
-> Ingest your alerts into [Microsoft Sentinel](/azure/sentinel/overview), a cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution to provide your Security Operations Center (SOC) with a single pane of glass for monitoring security events across your enterprise.
+> Ingest your alerts into [Microsoft Sentinel with Microsoft 365 Defender](/azure/sentinel/microsoft-365-defender-sentinel-integration), a cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution to provide your Security Operations Center (SOC) with a single pane of glass for monitoring security events across your enterprise.
 >
 
 ## Next steps
