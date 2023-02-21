@@ -5,6 +5,7 @@ items:
   items:
   - name: What is Microsoft Defender for Identity?
     href: what-is.md
+    displayName: Zero Trust
   - name: Defender for Identity architecture
     href: architecture.md
   - name: Defender for Identity for US Government
