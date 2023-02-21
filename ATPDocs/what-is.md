@@ -52,6 +52,10 @@ Highlighting attacker behavior if domain dominance is achieved, through remote c
 
 Defender for Identity is designed to reduce general alert noise, providing only relevant, important security alerts in a simple, real-time organizational attack timeline. The Defender for Identity attack timeline view allows you to easily stay focused on what matters, leveraging the intelligence of smart analytics. Use Defender for Identity to quickly investigate threats, and gain insights across the organization for users, devices, and network resources. Seamless integration with Microsoft Defender for Endpoint provides another layer of enhanced security by additional detection and protection against advanced persistent threats on the operating system.
 
+## Zero Trust with Defender for Identity
+
+<!--creating branch for ZT content-->
+
 ## Additional resources for Defender for Identity
 
 ### Start a free trial
