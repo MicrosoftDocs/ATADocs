@@ -107,7 +107,7 @@ Sensor-specific health alerts are displayed in the **Sensors settings** page and
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more events than it can process.|Some Windows events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required. If this is a standalone Defender for Identity sensor, verify that only the required events are forwarded to the Defender for Identity sensor or try to forward some of the events to another Defender for Identity sensor.|Medium|Sensors settings page and health issues page|
+|The Defender for Identity sensor is receiving more events than it can process.|Some Windows events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required. If this is a standalone Defender for Identity sensor, verify that only the required events are forwarded to the sensor. Or, try forwarding some events to another Defender for Identity sensor.|Medium|Sensors settings page and health issues page|
 
 ### Some network traffic could not be analyzed
 
