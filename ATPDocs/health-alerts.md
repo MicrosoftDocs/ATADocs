@@ -165,6 +165,12 @@ Sensor specific health alerts are displayed in the **Sensors settings** page and
 |----|----|----|----|----|
 |Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode is not configured to the optimal processor performance settings. This can impact the server's performance and the sensors' ability to detect suspicious activities.|Configure the power option of the machine running the Defender for Identity sensor to High Performance (or set both the minimum and maximum processor state to 100) as described in the [Server specifications](prerequisites.md#server-specifications) section, in the [Defender for Identity prerequisites](prerequisites.md) page.|Low|Sensors settings page|
 
+### Sensor failed to write to the custom log path
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Sensor failed to write to the custom log path.|The custom log path provided in the sensor configuration cannot be created.|Stop the AATPSensorUpdater and AATPSensor services, change the SensorCustomLogLocation in the sensor configuration file to a valid path, or set it to null, and start the AATPSensorUpdater and AATPSensor services.|Low|Sensors settings page|
+
 <!--
 ## Windows events missing from domain controller audit policy
 
