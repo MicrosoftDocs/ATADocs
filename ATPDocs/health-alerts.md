@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health alerts
 description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 01/29/2023
+ms.date: 02/22/2023
 ms.topic: how-to
 ---
 
