@@ -180,8 +180,7 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
     1. For **Type** select **Success**.
     1. For **Applies to** select **Descendant User objects.**
     1. Under **Permissions**, scroll down and select the **Clear all** button.
-    1. Then scroll up and select **Full Control**. All the permissions will be selected. Then **uncheck** the **List contents**, **Read permissions**, and **Read all properties** permissions.
-    1. Select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
+    1. Then scroll back up and select **Full Control**. All the permissions will be selected. Then **uncheck** the **List contents**, **Read permissions**, and **Read all properties** permissions. Select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
 
         ![Select permissions.](media/select-permissions.png)
 
