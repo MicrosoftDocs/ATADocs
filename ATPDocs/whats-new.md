@@ -28,6 +28,9 @@ Released March 5, 2023
 
 - Some exclusions for the **Honeytoken was queried via SAM-R** alert weren't functioning properly. In these instances, alerts were being triggered even for excluded entities. This has now been fixed.
 
+- **Updated NTLM protocol name for the Identity Advanced Hunting tables**: The old protocol name `Ntlm` will now be the new protocol name `NTLM`, in Advanced Hunting Identity tables: IdentityLogonEvents, IdentityQueryEvents, IdentityDirectoryEvents.
+If you're currently using the `Ntlm` protocol in case-sensitive format from the Identity event tables, you should change it to `NTLM`.
+
 ## Defender for Identity release 2.198
 
 Released February 15, 2023
