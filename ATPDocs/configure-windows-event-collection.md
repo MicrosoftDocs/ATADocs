@@ -90,7 +90,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
 ### Event ID 8004
 
-To audit Event ID 8004, additional configuration steps are required.
+To audit Event ID 8004, more configuration steps are required.
 
 > [!NOTE]
 >
@@ -167,7 +167,7 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
     ![Select auditing tab.](media/auditing-tab.png)
 
-1. Click **Select a principal**.
+1. Choose **Select a principal**.
 
     ![Select a principal.](media/select-a-principal.png)
 
@@ -177,9 +177,13 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
 1. You'll then return to **Auditing Entry**. Make the following selections:
 
-    - For **Type** select **Success**.
-    - For **Applies to** select **Descendant User objects.**
-    - Under **Permissions**, scroll down and select **Clear all.** Scroll up and select **Full Control**. All the permissions will be selected. Then uncheck the **List contents**, **Read permissions**, and **Read all properties** permissions. Then select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
+    1. For **Type** select **Success**.
+    1. For **Applies to** select **Descendant User objects.**
+    1. Under **Permissions**, scroll down and select the **Clear all** button.
+
+        :::image type="content" source="media/clear-all.png" alt-text="Select Clear all.":::
+
+    1. Then scroll back up and select **Full Control**. All the permissions will be selected. Then **uncheck** the **List contents**, **Read permissions**, and **Read all properties** permissions. Select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
 
         ![Select permissions.](media/select-permissions.png)
 
@@ -203,7 +207,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 1. Right-click **ADFS** and select **Properties**.
 1. Go to the **Security** tab, and select **Advanced**.
 1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
-1. Click **Select a principal**.
+1. Choose **Select a principal**.
 1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
 1. You'll then return to **Auditing Entry**. Make the following selections:
 
@@ -227,7 +231,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
 1. Go to the **Security** tab, and select **Advanced**.
 1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
-1. Click **Select a principal**.
+1. Choose **Select a principal**.
 1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
 1. You'll then return to **Auditing Entry**. Make the following selections:
 
