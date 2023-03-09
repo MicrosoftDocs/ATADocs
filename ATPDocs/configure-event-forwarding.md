@@ -45,7 +45,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 1. Double-click **Configure target Subscription Manager**.
 
     1. Select **Enabled**.
-    1. Under **Options**, click **Show**.
+    1. Under **Options**, select **Show**.
     1. Under **SubscriptionManagers**, enter the following value and select **OK**:
         `Server=http://<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: `Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
 
@@ -64,7 +64,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     1. For **Destination Log**, confirm that **Forwarded Events** is selected. For Defender for Identity to read the events, the destination log must be **Forwarded Events**.
     1. Select **Source computer initiated** and select **Select Computers Groups**.
         1. Select **Add Domain Computer**.
-        1. Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.
+        1. Enter the name of the domain controller in the **Enter the object name to select** field. Then select **Check Names** and select **OK**.
         1. Select **OK**.
         ![Event Viewer image.](media/wef-3-event-viewer.png)
     1. Select **Select Events**.
