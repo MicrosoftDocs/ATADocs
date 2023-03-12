@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event Forwarding 
 description: Describes your options for configuring Windows Event Forwarding with Microsoft Defender for Identity
-ms.date: 02/15/2023
+ms.date: 03/09/2023
 ms.topic: how-to
 ---
 

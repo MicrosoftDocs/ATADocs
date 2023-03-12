@@ -1,7 +1,7 @@
 ---
 title: Install the sensor
 description: Learn how to install the Microsoft Defender for Identity sensors on your domain controllers.
-ms.date: 02/22/2023
+ms.date: 03/08/2023
 ms.topic: how-to
 ---
 
