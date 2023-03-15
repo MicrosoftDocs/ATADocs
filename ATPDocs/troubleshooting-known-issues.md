@@ -336,9 +336,19 @@ A Discretionary Access Control List is limiting access to the required event log
 
 **Resolution:**
 
-Ensure that the Discretionary Access Control List includes the following entry:
+Ensure that the Discretionary Access Control List (DACL) includes the following entry (this is the SID of the AATPSensor service).
 
 `(A;;0x1;;;S-1-5-80-818380073-2995186456-1411405591-3990468014-3617507088)`
+
+Check if the DACL for the Security Event Log was configured by a GPO:
+
+`Policies > Administrative Templates > Windows Components > Event Log Service > Security > Configure log access`
+
+Append the entry above to the existing policy. Run `wevtutil gl security` after to verify that the entry was added.
+
+The local MDI logs should now display:
+
+`Info WindowsEventLogReader EnableEventLogWatchers EventLogWatcher enabled [name=Security]`
 
 ## ApplyInternal failed two way SSL connection to service error
 
