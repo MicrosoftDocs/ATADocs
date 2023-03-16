@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/19/2023
+ms.date: 03/16/2023
 ms.topic: overview
 ---
 
@@ -24,7 +24,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## Defender for Identity release 2.200
 
-Released March 19, 2023
+Released March 16, 2023
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
