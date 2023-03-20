@@ -344,9 +344,9 @@ Check if the DACL for the Security Event Log was configured by a GPO:
 
 `Policies > Administrative Templates > Windows Components > Event Log Service > Security > Configure log access`
 
-Append the entry above to the existing policy. Run `wevtutil gl security` after to verify that the entry was added.
+Append the entry above to the existing policy. Run `C:\Windows\System32\wevtutil.exe gl security` afterwards to verify that the entry was added.
 
-The local MDI logs should now display:
+The local Defender for Identity logs should now display:
 
 `Info WindowsEventLogReader EnableEventLogWatchers EventLogWatcher enabled [name=Security]`
 
