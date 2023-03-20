@@ -26,7 +26,7 @@ The LMP for each entity provides different information depending on the sensitiv
 - Sensitive users – potential LMP(s) leading to this user are shown.
 - Non-sensitive users and computers – potential LMP(s) the entity is related to are shown.
 
-Each time the tab is clicked, Defender for Identity displays the most recently discovered LMP. Each potential LMP is saved for 48 hours following discovery. LMP history is available. View older LMPs that were discovered in the past by choosing **Select a date**. You can also choose a different user who initiated the LMP by selecting **Path initiator**.
+Each time the tab is selected, Defender for Identity displays the most recently discovered LMP. Each potential LMP is saved for 48 hours following discovery. LMP history is available. View older LMPs that were discovered in the past by choosing **Select a date**. You can also choose a different user who initiated the LMP by selecting **Path initiator**.
 
 ## LMP discovery using advanced hunting
 
