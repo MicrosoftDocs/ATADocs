@@ -18,8 +18,6 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
-ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -41,29 +39,22 @@ The ATA Health Center lets you know that there's a problem by raising an alert (
 
 ### Managing ATA health
 
-To check up on your system's overall health, click the Health Center icon in the menu bar ![ATA Health Center icon.](media/ATA-red-dot.png)
+To check up on your system's overall health, select the Health Center icon in the menu bar ![ATA Health Center icon.](media/ATA-red-dot.png)
 
-- All open alerts can be managed by setting them to **Close**, **Suppress**, or **Delete** by clicking the three dots in the corner of the alert and making your selection.
+- All open alerts can be managed by setting them to **Close**, **Suppress**, or **Delete** by selecting the three dots in the corner of the alert and making your selection.
 
--   **Open**: All new suspicious activities appear in this list.
+- **Open**: All new suspicious activities appear in this list.
 
--   **Close**: Is used to track suspicious activities that you identified, researched, and fixed for mitigated.
+- **Close**: Is used to track suspicious activities that you identified, researched, and fixed for mitigated.
 
     > [!NOTE]
     > ATA may reopen a closed activity if the same activity is detected again within a short period of time.
 
--   **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert ATA doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
+- **Suppress**: Suppressing an activity means you want to ignore it for now, and only be alerted again if there's a new instance. If there's a similar alert ATA doesn't reopen it. But if the alert stops for seven days, and is then seen again, you are alerted again.
 
-- **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you click delete, you'll be able to delete all suspicious activities of the same type.
-
-
+- **Delete**: If you Delete an alert, it is deleted from the system, from the database and you will NOT be able to restore it. After you select delete, you'll be able to delete all suspicious activities of the same type.
 
 ![ATA Health Center issues image.](media/ATA-Health-Issue.JPG)
-
-
-
-
-
 
 ## See Also
 
