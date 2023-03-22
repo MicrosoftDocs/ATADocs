@@ -44,6 +44,7 @@ The update to ATA 1.5 provides improvements in the following areas:
 - Additional performance counters for enhanced monitoring and troubleshooting
 
 ## Updating ATA to version 1.5
+
 > [!NOTE]
 > If ATA is not installed in your environment, download the full version of ATA, which includes version 1.5  and follow the standard installation procedure described in [Install ATA](install-ata-step1.md).
 
@@ -54,7 +55,6 @@ Follow these steps to update to ATA version 1.5:
 1. Download ATA v1.5 from VLSC or MSDN.
       > [!NOTE]
       > You can also use the updated full version of ATA to perform the update to version 1.5.
-
 
 1. Update the ATA Center
 
@@ -75,11 +75,11 @@ Follow these steps to update to ATA version 1.5:
 
 1. Run the update file, Microsoft ATA Center Update.exe, and follow the instructions on the screen to install the update.
 
-    1.  In the **Welcome** page, select your language and click **Next**.
+    1. In the **Welcome** page, select your language and select **Next**.
 
-    2.  Read the End-User License Agreement and if you accept the terms, click the checkbox, and click **Next**.
+    2. Read the End-User License Agreement and if you accept the terms, select the checkbox, and then select **Next**.
 
-    3.  Select whether you want to run the full (default) or partial migration.
+    3. Select whether you want to run the full (default) or partial migration.
 
         ![Choose full or partial migration.](media/ATA-center-fullpartial.png)
 
@@ -87,27 +87,29 @@ Follow these steps to update to ATA version 1.5:
 
         - If you run a **Full** migration, you need additional disk space, as calculated for you on the upgrade page, and the migration may take longer, depending on the network traffic. The full migration retains all previously collected data and user behavioral profiles are maintained, meaning that it will not take additional time for ATA to learn behavior profiles and anomalous behavior can be detected immediately after update.
 
-1. Click **Update**. Once you click Update, ATA is offline until the update procedure is complete.
+1. Select **Update**. Once you select **Update**, ATA is offline until the update procedure is complete.
 
 1. After updating the ATA Center, the ATA Gateways will report that they are now outdated.
 
     ![Outdated gateways image.](media/ATA-center-outdated.png)
 
 > [!IMPORTANT]
+>
 > - Update all the ATA Gateways to make sure ATA functions properly.
 
 ### Step 2. Download the ATA Gateway setup package
+
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package.
 
 To download the ATA Gateway package:
 
 1. Delete any previous versions of the ATA Gateway package you previously downloaded.
 
-1. On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, click on the settings icon and select **Configuration**.
+1. On the ATA Gateway machine, open a browser and enter the IP address you configured in the ATA Center for the ATA Console. When the ATA Console opens, select the settings icon and select **Configuration**.
 
     ![Configuration settings icon.](media/ATA-config-icon.png)
 
-1. In the **ATA Gateways** tab, click **Download ATA Gateway Setup**.
+1. In the **ATA Gateways** tab, select **Download ATA Gateway Setup**.
 
 1. Save the package locally.
 
