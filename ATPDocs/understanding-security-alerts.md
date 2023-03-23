@@ -1,7 +1,7 @@
 ---
 title: Understanding security alerts
 description: This article explains how to use and understand Microsoft Defender for Identity security alerts.
-ms.date: 01/19/2023
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 
@@ -68,7 +68,7 @@ Defender for Identity security alerts are divided into the following categories 
 
 To get more details on a security alert, download the detailed Excel alert report.
 
-1. Click the three dots in the upper right corner of any alert, then select **Download Details**.
+1. Select the three dots in the upper right corner of any alert, then select **Download Details**.
 
 Each Defender for Identity alert Excel download provides the following information:
 

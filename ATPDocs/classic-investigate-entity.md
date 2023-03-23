@@ -1,7 +1,7 @@
 ---
 title: How to investigate users and computers with Microsoft Defender for Identity
 description: Describes how to investigate suspicious activities performed by users, entities, computers, or devices using Microsoft Defender for Identity
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: tutorial
 ROBOTS: NOINDEX
 ---
@@ -97,7 +97,7 @@ Defender for Identity can help you prevent attacks that use lateral movement pat
 
 If a lateral movement path exists for an entity, in the entity profile page, you will be able to click the **Lateral movement paths** tab. The diagram that is displayed provides you with a map of the possible paths to your sensitive user.
 
-For more information, see [Investigating lateral movement paths with Defender for Identity](use-case-lateral-movement-path.md).
+For more information, see [Investigating lateral movement paths with Defender for Identity](/defender-for-identity/classic-use-case-lateral-movement-path).
 
 ## Check honeytoken status
 

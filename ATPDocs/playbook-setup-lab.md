@@ -1,7 +1,7 @@
 ---
 title: Security alert lab setup 
 description: In this lab, you set up a Microsoft Defender for Identity test lab for simulating threats for detection by Defender for Identity.
-ms.date: 01/18/2023
+ms.date: 02/05/2023
 ms.topic: how-to
 ---
 
@@ -192,7 +192,7 @@ To run the Defender for Identity Security Alert playbooks, download and copy the
 | Mimikatz | [GitHub - Mimikatz](https://github.com/gentilkiwi/mimikatz) |
 | PowerSploit | [GitHub - PowerSploit](https://github.com/PowerShellMafia/PowerSploit) |
 | PsExec | [PsExec documentation](/sysinternals/downloads/psexec) |
-| NetSess | [JoeWare Tools](https://www.joeware.net/freetools) |
+| NetSess | [JoeWare Tools](https://www.joeware.net/freetools/) |
 
 We thank the authors of these research tools for enabling the community to better understand cyber risks and impacts.
 

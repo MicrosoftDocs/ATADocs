@@ -1,7 +1,7 @@
 ---
 title: Detection exclusions in Microsoft 365 Defender
 description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft 365 Defender.
-ms.date: 01/19/2023
+ms.date: 03/14/2023
 ms.topic: how-to
 ---
 
@@ -87,7 +87,7 @@ You can now also configure exclusions by **Global excluded entities**. Global ex
 
     ![Select exclude domains.](media/select-exclude-domains.png)
 
-1. You'll then see the domain in the list of entities to be excluded from all detection rules. You can export the list, or remove the entities by selecting them and clicking the **Remove** button.
+1. You'll then see the domain in the list of entities to be excluded from all detection rules. You can export the list, or remove the entities by choosing them and selecting the **Remove** button.
 
     ![List of global excluded entries.](media/global-excluded-entries-list.png)
 

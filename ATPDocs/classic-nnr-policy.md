@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Microsoft Defender for Identity Network Name Resolution
 description: Classic portal - This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
-ms.date: 01/18/2023
+ms.date: 01/29/2023
 ms.topic: conceptual
 ROBOTS: NOINDEX
 ---

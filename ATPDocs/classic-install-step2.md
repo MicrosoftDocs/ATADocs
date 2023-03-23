@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Connect Microsoft Defender for Identity to Active Directory quickstart
 description: Classic portal - Step two of installing Microsoft Defender for Identity helps you configure the domain connectivity settings on your Defender for Identity cloud service
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: quickstart
 ROBOTS: NOINDEX
 ---
@@ -15,7 +15,7 @@ In this quickstart, you'll connect Microsoft Defender for Identity to Active Dir
 
 ## Prerequisites
 
-- A [Defender for Identity instance](install-step1.md).
+- A [Defender for Identity instance](/defender-for-identity/classic-install-step1).
 - Review the [Defender for Identity prerequisites](prerequisites.md) article.
 - At least one Directory Service account with read access to all objects in the monitored domains. For instructions on how to create the Directory Service account, see [Directory Service account recommendations](directory-service-accounts.md).
 
@@ -39,7 +39,7 @@ The first time you open the Defender for Identity portal, the following screen a
 ## Next steps
 
 > [!div class="step-by-step"]
-> [« Step 1 - Create Defender for Identity instance](install-step1.md)
+> [« Step 1 - Create Defender for Identity instance](/defender-for-identity/classic-install-step1)
 > [Step 3 - Download the sensor setup »](/defender-for-identity/classic-install-step3)
 
 ## Join the Community

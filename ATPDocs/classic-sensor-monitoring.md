@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Monitoring domain controllers and installed sensors installed on your domain controllers using Microsoft Defender for Identity
 description: Classic portal - Describes how to monitor Microsoft Defender for Identity sensors and sensor coverage using Defender for Identity
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
@@ -50,6 +50,6 @@ Managing your fleet of sensors and domain controllers can be challenging. To mak
 ## See Also
 
 - [Defender for Identity Architecture](architecture.md)
-- [Configuring Defender for Identity sensors](install-step5.md)
+- [Configuring Defender for Identity sensors](/defender-for-identity/configure-sensor-settings)
 - [Multi-forest support](multi-forest.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

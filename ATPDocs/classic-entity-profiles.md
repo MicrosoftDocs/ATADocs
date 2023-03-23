@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Working with user profiles in the Microsoft Defender for Identity portal
 description: Classic portal - Describes how to investigate users from the user profiles screen in the Microsoft Defender for Identity portal
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: conceptual
 ROBOTS: NOINDEX
 ---
@@ -52,5 +52,5 @@ For more information, see [Lateral movement paths](/defender-for-identity/unders
 
 ## See Also
 
-- [Investigate lateral movement paths with Defender for Identity](use-case-lateral-movement-path.md)
+- [Investigate lateral movement paths with Defender for Identity](/defender-for-identity/classic-use-case-lateral-movement-path)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

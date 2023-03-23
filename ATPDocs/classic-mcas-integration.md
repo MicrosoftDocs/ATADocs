@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity in Microsoft Defender for Cloud Apps
 description: Overview of Microsoft Defender for Identity features within Microsoft Defender for Cloud Apps.
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
@@ -61,7 +61,7 @@ If both your services (Defender for Identity and Defender for Cloud Apps) are cu
 
 ## Activities
 
-Defender for Identity alerts are displayed within the Defender for Cloud Apps **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Defender for Cloud Apps. See [Defender for Identity activities using Microsoft Defender for Cloud Apps](activities-filtering-mcas.md) to learn how to filter and create new activity policies.
+Defender for Identity alerts are displayed within the Defender for Cloud Apps **Activity log**. Additional activity filtering options and features are available only when viewing alerts using Defender for Cloud Apps. See [Defender for Identity activities using Microsoft Defender for Cloud Apps](/defender-for-identity/classic-activities-filtering-mcas) to learn how to filter and create new activity policies.
 
 ## User pages
 

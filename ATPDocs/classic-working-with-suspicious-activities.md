@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Working with security alerts in Microsoft Defender for Identity
 description: Classic portal - Describes how to review security alerts issued by Microsoft Defender for Identity
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: how-to
 ROBOTS: NOINDEX
 ---
@@ -109,7 +109,7 @@ To do this, click the three dots at the top right corner of a specific alert to 
 
 ## See Also
 
-- [Working with the Defender for Identity portal](workspace-portal.md)
+- [Working with the Defender for Identity portal](/defender-for-identity/classic-workspace-portal)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
 
 ## Learn more

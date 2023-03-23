@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Understand and use Lateral Movement Paths with Microsoft Defender for Identity
 description: Classic portal - This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: conceptual
 ROBOTS: NOINDEX
 ---
@@ -76,7 +76,7 @@ For instructions on how to identify and investigate using Defender for Identity 
 
 ## See Also
 
-- [Investigating Defender for Identity LMPs](investigate-lateral-movement-path.md)
-- [Configure Defender for Identity to make remote calls to SAM](install-step8-samr.md)
+- [Investigating Defender for Identity LMPs](/defender-for-identity/classic-use-case-lateral-movement-path)
+- [Configure Defender for Identity to make remote calls to SAM](/defender-for-identity/remote-calls-sam)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

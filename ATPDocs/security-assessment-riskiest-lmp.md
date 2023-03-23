@@ -1,7 +1,7 @@
 ---
 title: Lateral movement paths assessments
 description: This article provides an overview of Microsoft Defender for Identity's sensitive entities with the riskiest lateral movement paths identity security posture assessment report.
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: how-to
 ---
 
@@ -13,7 +13,7 @@ Microsoft Defender for Identity continuously monitors your environment to identi
 
 Learn more about LMP:
 
-- [Defender for Identity Lateral Movement Paths (LMPs)](use-case-lateral-movement-path.md)
+- [Defender for Identity Lateral Movement Paths (LMPs)](/defender-for-identity/classic-use-case-lateral-movement-path)
 - [MITRE ATT&CK Lateral Movement](https://attack.mitre.org/tactics/TA0008/)
 
 ## What risk do risky lateral movement paths pose?

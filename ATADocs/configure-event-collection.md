@@ -18,8 +18,6 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
-ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -37,22 +35,23 @@ To enhance detection capabilities, ATA needs the following Windows events: 4776,
 > [!NOTE]
 > If you are using Server Core, [wecutil](/windows-server/administration/windows-commands/wecutil) can be used to create and manage subscriptions to events that are forwarded from remote computers.
 
-### WEF configuration for ATA Gateway's with port mirroring
+## WEF configuration for ATA Gateway's with port mirroring
 
-After configuring port mirroring from the domain controllers to the ATA Gateway, use the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
+After configuring port mirroring from the domain controllers to the ATA Gateway, use the following instructions to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding.
 
-**Step 1: Add the network service account to the domain Event Log Readers Group.** 
+**Step 1: Add the network service account to the domain Event Log Readers Group.**
 
 In this scenario, assume that the ATA Gateway is a member of the domain.
 
-1. Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**. 
+1. Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**.
 1. Select **Members**.
-1. If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
+1. If **Network Service** is not listed, select **Add**, type **Network Service** in the **Enter the object names to select** field. Then select **Check Names** and select **OK** twice.
 
 After adding the **Network Service** to the **Event Log Readers** group, reboot the domain controllers for the change to take effect.
 
-**Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
-> [!Note] 
+**Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.**
+
+> [!NOTE]
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below modify the local policy of the domain controller.  
 
 1. Run the following command on each domain controller: *winrm quickconfig*
@@ -62,44 +61,44 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     ![Local policy group editor image.](media/wef-1-local-group-policy-editor.png)
 
 1. Double-click **Configure target Subscription Manager**.
-   
-   1.  Select **Enabled**.
-   2.  Under **Options**, click **Show**.
 
-   3.  Under **SubscriptionManagers**, enter the following value and click **OK**: *Server=http://\<fqdnATAGateway\>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
-      
+   1. Select **Enabled**.
+   2. Under **Options**, select **Show**.
+
+   3. Under **SubscriptionManagers**, enter the following value and select **OK**: `Server=http://<fqdnATAGateway\>:5985/wsman/SubscriptionManager/WEC,Refresh=10`
+
         *(For example: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
-      
-        ![Configure target subscription image.](media/wef-2-config-target-sub-manager.png)
-      
-   4.  Click **OK**.
-   5.  From an elevated command prompt type *gpupdate /force*. 
 
-**Step 3: Perform the following steps on the ATA Gateway** 
+        ![Configure target subscription image.](media/wef-2-config-target-sub-manager.png)
+
+   4. Select **OK**.
+   5. From an elevated command prompt type *gpupdate /force*.
+
+**Step 3: Perform the following steps on the ATA Gateway**
 
 1. Open an elevated command prompt and type *wecutil qc*
-1. Open **Event Viewer**. 
-1. Right-click **Subscriptions** and select **Create Subscription**. 
+1. Open **Event Viewer**.
+1. Right-click **Subscriptions** and select **Create Subscription**.
 
-    1. Enter a name and description for the subscription. 
-    2. For **Destination Log**, confirm that **Forwarded Events** is selected. For ATA to read the events, the destination log must be **Forwarded Events**. 
-    3. Select **Source computer initiated** and click **Select Computers Groups**.
-        1. Click **Add Domain Computer**.
-        2. Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**.  
+    1. Enter a name and description for the subscription.
+    2. For **Destination Log**, confirm that **Forwarded Events** is selected. For ATA to read the events, the destination log must be **Forwarded Events**.
+    3. Select **Source computer initiated** and then choose **Select Computers Groups**.
+        1. Select **Add Domain Computer**.
+        2. Enter the name of the domain controller in the **Enter the object name to select** field. Then select **Check Names** and select **OK**.  
           ![Event Viewer image.](media/wef-3-event-viewer.png)  
-        3. Click **OK**.
-    4. Click **Select Events**.
-        1. Click **By log** and select **Security**.
-        2. In the **Includes/Excludes Event ID** field type the event number and click **OK**. For example, type 4776, like in the following sample.
+        3. Select **OK**.
+    4. Select **Select Events**.
+        1. Select **By log** and select **Security**.
+        2. In the **Includes/Excludes Event ID** field type the event number and select **OK**. For example, type 4776, like in the following sample.
 
         ![Query filter image.](media/wef-4-query-filter.png)
 
     5. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status.
     6. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the ATA Gateway.
 
-
 For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
 ## See Also
+
 - [Install ATA](install-ata-step1.md)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

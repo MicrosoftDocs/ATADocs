@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Understanding the Microsoft Defender for Identity portal
 description: Classic portal - Describes how to log into the Microsoft Defender for Identity portal and the components of the portal
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: conceptual
 ROBOTS: NOINDEX
 ---
@@ -99,5 +99,5 @@ If you hover your mouse over an entity, anywhere in the Defender for Identity po
 
 ## See Also
 
-- [Creating Defender for Identity instances](install-step1.md)
+- [Creating Defender for Identity instances](/defender-for-identity/classic-install-step1)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

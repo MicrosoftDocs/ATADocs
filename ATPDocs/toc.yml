@@ -44,6 +44,8 @@ items:
       href: configure-sensor-settings.md
   - name: Special scenarios
     items:
+    - name: Deploying and monitoring for Zero Trust
+      href: zero-trust.md
     - name: Installing on Active Directory Federation Services
       href: active-directory-federation-services.md
     - name: Multi-forest support
@@ -78,8 +80,12 @@ items:
       href: entity-tags.md
     - name: Configure detection exclusions
       href: exclusions.md
+    - name: Automated response exclusions
+      href: automated-response-exclusions.md
     - name: Email and syslog notifications
       href: notifications.md
+    - name: Advanced settings
+      href: advanced-settings.md
   - name: Troubleshooting
     items:
     - name: Troubleshooting known issues

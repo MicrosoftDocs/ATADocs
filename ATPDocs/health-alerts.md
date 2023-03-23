@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health alerts
 description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 01/18/2023
+ms.date: 02/22/2023
 ms.topic: how-to
 ---
 
@@ -20,7 +20,7 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
 1. Under **General**, select **Health issues**.
 
-1. The **Health issues** page is displayed, where you can see **Open**, **Closed**, and **Suppressed** health issues.
+1. The **Health issues** page appears, where you can see **Open**, **Closed**, and **Suppressed** health issues.
 
     ![Health issues page.](media/health-issues.png)
 
@@ -35,7 +35,7 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
 This section describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
 
-Sensor specific health alerts are displayed in the **Sensors settings** page and domain related or aggregated health alerts are displayed in the **Health issues** page as detailed in the tables below. 
+Sensor-specific health alerts are displayed in the **Sensors settings** page and domain related or aggregated health alerts are displayed in the **Health issues** page as detailed in the following tables:
 
 ### A domain controller is unreachable by a sensor
 
@@ -101,25 +101,25 @@ Sensor specific health alerts are displayed in the **Sensors settings** page and
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|There has been no communication from the Defender for Identity sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Defender for Identity sensor. This impacts Defender for Identity's ability to detect suspicious activities, since network traffic won't be able to reach the Defender for Identity cloud service.|Check that the port used for the communication between the Defender for Identity sensor and Defender for Identity cloud service is not blocked by any routers or firewalls.|Medium|Sensors settings page|
+|There has been no communication from the Defender for Identity sensor. The default time span for this alert is 5 minutes.|Network traffic is no longer captured by the network adapter on the Defender for Identity sensor. This impacts Defender for Identity's ability to detect suspicious activities, since network traffic won't be able to reach the Defender for Identity cloud service.|Check that the port used for the communication between the Defender for Identity sensor and Defender for Identity cloud service isn't blocked by any routers or firewalls.|Medium|Sensors settings page|
 
 ### Some Windows events are not being analyzed
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more events than it can process.|Some Windows events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone Defender for Identity sensor, verify that only the required events are forwarded to the Defender for Identity sensor or try to forward some of the events to another Defender for Identity sensor.|Medium|Sensors settings page and health issues page|
+|The Defender for Identity sensor is receiving more events than it can process.|Some Windows events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required. If this is a standalone Defender for Identity sensor, verify that only the required events are forwarded to the sensor. Or, try forwarding some events to another Defender for Identity sensor.|Medium|Sensors settings page and health issues page|
 
 ### Some network traffic could not be analyzed
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more network traffic than it can process.|Some network traffic couldn't be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required. If this is a standalone Defender for Identity sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you're using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine (in the Windows OS, not in the VMware settings):<br></br>- Large Send Offload V2 (IPv4)<br></br>- IPv4 TSO Offload<br></br>The names may vary depending on your VMware version. For more information, see your VMware documentation.|Medium|Sensors settings page and health issues page|
+|The Defender for Identity sensor is receiving more network traffic than it can process.|Some network traffic couldn't be analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required. If this is a standalone Defender for Identity sensor, reduce the number of domain controllers being monitored.<br></br>This can also happen if you're using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine (in the Windows OS, not in the VMware settings):<br></br>- Large Send Offload V2 (IPv4)<br></br>- IPv4 TSO Offload<br></br>The names may vary depending on your VMware version. For more information, see your VMware documentation.|Medium|Sensors settings page and health issues page|
 
 ### Some ETW events are not being analyzed
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding additional processors and memory](capacity-planning.md) as required.|Medium|Sensors settings page and health issues page|
+|The Defender for Identity sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events aren't being analyzed, which can impact the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required.|Medium|Sensors settings page and health issues page|
 
 ### Sensor with Windows Server 2008 R2: Will be unsupported soon
 
@@ -164,6 +164,12 @@ Sensor specific health alerts are displayed in the **Sensors settings** page and
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode is not configured to the optimal processor performance settings. This can impact the server's performance and the sensors' ability to detect suspicious activities.|Configure the power option of the machine running the Defender for Identity sensor to High Performance (or set both the minimum and maximum processor state to 100) as described in the [Server specifications](prerequisites.md#server-specifications) section, in the [Defender for Identity prerequisites](prerequisites.md) page.|Low|Sensors settings page|
+
+### Sensor failed to write to the custom log path
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Sensor failed to write to the custom log path.|The custom log path provided in the sensor configuration cannot be created.|Stop the AATPSensorUpdater and AATPSensor services, change the SensorCustomLogLocation in the sensor configuration file to a valid path, or set it to null, and start the AATPSensorUpdater and AATPSensor services.|Low|Sensors settings page|
 
 <!--
 ## Windows events missing from domain controller audit policy

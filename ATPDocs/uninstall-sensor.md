@@ -1,7 +1,7 @@
 ---
 title: Uninstall the sensor
 description: This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers.
-ms.date: 01/18/2023
+ms.date: 01/30/2023
 ms.topic: how-to
 ---
 

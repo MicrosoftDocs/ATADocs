@@ -1,7 +1,7 @@
 ---
 title: Prerequisites
 description: Describes the requirements for a successful deployment of Microsoft Defender for Identity in your environment
-ms.date: 01/18/2023
+ms.date: 01/30/2023
 ms.topic: overview
 ---
 
@@ -35,6 +35,8 @@ This section lists information you should gather as well as accounts and network
 - To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
+
+For more information about required permissions, see [Role groups](role-groups.md).
 
 ## Microsoft 365 Defender portal requirements
 
@@ -101,13 +103,15 @@ The Defender for Identity sensor supports installation on the different operatin
 
 | Operating system version   | Server with Desktop Experience | Server Core | Nano Server    | Supported installations  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
-| Windows Server 2012        | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
-| Windows Server 2012 R2     | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
+| Windows Server 2012\*      | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
+| Windows Server 2012 R2\*   | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
-| Windows Server 2019\*      | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
+| Windows Server 2019\**     | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
 | Windows Server 2022        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
 
-\* Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) or newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
+\* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
+
+\** Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) or newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
 The domain controller can be a read-only domain controller (RODC).
 

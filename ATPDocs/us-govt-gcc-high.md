@@ -1,7 +1,7 @@
 ---
 title: US Government offerings
 description: This article provides an overview of Microsoft Defender for Identity's US Government offerings.
-ms.date: 01/18/2023
+ms.date: 02/14/2023
 ms.topic: overview
 ---
 
@@ -27,7 +27,7 @@ Defender for Identity for US Government customers requires one of the following 
 
 To access Microsoft Defender for Identity for US Government offerings, use the appropriate addresses in this table:
 
-|US Government offering  |Portal  |Workspace |Agent endpoint  |
+|US Government offering  |Microsoft 365 Defender Portal  |Defender for Identity (classic) Portal | Sensor (agent) endpoint  |
 |---------|---------|---------|---------|
 |DoD    |   `security.microsoft.us`      | `<workspacename>.atp.azure.us` |  `<your-instance-name>sensorapi.atp.azure.us`       |
 |GCC-H   |  `security.microsoft.us`       | `<workspacename>.atp.azure.us`    |  `<your-instance-name>sensorapi.atp.azure.us`       |

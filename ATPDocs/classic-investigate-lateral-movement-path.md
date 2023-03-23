@@ -2,7 +2,7 @@
 
 title: Investigating lateral movement paths with Microsoft Defender for Identity
 description: This article describes how to detect and investigate potential lateral movement path attacks with Microsoft Defender for Identity.
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: tutorial
 ROBOTS: NOINDEX
 ---
@@ -73,8 +73,8 @@ In this tutorial, you've learned how to use LMPs to investigate suspicious activ
 
 ## See Also
 
-- [Understanding Defender for Identity Lateral Movement Paths](use-case-lateral-movement-path.md)
-- [Configure Defender for Identity to make remote calls to SAM](install-step8-samr.md)
+- [Understanding Defender for Identity Lateral Movement Paths](/defender-for-identity/classic-use-case-lateral-movement-path)
+- [Configure Defender for Identity to make remote calls to SAM](/defender-for-identity/remote-calls-sam)
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
 

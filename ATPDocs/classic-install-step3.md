@@ -1,7 +1,7 @@
 ---
 title: Classic portal - Download the Microsoft Defender for Identity sensor setup package quickstart
 description: Classic portal - Step three of installing Microsoft Defender for Identity helps you download the Defender for Identity sensor setup package.
-ms.date: 01/18/2023
+ms.date: 02/15/2023
 ms.topic: quickstart
 ROBOTS: NOINDEX
 ---
@@ -43,7 +43,7 @@ The zip file includes the following files:
 
 > [!div class="step-by-step"]
 > [« Step 2 - Connect to Active Directory](/defender-for-identity/classic-install-step2)
-> [Step 4 - Install the Defender for Identity sensor »](install-step4.md)
+> [Step 4 - Install the Defender for Identity sensor »](/defender-for-identity/install-sensor)
 
 ## Join the Community
 

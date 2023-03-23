@@ -1,7 +1,7 @@
 ---
 title: Attack simulations 
 description: Learn how to simulate threats in your environment using the Microsoft Defender for Identity security lab attack simulations.
-ms.date: 01/19/2023
+ms.date: 01/22/2023
 ms.topic: how-to
 ---
 
@@ -98,11 +98,9 @@ For details about this alert, see [Security principal reconnaissance (LDAP) (ext
 In this detection, Defender for Identity looks for LDAP security principal reconnaissance, which is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
 From a command line on a workstation with proper permissions, run the tools from the French Security Agency for data collection:
-  
 `oradad.exe`
 
 Tools available from: <https://github.com/ANSSI-FR/ORADAD/releases>
-  
 You should see the activities and the alert in the client machine timeline:  
 
 ![Security principal reconnaissance alert.](media/playbooks/security-principal-alert.png)  
@@ -243,48 +241,7 @@ You should see the activities and the alert in the client machine timeline:
 
 Detail in the alert:  
 
-![Brute force attack alert details.](media/playbooks/brute-force-details.png)  
-
-## Suspected identity theft (pass-the-ticket) & (pass-the-hash)
-
-For details about this alert, see [Suspected identity theft (pass-the-ticket) (external ID 2018)](lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) and [Suspected identity theft (pass-the-hash) (external ID 2017)](lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017).
-
-Pass-the-Ticket or Pass-The-Hash is a lateral movement technique in which attackers steal a Kerberos ticket or user's NTLM hash from one computer and use it to gain access to another computer by reusing the stolen ticket or user's NTLM hash.
-  
-This detection is often misunderstood. If you perform a Pass-The-Ticket from one security context to another security context on the same machine, you won't generate a Defender for Identity alert. This activity can only be seen with an EDR on a managed machine.
-
-What Defender for Identity can detect, without any client agent and even if the activity is seen from an unmanaged machine (without EPP or EDR), is if one Kerberos ticket (TGT) was issued to a user on a specific machine (Name, IP) and the same ticket is seen coming from another machine (Name, IP). Then Defender for Identity can trigger a Suspected identity theft.
-
-In this detection, a Kerberos ticket is seen used on two (or more) different computers.  
-
-On *machine 1* (ADMIN-PC), where a domain user is in used (logon as Task, Service, RDP, Interactive), from a command line run as local admin:
-
-```cmd
-mimikatz # privilege::debug 
-mimikatz # sekurlsa::logonpasswords  
-mimikatz # sekurlsa::tickets /export 
-```
-
-You should rename the Nuck's TGT file (or whatever) to nuck.kirbi
-
-On *machine 2* (VICTIM-PC), from a command line run as local admin:
-
-```cmd
-mimikatz # privilege::debug  
-mimikatz # kerberos::ptt nuck.kirbi
-mimikatz # Quit 
-Klist 
-```
-
-From the result, check if the TGT for nuck is loaded.
-
-Perform an LDAP bind (digest), for example with LDP.exe. The stolen TGT from *machine 1* will be presented to a domain controller to issue a TGS for the LDAP query.
-
-Tools available from: <https://github.com/gentilkiwi/mimikatz/releases>  
-  
-Detail in the alert:  
-
-![Suspected identity theft alert details](media/playbooks/identity-theft-details.png)  
+![Brute force attack alert details.](media/playbooks/brute-force-details.png)
 
 ## Malicious request of Data Protection API (DPAPI) master key
 
@@ -318,7 +275,6 @@ Detail in the alert:
 For details about this alert, see [Suspected skeleton key attack (encryption downgrade) (external ID 2010)](persistence-privilege-escalation-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010).
 
 Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller.
-  
 It means the attacker can use the same password for any Active Directory accounts without the need to reset or change the original account's password.
 
 In this alert, the learned behavior of previous KRB_ERR message encryption from the domain controller to the account requesting a ticket was downgraded.

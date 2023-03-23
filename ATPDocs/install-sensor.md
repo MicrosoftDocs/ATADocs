@@ -1,7 +1,7 @@
 ---
 title: Install the sensor
 description: Learn how to install the Microsoft Defender for Identity sensors on your domain controllers.
-ms.date: 01/18/2023
+ms.date: 03/08/2023
 ms.topic: how-to
 ---
 
@@ -40,7 +40,7 @@ Perform the following steps on the domain controller or AD FS server.
     Select **Next**.
 
     > [!NOTE]
-    > A warning is issued if the domain controller / AD FS server or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from clicking **Next**, and proceeding with the installation. It can still be the right option for the installation of Defender for Identity in a small lab test environment where less room for data storage is required. For production environments, it is highly recommended to work with Defender for Identity's [capacity planning](capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
+    > A warning is issued if the domain controller / AD FS server or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from selecting **Next**, and proceeding with the installation. It can still be the right option for the installation of Defender for Identity in a small lab test environment where less room for data storage is required. For production environments, it is highly recommended to work with Defender for Identity's [capacity planning](capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
 1. Under **Configure the sensor**, enter the installation path and the access key that you copied from the previous step, based on your environment:
 
@@ -112,9 +112,10 @@ Use the following command to perform a fully silent install of the Defender for 
 >
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |InstallationPath|InstallationPath=""|No|Sets the path for the installation of Defender for Identity Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection sensor
+> |InstallationPath|InstallationPath=""|No|Sets the path for the installation of Defender for Identity Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection Sensor
 > |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Defender for Identity sensor with the Defender for Identity instance.|
 > |DelayedUpdate|DelayedUpdate=true|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. See [Delayed sensor update](sensor-settings.md#delayed-sensor-update) for more details.|
+> |LogsPath|LogsPath=""|No|Sets the path for the Defender for Identity Sensor logs. Default path: %programfiles%\Azure Advanced Threat Protection Sensor|
 
 **Examples**:
 
