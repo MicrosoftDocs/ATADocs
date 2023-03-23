@@ -20,7 +20,7 @@ Then from a new machine (fresh install, managed, or unmanaged) try the following
 
 ## Network mapping reconnaissance (DNS)
 
-For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
+For details about this alert, see [Network-mapping reconnaissance (DNS) (external ID 2007)](reconnaissance-discovery-alerts.md#network-mapping-reconnaissance-dns-external-id-2007).
 
 > [!NOTE]
 > To generate the alert again, perform the action from a different user or with a different command.
@@ -47,7 +47,7 @@ Detail in the alert:
 
 ## User and IP address reconnaissance
 
-For details about this alert, see [User and IP address reconnaissance (SMB) (external ID 2012)](reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012).
+For details about this alert, see [User and IP address reconnaissance (SMB) (external ID 2012)](reconnaissance-discovery-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012).
 
 In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller. Users and computers need at least to access the SYSVOL share in order to retrieve GPOs. Attackers can use this information to know where users recently signed in and move laterally in the network to get to a specific sensitive account.  
 
@@ -69,7 +69,7 @@ Detail in the alert:
 
 ## User and group membership reconnaissance (SAMR)
 
-For details about this alert, see [User and Group membership reconnaissance (SAMR) (external ID 2021)](reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021).
+For details about this alert, see [User and Group membership reconnaissance (SAMR) (external ID 2021)](reconnaissance-discovery-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021).
 
 In this detection, user and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack using the SAMR protocol.
 
@@ -93,7 +93,7 @@ Detail in the alert:
 
 ## Security principal reconnaissance (LDAP)
 
-For details about this alert, see [Security principal reconnaissance (LDAP) (external ID 2038)](reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038).
+For details about this alert, see [Security principal reconnaissance (LDAP) (external ID 2038)](credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038).
 
 In this detection, Defender for Identity looks for LDAP security principal reconnaissance, which is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
@@ -111,7 +111,7 @@ Detail in the alert:
 
 ## Honeytoken activity
 
-For details about this alert, see [Honeytoken activity (external ID 2014)](compromised-credentials-alerts.md#honeytoken-activity-external-id-2014).
+For details about this alert, see [Honeytoken activity (external ID 2014)](credential-access-alerts.md#honeytoken-activity-external-id-2014).
 
 This honeytoken account should be attractive for attackers (attractive name or sensitive group membership) and be left unused by your organization. Any activity from them might indicate malicious behavior (LDAP, NTLM or Kerberos logon attempts).
 
@@ -127,7 +127,7 @@ Detail in the alert (failed logon attempt):
 
 ## Active Directory attributes reconnaissance (LDAP)
 
-For details about this alert, see [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
+For details about this alert, see [Active Directory attributes reconnaissance (LDAP) (external ID 2210)](reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210).
 
 Active Directory LDAP attributes reconnaissance is used by attackers to gain critical information about the domain environment, such as accounts with DES or RC4 kerberos cipher, accounts with Kerberos Pre-Authentication disabled, and service accounts configured with Unconstrained Kerberos Delegation.
 
@@ -155,7 +155,7 @@ Detail in the alert:
 
 ## Account enumeration reconnaissance
 
-For details about this alert, see [Account enumeration reconnaissance (external ID 2003)](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003).
+For details about this alert, see [Account enumeration reconnaissance (external ID 2003)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-external-id-2003).
 
 In this alert, an attacker makes Kerberos (or NTLM) requests using a list of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the Preauthentication required instead of Security principal unknown Kerberos error or the WrongPassword (0xc000006a) instead of NoSuchUser (0xc0000064) NTLM error.
 
@@ -180,7 +180,7 @@ Detail in the alert:
 
 ## Suspected Kerberos SPN exposure  
 
-For details about this alert, see [Suspected Kerberos SPN exposure (external ID 2410)](compromised-credentials-alerts.md#suspected-kerberos-spn-exposure-external-id-2410).
+For details about this alert, see [Suspected AS-REP Roasting attack (external ID 2412)](credential-access-alerts.md#suspected-as-rep-roasting-attack-external-id-2412).
 
 In this detection, Defender for Identity looks if an attacker uses tools to enumerate service accounts and their respective SPNs (Service Principal Names), request a Kerberos service ticket for the services, capture the Ticket Granting Service (TGS) tickets from memory and extract their hashes, and save them for later use in an offline brute force attack.  
 
@@ -204,7 +204,7 @@ Detail in the alert:
 
 ## Suspected Brute-Force Attack (Kerberos, NTLM and LDAP) & Password Spray attack
 
-For details about this alert, see [Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)](compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023).
+For details about this alert, see [Suspected Brute Force attack (Kerberos, NTLM) (external ID 2023)](credential-access-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023).
 
 In this detection, an alert is triggered when many authentication failures occur using Kerberos, NTLM, or use of a password spray is detected. Using Kerberos or NTLM, this type of attack is typically committed either horizontal, using a small set of passwords across many users, vertical with a large set of passwords on a few users, or any combination of the two.
 
@@ -243,11 +243,9 @@ Detail in the alert:
 
 ![Brute force attack alert details.](media/playbooks/brute-force-details.png)
 
-  
-
 ## Malicious request of Data Protection API (DPAPI) master key
 
-For details about this alert, see [Malicious request of Data Protection API master key (external ID 2020)](domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020).
+For details about this alert, see [Malicious request of Data Protection API master key (external ID 2020)](credential-access-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020).
 
 DPAPI is used by Windows to securely protect passwords saved by browsers, encrypted files, a certificate's private key, and other sensitive data. Domain controllers hold a backup master key (RSA 2048) that can be used to decrypt all secrets encrypted with DPAPI on domain-joined Windows machines.
 
@@ -274,7 +272,7 @@ Detail in the alert:
 
 ## Suspected skeleton key attack (encryption downgrade)
 
-For details about this alert, see [Suspected skeleton key attack (encryption downgrade) (external ID 2010)](domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010).
+For details about this alert, see [Suspected skeleton key attack (encryption downgrade) (external ID 2010)](persistence-privilege-escalation-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010).
 
 Skeleton Key is malware that runs on domain controllers and allows authentication to the domain with any account without knowing its password. This malware often uses weaker encryption algorithms to hash the user's passwords on the domain controller.
 It means the attacker can use the same password for any Active Directory accounts without the need to reset or change the original account's password.
@@ -301,7 +299,8 @@ Detail in the alert:
 
 ## Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation)
 
-For details about this alert, see [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](compromised-credentials-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation-external-id-2411).
+For details about this alert, see [Suspected Netlogon privilege elevation attempt (CVE-2020-1472 exploitation) (external ID 2411)](persistence-privilege-escalation-alerts.md#suspected-netlogon-privilege-elevation-attempt-cve-2020-1472-exploitation-external-id-2411).
+  
 The alert is triggered if an attacker attempts to establish a vulnerable Netlogon secure channel connection to a DC, using the Netlogon Remote Protocol (MS-NRPC), also known as Netlogon Elevation of Privilege Vulnerability.
 
 From a command line on a workstation, run with a local admin account:
@@ -338,7 +337,7 @@ Detail in the alert:
 
 ## Suspected DCSync attack (replication of directory services)
 
-For details about this alert, see [Suspected DCSync attack (replication of directory services) (external ID 2006)](domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006).
+For details about this alert, see [Suspected DCSync attack (replication of directory services) (external ID 2006)](credential-access-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006).
 
 If attackers have the *DS-Replication-Get-Changes-All* permission, they can initiate a replication request to retrieve the data stored in Active Directory, such as the krbtgt's password hash.
 
@@ -365,7 +364,7 @@ In the alert, a user failed to retrieve the DCsync (not enough permission):
 
 ## Suspected DCShadow attack (domain controller promotion) & (domain controller replication request)
 
-For details about this alert, see [Suspected DCShadow attack (domain controller promotion) (external ID 2028)](domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028) and [Suspected DCShadow attack (domain controller replication request) (external ID 2029)](domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029).
+For details about this alert, see [Suspected DCShadow attack (domain controller promotion) (external ID 2028)](other-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028) and [Suspected DCShadow attack (domain controller replication request) (external ID 2029)](other-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029).
 
 Two alerts are available, but we'll focus only on the *Domain controller replication request* alert. In this scenario, attackers try to initiate a malicious replication request, allowing them to change Active Directory objects on a genuine domain controller, which can give the attackers persistence in the domain.
 
@@ -385,7 +384,7 @@ Detail in the alert:
 
 ## Remote code execution attempts
 
-For details about this alert, see [Remote code execution attempt (external ID 2019)](domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019).
+For details about this alert, see [Remote code execution attempt (external ID 2019)](other-alerts.md#remote-code-execution-attempt-external-id-2019).
 
 Defender for Identity detects PSexec, Remote WMI, and PowerShell connections from a client machine to a domain controller. Attackers can execute remote commands on your domain controller or Active Directory Federation Services (AD FS) server to create persistence, collect data or perform a denial of service (DOS).
 
@@ -405,7 +404,7 @@ Detail in the alert:
 
 ## Data exfiltration over SMB
 
-For details about this alert, see [Data exfiltration over SMB (external ID 2030)](exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
+For details about this alert, see [Data exfiltration over SMB (external ID 2030)](other-alerts.md#data-exfiltration-over-smb-external-id-2030).
 
 This alert is triggered when suspicious transfers of data are observed from your monitored domain controllers, such as when an attacker copies the ntds.dit file from a domain controller to a workstation.
 
@@ -429,7 +428,7 @@ Keep in mind that Defender for Identity can also track files uploaded from works
 
 ## Suspected Golden Ticket usage (encryption downgrade) & (nonexistent account) & (Time anomaly)
 
-For details about this alert, see [Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)](domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009), [Suspected Golden Ticket usage (nonexistent account) (external ID 2027)](domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027), and [Suspected Golden Ticket usage (time anomaly) (external ID 2022)](domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022).
+For details about this alert, see [Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009), [Suspected Golden Ticket usage (nonexistent account) (external ID 2027)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027), and [Suspected Golden Ticket usage (time anomaly) (external ID 2022)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022).
 
 Defender for Identity can detect six types of Golden Ticket attacks. Let's see two of them.
 
@@ -461,7 +460,7 @@ Detail in the alert:
 
 ## Suspicious additions to sensitive groups
 
-For details about this alert, see [Suspicious additions to sensitive groups (external ID 2024)](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).
+For details about this alert, see [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).
 
 Attackers could add users to highly privileged groups to gain access to more resources, and gain persistency. This alert needs a machine learning period (such as: this user usually doesn't perform this addition to sensitive groups).
 
@@ -482,4 +481,3 @@ Detail in the alert:
 ## Next steps
 
 - [Microsoft Defender for Identity Security Alerts](alerts-overview.md)
-
