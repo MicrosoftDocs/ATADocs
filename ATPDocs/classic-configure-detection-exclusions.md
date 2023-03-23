@@ -40,7 +40,7 @@ To configure exclusions from the configuration page, do the following:
 1. Select **Save**.
 
 >[!NOTE]
->Of the most common domains with [Suspicious communication over DNS](exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts opened on them, we observed the domains that customers most excluded from the alert. These domains are added to the exclusions list by default, but you have the option to easily remove them.
+>Of the most common domains with [Suspicious communication over DNS (external ID 2031)](other-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts opened on them, we observed the domains that customers most excluded from the alert. These domains are added to the exclusions list by default, but you have the option to easily remove them.
 
 ### From a security alert
 
@@ -53,7 +53,7 @@ To configure exclusions from a security alert, do the following:
 
     ![Exclude entity.](media/exclude-in-sa.png)
 
-Defender for Identity scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after Defender for Identity deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
+Defender for Identity scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after Defender for Identity deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
 
 ## See Also
 

@@ -766,6 +766,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "ATPDocs/domain-dominance-alerts.md",
+            "redirect_url": "/defender-for-identity/persistence-privilege-escalation-alerts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/compromised-credentials-alerts.md",
+            "redirect_url": "/defender-for-identity/credential-access-alerts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/reconnaissance-alerts.md",
+            "redirect_url": "/defender-for-identity/reconnaissance-discovery-alerts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "ATPDocs/exfiltration-alerts.md",
+            "redirect_url": "/defender-for-identity/other-alerts",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "ATPDocs/sensitive-accounts.md",
             "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
             "redirect_document_id": false
