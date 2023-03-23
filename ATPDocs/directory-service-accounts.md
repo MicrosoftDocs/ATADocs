@@ -198,6 +198,10 @@ Import-Module ActiveDirectory
 Install-ADServiceAccount -Identity 'mdiSvc01'
 ```
 
+>[!NOTE]
+>Trying to intall a gMSA from a root domain on a child domain will fail, as the Install-ADServiceAccount cmdlet can only look for the account on the local domain.
+>There's no need to install the gMSA for Defender for Identity sensors to be able to use the gMSA. It is only required for the password rotation mechanism.
+
 ## How to validate that the domain controller can retrieve the gMSA's password
 
 To validate that the server has the required permissions to retrieve the gMSA's password, run the following PowerShell command:
