@@ -38,6 +38,10 @@ There are two types of DSA that can be used:
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. |
 | Regular user  account | <li> Supports all operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
+  
+  
+  >[!NOTE]
+  > The Defender for Identity sensor will not attempt to use a gMSA entry from a non-trusting domain, nor for a connection to a non-trusted target domain.
 
 ## Number of DSA entries
 
