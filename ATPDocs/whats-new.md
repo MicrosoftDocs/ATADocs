@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/23/2023
+ms.date: 03/27/2023
 ms.topic: overview
 ---
 
@@ -21,6 +21,13 @@ For more information on what's new with other Microsoft Defender security produc
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
+
+## Defender for Identity release 2.201
+
+Released March 27, 2023
+
+- We're in the process of disabling the SAM-R honeytoken alert. While these types of accounts should never be accessed or queried, we're aware that certain legacy systems may use these accounts as part of their regular operations. If this functionality is necessary for you, you can always create an advanced hunting query and use it as a custom detection. Additionally, we'll be reviewing the LDAP honeytoken alert over the coming weeks, but it will remain functional for now.
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.200
 
