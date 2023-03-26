@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 03/16/2023
+ms.date: 03/23/2023
 ms.topic: overview
 ---
 
