@@ -44,6 +44,7 @@ To access the Defender for Identity experience in [in Microsoft 365 Defender](/m
 | MDI Settings                                                 | Member of one of the following Azure AD roles:<li>Global Administrator<li>Security Administrator <br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Authorization and settings/Security settings/Read<br/> <li>Authorization and settings/Security settings/All permissions<br/> <li>Authorization and settings/System settings/Read<br/><li> Authorization and settings/System settings/All permissions |
 | MDI security alerts and activities                           | Member of one of the Azure AD roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Security operations/Security data/Alerts (Manage)<br/><li>Security operations/Security data /Security data basics (Read) |
 | MDI security assessments <br> (now part of Microsoft Secure Score) | [Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac): <br><li>Security operations/Security data /Security data basics (Read)|
+|Asset \ Identities page|[Permissions ](/azure/defender-for-cloud/permissions)to access Defender for cloud apps **or** Member of one of the Azure AD roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)|
 
 ## Types of Defender for Identity security groups
 
@@ -77,4 +78,5 @@ Defender for Identity uses Azure AD security groups as a basis for role groups. 
 > [!div class="step-by-step"]
 > [« Directory Service accounts](directory-service-accounts.md)
 > [Configure remote calls to SAM »](remote-calls-sam.md)
+
 
