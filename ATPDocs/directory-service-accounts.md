@@ -1,7 +1,7 @@
 ---
 title: Directory Service account recommendations
 description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
-ms.date: 01/29/2023
+ms.date: 03/23/2023
 ms.topic: how-to
 ---
 
