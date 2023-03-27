@@ -19,8 +19,6 @@ ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
-ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -32,7 +30,7 @@ ms.suite: ems
 
 The ATA reports section in the console enables you to generate reports that provide you with system status information, both system health and a report of the suspicious activities detected in your environment.
 
-To access the reports page, click the report icon in the menu bar: ![report icon.](media/ata-report-icon.png).
+To access the reports page, select the report icon in the menu bar: ![report icon.](media/ata-report-icon.png).
 The reports that are available are:
 
 - **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists ATA system health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues.
@@ -47,21 +45,21 @@ There are two ways to generate a report: either on demand or by scheduling a rep
 
 To generate a report on demand:
 
-1. In the ATA console menu bar, click the report icon in the menu bar: ![report icon.](media/ata-report-icon.png).
+1. In the ATA console menu bar, select the report icon in the menu bar: ![report icon.](media/ata-report-icon.png).
 
-1. Under either your selected report type, set the **From** and **To** dates and click **Download**.
+1. Under either your selected report type, set the **From** and **To** dates and select **Download**.
  ![Screenshot showing report date range selection.](media/reports.png)
 
 To set a scheduled report:
 
-1. In the **Reports** page, click **Set scheduled reports**, or in the ATA Console configuration page, under Notifications and Reports, click **Scheduled reports**.
+1. In the **Reports** page, select **Set scheduled reports**, or in the ATA Console configuration page, under Notifications and Reports, select **Scheduled reports**.
 
     ![Schedule reports.](media/ata-sched-reports.png)
 
    > [!NOTE]
    > The daily reports are designed to be sent shortly after midnight, UTC.
 
-1. Click **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and click the plus sign next to the email addresses to add them, and click **Save**.
+1. Select **Schedule** next to your selected report type, to set the frequency and email address for delivery of the reports, and select the plus sign next to the email addresses to add them, and select **Save**.
 
     ![Schedule report frequency and email.](media/sched-report1.png)
 
