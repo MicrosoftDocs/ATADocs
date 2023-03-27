@@ -27,6 +27,7 @@ For more information on what's new with other Microsoft Defender security produc
 Released March 27, 2023
 
 - We're in the process of disabling the SAM-R honeytoken alert. While these types of accounts should never be accessed or queried, we're aware that certain legacy systems may use these accounts as part of their regular operations. If this functionality is necessary for you, you can always create an advanced hunting query and use it as a custom detection. Additionally, we'll be reviewing the LDAP honeytoken alert over the coming weeks, but it will remain functional for now.
+- We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.200
