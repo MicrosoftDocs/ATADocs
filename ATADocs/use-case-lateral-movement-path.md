@@ -18,8 +18,6 @@ ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: bennyl
-ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -41,13 +39,13 @@ ATA enables you to take preemptive action on your network to prevent attackers f
 
 To discover which sensitive accounts in your network are vulnerable because of their connection to non-sensitive accounts or resources, in a specific timeframe, follow these steps:
 
-1. In the ATA console menu, click the reports icon ![reports icon.](media/ata-report-icon.png).
+1. In the ATA console menu, select the reports icon ![reports icon.](media/ata-report-icon.png).
 
 1. Under **Lateral movements paths to sensitive accounts**, if there are no lateral movement paths found, the report is grayed out. If there are lateral movement paths, then the dates of the report automatically select the first date when there is relevant data.
 
     ![Screenshot showing report date selection.](media/reports.png)
 
-1. Click **Download**.
+1. Select **Download**.
 
 1. The Excel file that is created provides you with details about your sensitive accounts at risk. The **Summary** tab provides graphs that detail the number of sensitive accounts, computers, and averages for at-risk resources. The **Details** tab provides a list of the sensitive accounts that you should be concerned about. Note that the paths are paths that existed previously, and may not be available today.
 
@@ -57,7 +55,7 @@ Now that you know which sensitive accounts are at risk, you can deep dive in ATA
 
 1. In the ATA console, search for the Lateral movement badge that's added to the entity profile when the entity is in a lateral movement path ![lateral icon.](media/lateral-movement-icon.png) or ![path icon](media/paths-icon.png). This is available if there was a lateral movement path in the last two days.
 
-1. In the user profile page that opens, click the **Lateral movement paths** tab.
+1. In the user profile page that opens, select the **Lateral movement paths** tab.
 
 1. The graph that is displayed provides a map of the possible paths to the sensitive user. The graph shows connections that have been made over the last two days.
 
