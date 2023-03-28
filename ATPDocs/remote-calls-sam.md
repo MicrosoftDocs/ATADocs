@@ -47,8 +47,7 @@ Then add the Defender for Identity Directory Service account to the list of appr
 ![Add the Directory Service account.](media/add-service-account.png)
 
 >[!NOTE]
-> In the Microsoft recommended baselines, as part of the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/en-us/download/details.aspx?id=55319), we recommend replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connection from performing network logons. Please review the local policy settings before managing this setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
-
+> In the Microsoft recommended baselines, as part of the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319), we recommend replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connection from performing network logons. Please review the local policy settings before managing this setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
 
 ## Next steps
 
