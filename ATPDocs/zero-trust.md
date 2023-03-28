@@ -31,7 +31,7 @@ For example, you can use advanced hunting to discover an attacker's [lateral mov
 
 Learn more about Zero Trust and how to build an enterprise-scale strategy and architecture with the [Zero Trust Guidance Center](/security/zero-trust).
 
-For identity-centric concepts and deployment objectives, see [Securing identity with Zero Trust](/security/zero-trust/deploy/identity)
+For identity-centric concepts and deployment objectives, see [Securing identity with Zero Trust](/security/zero-trust/deploy/identity).
 
 For identity in Microsoft 365, see [Deploy your identity infrastructure for Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview).
 
