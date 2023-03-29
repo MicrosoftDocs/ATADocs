@@ -38,8 +38,7 @@ There are two types of DSA that can be used:
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. |
 | Regular user  account | <li> Supports all operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
-  
-  
+
   >[!NOTE]
   > The Defender for Identity sensor will not attempt to use a gMSA entry from a non-trusting domain, nor for a connection to a non-trusted target domain.
 
@@ -47,9 +46,9 @@ There are two types of DSA that can be used:
 
 ### How many DSA entries are required?
 
-A minimum of one DSA entry is required by Defender for Identity. It should have read permissions to all the domains in the forests.
+In a single domain environment, with sensors only on domain controllers, no DSA is required. However, if there is no DSA configured, Defender for Identity can't calculate risky lateral movement paths using [SAM-R queries](remote-calls-sam.md).
 
-In an untrusted multi-forest environment, a DSA account will be required for each forest.
+In a more complex environment, for example one with AD FS sensors, or a multi-domain/multi-forest environment, a minimum of one DSA entry is required for each forest.
 
 ### How does the sensor pick which DSA entity to use?
 
