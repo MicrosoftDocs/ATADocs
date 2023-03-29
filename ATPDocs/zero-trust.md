@@ -36,3 +36,5 @@ For identity-centric concepts and deployment objectives, see [Securing identity 
 For identity in Microsoft 365, see [Deploy your identity infrastructure for Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview).
 
 Learn more about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust).
+
+For an overview of Zero Trust for Microsoft 365 Defender services, see [Zero Trust with Microsoft 365 Defender](zero-trust-with-microsoft-365-defender.md).
