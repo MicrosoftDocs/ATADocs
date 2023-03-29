@@ -111,38 +111,6 @@ To audit Event ID 8004, more configuration steps are required.
 
     ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
 
-## Event ID 1644
-
-Microsoft Defender for Identity can monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers.
-
-> [!NOTE]
-> Logging the 1644 events may impact server performance. While the [resource limitation feature](architecture.md#resource-limitations) can stop the Defender for Identity service if the server is running out of resources, it does not stop the event auditing at the operating system level. Therefore, to avoid performance issues, make sure your servers have sufficient memory, CPU, and disk resources.
-
-Windows event 1644 isn't collected by default on domain controllers and needs to be manually activated to support this feature. This is done by creating these registry keys with the following values:  
-
-```reg
-
-Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
-"15 Field Engineering"=dword:00000005
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters]
-"Expensive Search Results Threshold"=dword:00000001
-"Inefficient Search Results Threshold"=dword:00000001
-"Search Time Threshold (msecs)"=dword:00000001
-```
-
-<!--
-## Defender for Identity Advanced Audit Policy check
-
-To make it easier to verify the current status of each of your domain controller's Advanced Audit Policies, Defender for Identity automatically checks your existing Advanced Audit Policies and issues health alerts for policy settings that require modification. Each health alert provides specific details of the domain controller, the problematic policy as well as remediation suggestions.
-
-![Advanced Audit Policy Health Alert.](media/health-alert-audit.png)
-
-Advanced Security Audit Policy is enabled via **Default Domain Controllers Policy** GPO. These audit events are recorded on the domain controller's Windows Events.
--->
-
 ## Configure object auditing
 
 To collect 4662 events, it's also necessary to configure object auditing on the user, group and computer objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
@@ -253,6 +221,24 @@ These events can be collected automatically by the Defender for Identity sensor 
 > [!NOTE]
 >
 > - Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
+
+## Event ID 1644
+
+> [!IMPORTANT]
+> Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
+>
+> ```reg
+>
+>Windows Registry Editor Version 5.00
+>
+>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
+>"15 Field Engineering"=dword:00000005
+>
+>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters]
+>"Expensive Search Results Threshold"=dword:00000001
+>"Inefficient Search Results Threshold"=dword:00000001
+>"Search Time Threshold (msecs)"=dword:00000001
+>```
 
 ## Next steps
 
