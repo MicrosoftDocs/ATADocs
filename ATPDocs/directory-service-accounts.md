@@ -13,7 +13,7 @@ Learn how to create a Directory Service account (DSA), and configure it to work 
 
 The Directory Service account (DSA) in Defender for Identity is used by the sensor to perform the following functions:
 
-- At startup, the sensor connects to the domain controller using LDAP with the DSA account credentials.
+- At startup, the sensor connects to the domain controller using the configured DSA option.
 
 - The sensor queries the domain controller for information on entities seen in network traffic, monitored events, and monitored ETW activities.
 
@@ -28,16 +28,19 @@ The Directory Service account (DSA) in Defender for Identity is used by the sens
 
 ## Types of DSA accounts
 
-There are two types of DSA that can be used:
+The following DSA options can be used:
 
-- Group Managed Service Account (gMSA) – **recommended**
+- **Group Managed Service Account (gMSA) (recommended)** – This is the recommended DSA option due to it’s more secure deployment and management of passwords.
+- **Regular user account in Active Directory** – This option is easy to get started with but requires additional management overhead of passwords.
+- **Local service account** – This option is used out-of-the-box and deployed by default with the sensor, no additional configuration steps are required. This option has limitations such as no support for SAM-R queries and multi-forest scenarios.
 
-- Regular user account in Active Directory
 
 | Type of DSA           | Pros                                                         | Cons                                                         |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| gMSA                  | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. |
-| Regular user  account | <li> Supports all operating system versions the sensor supports.  <li> Easy to create and start working with.  <li> Easy to configure read  permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
+| gMSA (Recommended) | <li>    More secure deployment since Active Directory manages the creation and rotation of the account's password like a computer account's password.  <li> You can control how often the account's password is changed. | <li> Requires additional setup  steps. |
+| Regular user account | <li> Easy to create and start working with.  <li> Easy to configure read permissions between trusted forests. | <li> Less secure since it  requires the creation and management of passwords.   <li> Can lead to downtime if the password expires and password isn't updated (both at the user and DSA configuration). |
+| Local service account | <li> Configured by default during install of sensors. Deploy sensors quickly and easily without the need to create and configure additional AD user accounts. | <li> SAM-R queries for potential lateral movement paths not supported. <li> LDAP queries only within the domain the sensor is installed. Queries to other domains in the same forest or cross forest will fail. |
+
 
   >[!NOTE]
   > The Defender for Identity sensor will not attempt to use a gMSA entry from a non-trusting domain, nor for a connection to a non-trusted target domain.
@@ -58,10 +61,10 @@ When the sensor starts, it will get a list of DSA entries configured in Defender
 
 The sensor will attempt to use the DSA entry configured during start-up, as a reaction to a new domain contacting the domain controller, each time a SAM-R query is made, or whenever such a connection needs to be recreated.
 
-- **Regular account**: the sensor will attempt to sign in to the domain controller using the username and password configured.
-
 - **gMSA account**: – the sensor will attempt to retrieve the password for the gMSA account from Active Directory (AD). After retrieving the password, the sensor will attempt to sign in to the domain.
-
+ 
+- **Regular account**: the sensor will attempt to sign in to the domain controller using the username and password configured.
+  
 #### Two or more DSA entries are configured
 
 When there are two or more DSA entries, the following logic is applied:
@@ -81,6 +84,7 @@ For example, the sensor will try the DSA entries in the following order:
 1. Look for a "sibling domain" - target domain name (for example, emea.contoso.com) and DSA regular entry domain name (for example, apac.contoso.com).
 1. Round robin all other DSA gMSA entries
 1. Round robin all other DSA regular entries
+1. The local service account will be used if no DSA entry is successful and there was no specific DSA for the domain.
 
 Another example, if these are the DSA entries configured:
 
@@ -103,7 +107,7 @@ Then these are the sensors, and which DSA entry will be used first:
 > - In multi-forest multi-domain environments, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
 
 >[!IMPORTANT]
->If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup using any of the configured DSA accounts, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health alerts](health-alerts.md).
+>If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health alerts](health-alerts.md).
 
 ## How to create a gMSA account for use with Defender for Identity
 
