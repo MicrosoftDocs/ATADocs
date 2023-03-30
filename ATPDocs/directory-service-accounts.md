@@ -30,7 +30,7 @@ The Directory Service account (DSA) in Defender for Identity is used by the sens
 
 The following DSA options can be used:
 
-- **Group Managed Service Account (gMSA) (recommended)** – This is the recommended DSA option due to it’s more secure deployment and management of passwords.
+- **Group Managed Service Account (gMSA) (recommended)** – This is the recommended DSA option due to its more secure deployment and management of passwords.
 - **Regular user account in Active Directory** – This option is easy to get started with but requires additional management overhead of passwords.
 - **Local service account** – This option is used out-of-the-box and deployed by default with the sensor, no additional configuration steps are required. This option has limitations such as no support for SAM-R queries and multi-forest scenarios.
 
