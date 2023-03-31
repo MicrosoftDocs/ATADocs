@@ -29,6 +29,7 @@ The recommended and simplest way to determine capacity for your Defender for Ide
 
 > [!NOTE]
 > To ensure accurate results, only run the sizing tool before you've installed any Defender for Identity sensors in your environment.
+> The Sizing Tool measures the capacity needed for domain controllers only. There is no need to run it against AD FS servers, as the performance impact on AD FS servers is extremely minimal to not existent.
 
 <a name="sizing"></a>
 
