@@ -1,7 +1,7 @@
 ---
 title: Zero Trust with Microsoft Defender for Identity
 description: Explains how Microsoft Defender for Identity fits into an overall Zero Trust strategy when deploying Microsoft 365 Defender.
-ms.date: 02/21/2023
+ms.date: 03/29/2023
 ms.topic: conceptual
 ms.collection: zerotrust-services
 ---
