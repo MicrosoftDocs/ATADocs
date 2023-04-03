@@ -32,14 +32,14 @@ ms.suite: ems
 
 The entity profile provides you with a dashboard designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new ATA logical activity translator which can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
-To access an entity profile page, click on the name of the entity, such as a username, in the suspicious activity timeline.
+To access an entity profile page, select the name of the entity, such as a username, in the suspicious activity timeline.
 
 The left menu provides you with all the Active Directory information available on the entity - email address, domain, first seen date. If the entity is sensitive it will tell you why. For example, is the user tagged as sensitive or the member of a sensitive group?
 If it's a sensitive user you'll see the icon under the user's name.
 
 ## View entity activities
 
-To view all the activities performed by the user, or performed on an entity, click on the **Activities** tab. 
+To view all the activities performed by the user, or performed on an entity, select the **Activities** tab. 
 
  ![user profile activities.](media/user-profile-activities.png)
 
@@ -74,7 +74,7 @@ In the **User access control** section, ATA surfaces security settings that may 
 
 ## View lateral movement paths
 
-By clicking the **Lateral movement paths** tab you can view a fully dynamic and clickable map that provides you with a visual representation of the lateral movement paths to and from this user that can be used to infiltrate your network.
+By selecting the **Lateral movement paths** tab you can view a fully dynamic and clickable map that provides you with a visual representation of the lateral movement paths to and from this user that can be used to infiltrate your network.
 
 The map provides you with a list of how many hops between computers or users an attacker would have to and from this user to compromise a sensitive account, and if the user themselves has a sensitive account, you can see how many resources and accounts are directly connected. For more information, see [Lateral movement paths](use-case-lateral-movement-path.md). 
 
