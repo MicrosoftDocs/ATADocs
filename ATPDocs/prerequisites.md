@@ -47,8 +47,10 @@ Access Defender for Identity in the Microsoft 365 Defender portal using Microsof
 >[!NOTE]
 >The network requirements for US Government offerings can be found at [Microsoft Defender for Identity for US Government offerings](us-govt-gcc-high.md).
 
-- Verify that the servers you intend to install Defender for Identity sensors on are able to reach the Defender for Identity Cloud Service. They should be able to access `https://*your-instance-name*sensorapi.atp.azure.com` (port 443). For example, `https://*contoso-corp*sensorapi.atp.azure.com`.<br><br>
-To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>. The Defender for Identity sensor supports the use of a proxy. For more information on proxy configuration, see [Configuring a proxy for Defender for Identity](configure-proxy.md).
+- Verify that the servers you intend to install Defender for Identity sensors on are able to reach the Defender for Identity Cloud Service. They should be able to access `https://*your-instance-name*sensorapi.atp.azure.com`. For example, `https://*contoso-corp*sensorapi.atp.azure.com`.<br>
+We recommend using a proxy server instead of allowing direct outbound connectivity to the Internet through port 443, and allowing the Defender for Identity sensors to access through that proxy only your dedicated Defender for Identity Cloud Service. For more information on proxy configuration, see [Configuring a proxy for Defender for Identity](configure-proxy.md).
+<br>
+To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>.
 
     > [!NOTE]
     > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
