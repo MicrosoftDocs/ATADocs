@@ -14,6 +14,8 @@ items:
 - name: Get started
   expanded: true
   items:
+  - name: Quick installation guide
+    href: quick-installation-guide.md
   - name: Deploy Defender for Identity with Microsoft 365 Defender
     href: deploy-defender-identity.md
   - name: Prepare
