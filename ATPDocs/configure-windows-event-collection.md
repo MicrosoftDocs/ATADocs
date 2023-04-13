@@ -161,6 +161,10 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
    - **Descendant msDS-GroupManagedServiceAccount Objects**
    - **Descendant msDS-ManagedServiceAccount Objects**
 
+> [!NOTE]
+> Assigning the auditing permissions on the 'All descendant objects' would work as well, but we only require the object types as detailed above.
+>
+
 ### Auditing for specific detections
 
 Some detections require auditing specific Active Directory objects. To do so, follow the steps above, but note the changes below regarding which objects to audit and which permissions to include.
