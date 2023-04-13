@@ -9,12 +9,20 @@ ms.topic: how-to
 
 This article will outline the steps to install Microsoft Defender for Identity on Active Directory or Active Directory Federation Services (AD FS) servers.
 
+<!--
+For a short demonstration of how simple the installation process is, watch this video:
+-->
+
 ## Installation steps
 
 Make sure to install Defender for Identity on Windows 2012 and higher on a server with minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space. For more information, see [Minimum requirements](#minimum-requirements).
 
-1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.micrsoft.com) in the **Settings** -> **Identities** -> **Sensors** page. You only need to download the installer once, as it can be used for every server.
-1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service,  by accessing `https://*your-instance-name*sensorapi.atp.azure.com` (port 443).
+1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.micrsoft.com) in the **Settings** -> **Identities** -> **Sensors** page.
+
+    - Copy the **Access key**. You'll need it for the installation.
+    - You only need to download the installer once, as it can be used for every server in the tenant.
+
+1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service,  by accessing `https://*your-instance-name*sensorapi.atp.azure.com`.
 
     - To get your instance name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
     - For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
