@@ -148,10 +148,13 @@ Active Directory LDAP reconnaissance is used by attackers to gain critical infor
 **Learning period**:
 
 None
-## Honeytoken was queried via SAM-R (external ID  )
 
-**Severity**: Medium
+## Honeytoken was queried via SAM-R (external ID 2426)
+
+**Severity**: Low
+
 **Description**:
+
 User reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
 In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
 
@@ -159,10 +162,31 @@ In this detection, Microsoft Defender for Identity will trigger this alert for a
 
 |Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
 |---------|---------|
-|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Indirect Command Execution (T1202)](https://attack.mitre.org/techniques/T1202/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
-|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Groups (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)   
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)|
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)|
 
 **Learning period**:
+
+None
+
+## Honeytoken was queried via LDAP) (external ID 2429)
+
+**Severity**: Low
+
+**Description**:
+
+User reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
+In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)  |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)  |
+
+**Learning period**:
+
 None
 
 ## See also
