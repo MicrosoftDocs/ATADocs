@@ -149,6 +149,46 @@ Active Directory LDAP reconnaissance is used by attackers to gain critical infor
 
 None
 
+## Honeytoken was queried via SAM-R (external ID 2426)
+
+**Severity**: Low
+
+**Description**:
+
+User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
+In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)|
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)|
+
+**Learning period**:
+
+None
+
+## Honeytoken was queried via LDAP (external ID 2429)
+
+**Severity**: Low
+
+**Description**:
+
+User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
+In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)  |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)  |
+
+**Learning period**:
+
+None
+
 ## See also
 
 - [Investigate assets](investigate-assets.md)
@@ -157,3 +197,5 @@ None
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
+
