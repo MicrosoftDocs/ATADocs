@@ -77,7 +77,7 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
   - **Classification** - You can choose **True alert** or **False alert**.
   - **Comment** - You can add a comment about the alert.
 
-    If you select the three dots next to **Manage alert**, you can **Link alert to another incident**, **Create suppression rule**, or **Ask Defender Experts**.
+  - If you select the three dots next to **Manage alert**, you can **Link alert to another incident**, **Create suppression rule** (available for preview customers only), or **Ask Defender Experts**.
 
     :::image type="content" source="media/manage-alert.png" alt-text="The Manage alert option" lightbox="media/manage-alert.png":::
 
@@ -93,3 +93,5 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
 ## Learn more
 
 - Try our interactive guide: [Detect suspicious activities and potential attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Detect%20suspicious%20activities%20and%20potential%20attacks%20with%20Microsoft%20Defender%20for%20Identity)
+
+
