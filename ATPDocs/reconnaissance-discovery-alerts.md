@@ -169,7 +169,7 @@ In this detection, Microsoft Defender for Identity will trigger this alert for a
 
 None
 
-## Honeytoken was queried via LDAP) (external ID 2429)
+## Honeytoken was queried via LDAP (external ID 2429)
 
 **Severity**: Low
 
