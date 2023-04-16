@@ -243,6 +243,9 @@ These events can be collected automatically by the Defender for Identity sensor 
 >"Inefficient Search Results Threshold"=dword:00000001
 >"Search Time Threshold (msecs)"=dword:00000001
 >```
+>
+> No functionality is lost due to this requirement being removed.
+
 
 ## Next steps
 
