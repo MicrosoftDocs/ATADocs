@@ -222,7 +222,8 @@ None
 |MITRE attack technique  | [Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134),[Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068),[Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558)     |
 |MITRE attack sub-technique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
 
-## Honeytoken activity (external ID 2014)
+<a name="honeytoken-activity-external-id-2014">
+## Honeytoken authentication activity (external ID 2014)
 
 *Previous name:* Honeytoken activity
 
@@ -230,9 +231,7 @@ None
 
 **Description**:
 
-Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused while having an attractive name to lure attackers (for example,
-SQL-Admin). Any activity from them might indicate malicious behavior.
-
+Honeytoken accounts are decoy accounts set up to identify and track malicious activity that involves these accounts. Honeytoken accounts should be left unused while having an attractive name to lure attackers (for example, SQL-Admin). Any authentication activity from them might indicate malicious behavior.
 For more information on honeytoken accounts, see [Manage sensitive or honeytoken accounts](/defender-for-identity/entity-tags).
 
 **Learning period**:
@@ -290,3 +289,5 @@ Validate the following permissions:
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
+
