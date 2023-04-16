@@ -233,7 +233,7 @@ None
 **Severity**: High
 
 **Description**:
-Every user object in Active Directory has groups they belong to. Attackers will try to add or remove permissions from account they manage to get access to. Microsoft Defender for Identity will trigger this alert for any change performed against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
+In Active Directory, each user is a member of one or more groups. After gaining access to an account, attackers may attempt to add or remove permissions from it. Microsoft Defender for Identity triggers an alert whenever there is a change made to a preconfigured [honeytoken user account](classic-manage-sensitive-honeytoken-accounts.md).
 
 **Learning period**:
 
