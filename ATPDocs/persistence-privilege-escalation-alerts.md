@@ -228,6 +228,25 @@ None
 |MITRE attack technique  |  [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)     |
 |MITRE attack sub-technique | N/A        |
 
+## Honeytoken group membership changed (external ID 2428)
+
+**Severity**: High
+
+**Description**:
+Every user object in Active Directory has groups they belong to. Attackers will try to add or remove permissions from account they manage to get access to. Microsoft Defender for Identity will trigger this alert for any change performed against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)  |
+|---------|---------|
+|MITRE attack technique  |  [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)     |
+|MITRE attack sub-technique | N/A        |
+
+
 ## See also
 
 - [Investigate assets](investigate-assets.md)
@@ -236,5 +255,6 @@ None
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
 
 
