@@ -202,10 +202,31 @@ None
 **MITRE**:
 
 |Primary MITRE tactic  | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)  |
+|---------|---------|
+|MITRE attack technique | N/A        |
+|MITRE attack sub-technique | N/A        |
 
 **Suggested steps for prevention**:
 
 1. Review [our guidance](https://support.microsoft.com/help/4557222/how-to-manage-the-changes-in-netlogon-secure-channel-connections-assoc) on managing changes in Netlogon secure channel connection which relate to and can prevent this vulnerability.
+
+## Honeytoken user attributes modified (external ID 2427)
+
+**Severity**: High
+
+**Description**:
+Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes, an attacker will try and manipulate these objects to his favor. Such as changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003)  |
+|---------|---------|
+|MITRE attack technique  |  [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)     |
+|MITRE attack sub-technique | N/A        |
 
 ## See also
 
@@ -215,3 +236,5 @@ None
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
+
