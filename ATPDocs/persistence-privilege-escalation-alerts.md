@@ -215,7 +215,7 @@ None
 **Severity**: High
 
 **Description**:
-Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes, an attacker will try and manipulate these objects to his favor. Such as changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md)
+Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes attackers will try and manipulate these objects for their benefit, for example by changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](classic-manage-sensitive-honeytoken-accounts.md).
 
 **Learning period**:
 
