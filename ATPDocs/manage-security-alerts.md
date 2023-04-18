@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity security alerts in Microsoft 365 Defender
 description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft 365 Defender
-ms.date: 02/15/2023
+ms.date: 04/16/2023
 ms.topic: how-to
 ---
 
