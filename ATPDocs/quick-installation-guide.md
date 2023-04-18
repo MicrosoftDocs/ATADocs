@@ -1,7 +1,7 @@
 ---
 title: Quick installation guide
 description: Learn how to quickly install Microsoft Defender for Identity.
-ms.date: 04/13/2023
+ms.date: 04/16/2023
 ms.topic: how-to
 ---
 

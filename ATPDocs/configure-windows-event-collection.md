@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event collection
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 03/28/2023
+ms.date: 04/16/2023
 ms.topic: how-to
 ---
 
