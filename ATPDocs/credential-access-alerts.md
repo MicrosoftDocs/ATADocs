@@ -1,7 +1,7 @@
 ---
 title: Credential access security alerts
 description: This article explains Microsoft Defender for Identity alerts issued when credential access attacks are detected against your organization.
-ms.date: 01/18/2023
+ms.date: 04/16/2023
 ms.topic: conceptual
 ---
 
