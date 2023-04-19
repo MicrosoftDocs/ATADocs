@@ -223,6 +223,7 @@ None
 |MITRE attack sub-technique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
 
 <a name="honeytoken-activity-external-id-2014">
+
 ## Honeytoken authentication activity (external ID 2014)
 
 *Previous name:* Honeytoken activity
