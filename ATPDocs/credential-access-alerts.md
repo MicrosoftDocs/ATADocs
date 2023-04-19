@@ -222,7 +222,7 @@ None
 |MITRE attack technique  | [Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134),[Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068),[Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558)     |
 |MITRE attack sub-technique | [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)        |
 
-<a name="honeytoken-activity-external-id-2014">
+<a name="honeytoken-activity-external-id-2014"></a>
 
 ## Honeytoken authentication activity (external ID 2014)
 
