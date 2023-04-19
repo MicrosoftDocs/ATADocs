@@ -63,7 +63,7 @@ If you're using a third-party VPN solution, consult their documentation for inst
 Perform the following steps on your RRAS server.
 
 1. Open the Routing and Remote Access console.
-1. Right-click the server name and click **Properties**.
+1. Right-click the server name and select **Properties**.
 1. In the **Security** tab, under **Accounting provider**, select **RADIUS Accounting** and click **Configure**.
 
     ![RADIUS setup.](media/radius-setup.png)
