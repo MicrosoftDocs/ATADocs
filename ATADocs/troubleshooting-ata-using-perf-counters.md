@@ -4,9 +4,9 @@
 title: Troubleshooting Advanced Threat Analytics with performance counters
 description: Describes how you can use performance counters to troubleshoot issues with ATA
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
+author: batamig
+ms.author: bagol
+manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics

@@ -4,9 +4,9 @@
 title: Export and Import Advanced Threat Analytics Configuration
 description: How to export and import the ATA configuration.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
+author: batamig
+ms.author: bagol
+manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
