@@ -4,9 +4,9 @@
 title: Setting email notification settings in Advanced Threat Analytics
 description: Describes how to have ATA notify you (by email or by ATA event forwarding) when it detects suspicious activities 
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
+author: batamig
+ms.author: bagol
+manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics

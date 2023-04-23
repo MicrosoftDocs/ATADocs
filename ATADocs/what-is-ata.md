@@ -4,9 +4,9 @@
 title: What is Microsoft Advanced Threat Analytics (ATA)?
 description: Explains what Microsoft Advanced Threat Analytics (ATA) is and what kinds of suspicious activities it can detect
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
+author: batamig
+ms.author: bagol
+manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics

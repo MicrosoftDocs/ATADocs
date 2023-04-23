@@ -4,9 +4,9 @@
 title: Install Advanced Threat Analytics - Step 1
 description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
+author: batamig
+ms.author: bagol
+manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
