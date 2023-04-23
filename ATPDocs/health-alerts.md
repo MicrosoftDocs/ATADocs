@@ -159,6 +159,12 @@ Sensor-specific health alerts are displayed in the **Sensors settings** page and
 |----|----|----|----|----|
 |Directory Services Object Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Object Auditing configuration does not include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#configure-object-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
 
+### Auditing on the Configuration container is not enabled as required
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Auditing on the Configuration container is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the Domain's Configuration container is not enabled as required.|Enable the Directory Services Auditing on the Domain's Configuration container according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Health issues page|
+
 ### Power mode is not configured for optimal processor performance
 
 |Alert|Description|Resolution|Severity|Displayed in|
