@@ -4,9 +4,9 @@
 title: Change Advanced Threat Analytics config - domain connectivity password
 description: Describes how to change the Domain Connectivity Password on the ATA Gateway.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
+author: batamig
+ms.author: bagol
+manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics

@@ -4,9 +4,9 @@
 title: Tag sensitive accounts with ATA
 description: Describes how to tag sensitive accounts using Advanced Threat Analytics (ATA) 
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
+author: batamig
+ms.author: bagol
+manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
