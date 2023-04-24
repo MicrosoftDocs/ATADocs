@@ -246,6 +246,25 @@ None
 |MITRE attack technique  |  [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)     |
 |MITRE attack sub-technique | N/A        |
 
+## Suspected SID-History injection (external ID 1106)
+
+**Severity**: High
+
+**Description**:
+SIDHistory is an attribute in Active Directory that allows users to retain their permissions and access to resources when their account is migrated from one domain to another. When a user account is migrated to a new domain, the user's SID is added to the SIDHistory attribute of their account in the new domain. This attribute contains a list of SIDs from the user's previous domain.
+
+Adversaries may use the SIH history injection to escalate privileges and bypass access controls. This detection will trigger when newly added SID was added to the SIDHistory attribute.
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)  |
+|---------|---------|
+|MITRE attack technique  |[Account Manipulation (T1134)](https://attack.mitre.org/techniques/T1134/)     |
+|MITRE attack sub-technique |[SID-History Injection(T1334.005)](https://attack.mitre.org/techniques/T1134/005/)       |
 
 ## See also
 
@@ -255,6 +274,7 @@ None
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
 
 
 
