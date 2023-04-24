@@ -45,6 +45,7 @@
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection",
       "layout": "Conceptual",
       "breadcrumb_path": "/advanced-threat-analytics/bread/toc.json",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "searchScope": ["ATA"]
     },
     "markdownEngineName": "markdig"

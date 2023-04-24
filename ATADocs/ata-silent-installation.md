@@ -4,12 +4,12 @@
 title: Install Advanced Threat Analytics silently
 description: This article describes how to silently install ATA.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 07/20/2020
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 

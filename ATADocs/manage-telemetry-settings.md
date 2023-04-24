@@ -4,12 +4,12 @@
 title: Manage Advanced Threat Analytics system-generated logs
 description: Describes the data collected by ATA and provides steps to turn off data collection.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 8/19/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: article
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 
 # optional metadata

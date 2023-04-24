@@ -1,38 +1,38 @@
 ---
-title: Microsoft Defender for Identity security alert lateral movement playbook
+title: Lateral movement playbook
 description: The Microsoft Defender for Identity playbook describes how to simulate lateral movement threats for detection by Defender for Identity.
-ms.date: 11/16/2021
-ms.topic: tutorial
+ms.date: 01/30/2023
+ms.topic: how-to
 ---
 
-# Tutorial: Lateral movement playbook
+# Lateral movement playbook
 
-The lateral movement playbook is third in the four part tutorial series for [!INCLUDE [Product long](includes/product-long.md)] security alerts. The purpose of the [!INCLUDE [Product short](includes/product-short.md)] security alert lab is to illustrate **[!INCLUDE [Product short](includes/product-short.md)]**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of [!INCLUDE [Product short](includes/product-short.md)]'s *discrete* detections. The playbook focuses on [!INCLUDE [Product short](includes/product-short.md)]'s *signature*-based capabilities and doesn't include advanced machine-learning, user, or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each tutorial in this series, see the [[!INCLUDE [Product short](includes/product-short.md)] security alert lab overview](playbook-lab-overview.md).
+The lateral movement playbook is third in the four part lab series for Microsoft Defender for Identity security alerts. The purpose of the Defender for Identity security alert lab is to illustrate **Defender for Identity**'s capabilities in identifying and detecting suspicious activities and potential attacks against your network. The playbook explains how to test against some of Defender for Identity's *discrete* detections. The playbook focuses on Defender for Identity's *signature*-based capabilities and doesn't include advanced machine-learning, user, or entity-based behavioral detections (these require a learning period with real network traffic for up to 30 days). For more information about each lab in this series, see the [Defender for Identity security alert lab overview](playbook-lab-overview.md).
 
-This playbook shows some of the lateral movement path threat detections and security alerts services of [!INCLUDE [Product short](includes/product-short.md)] by mimicking an attack with common, real-world, publicly available hacking and attack tools.
+This playbook shows some of the lateral movement path threat detections and security alerts services of Defender for Identity by mimicking an attack with common, real-world, publicly available hacking and attack tools.
 
-In this tutorial you will:
+In this lab you will:
 
 > [!div class="checklist"]
 >
 > - Harvest NTLM hashes and simulate an Overpass-the-Hash attack to obtain a Kerberos Ticket Granting Ticket (TGT).
 > - Masquerade as another user, move laterally across the network, and harvest more credentials.
 > - Simulate a Pass-the-Ticket attack to gain access to the domain controller.
-> - Review the security alerts from the lateral movement in [!INCLUDE [Product short](includes/product-short.md)].
+> - Review the security alerts from the lateral movement in Defender for Identity.
 
 ## Prerequisites
 
-1. [A completed [!INCLUDE [Product short](includes/product-short.md)] security alert lab](playbook-setup-lab.md)
-    - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the [!INCLUDE [Product short](includes/product-short.md)] testing procedures.
+1. [A completed Defender for Identity security alert lab](playbook-setup-lab.md)
+    - We recommend following the lab setup instructions as closely as possible. The closer your lab is to the suggested lab setup, the easier it will be to follow the Defender for Identity testing procedures.
 
-1. [Completion of the reconnaissance playbook tutorial](playbook-reconnaissance.md)
+1. [Completion of the reconnaissance playbook lab](playbook-reconnaissance.md)
 
 > [!WARNING]
 > The third-party hacking tools in this lab are presented for research purposes only. Microsoft does **not** own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment **only**.
 
-## Lateral Movement
+## Lateral movement
 
-From our simulated attacks in the previous tutorial, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered and seeing [!INCLUDE [Product short](includes/product-short.md)]'s alerts on the movement. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA's computer credentials were exposed. We'll mimic various attack methods to try to move laterally across the domain.
+From our simulated attacks in the previous lab, the reconnaissance playbook, we gained extensive network information. Using that information, our goal during this Lateral Movement phase of the lab is getting to the critical value IP addresses we already discovered and seeing Defender for Identity's alerts on the movement. In the previous Reconnaissance lab simulation, we identified 10.0.24.6 as the target IP since that was where SamiraA's computer credentials were exposed. We'll mimic various attack methods to try to move laterally across the domain.
 
 ## Dump Credentials In-Memory from VictimPC
 
@@ -88,7 +88,7 @@ Using a common technique called **Overpass-the-Hash**, the harvested NTLM hash i
 
 1. Check that a new command prompt opens. It will be executing as RonHD, but that may not seem obvious *yet*. Don't close the new command prompt since you'll use it next.
 
-[!INCLUDE [Product short](includes/product-short.md)] won't detect a hash passed on a local resource. [!INCLUDE [Product short](includes/product-short.md)] detects when a hash is **used from one resource to access another** resource or service.
+Defender for Identity won't detect a hash passed on a local resource. Defender for Identity detects when a hash is **used from one resource to access another** resource or service.
 
 ### Additional lateral move
 
@@ -131,11 +131,11 @@ You can see that, for this particular process, we have RonHD's TGT in memory. We
 
 ### Overpass-the-Hash Detected in Defender for Identity
 
-Looking at the [!INCLUDE [Product short](includes/product-short.md)] console, we can see the following things:
+Looking at the Defender for Identity console, we can see the following things:
 
-![[!INCLUDE [Product short.](includes/product-short.md)] detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
+![Defender for Identity detecting the Overpass-the-Hash attack](media/playbook-lateral-opthdetection.png)
 
-[!INCLUDE [Product short](includes/product-short.md)] detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we select RonHD's name in the alert, we're taken to the Logical Activity timeline of RonHD, where we can further our investigation.
+Defender for Identity detected that RonHD's account was compromised on VictimPC and then used to successfully get a Kerberos TGT. If we select RonHD's name in the alert, we're taken to the Logical Activity timeline of RonHD, where we can further our investigation.
 
 ![View the detection in the Logical Activity timeline.](media/playbook-lateral-opthlogicalactivity.png)
 
@@ -219,7 +219,7 @@ With the tickets locally on VictimPC, it's finally time to become SamiraA by "Pa
 1. Note that these tickets remain unused. Acting as an attacker, we successfully "passed the ticket". We harvested SamirA's credential from AdminPC, and then passed it to another process running on VictimPC.
 
     > [!Note]
-    > Like in Pass-the-Hash, [!INCLUDE [Product short](includes/product-short.md)] doesn't know the ticket was passed based on local client activity. However, [!INCLUDE [Product short](includes/product-short.md)] does detect the activity *once the ticket is used*, that is, leveraged to access another resource/service.
+    > Like in Pass-the-Hash, Defender for Identity doesn't know the ticket was passed based on local client activity. However, Defender for Identity does detect the activity *once the ticket is used*, that is, leveraged to access another resource/service.
 
 1. Complete your simulated attack by accessing the domain controller from **VictimPC**. In the command prompt, now running with the tickets of SamirA in memory, execute:
 
@@ -233,26 +233,26 @@ Success! Through our mock attacks, we gained administrator access on our domain 
 
 ### Pass the Ticket detection in Defender for Identity
 
-Most security tools have no way to detect when a legitimate credential was used to access a legitimate resource. In contrast, what does [!INCLUDE [Product short](includes/product-short.md)] detect and alert on in this chain of events?
+Most security tools have no way to detect when a legitimate credential was used to access a legitimate resource. In contrast, what does Defender for Identity detect and alert on in this chain of events?
 
-- [!INCLUDE [Product short](includes/product-short.md)] detected theft of Samira's tickets from AdminPC and movement to VictimPC.
-- The [!INCLUDE [Product short](includes/product-short.md)] portal shows exactly which resources were accessed using the stolen tickets.
+- Defender for Identity detected theft of Samira's tickets from AdminPC and movement to VictimPC.
+- The Defender for Identity portal shows exactly which resources were accessed using the stolen tickets.
 - Provides key information and evidence to identify exactly where to start your investigation and what remediation steps to take.
 
-[!INCLUDE [Product short](includes/product-short.md)] detections and alert information are of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise.
+Defender for Identity detections and alert information are of critical value to any Digital Forensics Incident Response (DFIR) team. You can not only see the credentials being stolen, but also learn what resources the stolen ticket was used to access and compromise.
 
-![[!INCLUDE [Product short.](includes/product-short.md)] detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
+![Defender for Identity detects Pass-the-Ticket with two-hour suppression](media/playbook-escalation-pttdetection.png)
 
 > [!NOTE]
-> This event will only display on the [!INCLUDE [Product short](includes/product-short.md)] console in **2 hours**. Events of this type are purposefully suppressed for this timeframe to reduce false positives.
+> This event will only display on the Defender for Identity console in **2 hours**. Events of this type are purposefully suppressed for this timeframe to reduce false positives.
 
 ## Next steps
 
 The next phase in the attack kill chain is domain dominance.
 
 > [!div class="nextstepaction"]
-> [[!INCLUDE [Product short](includes/product-short.md)] Domain Dominance playbook](playbook-domain-dominance.md)
+> [Defender for Identity Domain Dominance playbook](playbook-domain-dominance.md)
 
 ## Join the Community
 
-Do you have more questions, or an interest in discussing [!INCLUDE [Product short](includes/product-short.md)] and related security with others? Join the [[!INCLUDE [Product short](includes/product-short.md)] Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
+Do you have more questions, or an interest in discussing Defender for Identity and related security with others? Join the [Defender for Identity Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!

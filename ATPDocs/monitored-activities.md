@@ -1,26 +1,23 @@
 ---
-title: Microsoft Defender for Identity monitored domain activities
+title: Monitored activities
 description: Describes each activity type monitored by Microsoft Defender for Identity
-ms.date: 12/24/2020
+ms.date: 01/29/2023
 ms.topic: conceptual
 ---
 
 # Microsoft Defender for Identity monitored activities
 
-> [!NOTE]
-> The [!INCLUDE [Product long](includes/product-long.md)] features explained on this page are also accessible using the new [portal](https://portal.cloudappsecurity.com).
+Microsoft Defender for Identity monitors information generated from your organization's Active Directory, network activities and event activities to detect suspicious activity. The monitored activity information enables Defender for Identity to help you determine the validity of each potential threat and correctly triage and respond.
 
-[!INCLUDE [Product long](includes/product-long.md)] monitors information generated from your organization's Active Directory, network activities and event activities to detect suspicious activity. The monitored activity information enables [!INCLUDE [Product short](includes/product-short.md)] to help you determine the validity of each potential threat and correctly triage and respond.
+In the case of a valid threat, or **true positive**, Defender for Identity enables you to discover the scope of the breach for each incident, investigate which entities are involved, and determine how to remediate them.
 
-In the case of a valid threat, or **true positive**, [!INCLUDE [Product short](includes/product-short.md)] enables you to discover the scope of the breach for each incident, investigate which entities are involved, and determine how to remediate them.
-
-The information monitored by [!INCLUDE [Product short](includes/product-short.md)] is presented in the form of activities. [!INCLUDE [Product short](includes/product-short.md)] currently supports monitoring of the following activity types:
+The information monitored by Defender for Identity is presented in the form of activities. Defender for Identity currently supports monitoring of the following activity types:
 
 > [!NOTE]
 >
-> - This article is relevant for all [!INCLUDE [Product short](includes/product-short.md)] sensor types.
-> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities appear on both the user and machine profile page.
-> - [!INCLUDE [Product short](includes/product-short.md)] monitored activities are also available in [Defender for Cloud Apps](https://portal.cloudappsecurity.com/) and Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
+> - This article is relevant for all Defender for Identity sensor types.
+> - Defender for Identity monitored activities appear on both the user and machine profile page.
+> - Defender for Identity monitored activities are also available in Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
 
 ## Monitored user activities: User account AD attribute changes
 
@@ -104,7 +101,7 @@ The information monitored by [!INCLUDE [Product short](includes/product-short.md
 
 ## See Also
 
-- [Managing security alerts](working-with-suspicious-activities.md)
-- [Security alert guide](suspicious-activity-guide.md)
-- [Investigate entities](investigate-entity.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Managing security alerts](/defender-for-identity/manage-security-alerts)
+- [Security alert guide](/defender-for-identity/alerts-overview)
+- [Investigate assets](/defender-for-identity/investigate-assets)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -4,12 +4,12 @@
 title: Install Advanced Threat Analytics - Step 6
 description: In this step of installing ATA, you configure data sources.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 09/08/2019
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 
@@ -56,6 +56,7 @@ For ATA to be able to consume data from a Syslog server, you need to perform the
 > - Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
 
 > [!IMPORTANT]
+>
 > - Do not forward all the Syslog data to the ATA Gateway.
 > - ATA supports UDP traffic from the SIEM/Syslog server.
 
@@ -144,9 +145,9 @@ Error Code: 0x0
 
 #### QRadar
 
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because ATA necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [https://www-01.ibm.com/support/docview.wss?uid=swg21700170](https://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because ATA necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [QRadar: Agentless Windows Events Collection using the MSRPC Protocol](https://www.ibm.com/support/pages/qradar-agentless-windows-events-collection-using-msrpc-protocol-msrpc-faq).
 
-```
+```log
 <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 ```
 

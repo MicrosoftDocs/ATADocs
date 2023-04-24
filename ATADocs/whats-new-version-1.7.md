@@ -4,12 +4,12 @@
 title: What's new in ATA version 1.7
 description: Lists what was new in ATA version 1.7 along with known issues
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 1/23/2017
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 

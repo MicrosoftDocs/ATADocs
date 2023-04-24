@@ -4,12 +4,12 @@
 title: Change Advanced Threat Analytics ATA Center config
 description: Describes how to change the IP address, port, console URL or certificate of your ATA Center.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 3/21/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 
 # optional metadata

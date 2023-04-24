@@ -4,12 +4,12 @@
 title: Planning your Advanced Threat Analytics deployment
 description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 10/16/2019
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 
 # optional metadata

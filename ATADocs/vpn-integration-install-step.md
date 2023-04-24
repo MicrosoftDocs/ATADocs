@@ -4,12 +4,12 @@
 title: Install Advanced Threat Analytics - Step 7
 description: In this step of installing ATA, you integrate your VPN.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 11/07/2019
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 
@@ -63,7 +63,7 @@ If you're using a third-party VPN solution, consult their documentation for inst
 Perform the following steps on your RRAS server.
 
 1. Open the Routing and Remote Access console.
-1. Right-click the server name and click **Properties**.
+1. Right-click the server name and select **Properties**.
 1. In the **Security** tab, under **Accounting provider**, select **RADIUS Accounting** and click **Configure**.
 
     ![RADIUS setup.](media/radius-setup.png)

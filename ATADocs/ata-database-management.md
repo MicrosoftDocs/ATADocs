@@ -4,12 +4,12 @@
 title: Advanced Threat Analytics Database Management
 description: Procedures to help you move, backup, or restore the ATA database.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 3/21/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 
@@ -33,11 +33,11 @@ If you need to move, backup or restore the ATA database, use these procedures fo
 
 ## Backing up the ATA database
 
-Refer to the [relevant MongoDB documentation](https://docs.mongodb.org/manual/administration/backup/).
+Refer to the [relevant MongoDB documentation](https://www.mongodb.com/docs/manual/core/backups/).
 
 ## Restoring the ATA database
 
-Refer to the [relevant MongoDB documentation](https://docs.mongodb.org/manual/administration/backup/).
+Refer to the [relevant MongoDB documentation](https://www.mongodb.com/docs/manual/core/backups/).
 
 ## Moving the ATA database to another drive
 

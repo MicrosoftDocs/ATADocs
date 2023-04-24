@@ -4,12 +4,12 @@
 title: Disaster recovery for Advanced Threat Analytics
 description: Describes how you can quickly recover ATA functionality after disaster
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 05/02/2019
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 

@@ -4,12 +4,12 @@
 title: Working with suspicious activities in Advanced Threat Analytics
 description: Describes how to review suspicious activities identified by ATA
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 4/29/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 
@@ -102,6 +102,6 @@ To do this, click the three dots at the top right corner of a specific suspiciou
 
 ## See also
 
-- [ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
+- [ATA suspicious activity playbook](https://aka.ms/ataplaybook)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Modifying ATA configuration](modifying-ata-center-configuration.md)

@@ -4,12 +4,12 @@
 title: Configure Port Mirroring when deploying Advanced Threat Analytics
 description: Describes port mirroring options and how to configure them for ATA
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 3/21/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 

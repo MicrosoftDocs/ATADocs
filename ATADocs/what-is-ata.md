@@ -4,12 +4,12 @@
 title: What is Microsoft Advanced Threat Analytics (ATA)?
 description: Explains what Microsoft Advanced Threat Analytics (ATA) is and what kinds of suspicious activities it can detect
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 02/17/2021
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 
@@ -34,7 +34,7 @@ Advanced Threat Analytics (ATA) is an on-premises platform that helps protect yo
 > [!NOTE]
 > **Support lifecycle**
 >
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## How ATA works
 
@@ -121,5 +121,5 @@ You can view suspicious activities of this type in the ATA Dashboard. In the fol
 
 ## See also
 
-- [ATA suspicious activity playbook](/samples/browse/?redirectedfrom=TechNet-Gallery)
+- [ATA suspicious activity playbook](https://aka.ms/ataplaybook)
 - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

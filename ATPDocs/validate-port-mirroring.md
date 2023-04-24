@@ -1,25 +1,25 @@
 ---
-title: Validate port mirroring in Microsoft Defender for Identity
+title: Validate port mirroring 
 description: Describes how to validate that port mirroring is configured correctly in Microsoft Defender for Identity
-ms.date: 10/27/2020
+ms.date: 01/29/2023
 ms.topic: how-to
 ---
 
-# Validate Port Mirroring
+# Validate port mirroring
 
-This article is relevant only if you deploy deploy [!INCLUDE [Product long](includes/product-long.md)] Standalone Sensor instead of [!INCLUDE [Product short](includes/product-short.md)] Sensor.
+This article is relevant only if you deploy deploy Microsoft Defender for Identity Standalone Sensor instead of Defender for Identity Sensor.
 
 > [!NOTE]
-> [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
-The following steps walk you through the process for validating that port mirroring is properly configured. For [!INCLUDE [Product short](includes/product-short.md)] to work properly, the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor must be able to see the traffic to and from the domain controller. The main data source used by [!INCLUDE [Product short](includes/product-short.md)] is deep packet inspection of the network traffic to and from your domain controllers. For [!INCLUDE [Product short](includes/product-short.md)] to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
+The following steps walk you through the process for validating that port mirroring is properly configured. For Defender for Identity to work properly, the Defender for Identity standalone sensor must be able to see the traffic to and from the domain controller. The main data source used by Defender for Identity is deep packet inspection of the network traffic to and from your domain controllers. For Defender for Identity to see the network traffic, port mirroring needs to be configured. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 
-## Validate port mirroring using Net Mon
+## Validate port mirroring using Network Monitor
 
-1. Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor that you want to validate.
+1. Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the Defender for Identity standalone sensor that you want to validate.
 
     > [!IMPORTANT]
-    > If you choose to install Wireshark in order to validate port mirroring, restart the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor service after validation.
+    > If you choose to install Wireshark in order to validate port mirroring, restart the Defender for Identity standalone sensor service after validation.
 
 1. Open Network Monitor and create a new capture tab.
 
@@ -27,15 +27,15 @@ The following steps walk you through the process for validating that port mirror
 
     1. Ensure that P-Mode is enabled.
 
-    1. Click **New Capture**.
+    1. Select **New Capture**.
 
         ![Create new capture tab image.](media/port-mirroring-capture.png)
 
-1. In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then click **Apply**.
+1. In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then select **Apply**.
 
     ![Apply KerberosV5 or LDAP filter image.](media/port-mirroring-filter-settings.png)
 
-1. Click **Start** to start the capture session. If you do not see traffic to and from the domain controller, review your port mirroring configuration.
+1. Select **Start** to start the capture session. If you do not see traffic to and from the domain controller, review your port mirroring configuration.
 
     ![Start capture session image.](media/port-mirroring-capture-traffic.png)
 
@@ -48,4 +48,4 @@ The following steps walk you through the process for validating that port mirror
 
 - [Configure event forwarding](configure-event-forwarding.md)
 - [Configure port mirroring](configure-port-mirroring.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

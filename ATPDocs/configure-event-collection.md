@@ -1,65 +1,53 @@
 ---
-title: Install Microsoft Defender for Identity
+title: Configure event collection
 description: In this step of installing Microsoft Defender for Identity, you configure data sources.
-ms.date: 10/26/2020
+ms.date: 02/05/2023
 ms.topic: how-to
 ---
 
 # Configure event collection
 
-To enhance detection capabilities, [!INCLUDE [Product long](includes/product-long.md)] needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the [!INCLUDE [Product short](includes/product-short.md)] sensor or in case the [!INCLUDE [Product short](includes/product-short.md)] sensor is not deployed, it can be forwarded to the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor in one of two ways, by configuring the [!INCLUDE [Product short](includes/product-short.md)] standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
+To enhance detection capabilities, Microsoft Defender for Identity needs the Windows events listed in [Configure event collection](configure-windows-event-collection.md#configure-event-collection). These events can either be read automatically by the Defender for Identity sensor or if the Defender for Identity sensor isn't deployed, it can be forwarded to the Defender for Identity standalone sensor in one of two ways, by configuring the [Defender for Identity standalone sensor to listen for SIEM events or by [Configuring Windows Event Forwarding](configure-event-forwarding.md).
 
 > [!NOTE]
 >
-> - [!INCLUDE [Product short](includes/product-short.md)] standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the [!INCLUDE [Product short](includes/product-short.md)] sensor.
+> - Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
-In addition to collecting and analyzing network traffic to and from the domain controllers, [!INCLUDE [Product short](includes/product-short.md)] can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide [!INCLUDE [Product short](includes/product-short.md)] with additional information that is not available via the domain controller network traffic.
-
-## NTLM authentication using Windows Event 8004
-
-To configure Windows Event 8004 collection:
-
-1. Navigate to: *Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options*
-1. Set the **domain group policy** as follows:
-    - Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers = **Audit All**
-    - Network security: Restrict NTLM: Audit NTLM authentication in this domain = **Enable all**
-    - Network security: Restrict NTLM: Audit Incoming NTLM Traffic = **Enable auditing for all accounts**
-
-When Windows Event 8004 is parsed by [!INCLUDE [Product short](includes/product-short.md)] Sensor, [!INCLUDE [Product short](includes/product-short.md)] NTLM authentications activities are enriched with the server accessed  data.
+In addition to collecting and analyzing network traffic to and from the domain controllers, Defender for Identity can use Windows events to further enhance detections. These events can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide Defender for Identity with additional information that isn't available via the domain controller network traffic.
 
 ## SIEM/Syslog
 
-[!INCLUDE [Product short](includes/product-short.md)] Standalone sensors are configured by default to receive Syslog data. For [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
+Defender for Identity Standalone sensors are configured by default to receive Syslog data. For Defender for Identity Standalone sensors to be able to consume that data you need to forward your Syslog data to the sensor.
 
 > [!NOTE]
-> [!INCLUDE [Product short](includes/product-short.md)] only listens on IPv4 and not IPv6.
+> Defender for Identity only listens on IPv4 and not IPv6.
 
 > [!IMPORTANT]
 >
-> - Do not forward all the Syslog data to the [!INCLUDE [Product short](includes/product-short.md)] sensor.
-> - [!INCLUDE [Product short](includes/product-short.md)] supports UDP traffic from the SIEM/Syslog server.
+> - Do not forward all the Syslog data to the Defender for Identity sensor.
+> - Defender for Identity supports UDP traffic from the SIEM/Syslog server.
 
 Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server.
 
 > [!NOTE]
-> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by [!INCLUDE [Product short](includes/product-short.md)].
+> If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward all required events to be collected and analyzed by Defender for Identity.
 
 ## Configuring the Defender for Identity sensor to listen for SIEM events
 
-- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the [!INCLUDE [Product short](includes/product-short.md)] Standalone sensors. For additional information on configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
+- Configure your SIEM or Syslog server to forward all required events to the IP address of one of the Defender for Identity Standalone sensors. For more information about configuring your SIEM, see your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
 
-[!INCLUDE [Product short](includes/product-short.md)] supports SIEM events in the following formats:
+Defender for Identity supports SIEM events in the following formats:
 
 ### RSA Security Analytics
 
-&lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
+`<Syslog Header>RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0`
 
 - Syslog header is optional.
 
 - "\n" character separator is required between all fields.
 - The fields, in order, are:
     1. RsaSA constant (must appear).
-    2. The timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably in milliseconds accuracy, this is important.
+    2. The timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). Preferably in milliseconds accuracy, this is important.
     3. The Windows event ID
     4. The Windows event provider name
     5. The Windows event log name
@@ -71,27 +59,27 @@ Refer to your SIEM/Syslog server's product documentation for information on how 
 
 ### MicroFocus ArcSight
 
-CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
+`CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code`
 
 - Must comply with the protocol definition.
 
 - No syslog header.
 - The header part (the part that's separated by a pipe) must exist (as stated in the protocol).
-- The following keys in the _Extension_ part must be present in the event:
+- The following keys in the *Extension* part must be present in the event:
   - externalId = the Windows event ID
-  - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). Preferably  in milliseconds accuracy, this is important.
+  - rt = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). Preferably  in milliseconds accuracy, this is important.
   - cat = the Windows event log name
   - shost = the source host name
   - dhost = the computer receiving the event (the DC in this case)
   - duser = the user authenticating
-- The order is not important for the _Extension_ part
+- The order isn't important for the *Extension* part
 - There must be a custom key and keyLable for these two fields:
   - "EventSource"
   - "Reason or Error Code" = The result code of the NTLM
 
 ### Splunk
 
-&lt;Syslog Header&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
+`<Syslog Header>\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=`
 
 The computer attempted to validate the credentials for an account.
 
@@ -111,15 +99,15 @@ Error Code: 0x0
   - EventCode = the Windows event ID
   - Logfile = the Windows event log name
   - SourceName = The Windows event provider name
-  - TimeGenerated = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
+  - TimeGenerated = the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is important.
   - ComputerName = the source host name
   - Message = the original event text from the Windows event
 - The Message Key and value MUST be last.
-- The order is not important for the key=value pairs.
+- The order isn't important for the key=value pairs.
 
 ### QRadar
 
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because [!INCLUDE [Product short](includes/product-short.md)] necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [https://www-01.ibm.com/support/docview.wss?uid=swg21700170](https://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
+QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because Defender for Identity needs millisecond data, it's necessary to set QRadar to use agentless Windows event collection. For more information, see [QRadar: Agentless Windows Events Collection using the MSRPC Protocol](https://www.ibm.com/support/pages/qradar-agentless-windows-events-collection-using-msrpc-protocol-msrpc-faq).
 
 ```text
 <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -134,7 +122,7 @@ The fields needed are:
 - The DC fully qualified domain name
 - The Windows event ID
 
-TimeGenerated is the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to [!INCLUDE [Product short](includes/product-short.md)]). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
+TimeGenerated is the timestamp of the actual event (make sure it's not the timestamp of the arrival to the SIEM or when it's sent to Defender for Identity). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is important.
 
 Message is the original event text from the Windows event
 
@@ -143,9 +131,9 @@ Make sure to have \t between the key=value pairs.
 >[!NOTE]
 > Using WinCollect for Windows event collection is not supported.
 
-## See Also
+## See also
 
-- [[!INCLUDE [Product short](includes/product-short.md)] sizing tool](https://aka.ms/aatpsizingtool)
-- [[!INCLUDE [Product short](includes/product-short.md)] SIEM log reference](cef-format-sa.md)
-- [[!INCLUDE [Product short](includes/product-short.md)] prerequisites](prerequisites.md)
-- [Check out the [!INCLUDE [Product short](includes/product-short.md)] forum!](<https://aka.ms/MDIcommunity>)
+- [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
+- [Defender for Identity SIEM log reference](cef-format-sa.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

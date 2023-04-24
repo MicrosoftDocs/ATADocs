@@ -4,12 +4,12 @@
 title: Working with ATA audit logs
 description: This article describes how to work with ATA audit logs in the Windows Event Log.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 3/21/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 

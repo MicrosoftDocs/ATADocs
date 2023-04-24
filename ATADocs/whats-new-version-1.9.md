@@ -4,12 +4,12 @@
 title: What's new in ATA version 1.9
 description: Lists what was new in ATA version 1.9 along with known issues
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 3/25/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 
@@ -27,7 +27,7 @@ ms.suite: ems
 
 # What's new in ATA version 1.9
 
-The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=56725)  or the full version can be downloaded from the [Eval center](https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
+The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=56725).
 
 These release notes provide information about updates, new features, bug fixes, and known issues in this version of Advanced Threat Analytics.
 

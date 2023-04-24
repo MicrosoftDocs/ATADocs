@@ -4,12 +4,12 @@
 title: Validate port mirroring in Advanced Threat Analytics
 description: Describes how to validate that port mirroring is configured correctly
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 3/21/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 

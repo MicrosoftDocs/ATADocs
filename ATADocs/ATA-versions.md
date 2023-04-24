@@ -3,12 +3,12 @@
 
 title: Advanced Threat Analytics versions
 description: Explains the different support options for Microsoft Advanced Threat Analytics (ATA) versions.
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 09/21/2020
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 
 
@@ -27,14 +27,14 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-Microsoft ATA support is defined by the Microsoft Lifecycle Policy for [ATA 1.x](https://support.microsoft.com/lifecycle/search?alpha=Advanced%20Threat%20Analytics%201.X), with mainstream support ending on January 12, 2021.
+Microsoft ATA support is defined by the Microsoft Lifecycle Policy for [ATA 1.x](/lifecycle/products/?alpha=Advanced%20Threat%20Analytics%201.X), with mainstream support ending on January 12, 2021.
 
 ATA updates are supported for 12 months from their general availability (GA) release date, or 6 months after a newer update is available.
 
 > [!NOTE]
 > **Support lifecycle**
 >
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA Mainstream Support ended on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## Version History
 

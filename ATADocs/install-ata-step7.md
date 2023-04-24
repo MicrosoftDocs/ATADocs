@@ -4,12 +4,12 @@
 title: Install Advanced Threat Analytics - Step 8
 description: In the final step of installing ATA, you configure the Honeytoken user.
 keywords:
-author: dcurwin
-ms.author: dacurwin
-manager: dcurwin
-ms.date: 6/14/2018
+author: batamig
+ms.author: bagol
+manager: raynew
+ms.date: 01/10/2023
 ms.topic: conceptual
-ms.prod: advanced-threat-analytics
+ms.service: advanced-threat-analytics
 ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 
@@ -65,7 +65,7 @@ Check the attack time line to view detected suspicious activities and search for
 
 ATA starts scanning for suspicious activities immediately. Some activities, such as some of the suspicious behavior activities, is not available until ATA has had time to build behavioral profiles (minimum of three weeks).
 
-To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
+To check that ATA is up and running and catching breaches in your network, you can check out the [ATA attack simulation playbook](https://aka.ms/ataplaybook).
 
 > [!div class="step-by-step"]
 > [« Step 7](vpn-integration-install-step.md)
