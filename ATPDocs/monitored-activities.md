@@ -44,10 +44,6 @@ The information monitored by Defender for Identity is presented in the form of a
 |User Phone Number Changed|User's phone number attribute was changed.|
 |User Title Changed|User's title attribute was changed.|
 
-<!-- Rollback
-|SID-History Changed|Account's SID-History attribute was changed.|
--->
-
 ## Monitored user activities: AD security principal operations
 
 |Monitored activity|Description|
