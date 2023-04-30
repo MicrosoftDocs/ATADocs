@@ -177,6 +177,13 @@ Sensor-specific health alerts are displayed in the **Sensors settings** page and
 |----|----|----|----|----|
 |Sensor failed to write to the custom log path.|The custom log path provided in the sensor configuration cannot be created.|Stop the AATPSensorUpdater and AATPSensor services, change the SensorCustomLogLocation in the sensor configuration file to a valid path, or set it to null, and start the AATPSensorUpdater and AATPSensor services.|Low|Sensors settings page|
 
+<!--
+## Windows events missing from domain controller audit policy
+|Alert|Description|Resolution|Severity|
+|----|----|----|----|
+| Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Defender for Identity coverage.|Review your [Advanced Audit policy](configure-windows-event-collection.md) and modify as needed. | Medium|
+-->
+
 ## See also
 
 - [Defender for Identity prerequisites](prerequisites.md)
