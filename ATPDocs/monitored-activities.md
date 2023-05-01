@@ -29,7 +29,7 @@ The information monitored by Defender for Identity is presented in the form of a
 |Account Disabled Changed|Indicates whether an account is disabled or enabled.|
 |Account Expired|Date when the account expires.|
 |Account Expiry Time Changed|Change to the date when the account expires.|
-|Account Locked Changed|Change to the date when the account expires.|
+|Account Locked Changed|Changes to the account lock settings.|
 |Account Password Changed|User changed their password.|
 |Account Password Expired|User's password expired.|
 |Account Password Never Expires Changed|User's password changed to never expire.|
