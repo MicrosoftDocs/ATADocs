@@ -9,10 +9,6 @@ ms.topic: how-to
 
 This article will outline the steps to install Microsoft Defender for Identity on Active Directory or Active Directory Federation Services (AD FS) servers.
 
-<!--
-For a short demonstration of how simple the installation process is, watch this video:
--->
-
 ## Installation steps
 
 Make sure to install Defender for Identity on Windows 2012 and higher on a server with minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space. For more information, see [Minimum requirements](#minimum-requirements).
