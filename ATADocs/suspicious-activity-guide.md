@@ -193,7 +193,7 @@ Pass-the-Ticket is a lateral movement technique in which attackers steal a Kerbe
 
 **Remediation**
 
-1. If the involved account isn't sensitive, then reset the password of that account. Password resent prevents the attacker from creating new Kerberos tickets from the password hash. Any existing tickets remain usable until expired.
+1. If the involved account isn't sensitive, then reset the password of that account. Password reset prevents the attacker from creating new Kerberos tickets from the password hash. Any existing tickets remain usable until expired.
 
 1. If it's a sensitive account, you should consider resetting the KRBTGT account twice as in the Golden Ticket suspicious activity. Resetting the KRBTGT twice invalidates all Kerberos tickets in this domain so plan before doing so. See guidance in the [KRBTGT account article](/windows/security/identity-protection/access-control/active-directory-accounts#krbtgt-account).  Since this is a lateral movement technique, follow the best practices in [Pass the hash recommendations](https://www.microsoft.com/download/details.aspx?id=36036).
 
