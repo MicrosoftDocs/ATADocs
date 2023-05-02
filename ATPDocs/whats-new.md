@@ -7,7 +7,7 @@ ms.topic: overview
 
 # What's new in Microsoft Defender for Identity
 
-This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity (formerly Azure Advanced Threat Protection, also known as Azure ATP).
+This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity (formerly Azure Advanced Threat Protection, also known as Azure ATP). Defender for Identity releases are deployed gradually across customer tenants. If there's a feature documented here that you don't see yet in your tenant, check back later for the update.
 
 RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
 
