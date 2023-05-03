@@ -110,7 +110,7 @@ items:
       href: alerts-overview.md
     - name: Understanding security alerts
       href: understanding-security-alerts.md
-    - name: Manage security alerts
+    - name: Investigate security alerts
       href: manage-security-alerts.md
     - name: Monitored activities
       href: monitored-activities.md
