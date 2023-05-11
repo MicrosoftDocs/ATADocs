@@ -32,15 +32,9 @@ Released April 10, 2023
 
 - The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed. For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).
 
-- The **Identity timeline** tab has the following new enhancements:
-
-  - New filters for *Activity type*, *Protocol*, and *Location*
-  - New ability to export the timeline to a CSV file
-  - New details about activities associated with MITRE ATT&CK techniques
-
-  For more information, see [Investigate users in Microsoft 365 Defender](investigate-users.md).
+- The identity **Timeline** tab now contains new and enhanced features! With the updated timeline, you can now filter by *Activity type*, *Protocol*, and *Location*, in addition to the original filters. You can also export the timeline to a CSV file and find additional information about activities associated with MITRE ATT&CK techniques. For more information, see [Investigate users in Microsoft 365 Defender](investigate-users.md).
   
-- Version includes improvements and bug fixes for internal sensor infrastructure.
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Defender for Identity release 2.202
 
