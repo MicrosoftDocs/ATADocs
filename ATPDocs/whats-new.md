@@ -35,8 +35,6 @@ Released April 10, 2023
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
 - The identity **Timeline** tab now contains new and enhanced features! With the updated timeline, you can now filter by *Activity type*, *Protocol*, and *Location*, in addition to the original filters. You can also export the timeline to a CSV file and find additional information about activities associated with MITRE ATT&CK techniques. For more information, see [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users).
-  
-- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 - Alert tuning, now available in Microsoft 365 Defender, allows you to adjust your alerts and optimize them. Alert tuning reduces false positives, allows your SOC teams to focus on high-priority alerts, and improves threat detection coverage across your system. 
 
