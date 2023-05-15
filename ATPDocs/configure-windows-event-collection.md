@@ -79,10 +79,6 @@ Modify the Advanced Audit Policies of your domain controller using the following
         ![Audit Security Group Management.](media/advanced-audit-policy-check-step-4.png)
 
 1. From an elevated command prompt type `gpupdate`.
-
-    > [!NOTE]
-    > This step should be performed on all domain controllers in the domain, or you can wait for the next refresh cycle to update them (by default within 90 minutes)
-
 1. After applying via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
 > [!NOTE]
