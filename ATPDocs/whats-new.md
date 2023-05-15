@@ -26,7 +26,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## Defender for Identity release 2.203
 
-Released April 10, 2023
+Released May 10, 2023
 
 - New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required).
 
