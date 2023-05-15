@@ -13,7 +13,7 @@ A key component of Microsoft Defender for Identity's security insights are Later
 
 For example:
 
-:::image type="content" source="media/lmp-new.png" alt-text="Screenshot of a lateral movement path with details showing.":::
+:::image type="content" source="media/lmp-new.png" alt-text="Screenshot of a lateral movement path with details showing." lightbox="media/lmp-new.png":::
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored sign-in credentials in accounts, groups and machines with sensitive accounts.
 
