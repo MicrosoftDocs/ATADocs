@@ -5,7 +5,7 @@ ms.date: 04/16/2023
 ms.topic: how-to
 ---
 
-# Defender for Identity security alerts in Microsoft 365 Defender
+# Investigate Defender for Identity security alerts in Microsoft 365 Defender
 
 This article explains the basics of how to work with Microsoft Defender for Identity security alerts in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
@@ -85,6 +85,12 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
 
     > [!NOTE]
     > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft 365 Defender**. Each link will bring you to the relevant portal, and provide information about the alert there.
+
+## Tuning alerts (Public Preview)
+
+Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage across your system. In Microsoft 365 Defender, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
+
+For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#public-preview-tune-an-alert).
 
 ## See also
 
