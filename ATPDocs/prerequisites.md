@@ -80,6 +80,9 @@ The following table lists the minimum ports that the Defender for Identity senso
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
 \*\* One of these ports is required, but we recommend opening all of them.
 
+> [!NOTE]
+> Defender for Identity sensors might create ICMP traffic between domain controllers as part of the LDAP connection keep-alive mechanism, but opening ICMP in the firewalls is not required.
+
 ## Defender for Identity Network Name Resolution (NNR) requirements
 
 Network Name Resolution (NNR) is a main component of Defender for Identity functionality. To resolve IP addresses to computer names, Defender for Identity sensors look up the IP addresses using the following methods:
