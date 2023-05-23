@@ -184,6 +184,8 @@ items:
     href: privacy-compliance.md
   - name: Security baseline
     href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
+  - name: What's new archive
+    href: whats-new-archive.md
 - name: Classic Defender for Identity portal
   items:
   - name: Deploy
