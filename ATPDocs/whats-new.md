@@ -7,11 +7,17 @@ ms.topic: overview
 
 # What's new in Microsoft Defender for Identity
 
-This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity (formerly Azure Advanced Threat Protection, also known as Azure ATP). 
+This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity (formerly Azure Advanced Threat Protection, also known as Azure ATP).
+
+## Defender for Identity deployment schedule
 
 Defender for Identity releases are deployed gradually across customer tenants. If there's a feature documented here that you don't see yet in your tenant, check back later for the update.
 
-RSS feed: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
+## RSS feed
+
+Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
+
+## Other what's new resources
 
 For more information on what's new with other Microsoft Defender security products, see:
 
@@ -19,10 +25,7 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
-> [!NOTE]
-> Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
->
->For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
+For updates about versions and features released 6 months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## May 2023
 
