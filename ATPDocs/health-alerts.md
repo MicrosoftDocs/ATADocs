@@ -20,7 +20,7 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
 1. Under **General**, select **Health issues**.
 
-    ![Screenshot of the Heathl issues page.](media/healthissues.png)
+    ![Screenshot of the Health issues page.](media/healthissues.png)
 
 1. The **Health issues** page appears, where you can see **Open**, **Closed**, and **Suppressed** health issues.
 
