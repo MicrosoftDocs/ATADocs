@@ -94,7 +94,7 @@ Released February 15, 2023
 
 - **Identity timeline is now available as part of the new Identity page in Microsoft 365 Defender**: The updated User page in Microsoft 365 Defender now has a new look and feel, with an expanded view of related assets and a new dedicated timeline tab. The timeline represents activities and alerts from the last 30 days, and it unifies the user’s identity entries across all available workloads (Defender for Identity/Defender for Cloud Apps/Defender for Endpoint). By using the timeline, you can easily focus on activities that the user performed (or were performed on them), in specific timeframes. For more information, see [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users)
 
-- **Further improvements for honeytoken alerts**: In [release 2.191](#defender-for-identity-release-2191) we introduced several new scenarios to the honeytoken activity alert.  
+- **Further improvements for honeytoken alerts**: In [release 2.191](whats-new-archive.md#defender-for-identity-release-2191) we introduced several new scenarios to the honeytoken activity alert.  
 
   Based on customer feedback, we've decided to split the honeytoken activity alert into five separate alerts:
 
