@@ -1,7 +1,7 @@
 ---
 title: Understand and investigate Lateral Movement Paths 
 description: This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
-ms.date: 03/20/2023
+ms.date: 05/15/2023
 ms.topic: conceptual
 ---
 
@@ -11,15 +11,17 @@ Lateral movement is when an attacker uses non-sensitive accounts to gain access 
 
 A key component of Microsoft Defender for Identity's security insights are Lateral Movement Paths or LMPs. Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Defender for Identity LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs help you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
 
-![Defender for Identity Lateral Movement Path (LMP)](media/lmp.png)
+For example:
+
+:::image type="content" source="media/lmp-new.png" alt-text="Screenshot of a lateral movement path with details showing." lightbox="media/lmp-new.png":::
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored sign-in credentials in accounts, groups and machines with sensitive accounts.
 
 ## Where can I find Defender for Identity LMPs?
 
-Every identity discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** information under the **Observed in organization** tab.
+Every identity discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** information under the **Observed in organization** tab. For example:
 
-:::image type="content" source="media/view-different-date.png" alt-text="Lateral movement paths.":::
+:::image type="content" source="media/view-different-date-new.png" alt-text="Lateral movement paths.":::
 
 The LMP for each entity provides different information depending on the sensitivity of the entity:
 
