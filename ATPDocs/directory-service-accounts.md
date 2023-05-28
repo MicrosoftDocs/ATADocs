@@ -185,6 +185,10 @@ C:\Windows\System32\dsacls.exe $params
 # Grant the 'List Contents' and 'Read Property' permissions to the user or group:
 $params = @("$deletedObjectsDN", '/G', "$($Identity):LCRP")
 C:\Windows\System32\dsacls.exe $params
+  
+# To remove the permissions, uncomment the next 2 lines and run them instead of the two prior ones:
+# $params = @("$deletedObjectsDN", '/R', $Identity)
+# C:\Windows\System32\dsacls.exe $params
 ```
 
 For more information about configuring read-only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section of the [View or Set Permissions on a Directory Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)) article.
