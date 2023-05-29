@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 05/23/2023
+ms.date: 05/29/2023
 ms.topic: overview
 ---
 
@@ -9,17 +9,15 @@ ms.topic: overview
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity.
 
-## Defender for Identity deployment schedule
+> [!TIP]
+> Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
+> 
+
+## What's new scope and references
 
 Defender for Identity releases are deployed gradually across customer tenants. If there's a feature documented here that you don't see yet in your tenant, check back later for the update.
 
-## RSS feed
-
-Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Microsoft+Defender+for+Identity%22&locale=en-us`
-
-## Other what's new resources
-
-For more information on what's new with other Microsoft Defender security products, see:
+For more information, see also:
 
 - [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
@@ -28,6 +26,22 @@ For more information on what's new with other Microsoft Defender security produc
 For updates about versions and features released 6 months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## May 2023
+
+### Enhanced Active Directory account control highlights
+
+The Microsoft 365 Defender **Identity** page now includes new Active Directory account control data.
+
+On the **Overview** tab, we've added a new card to highlight important security settings and Active directory controls. For example, learn whether a specific user is able to bypass password requirements or has a password that never expires. 
+
+For more information, see the [User-Account-Control attribute](/windows/win32/adschema/a-useraccountcontrol) documentation.
+
+### Defender for Identity release 2.204
+
+Released May ?, 2023
+
+-	New health alert for VPN (radius) integration data ingestion failures. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#radius-accounting-vpn-integration-data-ingestion-failures).
+
+-	This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Defender for Identity release 2.203
 
