@@ -29,9 +29,13 @@ For updates about versions and features released 6 months ago or earlier, see th
 
 ### Enhanced Active Directory account control highlights
 
-The Microsoft 365 Defender **Identity** page now includes new Active Directory account control data.
+The Microsoft 365 Defender **Identity** > user details page now includes new Active Directory account control data.
 
-On the **Overview** tab, we've added a new card to highlight important security settings and Active directory controls. For example, learn whether a specific user is able to bypass password requirements or has a password that never expires. 
+On the user details **Overview** tab, we've added the new **Active Directory account controls** card to highlight important security settings and Active directory controls. For example, use this card to learn whether a specific user is able to bypass password requirements or has a password that never expires.
+
+For example:
+
+:::image type="content" source="media/whats-new/uac-flags.png" alt-text="Screenshot of the UAC flags card on a user details page.":::
 
 For more information, see the [User-Account-Control attribute](/windows/win32/adschema/a-useraccountcontrol) documentation.
 
