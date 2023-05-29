@@ -7,7 +7,7 @@ ms.topic: overview
 
 # What is Microsoft Defender for Identity?
 
-Microsoft Defender for Identity (formerly Azure Advanced Threat Protection, also known as Azure ATP) is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
+Microsoft Defender for Identity is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 
 Defender for Identity enables SecOp analysts and security professionals struggling to detect advanced attacks in hybrid environments to:
 
@@ -15,6 +15,8 @@ Defender for Identity enables SecOp analysts and security professionals struggli
 - Protect user identities and credentials stored in Active Directory
 - Identify and investigate suspicious user activities and advanced attacks throughout the kill chain
 - Provide clear incident information on a simple timeline for fast triage
+
+Defender for Identity was formerly known as Azure Advanced Threat Protection (Azure ATP).
 
 ## Monitor and analyze user behavior and activities
 
@@ -96,7 +98,7 @@ Defender for Identity is designed to reduce general alert noise, providing only 
 
 Get started with [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
 
-## See Also
+## See also
 
 - [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy)
 - [Defender for Identity frequently asked questions](technical-faq.yml)

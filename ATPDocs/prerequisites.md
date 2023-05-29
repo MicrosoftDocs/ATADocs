@@ -53,7 +53,8 @@ We recommend using a proxy server instead of allowing direct outbound connectivi
 To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>.
 
     > [!NOTE]
-    > You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
+    > - You can use ExpressRoute public peering and add the *Microsoft Defender for Identity* (12076:5520) service BGP community to your route filter, to route the network traffic destined to the Defender for Identity cloud services through your ExpressRoute. For more information, see [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)
+    > - You can also use our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
     ![Defender for Identity architecture diagram](media/architecture-topology.png)
 
@@ -78,6 +79,9 @@ The following table lists the minimum ports that the Defender for Identity senso
 
 \* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
 \*\* One of these ports is required, but we recommend opening all of them.
+
+> [!NOTE]
+> Defender for Identity sensors might create ICMP traffic between domain controllers as part of the LDAP connection keep-alive mechanism, but opening ICMP in the firewalls is not required.
 
 ## Defender for Identity Network Name Resolution (NNR) requirements
 

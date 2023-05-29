@@ -29,7 +29,7 @@ The information monitored by Defender for Identity is presented in the form of a
 |Account Disabled Changed|Indicates whether an account is disabled or enabled.|
 |Account Expired|Date when the account expires.|
 |Account Expiry Time Changed|Change to the date when the account expires.|
-|Account Locked Changed|Change to the date when the account expires.|
+|Account Locked Changed|Changes to the account lock settings.|
 |Account Password Changed|User changed their password.|
 |Account Password Expired|User's password expired.|
 |Account Password Never Expires Changed|User's password changed to never expire.|
@@ -43,10 +43,6 @@ The information monitored by Defender for Identity is presented in the form of a
 |User Manager Changed|User's manager attribute was changed.|
 |User Phone Number Changed|User's phone number attribute was changed.|
 |User Title Changed|User's title attribute was changed.|
-
-<!-- Rollback
-|SID-History Changed|Account's SID-History attribute was changed.|
--->
 
 ## Monitored user activities: AD security principal operations
 

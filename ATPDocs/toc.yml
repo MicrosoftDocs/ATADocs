@@ -110,7 +110,7 @@ items:
       href: alerts-overview.md
     - name: Understanding security alerts
       href: understanding-security-alerts.md
-    - name: Manage security alerts
+    - name: Investigate security alerts
       href: manage-security-alerts.md
     - name: Monitored activities
       href: monitored-activities.md
@@ -184,6 +184,8 @@ items:
     href: privacy-compliance.md
   - name: Security baseline
     href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
+  - name: What's new archive
+    href: whats-new-archive.md
 - name: Classic Defender for Identity portal
   items:
   - name: Deploy
