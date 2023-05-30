@@ -288,7 +288,7 @@ Validate the following permissions:
 
 **Description**:
 
-The token signing and token decryption certificated, including the private keys of AD FS, are stored in AD FS configuration database. The certificates are encrypted using a technology called Distribute Key Manager. AD FS creates and use these DKM keys when needed. To preform attacks like Golden SAML, attacker would need the private keys that signs the SAML objects (similarly to how krbtgt is needed for Golden Ticket attacks). Using the AD FS user account, attack can access the DKM key and decrpyt the certificates used to sign SAML tokens. This detection tries to find actor that tries to read the DKM key of AD FS object.
+The token signing and token decryption certificate, including the Active Directory Federation Services (AD FS) private keys, are stored in the AD FS configuration database. The certificates are encrypted using a technology called Distribute Key Manager. AD FS creates and uses these DKM keys when needed. To perform attacks like Golden SAML, the attacker would need the private keys that sign the SAML objects, similarly to how the **krbtgt** account is needed for Golden Ticket attacks. Using the AD FS user account, an attacker can access the DKM key and decrypt the certificates used to sign SAML tokens. This detection tries to find any actors that try to read the DKM key of AD FS object.
 
 **Learning period**:
 
