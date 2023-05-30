@@ -181,6 +181,12 @@ Sensor-specific health alerts are displayed in the **Sensor health issues** tab 
 |----|----|----|----|----|
 |Sensor failed to write to the custom log path.|The custom log path provided in the sensor configuration can't be created.|1. Stop the `AATPSensorUpdater` and `AATPSensor` services. <br>2. Change the `SensorCustomLogLocation` in the sensor configuration file to a valid path or set it to null. <br>3. Start the `AATPSensorUpdater` and `AATPSensor` services again.|Low|Sensors health issues tab|
 
+### Radius accounting (VPN integration) data ingestion failures
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
+
 <!--
 ## Windows events missing from domain controller audit policy
 |Alert|Description|Resolution|Severity|

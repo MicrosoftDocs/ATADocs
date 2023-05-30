@@ -199,15 +199,15 @@ Write-Host "Press any key to continue..." -ForegroundColor Red
 
     1. Click **New Capture**.
 
-        ![Create new capture tab image.](media/ATA-Port-Mirroring-Capture.jpg)
+        ![Screenshot of the Microsoft Network Monitor dialog showing the New Capture button.](media/ATA-Port-Mirroring-Capture.jpg)
 
 1. In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then click **Apply**.
 
-    ![Apply KerberosV5 or LDAP filter image.](media/ATA-Port-Mirroring-filter-settings.jpg)
+    ![Screenshot of the Microsoft Network Monitor dialog with the Display Filter area showing.](media/ATA-Port-Mirroring-filter-settings.jpg)
 
 1. Click **Start** to start the capture session. If you do not see traffic to and from the domain controller, review your port mirroring configuration.
 
-    ![Start capture session image.](media/ATA-Port-Mirroring-Capture-traffic.jpg)
+    ![Screenshot of the Microsoft Network Monitor dialog with the Start button showing.](media/ATA-Port-Mirroring-Capture-traffic.jpg)
 
     > [!NOTE]
     > It is important to make sure you see traffic to and from the domain controllers.
