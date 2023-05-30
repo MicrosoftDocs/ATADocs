@@ -23,7 +23,7 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 
 ---
 
-# Configuring Windows Event Forwarding
+# Configuring Windows Event Collection
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
