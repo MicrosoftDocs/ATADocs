@@ -1,17 +1,37 @@
 ---
-title: Quick installation guide
+title: Quick installation guide | Microsoft Defender for Identity
 description: Learn how to quickly install Microsoft Defender for Identity.
-ms.date: 04/16/2023
-ms.topic: how-to
+ms.date: 05/30/2023
+ms.topic: quickstart
 ---
 
 # Quick installation guide
 
-This article will outline the steps to install Microsoft Defender for Identity on Active Directory or Active Directory Federation Services (AD FS) servers.
+This article outlines the steps required to install Microsoft Defender for Identity on Active Directory or Active Directory Federation Services (AD FS) servers.
 
-## Installation steps
+## Prerequisites
 
-Make sure to install Defender for Identity on Windows 2012 and higher on a server with minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space. For more information, see [Minimum requirements](#minimum-requirements).
+Make sure to install Defender for Identity on Windows 2012 and higher on a domain controller server with minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space.
+
+The following table lists installation support across several operating system versions:
+
+| Operating system version | Server with Desktop Experience | Server Core | Nano Server | Supported installations|
+| ---------------------------- | --------------------------------------- | -------------------- | -------------------- | -------------------------------- |
+| Windows Server  2012[*](#eos)        | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
+| Windows Server  2012 R2[*](#eos)     | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
+| Windows Server  2016         | ✔                                       | ✔                    | Not supported                    | Domain controller,  AD FS        |
+| Windows Server  2019[**](#kb)       | ✔                                       | ✔                    | Not supported                    | Domain controller,  AD FS        |
+| Windows Server  2022         | ✔                                       | ✔                    | Not supported                      | Domain controller,  AD FS        |
+
+<a name="eos"></a>* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on **October 10, 2023**. We recommend that you plan to upgrade those servers by that point, as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
+
+<a name="kb"></a>** Requires [KB4487044](https://support.microsoft.com/topic/february-12-2019-kb4487044-os-build-17763-316-6502eb5d-dde8-6902-e149-27ef359ed616) or a newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
+
+> [!TIP]
+> For accurate calculations of the resources required by your server according to your specific load, refer to [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
+>
+
+## Install the Defender for Identity sensor
 
 1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com) in the **Settings** -> **Identities** -> **Sensors** page.
 
@@ -23,27 +43,9 @@ Make sure to install Defender for Identity on Windows 2012 and higher on a serve
     - To get your instance name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
     - For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
 
-1. From the domain controller, run the installer downloaded in step 1 and follow the instructions on the screen.  
+1. From the domain controller, run the downloaded sensor installation file and follow the instructions on the screen.  Use the silent installation to install the sensor on multiple domain controllers.
 
-    - For deployment on multiple domain controllers, use the silent installation.
 
-## Minimum requirements
-
-The Defender for Identity sensor supports installation on the different operating system versions, as described in the following table. It requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on the domain controller.
-
-For accurate calculations of the resources required by your server according to your specific load, refer to [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
-
-| **Operating system version** | **Server with Desktop**  **Experience** | **Server**  **Core** | **Nano**  **Server** | **Supported**  **installations** |
-| ---------------------------- | --------------------------------------- | -------------------- | -------------------- | -------------------------------- |
-| Windows Server  2012*        | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
-| Windows Server  2012 R2*     | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
-| Windows Server  2016         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS        |
-| Windows Server  2019**       | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS        |
-| Windows Server  2022         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS        |
-
-\* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
-
-\*\* Requires [KB4487044](https://support.microsoft.com/topic/february-12-2019-kb4487044-os-build-17763-316-6502eb5d-dde8-6902-e149-27ef359ed616) or a newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
 ### Notes
 
