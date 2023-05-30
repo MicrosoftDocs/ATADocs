@@ -29,7 +29,7 @@ The following steps walk you through the process for validating that port mirror
 
     1. Select **New Capture**.
 
-        ![Screenshot of the Microsoft Network Monitor dialog showing the New Capture button.](media/port-mirroring-capture.png)
+        ![Screenshot of the Microsoft Network Monitor dialog highlighting the New Capture button.](media/port-mirroring-capture.png)
 
 1. In the Display Filter window, enter the following filter: **KerberosV5 OR LDAP** and then select **Apply**.
 
