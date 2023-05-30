@@ -41,7 +41,7 @@ For more information, see the [User-Account-Control attribute](/windows/win32/ad
 
 ### Defender for Identity release 2.204
 
-Released May ?, 2023
+Released May 29, 2023
 
 -	New health alert for VPN (radius) integration data ingestion failures. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#radius-accounting-vpn-integration-data-ingestion-failures).
 
