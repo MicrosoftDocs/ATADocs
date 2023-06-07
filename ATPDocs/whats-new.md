@@ -25,6 +25,21 @@ For more information, see also:
 
 For updates about versions and features released 6 months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## June 2023
+
+### New security posture reports
+
+Defender for Identity now provides the following new security posture reports:
+
+- Remove the attribute 'password never expires' from accounts in your domain
+- Remove access rights on suspicious accounts with the Admin SDHolder permission 
+- Manage accounts with passwords more than 180 days old.
+- Remove non-admin accounts with DCSync permissions
+- Remove local admins on identity assets
+- Enable security features like Enhanced Protection for Authentication (EPA) for your domains
+
+For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
 ## May 2023
 
 ### Enhanced Active Directory account control highlights

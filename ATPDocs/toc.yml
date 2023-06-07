@@ -172,6 +172,16 @@ items:
       href: security-assessment-unsecure-sid-history-attribute.md
     - name: Weak cipher usage assessment
       href: security-assessment-weak-cipher.md
+    - name: Password never expires
+      href: security-assessment-password-never-expires.md
+    - name: Remove suspicious access rights
+      href: security-assessment-remove-suspicious-access-rights.md
+    - name: Old passwords
+      href: security-assessment-old-passwords.md
+    - name: Non-admin accounts DCSync
+      href: security-assessment-non-admin-accounts-dcsync.md
+    - name: Remove local admins
+      href: security-assessment-remove-local-admins.md      
 - name: Reference
   items:
   - name: Frequently asked questions
