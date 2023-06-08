@@ -1,6 +1,6 @@
 ---
 title: Manage accounts with passwords more than 180 days old | Microsoft Defender for Identity
-description: Learn about Microsoft Defender for Identity's `Do not expire passwords` security assessment in Microsoft Secure Score.
+description: Learn about Microsoft Defender for Identity's `Manage accounts with passwords more than 180 days old` security assessment in Microsoft Secure Score.
 ms.date: 06/08/2023
 ms.topic: how-to
 ---
