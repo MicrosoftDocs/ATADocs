@@ -27,7 +27,7 @@ The following actions can be performed directly on the user account:
 
 ## Prerequisites
 
-To perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+Microsoft Defender for Identity will use an account to perform the above actions. By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the LocalSystem account of the domain controller and perform the actions. However, you can change this default behavior by setting up a gMSA account [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
 
 ## Permissions
 
