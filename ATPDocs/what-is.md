@@ -18,6 +18,8 @@ Defender for Identity enables SecOp analysts and security professionals struggli
 
 Defender for Identity was formerly known as Azure Advanced Threat Protection (Azure ATP).
 
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 ## Monitor and analyze user behavior and activities
 
 Defender for Identity monitors and analyzes user activities and information across your network, such as permissions and group membership, creating a behavioral baseline for each user. Defender for Identity then identifies anomalies with adaptive built-in intelligence, giving you insights into suspicious activities and events, revealing the advanced threats, compromised users, and insider threats facing your organization. Defender for Identity's proprietary sensors monitor organizational domain controllers, providing a comprehensive view for all user activities from every device.

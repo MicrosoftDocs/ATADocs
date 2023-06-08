@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 05/29/2023
+ms.date: 06/08/2023
 ms.topic: overview
 ---
 
@@ -12,6 +12,8 @@ This article is updated frequently to let you know what's new in the latest rele
 > [!TIP]
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
 >
+
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
 
 ## What's new scope and references
 
