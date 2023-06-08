@@ -17,7 +17,7 @@ Passwords more than 180 days old increase vulnerability to password attacks and 
 
     For example:
 
-    :::image type="content" source="media/secure-score/old-passwords.png" alt-text="Screenshot of the Manage accounts with passwords more than 180 days old security assessment.":::
+    :::image type="content" source="media/secure-score/old-passwords.png" alt-text="Screenshot of the Manage accounts with passwords more than 180 days old security assessment." lightbox="media/secure-score/old-passwords.png":::
 
 1. Review this list of exposed entities to discover which of your accounts have a password more than 180 days old.
 

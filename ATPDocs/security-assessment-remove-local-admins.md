@@ -20,7 +20,7 @@ Every local admin on a Tier-0 system is an indirect Domain Admin from an attacke
 
     For example:
 
-    :::image type="content" source="media/secure-score/local-admins.png" alt-text="Screenshot of the Remove local admins on identity assets security assessment.":::
+    :::image type="content" source="media/secure-score/local-admins.png" alt-text="Screenshot of the Remove local admins on identity assets security assessment." lightbox="media/secure-score/local-admins.png":::
 
 1. Review this list of exposed entities to discover which of your accounts have local admin rights on your identity assets.
 

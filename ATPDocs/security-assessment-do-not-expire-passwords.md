@@ -17,7 +17,7 @@ Having the **Password never expires** attribute configured poses risks like weak
 
     For example:
 
-    :::image type="content" source="media/secure-score/do-not-expire-passwords.png" alt-text="Screenshot of the Do not expire passwords security assessment":::
+    :::image type="content" source="media/secure-score/do-not-expire-passwords.png" alt-text="Screenshot of the Do not expire passwords security assessment" lightbox="media/secure-score/do-not-expire-passwords.png":::
 
 1. Review the list of of exposed entities that have the 'password never expire' attribute.
 

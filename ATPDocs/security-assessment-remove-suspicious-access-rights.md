@@ -20,7 +20,7 @@ Having non-sensitive accounts with **Admin SDHolder** (security descriptor holde
 
     For example:
 
-    :::image type="content" source="media/secure-score/remove-suspicious-access-rights.png" alt-text="Screenshot of the Admin SDHolder security assessment.":::
+    :::image type="content" source="media/secure-score/remove-suspicious-access-rights.png" alt-text="Screenshot of the Admin SDHolder security assessment." lightbox="media/secure-score/remove-suspicious-access-rights.png":::
 
 1. Review the list of exposed entities to discover which of your non-sensitive accounts have the **Admin SDHolder** permission.
 
