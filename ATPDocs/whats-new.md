@@ -31,12 +31,12 @@ For updates about versions and features released 6 months ago or earlier, see th
 
 Defender for Identity now provides the following new security posture reports:
 
-- Remove the attribute 'password never expires' from accounts in your domain
-- Remove access rights on suspicious accounts with the Admin SDHolder permission 
-- Manage accounts with passwords more than 180 days old.
-- Remove non-admin accounts with DCSync permissions
-- Remove local admins on identity assets
-- Enable security features like Enhanced Protection for Authentication (EPA) for your domains
+- [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
+- [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
+- [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
+- [Remove non-admin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
+- [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
+- [Enable security features like Enhanced Protection for Authentication (EPA) for your domains](security-assessment-open-security-features.md)
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
 
