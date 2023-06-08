@@ -36,7 +36,6 @@ Defender for Identity now provides the following new security posture reports:
 - [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
 - [Remove non-admin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
 - [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
-- [Enable security features like Enhanced Protection for Authentication (EPA) for your domains](security-assessment-open-security-features.md)
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
 
