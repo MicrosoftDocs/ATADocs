@@ -48,7 +48,7 @@ For accurate calculations of the resources required by your server according to 
 
 ## Install Defender for Identity
 
-Make sure to install Defender for Identity on Windows 2012 and higher on a server with minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space. For more information, see [Minimum requirements](#minimum-requirements).
+Make sure to install Defender for Identity on Windows 2012 and higher on a server with minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space. For more information, see [Minimum system requirements](#minimum-system-requirements).
 
 1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com) in the **Settings** -> **Identities** -> **Sensors** page.
 
