@@ -40,6 +40,7 @@ The following new security posture assessments are now available in Microsoft Se
 - [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
 - [Remove non-admin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
 - [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
+- [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
 
