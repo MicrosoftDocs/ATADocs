@@ -7,6 +7,10 @@ ms.topic: how-to
 
 # Security assessment: Manage accounts with passwords more than 180 days old
 
+> [!TIP]
+> We highly recommend moving your organization to a password-less strategy. For more information, see [Password-less strategy - Windows Security | Microsoft Learn](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
+>
+
 ## Why are passwords that are older than 180 days a risk?
 
 Passwords more than 180 days old increase vulnerability to password attacks and heighten the risk of credential theft. These passwords may also lead to non-compliance with security standards, reduce accountability and user awareness, and impede incident response efforts in case of a security breach.
@@ -20,6 +24,8 @@ Passwords more than 180 days old increase vulnerability to password attacks and 
     :::image type="content" source="media/secure-score/old-passwords.png" alt-text="Screenshot of the Manage accounts with passwords more than 180 days old security assessment." lightbox="media/secure-score/old-passwords.png":::
 
 1. Review this list of exposed entities to discover which of your accounts have a password more than 180 days old.
+
+    This report targets accounts that regularly authenticate using passwords. Password-less accounts are not listed in this report.
 
 1. Take appropriate action on those entities either by making them change their password or restricting their access to sensitive resources.
 

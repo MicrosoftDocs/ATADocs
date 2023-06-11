@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 06/08/2023
+ms.date: 06/11/2023
 ms.topic: overview
 ---
 
@@ -31,7 +31,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### New security posture reports
 
-Defender for Identity now provides the following new security posture reports:
+Defender for Identity's identity security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations.
+
+The following new security posture assessments are now available in Microsoft Secure Score:
 
 - [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
 - [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)

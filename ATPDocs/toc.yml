@@ -154,6 +154,8 @@ items:
       href: security-assessment-remove-suspicious-access-rights.md
     - name: DCSync permissions
       href: security-assessment-non-admin-accounts-dcsync.md
+    - name: Deploy Defender for Identity
+      href: security-assessment-deploy-defender-for-identity.md
     - name: Domain controllers with Print spooler service available assessment
       href: security-assessment-print-spooler.md
     - name: Do not expire passwords

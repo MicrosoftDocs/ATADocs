@@ -7,6 +7,10 @@ ms.topic: how-to
 
 # Security assessment: Do not expire passwords
 
+> [!TIP]
+> We highly recommend moving your organization to a password-less strategy. For more information, see [Password-less strategy - Windows Security | Microsoft Learn](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
+>
+
 ## Why is the 'Password never expires` attribute a risk?
 
 Having the **Password never expires** attribute configured poses risks like weakened password security, increased exposure to credential theft, compliance and audit failures, and potential delays in incident response and recovery.
@@ -21,7 +25,10 @@ Having the **Password never expires** attribute configured poses risks like weak
 
 1. Review the list of of exposed entities that have the 'password never expire' attribute.
 
-    Entities include accounts that were previously authenticated using a password and currently have their password set to 'never expire'.
+    - Entities include accounts that were previously authenticated using a password and currently have their password set to 'never expire'.
+
+    - This report targets accounts that regularly authenticate using passwords. Password-less accounts are not listed in this report.
+
 
 1. Take appropriate action on those entities by remove setting that are not secure.
 
