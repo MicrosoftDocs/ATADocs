@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity reports in Microsoft 365 Defender
-description: Learn how to generate Microsoft Defender for Identity reports from Microsoft 365 Defender.
+title: Download and schedule Microsoft Defender for Identity reports in Microsoft 365 Defender
+description: Learn how to download and schedule Microsoft Defender for Identity reports from Microsoft 365 Defender.
 ms.date: 06/11/2023
 ms.topic: how-to
 ---
 
-# Microsoft Defender for Identity reports in Microsoft 365 Defender
+# Download and schedule Defender for Identity reports in Microsoft 365 Defender
 
 The Microsoft 365 Defender **Reports** page includes Defender for Identity reports with system and entity status details. Use these templates to create your own reports about system health, security alerts, and potential lateral movement paths detected in your environment.
 
@@ -28,7 +28,7 @@ Available reports include:
 
 To generate a report on demand:
 
-1. In Microsoft 365 Defender, select **Settings > Identities**, and then select one or more reports. <!--unclear how to get here?-->/
+1. In Microsoft 365 Defender, select **Settings > Identities**, and then select one or more reports. <!--unclear how to get here?-->
 1. Select **Download** and define the time period for your report.
 1. Select **Download report** to start generating and downloading your report.
 

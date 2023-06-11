@@ -76,8 +76,6 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
-    - name: Reports
-      href: reports.md
     - name: Health alerts
       href: health-alerts.md
     - name: VPN integration
@@ -90,6 +88,8 @@ items:
       href: automated-response-exclusions.md
     - name: Email and syslog notifications
       href: notifications.md
+    - name: Download and schedule reports
+      href: reports.md
     - name: Advanced settings
       href: advanced-settings.md
   - name: Troubleshooting
