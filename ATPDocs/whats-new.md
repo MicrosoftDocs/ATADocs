@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 06/08/2023
+ms.date: 06/11/2023
 ms.topic: overview
 ---
 
@@ -26,6 +26,20 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
+## June 2023
+
+### Defender for Identity report downloads and scheduling in Microsoft 365 Defender
+
+Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).
+
+Download and schedule reports in Microsoft 365 Defender by navigating with one of the following paths:
+
+- **Reports > Identities > Report management**
+- **Settings > Identities > Report management** <!--unclear exactly how this works-->
+
+For more information, see [Microsoft Defender for Identity reports in Microsoft 365 Defender](reports.md).
+
 
 ## May 2023
 
