@@ -11,7 +11,9 @@ ms.topic: how-to
 
 Microsoft Defender for Identity discovers if particular users are **sensitive** along with providing attributes that surface if they are inactive, disabled, or expired.
 
-However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant [sensitive entities](/defender-for-identity/entity-tags) are targets of opportunity for malicious actors to gain sensitive access to your organization.
+However, **Sensitive** accounts can also become *dormant* if they are not used for a period of 180 days. Dormant sensitive entities are targets of opportunity for malicious actors to gain sensitive access to your organization. 
+
+For more information, see [Sensitive tags](entity-tags.md#sensitive--tags).
 
 ## What risk do dormant entities create in sensitive groups?
 
