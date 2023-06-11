@@ -168,8 +168,6 @@ items:
       href: security-assessment-laps.md
     - name: Legacy protocols usage assessment
       href: security-assessment-legacy-protocols.md
-    - name: Missing security features like EPA
-      href: security-assessment-open-security-features.md
     - name: Passwords older than 180 days
       href: security-assessment-old-passwords.md
     - name: Remove local admins on identity assets
