@@ -145,7 +145,7 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 
         :::image type="content" source="media/clear-all.png" alt-text="Select Clear all.":::
 
-    1. Then scroll back up and select **Full Control**. All the permissions will be selected. Then **uncheck** the **List contents**, **Read permissions**, and **Read all properties** permissions. Select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
+    1. Then scroll back up and select **Full Control**. All the permissions will be selected. Then **uncheck** the **List contents**, **Read all properties**, and **Read permissions** permissions. Select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
 
         ![Select permissions.](media/select-permissions.png)
 
