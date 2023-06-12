@@ -1,5 +1,3 @@
-- name: Advanced Threat Analytics documentation
-  href: index.yml
 - name: Understand and Explore
   items:
   - name: What is Microsoft Advanced Threat Analytics?
