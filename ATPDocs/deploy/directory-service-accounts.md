@@ -165,7 +165,7 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName
 -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroupName 
 ```
 
-## Grant required DSA permissions
+### Grant required DSA permissions
 
 The DSA requires read permissions on all objects in Active Directory, including the **Deleted Objects** container.
 
@@ -202,7 +202,7 @@ Import-Module ActiveDirectory
 Install-ADServiceAccount -Identity 'mdiSvc01'
 ```
 
-## How to validate that the domain controller can retrieve the gMSA's password
+### Validate that the domain controller can retrieve the gMSA's password
 
 To validate that the server has the required permissions to retrieve the gMSA's password, run the following PowerShell command:
 
@@ -215,62 +215,65 @@ If it has the permissions, the command will return a **True** message.
 >[!NOTE]
 >If you get an error message when running Test-ADServiceAccount, either restart the server or run `klist purge -li 0x3e7` and try again.
 
-## Verify that the gMSA account has the required rights (if needed)
+### Verify that the gMSA account has the required rights
 
-The sensor (Azure Advanced Threat Protection Sensor) service runs as **LocalService** and performs impersonation of the DSA account. The impersonation will fail if the **Log on as a service** policy is configured but the permission hasn't been granted to the gMSA account, and you'll receive a health alert: **Directory services user credentials are incorrect**.
+The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* and performs impersonation of the DSA account. The impersonation will fail if the *Log on as a service* policy is configured but the permission hasn't been granted to the gMSA account. In such cases, you'll see the following health alert: **Directory services user credentials are incorrect.**
 
-If you receive the alert, you should check if the **Log on as a service** policy is configured.
+If you see this alert, we recommend checking to see if the *Log on as a service policy* is configured. If you need to configure the *Log on as a service* policy, do so either in a Group Policy setting or in a Local Security Policy.
 
-The **Log on as a service** policy can be configured either in a Group Policy setting or in a Local Security Policy.
+- **To check the Local Policy**, run `secpol.msc` and select **Local Policies**. Under **User Rights Assignment**, go to the **Log on as a service policy** setting. For example:
 
-- To check the Local Policy, run **secpol.msc** and select **Local Policies**. Under **User Rights Assignment**, go to the **Log on as a service** policy setting. If the policy is enabled, add the gMSA account to the list of accounts that can log on as a service.
+    :::image type="content" source="../media/log-on-as-a-service.png" alt-text="Screenshot of the log on as a service properties.":::
 
-- To check if the setting is set in Group Policy, run **rsop.msc** and see if the setting **Computer Configuration**  -> **Windows Settings** -> **Security Settings** -> **Local Policies** -> **User Rights Assignment** -> **Log on as a service** is set. If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
+    If the policy is enabled, add the gMSA account to the list of accounts that can log on as a service.
 
-[![Log on as a service in GPMC.](media/log-on-as-a-service-gpmc.png)](media/log-on-as-a-service-gpmc.png#lightbox)
+- **To check if the setting is configured in a Group Policy**: Run `rsop.msc` and see if the **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment -> Log on as a service** policy is selected. For example:
+    
+    :::image type="content" source="../media/log-on-as-a-service-gpmc.png" alt-text="Screenshot of the Log on as a service policy in the Group Policy Management Editor." lightbox="../media/log-on-as-a-service-gpmc.png":::
 
-[![Log on as a service properties.](media/log-on-as-a-service.png)](media/log-on-as-a-service.png#lightbox)
+    If the setting is configured, add the gMSA account to the list of accounts that can log on as a service in the Group Policy Management Editor.
 
 > [!NOTE]
-> If you use Group Policy to configure the **Log on as a service** setting, make sure you add both **NT Service\All Services** and the gMSA account you created.
+> If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure you add both **NT Service\All Services** and the gMSA account you created.
 
-## Configure Directory Service account in Microsoft 365 Defender
+<!--for more information, see? -->
+
+## Configure a Directory Service account in Microsoft 365 Defender
 
 To connect your sensors with your Active Directory domains, you'll need to configure Directory Service accounts in Microsoft 365 Defender.
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
+1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings > Identities**. For example:
 
-    [![Go to Settings, then Identities.](media/settings-identities.png)](media/settings-identities.png#lightbox)
+    [![Screenshot of the Identities settings in Microsoft 365 Defender.](/media/settings-identities.png)](media/settings-identities.png#lightbox)
 
-1. Select **Directory Service accounts**. You'll see which accounts are associated with which domains.
+1. Select **Directory Service accounts**. You'll see which accounts are associated with which domains. For example:
 
-    [![Directory Service accounts.](media/directory-service-accounts.png)](media/directory-service-accounts.png#lightbox)
+    [![Screenshot of the Directory Service accounts page.](/media/directory-service-accounts.png)](media/directory-service-accounts.png#lightbox)
 
-1. To add Directory Service account credentials, select **Add credentials** and fill in the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**.
+1. To add Directory Service account credentials, select **Add credentials** and enter the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**. For example:
 
-    [![Add credentials.](media/new-directory-service-account.png)](media/new-directory-service-account.png#lightbox)
+    [![Screenshot of the add credentials pane.](/media/new-directory-service-account.png)](media/new-directory-service-account.png#lightbox)
 
     |Field|Comments|
     |---|---|
-    |**Account name** (required)|Enter the read-only AD username. For example: **DefenderForIdentityUser**. You must use a **standard** AD user or gMSA account. **Don't** use the UPN format for your username. When using a gMSA, the user string should end with the '$' sign. For example: mdisvc$<br />**NOTE:** We recommend that you avoid using accounts assigned to specific users.|
-    |**Password** (required for standard AD user accounts)|For AD user accounts only, generate a strong password for the read-only user. For example: *PePR!BZ&}Y54UpC3aB*.|
+    |**Account name** (required)|Enter the read-only AD username. For example: **DefenderForIdentityUser**. <br><br>- You must use a **standard** AD user or gMSA account. <br>- **Don't** use the UPN format for your username. <br>- When using a gMSA, the user string should end with the `$` sign. For example: `mdisvc$`<br /><br>**NOTE:** We recommend that you avoid using accounts assigned to specific users.|
+    |**Password** (required for standard AD user accounts)|For AD user accounts only, generate a strong password for the read-only user. For example: `PePR!BZ&}Y54UpC3aB`.|
     |**Group managed service account** (required for gMSA accounts)|For gMSA accounts only, select **Group managed service account**.|
-    |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user's account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not contoso.com. For information on **Single Label Domains**, see [Microsoft support for Single Label Domains](/troubleshoot/windows-server/networking/single-label-domains-support-policy).|
+    |**Domain** (required)|Enter the domain for the read-only user. For example: **contoso.com**. <br><br>It's important that you enter the complete FQDN of the domain where the user is located. For example, if the user's account is in domain corp.contoso.com, you need to enter `corp.contoso.com` not `contoso.com`. <br><br>For more information, see [Microsoft support for Single Label Domains](/troubleshoot/windows-server/networking/single-label-domains-support-policy).|
 
 1. Select **Save**.
-1. (Optional) If you select an account, a pane will open with the settings for that account.
+1. (Optional) If you select an account, a details pane will open with the settings for that account. For example:
 
-    [![Account settings.](media/account-settings.png)](media/account-settings.png#lightbox)
+    [![Screenshot of an account details pane.](media/account-settings.png)](media/account-settings.png#lightbox)
 
 > [!NOTE]
 > You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
 
-## Troubleshooting
+### Troubleshooting
 
-- [Sensor failed to retrieve the gMSA credentials](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)
+For more information, see [Sensor failed to retrieve the gMSA credentials](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
 
 ## Next steps
-
 
 
 > [!div class="step-by-step"]
