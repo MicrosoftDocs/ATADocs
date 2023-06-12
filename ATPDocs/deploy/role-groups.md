@@ -39,28 +39,37 @@ The following table describes the type of access in Defender for Identity availa
 
 |Activity |Azure ATP *(Workspace name)* Administrators|Azure ATP *(Workspace name)* Users|Azure ATP *(Workspace name)* Viewers|
 |----|----|----|----|
-|**Change health alert statuses**|Available|Not available|Not available|
-|**Change security alert statuses** <br>(reopen, close, exclude, suppress)|Available|Available|Not available|
-|**Delete workspace**|Available|Not available|Not available|
-|**Download a report**|Available|Available|Available|
-|**Login**|Available|Available|Available|
-|**Share/Export security alerts** <br>(via email, get link, download details)|Available|Available|Available|
-|**Update Defender for Identity configuration - Updates**|Available|Not available|Not available|
-|**Update Defender for Identity configuration - Entity tags** <br>(sensitive and honeytoken)|Available|Available|Not available|
-|**Update Defender for Identity configuration - Exclusions**|Available|Available|Not available|
-|**Update Defender for Identity configuration - Language**|Available|Available|Not available|
-|**Update Defender for Identity configuration - Notifications** <br>(email and syslog)|Available|Available|Not available|
-|**Update Defender for Identity configuration - Preview detections**|Available|Available|Not available|
-|**Update Defender for Identity configuration - Scheduled reports**|Available|Available|Not available|
-|**Update Defender for Identity configuration - Data sources** <br>(directory services, SIEM, VPN, Defender for Endpoint)|Available|Not available|Not available|
-|**Update Defender for Identity configuration - Sensors** <br>(download, regenerate key, configure, delete)|Available|Not available|Not available|
-|**View entity profiles and security alerts**|Available|Available|Available|
+|**Change health alert statuses**| ✔|-|-|
+|**Change security alert statuses** <br>(reopen, close, exclude, suppress)| ✔| ✔|-|
+|**Delete workspace**| ✔|-|-|
+|**Download a report**| ✔| ✔| ✔|
+|**Login**| ✔| ✔| ✔|
+|**Share/Export security alerts** <br>(via email, get link, download details)| ✔| ✔| ✔|
+|**Update Defender for Identity configuration - Updates**| ✔|-|-|
+|**Update Defender for Identity configuration - Entity tags** <br>(sensitive and honeytoken)| ✔| ✔|-|
+|**Update Defender for Identity configuration - Exclusions**| ✔| ✔|-|
+|**Update Defender for Identity configuration - Language**| ✔| ✔|-|
+|**Update Defender for Identity configuration - Notifications** <br>(email and syslog)| ✔| ✔|-|
+|**Update Defender for Identity configuration - Preview detections**| ✔| ✔|-|
+|**Update Defender for Identity configuration - Scheduled reports**| ✔| ✔|-|
+|**Update Defender for Identity configuration - Data sources** <br>(directory services, SIEM, VPN, Defender for Endpoint)| ✔|-|-|
+|**Update Defender for Identity configuration - Sensors** <br>(download, regenerate key, configure, delete)| ✔|-|-|
+|**View entity profiles and security alerts**| ✔| ✔| ✔|
 
 Manage your role groups from the Azure Active Directory [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
 
-> [!TIP]
-> Any global administrator or security administrator on the tenant's Azure Active Directory is automatically a Defender for Identity administrator.
->
+
+### Azure Active Directory mapping
+
+The following table maps Azure Active Directory roles to their Defender for Identity roles.
+
+
+|Azure Active Directory roles ....  |Are automatically mapped to the following Defender for Identity roles |
+|---------|---------|
+|- Global administrator <br>- Security administrator     |  Administrator       |
+|- Security operator     |   User      |
+|- Global reader<br>- Security reader     |  Viewer       |
+
 
 ## Mapping built-in role groups to Microsoft 365's unified RBAC
 
