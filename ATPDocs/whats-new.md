@@ -27,6 +27,12 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## June 2023
+
+### Defender for Identity release 2.205
+
+This version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## May 2023
 
 ### Enhanced Active Directory account control highlights
