@@ -69,13 +69,13 @@ Sensor-specific health alerts are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Defender for Identity sensors stop running and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender) password.|Medium|Global health issues tab|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Defender for Identity sensors stop running and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md#configure-a-directory-service-account-in-microsoft-365-defender) password.|Medium|Global health issues tab|
 
 ### Read-only user password expired
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the Defender for Identity sensors stop running, or will stop running soon, and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender) password.|High|Global health issues tab|
+|The read-only user password, used to get directory data, expired.|All the Defender for Identity sensors stop running, or will stop running soon, and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md#configure-a-directory-service-account-in-microsoft-365-defender) password.|High|Global health issues tab|
 
 ### Sensor outdated
 
@@ -173,7 +173,7 @@ Sensor-specific health alerts are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode isn't configured to the optimal processor performance settings. This issue can affect the server's performance and the sensors' ability to detect suspicious activities.|Do one of the following: <br><br>- Configure the power option of the machine running the Defender for Identity sensor to *High Performance*<br>- Set both the minimum and maximum processor state to *100*<br><br>For more information, see the [Server specifications](deploy/prerequisites.md#server-specifications) section in the [Defender for Identity prerequisites](deploy/prerequisites.md) page.|Low|Sensors health issues tab|
+|Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode isn't configured to the optimal processor performance settings. This issue can affect the server's performance and the sensors' ability to detect suspicious activities.|Do one of the following: <br><br>- Configure the power option of the machine running the Defender for Identity sensor to *High Performance*<br>- Set both the minimum and maximum processor state to *100*<br><br>For more information, see the [Server specifications](deploy/prerequisites.md#sensor-requirements) section in the [Defender for Identity prerequisites](deploy/prerequisites.md) page.|Low|Sensors health issues tab|
 
 ### Sensor failed to write to the custom log path
 

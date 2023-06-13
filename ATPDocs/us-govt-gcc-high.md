@@ -52,7 +52,7 @@ Use [this link](deploy/prerequisites.md#ports) to configure the minimum internal
 1. Download the new sensor agent package and copy the workspace key
 1. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
 1. Uninstall existing sensor agents from the domain controllers
-1. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
+1. [Reinstall sensors with the new workspace key](deploy/install-sensor.md#install-the-sensor)
 1. Migrate any settings after the initial sync (use the two portals to compare)
 1. Eventually, delete the previous workspace (historical data will be lost)
 

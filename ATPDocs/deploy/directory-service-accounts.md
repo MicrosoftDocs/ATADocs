@@ -109,7 +109,7 @@ Then the following table lists the sensors and the DSA entry that's used first:
 > - In multi-forest, multi-domain environment, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
 
 >[!IMPORTANT]
->If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert is generated. For more information, see [Defender for Identity health alerts](health-alerts.md).
+>If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert is generated. For more information, see [Defender for Identity health alerts](../health-alerts.md).
 
 ## Create a gMSA account for use with Defender for Identity
 
@@ -244,15 +244,15 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings > Identities**. For example:
 
-    [![Screenshot of the Identities settings in Microsoft 365 Defender.](/media/settings-identities.png)](media/settings-identities.png#lightbox)
+    [![Screenshot of the Identities settings in Microsoft 365 Defender.](../media/settings-identities.png)](../media/settings-identities.png#lightbox)
 
 1. Select **Directory Service accounts**. You'll see which accounts are associated with which domains. For example:
 
-    [![Screenshot of the Directory Service accounts page.](/media/directory-service-accounts.png)](media/directory-service-accounts.png#lightbox)
+    [![Screenshot of the Directory Service accounts page.](../media/directory-service-accounts.png)](../media/directory-service-accounts.png#lightbox)
 
 1. To add Directory Service account credentials, select **Add credentials** and enter the **Account name**, **Domain**, and **Password** of the account you created earlier. You can also choose if it's a **Group managed service account** (gMSA), and if it belongs to a **Single label domain**. For example:
 
-    [![Screenshot of the add credentials pane.](/media/new-directory-service-account.png)](media/new-directory-service-account.png#lightbox)
+    [![Screenshot of the add credentials pane.](../media/new-directory-service-account.png)](../media/new-directory-service-account.png#lightbox)
 
     |Field|Comments|
     |---|---|
@@ -264,17 +264,16 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 1. Select **Save**.
 1. (Optional) If you select an account, a details pane will open with the settings for that account. For example:
 
-    [![Screenshot of an account details pane.](media/account-settings.png)](media/account-settings.png#lightbox)
+    [![Screenshot of an account details pane.](../media/account-settings.png)](../media/account-settings.png#lightbox)
 
 > [!NOTE]
 > You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
 
 ### Troubleshooting
 
-For more information, see [Sensor failed to retrieve the gMSA credentials](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
+For more information, see [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
 
 ## Next steps
-
 
 > [!div class="step-by-step"]
 > [« Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md)

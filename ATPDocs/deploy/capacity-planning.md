@@ -12,7 +12,7 @@ In this article, you'll learn how to determine what resources you need for your 
 ## Prerequisites
 
 - Download the [Defender for Identity Sizing Tool](<https://aka.ms/mdi/sizingtool>).
-- Review the [Defender for Identity architecture](architecture.md) article.
+- Review the [Defender for Identity architecture](../architecture.md) article.
 - Review the [Defender for Identity prerequisites](prerequisites.md) article.
 
 ## Use the sizing tool

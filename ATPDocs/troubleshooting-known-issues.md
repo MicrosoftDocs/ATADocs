@@ -219,7 +219,7 @@ The domain controller hasn't been granted permission to retrieve the password of
 
 **Resolution 1**:
 
-Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Granting the permissions to retrieve the gMSA account's password](deploy/directory-service-accounts.md#granting-the-permissions-to-retrieve-the-gmsa-accounts-password).
+Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/directory-service-accounts.md#grant-permissions-to-retrieve-the-gmsa-accounts-password).
 
 ### Cause 2
 
@@ -229,7 +229,7 @@ If the user rights assignment policy **Log on as a service** is configured for t
 
 **Resolution 2**:
 
-Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights (if needed)](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights).
 
 ### Cause 3
 
@@ -399,7 +399,7 @@ There are two possible workarounds for this issue:
     psexec -s -i "C:\MDI\Azure ATP Sensor Setup.exe"
     ```
 
-1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation).
+1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](deploy/install-sensor.md#defender-for-identity-sensor-silent-installation).
 
 ## Sensor installation fails due to certificate management client
 
@@ -458,7 +458,7 @@ NT Service\All Services do not have the right to logon as a service.
 
 **Resolution:**
 
-Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+Add Domain Controller Policy with the logon as a service. For more information, see [Verify that the gMSA account has the required rights](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights).
 
 ## See also
 

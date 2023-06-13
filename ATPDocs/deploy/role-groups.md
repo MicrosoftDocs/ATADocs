@@ -75,7 +75,7 @@ The following table maps Azure Active Directory roles to their Defender for Iden
 
 Microsoft 365's unified RBAC provides more granular options for defining user access than Defender for Identity's build-in security groups. Define unified RBAC in Microsoft 365 Defender. For example:
 
-:::image type="content" source="media/choose-permissions.png" alt-text="Screenshot of the Permissions page in Microsoft 365 Defender." lightbox="media/choose-permissions.png":::
+:::image type="content" source="../media/choose-permissions.png" alt-text="Screenshot of the Permissions page in Microsoft 365 Defender." lightbox="../media/choose-permissions.png":::
 
 The following table maps the built-in Defender for Identity role to require permissions in Microsoft 365 Defender:
 
@@ -91,7 +91,7 @@ For more information, see [Custom roles in role-based access control for Microso
 
 Legacy customers can migrate any Defender for Identity role groups to Microsoft 365 Defender. However, if you change or add new roles in Microsoft 365 Defender, you'll need to match these permissions in the Defender for Identity role table to access the classic Defender for Identity portal. <!--can't we put this somewhere else? do we really still need it?-->
  
-Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) may still contain Defender for Identity data, which adheres to existing Defender for Cloud Apps permissions. <!--what does this mean?-->
+Information included from the [Defender for Cloud Apps activity log](../classic-mcas-integration.md#activities) may still contain Defender for Identity data, which adheres to existing Defender for Cloud Apps permissions. <!--what does this mean?-->
 
 
 ## Next steps

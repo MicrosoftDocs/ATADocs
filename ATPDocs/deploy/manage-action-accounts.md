@@ -7,11 +7,11 @@ ms.topic: how-to
 
 # Microsoft Defender for Identity action accounts
 
-Defender for Identity allows you to take [remediation actions](remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
+Defender for Identity allows you to take [remediation actions](../remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
 
 By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the LocalSystem account of the domain controller and perform the actions. However, you can change this default behavior by setting up a gMSA account and scope the permissions as you need.
 
-:::image type="content" source="media/management-accounts.png" alt-text="Configure management accounts.":::
+:::image type="content" source="../media/management-accounts.png" alt-text="Configure management accounts.":::
 
 ## Create and configure a specific action account
 
@@ -22,19 +22,19 @@ By default, the Microsoft Defender for Identity sensor installed on a domain con
     1. Open **Active Directory Users and Computers**.
     1. Right-click the relevant domain or OU, and select **Properties**.
 
-        ![Select properties of domain or OU.](media/domain-properties.png)
+        ![Select properties of domain or OU.](../media/domain-properties.png)
     1. Go the **Security** tab and select **Advanced**.
 
-        ![Advanced security settings.](media/advanced-security.png)
+        ![Advanced security settings.](../media/advanced-security.png)
 
     1. Select **Add**.
     1. Choose **Select a principal**.
-        ![Choose select a principal.](media/select-principal.png)
+        ![Choose select a principal.](../media/select-principal.png)
     1. Make sure **Service accounts** is marked in **Object types**.
-        ![Select service accounts as object types.](media/object-types.png)
+        ![Select service accounts as object types.](../media/object-types.png)
     1. Enter the name of the gMSA account in the **Enter the object name to select** box and select **OK**.
     1. Select **Descendant User objects** in the **Applies to** field, leave the existing settings, and add the following permissions and properties:
-        ![Set permissions and properties.](media/permission-entry.png)
+        ![Set permissions and properties.](../media/permission-entry.png)
         - To enable force password reset:
             - Permissions:
                 - Reset password
@@ -66,7 +66,7 @@ By default, the Microsoft Defender for Identity sensor installed on a domain con
 1. Provide the account name and domain, and select **Save**.
 1. Your action account will be listed on the **Manage action accounts** page.
 
-      ![Create action account.](media/manage-action-accounts.png)
+      ![Create action account.](../media/manage-action-accounts.png)
 
 ## Related videos
 

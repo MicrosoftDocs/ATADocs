@@ -27,7 +27,7 @@ The ability to support multiple Active Directory forests enables the following:
 To detect cross-forest activities, Defender for Identity sensors query domain controllers in remote forests to create profiles for all entities involved (including users and computers from remote forests).
 
 - Defender for Identity sensors can be installed on domain controllers in all forests, even forests with no trust.
-- [Add additional credentials](directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender) on the **Directory Service accounts** page to support any untrusted forests in your environment.
+- [Add additional credentials](directory-service-accounts.md#configure-a-directory-service-account-in-microsoft-365-defender) on the **Directory Service accounts** page to support any untrusted forests in your environment.
   - Only one credential is required to support all forests with a two-way trust.
   - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
   - There's a default limit of 30 untrusted forests per Defender for Identity instance. Contact support if your organization has more than 30 forests.
@@ -68,6 +68,6 @@ When Defender for Identity maps your forests, it uses a process that impacts the
 ## See Also
 
 - [Defender for Identity sizing tool](<https://aka.ms/aatpsizingtool>)
-- [Defender for Identity architecture](architecture.md)
+- [Defender for Identity architecture](../architecture.md)
 - [Install Defender for Identity](/defender-for-identity/classic-install-step1)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

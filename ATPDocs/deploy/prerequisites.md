@@ -96,8 +96,7 @@ Identity sensor      |
 
 <a name=localhost></a><sup>1</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it. 
 
-<a name=localhost></a><sup>2</sup> While only one of the listed ports is required, we recommend opening all of them.
-
+<a name=nnr></a><sup>2</sup> While only one of the listed ports is required, we recommend opening all of them.
 
 ### Dynamic memory requirements
 
@@ -114,7 +113,7 @@ The following table describes memory requirements on the server used for the Def
 
 ## More resources
 
-For more information, see [Defender for Identity architecture](architecture.md)
+For more information, see [Defender for Identity architecture](../architecture.md)
 
 ## Next steps
 

@@ -240,7 +240,6 @@ These events can be collected automatically by the Defender for Identity sensor 
 >
 > No functionality is lost due to this requirement being removed.
 
-
 ## Next steps
 
 > [!div class="step-by-step"]

@@ -95,7 +95,7 @@ Released March 27, 2023
 
 - We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
 
-- We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](deploy/directory-service-accounts.md#number-of-dsa-entries).
+- We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Supported DSA account options](deploy/directory-service-accounts.md#supported-dsa-account-options).
 
 - We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see [Event ID 1644](deploy/configure-windows-event-collection.md#event-id-1644).
 

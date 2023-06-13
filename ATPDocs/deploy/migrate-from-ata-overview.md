@@ -12,7 +12,7 @@ ms.topic: how-to
 
 Use this guide to move from an existing ATA installation to the (Microsoft Defender for Identity) service. The guide explains Defender for Identity prerequisites and requirements, and details how to plan and then complete your move. Validation steps and tips to take advantage of the latest threat protection and security solutions with Defender for Identity after installation are also included.
 
-To learn more about the differences between ATA and Defender for Identity, see the [Defender for Identity frequently asked questions](technical-faq.yml).
+To learn more about the differences between ATA and Defender for Identity, see the [Defender for Identity frequently asked questions](../technical-faq.yml).
 
 In this guide you will:
 
@@ -47,7 +47,7 @@ Make sure to gather the following information before starting your move:
 
 1. Account details for your [Directory Services](directory-service-accounts.md) account.
 1. Syslog notification [settings](/defender-for-identity/notifications).
-1. Email [notification details](notifications.md).
+1. Email [notification details](../notifications.md).
 1. ATA roles group membership
 1. VPN integration
 1. Alert exclusions
@@ -87,7 +87,7 @@ Complete your move to Defender for Identity in two easy steps:
 In the Microsoft 365 Defender portal:
 
 - Review any [health alerts](/defender-for-identity/health-alerts) for signs of service issues.
-- Review Defender for Identity [Sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
+- Review Defender for Identity [Sensor error logs](../troubleshooting-using-logs.md) for any unusual errors.
 
 ## After the move
 
@@ -108,7 +108,7 @@ Congratulations! Your move from ATA to Defender for Identity is complete.
 
 ## Next steps
 
-Learn more about [Defender for Identity](what-is.md) features, functionality, and [security alerts](understanding-security-alerts.md).
+Learn more about [Defender for Identity](../what-is.md) features, functionality, and [security alerts](../understanding-security-alerts.md).
 
 ## Join the Community
 
