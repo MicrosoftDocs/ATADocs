@@ -17,11 +17,11 @@ Before deploying Defender for Identity, make sure to acquire one of the followin
 - Microsoft 365 E5 (M365 E5/A5/G5)
 - Microsoft 365 E5/A5/G5 Security
 
-Acquire your licenses from the Microsoft 365 admin center or use the Cloud Solution Partner (CSP) licensing model.
+Acquire your licenses directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model
 
 Defender for Identity also supports standalone licenses.
 
-For more information, see Licensing and privacy. <!--link-->
+For more information, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy).
 
 ## Required permissions
 
@@ -33,9 +33,9 @@ You'll need Global or Security administrator access on your tenant to access the
 
 For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
-## Microsoft 365 Defender portal requirements
+## Defender for Identity firewall requirements
 
-AzureAdvancedThreatProtection to Virtual network service tags or download the service tags file
+Use the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
 
 <!--what does this mean?-->
 ## Required network adapters
