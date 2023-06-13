@@ -53,14 +53,14 @@ Modify the Advanced Audit Policies of your domain controller using the following
     > [!NOTE]
     > You can use the Default Domain Controllers Policy or a dedicated GPO to set these policies.
 
-    ![Edit domain controller policy.](media/advanced-audit-policy-check-step-1.png)
+    ![Edit domain controller policy.](../media/advanced-audit-policy-check-step-1.png)
 
 1. From the window that opens, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** and depending on the policy you want to enable, do the following:
 
     **For Advanced Audit Policy Configuration**
 
     1. Go to **Advanced Audit Policy Configuration** > **Audit Policies**.
-        ![Advanced Audit Policy Configuration.](media/advanced-audit-policy-check-step-2.png)
+        ![Advanced Audit Policy Configuration.](../media/advanced-audit-policy-check-step-2.png)
     1. Under **Audit Policies**, edit each of the following policies and select **Configure the following audit events** for both **Success** and **Failure** events.
 
         | Audit policy | Subcategory | Triggers event IDs |
@@ -76,7 +76,7 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
-        ![Audit Security Group Management.](media/advanced-audit-policy-check-step-4.png)
+        ![Audit Security Group Management.](../media/advanced-audit-policy-check-step-4.png)
 
 1. From an elevated command prompt type `gpupdate`.
 
@@ -103,7 +103,7 @@ To audit Event ID 8004, more configuration steps are required.
 
     For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
 
-    ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
+    ![Audit Outgoing NTLM traffic to remote servers.](../media/advanced-audit-policy-check-step-3.png)
 
 ## Configure object auditing
 
@@ -119,23 +119,23 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 1. Select the **View** menu and select **Advanced Features**.
 1. Right-click the container (the domain or OU) and select **Properties**.
 
-    ![Container properties.](media/container-properties.png)
+    ![Container properties.](../media/container-properties.png)
 
 1. Go to the **Security** tab, and select **Advanced**.
 
-    ![Advanced security properties.](media/security-advanced.png)
+    ![Advanced security properties.](../media/security-advanced.png)
 
 1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
 
-    ![Select auditing tab.](media/auditing-tab.png)
+    ![Select auditing tab.](../media/auditing-tab.png)
 
 1. Choose **Select a principal**.
 
-    ![Select a principal.](media/select-a-principal.png)
+    ![Select a principal.](../media/select-a-principal.png)
 
 1. Under **Enter the object name to select**, type **Everyone**. Then select **Check Names**, and select **OK**.
 
-    ![Select everyone.](media/select-everyone.png)
+    ![Select everyone.](../media/select-everyone.png)
 
 1. You'll then return to **Auditing Entry**. Make the following selections:
 
@@ -143,11 +143,11 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
     1. For **Applies to** select **Descendant User objects.**
     1. Under **Permissions**, scroll down and select the **Clear all** button.
 
-        :::image type="content" source="media/clear-all.png" alt-text="Select Clear all.":::
+        :::image type="content" source="../media/clear-all.png" alt-text="Select Clear all.":::
 
     1. Then scroll back up and select **Full Control**. All the permissions will be selected. Then **uncheck** the **List contents**, **Read permissions**, and **Read all properties** permissions. Select **OK**. This will set all the **Properties** settings to **Write**. Now when triggered, all relevant changes to directory services will appear as 4662 events.
 
-        ![Select permissions.](media/select-permissions.png)
+        ![Select permissions.](../media/select-permissions.png)
 
 1. Then repeat the steps above, but for **Applies to**, select the following object types:
    - **Descendant Group Objects**
@@ -168,7 +168,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 1. Go to the **Active Directory Users and Computers** console, and choose the domain you want to enable the logs on.
 1. Navigate to **Program Data** > **Microsoft** > **ADFS**.
 
-    ![ADFS container.](media/adfs-container.png)
+    ![ADFS container.](../media/adfs-container.png)
 
 1. Right-click **ADFS** and select **Properties**.
 1. Go to the **Security** tab, and select **Advanced**.
@@ -181,7 +181,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
     - For **Applies to** select **This object and all descendant objects**.
     - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Read all properties** and **Write all properties**.
 
-    ![Auditing settings for ADFS.](media/audit-adfs.png)
+    ![Auditing settings for ADFS.](../media/audit-adfs.png)
 
 1. Select **OK**.
 
@@ -193,7 +193,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 1. Expand the **Configuration** container. Under the **Configuration** container, you'll see the **Configuration** node. It will begin with *“CN=Configuration,DC=..."*
 1. Right-click the **Configuration** node and select **Properties**.
 
-    ![Configuration node properties.](media/configuration-properties.png)
+    ![Configuration node properties.](../media/configuration-properties.png)
 
 1. Go to the **Security** tab, and select **Advanced**.
 1. In **Advanced Security Settings**, choose the **Auditing** tab. Select **Add**.
@@ -205,7 +205,7 @@ Some detections require auditing specific Active Directory objects. To do so, fo
     - For **Applies to** select **This object and all descendant objects**.
     - Under **Permissions**, scroll down and select **Clear all**. Scroll up and select **Write all properties**.
 
-    ![Auditing settings for Configuration.](media/audit-configuration.png)
+    ![Auditing settings for Configuration.](../media/audit-configuration.png)
 
 1. Select **OK**.
 

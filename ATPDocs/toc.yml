@@ -17,53 +17,53 @@ items:
   expanded: true
   items:
   - name: Quick installation guide
-    href: quick-installation-guide.md
+    href: deploy/quick-installation-guide.md
   - name: Deploy Defender for Identity with Microsoft 365 Defender
-    href: deploy-defender-identity.md
+    href: deploy/deploy-defender-identity.md
   - name: Plan and prepare
     items:
     - name: Defender for Identity prerequisites
-      href: prerequisites.md
+      href: deploy/prerequisites.md
     - name: Plan your Defender for Identity capacity
-      href: capacity-planning.md
+      href: deploy/capacity-planning.md
     - name: Directory Service account recommendations
-      href: directory-service-accounts.md
-    - name: Role groups
-      href: role-groups.md
+      href: deploy/directory-service-accounts.md
+    - name: Roles and permissions
+      href: deploy/role-groups.md
     - name: Configure remote calls to SAM
-      href: remote-calls-sam.md
+      href: deploy/remote-calls-sam.md
   - name: Deploy Defender for Identity
     items:
     - name: Download the Defender for Identity sensor
-      href: download-sensor.md
+      href: deploy/download-sensor.md
     - name: Proxy configuration
-      href: configure-proxy.md
+      href: deploy/configure-proxy.md
     - name: Install the Defender for Identity sensor
-      href: install-sensor.md
+      href: deploy/install-sensor.md
     - name: Manage action accounts
-      href: manage-action-accounts.md
+      href: deploy/manage-action-accounts.md
     - name: Configure the Defender for Identity sensor
-      href: configure-sensor-settings.md
+      href: deploy/configure-sensor-settings.md
   - name: Deploy and monitor for Zero Trust
-    href: zero-trust.md
+    href: deploy/zero-trust.md
   - name: Install on Active Directory Federation Services
-    href: active-directory-federation-services.md
+    href: deploy/active-directory-federation-services.md
   - name: Deploy for multiple forests
-    href: multi-forest.md
+    href: deploy/multi-forest.md
   - name: Configure a standalone sensor
     items:
     - name: Configure port mirroring
-      href: configure-port-mirroring.md
+      href: deploy/configure-port-mirroring.md
     - name: Validate port mirroring
-      href: validate-port-mirroring.md
+      href: deploy/validate-port-mirroring.md
     - name: Configure event collection
-      href: configure-event-collection.md
+      href: deploy/configure-event-collection.md
     - name: Configure Windows Event Forwarding
-      href: configure-event-forwarding.md
+      href: deploy/configure-event-forwarding.md
     - name: Configure Windows Event collection
-      href: configure-windows-event-collection.md
+      href: deploy/configure-windows-event-collection.md
   - name: Migrate from Advanced Threat Analytics (ATA)
-    href: migrate-from-ata-overview.md
+    href: deploy/migrate-from-ata-overview.md
 - name: Manage
   items:
   - name: Settings

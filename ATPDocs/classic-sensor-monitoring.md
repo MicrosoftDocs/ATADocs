@@ -51,5 +51,5 @@ Managing your fleet of sensors and domain controllers can be challenging. To mak
 
 - [Defender for Identity Architecture](architecture.md)
 - [Configuring Defender for Identity sensors](/defender-for-identity/configure-sensor-settings)
-- [Multi-forest support](multi-forest.md)
+- [Multi-forest support](deploy/multi-forest.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

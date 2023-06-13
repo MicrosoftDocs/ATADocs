@@ -20,7 +20,7 @@ connection failed because connected host has failed to respond...
 
 **Resolution:**
 
-Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](prerequisites.md#ports).
+Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](deploy/prerequisites.md#ports).
 
 ## Deployment log location
 
@@ -51,7 +51,7 @@ In some cases, when communicating via a proxy, during authentication it might re
 
 **Resolution:**
 
-Ensure that the sensor can browse to *.atp.azure.com through the configured proxy without authentication. For more information, see [Configure proxy to enable communication](configure-proxy.md).
+Ensure that the sensor can browse to *.atp.azure.com through the configured proxy without authentication. For more information, see [Configure proxy to enable communication](deploy/configure-proxy.md).
 
 ## Proxy authentication problem presents as a connection error
 
@@ -219,7 +219,7 @@ The domain controller hasn't been granted permission to retrieve the password of
 
 **Resolution 1**:
 
-Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Granting the permissions to retrieve the gMSA account's password](directory-service-accounts.md#granting-the-permissions-to-retrieve-the-gmsa-accounts-password).
+Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Granting the permissions to retrieve the gMSA account's password](deploy/directory-service-accounts.md#granting-the-permissions-to-retrieve-the-gmsa-accounts-password).
 
 ### Cause 2
 
@@ -229,7 +229,7 @@ If the user rights assignment policy **Log on as a service** is configured for t
 
 **Resolution 2**:
 
-Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights (if needed)](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
 
 ### Cause 3
 
@@ -436,7 +436,7 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 
 `"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
-For more information, see [Configure proxy server using the command line](configure-proxy.md#configure-proxy-server-using-the-command-line).
+For more information, see [Configure proxy server using the command line](deploy/configure-proxy.md#configure-proxy-server-using-the-command-line).
 
 ## Sensor service could not run and remains in Starting state
 
@@ -458,12 +458,12 @@ NT Service\All Services do not have the right to logon as a service.
 
 **Resolution:**
 
-Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
 
 ## See also
 
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Defender for Identity capacity planning](capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity capacity planning](deploy/capacity-planning.md)
+- [Configure event collection](deploy/configure-event-collection.md)
+- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

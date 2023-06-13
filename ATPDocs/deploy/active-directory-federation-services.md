@@ -22,7 +22,7 @@ The Defender for Identity sensor supports installation on Active Directory Feder
 >[!NOTE]
 > The Defender for Identity sensor is supported only on the Federation servers. It is not required on the Web Application Proxy (WAP) servers.
 
-For hardware requirements, see [Defender for Identity server specifications](prerequisites.md#server-specifications).
+For more information, see [Sensor requirements](prerequisites.md#sensor-requirements).
 
 ## Network requirements
 
@@ -49,7 +49,7 @@ For sensors running on AD FS servers to have access to the AD FS database, you n
 If you have more than one AD FS server, then this should be performed on all of them as the database permissions are not replicated between them.
 
 >[!NOTE]
-> If the AD FS database runs on a dedicated SQL server and not the local AD FS server, and you are using a group managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md#types-of-dsa-accounts), make sure you grant the SQL server the required [permissions to retrieve the gMSA's password](directory-service-accounts.md#granting-the-permissions-to-retrieve-the-gmsa-accounts-password).
+>If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](directory-service-accounts.md#grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password. 
 
 ### How do I grant access to the AD FS database via TSQL or PowerShell?
 

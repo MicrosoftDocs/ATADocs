@@ -22,13 +22,13 @@ This article describes how to work with the key elements of the Defender for Ide
 ## Enabling access to the Defender for Identity portal
 
 To successfully log in to the Defender for Identity portal, you have to log in with a user assigned to an Azure Active Directory security group with access to the Defender for Identity portal.
-For more information about role-based access control (RBAC) in Defender for Identity, see [Working with Defender for Identity role groups](role-groups.md).
+For more information about role-based access control (RBAC) in Defender for Identity, see [Working with Defender for Identity role groups](deploy/role-groups.md).
 
 ## Logging into the Defender for Identity portal
 
 1. You can enter the Defender for Identity portal either by logging in to the portal [https://portal.atp.azure.com](https://portal.atp.azure.com) and selecting your instance, or browsing to the instance URL: `https://*instancename*.atp.azure.com`.
 
-1. Defender for Identity supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Defender for Identity uses that token to log you into the Defender for Identity portal. You can also log in using a smartcard. Your permissions in Defender for Identity correspond with your [administrator role](role-groups.md).
+1. Defender for Identity supports single sign-on integrated with Windows authentication - if you've already logged on to your computer, Defender for Identity uses that token to log you into the Defender for Identity portal. You can also log in using a smartcard. Your permissions in Defender for Identity correspond with your [administrator role](deploy/role-groups.md).
 
    > [!NOTE]
    > Make sure to log on to the computer from which you want to access the Defender for Identity portal using your Defender for Identity admin username and password. Alternatively, run your browser as a different user or log out of Windows and log on with your Defender for Identity admin user. Unlike the Defender for Identity portal, the new [Defender for Cloud Apps portal](https://portal.cloudappsecurity.com) offers multi-user login and requires no additional license to use with Defender for Identity.

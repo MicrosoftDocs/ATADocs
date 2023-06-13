@@ -64,6 +64,6 @@ After this is enabled, all Defender for Identity sensors listen on port 1813 for
 ## See Also
 
 - [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
-- [Configure event collection](configure-event-collection.md)
-- [Defender for Identity prerequisites](prerequisites.md)
+- [Configure event collection](deploy/configure-event-collection.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

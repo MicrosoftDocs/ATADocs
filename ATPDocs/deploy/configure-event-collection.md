@@ -134,6 +134,6 @@ Make sure to have \t between the key=value pairs.
 ## See also
 
 - [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
-- [Defender for Identity SIEM log reference](cef-format-sa.md)
+- [Defender for Identity SIEM log reference](../cef-format-sa.md)
 - [Defender for Identity prerequisites](prerequisites.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

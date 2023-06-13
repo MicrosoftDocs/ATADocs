@@ -34,7 +34,7 @@ In this guide you will:
 
 - Defender for Identity requires .Net Framework 4.7 or later and may require a domain controller restart if your current .Net Framework version is not 4.7 or later.
 
-- Make sure your domain controllers meet all the [Defender for Identity sensor requirements](prerequisites.md#defender-for-identity-sensor-requirements) and your environment meets all [Defender for Identity requirements](prerequisites.md).
+- Make sure that your domain controllers meet Defender for Identity sensor requirements, and that your environment meets all Defender for Identity requirements. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
 - Validate that all domain controllers you plan to use have sufficient internet access to the Defender for Identity service. Check and confirm your domain controllers meet the [Defender for Identity proxy configuration requirements](configure-proxy.md).
 

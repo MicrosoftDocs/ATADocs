@@ -79,7 +79,7 @@ The service health status for Defender for Identity is displayed in the [Microso
 
 - If you have a question about how something works, check whether your question is already answered in [Frequently asked questions](technical-faq.yml).
 
-- If you have a question about a prerequisite for Defender for Identity, see [Defender for Identity prerequisites](prerequisites.md).
+- If you have a question about a prerequisite for Defender for Identity, see [Defender for Identity prerequisites](deploy/prerequisites.md).
 
 - For information regarding investigation security alerts, see the [security alert guide](/defender-for-identity/alerts-overview).
 

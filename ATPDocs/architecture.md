@@ -79,13 +79,13 @@ If the monitoring process causes the Defender for Identity sensor to run out of 
 
 ### Windows Events
 
-To enhance Defender for Identity detection coverage related to NTLM authentications, modifications to sensitive groups and creation of suspicious services, Defender for Identity needs to analyze the logs of the [Windows Events listed here](configure-windows-event-collection.md#relevant-windows-events). These events are read automatically by Defender for Identity sensors with correct [advanced audit policy settings](configure-windows-event-collection.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md#event-id-8004) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+To enhance Defender for Identity detection coverage related to NTLM authentications, modifications to sensitive groups and creation of suspicious services, Defender for Identity needs to analyze the logs of the [Windows Events listed here](deploy/configure-windows-event-collection.md#relevant-windows-events). These events are read automatically by Defender for Identity sensors with correct [advanced audit policy settings](deploy/configure-windows-event-collection.md). To [make sure Windows Event 8004 is audited](deploy/configure-windows-event-collection.md#event-id-8004) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 
 ## Next steps
 
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Defender for Identity capacity planning](capacity-planning.md)
-- [Defender for Identity sizing tool](capacity-planning.md#use-the-sizing-tool)
-- [Configure event forwarding](configure-event-forwarding.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity capacity planning](deploy/capacity-planning.md)
+- [Defender for Identity sizing tool](deploy/capacity-planning.md#use-the-sizing-tool)
+- [Configure event forwarding](deploy/configure-event-forwarding.md)
+- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

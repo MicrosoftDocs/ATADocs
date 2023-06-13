@@ -13,19 +13,19 @@ Learn how to download the Microsoft Defender for Identity sensor for your domain
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
-    ![Go to Settings, then Identities.](media/settings-identities.png)
+    ![Go to Settings, then Identities.](../media/settings-identities.png)
 
 1. Select the **Sensors** page, which displays all of your Defender for Identity sensors.
 
-    [![Sensor page.](media//sensor-page.png)](media/sensor-page.png#lightbox)
+    [![Sensor page.](../media//sensor-page.png)](../media/sensor-page.png#lightbox)
 
 1. Select **Add sensor**.
 
-    ![Add sensor.](media/add-sensor.png)
+    ![Add sensor.](../media/add-sensor.png)
 
 1. A pane will open, providing you with a button to download the sensor installer and a generated access key.
 
-    ![Download installer and access key.](media/installer-access-key.png)
+    ![Download installer and access key.](../media/installer-access-key.png)
 
 1. Select **Download installer** to save the package locally. The zip file includes the following files:
 

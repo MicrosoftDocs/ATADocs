@@ -21,11 +21,11 @@ To ensure Windows clients and servers allow your Defender for Identity Directory
    - Policy Name: Network access - Restrict clients allowed to make remote calls to SAM
    - Location: Computer configuration, Windows settings, Security settings, Local policies, Security options
 
-    ![Locate the policy.](media/samr-policy-location.png)
+    ![Locate the policy.](../media/samr-policy-location.png)
 
 1. Add the Defender for Identity Directory Service account to the list of approved accounts able to perform this action on your modern Windows systems.
 
-    ![Add the service.](media/samr-add-service.png)
+    ![Add the service.](../media/samr-add-service.png)
 
 1. The Defender for Identity Directory Service account now has the privileges needed to perform SAM-R in the environment.
 
@@ -40,11 +40,11 @@ If you've defined the [Access this computer from the network](/windows/security/
 
 To add the Directory Service account, go to the policy and navigate to **Computer Configuration** -> **Policies** -> **Windows Settings** -> **Local Policies** -> **User Right Assignment**. Then open the setting **Access this computer from the network**.
 
-![Access this computer from the network setting.](media/access-computer-from-network.png)
+![Access this computer from the network setting.](../media/access-computer-from-network.png)
 
 Then add the Defender for Identity Directory Service account to the list of approved accounts.
 
-![Add the Directory Service account.](media/add-service-account.png)
+![Add the Directory Service account.](../media/add-service-account.png)
 
 >[!NOTE]
 > In the Microsoft recommended baselines, as part of the [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319), we recommend replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connection from performing network logons. Please review the local policy settings before managing this setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.

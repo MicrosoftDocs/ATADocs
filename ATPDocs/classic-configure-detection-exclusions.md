@@ -57,5 +57,5 @@ Defender for Identity scanning starts immediately. Some detections, such as [Sus
 
 ## See Also
 
-- [Configure event collection](configure-event-collection.md)
+- [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

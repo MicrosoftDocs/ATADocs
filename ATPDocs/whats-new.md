@@ -89,9 +89,9 @@ Released March 27, 2023
 
 - We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
 
-- We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md#number-of-dsa-entries).
+- We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](deploy/directory-service-accounts.md#number-of-dsa-entries).
 
-- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see [Event ID 1644](configure-windows-event-collection.md#event-id-1644).
+- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see [Event ID 1644](deploy/configure-windows-event-collection.md#event-id-1644).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -180,6 +180,6 @@ Released December 7, 2022
 
 - [What is Microsoft Defender for Identity?](what-is.md)
 - [Frequently asked questions](technical-faq.yml)
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Defender for Identity capacity planning](capacity-planning.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity capacity planning](deploy/capacity-planning.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -27,7 +27,7 @@ The following actions can be performed directly on the user account:
 
 ## Prerequisites
 
-To perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+To perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
 
 ## Permissions
 
@@ -39,5 +39,5 @@ Currently, this feature requires the account signed into Microsoft 365 Defender 
 
 ## See also
 
-[Microsoft Defender for Identity action accounts](manage-action-accounts.md)
+[Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md)
 

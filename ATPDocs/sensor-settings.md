@@ -146,7 +146,7 @@ Sensors not selected for delayed update are updated automatically, each time the
 The **delayed update** option enables you to select specific sensors as an automatic update ring, on which all updates are rolled out automatically, and set the rest of your sensors to update on delay, giving you time to confirm that the automatically updated sensors were successful.
 
 > [!NOTE]
-> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](configure-proxy.md).
+> If an error occurs and a sensor does not update, open a support ticket. To further harden your proxy to only communicate with your instance, see [Proxy configuration](deploy/configure-proxy.md).
 
 Authentication between your sensors and the Azure cloud service uses strong, certificate-based mutual authentication. The client certificate is created at the sensor installation as a self-signed certificate, valid for 2 years. The Sensor Updater service is responsible for generating a new self-signed certificate before the existing certificate expires. The certificates are rolled with a 2-phase validation process against the backend to avoid a situation where a rolling certificate breaks the authentication.
 
@@ -217,6 +217,6 @@ To update the Defender for Identity sensor silently:
 
 ## See also
 
-* [Configure event forwarding](configure-event-forwarding.md)
-* [Defender for Identity prerequisites](prerequisites.md)
+* [Configure event forwarding](deploy/configure-event-forwarding.md)
+* [Defender for Identity prerequisites](deploy/prerequisites.md)
 * [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -29,7 +29,7 @@ For example, if the attribute *PasswordNotRequired* is enabled, an attacker can 
 > [!NOTE]
 >
 > - This assessment is updated in near real time.
-> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for Microsoft Defender for Identity are not met.
+> - This assessment might contain previously deleted entities if the [prerequisites](deploy/prerequisites.md#before-you-start) for Microsoft Defender for Identity are not met.
 
 ## Remediation
 

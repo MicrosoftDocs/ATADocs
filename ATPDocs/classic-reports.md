@@ -15,7 +15,7 @@ Available reports are:
 
 - **Summary report**: The Summary report presents a dashboard of the status in the system. You can view three tabs - one for a **Summary** of what was detected on your network, **Open suspicious activities** that lists the suspicious activities you should take care of, and **Open health issues** that lists Defender for Identity health issues you should take care of. The suspicious activities listed are broken down by type, as are the health issues.
 
-- **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins, or manually tagged accounts or groups). If you're using Defender for Identity standalone sensors, in order to receive a full report about your sensitive groups, make sure that [events are forwarded from your domain controllers to the standalone sensors](configure-event-forwarding.md).
+- **Modification of sensitive groups**: This report lists every time a modification is made to sensitive groups (such as admins, or manually tagged accounts or groups). If you're using Defender for Identity standalone sensors, in order to receive a full report about your sensitive groups, make sure that [events are forwarded from your domain controllers to the standalone sensors](deploy/configure-event-forwarding.md).
 
 - **Passwords exposed in cleartext**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes. This report lists all source computer and account passwords detected by Defender for Identity being sent in clear text.
 
@@ -45,8 +45,8 @@ To set a scheduled report:
 
 ## See Also
 
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Defender for Identity capacity planning](capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity capacity planning](deploy/capacity-planning.md)
+- [Configure event collection](deploy/configure-event-collection.md)
+- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -40,7 +40,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 1. From a command prompt type *gpedit.msc*.
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
 
-    ![Local policy group editor image.](media/wef-1-local-group-policy-editor.png)
+    ![Local policy group editor image.](../media/wef-1-local-group-policy-editor.png)
 
 1. Double-click **Configure target Subscription Manager**.
 
@@ -49,7 +49,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
     1. Under **SubscriptionManagers**, enter the following value and select **OK**:
         `Server=http://<fqdnMicrosoftDefenderForIdentitySensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10` (For example: `Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
 
-    ![Configure target subscription image.](media/wef-2-config-target-sub-manager.png)
+    ![Configure target subscription image.](../media/wef-2-config-target-sub-manager.png)
 
 1. Select **OK**.
 1. From an elevated command prompt type *gpupdate /force*.
@@ -66,11 +66,11 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         1. Select **Add Domain Computer**.
         1. Enter the name of the domain controller in the **Enter the object name to select** field. Then select **Check Names** and select **OK**.
         1. Select **OK**.
-        ![Event Viewer image.](media/wef-3-event-viewer.png)
+        ![Event Viewer image.](../media/wef-3-event-viewer.png)
     1. Select **Select Events**.
         1. Select **By log** and then select **Security**.
         1. In the **Includes/Excludes Event ID** field type the event number and select **OK**. For example, type 4776, like in the following sample:<br/>
-        ![Query filter image.](media/wef-4-query-filter.png)
+        ![Query filter image.](../media/wef-4-query-filter.png)
     1. Return to the command window opened in the first step. Run the following commands, replacing *SubscriptionName* with the name you created for the subscription.
 
         ```cmd

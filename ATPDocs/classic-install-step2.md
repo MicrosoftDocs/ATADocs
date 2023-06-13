@@ -11,13 +11,13 @@ ROBOTS: NOINDEX
 > [!NOTE]
 > The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/directory-service-accounts). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
-In this quickstart, you'll connect Microsoft Defender for Identity to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](multi-forest.md) article.
+In this quickstart, you'll connect Microsoft Defender for Identity to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](deploy/multi-forest.md) article.
 
 ## Prerequisites
 
 - A [Defender for Identity instance](/defender-for-identity/classic-install-step1).
-- Review the [Defender for Identity prerequisites](prerequisites.md) article.
-- At least one Directory Service account with read access to all objects in the monitored domains. For instructions on how to create the Directory Service account, see [Directory Service account recommendations](directory-service-accounts.md).
+- Review the [Defender for Identity prerequisites](deploy/prerequisites.md) article.
+- At least one Directory Service account with read access to all objects in the monitored domains. For instructions on how to create the Directory Service account, see [Directory Service account recommendations](deploy/directory-service-accounts.md).
 
 ## Provide a username and password to connect to your Active Directory Forest
 

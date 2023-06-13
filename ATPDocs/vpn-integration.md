@@ -70,6 +70,6 @@ After the Defender for Identity sensor receives the VPN events and sends them to
 ## See Also
 
 - [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
-- [Configure event collection](configure-event-collection.md)
-- [Defender for Identity prerequisites](prerequisites.md)
+- [Configure event collection](deploy/configure-event-collection.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

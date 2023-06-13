@@ -57,7 +57,7 @@ sections:
 
           Defender for Identity's frequent updates include the following features and capabilities:
 
-          - **Support for [multi-forest environments](multi-forest.md)**: Provides organizations visibility across AD forests.
+          - **Support for [multi-forest environments](deploy/multi-forest.md)**: Provides organizations visibility across AD forests.
 
           - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components, as well as, providing remediation paths to reduce the attack surface.
 
@@ -98,7 +98,7 @@ sections:
     questions:
       - question: How many Defender for Identity sensors do I need?
         answer: |
-          Every domain controller in the environment should be covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
+          Every domain controller in the environment should be covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](deploy/capacity-planning.md#sizing).
 
       - question: Does Defender for Identity work with encrypted traffic?
         answer: Network protocols with encrypted traffic (for example, AtSvc and WMI) are not decrypted, but are analyzed by the sensors.
@@ -109,9 +109,9 @@ sections:
 
       - question: How do I monitor a virtual domain controller using Defender for Identity?
         answer: |
-          Most virtual domain controllers can be covered by the Defender for Identity sensor, to determine whether the Defender for Identity sensor is appropriate for your environment, see [Defender for Identity Capacity Planning](capacity-planning.md).
+          Most virtual domain controllers can be covered by the Defender for Identity sensor, to determine whether the Defender for Identity sensor is appropriate for your environment, see [Defender for Identity Capacity Planning](deploy/capacity-planning.md).
 
-          If a virtual domain controller can't be covered by the Defender for Identity sensor, you can have either a virtual or physical Defender for Identity standalone sensor as described in [Configure port mirroring](configure-port-mirroring.md).
+          If a virtual domain controller can't be covered by the Defender for Identity sensor, you can have either a virtual or physical Defender for Identity standalone sensor as described in [Configure port mirroring](deploy/configure-port-mirroring.md).
           The easiest way is to have a virtual Defender for Identity standalone sensor on every host where a virtual domain controller exists.
           If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
@@ -121,7 +121,7 @@ sections:
 
       - question: How do I configure the Defender for Identity sensors to communicate with Defender for Identity cloud service when I have a proxy?
         answer: |
-          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with Defender for Identity sensors](configure-proxy.md).
+          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with Defender for Identity sensors](deploy/configure-proxy.md).
 
       - question: Can Defender for Identity monitored domain controllers be virtualized on your IaaS solution?
         answer: |
@@ -129,7 +129,7 @@ sections:
 
       - question: Can Defender for Identity support multi-domain and multi-forest?
         answer: |
-          Defender for Identity supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](multi-forest.md).
+          Defender for Identity supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](deploy/multi-forest.md).
 
       - question: Can you see the overall health of the deployment?
         answer: |
@@ -164,7 +164,7 @@ sections:
 
       - question: How do I download and install or upgrade the Npcap driver? 
         answer: |
-          -  You can obtain the Npcap executables by [downloading the latest deployment package of the Defender for Identity sensor](download-sensor.md).
+          -  You can obtain the Npcap executables by [downloading the latest deployment package of the Defender for Identity sensor](deploy/download-sensor.md).
 
             - If you haven't yet installed the sensor:
               1. Install the sensor (with an installation package of version 2.184 or greater).
@@ -249,9 +249,9 @@ sections:
 
 additionalContent: |
   ## See Also
-  - [Defender for Identity prerequisites](prerequisites.md)
-  - [Defender for Identity capacity planning](capacity-planning.md)
-  - [Configure event collection](configure-event-collection.md)
-  - [Configuring Windows event forwarding](configure-event-forwarding.md)
+  - [Defender for Identity prerequisites](deploy/prerequisites.md)
+  - [Defender for Identity capacity planning](deploy/capacity-planning.md)
+  - [Configure event collection](deploy/configure-event-collection.md)
+  - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
   - [Troubleshooting](troubleshooting-known-issues.md)
   - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

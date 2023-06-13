@@ -167,7 +167,7 @@ Attackers add users to highly privileged groups. Adding users is done to gain ac
 
 For a definition of sensitive groups in Defender for Identity, see [Working with the sensitive accounts](/defender-for-identity/entity-tags).
 
-The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](configure-windows-event-collection.md).
+The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](deploy/configure-windows-event-collection.md).
 
 **Learning period**:
 

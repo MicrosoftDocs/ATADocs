@@ -18,7 +18,7 @@ In this quickstart, you'll create your Microsoft Defender for Identity instance 
 - A [Microsoft Defender for Identity license](/defender-for-identity/technical-faq#licensing-and-privacy).
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Defender for Identity portal.
 - Review the [Defender for Identity architecture](architecture.md) article.
-- Review the [Defender for Identity prerequisites](prerequisites.md) article.
+- Review the [Defender for Identity prerequisites](deploy/prerequisites.md) article.
 
 ## Sign in to the Defender for Identity portal
 
@@ -41,7 +41,7 @@ After you verified that your network meets the sensor requirements, start the cr
     ![Azure instance created.](media/instance-created.png)
 
     > [!NOTE]
-    > To sign in to Defender for Identity, you'll need to sign in with a user assigned a Defender for Identity role with rights to access the Defender for Identity portal. For more information about role-based access control (RBAC) in Defender for Identity, see [Working with Defender for Identity role groups](role-groups.md).
+    > To sign in to Defender for Identity, you'll need to sign in with a user assigned a Defender for Identity role with rights to access the Defender for Identity portal. For more information about role-based access control (RBAC) in Defender for Identity, see [Working with Defender for Identity role groups](deploy/role-groups.md).
 
 1. Select **Configuration**, **Manage role groups**, and use the [Azure AD Admin Center](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) link to manage your role groups.
 
@@ -52,7 +52,7 @@ After you verified that your network meets the sensor requirements, start the cr
 ## Next steps
 
 > [!div class="step-by-step"]
-> [« Prerequisites](prerequisites.md)
+> [« Prerequisites](deploy/prerequisites.md)
 > [Step 2 - Connect to Active Directory »](/defender-for-identity/classic-install-step2)
 
 ## Join the Community

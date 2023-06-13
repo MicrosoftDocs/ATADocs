@@ -33,7 +33,7 @@ To receive notifications to a specific email address, set the following paramete
 
 ## See Also
 
-- [Configure event collection](configure-event-collection.md)
+- [Configure event collection](deploy/configure-event-collection.md)
 
 - [Set Syslog settings](/defender-for-identity/notifications)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

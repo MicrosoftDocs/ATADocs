@@ -15,37 +15,37 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
-   :::image type="content" source="media/settings-identities.png" alt-text="The option of Identities on the Settings page" lightbox="media/settings-identities.png":::
+   :::image type="content" source="../media/settings-identities.png" alt-text="The option of Identities on the Settings page" lightbox="../media/settings-identities.png":::
 
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created. For details about each column, see [Sensor details](sensor-settings.md#sensor-details).
+1. Select the **Sensors** page, which displays all of your Defender for Identity sensors. For each sensor, you'll see its name, its domain membership, the version number, if updates should be delayed, the service status, sensor status, health status, the number of health issues, and when the sensor was created. For details about each column, see [Sensor details](../sensor-settings.md#sensor-details).
 
-    [![Sensor page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
+    [![Sensor page.](../media/sensor-page.png)](../media/sensor-page.png#lightbox)
 
    > [!NOTE]
-   > For information about how to configure delayed updates, see [Delayed sensor update](sensor-settings.md#delayed-sensor-update).
+   > For information about how to configure delayed updates, see [Delayed sensor update](../sensor-settings.md#delayed-sensor-update).
 
 1. If you select **Filters**, you can choose which filters will be available. Then with each filter, you can choose which sensors to display.
 
-    [![Sensor filters.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
+    [![Sensor filters.](../media/sensor-filters.png)](../media/sensor-filters.png#lightbox)
 
-    :::image type="content" source="media/filtered-sensor.png" alt-text="The Filtered sensor" lightbox="media/filtered-sensor.png":::
+    :::image type="content" source="../media/filtered-sensor.png" alt-text="The Filtered sensor" lightbox="../media/filtered-sensor.png":::
 
 1. If you select one of the sensors, a pane will display with information about the sensor and its health status.
 
-    [![Sensor details.](media/sensor-details.png)](media/sensor-details.png#lightbox)
+    [![Sensor details.](../media/sensor-details.png)](../media/sensor-details.png#lightbox)
 
 1. If you select **Manage sensor**, a pane will open where you can configure the sensor details.
 
-   :::image type="content" source="media/manage-sensor.png" alt-text="The Manage sensor option" lightbox="media/manage-sensor.png":::
+   :::image type="content" source="../media/manage-sensor.png" alt-text="The Manage sensor option" lightbox="../media/manage-sensor.png":::
 
-   :::image type="content" source="media/configure-sensor-details.png" alt-text="The page on which you configure settings for the sensor" lightbox="media/configure-sensor-details.png":::
+   :::image type="content" source="../media/configure-sensor-details.png" alt-text="The page on which you configure settings for the sensor" lightbox="../media/configure-sensor-details.png":::
 
     You can configure the following sensor details:
 
     - **Description**: Enter a description for the Defender for Identity sensor (optional).
     - **Domain Controllers (FQDN)**: This is required for the Defender for Identity standalone and AD FS sensors. (It can't be changed for the Defender for Identity sensor.) Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**.
 
-      ![Add domain controller.](media/add-domain-controller.png)
+      ![Add domain controller.](../media/add-domain-controller.png)
 
     The following information applies to the servers you enter in the **Domain Controllers** list:
     - All domain controllers whose traffic is being monitored via port mirroring by the Defender for Identity standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
@@ -58,7 +58,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. In the **Sensors** page, you can export your list of sensors to a .csv file by selecting **Export**.
 
-   :::image type="content" source="media/export-sensors.png" alt-text="The Export list of sensors" lightbox="media/export-sensors.png":::
+   :::image type="content" source="../media/export-sensors.png" alt-text="The Export list of sensors" lightbox="../media/export-sensors.png":::
 
 ## Validate installations
 
@@ -66,7 +66,7 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
 1. Check that the service named **Azure Advanced Threat Protection sensor** is running. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
 
-1. If the service doesn't start, review the "Microsoft.Tri.sensor-Errors.log" file located in the following default folder, "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
+1. If the service doesn't start, review the **Microsoft.Tri.sensor-Errors.log" file located in the following default folder, "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
 
    >[!NOTE]
    > The version of Defender for Identity updates frequently, to check the latest version, in the Defender for Identity portal, go to **Configuration** and then **About**.
@@ -104,7 +104,7 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
     1. The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**. You can select a specific row and see additional details in the **Inspect Record** left pane.
 
-    :::image type="content" source="media/adfs-logon-advanced-hunting.png" alt-text="See results of ADFS logon advanced hunting query." lightbox="media/adfs-logon-advanced-hunting.png":::
+    :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="See results of ADFS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 
 ## Related videos
 
@@ -114,7 +114,7 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
 Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:
 
-- [Updating your sensors](sensor-settings.md#updating-your-sensors)
-- [Set entity tags: sensitive, honeytoken, and Exchange server](entity-tags.md)
-- [Configure detection exclusions](exclusions.md)
-- [Configure notifications: health issues, alerts, and Syslog](notifications.md)
+- [Updating your sensors](../sensor-settings.md#updating-your-sensors)
+- [Set entity tags: sensitive, honeytoken, and Exchange server](../entity-tags.md)
+- [Configure detection exclusions](../exclusions.md)
+- [Configure notifications: health issues, alerts, and Syslog](../notifications.md)

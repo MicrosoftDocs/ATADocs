@@ -87,6 +87,6 @@ Each health alert provides specific details of the method, sensors, the problema
 
 ## See Also
 
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Configure event collection](configure-event-collection.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -90,5 +90,5 @@ Defender for Identity can notify you when it detects suspicious activities by se
 
 ## See Also
 
-- [Configure event collection](configure-event-collection.md)
+- [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

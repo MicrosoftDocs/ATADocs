@@ -9,7 +9,7 @@ ms.topic: how-to
 
 Microsoft Defender for Identity is a powerful solution for detecting abnormal or suspicious activities from managed, unmanaged or even unknown machines targeting domain controllers.
 
-When running a lab or a pentesting ensure your Defender for Identity configuration is well configured. Make sure that [sensors are installed on all domain controllers](sensor-settings.md) and are in a [healthy state](health-alerts.md). Also, check that [Windows Event collection](configure-windows-event-collection.md) is properly configured.
+When running a lab or a pentesting ensure your Defender for Identity configuration is well configured. Make sure that [sensors are installed on all domain controllers](sensor-settings.md) and are in a [healthy state](health-alerts.md). Also, check that [Windows Event collection](deploy/configure-windows-event-collection.md) is properly configured.
 
 Many alerts require a machine learning period before generating alerts. The learning period is listed in the link to the details for each detection. Be sure to wait the required period to get the proper results.
 
