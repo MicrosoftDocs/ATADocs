@@ -37,7 +37,7 @@ You can also use the IP address ranges in our Azure service tag (**AzureAdvanced
 
 ## Required connectivity settings
 
-Use [this link](deploy/prerequisites.md#ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
+Use [this link](deploy/prerequisites.md#required-ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
 
 ## How to migrate from commercial to GCC
 
