@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 06/11/2023
+ms.date: 06/19/2023
 ms.topic: overview
 ---
 
@@ -43,6 +43,10 @@ The following new security posture assessments are now available in Microsoft Se
 - [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
+### Defender for Identity release 2.205
+
+This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## May 2023
 
