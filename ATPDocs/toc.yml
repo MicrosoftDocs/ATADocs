@@ -1,0 +1,254 @@
+items:
+- name: Microsoft Defender for Identity Documentation
+  href: index.yml
+- name: Overview
+  items:
+  - name: What is Microsoft Defender for Identity?
+    href: what-is.md
+  - name: What's new in Defender for Identity?
+    href: whats-new.md
+  - name: Defender for Identity architecture
+    href: architecture.md
+  - name: Defender for Identity in Microsoft 365 Defender
+    href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json
+  - name: Defender for Identity for US Government
+    href: us-govt-gcc-high.md
+- name: Get started
+  expanded: true
+  items:
+  - name: Quick installation guide
+    href: quick-installation-guide.md
+  - name: Deploy Defender for Identity with Microsoft 365 Defender
+    href: deploy-defender-identity.md
+  - name: Prepare
+    items:
+    - name: Defender for Identity prerequisites
+      href: prerequisites.md
+    - name: Plan your Defender for Identity capacity
+      href: capacity-planning.md
+    - name: Configure Windows Event collection
+      href: configure-windows-event-collection.md
+    - name: Directory Service accounts
+      href: directory-service-accounts.md
+    - name: Role groups
+      href: role-groups.md
+    - name: Configure remote calls to SAM
+      href: remote-calls-sam.md
+  - name: Deploy 
+    items:
+    - name: Download the Defender for Identity sensor
+      href: download-sensor.md
+    - name: Proxy configuration
+      href: configure-proxy.md
+    - name: Install the Defender for Identity sensor
+      href: install-sensor.md
+    - name: Manage action accounts
+      href: manage-action-accounts.md
+    - name: Configure the Defender for Identity sensor
+      href: configure-sensor-settings.md
+  - name: Special scenarios
+    items:
+    - name: Deploying and monitoring for Zero Trust
+      href: zero-trust.md
+    - name: Installing on Active Directory Federation Services
+      href: active-directory-federation-services.md
+    - name: Multi-forest support
+      href: multi-forest.md
+    - name: Migrate from Advanced Threat Analytics (ATA)
+      href: migrate-from-ata-overview.md
+    - name: Standalone sensor
+      items:
+      - name: Configure port mirroring
+        href: configure-port-mirroring.md
+      - name: Validate port mirroring
+        href: validate-port-mirroring.md
+      - name: Configure event collection
+        href: configure-event-collection.md
+      - name: Configure Windows Event Forwarding
+        href: configure-event-forwarding.md
+- name: Manage
+  items:
+  - name: Settings
+    items:
+    - name: About page
+      href: settings-about.md   
+    - name: Manage and update sensors
+      href: sensor-settings.md
+    - name: Uninstall a sensor
+      href: uninstall-sensor.md
+    - name: Health alerts
+      href: health-alerts.md
+    - name: VPN integration
+      href: vpn-integration.md
+    - name: Set entity tags
+      href: entity-tags.md
+    - name: Configure detection exclusions
+      href: exclusions.md
+    - name: Automated response exclusions
+      href: automated-response-exclusions.md
+    - name: Email and syslog notifications
+      href: notifications.md
+    - name: Advanced settings
+      href: advanced-settings.md
+  - name: Troubleshooting
+    items:
+    - name: Troubleshooting known issues
+      href: troubleshooting-known-issues.md
+    - name: Troubleshoot using logs
+      href: troubleshooting-using-logs.md
+- name: Investigate and respond
+  items:
+  - name: Assets
+    items:
+    - name: Investigate assets
+      href: investigate-assets.md
+  - name: Lateral movement paths
+    items:
+    - name: Understand and investigate lateral movement paths
+      href: understand-lateral-movement-paths.md
+  - name: Alerts
+    items:
+    - name: Alerts overview
+      href: alerts-overview.md
+    - name: Understanding security alerts
+      href: understanding-security-alerts.md
+    - name: Investigate security alerts
+      href: manage-security-alerts.md
+    - name: Monitored activities
+      href: monitored-activities.md
+    - name: Understanding Network Name Resolution (NNR)
+      href: nnr-policy.md
+    - name: Reconnaissance and discovery alerts
+      href: reconnaissance-discovery-alerts.md
+    - name: Persistence and privilege escalation alerts
+      href: persistence-privilege-escalation-alerts.md
+    - name: Credential access alerts
+      href: credential-access-alerts.md
+    - name: Lateral movement alerts
+      href: lateral-movement-alerts.md
+    - name: Other alerts
+      href: other-alerts.md
+  - name: Security alert lab
+    items:
+    - name: Lab overview
+      href: playbook-lab-overview.md 
+    - name: Lab setup
+      href: playbook-setup-lab.md 
+    - name: Reconnaissance playbook
+      href: playbook-reconnaissance.md 
+    - name: Lateral movement playbook
+      href: playbook-lateral-movement.md 
+    - name: Domain dominance playbook
+      href: playbook-domain-dominance.md
+    - name: Attack simulations
+      href: playbooks.md 
+  - name: Remediation
+    items:
+    - name: Remediation actions
+      href: remediation-actions.md 
+  - name: Security posture
+    items:
+    - name: Overview
+      href: security-assessment.md
+    - name: Domain controllers with Print spooler service available assessment
+      href: security-assessment-print-spooler.md
+    - name: Dormant entities in sensitive groups assessment
+      href: security-assessment-dormant-entities.md
+    - name: Entities exposing credentials in clear text assessment
+      href: security-assessment-clear-text.md
+    - name: LAPS usage assessment
+      href: security-assessment-laps.md
+    - name: Legacy protocols usage assessment
+      href: security-assessment-legacy-protocols.md
+    - name: Riskiest lateral movement paths
+      href: security-assessment-riskiest-lmp.md
+    - name: Unmonitored domain controllers
+      href: security-assessment-unmonitored-domain-controller.md
+    - name: Unsecure account attributes
+      href: security-assessment-unsecure-account-attributes.md
+    - name: Unsecure domain configurations
+      href: security-assessment-unsecure-domain-configurations.md
+    - name: Unsecure Kerberos delegation assessment
+      href: security-assessment-unconstrained-kerberos.md
+    - name: Unsecure SID History attributes
+      href: security-assessment-unsecure-sid-history-attribute.md
+    - name: Weak cipher usage assessment
+      href: security-assessment-weak-cipher.md
+- name: Reference
+  items:
+  - name: Frequently asked questions
+    href: technical-faq.yml
+  - name: SIEM log reference
+    href: cef-format-sa.md
+  - name: Support
+    href: support.md
+  - name: Defender for Identity data security and privacy
+    href: privacy-compliance.md
+  - name: Security baseline
+    href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
+  - name: What's new archive
+    href: whats-new-archive.md
+- name: Classic Defender for Identity portal
+  items:
+  - name: Deploy
+    items:
+    - name: Create your Defender for Identity instance 
+      href: classic-install-step1.md
+    - name: Connect to Active Directory
+      href: classic-install-step2.md
+    - name: Download the Defender for Identity sensor package
+      href: classic-install-step3.md
+  - name: Manage
+    items:
+    - name: Defender for Identity portal
+      href: classic-workspace-portal.md
+    - name: Manage security alerts
+      href: classic-working-with-suspicious-activities.md
+    - name: Manage sensitive or honeytoken accounts
+      href: classic-manage-sensitive-honeytoken-accounts.md
+    - name: Reports
+      href: classic-reports.md
+    - name: Configure detection exclusions
+      href: classic-configure-detection-exclusions.md
+    - name: Monitor domain controllers
+      href: classic-sensor-monitoring.md
+    - name: VPN integration
+      href: classic-install-step6-vpn.md
+    - name: Integrate with Syslog
+      href: classic-setting-syslog.md
+    - name: Change domain connectivity password
+      href: classic-modifying-config-dcpassword.md
+    - name: Set Defender for Identity notifications
+      href: classic-notifications.md
+    - name: Work with Defender for Identity health center
+      href: classic-health-center.md
+    - name: Uninstall a sensor
+      href: classic-uninstall-sensor.md
+    - name: Integrate with Microsoft Defender for Endpoint
+      href: classic-integrate-mde.md
+  - name: Investigate and respond
+    items:
+    - name: Understanding entity profiles
+      href: classic-entity-profiles.md
+    - name: Lateral movement paths
+      href: classic-use-case-lateral-movement-path.md
+    - name: Investigate lateral movement paths
+      href: classic-investigate-lateral-movement-path.md
+    - name: Understanding Network Name Resolution (NNR)
+      href: classic-nnr-policy.md
+    - name: Investigate an entity
+      href: classic-investigate-entity.md
+    - name: Search and filter monitored activities
+      href: classic-activities-search.md
+- name: Microsoft 365 Defender Docs
+  items: 
+  - name: Microsoft 365 Defender
+    href: /microsoft-365/security/defender/
+  - name: Microsoft Defender for Office 365
+    href: /microsoft-365/security/office-365-security/
+  - name: Microsoft Defender for Endpoint
+    href: /microsoft-365/security/defender-endpoint/
+  - name: Microsoft Defender for Cloud Apps
+    href: /cloud-app-security/
+  - name: Microsoft Defender Vulnerability Management
+    href: /microsoft-365/security/defender-vulnerability-management/

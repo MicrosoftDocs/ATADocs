@@ -1,5 +1,0 @@
-# [Understand and Explore](/understand-explore/what-is-ata)
-# [Plan and Design](/plan-design/ata-architecture)
-# [Deploy](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Use](/advanced-threat-analytics/deploy-use/operate-ata)
-# [Troubleshoot](/troubleshoot/troubleshooting-ata-known-errors)

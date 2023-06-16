@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "exfiltration",
+        "infographic",
+        "kerberos",
+        "remediate",
+        "unmonitored"
+    ],
+    "markdownlint.config": {
+        "MD028": false,
+        "MD025": {
+            "front_matter_title": ""
+        }
+    }
+}

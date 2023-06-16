@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -11,20 +12,21 @@
           "DeployUse/**",
           "PlanDesign/**",
           "Troubleshoot/**",
-          "**/Token/**"
+          "**/Token/**",
+          "**/includes/**"
         ]
       }
     ],
     "resource": [
-        {
-          "files": [
-          "**/images/**", 
+      {
+        "files": [
+          "**/images/**",
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
           "**/*.bmp",
           "**/*.html"
-          ],
+        ],
         "exclude": [
           "**/obj/**",
           "_themes/**",
@@ -38,8 +40,14 @@
     "dest": "ATADocs",
     "template": "docs.html",
     "globalMetadata": {
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/atadocs",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection",
       "layout": "Conceptual",
-      "breadcrumb_path": "/enterprise-mobility-security/toc.json"
-    }
+      "breadcrumb_path": "/advanced-threat-analytics/bread/toc.json",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "searchScope": ["ATA"]
+    },
+    "markdownEngineName": "markdig"
   }
 }

@@ -1,8 +1,0 @@
-# [Understand and Explore](/advanced-threat-analytics/understand-explore/what-is-ata)
-# [Plan and Design](ata-architecture.md)
-## [ATA Architecture](ata-architecture.md)
-## [Plan your ATA capacity](ata-capacity-planning.md)
-## [ATA Prerequisites](ata-prerequisites.md)
-# [Deploy](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Use](/advanced-threat-analytics/deploy-use/operate-ata)
-# [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)

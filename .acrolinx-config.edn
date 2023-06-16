@@ -1,0 +1,2 @@
+{:allowed-branchname-matches ["main" "master" "release-.*" "sandbox-.*"]
+ :allowed-filename-matches ["ATADocs" "ATPDocs"]}

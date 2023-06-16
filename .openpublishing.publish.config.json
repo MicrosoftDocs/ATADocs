@@ -1,70 +1,80 @@
 {
   "build_entry_point": "docs.ps1",
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "ATADocs",
+      "build_source_folder": "ATADocs",
       "build_output_subfolder": "ATADocs",
       "locale": "en-us",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
-      }
+        "Conceptual": "Content",
+        "LandingData": "Content",
+        "ContextObject": "Toc"
+      },
+      "version": 0
     },
     {
-      "docset_name": "ATAUnderstand",
-      "build_output_subfolder": "ATADocs/Understand",
+      "docset_name": "ATPDocs",
+      "build_source_folder": "ATPDocs",
+      "build_output_subfolder": "ATPDocs",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
-      }
-    },
-    {
-      "docset_name": "ATAPlanDesign",
-      "build_output_subfolder": "ATADocs/PlanDesign",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      }
-    },
-    {
-      "docset_name": "ATADeployUse",
-      "build_output_subfolder": "ATADocs/DeployUse",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      }
-    },
-    {
-      "docset_name": "ATATroubleshoot",
-      "build_output_subfolder": "ATADocs/Troubleshoot",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      }
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
     ""
   ],
+  "sync_notification_subscribers": [
+    "v-jiahu@microsoft.com",
+    "v-jutao@microsoft.com"
+  ],
+  "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/ATADocs",
+  "git_repository_branch_open_to_public_contributors": "main",
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
+  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master"
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
-  "need_preview_pull_request": "true"
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "need_generate_pdf_url_template": true,
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
