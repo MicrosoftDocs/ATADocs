@@ -19,6 +19,7 @@ You'll then be given the option to deploy supported services, including Microsof
 
 For more information about these steps, see the following articles:
 
+- [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json)
 - [Get started with Microsoft 365 Defender](/microsoft-365/security/defender/get-started)
 - [Turn on Microsoft 365 Defender](/microsoft-365/security/defender/m365d-enable)
 - [Deploy supported services](/microsoft-365/security/defender/deploy-supported-services)
