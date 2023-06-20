@@ -29,6 +29,12 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## June 2023
 
+### Advanced hunting with an enhanced IdentityInfo table
+
+For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, as well as identities detected by the Defender for Identity sensor from your on-premises environment. 
+
+For more information, see the [Microsoft 365 Defender advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
+
 ### Defender for Identity release 2.205
 
 This version includes improvements and bug fixes for internal sensor infrastructure.
