@@ -72,56 +72,58 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 ## Validate installations
 
+### Verify latest available sensor version
 
-   >[!NOTE]
-   > The version of Defender for Identity updates frequently, to check the latest version, in the Defender for Identity portal, go to **Configuration** and then **About**.
+The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft 365 Defender **Settings** > **Identities** > **About** page.
 
+### Validate successful deployment
 
 To validate that the Defender for Identity sensor has been successfully deployed:
 
+1. Check that the **Azure Advanced Threat Protection sensor** service is running on your sensor machine. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
+
+1. If the service doesn't start, review the **Microsoft.Tri.sensor-Errors.log** file, located by default at `%programfiles%\Azure Advanced Threat Protection sensor\<sensor version>\Logs`, where `<sensor version>` is the version you deployed.
+
+### Validate connectivity
+
+Verify Defender for Identity connectivity on any domain device using the following steps.
+
+When using the examples in the following steps, make sure to replace `contosodc.contoso.azure` and `contoso.azure` with the FQDN of your Defender for Identity sensor and domain name respectively.
+
+1. Open a command prompt and enter `nslookup`
+
+1. Enter `server` and the FQDN or IP address of the domain controller where the Defender for Identity sensor is installed. For example:  `server contosodc.contoso.azure`
+
+1. Enter `ls -d contoso.azure`
+   
+1. Repeat the previous two steps for each sensor you want to test.
+
+1. From the Defender for Identity console, open the entity profile for the computer you ran the connectivity test from.
+
+1. In Microsoft 365 Defender, search for the name of the user you used to run the commands in the previous steps. Select the name in the results, and view the user details page and all related activities and alerts.
+
+If the domain controller that you're testing is the first sensor you've deployed, wait at least 15 minutes before verifying any logical activity for that domain controller, allowing the database backend to complete the initial microservice deployments.
+
+### Validate successful deployment on an AD FS server
+
+To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server:
+
 1. Check that the **Azure Advanced Threat Protection sensor** service is running. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
 
-1. If the service doesn't start, review the **Microsoft.Tri.sensor-Errors.log** file, located by default at `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`.
+1. If the service doesn't start, review the `Microsoft.Tri.sensor-Errors.log` file, located by default at: `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`
 
-1. Verify Defender for Identity connectivity on any domain device using the following steps:
+1. Use AD FS to authenticate a user to any application, and then verify that the AD FS authentication was observed by Defender for Identity:
 
-     1. Open a command prompt and enter `nslookup`
+   From Microsoft 365 Defender, select **Hunting** > **Advanced Hunting**. In the **Query** pane, enter and run the following query:
 
-     1. Enter **server** and the FQDN or IP address of the domain controller where the Defender for Identity sensor is installed. For example: `server <contosodc.contoso>.azure`
+   ```query
+   IdentityLogonEvents | where Protocol contains 'Adfs'
+   ```
 
-     1. Enter `ls -d <contoso.azure>`
+   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**. Select a specific row to see additional details in the **Inspect Record** left pane. For example:
 
-         - Make sure to replace contosodc.contoso.azure and contoso.azure with the FQDN of your Defender for Identity sensor and domain name respectively.
-       1. Repeat the previous two steps for each sensor you wish to test.
-       1. From the Defender for Identity console, open the entity profile for the computer you ran the connectivity test from.
-   1. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/). In the top middle search box, type in the name of the user you used to perform the commands detailed above, select the name in the results to view the user's page and all its related activities and alerts.
+   :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 
-   > [!NOTE]
-   > If the domain controller you wish to test is your first deployed sensor, wait at least 15 minutes to allow the database backend to finish initial deployment of the necessary microservices before you attempt to verify the related logical activity for that domain controller.
-
-To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server, check the following:
-
-1. Check that the service named **Azure Advanced Threat Protection sensor** is running. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
-1. If the service doesn't start, review the "Microsoft.Tri.sensor-Errors.log" file located in the following default folder, "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
-   > [!NOTE]
-   > The version of Defender for Identity updates frequently, to check the latest version, in the Defender for Identity portal, go to **Configuration** and then **About**.
-
-1. Use AD FS to authenticate a user to any application.
-1. Verify that the AD FS authentication was observed by Defender for Identity using the following steps:
-
-    1. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/). From the navigation menu, select **Hunting** and then **Advanced Hunting**. In the **Query** pane, type in and run the following query:
-
-        ```query
-        IdentityLogonEvents | where Protocol contains 'Adfs'
-        ```
-
-    1. The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**. You can select a specific row and see additional details in the **Inspect Record** left pane.
-
-    :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="See results of ADFS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
-
-
->[!NOTE]
-> The version of Defender for Identity updates frequently, to check the latest version, in the Defender for Identity portal, go to **Configuration** and then **About**.
 
 ## Related videos
 
