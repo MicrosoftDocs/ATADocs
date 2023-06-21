@@ -107,7 +107,7 @@ To audit Event ID 8004, more configuration steps are required.
 
 ## Configure object auditing
 
-To collect 4662 events, it's also necessary to configure object auditing on the user, group and computer objects. Here's an example for how to enable auditing on all users, groups, and computers in the Active Directory domain, but it can be also scoped by OU (organizational unit):
+To collect 4662 events, it's also necessary to configure object auditing on the user, group and computer objects. Here's how to enable auditing on all users, groups, and computers in the Active Directory domain:
 
 > [!NOTE]
 > It is important to [review and verify your audit policies](#configure-audit-policies) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
@@ -115,9 +115,9 @@ To collect 4662 events, it's also necessary to configure object auditing on the 
 >If configured properly, this auditing should have minimal effect on server performance.
 
 1. Go to the **Active Directory Users and Computers** console.
-1. Select the domain or OU that contains the users, groups, or computers you want to audit.
+1. Select the domain you want to audit.
 1. Select the **View** menu and select **Advanced Features**.
-1. Right-click the container (the domain or OU) and select **Properties**.
+1. Right-click the domain and select **Properties**.
 
     ![Container properties.](../media/container-properties.png)
 

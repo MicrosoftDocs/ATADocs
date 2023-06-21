@@ -9,6 +9,11 @@ ms.topic: how-to
 
 This article outlines the steps to install Microsoft Defender for Identity on Active Directory or Active Directory Federation Services (AD FS) servers.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW16oLB]
+
+In this short video, we show a step-by-step guide on how to install the Microsoft Defender for Identity sensor. The video begins by explaining the importance of having the sensors installed to protect your organization against identity-based attacks. It then goes on to show the user how to download and install the sensor, as well as how to find the potential health issues, and how to see your secure score Identity related posture assessments.
+
+
 ## Prerequisites
 
 ### Licensing requirements
