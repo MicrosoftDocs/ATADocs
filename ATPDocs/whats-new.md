@@ -40,6 +40,9 @@ Download and schedule reports in Microsoft 365 Defender by navigating with one o
 
 For more information, see [Microsoft Defender for Identity reports in Microsoft 365 Defender](reports.md).
 
+### Defender for Identity release 2.205
+
+This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## May 2023
 
