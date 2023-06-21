@@ -99,7 +99,7 @@ The URL syntaxes listed in the table above automatically map to the correct serv
 
 Alternately, use the IP address ranges in our **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). 
 
-To download the *Azure IP Ranges and Service Tags - Public Cloud* file, select [https://www.microsoft.com/download/details.aspx?id=56519](https://www.microsoft.com/download/details.aspx?id=56519). 
+To download the *Azure IP Ranges and Service Tags - Public Cloud* file, select [https://www.microsoft.com/download/details.aspx?id=56519](https://www.microsoft.com/download/details.aspx?id=56519).
 
 For US Government offerings, see [Get started with US Government offerings](../us-govt-gcc-high.md).
 
@@ -117,15 +117,16 @@ After the proxy has been configured to allow the sensor access to the Defender f
 1. Go to: `https://<your_workspace_name>sensorapi.atp.azure.com`, where `<your_workspace_name>` is the name of your Defender for Identity workspace.
 
     > [!IMPORTANT]
-    > You must specify `HTTPS`, not `HTTP`, to properly test connectivity.
+    > You *must* specify `HTTPS`, not `HTTP`, to properly test connectivity.
 
 You should get an *Error 503 The service is unavailable* message, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint.  This is the desired result.
 
 If you don't get an *Error 503 The service is unavailable* message, you may have a problem with your proxy configuration. Check your network and proxy settings.
 
-If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). Certificate details should look 
+If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). 
 
-![Screenshot of the expected certificate path.](../media/certificate-path.png)
+Certificate details should look similar to the following: **DigiCert Global Root G2** > **Microsoft Azure TLS Issuing CA 01** > ***.atp.azure.com**.
+
 
 ## Next steps
 
