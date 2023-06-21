@@ -1,66 +1,69 @@
 ---
-title: Configure endpoint proxy and Internet connectivity settings
-description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 04/16/2023
+title: Configure endpoint proxy and internet connectivity settings | Microsoft Defender for Identity
+description: Learn how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors.
+ms.date: 06/13/2023
 ms.topic: how-to
 ---
 
 # Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor
 
-Each Microsoft Defender for Identity sensor requires Internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully. In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection. SSL inspection and intercepting proxies are not supported for security reasons. Your proxy server should allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
+Each Microsoft Defender for Identity sensor requires internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully. 
+
+In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. 
+
+In such cases, your proxy server must allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
+
+Use the command line, Microsoft Windows Internet (WinINet), or the registry to configure your proxy server. 
+
+We recommend using the command line to ensure that only the Defender for Identity sensor services communicate through the proxy. When you use WinINet or the registry to configure your proxy, other services running in the context as Local System or Local Service will also direct traffic through the proxy.
 
 > [!NOTE]
-> Microsoft does not provide a proxy server. The URLs will be accessible via the proxy server that you configure.
+> Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
 
-## Configure proxy server using the command line
+## Configure a proxy server using the command line
 
-You can configure your proxy server during sensor installation using the following command-line switches.
+Configure your proxy server during sensor installation using the following command-line switches.
 
 ### Syntax
 
-"Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]
+`"Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
 ### Switch descriptions
 
-> [!div class="mx-tableFixed"]
+|Name|Syntax|Mandatory for silent installation?|Description|
+|-------------|----------|---------|---------|
+|**ProxyUrl**|`ProxyUrl="http\://proxy.contoso.com:8080"`|No|Specifies the proxy URL and port number for the Defender for Identity sensor.|
+|**ProxyUserName**|`ProxyUserName="Contoso\ProxyUser"`|No|If your proxy service requires authentication, define a user name in the `DOMAIN\user` format.|
+|**ProxyUserPassword**|`ProxyUserPassword="P@ssw0rd"`|No|Specifies the password for your  proxy user name. <br><br>Credentials are encrypted and stored locally by the Defender for Identity sensor.|
+
+> [!TIP]
+> If you've configured a proxy during installation, changing the proxy configuration requires you to remove and install the sensor. Therefore, we recommend creating and using a custom DNS A record for the proxy server, which you can use to change the proxy server's address when needed. 
 >
-> |Name|Syntax|Mandatory for silent installation?|Description|
-> |-------------|----------|---------|---------|
-> |ProxyUrl|ProxyUrl="http\://proxy.contoso.com:8080"|No|Specifies the ProxyUrl and port number for the Defender for Identity sensor.|
-> |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
-> |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Defender for Identity sensor.|
+> We also recommend using the *hosts* file for testing.
 
-> [!NOTE]
-> Since changing the sensor's proxy configuration (if installed via the command line as described above) requires removing and reinstalling the sensor, we recommend creating and using a custom DNS A record for the proxy server. With a custom DNS A record, you can change the proxy server's address when needed, and also use the hosts file for testing.
+## Configure a proxy server using WinINet
 
-## Alternative methods to configure your proxy server
+When configuring the proxy using WinINet, keep in mind that the embedded Defender for Identity sensor service runs in system context using the **LocalService** account, and that the Defender for Identity Sensor updater service runs in the system context using **LocalSystem** account.
 
-You can use one of the following alternative methods to configure your proxy server. When configuring the proxy settings using these methods, other services running in the context as Local System or Local Service will also direct traffic through the proxy.
+- If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Defender for Identity cloud service.
 
-- [Configure proxy server using WinINet](#configure-proxy-server-using-wininet)
-- [Configure proxy server using the registry](#configure-proxy-server-using-the-registry)
+- If you're using Transparent proxy or WPAD in your network topology, you don't need to configure WinINet for your proxy.
 
-### Configure proxy server using WinINet
+## Configure a proxy server using the registry
 
-You can configure your proxy server using Microsoft Windows Internet (WinINet) proxy configuration, to allow Defender for Identity sensor to report diagnostic data and communicate with Defender for Identity cloud service when a computer isn't permitted to connect to the Internet. If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Defender for Identity cloud service.
+This section describes how to configure a static proxy server manually using a registry-based static proxy. 
 
-When configuring the proxy, remember that the embedded Defender for Identity sensor service runs in system context using the **LocalService** account, and that the Defender for Identity Sensor Updater service runs in the system context using **LocalSystem** account.
+> [!IMPORTANT]
+> Configuring a proxy via the registry affects all applications that use WinINet with the **LocalService** and **LocalSystem** accounts, including Windows services.
+>
+>Apply registry changes only to the **LocalService** and **LocalSystem** accounts.
+>
 
-> [!NOTE]
-> If you're using Transparent proxy or WPAD in your network topology, you don't need to configure WinINet for your proxy.
+To configure your proxy, copy your proxy configuration in user context to the **LocalSystem** and **LocalService** accounts as follows:
 
-### Configure proxy server using the registry
+1. Back up your registry keys.
 
-You can also configure your proxy server manually using a registry-based static proxy, to allow Defender for Identity sensor to report diagnostic data and communicate with Defender for Identity cloud service when a computer isn't permitted to connect to the Internet.
-
-> [!NOTE]
-> The registry changes should be applied only to LocalService and LocalSystem.
-
-The static proxy is configurable through the Registry. You must copy the proxy configuration that you use in user context to the LocalSystem and LocalService. To copy your user context proxy settings:
-
-1. Make sure to back up the registry keys before you modify them.
-
-1. In the registry, search for the value `DefaultConnectionSettings` as REG_BINARY under the registry key `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` and copy it.
+1. In the registry, search for the `DefaultConnectionSettings` value as REG_BINARY, under the `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` registry key, and copy it.
 
 1. If the LocalSystem doesn't have the correct proxy settings (either they aren't configured or they're different from the Current_User), then copy the proxy setting from the Current_User to the LocalSystem. Under the registry key `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
@@ -70,8 +73,9 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 1. Paste the value from the Current_User `DefaultConnectionSettings` as REG_BINARY.
 
+ 
+
 > [!NOTE]
-> This will affect all applications including Windows services which use WinINET with LocalService, LocalSytem context.
 
 ## Enable access to Defender for Identity service URLs in the proxy server
 
