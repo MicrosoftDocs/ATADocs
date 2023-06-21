@@ -31,7 +31,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Defender for Identity release 2.206
 
-This version includes improvements and bug fixes for cloud services and internal sensor infrastructure.
+This version includes improvements and bug fixes for cloud services and Defender for Identity sensor.
 
 ### Defender for Identity release 2.205
 
