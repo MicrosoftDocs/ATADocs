@@ -7,13 +7,11 @@ ms.topic: how-to
 
 # Download and schedule Defender for Identity reports in Microsoft 365 Defender
 
-The Microsoft 365 Defender **Reports** page includes Defender for Identity reports. Use the **Reports** page to either generate a report on demand, or configure Microsoft 365 Defender to send you a report periodically by email.
-
-Either generate a report on demand, or configure Microsoft 365 Defender to send you a report periodically by email.
+The Microsoft 365 Defender includes Defender for Identity reports. Use the **Reports management** page to either generate a report on demand, or configure Microsoft 365 Defender to send you a report periodically by email.
 
 ## Access Defender for Identity reports in Microsoft 365 Defender
 
-To access Defender for Identity reports in Microsoft 365 Defender, select **Reports > Identities > Reports management**.
+To access Defender for Identity reports in Microsoft 365 Defender, select **Settings > Identities > Reports management**.
 
 Available reports include:
 
@@ -34,6 +32,9 @@ To generate a report on demand:
 
 Reports include data from the last 180 days.
 
+![image](https://github.com/batamig/ATADocs-pr/assets/111686396/4ce0b4fa-a7e0-4574-990b-688e292d7df7)
+
+
 ## Schedule a report by email
 
 To define a schedule for a report to be sent to you by email:
@@ -48,9 +49,14 @@ To define a schedule for a report to be sent to you by email:
 
         The time you select for the report to be sent is according to your time zone settings (*Local* or UTC). For more information, see [Set the time zone for Microsoft 365 Defender](/microsoft-365/security/defender/m365d-time-zone).
 
-    - **Recipients**: Enter the email addresses for anyone you want to receive the report
+    - **Recipients**: Enter the email addresses for anyone you want to receive the report.
+
+Once the report has been configured, you can edit and change the sending time or recipients in this wizard. 
 
 1. At the end of the wizard, in the **Finish** page, select **Close** to close the wizard.
+
+![image](https://github.com/batamig/ATADocs-pr/assets/111686396/dc5957f5-779f-4ff1-8cf5-780587e52809)
+
 
 ### Remove a scheduled report
 
