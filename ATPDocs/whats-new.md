@@ -29,7 +29,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## June 2023
 
-### Defender for Identity report downloads and scheduling in Microsoft 365 Defender
+### Defender for Identity report downloads and scheduling in Microsoft 365 Defender (Preview)
 
 Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).
 

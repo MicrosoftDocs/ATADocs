@@ -5,7 +5,7 @@ ms.date: 06/21/2023
 ms.topic: how-to
 ---
 
-# Download and schedule Defender for Identity reports in Microsoft 365 Defender
+# Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)
 
 Microsoft 365 Defender provides Defender for Identity reports, which you can either generate on demand or configure to be sent periodically by email.
 
