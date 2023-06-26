@@ -7,16 +7,11 @@ ms.topic: how-to
 
 # Download and schedule Defender for Identity reports in Microsoft 365 Defender
 
-Microsoft 365 Defender provides Defender for Identity reports, which you can either generate on demand or configure to be sent periodically by email. For example:
-
-:::image type="content" source="media/reports/sample-report.png" alt-text="Screenshot of a sample Summary report." lightbox="media/reports/sample-report.png":::
-
+Microsoft 365 Defender provides Defender for Identity reports, which you can either generate on demand or configure to be sent periodically by email.
 
 ## Access Defender for Identity reports in Microsoft 365 Defender
 
-To access Defender for Identity reports in Microsoft 365 Defender, select **Settings > Identities > Report management**. For example:
-
-:::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page." lightbox="media/whats-new/report-management.png":::
+To access Defender for Identity reports in Microsoft 365 Defender, select **Settings > Identities > Report management**. 
 
 Available reports include:
 
