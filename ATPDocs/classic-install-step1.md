@@ -8,10 +8,11 @@ ROBOTS: NOINDEX
 
 # Classic portal: Quickstart -Create your Microsoft Defender for Identity instance
 
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 In this quickstart, you'll create your Microsoft Defender for Identity instance in the Defender for Identity portal. In Defender for Identity, you'll have a single instance, previously called a workspace. A single instance enables you to manage multiple forests from a single pane of glass.
 
-> [!IMPORTANT]
-> Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, Defender for Identity instances aren't movable.
+Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, Defender for Identity instances aren't movable.
 
 ## Prerequisites
 

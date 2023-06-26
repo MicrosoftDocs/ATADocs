@@ -8,6 +8,8 @@ ROBOTS: NOINDEX
 
 # Classic portal: Uninstall the Microsoft Defender for Identity sensor
 
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 This article describes how to uninstall the Microsoft Defender for Identity sensor from domain controllers for the following scenarios:
 
 1. Uninstall a sensor from a domain controller

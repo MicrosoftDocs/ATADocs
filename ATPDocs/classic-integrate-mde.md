@@ -8,6 +8,8 @@ ROBOTS: NOINDEX
 
 # Classic portal: Integrate Microsoft Defender for Identity with Microsoft Defender for Endpoint
 
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 Microsoft Defender for Identity enables you to integrate Microsoft Defender for Identity with Defender for Endpoint, for an even more complete threat protection solution. While Defender for Identity monitors the traffic on your domain controllers, Defender for Endpoint monitors your endpoints, together providing a single interface from which you can protect your environment.
 
 By integrating Defender for Endpoint into Defender for Identity, you can leverage the full power of both services and secure your environment, including:
