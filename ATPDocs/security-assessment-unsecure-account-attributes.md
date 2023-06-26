@@ -26,11 +26,6 @@ For example, if the **PasswordNotRequired** attribute is enabled, an attacker ca
     ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
-> [!NOTE]
->
-> - This assessment is updated in near real time.
-> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for Microsoft Defender for Identity are not met.
-
 ## Remediation
 
 Use the remediation appropriate to the relevant attribute as described in the following table.
@@ -43,8 +38,11 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 | Remove Password stored with weak encryption | Reset the account password | Changing the account's password enables stronger encryption algorithms to be used for its protection. |
 | Enable Kerberos AES encryption support | Enable AES features on the account properties in AD | Enabling AES128_CTS_HMAC_SHA1_96 or AES256_CTS_HMAC_SHA1_96 on the account helps prevent the use of weaker encryption ciphers for Kerberos authentication. |
 | Remove Use Kerberos DES encryption types for this account | Remove this setting from account properties in AD | Removing this setting enables the use of stronger encryption algorithms for the account's password. |
+| Remove a Service Principal Name (SPN) | Remove this setting from account properties in AD | When a user account is configured with an SPN set, it means that the account has been associated with one or more SPNs. This typically occurs when a service is installed or registered to run under a specific user account, and the SPN is created to uniquely identify the service instance for Kerberos authentication. This recommendation only showed for sensitive accounts |
 
 ## See Also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
+
