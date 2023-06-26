@@ -26,11 +26,6 @@ For example, if the **PasswordNotRequired** attribute is enabled, an attacker ca
     ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-account-attributes-1.png)
 1. Take appropriate action on those user accounts by modifying or removing the relevant attributes.
 
-> [!NOTE]
->
-> - This assessment is updated in near real time.
-> - This assessment might contain previously deleted entities if the [prerequisites](prerequisites.md#before-you-start) for Microsoft Defender for Identity are not met.
-
 ## Remediation
 
 Use the remediation appropriate to the relevant attribute as described in the following table.
@@ -49,3 +44,5 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
+
