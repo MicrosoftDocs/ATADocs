@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Download and schedule Defender for Identity reports in Microsoft 365 Defender
 
-The Microsoft 365 Defender includes Defender for Identity reports. Use the **Reports management** page to either generate a report on demand, or configure Microsoft 365 Defender to send you a report periodically by email.
+Microsoft 365 Defender includes Defender for Identity reports. Use the **Reports management** page to either generate a report on demand or configure Microsoft 365 Defender to send you a report periodically by email.
 
 ## Access Defender for Identity reports in Microsoft 365 Defender
 
@@ -30,9 +30,9 @@ To generate a report on demand:
 1. Select **Download** and define the time period for your report.
 1. Select **Download report** to start generating and downloading your report.
 
-Reports include data from the last 180 days.
+Reports include data from the last 180 days. For example:
 
-![image](https://github.com/batamig/ATADocs-pr/assets/111686396/4ce0b4fa-a7e0-4574-990b-688e292d7df7)
+![Screenshot of the Reports management page](https://github.com/batamig/ATADocs-pr/assets/111686396/4ce0b4fa-a7e0-4574-990b-688e292d7df7)
 
 
 ## Schedule a report by email
@@ -53,9 +53,9 @@ To define a schedule for a report to be sent to you by email:
 
 Once the report has been configured, you can edit and change the sending time or recipients in this wizard. 
 
-1. At the end of the wizard, in the **Finish** page, select **Close** to close the wizard.
+1. At the end of the wizard, in the **Finish** page, select **Close** to close the wizard. For example:
 
-![image](https://github.com/batamig/ATADocs-pr/assets/111686396/dc5957f5-779f-4ff1-8cf5-780587e52809)
+![Screenshot of the scheduling wizard.](https://github.com/batamig/ATADocs-pr/assets/111686396/dc5957f5-779f-4ff1-8cf5-780587e52809)
 
 
 ### Remove a scheduled report
