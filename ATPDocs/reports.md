@@ -7,63 +7,69 @@ ms.topic: how-to
 
 # Download and schedule Defender for Identity reports in Microsoft 365 Defender
 
-Microsoft 365 Defender includes Defender for Identity reports. Use the **Reports management** page to either generate a report on demand or configure Microsoft 365 Defender to send you a report periodically by email.
+Microsoft 365 Defender provides Defender for Identity reports, which you can either generate on demand or configure to be sent periodically by email. For example:
+
+:::image type="content" source="media/reports/sample-report.png" alt-text="Screenshot of a sample Summary report.":::
+
 
 ## Access Defender for Identity reports in Microsoft 365 Defender
 
-To access Defender for Identity reports in Microsoft 365 Defender, select **Settings > Identities > Reports management**.
+To access Defender for Identity reports in Microsoft 365 Defender, select **Settings > Identities > Report management**. For example:
+
+:::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page.":::
 
 Available reports include:
 
 |Report name  |Description  |
 |---------|---------|
 |**Summary**| Presents a dashboard of your system status, including: <br><br>- **Summary**: A summary of detected network activity <br>- **Open suspicious activities**: Lists the suspicious activities you should take care of <br>- **Open health issues**: Lists Defender for Identity health issues you should take care of. <br><br> Suspicious activities and health issues are listed by type. |
-|**Modification to sensitive groups**     |    Lists every time a modification is made to sensitive groups, such as admins, or manually tagged accounts or groups. If you're using Defender for Identity standalone sensors, make sure that [events are forwarded from your domain controllers to the standalone sensors](configure-event-forwarding.md) in order to receive a full report about your sensitive groups.     |
+|**Modification to sensitive groups**     |    Lists every time a modification is made to sensitive groups, such as admins, or manually tagged accounts or groups. <br><br>If you're using Defender for Identity standalone sensors, make sure that [events are forwarded from your domain controllers to the standalone sensors](configure-event-forwarding.md) in order to receive a full report about your sensitive groups.     |
 |**Passwords exposed in cleartext**     | Lists all source computer and account passwords detected by Defender for Identity being sent in clear text. <br><br>**Note**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes.     |
-| **Lateral movement paths to sensitive accounts** | Lists the sensitive accounts that are exposed via lateral movement paths, for the selected report period. For more information, see [Lateral movement paths](/defender-for-identity/classic-use-case-lateral-movement-path). |
+| **Lateral movement paths to sensitive accounts** | Lists the sensitive accounts that are exposed via lateral movement paths, for the selected report period. <br><br>For more information, see [Lateral movement paths](/defender-for-identity/classic-use-case-lateral-movement-path). |
 
 ## Generate a report on demand
 
 To generate a report on demand:
 
-1. In Microsoft 365 Defender, select **Settings > Identities** > **Reports management**, and then select a report.
-1. Select **Download** and define the time period for your report.
-1. Select **Download report** to start generating and downloading your report.
+1. In Microsoft 365 Defender, select **Settings > Identities** > **Report management**.
 
-Reports include data from the last 180 days. For example:
+1. Select a report and then select **Download**.
 
-![Screenshot of the Reports management page](https://github.com/batamig/ATADocs-pr/assets/111686396/4ce0b4fa-a7e0-4574-990b-688e292d7df7)
+1. In the download report pane that appears on the right, define a time period for your report and then select **Download Report**.
+
+Your report is downloaded by your browser, where you can open or save it. 
 
 
 ## Schedule a report by email
 
 To define a schedule for a report to be sent to you by email:
 
-1. In Microsoft 365 Defender, select **Settings > Identities > Reports management**.
+1. In Microsoft 365 Defender, select **Settings > Identities > Report management**.
 
 1. Select a report and then select **Schedule report**.
 
 1. Use the wizard to define the following details:
 
-    - **Set schedule**: Define the conditions in which you want to send the report, and the time you want it sent. 
+    1. On the **Set schedule** page, define the conditions in which you want to send the report, and the time you want it sent.
 
-        The time you select for the report to be sent is according to your time zone settings (*Local* or UTC). For more information, see [Set the time zone for Microsoft 365 Defender](/microsoft-365/security/defender/m365d-time-zone).
+        Your report is sent according to your Microsoft 365 Defender time zone settings (*Local* or UTC). For more information, see [Set the time zone for Microsoft 365 Defender](/microsoft-365/security/defender/m365d-time-zone).
 
-    - **Recipients**: Enter the email addresses for anyone you want to receive the report.
+    1. On the **Recipients** page, enter and add email addresses for anyone you want to receive the report. Select **Next** to complete the scheduling.
 
-Once the report has been configured, you can edit and change the sending time or recipients in this wizard. 
+    1. The **Finish** page shows a confirmation message. Select **Close** to close the wizard.
+    
+Once the scheduling is configured, repeat this procedure to edit the scheduled time or recipients.
 
-1. At the end of the wizard, in the **Finish** page, select **Close** to close the wizard. For example:
-
-![Screenshot of the scheduling wizard.](https://github.com/batamig/ATADocs-pr/assets/111686396/dc5957f5-779f-4ff1-8cf5-780587e52809)
-
-
-### Remove a scheduled report
+### Remove all scheduled reports
 
 To remove a scheduled report and stop it from being sent:
 
-1. In Microsoft 365 Defender, select **Settings > Identities** > **Reports management**, and select the report you want to stop sending.
-1. Select **Reset schedule > Reset** to stop sending the selected report.
+
+1. In Microsoft 365 Defender, select **Settings > Identities > Report management**.
+
+1. Select the report you want to stop sending and then select **Reset schedule**.
+
+1. In the confirmation message, select **Reset** to complete the process.
 
 
 ## Next steps
