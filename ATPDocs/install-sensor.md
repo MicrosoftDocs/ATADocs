@@ -1,7 +1,7 @@
 ---
 title: Install the sensor
 description: Learn how to install the Microsoft Defender for Identity sensors on your domain controllers.
-ms.date: 03/08/2023
+ms.date: 07/02/2023
 ms.topic: how-to
 ---
 
@@ -114,6 +114,7 @@ Use the following command to perform a fully silent install of the Defender for 
 > |-------------|----------|---------|---------|
 > |InstallationPath|InstallationPath=""|No|Sets the path for the installation of Defender for Identity Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection Sensor
 > |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Defender for Identity sensor with the Defender for Identity instance.|
+> |AccessKeyFile|AccessKeyFile=""|No|Sets the workspace Access Key from the provided text file path.|
 > |DelayedUpdate|DelayedUpdate=true|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. See [Delayed sensor update](sensor-settings.md#delayed-sensor-update) for more details.|
 > |LogsPath|LogsPath=""|No|Sets the path for the Defender for Identity Sensor logs. Default path: %programfiles%\Azure Advanced Threat Protection Sensor|
 
@@ -124,6 +125,11 @@ Use the following command to silently install the Defender for Identity sensor:
 ```cmd
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 ```
+
+```cmd
+"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKeyFile="C:\Path\myAccessKeyFile.txt"
+```
+
 
 ## Post-installation steps for AD FS servers
 
