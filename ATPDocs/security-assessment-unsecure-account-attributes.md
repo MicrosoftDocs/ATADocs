@@ -1,7 +1,7 @@
 ---
 title: Unsecure account attributes assessment
 description: This article provides an overview of Microsoft Defender for Identity's entities with unsecure attributes identity security posture assessment report.
-ms.date: 01/29/2023
+ms.date: 07/02/2023
 ms.topic: how-to
 ---
 
@@ -40,7 +40,14 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 | Remove Use Kerberos DES encryption types for this account | Remove this setting from account properties in AD | Removing this setting enables the use of stronger encryption algorithms for the account's password. |
 | Remove a Service Principal Name (SPN) | Remove this setting from account properties in AD | When a user account is configured with an SPN set, it means that the account has been associated with one or more SPNs. This typically occurs when a service is installed or registered to run under a specific user account, and the SPN is created to uniquely identify the service instance for Kerberos authentication. This recommendation only showed for sensitive accounts |
 
-## See Also
+Use the **UserAccountControl** flag to manipulate user account profiles. For more information, see:
+
+- [Windows Server troubleshooting](/troubleshoot/windows-server/identity/useraccountcontrol-manipulate-account-properties) documentation.
+- [User Properties - Account Section](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd861342(v=ws.11))
+- [Introduction to Active Directory Administrative CEnter Enhancements (Level 100)](/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-)
+- [Active Directory Administration Center](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd871105(v=ws.11))
+
+## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
