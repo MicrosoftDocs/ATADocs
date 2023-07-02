@@ -27,6 +27,14 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## July 2023
+
+### Defender for Identity release 2.207
+
+- This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ## June 2023
 
 ### Defender for Identity release 2.206
