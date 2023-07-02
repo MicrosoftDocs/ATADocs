@@ -40,7 +40,7 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 | Remove Use Kerberos DES encryption types for this account | Remove this setting from account properties in AD | Removing this setting enables the use of stronger encryption algorithms for the account's password. |
 | Remove a Service Principal Name (SPN) | Remove this setting from account properties in AD | When a user account is configured with an SPN set, it means that the account has been associated with one or more SPNs. This typically occurs when a service is installed or registered to run under a specific user account, and the SPN is created to uniquely identify the service instance for Kerberos authentication. This recommendation only showed for sensitive accounts |
 
-For more information, see [Use the UserAccountControl flags to manipulate user account profiles](/troubleshoot/windows-server/identity/useraccountcontrol-manipulate-account-properties).
+Use the **UserAccountControl** flag to manipulate user account profiles. For more information, see [Windows Server troubleshooting](/troubleshoot/windows-server/identity/useraccountcontrol-manipulate-account-properties) documentation.
 
 ## Next steps
 
