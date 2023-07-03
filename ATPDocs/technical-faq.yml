@@ -133,7 +133,7 @@ sections:
 
       - question: Can you see the overall health of the deployment?
         answer: |
-          Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Defender for Identity health alerts.
+          Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Defender for Identity health issues.
 
   - name: WinPcap and Npcap drivers
     questions: 
@@ -198,7 +198,7 @@ sections:
     questions:
       - question: What kind of integration does Defender for Identity have with SIEMs?
         answer: |
-          Defender for Identity can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a security alert is detected. See the [SIEM log reference](cef-format-sa.md) for more information .
+          Defender for Identity can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health issues and when a security alert is detected. See the [SIEM log reference](cef-format-sa.md) for more information .
 
       - question: Why are certain accounts considered sensitive?
         answer: |
