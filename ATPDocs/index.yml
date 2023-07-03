@@ -40,7 +40,7 @@ landingContent:
             url: alerts-overview.md
           - text: Manage security alerts
             url: manage-security-alerts.md
-          - text: Health alerts
+          - text: Health issues
             url: health-alerts.md
   - title: Explore different ways to use Defender for Identity
     linkLists:

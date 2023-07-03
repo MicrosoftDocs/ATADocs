@@ -86,7 +86,7 @@ Complete your move to Defender for Identity in two easy steps:
 
 In the Microsoft 365 Defender portal:
 
-- Review any [health alerts](/defender-for-identity/health-alerts) for signs of service issues.
+- Review any [health issues](/defender-for-identity/health-alerts) for signs of service issues.
 - Review Defender for Identity [Sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
 
 ## After the move
