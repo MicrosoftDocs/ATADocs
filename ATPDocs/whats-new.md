@@ -29,6 +29,15 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2023
 
+### AD Connect and ADCS sensor types supported
+
+Defender for Identity now supports the following new sensor types:
+
+- **Azure AD Connect** (AAD Connect), used for TBD
+- **Active Directory Certificate Services** (ADCS), used for TBD
+
+You'll see these new sensor types identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
+
 ### Defender for Identity release 2.207
 
 - This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
