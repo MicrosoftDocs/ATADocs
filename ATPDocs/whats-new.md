@@ -29,12 +29,6 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2023
 
-### Defender for Identity release 2.207
-
-- This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
-
-- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
-
 ### Defender for Identity report downloads and scheduling in Microsoft 365 Defender (Preview)
 
 Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).
@@ -44,6 +38,12 @@ Download and schedule reports in Microsoft 365 Defender from the **Settings > Id
 :::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page." lightbox="media/whats-new/report-management.png":::
 
 For more information, see [Microsoft Defender for Identity reports in Microsoft 365 Defender](reports.md).
+
+### Defender for Identity release 2.207
+
+- This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ## June 2023
 
