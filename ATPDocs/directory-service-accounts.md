@@ -107,7 +107,7 @@ Then these are the sensors, and which DSA entry will be used first:
 > - In multi-forest multi-domain environments, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
 
 >[!IMPORTANT]
->If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health alerts](health-alerts.md).
+>If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health issues](health-alerts.md).
 
 ## How to create a gMSA account for use with Defender for Identity
 
