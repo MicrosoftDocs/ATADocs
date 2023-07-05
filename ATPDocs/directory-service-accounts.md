@@ -1,7 +1,7 @@
 ---
 title: Directory Service account recommendations
 description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
-ms.date: 03/30/2023
+ms.date: 07/05/2023
 ms.topic: how-to
 ---
 
@@ -166,13 +166,14 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 The DSA requires read permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
 The read-only permissions on the Deleted Objects container allows Defender for Identity to detect user deletions from your Active Directory.
 
+  >[!NOTE]
+  >If the DSA you want to grant the permissions to is a Group Managed Service Account (gMSA), you need first to create a security group, add the gMSA as a member and add the permissions to that group
+
 Granting the required read permissions on the Deleted Objects Container can be accomplished using the following code example:
 
 ```powershell
-# Declare the *user* or *group* that needs to have read access to the deleted objects container
-# Note that if the identity you want to grant the permissions to is a Group Managed Service Account (gMSA), 
-# you need first to create a security group, add the gMSA as a member and list that group as the identity below
-$Identity = 'CONTOSO\mdisvc'
+# Declare the identity (*user* or *group*) that you want to add read access to the deleted objects container:
+$Identity = 'CONTOSO\mdisvcUserOrGroup'
 
 # Get the deleted objects container's distinguished name:
 $distinguishedName = ([adsi]'').distinguishedName.Value
