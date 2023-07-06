@@ -12,7 +12,7 @@ ROBOTS: NOINDEX
 
 This article is designed to help you understand how Microsoft Defender for Identity functionality is represented in the Microsoft Defender for Cloud Apps portal.
 
-Leveraging existing on-premise detections and abnormal behavior analytics, accessing Defender for Identity using the Microsoft Defender for Cloud Apps portal provides the ability to detect and alert on sensitive data exfiltration across your enterprise. This hybrid offering analyzes activity and alerts based on User and Entity Behavior Analytics (UEBA) to determine risky behaviors, and provides an investigation priority score to streamline your incident response for compromised identities. 
+Leveraging existing on-premises detections and abnormal behavior analytics, accessing Defender for Identity using the Microsoft Defender for Cloud Apps portal provides the ability to detect and alert on sensitive data exfiltration across your enterprise. This hybrid offering analyzes activity and alerts based on User and Entity Behavior Analytics (UEBA) to determine risky behaviors, and provides an investigation priority score to streamline your incident response for compromised identities. 
 
 In this article you'll learn:
 
