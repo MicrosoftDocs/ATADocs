@@ -107,6 +107,9 @@ For information on installing the Microsoft Defender for Identity sensor on AD F
 
 ### Post-installation steps for AD FS servers
 
+>[!NOTE]
+> During the sensor installation on an AD FS server (sensor version 2.202 or above) the closest domain controller will automatically be selected on installation. This can be checked or configured post-installation using the steps detailed below.
+
 Use the following steps to configure Defender for Identity once you've completed the installation of the sensor on an AD FS server.
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
