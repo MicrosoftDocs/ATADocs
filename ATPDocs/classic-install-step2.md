@@ -8,8 +8,8 @@ ROBOTS: NOINDEX
 
 # Classic portal: Quickstart - Connect to your Active Directory Forest
 
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/directory-service-accounts). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 
 In this quickstart, you'll connect Microsoft Defender for Identity to Active Directory (AD) to retrieve data about users and computers. If you're connecting multiple forests, see the [Multi-forest support](multi-forest.md) article.
 

@@ -29,6 +29,12 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2023
 
+### Automatic redirection for the classic Defender for Identity portal
+
+The Microsoft Defender for Identity portal experience and functionality have been converged into Microsoft’s extended detection and response (XDR) platform, Microsoft 365 Defender. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft 365 Defender, with no option to revert back to the classic portal.
+
+For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
+
 ### Defender for Identity report downloads and scheduling in Microsoft 365 Defender (Preview)
 
 Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).

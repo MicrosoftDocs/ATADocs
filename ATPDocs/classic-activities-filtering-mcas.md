@@ -8,6 +8,8 @@ ROBOTS: NOINDEX
 
 # Use activity filters and create action policies with Microsoft Defender for Identity in Microsoft Defender for Cloud Apps
 
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 This article is designed to help you understand how to filter and create action policies for Defender for Identity activities using Microsoft Defender for Cloud Apps.
 
 For more information about how to complete your integration, see [Defender for Identity integration with Defender for Cloud Apps](/cloud-app-security/mdi-integration).

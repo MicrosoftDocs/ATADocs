@@ -8,8 +8,7 @@ ROBOTS: NOINDEX
 
 # Tutorial: Investigate an entity
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
 
 In this tutorial you'll learn how to investigate entities connected to suspicious activities detected by Microsoft Defender for Identity. After viewing a security alert in the timeline, you'll learn how to drill down into the entity involved in the alert, and use the following parameters and details to learn more about what happened and what you need to do to mitigate risk.
 

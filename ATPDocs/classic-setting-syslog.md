@@ -8,8 +8,7 @@ ROBOTS: NOINDEX
 
 # Classic portal: Integrate with Syslog
 
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender. The supporting documents for the new experience can be found [here](/microsoft-365/security/defender-identity/notifications#syslog-notifications). For more information about Microsoft Defender for Identity and when other features will be available in Microsoft 365 Defender, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
 
 Microsoft Defender for Identity can notify you when it detects suspicious activities by sending security and health alerts to your Syslog server through a nominated sensor.
 
