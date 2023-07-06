@@ -163,7 +163,7 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 
 ## Permissions required for the DSA
 
-The DSA requires read permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
+The DSA requires read only permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
 The read-only permissions on the Deleted Objects container allows Defender for Identity to detect user deletions from your Active Directory.
 
   >[!NOTE]
@@ -177,6 +177,7 @@ $Identity = 'mdiSvc01'
 
 # If the identity is a gMSA, first to create a group and add the gMSA to it:
 $groupName = 'mdiUsr01Group'
+$groupDescription = 'Members of this group are allowed to read the objects in the Deleted Objects container in AD'
 if(Get-ADServiceAccount -Identity $Identity -ErrorAction SilentlyContinue) {
     $groupParams = @{
         Name           = $groupName
@@ -184,10 +185,10 @@ if(Get-ADServiceAccount -Identity $Identity -ErrorAction SilentlyContinue) {
         DisplayName    = $groupName
         GroupCategory  = 'Security'
         GroupScope     = 'Universal'
-        Description    = 'Members of this group are allowed to read the objects in the Deleted Objects container in AD'
+        Description    = $groupDescription
     }
     $group = New-ADGroup @groupParams -PassThru
-    Add-ADGroupMember -Identity $group -Members ('{0}$' -f $account)
+    Add-ADGroupMember -Identity $group -Members ('{0}$' -f $Identity)
     $Identity = $group.Name
 }
 
