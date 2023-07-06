@@ -8,6 +8,8 @@ ROBOTS: NOINDEX
 
 # Classic portal: Monitoring your domain controller coverage
 
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 As soon as the first Microsoft Defender for Identity sensor is installed and configured on any domain controller in your network, Defender for Identity begins monitoring your environment for domain controllers.
 
 Once a Defender for Identity sensor is installed and configured on a domain controller in your network, the sensor communicates with the Defender for Identity service on a constant basis sending sensor status, health and version information, and collected Active Directory events and changes.
