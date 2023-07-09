@@ -9,11 +9,11 @@ ms.topic: overview
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity.
 
-> [!TIP]
-> Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
->
-
 [!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
+## Get notified about updates
+
+Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
 
 ## What's new scope and references
 
