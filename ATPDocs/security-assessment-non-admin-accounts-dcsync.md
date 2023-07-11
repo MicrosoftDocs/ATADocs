@@ -19,7 +19,7 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
     For example:
 
-:::image type="content" source="media/secure-score/dcsync-permissions.png" alt-text="Screenshot of the Remove non-admin accounts with DCSync permissions security assessment." lightbox="media/secure-score/dcsync-permissions.png":::
+    :::image type="content" source="media/secure-score/dcsync-permissions.png" alt-text="Screenshot of the Remove non-admin accounts with DCSync permissions security assessment." lightbox="media/secure-score/dcsync-permissions.png":::
 
 1. Review this list of exposed entities to discover which of your accounts have DCSync permissions and are also non-domain admins.
 
