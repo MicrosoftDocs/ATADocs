@@ -19,7 +19,14 @@ sections:
 
       - question: What data does Defender for Identity collect?
         answer: |
-          Defender for Identity collects and stores information from your configured servers (domain controllers, member servers, etc.) in a database specific to the service for administration, tracking, and reporting purposes. Information collected includes network traffic to and from domain controllers (such as Kerberos authentication, NTLM authentication, DNS queries), security logs (such as Windows security events), Active Directory information (structure, subnets, sites), and entity information (such as names, email addresses, and phone numbers).
+          Defender for Identity collects and stores information from your configured servers, such as domain controllers, member servers, and so on. Data is stored in a database specific to the service for administration, tracking, and reporting purposes. 
+          
+          Information collected includes:
+          
+          - Network traffic to and from domain controllers, such as Kerberos authentication, NTLM authentication, or DNS queries
+          - Security logs, such as Windows security events
+          - Active Directory information, such as structure, subnets, or sites
+          - Entity information, such as names, email addresses, and phone numbers
 
           Microsoft uses this data to:
 
@@ -27,13 +34,13 @@ sections:
           - Generate alerts if a possible attack was detected
           - Provide your security operations with a view into entities related to threat signals from your network, enabling you to investigate and explore the presence of security threats on the network.
 
-          Microsoft does not mine your data for advertising or for any other purpose other than providing you the service.
+          Microsoft doesn't mine your data for advertising or for any other purpose other than providing you with the service.
 
       - question: How many Directory Service credentials does Defender for Identity support?
         answer: |
           Defender for Identity currently supports adding up to 30 different Directory Service credentials to support Active Directory environments with untrusted forests. If you require more accounts, open a support ticket.
 
-      - question: Does Defender for Identity only leverage traffic from Active Directory?
+      - question: Does Defender for Identity only use traffic from Active Directory?
         answer: |
           In addition to analyzing Active Directory traffic using deep packet inspection technology, Defender for Identity also collects relevant Windows Events from your domain controller and creates entity profiles based on information from Active Directory Domain Services. Defender for Identity also supports receiving RADIUS accounting of VPN logs from various vendors (Microsoft, Cisco, F5, and Checkpoint).
 
@@ -41,31 +48,31 @@ sections:
         answer: |
           No. Defender for Identity monitors all devices in the network performing authentication and authorization requests against Active Directory, including non-Windows and mobile devices.
 
-      - question: Does Defender for Identity monitor computer accounts as well as user accounts?
+      - question: Does Defender for Identity monitor computer accounts and user accounts?
         answer: |
-          Yes. Since computer accounts (as well as any other entities) can be used to perform malicious activities, Defender for Identity monitors all computer accounts behavior and all other entities in the environment.
+          Yes. Since computer accounts, and other entities, can be used to perform malicious activities, Defender for Identity monitors all computer accounts behavior and all other entities in the environment.
 
       - question: What is the difference between Advanced Threat Analytics (ATA) and Defender for Identity?
         answer: |
           ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
 
-          Defender for Identity is a cloud-based security solution that leverages your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
+          Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
 
-          The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+          The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support continues until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
-          In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver additional detections.
+          In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections.
 
           Defender for Identity's frequent updates include the following features and capabilities:
 
           - **Support for [multi-forest environments](multi-forest.md)**: Provides organizations visibility across AD forests.
 
-          - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components, as well as, providing remediation paths to reduce the attack surface.
+          - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components and provides remediation paths to reduce the attack surface.
 
           - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
 
           - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Azure AD Identity Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
 
-          - **Contributes to Microsoft 365 Defender**: Contributes alert and threat data to  Microsoft 365 Defender. Microsoft 365 Defender leverages the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. With this breadth and depth of clarity, defenders can focus on critical threats and hunt for sophisticated breaches, trusting that Microsoft 365 Defender's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
+          - **Contributes to Microsoft 365 Defender**: Contributes alert and threat data to  Microsoft 365 Defender. Microsoft 365 Defender uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. With this breadth and depth of clarity, defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft 365 Defender's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
 
   - name: Licensing and privacy
     questions:
@@ -82,7 +89,7 @@ sections:
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |
-          No. When your Defender for Identity instance is created, it is stored automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant.  Once your Defender for Identity instance is created, Defender for Identity data cannot be moved to a different region.
+          No. When your Defender for Identity instance is created, it's stored automatically in the Azure region that's closest to your Azure Active Directory tenant's geographical location.  Once your Defender for Identity instance is created, Defender for Identity data can't be moved to a different region.
 
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |
@@ -92,36 +99,36 @@ sections:
           - Combinations of controls that greatly enhance independent detection of malicious activity
           - Multiple levels of monitoring, logging, and reporting
 
-          In addition, Microsoft conducts background verification checks on certain operations personnel, and limits access to applications, systems, and network infrastructure in proportion to the level of background verification. Operations personnel follow a formal process when they are required to access a customer's account or related information in the performance of their duties.
+          In addition, Microsoft conducts background verification checks on certain operations personnel, and limits access to applications, systems, and network infrastructure in proportion to the level of background verification. Operations personnel follow a formal process when they're required to access a customer's account or related information in the performance of their duties.
 
   - name: Deployment
     questions:
       - question: How many Defender for Identity sensors do I need?
         answer: |
-          Every domain controller in the environment should be covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
+          We recommend that you make sure that each of your domain controllers is covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
 
       - question: Does Defender for Identity work with encrypted traffic?
-        answer: Network protocols with encrypted traffic (for example, AtSvc and WMI) are not decrypted, but are analyzed by the sensors.
-
+        answer: While network protocols with encrypted traffic, such as AtSvc and WMI, aren't decrypted, sensors do still analyze the traffic.
+        
       - question: Does Defender for Identity work with Kerberos Armoring?
         answer: |
-          Enabling Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST), is supported by Defender for Identity, with the exception of over-pass the hash detection, which does not work with Kerberos Armoring.
+          Defender for Identity supports Kerberos Armoring, also known as Flexible Authentication Secure Tunneling (FAST). The exception to this support is the over-pass the hash detection, which doesn't work with Kerberos Armoring.
 
       - question: How do I monitor a virtual domain controller using Defender for Identity?
         answer: |
-          Most virtual domain controllers can be covered by the Defender for Identity sensor, to determine whether the Defender for Identity sensor is appropriate for your environment, see [Defender for Identity Capacity Planning](capacity-planning.md).
+          The Defender for Identity sensor can cover most virtual domain controllers. For more information, see [Defender for Identity Capacity Planning](capacity-planning.md).
 
-          If a virtual domain controller can't be covered by the Defender for Identity sensor, you can have either a virtual or physical Defender for Identity standalone sensor as described in [Configure port mirroring](configure-port-mirroring.md).
+          If the Defender for Identity sensor can't cover a virtual domain controller, use either a virtual or physical Defender for Identity standalone sensor instead. For more information, see [Configure port mirroring](configure-port-mirroring.md).
           The easiest way is to have a virtual Defender for Identity standalone sensor on every host where a virtual domain controller exists.
           If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
           - When the virtual domain controller moves to another host, preconfigure the Defender for Identity standalone sensor in that host to receive the traffic from the recently moved virtual domain controller.
-          - Make sure that you affiliate the virtual Defender for Identity standalone sensor with the virtual domain controller so that if it is moved, the Defender for Identity standalone sensor moves with it.
+          - Make sure that you affiliate the virtual Defender for Identity standalone sensor with the virtual domain controller so that if it's moved, the Defender for Identity standalone sensor moves with it.
           - There are some virtual switches that can send traffic between hosts.
 
       - question: How do I configure the Defender for Identity sensors to communicate with Defender for Identity cloud service when I have a proxy?
         answer: |
-          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For instructions on how to do this, see [Configure your proxy or firewall to enable communication with Defender for Identity sensors](configure-proxy.md).
+          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For more information, see [Configure your proxy or firewall to enable communication with Defender for Identity sensors](configure-proxy.md).
 
       - question: Can Defender for Identity monitored domain controllers be virtualized on your IaaS solution?
         answer: |
@@ -133,26 +140,26 @@ sections:
 
       - question: Can you see the overall health of the deployment?
         answer: |
-          Yes, you can view the overall health of the deployment as well as specific issues related to configuration, connectivity etc., and you are alerted as they occur with Defender for Identity health alerts.
+          Yes, you can view the overall deployment health and any specific issues related to configuration, connectivity, and so on. You're alerted as these events occur with Defender for Identity health issues.
 
   - name: WinPcap and Npcap drivers
     questions: 
 
       - question: What recommendations about WinPcap and Npcap drivers are changing?
-        answer: The Microsoft Defender for Identity team recommends that all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package will install Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.
+        answer: The Microsoft Defender for Identity team recommends that all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.
 
       - question: Why are we moving away from WinPcap?
-        answer: WinPcap is no longer supported and since it's no longer being developed, the driver cannot be optimized any longer for the Defender for Identity sensor. Additionally, if there is an issue in the future with the WinPcap driver, there are no options for a fix. 
+        answer: WinPcap is no longer supported and since it's no longer being developed, the driver can't be optimized any longer for the Defender for Identity sensor. Additionally, if there's an issue in the future with the WinPcap driver, there are no options for a fix. 
           
       - question: Why Npcap?
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
 
       - question: What version of Npcap is supported? 
-        answer: The recommended and officially supported version of Npcap is version 1.0. You can install a newer version of Npcap, but note that for troubleshooting, support will ask you to downgrade the Npcap version to validate that the issue is not related to the newer version installed.
+        answer: The recommended and officially supported version of Npcap is version 1.0. You can install a newer version of Npcap, but note that for troubleshooting, support asks you to downgrade the Npcap version to validate that the issue isn't related to the newer version installed.
 
-      - question: I have more than 5 domain controllers in my organization. Do I need to purchase an Npcap license if I'm using Npcap on these domain controllers? 
+      - question: I have more than five domain controllers in my organization. Do I need to purchase an Npcap license if I'm using Npcap on these domain controllers? 
         answer: |
-          No, Npcap has an exemption to the usual limit of 5 installs. You can install it on unlimited systems where it is only used with the Defender for Identity sensor.
+          No, Npcap has an exemption from the usual limit of five installs. You can install it on unlimited systems where it's only used with the Defender for Identity sensor.
           
           See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE), and search for Microsoft Defender for Identity. 
 
@@ -166,31 +173,34 @@ sections:
         answer: |
           -  You can obtain the Npcap executables by [downloading the latest deployment package of the Defender for Identity sensor](download-sensor.md).
 
-            - If you haven't yet installed the sensor:
-              1. Install the sensor (with an installation package of version 2.184 or greater).
+            - **If you haven't yet installed the sensor**, install the sensor using version 2.184 or higher.
 
-            - If you already installed the sensor with WinPcap and need to update to use Npcap:
-              1. Uninstall the sensor.
-                  - Either using **Add/Remove programs** in the control panel (*appwiz.cpl*), or by running the following [uninstall command](uninstall-sensor.md#uninstall-the-defender-for-identity-sensor-silently):  
-                    `".\Azure ATP Sensor Setup.exe" /uninstall /quiet`
-              1. Uninstall WinPcap.
-                  - Note: This is applicable only if WinPcap was manually installed prior to the sensor installation. In this case you would need to manually remove WinPcap.
-              1. Reinstall the sensor (with an installation package of version 2.184 or greater).
+            - **If you already installed the sensor** with WinPcap and need to update to use Npcap:
+
+              1. Uninstall the sensor. Use either **Add/Remove programs** from the Windows control panel (*appwiz.cpl*), or run the following [uninstall command](uninstall-sensor.md#uninstall-the-defender-for-identity-sensor-silently): `".\Azure ATP Sensor Setup.exe" /uninstall /quiet`
+
+              1. Uninstall WinPcap if needed. This step is relevant only if WinPcap was manually installed prior to the sensor installation. In this case, you would need to manually remove WinPcap.
+
+              1. Reinstall the sensor using version 2.184 or higher.
               
-            - If you want to manually install Npcap:
-              1. Install Npcap with the following options:
-                - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
-                - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
+            - **If you want to manually install Npcap**: Install Npcap with the following options:
+
+                - If you're using the GUI installer, clear the **loopback support** option and select **WinPcap** mode. Make sure the **Restrict Npcap driver's access to Administrators only** option is cleared.
+                - If you're using the command line, run: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
                 
-            - If you want to manually upgrade Npcap:
-              1. Stop the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)  
-                  `Stop-Service -Name AATPSensorUpdater -Force; Stop-Service -Name AATPSensor -Force`
-              2. Remove Npcap using **Add/Remove programs** in the control panel (*appwiz.cpl*)
-              3. Install Npcap with the following options:
-                  - If using the GUI installer, deselect the **loopback support** and select **WinPcap** mode. Make sure the option **Restrict Npcap driver's access to Administrators only** is deselected.
-                  - If using the command line: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
-              4. Start the Defender for Identity sensor services (AATPSensorUpdater and AATPSensor)  
-                  `Start-Service -Name AATPSensorUpdater; Start-Service -Name AATPSensor`
+            - **If you want to manually upgrade Npcap**:
+
+              1. Stop the Defender for Identity sensor services, *AATPSensorUpdater* and *AATPSensor*. Run:  `Stop-Service -Name AATPSensorUpdater -Force; Stop-Service -Name AATPSensor -Force`
+
+              1. Remove Npcap using **Add/Remove programs** in the Windows control panel (*appwiz.cpl*).
+
+              1. Install Npcap with the following options:
+
+                  - If you're using the GUI installer, clear the **loopback support** option and select **WinPcap** mode. Make sure the **Restrict Npcap driver's access to Administrators only** option is cleared.
+
+                  - If you're using the command line, run: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
+
+              1. Start the Defender for Identity sensor services, *AATPSensorUpdater* and *AATPSensor*. Run: `Start-Service -Name AATPSensorUpdater; Start-Service -Name AATPSensor`
 
 
 
@@ -198,24 +208,24 @@ sections:
     questions:
       - question: What kind of integration does Defender for Identity have with SIEMs?
         answer: |
-          Defender for Identity can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health alerts and when a security alert is detected. See the [SIEM log reference](cef-format-sa.md) for more information .
+          Defender for Identity can be configured to send a Syslog alert, to any SIEM server using the CEF format, for health issues and when a security alert is detected. For more information, see the [SIEM log reference](cef-format-sa.md).
 
       - question: Why are certain accounts considered sensitive?
         answer: |
-          This happens when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
+          Accounts are considered as sensitive when an account is a member of groups that are designated as sensitive (for example: "Domain Admins").
 
-          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to (the group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group). You can also manually [tag accounts as sensitive](/defender-for-identity/entity-tags).
+          To understand why an account is sensitive you can review its group membership to understand which sensitive groups it belongs to. The group that it belongs to can also be sensitive due to another group, so the same process should be performed until you locate the highest level sensitive group. Alternately, manually [tag accounts as sensitive](/defender-for-identity/entity-tags).
 
       - question: Do you have to write your own rules and create a threshold/baseline?
         answer: |
-          With Defender for Identity, there is no need to create rules, thresholds, or baselines and then fine-tune. Defender for Identity analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. Three weeks after deployment, Defender for Identity starts to detect behavioral suspicious activities. On the other hand, Defender for Identity will start detecting known malicious attacks and security issues immediately after deployment.
+          With Defender for Identity, there's no need to create rules, thresholds, or baselines and then fine-tune. Defender for Identity analyzes the behaviors among users, devices, and resources, as well as their relationship to one another, and can detect suspicious activity and known attacks quickly. Three weeks after deployment, Defender for Identity starts to detect behavioral suspicious activities. On the other hand, Defender for Identity will start detecting known malicious attacks and security issues immediately after deployment.
 
       - question: Which traffic does Defender for Identity generate in the network from domain controllers, and why?
         answer: |
           Defender for Identity generates traffic from domain controllers to computers in the organization in one of three scenarios:
 
           1. **Network Name resolution**
-          Defender for Identity captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, Defender for Identity needs to resolve IPs to computer accounts. To resolve IPs to computer names Defender for Identity sensors request the IP address for the computer name *behind* the IP address.
+          Defender for Identity captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, Defender for Identity needs to resolve IPs to computer accounts. To resolve IPs to computer names Defender for Identity sensors, request the IP address for the computer name *behind* the IP address.
 
               Requests are made using one of four methods:
               - NTLM over RPC (TCP Port 135)
@@ -223,7 +233,7 @@ sections:
               - RDP (TCP port 3389)
               - Query the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-              After getting the computer name,  Defender for Identity sensors cross check the details in Active Directory to see if there is a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
+              After getting the computer name,  Defender for Identity sensors cross check the details in Active Directory to see if there's a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
           2. **Lateral Movement Path (LMP)**
           To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](/defender-for-identity/remote-calls-sam).
 

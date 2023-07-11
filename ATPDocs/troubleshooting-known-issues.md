@@ -321,7 +321,7 @@ No known resolution.
 
 ## Sensor fails to enumerate event logs
 
-If you observe a limited number, or lack of, security event alerts or logical activities within the Defender for Identity console but no health alerts are triggered.
+If you observe a limited number, or lack of, security event alerts or logical activities within the Defender for Identity console but no health issues are triggered.
 
 **Sensor log entries:**
 

@@ -93,7 +93,7 @@ Defender for Identity won't detect a hash passed on a local resource. Defender f
 ### Additional lateral move
 
 Now, with RonHD's credential, can it give us access we previously didn't have with JeffL's credentials?
-We'll use **PowerSploit** ```Get-NetLocalGroup``` to help answer that.
+We'll use **PowerSploit** [`Get-NetLocalGroupMember`](https://powersploit.readthedocs.io/en/latest/Recon/Get-NetLocalGroupMember/) to help answer that.
 
 1. In the command console that opened up because of our previous attack, running as RonHD, execute the following items:
 

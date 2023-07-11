@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 06/19/2023
+ms.date: 07/17/2023
 ms.topic: overview
 ---
 
@@ -9,11 +9,11 @@ ms.topic: overview
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity.
 
-> [!TIP]
-> Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
->
-
 [!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
+## Get notified about updates
+
+Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
 
 ## What's new scope and references
 
@@ -27,7 +27,7 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
-## June 2023
+## July 2023
 
 ### New security posture reports
 
@@ -43,6 +43,40 @@ The following new security posture assessments are now available in Microsoft Se
 - [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
+### Automatic redirection for the classic Defender for Identity portal
+
+The Microsoft Defender for Identity portal experience and functionality have been converged into Microsoft’s extended detection and response (XDR) platform, Microsoft 365 Defender. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft 365 Defender, with no option to revert back to the classic portal.
+
+For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
+
+### Defender for Identity report downloads and scheduling in Microsoft 365 Defender (Preview)
+
+Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).
+
+Download and schedule reports in Microsoft 365 Defender from the **Settings > Identities > Report management** page. For example:
+
+:::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page." lightbox="media/whats-new/report-management.png":::
+
+For more information, see [Microsoft Defender for Identity reports in Microsoft 365 Defender](reports.md).
+
+### Defender for Identity release 2.207
+
+- This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## June 2023
+
+### Defender for Identity release 2.206
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Advanced hunting with an enhanced IdentityInfo table
+
+For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, as well as identities detected by the Defender for Identity sensor from your on-premises environment. 
+
+For more information, see the [Microsoft 365 Defender advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
 
 ### Defender for Identity release 2.205
 

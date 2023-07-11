@@ -6,6 +6,7 @@ ms.date: 06/08/2023
 ---
 
 > [!IMPORTANT]
-> As of June 30th, customers still using the classic Microsoft Defender for Identity portal will be automatically redirected to Microsoft 365 Defender, with no option to revert back to the classic portal.
+> Customers using the classic Defender for Identity portal are now automatically redirected to [Microsoft 365 Defender](https://security.microsoft.com), with no option to revert back to the classic portal.
+> 
+> For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 >
-> For more information, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).

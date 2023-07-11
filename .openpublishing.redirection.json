@@ -671,11 +671,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "ATPDocs/reports.md",
-            "redirect_url": "/defender-for-identity/notifications",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "ATPDocs/setting-syslog.md",
             "redirect_url": "/defender-for-identity/notifications",
             "redirect_document_id": false

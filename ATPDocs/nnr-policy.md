@@ -76,14 +76,14 @@ After confirming the device, you can then determine if the alert is a **False Po
 - Reverse DNS:
   - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
 
-## Health alerts
+## Health issues
 
 To make sure Defender for Identity is working ideally and the environment is configured correctly, Defender for Identity checks the resolution status of each sensor and issues a health alert per method, providing a list of the Defender for Identity sensors with low success rate of active name resolution using each method.
 
 > [!NOTE]
 > To disable an optional NNR method in Defender for Identity to fit the needs of your environment, open a support case.
 
-Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations. For more information about health alerts, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
+Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations. For more information about health issues, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
 
 ## See Also
 
