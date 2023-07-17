@@ -45,6 +45,10 @@ Download and schedule reports in Microsoft 365 Defender from the **Settings > Id
 
 For more information, see [Microsoft Defender for Identity reports in Microsoft 365 Defender](reports.md).
 
+### Defender for Identity release 2.208
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Defender for Identity release 2.207
 
 - This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
@@ -55,17 +59,17 @@ For more information, see [Microsoft Defender for Identity reports in Microsoft 
 
 ### Defender for Identity release 2.206
 
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Advanced hunting with an enhanced IdentityInfo table
 
-For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, as well as identities detected by the Defender for Identity sensor from your on-premises environment. 
+- For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, as well as identities detected by the Defender for Identity sensor from your on-premises environment. 
 
 For more information, see the [Microsoft 365 Defender advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
 
 ### Defender for Identity release 2.205
 
-This version includes improvements and bug fixes for internal sensor infrastructure.
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## May 2023
 
