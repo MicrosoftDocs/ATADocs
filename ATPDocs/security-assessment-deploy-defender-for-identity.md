@@ -25,7 +25,7 @@ For more information, see:
 
 ## How do I use this security assessment?
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to be alerted if have a Defender for Identity license, but don't have Defender for Identity deployed. <!--for example - missing screenshot>
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to be alerted if you have a Defender for Identity license, but don't have Defender for Identity deployed.
 
 1. Take appropriate action by deploying Defender for Identity. For more information, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
 
