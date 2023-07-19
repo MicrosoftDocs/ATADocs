@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Start your Defender for Identity deployment
 
-Start your Defender for Identity deployment, installing sensors on domain controllers and other eligible servers.
+This article describes the **Start your Defender for Identity deployment** security assessment, which encourages you to install sensors on domain controllers and other eligible servers.
 
 
 ## Why is not having Defender for Identity deployed considered a risk?
