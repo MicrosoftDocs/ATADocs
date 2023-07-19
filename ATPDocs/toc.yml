@@ -152,8 +152,16 @@ items:
     items:
     - name: Overview
       href: security-assessment.md
+    - name: Admin SDHolder permissions
+      href: security-assessment-remove-suspicious-access-rights.md
+    - name: DCSync permissions
+      href: security-assessment-non-admin-accounts-dcsync.md
+    - name: Deploy Defender for Identity
+      href: security-assessment-deploy-defender-for-identity.md
     - name: Domain controllers with Print spooler service available assessment
       href: security-assessment-print-spooler.md
+    - name: Do not expire passwords
+      href: security-assessment-do-not-expire-passwords.md
     - name: Dormant entities in sensitive groups assessment
       href: security-assessment-dormant-entities.md
     - name: Entities exposing credentials in clear text assessment
@@ -162,6 +170,10 @@ items:
       href: security-assessment-laps.md
     - name: Legacy protocols usage assessment
       href: security-assessment-legacy-protocols.md
+    - name: Passwords older than 180 days
+      href: security-assessment-old-passwords.md
+    - name: Remove local admins on identity assets
+      href: security-assessment-remove-local-admins.md      
     - name: Riskiest lateral movement paths
       href: security-assessment-riskiest-lmp.md
     - name: Unmonitored domain controllers
