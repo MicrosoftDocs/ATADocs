@@ -7,6 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Remove non-admin accounts with DCSync permissions
 
+
 ## Why might the DCSync permission be a risk?
 
 Accounts with the DCSync permission can initiate domain replication, which can potentially be exploited by attackers to gain unauthorized access, manipulate domain data, or compromise the integrity and availability of your Active Directory environment.
