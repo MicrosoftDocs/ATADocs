@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Do not expire passwords
 
+This article describes the **Do not expire passwords** security assessment, which indicates where users have settings for passwords that don't expire.
+
 > [!TIP]
 > We highly recommend moving your organization to a password-less strategy. For more information, see [Password-less strategy - Windows Security | Microsoft Learn](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
 >
