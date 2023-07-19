@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 06/11/2023
+ms.date: 07/17/2023
 ms.topic: overview
 ---
 
@@ -28,6 +28,21 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## July 2023
+
+### New security posture reports
+
+Defender for Identity's identity security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations.
+
+The following new security posture assessments are now available in Microsoft Secure Score:
+
+- [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
+- [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
+- [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
+- [Remove non-admin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
+- [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
+- [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
+
+For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
 
 ### Automatic redirection for the classic Defender for Identity portal
 
