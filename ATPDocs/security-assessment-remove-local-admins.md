@@ -7,6 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Remove local admins on identity assets
 
+This article describes the **Remove local admins on identity assets** security assessment, which highlights local admins that pose a risk to your environment.
 
 ## Why are local admins on identity assets a risk?
 
