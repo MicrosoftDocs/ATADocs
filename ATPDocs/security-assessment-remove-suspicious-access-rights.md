@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Remove access rights on suspicious accounts with the Admin SDHolder permission
 
+This article describes the **Remove access rights on suspicious accounts with the Admin SDHolder permission** security assessment, which highlights risky access rights on suspicious accounts.
+
 ## Why might the Admin SDHolder permission be risky?
 
 Having non-sensitive accounts with **Admin SDHolder** (security descriptor holder) permissions can have significant security implications, including:
