@@ -7,6 +7,7 @@ ms.topic: how-to
 
 # Security assessment: Remove non-admin accounts with DCSync permissions
 
+This article describes the **Remove non-admin accounts with DCSync permissions** security assessment, which identifies risky DCSync permission settings.
 
 ## Why might the DCSync permission be a risk?
 
