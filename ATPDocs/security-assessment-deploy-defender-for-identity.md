@@ -9,7 +9,6 @@ ms.topic: how-to
 
 This article describes the **Start your Defender for Identity deployment** security assessment, which encourages you to install sensors on domain controllers and other eligible servers.
 
-
 ## Why is not having Defender for Identity deployed considered a risk?
 
 If you've obtained a Defender for Identity license, but haven't yet deployed Defender for Identity sensors, not only are you not yet using your purchased services, but you may be missing advanced threats in your identity infrastructure.
