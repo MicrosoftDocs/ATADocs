@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Manage accounts with passwords more than 180 days old
 
+This article describes the **Manage accounts with passwords more than 180 days old**, which highlights accounts at risk because of older passwords.
+
 > [!TIP]
 > We highly recommend moving your organization to a password-less strategy. For more information, see [Password-less strategy - Windows Security | Microsoft Learn](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
 >
