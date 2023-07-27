@@ -20,7 +20,7 @@ The ability to support multiple Active Directory forests enables the following:
 
 - View and investigate activities performed by users across multiple forests, from a single pane of glass.
 - Improved detection and reduced false positives by providing advanced Active Directory integration and account resolution.
-- Greater control and easier deployment. Improved health alerts and reporting for cross-org coverage when your domain controllers are all monitored from a single Defender for Identity console.
+- Greater control and easier deployment. Improved health issues and reporting for cross-org coverage when your domain controllers are all monitored from a single Defender for Identity console.
 
 ## Defender for Identity detection activity across multiple forests
 

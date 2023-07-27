@@ -8,9 +8,8 @@ ROBOTS: NOINDEX
 
 # Classic portal: Working with the Microsoft Defender for Identity portal
 
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
-
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+ 
 Use the Microsoft Defender for Identity portal to monitor and respond to suspicious activity detected by Defender for Identity.
 
 Typing the `?` key provides keyboard shortcuts for Defender for Identity portal accessibility.

@@ -109,7 +109,7 @@ Then the following table lists the sensors and the DSA entry that's used first:
 > - In multi-forest, multi-domain environment, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
 
 >[!IMPORTANT]
->If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert is generated. For more information, see [Defender for Identity health alerts](../health-alerts.md).
+>If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health issue is generated. For more information, see [Defender for Identity health issues](../health-alerts.md).
 
 ## Create a gMSA account for use with Defender for Identity
 
@@ -186,6 +186,9 @@ C:\Windows\System32\dsacls.exe $params
 # Grant the 'List Contents' and 'Read Property' permissions to the user or group: 
 $params = @("$deletedObjectsDN", '/G', "$($Identity):LCRP") 
 C:\Windows\System32\dsacls.exe $params 
+# To remove the permissions, uncomment the next 2 lines and run them instead of the two prior ones:
+# $params = @("$deletedObjectsDN", '/R', $Identity)
+# C:\Windows\System32\dsacls.exe $params
 ```
 
 For more information, see [Changing permissions on a deleted object container](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816824(v=ws.10)).
@@ -217,7 +220,7 @@ If it has the permissions, the command will return a **True** message.
 
 ### Verify that the gMSA account has the required rights
 
-The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* and performs impersonation of the DSA account. The impersonation will fail if the *Log on as a service* policy is configured but the permission hasn't been granted to the gMSA account. In such cases, you'll see the following health alert: **Directory services user credentials are incorrect.**
+The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* and performs impersonation of the DSA account. The impersonation will fail if the *Log on as a service* policy is configured but the permission hasn't been granted to the gMSA account. In such cases, you'll see the following health issue: **Directory services user credentials are incorrect.**
 
 If you see this alert, we recommend checking to see if the *Log on as a service policy* is configured. If you need to configure the *Log on as a service* policy, do so either in a Group Policy setting or in a Local Security Policy.
 

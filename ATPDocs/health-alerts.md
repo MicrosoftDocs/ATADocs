@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for Identity health alerts
-description: This article describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 02/22/2023
+title: Microsoft Defender for Identity health issues
+description: This article describes all the health issues that may occur for each component, listing the cause and the steps needed to resolve the problem
+ms.date: 07/03/2023
 ms.topic: how-to
 ---
 
-# Microsoft Defender for Identity sensor health alerts
+# Microsoft Defender for Identity sensor health issues
 
 > [!NOTE]
 > The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
@@ -29,11 +29,11 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
     :::image type="content" source="media/global-health-issues-details.png" alt-text="Health issues details":::
 
 
-## Health alerts
+## Health issues
 
-This section describes all the health alerts for each component, listing the cause and the steps needed to resolve the problem.
+This section describes all the health issues for each component, listing the cause and the steps needed to resolve the problem.
 
-Sensor-specific health alerts are displayed in the **Sensor health issues** tab and domain related or aggregated health alerts are displayed in the **Global health issues** tab as detailed in the following tables:
+Sensor-specific health issues are displayed in the **Sensor health issues** tab and domain related or aggregated health issues are displayed in the **Global health issues** tab as detailed in the following tables:
 
 ### A domain controller is unreachable by a sensor
 
@@ -111,7 +111,7 @@ Sensor-specific health alerts are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more network traffic than it can process.|Some network traffic couldn't be analyzed. This issue can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](deploy/capacity-planning.md) as required. If you're using a standalone Defender for Identity sensor, reduce the number of domain controllers being monitored.<br></br>This issue can also happen if you're using domain controllers on VMware virtual machines. To avoid these alerts, you can check that the following settings are set to 0 or Disabled in the virtual machine (in the Windows OS, not in the VMware settings):<br></br>- Large Send Offload V2 (IPv4)<br></br>- IPv4 TSO Offload<br></br>The names may vary depending on your VMware version. For more information, see your VMware documentation.|Medium|Sensors health issues tab and Global health issues tab|
+|The Defender for Identity sensor is receiving more network traffic than it can process.|Some network traffic couldn't be analyzed. This issue can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](deploy/capacity-planning.md) as required. If you're using a standalone Defender for Identity sensor, reduce the number of domain controllers being monitored.<br></br>This issue can also happen if you're using domain controllers on VMware virtual machines. To avoid these issues, you can check that the following settings are set to **0** or **Disabled** in the virtual machine (in the Windows OS, not in the VMware settings):<br></br>- **Large Send Offload V2 (IPv4)**<br></br>- **IPv4 TSO Offload**<br></br>The names may vary depending on your VMware version. For more information, see your VMware documentation.|Medium|Sensors health issues tab and Global health issues tab|
 
 ### Some ETW events are not being analyzed
 

@@ -185,7 +185,8 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
 1. Select **OK**.
 
-#### Enable auditing on an Exchange object
+#### Enable auditing on the Configuration container
+<a name="enable-auditing-on-an-exchange-object"></a>
 
 1. Open ADSI Edit. To do this, select **Start**, select **Run**, type *ADSIEdit.msc*, and then select **OK**.
 1. On the **Action** menu, select **Connect to**.

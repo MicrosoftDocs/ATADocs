@@ -8,6 +8,8 @@ ROBOTS: NOINDEX
 
 # Classic portal: Microsoft Defender for Identity Reports
 
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 The Microsoft Defender for Identity reports section in the Defender for Identity portal enables you to schedule or immediately generate and download reports that provide you with system and entity status information. From the reports feature, you can create reports about system health, security alerts and potential lateral movement paths detected in your environment.
 
 To access the reports page, click the report icon in the menu bar: ![report icon.](media/report-icon.png).

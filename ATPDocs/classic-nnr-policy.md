@@ -8,8 +8,8 @@ ROBOTS: NOINDEX
 
 # Classic portal: What is Network Name Resolution?
 
-> [!NOTE]
-> The experience described in this page can also be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
 
 Network Name Resolution (NNR) is a main component of  Microsoft Defender for Identity functionality. Defender for Identity captures activities based on network traffic, Windows events, and ETW - these activities normally contain IP data.
 
