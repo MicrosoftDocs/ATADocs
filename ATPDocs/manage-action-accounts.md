@@ -45,7 +45,7 @@ By default, the Microsoft Defender for Identity sensor installed on a domain con
             - Properties:
                 - Read userAccountControl
                 - Write userAccountControl
-    1. Select **Descendant Group objects** in the **Applies to** field and set the following properties:
+    1. (Optional) Select **Descendant Group objects** in the **Applies to** field and set the following properties:
 
         - Read members
         - Write members
