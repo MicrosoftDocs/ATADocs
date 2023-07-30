@@ -29,6 +29,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2023
 
+### Defender for Identity release 2.209
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Search for Active Directory groups in Microsoft 365 Defender (Preview)
 
 The Microsoft 365 Defender global search now supports searching by Active Directory group name. Any groups found are shown in the results on a separate **Groups** tab. Select an Active Directory group from your search results to see more details, including:
