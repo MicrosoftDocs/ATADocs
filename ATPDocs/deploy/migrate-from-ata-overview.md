@@ -1,7 +1,7 @@
 ---
-title: Move from Advanced Threat Analytics 
+title: Migrate from Advanced Threat Analytics | Microsoft Defender for Identity
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
-ms.date: 02/15/2023
+ms.date: 07/27/2023
 ms.topic: how-to
 ---
 
@@ -10,27 +10,25 @@ ms.topic: how-to
 > [!NOTE]
 > The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
-Use this guide to move from an existing ATA installation to the (Microsoft Defender for Identity) service. The guide explains Defender for Identity prerequisites and requirements, and details how to plan and then complete your move. Validation steps and tips to take advantage of the latest threat protection and security solutions with Defender for Identity after installation are also included.
-
-To learn more about the differences between ATA and Defender for Identity, see the [Defender for Identity frequently asked questions](../technical-faq.yml).
-
-In this guide you will:
+Use this guide to migrate from an existing ATA installation to Microsoft Defender for Identity. In this guide you will:
 
 > [!div class="checklist"]
 >
 > - Review and confirm Defender for Identity service prerequisites
 > - Document your existing ATA configuration
-> - Plan your move
-> - Set up and configure your Defender for Identity  service
-> - Perform post move checks and verification
-> - Decommission ATA after completing the move
+> - Plan your migration
+> - Set up and configure your Defender for Identity service
+> - Perform post-migration checks and verifications
+> - Decommission ATA
 
 > [!NOTE]
-> Moving to Defender for Identity from ATA is possible from any ATA version. However, as data cannot be moved from ATA to Defender for Identity, it is recommended to retain your ATA Center data and alerts required for ongoing investigations until all ATA alerts are closed or remediated.
+> While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
 
 ## Prerequisites
 
-- An Azure Active Directory tenant with at least one global/security administrator is required to create a Defender for Identity instance. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+To migrate from ATA to Defender for Identity, you must have:
+
+- An Azure Active Directory tenant with at least one global/security administrator, so that you can create a Defender for Identity instance. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - Defender for Identity requires .Net Framework 4.7 or later and may require a domain controller restart if your current .Net Framework version is not 4.7 or later.
 
@@ -113,3 +111,5 @@ Learn more about [Defender for Identity](../what-is.md) features, functionality,
 ## Join the Community
 
 Do you have more questions, or an interest in discussing Defender for Identity and related security with others? Join the [Defender for Identity Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
+
+- [Defender for Identity frequently asked questions](../technical-faq.yml).

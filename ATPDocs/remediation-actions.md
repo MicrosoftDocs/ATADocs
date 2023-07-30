@@ -23,7 +23,9 @@ The following actions can be performed directly on the user account:
 - **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
 
 > [!NOTE]
-> For users with the **Password never expires** flag turned on, the password reset will only take place once the flag is removed.
+> - For users with the **Password never expires** flag turned on, the password reset will only take place once the flag is removed.
+>
+> - By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the LocalSystem account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
 
 ## Prerequisites
 
