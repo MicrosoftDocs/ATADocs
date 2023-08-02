@@ -202,11 +202,6 @@ items:
     href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
   - name: What's new archive
     href: whats-new-archive.md
-- name: Classic Defender for Identity portal
-  items:
-  - name: Deploy
-  - name: Manage
-  - name: Investigate and respond
 - name: Microsoft 365 Defender Docs
   items:
   - name: Microsoft 365 Defender
