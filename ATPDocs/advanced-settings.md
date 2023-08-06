@@ -15,7 +15,7 @@ Microsoft Defender for Identity sensors detect suspicious activities on your net
 
 However, there may be instances where you would like to receive alerts even before the full learning process has been completed. For example, when you install a new sensor on a domain controller or when you're evaluating the product, you may want to get alerts immediately. In such cases, you can turn off the learning period for the affected alerts by enabling the **Remove learning period** feature.
 
-When enabled, every alert that is based on learning or profiling will be triggered instantly. Although this feature can be useful, enabling it might result in a high volume of alerts, including some that might be legitimate activity. So it's highly recommended to only enable this feature for a short period of time.
+When enabled, every alert that is based on learning or profiling will be triggered instantly. Although this feature can be useful, enabling it might result in a high volume of alerts, including some that might be legitimate activity. So it's highly recommended to do it with caution.
 
 When the **Remove learning period** feature is enabled, Defender for Identity will continue to learn about your network environment.
 
@@ -50,3 +50,4 @@ For more information on which alerts have learning periods, see the alerts liste
 
 - [Defender for Identity security alerts in Microsoft 365 Defender](manage-security-alerts.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
