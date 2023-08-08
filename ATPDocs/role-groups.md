@@ -9,8 +9,6 @@ ms.topic: conceptual
 
 Microsoft Defender for Identity offers role-based security to safeguard data according to an organization's specific security and compliance needs. Defender for Identity support three separate roles: Administrators, Users, and Viewers.
 
-[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
-
 Role groups enable access management for Defender for Identity. Using role groups, you can segregate duties within your security team, and grant only the amount of access that users need to do their jobs. This article explains access management, Defender for Identity role authorization, and helps you get up and running with role groups in Defender for Identity.
 
 > [!NOTE]
