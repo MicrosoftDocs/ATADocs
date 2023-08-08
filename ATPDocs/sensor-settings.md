@@ -57,7 +57,6 @@ The sensors page provides the following information about each sensor:
 
   * **Standalone sensor**
 
-  * **AAD Connect** (Azure AD Connect)
  
   * **ADCS** (Active Directory Certificate Services)
 
