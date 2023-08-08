@@ -33,7 +33,6 @@ For updates about versions and features released six months ago or earlier, see 
 
 Defender for Identity now supports the following new sensor types:
 
-- **Azure AD Connect** (AAD Connect), used for TBD
 - **Active Directory Certificate Services** (ADCS), used for TBD
 
 You'll see these new sensor types identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
