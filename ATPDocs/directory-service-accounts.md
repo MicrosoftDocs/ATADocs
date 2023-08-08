@@ -1,7 +1,7 @@
 ---
 title: Directory Service account recommendations
 description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
-ms.date: 03/30/2023
+ms.date: 07/05/2023
 ms.topic: how-to
 ---
 
@@ -107,7 +107,7 @@ Then these are the sensors, and which DSA entry will be used first:
 > - In multi-forest multi-domain environments, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
 
 >[!IMPORTANT]
->If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health alerts](health-alerts.md).
+>If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health alert will be created. For more information, see [Defender for Identity health issues](health-alerts.md).
 
 ## How to create a gMSA account for use with Defender for Identity
 
@@ -163,16 +163,34 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 
 ## Permissions required for the DSA
 
-The DSA requires read permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
+The DSA requires read only permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
 The read-only permissions on the Deleted Objects container allows Defender for Identity to detect user deletions from your Active Directory.
+
+  >[!NOTE]
+  >If the DSA you want to grant the permissions to is a Group Managed Service Account (gMSA), you need first to create a security group, add the gMSA as a member and add the permissions to that group
 
 Granting the required read permissions on the Deleted Objects Container can be accomplished using the following code example:
 
 ```powershell
-# Declare the *user* or *group* that needs to have read access to the deleted objects container
-# Note that if the identity you want to grant the permissions to is a Group Managed Service Account (gMSA), 
-# you need first to create a security group, add the gMSA as a member and list that group as the identity below
-$Identity = 'CONTOSO\mdisvc'
+# Declare the identity that you want to add read access to the deleted objects container:
+$Identity = 'mdiSvc01'
+
+# If the identity is a gMSA, first to create a group and add the gMSA to it:
+$groupName = 'mdiUsr01Group'
+$groupDescription = 'Members of this group are allowed to read the objects in the Deleted Objects container in AD'
+if(Get-ADServiceAccount -Identity $Identity -ErrorAction SilentlyContinue) {
+    $groupParams = @{
+        Name           = $groupName
+        SamAccountName = $groupName
+        DisplayName    = $groupName
+        GroupCategory  = 'Security'
+        GroupScope     = 'Universal'
+        Description    = $groupDescription
+    }
+    $group = New-ADGroup @groupParams -PassThru
+    Add-ADGroupMember -Identity $group -Members ('{0}$' -f $Identity)
+    $Identity = $group.Name
+}
 
 # Get the deleted objects container's distinguished name:
 $distinguishedName = ([adsi]'').distinguishedName.Value
@@ -183,11 +201,11 @@ $params = @("$deletedObjectsDN", '/takeOwnership')
 C:\Windows\System32\dsacls.exe $params
 
 # Grant the 'List Contents' and 'Read Property' permissions to the user or group:
-$params = @("$deletedObjectsDN", '/G', "$($Identity):LCRP")
+$params = @("$deletedObjectsDN", '/G', ('{0}\{1}:LCRP' -f ([adsi]'').name.Value, $Identity))
 C:\Windows\System32\dsacls.exe $params
   
 # To remove the permissions, uncomment the next 2 lines and run them instead of the two prior ones:
-# $params = @("$deletedObjectsDN", '/R', $Identity)
+# $params = @("$deletedObjectsDN", '/R', ('{0}\{1}' -f ([adsi]'').name.Value, $Identity))
 # C:\Windows\System32\dsacls.exe $params
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 06/08/2023
+ms.date: 07/24/2023
 ms.topic: overview
 ---
 
@@ -9,11 +9,11 @@ ms.topic: overview
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity.
 
-> [!TIP]
-> Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
->
-
 [!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
+
+## Get notified about updates
+
+Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
 
 ## What's new scope and references
 
@@ -35,6 +35,77 @@ Defender for Identity now supports the new **ADCS** sensor type for Active Direc
 
 You'll see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
 
+### Defender for Identity release 2.210
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## July 2023
+
+### Defender for Identity release 2.209
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Search for Active Directory groups in Microsoft 365 Defender (Preview)
+
+The Microsoft 365 Defender global search now supports searching by Active Directory group name. Any groups found are shown in the results on a separate **Groups** tab. Select an Active Directory group from your search results to see more details, including:
+
+:::row:::
+   :::column span="":::
+      - Type
+      - Scope
+      - Domain
+      - SAM name
+      - SID
+   :::column-end:::
+   :::column span="":::
+      - Group creation time
+      - The first time an activity by the group was observed
+      - Groups that contain the selected group
+      - A list of all group members
+   :::column-end:::
+:::row-end:::
+
+For example:
+
+:::image type="content" source="media/whats-new/group-search.png" alt-text="Screenshot of the Groups tab in the Microsoft 365 Defender global search." lightbox="media/whats-new/group-search.png":::
+
+For more information, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).
+
+### New security posture reports
+
+Defender for Identity's identity security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations.
+
+The following new security posture assessments are now available in Microsoft Secure Score:
+
+- [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
+- [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
+- [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
+- [Remove non-admin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
+- [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
+- [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
+
+For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
+### Automatic redirection for the classic Defender for Identity portal
+
+The Microsoft Defender for Identity portal experience and functionality have been converged into Microsoft’s extended detection and response (XDR) platform, Microsoft 365 Defender. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft 365 Defender, with no option to revert back to the classic portal.
+
+For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
+
+### Defender for Identity report downloads and scheduling in Microsoft 365 Defender (Preview)
+
+Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).
+
+Download and schedule reports in Microsoft 365 Defender from the **Settings > Identities > Report management** page. For example:
+
+:::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page." lightbox="media/whats-new/report-management.png":::
+
+For more information, see [Microsoft Defender for Identity reports in Microsoft 365 Defender](reports.md).
+
+### Defender for Identity release 2.208
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Defender for Identity release 2.207
 
 - This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
@@ -45,17 +116,17 @@ You'll see the new sensor type identified in the **Settings > Identities > Senso
 
 ### Defender for Identity release 2.206
 
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Advanced hunting with an enhanced IdentityInfo table
 
-For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, as well as identities detected by the Defender for Identity sensor from your on-premises environment. 
+- For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, as well as identities detected by the Defender for Identity sensor from your on-premises environment.
 
 For more information, see the [Microsoft 365 Defender advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
 
 ### Defender for Identity release 2.205
 
-This version includes improvements and bug fixes for internal sensor infrastructure.
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## May 2023
 
@@ -75,9 +146,9 @@ For more information, see the [User-Account-Control attribute](/windows/win32/ad
 
 Released May 29, 2023
 
--	New health alert for VPN (radius) integration data ingestion failures. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#radius-accounting-vpn-integration-data-ingestion-failures).
+- New health alert for VPN (radius) integration data ingestion failures. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#radius-accounting-vpn-integration-data-ingestion-failures).
 
--	This version includes improvements and bug fixes for internal sensor infrastructure.
+- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Defender for Identity release 2.203
 
@@ -95,7 +166,7 @@ The identity **Timeline** tab now contains new and enhanced features! With the u
 
 ### Alert tuning in Microsoft 365 Defender
 
-Alert tuning, now available in Microsoft 365 Defender, allows you to adjust your alerts and optimize them. Alert tuning reduces false positives, allows your SOC teams to focus on high-priority alerts, and improves threat detection coverage across your system. 
+Alert tuning, now available in Microsoft 365 Defender, allows you to adjust your alerts and optimize them. Alert tuning reduces false positives, allows your SOC teams to focus on high-priority alerts, and improves threat detection coverage across your system.
 
 In Microsoft 365 Defender, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#public-preview-tune-an-alert).
 
@@ -105,8 +176,8 @@ In Microsoft 365 Defender, create rule conditions based on evidence types, and t
 
 Released April 23, 2023
 
--	New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required).
--	New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
+- New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required).
+- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## March 2023
@@ -203,8 +274,6 @@ Released December 7, 2022
 - Defender for Identity data centers are now also deployed in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
-
-
 
 ## Next steps
 

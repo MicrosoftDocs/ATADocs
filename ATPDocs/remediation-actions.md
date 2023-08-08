@@ -25,9 +25,8 @@ The following actions can be performed directly on the user account:
 > [!NOTE]
 > For users with the **Password never expires** flag turned on, the password reset will only take place once the flag is removed.
 
-## Prerequisites
-
-To perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+> [!NOTE]
+> By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the LocalSystem account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
 
 ## Permissions
 
