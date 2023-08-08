@@ -56,9 +56,8 @@ The sensors page provides the following information about each sensor:
   * **AD FS sensor** (Active Directory Federation Services)
 
   * **Standalone sensor**
-
  
-  * **ADCS** (Active Directory Certificate Services)
+  * **ADCS sensor** (Active Directory Certificate Services)
 
 * **Domain**: Displays the fully qualified domain name of the Active Directory domain where the sensor is installed.
 
