@@ -31,7 +31,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### AD Connect and ADCS sensor types supported
 
-Defender for Identity now supports the following new sensor types:
+Defender for Identity now supports the **Active Directory Certificate Services** (AD CS) sensor type, which provides customers with TBD
+
+AD CS is an Active Directory Certificate Services a Windows Server role for issuing and managing public key infrastructure (PKI) certificates used in secure communication and authentication protocols.
 
 - **Active Directory Certificate Services** (ADCS), used for TBD
 
