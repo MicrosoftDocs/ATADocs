@@ -37,7 +37,7 @@ AD CS is an Active Directory Certificate Services a Windows Server role for issu
 
 - **Active Directory Certificate Services** (ADCS), used for TBD
 
-You'll see these new sensor types identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
+You'll see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
 
 ### Defender for Identity release 2.207
 
