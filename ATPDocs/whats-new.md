@@ -29,9 +29,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2023
 
-### New sensor type for Active Directory Certificate Services (AD CS)
+### New sensor type for Active Directory Certificate Services (ADCS)
 
-Defender for Identity now supports the new **AD CS** sensor type for Active Directory Certificate Services. AD CS is a Windows Server role that issues and manages public key infrastructure (PKI) certificates in secure communication and authentication protocols. If your sensor is installed on a domain controller with AD CS, you'll view additional security content, such as related alerts and Secure Score reports.
+Defender for Identity now supports the new **ADCS** sensor type for Active Directory Certificate Services. ADCS is a Windows Server role that issues and manages public key infrastructure (PKI) certificates in secure communication and authentication protocols. If your sensor is installed on a domain controller with ADCS, you'll view additional security content, such as related alerts and Secure Score reports.
 
 You'll see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
 
