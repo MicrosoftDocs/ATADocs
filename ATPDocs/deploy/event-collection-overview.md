@@ -28,6 +28,26 @@ Defender for Identity supports UDP traffic from your SIEM or syslog server. If y
 > When forwarding syslog data to a standalone sensor, make sure not to forward *all* syslog data to your sensor.
 >
 
+## NNR requirements
+
+Network Name Resolution (NNR) is a main component of Defender for Identity functionality. To resolve IP addresses to computer names, Defender for Identity sensors look up the IP addresses using the following methods:
+
+- NTLM over RPC (TCP Port 135).
+- NetBIOS (UDP port 137).
+- RDP (TCP port 3389). Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
+
+<!--for more info see nnr policy? where is this?-->
+
+For the best results, we recommend using all supported methods. If this isn't possible, use the DNS lookup method and at least one of the other methods.
+
+## Windows Event logs
+
+Defender for Identity detection relies on specific Windows Event logs that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, Advanced audit policy check.
+
+To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings.
+
+For sensors running on AD FS servers, configure the auditing level to Verbose. For information on how to configure the auditing level, see Event auditing information for AD FS.
+
 ## Supported Windows events
 
 The following Windows events are supported for the Defender for Identity sensor to collect and enhance your system's detection abilities:
