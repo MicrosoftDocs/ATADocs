@@ -258,7 +258,7 @@ sections:
           Look at the most recent error in the current error [log](troubleshooting-using-logs.md) (Where Defender for Identity is installed under the "Logs" folder).
 
 additionalContent: |
-  ## See Also
+  ## Next steps
   - [Defender for Identity prerequisites](deploy/prerequisites.md)
   - [Defender for Identity capacity planning](deploy/capacity-planning.md)
   - [Configure event collection](deploy/configure-event-collection.md)

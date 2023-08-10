@@ -96,7 +96,7 @@ Each health alert provides specific details of the method, sensors, the problema
 - Reverse DNS:
   - Check that the Sensor can reach the DNS server and that Reverse Lookup Zones are enabled.
 
-## See Also
+## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Configure event collection](deploy/configure-event-collection.md)

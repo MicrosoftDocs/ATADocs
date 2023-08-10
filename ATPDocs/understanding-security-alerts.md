@@ -148,7 +148,7 @@ Download report data appears in two columns:
 
 For more information about how to work with Defender for Identity security alerts, see [Working with security alerts](/defender-for-identity/manage-security-alerts).
 
-## See Also
+## Next steps
 
 - [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
 - [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)

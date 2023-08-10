@@ -266,7 +266,7 @@ None
 |MITRE attack technique  |[Account Manipulation (T1134)](https://attack.mitre.org/techniques/T1134/)     |
 |MITRE attack sub-technique |[SID-History Injection(T1134.005)](https://attack.mitre.org/techniques/T1134/005/)       |
 
-## See also
+## Next steps
 
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)

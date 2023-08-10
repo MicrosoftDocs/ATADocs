@@ -301,7 +301,7 @@ None
 |MITRE attack technique  | [Unsecured Credentials)](https://attack.mitre.org/techniques/T1552/)        |
 |MITRE attack sub-technique | [Unsecured Credentials: Private Keys (T1552.004)](https://attack.mitre.org/techniques/T1552/004/)        
 
-## See also
+## Next steps
 
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)

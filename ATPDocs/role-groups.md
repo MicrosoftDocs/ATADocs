@@ -71,7 +71,7 @@ Defender for Identity provides three types of security groups: Azure ATP *(Works
 
 Defender for Identity uses Azure AD security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
 
-## See also
+## Next steps
 
 > [!div class="step-by-step"]
 > [« Directory Service accounts](directory-service-accounts.md)

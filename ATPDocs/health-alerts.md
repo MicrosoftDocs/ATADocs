@@ -194,7 +194,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 | Windows events missing from domain controller audit policy|For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings leave critical events out of your logs, and result in incomplete Defender for Identity coverage.|Review your [Advanced Audit policy](configure-windows-event-collection.md) and modify as needed. | Medium|
 -->
 
-## See also
+## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)

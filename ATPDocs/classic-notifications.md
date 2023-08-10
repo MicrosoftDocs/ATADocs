@@ -31,7 +31,7 @@ To receive notifications to a specific email address, set the following paramete
 
     ![Defender for Identity notifications](media/notifications.png)
 
-## See Also
+## Next steps
 
 - [Configure event collection](deploy/configure-event-collection.md)
 

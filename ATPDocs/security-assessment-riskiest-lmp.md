@@ -36,7 +36,7 @@ For example, the riskiest paths are more readily visible to attackers and, if co
     > [!NOTE]
     > This assessment is updated every 24 hours, so wait 24 hours and then check that the recommendation no longer appears in the list.
 
-## See Also
+## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

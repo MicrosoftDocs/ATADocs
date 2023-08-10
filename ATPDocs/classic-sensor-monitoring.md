@@ -49,7 +49,7 @@ Managing your fleet of sensors and domain controllers can be challenging. To mak
 > [!NOTE]
 > Defender for Identity portal configuration pages can be modified by Defender for Identity admins only.
 
-## See Also
+## Next steps
 
 - [Defender for Identity Architecture](architecture.md)
 - [Configuring Defender for Identity sensors](/defender-for-identity/configure-sensor-settings)

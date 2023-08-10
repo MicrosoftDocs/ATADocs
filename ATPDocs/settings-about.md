@@ -24,7 +24,7 @@ The About page provides the following details:
 
 This information can be helpful when troubleshooting issues and opening support tickets. Additionally, you can find the name of your instance (workspace) which is necessary for configuring your [proxy or firewall](deploy/configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
-## See also
+## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

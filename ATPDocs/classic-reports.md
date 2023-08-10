@@ -45,7 +45,7 @@ To set a scheduled report:
 
     ![Schedule report frequency and email.](media/sched-report1.png)
 
-## See Also
+## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)

@@ -33,7 +33,7 @@ It doesn't matter if the cause is employee turnover or resource mismanagement -s
 > [!NOTE]
 > This assessment is updated in near real time.
 
-## See Also
+## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

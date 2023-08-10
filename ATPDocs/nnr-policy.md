@@ -85,7 +85,7 @@ To make sure Defender for Identity is working ideally and the environment is con
 
 Each health alert provides specific details of the method, sensors, the problematic policy as well as configuration recommendations. For more information about health issues, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
 
-## See Also
+## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Configure event collection](deploy/configure-event-collection.md)

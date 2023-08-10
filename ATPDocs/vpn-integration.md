@@ -67,7 +67,7 @@ After this is enabled, all Defender for Identity sensors will listen on port 181
 
 After the Defender for Identity sensor receives the VPN events and sends them to the Defender for Identity cloud service for processing, the entity profile will indicate distinct accessed VPN locations and activities in the profile will indicate locations.
 
-## See Also
+## Next steps
 
 - [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [Configure event collection](deploy/configure-event-collection.md)

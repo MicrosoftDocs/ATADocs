@@ -368,7 +368,7 @@ None
 
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-## See also
+## Next steps
 
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)

@@ -52,6 +52,6 @@ Defender for Identity implements the audit of personal data changes, including t
 > [!IMPORTANT]
 > Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, Defender for Identity instances aren't movable.
 
-## See also
+## Next steps
 
 - More information about privacy can be found in the [Defender for Identity FAQ](/defender-for-identity/technical-faq#licensing-and-privacy)

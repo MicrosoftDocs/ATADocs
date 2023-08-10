@@ -54,7 +54,7 @@ To configure exclusions from a security alert, do the following:
 
 Defender for Identity scanning starts immediately. Some detections, such as [Suspicious additions to sensitive groups (external ID 2024)](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024), require a learning period and aren't available immediately after Defender for Identity deployment. The learning period for each alert is listed in the detailed [security alert guide](/defender-for-identity/alerts-overview).
 
-## See Also
+## Next steps
 
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

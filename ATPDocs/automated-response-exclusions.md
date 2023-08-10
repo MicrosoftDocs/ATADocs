@@ -38,7 +38,7 @@ For example, an incident involving Attack Disruption, where response actions are
 
     :::image type="content" source="media/remove-excluded-users.png" alt-text="Remove excluded users.":::
 
-## See also
+## Next steps
 
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

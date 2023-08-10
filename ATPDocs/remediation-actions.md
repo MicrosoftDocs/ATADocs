@@ -39,7 +39,7 @@ Currently, this feature requires the account signed into Microsoft 365 Defender 
 
 [Remediation actions in Defender for Identity](https://www.microsoft.com/videoplayer/embed/RE4U7Pe)
 
-## See also
+## Next steps
 
 [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md)
 

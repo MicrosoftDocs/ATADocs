@@ -217,7 +217,7 @@ None
 |MITRE attack technique  | [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570)](https://attack.mitre.org/techniques/T1570/)      |
 |MITRE attack sub-technique | [Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)        |
 
-## See also
+## Next steps
 
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)

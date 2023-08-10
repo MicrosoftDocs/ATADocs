@@ -31,7 +31,7 @@ For more information, see:
 > [!NOTE]
 > This assessment is updated in near real time.
 
-## See Also
+## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

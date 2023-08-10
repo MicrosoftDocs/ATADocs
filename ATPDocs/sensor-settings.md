@@ -215,7 +215,7 @@ To update the Defender for Identity sensor silently:
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
-## See also
+## Next steps
 
 * [Configure event forwarding](deploy/configure-event-forwarding.md)
 * [Defender for Identity prerequisites](deploy/prerequisites.md)

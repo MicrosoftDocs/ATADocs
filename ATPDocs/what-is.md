@@ -100,7 +100,7 @@ Defender for Identity is designed to reduce general alert noise, providing only 
 
 Get started with [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy/deploy-defender-identity.md).
 
-## See also
+## Next steps
 
 - [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy)
 - [Defender for Identity frequently asked questions](technical-faq.yml)

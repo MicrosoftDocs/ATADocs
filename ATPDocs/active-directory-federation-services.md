@@ -133,7 +133,7 @@ Use the following steps to configure Defender for Identity once you've completed
 
 If you use both products, then to protect both the server and Active Directory, the two sensors must be installed.
 
-## See also
+## Next steps
 
 - [Directory Service account recommendations](/defender-for-identity/directory-service-accounts)
 - [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md)

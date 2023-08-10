@@ -27,7 +27,7 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 > [!NOTE]
 > This assessment is updated in near real time.
 
-## See Also
+## Next steps
 
 - [Monitoring your domain controller coverage](/defender-for-identity/sensor-settings)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

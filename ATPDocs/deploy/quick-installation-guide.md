@@ -78,6 +78,6 @@ Make sure to install Defender for Identity on Windows 2012 and higher on a serve
 - For Windows Server 2012, the Defender for Identity sensor isn't supported in [Multiple Processor Group mode](/windows/win32/procthread/processor-groups). For more information about multi-processor group mode, see the [troubleshooting article](../troubleshooting-known-issues.md#multi-processor-group-mode).
 - When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
 
-## See also
+## Next steps
 
 For more detailed installation instructions, see the links in [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).

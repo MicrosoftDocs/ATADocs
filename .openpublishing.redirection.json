@@ -1,6 +1,11 @@
 {
     "redirections": [
     {
+        "source_path": "ATPDocs/validate-port-mirroring.md",
+        "redirect_url": "/previous-versions/defender-for-identity/deploy/configure-port-mirroring#validate-port-mirroring",
+        "redirect_document_id": false
+        },
+    {
       "source_path": "ATPDocs/classic-activities-filtering-mcas.md",
       "redirect_url": "/previous-versions/defender-for-identity/classic-activities-filtering-mcas",
       "redirect_document_id": false

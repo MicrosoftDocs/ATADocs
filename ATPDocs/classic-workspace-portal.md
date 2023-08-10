@@ -96,7 +96,7 @@ If you hover your mouse over an entity, anywhere in the Defender for Identity po
 - WD ATP badge- Will be displayed if there are suspicious activities in Microsoft Defender for Endpoint associated with this entity.
 - Lateral movement paths badge - Will be displayed if there have been lateral movement paths detected for this entity within the last two days.
 
-## See Also
+## Next steps
 
 - [Creating Defender for Identity instances](/defender-for-identity/classic-install-step1)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

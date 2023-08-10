@@ -88,7 +88,7 @@ Defender for Identity can notify you when it detects suspicious activities by se
 >
 > - The events won’t be sent from the Defender for Identity service to your Syslog server directly. This is the purpose of the nominated sensor. The selected sensor will collect the data from the Defender for Identity service and send it to your Syslog server.
 
-## See Also
+## Next steps
 
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

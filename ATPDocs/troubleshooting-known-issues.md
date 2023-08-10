@@ -460,7 +460,7 @@ NT Service\All Services do not have the right to logon as a service.
 
 Add Domain Controller Policy with the logon as a service. For more information, see [Verify that the gMSA account has the required rights](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights).
 
-## See also
+## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)

@@ -3,11 +3,11 @@ items:
   href: index.yml
 - name: Overview
   items:
-  - name: What is Microsoft Defender for Identity?
+  - name: Welcome to Defender for Identity
     href: what-is.md
   - name: What's new in Defender for Identity?
     href: whats-new.md
-  - name: Defender for Identity architecture
+  - name: Architecture
     href: architecture.md
   - name: Defender for Identity in Microsoft 365 Defender
     href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json
@@ -56,10 +56,12 @@ items:
     items:
     - name: Configure port mirroring
       href: deploy/configure-port-mirroring.md
-    - name: Validate port mirroring
-      href: deploy/validate-port-mirroring.md
     - name: Configure event collection
-      href: deploy/configure-event-collection.md
+      items:
+      - name: Event collection overview 
+        href: deploy/event-collection-overview.md
+      - name: Listen for SIEM events
+        href: deploy/configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: deploy/configure-event-forwarding.md
     - name: Configure Windows Event collection

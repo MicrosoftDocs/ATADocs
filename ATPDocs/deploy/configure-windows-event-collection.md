@@ -1,46 +1,15 @@
 ---
-title: Configure Windows Event collection
+title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 04/16/2023
+ms.date: 08/10/2023
 ms.topic: how-to
 ---
 
-# Configure Windows Event collection
+# Configure audit policies for Windows event logs
 
 Microsoft Defender for Identity detection relies on specific Windows Event log entries to enhance some detections and provide additional information on who performed specific actions such as NTLM logons, security group modifications, and similar events. For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings can lead to the required events not being recorded in the Event Log and result in incomplete Defender for Identity coverage.
 
 To enhance threat detection capabilities, Defender for Identity needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by Defender for Identity:
-
-## Relevant Windows Events
-
-### For Active Directory Federation Services (AD FS) events
-
-- 1202 - The Federation Service validated a new credential
-- 1203 - The Federation Service failed to validate a new credential
-- 4624 - An account was successfully logged on
-- 4625 - An account failed to log on
-
-### For other events
-
-- 1644 - LDAP search
-- 4662 - An operation was performed on an object
-- 4726 - User Account Deleted
-- 4728 - Member Added to Global Security Group
-- 4729 - Member Removed from Global Security Group
-- 4730 - Global Security Group Deleted
-- 4732 - Member Added to Local Security Group
-- 4733 - Member Removed from Local Security Group
-- 4741 - Computer Account Added
-- 4743 - Computer Account Deleted
-- 4753 - Global Distribution Group Deleted
-- 4756 - Member Added to Universal Security Group
-- 4757 - Member Removed from Universal Security Group
-- 4758 - Universal Security Group Deleted
-- 4763 - Universal Distribution Group Deleted
-- 4776 - Domain Controller Attempted to Validate Credentials for an Account (NTLM)
-- 5136 - A directory service object was modified
-- 7045 - New Service Installed
-- 8004 - NTLM Authentication
 
 ## Configure audit policies
 

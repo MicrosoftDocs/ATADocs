@@ -78,7 +78,7 @@ The following table lists the mapping between alert names, their corresponding u
 > [!NOTE]
 > To disable any security alert, contact support.
 
-## See Also
+## Next steps
 
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Understanding security alerts](understanding-security-alerts.md)
