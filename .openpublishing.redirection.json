@@ -1,5 +1,125 @@
 {
     "redirections": [
+    {
+      "source_path": "ATPDocs/classic-activities-filtering-mcas.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-activities-filtering-mcas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-activities-search.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-activities-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-configure-detection-exclusions.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-entity-profiles.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-entity-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-health-center.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step1.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step2.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step3.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step6-vpn.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step6-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-integrate-mde.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-integrate-mde",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-investigate-entity.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-investigate-entity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-investigate-lateral-movement-path.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-investigate-lateral-movement-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-manage-sensitive-honeytoken-accounts.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-manage-sensitive-honeytoken-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-mcas-integration.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-mcas-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-modifying-config-dcpassword.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-modifying-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-nnr-policy.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-nnr-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-notifications.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-reports.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-sensor-monitoring.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-sensor-monitoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-setting-syslog.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-setting-syslog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-uninstall-sensor.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-uninstall-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-use-case-lateral-movement-path.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-use-case-lateral-movement-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-working-with-suspicious-activities.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-working-with-suspicious-activities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-workspace-portal.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-workspace-portal",
+      "redirect_document_id": false
+    },
         {
             "source_path": "ATPDocs/active-directory-federation-services.md",
             "redirect_url": "/defender-for-identity/deploy/active-directory-federation-services",

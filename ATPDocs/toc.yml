@@ -69,7 +69,7 @@ items:
   - name: Settings
     items:
     - name: About page
-      href: settings-about.md   
+      href: settings-about.md
     - name: Manage and update sensors
       href: sensor-settings.md
     - name: Uninstall a sensor
@@ -131,21 +131,21 @@ items:
   - name: Security alert lab
     items:
     - name: Lab overview
-      href: playbook-lab-overview.md 
+      href: playbook-lab-overview.md
     - name: Lab setup
-      href: playbook-setup-lab.md 
+      href: playbook-setup-lab.md
     - name: Reconnaissance playbook
-      href: playbook-reconnaissance.md 
+      href: playbook-reconnaissance.md
     - name: Lateral movement playbook
-      href: playbook-lateral-movement.md 
+      href: playbook-lateral-movement.md
     - name: Domain dominance playbook
       href: playbook-domain-dominance.md
     - name: Attack simulations
-      href: playbooks.md 
+      href: playbooks.md
   - name: Remediation
     items:
     - name: Remediation actions
-      href: remediation-actions.md 
+      href: remediation-actions.md
   - name: Security posture
     items:
     - name: Overview
@@ -200,60 +200,8 @@ items:
     href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
   - name: What's new archive
     href: whats-new-archive.md
-- name: Classic Defender for Identity portal
-  items:
-  - name: Deploy
-    items:
-    - name: Create your Defender for Identity instance 
-      href: classic-install-step1.md
-    - name: Connect to Active Directory
-      href: classic-install-step2.md
-    - name: Download the Defender for Identity sensor package
-      href: classic-install-step3.md
-  - name: Manage
-    items:
-    - name: Defender for Identity portal
-      href: classic-workspace-portal.md
-    - name: Manage security alerts
-      href: classic-working-with-suspicious-activities.md
-    - name: Manage sensitive or honeytoken accounts
-      href: classic-manage-sensitive-honeytoken-accounts.md
-    - name: Reports
-      href: classic-reports.md
-    - name: Configure detection exclusions
-      href: classic-configure-detection-exclusions.md
-    - name: Monitor domain controllers
-      href: classic-sensor-monitoring.md
-    - name: VPN integration
-      href: classic-install-step6-vpn.md
-    - name: Integrate with Syslog
-      href: classic-setting-syslog.md
-    - name: Change domain connectivity password
-      href: classic-modifying-config-dcpassword.md
-    - name: Set Defender for Identity notifications
-      href: classic-notifications.md
-    - name: Work with Defender for Identity health center
-      href: classic-health-center.md
-    - name: Uninstall a sensor
-      href: classic-uninstall-sensor.md
-    - name: Integrate with Microsoft Defender for Endpoint
-      href: classic-integrate-mde.md
-  - name: Investigate and respond
-    items:
-    - name: Understanding entity profiles
-      href: classic-entity-profiles.md
-    - name: Lateral movement paths
-      href: classic-use-case-lateral-movement-path.md
-    - name: Investigate lateral movement paths
-      href: classic-investigate-lateral-movement-path.md
-    - name: Understanding Network Name Resolution (NNR)
-      href: classic-nnr-policy.md
-    - name: Investigate an entity
-      href: classic-investigate-entity.md
-    - name: Search and filter monitored activities
-      href: classic-activities-search.md
 - name: Microsoft 365 Defender Docs
-  items: 
+  items:
   - name: Microsoft 365 Defender
     href: /microsoft-365/security/defender/
   - name: Microsoft Defender for Office 365
