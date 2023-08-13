@@ -38,15 +38,13 @@ Network Name Resolution (NNR) is a main component of Defender for Identity funct
 
 <!--for more info see nnr policy? where is this?-->
 
-For the best results, we recommend using all supported methods. If this isn't possible, use the DNS lookup method and at least one of the other methods.
+For the first three methods to work, the relevant ports must be opened inbound from the Defender for Identity sensors to devices on the network.
 
 ## Windows Event logs
 
-Defender for Identity detection relies on specific Windows Event logs that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, Advanced audit policy check.
+Defender for Identity detection relies on specific Windows Event logs that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information, see [Configure Advanced Audit Policy settings](configure-windows-event-collection.md#configure-advanced-audit-policy-settings).
 
-To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings.
-
-For sensors running on AD FS servers, configure the auditing level to Verbose. For information on how to configure the auditing level, see Event auditing information for AD FS.
+To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings. For sensors running on AD FS servers, configure the auditing level to **Verbose**. For more information, see [Enable auditing on an ADFS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object).
 
 ## Supported Windows events
 

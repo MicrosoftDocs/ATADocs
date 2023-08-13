@@ -20,32 +20,46 @@ Before you start:
 - Make sure that the domain controller is properly configured to capture the required events.
 - [Configure port mirroring](configure-port-mirroring.md)
 
-## WEF configuration with port mirroring
+## Step 1: Add the network service account to the domain
 
-This section provides an example of configuring Windows event forwarding to the Defender for Identity standalone sensor using Source Initiated configuration. 
+This procedure describes how to add the network service account to the **Event Log Readers Group** domain. For this scenario, assume that the Defender for Identity standalone sensor is a member of the domain. <!--this doesn't make any sense-->
 
-### Step 1: Add the network service account to the domain Event Log Readers Group
+1. In Active Directory's Users and Computers, go to the **Built-in** folder and double-click **Event Log Readers**.
 
-In this scenario, assume that the Defender for Identity standalone sensor is a member of the domain.
-
-1. Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double-click **Event Log Readers**.
 1. Select **Members**.
-1. If **Network Service** is not listed, select **Add**, type **Network Service** in the **Enter the object names to select** field. Then select **Check Names** and select **OK** twice.
+
+1. If **Network Service** is not listed, select **Add**, and then enter **Network Service** in the **Enter the object names to select** field.
+
+1. Select **Check Names** and select **OK** twice.
 
 After adding the **Network Service** to the **Event Log Readers** group, reboot the domain controllers for the change to take effect.
 
-### Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting
+For more information, see [Active Directory accounts](/windows-server/identity/ad-ds/manage/understand-default-user-accounts).
 
-> [!NOTE]
+## Step 2: Create a policy that sets the Configure target setting
+
+This procedure describes how to create a policy on the domain controllers to set the **Configure target** Subscription Manager setting
+
+> [!TIP]
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Defender for Identity standalone sensor. The following steps modify the local policy of the domain controller.
 
-1. Run the following command on each domain controller: *winrm quickconfig*
-1. From a command prompt type *gpedit.msc*.
+1. On each domain controller, run:
+
+    ```cmd
+    ninrm quick config
+    ```
+
+1. From a command prompt, enter
+
+    ```cmd
+    gpedit.msc
+    ```
+
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**. For example:
 
-    ![Local policy group editor image.](../media/wef-1-local-group-policy-editor.png)
+    ![Screenshot of the Local policy group editor dialog.](../media/wef-1-local-group-policy-editor.png)
 
-1. Double-click **Configure target Subscription Manager** and then do the following:
+1. Double-click **Configure target Subscription Manager** and then:
 
     1. Select **Enabled**.
     1. Under **Options**, select **Show**.
@@ -55,14 +69,25 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
         
         For example, using **Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10**:
 
-        ![Configure target subscription image.](../media/wef-2-config-target-sub-manager.png)
+        ![Screenshot of the Configure target subscription dialog.](../media/wef-2-config-target-sub-manager.png)
 
 1. Select **OK**.
-1. From an elevated command prompt type *gpupdate /force*.
 
-### Step 3: Perform the following steps on the Defender for Identity standalone sensor
+1. From an elevated command prompt, enter:
 
-1. Open an elevated command prompt and type `wecutil qc`. Leave the command window open.
+    ```cmd
+    gpupdate /force
+    ```
+
+### Step 3: Create and select a subscription on your sensor
+
+This procedure describes how to create a subscription for use with Defender for Identity and then select it from your standalone sensor.
+
+1. Open an elevated command prompt and enter
+
+    ```cmd
+    wecutil qc
+    ```
 
 1. Open **Event Viewer**.
 
@@ -72,23 +97,21 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
     1. For **Destination Log**, confirm that **Forwarded Events** is selected. For Defender for Identity to read the events, the destination log must be **Forwarded Events**.
 
-    1. Select **Source computer initiated** and select **Select Computers Groups**.
+    1. Select **Source computer initiated** > **Select Computers Groups** > **Add Domain Computer**.
 
-        1. Select **Add Domain Computer**.
+        1. Enter the name of the domain controller in the **Enter the object name to select** field. 
 
-        1. Enter the name of the domain controller in the **Enter the object name to select** field. Then select **Check Names** and select **OK**.
+        1. Select **Check Names** > **OK** > **OK**.
 
         1. Select **OK**. For example:
 
-        ![Event Viewer image.](../media/wef-3-event-viewer.png)
+            ![Screenshot of the Event Viewer dialog.](../media/wef-3-event-viewer.png)
 
-    1. Select **Select Events**.
+    1. Select **Select Events** > **By log** > **Security**.
 
-        1. Select **By log** and then select **Security**.
-
-        1. In the **Includes/Excludes Event ID** field type the event number and select **OK**. For example, enter **4776**:
+    1. In the **Includes/Excludes Event ID** field type the event number and select **OK**. For example, enter **4776**:
     
-            ![Query filter image.](../media/wef-4-query-filter.png)
+        ![Screenshot of the Query  dialog.](../media/wef-4-query-filter.png)
 
     1. Return to the command window opened in the first step. Run the following commands, replacing *SubscriptionName* with the name you created for the subscription.
 
