@@ -89,9 +89,9 @@ For more information, see [Custom roles in role-based access control for Microso
 
 ### Migrating from built-in role groups
 
-Legacy customers can migrate any Defender for Identity role groups to Microsoft 365 Defender. However, if you change or add new roles in Microsoft 365 Defender, you'll need to match these permissions in the Defender for Identity role table to access the classic Defender for Identity portal. <!--can't we put this somewhere else? do we really still need it?-->
+Legacy customers can migrate any Defender for Identity role groups to Microsoft 365 Defender.
  
-Information included from the [Defender for Cloud Apps activity log](../classic-mcas-integration.md#activities) may still contain Defender for Identity data, which adheres to existing Defender for Cloud Apps permissions. <!--what does this mean?-->
+Information included from the [Defender for Cloud Apps activity log](../classic-mcas-integration.md#activities) may still contain Defender for Identity data, which adheres to existing Defender for Cloud Apps permissions.
 
 
 ## Next steps

@@ -42,7 +42,7 @@ Defender for Identity requires the following to support multiple Active Director
 
 <!-->
 > [!NOTE]
-> Each Defender for Identity sensor can only report to a single Defender for Identity workspace. <!--is this really still neccesary? moved from known issues
+> Each Defender for Identity sensor can only report to a single Defender for Identity workspace. <!--is this really still necessary? moved from known issues
 >
 -->
 

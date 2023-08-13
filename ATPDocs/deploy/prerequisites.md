@@ -29,15 +29,16 @@ To create your Defender for Identity instance, you'll need an Azure Active Direc
 
 Each Defender for Identity instance supports  multiple Active Directory forest boundaries and Forest Functional Levels (FFL), for Windows 2003 and higher.
 
-You'll need Global or Security administrator access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** <!--should this be settings?-->area and create the workspace.
+You'll need Global or Security administrator access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
 
 For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
 ## Defender for Identity firewall requirements
 
-Use the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
+Use the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. 
 
-<!--what does this mean?-->
+For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
+
 ## Required network adapters
 
 The Defender for Identity sensor monitors local traffic on all of the domain controller's network adapters.
@@ -46,7 +47,7 @@ After deployment, you'll use the Microsoft 365 Defender portal to modify which n
 
 When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error. 
 
-To install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap by following the instructions here.<!--where?-->
+To install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap. For more information, see [How do I download and install or upgrade the Npcap driver?](../technical-faq.yml#how-do-i-download-and-install-or-upgrade-the-npcap-driver)
 
 ## Sensor requirements
 

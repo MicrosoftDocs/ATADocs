@@ -36,8 +36,6 @@ Network Name Resolution (NNR) is a main component of Defender for Identity funct
 - NetBIOS (UDP port 137).
 - RDP (TCP port 3389). Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
-<!--for more info see nnr policy? where is this?-->
-
 For the first three methods to work, the relevant ports must be opened inbound from the Defender for Identity sensors to devices on the network.
 
 ## Windows Event logs

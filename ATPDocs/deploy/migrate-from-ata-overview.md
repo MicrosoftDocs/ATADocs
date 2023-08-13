@@ -23,9 +23,10 @@ This article describes how to migrate from an existing ATA installation to Micro
 
 > [!NOTE]
 > While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
+>
 
 > [!IMPORTANT]
-> This migration guide is designed for Defender for Identity sensors only. <!--what does this even mean?-->
+> This migration guide is designed for Defender for Identity sensors only, and not standalone sensors.
 >
 
 ## Prerequisites

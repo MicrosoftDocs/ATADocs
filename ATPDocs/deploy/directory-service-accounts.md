@@ -239,8 +239,6 @@ If you see this alert, we recommend checking to see if the *Log on as a service 
 > [!NOTE]
 > If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure you add both **NT Service\All Services** and the gMSA account you created.
 
-<!--for more information, see? -->
-
 ## Configure a Directory Service account in Microsoft 365 Defender
 
 To connect your sensors with your Active Directory domains, you'll need to configure Directory Service accounts in Microsoft 365 Defender.
