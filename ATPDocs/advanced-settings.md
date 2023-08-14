@@ -46,7 +46,7 @@ For more information on which alerts have learning periods, see the alerts liste
     >
     > "The learning period for alerts is disabled. This might increase the number of alerts for some legitimate alerts and activities."
 
-## Next steps
+## See also
 
 - [Defender for Identity security alerts in Microsoft 365 Defender](manage-security-alerts.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

@@ -92,7 +92,7 @@ Tune your alerts to adjust and optimize them, reducing false positives. Alert tu
 
 For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#public-preview-tune-an-alert).
 
-## Next steps
+## See also
 
 - [Microsoft Defender for Identity Security Alerts](alerts-overview.md)
 

@@ -114,7 +114,7 @@ Defender for Identity considers Exchange servers as high-value assets and automa
 
     ![Select device.](media/select-device.png)
 
-## Next steps
+## See also
 
 - [Working with suspicious activities](/defender-for-identity/manage-security-alerts)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

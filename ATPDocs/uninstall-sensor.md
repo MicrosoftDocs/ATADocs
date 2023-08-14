@@ -68,6 +68,6 @@ To silently uninstall the Defender for Identity sensor from the server:
 "Azure ATP sensor Setup.exe" /quiet /uninstall
 ```
 
-## Next steps
+## See Also
 
 - [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md)

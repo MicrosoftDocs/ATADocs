@@ -189,7 +189,7 @@ In this detection, Microsoft Defender for Identity will trigger this alert for a
 
 None
 
-## Next steps
+## See also
 
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)
