@@ -65,7 +65,7 @@ This procedure describes how to create a policy on the domain controllers to set
     1. Under **Options**, select **Show**.
     1. Under **SubscriptionManagers**, enter the following value and select **OK**:
 
-        **Server=http://`<fqdnMicrosoftDefenderForIdentitySensor>``:5985/wsman/SubscriptionManager/WEC,Refresh=10**
+        **Server=http://`<fqdnMicrosoftDefenderForIdentitySensor>`:5985/wsman/SubscriptionManager/WEC,Refresh=10**
         
         For example, using **Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10**:
 

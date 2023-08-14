@@ -88,8 +88,8 @@ After the migration is complete, allow two hours for the initial sync to be comp
 
 In Microsoft 365 Defender, check the following areas to validate your migration:
 
-- Review any [health issues](/health-alerts.md) for signs of service issues.
-- Review Defender for Identity [sensor error logs](/troubleshooting-using-logs.md) for any unusual errors.
+Review any [health issues](../health-alerts.md) for signs of service issues
+- Review Defender for Identity [sensor error logs](../troubleshooting-using-logs.md) for any unusual errors.
 
 ## Post-migration activities
 

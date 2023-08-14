@@ -83,10 +83,6 @@ To enhance Defender for Identity detection coverage related to NTLM authenticati
 
 To ensure that the logs are read, make sure that your Defender for Identity sensor has advanced audit policy settings configured correctly. To [make sure Windows Event 8004 is audited](deploy/configure-windows-event-collection.md#event-id-8004) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7)
 
-
-
- to analyze the logs of the [Windows Events listed here](deploy/configure-windows-event-collection.md#relevant-windows-events). These events are read automatically by Defender for Identity sensors with correct [advanced audit policy settings](deploy/configure-windows-event-collection.md). .
-
 ## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
