@@ -63,8 +63,8 @@ After the Defender for Identity sensor is installed, do the following to view an
 
    - **Capture Network adapters** (required):
 
-          - For Defender for Identity sensors, all network adapters that are used for communication with other computers in your organization.
-          - For Defender for Identity standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.
+         - For Defender for Identity sensors, all network adapters that are used for communication with other computers in your organization.
+         - For Defender for Identity standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.
 
 1. On the **Sensors** page, select **Export** to export a list of your sensors to a **.csv** file. For example:
 

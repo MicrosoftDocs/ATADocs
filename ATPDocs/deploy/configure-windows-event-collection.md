@@ -83,14 +83,32 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 ![Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration.](../media/advanced-audit-policy-check-step-3.png)
 
+## Configure auditing for extra LDAP queries
+
+Microsoft Defender for Identity can monitor extra LDAP queries in your network, which are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable **event 1644** on your domain controllers. 
+
+Event 1644 covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers.
+
+> [!IMPORTANT]
+> Logging the 1644 events may impact server performance. While the resource limitation feature can stop the Defender for Identity service if the server is running out of resources, it does not stop the event auditing at the operating system level. Therefore, to avoid performance issues, make sure your servers have sufficient memory, CPU, and disk resources.
+
+Windows event 1644 isn't collected by default on domain controllers and needs to be manually activated to support this feature. Create registry keys with the following values:
+
+```reg
+Windows Registry Editor Version 5.00 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics] 
+"15 Field Engineering"=dword:00000005 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters] 
+"Expensive Search Results Threshold"=dword:00000001 
+"Inefficient Search Results Threshold"=dword:00000001 "Search Time Threshold (msecs)"=dword:00000001 
+```
+
 ## Configure object auditing
 
 To collect 4662 events, you must also configure object auditing on the user, group and computer objects. This procedure describes how to enable auditing on all users, groups, and computers in the Active Directory domain.
 
 > [!IMPORTANT]
-> Make sure to [review and verify your audit policies](#configure-audit-policies) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events.
->
->If configured properly, this auditing should have minimal effect on server performance.
+> Make sure to [review and verify your audit policies](#configure-advanced-audit-policy-settings) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events. If configured properly, this auditing should have minimal effect on server performance.
 
 1. Go to the **Active Directory Users and Computers** console.
 1. Select the domain you want to audit.

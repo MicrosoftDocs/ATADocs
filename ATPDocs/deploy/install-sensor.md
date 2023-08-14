@@ -20,8 +20,7 @@ Before you start, make sure that you have:
 
 - Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the Defender for Identity sensor setup package installs it, which may require a reboot of the server.
 
-You might be installing the sensor on an Active Directory Federation Service (AD FS) server. For more information, see [AD FS Prerequisites](active-directory-federation-services.md#prerequisites).
-
+- Relevant server specifications and network requirements, if you're installing the sensor on an Active Directory Federation Service (AD FS) server. For more information, see [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md).
 
 ## Install the sensor
 

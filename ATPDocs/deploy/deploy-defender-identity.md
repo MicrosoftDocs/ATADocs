@@ -60,9 +60,11 @@ For more information about these steps, see the following articles:
 If you deploy Defender for Identity standalone sensors, you'll need to do the following steps:
 
 1. [Configure port mirroring](configure-port-mirroring.md)
-1. [Validate Port Mirroring](validate-port-mirroring.md)
-1. [Configure event collection](configure-event-collection.md)
-1. [Configuring Windows Event Forwarding](configure-event-forwarding.md)
+1. [Validate port mirroring](configure-port-mirroring.md#validate-port-mirroring)
+1. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)
+1. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
+
+For more information, see [Windows event collection overview](event-collection-overview.md).
 
 ## Next steps
 

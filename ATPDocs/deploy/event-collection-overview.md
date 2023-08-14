@@ -2,7 +2,7 @@
 title: Configure Windows event collection - Overview | Microsoft Defender for Identity
 description: Learn about options for configuring Windows event collection to Microsoft Defender for Identity.
 ms.date: 08/10/2023
-ms.topic: concept
+ms.topic: conceptual
 ---
 
 # Windows event collection overview

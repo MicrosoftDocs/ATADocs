@@ -56,9 +56,9 @@ Before starting the migration, gather all of the following information:
 
 - [VPN integration details](../vpn-integration.md)
 
-- Alert exclusions. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions in Defender for Identity](../exclusions).
+- Alert exclusions. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions in Defender for Identity](../exclusions.md).
 
-- Account details for entity tags. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity identity tags in Microsoft 365 Defender](/microsoft-365/security/defender-identity/entity-tags?view=o365-worldwide&branch=main). <!--is this correct?-->
+- Account details for entity tags. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity identity tags in Microsoft 365 Defender](/microsoft-365/security/defender-identity/entity-tags). <!--is this correct?-->
 
 - A complete list of all entities, such as computers, groups, or users, that you want to manually tag as Sensitive entities. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
 
@@ -88,8 +88,8 @@ After the migration is complete, allow two hours for the initial sync to be comp
 
 In Microsoft 365 Defender, check the following areas to validate your migration:
 
-- Review any [health issues](/defender-for-identity/health-alerts) for signs of service issues.
-- Review Defender for Identity [sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
+- Review any [health issues](/health-alerts.md) for signs of service issues.
+- Review Defender for Identity [sensor error logs](/troubleshooting-using-logs.md) for any unusual errors.
 
 ## Post-migration activities
 

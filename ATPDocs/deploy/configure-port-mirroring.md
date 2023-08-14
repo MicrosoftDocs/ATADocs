@@ -27,8 +27,8 @@ Your domain controllers and Defender for Identity standalone sensor can be eithe
 
     Defender for Identity currently cannot directly receive ERSPAN traffic. Instead:
 
-      1. Configure the ERSPAN destination where the traffic is decapsulated as a switch or router that can decapsulate the traffic. 
-      1. Configure the switch or router to forward the decapsulated traffic to the Defender for Identity standalone sensor using either SPAN or RSPAN.
+    1. Configure the ERSPAN destination where the traffic is decapsulated as a switch or router that can decapsulate the traffic. 
+    1. Configure the switch or router to forward the decapsulated traffic to the Defender for Identity standalone sensor using either SPAN or RSPAN.
 
 > [!NOTE]
 > - If the domain controller being port mirrored is connected over a WAN link, make sure the WAN link can handle the additional load of the ERSPAN traffic.
