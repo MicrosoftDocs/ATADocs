@@ -55,10 +55,10 @@ For accurate calculations of the resources required by your server according to 
 
 Make sure to install Defender for Identity on Windows 2012 and higher on a server with minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space. For more information, see [Minimum system requirements](#minimum-system-requirements).
 
-1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com) in the **Settings** -> **Identities** -> **Sensors** page.
+1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com) in the **Settings** -> **Identities** -> **Sensors** -> **Add sensor** page.
 
     - Copy the **Access key**. You'll need it for the installation.
-    - You only need to download the installer once, as it can be used for every server in the tenant.
+    - You only need to download the installer once, as it can be used for every server in the tenant. Be sure no pop-up blocker is blocking the download.
 
 1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service,  by accessing `https://*your-instance-name*sensorapi.atp.azure.com`.
 
