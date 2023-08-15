@@ -105,7 +105,7 @@ sections:
     questions:
       - question: How many Defender for Identity sensors do I need?
         answer: |
-          We recommend that you make sure that each of your domain controllers is covered by a Defender for Identity sensor or standalone sensor. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
+          We recommend that you have a Defender for Identity sensor or standalone sensor for each one of your domain controllers. For more information, see [Defender for Identity sensor sizing](capacity-planning.md#sizing).
 
       - question: Does Defender for Identity work with encrypted traffic?
         answer: While network protocols with encrypted traffic, such as AtSvc and WMI, aren't decrypted, sensors do still analyze the traffic.
