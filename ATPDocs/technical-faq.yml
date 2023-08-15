@@ -70,7 +70,7 @@ sections:
 
           - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
 
-          - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Azure AD Identity Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
+          - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Entra ID Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
 
           - **Contributes to Microsoft 365 Defender**: Contributes alert and threat data to  Microsoft 365 Defender. Microsoft 365 Defender uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. With this breadth and depth of clarity, defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft 365 Defender's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
 
@@ -89,7 +89,7 @@ sections:
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |
-          No. When your Defender for Identity instance is created, it's stored automatically in the Azure region that's closest to your Azure Active Directory tenant's geographical location.  Once your Defender for Identity instance is created, Defender for Identity data can't be moved to a different region.
+          No. When your Defender for Identity instance is created, it's stored automatically in the Entra ID region that's closest to your Entra ID tenant's geographical location.  Once your Defender for Identity instance is created, Defender for Identity data can't be moved to a different region.
 
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |

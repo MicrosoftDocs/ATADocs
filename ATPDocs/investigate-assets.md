@@ -50,7 +50,7 @@ You can find identity information in the following views: 
 When you investigate a specific identity, you'll see the:
 
 - [Overview](/microsoft-365/security/defender/investigate-users#overview)  
-   the Overview including identity details such as the Azure Active Directory (Azure AD) Identity risk level, the number of devices the user is signed in to, when the user was first and last seen, the user's accounts and more important information.  
+   the Overview including identity details such as the Entra ID Identity risk level, the number of devices the user is signed in to, when the user was first and last seen, the user's accounts and more important information.  
    In addition, you can see the incidents and alerts visual view, investigation priority score, organization tree, entity tags and scored activities timeline.
 - [Active Alerts](/microsoft-365/security/defender/investigate-users#alerts) tab  
    The alerts tab contains active alerts involving the user from the last 180 days in this tab. Information like alert severity and the time the alert was generated is available in this tab.
