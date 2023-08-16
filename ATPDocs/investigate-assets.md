@@ -98,7 +98,7 @@ For more information about investigate a device in the Microsoft 365 Defender po
 ## Next steps
 
 - [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](understand-lateral-movement-paths.md)
-- [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users?view=o365-worldwide)
+- [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users)
 
 - [Investigate incidents in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-incidents)
    
