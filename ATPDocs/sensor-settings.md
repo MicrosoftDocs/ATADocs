@@ -57,7 +57,7 @@ The sensors page provides the following information about each sensor:
 
   * **Standalone sensor**
  
-  * **ADCS sensor** (Active Directory Certificate Services). If the ADCS is part of a domain controller, as a module on the domain controller server, the sensor type is shown as **Domain controller sensor** instead.
+  * **ADCS sensor** (Active Directory Certificate Services). If your sensor is installed on a domain controller server with AD CS configured, such as in a testing environment, the sensor type is shown as **Domain controller sensor** instead.
 
 * **Domain**: Displays the fully qualified domain name of the Active Directory domain where the sensor is installed.
 
