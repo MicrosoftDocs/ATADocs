@@ -11,12 +11,18 @@ Microsoft Defender for Identity is a powerful solution for detecting abnormal or
 
 When running a lab or a pentesting ensure your Defender for Identity configuration is well configured. Make sure that [sensors are installed on all domain controllers](sensor-settings.md) and are in a [healthy state](health-alerts.md). Also, check that [Windows Event collection](deploy/configure-windows-event-collection.md) is properly configured.
 
-Many alerts require a machine learning period before generating alerts. The learning period is listed in the link to the details for each detection. Be sure to wait the required period to get the proper results.
+Many alerts require a machine learning period before generating alerts. You can avoid this by [removing the learning period for your tests](advanced-settings.md#removing-the-learning-period-for-alerts), or waiting the required period for each alert. The learning period is listed in the link to the details for each detection. 
+
+The tests in this article simulate actual security events. Make sure to run all these tests on a test environment.
 
 > [!WARNING]
-> The third-party hacking tools in this lab are presented for research purposes only. Microsoft does not own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment only.
+> The third-party tools in this tutorial are presented for research purposes only. Microsoft does not own these tools and Microsoft cannot and does not guarantee or warranty their behavior. They are subject to change without notice. These tools should be run in a test lab environment only.
 
 Then from a new machine (fresh install, managed, or unmanaged) try the following scenarios:
+
+## Prerequisites
+
+To replicate the alerts in this article, you 'll need access to a workstation in the domain associated with a domain controller that has the Defender for Identity sensor installed. 
 
 ## Network mapping reconnaissance (DNS)
 
@@ -29,7 +35,8 @@ This reconnaissance is used by attackers to map your network structure and targe
 
 There are several query types in the DNS protocol. This Defender for Identity security alert detects suspicious requests, either requests using an AXFR (transfer) originating from non-DNS servers, or those using an excessive number of requests.
 
-From a command line on a workstation run:  
+
+From your workstation, run:
 
 ```cmd
 nslookup 
@@ -51,7 +58,7 @@ For details about this alert, see [User and IP address reconnaissance (SMB) (ext
 
 In this detection, an alert is triggered when an SMB session enumeration is performed against a domain controller. Users and computers need at least to access the SYSVOL share in order to retrieve GPOs. Attackers can use this information to know where users recently signed in and move laterally in the network to get to a specific sensitive account.  
 
-From a command line on a workstation run:
+From your workstation, run:
 
 ```cmd
 NetSess.exe MSDemo-DC01.msdemo.local
@@ -73,7 +80,7 @@ For details about this alert, see [User and Group membership reconnaissance (SAM
 
 In this detection, user and group membership reconnaissance are used by attackers to map the directory structure and target privileged accounts for later steps in their attack using the SAMR protocol.
 
-From a command line on a workstation with proper permissions, run:  
+From your workstation, sign in as an admin user, and run:
 
 ```cmd
 net user /domain 
@@ -97,10 +104,12 @@ For details about this alert, see [Security principal reconnaissance (LDAP) (ext
 
 In this detection, Defender for Identity looks for LDAP security principal reconnaissance, which is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
-From a command line on a workstation with proper permissions, run the tools from the French Security Agency for data collection:
+From your workstation, sign in as an admin user, and run the tools from the [ANSSI](https://www.ssi.gouv.fr/) (Agence nationale de la sécurité des systèmes d'information) for data collection:
+
 `oradad.exe`
 
 Tools available from: <https://github.com/ANSSI-FR/ORADAD/releases>
+
 You should see the activities and the alert in the client machine timeline:  
 
 ![Security principal reconnaissance alert.](media/playbooks/security-principal-alert.png)  
@@ -115,7 +124,7 @@ For details about this alert, see [Honeytoken activity (external ID 2014)](crede
 
 This honeytoken account should be attractive for attackers (attractive name or sensitive group membership) and be left unused by your organization. Any activity from them might indicate malicious behavior (LDAP, NTLM or Kerberos logon attempts).
 
-From MSTSC.exe or from an interactive logon, try to sign in using this account with a wrong password and/or valid password:  
+Try signing into your honeytoken account. For example, you might might used [MSTSC.exe](/windows-server/administration/windows-commands/mstsc) or an interactive logic.
 
 You should see the logon activity and the alert in the honeytoken user timeline:  
 
@@ -132,6 +141,8 @@ For details about this alert, see [Active Directory attributes reconnaissance (L
 Active Directory LDAP attributes reconnaissance is used by attackers to gain critical information about the domain environment, such as accounts with DES or RC4 kerberos cipher, accounts with Kerberos Pre-Authentication disabled, and service accounts configured with Unconstrained Kerberos Delegation.
 
 On a workstation, from adsisearcher (PowerShell) or any LDAP browser such as ldp.exe set the following LDAP filters:  
+
+<!-- do we need an admin user?-->
 
 `(&(objectCategory=person)(objectClass=user)(userAccountControl:1.2.840.113556.1.4.803:=2097152)) FindAll()` => Enumerate accounts with Kerberos DES enabled
 
@@ -159,7 +170,7 @@ For details about this alert, see [Account enumeration reconnaissance (external 
 
 In this alert, an attacker makes Kerberos (or NTLM) requests using a list of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the Preauthentication required instead of Security principal unknown Kerberos error or the WrongPassword (0xc000006a) instead of NoSuchUser (0xc0000064) NTLM error.
 
-Build a *users.txt* list of names by merging some names from <https://github.com/jeanphorn/wordlist/blob/master/usernames.txt> and add some valid names from your organization.
+Build a *users.txt* list of fake names, and add some valid names from your organization.
 
 Then, run the following command from a PowerShell session on a workstation:  
 
@@ -168,7 +179,7 @@ Import-Module .\adlogin.ps1
 adlogin users.txt msdemo.local P@ssw0rd!
 ```
 
-Tools available from: <https://github.com/jeanphorn/wordlist> and <https://github.com/InfosecMatter/Minimalistic-offensive-security-tools>
+Tools available from <https://github.com/InfosecMatter/Minimalistic-offensive-security-tools>
 
 You should see the activities and the alert in the client machine timeline:  
 
@@ -253,7 +264,10 @@ This is needed when a user password is reset. The blob with sensitive data can't
 
 Attackers can use the master key to decrypt any secrets protected by DPAPI on all domain-joined machines. In this detection, a Defender for Identity alert is triggered when the DPAPI is used to retrieve the backup master key.  
 
+If you have Microsoft Defender for Endpoint, turn it off to run this test.
+
 From a command line on workstation run with an admin account:  
+
 
 ```cmd
 mimikatz # privilege::debug
@@ -280,7 +294,7 @@ It means the attacker can use the same password for any Active Directory account
 In this alert, the learned behavior of previous KRB_ERR message encryption from the domain controller to the account requesting a ticket was downgraded.
 
 > [!WARNING]
-> Never run an untrusted tools on a production domain controller. Once the domain controller is impacted, there is no easy rollback, and the domain controller must be demoted.
+> Make sure that you're working in a testing environment, and not with a production domain controller. Once the domain controller is impacted, there is no easy rollback, and the domain controller must be demoted.
 
 From a command line on a workstation with a shell on a domain controller, run as a domain admin:
 
