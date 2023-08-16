@@ -1,7 +1,7 @@
 ---
 title: Configure Windows Event collection
 description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 04/16/2023
+ms.date: 08/16/2023
 ms.topic: how-to
 ---
 
@@ -19,6 +19,18 @@ To enhance threat detection capabilities, Defender for Identity needs the follow
 - 1203 - The Federation Service failed to validate a new credential
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
+
+### For Active Directory Certificate Services (AD CS) events
+
+- 4870: Certificate Services revoked a certificate
+- 4882: The security permissions for Certificate Services changed
+- 4885: The audit filter for Certificate Services changed
+- 4887: Certificate Services approved a certificate request and issued a certificate
+- 4888: Certificate Services denied a certificate request
+- 4890: The certificate manager settings for Certificate Services changed.
+- 4896: One or more rows have been deleted from the certificate database
+
+If your sensor is installed on a domain controller server with AD CS configured, such as in a testing environment, no action is needed to collect extra events.
 
 ### For other events
 
