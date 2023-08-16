@@ -20,6 +20,22 @@ To enhance threat detection capabilities, Defender for Identity needs the follow
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
+### For Active Directory Certificate Services (AD CS) events
+
+- 4870: Certificate Services revoked a certificate
+
+- 4882: The security permissions for Certificate Services changed
+
+- 4885: The audit filter for Certificate Services changed
+
+- 4887: Certificate Services approved a certificate request and issued a certificate
+
+- 4888: Certificate Services denied a certificate request
+
+- 4890: The certificate manager settings for Certificate Services changed.
+
+- 4896: One or more rows have been deleted from the certificate database
+
 ### For other events
 
 - 1644 - LDAP search
@@ -104,6 +120,34 @@ To audit Event ID 8004, more configuration steps are required.
     For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
 
     ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
+
+## Configure auditing for AD CS
+
+The auditing must be enabled by the two following steps:
+
+ 1. Create a group policy which applies on your AD CS servers. Edit it and configure the following auditing settings: 
+
+Go to __Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services,__ double click it, and configure the audit events for __“__Success and Failure”. 
+
+![User's image](media/configure-windows-event-collection/image.png)
+
+2. Configure auditing on the CA, by doing one of the two – 
+
+__Configure CA auditing using the command line:__
+
+certutil –setreg CA\AuditFilter 127 
+
+net stop certsvc && net start certsvc 
+
+__Configure CA auditing using GUI:__
+
+Start -> Certification Authority (MMC Desktop application) -> Right click on your CA name and select properties:
+
+![User's image](media/configure-windows-event-collection/image1.png)
+
+Open the Auditing tab, check all the Events to audit and click Apply:
+
+![User's image](image2.png)
 
 ## Configure object auditing
 
@@ -247,3 +291,4 @@ These events can be collected automatically by the Defender for Identity sensor 
 > [!div class="step-by-step"]
 > [« Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
 > [Directory Service accounts »](directory-service-accounts.md)
+
