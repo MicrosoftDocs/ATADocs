@@ -30,8 +30,8 @@ To enhance threat detection capabilities, Defender for Identity needs the follow
 - 4890: The certificate manager settings for Certificate Services changed.
 - 4896: One or more rows have been deleted from the certificate database
 
-If your sensor is installed on a domain controller server with AD CS configured, such as in a testing environment, no action is needed to collect extra events.
-
+For more information, see 
+[Configure auditing for AD CS](#configure-auditing-for-ad-cs).
 ### For other events
 
 - 1644 - LDAP search
@@ -116,6 +116,39 @@ To audit Event ID 8004, more configuration steps are required.
     For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**.
 
     ![Audit Outgoing NTLM traffic to remote servers.](media/advanced-audit-policy-check-step-3.png)
+
+## Configure auditing for AD CS
+
+If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:
+
+1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
+
+    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**, and then configure audit events for **Success and Failure**. For example:
+
+    ![Screenshot of the Group Policy Management Editor](media/configure-windows-event-collection/group-policy-management-editor.png)
+
+1. Configure auditing on the certificate authority (CA) using one of the following methods:
+
+    - **To configure CA auditing using the command line**, run:
+
+        ```cmd
+        certutil –setreg CA\AuditFilter 127 
+
+        net stop certsvc && net start certsvc
+        ````
+
+    - **To Configure CA auditing using the GUI**:
+
+        1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
+
+            ![Screenshot of the Certification Authority dialog.](media/configure-windows-event-collection/certification-authority.png)
+
+        1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
+
+
+            ![Screenshot of the Auditing tab.](media/configure-windows-event-collection/auditing.png)
+
+        For more information, see [For Active Directory Certificate Services (AD CS) events](#for-active-directory-certificate-services-ad-cs-events).
 
 ## Configure object auditing
 
@@ -259,3 +292,4 @@ These events can be collected automatically by the Defender for Identity sensor 
 > [!div class="step-by-step"]
 > [« Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
 > [Directory Service accounts »](directory-service-accounts.md)
+
