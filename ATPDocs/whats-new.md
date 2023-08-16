@@ -29,6 +29,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2023
 
+### Defender for Identity release 2.211
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### New sensor type for Active Directory Certificate Services (AD CS)
 
 Defender for Identity now supports the new **ADCS** sensor type for Active Directory Certificate Services. AD CS is a Windows Server role that issues and manages public key infrastructure (PKI) certificates in secure communication and authentication protocols. If your sensor is installed on a domain controller with AD CS, you'll view additional security content, such as related alerts and Secure Score reports.
