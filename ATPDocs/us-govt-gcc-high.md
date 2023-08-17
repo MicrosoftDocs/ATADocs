@@ -44,7 +44,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 >[!NOTE]
 > The following steps should only be taken after you have initiated the transition of Microsoft Defender for Endpoint and Microsoft Defender for Cloud Apps
 
-1. Go to the [Azure Portal](https://portal.azure.com/) > Azure Active Directory > Groups
+1. Go to the [Azure portal](https://portal.azure.com/) > Azure Active Directory > Groups
 1. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
    - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial"
    - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
