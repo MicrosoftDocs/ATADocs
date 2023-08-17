@@ -27,11 +27,11 @@ Defender for Identity for US Government customers requires one of the following 
 
 To access Microsoft Defender for Identity for US Government offerings, use the appropriate addresses in this table:
 
-|US Government offering  |Microsoft 365 Defender Portal  |Defender for Identity (classic) Portal | Sensor (agent) endpoint  |
-|---------|---------|---------|---------|
-|DoD    |   `security.microsoft.us`      | `<workspacename>.atp.azure.us` |  `<your-instance-name>sensorapi.atp.azure.us`       |
-|GCC-H   |  `security.microsoft.us`       | `<workspacename>.atp.azure.us`    |  `<your-instance-name>sensorapi.atp.azure.us`       |
-|GCC     |     `security.microsoft.com`    | `<workspacename>.gcc.atp.azure.com` |     `<your-instance-name>sensorapi.gcc.atp.azure.com`    |
+| US Government offering | Microsoft 365 Defender Portal | Sensor (agent) endpoint                           |
+|------------------------|-------------------------------|---------------------------------------------------|
+|DoD                     | `security.microsoft.us`       | `<your-instance-name>sensorapi.atp.azure.us`      |
+|GCC-H                   | `security.microsoft.us`       | `<your-instance-name>sensorapi.atp.azure.us`      |
+|GCC                     | `security.microsoft.com`      | `<your-instance-name>sensorapi.gcc.atp.azure.com` |
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or download [the Azure IP Ranges and Service Tags – US Government Cloud file](https://www.microsoft.com/download/details.aspx?id=57063).
 
@@ -41,25 +41,25 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 
 ## How to migrate from commercial to GCC
 
+>[!NOTE]
+> The following steps should only be taken after you have initiated the transition of Microsoft Defender for Endpoint and Microsoft Defender for Cloud Apps
+
 1. Go to the [Azure Portal](https://portal.azure.com/) > Azure Active Directory > Groups
 1. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
    - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial"
    - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
    - "Azure ATP _instanceName_ Users" --> "Azure ATP _instanceName_ Users - commercial"
-1. Go to the GCC portal for Defender for Identity: `https://portal.gcc.atp.azure.com`
-1. Create a new instance of Defender for Identity
+1. In the [Microsoft 365 Defender portal](https://security.microsoft.com), go to the Settings -> Identities section to create a new instance of Defender for Identity
 1. Configure a Directory Service account
 1. Download the new sensor agent package and copy the workspace key
 1. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
-1. Uninstall existing sensor agents from the domain controllers
+1. Uninstall existing sensor agents from the domain controllers, AD FS servers and AD CS servers
 1. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
-1. Migrate any settings after the initial sync (use the two portals to compare)
+1. Migrate any settings after the initial sync (use the https://transition.security.microsoft.com portal in a separate browser session to compare)
 1. Eventually, delete the previous workspace (historical data will be lost)
 
 >[!NOTE]
 > No data is migrated from the commercial service.
->
-> If you also have Microsoft Defender for Cloud Apps deployed, it should be migrated before you start the Defender for Identity migration.
 
 ## Feature parity with the commercial environment
 
