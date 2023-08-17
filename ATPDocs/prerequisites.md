@@ -111,9 +111,9 @@ The Defender for Identity sensor supports installation on the different operatin
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
 | Windows Server 2012\*      | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
 | Windows Server 2012 R2\*   | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
-| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
-| Windows Server 2019\**     | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
-| Windows Server 2022        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS |
+| Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS, AD CS|
+| Windows Server 2019\**     | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS, AD CS|
+| Windows Server 2022        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS, AD CS|
 
 \* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
 
@@ -268,3 +268,4 @@ The following table lists the minimum ports that the Defender for Identity stand
 > [!div class="step-by-step"]
 > [« Deploy Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
 > [Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)
+
