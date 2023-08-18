@@ -60,7 +60,7 @@ Review the sensitive users listed in the recommendations and remove them from th
 
 ### Resource-based constrained delegation (RBCD)
 
-Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Entra ID Domain Services](/azure/active-directory-domain-services/deploy-kcd).
+Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Microsoft Entra ID Domain Services](/azure/active-directory-domain-services/deploy-kcd).
 
 ## Next steps
 
