@@ -48,9 +48,6 @@ For information on how to configure the auditing level, see [Event auditing info
 For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (db_datareader) permissions on it for the relevant [Directory Services Account](directory-service-accounts.md) configured.
 If you have more than one AD FS server, then this should be performed on all of them as the database permissions are not replicated between them.
 
->[!NOTE]
-> If the AD FS database runs on a dedicated SQL server and not the local AD FS server, and you are using a group managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md#types-of-dsa-accounts), make sure you grant the SQL server the required [permissions to retrieve the gMSA's password](directory-service-accounts.md#granting-the-permissions-to-retrieve-the-gmsa-accounts-password).
-
 ### How do I grant access to the AD FS database via TSQL or PowerShell?
 
 Instead of using SQL Server Management Studio, you can grant access to the AD FS database either through TSQL or through PowerShell. For example, if you're using the Windows Internal Database (WID) or an external SQL server, these commands can be helpful.
@@ -137,3 +134,4 @@ If you use both products, then to protect both the server and Active Directory, 
 
 - [Directory Service account recommendations](/defender-for-identity/directory-service-accounts)
 - [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md)
+
