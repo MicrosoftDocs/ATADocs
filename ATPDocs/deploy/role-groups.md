@@ -1,7 +1,7 @@
 ---
 title: Roles and permissions | Microsoft Defender for Identity
 description: Learn about the role groups used with Microsoft Defender for Identity.
-ms.date: 06/12/2023
+ms.date: 08/27/2023
 ms.topic: conceptual
 ---
 

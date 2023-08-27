@@ -1,13 +1,15 @@
 ---
 title: Configure a Directory Service account | Microsoft Defender for Identity
 description: Learn how to configure the Directory Service account (DSA) to work with Microsoft Defender for Identity.
-ms.date: 06/01/2023
+ms.date: 08/27/2023
 ms.topic: how-to
 ---
 
 # Configure a Directory Service account for Microsoft Defender for Identity
 
-Defender for Identity's Directory Service account (DSA) is used by the sensor to do the following:
+This article describes how to create and configure a Defender for Identity Directory Service account (DSA).
+
+Defender for Identity's sensor uses a DSA to do the following:
 
 - Connect to the domain controller at startup using the configured DSA option
 - Query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities
@@ -18,7 +20,6 @@ If a sensor detects activities in other domains, it queries the other domain via
 
 Defender for Identity requests the member list for the local administrator group from devices seen in network traffic, events, and ETQ activities via an [SAM-R call](remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
 
-This article describes how to create and configure a Defender for Identity DSA.
 
 >[!NOTE]
 >By default, Defender for Identity supports up to 30 credentials. To add more credentials, contact Defender for Identity support.
@@ -132,11 +133,11 @@ If you add a computer account to the universal group after the computer received
 
 In such scenarios, do one of the following:
 
-1. Wait for new Kerberos ticket to be issued. Kerberos tickets are normally valid for 10 hours.
+- **Wait for new Kerberos ticket to be issued**. Kerberos tickets are normally valid for 10 hours.
 
-1.Reboot the server. When the server is rebooted, a new Kerberos ticket is requested with the new group membership.
+- **Reboot the server**. When the server is rebooted, a new Kerberos ticket is requested with the new group membership.
 
-1. Purge the existing Kerberos tickets. This forces the domain controller to request a new Kerberos ticket. 
+- **Purge the existing Kerberos tickets**. This forces the domain controller to request a new Kerberos ticket. 
 
     To purge the tickets, from an administrator command prompt on the domain controller, run the following command: `klist purge -li 0x3e7`
 
@@ -272,10 +273,10 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
 ### Troubleshooting
 
-For more information, see [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
+See [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
 
 ## Next steps
 
 > [!div class="step-by-step"]
 > [« Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md)
-> [Role groups »](role-groups.md)
+> [Microsoft Defender for Identity roles and permissions »](role-groups.md)

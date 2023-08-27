@@ -1,5 +1,5 @@
 ---
-title: Configure Windows event collection - Overview | Microsoft Defender for Identity
+title: Windows event collection - Overview | Microsoft Defender for Identity
 description: Learn about options for configuring Windows event collection to Microsoft Defender for Identity.
 ms.date: 08/10/2023
 ms.topic: conceptual
@@ -7,7 +7,9 @@ ms.topic: conceptual
 
 # Windows event collection overview
 
-We recommend that you enhance Microsoft Defender for Identity's detection capabilities with extra Windows events that aren't available via the domain controller network traffic. 
+<!--what here is relevant for the standalone sensor only?-->
+
+We recommend that you enhance Microsoft Defender for Identity's detection capabilities with extra Windows events that aren't available via the domain controller network traffic.
 
 While the Defender for Identity sensor is configured to automatically collect syslog events, if you're working with a standalone Defender for Identity sensor, you'll need to configure this manually. Using one of the following options:
 

@@ -7,20 +7,22 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity prerequisites
 
-This article describes the requirements for a successful Microsoft Defender for Identity deployment.
+This article describes the requirements for a successful Microsoft Defender for Identity deployment. For more information, see [Defender for Identity architecture](../architecture.md).
 
 <!--are we missing details about service BGP community from the original file?-->
 ## Licensing requirements
 
 Before deploying Defender for Identity, make sure to acquire one of the following Microsoft 365 licenses:
 
+
 - Enterprise Mobility + Security E5 (EMS E5/A5)
 - Microsoft 365 E5 (M365 E5/A5/G5)
 - Microsoft 365 E5/A5/G5 Security
 
-Acquire your licenses directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model
-
 Defender for Identity also supports standalone licenses.
+
+Acquire your licenses directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model.
+
 
 For more information, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy).
 
@@ -36,17 +38,15 @@ For more information, see [Microsoft Defender for Identity role groups](role-gro
 
 ## Defender for Identity firewall requirements
 
-Use the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. 
+Download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to help you enable access to Defender for Identity.
 
-For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or [download the service tags](https://www.microsoft.com/download/details.aspx?id=56519) file.
+For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
 ## Required network adapters
 
-The Defender for Identity sensor monitors local traffic on all of the domain controller's network adapters.
+The Defender for Identity sensor monitors local traffic on all of the domain controller's network adapters. After deployment, you'll use the Microsoft 365 Defender portal to modify which network adapters are monitored.
 
-After deployment, you'll use the Microsoft 365 Defender portal to modify which network adapters are monitored.
-
-When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error. 
+If you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error.
 
 To install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap. For more information, see [How do I download and install or upgrade the Npcap driver?](../technical-faq.yml#how-do-i-download-and-install-or-upgrade-the-npcap-driver)
 
@@ -113,9 +113,6 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-## More resources
-
-For more information, see [Defender for Identity architecture](../architecture.md)
 
 ## Next steps
 

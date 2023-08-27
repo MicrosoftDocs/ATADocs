@@ -27,7 +27,7 @@ For example, you can use advanced hunting to discover an attacker's [lateral mov
 > Ingest your alerts into [Microsoft Sentinel with Microsoft 365 Defender](/azure/sentinel/microsoft-365-defender-sentinel-integration), a cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution to provide your Security Operations Center (SOC) with a single pane of glass for monitoring security events across your enterprise.
 >
 
-## Next steps
+## Next step
 
 Learn more about Zero Trust and how to build an enterprise-scale strategy and architecture with the [Zero Trust Guidance Center](/security/zero-trust).
 

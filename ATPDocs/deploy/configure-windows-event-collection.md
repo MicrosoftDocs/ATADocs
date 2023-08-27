@@ -1,7 +1,7 @@
 ---
 title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
 description: Describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity standalone sensor.
-ms.date: 08/10/2023
+ms.date: 08/27/2023
 ms.topic: how-to
 ---
 
@@ -13,11 +13,13 @@ For the correct events to be audited and included in the Windows Even Log, your 
 
 This article describes how to configure your Advanced Audit Policy settings as needed and other configurations for specific event types.
 
+For more information, see [Windows event collection overview](event-collection-overview.md).
+
 > [!TIP]
 > Some events that are collected by the Defender for Identity sensor aren't collected by default by the Defender for Identity standalone sensor. If you're working with the standalone Defender for Identity sensor, forward events using the following methods:
-> 
+>
 > - [Configure the Defender for Identity standalone sensor](configure-event-forwarding.md) to listen for SIEM events
-> - [Configure Windows Event Forwarding](configure-event-forwarding.md)
+> - [Configure Windows event forwarding](configure-event-forwarding.md)
 >
 
 ## Configure Advanced Audit Policy settings
@@ -60,7 +62,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
 1. After applying via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
-## Event ID 8004
+## Configure auditing for Event ID 8004
 
 This section describes the extra configuration steps needed to audit Event ID 8004.
 
@@ -137,7 +139,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
         For more information, see [Supported Windows events](event-collection-overview.md#supported-windows-events).
 
-## Configure object auditing
+## Configure object auditing for Event ID 4662
 
 To collect 4662 events, you must also configure object auditing on the user, group and computer objects. This procedure describes how to enable auditing on all users, groups, and computers in the Active Directory domain.
 
@@ -253,8 +255,8 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
 1. Select **OK**.
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
 > [« Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
-> [Directory Service accounts »](directory-service-accounts.md)
+> [Microsoft Defender for Identity Directory Service account recommendations »](directory-service-accounts.md)

@@ -1,13 +1,18 @@
 ---
 title: Plan capacity for deployment | Microsoft Defender for Identity
-description: Plan your deployment and decide how many Microsoft Defender for Identity servers are needed to support your network
-ms.date: 05/31/2023
+description: Plan your deployment and decide how many Microsoft Defender for Identity servers are needed to support your network.
+ms.date: 08/27/2023
 ms.topic: how-to
 ---
 
 # Plan capacity for Microsoft Defender for Identity deployment
 
-In this article, you'll learn how to determine what resources you need for your Microsoft Defender for Identity sensors.
+This article describes how to determine what resources you need for your Microsoft Defender for Identity sensors.
+
+By default, Defender for Identity supports up to 350 sensors. To install more sensors, contact Defender for Identity support.
+
+> [!IMPORTANT]
+> While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
 ## Prerequisites
 
@@ -15,13 +20,14 @@ In this article, you'll learn how to determine what resources you need for your 
 - Review the [Defender for Identity architecture](../architecture.md) article.
 - Review the [Defender for Identity prerequisites](prerequisites.md) article.
 
+> [!TIP]
+> If you're unable to use the Defender for Identity Sizing tool, you can manually gather traffic information instead. For more information, see [Domain controller traffic estimator](#manual-sizing).
+>
+
+
 ## Use the sizing tool
 
-The recommended and simplest way to determine capacity for your Defender for Identity deployment is to use the Defender for Identity Sizing Tool. 
-
-> [!TIP]
-> If you're unable to use the tool, you can manually gather traffic information instead. For more information, see [Domain controller traffic estimator](#manual-sizing).
->
+This procedure describes how to use the Defender for Identity Sizing Tool, which is the recommended and simplest way to determine capacity for your Defender for Identity deployment.
 
 **To determine capacity with the sizing tool**:
 
@@ -35,24 +41,24 @@ The recommended and simplest way to determine capacity for your Defender for Ide
 
     ![Screenshot of a sample capacity planning tool.](../media/capacity-tool.png)
 
-    The other sheet isn't needed since it's for ATA planning.
+    The other sheet in the file is used for Advanced Threat Analytics (ATA) planning and isn't needed for Defender for Identity.
 
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
 
 1. Match your **Busy Packets/sec** field to the **PACKETS PER SECOND** field in the [Defender for Identity sensor table](#sizing) section of this article. Use the fields to determine the memory and CPU that will be used by the sensor.
 
 > [!NOTE]
-> To ensure accurate results, only run the sizing tool before you've installed any Defender for Identity sensors in your environment.
+> To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
 
 <a name="sizing"></a>
 
 ## Defender for Identity sensor sizing
 
-A Defender for Identity sensor can support the monitoring of a domain controller based on the amount of network traffic the domain controller generates. The following table is an estimate. The final amount that the sensor parses is dependent on the amount of traffic and the distribution of traffic.
+A Defender for Identity sensor can support the monitoring of a domain controller based on the amount of network traffic the domain controller generates, such as shown in the following table of estimates.
 
-The following CPU and Random Access Memory (RAM) capacity refers to the **sensor's own consumption**, not the domain controller capacity.
+**This table is an estimate. The final amount that the sensor parses is dependent on the amount of traffic and the distribution of traffic.**
 
-|Packets per second|CPU (physical cores) [<sup>1</sup>](#phys)|RAM (GB)|
+|Packets per second|CPU (physical cores)|RAM (GB)|
 |----|----|-----|
 |0-1k|0.25|2.50|
 |1k-5k|0.75|6.00|
@@ -62,15 +68,13 @@ The following CPU and Random Access Memory (RAM) capacity refers to the **sensor
 |50k-75k |5.50|11.50|
 |75k-100k|7.50|13.50|
 
-<a name="phys"></a><sup>1</sup> CPU capacity doesn't include hyper-threaded cores. We recommend that you don't work with hyper-threaded cores, which can result in health issues in the Defender for Identity sensor. 
+In this table:
+
+- CPU and RAM capacity refers to the **sensor's own consumption**, not the domain controller capacity.
+
+- CPU capacity doesn't include hyper-threaded cores. We recommend that you don't work with hyper-threaded cores, which can result in health issues in the Defender for Identity sensor. 
 
 When determining sizing, keep in mind the total number of cores and total amount of memory that will be used by the sensor service.
-
-> [!IMPORTANT]
-> While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. 
->
-
-For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
 
 <a name="manual-sizing"></a>
@@ -120,11 +124,9 @@ This section describes how to collect the packets/sec counter from a domain cont
 
     ![Screenshot of the Performance Monitor dialog with the Packets/sec counter selected.](../media/traffic-estimation-14.png)
 
-> [!NOTE]
-> By default, Defender for Identity supports up to 350 sensors. To install more sensors, contact Defender for Identity support.
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
 > [« Prerequisites](prerequisites.md)
-> [Microsoft Defender for Identity Directory Service account recommendations »](directory-service-accounts.md)
+> [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)
