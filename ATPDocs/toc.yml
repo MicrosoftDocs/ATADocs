@@ -5,10 +5,10 @@ items:
   items:
   - name: Welcome to Defender for Identity
     href: what-is.md
-  - name: What's new in Defender for Identity?
+  - name: What's new?
     href: whats-new.md
-  - name: Architecture
-    href: architecture.md
+  - name: Deploy and monitor for Zero Trust
+    href: zero-trust.md
   - name: Defender for Identity in Microsoft 365 Defender
     href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json
   - name: Defender for Identity for US Government
@@ -16,6 +16,8 @@ items:
 - name: Deploy
   expanded: true
   items:
+  - name: System architecture
+    href: architecture.md
   - name: Quick installation guide
     href: deploy/quick-installation-guide.md
   - name: Deploy Defender for Identity with Microsoft 365 Defender
@@ -44,8 +46,6 @@ items:
       href: deploy/manage-action-accounts.md
     - name: Configure the Defender for Identity sensor
       href: deploy/configure-sensor-settings.md
-  - name: Deploy and monitor for Zero Trust
-    href: deploy/zero-trust.md
   - name: Install on Active Directory Federation Services
     href: deploy/active-directory-federation-services.md
   - name: Deploy for multiple forests

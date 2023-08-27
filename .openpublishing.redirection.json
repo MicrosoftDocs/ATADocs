@@ -220,11 +220,6 @@
             "redirect_url": "/defender-for-identity/deploy/configure-port-mirroring#validate-port-mirroring",
             "redirect_document_id": false
         },
-       {
-            "source_path": "ATPDocs/zero-trust.md",
-            "redirect_url": "/defender-for-identity/deploy/zero-trust",
-            "redirect_document_id": false
-        },
         {
             "source_path": "ATPDocs/security-baseline.md",
             "redirect_url": "/security/benchmark/azure/baselines/defender-for-identity-security-baseline",
