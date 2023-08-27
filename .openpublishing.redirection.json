@@ -1,7 +1,7 @@
 {
     "redirections": [
     {
-      "source_path": "ATPDocs/playbook-lab-overview.md.md",
+      "source_path": "ATPDocs/playbook-lab-overview.md",
       "redirect_url": "defender-for-identity/playbooks",
       "redirect_document_id": false
     },
