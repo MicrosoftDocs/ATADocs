@@ -9,6 +9,7 @@ ms.topic: conceptual
 
 This article describes the requirements for a successful Microsoft Defender for Identity deployment.
 
+<!--are we missing details about service BGP community from the original file?-->
 ## Licensing requirements
 
 Before deploying Defender for Identity, make sure to acquire one of the following Microsoft 365 licenses:
