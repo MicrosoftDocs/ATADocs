@@ -42,9 +42,9 @@ For accurate calculations of the resources required by your server according to 
 | ---------------------------- | --------------------------------------- | -------------------- | -------------------- | -------------------------------- |
 | Windows Server  2012*        | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
 | Windows Server  2012 R2*     | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
-| Windows Server  2016         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS        |
-| Windows Server  2019**       | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS        |
-| Windows Server  2022         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS        |
+| Windows Server  2016         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
+| Windows Server  2019**       | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
+| Windows Server  2022         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
 
 \* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
 
@@ -81,3 +81,4 @@ Make sure to install Defender for Identity on Windows 2012 and higher on a serve
 ## Next steps
 
 For more detailed installation instructions, see the links in [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+

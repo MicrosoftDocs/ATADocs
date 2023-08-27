@@ -51,11 +51,13 @@ The sensors page provides the following information about each sensor:
 
 * **Type**:  Displays the type of the sensor. Possible values are:
 
-  * Domain controller sensor
+  * **Domain controller sensor**
 
-  * AD FS sensor
+  * **AD FS sensor** (Active Directory Federation Services)
 
-  * Standalone sensor
+  * **Standalone sensor**
+ 
+  * **ADCS sensor** (Active Directory Certificate Services). If your sensor is installed on a domain controller server with AD CS configured, such as in a testing environment, the sensor type is shown as **Domain controller sensor** instead.
 
 * **Domain**: Displays the fully qualified domain name of the Active Directory domain where the sensor is installed.
 
