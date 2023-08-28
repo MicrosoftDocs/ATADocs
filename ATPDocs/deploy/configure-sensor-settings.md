@@ -9,6 +9,11 @@ ms.topic: how-to
 
 In this article, you'll learn how to correctly configure Microsoft Defender for Identity sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of Defender for Identity's full capabilities.
 
+
+The following video shows a review of the Defender for Identity sensor settings: <br>
+
+> [!VIDEO (https://www.microsoft.com/en-us/videoplayer/embed/RWFVEX)]
+
 ## View and configure sensor settings
 
 After the Defender for Identity sensor is installed, do the following to view and configure Defender for Identity sensor settings:
@@ -78,6 +83,12 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 ## Validate installations
 
+Use the following procedures to validate your Defender for Identity sensor installation. 
+
+> [!NOTE]
+> If you're installing on an AD FS server, you'll use a different set of validations. For more information, see [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md).
+>
+
 ### Verify latest available sensor version
 
 The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft 365 Defender **Settings** > **Identities** > **About** page.
@@ -110,32 +121,8 @@ When using the examples in the following steps, make sure to replace `contosodc.
 
 If the domain controller that you're testing is the first sensor you've deployed, wait at least 15 minutes before verifying any logical activity for that domain controller, allowing the database backend to complete the initial microservice deployments.
 
-### Validate successful deployment on an AD FS server
 
-To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server:
-
-1. Check that the **Azure Advanced Threat Protection sensor** service is running. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
-
-1. If the service doesn't start, review the `Microsoft.Tri.sensor-Errors.log` file, located by default at: `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`
-
-1. Use AD FS to authenticate a user to any application, and then verify that the AD FS authentication was observed by Defender for Identity:
-
-   From Microsoft 365 Defender, select **Hunting** > **Advanced Hunting**. In the **Query** pane, enter and run the following query:
-
-   ```query
-   IdentityLogonEvents | where Protocol contains 'Adfs'
-   ```
-
-   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**. Select a specific row to see additional details in the **Inspect Record** left pane. For example:
-
-   :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
-
-
-## Related videos
-
-- [Microsoft Defender for Identity settings](https://www.microsoft.com/videoplayer/embed/RWFVEX)
-
-## Next steps
+## Next step
 
 Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:
 

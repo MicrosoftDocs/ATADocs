@@ -130,6 +130,26 @@ For sensor installations on AD FS servers, configure the SQL server to allow *Di
 
 For more information, see [Install the Defender for Identity sensor](install-sensor.md).
 
+### Validate successful deployment on an AD FS server
+
+To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server:
+
+1. Check that the **Azure Advanced Threat Protection sensor** service is running. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
+
+1. If the service doesn't start, review the `Microsoft.Tri.sensor-Errors.log` file, located by default at: `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`
+
+1. Use AD FS to authenticate a user to any application, and then verify that the AD FS authentication was observed by Defender for Identity:
+
+   From Microsoft 365 Defender, select **Hunting** > **Advanced Hunting**. In the **Query** pane, enter and run the following query:
+
+   ```query
+   IdentityLogonEvents | where Protocol contains 'Adfs'
+   ```
+
+   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**. Select a specific row to see additional details in the **Inspect Record** left pane. For example:
+
+   :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
+
 ## Post-installation steps for AD FS servers
 
 Installing the sensor on an AD FS server automatically selects the closest domain controller. Use the following steps to check or modify the selected domain controller.
@@ -143,6 +163,7 @@ Installing the sensor on an AD FS server automatically selects the closest domai
     ![Defender for Identity configure AD FS sensor resolver](../media/sensor-config-adfs-resolver.png)
 
 Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
+
 
 
 ## Next steps
