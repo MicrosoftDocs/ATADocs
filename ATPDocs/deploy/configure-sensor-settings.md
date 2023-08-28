@@ -14,7 +14,7 @@ The following video shows a review of the Defender for Identity sensor settings:
 
 <br>
 
-> [!VIDEO (https://www.microsoft.com/en-us/videoplayer/embed/RWFVEX)]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFVEX]
 
 ## View and configure sensor settings
 

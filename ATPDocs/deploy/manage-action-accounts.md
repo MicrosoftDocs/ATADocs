@@ -13,7 +13,7 @@ By default, the Microsoft Defender for Identity sensor installed on a domain con
 
 :::image type="content" source="../media/management-accounts.png" alt-text="Screenshot of the Manage action accounts tab." lightbox="../media/management-accounts.png":::
 
-Watch the following video to learn more about remediation actions in Defender for Identity: 
+Watch the following video to learn more about remediation actions in Defender for Identity:
 
 <br>
 
