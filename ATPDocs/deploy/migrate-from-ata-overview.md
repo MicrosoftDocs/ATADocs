@@ -57,7 +57,7 @@ Before starting the migration, gather all of the following information:
 
 - Alert exclusions. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions in Defender for Identity](../exclusions.md).
 
-- Account details for entity tags. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity identity tags in Microsoft 365 Defender](/microsoft-365/security/defender-identity/entity-tags). <!--is this correct?-->
+- Account details for entity tags. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
 
 - A complete list of all entities, such as computers, groups, or users, that you want to manually tag as Sensitive entities. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
 
