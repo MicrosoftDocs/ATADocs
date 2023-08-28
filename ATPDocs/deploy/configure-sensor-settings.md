@@ -10,7 +10,9 @@ ms.topic: how-to
 In this article, you'll learn how to correctly configure Microsoft Defender for Identity sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of Defender for Identity's full capabilities.
 
 
-The following video shows a review of the Defender for Identity sensor settings: <br>
+The following video shows a review of the Defender for Identity sensor settings: 
+
+<br>
 
 > [!VIDEO (https://www.microsoft.com/en-us/videoplayer/embed/RWFVEX)]
 

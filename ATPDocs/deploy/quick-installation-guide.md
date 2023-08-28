@@ -16,8 +16,6 @@ Watch the following video for a step-by-step demo. Learn about:
 - Finding potential health issues
 - Viewing identity-related posture assessments in Microsoft Secure Score
 
-<br>
-
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW16oLB]
 
 ## Prerequisites
