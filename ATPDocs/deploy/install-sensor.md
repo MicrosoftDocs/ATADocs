@@ -141,7 +141,7 @@ Use the following commands to perform a fully silent install of the Defender for
 Use the following commands to silently install the Defender for Identity sensor:
 
 ```cmd
-"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
+"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<access key value>"
 ```
 
 ```cmd
