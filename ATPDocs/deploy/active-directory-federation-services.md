@@ -20,7 +20,14 @@ For more information, see [Microsoft Defender for Identity prerequisites](prereq
 > [!NOTE]
 > If you use both Defender for Identity and Defender for Endpoint, you must install both sensors on domain controllers or AD FS servers to protect both the server and Active Directory.
 
-## Server specifications
+## Prerequisites
+
+Before you start, make sure to have the following prerequisites, as listed in this section:
+
+- Server specifications
+- Network requirements
+
+### Server specifications
 
 The Defender for Identity sensor supports the following AD FS servers:
 
@@ -35,7 +42,7 @@ The Defender for Identity sensor supports the following AD FS servers:
 
 For more information, see [Sensor requirements](prerequisites.md#sensor-requirements).
 
-## Network requirements
+### Network requirements
 
 For sensors running on AD FS servers to be able to communicate with the Defender for Identity cloud service, you must open port 443 on your firewalls and proxies to the following endpoint: `<your-instance-name>sensorapi.atp.azure.com`
 
@@ -166,9 +173,6 @@ Initializing the sensor may take a couple of minutes, at which time the AD FS se
 
 
 
-## Next steps
+## Next step
 
-For more information, see:
-
-- [Directory Service account recommendations](/defender-for-identity/directory-service-accounts)
-- [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md)
+[Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md)

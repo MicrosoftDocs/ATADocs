@@ -275,8 +275,7 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
 See [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
-> [« Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md)
 > [Microsoft Defender for Identity roles and permissions »](role-groups.md)

@@ -82,8 +82,7 @@ We also recommend that you avoid using the same account as both the Directory Se
 Your action account is listed on the **Manage action accounts** page.
 
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
-> [« Install the Defender for Identity sensor](install-sensor.md)
 > [Configure the Defender for Identity sensor »](configure-sensor-settings.md)

@@ -149,7 +149,7 @@ Make sure that the message includes the original event text from the Windows eve
 >[!NOTE]
 > Using WinCollect for Windows event collection is not supported.
 
-## Next steps
+## Next step
 
 - [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>)
 - [Defender for Identity SIEM log reference](../cef-format-sa.md)

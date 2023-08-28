@@ -154,8 +154,7 @@ If you installed the sensor on AD FS servers, follow the steps in [Post-installa
 
 These steps are required, or the sensor services will not start.
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
-> [« Proxy configuration](configure-proxy.md)
 > [Manage action accounts »](manage-action-accounts.md)

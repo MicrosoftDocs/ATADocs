@@ -5,7 +5,7 @@ ms.date: 08/27/2023
 ms.topic: conceptual
 ---
 
-# Microsoft Defender for Identity roles and permissions
+# What are Defender for Identity roles and permissions?
 
 Microsoft Defender for Identity uses Microsoft 365's role-based access control (RBAC) to manage your user access, so that you can safeguard your data according to your organization's specific security and compliance needs.
 
@@ -13,7 +13,7 @@ Defender for Identity also supports built-in security groups to define user role
 
 This article describes Defender for Identities access management and role authorization, helping you segregate duties within your security team, and granting only the amount of access that users need to do their jobs.
 
-[!INCLUDE [gdpr-intro-sentence](../../includes/gdpr-intro-sentence.md)]
+[!INCLUDE [gdpr-intro-sentence](../../includes/gdpr-intro-sentence.md)] <!--do we really need this?-->
 
 ## Permissions required for Defender for Identity in Microsoft 365 Defender
 
@@ -97,7 +97,4 @@ Information included from the [Defender for Cloud Apps activity log](../privacy-
 ## Next step
 
 > [!div class="step-by-step"]
-> [« Directory Service accounts](directory-service-accounts.md)
 > [Configure remote calls to SAM »](remote-calls-sam.md)
-
-

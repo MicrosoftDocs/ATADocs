@@ -5,7 +5,7 @@ ms.date: 08/10/2023
 ms.topic: conceptual
 ---
 
-# Windows event collection overview
+# What is Windows event collection for Defender for Identity?
 
 <!--what here is relevant for the standalone sensor only?-->
 
@@ -93,10 +93,7 @@ The following Windows events are supported for the Defender for Identity sensor 
     - 7045 - New Service Installed
     - 8004 - NTLM Authentication
 
-## Next steps
+## Next step
 
-For more information, see:
-
-- [Listen for SIEM events on your Defender for Identity sensor](configure-event-collection.md)
-- [Configure Windows event forwarding](configure-event-forwarding.md)
-- [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+> [!div class="step-by-step"]
+> [Configure audit policies for Windows event logs  »](configure-windows-event-collection.md)

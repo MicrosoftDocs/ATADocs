@@ -156,7 +156,7 @@ None
 **Description**:
 
 User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
-In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](/microsoft-365/security/defender/investigate-users#account-tags)
+In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md#honeytoken-tags)
 
 **MITRE**:
 
@@ -177,7 +177,7 @@ None
 
 User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
 
-In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](/microsoft-365/security/defender/investigate-users#account-tags).
+In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md#honeytoken-tags).
 
 
 

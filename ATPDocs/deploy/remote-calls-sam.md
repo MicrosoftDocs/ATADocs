@@ -55,8 +55,7 @@ This procedure is only required if you've previously enabled the [Access this co
     ![Screenshot of the Access this computer from the network Properties dialog](../media/add-service-account.png)
 
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
-> [« Microsoft Defender for Identity roles and permissions](role-groups.md)
 > [Download the Defender for Identity sensor »](download-sensor.md)

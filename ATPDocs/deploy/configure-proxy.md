@@ -130,8 +130,7 @@ If you get a certificate error, ensure that you have the required trusted root c
 Certificate details should look similar to the following: **DigiCert Global Root G2** > **Microsoft Azure TLS Issuing CA 01** > ***.atp.azure.com**.
 
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
-> [« Download the Defender for Identity sensor](download-sensor.md)
 > [Install the Defender for Identity sensor »](install-sensor.md)

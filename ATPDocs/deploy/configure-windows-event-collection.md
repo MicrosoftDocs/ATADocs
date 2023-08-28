@@ -13,7 +13,7 @@ For the correct events to be audited and included in the Windows Even Log, your 
 
 This article describes how to configure your Advanced Audit Policy settings as needed and other configurations for specific event types.
 
-For more information, see [Windows event collection overview](event-collection-overview.md).
+For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md).
 
 > [!TIP]
 > Some events that are collected by the Defender for Identity sensor aren't collected by default by the Defender for Identity standalone sensor. If you're working with the standalone Defender for Identity sensor, forward events using the following methods:
@@ -258,5 +258,4 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 ## Next step
 
 > [!div class="step-by-step"]
-> [« Plan capacity for Microsoft Defender for Identity](capacity-planning.md)
-> [Microsoft Defender for Identity Directory Service account recommendations »](directory-service-accounts.md)
+> [Configure a Directory Service account for Microsoft Defender for Identity »](directory-service-accounts.md)

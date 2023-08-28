@@ -1,7 +1,7 @@
 ---
 title: Prerequisites | Microsoft Defender for Identity
-description: Learn about the requirements for a successful Microsoft Defender for Identity deployment.
-ms.date: 05/31/2023
+description: This article describes the prerequisites required for a successful Microsoft Defender for Identity deployment.
+ms.date: 08/28/2023
 ms.topic: conceptual
 ---
 
@@ -113,8 +113,7 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
-
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
 > [Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)

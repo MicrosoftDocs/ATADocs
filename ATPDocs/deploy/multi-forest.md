@@ -17,7 +17,7 @@ Securing your multiple Active Directory forests with Defender for Identity provi
 - Gain improved detection and reduce false positives with advanced Active Directory integration and account resolution
 - Gain greater control and easier deployment, with an improved set of health issues and reporting for cross-org coverage when your domain controllers are all monitored from a single Defender for Identity server
 
-## Prerequisites
+## Requirements
 
 Defender for Identity requires the following to support multiple Active Directory forests:
 

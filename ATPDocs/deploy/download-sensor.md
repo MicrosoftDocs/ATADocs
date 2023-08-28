@@ -34,8 +34,7 @@ This article describes how to download the Microsoft Defender for Identity senso
 
 1. Copy the downloaded installation package to the dedicated server or domain controller where you're installing the Defender for Identity sensor.
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
-> [« Configure remote calls to SAM](remote-calls-sam.md)
 > [Configure proxy settings »](configure-proxy.md)

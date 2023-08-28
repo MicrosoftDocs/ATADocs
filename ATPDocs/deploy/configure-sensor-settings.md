@@ -128,7 +128,6 @@ If the domain controller that you're testing is the first sensor you've deployed
 
 Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:
 
-- [Updating your sensors](../sensor-settings.md#updating-your-sensors)
 - [Set entity tags: sensitive, honeytoken, and Exchange server](../entity-tags.md)
 - [Configure detection exclusions](../exclusions.md)
 - [Configure notifications: health issues, alerts, and Syslog](../notifications.md)

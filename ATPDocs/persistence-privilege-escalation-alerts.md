@@ -215,7 +215,7 @@ None
 **Severity**: High
 
 **Description**:
-Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes attackers will try and manipulate these objects for their benefit, for example by changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](/microsoft-365/security/defender/investigate-users#account-tags).
+Every user object in Active Directory has attributes that contain information such as first name, middle name, last name, phone number, address and more. Sometimes attackers will try and manipulate these objects for their benefit, for example by changing the phone number of an account to get access to any multifactor authentication attempt. Microsoft Defender for Identity will trigger this alert for any attribute modification against a pre-configured [honeytoken user](entity-tags.md#honeytoken-tags).
 
 **Learning period**:
 
@@ -233,7 +233,7 @@ None
 **Severity**: High
 
 **Description**:
-In Active Directory, each user is a member of one or more groups. After gaining access to an account, attackers may attempt to add or remove permissions from it to other users, by removing or adding them to security groups. Microsoft Defender for Identity triggers an alert whenever there is a change made to a preconfigured [honeytoken user account](/microsoft-365/security/defender/investigate-users#account-tags).
+In Active Directory, each user is a member of one or more groups. After gaining access to an account, attackers may attempt to add or remove permissions from it to other users, by removing or adding them to security groups. Microsoft Defender for Identity triggers an alert whenever there is a change made to a preconfigured [honeytoken user account](entity-tags.md#honeytoken-tags).
 
 **Learning period**:
 

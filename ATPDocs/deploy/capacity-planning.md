@@ -24,7 +24,6 @@ By default, Defender for Identity supports up to 350 sensors. To install more se
 > If you're unable to use the Defender for Identity Sizing tool, you can manually gather traffic information instead. For more information, see [Domain controller traffic estimator](#manual-sizing).
 >
 
-
 ## Use the sizing tool
 
 This procedure describes how to use the Defender for Identity Sizing Tool, which is the recommended and simplest way to determine capacity for your Defender for Identity deployment.
@@ -128,5 +127,4 @@ This section describes how to collect the packets/sec counter from a domain cont
 ## Next step
 
 > [!div class="step-by-step"]
-> [« Prerequisites](prerequisites.md)
 > [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)
