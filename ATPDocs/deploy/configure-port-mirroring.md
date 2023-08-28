@@ -49,7 +49,7 @@ The following table describes Defender for Identity's support for port mirroring
 |Physical|Physical on a different switch|Requires physical switches to support RSPAN or ERSPAN <br><br>ERSPAN is only supported when decapsulation is performed before the traffic is analyzed by Defender for Identity.|
 
 > [!NOTE]
-> - The time on your domain controllers and the connected Defender for Identity sensor must be synchronized to within 5 minutes of eachother.
+> The time on your domain controllers and the connected Defender for Identity sensor must be synchronized to within 5 minutes of eachother.
 >
 
 ## Validate port mirroring
@@ -78,8 +78,7 @@ After configuring port mirroring, validate that port mirroring is working before
 
 1. Select **Start** to start the capture session. If you do not see traffic to and from the domain controller listed in the **Frame summary** area, review your port mirroring configuration.
 
-    > [!NOTE]
-    > It is important to make sure you see traffic to and from the domain controllers.
+    Make sure you see traffic to and from the domain controllers.
 
 1. If you only see traffic in one direction, work with your networking or virtualization teams to help troubleshoot your port mirroring configuration.
 
@@ -87,10 +86,9 @@ After configuring port mirroring, validate that port mirroring is working before
 
 If you are working with virtualization clusters:
 
-- **Configure affinity between the domain controller and the Defender for Identity standalone sensor**. Configure affinity for each domain controller running on the virtualization cluster in a virtual machine with the Defender for Identity standalone sensor. When the domain controller moves to another host in the cluster, the Defender for Identity standalone sensor follows it. This works well when there are a few domain controllers.
+- **Configure affinity between the domain controller and the Defender for Identity standalone sensor**. This step is irrelevant if your environment supports Virtual to Virtual on different hosts (RSPAN).
 
-  > [!NOTE]
-  > This step is irrelevant if your environment supports Virtual to Virtual on different hosts (RSPAN).
+    Configure affinity for each domain controller running on the virtualization cluster in a virtual machine with the Defender for Identity standalone sensor. When the domain controller moves to another host in the cluster, the Defender for Identity standalone sensor follows it. This works well when there are a few domain controllers.
 
 - **Ensure proper sensor sizing**. Make sure that the Defender for Identity standalone sensor is properly sized to handle monitoring all of the DCs by themselves:
 
@@ -100,7 +98,6 @@ If you are working with virtualization clusters:
 
     Any host the domain controllers run on is monitored.
 
-## Next steps
+## Next step
 
-- [Configure event forwarding](configure-event-forwarding.md)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+[Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)

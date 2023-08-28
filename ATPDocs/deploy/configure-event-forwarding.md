@@ -105,7 +105,7 @@ This procedure describes how to create a subscription for use with Defender for 
 
         1. Select **OK**. For example:
 
-            ![Screenshot of the Event Viewer dialog.](../media/wef-3-event-viewer.png)
+            :::image type="content" source="../media/wef-3-event-viewer.png" alt-text="Screenshot of the Event Viewer dialog." lightbox="../media/wef-3-event-viewer.png":::
 
     1. Select **Select Events** > **By log** > **Security**.
 
@@ -126,7 +126,6 @@ This procedure describes how to create a subscription for use with Defender for 
 
 For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
-## Next steps
+## Next step
 
-- [Install Defender for Identity](/defender-for-identity/classic-install-step1)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+[Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md)

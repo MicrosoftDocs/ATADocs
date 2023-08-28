@@ -52,20 +52,22 @@ items:
       href: deploy/manage-action-accounts.md
     - name: Configure the Defender for Identity sensor
       href: deploy/configure-sensor-settings.md
-  - name: Install on Active Directory Federation Services
-    href: deploy/active-directory-federation-services.md
-  - name: Deploy for multiple forests
-    href: deploy/multi-forest.md
-  - name: Migrate from Advanced Threat Analytics (ATA)
-    href: deploy/migrate-from-ata-overview.md
-  - name: Configure a standalone sensor
+  - name: Extra deployment scenarios
     items:
-    - name: Configure port mirroring
-      href: deploy/configure-port-mirroring.md
-    - name: Listen for SIEM events
-      href: deploy/configure-event-collection.md
-    - name: Configure Windows Event Forwarding
-      href: deploy/configure-event-forwarding.md
+    - name: Install on Active Directory Federation Services
+      href: deploy/active-directory-federation-services.md
+    - name: Deploy for multiple forests
+      href: deploy/multi-forest.md
+    - name: Migrate from Advanced Threat Analytics (ATA)
+      href: deploy/migrate-from-ata-overview.md
+    - name: Configure a standalone sensor
+      items:
+      - name: Configure port mirroring
+        href: deploy/configure-port-mirroring.md
+      - name: Listen for SIEM events
+        href: deploy/configure-event-collection.md
+      - name: Configure Windows Event Forwarding
+        href: deploy/configure-event-forwarding.md
 - name: Tutorials
   items:
   - name: Attack simulations

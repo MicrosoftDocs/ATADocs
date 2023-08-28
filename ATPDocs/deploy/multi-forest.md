@@ -40,11 +40,10 @@ Defender for Identity requires the following to support multiple Active Director
   |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
   |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
 
-<!-->
 > [!NOTE]
-> Each Defender for Identity sensor can only report to a single Defender for Identity workspace. <!--is this really still necessary? moved from known issues
+> Each Defender for Identity sensor can only report to a single Defender for Identity workspace.
 >
--->
+
 
 ## Detection activity across multiple forests
 
@@ -79,9 +78,6 @@ You may see ad-hoc traffic when the Defender for Identity sensor detects cross f
 > Interactive sign-ins performed by users in one forest to access resources in another forest aren't displayed in the Defender for Identity dashboard.
 >
 
-## Next steps
+## Next step
 
-- [Defender for Identity sizing tool](<https://aka.ms/aatpsizingtool>)
-- [Defender for Identity architecture](../architecture.md)
-- [Install Defender for Identity](/defender-for-identity/classic-install-step1)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+[Install the Microsoft Defender for Identity sensor](install-sensor.md)

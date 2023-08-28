@@ -107,7 +107,7 @@ For more information, see our [blog post](https://techcommunity.microsoft.com/t5
 
 ### Defender for Identity report downloads and scheduling in Microsoft 365 Defender (Preview)
 
-Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).
+Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the legacy[classic Defender for Identity portal](classic-reports.md).
 
 Download and schedule reports in Microsoft 365 Defender from the **Settings > Identities > Report management** page. For example:
 

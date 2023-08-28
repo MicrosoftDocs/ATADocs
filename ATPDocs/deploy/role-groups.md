@@ -91,10 +91,10 @@ For more information, see [Custom roles in role-based access control for Microso
 
 Legacy customers can migrate any Defender for Identity role groups to Microsoft 365 Defender.
  
-Information included from the [Defender for Cloud Apps activity log](../classic-mcas-integration.md#activities) may still contain Defender for Identity data, which adheres to existing Defender for Cloud Apps permissions.
+Information included from the [Defender for Cloud Apps activity log](../privacy-compliance.md#data-sharing) may still contain Defender for Identity data, which adheres to existing Defender for Cloud Apps permissions. <!--is this still relevant? refers to the classic page. where's the new one?-->
 
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
 > [« Directory Service accounts](directory-service-accounts.md)

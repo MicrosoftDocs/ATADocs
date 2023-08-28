@@ -13,6 +13,35 @@ Defender for Identity is a primary component of a [Zero Trust](/security/zero-tr
 
 For a quick set of deployment highlights, see [Quick installation guide](quick-installation-guide.md).
 
+## Prerequisites
+
+Before you start, make sure that you have access to Microsoft 365 Defender as a Global or SEcu
+
+
+Before deploying Defender for Identity, make sure to acquire one of the following Microsoft 365 licenses:
+
+
+- Enterprise Mobility + Security E5 (EMS E5/A5)
+- Microsoft 365 E5 (M365 E5/A5/G5)
+- Microsoft 365 E5/A5/G5 Security
+
+Defender for Identity also supports standalone licenses.
+
+Acquire your licenses directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model.
+
+
+For more information, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy).
+
+## Required permissions
+
+To create your Defender for Identity instance, you'll need an Azure Active Directory (Azure AD) tenant with at least one Global or Security administrator.
+
+Each Defender for Identity instance supports  multiple Active Directory forest boundaries and Forest Functional Levels (FFL), for Windows 2003 and higher.
+
+You'll need Global or Security administrator access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
+
+For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
+
 ## Start using Microsoft 365 Defender
 
 This section describes how to start onboarding to Defender for Identity.

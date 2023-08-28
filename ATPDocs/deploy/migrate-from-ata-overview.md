@@ -7,10 +7,7 @@ ms.topic: how-to
 
 # Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
-> [!NOTE]
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
-
-This article describes how to migrate from an existing ATA installation to Microsoft Defender for Identity:
+This article describes how to migrate from an existing ATA installation to a Microsoft Defender for Identity sensor, and includes the following steps:
 
 > [!div class="checklist"]
 >
@@ -21,25 +18,27 @@ This article describes how to migrate from an existing ATA installation to Micro
 > - Perform post-migration checks and verifications
 > - Decommission ATA
 
-> [!NOTE]
-> While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
->
 
 > [!IMPORTANT]
 > This migration guide is designed for Defender for Identity sensors only, and not standalone sensors.
 >
+> While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
+>
+
+> [!NOTE]
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## Prerequisites
 
 To migrate from ATA to Defender for Identity, you must have:
 
-- An Azure Active Directory tenant with at least one global/security administrator, so that you can create a Defender for Identity instance. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- **An Azure Active Directory tenant with at least one global/security administrator**, so that you can create a Defender for Identity instance. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
-- .Net Framework version 4.7 or later. You may also need to restart your domain controller if your current .Net Framework version is not 4.7 or later.
+- **.Net Framework version 4.7 or later**. You may also need to restart your domain controller if your current .Net Framework version is not 4.7 or later.
 
-- An environment and domain controllers that meet Defender for Identity sensor requirements. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
+- **An environment and domain controllers that meet Defender for Identity sensor requirements.** For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-- Verification that all domain controllers you plan to use have sufficient internet access to the Defender for Identity service. For more information, see [Defender for Identity proxy configuration requirements](configure-proxy.md).
+- **Verification that all domain controllers you plan to use have sufficient internet access** to the Defender for Identity service. For more information, see [Defender for Identity proxy configuration requirements](configure-proxy.md).
 
 
 ## Plan your migration
@@ -101,13 +100,6 @@ After completing your migration to Defender for Identity, do the following to cl
     - **Decommission the ATA Center**. We recommend keeping ATA data online for a period of time. 
     - **Back up Mongo DB** if you want to keep the ATA data indefinitely. For more information, see [Backing up the ATA database](/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
 
-## Next steps
+## Next step
 
-For more information, see:
-
-- [What is Microsoft Defender for Identity?](../what-is.md)
-- [Understanding security alerts](../understanding-security-alerts.md)
-- [What's new in Microsoft Defender for Identity](../whats-new.md)
-- [Defender for Identity frequently asked questions](../technical-faq.yml).
-
-Do you have more questions, or an interest in discussing Defender for Identity and related security with others? Join the [Defender for Identity Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
+[Understanding security alerts](../understanding-security-alerts.md)
