@@ -66,6 +66,10 @@ items:
       href: deploy/configure-event-collection.md
     - name: Configure Windows Event Forwarding
       href: deploy/configure-event-forwarding.md
+- name: Tutorials
+  items:
+  - name: Attack simulations
+    href: playbooks.md
 - name: Manage
   items:
   - name: Settings
@@ -130,20 +134,6 @@ items:
       href: lateral-movement-alerts.md
     - name: Other alerts
       href: other-alerts.md
-  - name: Security alert lab
-    items:
-    - name: Lab overview
-      href: playbook-lab-overview.md
-    - name: Lab setup
-      href: playbook-setup-lab.md
-    - name: Reconnaissance playbook
-      href: playbook-reconnaissance.md
-    - name: Lateral movement playbook
-      href: playbook-lateral-movement.md
-    - name: Domain dominance playbook
-      href: playbook-domain-dominance.md
-    - name: Attack simulations
-      href: playbooks.md
   - name: Remediation
     items:
     - name: Remediation actions

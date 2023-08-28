@@ -1,6 +1,31 @@
 {
     "redirections": [
     {
+      "source_path": "ATPDocs/playbook-lab-overview.md",
+      "redirect_url": "playbooks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-setup-lab.md",
+      "redirect_url": "playbooks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-reconnaissance.md",
+      "redirect_url": "playbooks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-lateral-movement.md",
+      "redirect_url": "playbooks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-domain-dominance.md",
+      "redirect_url": "playbooks",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "ATPDocs/classic-activities-filtering-mcas.md",
       "redirect_url": "/previous-versions/defender-for-identity/classic-activities-filtering-mcas",
       "redirect_document_id": false
