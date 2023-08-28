@@ -65,20 +65,21 @@ The following table lists the minimum ports that the Defender for Identity senso
 |Protocol|Transport|Port|From|To|
 |------------|-------------|--------|-----------|---|
 |**Internet ports**|||||
-|SSL (\*.atp.azure.com)|TCP|443|Defender for Identity sensor|Defender for Identity cloud service|
+|SSL (\*.atp.azure.com) \*<sup>1</sup>|TCP|443|Defender for Identity sensor|Defender for Identity cloud service|
 |**Internal ports**|||||
 |DNS|TCP and UDP|53|Defender for Identity sensor|DNS Servers|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Defender for Identity sensor|All devices on network|
 |RADIUS|UDP|1813|RADIUS|Defender for Identity sensor|
-|**Localhost ports**\*|Required for Sensor Service updater||||
+|**Localhost ports** \*<sup>2</sup>|Required for Sensor Service updater||||
 |SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
-|**NNR ports**\*\*|||||
+|**NNR ports** \*<sup>3</sup>|||||
 |NTLM over RPC|TCP|Port 135|Defender for Identity sensor|All devices on network|
 |NetBIOS|UDP|137|Defender for Identity sensor|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|Defender for Identity sensor|All devices on network|
 
-\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
-\*\* One of these ports is required, but we recommend opening all of them.
+\*<sup>1</sup> Connectivity from the Sensor to the Defender for Identity cloud services is required either directly on port 443, or through proxy. For more information on proxy configuration, see [Configuring a proxy for Defender for Identity](configure-proxy.md).    
+\*<sup>2</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.   
+\*<sup>3</sup> One of these ports is required, but we recommend opening all of them.   
 
 > [!NOTE]
 > Defender for Identity sensors might create ICMP traffic between domain controllers as part of the LDAP connection keep-alive mechanism, but opening ICMP in the firewalls is not required.
@@ -237,7 +238,7 @@ The following table lists the minimum ports that the Defender for Identity stand
 |Protocol|Transport|Port|From|To|
 |------------|-------------|--------|-----------|---|
 |**Internet ports**||||
-|SSL (\*.atp.azure.com)|TCP|443|Defender for Identity sensor|Defender for Identity cloud service|
+|SSL (\*.atp.azure.com) \*<sup>1</sup>|TCP|443|Defender for Identity sensor|Defender for Identity cloud service|
 |**Internal ports**||||
 |LDAP|TCP and UDP|389|Defender for Identity sensor|Domain controllers|
 |Secure LDAP (LDAPS)|TCP|636|Defender for Identity sensor|Domain controllers|
@@ -249,15 +250,16 @@ The following table lists the minimum ports that the Defender for Identity stand
 |DNS|TCP and UDP|53|Defender for Identity sensor|DNS Servers|
 |Syslog (optional)|TCP/UDP|514, depending on configuration|SIEM Server|Defender for Identity sensor|
 |RADIUS|UDP|1813|RADIUS|Defender for Identity sensor|
-|**Localhost ports**\*|Required for Sensor Service updater||||
+|**Localhost ports* \*<sup>2</sup>|Required for Sensor Service updater||||
 |SSL (localhost)|TCP|444|Sensor Service|Sensor Updater Service|
-|**NNR ports**\*\*|||||
+|**NNR ports** \*<sup>3</sup>|||||
 |NTLM over RPC|TCP|135|Defender for Identity sensor|All devices on network|
 |NetBIOS|UDP|137|Defender for Identity sensor|All devices on network|
 |RDP|TCP|3389, only the first packet of Client hello|Defender for Identity sensor|All devices on network|
 
-\* By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.  
-\*\* One of these ports is required, but we recommend opening all of them.
+\*<sup>1</sup> Connectivity from the Sensor to the Defender for Identity cloud services is required either directly on port 443, or through proxy. For more information on proxy configuration, see [Configuring a proxy for Defender for Identity](configure-proxy.md).    
+\*<sup>2</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.   
+\*<sup>3</sup> One of these ports is required, but we recommend opening all of them.   
 
 > [!NOTE]
 >
