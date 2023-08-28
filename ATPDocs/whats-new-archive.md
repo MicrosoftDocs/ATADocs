@@ -874,7 +874,7 @@ Released September 22, 2019
 - **Enriched NTLM authentication data using Windows Event 8004**  
 Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data as well as enriched failed logon activities including the destination computer which the user attempted but failed to access.
 
-    Learn more about NTLM authentication activities [using Windows Event 8004](deploy/configure-windows-event-collection.md#event-id-8004).
+  Learn more about NTLM authentication activities [using Windows Event 8004](deploy/configure-windows-event-collection.md#configure-auditing-for-event-id-8004).
 
 - Version also includes improvements and bug fixes for internal sensor infrastructure.
 

@@ -143,7 +143,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a week, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](deploy/configure-windows-event-collection.md#event-id-8004) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
+|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a week, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](deploy/configure-windows-event-collection.md#configure-auditing-for-event-id-8004) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
 
 ### Directory Services Advanced Auditing is not enabled as required
 
@@ -155,7 +155,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Object Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Object Auditing configuration doesn't include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure Audit Policies](deploy/configure-windows-event-collection.md#configure-object-auditing) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Global health issues tab|
+|Directory Services Object Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Object Auditing configuration doesn't include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure Audit Policies](deploy/configure-windows-event-collection.md#configure-object-auditing-for-event-id-4662) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Global health issues tab|
 
 ### Auditing on the Configuration container is not enabled as required
 

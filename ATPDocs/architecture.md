@@ -80,7 +80,7 @@ If the monitoring process causes the Defender for Identity sensor to run out of 
 
 To enhance Defender for Identity detection coverage related to NTLM authentications, modifications to sensitive groups and creation of suspicious services, Defender for Identity analyzes the logs of [specific Windows events](deploy/event-collection-overview.md#windows-event-logs).
 
-To ensure that the logs are read, make sure that your Defender for Identity sensor has advanced audit policy settings configured correctly. To [make sure Windows Event 8004 is audited](deploy/configure-windows-event-collection.md#event-id-8004) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7)
+To ensure that the logs are read, make sure that your Defender for Identity sensor has advanced audit policy settings configured correctly. To make sure [Windows Event 8004 is audited](deploy/configure-windows-event-collection.md#configure-auditing-for-event-id-8004) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7)
 
 ## Next step
 

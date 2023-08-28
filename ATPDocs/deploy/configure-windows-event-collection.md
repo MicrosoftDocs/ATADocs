@@ -50,7 +50,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | **Account Management** | Audit Distribution Group Management | 4753, 4763 |
         | **Account Management** | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | Audit User Account Management | 4726 |
-        | **DS Access** | Audit Directory Service Access | 4662 - For this event, it's also necessary to [Configure object auditing](#configure-object-auditing).  |
+        | **DS Access** | Audit Directory Service Access | 4662 - For this event, it's also necessary to [configure object auditing](#configure-object-auditing-for-event-id-4662).  |
         | **DS Access** | Audit Directory Service Changes | 5136  |
         | **System** | Audit Security System Extension | 7045 |
 
