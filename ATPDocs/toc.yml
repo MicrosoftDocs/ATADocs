@@ -20,7 +20,7 @@ items:
   items:
   - name: Quick installation guide
     href: deploy/quick-installation-guide.md
-  - name: Deploy Defender for Identity with Microsoft 365 Defender
+  - name: Deployment overview
     href: deploy/deploy-defender-identity.md
   - name: Plan and prepare
     items:
@@ -34,7 +34,7 @@ items:
         href: deploy/event-collection-overview.md
       - name: Configure audit policies for Windows event logs
         href: deploy/configure-windows-event-collection.md
-    - name: Directory Service account recommendations
+    - name: Configure a Directory Service account
       href: deploy/directory-service-accounts.md
     - name: Roles and permissions
       href: deploy/role-groups.md
@@ -44,7 +44,7 @@ items:
     items:
     - name: Download the Defender for Identity sensor
       href: deploy/download-sensor.md
-    - name: Proxy configuration
+    - name: Configure proxy settings
       href: deploy/configure-proxy.md
     - name: Install the Defender for Identity sensor
       href: deploy/install-sensor.md

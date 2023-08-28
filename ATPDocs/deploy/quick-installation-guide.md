@@ -92,9 +92,9 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 
 **To download and install the sensor**:
 
-1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com). Select **Settings** -> **Identities** -> **Sensors** and copy the **Access key** value, which you'll need for the installation.
+1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com). Select **Settings** -> **Identities** -> **Sensors** -> **Add sensor** and copy the **Access key** value, which you'll need for the installation.
 
-    You only need to download the installer once, as it can be used for every server in the tenant.
+    You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
 
 1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service. From each server, try accessing: `https://*your-instance-name*sensorapi.atp.azure.com`.
 

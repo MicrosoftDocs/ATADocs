@@ -5,24 +5,25 @@ ms.date: 06/13/2023
 ms.topic: how-to
 ---
 
-# Configure endpoint proxy and internet connectivity settings for your Microsoft Defender for Identity sensor
+# Configure endpoint proxy and internet connectivity settings
 
 Each Microsoft Defender for Identity sensor requires internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully. 
 
-In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons.
+In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
 
-In such cases, your proxy server must allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
+Use the command line, Microsoft Windows Internet (WinINet), or the registry to configure your proxy server.  
 
-Use the command line, Microsoft Windows Internet (WinINet), or the registry to configure your proxy server. 
+> [!TIP]
+> We recommend using the command line to ensure that only the Defender for Identity sensor services communicate through the proxy. When you use WinINet or the registry to configure your proxy, other services running in the context as Local System or Local Service will also direct traffic through the proxy.
+>
 
-We recommend using the command line to ensure that only the Defender for Identity sensor services communicate through the proxy. When you use WinINet or the registry to configure your proxy, other services running in the context as Local System or Local Service will also direct traffic through the proxy.
-
-> [!NOTE]
+> [!IMPORTANT]
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
+>
 
 ## Configure a proxy server using the command line
 
-Configure your proxy server during sensor installation using the following command-line switches.
+Configure your proxy server during sensor installation using the following command-line switches:
 
 ### Syntax
 
@@ -97,9 +98,9 @@ The URL syntaxes listed in the table above automatically map to the correct serv
 
 ### Enable access with a service tag
 
-Alternately, use the IP address ranges in our **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). 
+Instead of manually enabling access to specific endpoints, download the [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519), and use the IP address ranges in the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. 
 
-To download the *Azure IP Ranges and Service Tags - Public Cloud* file, select [https://www.microsoft.com/download/details.aspx?id=56519](https://www.microsoft.com/download/details.aspx?id=56519).
+For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). 
 
 For US Government offerings, see [Get started with US Government offerings](../us-govt-gcc-high.md).
 
@@ -109,10 +110,11 @@ The Defender for Identity sensor requires network connectivity to the Defender f
 
 After the proxy has been configured to allow the sensor access to the Defender for Identity service, do the following steps to confirm that everything is working as expected. Perform this procedure either before you deploy the sensor, or if the sensor experiences connectivity issues after being installed.
 
+**To test your proxy settings**:
+
 1. Open a browser using the same proxy settings being used by the sensor.
 
-    >[!NOTE]
-    >If the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
+    For example, if the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
 
 1. Go to: `https://<your_workspace_name>sensorapi.atp.azure.com`, where `<your_workspace_name>` is the name of your Defender for Identity workspace.
 
