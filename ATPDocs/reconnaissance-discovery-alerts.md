@@ -176,10 +176,14 @@ None
 **Description**:
 
 User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
+<<<<<<< HEAD
 
 In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md#honeytoken-tags).
 
 
+=======
+In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md).
+>>>>>>> f6ef5c7cdbba00fd52bc7540336d36f663c8ee3d
 
 **MITRE**:
 
