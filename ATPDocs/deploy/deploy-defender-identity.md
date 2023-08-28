@@ -33,7 +33,7 @@ For more information, see:
 > [!IMPORTANT]
 > Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East, and Asia. Your instance is created automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant. Once created, Defender for Identity instances aren't movable.
 
-## Preparation
+## Plan and prepare
 
 Use the following steps to prepare for deploying Defender for Identity:
 
@@ -48,23 +48,23 @@ Use the following steps to prepare for deploying Defender for Identity:
 > We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites. For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
 >
 
-## Deployment
+## Deploy Defender for Identity
 
 After you've prepared your system, use the following steps to deploy Defender for Identity:
 
 1. [Download the Defender for Identity sensor](download-sensor.md).
 1. [Configure a proxy](configure-proxy.md) as needed.
 1. [Install the Defender for Identity sensor](install-sensor.md).
-1. [Manage action accounts](manage-action-accounts.md).
+1. [Manage action accounts](manage-action-accounts.md) as needed.
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
 You may have extra, or different steps in your deployment if you're working with any of the following environments:
 
 |Scenario  |Extra steps  |
 |---------|---------|
-| **Installing a standalone Defender for Identity sensor** | 1. [Configure port mirroring](configure-port-mirroring.md) and [Validate port mirroring](configure-port-mirroring.md#validate-port-mirroring). <br>2. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). <br>3. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md).<br><br>For more information, see [Windows event collection overview](event-collection-overview.md).|
+| **Installing a standalone Defender for Identity sensor** | 1. [Configure port mirroring](configure-port-mirroring.md) and [Validate port mirroring](configure-port-mirroring.md#validate-port-mirroring). <br>2. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). <br>3. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md).|
 |**Installing your Defender for Identity sensor on AD FS servers**     |   [Installing on Active Directory Federation Services](active-directory-federation-services.md)      |
-|**Installing with multiple Active Directory forests**     |  [Multi-forest support](multi-forest.md)       |
+|**Installing your Defender for Identity sensor with multiple Active Directory forests**     |  [Multi-forest support](multi-forest.md)       |
 |**Migrate from Advanced Threat Analytics (ATA)**     |   [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)      |
 
 ## Next step

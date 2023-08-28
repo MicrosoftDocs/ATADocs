@@ -63,15 +63,16 @@ Perform the following steps on the domain controller or AD FS server.
 
 1. Select **Install**. The following components are installed and configured during the installation of the Defender for Identity sensor:
 
+    - **Defender for Identity sensor service** and **Defender for Identity sensor updater service**
+
+    - **Microsoft Visual C++ 2013 Redistributable**
+
     - **KB 3047154** (for Windows Server 2012 R2 only)
 
         > [!IMPORTANT]
         >
         > - Don't install KB 3047154 on a virtualization host, which is the host that is running the virtualization. This may cause port mirroring to stop working properly. It's fine to run KB 3047154 on a virtual machine.
         > - If Wireshark is installed on the Defender for Identity sensor machine, you'll need to restart the Defender for Identity sensor after running Wireshark because they use the same drivers.
-
-    - **Defender for Identity sensor service** and **Defender for Identity sensor updater service**
-    -** Microsoft Visual C++ 2013 Redistributable**
 
 ### Viewing sensor versions
 

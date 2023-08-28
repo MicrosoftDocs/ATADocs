@@ -19,15 +19,21 @@ After the Defender for Identity sensor is installed, do the following to view an
 
    The **Sensors** page displays all of your Defender for Identity sensors, listing the following details per sensor:
 
-   - Sensor name
-   - Sensor domain membership
-   - Sensor version number
-   - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update).
-   - Sensor service status
-   - Sensor status
-   - Sensor health status
-   - The number of health issues
-   - When the sensor was created. 
+   :::row:::
+       :::column:::
+          - Sensor name
+          - Sensor domain membership
+          - Sensor version number
+          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update).        
+       :::column-end:::
+       :::column:::
+          - Sensor service status
+          - Sensor status
+          - Sensor health status
+          - The number of health issues
+          - When the sensor was created. 
+       :::column-end:::
+   :::row-end:::
 
    For more information, see [Sensor details](../sensor-settings.md#sensor-details).
 
@@ -35,7 +41,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
    [![Screenshot of sensor filters.](../media/sensor-filters.png)](../media/sensor-filters.png#lightbox)
 
-1. Use the dispalyed filters to determine which sensors to display. For example:
+1. Use the displayed filters to determine which sensors to display. For example:
 
    :::image type="content" source="../media/filtered-sensor.png" alt-text="Screenshot of a filtered list of sensors." lightbox="../media/filtered-sensor.png":::
 
