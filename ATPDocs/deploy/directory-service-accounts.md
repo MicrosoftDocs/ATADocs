@@ -278,4 +278,4 @@ See [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-is
 ## Next step
 
 > [!div class="step-by-step"]
-> [Microsoft Defender for Identity roles and permissions »](role-groups.md)
+> [Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity »](remote-calls-sam.md)

@@ -34,8 +34,6 @@ items:
         href: deploy/event-collection-overview.md
       - name: Configure audit policies for Windows event logs
         href: deploy/configure-windows-event-collection.md
-    - name: Configure a Directory Service account
-      href: deploy/directory-service-accounts.md
     - name: Roles and permissions
       href: deploy/role-groups.md
     - name: Configure remote calls to SAM
@@ -58,6 +56,8 @@ items:
       href: deploy/active-directory-federation-services.md
     - name: Deploy for multiple forests
       href: deploy/multi-forest.md
+    - name: Configure a Directory Service account
+      href: deploy/directory-service-accounts.md
     - name: Migrate from Advanced Threat Analytics (ATA)
       href: deploy/migrate-from-ata-overview.md
     - name: Configure a standalone sensor

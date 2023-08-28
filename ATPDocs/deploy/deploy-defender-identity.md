@@ -53,7 +53,6 @@ Use the following steps to prepare for deploying Defender for Identity:
 1. Make sure that you have all [prerequisites](prerequisites.md) required.
 1. [Plan your Defender for Identity capacity](capacity-planning.md).
 1. [Configure Windows Event collection](configure-windows-event-collection.md).
-1. Configure any [Directory Service accounts](directory-service-accounts.md) required.
 1. Configure any [role groups](role-groups.md) you want to use for Defender for Identity.
 1. [Configure remote calls to SAM](remote-calls-sam.md) as needed.
 
@@ -75,10 +74,11 @@ You may have extra, or different steps in your deployment if you're working with
 
 |Scenario  |Extra steps  |
 |---------|---------|
-| **Installing a standalone Defender for Identity sensor** | 1. [Configure port mirroring](configure-port-mirroring.md) and [Validate port mirroring](configure-port-mirroring.md#validate-port-mirroring). <br>2. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). <br>3. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md).|
 |**Installing your Defender for Identity sensor on AD FS servers**     |   [Installing on Active Directory Federation Services](active-directory-federation-services.md)      |
 |**Installing your Defender for Identity sensor with multiple Active Directory forests**     |  [Multi-forest support](multi-forest.md)       |
+| **Create a Directory Service account (DSA) for use with Defender for Identity** | [Configure a Directory Service account](directory-service-accounts.md) |
 |**Migrate from Advanced Threat Analytics (ATA)**     |   [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)      |
+| **Installing a standalone Defender for Identity sensor** | 1. [Configure port mirroring](configure-port-mirroring.md). <br>2. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). <br>3. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md).|
 
 ## Next step
 

@@ -258,4 +258,4 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure a Directory Service account for Microsoft Defender for Identity »](directory-service-accounts.md)
+> [What are Defender for Identity roles and permissions?  »](role-groups.md)
