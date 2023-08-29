@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/24/2023
+ms.date: 08/29/2023
 ms.topic: overview
 ---
 
@@ -27,6 +27,13 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## September 2023
+
+### Defender for Identity reports moved to the main navigation
+
+Now you can access Defender for Identity reports in Microsoft 365 Defender from the main navigation bar instead of the **Settings** area.
+
+Select  
 ## August 2023
 
 ### Defender for Identity release 2.212

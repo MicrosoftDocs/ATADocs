@@ -1,8 +1,9 @@
 ---
-title: Download and schedule Microsoft Defender for Identity reports in Microsoft 365 Defender
+title: Manage reports | Microsoft Defender for Identity
 description: Learn how to download and schedule Microsoft Defender for Identity reports from Microsoft 365 Defender.
-ms.date: 06/21/2023
+ms.date: 08/29/2023
 ms.topic: how-to
+#CustomerIntent: As a Defender for Identity admin, I want to understand how to generate and schedule reports for activity detected in my environment.
 ---
 
 # Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)
@@ -11,7 +12,7 @@ Microsoft 365 Defender provides Defender for Identity reports, which you can eit
 
 ## Access Defender for Identity reports in Microsoft 365 Defender
 
-To access Defender for Identity reports in Microsoft 365 Defender, select **Settings > Identities > Report management**. 
+To access Defender for Identity reports in Microsoft 365 Defender, from the navigation menu on the left, under **Identities**, select **Reports**.
 
 Available reports include:
 
@@ -26,7 +27,7 @@ Available reports include:
 
 To generate a report on demand:
 
-1. In Microsoft 365 Defender, select **Settings > Identities** > **Report management**.
+1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
 
 1. Select a report and then select **Download**.
 
@@ -39,7 +40,7 @@ Your report is downloaded by your browser, where you can open or save it.
 
 To define a schedule for a report to be sent to you by email:
 
-1. In Microsoft 365 Defender, select **Settings > Identities > Report management**.
+1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
 
 1. Select a report and then select **Schedule report**.
 
@@ -60,19 +61,15 @@ Once the scheduling is configured, repeat this procedure to edit the scheduled t
 To remove a scheduled report and stop it from being sent:
 
 
-1. In Microsoft 365 Defender, select **Settings > Identities > Report management**.
+1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
 
 1. Select the report you want to stop sending and then select **Reset schedule**.
 
 1. In the confirmation message, select **Reset** to complete the process.
 
 
-## Next steps
+## Related content
 
-For more information, see:
-
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Defender for Identity capacity planning](capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Investigate assets](investigate-assets.md)
+- [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md)
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
