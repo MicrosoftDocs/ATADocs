@@ -31,9 +31,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Defender for Identity reports moved to the main navigation
 
-Now you can access Defender for Identity reports in Microsoft 365 Defender from the main navigation bar instead of the **Settings** area.
+Now you can access Defender for Identity reports in Microsoft 365 Defender from the main navigation bar instead of the **Settings** area. For example:
 
-Select  
+<!--image TBD-->
+For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
+
 ## August 2023
 
 ### Defender for Identity release 2.212
