@@ -147,8 +147,10 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 
             ![Screenshot of the Auditing tab.](media/configure-windows-event-collection/auditing.png)
+> [!NOTE]
+> Configuring "Start and Stop Active Directory Certificate Services" event auditing may cause restarts delays when dealing with a large AD CS database. Consider removing irrelevant entries from the DB, or alternatively, refrain from enabling this specific type of event.
 
-        For more information, see [For Active Directory Certificate Services (AD CS) events](#for-active-directory-certificate-services-ad-cs-events).
+For more information, see [For Active Directory Certificate Services (AD CS) events](#for-active-directory-certificate-services-ad-cs-events).
 
 ## Configure object auditing
 
