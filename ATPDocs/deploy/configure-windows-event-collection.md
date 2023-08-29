@@ -9,18 +9,14 @@ ms.topic: how-to
 
 Microsoft Defender for Identity detection relies on specific Windows Event log entries to enhance detections and provide extra information on the users who performed specific actions, such as NTLM logons and security group modifications.
 
-For the correct events to be audited and included in the Windows Even Log, your domain controllers require specific Advanced Audit Policy settings. Misconfigured Advanced Audit Policy settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
+For the correct events to be audited and included in the Windows Event Log, your domain controllers require specific Advanced Audit Policy settings. Misconfigured Advanced Audit Policy settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
 
-This article describes how to configure your Advanced Audit Policy settings as needed and other configurations for specific event types.
+This article describes how to configure your Advanced Audit Policy settings as needed for a standalone Defender for Identity sensor, and other configurations for specific event types.
+
+> [!IMPORTANT]
+> Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
 For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md).
-
-> [!TIP]
-> Some events that are collected by the Defender for Identity sensor aren't collected by default by the Defender for Identity standalone sensor. If you're working with the standalone Defender for Identity sensor, forward events using the following methods:
->
-> - [Configure the Defender for Identity standalone sensor](configure-event-forwarding.md) to listen for SIEM events
-> - [Configure Windows event forwarding](configure-event-forwarding.md)
->
 
 ## Configure Advanced Audit Policy settings
 
@@ -258,4 +254,4 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 ## Next step
 
 > [!div class="step-by-step"]
-> [What are Defender for Identity roles and permissions?  »](role-groups.md)
+> [Listen for SIEM events on your Defender for Identity standalone sensor »](configure-event-collection.md)

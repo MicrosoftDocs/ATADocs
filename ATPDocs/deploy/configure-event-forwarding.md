@@ -128,4 +128,5 @@ For more information, see: [Configure the computers to forward and collect event
 
 ## Next step
 
-[Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md)
+> [!div class="step-by-step"]
+> [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)

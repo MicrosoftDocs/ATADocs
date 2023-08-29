@@ -7,8 +7,6 @@ ms.topic: conceptual
 
 # What is Windows event collection for Defender for Identity?
 
-<!--what here is relevant for the standalone sensor only?-->
-
 We recommend that you enhance Microsoft Defender for Identity's detection capabilities with extra Windows events that aren't available via the domain controller network traffic.
 
 While the Defender for Identity sensor is configured to automatically collect syslog events, if you're working with a standalone Defender for Identity sensor, you'll need to configure this manually. Using one of the following options:
@@ -96,4 +94,4 @@ The following Windows events are supported for the Defender for Identity sensor 
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure audit policies for Windows event logs  »](configure-windows-event-collection.md)
+> [Listen for SIEM events on your Defender for Identity standalone sensor  »](configure-event-collection.md)

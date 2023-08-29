@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Quick installation guide
 
-This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory or Active Directory Federation Services (AD FS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
 
 Watch the following video for a step-by-step demo. Learn about:
 
@@ -44,7 +44,7 @@ Acquire licenses directly via the [Microsoft 365 portal](https://www.microsoft.c
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
-For more information, see [Role groups](role-groups.md).
+For more information, see [What are Defender for Identity roles and permissions?](role-groups.md).
 
 ### Minimum system requirements
 

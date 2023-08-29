@@ -75,7 +75,7 @@ In this table:
 
 When determining sizing, keep in mind the total number of cores and total amount of memory that will be used by the sensor service.
 
-
+<!--
 <a name="manual-sizing"></a>
 
 ## Domain controller traffic estimation
@@ -123,8 +123,8 @@ This section describes how to collect the packets/sec counter from a domain cont
 
     ![Screenshot of the Performance Monitor dialog with the Packets/sec counter selected.](../media/traffic-estimation-14.png)
 
-
+-->
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)
+> [What are Defender for Identity roles and permissions? »](role-groups.md)

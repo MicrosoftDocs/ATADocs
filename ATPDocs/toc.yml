@@ -28,12 +28,6 @@ items:
       href: deploy/prerequisites.md
     - name: Plan your Defender for Identity capacity
       href: deploy/capacity-planning.md
-    - name: Configure Windows event collection
-      items:
-      - name: Event collection overview 
-        href: deploy/event-collection-overview.md
-      - name: Configure audit policies for Windows event logs
-        href: deploy/configure-windows-event-collection.md
     - name: Roles and permissions
       href: deploy/role-groups.md
     - name: Configure remote calls to SAM
@@ -64,10 +58,16 @@ items:
       items:
       - name: Configure port mirroring
         href: deploy/configure-port-mirroring.md
-      - name: Listen for SIEM events
-        href: deploy/configure-event-collection.md
-      - name: Configure Windows Event Forwarding
-        href: deploy/configure-event-forwarding.md
+      - name: Configure Windows event collection
+        items:
+        - name: Event collection overview 
+          href: deploy/event-collection-overview.md
+        - name: Configure audit policies for Windows event logs
+          href: deploy/configure-windows-event-collection.md
+        - name: Listen for SIEM events
+          href: deploy/configure-event-collection.md
+        - name: Configure Windows Event Forwarding
+          href: deploy/configure-event-forwarding.md
 - name: Tutorials
   items:
   - name: Attack simulations

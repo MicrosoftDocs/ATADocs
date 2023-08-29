@@ -36,19 +36,24 @@ You'll need Global or Security administrator access on your tenant to access the
 
 For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
-## Defender for Identity firewall requirements
+## Connectivity requirements
 
-Download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to help you enable access to Defender for Identity.
+The Defender for Identity sensor must be able to communicate with the Defender for Identity cloud service, using one of the following options:
 
-For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
+- **Set up a proxy**. If you choose this option, you'll configure your proxy later in the deployment process. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+
+- **ExpressRoute**. <!--TBD-->
+
+- **Firewall, using the Defender for Identity Azure IP addresses**. If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag add the relevant IP addresses. For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
+
 
 ## Required network adapters
 
 The Defender for Identity sensor monitors local traffic on all of the domain controller's network adapters. After deployment, you'll use the Microsoft 365 Defender portal to modify which network adapters are monitored.
 
-If you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error.
+<!-- removing this as per Gershon: If you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error.
 
-To install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap. For more information, see [How do I download and install or upgrade the Npcap driver?](../technical-faq.yml#how-do-i-download-and-install-or-upgrade-the-npcap-driver)
+To install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap. For more information, see [How do I download and install or upgrade the Npcap driver?](../technical-faq.yml#how-do-i-download-and-install-or-upgrade-the-npcap-driver)-->
 
 ## Sensor requirements
 
