@@ -22,7 +22,7 @@ When you're finished, make sure to also configure audit policies as needed. For 
 
 ## SIEM/syslog data support
 
-Defender for Identity supports UDP traffic from your SIEM or syslog server. If you don't use a SIEM or syslog server, configure your Windows domain controllers to forward all required events the the Defender for Identity sensor for analysis. For more information, see your SIEM or syslog server's product documentation.
+Defender for Identity supports UDP traffic from your SIEM or syslog server. If you don't use a SIEM or syslog server, configure your Windows domain controllers to forward all required events the Defender for Identity sensor for analysis. For more information, see your SIEM or syslog server's product documentation.
 
 > [!CAUTION]
 > When forwarding syslog data to a standalone sensor, make sure not to forward *all* syslog data to your sensor.
@@ -42,8 +42,11 @@ For the first three methods to work, the relevant ports must be opened inbound f
 
 Defender for Identity detection relies on specific Windows Event logs that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information, see [Configure Advanced Audit Policy settings](configure-windows-event-collection.md#configure-advanced-audit-policy-settings).
 
-To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings. For sensors running on AD FS servers, configure the auditing level to **Verbose**. For more information, see [Enable auditing on an ADFS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object).
+To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings. 
 
+> [!TIP]
+> For sensors running on AD FS servers, configure the auditing level to **Verbose**. For more information, see [Enable auditing on an ADFS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object).
+> 
 ## Supported Windows events
 
 The following Windows events are supported for the Defender for Identity sensor to collect and enhance your system's detection abilities:

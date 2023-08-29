@@ -119,7 +119,7 @@ When using the examples in the following steps, make sure to replace `contosodc.
 
 1. From the Defender for Identity console, open the entity profile for the computer you ran the connectivity test from.
 
-1. In Microsoft 365 Defender, search for the name of the user you used to run the commands in the previous steps. Select the name in the results, and view the user details page and all related activities and alerts.
+<!--1. In Microsoft 365 Defender, search for the name of the user you used to run the commands in the previous steps. Select the name in the results, and view the user details page and all related activities and alerts.-->
 
 If the domain controller that you're testing is the first sensor you've deployed, wait at least 15 minutes before verifying any logical activity for that domain controller, allowing the database backend to complete the initial microservice deployments.
 
