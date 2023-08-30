@@ -461,11 +461,11 @@ NT Service\All Services do not have the right to logon as a service.
 Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
 
 
-## Your instance was not created becuase a security group with the same name already exists in Azure Active Directory
+## Your instance was not created because a security group with the same name already exists in Azure Active Directory
 
 **Cause:**
 
-The issue can be caused when a previous Defender for Identity instance was deleted because of license expiration and the retention period ended, but the Azure AD groups were not deleted.
+The issue can be caused when a previous Defender for Identity instance is deleted because of license expiration and the retention period has ended, but the Azure AD groups were not deleted.
 
 **Resolution:**
 
