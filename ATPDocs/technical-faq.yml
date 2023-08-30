@@ -157,6 +157,12 @@ sections:
       - question: What version of Npcap is supported? 
         answer: The recommended and officially supported version of Npcap is version 1.0. You can install a newer version of Npcap, but note that for troubleshooting, support asks you to downgrade the Npcap version to validate that the issue isn't related to the newer version installed.
 
+      - question: Do I need to manually remove and reinstall the Sensor, or will the automatic update service handle this as part of its normal updating?
+        answer: Yes. It is required to manually remove the Sensor to remove the WinPcap drivers. The reinstallation using the latest package will install the Npcap drivers.
+
+      - question: How can I check whether my current installation of Defender for Identity uses Npcap or WinPcap?
+        answer: You can see that 'Npcap OEM' is installed through the Add/Remove programs (appwiz.cpl), and if there was an open [health issue](health-alerts.md#sensor-has-issues-with-packet-capturing-component) for this, it will be automatically closed.
+
       - question: I have more than five domain controllers in my organization. Do I need to purchase an Npcap license if I'm using Npcap on these domain controllers? 
         answer: |
           No, Npcap has an exemption from the usual limit of five installs. You can install it on unlimited systems where it's only used with the Defender for Identity sensor.
@@ -201,8 +207,6 @@ sections:
                   - If you're using the command line, run: `npcap-1.00-oem.exe /loopback_support=no /winpcap_mode=yes /admin_only=no /S`
 
               1. Start the Defender for Identity sensor services, *AATPSensorUpdater* and *AATPSensor*. Run: `Start-Service -Name AATPSensorUpdater; Start-Service -Name AATPSensor`
-
-
 
   - name: Operation
     questions:
