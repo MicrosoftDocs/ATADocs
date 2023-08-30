@@ -88,22 +88,23 @@ The following table lists installation support across several operating system v
 |**Protocol**   |**Transport**         |**Port**         |**From**       |**To**   |
 |------------|---------|---------|-------|--------------|
 |**Internet ports**          | | | | |
-|**SSL** (\*.atp.azure.com)     |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|
+|**SSL** (\*.atp.azure.com) [<sup>1</sup>](#connectivity)   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|
 |**Internal ports**          | | | | |
 |**DNS**            |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |
 |**Netlogon**  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network|
-|**RADIUS**         |UDP      |1813|RADIUS         |Defender for
-Identity sensor      |
-|**Localhost ports** [<sup>1</sup>](#localhost) <br><br>Required for the sensor service updater      ||    |  |         |
-|**SSL** (localhost)|TCP      |444 |Sensor service|Sensor updater service            |
-|**NNR ports** [<sup>2</sup>](#nnr)       | | | | |
+|**RADIUS**         |UDP      |1813|RADIUS         |Defender for Identity sensor      |
+|**Localhost ports** [<sup>2</sup>](#localhost) <br><br>Required for the sensor service updater      ||    |  |         |
+|**SSL** [<sup>2</sup>](localhost)|TCP      |444 |Sensor service|Sensor updater service            |
+|**NNR ports** [<sup>3</sup>](#nnr)      | | | | |
 |**NTLM over RPC**  |TCP      |Port 135         |Defender for Identity sensor|All devices on network|
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
 |**RDP**            |TCP      |3389, only the first packet of Client hello|Defender for Identity sensor|All devices on network|
 
-<a name=localhost></a><sup>1</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it. 
+<a name=connectivity></a><sup>1</sup> Connectivity from the sensor to the Defender for Identity cloud services is required either directly on port 443, or through a proxy. For more information, see [Configuring a proxy for Defender for Identity](configure-proxy.md).
 
-<a name=nnr></a><sup>2</sup> While only one of the listed ports is required, we recommend opening all of them.
+<a name=localhost></a><sup>2</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
+
+<a name=nnr></a><sup>3</sup> One of these ports is required, but we recommend opening all of them.   
 
 ### Dynamic memory requirements
 
