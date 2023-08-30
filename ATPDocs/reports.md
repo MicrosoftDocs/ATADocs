@@ -12,7 +12,7 @@ Microsoft 365 Defender provides Defender for Identity reports, which you can eit
 
 ## Access Defender for Identity reports in Microsoft 365 Defender
 
-To access Defender for Identity reports in Microsoft 365 Defender, from the navigation menu on the left, under **Identities**, select **Reports**.
+To access Defender for Identity reports in Microsoft 365 Defender, from the navigation menu on the left, select **Reports** > **Identities** > **Report management**.
 
 Available reports include:
 
@@ -27,7 +27,7 @@ Available reports include:
 
 To generate a report on demand:
 
-1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
+1. In Microsoft 365 Defender, select **Reports** > **Identities** > **Report management**.
 
 1. Select a report and then select **Download**.
 
@@ -40,7 +40,7 @@ Your report is downloaded by your browser, where you can open or save it.
 
 To define a schedule for a report to be sent to you by email:
 
-1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
+1. In Microsoft 365 Defender, select **Reports** > **Identities** > **Report management**.
 
 1. Select a report and then select **Schedule report**.
 
