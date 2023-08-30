@@ -444,7 +444,7 @@ The following errors will appear in the **System log** in **Event viewer**:
 
 - The Open procedure for service ".NETFramework" in DLL "C:\Windows\system32\mscoree.dll" failed with error code Access is denied. Performance data for this service will not be available.
 - The Open procedure for service "Lsa" in DLL "C:\Windows\System32\Secur32.dll" failed with error code Access is denied. Performance data for this service will not be available.
-- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code The device is not ready. Performance data for this service will not be available.
+- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code "The device is not ready". Performance data for this service will not be available.
 
 The Microsoft.TriSensorError.log will contain an error similar to this:
 
@@ -454,7 +454,7 @@ at new Microsoft.Tri.Sensor.DirectoryServicesClient(IConfigurationManager`
 
 **Cause:**
 
-NT Service\All Services do not have the right to logon as a service.
+NT Service\All Services do not have the right to log on as a service.
 
 **Resolution:**
 
