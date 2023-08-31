@@ -135,9 +135,9 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is using WinPcap drivers instead of Npcap drivers.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Low|Sensors health issues tab|
-|The Defender for Identity sensor is running an Npcap version older than the minimum required version.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Upgrade Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Medium|Sensors health issues tab|
-|The Defender for Identity sensor is running an Npcap component that isn't configured as required.|We recommend all customers use the Npcap driver instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM instead of the WinPcap 4.1.3 drivers.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors health issues tab|
+|The Defender for Identity sensor is using WinPcap drivers instead of Npcap drivers.|All customers should be using Npcap drivers instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Low|Sensors health issues tab|
+|The Defender for Identity sensor is running an Npcap version older than the minimum required version.|The minimum Npcap version supported is 1.0. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Upgrade Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Medium|Sensors health issues tab|
+|The Defender for Identity sensor is running an Npcap component that is not configured as required.|The Npcap installation is missing the required configuration options.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors health issues tab|
 
 ### NTLM Auditing is not enabled
 
