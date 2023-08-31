@@ -27,6 +27,16 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## September 2023
+
+### Go hunt button for groups in Microsoft 365 Defender
+
+Defender for Identity has added the **Go hunt** button for groups in Microsoft 365 Defender. Select **Go hunt** from any group details pane during an investigation to run an advanced hunting query for any relevant information.
+
+<!--For example: TBD-->
+
+For more information, see [Quickly hunt for entity or event information with go hunt](/microsoft-365/security/defender/advanced-hunting-go-hunt).
+
 ## August 2023
 
 ### Defender for Identity release 2.213
