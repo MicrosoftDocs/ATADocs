@@ -29,11 +29,12 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2023
 
-### Defender for Identity reports moved to the main navigation
+### Defender for Identity reports moved to the main Reports area
 
 Now you can access Defender for Identity reports in Microsoft 365 Defender from the main navigation bar instead of the **Settings** area. For example:
 
-<!--image TBD-->
+:::image type="content" source="media/whats-new/reports-main-area.png" alt-text="Screenshot of the Defender for Identity report access from the main Reports area.":::
+
 For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
 
 ## August 2023

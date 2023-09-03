@@ -12,7 +12,7 @@ Microsoft 365 Defender provides Defender for Identity reports, which you can eit
 
 ## Access Defender for Identity reports in Microsoft 365 Defender
 
-To access Defender for Identity reports in Microsoft 365 Defender, from the navigation menu on the left, under **Identities**, select **Reports**.
+To access Defender for Identity reports in Microsoft 365 Defender, from the navigation menu on the left, select **Reports** > **Identities** > **Reports management**.
 
 Available reports include:
 
@@ -27,9 +27,9 @@ Available reports include:
 
 To generate a report on demand:
 
-1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
+1. In Microsoft 365 Defender, select **Reports** > **Identities** > **Reports management**.
 
-1. Select a report and then select **Download**.
+1. On the **Identities reports** page, select a report and then select **Download**.
 
 1. In the download report pane that appears on the right, define a time period for your report and then select **Download Report**.
 
@@ -40,9 +40,9 @@ Your report is downloaded by your browser, where you can open or save it.
 
 To define a schedule for a report to be sent to you by email:
 
-1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
+1. In Microsoft 365 Defender, select **Reports** > **Identities** > **Reports management**.
 
-1. Select a report and then select **Schedule report**.
+1. On the **Identities reports** page, select a report and then select **Schedule report**.
 
 1. Use the wizard to define the following details:
 
@@ -61,9 +61,9 @@ Once the scheduling is configured, repeat this procedure to edit the scheduled t
 To remove a scheduled report and stop it from being sent:
 
 
-1. In Microsoft 365 Defender, under **Identities**, select **Reports**.
+1. In Microsoft 365 Defender, select **Reports** > **Identities** > **Reports management**.
 
-1. Select the report you want to stop sending and then select **Reset schedule**.
+1. On the **Identities reports** page, select the report you want to stop sending and then select **Reset schedule**.
 
 1. In the confirmation message, select **Reset** to complete the process.
 
