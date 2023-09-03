@@ -31,7 +31,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Defender for Identity reports moved to the main Reports area
 
-Now you can access Defender for Identity reports in Microsoft 365 Defender from the main navigation bar instead of the **Settings** area. For example:
+Now you can access Defender for Identity reports from Microsoft 365 Defender's main **Reports** area instead of the **Settings** area. For example:
 
 :::image type="content" source="media/whats-new/reports-main-area.png" alt-text="Screenshot of the Defender for Identity report access from the main Reports area.":::
 
