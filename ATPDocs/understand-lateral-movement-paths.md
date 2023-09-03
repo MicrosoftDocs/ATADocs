@@ -1,17 +1,16 @@
 ---
-title: Lateral Movement Paths in Microsoft Defender for Identity
+title: Lateral movement paths in Microsoft Defender for Identity
 description: This article describes the potential Lateral Movement Paths (LMPs) of Microsoft Defender for Identity
 ms.date: 09/03/2023
 ms.topic: conceptual
 #CustomerIntent: As a Defender for Identity customers, I want to understand how to investigate LMPs so that I can identify suspicious access to sensitive accounts.
 ---
 
-# What are Lateral Movement Paths (LMPs) in Microsoft Defender for Identity?
+# What are lateral movement paths (LMPs) in Microsoft Defender for Identity?
 
 Lateral movement is when an attacker uses non-sensitive accounts to gain access to sensitive accounts throughout your network, which may store sign-in credentials in accounts, groups, or machines. Once an attacker makes successful lateral moves towards your key targets, the attacker can also take advantage and gain access to your domain controllers.
 
-
-A key component of Microsoft Defender for Identity's security insights are Lateral Movement Paths or LMPs. Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. The purpose of lateral movements within the cyber-attack kill chain are for attackers to gain and compromise your sensitive accounts using non-sensitive accounts. Compromising your sensitive accounts gets them another step closer to their ultimate goal, domain dominance. To stop these attacks from being successful, Defender for Identity LMPs give you easy to interpret, direct visual guidance on your most vulnerable, sensitive accounts. LMPs help you mitigate and prevent those risks in the future, and close attacker access before they achieve domain dominance.
+Microsoft Defender for Identity provides lateral movement paths (LMPs) as part of it's central security insights. Defender for Identity LMPs are visual guides that help you understand and identify exactly how attackers can move laterally inside your network from non-sensitive to sensitive accounts. Use LMPs to mitigate and prevent lateral movement risks, and close attacker access before they can compromise your security.
 
 For example:
 
