@@ -1,4 +1,4 @@
-items:
+uaitems:
 - name: Microsoft Defender for Identity Documentation
   href: index.yml
 - name: Overview
@@ -66,7 +66,7 @@ items:
       - name: Configure Windows Event Forwarding
         href: configure-event-forwarding.md
   expanded: true
-- name: Tutorials
+- name: Evaluate
   items:
   - name: Attack simulations
     href: playbooks.md
