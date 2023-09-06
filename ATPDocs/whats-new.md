@@ -27,6 +27,19 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## September 2023
+
+### Performance enhancements
+
+Defender for Identity has made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft 365 Defender.
+
+Customers should expect no delays in Defender for Identity alerts and activities appearing in Microsoft 365 Defender. 
+
+For more information, see:
+
+- [Security alerts in Microsoft Defender for Identity](alerts-overview.md)
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
+
 ## August 2023
 
 ### Defender for Identity release 2.213
