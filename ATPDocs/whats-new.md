@@ -31,7 +31,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Go hunt button for groups in Microsoft 365 Defender
 
-Defender for Identity has added the **Go hunt** button for groups in Microsoft 365 Defender. Users can use the **Go hunt** button ot query for group-related activities and alerts during an investigation.
+Defender for Identity has added the **Go hunt** button for groups in Microsoft 365 Defender. Users can use the **Go hunt** button to query for group-related activities and alerts during an investigation.
 
 For example:
 
