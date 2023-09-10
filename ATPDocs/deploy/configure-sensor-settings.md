@@ -103,13 +103,13 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
 1. If the service doesn't start, review the **Microsoft.Tri.sensor-Errors.log** file, located by default at `%programfiles%\Azure Advanced Threat Protection sensor\<sensor version>\Logs`, where `<sensor version>` is the version you deployed.
 
-### Validate connectivity
+### Verify security alert functionality
 
-Verify Defender for Identity connectivity on any domain device using the following steps.
+This section describes how you can verify that security alerts are being triggered as expected.
 
 When using the examples in the following steps, make sure to replace `contosodc.contoso.azure` and `contoso.azure` with the FQDN of your Defender for Identity sensor and domain name respectively.
 
-1. Open a command prompt and enter `nslookup`
+1. On a member joined device, open a command prompt and enter `nslookup`
 
 1. Enter `server` and the FQDN or IP address of the domain controller where the Defender for Identity sensor is installed. For example:  `server contosodc.contoso.azure`
 
@@ -117,12 +117,17 @@ When using the examples in the following steps, make sure to replace `contosodc.
    
 1. Repeat the previous two steps for each sensor you want to test.
 
-1. From the Defender for Identity console, open the entity profile for the computer you ran the connectivity test from.
+1. From the Microsoft 365 Defender **Devices** page, open the details page for the computer you ran the connectivity test from. Select the **Timeline** tab to view the following activity:
+
+    - **Events**: DNS queries performed to a specified domain name
+    - **Action type** MdiDnsQuery
 
 <!--1. In Microsoft 365 Defender, search for the name of the user you used to run the commands in the previous steps. Select the name in the results, and view the user details page and all related activities and alerts.-->
 
 If the domain controller that you're testing is the first sensor you've deployed, wait at least 15 minutes before verifying any logical activity for that domain controller, allowing the database backend to complete the initial microservice deployments.
 
+For more information, see 
+[Attack simulations for Microsoft Defender for Identity](../playbooks.md).
 
 ## Next step
 

@@ -7,6 +7,7 @@ ms.topic: how-to
 
 # Microsoft Defender for Identity on Active Directory Federation Services (AD FS)
 
+<!--ad cs-->
 Defender for Identity protects the Active Directory Federation Services (AD FS) in your environment by detecting on-premises attacks against AD FS servers.
 
 This article describes the additional prerequisites and post-installation steps required when installing Defender for Identity sensors on AD FS servers.
@@ -52,7 +53,7 @@ For more information see [Configure endpoint proxy and Internet connectivity set
 
 ## Verbose logging for AD FS Windows event logs
 
-Sensors running on AD FS servers must have the auditing level set to **Verbose**, tracking the following events:
+Sensors running on AD FS servers must have the auditing level set to **Verbose**, tracking the following events: <!--what about ad cs?-->
 
 - 1202 - The Federation Service validated a new credential
 - 1203 - The Federation Service failed to validate a new credential

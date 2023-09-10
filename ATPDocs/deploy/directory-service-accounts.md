@@ -103,12 +103,6 @@ Then the following table lists the sensors and the DSA entry that's used first:
 | `DC03.emea.contoso.com`   | `DSA2.emea.contoso.com`            |
 | `DC04.contoso.com`        | Round robin                      |
 
->[!NOTE]
->
-> - In a multi-domain forest, we recommend that you create the DSA account in the domain with the largest number of domain controllers.
->
-> - In multi-forest, multi-domain environment, consider creating a DSA entry for each domain in the environment to avoid failed authentications from being recorded due to the round robin method.
-
 >[!IMPORTANT]
 >If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health issue is generated. For more information, see [Defender for Identity health issues](../health-alerts.md).
 
@@ -127,7 +121,7 @@ When using a gMSA entry, the sensor needs to retrieve the gMSA's password from A
 
 - **In a single-forest, single-domain deployment**, if you aren't planning to install the sensor on any AD FS servers, you can use the built-in Domain Controllers security group.
 
-- **In a forest with multiple domains**, when using a single DSA account, we recommend creating a universal group and adding each of the domain controllers and AD FS servers to the universal group.
+- **In a forest with multiple domains**, when using a single DSA account, we recommend creating a universal group and adding each of the domain controllers and AD FS / AD CS servers to the universal group.
  
 If you add a computer account to the universal group after the computer received its Kerberos ticket, it won't be able to retrieve the gMSA's password until it receives a new Kerberos ticket. The Kerberos ticket has a list of groups that an entity is a member of when the ticket is issued.
 
@@ -151,7 +145,7 @@ Run the following PowerShell commands as an administrator:
 # Set the variables: 
 $gMSA_AccountName = 'mdiSvc01' 
 $gMSA_HostsGroupName = 'mdiSvc01Group' 
-$gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2' 
+$gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2', 'ADCS2',
 # Import the required PowerShell module: 
 Import-Module ActiveDirectory 
 # Create the group and add the members 

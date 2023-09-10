@@ -23,7 +23,7 @@ Defender for Identity requires the following to support multiple Active Director
 
 - **A Directory Service account**: The Directory Service account you configure for each forest must:
 
-  - Be trusted in all the other forests
+  - When there is a trust between the forests, the Directory Service account must be trusted in all the other forests
   - Have at least read-only permission to perform LDAP queries on the domain controllers.
 
   If Defender for Identity standalone sensors are installed on standalone machines, rather than directly on the domain controllers, the machines must be allowed to communicate with all of remote forest domain controllers using LDAP.
@@ -74,9 +74,11 @@ When Defender for Identity maps your forests, it uses the following process:
 
 You may see ad-hoc traffic when the Defender for Identity sensor detects cross forest activity. When this occurs, the Defender for Identity sensors will send an LDAP query to the relevant domain controllers to retrieve entity information.
 
+<!--
 > [!NOTE]
 > Interactive sign-ins performed by users in one forest to access resources in another forest aren't displayed in the Defender for Identity dashboard.
 >
+-->
 
 ## Next step
 

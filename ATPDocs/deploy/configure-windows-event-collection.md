@@ -46,9 +46,11 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | **Account Management** | Audit Distribution Group Management | 4753, 4763 |
         | **Account Management** | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | Audit User Account Management | 4726 |
-        | **DS Access** | Audit Directory Service Access | 4662 - For this event, it's also necessary to [configure object auditing](#configure-object-auditing-for-event-id-4662).  |
         | **DS Access** | Audit Directory Service Changes | 5136  |
         | **System** | Audit Security System Extension | 7045 |
+
+        <!--
+        | **DS Access** | Audit Directory Service Access | 4662 - For this event, it's also necessary to [configure object auditing](#configure-object-auditing-for-event-id-4662).  | -->
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events:
 
@@ -81,6 +83,7 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 ![Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration.](../media/advanced-audit-policy-check-step-3.png)
 
+<!-->
 ## Configure auditing for extra LDAP queries
 
 Microsoft Defender for Identity can monitor extra LDAP queries in your network, which are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable **event 1644** on your domain controllers. 
@@ -101,39 +104,7 @@ Windows Registry Editor Version 5.00
 "Inefficient Search Results Threshold"=dword:00000001 "Search Time Threshold (msecs)"=dword:00000001 
 ```
 
-
-## Configure auditing for AD CS
-
-If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:
-
-1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
-
-    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**, and then configure audit events for **Success and Failure**. For example:
-
-    ![Screenshot of the Group Policy Management Editor](../media/configure-windows-event-collection/group-policy-management-editor.png)
-
-1. Configure auditing on the certificate authority (CA) using one of the following methods:
-
-    - **To configure CA auditing using the command line**, run:
-
-        ```cmd
-        certutil –setreg CA\AuditFilter 127 
-
-        net stop certsvc && net start certsvc
-        ````
-
-    - **To Configure CA auditing using the GUI**:
-
-        1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
-
-            ![Screenshot of the Certification Authority dialog.](../media/configure-windows-event-collection/certification-authority.png)
-
-        1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
-
-
-            ![Screenshot of the Properties Auditing tab.](../media/configure-windows-event-collection/auditing.png)
-
-        For more information, see [Supported Windows events](event-collection-overview.md#supported-windows-events).
+-->
 
 ## Configure object auditing for Event ID 4662
 
@@ -250,6 +221,40 @@ Some detections require auditing specific Active Directory objects. To do so, fo
     ![Screenshot of the auditing settings for the Configuration container.](../media/audit-configuration.png)
 
 1. Select **OK**.
+## Configure auditing for AD CS
+
+If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:
+
+1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
+
+    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**, and then configure audit events for **Success and Failure**. For example:
+
+    ![Screenshot of the Group Policy Management Editor](../media/configure-windows-event-collection/group-policy-management-editor.png)
+
+1. Configure auditing on the certificate authority (CA) using one of the following methods:
+
+    - **To configure CA auditing using the command line**, run:
+
+        ```cmd
+        certutil –setreg CA\AuditFilter 127 
+
+        net stop certsvc && net start certsvc
+        ````
+
+    - **To Configure CA auditing using the GUI**:
+
+        1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
+
+            ![Screenshot of the Certification Authority dialog.](../media/configure-windows-event-collection/certification-authority.png)
+
+        1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
+
+
+            ![Screenshot of the Properties Auditing tab.](../media/configure-windows-event-collection/auditing.png)
+
+        For more information, see [Supported Windows events](event-collection-overview.md#supported-windows-events).
+
+
 
 ## Next step
 

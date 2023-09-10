@@ -274,7 +274,7 @@ Adversaries may create authentication bypass vulnerability results from having t
 
 **Prerequisites**:
 
-Defender for Identity needs Windows Event 4662 to be enabled and collected to monitor for this attack. For information on how to configure and collect this event, see [Configure Windows Event collection](deploy/configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](deploy/configure-windows-event-collection.md#enable-auditing-on-an-exchange-object).
+Defender for Identity needs Windows Event 4662 to be enabled and collected to monitor for this attack. For information on how to configure and collect this event, see [Configure Windows Event collection](deploy/configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](deploy/configure-windows-event-collection.md#enable-auditing-on-an-exchange-object). <!--remove this one if we're removing 4662-->
 
 **Learning period**:
 

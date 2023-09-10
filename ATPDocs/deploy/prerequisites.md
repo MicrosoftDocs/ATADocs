@@ -38,14 +38,15 @@ For more information, see [Microsoft Defender for Identity role groups](role-gro
 
 ## Connectivity requirements
 
-The Defender for Identity sensor must be able to communicate with the Defender for Identity cloud service, using one of the following options:
+The Defender for Identity sensor must be able to communicate with the Defender for Identity cloud service, using one of the following methods:
 
-- **Set up a proxy**. If you choose this option, you'll configure your proxy later in the deployment process. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+|Method  |Description  |Considerations |Learn more |
+|---------|---------|---------|---------|
+|**Set up a proxy**     | Customers who have a forward proxy deployed can take advantage of the proxy to provide connectivity to the MDI cloud service.  <br><br> If you choose this option, you'll configure your proxy later in the deployment process.       |  Allows access to the internet for a single URL  <br><br>SSL inspection isn't supported      |    [Configure endpoint proxy and internet connectivity settings](configure-proxy.md)    |
+|**ExpressRoute**     | ExpressRoute can be configured to forward MDI sensor traffic over customer’s express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute.       |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
+|**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don’t have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
 
-- **ExpressRoute**. <!--TBD-->
-
-- **Firewall, using the Defender for Identity Azure IP addresses**. If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag add the relevant IP addresses. For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
-
+For more information, see [Microsoft Defender for Identity architecture](../architecture.md) and [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
 <!-->
 ## Required network adapters
@@ -119,6 +120,9 @@ The following table describes memory requirements on the server used for the Def
 
 > [!IMPORTANT]
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
+
+## Time synchronization
+The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 
 ## Next step
 

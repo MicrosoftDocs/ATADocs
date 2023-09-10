@@ -13,7 +13,7 @@ Watch the following video for a step-by-step demo. Learn about:
 
 - The importance of installing Defender for Identity sensors to protect your organization against identity-based attacks
 - Downloading and installing the sensor
-- Finding potential health issues
+- Finding potential sensor and configuration health issues
 - Viewing identity-related posture assessments in Microsoft Secure Score
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW16oLB]
@@ -40,7 +40,7 @@ Acquire licenses directly via the [Microsoft 365 portal](https://www.microsoft.c
 
 ### Required permissions
 
-- To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. <!--unclear how this connects to Permissions-->
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
@@ -85,7 +85,7 @@ When installing your sensors, consider scheduling a maintenance window for your 
 This procedure describes how to install the Defender for Identity sensor on a Windows server version 2012 or higher. Make sure that your server has the [minium system requirements](#minimum-system-requirements).
 
 > [!NOTE]
-> Defender for Identity sensors can be installed on read-only domain controllers (RODC). If you're installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node.
+> Defender for Identity sensors should be installed on read-only domain controllers (RODC). If you're installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node. <!--what about ad cs?-->
 >
 
 **To download and install the sensor**:

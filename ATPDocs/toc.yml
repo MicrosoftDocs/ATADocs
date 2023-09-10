@@ -48,7 +48,7 @@ items:
     items:
     - name: Install on Active Directory Federation Services
       href: deploy/active-directory-federation-services.md
-    - name: Deploy for multiple forests
+    - name: Deploy for multiple Active Directory forests
       href: deploy/multi-forest.md
     - name: Configure a Directory Service account
       href: deploy/directory-service-accounts.md

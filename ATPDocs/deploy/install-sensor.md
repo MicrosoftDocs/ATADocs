@@ -20,7 +20,7 @@ Before you start, make sure that you have:
 
 - Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the Defender for Identity sensor setup package installs it, which may require a reboot of the server.
 
-- Relevant server specifications and network requirements, if you're installing the sensor on an Active Directory Federation Service (AD FS) server. For more information, see [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md).
+- Relevant server specifications and network requirements, if you're installing the sensor on an Active Directory Federation Service (AD FS) server. For more information, see [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md). <!--missing ad cs-->
 
 ## Install the sensor
 
@@ -36,9 +36,9 @@ Perform the following steps on the domain controller or AD FS server.
 
     ![Screenshot of the Defender for Identity standalone sensor installation language selection.](../media/sensor-install-language.png)
 
-    The installation wizard automatically checks if the server is a domain controller/ AD FS server or a dedicated server.
+    The installation wizard automatically checks if the server is a domain controller, AD FS server, AC CS server, or a dedicated server.
 
-    - If it's a domain controller / AD FS server, the Defender for Identity sensor is installed.
+    - If it's a domain controller / AD FS server / AD CS server, the Defender for Identity sensor is installed.
     - If it's a dedicated server, the Defender for Identity standalone sensor is installed.
 
     For example, for a Defender for Identity sensor, the following screen is displayed to let you know that a Defender for Identity sensor is installed on your dedicated server:
@@ -47,7 +47,7 @@ Perform the following steps on the domain controller or AD FS server.
 
 1. Select **Next**.
 
-    A warning is issued if the domain controller / AD FS server or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from selecting **Next**, and proceeding with the installation. It can still be the right option for the installation of Defender for Identity in a small lab test environment where less room for data storage is required. 
+    A warning is issued if the domain controller / AD FS server / AD CS or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from selecting **Next**, and proceeding with the installation. It can still be the right option for the installation of Defender for Identity in a small lab test environment where less room for data storage is required. 
 
     For production environments, we highly recommend working with Defender for Identity's [capacity planning](capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
@@ -148,12 +148,14 @@ Use the following commands to silently install the Defender for Identity sensor:
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKeyFile="C:\Path\myAccessKeyFile.txt"
 ```
 
-## Installing on AD FS servers
+## Installing on AD FS servers 
+
+<!--do we need separate information for ad cs servers?-->
 
 If you installed the sensor on AD FS servers, follow the steps in [Post-installation steps for AD FS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-servers) to complete the setup.
 
-These steps are required, or the sensor services will not start.
-
+<!--unclear
+But we can add a note about changing the selected domain controller that the sensor is working with. -->
 ## Next step
 
 > [!div class="step-by-step"]

@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Plan capacity for Microsoft Defender for Identity deployment
 
+<!--as per Gershon, missing dedicated info for AD CS-->
+
 This article describes how to determine what resources you need for your Microsoft Defender for Identity sensors.
 
 By default, Defender for Identity supports up to 350 sensors. To install more sensors, contact Defender for Identity support.
@@ -44,7 +46,7 @@ This procedure describes how to use the Defender for Identity Sizing Tool, which
 
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
 
-1. Match your **Busy Packets/sec** field to the **PACKETS PER SECOND** field in the [Defender for Identity sensor table](#sizing) section of this article. Use the fields to determine the memory and CPU that will be used by the sensor.
+1. Match your **Busy Packets/sec** field to the **PACKETS PER SECOND** field in the [Defender for Identity sensor table](#sizing) section of this article. Use the fields to determine the memory and CPU that will be used by the sensor. <!--Not sure why we have this here as the excel Indicates if the sensor is supported or not. I would add a note here if the response is No or Maybe because the busy packets / second are very high to compare the Avg to the - ?-->
 
 > [!NOTE]
 > To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
@@ -55,6 +57,8 @@ This procedure describes how to use the Defender for Identity Sizing Tool, which
 
 A Defender for Identity sensor can support the monitoring of a domain controller based on the amount of network traffic the domain controller generates, such as shown in the following table of estimates.
 
+For more information, see [Resource limitations](../architecture.md#resource-limitations).
+
 **This table is an estimate. The final amount that the sensor parses is dependent on the amount of traffic and the distribution of traffic.**
 
 |Packets per second|CPU (physical cores)|RAM (GB)|
@@ -64,9 +68,12 @@ A Defender for Identity sensor can support the monitoring of a domain controller
 |5k-10k|1.00|6.50|
 |10k-20k|2.00|9.00|
 |20k-50k|3.50|9.50|
+|50k-60k |5.50|11.50|
+
+<!-->
 |50k-75k |5.50|11.50|
 |75k-100k|7.50|13.50|
-
+-->
 In this table:
 
 - CPU and RAM capacity refers to the **sensor's own consumption**, not the domain controller capacity.

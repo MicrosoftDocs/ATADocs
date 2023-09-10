@@ -55,7 +55,7 @@ Before starting the migration, gather all of the following information:
 
 - [VPN integration details](../vpn-integration.md)
 
-- Alert exclusions. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions in Defender for Identity](../exclusions.md).
+- Alert exclusions. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](../exclusions.md) in Microsoft 365 Defender.
 
 - Account details for entity tags. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
 
