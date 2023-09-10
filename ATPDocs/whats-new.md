@@ -29,6 +29,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2023
 
+### Defender for Identity release 2.214
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Performance enhancements
 
 Defender for Identity has made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft 365 Defender. Customers should expect no delays in Defender for Identity data appearing in Microsoft 365 Defender, such as alerts or activities for advanced hunting.
