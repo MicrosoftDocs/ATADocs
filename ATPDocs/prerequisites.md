@@ -147,13 +147,6 @@ For more information about the Defender for Identity sensor hardware requirement
 
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 
-### Network adapters
-
-The Defender for Identity sensor monitors the local traffic on all of the domain controller's network adapters.  
-After deployment, use the Microsoft 365 Defender portal to modify which network adapters are monitored.
-
-When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
-
 ### Windows Event logs
 
 Defender for Identity detection relies on specific [Windows Event logs](configure-windows-event-collection.md#configure-event-collection) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information about setting the correct policies, see, [Advanced audit policy check](configure-windows-event-collection.md). To [make sure Windows Event 8004 is audited](configure-windows-event-collection.md#configure-audit-policies) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
