@@ -47,6 +47,7 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 - **Firewall, using the Defender for Identity Azure IP addresses**. If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag add the relevant IP addresses. For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 
 
+<!-->
 ## Required network adapters
 
 The Defender for Identity sensor monitors local traffic on all of the domain controller's network adapters. After deployment, you'll use the Microsoft 365 Defender portal to modify which network adapters are monitored.
@@ -104,7 +105,7 @@ The following table lists installation support across several operating system v
 
 <a name=localhost></a><sup>2</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
 
-<a name=nnr></a><sup>3</sup> One of these ports is required, but we recommend opening all of them.   
+<a name=nnr></a><sup>3</sup> One of these ports is required, but we recommend opening all of them.
 
 ### Dynamic memory requirements
 
