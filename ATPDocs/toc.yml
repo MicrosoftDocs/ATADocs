@@ -68,7 +68,7 @@ items:
           href: deploy/configure-event-collection.md
         - name: Configure Windows Event Forwarding
           href: deploy/configure-event-forwarding.md
-- name: Tutorials
+- name: Evaluate
   items:
   - name: Attack simulations
     href: playbooks.md

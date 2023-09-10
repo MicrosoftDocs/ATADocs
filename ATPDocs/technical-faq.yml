@@ -155,7 +155,7 @@ sections:
         answer: Npcap is supported, while WinPcap is no longer a supported product.  
 
       - question: What version of Npcap is supported? 
-        answer: The recommended and officially supported version of Npcap is version 1.0. You can install a newer version of Npcap, but note that for troubleshooting, support asks you to downgrade the Npcap version to validate that the issue isn't related to the newer version installed.
+        answer: The MDI Sensor requires Npcap 1.0 or later. The Sensor installation package will install version 1.0 if no other version of Npcap is installed. If you have Npcap already installed it is important to ensure it has been installed with the [required settings for MDI](#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
       - question: Do I need to manually remove and reinstall the Sensor, or will the automatic update service handle this as part of its normal updating?
         answer: Yes. It is required to manually remove the Sensor to remove the WinPcap drivers. The reinstallation using the latest package will install the Npcap drivers.
