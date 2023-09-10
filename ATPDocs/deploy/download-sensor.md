@@ -25,7 +25,7 @@ This article describes how to download the Microsoft Defender for Identity senso
 
     - The configuration setting file with the required information to connect to the Defender for Identity cloud service
 
-    Make sure that no pop-up blocker is blocking the download. <!-- in the installer is also NPCAP OEM version 1.0 Correct. But we could remove it as it is bundled within the setup package. Do you know if we still have customers using it separately?-->
+    - [Npcap OEM version 1.0](https://npcap.com/), which is automatically installed by the sensor installation if it's not found to be already installed
 
 1. In the **Add a new sensor** pane, copy the **Access key** value and save it to a secured location. This access key is a one-time password for use when deploying the sensor, after which communication is performed using certificates for authentication and TLS encryption.
 
