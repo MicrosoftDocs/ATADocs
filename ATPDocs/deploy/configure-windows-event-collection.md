@@ -106,6 +106,7 @@ Windows Registry Editor Version 5.00
 
 -->
 
+<!-->
 ## Configure object auditing for Event ID 4662
 
 To collect 4662 events, you must also configure object auditing on the user, group and computer objects. This procedure describes how to enable auditing on all users, groups, and computers in the Active Directory domain.
@@ -221,6 +222,8 @@ Some detections require auditing specific Active Directory objects. To do so, fo
     ![Screenshot of the auditing settings for the Configuration container.](../media/audit-configuration.png)
 
 1. Select **OK**.
+
+-->
 ## Configure auditing for AD CS
 
 If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:
