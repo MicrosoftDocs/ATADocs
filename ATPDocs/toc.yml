@@ -74,6 +74,8 @@ items:
     href: playbooks.md
 - name: Manage
   items:
+  - name: Defender for Identity reports
+    href: reports.md
   - name: Settings
     items:
     - name: About page
@@ -94,8 +96,6 @@ items:
       href: automated-response-exclusions.md
     - name: Email and syslog notifications
       href: notifications.md
-    - name: Download and schedule reports
-      href: reports.md
     - name: Advanced settings
       href: advanced-settings.md
   - name: Troubleshooting
