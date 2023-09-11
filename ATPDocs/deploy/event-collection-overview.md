@@ -75,7 +75,7 @@ The following Windows events are supported for the Defender for Identity sensor 
 - **For other events**: <!--Which of these events are just for ADDS (domain controllers) and which also apply to ADFS and ADCS. -->
 
     - 1644 - LDAP search
-    - 4662 - An operation was performed on an object
+    <!--- 4662 - An operation was performed on an object-->
     - 4726 - User Account Deleted
     - 4728 - Member Added to Global Security Group
     - 4729 - Member Removed from Global Security Group

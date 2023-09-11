@@ -75,9 +75,9 @@ The following table lists installation support across several operating system v
 | ------------------------ | ----------------------------- | ------------ | -------------- | ----------------------- |
 | Windows Server  2012 [<sup>1</sup>](#eos) [<sup>2</sup></sup>](#mpg)        | ✔     | ✔    | Not  applicable    | Domain  controller       |
 | Windows Server  2012 R2 [<sup>1</sup>](#eos)     | ✔   | ✔       | Not  applicable      | Domain  controller  |
-| Windows Server  2016         | ✔         | ✔          | Not supported    | Domain controller,  AD FS        |
-| Windows Server  2019 [<sup>3</sup>](#kb)       | ✔          | ✔     | Not supported    | Domain controller,  AD FS        |
-| Windows Server  2022         | ✔       | ✔       | Not supported     | Domain controller,  AD FS        |
+| Windows Server  2016         | ✔         | ✔          | Not supported    | Domain controller,  AD FS, AD CS        |
+| Windows Server  2019 [<sup>3</sup>](#kb)       | ✔          | ✔     | Not supported    | Domain controller,  AD FS, AD CS        |
+| Windows Server  2022         | ✔       | ✔       | Not supported     | Domain controller,  AD FS, AD CS        |
 
 <a name="eos"></a><sup>1</sup> Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on **October 10, 2023**. We recommend that you plan to upgrade those servers by that point, as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
 

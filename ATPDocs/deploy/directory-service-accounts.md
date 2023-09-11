@@ -13,13 +13,11 @@ Defender for Identity's sensor uses a DSA to do the following:
 
 - Connect to the domain controller at startup using the configured DSA option
 - Query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities
+- Request member lists for local administrator groups from devices seen in network traffic, events and ETQ activities via a [SAM-R call](remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
 
 One sensor in each domain is defined as the *domain synchronizer*, and is responsible for tracking changes to the entities in the domain, like objects created, entity attributes tracked by Defender for Identity and so on.
 
 If a sensor detects activities in other domains, it queries the other domain via LDAP for more details.
-
-Defender for Identity requests the member list for the local administrator group from devices seen in network traffic, events, and ETQ activities via an [SAM-R call](remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
-
 
 >[!NOTE]
 >By default, Defender for Identity supports up to 30 credentials. To add more credentials, contact Defender for Identity support.
@@ -145,7 +143,7 @@ Run the following PowerShell commands as an administrator:
 # Set the variables: 
 $gMSA_AccountName = 'mdiSvc01' 
 $gMSA_HostsGroupName = 'mdiSvc01Group' 
-$gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2', 'ADCS2',
+$gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2', 'ADCS1',
 # Import the required PowerShell module: 
 Import-Module ActiveDirectory 
 # Create the group and add the members 

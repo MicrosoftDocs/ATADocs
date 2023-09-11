@@ -11,7 +11,7 @@ Each Microsoft Defender for Identity sensor requires internet connectivity to th
 
 In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
 
-Use the command line, Microsoft Windows Internet (WinINet), or the registry to configure your proxy server.  
+Use the sensor installer command line switches, Microsoft Windows Internet (WinINet), or the registry to configure your proxy server.  
 
 > [!IMPORTANT]
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
@@ -27,7 +27,7 @@ Also, consider which of the following methods you want to use to configure your 
 |**Command line**    | Recommended, and ensures that only the Defender for Identity sensor services communicate through the proxy.        |
 |**WinINet or the registry**     |  Other services running in the context as Local System or Local Service also direct traffic through the proxy.       |
 
-
+<!--can we get rid of wininet / registry? now we have this built into the installer-->
 ## Configure a proxy server using the command line
 
 Configure your proxy server during sensor installation using the following command-line switches:
