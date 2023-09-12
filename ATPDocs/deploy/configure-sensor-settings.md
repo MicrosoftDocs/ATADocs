@@ -64,7 +64,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
    - **Description** (optional): Enter a description for the Defender for Identity sensor.
 
-   - **Domain Controllers (FQDN)**: This is required for the Defender for Identity standalone and AD FS sensors, and cannot be modified for the Defender for Identity sensor.
+   - **Domain Controllers (FQDN)**: This is required for the Defender for Identity [standalone sensors](prerequisites-standalone.md) and [sensors installed on AD FS / AD CS servers](active-directory-federation-services.md), and cannot be modified for the Defender for Identity sensor.
    
       Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**.
 
@@ -88,7 +88,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 Use the following procedures to validate your Defender for Identity sensor installation. 
 
 > [!NOTE]
-> If you're installing on an AD FS server, you'll use a different set of validations. For more information, see [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md).
+> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md).
 >
 
 ### Verify latest available sensor version

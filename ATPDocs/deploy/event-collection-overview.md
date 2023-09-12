@@ -45,8 +45,11 @@ Defender for Identity detection relies on specific Windows Event logs that the s
 To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings. 
 
 > [!TIP]
-> For sensors running on AD FS servers, configure the auditing level to **Verbose**. For more information, see [Enable auditing on an ADFS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object). <!--what about AD CS?-->
-> 
+> For sensors running on AD FS or AD CS servers, configure the auditing level to **Verbose**. For more information, see:
+>
+> - [Enable auditing on an ADFS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object).
+> - [Configure auditing for AD CS](configure-windows-event-collection.md#configure-auditing-for-ad-cs)
+>
 ## Supported Windows events
 
 The following Windows events are supported for the Defender for Identity sensor to collect and enhance your system's detection abilities:

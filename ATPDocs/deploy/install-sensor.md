@@ -20,11 +20,11 @@ Before you start, make sure that you have:
 
 - Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the Defender for Identity sensor setup package installs it, which may require a reboot of the server.
 
-- Relevant server specifications and network requirements, if you're installing the sensor on an Active Directory Federation Service (AD FS) server. For more information, see [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md). <!--missing ad cs-->
+- Relevant server specifications and network requirements, if you're installing the sensor on an Active Directory Federation Service (AD FS) or Active Directory Certificate Services (AD CS) server. For more information, see [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md).
 
 ## Install the sensor
 
-Perform the following steps on the domain controller or AD FS server.
+Perform the following steps on the domain controller or AD FS/AD CS server.
 
 1. Verify the machine has connectivity to the relevant [Defender for Identity cloud service endpoint(s)](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
@@ -148,11 +148,11 @@ Use the following commands to silently install the Defender for Identity sensor:
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKeyFile="C:\Path\myAccessKeyFile.txt"
 ```
 
-## Installing on AD FS servers 
+## Installing on AD FS / AD CS servers 
 
 <!--do we need separate information for ad cs servers?-->
 
-If you installed the sensor on AD FS servers, follow the steps in [Post-installation steps for AD FS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-servers) to complete the setup.
+If you installed the sensor on AD FS / AD CS servers, follow the steps in [Post-installation steps for AD FS/ AD CS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-ad-cs-servers) to complete the setup.
 
 <!--unclear
 But we can add a note about changing the selected domain controller that the sensor is working with. -->

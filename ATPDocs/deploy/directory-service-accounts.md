@@ -117,7 +117,7 @@ Before you create the gMSA account, consider how to assign permissions to retrie
 
 When using a gMSA entry, the sensor needs to retrieve the gMSA's password from Active Directory. This can be done either by assigning to each of the sensors or by using a group.
 
-- **In a single-forest, single-domain deployment**, if you aren't planning to install the sensor on any AD FS servers, you can use the built-in Domain Controllers security group.
+- **In a single-forest, single-domain deployment**, if you aren't planning to install the sensor on any AD FS / AD CS servers, you can use the built-in Domain Controllers security group.
 
 - **In a forest with multiple domains**, when using a single DSA account, we recommend creating a universal group and adding each of the domain controllers and AD FS / AD CS servers to the universal group.
  

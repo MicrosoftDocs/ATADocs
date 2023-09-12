@@ -31,7 +31,7 @@ Credential Access consists of techniques for stealing credentials like account n
 
 In a brute-force attack, the attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when Defender for Identity detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
+In this detection, an alert is triggered when Defender for Identity detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS / AD CS servers.
 
 **Learning period**:
 

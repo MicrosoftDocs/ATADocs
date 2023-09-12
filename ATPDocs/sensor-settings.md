@@ -83,7 +83,7 @@ The sensors page provides the following information about each sensor:
 
   * **Update failed**: Sensor failed to update to a new version.
 
-  * **Not Configured**: Sensor requires more configuration before it's fully operational. This applies to sensors installed on AD FS servers or standalone sensors.
+  * **Not Configured**: Sensor requires more configuration before it's fully operational. This applies to sensors installed on AD FS / AD CS servers or standalone sensors.
 
   * **Start failed**: Sensor didn't pull configuration for more than 30 minutes.
 

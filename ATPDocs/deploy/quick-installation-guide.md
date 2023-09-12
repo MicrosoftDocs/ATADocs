@@ -1,6 +1,6 @@
 ---
 title: Quick installation guide | Microsoft Defender for Identity
-description: Learn how to quickly install Microsoft Defender for Identity on Active Directory or Active Directory Federation Services (AD FS) servers.
+description: Learn how to quickly install Microsoft Defender for Identity on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certificate Services (AD CS) servers.
 ms.date: 08/27/2023
 ms.topic: how-to
 ---
@@ -85,7 +85,7 @@ When installing your sensors, consider scheduling a maintenance window for your 
 This procedure describes how to install the Defender for Identity sensor on a Windows server version 2012 or higher. Make sure that your server has the [minium system requirements](#minimum-system-requirements).
 
 > [!NOTE]
-> Defender for Identity sensors should be installed on read-only domain controllers (RODC). If you're installing on an AD FS farm, we recommend installing the sensor on each AD FS server, or at least on the primary node. <!--what about ad cs?-->
+> Defender for Identity sensors should be installed on read-only domain controllers (RODC). If you're installing on an AD FS / AD CS farm, we recommend installing the sensor on each AD FS / AD CS server, or at least on the primary node.
 >
 
 **To download and install the sensor**:

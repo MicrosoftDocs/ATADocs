@@ -260,7 +260,7 @@ The domain controller hasn't been given rights to access the password of the gMS
 
 **Resolution:**
 
-Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
+Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS / AD CS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
 
 You can use the following command to check if a computer account or security group has been added to the parameter. Replace *mdiSvc01* with the name you created.
 
@@ -303,7 +303,7 @@ The sensor service fails to start, and the sensor log contains an entry similar 
 
 **Cause:**
 
-The gMSA configured for this domain controller or AD FS server doesn't have permissions to the performance counter's registry keys.
+The gMSA configured for this domain controller or AD FS / AD CS server doesn't have permissions to the performance counter's registry keys.
 
 **Resolution:**
 

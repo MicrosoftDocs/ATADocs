@@ -35,7 +35,7 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 **NTLM**: Attacker makes NTLM authentication requests using the dictionary of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the **WrongPassword (0xc000006a)** instead of **NoSuchUser (0xc0000064)** NTLM error.
 
-In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
+In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS / AD CS servers.
 
 **Learning period**:
 

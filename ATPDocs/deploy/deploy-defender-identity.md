@@ -74,7 +74,7 @@ You may have extra, or different steps in your deployment if you're working with
 
 |Scenario  |Extra steps  |
 |---------|---------|
-|**Installing your Defender for Identity sensor on AD FS servers**     |   [Installing on Active Directory Federation Services](active-directory-federation-services.md)      |
+|**Installing your Defender for Identity sensor on AD FS or AD CS servers**     |   [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)      |
 |**Installing your Defender for Identity sensor with multiple Active Directory forests**     |  [Multi-forest support](multi-forest.md)       |
 | **Create a Directory Service account (DSA) for use with Defender for Identity** | [Configure a Directory Service account](directory-service-accounts.md) |
 |**Migrate from Advanced Threat Analytics (ATA)**     |   [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)      |

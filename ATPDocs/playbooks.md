@@ -386,7 +386,7 @@ Detail in the alert:
 
 For details about this alert, see [Remote code execution attempt (external ID 2019)](other-alerts.md#remote-code-execution-attempt-external-id-2019).
 
-Defender for Identity detects PSexec, Remote WMI, and PowerShell connections from a client machine to a domain controller. Attackers can execute remote commands on your domain controller or Active Directory Federation Services (AD FS) server to create persistence, collect data or perform a denial of service (DOS).
+Defender for Identity detects PSexec, Remote WMI, and PowerShell connections from a client machine to a domain controller. Attackers can execute remote commands on your domain controller, Active Directory Federation Services (AD FS) server, or Active Directory Certificate Services (AD CS) server to create persistence, collect data or perform a denial of service (DOS).
 
 From a command line on a workstation, run with a domain admin account:  
 
