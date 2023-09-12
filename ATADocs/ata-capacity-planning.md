@@ -125,7 +125,7 @@ While hyper threading is acceptable for the ATA Lightweight Gateway, when planni
 
 > [!NOTE]
 >
-> - If the domain controller doesn't have the resources required by the ATA Lightweight Gateway, domain controller performance isn't effected, but the ATA Lightweight Gateway might not operate as expected.
+> - If the domain controller doesn't have the resources required by the ATA Lightweight Gateway, domain controller performance isn't affected, but the ATA Lightweight Gateway might not operate as expected.
 > - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](ata-prerequisites.md#dynamic-memory)).
 > - For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 > - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
