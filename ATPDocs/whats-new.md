@@ -1,8 +1,9 @@
 ---
-title: What's new 
+title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 09/10/2023
+ms.date: 09/12/2023
 ms.topic: overview
+#CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
 
 # What's new in Microsoft Defender for Identity
@@ -28,6 +29,16 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## September 2023
+
+### Automatic learning period activity for new workspaces
+
+Now, any new Defender for Identity workspace automatically has an alert learning period turned on for 30 days. When 30 days is complete, the learning period is automatically turned off and a health alert is triggered to notify administrators.
+
+Each alert triggered during the learning period is tagged as *POC* to identify it as a learning mode alert.
+
+During the learning period, Defender for Identity learns about your network and builds a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which may be triggered by legitimate activity.
+
+For more information, see [Advanced settings](advanced-settings.md).
 
 ### Defender for Identity reports moved to the main Reports area
 
