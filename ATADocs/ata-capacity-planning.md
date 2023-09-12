@@ -47,7 +47,7 @@ The recommended and simplest way to determine capacity for your ATA deployment i
 > [!NOTE]
 > Because different environments vary and have multiple special and unexpected network traffic characteristics, after you initially deploy ATA and run the sizing tool, you may need to adjust and fine tune your deployment for capacity.
 
-If for some reason you cannot use the ATA Sizing Tool, manually gather the packet/sec counter information from all your Domain Controllers for 24 hours with a low collection interval (approximately 5 seconds). Then, for each Domain Controller,  calculate the daily average and the busiest period (15 minutes) average.
+If you can't use the ATA Sizing Tool, manually gather the packet/sec counter information with a low collection interval (approximately 5 seconds) from all your Domain Controllers for 24 hours. Then, for each Domain Controller, calculate the daily average and the busiest period (15 minutes) average.
 The following sections provide instructions about how to collect the packets/sec counter from one Domain Controller.
 
 > [!NOTE]
@@ -71,15 +71,15 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 &#42;&#42;Average numbers (Peak numbers)
 > [!NOTE]
 >
-> - The ATA Center can handle an aggregated maximum of 1M packets per second from all  monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M and some environments may exceed ATA capacity. Contact us at azureatpfeedback@microsoft.com for assistance in planning and estimating large environments.
+> - The ATA Center can handle an aggregated maximum of 1M packets per second from all monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M and some environments may exceed ATA capacity. Contact us at azureatpfeedback@microsoft.com for assistance in planning and estimating large environments.
 
-> - If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it is not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.
-> - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
+> - If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it's not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.
+> - You can deploy the ATA Center on any IaaS vendor if the performance requirements that are described in this article are met.
 > - The storage latency for read and write activities should be below 10 ms.
 > - The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
-> - When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. For more information on running ATA Center as a virtual machine, see [ATA Center requirements](ata-prerequisites.md#dynamic-memory)
-> - For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
-> - When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This is not relevant when the ATA Center is running on a virtual server.
+> - When running the Center as a virtual machine (VM) the Center requires all memory be allocated to the VM, all the time. For more information on running ATA Center as a virtual machine, see [ATA Center requirements](ata-prerequisites.md#dynamic-memory).
+> - For optimal performance, set the **Power Option** of the ATA Center to **High Performance**. <br>
+> - When working on a physical server, the ATA database needs you to **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you have to **enable** Node Interleaving to disable NUMA. For more information, see your BIOS documentation. This isn't relevant when the ATA Center is running on a virtual server.
 
 ## Choosing the right gateway type for your deployment
 
@@ -125,8 +125,8 @@ While hyper threading is acceptable for the ATA Lightweight Gateway, when planni
 
 > [!NOTE]
 >
-> - If the domain controller does not have the resources required by the ATA Lightweight Gateway, domain controller performance is not effected, but the ATA Lightweight Gateway might not operate as expected.
-> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](ata-prerequisites.md#dynamic-memory))
+> - If the domain controller doesn't have the resources required by the ATA Lightweight Gateway, domain controller performance isn't affected, but the ATA Lightweight Gateway might not operate as expected.
+> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](ata-prerequisites.md#dynamic-memory)).
 > - For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
 > - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
@@ -135,7 +135,7 @@ While hyper threading is acceptable for the ATA Lightweight Gateway, when planni
 Consider the following issues when deciding how many ATA Gateways to deploy.
 
 - **Active Directory forests and domains**  
-  ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. Do not configure a single ATA deployment to monitor network traffic of domain controllers from different forests.
+  ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. Don't configure a single ATA deployment to monitor network traffic of domain controllers from different forests.
 - **Port Mirroring**  
 Port mirroring considerations might require you to deploy multiple ATA Gateways per data Gateway or branch site.
 - **Capacity**  
@@ -151,13 +151,13 @@ Port mirroring considerations might require you to deploy multiple ATA Gateways 
 
 &#42;Total average number of packets-per-second from all domain controllers being monitored by the specific ATA Gateway during their busiest hour of the day.
 
-&#42;The total amount of domain controller port-mirrored traffic cannot exceed the capacity of the capture NIC on the ATA Gateway.
+&#42;The total amount of domain controller port-mirrored traffic can't exceed the capacity of the capture NIC on the ATA Gateway.
 
 &#42;&#42;Hyper-threading must be disabled.
 
 > [!NOTE]
 >
-> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](ata-prerequisites.md#dynamic-memory)
+> - When running the Gateway as a virtual machine (VM) the Gateway requires all memory be allocated to the VM, all the time. For more information on running ATA Gateway as a virtual machine, see [Dynamic memory requirements](ata-prerequisites.md#dynamic-memory).
 > - For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
 > - A minimum of 5 GB of space is required and 10 GB is recommended, including space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md), and [performance logs](troubleshooting-ata-using-perf-counters.md).
 
