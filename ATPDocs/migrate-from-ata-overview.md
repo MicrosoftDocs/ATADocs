@@ -30,7 +30,7 @@ In this guide you will:
 
 ## Prerequisites
 
-- An Azure Active Directory tenant with at least one global/security administrator is required to create a Defender for Identity instance. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- An Azure Active Directory tenant with at least one global/security administrator is required to create a Defender for Identity instance. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - Defender for Identity requires .Net Framework 4.7 or later and may require a domain controller restart if your current .Net Framework version is not 4.7 or later.
 
@@ -65,7 +65,7 @@ Make sure to gather the following information before starting your move:
 
 Complete your move to Defender for Identity in two easy steps:
 
-### Step 1: Create and install Defender for Identity instance and sensors
+### Step 1: Create and install Defender for Identity workspace and sensors
 
 1. [Create your new Defender for Identity instance](deploy-defender-identity.md#start-using-microsoft-365-defender)
 

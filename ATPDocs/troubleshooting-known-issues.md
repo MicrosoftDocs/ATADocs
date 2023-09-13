@@ -461,11 +461,11 @@ NT Service\All Services do not have the right to log on as a service.
 Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
 
 
-## Your instance was not created because a security group with the same name already exists in Azure Active Directory
+## Your workspace was not created because a security group with the same name already exists in Azure Active Directory
 
 **Cause:**
 
-The issue can be caused when a previous Defender for Identity instance is deleted because of license expiration and the retention period has ended, but the Azure AD groups were not deleted.
+The issue can be caused when a previous Defender for Identity workspace is deleted because of license expiration and the retention period has ended, but the Azure AD groups were not deleted.
 
 **Resolution:**
 
@@ -474,7 +474,7 @@ The issue can be caused when a previous Defender for Identity instance is delete
    - "Azure ATP instanceName Administrators" -> "Azure ATP instanceName Administrators - old"
    - "Azure ATP instanceName Viewers" -> "Azure ATP instanceName Viewers - old"
    - "Azure ATP instanceName Users" -> "Azure ATP instanceName Users - old"
-1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new instance of Defender for Identity.
+1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace of Defender for Identity.
 
 ## See also
 

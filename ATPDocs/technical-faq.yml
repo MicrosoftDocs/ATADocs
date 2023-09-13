@@ -89,7 +89,7 @@ sections:
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |
-          No. When your Defender for Identity instance is created, it's stored automatically in the Azure region that's closest to your Azure Active Directory tenant's geographical location.  Once your Defender for Identity instance is created, Defender for Identity data can't be moved to a different region.
+          No. When your Defender for Identity workspace is created, it's stored automatically in the Azure region that's closest to your Azure Active Directory tenant's geographical location.  Once your Defender for Identity workspace is created, Defender for Identity data can't be moved to a different region.
 
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |

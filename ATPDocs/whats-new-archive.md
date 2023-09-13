@@ -780,7 +780,7 @@ Brute Force attack is used by attackers to gain a foothold into your organizatio
 Released Mar 15, 2020
 
 - **New Azure ATP instances automatically integrate with Microsoft Defender for Cloud Apps**  
-When creating an Azure ATP instance (formerly workspace), the integration with Microsoft Defender for Cloud Apps is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
+When creating an Azure ATP workspace (formerly workspace), the integration with Microsoft Defender for Cloud Apps is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
 
 - **New monitored activities**  
 The following activity monitors are now available:
@@ -1060,8 +1060,8 @@ Released June 23, 2019
 - **Feature enhancement: Suspicious service creation alert (external ID 2026)**  
 This alert now features an improved alert page with additional evidence and a new description. For more information, see [Suspicious service creation security alert](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026).
 
-- **Instance naming support: Support added for digit only domain prefix**  
-Support added for Azure ATP instance creation using initial domain prefixes that only contain digits. For example, use of digit only initial domain prefixes such as  123456.contoso.com are now supported.
+- **workspace naming support: Support added for digit only domain prefix**  
+Support added for Azure ATP workspace creation using initial domain prefixes that only contain digits. For example, use of digit only initial domain prefixes such as  123456.contoso.com are now supported.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1420,10 +1420,10 @@ Azure ATP's [Suspected Golden Ticket usage - ticket anomaly](/defender-for-ident
 
     This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this new detection is designed to identify.
 
-- **Feature Enhancement: Automated Azure ATP instance (workspace) creation**  
-From today, Azure ATP *workspaces* are renamed Azure ATP *instances*. Azure ATP now supports one Azure ATP instance per Azure ATP account. Instances for new customers are created using the instance creation wizard in the [Azure ATP portal](https://portal.atp.azure.com). Existing Azure ATP workspaces are converted automatically to Azure ATP instances with this update.  
+- **Feature Enhancement: Automated Azure ATP workspace (workspace) creation**  
+From today, Azure ATP *workspaces* are renamed Azure ATP *instances*. Azure ATP now supports one Azure ATP workspace per Azure ATP account. Instances for new customers are created using the workspace creation wizard in the [Azure ATP portal](https://portal.atp.azure.com). Existing Azure ATP workspaces are converted automatically to Azure ATP instances with this update.  
 
-  - Simplified instance creation for faster deployment and protection using [create your Azure ATP instance](/defender-for-identity/deploy-defender-identity).
+  - Simplified workspace creation for faster deployment and protection using [create your Azure ATP instance](/defender-for-identity/deploy-defender-identity).
   - All [data privacy and compliance](privacy-compliance.md) remains the same.
 
   To learn more about Azure ATP instances, see [Create your Azure ATP instance](/defender-for-identity/deploy-defender-identity).
