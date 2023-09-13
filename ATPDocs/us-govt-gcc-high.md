@@ -49,7 +49,7 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
    - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial"
    - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
    - "Azure ATP _instanceName_ Users" --> "Azure ATP _instanceName_ Users - commercial"
-1. In the [Microsoft 365 Defender portal](https://security.microsoft.com), go to the Settings -> Identities section to create a new workspace of Defender for Identity
+1. In the [Microsoft 365 Defender portal](https://security.microsoft.com), go to the Settings -> Identities section to create a new workspace for Defender for Identity
 1. Configure a Directory Service account
 1. Download the new sensor agent package and copy the workspace key
 1. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
