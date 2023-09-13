@@ -7,7 +7,7 @@ ms.topic: overview
 
 # Microsoft Defender for Identity for US Government offerings
 
-The Microsoft Defender for Identity GCC High offering uses the same underlying technologies and capabilities as the commercial workspace of Defender for Identity.
+The Microsoft Defender for Identity GCC High offering uses the same underlying technologies and capabilities as the commercial workspace for Defender for Identity.
 
 ## Get started with US Government offerings
 
