@@ -473,7 +473,7 @@ The issue can come up when a Defender for Identity workspace license expires and
    - "Azure ATP instanceName Administrators" -> "Azure ATP instanceName Administrators - old"
    - "Azure ATP instanceName Viewers" -> "Azure ATP instanceName Viewers - old"
    - "Azure ATP instanceName Users" -> "Azure ATP instanceName Users - old"
-1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace of Defender for Identity.
+1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
 
 ## See also
 
