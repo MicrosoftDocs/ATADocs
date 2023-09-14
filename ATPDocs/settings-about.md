@@ -22,7 +22,7 @@ The About page provides the following details:
 - Workspace ID: The identifier of your workspace.
 - Workspace name: The name of your workspace instance.
 
-This information can be helpful when troubleshooting issues and opening support tickets. Additionally, you can find the name of your instance (workspace) which is necessary for configuring your [proxy or firewall](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
+This information can be helpful when troubleshooting issues and opening support tickets. Additionally, you can find the name of your workspace (workspace) which is necessary for configuring your [proxy or firewall](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
 ## See also
 
