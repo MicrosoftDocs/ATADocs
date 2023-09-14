@@ -94,6 +94,19 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
 1. After applying via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
+<!--address this-->
+
+To configure audit policies using PowerShell, run the following commands:
+
+Run set-mdiconfiguration
+
+To view it or test it, use get- or test
+
+all 3 has different parameter values for each type
+
+get shows values
+test shows yes/no to say whether it's configured correctly
+
 ### Event ID 8004
 
 To audit Event ID 8004, more configuration steps are required.
@@ -287,6 +300,8 @@ These events can be collected automatically by the Defender for Identity sensor 
 >```
 >
 > No functionality is lost due to this requirement being removed.
+
+
 
 
 ## Next steps

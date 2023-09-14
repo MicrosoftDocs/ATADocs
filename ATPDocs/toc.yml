@@ -37,10 +37,12 @@ items:
     items:
     - name: Download the Defender for Identity sensor
       href: download-sensor.md
-    - name: Proxy configuration
-      href: configure-proxy.md
     - name: Install the Defender for Identity sensor
       href: install-sensor.md
+    - name: Proxy configuration
+      href: configure-proxy.md
+    - name: Test connectivity
+      href: test-connectivity.md
     - name: Manage action accounts
       href: manage-action-accounts.md
     - name: Configure the Defender for Identity sensor

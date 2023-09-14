@@ -27,6 +27,26 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## October 2023
+
+Defender for Identity now provides the **DefenderForIdentity** PowerShell module to support sensor deployment, including the following activities:
+
+- Testing connectivity between the server you're using for your sensor and the Defender for Identity cloud service. Run PowerShell commands even before you install your sensor or configure a proxy to test the settings you want to use.
+- Viewing and configuring proxy settings.
+- Viewing and configuring audit policy settings for Windows event collection.
+- Validating permissions and delegations for a Directory Service Account
+- Generating a report of your current domain configurations
+
+To use PowerShell commands with your sensor, make sure to install the **DefenderForIdentity** PowerShell module. <!--xref to the powershell page-->
+
+For more information, see:
+
+- [Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor](configure-proxy.md)
+- [Configure Windows Event collection](configure-windows-event-collection.md)
+- [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md)
+- <XREF TO A TROUBLEShOOTING PAGE?>
+- [Defender for Identity PowerShell reference documentation](/powershell/module/azureinformationprotection)
+
 ## September 2023
 
 ### Defender for Identity reports moved to the main Reports area
