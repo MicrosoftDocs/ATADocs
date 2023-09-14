@@ -72,7 +72,6 @@ The ATA Center requires a recommended minimum of 30 days of data for user behavi
 > [!NOTE]
 >
 > - The ATA Center can handle an aggregated maximum of 1M packets per second from all monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 1M and some environments may exceed ATA capacity. Contact us at azureatpfeedback@microsoft.com for assistance in planning and estimating large environments.
-
 > - If your free space reaches a minimum of either 20% or 200 GB, the oldest collection of data is deleted. If it's not possible to successfully reduce the data collection to this level, an alert will be logged.  ATA will continue functioning until the threshold of 5% or 50 GB free is reached.  At this point, ATA will stop populating the database and an additional alert will be issued.
 > - You can deploy the ATA Center on any IaaS vendor if the performance requirements that are described in this article are met.
 > - The storage latency for read and write activities should be below 10 ms.
