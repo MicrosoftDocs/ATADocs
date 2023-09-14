@@ -50,4 +50,3 @@ For more information on which alerts have learning periods, see the alerts liste
 
 - [Defender for Identity security alerts in Microsoft 365 Defender](manage-security-alerts.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
-

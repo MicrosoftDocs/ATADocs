@@ -214,7 +214,7 @@ Released June 20, 2022
 
 Released June 4, 2022
 
-- A new **About** page for Defender for Identity is available. You can find it in the [Microsoft 365 Defender portal](https://security.microsoft.com), under **Settings** -> **Identities** -> **About**. It provides several important details about your Defender for Identity workspace, including the workspace name, version, ID and the geolocation of your workspace. This information can be helpful when troubleshooting issues and opening support tickets.
+- A new **About** page for Defender for Identity is available. You can find it in the [Microsoft 365 Defender portal](https://security.microsoft.com), under **Settings** -> **Identities** -> **About**. It provides several important details about your Defender for Identity instance, including the instance name, version, ID and the geolocation of your instance. This information can be helpful when troubleshooting issues and opening support tickets.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## May 2022
@@ -780,7 +780,7 @@ Brute Force attack is used by attackers to gain a foothold into your organizatio
 Released Mar 15, 2020
 
 - **New Azure ATP instances automatically integrate with Microsoft Defender for Cloud Apps**  
-When creating an Azure ATP workspace (formerly workspace), the integration with Microsoft Defender for Cloud Apps is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
+When creating an Azure ATP instance (formerly instance), the integration with Microsoft Defender for Cloud Apps is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
 
 - **New monitored activities**  
 The following activity monitors are now available:
@@ -1060,8 +1060,8 @@ Released June 23, 2019
 - **Feature enhancement: Suspicious service creation alert (external ID 2026)**  
 This alert now features an improved alert page with additional evidence and a new description. For more information, see [Suspicious service creation security alert](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026).
 
-- **workspace naming support: Support added for digit only domain prefix**  
-Support added for Azure ATP workspace creation using initial domain prefixes that only contain digits. For example, use of digit only initial domain prefixes such as  123456.contoso.com are now supported.
+- **Instance naming support: Support added for digit only domain prefix**  
+Support added for Azure ATP instance creation using initial domain prefixes that only contain digits. For example, use of digit only initial domain prefixes such as  123456.contoso.com are now supported.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1410,7 +1410,6 @@ When viewing large lateral movement paths, Azure ATP now highlights only the nod
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
-
 ### Azure ATP release 2.57
 
 Released December 2, 2018
@@ -1420,10 +1419,10 @@ Azure ATP's [Suspected Golden Ticket usage - ticket anomaly](/defender-for-ident
 
     This forged TGT is called a "Golden Ticket" because it allows attackers to achieve lasting network persistence. Forged Golden Tickets of this type have unique characteristics this new detection is designed to identify.
 
-- **Feature Enhancement: Automated Azure ATP workspace (workspace) creation**  
-From today, Azure ATP *workspaces* are renamed Azure ATP *instances*. Azure ATP now supports one Azure ATP workspace per Azure ATP account. Instances for new customers are created using the workspace creation wizard in the [Azure ATP portal](https://portal.atp.azure.com). Existing Azure ATP workspaces are converted automatically to Azure ATP instances with this update.  
+- **Feature Enhancement: Automated Azure ATP instance (instance) creation**  
+From today, Azure ATP *instances* are renamed Azure ATP *instances*. Azure ATP now supports one Azure ATP instance per Azure ATP account. Instances for new customers are created using the instance creation wizard in the [Azure ATP portal](https://portal.atp.azure.com). Existing Azure ATP instances are converted automatically to Azure ATP instances with this update.  
 
-  - Simplified workspace creation for faster deployment and protection using [create your Azure ATP instance](/defender-for-identity/deploy-defender-identity).
+  - Simplified instance creation for faster deployment and protection using [create your Azure ATP instance](/defender-for-identity/deploy-defender-identity).
   - All [data privacy and compliance](privacy-compliance.md) remains the same.
 
   To learn more about Azure ATP instances, see [Create your Azure ATP instance](/defender-for-identity/deploy-defender-identity).
@@ -1451,7 +1450,6 @@ Additions and updates were made to Azure ATP articles describing Lateral Movemen
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
 For details of each Defender for Identity release prior to (and including) release 2.55, see the [Defender for Identity release reference](/defender-for-identity/whats-new).
-
 
 ## Next steps
 

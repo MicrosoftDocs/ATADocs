@@ -26,7 +26,7 @@ For more information about these steps, see the following articles:
 - [Frequently asked questions when turning on Microsoft 365 Defender](/microsoft-365/security/defender/m365d-enable-faq)
 
 > [!IMPORTANT]
-> Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East, and Asia. Your workspace is created automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant. Once created, Defender for Identity instances aren't movable.
+> Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East, and Asia. Your workspace is created automatically in the Azure region closest to the geographical location of your Azure Active Directory tenant. Once created, Defender for Identity workspaces aren't movable.
 
 ## Preparation
 
