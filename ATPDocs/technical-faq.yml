@@ -23,15 +23,15 @@ sections:
           
           Information collected includes:
           
-          - Network traffic to and from domain controllers, such as Kerberos authentication, NTLM authentication, or DNS queries
-          - Security logs, such as Windows security events
-          - Active Directory information, such as structure, subnets, or sites
-          - Entity information, such as names, email addresses, and phone numbers
+          - Network traffic to and from domain controllers, such as Kerberos authentication, NTLM authentication, or DNS queries.
+          - Security logs, such as Windows security events.
+          - Active Directory information, such as structure, subnets, or sites.
+          - Entity information, such as names, email addresses, and phone numbers.
 
           Microsoft uses this data to:
 
-          - Proactively identify indicators of attack (IOAs) in your organization
-          - Generate alerts if a possible attack was detected
+          - Proactively identify indicators of attack (IOAs) in your organization.
+          - Generate alerts if a possible attack was detected.
           - Provide your security operations with a view into entities related to threat signals from your network, enabling you to investigate and explore the presence of security threats on the network.
 
           Microsoft doesn't mine your data for advertising or for any other purpose other than providing you with the service.

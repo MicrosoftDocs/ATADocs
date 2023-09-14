@@ -19,7 +19,7 @@ Defender for Identity personal data is gathered from Active Directory through th
 
 ## Data sharing
 
-Defender for Identity shares data, including customer data, among the following Microsoft products also licensed by the customer.
+Defender for Identity shares data, including customer data, among the following Microsoft products also licensed by the customer:
 
 - Microsoft 365 Defender
 - Microsoft Defender for Cloud Apps
