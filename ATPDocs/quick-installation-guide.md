@@ -57,8 +57,9 @@ Make sure to install Defender for Identity on Windows 2012 and higher on a serve
 
 1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com) in the **Settings** -> **Identities** -> **Sensors** page.
 
-    - Copy the **Access key**. You'll need it for the installation.
+    - Select **Add sensor** and then copy the **Access key** displayed. You'll need it for the installation.
     - You only need to download the installer once, as it can be used for every server in the tenant.
+    - Make sure to allow popups to download the sensor.
 
 1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service,  by accessing `https://*your-instance-name*sensorapi.atp.azure.com`.
 

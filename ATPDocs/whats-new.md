@@ -1,7 +1,7 @@
 ---
 title: What's new 
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/24/2023
+ms.date: 09/10/2023
 ms.topic: overview
 ---
 
@@ -26,6 +26,41 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
+## September 2023
+
+### Defender for Identity reports moved to the main Reports area
+
+Now you can access Defender for Identity reports from Microsoft 365 Defender's main **Reports** area instead of the **Settings** area. For example:
+
+:::image type="content" source="media/whats-new/reports-main-area.png" alt-text="Screenshot of the Defender for Identity report access from the main Reports area.":::
+
+For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
+
+### Go hunt button for groups in Microsoft 365 Defender
+
+Defender for Identity has added the **Go hunt** button for groups in Microsoft 365 Defender. Users can use the **Go hunt** button to query for group-related activities and alerts during an investigation.
+
+For example:
+
+:::image type="content" source="media/whats-new/go-hunt-groups.png" alt-text="Screenshot of the new Go hunt button on a group details pane.":::
+
+For more information, see [Quickly hunt for entity or event information with go hunt](/microsoft-365/security/defender/advanced-hunting-go-hunt).
+
+### Defender for Identity release 2.214
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Performance enhancements
+
+Defender for Identity has made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft 365 Defender. Customers should expect no delays in Defender for Identity data appearing in Microsoft 365 Defender, such as alerts or activities for advanced hunting.
+
+
+For more information, see:
+
+- [Security alerts in Microsoft Defender for Identity](alerts-overview.md)
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
+- [Proactively hunt for threats with advanced hunting in Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview)
 
 ## August 2023
 
