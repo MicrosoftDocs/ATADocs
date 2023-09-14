@@ -1,17 +1,18 @@
 ---
-title: Architecture
-description: Describes the architecture of Microsoft Defender for Identity
-ms.date: 01/30/2023
+title: Architecture | Microsoft Defender for Identity
+description: Learn about the Microsoft Defender for Identity system architecture and related components.
+ms.date: 09/14/2023
 ms.topic: overview
+#CustomerIntent: As a Defender for Identity user, I want to understand the relevant components and how they interact with the rest of my environment so that I can best use Defender for Identity features.
 ---
 
 # Microsoft Defender for Identity architecture
 
 Microsoft Defender for Identity monitors your domain controllers by capturing and parsing network traffic and leveraging Windows events directly from your domain controllers, then analyzes the data for attacks and threats. Utilizing profiling, deterministic detection, machine learning, and behavioral algorithms Defender for Identity learns about your network, enables detection of anomalies, and warns you of suspicious activities.
 
-Defender for Identity architecture:
+The following image shows how Defender for Identity is layered over Microsoft 365 Defender, and works together with other Microsoft services and third-party identity providers to monitor traffic coming in from domain controllers and Active Directory servers.
 
-![Defender for Identity architecture topology diagram](media/architecture-topology.png)
+:::image type="content" source="media/architecture/architecture.png" alt-text="Diagram of the Defender for Identity architecture." border="false":::
 
 This section describes how the flow of Defender for Identity's network and event capturing works, and drills down to describe the functionality of the main components: the Microsoft 365 Defender portal, Defender for Identity sensor, and Defender for Identity cloud service.
 
