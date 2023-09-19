@@ -18,19 +18,19 @@ In this guide you will:
 
 > [!div class="checklist"]
 >
-> - Review and confirm Defender for Identity service prerequisites
-> - Document your existing ATA configuration
-> - Plan your move
-> - Set up and configure your Defender for Identity  service
-> - Perform post move checks and verification
-> - Decommission ATA after completing the move
+> - Review and confirm Defender for Identity service prerequisites.
+> - Document your existing ATA configuration.
+> - Plan your move.
+> - Set up and configure your Defender for Identity  service.
+> - Perform post move checks and verification.
+> - Decommission ATA after completing the move.
 
 > [!NOTE]
 > Moving to Defender for Identity from ATA is possible from any ATA version. However, as data cannot be moved from ATA to Defender for Identity, it is recommended to retain your ATA Center data and alerts required for ongoing investigations until all ATA alerts are closed or remediated.
 
 ## Prerequisites
 
-- An Azure Active Directory tenant with at least one global/security administrator is required to create a Defender for Identity instance. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- An Azure Active Directory tenant with at least one global/security administrator is required to create a Defender for Identity instance. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - Defender for Identity requires .Net Framework 4.7 or later and may require a domain controller restart if your current .Net Framework version is not 4.7 or later.
 
@@ -46,8 +46,8 @@ In this guide you will:
 Make sure to gather the following information before starting your move:
 
 1. Account details for your [Directory Services](directory-service-accounts.md) account.
-1. Syslog notification [settings](/defender-for-identity/notifications).
-1. Email [notification details](notifications.md).
+1. Syslog notification [settings](/defender-for-identity/notifications)
+1. Email [notification details](notifications.md)
 1. ATA roles group membership
 1. VPN integration
 1. Alert exclusions
@@ -65,9 +65,9 @@ Make sure to gather the following information before starting your move:
 
 Complete your move to Defender for Identity in two easy steps:
 
-### Step 1: Create and install Defender for Identity instance and sensors
+### Step 1: Create and install Defender for Identity workspace and sensors
 
-1. [Create your new Defender for Identity instance](deploy-defender-identity.md#start-using-microsoft-365-defender)
+1. [Create your new Defender for Identity instance](deploy-defender-identity.md#start-using-microsoft-365-defender).
 
 1. Uninstall the ATA Lightweight Gateway on all domain controllers.
 

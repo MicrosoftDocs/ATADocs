@@ -26,7 +26,7 @@ For more information, see [Licensing and privacy](/defender-for-identity/technic
 
 ### Required permissions
 
-- To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
@@ -63,7 +63,7 @@ Make sure to install Defender for Identity on Windows 2012 and higher on a serve
 
 1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service,  by accessing `https://*your-instance-name*sensorapi.atp.azure.com`.
 
-    - To get your instance name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
+    - To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
     - For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
 
 1. From the domain controller, run the installer downloaded in step 1 and follow the instructions on the screen.  

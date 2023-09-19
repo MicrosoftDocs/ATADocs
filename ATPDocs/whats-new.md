@@ -29,6 +29,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## September 2023
 
+### Defender for Identity release 2.215
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Defender for Identity reports moved to the main Reports area
 
 Now you can access Defender for Identity reports from Microsoft 365 Defender's main **Reports** area instead of the **Settings** area. For example:
