@@ -8,7 +8,7 @@ ms.topic: how-to
 
 # Defender for Identity notifications in Microsoft 365 Defender
 
-Microsoft Defender for Identity provides Microsoft 365 Defender notifications for health issues and security alerts, either via email notifications or to a Syslog server.
+Microsoft Defender for Identity provides notifications for health issues and security alerts, either via email notifications or to a Syslog server.
 
 This article describes how to configure Defender for Identity notifications so that you're aware of any health issues or security alerts detected.
 
