@@ -42,10 +42,12 @@ For example:
 
 Modern identity environments often span both on-premises and in the cloud. Defender for Identity uses data from across your environment, including domain controllers, Active Directory Federation Services (AD FS), and Active Directory Certificate services (AD CS), to provide you with a complete view of your identity environment.
 
-Defender for Identity sensors monitor domain controller traffic by default. For AD FS / AD CS servers, make sure to install the relevant sensor type for complete identity monitoring. For more information, see [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md).
+Defender for Identity sensors monitor domain controller traffic by default. For AD FS / AD CS servers, make sure to install the relevant sensor type for complete identity monitoring.
 
+For more information, see:
 
-
+- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+- [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md)
 
 
 ## Identify suspicious activities across the cyber-attack kill-chain
@@ -61,6 +63,7 @@ Defender for Identity identifies these advanced threats at the source throughout
 |**Lateral movements**     |  Detect attempts to move laterally inside the network to gain further control of sensitive users, utilizing methods such as Pass the Ticket, Pass the Hash, Overpass the Hash and more.       |
 |**Domain dominance**     |   View highlighted attacker behavior if domain dominance is achieved. For example, attackers might run code remotely on the domain controller, or use methods like DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.      |
 
+For more information, see [Security alerts in Microsoft Defender for Identity](alerts-overview.md).
 
 ## Investigate alerts and user activities
 
@@ -68,6 +71,7 @@ Defender for Identity is designed to reduce general alert noise, providing you w
 
 Seamless integration with Microsoft 365 Defender provides another layer of enhanced security by correlating data from other domains, for greater visibility and accuracy across users, devices, and network resources.
 
+For more information, see [Investigate assets](investigate-assets.md) and [Investigate security alerts](manage-security-alerts.md).
 
 ## Related content
 
