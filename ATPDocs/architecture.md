@@ -16,7 +16,7 @@ The following image shows how Defender for Identity is layered over Microsoft 36
 
 This section describes how the flow of Defender for Identity's network and event capturing works, and drills down to describe the functionality of the main components: the Microsoft 365 Defender portal, Defender for Identity sensor, and Defender for Identity cloud service.
 
-Installed directly on your domain controller or AD FS servers, the Defender for Identity sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, Defender for Identity sends only the parsed information to the Defender for Identity cloud service (only a percentage of the logs are sent).
+Installed directly on your domain controller, Active Directory Federation Services (AD FS), or Active Directory Certificate Services (AD CS) servers, the Defender for Identity sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, Defender for Identity sends only the parsed information to the Defender for Identity cloud service.
 
 ## Defender for Identity components
 
@@ -25,17 +25,14 @@ Defender for Identity consists of the following components:
 - **Microsoft 365 Defender portal**  
 The Microsoft 365 Defender portal creates your Defender for Identity instance, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
-- **Defender for Identity sensor**  
+- **Defender for Identity sensor** 
 Defender for Identity sensors can be directly installed on the following servers:
   - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
-  - **AD FS**: The sensor directly monitors network traffic and authentication events.
+  - **AD FS / AD CS**: The sensor directly monitors network traffic and authentication events.
 - **Defender for Identity cloud service**  
 Defender for Identity cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, Australia East, and Asia. Defender for Identity cloud service is connected to Microsoft's intelligent security graph.
 
 ## Microsoft 365 Defender portal
-
-> [!NOTE]
-> Since all major Microsoft Defender for Identity features are available in the Microsoft 365 Defender portal, the portal redirection setting will be automatically enabled for each tenant starting January 31, 2023. For more information, see [Redirecting accounts from Microsoft Defender for Identity to Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-mdi-redirection#what-to-expect).
 
 Use the Microsoft 365 Defender portal to:
 
