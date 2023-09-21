@@ -23,15 +23,15 @@ sections:
           
           Information collected includes:
           
-          - Network traffic to and from domain controllers, such as Kerberos authentication, NTLM authentication, or DNS queries
-          - Security logs, such as Windows security events
-          - Active Directory information, such as structure, subnets, or sites
-          - Entity information, such as names, email addresses, and phone numbers
+          - Network traffic to and from domain controllers, such as Kerberos authentication, NTLM authentication, or DNS queries.
+          - Security logs, such as Windows security events.
+          - Active Directory information, such as structure, subnets, or sites.
+          - Entity information, such as names, email addresses, and phone numbers.
 
           Microsoft uses this data to:
 
-          - Proactively identify indicators of attack (IOAs) in your organization
-          - Generate alerts if a possible attack was detected
+          - Proactively identify indicators of attack (IOAs) in your organization.
+          - Generate alerts if a possible attack was detected.
           - Provide your security operations with a view into entities related to threat signals from your network, enabling you to investigate and explore the presence of security threats on the network.
 
           Microsoft doesn't mine your data for advertising or for any other purpose other than providing you with the service.
@@ -89,7 +89,7 @@ sections:
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |
-          No. When your Defender for Identity instance is created, it's stored automatically in the Azure region that's closest to your Azure Active Directory tenant's geographical location.  Once your Defender for Identity instance is created, Defender for Identity data can't be moved to a different region.
+          No. When your Defender for Identity workspace is created, it's stored automatically in the Azure region that's closest to your Azure Active Directory tenant's geographical location.  Once your Defender for Identity workspace is created, Defender for Identity data can't be moved to a different region.
 
       - question: How does Microsoft prevent malicious insider activities and abuse of high privilege roles?
         answer: |

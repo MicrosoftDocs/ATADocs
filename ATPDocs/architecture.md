@@ -37,15 +37,15 @@ Defender for Identity cloud service runs on Azure infrastructure and is currentl
 
 Use the Microsoft 365 Defender portal to:
 
-- Create your Defender for Identity instance
-- Integrate with other Microsoft security services
-- Manage Defender for Identity sensor configuration settings
-- View data received from Defender for Identity sensors
-- Monitor detected suspicious activities and suspected attacks based on the attack kill chain model
-- **Optional**: the portal can also be configured to send emails and events when security alerts or health issues are detected
+- Create your Defender for Identity instance.
+- Integrate with other Microsoft security services.
+- Manage Defender for Identity sensor configuration settings.
+- View data received from Defender for Identity sensors.
+- Monitor detected suspicious activities and suspected attacks based on the attack kill chain model.
+- **Optional**: The portal can also be configured to send emails and events when security alerts or health issues are detected.
 
 > [!NOTE]
-> If no sensor is installed on your Defender for Identity instance within 60 days, the instance may be deleted and you'll need to recreate it.
+> If no sensor is installed on your Defender for Identity workspace within 60 days, the workspace may be deleted and you'll need to recreate it.
 
 
 ## Defender for Identity sensor

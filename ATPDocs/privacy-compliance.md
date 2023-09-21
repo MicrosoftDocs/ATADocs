@@ -19,7 +19,7 @@ Defender for Identity personal data is gathered from Active Directory through th
 
 ## Data sharing
 
-Defender for Identity shares data, including customer data, among the following Microsoft products also licensed by the customer.
+Defender for Identity shares data, including customer data, among the following Microsoft products also licensed by the customer:
 
 - Microsoft 365 Defender
 - Microsoft Defender for Cloud Apps
@@ -50,7 +50,7 @@ Defender for Identity implements the audit of personal data changes, including t
 - For information about Defender for Identity trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
 
 > [!IMPORTANT]
-> Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East and Asia. Your instance is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, Defender for Identity instances aren't movable.
+> Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East and Asia. Your workspace is created automatically in the data center that is geographically closest to your Azure Active Directory (Azure AD). Once created, Defender for Identity workspaces aren't movable.
 
 ## Next steps
 
