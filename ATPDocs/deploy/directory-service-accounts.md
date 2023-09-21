@@ -90,7 +90,8 @@ For example, the sensor tries the DSA entries in the following order:
 For another example, if the DSA entires configured are as follows:
 
 - `DSA1.northamerica.contoso.com`
-- `DSA2.EMEA.contoso.com DSA3.fabrikam.com`
+- `DSA2.EMEA.contoso.com`
+- `DSA3.fabrikam.com`
 
 Then the following table lists the sensors and the DSA entry that's used first:
 
@@ -140,22 +141,24 @@ This section describes how to create a specific group that can retrieve the acco
 Run the following PowerShell commands as an administrator:
 
 ```powershell
-# Set the variables: 
-$gMSA_AccountName = 'mdiSvc01' 
-$gMSA_HostsGroupName = 'mdiSvc01Group' 
-$gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2', 'ADCS1',
-# Import the required PowerShell module: 
-Import-Module ActiveDirectory 
-# Create the group and add the members 
-$gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope Global -PassThru 
-$gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } | 
-    ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName Members $_ } 
-# Or, use the built-in 'Domain Controllers' group if the environment is a single forest, and will contain only domain controller sensors 
-# $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'    
-# Create the gMSA: 
-New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName 
-"$gMSA_AccountName.$env:USERDNSDOMAIN" ` 
--PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroupName 
+# Set the variables:
+$gMSA_AccountName = 'mdiSvc01'
+$gMSA_HostsGroupName = 'mdiSvc01Group'
+$gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2'
+
+# Import the required PowerShell module:
+Import-Module ActiveDirectory
+
+# Create the group and add the members
+$gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope Global -PassThru
+$gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
+    ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
+# Or, use the built-in 'Domain Controllers' group if the environment is a single forest, and will contain only domain controller sensors
+# $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'
+  
+# Create the gMSA:
+New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
+-PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroupName
 ```
 
 ### Grant required DSA permissions
@@ -167,20 +170,40 @@ The read-only permissions on the **Deleted Objects** container allows Defender f
 Use the following code sample to help you grant the required read permissions on the **Deleted Objects** container:
 
 ```powershell
-# Declare the *user* or *group* that needs to have read access to the deleted objects container 
-# Note that if the identity you want to grant the permissions to is a Group 
-Managed Service Account (gMSA),  
-# you need first to create a security group, add the gMSA as a member and list that group as the identity below $Identity = 'CONTOSO\mdisvc' 
-# Get the deleted objects container's distinguished name: 
-$distinguishedName = ([adsi]'').distinguishedName.Value 
-$deletedObjectsDN = 'CN=Deleted Objects,{0}' -f $distinguishedName 
-# Take ownership on the deleted objects container: $params = @("$deletedObjectsDN", '/takeOwnership') 
-C:\Windows\System32\dsacls.exe $params 
-# Grant the 'List Contents' and 'Read Property' permissions to the user or group: 
-$params = @("$deletedObjectsDN", '/G', "$($Identity):LCRP") 
-C:\Windows\System32\dsacls.exe $params 
+# Declare the identity that you want to add read access to the deleted objects container:
+$Identity = 'mdiSvc01'
+
+# If the identity is a gMSA, first to create a group and add the gMSA to it:
+$groupName = 'mdiUsr01Group'
+$groupDescription = 'Members of this group are allowed to read the objects in the Deleted Objects container in AD'
+if(Get-ADServiceAccount -Identity $Identity -ErrorAction SilentlyContinue) {
+    $groupParams = @{
+        Name           = $groupName
+        SamAccountName = $groupName
+        DisplayName    = $groupName
+        GroupCategory  = 'Security'
+        GroupScope     = 'Universal'
+        Description    = $groupDescription
+    }
+    $group = New-ADGroup @groupParams -PassThru
+    Add-ADGroupMember -Identity $group -Members ('{0}$' -f $Identity)
+    $Identity = $group.Name
+}
+
+# Get the deleted objects container's distinguished name:
+$distinguishedName = ([adsi]'').distinguishedName.Value
+$deletedObjectsDN = 'CN=Deleted Objects,{0}' -f $distinguishedName
+
+# Take ownership on the deleted objects container:
+$params = @("$deletedObjectsDN", '/takeOwnership')
+C:\Windows\System32\dsacls.exe $params
+
+# Grant the 'List Contents' and 'Read Property' permissions to the user or group:
+$params = @("$deletedObjectsDN", '/G', ('{0}\{1}:LCRP' -f ([adsi]'').name.Value, $Identity))
+C:\Windows\System32\dsacls.exe $params
+  
 # To remove the permissions, uncomment the next 2 lines and run them instead of the two prior ones:
-# $params = @("$deletedObjectsDN", '/R', $Identity)
+# $params = @("$deletedObjectsDN", '/R', ('{0}\{1}' -f ([adsi]'').name.Value, $Identity))
 # C:\Windows\System32\dsacls.exe $params
 ```
 
@@ -265,7 +288,7 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 
 ### Troubleshooting
 
-See [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
+For more information, see [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
 
 ## Next step
 
