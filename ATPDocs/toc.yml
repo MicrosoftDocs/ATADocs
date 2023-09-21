@@ -60,10 +60,10 @@ items:
       href: deploy/manage-action-accounts.md
     - name: Configure a standalone sensor
       items:
-      - name: Configure port mirroring
-        href: deploy/configure-port-mirroring.md
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
+      - name: Configure port mirroring
+        href: deploy/configure-port-mirroring.md
       - name: Configure Windows Event Forwarding
         href: deploy/configure-event-forwarding.md
     - name: Migrate from Advanced Threat Analytics (ATA)
