@@ -52,7 +52,7 @@ Perform the following steps on the domain controller or AD FS/AD CS server.
 
 1. Select **Next**.
 
-    A warning is issued if the domain controller / AD FS server / AD CS or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from selecting **Next**, and proceeding with the installation. It can still be the right option for the installation of Defender for Identity in a small lab test environment where less room for data storage is required. 
+    A warning is issued if the domain controller / AD FS server / AD CS or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from selecting **Next** and proceeding with the installation, which might still be the right option. For example, you'll need less room for data storage when installing a small lab test environment.
 
     For production environments, we highly recommend working with Defender for Identity's [capacity planning](capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
