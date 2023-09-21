@@ -20,7 +20,7 @@ The following video shows a review of the Defender for Identity sensor settings:
 
 After the Defender for Identity sensor is installed, do the following to view and configure Defender for Identity sensor settings:
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** **Sensors**. For example:
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**. For example:
 
    [![Screenshot of the Sensors page.](../media/sensor-page.png)](../media/sensor-page.png#lightbox)
 
@@ -31,10 +31,10 @@ After the Defender for Identity sensor is installed, do the following to view an
           - Sensor name
           - Sensor domain membership
           - Sensor version number
-          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update).        
+          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update).
+          - Sensor service status
        :::column-end:::
        :::column:::
-          - Sensor service status
           - Sensor status
           - Sensor health status
           - The number of health issues
@@ -62,22 +62,11 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. Configure the following sensor details:
 
-   - **Description** (optional): Enter a description for the Defender for Identity sensor.
-
-   - **Domain Controllers (FQDN)**: This is required for the Defender for Identity [standalone sensors](prerequisites-standalone.md) and [sensors installed on AD FS / AD CS servers](active-directory-federation-services.md), and cannot be modified for the Defender for Identity sensor.
-   
-      Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**.
-
-      For any servers you define in the **Domain Controllers** list:
-
-      - All domain controllers whose traffic is being monitored via port mirroring by the Defender for Identity standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-
-      - At least one domain controller in the list should be a global catalog. This enables Defender for Identity to resolve computer and user objects in other domains in the forest.
-
-   - **Capture Network adapters** (required):
-
-      - For Defender for Identity sensors, all network adapters that are used for communication with other computers in your organization.
-      - For Defender for Identity standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.
+    |Name  |Description  |
+    |---------|---------|
+    |**Description**     |  Optional. Enter a description for the Defender for Identity sensor.       |
+    |**Domain Controllers (FQDN)**     |  Required for the Defender for Identity [standalone sensors](prerequisites-standalone.md) and [sensors installed on AD FS / AD CS servers](active-directory-federation-services.md), and cannot be modified for the Defender for Identity sensor.   <br><br>Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**. <br><br>For any servers you define in the **Domain Controllers** list: <br><br> - All domain controllers whose traffic is being monitored via port mirroring by the Defender for Identity standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected. <br><br> - At least one domain controller in the list should be a global catalog. This enables Defender for Identity to resolve computer and user objects in other domains in the forest. |
+    |**Capture Network adapters**     | Required.      <br><br>  - For Defender for Identity sensors, all network adapters that are used for communication with other computers in your organization.<br><br>      - For Defender for Identity standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.      |
 
 1. On the **Sensors** page, select **Export** to export a list of your sensors to a **.csv** file. For example:
 
@@ -85,15 +74,11 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 ## Validate installations
 
-Use the following procedures to validate your Defender for Identity sensor installation. 
+Use the following procedures to validate your Defender for Identity sensor installation.
 
 > [!NOTE]
-> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md).
+> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on an AD FS/ AD CS server](active-directory-federation-services.md#validate-successful-deployment-on-an-ad-fs-ad-cs-server).
 >
-
-### Verify latest available sensor version
-
-The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft 365 Defender **Settings** > **Identities** > **About** page.
 
 ### Validate successful deployment
 
@@ -128,6 +113,10 @@ If the domain controller that you're testing is the first sensor you've deployed
 
 For more information, see 
 [Attack simulations for Microsoft Defender for Identity](../playbooks.md).
+
+### Verify latest available sensor version
+
+The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft 365 Defender **Settings** > **Identities** > **About** page.
 
 ## Next step
 
