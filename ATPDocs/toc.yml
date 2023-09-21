@@ -36,7 +36,7 @@ items:
     items:
     - name: Download the Defender for Identity sensor
       href: deploy/download-sensor.md
-    - name: Configure proxy settings
+    - name: Configure endpoint proxy and internet connectivity settings
       href: deploy/configure-proxy.md
     - name: Install the Defender for Identity sensor
       href: deploy/install-sensor.md

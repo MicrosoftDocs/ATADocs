@@ -25,7 +25,7 @@ To ensure that Windows clients and servers allow your Defender for Identity Dire
 
 1. Locate the policy. In your **Computer configuration > Windows settings > Security settings > Local policies > Security options**, select the **Network access - Restrict clients allowed to make remote calls to SAM** policy. For example:
 
-    ![Screenshot of the Network access policy selected.](../media/samr-policy-location.png)
+    :::image type="content" source="../media/samr-policy-location.png" alt-text="Screenshot of the Network access policy selected." lightbox="../media/samr-policy-location.png":::
 
 1. Add the Defender for Identity Directory Service account to the list of approved accounts able to perform this action on your modern Windows systems. For example:
 

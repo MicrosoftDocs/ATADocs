@@ -217,6 +217,48 @@ To update the Defender for Identity sensor silently:
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
+## Configure proxy settings (legacy methods)
+
+We recommend configuring your proxy settings during installation by using command line switches. However, if you'd previously configured your proxy settings via either WinINet or a registry key and need to update them, you'll need to use the same method you used originally.
+
+While configuring your proxy from the command line during installation ensures that only the Defender for Identity sensor services communicate through the proxy, using WinINet or a registry allow other services running in the context as Local System or Local Service to also direct traffic through the proxy.  
+
+For more information, see [Configure endpoint proxy and internet connectivity settings](deploy/configure-proxy.md).
+
+### Configure a proxy server using WinINet
+
+When configuring the proxy using WinINet, keep in mind that the embedded Defender for Identity sensor service runs in system context using the **LocalService** account, and that the Defender for Identity Sensor updater service runs in the system context using **LocalSystem** account.
+
+- If you use WinHTTP for proxy configuration, you still need to configure Windows Internet (WinINet) browser proxy settings for communication between the sensor and the Defender for Identity cloud service.
+
+- If you're using Transparent proxy or WPAD in your network topology, you don't need to configure WinINet for your proxy.
+
+### Configure a proxy server using the registry
+
+This section describes how to configure a static proxy server manually using a registry-based static proxy.
+
+> [!IMPORTANT]
+> Configuring a proxy via the registry affects all applications that use WinINet with the **LocalService** and **LocalSystem** accounts, including Windows services.
+>
+> Apply registry changes only to the **LocalService** and **LocalSystem** accounts.
+>
+
+To configure your proxy, copy your proxy configuration in user context to the **LocalSystem** and **LocalService** accounts as follows:
+
+1. Back up your registry keys.
+
+1. In the registry, search for the `DefaultConnectionSettings` value as `REG_BINARY`, under the `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` registry key, and copy it.
+
+1. If the `LocalSystem` doesn't have the correct proxy settings, copy the proxy setting from the `Current_User` to the `LocalSystem`, under the `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` registry key.
+
+    Make sure to paste the value from the `Current_User`'s `DefaultConnectionSettings` registry key as `REG_BINARY`.
+
+    This may happen if your proxy settings aren't configured, or if they're different from the `Current_User`.
+
+1. If the `LocalService` doesn't have the correct proxy settings, then copy the proxy setting from the `Current_User` to the `LocalService`, under the `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` registry key.
+
+    Make sure to paste the value from the `Current_User`'s `DefaultConnectionSettings` registry key as `REG_BINARY`.
+
 ## Next steps
 
 * [Configure event forwarding](deploy/configure-event-forwarding.md)

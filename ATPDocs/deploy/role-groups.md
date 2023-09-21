@@ -37,23 +37,25 @@ Defender for Identity uses Azure AD security groups as a basis for role groups. 
 
 The following table describes the type of access in Defender for Identity available for each role:
 
+<!--do we need sign in listed here? should be the same as for all m365d-->
+
 |Activity |Azure ATP *(Workspace name)* Administrators|Azure ATP *(Workspace name)* Users|Azure ATP *(Workspace name)* Viewers|
 |----|----|----|----|
 |**Change health alert statuses**| ✔|-|-|
 |**Change security alert statuses** <br>(reopen, close, exclude, suppress)| ✔| ✔|-|
 |**Delete workspace**| ✔|-|-|
 |**Download a report**| ✔| ✔| ✔|
-|**Login**| ✔| ✔| ✔|
+|**Sign in** | ✔| ✔| ✔|
 |**Share/Export security alerts** <br>(via email, get link, download details)| ✔| ✔| ✔|
-|**Update Defender for Identity configuration - Updates**| ✔|-|-|
-|**Update Defender for Identity configuration - Entity tags** <br>(sensitive and honeytoken)| ✔| ✔|-|
-|**Update Defender for Identity configuration - Exclusions**| ✔| ✔|-|
-|**Update Defender for Identity configuration - Language**| ✔| ✔|-|
-|**Update Defender for Identity configuration - Notifications** <br>(email and syslog)| ✔| ✔|-|
-|**Update Defender for Identity configuration - Preview detections**| ✔| ✔|-|
-|**Update Defender for Identity configuration - Scheduled reports**| ✔| ✔|-|
-|**Update Defender for Identity configuration - Data sources** <br>(directory services, SIEM, VPN, Defender for Endpoint)| ✔|-|-|
-|**Update Defender for Identity configuration - Sensors** <br>(download, regenerate key, configure, delete)| ✔|-|-|
+|**Update Defender for Identity configuration** - Updates| ✔|-|-|
+|**Update Defender for Identity configuration** - Entity tags <br>(sensitive and honeytoken)| ✔| ✔|-|
+|**Update Defender for Identity configuration** - Exclusions| ✔| ✔|-|
+|**Update Defender for Identity configuration** - Language| ✔| ✔|-|
+|**Update Defender for Identity configuration** - Notifications via email and syslog| ✔| ✔|-|
+|**Update Defender for Identity configuration** - Preview detections| ✔| ✔|-|
+|**Update Defender for Identity configuration** - Scheduled reports| ✔| ✔|-|
+|**Update Defender for Identity configuration** - Data sources, including directory services, SIEM, VPN, Defender for Endpoint| ✔|-|-|
+|**Update Defender for Identity configuration** - Sensor activities, including download, regenerate key, configure, delete| ✔|-|-|
 |**View entity profiles and security alerts**| ✔| ✔| ✔|
 
 Manage your role groups from the Azure Active Directory [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
