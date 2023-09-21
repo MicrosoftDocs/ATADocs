@@ -249,7 +249,7 @@ Released March 27, 2023
 
 - We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Supported DSA account options](deploy/directory-service-accounts.md#supported-dsa-account-options).
 
-- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see [Event ID 1644](deploy/configure-windows-event-collection.md#configure-auditing-for-extra-ldap-queries).
+- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see [Event ID 1644](deploy/configure-windows-event-collection.md#configure-auditing-for-extra-ldap-queries). <!--looks like we removed this-->
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 

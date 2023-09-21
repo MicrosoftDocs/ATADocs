@@ -22,10 +22,11 @@ The Sizing Tool measures the capacity needed for domain controllers only. There 
 - Review the [Defender for Identity architecture](../architecture.md) article.
 - Review the [Defender for Identity prerequisites](prerequisites.md) article.
 
+<!--
 > [!TIP]
 > If you're unable to use the Defender for Identity Sizing tool, you can manually gather traffic information instead. For more information, see [Domain controller traffic estimator](#manual-sizing).
 >
-
+-->
 ## Use the sizing tool
 
 This procedure describes how to use the Defender for Identity Sizing Tool, which is the recommended and simplest way to determine capacity for your Defender for Identity deployment.

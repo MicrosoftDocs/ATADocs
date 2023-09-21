@@ -96,7 +96,7 @@ The following table lists installation support across several operating system v
 |**Netlogon**  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network|
 |**RADIUS**         |UDP      |1813|RADIUS         |Defender for Identity sensor      |
 |**Localhost ports** [<sup>2</sup>](#localhost) <br><br>Required for the sensor service updater      ||    |  |         |
-|**SSL** [<sup>2</sup>](localhost)|TCP      |444 |Sensor service|Sensor updater service            |
+|**SSL** [<sup>2</sup>](#localhost)|TCP      |444 |Sensor service|Sensor updater service            |
 |**Network Name Resolution (NNR) ports** [<sup>3</sup>](#nnr)      | | | | |
 |**NTLM over RPC**  |TCP      |Port 135         |Defender for Identity sensor|All devices on network|
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|

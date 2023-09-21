@@ -266,7 +266,7 @@ Released April 10, 2022
 
 Released March 27, 2022
 
-- Microsoft Defender for Identity can now monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers. To learn how to enable this event, see [Event ID 1644](deploy/configure-windows-event-collection.md#configure-auditing-for-extra-ldap-queries).
+- Microsoft Defender for Identity can now monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers. To learn how to enable this event, see [Event ID 1644](deploy/configure-windows-event-collection.md#configure-auditing-for-extra-ldap-queries). <!--looks like we removed this-->
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 

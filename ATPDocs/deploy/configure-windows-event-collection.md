@@ -255,7 +255,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
             ![Screenshot of the Properties Auditing tab.](../media/configure-windows-event-collection/auditing.png)
 
-        For more information, see [Supported Windows events](event-collection-overview.md#supported-windows-events).
+        For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
 
 

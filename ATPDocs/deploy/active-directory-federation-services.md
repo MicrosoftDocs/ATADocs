@@ -7,7 +7,6 @@ ms.topic: how-to
 
 # Deploying Microsoft Defender for Identity on AD FS and AD CS servers
 
-<!--do we need NNR/SAM-R ports open for AD CS sensors?-->
 Defender for Identity protects the Active Directory Federation Services (AD FS) in your environment by detecting on-premises attacks against AD FS servers, and protects the Active Directory Certificate Services (AD CS) by detecting on-premises attacks against AD CS servers.
 
 This article describes the additional prerequisites and post-installation steps required when installing Defender for Identity sensors on AD FS or AD CS servers.
