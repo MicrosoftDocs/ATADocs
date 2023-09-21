@@ -19,6 +19,8 @@ This article describes how the flow of Defender for Identity's network and event
 
 Installed directly on your domain controller, AD FS, or AD CS servers, the Defender for Identity sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, Defender for Identity sends only the parsed information, including only a selection of your logs, to the Defender for Identity cloud service.
 
+Each Defender for Identity workspace supports multiple Active Directory forest boundaries and Forest Functional Levels (FFL), for Windows 2003 and higher. For more information, see [Microsoft Defender for Identity multi-forest support](multi-forest.md).
+
 ## Defender for Identity components
 
 Defender for Identity consists of the following components:
