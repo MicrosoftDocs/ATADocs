@@ -83,7 +83,7 @@ The following table maps the built-in Defender for Identity role to require perm
 | ------------------------------------- | ------------------------------------------------------------ |
 |**Administrator**                             | - `Authorization and settings/Security settings/Read`<br>- `Authorization and settings/Security settings/All permissions`<br/>-`Authorization and settings/System settings/Read`<br/>-`Authorization and settings/System settings/All permissions`<br/>- `Security operations/Security data/Alerts` (manage)<br/>- `Security operations/Security data/Security data basics` (Read)<br/>- `Authorization and settings/Authorization/All permissions` <br>- `Authorization and settings/Authorization/Read` |
 |**User**                              | - `Security operations/Security data/Security data basics` (Read)<br/>- `Authorization and settings/System settings/Read`<br/>- `Authorization and settings/Security settings/Read`<br/>- `Security operations/Security data/Alerts` (manage)<br/>- `microsoft.xdr/configuration/security/manage` |
-|**Viewer**                            | - `Security operations/Security data/Security data basics` (Read)<br/>- `Authorization and settings/System settings/Read`<br/>- Authorization and settings/Security settings/Read` |
+|**Viewer**                            | - `Security operations/Security data/Security data basics` (Read)<br/>- `Authorization and settings/System settings/Read`<br/>- `Authorization and settings/Security settings/Read` |
 
 For more information, see [Custom roles in role-based access control for Microsoft 365 Defender](/microsoft-365/security/defender/custom-roles).
 
