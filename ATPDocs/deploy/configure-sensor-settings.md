@@ -77,7 +77,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 Use the following procedures to validate your Defender for Identity sensor installation.
 
 > [!NOTE]
-> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on an AD FS/ AD CS server](active-directory-federation-services.md#validate-successful-deployment-on-an-ad-fs-ad-cs-server).
+> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on an AD FS / AD CS server](active-directory-federation-services.md#validate-successful-deployment-on-an-ad-fs-ad-cs-server).
 >
 
 ### Validate successful deployment

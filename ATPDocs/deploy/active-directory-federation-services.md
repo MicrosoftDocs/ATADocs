@@ -16,10 +16,10 @@ For more information, see:
 
 - [Microsoft Defender for Identity prerequisites](prerequisites.md)
 - [Install the Microsoft Defender for Identity sensor](install-sensor.md)
-For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
+
 
 > [!NOTE]
-> If you use both Defender for Identity and Defender for Endpoint, you must install both sensors on domain controllers or AD FS/AD CS servers to protect both the server and Active Directory.
+> If you use both Defender for Identity and Defender for Endpoint, you must install both sensors on domain controllers or AD FS /AD CS servers to protect both the server and Active Directory.
 
 ## Prerequisites
 
@@ -136,19 +136,17 @@ For sensor installations on AD FS servers, configure the SQL server to allow *Di
 
 <!--what about ad cs?-->
 
-## Install the Microsoft Defender for Identity sensor on an AD FS/ AD CS server
 
-For more information, see [Install the Defender for Identity sensor](install-sensor.md).
 
-### Validate successful deployment on an AD FS/ AD CS server
+## Validate successful deployment on an AD FS / AD CS server
 
-To validate that the Defender for Identity sensor has been successfully deployed on an AD FS/ AD CS server:
+To validate that the Defender for Identity sensor has been successfully deployed on an AD FS / AD CS server:
 
 1. Check that the **Azure Advanced Threat Protection sensor** service is running. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
 
 1. If the service doesn't start, review the `Microsoft.Tri.sensor-Errors.log` file, located by default at: `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`
 
-1. Use AD FS/ AD CS to authenticate a user to any application, and then verify that the AD FS authentication was observed by Defender for Identity:
+1. Use AD FS / AD CS to authenticate a user to any application, and then verify that the AD FS authentication was observed by Defender for Identity:
 
    From Microsoft 365 Defender, select **Hunting** > **Advanced Hunting**. For example, in the **Query** pane, enter and run the following query:
 
@@ -160,22 +158,26 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
    :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 
-## Post-installation steps for AD FS/ AD CS servers
+## Post-installation steps for AD FS / AD CS servers
 
-Installing the sensor on an AD FS/ AD CS server automatically selects the closest domain controller. Use the following steps to check or modify the selected domain controller.
+Installing the sensor on an AD FS / AD CS server automatically selects the closest domain controller. Use the following steps to check or modify the selected domain controller.
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings**  > **Identities** > **Sensors** to view all of your Defender for Identity sensors.
 
-1. Locate and select the sensor you installed on an AD FS/ AD CS server.
+1. Locate and select the sensor you installed on an AD FS / AD CS server.
 
-1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers. Select the plus icon **(+)**, and then select **Save**.   For example:
+1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.   For example:
 
     ![Defender for Identity configure AD FS sensor resolver](../media/sensor-config-adfs-resolver.png)
 
-Initializing the sensor may take a couple of minutes, at which time the AD FS/ AD CS sensor service status should change from **stopped** to **running**.
+Initializing the sensor may take a couple of minutes, at which time the AD FS / AD CS sensor service status should change from **stopped** to **running**.
 
 
 
-## Next step
+## Related content
 
-[Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md)
+For more information, see:
+
+- [Microsoft Defender for Identity prerequisites](prerequisites.md)
+- [Install the Microsoft Defender for Identity sensor](install-sensor.md)
+- [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md)

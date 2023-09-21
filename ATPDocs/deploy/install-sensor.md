@@ -29,7 +29,7 @@ Before you start, make sure that you have:
 
 ## Install the sensor
 
-Perform the following steps on the domain controller or AD FS/AD CS server.
+Perform the following steps on the domain controller or AD FS /AD CS server.
 
 1. Verify the machine has connectivity to the relevant [Defender for Identity cloud service endpoint(s)](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
@@ -158,7 +158,7 @@ Use the following commands to silently install the Defender for Identity sensor:
 
 If you installed the sensor on an AD FS / AD CS server, or if you installed a standalone sensor, following the extra post-installation steps:
 
-- [Post-installation steps for AD FS/ AD CS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-ad-cs-servers)
+- [Post-installation steps for AD FS / AD CS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-ad-cs-servers)
 
 - **Standalone sensors**:
 
