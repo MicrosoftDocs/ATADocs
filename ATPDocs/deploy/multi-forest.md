@@ -13,11 +13,11 @@ Enterprise organizations typically have several Active Directory forests - often
 
 Securing your multiple Active Directory forests with Defender for Identity provides the following advantages:
 
-- View and investigate activities performed by users across multiple forests from a single location
-- Gain improved detection and reduce false positives with advanced Active Directory integration and account resolution
-- Gain greater control and easier deployment, with an improved set of health issues and reporting for cross-org coverage when your domain controllers are all monitored from a single Defender for Identity server
+- **View and investigate** activities performed by users across multiple forests from a single location
+- **Gain improved detection** and reduce false positives with advanced Active Directory integration and account resolution
+- **Gain greater control and easier deployment**, with an improved set of health issues and reporting for cross-org coverage when your domain controllers are all monitored from a single Defender for Identity server
 
-## Requirements
+## Prerequisites
 
 Defender for Identity requires the following to support multiple Active Directory forests:
 
@@ -33,12 +33,12 @@ Defender for Identity requires the following to support multiple Active Director
   |Protocol|Transport|Port|To/From|Direction|
   |----|----|----|----|----|
   |**Internet ports**||||
-  |SSL (*.atp.azure.com)|TCP|443|Defender for Identity cloud service|Outbound|
+  |**SSL** (*.atp.azure.com)|TCP|443|Defender for Identity cloud service|Outbound|
   |**Internal ports**||||
-  |LDAP|TCP and UDP|389|Domain controllers|Outbound|
-  |Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
-  |LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
-  |LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
+  |**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
+  |**Secure LDAP** (LDAPS)|TCP|636|Domain controllers|Outbound|
+  |**LDAP to Global Catalog**|TCP|3268|Domain controllers|Outbound|
+  |**LDAPS to Global Catalog**|TCP|3269|Domain controllers|Outbound|
 
 > [!NOTE]
 > Each Defender for Identity sensor can only report to a single Defender for Identity workspace.
@@ -59,10 +59,12 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 
   - There's a default limit of 30 untrusted forests per Defender for Identity workspace. Contact support if your organization has more than 30 forests.
 
+    - Interactive sign-ins performed by users in one forest to access resources in another forest aren't listed by Defender for Identity. <!--dashboard?-->
+
 For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
 
-## Multi-forest mapping process
+## Network traffic impact for multi-forest support
 
 When Defender for Identity maps your forests, it uses the following process:
 

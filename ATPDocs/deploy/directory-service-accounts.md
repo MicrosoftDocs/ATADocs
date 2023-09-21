@@ -26,7 +26,7 @@ If a sensor detects activities in other domains, it queries the other domain via
 
 Defender for Identity supports the following DSA options:
 
-- **gMSA** (Recommended). Provides a more secure deployment and password management. Active Directory manages the creation and rotation of the account's password, just like a computer account's password, and you can control how often the account's password is changed.
+- **Group Managed Service Account gMSA** (Recommended). Provides a more secure deployment and password management. Active Directory manages the creation and rotation of the account's password, just like a computer account's password, and you can control how often the account's password is changed.
 
     gMSA requires extra setup steps.
 

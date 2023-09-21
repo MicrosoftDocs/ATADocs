@@ -108,6 +108,8 @@ The following table lists installation support across several operating system v
 
 <a name=nnr></a><sup>3</sup> One of these ports is required, but we recommend opening all of them.
 
+Additional ports are required to support multiple Active Directory forests. For more information, see [Prerequisites](multi-forest.md#prerequisites).
+
 ### Dynamic memory requirements
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:
