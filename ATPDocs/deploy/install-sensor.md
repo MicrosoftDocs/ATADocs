@@ -168,4 +168,4 @@ If you installed the sensor on an AD FS / AD CS server, or if you installed a st
 ## Next step
 
 > [!div class="step-by-step"]
-> [Manage action accounts »](manage-action-accounts.md)
+> [Configure the Defender for Identity sensor »](configure-sensor-settings.md)

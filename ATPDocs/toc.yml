@@ -40,20 +40,18 @@ items:
       href: deploy/configure-proxy.md
     - name: Install the Defender for Identity sensor
       href: deploy/install-sensor.md
-    - name: Manage action accounts
-      href: deploy/manage-action-accounts.md
     - name: Configure the Defender for Identity sensor
       href: deploy/configure-sensor-settings.md
   - name: Extra deployment scenarios
     items:
-    - name: Install on Active Directory Federation Services
+    - name: Install on AD FS / AD CS servers
       href: deploy/active-directory-federation-services.md
     - name: Deploy for multiple Active Directory forests
       href: deploy/multi-forest.md
     - name: Configure a Directory Service account
       href: deploy/directory-service-accounts.md
-    - name: Migrate from Advanced Threat Analytics (ATA)
-      href: deploy/migrate-from-ata-overview.md
+    - name: Configure action accounts
+      href: deploy/manage-action-accounts.md
     - name: Configure a standalone sensor
       items:
       - name: Configure port mirroring
@@ -68,6 +66,8 @@ items:
           href: deploy/configure-event-collection.md
         - name: Configure Windows Event Forwarding
           href: deploy/configure-event-forwarding.md
+    - name: Migrate from Advanced Threat Analytics (ATA)
+      href: deploy/migrate-from-ata-overview.md
 - name: Evaluate
   items:
   - name: Attack simulations

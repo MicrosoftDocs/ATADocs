@@ -5,7 +5,7 @@ ms.date: 01/22/2023
 ms.topic: how-to
 ---
 
-# Microsoft Defender for Identity action accounts
+# Configure Microsoft Defender for Identity action accounts
 
 
 <!--is this in the right place? as per gershon-->
@@ -16,11 +16,6 @@ By default, the Microsoft Defender for Identity sensor installed on a domain con
 
 :::image type="content" source="../media/management-accounts.png" alt-text="Screenshot of the Manage action accounts tab." lightbox="../media/management-accounts.png":::
 
-Watch the following video to learn more about remediation actions in Defender for Identity:
-
-<br>
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4U7Pe]
 
 ## Best practices for action accounts
 
@@ -76,7 +71,7 @@ We also recommend that you avoid using the same account as both the Directory Se
 
 ## Add the gMSA account in the Microsoft 365 Defender portal
 
-1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com) and select **Settings** -> **Identities** > **Microsoft Defender for Identity** > **Manage action accounts** > **+Create new account**. For exmaple:
+1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com) and select **Settings** -> **Identities** > **Microsoft Defender for Identity** > **Manage action accounts** > **+Create new account**. For example:
 
     ![Screenshot of the Create new account button.](../media/manage-action-accounts.png)
 
@@ -85,7 +80,6 @@ We also recommend that you avoid using the same account as both the Directory Se
 Your action account is listed on the **Manage action accounts** page.
 
 
-## Next step
+## Related content
 
-> [!div class="step-by-step"]
-> [Configure the Defender for Identity sensor »](configure-sensor-settings.md)
+For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
