@@ -290,6 +290,22 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 > [!NOTE]
 > You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
 
+## Test your DSA permissions and delegations
+
+Use the following PowerShell command to verify that your DSA doesn't have too many permissions, such as powerful admin permissions:
+
+```powershell
+Test-MDIDSA [-Identity] <String> [-Detailed] [<CommonParameters>]
+```
+
+For example, to check permissions for the **mdiSvc01** account and provide full details, run:
+
+```powershell
+Test-MDIDSA -Identity "mdiSvc01" -Detailed
+```
+
+For more information, see <xref>.
+
 ## Troubleshooting
 
 - [Sensor failed to retrieve the gMSA credentials](troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials)

@@ -55,8 +55,14 @@ Set-MDISensorProxyConfiguration -ProxyUrl 'http://proxy.contoso.com:8080'
 
 This example sets the proxy configuration for the Defender for Identity sensor to use the specified proxy server without any credentials.
 
-For more information, see <xref>.
 
+**To remove the current sensor's proxy configuration entirely**:
+
+```powershell
+Clear-MDISensorProxyConfiguration
+```
+
+For more information, see <xref>.
 
 ## Alternative methods to configure your proxy server
 

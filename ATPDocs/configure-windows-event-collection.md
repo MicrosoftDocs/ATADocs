@@ -1,16 +1,36 @@
 ---
-title: Configure Windows Event collection
-description: In this step of installing Microsoft Defender for Identity, you configure Windows Event collection.
-ms.date: 08/16/2023
+title: Configure event and audit policies | Microsoft Defender for Identity
+description: Learn how to configure event and audit policies for specific events used by Microsoft Defender for Identity.
+ms.date: 09/21/2023
 ms.topic: how-to
 ---
 
-# Configure Windows Event collection
+# Configure event and audit policies
 
 Microsoft Defender for Identity detection relies on specific Windows Event log entries to enhance some detections and provide additional information on who performed specific actions such as NTLM logons, security group modifications, and similar events. For the correct events to be audited and included in the Windows Event Log, your domain controllers require accurate Advanced Audit Policy settings. Incorrect Advanced Audit Policy settings can lead to the required events not being recorded in the Event Log and result in incomplete Defender for Identity coverage.
 
 To enhance threat detection capabilities, Defender for Identity needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by Defender for Identity:
 
+## Generate a report with current configurations
+
+Before you start creating new event and audit polices, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
+
+<!--we should give full syntax everywhere-->
+```powershell
+New-MDIConfigurationReport [-Path] <String> [-OpenHtmlReport] [<CommonParameters>]
+```
+
+For example, to generate a report and open it in your default browser, run the following command:
+
+```powershell
+New-MDIConfigurationReport -Path "C:\Reports" -OpenHtmlReport
+```
+
+For more information, see <xref>.
+
+> [!TIP]
+> The report includes only configurations set as group policies on the domain. If you have settings defined locally, we recommend that you also run the [Test-MdiReadiness.ps1]((https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness)) script.
+> 
 ## Relevant Windows Events
 
 ### For Active Directory Federation Services (AD FS) events
@@ -101,6 +121,7 @@ To configure audit policies using PowerShell, run the following commands:
 Run set-mdiconfiguration
 
 To view it or test it, use get- or test
+(Get-MDIConfiguration, Test-MDIConfiguration)
 
 all 3 has different parameter values for each type
 
