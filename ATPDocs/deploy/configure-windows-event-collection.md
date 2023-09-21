@@ -83,7 +83,7 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 ![Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration.](../media/advanced-audit-policy-check-step-3.png)
 
-<!-->
+<!--
 ## Configure auditing for extra LDAP queries
 
 Microsoft Defender for Identity can monitor extra LDAP queries in your network, which are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable **event 1644** on your domain controllers. 
@@ -104,9 +104,9 @@ Windows Registry Editor Version 5.00
 "Inefficient Search Results Threshold"=dword:00000001 "Search Time Threshold (msecs)"=dword:00000001 
 ```
 
--->
 
-<!-->
+
+
 ## Configure object auditing for Event ID 4662
 
 To collect 4662 events, you must also configure object auditing on the user, group and computer objects. This procedure describes how to enable auditing on all users, groups, and computers in the Active Directory domain.
@@ -164,6 +164,7 @@ To collect 4662 events, you must also configure object auditing on the user, gro
 >
 
 Some detections require auditing specific Active Directory objects. To do so, follow the steps in this procedure, with the changes noted as follows regarding the objects to audit and permissions to include.
+-->
 
 ### Enable auditing on an ADFS object
 
@@ -223,7 +224,6 @@ Some detections require auditing specific Active Directory objects. To do so, fo
 
 1. Select **OK**.
 
--->
 ## Configure auditing for AD CS
 
 If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:

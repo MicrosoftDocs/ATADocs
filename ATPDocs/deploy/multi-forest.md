@@ -59,7 +59,7 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 
   - There's a default limit of 30 untrusted forests per Defender for Identity workspace. Contact support if your organization has more than 30 forests.
 
-    - Interactive sign-ins performed by users in one forest to access resources in another forest aren't listed by Defender for Identity. <!--dashboard?-->
+    - Interactive sign-ins performed by users in one forest to access resources in another forest aren't listed by Defender for Identity.
 
 For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 

@@ -7,8 +7,6 @@ ms.topic: how-to
 
 # Plan capacity for Microsoft Defender for Identity deployment
 
-<!--as per Gershon, missing dedicated info for AD CS-->
-
 This article describes how to determine what resources you need for your Microsoft Defender for Identity sensors.
 
 By default, Defender for Identity supports up to 350 sensors. To install more sensors, contact Defender for Identity support.

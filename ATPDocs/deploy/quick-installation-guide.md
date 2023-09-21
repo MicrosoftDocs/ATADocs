@@ -27,6 +27,7 @@ This section lists the prerequisites required before installing the Defender for
 - System requirements
 - Recommendations for performance and maintenance windows
 
+Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 ### Licensing requirements
 
 Make sure that you have one of the following licenses:
@@ -40,7 +41,7 @@ Acquire licenses directly via the [Microsoft 365 portal](https://www.microsoft.c
 
 ### Required permissions
 
-- To create your Defender for Identity workspace, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. <!--unclear how this connects to Permissions-->
+- To create your Defender for Identity workspace, you'll need an Azure AD tenant with at least one global/security administrator. 
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
