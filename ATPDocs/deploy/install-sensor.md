@@ -77,13 +77,14 @@ Perform the following steps on the domain controller or AD FS/AD CS server.
         > [!IMPORTANT]
         >
         > - Don't install KB 3047154 on a virtualization host, which is the host that is running the virtualization. This may cause port mirroring to stop working properly. It's fine to run KB 3047154 on a virtual machine.
+        >
         > - If Wireshark is installed on the Defender for Identity sensor machine, you'll need to restart the Defender for Identity sensor after running Wireshark because they use the same drivers.
 
 ### Viewing sensor versions
 
-Beginning with version 2.176, when installing the sensor from a new package, the sensor's version under **Add/Remove Programs** will appear with the full version number, such as **2.176.x.y**, instead of the static **2.0.0.0** that was previously shown.
+Beginning with version 2.176, when installing the sensor from a new package, the sensor's version under **Add/Remove Programs** appears with the full version number, such as **2.176.x.y**, instead of the static **2.0.0.0** that was previously shown.
 
-The installed version continues to show even after automatic updates are run from the Defender for Identity cloud services. 
+The installed version continues to show even after automatic updates are run from the Defender for Identity cloud services.
 
 View the sensor's real version in the Microsoft 365 Defender [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor), in the executable path or in the file version.
 
@@ -153,14 +154,17 @@ Use the following commands to silently install the Defender for Identity sensor:
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKeyFile="C:\Path\myAccessKeyFile.txt"
 ```
 
-## Installing on AD FS / AD CS servers 
+## Related content
 
-<!--do we need separate information for ad cs servers?-->
+If you installed the sensor on an AD FS / AD CS server, or if you installed a standalone sensor, following the extra post-installation steps:
 
-If you installed the sensor on AD FS / AD CS servers, follow the steps in [Post-installation steps for AD FS/ AD CS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-ad-cs-servers) to complete the setup.
+- [Post-installation steps for AD FS/ AD CS servers](active-directory-federation-services.md#post-installation-steps-for-ad-fs-ad-cs-servers)
 
-<!--unclear
-But we can add a note about changing the selected domain controller that the sensor is working with. -->
+- **Standalone sensors**:
+
+    - [Configure port mirroring](configure-port-mirroring.md)
+    - [Configure Windows event collection](event-collection-overview.md)
+
 ## Next step
 
 > [!div class="step-by-step"]
