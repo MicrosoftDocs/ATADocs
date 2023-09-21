@@ -86,11 +86,11 @@ Do the following steps to confirm that everything is working as expected. Perfor
 
 You should get an *Error 503 The service is unavailable* message, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint.  This is the desired result.
 
-If you don't get an *Error 503 The service is unavailable* message, you may have a problem with your connectivity configuration. Check your network and proxy settings.
+- If you don't get an *Error 503 The service is unavailable* message, you may have a problem with your connectivity configuration. Check your network and proxy settings.
 
-If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). 
+- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). 
 
-Certificate details should look similar to the following: **DigiCert Global Root G2** > **Microsoft Azure TLS Issuing CA 01** > ***.atp.azure.com**.
+    Certificate details should look similar to the following: **DigiCert Global Root G2** > **Microsoft Azure TLS Issuing CA 01** > ***.atp.azure.com**.
 
 ## Legacy proxy configuration methods
 
