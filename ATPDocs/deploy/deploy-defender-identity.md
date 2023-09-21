@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article provides an overview of the full deployment process for Microsoft Defender for Identity, including steps for preparation, deployment, and extra steps for specific scenarios.
 
-Defender for Identity is a primary component of a [Zero Trust](/security/zero-trust/zero-trust-overview) strategy and your XDR deployment with Microsoft 365 Defender. Defender for Identity uses Active Directory signals to detect sudden account changes like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by the security team. <!--should we also mention itdr?-->
+Defender for Identity is a primary component of a [Zero Trust](/security/zero-trust/zero-trust-overview) strategy and your identity threat detection and response (ITDR) or extended detection and response (XDR) deployment with Microsoft 365 Defender. Defender for Identity uses Active Directory signals to detect sudden account changes like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by the security team.
 
 For a quick set of deployment highlights, see [Quick installation guide](quick-installation-guide.md).
 
@@ -67,18 +67,18 @@ After you've prepared your system, use the following steps to deploy Defender fo
 1. [Download the Defender for Identity sensor](download-sensor.md).
 1. [Configure a proxy](configure-proxy.md) as needed.
 1. [Install the Defender for Identity sensor](install-sensor.md).
-1. [Manage action accounts](manage-action-accounts.md) as needed.
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
 You may have extra, or different steps in your deployment if you're working with any of the following environments:
 
 |Scenario  |Extra steps  |
 |---------|---------|
-|**Installing your Defender for Identity sensor on AD FS or AD CS servers**     |   [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)      |
-|**Installing your Defender for Identity sensor with multiple Active Directory forests**     |  [Multi-forest support](multi-forest.md)       |
-| **Create a Directory Service account (DSA) for use with Defender for Identity** | [Configure a Directory Service account](directory-service-accounts.md) |
+|**Installing your Defender for Identity sensor on AD FS or AD CS servers**     |  Note extra prerequisites and post-installation steps in [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md).      |
+|**Installing your Defender for Identity sensor with multiple Active Directory forests**     |  Learn how Defender for Identity provides [multi-forest support](multi-forest.md).       |
+| **Create a specific Directory Service account (DSA) for use with Defender for Identity** | [Configure a Directory Service account](directory-service-accounts.md) |
+| **Set up a gMSA account to use instead of a LocalSystem account**| [Configure an action account to use with Defender for Identity](manage-action-accounts.md).|
+| **Installing a standalone Defender for Identity sensor** | Note extra prerequisites for standalone sensors in [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md). <br><br>Also do the following for your standalone sensor: <br>1. [Configure port mirroring](configure-port-mirroring.md). <br>2. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). <br>3. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md).|
 |**Migrate from Advanced Threat Analytics (ATA)**     |   [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)      |
-| **Installing a standalone Defender for Identity sensor** | 1. [Configure port mirroring](configure-port-mirroring.md). <br>2. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). <br>3. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md).|
 
 ## Next step
 

@@ -62,7 +62,7 @@ We also recommend that you avoid using the same account as both the Directory Se
         |**Enable force password reset**     |  Reset password       |   - `Read pwdLastSet` <br>- `Write pwdLastSet`      |
         |**To disable user**     |    -     |                   - `Read userAccountControl` <br>- `Write userAccountControl`      |
 
-    1. In the **Applies to** field, select **Descendant Group objects** and set the following properties:
+    1. (Optional) In the **Applies to** field, select **Descendant Group objects** and set the following properties:
 
         - `Read members`
         - `Write members`
@@ -71,7 +71,9 @@ We also recommend that you avoid using the same account as both the Directory Se
 
 ## Add the gMSA account in the Microsoft 365 Defender portal
 
-1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com) and select **Settings** -> **Identities** > **Microsoft Defender for Identity** > **Manage action accounts** > **+Create new account**. For example:
+1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com) and select **Settings** -> **Identities** > **Microsoft Defender for Identity** > **Manage action accounts** > **+Create new account**. 
+
+    For example:
 
     ![Screenshot of the Create new account button.](../media/manage-action-accounts.png)
 
