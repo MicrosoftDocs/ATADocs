@@ -7,16 +7,21 @@ ms.topic: how-to
 
 # Configure endpoint proxy and internet connectivity settings
 
-Each Microsoft Defender for Identity sensor requires internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully. 
+Each Microsoft Defender for Identity sensor requires internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully.
 
 In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
 
 > [!IMPORTANT]
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
 >
+
+
 ## Prerequisites
 
 Before starting, make sure that you understand that you want to use a proxy connection instead of option connectivity options. For more information, see [Connectivity requirements](prerequisites.md#connectivity-requirements).
+
+If you aren't configuring a proxy, you'll still need to make sure that your machine has connectivity to the relevant Defender for Identity cloud service endpoints. For more information, see [Enable access to Defender for Identity service URLs in the proxy server](#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server). [Test your connectivity](#test-connectivity) and then continue with [installing the Microsoft Defender for Identity sensor](install-sensor.md).
+
 
 ## Configure a proxy server using the command line
 

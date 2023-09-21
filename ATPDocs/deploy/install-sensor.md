@@ -7,10 +7,11 @@ ms.topic: how-to
 
 # Install the Microsoft Defender for Identity sensor
 
-Learn how to install the Microsoft Defender for Identity sensor on domain controllers.
+This article describes how to install the Microsoft Defender for Identity sensor, including a standalone sensor, using the installation wizard.
 
-> [!NOTE]
-> When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-sensor-silent-installation) instead.
+- If you're using a proxy, we recommend that you install the sensor and configure your proxy together from the command line. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+
+- When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-sensor-silent-installation) instead.
 
 ## Prerequisites
 
@@ -20,7 +21,11 @@ Before you start, make sure that you have:
 
 - Microsoft .NET Framework 4.7 or later is installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the Defender for Identity sensor setup package installs it, which may require a reboot of the server.
 
-- Relevant server specifications and network requirements, if you're installing the sensor on an Active Directory Federation Service (AD FS) or Active Directory Certificate Services (AD CS) server. For more information, see [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md).
+- Relevant server specifications and network requirements. For more information, see:
+
+    - [Microsoft Defender for Identity prerequisites](prerequisites.md)
+    - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
+    - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
 
 ## Install the sensor
 
