@@ -11,10 +11,6 @@ Each Microsoft Defender for Identity sensor requires internet connectivity to th
 
 In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
 
-If you're using a proxy, we recommend that you configure your proxy together with the sensor installation using command line switches.
-
-If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](../sensor-settings.md#configure-proxy-settings-legacy-methods).
-
 > [!IMPORTANT]
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
 >
@@ -95,6 +91,12 @@ If you don't get an *Error 503 The service is unavailable* message, you may have
 If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). 
 
 Certificate details should look similar to the following: **DigiCert Global Root G2** > **Microsoft Azure TLS Issuing CA 01** > ***.atp.azure.com**.
+
+## Legacy proxy configuration methods
+
+If you're using a proxy, we recommend that you configure your proxy together with the sensor installation using command line switches.
+
+If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](../sensor-settings.md#configure-proxy-settings-legacy-methods).
 
 ## Next step
 
