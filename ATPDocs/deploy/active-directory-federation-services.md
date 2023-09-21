@@ -45,7 +45,7 @@ For more information, see [Sensor requirements](prerequisites.md#sensor-requirem
 
 ### Network requirements
 
-For sensors running on AD FS / AD CS servers to be able to communicate with the Defender for Identity cloud service, you must open port 443 on your firewalls and proxies to the following endpoint: `<your-instance-name>sensorapi.atp.azure.com`
+For sensors running on AD FS / AD CS servers to be able to communicate with the Defender for Identity cloud service, you must open port 443 on your firewalls and proxies to the following endpoint: `<your-workspace-name>sensorapi.atp.azure.com`
 
 For example: *contoso-corpsensorapi.atp.azure.com*
 

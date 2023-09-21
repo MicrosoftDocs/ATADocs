@@ -28,9 +28,9 @@ For more information, see [Licensing and privacy](/defender-for-identity/technic
 
 ## Required permissions
 
-To create your Defender for Identity instance, you'll need an Azure Active Directory (Azure AD) tenant with at least one Global or Security administrator.
+To create your Defender for Identity workspace, you'll need an Azure Active Directory (Azure AD) tenant with at least one Global or Security administrator.
 
-Each Defender for Identity instance supports  multiple Active Directory forest boundaries and Forest Functional Levels (FFL), for Windows 2003 and higher.
+Each Defender for Identity workspace supports  multiple Active Directory forest boundaries and Forest Functional Levels (FFL), for Windows 2003 and higher.
 
 You'll need Global or Security administrator access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
 

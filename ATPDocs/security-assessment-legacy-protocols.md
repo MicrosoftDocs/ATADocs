@@ -38,7 +38,7 @@ To retire the use of legacy protocols, your organization must first discover whi
 1. Stop legacy protocol use and eventually, [disable the protocols completely](/archive/blogs/miriamxyra/stop-using-lan-manager-and-ntlmv1).
 
     >[!IMPORTANT]
-    >Microsoft Defender for Identity may not detect every instance of legacy protocols. So, as with any modifications to your environment, it's recommended to test any changes before pushing them into production. Disabling those protocols without testing might cause legacy apps to break.
+    >Microsoft Defender for Identity may not detect every workspace of legacy protocols. So, as with any modifications to your environment, it's recommended to test any changes before pushing them into production. Disabling those protocols without testing might cause legacy apps to break.
 
 > [!NOTE]
 > This assessment is updated in near real time.

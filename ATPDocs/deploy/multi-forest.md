@@ -57,7 +57,7 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 
   - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
 
-  - There's a default limit of 30 untrusted forests per Defender for Identity instance. Contact support if your organization has more than 30 forests.
+  - There's a default limit of 30 untrusted forests per Defender for Identity workspace. Contact support if your organization has more than 30 forests.
 
 For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 

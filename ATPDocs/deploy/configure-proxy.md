@@ -88,10 +88,10 @@ To configure your proxy, copy your proxy configuration in user context to the **
 
 To ensure maximal security and data privacy, Defender for Identity uses certificate-based, mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud back-end. SSL inspection and interception are not supported, as they interfere in the authentication process.
 
-To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-instance-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
+To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
 
 
-The URL syntaxes listed in the table above automatically map to the correct service location for your Defender for Identity instance.
+The URL syntaxes listed in the table above automatically map to the correct service location for your Defender for Identity workspace.
 
 > [!TIP]
 > Occasionally, the Defender for Identity service IP addresses may change. 

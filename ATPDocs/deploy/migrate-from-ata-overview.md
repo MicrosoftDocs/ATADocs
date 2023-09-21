@@ -32,7 +32,7 @@ This article describes how to migrate from an existing ATA installation to a Mic
 
 To migrate from ATA to Defender for Identity, you must have:
 
-- **An Azure Active Directory tenant with at least one global/security administrator**, so that you can create a Defender for Identity instance. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- **An Azure Active Directory tenant with at least one global/security administrator**, so that you can create a Defender for Identity workspace. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - **.Net Framework version 4.7 or later**. You may also need to restart your domain controller if your current .Net Framework version is not 4.7 or later.
 
@@ -70,7 +70,7 @@ Before starting the migration, gather all of the following information:
 
 Use the following steps to migrate to Defender for Identity:
 
-1. [Create your new Defender for Identity instance](deploy-defender-identity.md#start-using-microsoft-365-defender).
+1. [Create your new Defender for Identity workspace](deploy-defender-identity.md#start-using-microsoft-365-defender).
 
 1. Uninstall the ATA Lightweight Gateway on all domain controllers.
 

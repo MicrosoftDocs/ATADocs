@@ -107,9 +107,9 @@ This section describes how to collect the packets/sec counter from a domain cont
 
 1. On the **What type of data do you want to include?** dialog, select  **Create data logs** >  **Performance counter**.
 
-1. On the  **Which performance counters would you like to log** dialog, select **Add** > **Network Adapter** > **Packets/sec**. Select the relevant instance, and then select **Add > OK**.
+1. On the  **Which performance counters would you like to log** dialog, select **Add** > **Network Adapter** > **Packets/sec**. Select the relevant workspace, and then select **Add > OK**.
 
-    If you aren't sure which instance to select, select **&lt;All instances&gt;**.
+    If you aren't sure which workspace to select, select **&lt;All workspace&gt;**.
 
     > [!NOTE]
     > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter it's and configuration.

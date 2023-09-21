@@ -40,7 +40,7 @@ Acquire licenses directly via the [Microsoft 365 portal](https://www.microsoft.c
 
 ### Required permissions
 
-- To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. <!--unclear how this connects to Permissions-->
+- To create your Defender for Identity workspace, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above. <!--unclear how this connects to Permissions-->
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
@@ -95,9 +95,9 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
     > [!TIP]
     > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
 
-1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service. From each server, try accessing: `https://*your-instance-name*sensorapi.atp.azure.com`.
+1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service. From each server, try accessing: `https://*your-workspace-name*sensorapi.atp.azure.com`.
 
-    - To get your instance name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
+    - To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
     - For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
 
 1. From the domain controller, run the installer you'd downloaded from Microsoft 365 Defender and follow the instructions on the screen.  
