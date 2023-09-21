@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity prerequisites
 
-This article describes the requirements for a successful Microsoft Defender for Identity deployment. For more information, see [Defender for Identity architecture](../architecture.md).
+This article describes the requirements for a successful Microsoft Defender for Identity deployment.
 
 ## Licensing requirements
 
@@ -124,6 +124,15 @@ The following table describes memory requirements on the server used for the Def
 ## Time synchronization
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 
+## Related content
+
+This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server, or when you're installing a standalone Defender for Identity sensor.
+
+For more information, see:
+
+- [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
+- [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
+- [Defender for Identity architecture](../architecture.md)
 ## Next step
 
 > [!div class="step-by-step"]
