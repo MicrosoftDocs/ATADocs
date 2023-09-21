@@ -1,7 +1,7 @@
 ---
 title: Advanced settings in Microsoft 365 Defender
 description: Learn how to set Microsoft Defender for Identity advanced settings in Microsoft 365 Defender.
-ms.date: 09/12/2023
+ms.date: 09/21/2023
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to know how and when to use an alert learning mode to reduce the number of false positives.
 ---
@@ -39,34 +39,21 @@ Each alert triggered during the learning period is tagged as *POC* to identify i
 
 ## Supported alert types for learning periods
 
-We recommend changing alert 
-Defender for Identity learning periods are supported, and can be configured separately, for the following types of alerts:
+We recommend changing alert sensitivity only after careful consideration. The following table lists the alert types that support learning periods and describes the effects of *Medium* and *High* sensitivities.
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-
-
-|Detection  |Normal  |Medium  |High  |
-|---------|---------|---------|---------|
-|**Suspicious additions to sensitive groups**     |         |         |         |
-|**Suspected AD FS DKM key read**     |         |         |         |
-|**Suspected Brute Force attack (Kerberos, NTLM)**     |         |         |         |
-|**Suspected DCSync attack (replication of directory services)**     |         |         |         |
-|**Suspected Golden Ticket usage (forged authorization data)**     |         |         |         |
-|**Suspected Golden Ticket usage (encryption downgrade)**     |         |         |         |
-|**Account enumeration reconnaissance**     |         |         |         |
-|**Suspected identity theft (pass-the-certificate)**     |         |         |         |
-|**Suspected identity theft (pass-the-ticket)**     |         |         |         |
-|**User and Group membership reconnaissance (SAMR)**     |         |         |         |
-|Row11     |         |         |         |
+|Detection  |Medium  |High  |
+|---------|---------|---------|
+|**Account enumeration reconnaissance**     |    On *Medium* mode, this detection triggers immediately and disables the filtering of popular queries in the environment.         |   *High* mode includes everything in *mode* mode, plus a lower threshold for queries, single scope enumeration, and more.     |
+|**Suspicious additions to sensitive groups**     |      *Medium* mode not supported for this detection.     |    On *High* mode, this detector avoids the sliding window and ignores any previous learnings.    |
+|**Suspected AD FS DKM key read**     |             |   On *High* mode, this detection triggers immediately.      |
+|**Suspected Brute Force attack (Kerberos, NTLM)**     |   On *Medium* mode, this detection ignores any learning done and has a lower threshold for failed passwords.           | On *High* mode, this detection ignores any learning done and has the lowest possible threshold for failed passwords.        |
+|**Suspected DCSync attack (replication of directory services)**     |   On *Medium* mode, this detection triggers immediately.         | On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.        |
+|**Suspected Golden Ticket usage (forged authorization data)**     |      Not supported      |     On *High* mode, this detection triggers immediately.    |
+|**Suspected Golden Ticket usage (encryption downgrade)**     | Not supported           |    On *High* mode, this detection triggers an alert based on lower confidence resolution of a device.     |
+|**Suspected identity theft (pass-the-certificate)**     |     On *Medium* mode, this detection triggers immediately.         |  On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.       |
+|**Suspected identity theft (pass-the-ticket)**     |  On *Medium* mode, this detection triggers immediately.           |    On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.      |
+|**User and Group membership reconnaissance (SAMR)**     |     On *Medium* mode, this detection triggers immediately.        |   On *High* mode, this detection triggers immediately and includes a lower alert threshold.  |
+|Row11     |             |         |
 
 For more information, see [Security alerts in Microsoft Defender for Identity](alerts-overview.md).
 
