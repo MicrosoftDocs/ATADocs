@@ -16,6 +16,8 @@ By default, Defender for Identity supports up to 350 sensors. To install more se
 > [!IMPORTANT]
 > While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
+The Sizing Tool measures the capacity needed for domain controllers only. There is no need to run it against AD FS / AD CS servers, as the performance impact on AD FS / AD CS servers is extremely minimal to not existent.
+
 ## Prerequisites
 
 - Download the [Defender for Identity Sizing Tool](<https://aka.ms/mdi/sizingtool>).
@@ -40,9 +42,9 @@ This procedure describes how to use the Defender for Identity Sizing Tool, which
 
     For example:
 
-    ![Screenshot of a sample capacity planning tool.](../media/capacity-tool.png)
+    :::image type="content" source="../media/capacity-tool.png" alt-text="Screenshot of a sample capacity planning tool." lightbox="../media/capacity-tool.png":::
 
-    The other sheet in the file is used for Advanced Threat Analytics (ATA) planning and isn't needed for Defender for Identity.
+    The other sheet in the file is used for [Advanced Threat Analytics (ATA)](/advanced-threat-analytics/what-is-ata) planning and isn't needed for Defender for Identity.
 
 1. Locate the **Busy Packets/sec** field in the Azure ATP sensor table in the results Excel file and make a note of it.
 
@@ -70,10 +72,11 @@ For more information, see [Resource limitations](../architecture.md#resource-lim
 |20k-50k|3.50|9.50|
 |50k-60k |5.50|11.50|
 
-<!-->
+<!--
 |50k-75k |5.50|11.50|
 |75k-100k|7.50|13.50|
 -->
+
 In this table:
 
 - CPU and RAM capacity refers to the **sensor's own consumption**, not the domain controller capacity.
