@@ -43,6 +43,9 @@ Defender for Identity alert learning periods have been enhanced to provide more 
 During the learning period, Defender for Identity learns about your network and builds a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which may be triggered by legitimate activity.
 
 For more information, see [Advanced settings](advanced-settings.md).
+### Defender for Identity release 2.215
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity reports moved to the main Reports area
 

@@ -39,18 +39,34 @@ Each alert triggered during the learning period is tagged as *POC* to identify i
 
 ## Supported alert types for learning periods
 
+We recommend changing alert 
 Defender for Identity learning periods are supported, and can be configured separately, for the following types of alerts:
 
-- Suspicious additions to sensitive groups
-- Suspected AD FS DKM key read
-- Suspected Brute Force attack (Kerberos, NTLM)
-- Suspected DCSync attack (replication of directory services)
-- Suspected Golden Ticket usage (forged authorization data)
-- Suspected Golden Ticket usage (encryption downgrade)
-- Account enumeration reconnaissance
-- Suspected identity theft (pass-the-certificate)
-- Suspected identity theft (pass-the-ticket)
-- User and Group membership reconnaissance (SAMR)
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+
+|Detection  |Normal  |Medium  |High  |
+|---------|---------|---------|---------|
+|**Suspicious additions to sensitive groups**     |         |         |         |
+|**Suspected AD FS DKM key read**     |         |         |         |
+|**Suspected Brute Force attack (Kerberos, NTLM)**     |         |         |         |
+|**Suspected DCSync attack (replication of directory services)**     |         |         |         |
+|**Suspected Golden Ticket usage (forged authorization data)**     |         |         |         |
+|**Suspected Golden Ticket usage (encryption downgrade)**     |         |         |         |
+|**Account enumeration reconnaissance**     |         |         |         |
+|**Suspected identity theft (pass-the-certificate)**     |         |         |         |
+|**Suspected identity theft (pass-the-ticket)**     |         |         |         |
+|**User and Group membership reconnaissance (SAMR)**     |         |         |         |
+|Row11     |         |         |         |
 
 For more information, see [Security alerts in Microsoft Defender for Identity](alerts-overview.md).
 

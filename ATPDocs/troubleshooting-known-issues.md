@@ -29,10 +29,10 @@ The Defender for Identity deployment logs are located in the temp directory of t
 ## "Stop legacy protocols communication" recommended action always marked as "Completed"
 
 The existing "Stop legacy protocols communication" recommended action as part of the Microsoft Secure Score is always marked as completed.  
-Due to an error, NTLM v1 authentication activities are not profiled correctly. As a result, the recommended action to remediate them is marked as completed.
+Due to an error, NTLM v1 authentication activities aren't profiled correctly. As a result, the recommended action to remediate them is marked as completed.
 
 **Resolution:**  
-We are working to correctly profile the relevant activities as NTLM v1 authentication.
+We're working to correctly profile the relevant activities as NTLM v1 authentication.
 
 ## Proxy authentication problem presents as a licensing error
 
@@ -47,7 +47,7 @@ If during sensor installation you receive the following error:  **The sensor fai
 
 **Cause:**
 
-In some cases, when communicating via a proxy, during authentication it might respond to the Defender for Identity sensor with error 401 or 403 instead of error 407. The Defender for Identity sensor will interpret error 401 or 403 as a licensing issue and not as a proxy authentication issue.
+In some cases, when communicating via a proxy, during authentication it might respond to the Defender for Identity sensor with error 401 or 403 instead of error 407. The Defender for Identity sensor interprets error 401 or 403 as a licensing issue and not as a proxy authentication issue.
 
 **Resolution:**
 
@@ -158,7 +158,7 @@ Use the complete command to successfully install.
 
 ## Defender for Identity sensor NIC teaming issue
 
-When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
+When you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap by following the [instructions here](/defender-for-identity/technical-faq#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
 ## Multi Processor Group mode
 
@@ -225,7 +225,7 @@ Validate that the computer running the sensor has been granted permissions to re
 
 The sensor service runs as *LocalService* and performs impersonation of the Directory Service account.
 
-If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation will fail unless the gMSA account is granted the **Log on as a service** permission.
+If the user rights assignment policy **Log on as a service** is configured for this domain controller, impersonation fails unless the gMSA account is granted the **Log on as a service** permission.
 
 **Resolution 2**:
 
@@ -233,7 +233,7 @@ Configure **Log on as a service** for the gMSA accounts, when the user rights as
 
 ### Cause 3
 
-If the domain controller Kerberos ticket was issued before the domain controller was added to the security group with the proper permissions, this group won't be part of the Kerberos ticket. So it won't be able to retrieve the password of the gMSA account.
+If the domain controller Kerberos ticket was issued before the domain controller was added to the security group with the proper permissions, this group won't be part of the Kerberos ticket. So it can't retrieve the password of the gMSA account.
 
 **Resolution 3**:
 
@@ -258,7 +258,7 @@ The domain controller hasn't been given rights to access the password of the gMS
 
 **Resolution:**
 
-Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
+Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS server(s) and standalone sensors computer accounts included. If a Security Group doesn't exist, we recommend that you create one.
 
 You can use the following command to check if a computer account or security group has been added to the parameter. Replace *mdiSvc01* with the name you created.
 
@@ -307,9 +307,9 @@ The gMSA configured for this domain controller or AD FS server doesn't have perm
 
 Add the gMSA to the **Performance Monitor Users** group on the server.
 
-## Report downloads cannot contain more than 300,000 entries
+## Report downloads can't contain more than 300,000 entries
 
-Defender for Identity doesn't support report downloads that contain more than 300,000 entries per report. Reports will render as incomplete if more than 300,000 entries are included.
+Defender for Identity doesn't support report downloads that contain more than 300,000 entries per report. Reports render as incomplete if more than 300,000 entries are included.
 
 **Cause:**
 
@@ -428,7 +428,7 @@ If the sensor installation fails with an error code of 0x80070643, and the insta
 
 **Cause:**
 
-The issue can be caused when the installation process cannot access the Defender for Identity cloud services for the sensor registration.
+The issue can be caused when the installation process can't access the Defender for Identity cloud services for the sensor registration.
 
 **Resolution:**
 
@@ -442,9 +442,9 @@ For more information, see [Configure proxy server using the command line](config
 
 The following errors will appear in the **System log** in **Event viewer**:
 
-- The Open procedure for service ".NETFramework" in DLL "C:\Windows\system32\mscoree.dll" failed with error code Access is denied. Performance data for this service will not be available.
+- The Open procedure for service ".NETFramework" in DLL "C:\Windows\system32\mscoree.dll" failed with error code Access is denied. Performance data for this service won't be available.
 - The Open procedure for service "Lsa" in DLL "C:\Windows\System32\Secur32.dll" failed with error code Access is denied. Performance data for this service will not be available.
-- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code "The device is not ready". Performance data for this service will not be available.
+- The Open procedure for service "WmiApRpl" in DLL "C:\Windows\system32\wbem\wmiaprpl.dll" failed with error code "The device is not ready". Performance data for this service won't be available.
 
 The Microsoft.TriSensorError.log will contain an error similar to this:
 
@@ -454,18 +454,17 @@ at new Microsoft.Tri.Sensor.DirectoryServicesClient(IConfigurationManager`
 
 **Cause:**
 
-NT Service\All Services do not have the right to log on as a service.
+NT Service\All Services don't have the right to log on as a service.
 
 **Resolution:**
 
 Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
 
-
-## Your instance was not created because a security group with the same name already exists in Azure Active Directory
+## Your workspace wasn't created because a security group with the same name already exists in Azure Active Directory
 
 **Cause:**
 
-The issue can be caused when a previous Defender for Identity instance is deleted because of license expiration and the retention period has ended, but the Azure AD groups were not deleted.
+The issue can come up when a Defender for Identity workspace license expires and is deleted when the retention period has ended, but the Azure AD groups weren't deleted.
 
 **Resolution:**
 
@@ -474,7 +473,7 @@ The issue can be caused when a previous Defender for Identity instance is delete
    - "Azure ATP instanceName Administrators" -> "Azure ATP instanceName Administrators - old"
    - "Azure ATP instanceName Viewers" -> "Azure ATP instanceName Viewers - old"
    - "Azure ATP instanceName Users" -> "Azure ATP instanceName Users - old"
-1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new instance of Defender for Identity.
+1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
 
 ## See also
 

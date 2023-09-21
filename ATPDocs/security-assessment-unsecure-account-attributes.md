@@ -38,7 +38,7 @@ Use the remediation appropriate to the relevant attribute as described in the fo
 | Remove Password stored with weak encryption | Reset the account password | Changing the account's password enables stronger encryption algorithms to be used for its protection. |
 | Enable Kerberos AES encryption support | Enable AES features on the account properties in AD | Enabling AES128_CTS_HMAC_SHA1_96 or AES256_CTS_HMAC_SHA1_96 on the account helps prevent the use of weaker encryption ciphers for Kerberos authentication. |
 | Remove Use Kerberos DES encryption types for this account | Remove this setting from account properties in AD | Removing this setting enables the use of stronger encryption algorithms for the account's password. |
-| Remove a Service Principal Name (SPN) | Remove this setting from account properties in AD | When a user account is configured with an SPN set, it means that the account has been associated with one or more SPNs. This typically occurs when a service is installed or registered to run under a specific user account, and the SPN is created to uniquely identify the service instance for Kerberos authentication. This recommendation only showed for sensitive accounts |
+| Remove a Service Principal Name (SPN) | Remove this setting from account properties in AD | When a user account is configured with an SPN set, it means that the account has been associated with one or more SPNs. This typically occurs when a service is installed or registered to run under a specific user account, and the SPN is created to uniquely identify the service workspace for Kerberos authentication. This recommendation only showed for sensitive accounts. |
 
 Use the **UserAccountControl** flag to manipulate user account profiles. For more information, see:
 
