@@ -58,4 +58,4 @@ This procedure is only required if you've previously enabled the [Access this co
 ## Next step
 
 > [!div class="step-by-step"]
-> [Download the Defender for Identity sensor »](download-sensor.md)
+> [Learn about event collection with Defender for Identity »](event-collection-overview.md)

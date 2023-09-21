@@ -97,16 +97,16 @@ The following table lists installation support across several operating system v
 |**RADIUS**         |UDP      |1813|RADIUS         |Defender for Identity sensor      |
 |**Localhost ports** [<sup>2</sup>](#localhost) <br><br>Required for the sensor service updater      ||    |  |         |
 |**SSL** [<sup>2</sup>](localhost)|TCP      |444 |Sensor service|Sensor updater service            |
-|**NNR ports** [<sup>3</sup>](#nnr)      | | | | |
+|**Network Name Resolution (NNR) ports** [<sup>3</sup>](#nnr)      | | | | |
 |**NTLM over RPC**  |TCP      |Port 135         |Defender for Identity sensor|All devices on network|
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
-|**RDP**            |TCP      |3389, only the first packet of Client hello|Defender for Identity sensor|All devices on network|
+|**RDP**            |TCP      |3389 <br><br>Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|Defender for Identity sensor|All devices on network|
 
 <a name=connectivity></a><sup>1</sup> Connectivity from the sensor to the Defender for Identity cloud services is required either directly on port 443, or through a proxy. For more information, see [Configuring a proxy for Defender for Identity](configure-proxy.md).
 
 <a name=localhost></a><sup>2</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
 
-<a name=nnr></a><sup>3</sup> One of these ports is required, but we recommend opening all of them.
+<a name=nnr></a><sup>3</sup> To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required.
 
 Additional ports are required to support multiple Active Directory forests. For more information, see [Prerequisites](multi-forest.md#prerequisites).
 
