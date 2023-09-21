@@ -9,7 +9,6 @@ ms.topic: conceptual
 
 This article describes the requirements for a successful Microsoft Defender for Identity deployment. For more information, see [Defender for Identity architecture](../architecture.md).
 
-<!--are we missing details about service BGP community from the original file?-->
 ## Licensing requirements
 
 Before deploying Defender for Identity, make sure to acquire one of the following Microsoft 365 licenses:
@@ -49,7 +48,7 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 
 For more information, see [Microsoft Defender for Identity architecture](../architecture.md) and [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
-<!-->
+<!--
 ## Required network adapters
 
 The Defender for Identity sensor monitors local traffic on all of the domain controller's network adapters. After deployment, you'll use the Microsoft 365 Defender portal to modify which network adapters are monitored.
