@@ -829,7 +829,7 @@ Azure ATP now supports using group Managed Service Accounts (gMSA) for improved 
 When a scheduled report has too much data, the email now informs you of the fact by displaying the following text: There was too much data during the specified period to generate a report. This replaces the previous behavior of only discovering the fact after clicking the report link in the email.
 
 - **Feature enhancement: Updated domain controller coverage logic**  
-We've updated our domain controller coverage report logic to include additional information from Azure AD, resulting in a more accurate view of domain controllers without sensors on them. This new logic should also have a positive affect on the corresponding Microsoft Secure Score.
+We've updated our domain controller coverage report logic to include additional information from Azure AD, resulting in a more accurate view of domain controllers without sensors on them. This new logic should also have a positive effect on the corresponding Microsoft Secure Score.
 
 ### Azure ATP release 2.107
 
@@ -964,7 +964,7 @@ Released September 1, 2019
 
 Released August 25, 2019
 
-- ersion includes improvements and bug fixes for internal sensor infrastructure.
+- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Azure ATP release 2.91
 
