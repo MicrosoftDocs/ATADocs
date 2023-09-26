@@ -34,11 +34,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 Defender for Identity alert learning periods have been enhanced to provide more control over the learning period experience, including:
 
-- Any new Defender for Identity workspace automatically has an alert learning period turned on for 30 days. When 30 days is complete, the learning period is automatically turned off and a health alert is triggered to notify administrators.
+- Any new Defender for Identity workspace now automatically has an alert learning period turned on for 30 days. When 30 days is complete, the learning period is automatically turned off and a health alert is triggered to notify administrators.
 
 - Administrators can now configure the sensitivity used for specific alerts, and can also completely turn off learning for specific alerts. For example:
 
-   :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on.":::
+    :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
 During the learning period, Defender for Identity learns about your network and builds a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which may be triggered by legitimate activity.
 

@@ -33,7 +33,7 @@ For example, when you install a new sensor on a domain controller or when you're
 
 For example:
 
-:::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on.":::
+:::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
 Each alert triggered during the learning period is tagged as *POC* to identify it as a learning mode alert.
 
