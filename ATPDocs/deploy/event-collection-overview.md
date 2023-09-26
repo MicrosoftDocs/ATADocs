@@ -13,7 +13,7 @@ This article lists the events supported by the Defender for Identity sensor.
 
 For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
-## Supported AD FS events
+## Supported Active Directory Federation Services (AD FS) events
 
 The following events are supported for Active Directory Federation Services (AD FS) servers:
 
@@ -22,7 +22,7 @@ The following events are supported for Active Directory Federation Services (AD 
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
-For more information, see [Enable auditing on an ADFS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object).
+For more information, see [Enable auditing on an AD FS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object).
 
 ## Supported Active Directory Certificate Services (AD CS) events
 

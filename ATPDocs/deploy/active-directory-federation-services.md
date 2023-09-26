@@ -1,5 +1,5 @@
 ---
-title: Deploying sensors on AD FS and AD CS servers | Microsoft Defender for Identity
+title: Configuring sensors for AD FS and AD CS | Microsoft Defender for Identity
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS) 
 ms.date: 01/30/2023
 ms.topic: how-to
@@ -7,53 +7,47 @@ ms.topic: how-to
 
 # Configuring sensors for AD FS and AD CS
 
-<!--this page is entirely only for AD FS-->
+Install Defender for Identity sensors on Active Directory Federation Services (AD FS) and Active Directory Certificate Services (AD CS) servers to protect them from on-premises attacks.
 
-<!--ad cs is servers supported - already in prereqs, server connectivity, event collection - separate for AD FS and AD CS,  -->
-Defender for Identity protects the Active Directory Federation Services (AD FS) in your environment by detecting on-premises attacks against AD FS servers, and protects the Active Directory Certificate Services (AD CS) by detecting on-premises attacks against AD CS servers.
+This article describes the steps required when installing Defender for Identity sensors on AD FS or AD CS servers.
 
-This article describes the additional prerequisites and post-installation steps required when installing Defender for Identity sensors on AD FS or AD CS servers.
-
-For more information, see:
-
-- [Microsoft Defender for Identity prerequisites](prerequisites.md)
-- [Install the Microsoft Defender for Identity sensor](install-sensor.md)
-
-<!-- removing
 > [!NOTE]
-> If you use both Defender for Identity and Defender for Endpoint, you must install both sensors on domain controllers or AD FS /AD CS servers to protect both the server and Active Directory.
--->
+> For AD FS environments, the Defender for Identity sensor is supported only on the federation servers, and isn't required on the Web Application Proxy (WAP) servers. For AD CS environments, you don't need to install the sensor on any AD CS servers that are offline.
+>
+
 ## Prerequisites
 
-You don't need to install the sensor on any AD CS servers that are offline. 
+Prerequisites for installing Defender for Identity sensors on AD FS or AD CS servers are the same as for installing sensors on domain controllers. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-> [!NOTE]
-> For AD FS environments, the Defender for Identity sensor is supported only on the federation servers. It is not required on the Web Application Proxy (WAP) servers.
+## Configure Verbose logging for AD FS event logs
 
-For more information, see [Sensor requirements](prerequisites.md#sensor-requirements).
-
-## Verbose logging for AD FS event logs
-
-<!--find these details for AD CS this is added in the event collection page-->
-Sensors running on AD FS servers must have the auditing level set to **Verbose**, tracking the following events:
-
-- 1202 - The Federation Service validated a new credential
-- 1203 - The Federation Service failed to validate a new credential
-- 4624 - An account was successfully logged on
-- 4625 - An account failed to log on
-
-Configure the auditing level to **Verbose**. For example, for AD FS servers, use the following command:
+Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**::
 
 ```powershell
 Set-AdfsProperties -AuditLevel Verbose
 ```
 For more information, see [Event auditing information for AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016). 
 
-## Configuration for AD CS event logs
+For more information, see:
 
-<!--tbd-->
+- [Supported AD FS events](event-collection-overview.md#supported-ad-fs-events)
+- [Enable auditing on an AD FS object](configure-windows-event-collection.md#enable-auditing-on-an-ad-fs-object)
 
-## Read permissions for the AD FS database
+## Configure event collection for AD FS and AD CS logs
+
+If you're working with AD FS / AD CS servers, make sure that you've configured auditing as needed. For more information, see:
+
+- **AD FS**:
+
+    - [Supported Active Directory Federation Services (AD FS) events](event-collection-overview.md#supported-active-directory-federation-services-ad-fs-events)
+    - [Enable auditing on an Active Directory Federation Services (AD FS) object](configure-windows-event-collection.md#enable-auditing-on-an-active-directory-federation-services-ad-fs-object)
+
+- **AD CS**: 
+
+    - [Supported Active Directory Certificate Services (AD CS) events](event-collection-overview.md#supported-active-directory-certificate-services-ad-cs-events)
+    - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
+
+## Configure read permissions for the AD FS database
 
 For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (*db_datareader*) permissions for the relevant [Directory Services Account](directory-service-accounts.md) configured.
 
@@ -120,7 +114,7 @@ For sensor installations on AD FS servers, configure the SQL server to allow *Di
 - *read*
 - *select*
 
-## Validate successful deployment on an AD FS server
+## Validate successful deployment on an AD FS / AD CS server
 
 To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server:
 
@@ -128,25 +122,33 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
 1. If the service doesn't start, review the `Microsoft.Tri.sensor-Errors.log` file, located by default at: `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`
 
-1. Use AD FS to authenticate a user to any application, and then verify that the AD FS authentication was observed by Defender for Identity:
+1. Use AD FS or AD CS to authenticate a user to any application, and then verify that the authentication was observed by Defender for Identity. 
 
-   From Microsoft 365 Defender, select **Hunting** > **Advanced Hunting**. For example, in the **Query** pane, enter and run one of the following queries:
+   For example, select **Hunting** > **Advanced Hunting**. In the **Query** pane, enter and run one of the following queries:
+
+   **For AD FS**: 
 
    ```query
    IdentityLogonEvents | where Protocol contains 'Adfs'
    ```
 
-<!--need better code here-->
+   **For AD CS**:
+
    ```query
-   IdentityLogonEvents | where Protocol contains 'Adcs' 
+   IdentityDirectoryEvents | where Protocol == "Adcs"
    ```
 
-   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication** or <!--whatever this is for ad cs-->. Select a specific row to see additional details in the **Inspect Record** left pane. For example:
+   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication** or **Logon with ADCS authentication**.
+
+   Select a specific row to see additional details in the **Inspect Record** left pane. For example:
 
    :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 
-<!--parallel procedure for ad cs ask daniel-->
+<!--validate this for adcs-->
+
 ## Post-installation steps for AD FS / AD CS servers (Optional)
+
+<!--validate this for adcs-->
 
 Installing the sensor on an AD FS / AD CS server automatically selects the closest domain controller. Use the following steps to check or modify the selected domain controller.
 

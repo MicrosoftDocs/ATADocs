@@ -166,9 +166,10 @@ To collect 4662 events, you must also configure object auditing on the user, gro
 Some detections require auditing specific Active Directory objects. To do so, follow the steps in this procedure, with the changes noted as follows regarding the objects to audit and permissions to include.
 -->
 
-### Enable auditing on an ADFS object
+### Enable auditing on an Active Directory Federation Services (AD FS) object
 
 1. Go to the **Active Directory Users and Computers** console, and select the domain you want to enable the logs on.
+
 1. Go to to **Program Data** > **Microsoft** > **ADFS**. For example:
 
     ![Screenshot of an ADFS container.](../media/adfs-container.png)
@@ -188,6 +189,39 @@ Some detections require auditing specific Active Directory objects. To do so, fo
     ![Screenshot of the auditing settings for ADFS.](../media/audit-adfs.png)
 
 1. Select **OK**.
+
+## Configure auditing for Active Directory Certificate Services (AD CS)
+
+If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:
+
+1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
+
+    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**, and then configure audit events for **Success and Failure**. For example:
+
+    ![Screenshot of the Group Policy Management Editor](../media/configure-windows-event-collection/group-policy-management-editor.png)
+
+1. Configure auditing on the certificate authority (CA) using one of the following methods:
+
+    - **To configure CA auditing using the command line**, run:
+
+        ```cmd
+        certutil –setreg CA\AuditFilter 127 
+
+        net stop certsvc && net start certsvc
+        ````
+
+    - **To Configure CA auditing using the GUI**:
+
+        1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
+
+            ![Screenshot of the Certification Authority dialog.](../media/configure-windows-event-collection/certification-authority.png)
+
+        1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
+
+
+            ![Screenshot of the Properties Auditing tab.](../media/configure-windows-event-collection/auditing.png)
+
+        For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
 ### Enable auditing on an Exchange object
 <a name="enable-auditing-on-an-exchange-object"></a>
@@ -223,40 +257,6 @@ Some detections require auditing specific Active Directory objects. To do so, fo
     ![Screenshot of the auditing settings for the Configuration container.](../media/audit-configuration.png)
 
 1. Select **OK**.
-
-## Configure auditing for AD CS
-
-If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:
-
-1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
-
-    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**, and then configure audit events for **Success and Failure**. For example:
-
-    ![Screenshot of the Group Policy Management Editor](../media/configure-windows-event-collection/group-policy-management-editor.png)
-
-1. Configure auditing on the certificate authority (CA) using one of the following methods:
-
-    - **To configure CA auditing using the command line**, run:
-
-        ```cmd
-        certutil –setreg CA\AuditFilter 127 
-
-        net stop certsvc && net start certsvc
-        ````
-
-    - **To Configure CA auditing using the GUI**:
-
-        1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
-
-            ![Screenshot of the Certification Authority dialog.](../media/configure-windows-event-collection/certification-authority.png)
-
-        1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
-
-
-            ![Screenshot of the Properties Auditing tab.](../media/configure-windows-event-collection/auditing.png)
-
-        For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
-
 
 
 ## Next step

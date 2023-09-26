@@ -71,7 +71,7 @@ The following procedures can be done at any point in the deployment process:
 
 You may have extra or different steps in your deployment if you're working with any of the following scenarios. For more information, see the relevant articles:
 
-- [Installing a sensor on AD FS / AD CS servers](active-directory-federation-services.md), including extra prerequisites and post-installation steps.
+- [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
 
 - [Configure Directory Service account (DSA) for use with Defender for Identity](directory-service-accounts.md), to be used when connecting to a domain controller at startup, querying the domain controller, requesting member lists for local administrator groups, and accessing the *DeletedObjects* container.
 
