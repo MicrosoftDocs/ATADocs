@@ -1,5 +1,5 @@
 ---
-title: Configure endpoint proxy and internet connectivity settings | Microsoft Defender for Identity
+title: Verify connectivity to the Defender for Identity service | Microsoft Defender for Identity
 description: Learn how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors.
 ms.date: 06/13/2023
 ms.topic: how-to
@@ -15,44 +15,11 @@ In some organizations, the domain controllers aren't directly connected to the i
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
 >
 
-
-## Prerequisites
-
-Before starting, make sure that you understand that you want to use a proxy connection instead of option connectivity options. For more information, see [Connectivity requirements](prerequisites.md#connectivity-requirements).
-
-If you aren't configuring a proxy, you'll still need to make sure that your machine has connectivity to the relevant Defender for Identity cloud service endpoints. For more information, see [Enable access to Defender for Identity service URLs in the proxy server](#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server). [Test your connectivity](#test-connectivity) and then continue with [installing the Microsoft Defender for Identity sensor](install-sensor.md).
-
-
-## Configure a proxy server using the command line
-
-Configure your proxy server during sensor installation using the following command-line switches:
-
-### Syntax
-
-```cli
-"Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
-```
-
-### Switch descriptions
-
-|Name|Syntax|Mandatory for silent installation?|Description|
-|-------------|----------|---------|---------|
-|**ProxyUrl**|`ProxyUrl="http\://proxy.contoso.com:8080"`|No|Specifies the proxy URL and port number for the Defender for Identity sensor.|
-|**ProxyUserName**|`ProxyUserName="Contoso\ProxyUser"`|No|If your proxy service requires authentication, define a user name in the `DOMAIN\user` format.|
-|**ProxyUserPassword**|`ProxyUserPassword="P@ssw0rd"`|No|Specifies the password for your  proxy user name. <br><br>Credentials are encrypted and stored locally by the Defender for Identity sensor.|
-
-> [!TIP]
-> If you've configured a proxy during installation, changing the proxy configuration requires you to remove and install the sensor. Therefore, we recommend creating and using a custom DNS A record for the proxy server, which you can use to change the proxy server's address when needed. <!--add powershell script in here when ready. also Can mention that to modify the Proxy URL - the cusotmer can modify the sensorconfiguratio.json file manually and stop and restart the sensor services? -->
->
-> We also recommend using the *hosts* file for testing.
-
-
 ## Enable access to Defender for Identity service URLs in the proxy server
 
 To ensure maximal security and data privacy, Defender for Identity uses certificate-based, mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud back-end. SSL inspection and interception are not supported, as they interfere in the authentication process.
 
 To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
-
 
 The URL syntaxes listed in the table above automatically map to the correct service location for your Defender for Identity workspace.
 
@@ -80,7 +47,7 @@ Do the following steps to confirm that everything is working as expected. Perfor
 
 **To test your connectivity settings**:
 
-1. Open a browser. 
+1. Open a browser.
 
     If you're using a proxy, make sure that your browser uses the same proxy settings being used by the sensor. For example, if the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
 
@@ -97,13 +64,14 @@ You should get an *Error 503 The service is unavailable* message, which indicate
 
     Certificate details should look similar to the following: **DigiCert Global Root G2** > **Microsoft Azure TLS Issuing CA 01** > ***.atp.azure.com**.
 
-## Legacy proxy configuration methods
+## Related content
 
-If you're using a proxy, we recommend that you configure your proxy together with the sensor installation using command line switches.
+For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
 
-If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](../sensor-settings.md#configure-proxy-settings-legacy-methods).
+> [!NOTE]
+> If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](../sensor-settings.md#configure-proxy-settings-legacy-methods).
 
 ## Next step
 
 > [!div class="step-by-step"]
-> [Install the Defender for Identity sensor »](install-sensor.md)
+> [Download the Microsoft Defender for Identity sensor »](download-sensor.md)

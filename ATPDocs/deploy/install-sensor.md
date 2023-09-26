@@ -27,7 +27,7 @@ Before you start, make sure that you have:
     - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
     - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
 
-## Install the sensor
+## Install the sensor using the UI
 
 Perform the following steps on the domain controller or AD FS /AD CS server.
 
@@ -153,6 +153,32 @@ Use the following commands to silently install the Defender for Identity sensor:
 ```cmd
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKeyFile="C:\Path\myAccessKeyFile.txt"
 ```
+
+### Run a silent installation with a proxy configuration
+
+Use the following command to configure your proxy together with a silent installation:
+
+```cmd
+"Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
+```
+
+> [!NOTE]
+> If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](../sensor-settings.md#configure-proxy-settings-legacy-methods).
+
+**Installation parameters**:
+
+|Name|Syntax|Mandatory for silent installation?|Description|
+|-------------|----------|---------|---------|
+|**ProxyUrl**|`ProxyUrl="http\://proxy.contoso.com:8080"`|No|Specifies the proxy URL and port number for the Defender for Identity sensor.|
+|**ProxyUserName**|`ProxyUserName="Contoso\ProxyUser"`|No|If your proxy service requires authentication, define a user name in the `DOMAIN\user` format.|
+|**ProxyUserPassword**|`ProxyUserPassword="P@ssw0rd"`|No|Specifies the password for your  proxy user name. <br><br>Credentials are encrypted and stored locally by the Defender for Identity sensor.|
+
+> [!TIP]
+> If you've configured a proxy during installation, changing the proxy configuration requires you to remove and install the sensor. Therefore, we recommend creating and using a custom DNS A record for the proxy server, which you can use to change the proxy server's address when needed. <!--add powershell script in here when ready. also Can mention that to modify the Proxy URL - the cusotmer can modify the sensorconfiguratio.json file manually and stop and restart the sensor services? also should this note be here or on [Configure endpoint proxy and internet connectivity settings](configure-proxy.md)-->
+>
+> We also recommend using the *hosts* file for testing. <!--what does this mean?-->
+
+
 
 ## Related content
 

@@ -15,16 +15,9 @@ For a quick set of deployment highlights, see [Quick installation guide](quick-i
 
 ## Prerequisites
 
-Before you start, make sure that you have access to Microsoft 365 Defender as a Global or Security administrator, and one of the following licenses:
+Before you start, make sure that you have access to Microsoft 365 Defender at least as a Security administrator, and you have one of the following licenses:
 
-- Enterprise Mobility + Security E5 (EMS E5/A5)
-- Microsoft 365 E5 (M365 E5/A5/G5)
-- Microsoft 365 E5/A5/G5 Security
-- A standalone Defender for Identity license
-
-Acquire your licenses directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model.
-
-For more information, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy) and [Microsoft Defender for Identity role groups](role-groups.md).
+[!INCLUDE [licenses](../includes/licenses.md)]
 
 ## Start using Microsoft 365 Defender
 
@@ -61,7 +54,7 @@ Use the following steps to prepare for deploying Defender for Identity:
 
 After you've prepared your system, use the following steps to deploy Defender for Identity:
 
-1. [Verify connectivity to the Defender for Identity service.](configure-proxy.md) <!--last part of proxy page-->
+1. [Verify connectivity to the Defender for Identity service](configure-proxy.md). <!--last part of proxy page-->
 1. [Download the Defender for Identity sensor](download-sensor.md).
 1. [Install the Defender for Identity sensor](install-sensor.md). <!--take proxy configuration command line and add it here-->
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
@@ -74,17 +67,19 @@ The following procedures can be done at any point in the deployment process:
 1. [Enable and configure unified role-based access control (RBAC)](role-groups.md) for Defender for Identity.
 1. [Configure remote calls to SAM](remote-calls-sam.md) as needed.
 
-You may have extra, or different steps in your deployment if you're working with any of the following environments:
+## Extra deployment scenarios
 
-<!--move this order in the toc, rewrite outside a table-->
+You may have extra or different steps in your deployment if you're working with any of the following scenarios. For more information, see the relevant articles:
 
-|Scenario  |Extra steps  |
-|---------|---------|
-|**Installing your Defender for Identity sensor on AD FS or AD CS servers**     |  Note extra prerequisites and post-installation steps in [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md).      |
-| **Configure Directory Service account (DSA) for use with Defender for Identity** | [Configure a Directory Service account](directory-service-accounts.md) |
-| **Configure a managed action account** to take actions on behalf of Defender for Identity instead of the default LocalSystem account |[Configure an action account to use with Defender for Identity](manage-action-accounts.md).|
-|**Understanding support for multiple Active Directory forests**     |  Learn how Defender for Identity provides [multi-forest support](multi-forest.md).       |
-|**Migrate from Advanced Threat Analytics (ATA)**     |   [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)      |
+- [Installing a sensor on AD FS / AD CS servers](active-directory-federation-services.md), including extra prerequisites and post-installation steps.
+
+- [Configure Directory Service account (DSA) for use with Defender for Identity](directory-service-accounts.md), to be used when connecting to a domain controller at startup, querying the domain controller, requesting member lists for local administrator groups, and accessing the *DeletedObjects* container.
+
+- [Configure a managed action account](manage-action-accounts.md) to take actions on behalf of Defender for Identity instead of the default LocalSystem account
+
+- [Understanding support for multiple Active Directory forests](multi-forest.md)
+
+- [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)
 
 ## Next step
 

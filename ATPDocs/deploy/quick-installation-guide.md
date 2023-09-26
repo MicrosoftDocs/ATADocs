@@ -7,7 +7,6 @@ ms.topic: how-to
 
 # Quick installation guide
 
-<!-- remove performance from here, take networking step from procedure (access to network) and add to prerequisites. create include file for sys req-->
 This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
 
 Watch the following video for a step-by-step demo. Learn about:
@@ -29,16 +28,12 @@ This section lists the prerequisites required before installing the Defender for
 - Recommendations for performance and maintenance windows
 
 Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+
 ### Licensing requirements
 
 Make sure that you have one of the following licenses:
 
-- Enterprise Mobility + Security E5 (EMS E5/A5)
-- Microsoft 365 E5 (M365 E5/A5/G5)
-- Microsoft 365 E5/A5/G5 Security
-- A standalone Defender for Identity licenses
-
-Acquire licenses directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. For more information, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy).
+[!INCLUDE [licenses](../includes/licenses.md)]
 
 ### Required permissions
 
@@ -54,27 +49,24 @@ The Defender for Identity sensor supports installation on the different operatin
 
 For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
 
-| **Operating system version** | **Server with Desktop**  **Experience** | **Server**  **Core** | **Nano**  **Server** | **Supported**  **installations** |
-| ---------------------------- | --------------------------------------- | -------------------- | -------------------- | -------------------------------- |
-| Windows Server  2012 [*](#win2012)        | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
-| Windows Server  2012 R2 [*](#win2012)     | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
-| Windows Server  2016         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
-| Windows Server  2019 [**](#win2019)       | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
-| Windows Server  2022         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
+[!INCLUDE [server-requirements](../includes/server-requirements.md)]
 
 > [!NOTE]
 > When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
 >
 
-<a name="win2012"></a>* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. We recommend that you plan to upgrade those servers, as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2. 
-
-Also, for Windows Server 2012, the Defender for Identity sensor isn't supported in [Multiple Processor Group mode](/windows/win32/procthread/processor-groups). For more information, see [troubleshooting for Multi Processor Group mode](../troubleshooting-known-issues.md#multi-processor-group-mode).
-
-<a name="win2019"></a>** Requires [KB4487044](https://support.microsoft.com/topic/february-12-2019-kb4487044-os-build-17763-316-6502eb5d-dde8-6902-e149-27ef359ed616) or a newer cumulative update. Sensors installed on Server 2019 without this update are automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
-
+<!--
 ### Performance recommendations
 
 For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
+-->
+
+### Check network connectivity
+
+Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service. From each server, try accessing: `https://*your-workspace-name*sensorapi.atp.azure.com`.
+
+- To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
+- For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
 
 ### Schedule a maintenance window (optional)
 
@@ -97,15 +89,11 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
     > [!TIP]
     > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
 
-1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service. From each server, try accessing: `https://*your-workspace-name*sensorapi.atp.azure.com`.
-
-    - To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
-    - For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
-
 1. From the domain controller, run the installer you'd downloaded from Microsoft 365 Defender and follow the instructions on the screen.  
 
-    For deployment on multiple domain controllers, use the silent installation.
 
 ## Next step
 
-For more detailed installation instructions, see the links in [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md). 
+
+For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation) instead.

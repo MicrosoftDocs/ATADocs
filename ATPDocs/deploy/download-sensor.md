@@ -37,4 +37,4 @@ This article describes how to download the Microsoft Defender for Identity senso
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure proxy settings »](configure-proxy.md)
+> [Install the Microsoft Defender for Identity sensor »](install-sensor.md)
