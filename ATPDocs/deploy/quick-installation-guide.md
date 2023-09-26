@@ -7,6 +7,7 @@ ms.topic: how-to
 
 # Quick installation guide
 
+<!-- remove performance from here, take networking step from procedure (access to network) and add to prerequisites. create include file for sys req-->
 This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
 
 Watch the following video for a step-by-step demo. Learn about:
@@ -77,7 +78,7 @@ For optimal performance, set the **Power Option** of the machine running the Def
 
 ### Schedule a maintenance window (optional)
 
-During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 will be installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending. 
+During installation, if .NET Framework 4.7 or later isn't installed, the .NET Framework 4.7 will be installed and might require a reboot of the server. A reboot might also be required if there's a restart already pending.
 
 When installing your sensors, consider scheduling a maintenance window for your domain controllers.
 

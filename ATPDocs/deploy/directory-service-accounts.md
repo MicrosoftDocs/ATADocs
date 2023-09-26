@@ -14,6 +14,7 @@ Defender for Identity's sensor uses a DSA to do the following:
 - Connect to the domain controller at startup using the configured DSA option
 - Query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities
 - Request member lists for local administrator groups from devices seen in network traffic, events and ETQ activities via a [SAM-R call](remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
+- Access the *DeletedObjects* container to collect information about deleted users and computers
 
 One sensor in each domain is defined as the *domain synchronizer*, and is responsible for tracking changes to the entities in the domain, like objects created, entity attributes tracked by Defender for Identity and so on.
 

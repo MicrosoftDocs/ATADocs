@@ -52,9 +52,6 @@ Use the following steps to prepare for deploying Defender for Identity:
 
 1. Make sure that you have all [prerequisites](prerequisites.md) required.
 1. [Plan your Defender for Identity capacity](capacity-planning.md).
-1. [Configure Windows Event collection](configure-windows-event-collection.md).
-1. Configure any [role groups](role-groups.md) you want to use for Defender for Identity.
-1. [Configure remote calls to SAM](remote-calls-sam.md) as needed.
 
 > [!TIP]
 > We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites. For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
@@ -64,20 +61,29 @@ Use the following steps to prepare for deploying Defender for Identity:
 
 After you've prepared your system, use the following steps to deploy Defender for Identity:
 
+1. [Verify connectivity to the Defender for Identity service.](configure-proxy.md) <!--last part of proxy page-->
 1. [Download the Defender for Identity sensor](download-sensor.md).
-1. [Configure a proxy](configure-proxy.md) as needed.
-1. [Install the Defender for Identity sensor](install-sensor.md).
+1. [Install the Defender for Identity sensor](install-sensor.md). <!--take proxy configuration command line and add it here-->
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
+## Post-deployment configuration
+
+The following procedures can be done at any point in the deployment process:
+
+1. [Configure Windows Event collection](configure-windows-event-collection.md).
+1. [Enable and configure unified role-based access control (RBAC)](role-groups.md) for Defender for Identity.
+1. [Configure remote calls to SAM](remote-calls-sam.md) as needed.
+
 You may have extra, or different steps in your deployment if you're working with any of the following environments:
+
+<!--move this order in the toc, rewrite outside a table-->
 
 |Scenario  |Extra steps  |
 |---------|---------|
 |**Installing your Defender for Identity sensor on AD FS or AD CS servers**     |  Note extra prerequisites and post-installation steps in [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md).      |
-|**Installing your Defender for Identity sensor with multiple Active Directory forests**     |  Learn how Defender for Identity provides [multi-forest support](multi-forest.md).       |
-| **Create a specific Directory Service account (DSA) for use with Defender for Identity** | [Configure a Directory Service account](directory-service-accounts.md) |
-| **Set up a gMSA account to use instead of a LocalSystem account**| [Configure an action account to use with Defender for Identity](manage-action-accounts.md).|
-| **Installing a standalone Defender for Identity sensor** | Note extra prerequisites for standalone sensors in [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md). <br><br>Also do the following for your standalone sensor: <br>1. [Configure port mirroring](configure-port-mirroring.md). <br>2. [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). <br>3. [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md).|
+| **Configure Directory Service account (DSA) for use with Defender for Identity** | [Configure a Directory Service account](directory-service-accounts.md) |
+| **Configure a managed action account** to take actions on behalf of Defender for Identity instead of the default LocalSystem account |[Configure an action account to use with Defender for Identity](manage-action-accounts.md).|
+|**Understanding support for multiple Active Directory forests**     |  Learn how Defender for Identity provides [multi-forest support](multi-forest.md).       |
 |**Migrate from Advanced Threat Analytics (ATA)**     |   [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)      |
 
 ## Next step
