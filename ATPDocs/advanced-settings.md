@@ -12,7 +12,7 @@ This article explains how to work with Microsoft Defender for Identity advanced 
 
 ## Prerequisites
 
-To access the **Advanced settings** page in Microsoft 365 Defender, you need access as a Security or Global administrator.
+To access the **Advanced settings** page in Microsoft 365 Defender, you need access at least as a Security administrator.
 
 ## Define alert learning period settings
 
@@ -27,9 +27,9 @@ For example, when you install a new sensor on a domain controller or when you're
 
 **To define learning period settings**:
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings > **Identities** > **Advanced settings**. 
+1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** > **Advanced settings**. 
 1. Use the toggle to turn the learning period on or off.
-1. If the learning period is on, modify the sensitivity for each type of alert to determine how sensitive the learning period is. Use the details in the **Information** column to understand what *High*, *Medium* settings mean for each type of alert. *Normal* means that learn mode is turned off for the selected type of alert.
+1. If the learning period is on, modify the sensitivity for each type of alert to determine how sensitive the learning period is. *Normal* means that learn mode is turned off for the selected type of alert. For more information, see [Supported alert types for learning periods](#supported-alert-types-for-learning-periods).
 
 For example:
 
@@ -37,23 +37,26 @@ For example:
 
 Each alert triggered during the learning period is tagged as *POC* to identify it as a learning mode alert.
 
+> [!CAUTION]
+> We recommend changing alert sensitivity only after careful consideration. For example, if you have NAT or VPN, we recommend that you do not set relevant detections to high, including *Suspected DCSync attack (replication of directory services)* and  *Suspected identity theft* detections.
+>
+
 ## Supported alert types for learning periods
 
-We recommend changing alert sensitivity only after careful consideration. The following table lists the alert types that support learning periods and describes the effects of *Medium* and *High* sensitivities.
+The following table lists the alert types that support learning periods and describes the effects of *Medium* and *High* sensitivities.  We recommend changing alert sensitivity only after careful consideration.
 
 |Detection  |Medium  |High  |
 |---------|---------|---------|
-|**Account enumeration reconnaissance**     |    On *Medium* mode, this detection triggers immediately and disables the filtering of popular queries in the environment.         |   *High* mode includes everything in *mode* mode, plus a lower threshold for queries, single scope enumeration, and more.     |
-|**Suspicious additions to sensitive groups**     |      *Medium* mode not supported for this detection.     |    On *High* mode, this detector avoids the sliding window and ignores any previous learnings.    |
-|**Suspected AD FS DKM key read**     |             |   On *High* mode, this detection triggers immediately.      |
+|**Account enumeration reconnaissance**     |    On *Medium* mode, this detection triggers immediately and disables the filtering of popular queries in the environment.         |   *High* mode includes everything in *Medium* mode, plus a lower threshold for queries, single scope enumeration, and more.     |
+|**Suspicious additions to sensitive groups**     |      *Medium* mode not supported for this detection.     |    On *High* mode, this detection avoids the sliding window and ignores any previous learnings.    |
+|**Suspected AD FS DKM key read**     |    *Medium* mode not supported for this detection.        |   On *High* mode, this detection triggers immediately.      |
 |**Suspected Brute Force attack (Kerberos, NTLM)**     |   On *Medium* mode, this detection ignores any learning done and has a lower threshold for failed passwords.           | On *High* mode, this detection ignores any learning done and has the lowest possible threshold for failed passwords.        |
 |**Suspected DCSync attack (replication of directory services)**     |   On *Medium* mode, this detection triggers immediately.         | On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.        |
-|**Suspected Golden Ticket usage (forged authorization data)**     |      Not supported      |     On *High* mode, this detection triggers immediately.    |
-|**Suspected Golden Ticket usage (encryption downgrade)**     | Not supported           |    On *High* mode, this detection triggers an alert based on lower confidence resolution of a device.     |
+|**Suspected Golden Ticket usage (forged authorization data)**     |       *Medium* mode not supported for this detection.      |     On *High* mode, this detection triggers immediately.    |
+|**Suspected Golden Ticket usage (encryption downgrade)**     |  *Medium* mode not supported for this detection.           |    On *High* mode, this detection triggers an alert based on lower confidence resolution of a device.     |
 |**Suspected identity theft (pass-the-certificate)**     |     On *Medium* mode, this detection triggers immediately.         |  On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.       |
 |**Suspected identity theft (pass-the-ticket)**     |  On *Medium* mode, this detection triggers immediately.           |    On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.      |
 |**User and Group membership reconnaissance (SAMR)**     |     On *Medium* mode, this detection triggers immediately.        |   On *High* mode, this detection triggers immediately and includes a lower alert threshold.  |
-|Row11     |             |         |
 
 For more information, see [Security alerts in Microsoft Defender for Identity](alerts-overview.md).
 
