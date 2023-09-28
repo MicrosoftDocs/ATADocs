@@ -43,12 +43,25 @@ To ensure accurate results, only run the sizing tool *before* you've installed a
 
 The sizing tool determines whether your server is supported based on the **Busy Packets/Second** value, which is calculated based on the 15 busiest minutes over a 24 hour period.
 
-If the result for your sensor is **No** or **Maybe**, it may be because the current **Busy Packets/Second** value is higher at that point than average. Check the timestamps to understand the processes running at that time, and whether you can limit the bandwidth for those processes under normal circumstances.
+Common results include:
 
-In the following example, note that the **Display DC Times as UTC/Local** is set to *Local DC Time*. This setting helps highlight the fact that the values were taken at around 3:30 AM.
+|Result  |Description  |
+|---------|---------|
+|**Yes**     |   The sensor is supported on your server      |
+|**Yes, but additional resources required** | The sensor is supported on your server as long you add any specified missing resources.  |
+|**Maybe**     |     The current **Busy Packets/Second** value may be significantly higher at that point than average. Check the timestamps to understand the processes running at that time, and whether you can limit the bandwidth for those processes under normal circumstances.     |
+|**Maybe, but additional resources required** |The sensor may be supported on your server as long you add any specified missing resources, or the **Busy packets / Second** may be above 60K |
+|**No**     |    The sensor isn't supported on your server. <br><br>The current **Busy Packets/Second** value may be significantly higher at that point than average. Check the timestamps to understand the processes running at that time, and whether you can limit the bandwidth for those processes under normal circumstances.    |
+|**Missing OS Data**     |  There was an issue reading the operating system data.  Make sure the connection to your server is able to query WMI remotely.   |
+|**Missing Traffic Data**     | There was an issue reading the traffic data.    Make sure the connection to your server is able to query performance counters remotely.        |
+|**Missing RAM data**     |    There was an issue reading the RAM data.  Make sure the connection to your server is able to query WMI remotely.       |
+|**Missing core data**     |   There was an issue reading the core data. Make sure the connection to your server is able to query WMI remotely.          |
+
+<!--check last two-->
+
+For example, the following image shows a set of results where the **Maybe** indicates that the **Busy Packets/Second** value is significantly higher at that point than average.  Note that the **Display DC Times as UTC/Local** is set to *Local DC Time*. This setting helps highlight the fact that the values were taken at around 3:30 AM.
 
 :::image type="content" source="../media/capacity-tool-maybe.png" alt-text="Screenshot of a capacity tool results showing Maybe values.":::
-
 
 <a name="sizing"></a>
 ## Defender for Identity sensor estimated sizing
@@ -57,14 +70,15 @@ The following table shows the estimated CPU and RAM capacity needed for a Defend
 
 **This table is an estimate. The final amount that the sensor parses is dependent on the amount of traffic and the distribution of traffic.**
 
-|Packets per second|CPU (physical cores)|RAM (GB)|
+|Busy packets / second|CPU (physical cores)|RAM (GB)|
 |----|----|-----|
 |0-1k|0.25|2.50|
 |1k-5k|0.75|6.00|
 |5k-10k|1.00|6.50|
 |10k-20k|2.00|9.00|
 |20k-50k|3.50|9.50|
-|50k-60k |5.50|11.50|
+|50k-75k |5.50|11.50|
+|75k-100k|7.50|13.50|
 
 In this table:
 
@@ -75,11 +89,6 @@ In this table:
 When determining sizing, keep in mind the total number of cores and total amount of memory that will be used by the sensor service.
 
 For more information, see [Resource limitations](../architecture.md#resource-limitations).
-
-<!--
-|50k-75k |5.50|11.50|
-|75k-100k|7.50|13.50|
--->
 
 
 <!--

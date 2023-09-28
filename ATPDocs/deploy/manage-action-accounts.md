@@ -7,9 +7,6 @@ ms.topic: how-to
 
 # Configure Microsoft Defender for Identity action accounts
 
-
-<!--is this in the right place? as per gershon-->
-
 Defender for Identity allows you to take [remediation actions](../remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
 
 By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the `LocalSystem` account of the domain controller and perform the actions. However, you can change this default behavior by setting up a gMSA account and scope the permissions as you need. For example:

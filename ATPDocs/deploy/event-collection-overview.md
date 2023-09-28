@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 The Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs, which the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows event log, your domain controllers require accurate, advanced audit policy settings.
 
-This article lists the events supported by the Defender for Identity sensor.
+This article lists the events required by the Defender for Identity sensor.
 
 For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
 ## Supported Active Directory Federation Services (AD FS) events
 
-The following events are supported for Active Directory Federation Services (AD FS) servers:
+The following events are required for Active Directory Federation Services (AD FS) servers:
 
 - 1202 - The Federation Service validated a new credential
 - 1203 - The Federation Service failed to validate a new credential
@@ -26,7 +26,7 @@ For more information, see [Enable auditing on an AD FS object](configure-windows
 
 ## Supported Active Directory Certificate Services (AD CS) events
 
-The following events are supported for Active Directory Federation Services (AD FS) servers:
+The following events are required for Active Directory Federation Services (AD FS) servers:
 
 - 4870: Certificate Services revoked a certificate
 - 4882: The security permissions for Certificate Services changed
@@ -40,10 +40,9 @@ For more information, see [Configure auditing for AD CS](configure-windows-event
 
 ## Other Windows events
 
-The following general Windows events are supported for all Defender for Identity sensors:
+The following general Windows events are required for all Defender for Identity sensors:
 
-- 1644 - LDAP search
-<!--- 4662 - An operation was performed on an object-->
+- 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
 - 4728 - Member Added to Global Security Group
 - 4729 - Member Removed from Global Security Group

@@ -22,7 +22,7 @@ Before you start:
 
 ## Step 1: Add the network service account to the domain
 
-This procedure describes how to add the network service account to the **Event Log Readers Group** domain. For this scenario, assume that the Defender for Identity standalone sensor is a member of the domain. <!--this doesn't make any sense-->
+This procedure describes how to add the network service account to the **Event Log Readers Group** domain. For this scenario, assume that the Defender for Identity standalone sensor is a member of the domain.
 
 1. In Active Directory's Users and Computers, go to the **Built-in** folder and double-click **Event Log Readers**.
 

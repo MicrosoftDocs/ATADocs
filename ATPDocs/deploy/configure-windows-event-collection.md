@@ -48,9 +48,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | **Account Management** | Audit User Account Management | 4726 |
         | **DS Access** | Audit Directory Service Changes | 5136  |
         | **System** | Audit Security System Extension | 7045 |
-
-        <!--
-        | **DS Access** | Audit Directory Service Access | 4662 - For this event, it's also necessary to [configure object auditing](#configure-object-auditing-for-event-id-4662).  | -->
+        | **DS Access** | Audit Directory Service Access | 4662 - For this event, it's also necessary to [configure object auditing](#configure-object-auditing-for-event-id-4662).  |
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events:
 
@@ -82,30 +80,6 @@ This section describes the extra configuration steps needed to audit Event ID 80
 For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**:
 
 ![Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration.](../media/advanced-audit-policy-check-step-3.png)
-
-<!--
-## Configure auditing for extra LDAP queries
-
-Microsoft Defender for Identity can monitor extra LDAP queries in your network, which are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable **event 1644** on your domain controllers. 
-
-Event 1644 covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers.
-
-> [!IMPORTANT]
-> Logging the 1644 events may impact server performance. While the resource limitation feature can stop the Defender for Identity service if the server is running out of resources, it does not stop the event auditing at the operating system level. Therefore, to avoid performance issues, make sure your servers have sufficient memory, CPU, and disk resources.
-
-Windows event 1644 isn't collected by default on domain controllers and needs to be manually activated to support this feature. Create registry keys with the following values:
-
-```reg
-Windows Registry Editor Version 5.00 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics] 
-"15 Field Engineering"=dword:00000005 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters] 
-"Expensive Search Results Threshold"=dword:00000001 
-"Inefficient Search Results Threshold"=dword:00000001 "Search Time Threshold (msecs)"=dword:00000001 
-```
-
-
-
 
 ## Configure object auditing for Event ID 4662
 
@@ -258,6 +232,21 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Select **OK**.
 
+## Auditing for event ID 1644
+
+> [!IMPORTANT]
+> Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
+
+```reg
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics]
+"15 Field Engineering"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters]
+"Expensive Search Results Threshold"=dword:00000001
+"Inefficient Search Results Threshold"=dword:00000001
+"Search Time Threshold (msecs)"=dword:00000001
+```
 
 ## Next step
 

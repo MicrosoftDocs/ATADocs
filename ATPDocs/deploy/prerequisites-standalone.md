@@ -17,17 +17,13 @@ For more information, see [Plan capacity for Microsoft Defender for Identity dep
 
 ## Extra system requirements for standalone sensors
 
-When deploying a standalone sensor, note the following differences in prerequisites from the  [main deployment prerequisites](prerequisites.md):
-
-- Standalone sensors must be installed on servers that are members of a domain or workgroup <!--is this not true for regular sensors?>
-
-- Standalone sensors can be used to monitor Domain Controllers with a Domain Functional Level of Windows 2003 and above. <!--is this not true for regular sensors?>
-
-- The standalone sensor does not support installation on a server running Windows Server 2012. Other operating systems, including Windows Server 2012 R2 are supported as they are for the [Defender for Identity sensor](prerequisites.md#minimum-operating-system-requirements).
+Standalone sensors differ from Defender for Identity sensor [prerequisites](prerequisites.md) as follows:
 
 - Standalone sensors require a minimum of 5 GB of disk space
 
-- Standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers. <!--is this not true for regular sensors?>
+- Standalone sensors can be also be installed on servers that are in a workgroup.
+
+- Standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
 For information on using virtual machines with the Defender for Identity standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 

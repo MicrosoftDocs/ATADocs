@@ -132,6 +132,7 @@ To validate that the Defender for Identity sensor has been successfully deployed
    IdentityLogonEvents | where Protocol contains 'Adfs'
    ```
 
+<!--need better code and results or remove this-->
    **For AD CS**:
 
    ```query
@@ -147,8 +148,6 @@ To validate that the Defender for Identity sensor has been successfully deployed
 <!--validate this for adcs-->
 
 ## Post-installation steps for AD FS / AD CS servers (Optional)
-
-<!--validate this for adcs-->
 
 Installing the sensor on an AD FS / AD CS server automatically selects the closest domain controller. Use the following steps to check or modify the selected domain controller.
 

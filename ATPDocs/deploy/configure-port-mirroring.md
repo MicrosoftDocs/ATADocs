@@ -52,9 +52,11 @@ The following table describes Defender for Identity's support for port mirroring
 > The time on your domain controllers and the connected Defender for Identity sensor must be synchronized to within 5 minutes of eachother.
 >
 
+<!--remove this altogether>
+
 ## Validate port mirroring
 
-After configuring port mirroring, validate that port mirroring is working before installing the Defender for Identity standalone sensor. The Defender for Identity standalone sensor must be able to see the traffic to and from the domain controller.
+To validate that port mirroring is working before installing the Defender for Identity standalone sensor, use your network capture tool of choice. The Defender for Identity standalone sensor must be able to see the traffic to and from the domain controller.
 
 > [!IMPORTANT]
 > This procedure uses Microsoft Network Monitor to validate port mirroring.  If you choose to validate with Wireshark, restart the Defender for Identity standalone sensor service after you finish validating.
@@ -62,7 +64,7 @@ After configuring port mirroring, validate that port mirroring is working before
 
 **To validate port mirroring**:
 
-1. Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the Defender for Identity standalone sensor that you want to validate. <!--is there a newer option? Network Monitor 3.4 is the archive versioned tool for network traffic capture and protocol analysis.i can't even install it anymore to validate this procedure.-->
+1. Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the Defender for Identity standalone sensor that you want to validate. <!--is there a newer option? Network Monitor 3.4 is the archive versioned tool for network traffic capture and protocol analysis.i can't even install it anymore to validate this procedure.
 
 1. Open Network Monitor and create a new capture tab.
 
@@ -97,6 +99,8 @@ If you are working with virtualization clusters:
     1. Configure each Defender for Identity standalone sensor to monitor all of the domain controllers that run on the cluster.
 
     Any host the domain controllers run on is monitored.
+
+-->
 
 ## Next step
 
