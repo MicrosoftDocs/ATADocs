@@ -132,14 +132,15 @@ To validate that the Defender for Identity sensor has been successfully deployed
    IdentityLogonEvents | where Protocol contains 'Adfs'
    ```
 
-<!--need better code and results or remove this-->
+   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**
+   
    **For AD CS**:
 
    ```query
    IdentityDirectoryEvents | where Protocol == "Adcs"
    ```
 
-   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication** or **Logon with ADCS authentication**.
+   The results pane should include a list of events of failed and successful certificate issuance. 
 
    Select a specific row to see additional details in the **Inspect Record** left pane. For example:
 
