@@ -61,7 +61,7 @@ The information monitored by Defender for Identity is presented in the form of a
 |---------------------|------------------|
 |Directory Service Replication|User tried to replicate the directory service.|
 |DNS Query|Type of query user performed against the domain controller (**AXFR**,**TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**).|
-|gMSA Password retrieval | gMSA account password was retrieved by a user. <br> To monitor this activity, event 4662 must be collected. For more information, see [Configure Windows Event collection](deploy/configure-windows-event-collection.md). <!--remove if we're removing 4662)-->|
+|gMSA Password retrieval | gMSA account password was retrieved by a user. <br> To monitor this activity, event 4662 must be collected. For more information, see [Configure Windows Event collection](deploy/configure-windows-event-collection.md).|
 |LDAP Query | User performed an LDAP query.|
 |Potential lateral movement |  A lateral movement was identified.|
 |PowerShell execution | User attempted to remotely execute a PowerShell method.|
