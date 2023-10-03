@@ -22,7 +22,7 @@ Installed directly on your domain controller or AD FS servers, the Defender for 
 Defender for Identity consists of the following components:
 
 - **Microsoft 365 Defender portal**  
-The Microsoft 365 Defender portal creates your Defender for Identity instance, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
+The Microsoft 365 Defender portal creates your Defender for Identity workspace, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
 - **Defender for Identity sensor**  
 Defender for Identity sensors can be directly installed on the following servers:
@@ -38,7 +38,7 @@ Defender for Identity cloud service runs on Azure infrastructure and is currentl
 
 Use the Microsoft 365 Defender portal to:
 
-- Create your Defender for Identity instance.
+- Create your Defender for Identity workspace.
 - Integrate with other Microsoft security services.
 - Manage Defender for Identity sensor configuration settings.
 - View data received from Defender for Identity sensors.

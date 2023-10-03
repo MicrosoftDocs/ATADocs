@@ -469,10 +469,10 @@ The issue can come up when a Defender for Identity workspace license expires and
 **Resolution:**
 
 1. Go to the [Azure portal](https://portal.azure.com/) -> [Azure Active Directory](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview) -> [Groups](https://portal.azure.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/AllGroups)
-1. Rename the following three groups (where instanceName is the name of your workspace), by adding to them a " - old" suffix:
-   - "Azure ATP instanceName Administrators" -> "Azure ATP instanceName Administrators - old"
-   - "Azure ATP instanceName Viewers" -> "Azure ATP instanceName Viewers - old"
-   - "Azure ATP instanceName Users" -> "Azure ATP instanceName Users - old"
+1. Rename the following three groups (where workspaceName is the name of your workspace), by adding to them a " - old" suffix:
+   - "Azure ATP workspaceName Administrators" -> "Azure ATP workspaceName Administrators - old"
+   - "Azure ATP workspaceName Viewers" -> "Azure ATP workspaceName Viewers - old"
+   - "Azure ATP workspaceName Users" -> "Azure ATP workspaceName Users - old"
 1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
 
 ## See also

@@ -113,7 +113,7 @@ Use the following command to perform a fully silent install of the Defender for 
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
 > |InstallationPath|InstallationPath=""|No|Sets the path for the installation of Defender for Identity Sensor binaries. Default path: %programfiles%\Azure Advanced Threat Protection Sensor
-> |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Defender for Identity sensor with the Defender for Identity instance.|
+> |AccessKey|AccessKey="\*\*"|Yes|Sets the access key that is used to register the Defender for Identity sensor with the Defender for Identity workspace.|
 > |AccessKeyFile|AccessKeyFile=""|No|Sets the workspace Access Key from the provided text file path.|
 > |DelayedUpdate|DelayedUpdate=true|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. See [Delayed sensor update](sensor-settings.md#delayed-sensor-update) for more details.|
 > |LogsPath|LogsPath=""|No|Sets the path for the Defender for Identity Sensor logs. Default path: %programfiles%\Azure Advanced Threat Protection Sensor|
