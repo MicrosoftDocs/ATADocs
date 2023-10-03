@@ -29,9 +29,9 @@ To access Microsoft Defender for Identity for US Government offerings, use the a
 
 | US Government offering | Microsoft 365 Defender Portal | Sensor (agent) endpoint                           |
 |------------------------|-------------------------------|---------------------------------------------------|
-|DoD                     | `security.microsoft.us`       | `<your-instance-name>sensorapi.atp.azure.us`      |
-|GCC-H                   | `security.microsoft.us`       | `<your-instance-name>sensorapi.atp.azure.us`      |
-|GCC                     | `security.microsoft.com`      | `<your-instance-name>sensorapi.gcc.atp.azure.com` |
+|DoD                     | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
+|GCC-H                   | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
+|GCC                     | `security.microsoft.com`      | `<your-workspace-name>sensorapi.gcc.atp.azure.com` |
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview) or download [the Azure IP Ranges and Service Tags – US Government Cloud file](https://www.microsoft.com/download/details.aspx?id=57063).
 
@@ -45,10 +45,10 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 > The following steps should only be taken after you have initiated the transition of Microsoft Defender for Endpoint and Microsoft Defender for Cloud Apps
 
 1. Go to the [Azure portal](https://portal.azure.com/) > Azure Active Directory > Groups
-1. Rename the following three groups (where _instanceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
-   - "Azure ATP _instanceName_ Administrators" --> "Azure ATP _instanceName_ Administrators - commercial"
-   - "Azure ATP _instanceName_ Viewers" --> "Azure ATP _instanceName_ Viewers - commercial"
-   - "Azure ATP _instanceName_ Users" --> "Azure ATP _instanceName_ Users - commercial"
+1. Rename the following three groups (where _workspaceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
+   - "Azure ATP _workspaceName_ Administrators" --> "Azure ATP _workspaceName_ Administrators - commercial"
+   - "Azure ATP _workspaceName_ Viewers" --> "Azure ATP _workspaceName_ Viewers - commercial"
+   - "Azure ATP _workspaceName_ Users" --> "Azure ATP _workspaceName_ Users - commercial"
 1. In the [Microsoft 365 Defender portal](https://security.microsoft.com), go to the Settings -> Identities section to create a new workspace for Defender for Identity
 1. Configure a Directory Service account
 1. Download the new sensor agent package and copy the workspace key
