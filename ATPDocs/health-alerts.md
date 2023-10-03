@@ -12,7 +12,7 @@ ms.topic: how-to
 
 ## Health issues page
 
-The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity instance, by raising a health alert. To access the page, follow these steps:
+The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health alert. To access the page, follow these steps:
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 

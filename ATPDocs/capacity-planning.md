@@ -104,7 +104,7 @@ To determine packets per second, do the following steps on each domain controlle
 
 1. Under **Which performance counters would you like to log**, select **Add**.
 
-1. Expand **Network Adapter** and select **Packets/sec** and select the proper instance. If you aren't sure, you can select **&lt;All instances&gt;** and select **Add** and **OK**.
+1. Expand **Network Adapter** and select **Packets/sec** and select the proper workspace. If you aren't sure, you can select **&lt;All workspaces&gt;** and select **Add** and **OK**.
 
     > [!NOTE]
     > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter and configuration.

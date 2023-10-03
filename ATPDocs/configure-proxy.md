@@ -75,9 +75,9 @@ The static proxy is configurable through the Registry. You must copy the proxy c
 
 ## Enable access to Defender for Identity service URLs in the proxy server
 
-To enable access to Defender for Identity, we require allowing traffic to the following URLs. The URLs automatically map to the correct service location for your Defender for Identity instance.
+To enable access to Defender for Identity, we require allowing traffic to the following URLs. The URLs automatically map to the correct service location for your Defender for Identity workspace.
 
-- `<your-instance-name>sensorapi.atp.azure.com` - for example, `contoso-corpsensorapi.atp.azure.com`
+- `<your-workspace-name>sensorapi.atp.azure.com` - for example, `contoso-corpsensorapi.atp.azure.com`
 
 You can also use the IP address ranges in our Azure service tag (**AzureAdvancedThreatProtection**) to enable access to Defender for Identity. For more information about service tags, see [Virtual network service tags](/azure/virtual-network/service-tags-overview).
 

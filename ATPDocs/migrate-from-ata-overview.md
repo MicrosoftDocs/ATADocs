@@ -30,7 +30,7 @@ In this guide you will:
 
 ## Prerequisites
 
-- An Azure Active Directory tenant with at least one global/security administrator is required to create a Defender for Identity instance. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- An Azure Active Directory tenant with at least one global/security administrator is required to create a Defender for Identity workspace. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - Defender for Identity requires .Net Framework 4.7 or later and may require a domain controller restart if your current .Net Framework version is not 4.7 or later.
 
@@ -67,7 +67,7 @@ Complete your move to Defender for Identity in two easy steps:
 
 ### Step 1: Create and install Defender for Identity workspace and sensors
 
-1. [Create your new Defender for Identity instance](deploy-defender-identity.md#start-using-microsoft-365-defender).
+1. [Create your new Defender for Identity workspace](deploy-defender-identity.md#start-using-microsoft-365-defender).
 
 1. Uninstall the ATA Lightweight Gateway on all domain controllers.
 
@@ -75,7 +75,7 @@ Complete your move to Defender for Identity in two easy steps:
     - [Download the Defender for Identity sensor files](download-sensor.md) and retrieve the access key.
     - [Install Defender for Identity sensors on your domain controllers](install-sensor.md).
 
-### Step 2: Configure and validate Defender for Identity instance
+### Step 2: Configure and validate Defender for Identity workspace
 
 - [Configure the Sensor](configure-sensor-settings.md)
 
