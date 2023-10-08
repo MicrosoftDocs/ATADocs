@@ -42,7 +42,7 @@ This section describes how to tag an entity manually, such as for a honeytoken a
 
 For example:
 
-:::image type="content" source="media/entity-tags/tag-entities.png" alt-text="Screenshot of tagging user accounts as sensitive.":::
+:::image type="content" source="media/entity-tags/tag-entities.png" alt-text="Screenshot of tagging user accounts as sensitive." lightbox="media/entity-tags/tag-entities.png":::
 
 ## Default sensitive entities
 
