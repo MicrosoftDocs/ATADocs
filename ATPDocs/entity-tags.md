@@ -1,40 +1,52 @@
 ---
-title: Entity tags in Microsoft 365 Defender 
-description: Learn how to apply Microsoft Defender for Identity entity tags in Microsoft 365 Defender 
-ms.date: 01/30/2023
+title: Entity tags in Microsoft Defender for Identity
+description: Learn about when to use entity tags with Microsoft Defender for Identity and how to apply them in Microsoft 365 Defender.
+ms.date: 09/03/2023
 ms.topic: how-to
+#CustomerIntent: As a Defender for Identity customer, I want to learn how to apply entity tags so that I can identify sensitive accounts in Microsoft 365 Defender.
 ---
 
 # Defender for Identity entity tags in Microsoft 365 Defender
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+This article describes how to apply Microsoft Defender for Identity entity tags, for sensitive, Exchange server, or honeytoken accounts.
 
-This article explains how to apply entity tags to sensitive accounts. This is important because some Defender for Identity detections, such as sensitive group modification detection and lateral movement path rely on an entity's sensitivity status.
+- You must tag sensitive accounts for Defender for Identity detections that rely on an entity's sensitivity status, like sensitive group modification detections and lateral movement paths.
 
-Defender for Identity also enables the configuration of honeytoken accounts, which are used as traps for malicious actors - any authentication associated with these honeytoken accounts (normally dormant), triggers an alert.
+    While Defender for Identity automatically tags Exchange servers as high-value, sensitive assets, you can also manually tag devices as Exchange servers.
 
-## Entity tags
+- Tag honeytoken accounts to set traps for malicious actors. Since honeytoken accounts are usually dormant, any authentication associated with a honeytoken account triggers an alert.
 
-In Microsoft 365 Defender, you can set three types of Defender for Identity entity tags: **Sensitive tags**, **Honeytoken tags**, and **Exchange server tags**.
+## Prerequisites
 
-To set these tags, in [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+To set Defender for Identity entity tags in Microsoft 365 Defender, you'll need Defender for Identity [deployed in your environment](deploy-defender-identity.md), and administrator or user access to Microsoft 365 Defender.
 
-![Go to Settings, then Identities.](media/settings-identities.png)
+For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
-The tag settings will appear under **Entity tags**.
+## Tag entities manually
 
-![Tag setting types.](media/tag-settings.png)
+This section describes how to tag an entity manually, such as for a honeytoken account, or if your entity hasn't been automatically tagged as *Sensitive*.
 
-To set each type of tag, follow the instructions below.
+1. Sign into [Microsoft 365 Defender](https://security.microsoft.com) and select **Settings** > **Identities**.
 
-## Sensitive  tags
+1. Select the type of tag you want to apply: **Sensitive**, **Honeytoken**, or **Exchange server**.
 
-The **Sensitive tag** is used to identify high value assets. The lateral movement path also relies on an entity's sensitivity status. Some entities are considered sensitive automatically by Defender for Identity, and others can be added manually.
+    The page lists the entities already tagged in your system, listed on separate tabs for each entity type:
 
-### Sensitive entities
+    - The *Sensitive* tag supports users, devices, and groups.
+    - The *Honeytoken* tag supports users and devices.
+    - The *Exchange server* tag supports devices only.
 
-The groups in the following list are considered **Sensitive** by Defender for Identity. Any entity that is a member of one of these Active Directory groups (including nested groups and their members) is automatically considered sensitive:
+1. To tag additional entities, select the **Tag ...** button, such as **Tag users**. A pane opens on the right listing the available entities for you to tag. 
+
+1. Use the search box to find your entity if you need to. Select the entities you want to tag, and then select **Add selection**. 
+
+For example:
+
+:::image type="content" source="media/entity-tags/tag-entities.png" alt-text="Screenshot of tagging user accounts as sensitive." lightbox="media/entity-tags/tag-entities.png":::
+
+## Default sensitive entities
+
+The groups in the following list are considered **Sensitive** by Defender for Identity. Any entity that is a member of one of these Active Directory groups, including nested groups and their members, is automatically considered sensitive:
 
 - Administrators
 - Power Users
@@ -64,57 +76,7 @@ In addition to these groups, Defender for Identity identifies the following high
 - DNS Server
 - Microsoft Exchange Server
 
-### Manually tag as sensitive
 
-You can also manually tag users, devices, or groups as sensitive.
+## Related content
 
-1. Select **Sensitive**. You'll then see the existing sensitive **Users**, **Devices**, and **Groups**.
-
-    ![Sensitive entities.](media/sensitive-entities.png)
-
-1. Under each category, select **Tag...** to tag that type of entity. For example, under **Groups**, select **Tag groups.** A pane will open with the groups you can select to tag. To search for a group, enter its name in the search box.
-
-    ![Add groups.](media/add-groups.png)
-
-1. Select your group, and select **Add selection.**
-
-    ![Add selection.](media/add-selection.png)
-
-## Honeytoken tags
-
-Honeytoken entities are used as traps for malicious actors. Any authentication associated with these honeytoken entities triggers an alert.
-
-You can tag users or devices with the **Honeytoken** tag in the same way you tag sensitive accounts.
-
-1. Select **Honeytoken**. You'll then see the existing honeytoken **Users** and **Devices**.
-
-    ![Honeytoken entities.](media/honeytoken-entities.png)
-
-1. Under each category, select **Tag...** to tag that type of entity. For example, under **Users**, select **Tag users.** A pane will open with the groups you can select to tag. To search for a group, enter its name in the search box.
-
-    ![Add users.](media/add-users.png)
-
-1. Select your user, and select **Add selection.**
-
-    ![Add selected user.](media/add-selected-user.png)
-
-## Exchange server tags
-
-Defender for Identity considers Exchange servers as high-value assets and automatically tags them as **Sensitive**. You can also manually tag devices as Exchange servers.
-
-1. Select **Exchange server**. You'll then see the existing devices labeled with the **Exchange server** tag.
-
-    ![Exchange servers.](media/exchange-servers.png)
-
-1. To tag a device as an Exchange server, select **Tag devices**.  A pane will open with the devices that you can select to tag. To search for a device, enter its name in the search box.
-
-    ![Add devices.](media/add-devices.png)
-
-1. Select your device, and select **Add selection.**
-
-    ![Select device.](media/select-device.png)
-
-## See also
-
-- [Working with suspicious activities](/defender-for-identity/manage-security-alerts)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+For more information, see [Investigate Defender for Identity security alerts in Microsoft 365 Defender](manage-security-alerts.md).
