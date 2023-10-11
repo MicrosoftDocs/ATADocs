@@ -15,7 +15,7 @@ This article provides information about support, troubleshooting options, and co
 
 To contact Microsoft Support:
 
-If you have Premier Support, visit the [portal for Premier Support customers](https://premier.microsoft.com/) to submit incidents, browse solutions, and get help.
+If you have Premier Support, visit the [portal for Unified Support customers](https://learn.microsoft.com/services-hub/unified/support/open-support-requests) to submit incidents, browse solutions, and get help.
 
 For other customers, use the support widget as follows:
 
