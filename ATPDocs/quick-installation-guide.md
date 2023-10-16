@@ -40,13 +40,11 @@ For accurate calculations of the resources required by your server according to 
 
 | **Operating system version** | **Server with Desktop**  **Experience** | **Server**  **Core** | **Nano**  **Server** | **Supported**  **installations** |
 | ---------------------------- | --------------------------------------- | -------------------- | -------------------- | -------------------------------- |
-| Windows Server  2012*        | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
-| Windows Server  2012 R2*     | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
 | Windows Server  2016         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
 | Windows Server  2019**       | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
 | Windows Server  2022         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
 
-\* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
+\* Windows Server 2012 and Windows Server 2012 R2 reached extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2. The sensor running on these Operating Systems will continue to report to Defender for Identity and even receive the sensor updates, but some of the new functionalities will not be available as they might rely on Operating System capabilities.
 
 \*\* Requires [KB4487044](https://support.microsoft.com/topic/february-12-2019-kb4487044-os-build-17763-316-6502eb5d-dde8-6902-e149-27ef359ed616) or a newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
