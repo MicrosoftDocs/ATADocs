@@ -44,7 +44,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Alert sensitivity settings and learning period enhancements
 
-Defender for Identity uses learning periods to learn about your network and build a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which may be triggered by legitimate activity.
+Defender for Identity uses learning periods to learn about your network and build a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which might be triggered by legitimate activity.
 
 Defender for Identity alert learning periods have been enhanced to provide more control over the learning period experience, including:
 
