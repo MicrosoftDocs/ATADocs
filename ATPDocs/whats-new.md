@@ -58,10 +58,8 @@ Defender for Identity alert learning periods have been enhanced to provide more 
 
 For more information, see [Advanced settings](advanced-settings.md).
 
-<!--
 > [!NOTE]
-> If you'd previously had the **Remove learning period** setting turned on, this setting is now reverted to the default and is turned off. In such cases, we recommend checking your settings and reconfiguring sensitivity as needed.
--->
+> If you'd previously updated **Remove learning period** setting, your configurations remain the same.
 
 
 ### Defender for Identity release 2.215
