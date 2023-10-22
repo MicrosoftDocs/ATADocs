@@ -20,7 +20,7 @@ Some Defender for Identity alerts rely on *learning periods* to build a profile 
 
 By default, new Defender for Identity workspaces have a learning period turned on for the first 30 days so that Defender for Identity can build your network activity profile and send alerts for suspicious activities.
 
-Learning periods, especially in new workspaces, can result in an immediate increase of the number of alerts, with some of them being legitimate traffic and activities.
+Learning periods, especially in new workspaces, can result in an immediate increase of the number of alerts, with some of them being legitimate traffic and activities. Each alert triggered during the learning period is tagged as *POC* to identify it as a learning mode alert.
 
 In the Microsoft 365 Defender **Settings** area, set the **Remove learning period** setting to **Off** to end the learning period manually. For example, you might want to turn the learning period off manually in the following scenarios:
 
@@ -49,7 +49,6 @@ For example:
 
 :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
-Each alert triggered during the learning period is tagged as *POC* to identify it as a learning mode alert.
 
 ## Supported alert types for learning periods
 
