@@ -52,7 +52,7 @@ Defender for Identity alert learning periods have been enhanced to provide more 
 
     :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
-- Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities.
+- Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities. 
 
 - When 30 days is complete, the **Remove learning period** setting is automatically turned off and alert sensitivity levels are set back to their default, *Normal* values.
 
