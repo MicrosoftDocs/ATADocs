@@ -16,6 +16,11 @@ To access the **Advanced settings** page in Microsoft 365 Defender, you need acc
 
 ## Define alert learning period settings
 
+Some of the Microsoft Defender for Identity alerts rely on learning periods to build a profile of patterns and then distinguish between legitimate and suspicious activities. During the learning period, Defender for Identity learns about your network and builds a profile of your network's normal activity.  
+This ‘Remove learning period setting allows you to control whether to see alerts during the learning period before the profile has been built. 
+ 
+By default, new Defender for Identity workspaces have an alert Remove learning period turned on for the first 30 days. This will result in an immediately increase of the number of alerts, with some of them being legitimate traffic and activities.
+
 By default, new Defender for Identity workspaces have an alert *learning period* turned on for the first 30 days. During the learning period, Defender for Identity learns about your network and builds a profile of your network's normal activity. When 30 days is complete, the learning period is automatically turned off and a health alert is triggered to notify administrators.
 
 Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which may be triggered by legitimate activity. If Defender for Identity has learned your network sufficiently, you may want to remove the learning period before the 30 days is up.
