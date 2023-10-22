@@ -47,7 +47,7 @@ Defender for Identity alert learning periods have been enhanced to provide more 
 
 - Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities.
 
-- When 30 days is complete, the learning period is automatically turned off and a [health alert](health-alerts.md#learning-mode-has-automatically-ended-for-this-tenant) is triggered to notify administrators. At this point, alert sensitivity levels are set back to their default, *Normal* values.
+- When 30 days is complete, the learning period is automatically turned off and a [health issue](health-alerts.md#learning-mode-has-automatically-ended-for-this-tenant) is triggered to notify administrators. At this point, alert sensitivity levels are set back to their default, *Normal* values.
 
 For more information, see [Advanced settings](advanced-settings.md).
 
