@@ -34,7 +34,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new health issue:
 
-- [Learning Mode has automatically ended for this tenant](health-alerts.md#learning-mode-has-automatically-ended-for-this-tenant)
+- [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant)
 
 ### Alert sensitivity settings and learning period enhancements
 
@@ -48,7 +48,7 @@ Defender for Identity alert learning periods have been enhanced to provide more 
 
 - Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities.
 
-- When 30 days is complete, the learning period is automatically turned off and a [health issue](health-alerts.md#learning-mode-has-automatically-ended-for-this-tenant) is triggered to notify administrators. At this point, alert sensitivity levels are set back to their default, *Normal* values.
+- When 30 days is complete, the learning period is automatically turned off and a [health issue](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) is triggered to notify administrators. At this point, alert sensitivity levels are set back to their default, *Normal* values.
 
 For more information, see [Advanced settings](advanced-settings.md).
 

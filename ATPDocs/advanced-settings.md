@@ -28,7 +28,7 @@ In the Microsoft 365 Defender **Settings** area, set the **Remove learning perio
 - You've installed a new sensor on a domain controller and don't need a new learning period
 - You have a new workspace but feel that Defender for Identity has learned your network sufficiently before the first 30 days is up
 
-For new workspaces, if you haven't turned off the learning period manually by the end of 30 days, Defender for Identity automatically turns the **Remove learning period** setting off and a [health issue](health-alerts.md#learning-mode-has-automatically-ended-for-this-tenant) is triggered to notify administrators.
+For new workspaces, if you haven't turned off the learning period manually by the end of 30 days, Defender for Identity automatically turns the **Remove learning period** setting off and a [health issue](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) is triggered to notify administrators.
 
 >[!NOTE]
 > Turning off the learning feature for workspaces that have already completed their learning period won't delete the learned profiles, but will simply ignore them.
