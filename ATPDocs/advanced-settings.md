@@ -41,15 +41,15 @@ For new workspaces, if you haven't turned off the learning period manually by th
 
     *Normal* means that the learning period is turned off for the selected type of alert. For more information, see [Supported alert types for learning periods](#supported-alert-types-for-learning-periods).
 
+    > [!CAUTION]
+    > We recommend changing alert sensitivity only after careful consideration. For example, if you have NAT or VPN, we recommend that you do not set relevant detections to high, including *Suspected DCSync attack (replication of directory services)* and  *Suspected identity theft* detections.
+    >
+
 For example:
 
 :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
 Each alert triggered during the learning period is tagged as *POC* to identify it as a learning mode alert.
-
-> [!CAUTION]
-> We recommend changing alert sensitivity only after careful consideration. For example, if you have NAT or VPN, we recommend that you do not set relevant detections to high, including *Suspected DCSync attack (replication of directory services)* and  *Suspected identity theft* detections.
->
 
 ## Supported alert types for learning periods
 
