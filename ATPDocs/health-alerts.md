@@ -199,5 +199,3 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
-
-

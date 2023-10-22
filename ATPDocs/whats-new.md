@@ -30,10 +30,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## October 2023
 
-### Defender for Identity release 2.216
+### Defender for Identity release 2.217
 
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new health issue:
 
+- [Learning Mode has automatically ended for this tenant](health-alerts.md#learning-mode-has-automatically-ended-for-this-tenant)
 
 ### Alert sensitivity settings and learning period enhancements
 
@@ -55,6 +56,10 @@ For more information, see [Advanced settings](advanced-settings.md).
 > [!NOTE]
 > If you'd previously had the **Remove learning period** setting turned on, this setting is now reverted to the default and is turned off. In such cases, we recommend checking your settings and reconfiguring sensitivity as needed.
 -->
+
+### Defender for Identity release 2.216
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ## September 2023
 
