@@ -1,7 +1,7 @@
 ---
 title: Advanced settings in Microsoft 365 Defender
 description: Learn how to set Microsoft Defender for Identity advanced settings in Microsoft 365 Defender.
-ms.date: 09/21/2023
+ms.date: 10/22/2023
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to know how and when to use an alert learning mode to reduce the number of false positives.
 ---

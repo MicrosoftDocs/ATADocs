@@ -1,11 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-<<<<<<< HEAD
-ms.date: 10/19/2023
-=======
 ms.date: 10/22/2023
->>>>>>> e3852375261209a86a0b6bb67d8f5131f8098f95
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
