@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
-description: This article describes all the health issues that may occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 07/03/2023
+description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
+ms.date: 10/22/2023
 ms.topic: how-to
 ---
 
@@ -12,7 +12,7 @@ ms.topic: how-to
 
 ## Health issues page
 
-The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health alert. To access the page, follow these steps:
+The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health issue. To access the page, follow these steps:
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
@@ -111,7 +111,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more network traffic than it can process.|Some network traffic couldn't be analyzed. This issue can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required. If you're using a standalone Defender for Identity sensor, reduce the number of domain controllers being monitored.<br></br>This issue can also happen if you're using domain controllers on VMware virtual machines. To avoid these issues, you can check that the following settings are set to 0 or Disabled in the virtual machine (in the Windows OS, not in the VMware settings):<br></br>- Large Send Offload V2 (IPv4)<br></br>- IPv4 TSO Offload<br></br>The names may vary depending on your VMware version. For more information, see your VMware documentation.|Medium|Sensors health issues tab and Global health issues tab|
+|The Defender for Identity sensor is receiving more network traffic than it can process.|Some network traffic couldn't be analyzed. This issue can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required. If you're using a standalone Defender for Identity sensor, reduce the number of domain controllers being monitored.<br></br>This issue can also happen if you're using domain controllers on VMware virtual machines. To avoid these issues, you can check that the following settings are set to 0 or Disabled in the virtual machine (in the Windows OS, not in the VMware settings):<br></br>- Large Send Offload V2 (IPv4)<br></br>- IPv4 TSO Offload<br></br>The names can vary depending on your VMware version. For more information, see your VMware documentation.|Medium|Sensors health issues tab and Global health issues tab|
 
 ### Some ETW events are not being analyzed
 
@@ -187,12 +187,11 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |----|----|----|----|----|
 |Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
 
-<!--
-## Learning Mode has automatically ended for this tenant
-|Alert|Description|Resolution|Severity|Displayed in|Issue TypeId|
-|----|----|----|----|----|----|
-|Learning Mode has automatically ended for this tenant|The initial learning period for Defender for Identity has finished, and as a result, "learning mode" has been automatically turned off.|See our documentation for more details about learning mode. Optionally, adjust the sensitivity of affected alerts from the Defender for Identity Advanced Settings page|Low|Sensors health issues tab|2436|
--->
+### The 'Remove learning period' toggle was automatically switched off for this tenant
+
+|Alert|Description|Resolution|Severity|Displayed in|
+|----|----|----|----|----|
+|The 'Remove learning period' toggle was automatically switched off for this tenant|The learning period for Defender for Identity has ended, and as a result, the 'Remove learning mode' feature has been automatically disabled. This is just a notification, and no immediate action is required. You can safely close this health issue.|See our documentation for more details about [Remove learning period](https://aka.ms/mdi/advanced-settings). Optionally, adjust the sensitivity of affected alerts from the [Defender for Identity Advanced Settings page](https://security.microsoft.com/settings/identities?tabid=advancedSettings)|Low|Sensors health issues tab|
 
 ## See also
 
@@ -201,5 +200,3 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 - [Configure event collection](configure-event-collection.md)
 - [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
-
-
