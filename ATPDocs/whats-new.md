@@ -36,6 +36,12 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 - [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant)
 
+### Defender for Identity release 2.216
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## September 2023
+
 ### Alert sensitivity settings and learning period enhancements
 
 Defender for Identity uses learning periods to learn about your network and build a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which may be triggered by legitimate activity.
@@ -48,7 +54,7 @@ Defender for Identity alert learning periods have been enhanced to provide more 
 
 - Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities.
 
-- When 30 days is complete, the learning period is automatically turned off and a [health issue](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) is triggered to notify administrators. At this point, alert sensitivity levels are set back to their default, *Normal* values.
+- When 30 days is complete, the**Remove learning period** setting is automatically turned off and alert sensitivity levels are set back to their default, *Normal* values.
 
 For more information, see [Advanced settings](advanced-settings.md).
 
@@ -56,12 +62,6 @@ For more information, see [Advanced settings](advanced-settings.md).
 > [!NOTE]
 > If you'd previously had the **Remove learning period** setting turned on, this setting is now reverted to the default and is turned off. In such cases, we recommend checking your settings and reconfiguring sensitivity as needed.
 -->
-
-### Defender for Identity release 2.216
-
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
-
-## September 2023
 
 
 ### Defender for Identity release 2.215
