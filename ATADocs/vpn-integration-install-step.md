@@ -33,7 +33,7 @@ ms.suite: ems
 > [« Step 5](install-ata-step5.md)
 > [Step 8 »](install-ata-step7.md)
 
-## Step 7. Integrate VPN
+## Step 7: Integrate VPN
 
 Microsoft Advanced Threat Analytics (ATA) version 1.8 and higher can collect accounting information from VPN solutions. When configured, the user's profile page includes information from the VPN connections, such as the IP addresses and locations where connections originated. This complements the investigation process by providing additional information on user activity. The call to resolve an external IP address to a location is anonymous. No personal identifier is sent in this call.
 

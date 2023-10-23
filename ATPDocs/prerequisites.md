@@ -14,7 +14,7 @@ This article describes the requirements for a successful deployment of Microsoft
 
 Defender for Identity is composed of the Defender for Identity cloud service, the Microsoft 365 Defender portal and the Defender for Identity sensor. For more information about each Defender for Identity component, see [Defender for Identity architecture](architecture.md).
 
-Defender for Identity protects your on-premises Active Directory users and/or users synced to your Azure Active Directory (Azure AD). To protect an environment made up of only Azure AD users, see [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview).
+Defender for Identity protects your on-premises Active Directory users and/or users synced to your Microsoft Entra ID. To protect an environment made up of only Microsoft Entra users, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview).
 
 This article includes both [Defender for Identity sensor requirements](#defender-for-identity-sensor-requirements) and for [Defender for Identity standalone sensor requirements](#defender-for-identity-standalone-sensor-requirements). The Defender for Identity standalone sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
 
@@ -32,7 +32,7 @@ This section lists information you should gather as well as accounts and network
 
 ### Permissions
 
-- To create your Defender for Identity workspace, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- To create your Defender for Identity workspace, you'll need a Microsoft Entra tenant with at least one global/security administrator. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
@@ -261,4 +261,3 @@ The following table lists the minimum ports that the Defender for Identity stand
 > [!div class="step-by-step"]
 > [« Deploy Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
 > [Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)
-
