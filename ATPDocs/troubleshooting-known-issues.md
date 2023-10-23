@@ -460,15 +460,17 @@ NT Service\All Services don't have the right to log on as a service.
 
 Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
 
-## Your workspace wasn't created because a security group with the same name already exists in Azure Active Directory
+<a name='your-workspace-wasnt-created-because-a-security-group-with-the-same-name-already-exists-in-azure-active-directory'></a>
+
+## Your workspace wasn't created because a security group with the same name already exists in Microsoft Entra ID
 
 **Cause:**
 
-The issue can come up when a Defender for Identity workspace license expires and is deleted when the retention period has ended, but the Azure AD groups weren't deleted.
+The issue can come up when a Defender for Identity workspace license expires and is deleted when the retention period has ended, but the Microsoft Entra groups weren't deleted.
 
 **Resolution:**
 
-1. Go to the [Azure portal](https://portal.azure.com/) -> [Azure Active Directory](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview) -> [Groups](https://portal.azure.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/AllGroups)
+1. Go to the [Azure portal](https://portal.azure.com/) -> [Microsoft Entra ID](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview) -> [Groups](https://portal.azure.com/#view/Microsoft_AAD_IAM/GroupsManagementMenuBlade/~/AllGroups)
 1. Rename the following three groups (where workspaceName is the name of your workspace), by adding to them a " - old" suffix:
    - "Azure ATP workspaceName Administrators" -> "Azure ATP workspaceName Administrators - old"
    - "Azure ATP workspaceName Viewers" -> "Azure ATP workspaceName Viewers - old"
