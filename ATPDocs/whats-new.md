@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 10/22/2023
+ms.date: 10/24/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -29,6 +29,16 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## October 2023
+
+### Identity timeline includes more than 30 days of data
+
+Defender for Identity is gradually rolling out extended data retentions on identity details pages to more than 30 days. The timeline currently includes a minimum of 120 days and is growing.
+
+To view activities and alerts on the identity timeline, use the custom time range picker to select a specific time frame. Data is presented with a look back of 7 days.
+
+For example:
+
+For more information, see [Investigate assets](investigate-assets.md) and [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users).
 
 ### Defender for Identity release 2.217
 
