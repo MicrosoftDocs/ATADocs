@@ -20,12 +20,9 @@ Some Defender for Identity alerts wait for a *learning period* before alerts are
 
 By default, after deploying your first sensor, new Defender for Identity workspaces are configured with a **Remove learning period** set to *On*.
 
-Setting the **Remove learning period** option to *On* causes Defender for Identity to trigger alerts even while your baseline is still being built. The default setting for new workspaces is designed to help you start evaluating Defender for Identity as soon and as thoroughly as possible.
+Setting the **Remove learning period** option to *On* causes Defender for Identity to trigger affected alerts even while your baseline is still being built. The default setting for new workspaces is designed to help you start evaluating Defender for Identity as soon and as thoroughly as possible.
 
-However, the **Remove learning period** setting turned *On* can result in an immediate increase of the number of alerts, with some of them being legitimate traffic and activities. You might want to turn the **Remove learning period** setting *Off* manually, before the first 30 days are up, such as if:
-
-- You've installed a new sensor on an existing workspace and don't need to wait to start triggering alerts
-- You have a new workspace, but feel that Defender for Identity has learned your network sufficiently before the first 30 days is up
+However, the **Remove learning period** setting turned *On* can result in an immediate increase of the number of alerts, with some of them being legitimate traffic and activities. You might want to turn the **Remove learning period** setting *Off* manually, before the first 30 days are up, such as if you have a new workspace, but feel that Defender for Identity has learned your network sufficiently before the first 30 days are up.
 
 Any alerts that are affected by the **Remove learning period** setting, and are triggered while the setting is set to *On*, have an extra indication in the **Important information** section of the alert.
 
@@ -33,7 +30,7 @@ If the **Remove learning period** setting is still *On* at the end of 30 days, D
 
 <!--is this still relevant?-->
 >[!NOTE]
-> Turning off the learning feature for workspaces that have already completed their learning period won't delete the learned profiles, but will simply ignore them.
+> Turning *Off* the **Remove learning period** setting for workspaces that have already completed their learning period won't delete the learned profiles, but will ignore them for any alerts with sensitivity level *Medium* or *High*.
 
 **To define learning period settings**:
 
