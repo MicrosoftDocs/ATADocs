@@ -42,13 +42,13 @@ For more information, see <xref>.
 
 ### For Active Directory Certificate Services (AD CS) events
 
-- 4870: Certificate Services revoked a certificate
-- 4882: The security permissions for Certificate Services changed
-- 4885: The audit filter for Certificate Services changed
-- 4887: Certificate Services approved a certificate request and issued a certificate
-- 4888: Certificate Services denied a certificate request
-- 4890: The certificate manager settings for Certificate Services changed.
-- 4896: One or more rows have been deleted from the certificate database
+- 4870 - Certificate Services revoked a certificate
+- 4882 - The security permissions for Certificate Services changed
+- 4885 - The audit filter for Certificate Services changed
+- 4887 - Certificate Services approved a certificate request and issued a certificate
+- 4888 - Certificate Services denied a certificate request
+- 4890 - The certificate manager settings for Certificate Services changed.
+- 4896 - One or more rows have been deleted from the certificate database
 
 For more information, see 
 [Configure auditing for AD CS](#configure-auditing-for-ad-cs).
@@ -128,6 +128,12 @@ all 3 has different parameter values for each type
 get shows values
 test shows yes/no to say whether it's configured correctly
 
+   Alternatively, verify your audit policy via the command line. Run:
+   
+   ```cmd
+   auditpol.exe /get /category:*
+   ```
+   
 ### Event ID 8004
 
 To audit Event ID 8004, more configuration steps are required.

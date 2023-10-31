@@ -33,7 +33,7 @@ ms.suite: ems
 > [« Step 5](install-ata-step5.md)
 > [Step 7 »](vpn-integration-install-step.md)
 
-## Step 6. Configure event collection
+## Step 6: Configure event collection
 
 ### Configure Event Collection
 

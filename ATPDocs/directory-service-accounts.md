@@ -213,7 +213,11 @@ For more information about configuring read-only permissions on the Deleted Obje
 
 ## Install the gMSA account
 
-To install the gMSA account, run locally (as an administrator) on each of the servers, the following command:
+>[!NOTE]
+>There's no need to install the gMSA for Defender for Identity sensors to be able to use the gMSA.
+>Trying to intall a gMSA from a root domain on a child domain will fail, as the Install-ADServiceAccount cmdlet can only look for the account on the local domain.
+
+To install the gMSA account, run locally (as an administrator), the following command:
 
 ```powershell
 # Import the required PowerShell module:
@@ -222,10 +226,6 @@ Import-Module ActiveDirectory
 # Install the gMSA account
 Install-ADServiceAccount -Identity 'mdiSvc01'
 ```
-
->[!NOTE]
->Trying to intall a gMSA from a root domain on a child domain will fail, as the Install-ADServiceAccount cmdlet can only look for the account on the local domain.
->There's no need to install the gMSA for Defender for Identity sensors to be able to use the gMSA. It is only required for the password rotation mechanism.
 
 ## How to validate that the domain controller can retrieve the gMSA's password
 

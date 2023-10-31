@@ -97,7 +97,7 @@ Follow these steps to update to ATA version 1.5:
 >
 > - Update all the ATA Gateways to make sure ATA functions properly.
 
-### Step 2. Download the ATA Gateway setup package
+### Step 2: Download the ATA Gateway setup package
 
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package.
 

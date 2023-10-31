@@ -103,7 +103,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 > [!IMPORTANT]
 > Update all the ATA Gateways to make sure ATA functions properly.
 
-### Step 2. Download the ATA Gateway setup package
+### Step 2: Download the ATA Gateway setup package
 
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package.
 

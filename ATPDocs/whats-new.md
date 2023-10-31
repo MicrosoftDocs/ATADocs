@@ -1,8 +1,9 @@
 ---
-title: What's new 
+title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 09/10/2023
+ms.date: 10/22/2023
 ms.topic: overview
+#CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
 
 # What's new in Microsoft Defender for Identity
@@ -47,7 +48,41 @@ For more information, see:
 - <XREF TO A TROUBLEShOOTING PAGE?>
 - [Defender for Identity PowerShell reference documentation](/powershell/module/azureinformationprotection)
 
+### Defender for Identity release 2.217
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new health issue:
+
+- [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant)
+
+### Defender for Identity release 2.216
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ## September 2023
+
+### Alert sensitivity settings and learning period enhancements
+
+Defender for Identity uses learning periods to learn about your network and build a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which might be triggered by legitimate activity.
+
+Defender for Identity alert learning periods have been enhanced to provide more control over the learning period experience, including:
+
+- Administrators can now configure the sensitivity used for specific alerts, and can also completely turn off learning for specific alerts. For example:
+
+    :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
+
+- Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities. 
+
+- When 30 days is complete, the **Remove learning period** setting is automatically turned off and alert sensitivity levels are set back to their default, *Normal* values.
+
+For more information, see [Advanced settings](advanced-settings.md).
+
+> [!NOTE]
+> If you'd previously updated **Remove learning period** setting, your setting remains as you'd configured it.
+
+
+### Defender for Identity release 2.215
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity reports moved to the main Reports area
 

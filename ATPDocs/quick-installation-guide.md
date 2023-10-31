@@ -26,7 +26,7 @@ For more information, see [Licensing and privacy](/defender-for-identity/technic
 
 ### Required permissions
 
-- To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- To create your Defender for Identity workspace, you'll need a Microsoft Entra tenant with at least one global/security administrator. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
@@ -40,13 +40,11 @@ For accurate calculations of the resources required by your server according to 
 
 | **Operating system version** | **Server with Desktop**  **Experience** | **Server**  **Core** | **Nano**  **Server** | **Supported**  **installations** |
 | ---------------------------- | --------------------------------------- | -------------------- | -------------------- | -------------------------------- |
-| Windows Server  2012*        | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
-| Windows Server  2012 R2*     | ✔                                       | ✔                    | Not  applicable      | Domain  controller               |
 | Windows Server  2016         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
 | Windows Server  2019**       | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
 | Windows Server  2022         | ✔                                       | ✔                    | ❌                    | Domain controller,  AD FS, AD CS|
 
-\* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
+\* Windows Server 2012 and Windows Server 2012 R2 reached extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2. The sensor running on these Operating Systems will continue to report to Defender for Identity and even receive the sensor updates, but some of the new functionalities will not be available as they might rely on Operating System capabilities.
 
 \*\* Requires [KB4487044](https://support.microsoft.com/topic/february-12-2019-kb4487044-os-build-17763-316-6502eb5d-dde8-6902-e149-27ef359ed616) or a newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
@@ -61,9 +59,9 @@ Make sure to install Defender for Identity on Windows 2012 and higher on a serve
     - You only need to download the installer once, as it can be used for every server in the tenant.
     - Make sure to allow popups to download the sensor.
 
-1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service,  by accessing `https://*your-instance-name*sensorapi.atp.azure.com`.
+1. Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service,  by accessing `https://*your-workspace-name*sensorapi.atp.azure.com`.
 
-    - To get your instance name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
+    - To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
     - For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
 
 1. From the domain controller, run the installer downloaded in step 1 and follow the instructions on the screen.  
@@ -82,4 +80,3 @@ Make sure to install Defender for Identity on Windows 2012 and higher on a serve
 ## See also
 
 For more detailed installation instructions, see the links in [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
-

@@ -14,7 +14,7 @@ This article describes the requirements for a successful deployment of Microsoft
 
 Defender for Identity is composed of the Defender for Identity cloud service, the Microsoft 365 Defender portal and the Defender for Identity sensor. For more information about each Defender for Identity component, see [Defender for Identity architecture](architecture.md).
 
-Defender for Identity protects your on-premises Active Directory users and/or users synced to your Azure Active Directory (Azure AD). To protect an environment made up of only Azure AD users, see [Azure AD Identity Protection](/azure/active-directory/identity-protection/overview).
+Defender for Identity protects your on-premises Active Directory users and/or users synced to your Microsoft Entra ID. To protect an environment made up of only Microsoft Entra users, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview).
 
 This article includes both [Defender for Identity sensor requirements](#defender-for-identity-sensor-requirements) and for [Defender for Identity standalone sensor requirements](#defender-for-identity-standalone-sensor-requirements). The Defender for Identity standalone sensor is installed on a dedicated server and requires port mirroring to be configured on the domain controller to receive network traffic.
 
@@ -32,7 +32,7 @@ This section lists information you should gather as well as accounts and network
 
 ### Permissions
 
-- To create your Defender for Identity instance, you'll need an Azure AD tenant with at least one global/security administrator. Each Defender for Identity instance supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+- To create your Defender for Identity workspace, you'll need a Microsoft Entra tenant with at least one global/security administrator. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
@@ -47,10 +47,10 @@ Access Defender for Identity in the Microsoft 365 Defender portal using Microsof
 >[!NOTE]
 >The network requirements for US Government offerings can be found at [Microsoft Defender for Identity for US Government offerings](us-govt-gcc-high.md).
 
-- Verify that the servers you intend to install Defender for Identity sensors on are able to reach the Defender for Identity Cloud Service. They should be able to access `https://*your-instance-name*sensorapi.atp.azure.com`. For example, `https://*contoso-corp*sensorapi.atp.azure.com`.<br>
+- Verify that the servers you intend to install Defender for Identity sensors on are able to reach the Defender for Identity Cloud Service. They should be able to access `https://*your-workspace-name*sensorapi.atp.azure.com`. For example, `https://*contoso-corp*sensorapi.atp.azure.com`.<br>
 We recommend using a proxy server instead of allowing direct outbound connectivity to the Internet through port 443, and allowing the Defender for Identity sensors to access through that proxy only your dedicated Defender for Identity Cloud Service. For more information on proxy configuration, see [Configuring a proxy for Defender for Identity](configure-proxy.md).
 <br>
-To get your instance name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>.
+To get your workspace name, see the About page in the Identities settings section at <https://security.microsoft.com/settings/identities>.
 
     > [!NOTE]
     > - You can use ExpressRoute public peering and add the *Microsoft Defender for Identity* (12076:5220) service BGP community to your route filter, to route the network traffic destined to the Defender for Identity cloud services through your ExpressRoute. For more information, see [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)
@@ -110,13 +110,11 @@ The Defender for Identity sensor supports installation on the different operatin
 
 | Operating system version   | Server with Desktop Experience | Server Core | Nano Server    | Supported installations  |
 | -------------------------- | ------------------------------ | ----------- | -------------- | ------------------------ |
-| Windows Server 2012\*      | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
-| Windows Server 2012 R2\*   | &#10004;                       | &#10004;    | Not applicable | Domain controller        |
 | Windows Server 2016        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS, AD CS|
 | Windows Server 2019\**     | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS, AD CS|
 | Windows Server 2022        | &#10004;                       | &#10004;    | &#10060;       | Domain controller, AD FS, AD CS|
 
-\* Windows Server 2012 and Windows Server 2012 R2 will reach extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
+\* Windows Server 2012 and Windows Server 2012 R2 reached extended end of support on October 10, 2023. You should plan to upgrade those servers as Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2. The sensor running on these Operating Systems will continue to report to Defender for Identity and even receive the sensor updates, but some of the new functionalities will not be available as they might rely on Operating System capabilities.
 
 \** Requires [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) or newer cumulative update. Sensors installed on Server 2019 without this update will be automatically stopped if the file version of the *ntdsai.dll* file in the system directory is older than *10.0.17763.316*.
 
@@ -171,7 +169,7 @@ The Defender for Identity standalone sensor supports installation on a server ru
 The Defender for Identity standalone sensor can be installed on a server that is a member of a domain or workgroup.
 The Defender for Identity standalone sensor can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
 
-For your standalone sensor to communicate with the cloud service, port 443 in your firewalls and proxies to *your-instance-namesensorapi.atp.azure.com* must be open. See the [Defender for Identity firewall requirements](#defender-for-identity-firewall-requirements) section for more details.
+For your standalone sensor to communicate with the cloud service, port 443 in your firewalls and proxies to *your-workspace-namesensorapi.atp.azure.com* must be open. See the [Defender for Identity firewall requirements](#defender-for-identity-firewall-requirements) section for more details.
 
 For information on using virtual machines with the Defender for Identity standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 
@@ -263,4 +261,3 @@ The following table lists the minimum ports that the Defender for Identity stand
 > [!div class="step-by-step"]
 > [« Deploy Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
 > [Plan capacity for Microsoft Defender for Identity »](capacity-planning.md)
-

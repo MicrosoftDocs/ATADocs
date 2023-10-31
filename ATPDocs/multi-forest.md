@@ -30,7 +30,7 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 - [Add additional credentials](directory-service-accounts.md#configure-directory-service-account-in-microsoft-365-defender) on the **Directory Service accounts** page to support any untrusted forests in your environment.
   - Only one credential is required to support all forests with a two-way trust.
   - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
-  - There's a default limit of 30 untrusted forests per Defender for Identity instance. Contact support if your organization has more than 30 forests.
+  - There's a default limit of 30 untrusted forests per Defender for Identity workspace. Contact support if your organization has more than 30 forests.
 
 For detailed information about how to create a Directory Service account and configure it in the Microsoft 365 Defender portal, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 

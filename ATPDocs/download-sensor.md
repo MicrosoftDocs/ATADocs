@@ -33,7 +33,7 @@ Learn how to download the Microsoft Defender for Identity sensor for your domain
 
     - The configuration setting file with the required information to connect to the Defender for Identity cloud service
 
-1. Copy the **Access key**. The access key is required for the Defender for Identity sensor to connect to your Defender for Identity instance. The access key is a one-time-password for sensor deployment, after which all communication is performed using certificates for authentication and TLS encryption. Use the **Regenerate key** button if you ever need to regenerate the new access key. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
+1. Copy the **Access key**. The access key is required for the Defender for Identity sensor to connect to your Defender for Identity workspace. The access key is a one-time-password for sensor deployment, after which all communication is performed using certificates for authentication and TLS encryption. Use the **Regenerate key** button if you ever need to regenerate the new access key. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
 
 1. Copy the package to the dedicated server or domain controller onto which you're installing the Defender for Identity sensor.
 
