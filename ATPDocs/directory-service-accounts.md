@@ -304,7 +304,7 @@ For example, to check permissions for the **mdiSvc01** account and provide full 
 Test-MDIDSA -Identity "mdiSvc01" -Detailed
 ```
 
-For more information, see <xref>.
+For more information, see the [DefenderForIdentity PowerShell references](powershell/module/defenderforidentity/test-mdidsa).
 
 ## Troubleshooting
 

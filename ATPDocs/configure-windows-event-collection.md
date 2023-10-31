@@ -13,12 +13,18 @@ To enhance threat detection capabilities, Defender for Identity needs the follow
 
 ## Generate a report with current configurations
 
+**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+
 Before you start creating new event and audit polices, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
 
-<!--we should give full syntax everywhere-->
 ```powershell
-New-MDIConfigurationReport [-Path] <String> [-OpenHtmlReport] [<CommonParameters>]
+New-MDIConfigurationReport [-Path] <String> [-OpenHtmlReport]
 ```
+
+Where: 
+
+- **OpenHtmlReport** opens the HTML report after it's generated
+- **Path** specifies the path to save the reports to
 
 For example, to generate a report and open it in your default browser, run the following command:
 
@@ -26,12 +32,13 @@ For example, to generate a report and open it in your default browser, run the f
 New-MDIConfigurationReport -Path "C:\Reports" -OpenHtmlReport
 ```
 
-For more information, see <xref>.
+For more information, see the [DefenderforIdentity PowerShell reference](powershell/module/defenderforidentity/new-mdiconfigurationreport).
 
 > [!TIP]
 > The report includes only configurations set as group policies on the domain. If you have settings defined locally, we recommend that you also run the [Test-MdiReadiness.ps1]((https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness)) script.
 > 
-## Relevant Windows Events
+
+## Relevant Windows events
 
 ### For Active Directory Federation Services (AD FS) events
 
@@ -76,7 +83,7 @@ For more information, see
 
 ## Configure audit policies
 
-Modify the Advanced Audit Policies of your domain controller using the following instructions:
+Modify the Advanced Audit Policies of your domain controller as follows:
 
 1. Log in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -114,26 +121,69 @@ Modify the Advanced Audit Policies of your domain controller using the following
 
 1. After applying via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
-<!--address this-->
+### Configure, get, and test audit policies using PowerShell
 
-To configure audit policies using PowerShell, run the following commands:
+To configure audit policies using PowerShell, run the following command:
 
-Run set-mdiconfiguration
+```powershell
+Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
+```
 
-To view it or test it, use get- or test
-(Get-MDIConfiguration, Test-MDIConfiguration)
+Where:
 
-all 3 has different parameter values for each type
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+
+- **Configuration** specifies which configuration to set. Use ***** to set all configurations. 
+
+- **CreateGpoDisabled** specifies if the GPOs are created and kept as disabled.
+
+- **SkipGpoLink** specifies that GPO links aren't created.
+
+- **Force** specifies that the configuration is set or GPOs are created without validating the current state.
+
+To view or test your audit policies using PowerShell, run the following commands as needed:
+
+```powershell
+Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
+```
+
+Where:
+
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+
+- **Configuration** specifies which configuration to get. Use ***** to get all configurations.
+
+
+```powershell
+Test-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
+```
+
+Where:
+
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+
+- **Configuration** specifies which configuration to test. Use ***** to test all configurations.
+
+For more information, see the relevant DefenderForIdentity PowerShell reference:
+
+- [Set-MDIConfiguration](/powershell/module/defenderforidentity/set-mdiconfiguration)
+- [Get-MDIConfiguration](/powershell/module/defenderforidentity/get-mdiconfiguration)
+- [Test-MDIConfiguration](/powershell/module/defenderforidentity/test-mdiconfiguration)
+
 
 get shows values
 test shows yes/no to say whether it's configured correctly
 
-   Alternatively, verify your audit policy via the command line. Run:
-   
-   ```cmd
-   auditpol.exe /get /category:*
-   ```
-   
+### Test audit policies from the command line
+
+To test your audit policies from the command line, run the following command:
+
+```cmd
+auditpol.exe /get /category:*
+```
+
+For more information, see [auditpol reference documentation](/windows-server/administration/windows-commands/auditpol).
+
 ### Event ID 8004
 
 To audit Event ID 8004, more configuration steps are required.

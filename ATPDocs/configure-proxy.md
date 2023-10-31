@@ -33,13 +33,13 @@ You can configure your proxy server during sensor installation using the followi
 > |ProxyUserName|ProxyUserName="Contoso\ProxyUser"|No|If your proxy service requires authentication, supply a user name in the DOMAIN\user format.|
 > |ProxyUserPassword|ProxyUserPassword="P@ssw0rd"|No|Specifies the password for proxy user name. *Credentials are encrypted and stored locally by the Defender for Identity sensor.|
 
-To change the proxy configuration, see <xref to powershell>.
+To change the proxy configuration, see [Change proxy configuration using PowerShell](#change-proxy-configuration-using-powershell).
 
 ## Change proxy configuration using PowerShell
 
-You can view and change the proxy configuration for your sensor using PowerShell. To do so, sign into your sensor server and run commands as shown in the following examples:
+**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 
-<!--we need notes that you need to install the powershell module-->
+You can view and change the proxy configuration for your sensor using PowerShell. To do so, sign into your sensor server and run commands as shown in the following examples:
 
 **To view the current sensor's proxy configuration**:
 
@@ -62,7 +62,11 @@ This example sets the proxy configuration for the Defender for Identity sensor t
 Clear-MDISensorProxyConfiguration
 ```
 
-For more information, see <xref>.
+For more information, see the [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
+
+- [Get-MDISensorProxyConfiguration]](/powershell/module/defenderforidentity/get-mdisensorproxyconfiguration).
+- [Set-MDISensorProxyConfiguration]](/powershell/module/defenderforidentity/set-mdisensorproxyconfiguration).
+- [Clear-MDISensorProxyConfiguration]](/powershell/module/defenderforidentity/clear-mdisensorproxyconfiguration).
 
 ## Alternative methods to configure your proxy server
 

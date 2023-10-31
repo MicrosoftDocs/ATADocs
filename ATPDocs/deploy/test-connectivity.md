@@ -38,7 +38,7 @@ For more information, see [Required ports](../prerequisites.md#ports).
 
 ### Test server connectivity using PowerShell
 
-**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the **DefenderForIdentity** PowerShell module.
+**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 
 Sign into your server and run one of the following commands:
 
@@ -48,7 +48,7 @@ Sign into your server and run one of the following commands:
     Test-MDISensorApiConnection
     ```
 
-- If you want to test settings that you're planning on using, but aren't currently configured on the server, run the command using the following syntax:
+- To test settings that you're planning on using, but aren't currently configured on the server, run the command using the following syntax:
 
     ```powershell
     Test-MDISensorApiConnection -BypassConfiguration -SensorApiUrl 'https://<Workscontososensorapi.atp.azure.com' -ProxyUrl 'https://myproxy.contoso.com:8080' -ProxyCredential $credential

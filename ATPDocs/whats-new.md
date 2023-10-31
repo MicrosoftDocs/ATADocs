@@ -38,7 +38,8 @@ Defender for Identity now provides the **DefenderForIdentity** PowerShell module
 - Validating permissions and delegations for a Directory Service Account
 - Generating a report of your current domain configurations
 
-To use PowerShell commands with your sensor, make sure to install the **DefenderForIdentity** PowerShell module. <!--xref to the powershell page-->
+To use PowerShell commands with your sensor, make sure to install the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/) PowerShell module.
+
 
 For more information, see:
 
