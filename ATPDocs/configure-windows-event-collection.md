@@ -32,10 +32,10 @@ For example, to generate a report and open it in your default browser, run the f
 New-MDIConfigurationReport -Path "C:\Reports" -OpenHtmlReport
 ```
 
-For more information, see the [DefenderforIdentity PowerShell reference](powershell/module/defenderforidentity/new-mdiconfigurationreport).
+For more information, see the [DefenderforIdentity PowerShell reference](/powershell/module/defenderforidentity/new-mdiconfigurationreport).
 
 > [!TIP]
-> The report includes only configurations set as group policies on the domain. If you have settings defined locally, we recommend that you also run the [Test-MdiReadiness.ps1]((https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness)) script.
+> The report includes only configurations set as group policies on the domain. If you have settings defined locally, we recommend that you also run the [Test-MdiReadiness.ps1](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
 > 
 
 ## Relevant Windows events

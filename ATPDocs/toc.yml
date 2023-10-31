@@ -42,7 +42,7 @@ items:
     - name: Proxy configuration
       href: configure-proxy.md
     - name: Test connectivity
-      href: test-connectivity.md
+      href: deploy/test-connectivity.md
     - name: Manage action accounts
       href: manage-action-accounts.md
     - name: Configure the Defender for Identity sensor

@@ -26,15 +26,13 @@ For more information, see [Required ports](../prerequisites.md#ports).
     >[!IMPORTANT]
     >You must specify HTTPS, not HTTP, to properly test connectivity.
 
-1. **Result**: You should get an *Error 503 The service is unavailable*, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint.  This is the desired result. For example:
-
-    ![Error 503 result.](media/error-503.png)
+1. **Result**: You should get an *Error 503 The service is unavailable*, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint.  This is the desired result.
 
     If you don't get *Error 503 The service is unavailable*, then you may have a problem with your proxy configuration. Check your network and proxy settings.
 
-1. If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
+1. If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
 
-    ![Certificate path.](media/certificate-path.png)
+    :::image type="content" source="../media/certificate-path.png" alt-text="Screenshot of a certificate path.":::
 
 ### Test server connectivity using PowerShell
 
@@ -65,5 +63,5 @@ For more information, see the [MDI PowerShell documentation](/powershell/module/
 
 > [!div class="step-by-step"]
 > [« Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor](../configure-proxy.md)
-> [Install the Defender for Identity sensor »](install-sensor.md)
+> [Install the Defender for Identity sensor »](../install-sensor.md)
 
