@@ -55,6 +55,9 @@ For example:
 
 The following table lists the alert types that support learning periods and describes the effects of *Medium* and *High* sensitivities.  We recommend changing alert sensitivity only after careful consideration.
 
+*Normal* means that the **Remove learning period** setting is turned *Off* for the selected type of alert. For more information, see [Supported alert types for learning periods](#supported-alert-types-for-learning-periods).
+
+
 |Detection  |Medium  |High  |
 |---------|---------|---------|
 |**[Account enumeration reconnaissance](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-external-id-2003)**     |    On *Medium* mode, this detection triggers immediately and disables the filtering of popular queries in the environment.         |   *High* mode includes everything in *Medium* mode, plus a lower threshold for queries, single scope enumeration, and more.     |
