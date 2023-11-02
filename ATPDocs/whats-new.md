@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 10/22/2023
+ms.date: 11/02/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -28,13 +28,28 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## November 2023
+
+### Defender for Identity release 2.218
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ## October 2023
 
 ### Defender for Identity release 2.217
 
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new health issue:
+This version includes the following improvements:
 
-- [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant)
+- **Summary report**: The summary report has been updated to include two new columns in the *Health issues* tab:
+
+    -	Details: Additional information on the issue, such as a list of impacted objects or specific sensors on which the issue occurs.
+    -	Recommendations: A list of recommended actions that can be taken to resolve the issue, or how to investigate the issue further.
+
+    For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
+
+- **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) issue
+
+This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity release 2.216
 
@@ -44,23 +59,24 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Alert sensitivity settings and learning period enhancements
 
-Defender for Identity uses learning periods to learn about your network and build a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which might be triggered by legitimate activity.
+Some Defender for Identity alerts wait for a *learning period* before alerts are triggered, while building a profile of patterns to use when distinguishing between legitimate and suspicious activities.
 
-Defender for Identity alert learning periods have been enhanced to provide more control over the learning period experience, including:
+Defender for Identity now provides the following enhancements for the learning period experience:
 
-- Administrators can now configure the sensitivity used for specific alerts, and can also completely turn off learning for specific alerts. For example:
+- Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. 
 
-    :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
+   Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert. For example:
 
-- Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities. 
+   :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
-- When 30 days is complete, the **Remove learning period** setting is automatically turned off and alert sensitivity levels are set back to their default, *Normal* values.
+- After deploying a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days is complete, the **Remove learning period** setting is automatically turned *Off* and alert sensitivity levels are returned to their default functionality.
+
+   To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
 
 For more information, see [Advanced settings](advanced-settings.md).
 
 > [!NOTE]
-> If you'd previously updated **Remove learning period** setting, your setting remains as you'd configured it.
-
+> If you'd previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
 
 ### Defender for Identity release 2.215
 
@@ -275,7 +291,7 @@ Released April 23, 2023
 
 Released March 27, 2023
 
-- We're in the process of disabling the SAM-R honeytoken alert. While these types of accounts should never be accessed or queried, certain legacy systems may use these accounts as part of their regular operations. If this functionality is necessary for you, you can always create an advanced hunting query and use it as a custom detection. We're also reviewing the LDAP honeytoken alert over the coming weeks, but remains functional for now.
+- We're in the process of disabling the SAM-R honeytoken alert. While these types of accounts should never be accessed or queried, certain legacy systems might use these accounts as part of their regular operations. If this functionality is necessary for you, you can always create an advanced hunting query and use it as a custom detection. We're also reviewing the LDAP honeytoken alert over the coming weeks, but remains functional for now.
 
 - We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
 
