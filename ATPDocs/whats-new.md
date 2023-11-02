@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 10/22/2023
+ms.date: 11/02/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -32,9 +32,18 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Defender for Identity release 2.217
 
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new health issue:
+This version includes the following improvements:
 
-- [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant)
+- **Summary report**: The summary report has been updated to include two new columns in the *Health issues* tab:
+
+    -	Details: Additional information on the issue, such as a list of impacted objects or specific sensors on which the issue occurs.
+    -	Recommendations: A list of recommended actions that can be taken to resolve the issue, or how to investigate the issue further.
+
+    For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
+
+- **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) issue
+
+This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity release 2.216
 
