@@ -32,11 +32,11 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Identity timeline includes more than 30 days of data
 
-Defender for Identity is gradually rolling out extended data retentions on identity details pages to more than 30 days. The timeline currently includes a minimum of 120 days and is growing.
+Defender for Identity is gradually rolling out extended data retentions on identity details to more than 30 days. 
+
+The *user* timeline, which includes activities from Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint, currently includes a minimum of 150 days and is growing. There might be some variation in data retention rates over the next few weeks. 
 
 To view activities and alerts on the identity timeline, use the custom time range picker to select a specific time frame. Data is presented with a look back of 7 days.
-
-For example:
 
 For more information, see [Investigate assets](investigate-assets.md) and [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users).
 
