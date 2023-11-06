@@ -33,7 +33,7 @@ Defender for Identity's personal user data is derived from the user's object in 
 
 ## Delete personal data
 
-- After a user is deleted from the organization's Active Directory, Defender for Identity automatically deletes the user profile and any related network activity within a year. You can also [delete](/defender-for-identity/manage-security-alerts#review-suspicious-activities-on-the-attack-time-line) any security alerts that contain personal data.
+- After a user is deleted from the organization's Active Directory, Defender for Identity automatically deletes the user profile and any related network activity within a year. 
 
 - **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the Defender for Identity service, see the Deleted Objects container recommendation in [Defender for Identity Permissions required for the Directory Service account](directory-service-accounts.md#permissions-required-for-the-dsa).
 

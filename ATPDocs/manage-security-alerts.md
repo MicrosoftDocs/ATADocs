@@ -86,11 +86,11 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
     > [!NOTE]
     > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft 365 Defender**. Each link will bring you to the relevant portal, and provide information about the alert there.
 
-## Tuning alerts (Public Preview)
+## Tuning alerts
 
 Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage across your system. In Microsoft 365 Defender, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
 
-For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#public-preview-tune-an-alert).
+For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert).
 
 ## See also
 
@@ -99,5 +99,6 @@ For more information, see [Tune an alert](/microsoft-365/security/defender/inves
 ## Learn more
 
 - Try our interactive guide: [Detect suspicious activities and potential attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Detect%20suspicious%20activities%20and%20potential%20attacks%20with%20Microsoft%20Defender%20for%20Identity)
+
 
 

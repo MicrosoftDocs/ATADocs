@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 10/24/2023
+ms.date: 11/02/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -28,6 +28,12 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## November 2023
+
+### Defender for Identity release 2.218
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ## October 2023
 
 ### Identity timeline includes more than 30 days of data
@@ -42,9 +48,18 @@ For more information, see [Investigate assets](investigate-assets.md) and [Inves
 
 ### Defender for Identity release 2.217
 
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new health issue:
+This version includes the following improvements:
 
-- [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant)
+- **Summary report**: The summary report has been updated to include two new columns in the *Health issues* tab:
+
+    -	Details: Additional information on the issue, such as a list of impacted objects or specific sensors on which the issue occurs.
+    -	Recommendations: A list of recommended actions that can be taken to resolve the issue, or how to investigate the issue further.
+
+    For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
+
+- **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) issue
+
+This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity release 2.216
 
@@ -54,23 +69,24 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Alert sensitivity settings and learning period enhancements
 
-Defender for Identity uses learning periods to learn about your network and build a profile of your network's normal activity. Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which might be triggered by legitimate activity.
+Some Defender for Identity alerts wait for a *learning period* before alerts are triggered, while building a profile of patterns to use when distinguishing between legitimate and suspicious activities.
 
-Defender for Identity alert learning periods have been enhanced to provide more control over the learning period experience, including:
+Defender for Identity now provides the following enhancements for the learning period experience:
 
-- Administrators can now configure the sensitivity used for specific alerts, and can also completely turn off learning for specific alerts. For example:
+- Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. 
 
-    :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
+   Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert. For example:
 
-- Any new Defender for Identity workspace now automatically has the **Remove learning period** setting turned on for 30 days. This results in an increase in alerts, some of which represent legitimate traffic and activities. 
+   :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
-- When 30 days is complete, the **Remove learning period** setting is automatically turned off and alert sensitivity levels are set back to their default, *Normal* values.
+- After deploying a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days is complete, the **Remove learning period** setting is automatically turned *Off* and alert sensitivity levels are returned to their default functionality.
+
+   To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
 
 For more information, see [Advanced settings](advanced-settings.md).
 
 > [!NOTE]
-> If you'd previously updated **Remove learning period** setting, your setting remains as you'd configured it.
-
+> If you'd previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
 
 ### Defender for Identity release 2.215
 
@@ -226,91 +242,6 @@ For more information, see the [Microsoft 365 Defender advanced hunting documenta
 ### Defender for Identity release 2.205
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
-
-## May 2023
-
-### Enhanced Active Directory account control highlights
-
-The Microsoft 365 Defender **Identity** > user details page now includes new Active Directory account control data.
-
-On the user details **Overview** tab, we've added the new **Active Directory account controls** card to highlight important security settings and Active directory controls. For example, use this card to learn whether a specific user is able to bypass password requirements or has a password that never expires.
-
-For example:
-
-:::image type="content" source="media/whats-new/uac-flags.png" alt-text="Screenshot of the UAC flags card on a user details page.":::
-
-For more information, see the [User-Account-Control attribute](/windows/win32/adschema/a-useraccountcontrol) documentation.
-
-### Defender for Identity release 2.204
-
-Released May 29, 2023
-
-- New health alert for VPN (radius) integration data ingestion failures. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#radius-accounting-vpn-integration-data-ingestion-failures).
-
-- This version includes improvements and bug fixes for internal sensor infrastructure.
-
-### Defender for Identity release 2.203
-
-Released May 15, 2023
-
-- New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required).
-
-- The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed. For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).
-
-- This version includes improvements and bug fixes for internal sensor infrastructure.
-
-### Identity timeline enhancements
-
-The identity **Timeline** tab now contains new and enhanced features! With the updated timeline, you can now filter by *Activity type*, *Protocol*, and *Location*, in addition to the original filters. You can also export the timeline to a CSV file and find additional information about activities associated with MITRE ATT&CK techniques. For more information, see [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users).
-
-### Alert tuning in Microsoft 365 Defender
-
-Alert tuning, now available in Microsoft 365 Defender, allows you to adjust your alerts and optimize them. Alert tuning reduces false positives, allows your SOC teams to focus on high-priority alerts, and improves threat detection coverage across your system.
-
-In Microsoft 365 Defender, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#public-preview-tune-an-alert).
-
-## April 2023
-
-### Defender for Identity release 2.202
-
-Released April 23, 2023
-
-- New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required).
-- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
-- Version includes improvements and bug fixes for internal sensor infrastructure.
-
-## March 2023
-
-### Defender for Identity release 2.201
-
-Released March 27, 2023
-
-- We're in the process of disabling the SAM-R honeytoken alert. While these types of accounts should never be accessed or queried, certain legacy systems may use these accounts as part of their regular operations. If this functionality is necessary for you, you can always create an advanced hunting query and use it as a custom detection. We're also reviewing the LDAP honeytoken alert over the coming weeks, but remains functional for now.
-
-- We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
-
-- We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md#number-of-dsa-entries).
-
-- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see [Event ID 1644](configure-windows-event-collection.md#event-id-1644).
-
-- Version includes improvements and bug fixes for internal sensor infrastructure.
-
-### Defender for Identity release 2.200
-
-Released March 16, 2023
-
-- Version includes improvements and bug fixes for internal sensor infrastructure.
-
-### Defender for Identity release 2.199
-
-Released March 5, 2023
-
-- Some exclusions for the **Honeytoken was queried via SAM-R** alert weren't functioning properly. In these instances, alerts were being triggered even for excluded entities. This error has now been fixed.
-
-- **Updated NTLM protocol name for the Identity Advanced Hunting tables**: The old protocol name `Ntlm` is now listed as the new protocol name `NTLM` in Advanced Hunting Identity tables: IdentityLogonEvents, IdentityQueryEvents, IdentityDirectoryEvents.
-If you're currently using the `Ntlm` protocol in case-sensitive format from the Identity event tables, you should change it to `NTLM`.
-
-- Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Next steps
 
