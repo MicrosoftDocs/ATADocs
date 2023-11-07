@@ -40,7 +40,7 @@ To view activities and alerts on the identity timeline within a specific time fr
 
 For example:
 
-:::image type="content" source="media/whats-new/custom-time-frame.png" alt-text="Screenshot of the custom time frame options.":::
+:::image type="content" source="media/whats-new/custom-time-frame.png" alt-text="Screenshot of the custom time frame options." lightbox="media/whats-new/custom-time-frame.png":::
 
 For more information, see [Investigate assets](investigate-assets.md) and [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users).
 
