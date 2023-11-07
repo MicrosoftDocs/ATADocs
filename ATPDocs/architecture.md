@@ -1,25 +1,22 @@
 ---
-title: Microsoft Defender for Identity system architecture
-description: Learn about a Microsoft Defender for Identity deployment and system architecture.
-ms.date: 08/27/2023
-ms.topic: conceptual
+title: Architecture | Microsoft Defender for Identity
+description: Learn about the Microsoft Defender for Identity system architecture and related components.
+ms.date: 09/14/2023
+ms.topic: overview
+#CustomerIntent: As a Defender for Identity user, I want to understand the relevant components and how they interact with the rest of my environment so that I can best use Defender for Identity features.
 ---
 
 # Microsoft Defender for Identity architecture
 
 Microsoft Defender for Identity monitors your domain controllers by capturing and parsing network traffic, leveraging Windows events directly from your domain controllers, and then analyzes the data for attacks and threats.
 
-Defender for Identity uses profiling, deterministic detection, machine learning, and behavioral algorithms to learn about your network, detects anomalies in your system, and warns you of suspicious activities.
+The following image shows how Defender for Identity is layered over Microsoft 365 Defender, and works together with other Microsoft services and third-party identity providers to monitor traffic coming in from domain controllers and Active Directory servers.
 
-The following diagram shows the Defender for Identity system architecture:
+:::image type="content" source="media/architecture/architecture.png" alt-text="Diagram of the Defender for Identity architecture." border="false":::
 
 ![Diagram of the Defender for Identity system architecture.](media/architecture-topology.png)
 
-This article describes how the flow of Defender for Identity's network and event capturing works, and drills down to describe the functionality of the main components: the Microsoft 365 Defender portal, Defender for Identity sensor, and Defender for Identity cloud service.
-
-Installed directly on your domain controller, AD FS, or AD CS servers, the Defender for Identity sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, Defender for Identity sends only the parsed information, including only a selection of your logs, to the Defender for Identity cloud service.
-
-Each Defender for Identity workspace supports multiple Active Directory forest boundaries and Forest Functional Levels (FFL), for Windows 2003 and higher. For more information, see [Microsoft Defender for Identity multi-forest support](multi-forest.md).
+Installed directly on your domain controller, Active Directory Federation Services (AD FS), or Active Directory Certificate Services (AD CS) servers, the Defender for Identity sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, Defender for Identity sends only the parsed information to the Defender for Identity cloud service.
 
 ## Defender for Identity components
 
@@ -28,7 +25,7 @@ Defender for Identity consists of the following components:
 - **Microsoft 365 Defender portal**  
 The Microsoft 365 Defender portal creates your Defender for Identity workspace, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
-- **Defender for Identity sensor**  
+- **Defender for Identity sensor** 
 Defender for Identity sensors can be directly installed on the following servers:
   - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
   - **AD FS / AD CS**: The sensor directly monitors network traffic and authentication events.

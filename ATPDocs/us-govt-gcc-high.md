@@ -44,7 +44,7 @@ Use [this link](deploy/prerequisites.md#required-ports) to configure the minimum
 >[!NOTE]
 > The following steps should only be taken after you have initiated the transition of Microsoft Defender for Endpoint and Microsoft Defender for Cloud Apps
 
-1. Go to the [Azure portal](https://portal.azure.com/) > Azure Active Directory > Groups
+1. Go to the [Azure portal](https://portal.azure.com/) > Microsoft Entra ID > Groups
 1. Rename the following three groups (where _workspaceName_ is the name of your workspace), by adding to them a " - commercial" suffix:
    - "Azure ATP _workspaceName_ Administrators" --> "Azure ATP _workspaceName_ Administrators - commercial"
    - "Azure ATP _workspaceName_ Viewers" --> "Azure ATP _workspaceName_ Viewers - commercial"

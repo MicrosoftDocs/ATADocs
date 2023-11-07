@@ -250,7 +250,7 @@ In this detection, an alert is triggered when a replication request is initiated
 **Investigation**
 
 1. Is the computer in question a domain controller? For example, a newly promoted domain controller that had replication issues. If yes, **Close** the suspicious activity.
-1. Is the computer in question supposed to be replicating data from Active Directory? For example, Azure AD Connect. If yes, **Close and exclude** the suspicious activity.
+1. Is the computer in question supposed to be replicating data from Active Directory? For example, Microsoft Entra Connect. If yes, **Close and exclude** the suspicious activity.
 1. Select the source computer or account to go to its profile page. Check what happened around the time of the replication, searching for unusual activities, such as: who was logged in, which resources where accessed.
 
 **Remediation**

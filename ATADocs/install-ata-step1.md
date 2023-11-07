@@ -42,7 +42,7 @@ This installation procedure provides instructions for performing a fresh install
 > [!IMPORTANT]
 > If using Windows 2012 R2, you can install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation installs this update and requires a restart in the middle of the ATA installation.
 
-## Step 1. Download and Install the ATA Center
+## Step 1: Download and Install the ATA Center
 
 After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
 

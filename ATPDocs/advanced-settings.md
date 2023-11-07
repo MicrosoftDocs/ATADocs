@@ -1,7 +1,7 @@
 ---
 title: Advanced settings in Microsoft 365 Defender
 description: Learn how to set Microsoft Defender for Identity advanced settings in Microsoft 365 Defender.
-ms.date: 09/21/2023
+ms.date: 10/22/2023
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to know how and when to use an alert learning mode to reduce the number of false positives.
 ---
@@ -16,34 +16,47 @@ To access the **Advanced settings** page in Microsoft 365 Defender, you need acc
 
 ## Define alert learning period settings
 
-By default, new Defender for Identity workspaces have an alert *learning period* turned on for the first 30 days. During the learning period, Defender for Identity learns about your network and builds a profile of your network's normal activity. When 30 days is complete, the learning period is automatically turned off and a health alert is triggered to notify administrators.
+Some Defender for Identity alerts wait for a *learning period* before alerts are triggered. During this learning period, Defender for Identity builds a profile of patterns to use when distinguishing between legitimate and suspicious activities.
 
-Learning periods can be useful for updating your baseline algorithms, but can also result in a high volume of alerts, some of which may be triggered by legitimate activity. If Defender for Identity has learned your network sufficiently, you may want to remove the learning period before the 30 days is up.
+By default, after deploying your first sensor, new Defender for Identity workspaces are configured with a **Remove learning period** set to *On*.
 
-For example, when you install a new sensor on a domain controller or when you're evaluating the product, you may want to get alerts immediately. In such cases, you can turn off the learning period for the affected alerts by enabling the **Remove learning period** feature.
+Setting the **Remove learning period** option to *On* causes Defender for Identity to trigger affected alerts even while your baseline is still being built. The default setting for new workspaces is designed to help you start evaluating Defender for Identity as soon and as thoroughly as possible.
 
+However, the **Remove learning period** setting turned *On* can result in an immediate increase of the number of alerts, with some of them being legitimate traffic and activities. You might want to turn the **Remove learning period** setting *Off* manually, before the first 30 days are up, such as if you have a new workspace, but feel that Defender for Identity has learned your network sufficiently before the first 30 days are up.
+
+Any alerts that are affected by the **Remove learning period** setting, and are triggered while the setting is set to *On*, have an extra indication in the **Important information** section of the alert.
+
+If the **Remove learning period** setting is still *On* at the end of 30 days, Defender for Identity automatically turns it *Off* and opens a [health issue](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) to notify administrators.
+
+<!--is this still relevant?-->
 >[!NOTE]
-> Turning off the learning feature for instances that have already completed their learning period won't delete the learned profiles, but will simply ignore them.
+> Turning *Off* the **Remove learning period** setting for workspaces that have already completed their learning period won't delete the learned profiles, but will ignore them for any alerts with sensitivity level *Medium* or *High*.
 
 **To define learning period settings**:
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** > **Advanced settings**. 
-1. Use the toggle to turn the learning period on or off.
-1. If the learning period is on, modify the sensitivity for each type of alert to determine how sensitive the learning period is. *Normal* means that learn mode is turned off for the selected type of alert. For more information, see [Supported alert types for learning periods](#supported-alert-types-for-learning-periods).
+
+1. Use the toggle to turn the **Remove learning period** setting *On* or *Off*.
+
+1. If the **Remove learning period** setting is *On*, modify the sensitivity for each type of alert as needed for your organization.
+
+    *Normal* means that the **Remove learning period** setting is turned *Off* for the selected type of alert. For more information, see [Supported alert types for learning periods](#supported-alert-types-for-learning-periods).
+
+    > [!CAUTION]
+    > We recommend changing alert sensitivity only after careful consideration. For example, if you have NAT or VPN, we recommend that you do not set relevant detections to *High*, including *Suspected DCSync attack (replication of directory services)* and  *Suspected identity theft* detections.
+    >
 
 For example:
 
 :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
-Each alert triggered during the learning period is tagged as *POC* to identify it as a learning mode alert.
-
-> [!CAUTION]
-> We recommend changing alert sensitivity only after careful consideration. For example, if you have NAT or VPN, we recommend that you do not set relevant detections to high, including *Suspected DCSync attack (replication of directory services)* and  *Suspected identity theft* detections.
->
 
 ## Supported alert types for learning periods
 
 The following table lists the alert types that support learning periods and describes the effects of *Medium* and *High* sensitivities.  We recommend changing alert sensitivity only after careful consideration.
+
+*Normal* means that the **Remove learning period** setting is turned *Off* for the selected type of alert. For more information, see [Supported alert types for learning periods](#supported-alert-types-for-learning-periods).
+
 
 |Detection  |Medium  |High  |
 |---------|---------|---------|

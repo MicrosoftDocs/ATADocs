@@ -58,6 +58,12 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
 1. After applying via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
+   Alternatively, verify your audit policy via the command line. Run:
+
+   ```cmd
+   auditpol.exe /get /category:*
+   ```
+
 ## Configure auditing for Event ID 8004
 
 This section describes the extra configuration steps needed to audit Event ID 8004.

@@ -1,88 +1,86 @@
 ---
 title: What is Microsoft Defender for Identity?
-description: Explains what Microsoft Defender for Identity is and what kinds of suspicious activities it can detect
+description: This article describes the Microsoft Defender for Identity service and the sorts of suspicious activities Defender for Identity can detect.
 ms.date: 08/27/2023
 ms.topic: overview
+#customer intent: As a Microsoft Defender for Identity customer or potential customer, I want to understand the main use case scenarios for Defender for Identity so that I can best use my Microsoft 365 Defender deployment.
 ---
 
 # What is Microsoft Defender for Identity?
 
-Microsoft Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
+Microsoft Defender for Identity is a cloud-based security solution that helps secure your identity monitoring across your organization, 
 
-Defender for Identity enables SecOp analysts and security professionals struggling to detect advanced attacks in hybrid environments to:
+Defender for Identity is fully integrated with Microsoft 365 Defender, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
 
-- Monitor users, entity behavior, and activities with learning-based analytics
-- Protect user identities and credentials stored in Active Directory
-- Identify and investigate suspicious user activities and advanced attacks throughout the kill chain
-- Provide clear incident information on a simple timeline for fast triage
+Deploy Defender for Identity to help your SecOp teams deliver a modern identity threat detection (ITDR) solution across hybrid environments, including:
+
+- **Prevent breaches**, using proactive identity security posture assessments
+- **Detect threats**, using real-time analytics and data intelligence
+- **Investigate suspicious activities**, using clear, actionable incident information
+- **Respond to attacks**, using automatic response to compromised identities
 
 Defender for Identity was formerly known as Azure Advanced Threat Protection (Azure ATP).
 
 [!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
 
-## Monitor and analyze user behavior and activities
-
-Defender for Identity monitors and analyzes user activities and information across your network, such as permissions and group membership, creating a behavioral baseline for each user. 
-
-Defender for Identity then identifies anomalies with adaptive built-in intelligence, giving you insights into suspicious activities and events, revealing the advanced threats, compromised users, and insider threats facing your organization. 
-
-Defender for Identity's proprietary sensors monitor organizational domain controllers, providing a comprehensive view for all user activities from every device.
-
 ## Protect user identities and reduce the attack surface
 
 Defender for Identity provides you with invaluable insights on identity configurations and suggested security best-practices. Through security reports and user profile analytics, Defender for Identity helps dramatically reduce your organizational attack surface, making it harder to compromise user credentials, and advance an attack.
 
+### Proactively assess your identity posture
+
+Defender for Identity provides you with a clear view of your identity security posture, helping you to identify and resolve security issues before they can be exploited by attackers.
+
 For example:
 
-- Defender for Identity's *Lateral Movement Paths* help you quickly understand exactly how an attacker can move laterally inside your organization to compromise sensitive accounts and helps preventing those risks in advance. 
+- **Defender for Identity's *Lateral Movement Paths*** help you quickly understand exactly how an attacker can move laterally inside your organization. [Lateral movement paths](understand-lateral-movement-paths.md) can compromise sensitive accounts, and Defender for Identity helps you prevent those risks in advance.
 
-- Defender for Identity security reports help you identify users and devices that authenticate using clear-text passwords and provide extra insights to improve your organizational security posture and policies.
+- **[Defender for Identity security assessments](security-assessment.md)**, available from [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), provide extra insights to improve your organizational security posture and policies.
 
-## Protecting AD FS / AD CS servers in hybrid environments
 
-Active Directory Federation Services (AD FS) and Active Directory Certificate Services (AD CS) plays important role in today's infrastructure when it comes to authentication in hybrid environments. 
+### Detect threats across modern identity environments
 
-Defender for Identity protects AD FS / AD CS servers in your environment by detecting on-premises attacks on AD FS / AD CS servers and providing visibility into authentication events generated by AD FS / AD CS servers. 
+Modern identity environments often span both on-premises and in the cloud. Defender for Identity uses data from across your environment, including domain controllers, Active Directory Federation Services (AD FS), and Active Directory Certificate services (AD CS), to provide you with a complete view of your identity environment.
 
-For more information, see [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](deploy/active-directory-federation-services.md).
+Defender for Identity sensors monitor domain controller traffic by default. For AD FS / AD CS servers, make sure to install the relevant sensor type for complete identity monitoring.
 
-## Identify suspicious activities and advanced attacks across the cyber-attack kill-chain
+For more information, see:
 
-Typically, attacks are launched against any accessible entity, such as a low-privileged user, and then quickly move laterally until the attacker gains access to valuable assets – such as sensitive accounts, domain administrators, and highly sensitive data. 
+- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+- [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md)
+
+
+## Identify suspicious activities across the cyber-attack kill-chain
+
+Typically, attacks are launched against any accessible entity, such as a low-privileged user. Attackers then quickly move laterally until they gain access to valuable assets, such as sensitive accounts, domain administrators, and highly sensitive data.
 
 Defender for Identity identifies these advanced threats at the source throughout the entire cyber-attack kill chain:
-
 
 |Threat  |In Defender for Identity ...  |
 |---------|---------|
 |**Reconnaissance**     |     Identify rogue users and attackers' attempts to gain information. <br><br>Attackers search for information about user names, users' group membership, IP addresses assigned to devices, resources, and more, using various methods.    |
 |**Compromised credentials**     |   Identify attempts to compromise user credentials using brute force attacks, failed authentications, user group membership changes, and other methods.      |
 |**Lateral movements**     |  Detect attempts to move laterally inside the network to gain further control of sensitive users, utilizing methods such as Pass the Ticket, Pass the Hash, Overpass the Hash and more.       |
-|**Domain dominance**     |   Highlighting attacker behavior if domain dominance is achieved, through remote code execution on the domain controller, and methods such as DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.      |
+|**Domain dominance**     |   View highlighted attacker behavior if domain dominance is achieved. For example, attackers might run code remotely on the domain controller, or use methods like DC Shadow, malicious domain controller replication, Golden Ticket activities, and more.      |
 
+For more information, see [Security alerts in Microsoft Defender for Identity](alerts-overview.md).
 
 ## Investigate alerts and user activities
 
-Defender for Identity is designed to reduce general alert noise, providing only relevant, important security alerts in a simple, real-time organizational attack timeline. 
+Defender for Identity is designed to reduce general alert noise, providing you with a prioritized list of relevant, important security alerts in a simple, real-time organizational attack timeline.
 
-The Defender for Identity attack timeline view allows you to easily stay focused on what matters, using the intelligence of smart analytics. Use Defender for Identity to quickly investigate threats, and gain insights across the organization for users, devices, and network resources. 
+Seamless integration with Microsoft 365 Defender provides another layer of enhanced security by correlating data from other domains, for greater visibility and accuracy across users, devices, and network resources.
 
-Seamless integration with Microsoft Defender for Endpoint provides another layer of enhanced security by extra detection and protection against advanced persistent threats on the operating system.
+For more information, see [Investigate assets](investigate-assets.md) and [Investigate security alerts](manage-security-alerts.md).
 
-## More resources
+## Related content
 
 Use the following table to find more resources about Defender for Identity:
 
 |Resource type  |References |
 |---------|---------|
-|**Learn more**     |      - [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy) <br>- [Defender for Identity frequently asked questions](technical-faq.yml) <br>    - [Working with security alerts](/defender-for-identity/manage-security-alerts)<br>    - [Defender for Identity architecture](architecture.md)  <br>- [Zero Trust with Defender for Identity](zero-trust.md)     |
+|**Learn more**     |   - [Deploy Microsoft Defender for Identity](deploy-defender-identity.md)  <br> - [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy) <br>- [Defender for Identity frequently asked questions](technical-faq.yml) <br>    - [Working with security alerts](/defender-for-identity/manage-security-alerts)<br>    - [Defender for Identity architecture](architecture.md)  <br>- [Zero Trust with Defender for Identity](zero-trust.md)     |
 |**Join communities**     |     - [Follow Defender for Identity on the Microsoft TechCommunity](https://aka.ms/MDIcommunity "Defender for Identity on Microsoft Tech Community") <br>    - [Join the Defender for Identity Yammer community](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Defender for Identity Yammer community")<br>    - Read the [Defender for Identity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance/label-name/Microsoft%20Defender%20for%20Identity)        |
-|**Watch videos**     |      - [Bolster your security posture with Defender for Identity](<https://techcommunity.microsoft.com/t5/video-hub/bolster-your-security-posture-with-microsoft-defender-for/m-p/1698841>)<br>Identify and proactively resolve known bad-practices, leaving your environment in a healthier state and more resilient to bad actors. Watch the [YouTube video](https://youtu.be/nx5rrxVuRTk). <br><br>    - [Incident Investigation with Defender for Identity](<https://techcommunity.microsoft.com/t5/video-hub/incident-investigation-with-microsoft-defender-for-identity/m-p/1698840>)<br>Learn how to detect, investigate, and respond to advanced threats targeting identities and domain controllers with Defender for Identity. <br>Starting with an alert in Defender for Identity, we demonstrate how that information is correlated into an incident, how to hunt for threats using information captured by Defender for Identity, and how we can initiate an automatic incident response to remediate the incident before it evolves into a bigger problem. Watch the [YouTube video](https://youtu.be/geWU4It6S48).       |
 | **Roadmap** | [See the upcoming roadmap for Defender for Identity](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity) |
 | **Product page** |[Visit the Defender for Identity product page](https://www.microsoft.com/microsoft-365/security/identity-defender "Defender for Identity product page") |
 | **Free trial** | [Start a free trial](https://signup.microsoft.com/Signup?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7&ali=1 "Enterprise Mobility + Security E5") |
-
-## Next step
-
-Get started with [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy/deploy-defender-identity.md).
-

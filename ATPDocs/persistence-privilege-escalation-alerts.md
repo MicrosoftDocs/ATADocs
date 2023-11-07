@@ -165,7 +165,7 @@ None
 
 Attackers add users to highly privileged groups. Adding users is done to gain access to more resources, and gain persistency. This detection relies on profiling the group modification activities of users, and alerting when an abnormal addition to a sensitive group is seen. Defender for Identity profiles continuously.
 
-For a definition of sensitive groups in Defender for Identity, see [Working with the sensitive accounts](/defender-for-identity/entity-tags).
+For a definition of sensitive groups in Defender for Identity, see [Working with sensitive accounts](/defender-for-identity/entity-tags).
 
 The detection relies on events audited on domain controllers. Make sure your domain controllers are [auditing the events needed](deploy/configure-windows-event-collection.md).
 
@@ -274,6 +274,7 @@ None
 - [Defender for Identity SIEM log reference](cef-format-sa.md)
 - [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+
 
 
 

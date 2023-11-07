@@ -165,8 +165,6 @@ items:
       href: security-assessment-clear-text.md
     - name: LAPS usage assessment
       href: security-assessment-laps.md
-    - name: Legacy protocols usage assessment
-      href: security-assessment-legacy-protocols.md
     - name: Passwords older than 180 days
       href: security-assessment-old-passwords.md
     - name: Remove local admins on identity assets
