@@ -46,8 +46,8 @@ Find identity information in the following Microsoft 365 Defender areas:
 - The **Action center** page
 
 For example, the following image shows the details on an identity details page:
-   
-![Screenshot of an identity details page](media/investigate-assets/image.png)
+
+:::image type="content" source="media/investigate-assets/identity-details.png" alt-text="Screenshot of an identity details page." lightbox="media/investigate-assets/identity-details.png":::
 
 ### Identity details
 
@@ -85,7 +85,7 @@ Use the answers to these questions to determine if the device appears compromise
 
 For example, the following image shows a device details page:
 
-![Screenshot of a device details page.](media/investigate-assets/image1.png)
+:::image type="content" source="media/investigate-assets/device-details.png" alt-text="Screenshot of an device details page." lightbox="media/investigate-assets/device-details.png":::
 
 For more information, see [Investigate devices](/microsoft-365/security/defender-endpoint/investigate-machines) in the Microsoft 365 Defender documentation.
 
