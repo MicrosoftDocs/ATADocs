@@ -37,7 +37,7 @@ Make sure that you have one of the following licenses:
 
 ### Required permissions
 
-- To create your Defender for Identity workspace, you'll need an Azure AD tenant with at least one global/security administrator. 
+- To create your Defender for Identity workspace, you'll need a Microsoft Entra tenant with at least one global/security administrator. 
 
 - You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
 
@@ -76,7 +76,8 @@ When installing your sensors, consider scheduling a maintenance window for your 
 
 ## Install Defender for Identity
 
-This procedure describes how to install the Defender for Identity sensor on a Windows server version 2012 or higher. Make sure that your server has the [minium system requirements](#minimum-system-requirements).
+<!--updated to 2016-->
+This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minium system requirements](#minimum-system-requirements).
 
 > [!NOTE]
 > Defender for Identity sensors should be installed on read-only domain controllers (RODC). If you're installing on an AD FS / AD CS farm, we recommend installing the sensor on each AD FS / AD CS server, or at least on the primary node.

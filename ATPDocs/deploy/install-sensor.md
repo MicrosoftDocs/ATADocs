@@ -72,7 +72,7 @@ Perform the following steps on the domain controller or AD FS /AD CS server.
 
     - **Microsoft Visual C++ 2013 Redistributable**
 
-    - **KB 3047154** (for Windows Server 2012 R2 only)
+    - **KB 3047154** (for Windows Server 2012 R2 only) <!--should we remove this?-->
 
         > [!IMPORTANT]
         >

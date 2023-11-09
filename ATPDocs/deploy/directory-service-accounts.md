@@ -214,9 +214,9 @@ For more information, see [Changing permissions on a deleted object container](/
 
 >[!NOTE]
 >There's no need to install the gMSA for Defender for Identity sensors to be able to use the gMSA.
->Trying to intall a gMSA from a root domain on a child domain will fail, as the Install-ADServiceAccount cmdlet can only look for the account on the local domain.
+>Trying to install a gMSA from a root domain on a child domain will fail, as the `Install-ADServiceAccount` cmdlet can only look for the account on the local domain.
 
-To install the gMSA account, run the following command locally as an administrator:
+To install the gMSA account, run the following commands locally as an administrator:
 
 ```powershell
 # Import the required PowerShell module:

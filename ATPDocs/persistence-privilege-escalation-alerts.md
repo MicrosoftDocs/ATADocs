@@ -47,6 +47,8 @@ This alert has a learning period of 5 days from the start of domain controller m
 
 **Suggested steps for prevention**:
 
+<!--how do we handle this now?-->
+
 1. Make sure all domain controllers with operating systems up to Windows Server 2012 R2 are installed with [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) and all member servers and domain controllers up to 2012 R2 are up-to-date with [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). For more information, see [Silver PAC](/security-updates/SecurityBulletins/2011/ms11-013) and [Forged PAC](/security-updates/SecurityBulletins/2014/ms14-068).
 
 ## Suspected Golden Ticket usage (nonexistent account) (external ID 2027)

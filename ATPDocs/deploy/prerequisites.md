@@ -19,7 +19,7 @@ Before deploying Defender for Identity, make sure to acquire one of the followin
 
 To create your Defender for Identity workspace, you'll need:
 
-- **An Azure Active Directory (Azure AD) tenant** with at least one Global or Security administrator.
+- **A Microsoft Entra ID tenant** with at least one Global or Security administrator.
 
     You'll need Global or Security administrator access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
 
@@ -52,9 +52,10 @@ To install the Defender for Identity sensor on a machine configured with NIC tea
 
 The following table summarizes requirements for the domain controller server where you'll install the Defender for Identity sensor.
 
+<!--updated here to 2016-->
 | Prerequisite / Recommendation |Description  |
 |---------|---------|
-|**Specifications**     |  Make sure to install Defender for Identity on Windows version 2012 or higher, on a domain controller server with a minimum of:<br><br>- 2 cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |
+|**Specifications**     |  Make sure to install Defender for Identity on Windows version 2016 or higher, on a domain controller server with a minimum of:<br><br>- 2 cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |
 |**Performance**   | For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
 |**Maintenance window**     |   We recommend scheduling a maintenance window for your domain controllers, as a restart might be required if the installation runs and a restart is already pending, or if .NET Framework needs to be installed. <br><br>If .NET Framework version 4.7 or later isn't already found on the system, .NET Framework version 4.7 is installed, and may require a restart.      |
 

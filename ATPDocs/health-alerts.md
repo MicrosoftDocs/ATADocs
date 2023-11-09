@@ -121,9 +121,11 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 ### Sensor running on an operating system that will soon become unsupported
 
+<!--does this alert still occur?-->
+
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is running on an operating system that will soon become unsupported.|Windows Server 2012 and 2012 R2 will reach end of support on October 10, 2023. More details can be fount at: <https://aka.ms/mdi/oseos> |The operating system on the server should be upgraded to the latest supported operating system. For more details, see: <https://aka.ms/mdi/os>|Medium|Sensors health issues tab|
+|The Defender for Identity sensor is running on an operating system that will soon become unsupported.|Windows Server 2012 and 2012 R2 reached end of support on October 10, 2023. More details can be fount at: <https://aka.ms/mdi/oseos> |The operating system on the server should be upgraded to the latest supported operating system. For more details, see: <https://aka.ms/mdi/os>|Medium|Sensors health issues tab|
 
 ### Sensor running on an unsupported operating system
 

@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 Microsoft Defender for Identity uses Microsoft 365's role-based access control (RBAC) to manage your user access, so that you can safeguard your data according to your organization's specific security and compliance needs.
 
-Defender for Identity also supports built-in security groups to define user roles with your tenant's Azure Active Directory.
+Defender for Identity also supports built-in security groups to define user roles with your tenant's Microsoft Entra ID.
 
 This article describes Defender for Identities access management and role authorization, helping you segregate duties within your security team, and granting only the amount of access that users need to do their jobs.
 
@@ -17,19 +17,19 @@ This article describes Defender for Identities access management and role author
 
 ## Permissions required for Defender for Identity in Microsoft 365 Defender
 
-The following table lists the permissions required to access [Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), using either built-in Azure Active Directory role groups or Microsoft 365's RBAC.
+The following table lists the permissions required to access [Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), using either built-in Microsoft Entra ID role groups or Microsoft 365's RBAC.
 
 | Actions in Microsoft 365 Defender     | Required permissions                                         |
 | ------------------------------------- | ------------------- |
-| **Create a Defender for Identity workspace**   | One of the following Azure AD roles: <br>- Global Administrator <br>- Security Administrator |
-| **Configure Defender for Identity settings**    | One of the following Azure AD roles:<br>- Global Administrator<br>- Security Administrator <br><br> **Or** the following [unified RBAC permissions](#mapping-built-in-role-groups-to-microsoft-365s-unified-rbac):<br />- `Authorization and settings/Security settings/Read`<br/>- `Authorization and settings/Security settings/All permissions`<br/>- `Authorization and settings/System settings/Read`<br>- `Authorization and settings/System settings/All permissions` |
-| **View Defender for Identity security alerts and activities**                           | One of the Azure AD roles required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br><br> **Or** the following [unified RBAC permissions](#mapping-built-in-role-groups-to-microsoft-365s-unified-rbac):<br>- `Security operations/Security data/Alerts` (Manage)<br/>- `Security operations/Security data/Security data basics` (Read) |
+| **Create a Defender for Identity workspace**   | One of the following Microsoft Entra roles: <br>- Global Administrator <br>- Security Administrator |
+| **Configure Defender for Identity settings**    | One of the following Microsoft Entra roles:<br>- Global Administrator<br>- Security Administrator <br><br> **Or** the following [unified RBAC permissions](#mapping-built-in-role-groups-to-microsoft-365s-unified-rbac):<br />- `Authorization and settings/Security settings/Read`<br/>- `Authorization and settings/Security settings/All permissions`<br/>- `Authorization and settings/System settings/Read`<br>- `Authorization and settings/System settings/All permissions` |
+| **View Defender for Identity security alerts and activities**                           | One of the Microsoft Entra roles required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br><br> **Or** the following [unified RBAC permissions](#mapping-built-in-role-groups-to-microsoft-365s-unified-rbac):<br>- `Security operations/Security data/Alerts` (Manage)<br/>- `Security operations/Security data/Security data basics` (Read) |
 | **View Defender for Identity security assessments in Microsoft Secure Score** | - [Permissions to access Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) <br>- The following [unified RBAC permissions](#mapping-built-in-role-groups-to-microsoft-365s-unified-rbac): `Security operations/Security data/Security data basics` (Read)|
-|**View Defender for Identity details in the Assets > Identities page**|One of the following:<br>- [Permissions to access Defender for Cloud Apps](/azure/defender-for-cloud/permissions) <br> One of the Azure AD roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions) |
+|**View Defender for Identity details in the Assets > Identities page**|One of the following:<br>- [Permissions to access Defender for Cloud Apps](/azure/defender-for-cloud/permissions) <br> One of the Microsoft Entra roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions) |
 
 ## Defender for Identity built-in security groups
 
-Defender for Identity uses Azure AD security groups as a basis for role groups. Defender for Identity provides the following built-in security groups for your user roles:
+Defender for Identity uses Microsoft Entra security groups as a basis for role groups. Defender for Identity provides the following built-in security groups for your user roles:
 
 - Azure ATP *(Workspace name)* Administrators
 - Azure ATP *(Workspace name)* Users
@@ -58,15 +58,15 @@ The following table describes the type of access in Defender for Identity availa
 |**Update Defender for Identity configuration** - Sensor activities, including download, regenerate key, configure, delete| ✔|-|-|
 |**View entity profiles and security alerts**| ✔| ✔| ✔|
 
-Manage your role groups from the Azure Active Directory [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Azure AD users can be added or removed from security groups.
+Manage your role groups from the Microsoft Entra ID [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Microsoft Entra users can be added or removed from security groups.
 
 
-### Azure Active Directory mapping
+### Microsoft Entra ID mapping
 
-The following table maps Azure Active Directory roles to their Defender for Identity roles.
+The following table maps Microsoft Entra ID roles to their Defender for Identity roles.
 
 
-|Azure Active Directory roles ....  |Are automatically mapped to the following Defender for Identity roles |
+|Microsoft Entra ID roles ....  |Are automatically mapped to the following Defender for Identity roles |
 |---------|---------|
 |- Global administrator <br>- Security administrator     |  Administrator       |
 |- Security operator     |   User      |
