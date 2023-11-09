@@ -85,7 +85,7 @@ Use the answers to these questions to determine if the device appears compromise
 
 For example, the following image shows a device details page:
 
-:::image type="content" source="media/investigate-assets/device-details.png" alt-text="Screenshot of an device details page." lightbox="media/investigate-assets/device-details.png":::
+:::image type="content" source="media/investigate-assets/device-details.png" alt-text="Screenshot of a device details page." lightbox="media/investigate-assets/device-details.png":::
 
 For more information, see [Investigate devices](/microsoft-365/security/defender-endpoint/investigate-machines) in the Microsoft 365 Defender documentation.
 
