@@ -170,7 +170,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Auditing on the ADFS container is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the ADFS container isn't enabled as required.|Enable the Directory Services Auditing on the ADFS container according to the guidance as described in the [Enable auditing on an ADFS object](deploy/configure-windows-event-collection.md#enable-auditing-on-an-adfs-object) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Global health issues tab|
+|Auditing on the ADFS container is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the ADFS container isn't enabled as required.|Enable the Directory Services Auditing on the ADFS container according to the guidance as described in the [Enable auditing on an ADFS object](deploy/configure-windows-event-collection.md#enable-auditing-on-an-active-directory-federation-services-ad-fs-object) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Global health issues tab|
 
 ### Power mode is not configured for optimal processor performance
 

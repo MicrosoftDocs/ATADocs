@@ -143,6 +143,7 @@ To collect 4662 events, you must also configure object auditing on the user, gro
 > Assigning the auditing permissions on the **All descendant objects** would work as well, but we only require the object types as detailed above.
 >
 
+<!--what is this?>
 Some detections require auditing specific Active Directory objects. To do so, follow the steps in this procedure, with the changes noted as follows regarding the objects to audit and permissions to include.
 -->
 

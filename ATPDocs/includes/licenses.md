@@ -12,4 +12,4 @@ ms.date: 09/26/2023
 
 Acquire licenses directly via the [Microsoft 365 portal](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) or use the Cloud Solution Partner (CSP) licensing model. 
 
-For more information, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy) and [Microsoft Defender for Identity role groups](role-groups.md).
+For more information, see [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy) and [What are Defender for Identity roles and permissions?](../deploy/role-groups.md).
