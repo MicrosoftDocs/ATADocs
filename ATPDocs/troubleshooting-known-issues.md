@@ -439,7 +439,7 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 
 `"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
-For more information, see [Configure a proxy server using the command line](deploy/configure-proxy.md#configure-a-proxy-server-using-the-command-line).
+For more information, see [Run a silent installation with a proxy configuration](deploy/install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
 
 ## Sensor service could not run and remains in Starting state
 

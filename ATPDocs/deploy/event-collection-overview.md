@@ -22,7 +22,7 @@ The following events are required for Active Directory Federation Services (AD F
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
-For more information, see [Enable auditing on an AD FS object](configure-windows-event-collection.md#enable-auditing-on-an-adfs-object).
+For more information, see [Enable auditing on an AD FS object](configure-windows-event-collection.md#enable-auditing-on-an-active-directory-federation-services-ad-fs-object).
 
 ## Supported Active Directory Certificate Services (AD CS) events
 
@@ -36,7 +36,7 @@ The following events are required for Active Directory Federation Services (AD F
 - 4890: The certificate manager settings for Certificate Services changed.
 - 4896: One or more rows have been deleted from the certificate database
 
-For more information, see [Configure auditing for AD CS](configure-windows-event-collection.md#configure-auditing-for-ad-cs).
+For more information, see [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
 
 ## Other Windows events
 

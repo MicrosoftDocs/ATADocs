@@ -31,7 +31,7 @@ For more information, see [Event auditing information for AD FS](/windows-server
 For more information, see:
 
 - [Supported Active Directory Federation Services (AD FS) events](event-collection-overview.md#supported-active-directory-federation-services-ad-fs-events)
-- [Enable auditing on an AD FS object](configure-windows-event-collection.md#enable-auditing-on-an-ad-fs-object)
+- [Enable auditing on an Active Directory Federation Services (AD FS) object](configure-windows-event-collection.md#enable-auditing-on-an-active-directory-federation-services-ad-fs-object)
 
 ## Configure event collection for AD FS and AD CS logs
 
