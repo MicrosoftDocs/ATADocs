@@ -11,17 +11,14 @@ Microsoft Defender for Identity detection relies on specific Windows Event log e
 
 For the correct events to be audited and included in the Windows Event Log, your domain controllers require specific Advanced Audit Policy settings. Misconfigured Advanced Audit Policy settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
 
-This article describes how to configure your Advanced Audit Policy settings as needed for a standalone Defender for Identity sensor, and other configurations for specific event types.
-
-> [!IMPORTANT]
-> Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
+This article describes how to configure your Advanced Audit Policy settings as needed for a Defender for Identity sensor, and other configurations for specific event types.
 
 For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md).
 
 <!--is this the right order?-->
 ## Configure Advanced Audit Policy settings
 
-This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity.
+This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity. <!--should we also add ad fs ad cs?-->
 
 1. Log in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -86,7 +83,7 @@ This section describes the extra configuration steps needed to audit Event ID 80
 
 For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**:
 
-![Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration.](../media/advanced-audit-policy-check-step-3.png)
+:::image type="content" source="../media/advanced-audit-policy-check-step-3.png" alt-text="Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration." border="false":::
 
 ## Configure object auditing for Event ID 4662
 
@@ -148,7 +145,7 @@ To collect 4662 events, you must also configure object auditing on the user, gro
 Some detections require auditing specific Active Directory objects. To do so, follow the steps in this procedure, with the changes noted as follows regarding the objects to audit and permissions to include.
 -->
 
-### Enable auditing on an Active Directory Federation Services (AD FS) object
+## Enable auditing on an Active Directory Federation Services (AD FS) object
 
 1. Go to the **Active Directory Users and Computers** console, and select the domain you want to enable the logs on.
 
@@ -178,9 +175,11 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
 
-    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**, and then configure audit events for **Success and Failure**. For example:
+    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**.
+    
+    1. Select to configure audit events for **Success** and **Failure**. For example:
 
-    ![Screenshot of the Group Policy Management Editor](../media/configure-windows-event-collection/group-policy-management-editor.png)
+        :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the Group Policy Management Editor.":::
 
 1. Configure auditing on the certificate authority (CA) using one of the following methods:
 
@@ -196,23 +195,20 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
         1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
 
-            ![Screenshot of the Certification Authority dialog.](../media/configure-windows-event-collection/certification-authority.png)
+            :::image type="content" source="../media/configure-windows-event-collection/certification-authority.png" alt-text="Screenshot of the Certification Authority dialog.":::
 
         1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
 
-
-            ![Screenshot of the Properties Auditing tab.](../media/configure-windows-event-collection/auditing.png)
-
-        For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+            :::image type="content" source="../media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Properties Auditing tab.":::
 
 ### Enable auditing on an Exchange object
 <a name="enable-auditing-on-an-exchange-object"></a>
 
-1. Open ADSI Edit by selecting **Start** > **Run**. Enter *ADSIEdit.msc* and select **OK**.
+1. Open ADSI Edit by selecting **Start** > **Run**. Enter `ADSIEdit.msc` and select **OK**.
 
 1. On the **Action** menu, select **Connect to**.
 
-1. In the **Connection Settings** dialog boxm under **Select a well known Naming Context**, select **Configuration** > **OK**.
+1. In the **Connection Settings** dialog box under **Select a well known Naming Context**, select **Configuration** > **OK**.
 
 1. Expand the **Configuration** container to show the **Configuration** node, beginning with *“CN=Configuration,DC=..."*
 
@@ -242,6 +238,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 ## Auditing for event ID 1644
 
+<!--what does this code indicate? can we remove this section altogether?-->
 > [!IMPORTANT]
 > Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
 
@@ -258,5 +255,6 @@ Windows Registry Editor Version 5.00
 
 ## Next step
 
+
 > [!div class="step-by-step"]
-> [Listen for SIEM events on your Defender for Identity standalone sensor »](configure-event-collection.md)
+> [What are Defender for Identity roles and permissions? »](role-groups.md)
