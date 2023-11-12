@@ -18,6 +18,7 @@ This article describes how to configure your Advanced Audit Policy settings as n
 
 For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md).
 
+<!--is this the right order?-->
 ## Configure Advanced Audit Policy settings
 
 This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity.

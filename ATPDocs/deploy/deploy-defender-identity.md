@@ -54,9 +54,9 @@ Use the following steps to prepare for deploying Defender for Identity:
 
 After you've prepared your system, use the following steps to deploy Defender for Identity:
 
-1. [Verify connectivity to the Defender for Identity service](configure-proxy.md). <!--last part of proxy page-->
+1. [Verify connectivity to the Defender for Identity service](configure-proxy.md).
 1. [Download the Defender for Identity sensor](download-sensor.md).
-1. [Install the Defender for Identity sensor](install-sensor.md). <!--take proxy configuration command line and add it here-->
+1. [Install the Defender for Identity sensor](install-sensor.md). 
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
 ## Post-deployment configuration

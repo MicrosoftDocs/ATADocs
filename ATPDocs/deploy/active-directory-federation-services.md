@@ -140,13 +140,11 @@ To validate that the Defender for Identity sensor has been successfully deployed
    IdentityDirectoryEvents | where Protocol == "Adcs"
    ```
 
-   The results pane should include a list of events of failed and successful certificate issuance. 
+   The results pane should include a list of events of failed and successful certificate issuance.
 
    Select a specific row to see additional details in the **Inspect Record** left pane. For example:
 
    :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
-
-<!--validate this for adcs-->
 
 ## Post-installation steps for AD FS / AD CS servers (Optional)
 
