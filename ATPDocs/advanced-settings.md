@@ -28,7 +28,6 @@ Any alerts that are affected by the **Remove learning period** setting, and are 
 
 If the **Remove learning period** setting is still *On* at the end of 30 days, Defender for Identity automatically turns it *Off* and opens a [health issue](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) to notify administrators.
 
-<!--is this still relevant?-->
 >[!NOTE]
 > Turning *Off* the **Remove learning period** setting for workspaces that have already completed their learning period won't delete the learned profiles, but will ignore them for any alerts with sensitivity level *Medium* or *High*.
 
