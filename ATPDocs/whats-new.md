@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2023
 
-### Identity timeline includes more than 30 days of data
+### Identity timeline includes more than 30 days of data (Preview)
 
 Defender for Identity is gradually rolling out extended data retentions on identity details to more than 30 days. 
 
