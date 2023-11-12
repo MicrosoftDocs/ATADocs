@@ -7,11 +7,11 @@ ms.topic: conceptual
 
 # Event collection with Microsoft Defender for Identity
 
-The Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs, which the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows event log, your domain controllers or AD FS / AD CS servers require accurate, advanced audit policy settings. <!--added ad fs / ad cs here-->
+The Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs, which the sensor parses from your domain controllers. 
 
-This article lists the events required by the Defender for Identity sensor.
+For the correct events to be audited and included in the Windows event log, your domain controllers or AD FS / AD CS servers require accurate, advanced audit policy settings. <!--added ad fs / ad cs here--> For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
-For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+This article lists the events required by the Defender for Identity sensor and information about extra collection methods for standalone sensors.
 
 ## Supported Active Directory Federation Services (AD FS) events
 
@@ -84,4 +84,4 @@ For more information, see your SIEM or syslog server's product documentation.
 ## Next step
 
 > [!div class="step-by-step"]
-> [Listen for SIEM events on your Defender for Identity standalone sensor  »](configure-event-collection.md)
+> [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)
