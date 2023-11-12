@@ -7,6 +7,7 @@ ms.topic: how-to
 
 # Configure a Directory Service account for Microsoft Defender for Identity
 
+<!--do we need new screenshots here?-->
 This article describes how to create and configure a Defender for Identity Directory Service account (DSA).
 
 Defender for Identity's sensor uses a DSA to do the following:
@@ -23,6 +24,7 @@ If a sensor detects activities in other domains, it queries the other domain via
 >[!NOTE]
 >By default, Defender for Identity supports up to 30 credentials. To add more credentials, contact Defender for Identity support.
 
+<!--should we split this long page up into shorter pages?-->
 ## Supported DSA account options
 
 Defender for Identity supports the following DSA options:
@@ -70,6 +72,8 @@ When there are multiple DSA entries configured, the following logic is applied:
 
 1. If there isn't an entry for the sibling domain, or if the authentication failed, the sensor reviews the list again and tries to authenticate again with each entry until it succeeds. DSA gMSA entries have higher priority than regular DSA entries.
 
+**Example 1**: 
+
 For example, the sensor tries the DSA entries in the following order:
 
 1.	The sensor looks for a match between the DNS domain name of the target domain, such as `emea.contoso.com` and the DSA gMSA entry, such as `emea.contoso.com`.
@@ -87,6 +91,8 @@ For example, the sensor tries the DSA entries in the following order:
 1. The sensor runs a round robin of all DSA gMSA entries.
 
 1. The sensor runs a round robin of all DSA regular entries.
+
+**Example 2**:
 
 For another example, if the DSA entires configured are as follows:
 
@@ -140,6 +146,8 @@ In such scenarios, do one of the following:
 This section describes how to create a specific group that can retrieve the account's password, create a gMSA account, and then test that the account is ready to use.
 
 Run the following PowerShell commands as an administrator:
+
+<!--should we define the variables here?-->
 
 ```powershell
 # Set the variables:
@@ -297,5 +305,6 @@ For more information, see [Sensor failed to retrieve the gMSA credentials](../tr
 
 ## Next step
 
+<!--what should be the order here? this makes sense but it's not currently what we have in the toc-->
 > [!div class="step-by-step"]
 > [Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity »](remote-calls-sam.md)

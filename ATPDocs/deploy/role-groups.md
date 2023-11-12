@@ -13,8 +13,11 @@ Defender for Identity also supports built-in security groups to define user role
 
 This article describes Defender for Identities access management and role authorization, helping you segregate duties within your security team, and granting only the amount of access that users need to do their jobs.
 
-[!INCLUDE [gdpr-intro-sentence](../../includes/gdpr-intro-sentence.md)] <!--do we really need this?-->
+<!--do we really need this?>
+[!INCLUDE [gdpr-intro-sentence](../../includes/gdpr-intro-sentence.md)]
+-->
 
+<!--how do we update this table for least privileged permissions?-->
 ## Permissions required for Defender for Identity in Microsoft 365 Defender
 
 The following table lists the permissions required to access [Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), using either built-in Microsoft Entra ID role groups or Microsoft 365's RBAC.

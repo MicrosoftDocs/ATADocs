@@ -30,38 +30,41 @@ This article describes how to migrate from an existing ATA installation to a Mic
 
 ## Prerequisites
 
-To migrate from ATA to Defender for Identity, you must have:
+To migrate from ATA to Defender for Identity, you must have an environment and domain controllers that meet Defender for Identity sensor requirements. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
+
+Make sure that all the domain controllers you plan to use have sufficient internet access to the Defender for Identity service. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+
+<!--what do we not have to repeat?
 
 - **A Microsoft Entra tenant with at least one global/security administrator**, so that you can create a Defender for Identity workspace. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
 - **.Net Framework version 4.7 or later**. You may also need to restart your domain controller if your current .Net Framework version is not 4.7 or later.
 
-- **An environment and domain controllers that meet Defender for Identity sensor requirements.** For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
+- **** For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-- **Verification that all domain controllers you plan to use have sufficient internet access** to the Defender for Identity service. For more information, see [Defender for Identity proxy configuration requirements](configure-proxy.md).
-
+-->
 
 ## Plan your migration
 
 Before starting the migration, gather all of the following information:
 
-- Account details for your [Directory Services](directory-service-accounts.md) account.
+- **Account details for your [Directory Services](directory-service-accounts.md) account**.
 
-- Syslog notification [settings](/defender-for-identity/notifications).
+- **Syslog notification [settings](/defender-for-identity/notifications)**.
 
-- Email [notification details](../notifications.md).
+- **Email [notification details](../notifications.md)**.
 
-- All [ATA role group memberships](/advanced-threat-analytics/ata-role-groups)
+- **All [ATA role group memberships](/advanced-threat-analytics/ata-role-groups)**.
 
-- [VPN integration details](../vpn-integration.md)
+- **[VPN integration details](../vpn-integration.md)**.
 
-- Alert exclusions. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](../exclusions.md) in Microsoft 365 Defender.
+- **Alert exclusions**. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](../exclusions.md) in Microsoft 365 Defender.
 
-- Account details for entity tags. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
+- **Account details for entity tags**. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
 
-- A complete list of all entities, such as computers, groups, or users, that you want to manually tag as Sensitive entities. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
+- **A complete list of all entities, such as computers, groups, or users, that you want to manually tag as *Sensitive* entities**. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](../entity-tags.md).
 
-- Report scheduling [details](/defender-for-identity/classic-reports), including a list of all reports and scheduled timing.
+- **Report scheduling [details](/defender-for-identity/classic-reports)**, including a list of all reports and scheduled timing.
 
 > [!CAUTION]
 > Do not uninstall the ATA Center until all ATA Gateways are removed. Uninstalling the ATA Center with ATA Gateways still running leaves your organization exposed with no threat protection.
@@ -77,6 +80,7 @@ Use the following steps to migrate to Defender for Identity:
 1. Install the Defender for Identity Sensor on all domain controllers:
 
     1. [Download the Defender for Identity sensor files](download-sensor.md) and retrieve the access key.
+
     1. [Install Defender for Identity sensors on your domain controllers](install-sensor.md).
 
 1. [Configure the your Defender for Identity sensor](configure-sensor-settings.md).
@@ -87,7 +91,7 @@ After the migration is complete, allow two hours for the initial sync to be comp
 
 In Microsoft 365 Defender, check the following areas to validate your migration:
 
-Review any [health issues](../health-alerts.md) for signs of service issues
+- Review any [health issues](../health-alerts.md) for signs of service issues.
 - Review Defender for Identity [sensor error logs](../troubleshooting-using-logs.md) for any unusual errors.
 
 ## Post-migration activities
@@ -100,6 +104,9 @@ After completing your migration to Defender for Identity, do the following to cl
     - **Decommission the ATA Center**. We recommend keeping ATA data online for a period of time. 
     - **Back up Mongo DB** if you want to keep the ATA data indefinitely. For more information, see [Backing up the ATA database](/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
 
-## Next step
+## Related information
 
-[Understanding security alerts](../understanding-security-alerts.md)
+After migrating to Defender for Identity, learn more about investigating alerts in Microsoft 365 Defender. For more information, see:
+
+- [Understanding security alerts](../understanding-security-alerts.md)
+- [Investigate Defender for Identity security alerts in Microsoft 365 Defender](../manage-security-alerts.md)

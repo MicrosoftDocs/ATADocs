@@ -64,14 +64,14 @@ items:
       href: deploy/migrate-from-ata-overview.md
     - name: Configure a standalone sensor
       items:
-      - name: Listen for SIEM events
-        href: deploy/configure-event-collection.md
-        displayName: standalone
       - name: Configure port mirroring
         href: deploy/configure-port-mirroring.md
         displayName: standalone
       - name: Configure Windows Event Forwarding
         href: deploy/configure-event-forwarding.md
+        displayName: standalone
+      - name: Listen for SIEM events
+        href: deploy/configure-event-collection.md
         displayName: standalone
 - name: Manage
   items:

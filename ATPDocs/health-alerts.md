@@ -176,7 +176,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode isn't configured to the optimal processor performance settings. This issue can affect the server's performance and the sensors' ability to detect suspicious activities.|Do one of the following: <br><br>- Configure the power option of the machine running the Defender for Identity sensor to *High Performance*<br>- Set both the minimum and maximum processor state to *100*<br><br>For more information, see the [Server specifications](deploy/prerequisites.md#sensor-requirements) section in the [Defender for Identity prerequisites](deploy/prerequisites.md) page.|Low|Sensors health issues tab|
+|Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode isn't configured to the optimal processor performance settings. This issue can affect the server's performance and the sensors' ability to detect suspicious activities.|Do one of the following: <br><br>- Configure the power option of the machine running the Defender for Identity sensor to *High Performance*<br>- Set both the minimum and maximum processor state to *100*<br><br>For more information, see the [Sensor requirements and recommendations](deploy/prerequisites.md#sensor-requirements-and-recommendations) section in the [Defender for Identity prerequisites](deploy/prerequisites.md) page.|Low|Sensors health issues tab|
 
 ### Sensor failed to write to the custom log path
 

@@ -9,6 +9,8 @@ ms.topic: how-to
 
 Microsoft Defender for Identity mapping for [potential lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Defender for Identity [Directory Service account](directory-service-accounts.md) you configured.
 
+<!--then shouldn't the DSA not be in "extra scenarios"? or should this also be in extra scenarios together with the DSA?-->
+<!--needs new screenshots-->
 This article describes how to configure required permissions for using the SAM-R protocol.
 
 ## Configure SAM-R required permissions
@@ -58,4 +60,4 @@ This procedure is only required if you've previously enabled the [Access this co
 ## Next step
 
 > [!div class="step-by-step"]
-> [Learn about event collection with Defender for Identity »](event-collection-overview.md)
+> [Configuring sensors for AD FS and AD CS »](active-directory-federation-services.md)

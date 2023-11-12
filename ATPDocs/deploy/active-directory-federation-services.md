@@ -21,17 +21,17 @@ Prerequisites for installing Defender for Identity sensors on AD FS or AD CS ser
 
 ## Configure Verbose logging for AD FS event logs
 
-Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**::
+Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**:
 
 ```powershell
 Set-AdfsProperties -AuditLevel Verbose
 ```
-For more information, see [Event auditing information for AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016). 
 
 For more information, see:
 
 - [Supported Active Directory Federation Services (AD FS) events](event-collection-overview.md#supported-active-directory-federation-services-ad-fs-events)
 - [Enable auditing on an Active Directory Federation Services (AD FS) object](configure-windows-event-collection.md#enable-auditing-on-an-active-directory-federation-services-ad-fs-object)
+- [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
 
 ## Configure event collection for AD FS and AD CS logs
 
@@ -47,10 +47,13 @@ If you're working with AD FS / AD CS servers, make sure that you've configured a
     - [Supported Active Directory Certificate Services (AD CS) events](event-collection-overview.md#supported-active-directory-certificate-services-ad-cs-events)
     - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
 
+<!--should these titles be consistent - configure vs enable?-->
+
 ## Configure read permissions for the AD FS database
 
 For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (*db_datareader*) permissions for the relevant [Directory Services Account](directory-service-accounts.md) configured.
 
+<!--this means we should have the dsa configured first?-->
 If you have more than one AD FS server, make sure to grant this permission across all of them since database permissions are not replicated across servers.
 
 > [!NOTE]
@@ -140,9 +143,7 @@ To validate that the Defender for Identity sensor has been successfully deployed
    IdentityDirectoryEvents | where Protocol == "Adcs"
    ```
 
-   The results pane should include a list of events of failed and successful certificate issuance.
-
-   Select a specific row to see additional details in the **Inspect Record** left pane. For example:
+   The results pane should include a list of events of failed and successful certificate issuance. Select a specific row to see additional details in the **Inspect Record** left pane. For example:
 
    :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 

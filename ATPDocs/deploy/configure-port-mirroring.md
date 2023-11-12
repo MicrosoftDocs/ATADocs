@@ -7,6 +7,7 @@ ms.topic: how-to
 
 # Configure port mirroring
 
+<!--is this the right order?-->
 This article describes port mirroring options for Microsoft Defender for Identity, and is relevant only for standalone sensors. Defender for Identity mainly uses deep packet inspection over network traffic to and from your domain controllers. For Defender for Identity standalone sensors to see network traffic, you must either configure port mirroring, or use a Network TAP. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 
 When using port mirroring, configure port mirroring for each domain controller that you're monitoring as the source of your network traffic. We recommend working with your networking or virtualization team to configure port mirroring.
@@ -19,16 +20,12 @@ When using port mirroring, configure port mirroring for each domain controller t
 
 Your domain controllers and Defender for Identity standalone sensor can be either physical or virtual. The following are common methods for port mirroring and some considerations. For more information, see your switch or virtualization server product documentation. Your switch manufacturer might use different terminology.
 
-- **Switched Port Analyzer (SPAN)** – Copies network traffic from one or more switch ports to another switch port on the same switch. Both the Defender for Identity standalone sensor and domain controllers must be connected to the same physical switch.
 
-- **Remote Switch Port Analyzer (RSPAN)**  – Allows you to monitor network traffic from source ports distributed over multiple physical switches. RSPAN copies the source traffic into a special RSPAN configured VLAN. This VLAN needs to be trunked to the other switches involved. RSPAN works at Layer 2.
-
-- **Encapsulated Remote Switch Port Analyzer (ERSPAN)** – A Cisco proprietary technology working at Layer 3. ERSPAN allows you to monitor traffic across switches without the need for VLAN trunks and uses generic routing encapsulation (GRE) to copy monitored network traffic.
-
-    Defender for Identity currently cannot directly receive ERSPAN traffic. Instead:
-
-    1. Configure the ERSPAN destination where the traffic is decapsulated as a switch or router that can decapsulate the traffic. 
-    1. Configure the switch or router to forward the decapsulated traffic to the Defender for Identity standalone sensor using either SPAN or RSPAN.
+|Method  |Description  |
+|---------|---------|
+|**Switched Port Analyzer (SPAN)**     | Copies network traffic from one or more switch ports to another switch port on the same switch. Both the Defender for Identity standalone sensor and domain controllers must be connected to the same physical switch.        |
+|**Remote Switch Port Analyzer (RSPAN)**     |   Allows you to monitor network traffic from source ports distributed over multiple physical switches. RSPAN copies the source traffic into a special RSPAN configured VLAN. This VLAN needs to be trunked to the other switches involved. RSPAN works at Layer 2.      |
+|**Encapsulated Remote Switch Port Analyzer (ERSPAN)**     |    A Cisco proprietary technology working at Layer 3. ERSPAN allows you to monitor traffic across switches without the need for VLAN trunks and uses generic routing encapsulation (GRE) to copy monitored network traffic. <br><br>    Defender for Identity currently cannot directly receive ERSPAN traffic. Instead: <br>    1. Configure the ERSPAN destination where the traffic is decapsulated as a switch or router that can decapsulate the traffic.  <br> 1. Configure the switch or router to forward the decapsulated traffic to the Defender for Identity standalone sensor using either SPAN or RSPAN.|
 
 > [!NOTE]
 > - If the domain controller being port mirrored is connected over a WAN link, make sure the WAN link can handle the additional load of the ERSPAN traffic.
@@ -104,4 +101,5 @@ If you are working with virtualization clusters:
 
 ## Next step
 
+<!--more relevant next steps or related info?-->
 [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)

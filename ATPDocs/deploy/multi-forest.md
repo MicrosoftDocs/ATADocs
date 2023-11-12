@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 Microsoft Defender for Identity supports organizations with multiple Active Directory forests, giving you the ability to easily monitor activity and profile users across forests.
 
-Enterprise organizations typically have several Active Directory forests - often used for different purposes, including legacy infrastructure from corporate mergers and acquisitions, geographical distribution, and security boundaries (red-forests).
+Enterprise organizations typically have several Active Directory forests - often used for different purposes, including legacy infrastructure from corporate mergers and acquisitions, geographical distribution, and security boundaries (red-forests). <!--does this need a hypen?-->
 
 Securing your multiple Active Directory forests with Defender for Identity provides the following advantages:
 
@@ -21,14 +21,15 @@ Securing your multiple Active Directory forests with Defender for Identity provi
 
 Defender for Identity requires the following to support multiple Active Directory forests:
 
-- **A Directory Service account**: The Directory Service account you configure for each forest must:
+- **A Directory Service account**:
 
-  - When there is a trust between the forests, the Directory Service account must be trusted in all the other forests
-  - Have at least read-only permission to perform LDAP queries on the domain controllers.
+  - When there is a trust between the forests, the Directory Service account must be trusted in all the other forests.
 
-  If Defender for Identity standalone sensors are installed on standalone machines, rather than directly on the domain controllers, the machines must be allowed to communicate with all of remote forest domain controllers using LDAP.
+  - The Directory Service account you configure for each forest must have at least read-only permission to perform LDAP queries on the domain controllers.
 
-- **Required ports**: In order for Defender for Identity to communicate with the Defender for Identity sensors, including standalone sensors, make sure the following ports are opened on any machine where a Defender for Identity sensor is installed:
+  If Defender for Identity standalone sensors are installed on [standalone machines](prerequisites-standalone.md), rather than directly on the domain controllers, the machines must be allowed to communicate with all of remote forest domain controllers using LDAP.
+
+- **Required ports**: In order for Defender for Identity to communicate with the Defender for Identity sensors, including standalone sensors, make sure the following ports are opened on any machine where a Defender for Identity sensor is installed: <!--how are these ports different than the ones in the prereqs?-->
 
   |Protocol|Transport|Port|To/From|Direction|
   |----|----|----|----|----|
@@ -59,7 +60,7 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 
   - There's a default limit of 30 untrusted forests per Defender for Identity workspace. Contact support if your organization has more than 30 forests.
 
-    - Interactive sign-ins performed by users in one forest to access resources in another forest aren't listed by Defender for Identity.
+  - Interactive sign-ins performed by users in one forest to access resources in another forest aren't listed by Defender for Identity.
 
 For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
@@ -84,4 +85,4 @@ You may see ad-hoc traffic when the Defender for Identity sensor detects cross f
 
 ## Next step
 
-[Install the Microsoft Defender for Identity sensor](install-sensor.md)
+<!--what should be related information or next step here?-->

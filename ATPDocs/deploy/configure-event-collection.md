@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Listen for SIEM events on your Defender for Identity standalone sensor
 
+<!--is this the right order?-->
+
 This article describes the required message syntax when configuring a Defender for Identity standalone sensor to listen for supported SIEM event types. Listening for SIEM events is one method for enhancing your detection abilities with extra Windows events that aren't available from the domain controller network.
 
 For more information, see [Windows event collection overview](event-collection-overview.md).
@@ -26,7 +28,7 @@ In this syntax:
 
 - The syslog header is optional.
 
-- The `\n`` character separator is required between all fields.
+- The `\n` character separator is required between all fields.
 
 - The fields, in order, are:
 
@@ -70,12 +72,12 @@ In this syntax:
     |**dhost**     |   The computer receiving the event, such as the domain controller      |
     |**duser**     |    The user authenticating     |
     
-    The order isn't important for the *Extension* part
+    The order isn't important for the *Extension* part.
 
 - You must have a custom key and **keyLable** for the following fields:
 
     - `EventSource`
-    - `Reason or Error Code`` = The result code of the NTLM
+    - `Reason or Error Code` = The result code of the NTLM
 
 ### Splunk
 
@@ -144,7 +146,7 @@ In this syntax, you must include the following fields:
 - The Windows event ID
 - `TimeGenerated`, which is the timestamp of the actual event. Make sure that the value isn't the timestamp of the *arrival* to the SIEM, or when it's sent to Defender for Identity. The timestamp format must be `The format should match yyyyMMddHHmmss.FFFFFF`, and must have an accuracy of milliseconds.
 
-Make sure that the message includes the original event text from the Windows event, and that you have `\t`` between the key=value pairs.
+Make sure that the message includes the original event text from the Windows event, and that you have `\t` between the key=value pairs.
 
 >[!NOTE]
 > Using WinCollect for Windows event collection is not supported.
