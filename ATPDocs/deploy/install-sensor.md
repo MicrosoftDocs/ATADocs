@@ -7,11 +7,12 @@ ms.topic: how-to
 
 # Install the Microsoft Defender for Identity sensor
 
-This article describes how to install the Microsoft Defender for Identity sensor, including a standalone sensor, using the installation wizard.
+This article describes how to install the Microsoft Defender for Identity sensor, including a standalone sensor. The default recommendation is to use the UI. However:
 
-- If you're using a proxy, we recommend that you install the sensor and configure your proxy together from the command line. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+- **When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system**, follow the steps for [silent installation](#defender-for-identity-sensor-silent-installation) instead.
 
-- When installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-sensor-silent-installation) instead.
+- **If you're using a proxy**, we recommend that you install the sensor and configure your proxy together from the command line. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md) and [Run a silent installation with a proxy configuration](#run-a-silent-installation-with-a-proxy-configuration).
+
 
 ## Prerequisites
 
@@ -24,12 +25,12 @@ Before you start, make sure that you have:
 - Relevant server specifications and network requirements. For more information, see:
 
     - [Microsoft Defender for Identity prerequisites](prerequisites.md)
-    - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
     - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
+    - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 
 ## Install the sensor using the UI
 
-Perform the following steps on the domain controller or AD FS /AD CS server.
+Perform the following steps on the domain controller or AD FS / AD CS server.
 
 1. Verify the machine has connectivity to the relevant [Defender for Identity cloud service endpoint(s)](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
@@ -46,17 +47,20 @@ Perform the following steps on the domain controller or AD FS /AD CS server.
     - If it's a domain controller / AD FS server / AD CS server, the Defender for Identity sensor is installed.
     - If it's a dedicated server, the Defender for Identity standalone sensor is installed.
 
+<!-- do we need this? it's confusing>
     For example, for a Defender for Identity sensor, the following screen is displayed to let you know that a Defender for Identity sensor is installed on your dedicated server:
 
     ![Screenshot of the Defender for Identity sensor installation.](../media/sensor-install-deployment-type.png)
-
+-->
 1. Select **Next**.
 
-    A warning is issued if the domain controller / AD FS server / AD CS or dedicated server does not meet the minimum hardware requirements for the installation. The warning doesn't prevent you from selecting **Next** and proceeding with the installation, which might still be the right option. For example, you'll need less room for data storage when installing a small lab test environment.
+    A warning is issued if the domain controller / AD FS server / AD CS or dedicated server does not meet the minimum hardware requirements for the installation. 
+
+    The warning doesn't prevent you from selecting **Next** and proceeding with the installation, which might still be the right option. For example, you'll need less room for data storage when installing a small lab test environment.
 
     For production environments, we highly recommend working with Defender for Identity's [capacity planning](capacity-planning.md) guide to make sure your domain controllers or dedicated servers meet the necessary requirements.
 
-1. Under **Configure the sensor**, enter the installation path and the setup package access key. For example:
+1. On the **Configure the sensor** screen, enter the installation path and the setup package access key. For example:
 
     ![Screenshot of the Defender for Identity sensor configuration screen.](../media/sensor-install-config.png)
 
@@ -183,12 +187,13 @@ Use the following command to configure your proxy together with a silent install
 
 If you installed the sensor on an AD FS / AD CS server, or if you installed a standalone sensor, following the extra post-installation steps:
 
-- [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
+- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
 
 - **Standalone sensors**:
 
+    - [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)
     - [Configure port mirroring](configure-port-mirroring.md)
-    - [Configure Windows event collection](event-collection-overview.md)
+    - [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
 
 ## Next step
 

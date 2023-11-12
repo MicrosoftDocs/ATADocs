@@ -21,37 +21,33 @@ To ensure maximal security and data privacy, Defender for Identity uses certific
 
 To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
 
-The URL syntaxes listed in the table above automatically map to the correct service location for your Defender for Identity workspace.
-
 > [!TIP]
-> Occasionally, the Defender for Identity service IP addresses may change. 
+> Occasionally, the Defender for Identity service IP addresses may change.
 >
 > If you manually configure IP addresses, or if your proxy automatically resolves DNS names to their IP address and uses them, we recommend that you periodically check that the configured IP addresses are still up-to-date.
 >
 
 ### Enable access with a service tag
 
-Instead of manually enabling access to specific endpoints, download the [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519), and use the IP address ranges in the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity. 
+Instead of manually enabling access to specific endpoints, download the [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519), and use the IP address ranges in the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity.
 
-For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). 
-
-For US Government offerings, see [Get started with US Government offerings](../us-govt-gcc-high.md).
+For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). For US Government offerings, see [Get started with US Government offerings](../us-govt-gcc-high.md).
 
 ## Test connectivity
 
-The Defender for Identity sensor requires network connectivity to the Defender for Identity service running in Azure. Most organizations control access to the internet via firewall or proxies.  
+The Defender for Identity sensor requires network connectivity to the Defender for Identity service running in Azure.<!--running in azure?--> Most organizations control access to the internet via firewall or proxies.  
 
-When using a proxy, you can allow access port 443 via a single URL. For more information, see [Required ports](prerequisites.md#required-ports)
+When using a proxy, you can allow access port 443 via a single URL. For more information, see [Required ports](prerequisites.md#required-ports).
 
 Do the following steps to confirm that everything is working as expected. Perform this procedure either before you deploy the sensor, or if the sensor experiences connectivity issues after being installed.
 
 **To test your connectivity settings**:
 
-1. Open a browser.
+1. Open a browser. If you're using a proxy, make sure that your browser uses the same proxy settings being used by the sensor. 
 
-    If you're using a proxy, make sure that your browser uses the same proxy settings being used by the sensor. For example, if the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
+    For example, if the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
 
-1. Go to: `https://<your_workspace_name>sensorapi.atp.azure.com`, where `<your_workspace_name>` is the name of your Defender for Identity workspace.
+1. Go to `https://<your_workspace_name>sensorapi.atp.azure.com`, where `<your_workspace_name>` is the name of your Defender for Identity workspace.
 
     > [!IMPORTANT]
     > You *must* specify `HTTPS`, not `HTTP`, to properly test connectivity.

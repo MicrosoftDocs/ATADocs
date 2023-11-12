@@ -18,6 +18,7 @@ The following video shows a review of the Defender for Identity sensor settings:
 
 ## View and configure sensor settings
 
+<!--take new screenshots-->
 After the Defender for Identity sensor is installed, do the following to view and configure Defender for Identity sensor settings:
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**. For example:
@@ -31,14 +32,14 @@ After the Defender for Identity sensor is installed, do the following to view an
           - Sensor name
           - Sensor domain membership
           - Sensor version number
-          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update).
+          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update)
           - Sensor service status
        :::column-end:::
        :::column:::
           - Sensor status
           - Sensor health status
           - The number of health issues
-          - When the sensor was created. 
+          - When the sensor was created
        :::column-end:::
    :::row-end:::
 
@@ -56,7 +57,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
    [![Screenshot of a sensor details pane.](../media/sensor-details.png)](../media/sensor-details.png#lightbox)
 
-1. Select **Manage sensor** to show a pane where you can configure sensor details. For example:
+1. Scroll down and select **Manage sensor** to show a pane where you can configure sensor details. For example:
 
    :::image type="content" source="../media/manage-sensor.png" alt-text="Screenshot of the Manage sensor option." lightbox="../media/manage-sensor.png":::
 
@@ -94,7 +95,7 @@ This section describes how you can verify that security alerts are being trigger
 
 When using the examples in the following steps, make sure to replace `contosodc.contoso.azure` and `contoso.azure` with the FQDN of your Defender for Identity sensor and domain name respectively.
 
-1. On a member joined device, open a command prompt and enter `nslookup`
+1. On a member-joined device, open a command prompt and enter `nslookup`
 
 1. Enter `server` and the FQDN or IP address of the domain controller where the Defender for Identity sensor is installed. For example:  `server contosodc.contoso.azure`
 
@@ -109,10 +110,7 @@ When using the examples in the following steps, make sure to replace `contosodc.
 
 <!--1. In Microsoft 365 Defender, search for the name of the user you used to run the commands in the previous steps. Select the name in the results, and view the user details page and all related activities and alerts.-->
 
-If the domain controller that you're testing is the first sensor you've deployed, wait at least 15 minutes before verifying any logical activity for that domain controller, allowing the database backend to complete the initial microservice deployments.
-
-For more information, see 
-[Attack simulations for Microsoft Defender for Identity](../playbooks.md).
+If the domain controller or AD FS / AD CS that you're testing is the first sensor you've deployed, wait at least 15 minutes before verifying any logical activity for that domain controller, allowing the database backend to complete the initial microservice deployments.
 
 ### Verify latest available sensor version
 

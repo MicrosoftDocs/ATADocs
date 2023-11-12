@@ -90,7 +90,7 @@ Sensors running on these operating systems will continue to report to Defender f
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
 |**RDP**         <br><br>Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)   |TCP      |3389 |Defender for Identity sensor|All devices on network|
 
-Additional ports are required to support multiple Active Directory forests. For more information, see [Prerequisites](multi-forest.md#prerequisites).
+Additional ports are required to support multiple Active Directory forests. For more information, see [Prerequisites for multiple forests](multi-forest.md#prerequisites).
 
 ### Dynamic memory requirements
 
@@ -110,9 +110,7 @@ The servers and domain controllers onto which the sensor is installed must have 
 
 ## Test your prerequisites
 
-We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites.
-
-For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
+We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites. For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
 
 ## Related content
 

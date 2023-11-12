@@ -61,7 +61,7 @@ Common results include:
 
 For example, the following image shows a set of results where the **Maybe** indicates that the **Busy Packets/Second** value is significantly higher at that point than average.  Note that the **Display DC Times as UTC/Local** is set to *Local DC Time*. This setting helps highlight the fact that the values were taken at around 3:30 AM.
 
-:::image type="content" source="../media/capacity-tool-maybe.png" alt-text="Screenshot of a capacity tool results showing Maybe values.":::
+:::image type="content" source="../media/capacity-tool-maybe.png" alt-text="Screenshot of a capacity tool results showing Maybe values." lightbox="../media/capacity-tool-maybe.png":::
 
 <a name="sizing"></a>
 ## Defender for Identity sensor estimated sizing
@@ -142,5 +142,6 @@ This section describes how to collect the packets/sec counter from a domain cont
 -->
 ## Next step
 
+
 > [!div class="step-by-step"]
-> [What are Defender for Identity roles and permissions? »](role-groups.md)
+> [Configure endpoint proxy and internet connectivity settings »](configure-proxy.md)

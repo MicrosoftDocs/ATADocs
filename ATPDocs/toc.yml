@@ -73,10 +73,6 @@ items:
       - name: Configure Windows Event Forwarding
         href: deploy/configure-event-forwarding.md
         displayName: standalone
-- name: Evaluate
-  items:
-  - name: Attack simulations
-    href: playbooks.md
 - name: Manage
   items:
   - name: Defender for Identity reports

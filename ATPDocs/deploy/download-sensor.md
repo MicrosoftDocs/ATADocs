@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Download the Microsoft Defender for Identity sensor
 
-This article describes how to download the Microsoft Defender for Identity sensor for your domain controllers.
+This article describes how to download the Microsoft Defender for Identity sensor for your domain controllers or AD CS / AD FS servers. <!--added ad cs ad fs-->
 
-## Add and download a sensor
+## Add a sensor and download sensor software
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**. For example:
 
