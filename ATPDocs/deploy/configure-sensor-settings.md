@@ -116,10 +116,15 @@ If the domain controller or AD FS / AD CS that you're testing is the first senso
 
 The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft 365 Defender **Settings** > **Identities** > **About** page.
 
-## Next step
+## Related content
 
 Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:
 
 - [Set entity tags: sensitive, honeytoken, and Exchange server](../entity-tags.md)
 - [Configure detection exclusions](../exclusions.md)
 - [Configure notifications: health issues, alerts, and Syslog](../notifications.md)
+
+## Next step
+
+> [!div class="step-by-step"]
+> [Event collection with Microsoft Defender for Identity »](event-collection-overview.md)
