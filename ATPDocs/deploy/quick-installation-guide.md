@@ -49,7 +49,7 @@ For more information, see [What are Defender for Identity roles and permissions?
 <!--is this correct permissions? doesn't quite make sense-->
 ### Minimum system requirements
 
-This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller, AD FS, or AD CS server. <!--what abt adfs/adcs?-->
+This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller.
 
 When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times. For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
 
