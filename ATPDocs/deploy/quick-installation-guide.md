@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
 
-Watch the following video for a step-by-step demo. Learn about:
+Watch the following video for a step-by-step demo and to learn about:
 
 - The importance of installing Defender for Identity sensors to protect your organization against identity-based attacks
 - Downloading and installing the sensor
@@ -25,7 +25,7 @@ This section lists the prerequisites required before installing the Defender for
 - Licensing
 - Permissions
 - System requirements
-- Recommendations for performance and maintenance windows
+- Recommendations for best practices
 
 Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
 
@@ -35,26 +35,28 @@ Make sure that you have one of the following licenses:
 
 [!INCLUDE [licenses](../includes/licenses.md)]
 
+For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
+
+
 ### Required permissions
 
-- To create your Defender for Identity workspace, you'll need a Microsoft Entra tenant with at least one global/security administrator. 
+- **To create your Defender for Identity workspace**, you'll need a Microsoft Entra tenant with at least one [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
 
-- You need to be a [global administrator or security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) to access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace.
+- **To access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace**, you need to be at least a [Security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
 
 For more information, see [What are Defender for Identity roles and permissions?](role-groups.md).
 
+<!--is this correct permissions? doesn't quite make sense-->
 ### Minimum system requirements
 
-The Defender for Identity sensor supports installation on the different operating system versions, as described in the following table. It requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on the domain controller.
+This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller, AD FS, or AD CS server. <!--what abt adfs/adcs?-->
 
-For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
+When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times. For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
 
+<!--each row here is identical. can't we turn it into prose?-->
 [!INCLUDE [server-requirements](../includes/server-requirements.md)]
 
-> [!NOTE]
-> When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times.
->
-
+<!--removed part about legacy operating systems, don't need it in a quickstart-->
 <!--
 ### Performance recommendations
 
@@ -66,7 +68,7 @@ For optimal performance, set the **Power Option** of the machine running the Def
 Verify that the servers you intend to install Defender for Identity sensors on can reach the Defender for Identity cloud service. From each server, try accessing: `https://*your-workspace-name*sensorapi.atp.azure.com`.
 
 - To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
-- For proxy configuration, see [Configure proxy settings for your sensor](configure-proxy.md).
+- For proxy configuration, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
 ### Schedule a maintenance window (optional)
 
@@ -95,6 +97,4 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 
 ## Next step
 
-For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md). 
-
-For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation) instead.
+For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).  For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation) instead.

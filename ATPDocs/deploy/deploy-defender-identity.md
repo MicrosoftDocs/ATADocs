@@ -19,6 +19,8 @@ Before you start, make sure that you have access to Microsoft 365 Defender at le
 
 [!INCLUDE [licenses](../includes/licenses.md)]
 
+For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy) and [What are Defender for Identity roles and permissions?](role-groups.md)
+
 ## Start using Microsoft 365 Defender
 
 This section describes how to start onboarding to Defender for Identity.
@@ -43,12 +45,11 @@ For more information, see:
 
 Use the following steps to prepare for deploying Defender for Identity:
 
-1. Make sure that you have all [prerequisites](prerequisites.md) required.
+1. Make sure that you have all [prerequisites](prerequisites.md) required. 
+
 1. [Plan your Defender for Identity capacity](capacity-planning.md).
 
-> [!TIP]
-> We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites. For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
->
+1. We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
 
 ## Deploy Defender for Identity
 
@@ -63,23 +64,24 @@ After you've prepared your system, use the following steps to deploy Defender fo
 
 The following procedures can be done at any point in the deployment process:
 
-1. [Configure Windows Event collection](configure-windows-event-collection.md).
+1. [Configure Windows Event collection](configure-windows-event-collection.md). For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md).
 1. [Enable and configure unified role-based access control (RBAC)](role-groups.md) for Defender for Identity.
 1. [Configure remote calls to SAM](remote-calls-sam.md) as needed.
+
 
 ## Extra deployment scenarios
 
 You may have extra or different steps in your deployment if you're working with any of the following scenarios. For more information, see the relevant articles:
 
-- [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
+- [**Configure a sensor for installation on AD FS or AD CS servers**](active-directory-federation-services.md).
 
-- [Configure Directory Service account (DSA) for use with Defender for Identity](directory-service-accounts.md), to be used when connecting to a domain controller at startup, querying the domain controller, requesting member lists for local administrator groups, and accessing the *DeletedObjects* container.
+- [**Configure Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). For example, use a DSA when connecting to a domain controller at startup, querying the domain controller, requesting member lists for local administrator groups, and accessing the *DeletedObjects* container.
 
-- [Configure a managed action account](manage-action-accounts.md) to take actions on behalf of Defender for Identity instead of the default LocalSystem account
+- [**Configure a managed action account**](manage-action-accounts.md) to take actions on behalf of Defender for Identity instead of the default LocalSystem account
 
-- [Understanding support for multiple Active Directory forests](multi-forest.md)
+- [**Understanding support for multiple Active Directory forests**](multi-forest.md)
 
-- [Migrate from Advanced Threat Analytics (ATA)](migrate-from-ata-overview.md)
+- [**Migrate from Advanced Threat Analytics (ATA)**](migrate-from-ata-overview.md)
 
 ## Next step
 

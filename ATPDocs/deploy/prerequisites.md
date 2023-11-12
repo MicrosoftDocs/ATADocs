@@ -11,21 +11,23 @@ This article describes the requirements for a successful Microsoft Defender for 
 
 ## Licensing requirements
 
-Before deploying Defender for Identity, make sure to acquire one of the following Microsoft 365 licenses:
+Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
 
 [!INCLUDE [licenses](../includes/licenses.md)]
 
+For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
+
 ## Required permissions
 
-To create your Defender for Identity workspace, you'll need:
+To create your Defender for Identity workspace, you need:
 
-- **A Microsoft Entra ID tenant** with at least one Global or Security administrator.
+- **A Microsoft Entra ID tenant** with at least one Security administrator.
 
-    You'll need Global or Security administrator access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
+    You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
 
     For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
-- **At least one Directory Service account** with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
+- **At least one Directory Service account** with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md). <!--if we need it now, why is it all the way down there? or is it not always needed?-->
 
 ## Connectivity requirements
 
@@ -33,11 +35,11 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 
 |Method  |Description  |Considerations |Learn more |
 |---------|---------|---------|---------|
-|**Set up a proxy**     | Customers who have a forward proxy deployed can take advantage of the proxy to provide connectivity to the MDI cloud service.  <br><br> If you choose this option, you'll configure your proxy later in the deployment process.       |  Allows access to the internet for a single URL  <br><br>SSL inspection isn't supported      |    [Configure endpoint proxy and internet connectivity settings](configure-proxy.md)    |
-|**ExpressRoute**     | ExpressRoute can be configured to forward MDI sensor traffic over customer’s express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute.       |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
-|**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don’t have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
+|**Set up a proxy**     | Customers who have a forward proxy deployed can take advantage of the proxy to provide connectivity to the MDI cloud service.  <br><br> If you choose this option, you'll configure your proxy later in the deployment process.       |  Allows access to the internet for a single URL  <br><br>SSL inspection isn't supported      |    [Configure endpoint proxy and internet connectivity settings](configure-proxy.md) <br><br>[Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration)   |
+|**ExpressRoute**     | ExpressRoute can be configured to forward MDI sensor traffic over customer’s express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute      |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
+|**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don’t have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
 
-For more information, see [Microsoft Defender for Identity architecture](../architecture.md) and [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+For more information, see [Microsoft Defender for Identity architecture](../architecture.md).
 
 <!--
 ## Required network adapters
@@ -48,9 +50,9 @@ The Defender for Identity sensor monitors local traffic on all of the domain con
 
 To install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap. For more information, see [How do I download and install or upgrade the Npcap driver?](../technical-faq.yml#how-do-i-download-and-install-or-upgrade-the-npcap-driver)-->
 
-## Sensor requirements
+## Sensor requirements and recommendations
 
-The following table summarizes requirements for the domain controller server where you'll install the Defender for Identity sensor.
+The following table summarizes requirements and recommendations for the domain controller, AD FS, or AD CS server where you'll install the Defender for Identity sensor.
 
 <!--updated here to 2016-->
 | Prerequisite / Recommendation |Description  |
@@ -63,28 +65,30 @@ The following table summarizes requirements for the domain controller server whe
 
 [!INCLUDE [server-requirements](../includes/server-requirements.md)]
 
+#### Legacy operating systems
+
+Windows Server 2012 and Windows Server 2012 R2 reached extended end of support on October 10, 2023.
+
+We recommend that you plan to upgrade those servers as Microsoft no longer supports the Defender for Identity sensor on devices running Windows Server 2012 and Windows Server 2012 R2.
+
+Sensors running on these operating systems will continue to report to Defender for Identity and even receive the sensor updates, but some of the new functionalities will not be available as they might rely on operating system capabilities.
+
 ### Required ports
 
 |**Protocol**   |**Transport**         |**Port**         |**From**       |**To**   |
 |------------|---------|---------|-------|--------------|
 |**Internet ports**          | | | | |
-|**SSL** (\*.atp.azure.com) [<sup>1</sup>](#connectivity)   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|
+|**SSL** (\*.atp.azure.com) <br><br>Alternately, [configure access through a proxy](configure-proxy.md).   |TCP      |443 |Defender for Identity sensor|Defender for Identity cloud service|
 |**Internal ports**          | | | | |
 |**DNS**            |TCP and UDP           |53  |Defender for Identity sensor|DNS Servers           |
 |**Netlogon**  <br>(SMB, CIFS, SAM-R)|TCP/UDP  |445 |Defender for Identity sensor|All devices on the network|
 |**RADIUS**         |UDP      |1813|RADIUS         |Defender for Identity sensor      |
-|**Localhost ports** [<sup>2</sup>](#localhost) <br><br>Required for the sensor service updater      ||    |  |         |
-|**SSL** [<sup>2</sup>](#localhost)|TCP      |444 |Sensor service|Sensor updater service            |
-|**Network Name Resolution (NNR) ports** [<sup>3</sup>](#nnr)      | | | | |
+|**Localhost ports**: Required for the sensor service updater  <br><br>By default, *localhost* to *localhost* traffic is allowed unless a custom firewall policy blocks it.    | | | | |
+|**SSL** |TCP      |444 |Sensor service|Sensor updater service            |
+|**Network Name Resolution (NNR) ports** <br><br>To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required.     | | | | |
 |**NTLM over RPC**  |TCP      |Port 135         |Defender for Identity sensor|All devices on network|
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
-|**RDP**            |TCP      |3389 <br><br>Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)|Defender for Identity sensor|All devices on network|
-
-<a name=connectivity></a><sup>1</sup> Connectivity from the sensor to the Defender for Identity cloud services is required either directly on port 443, or through a proxy. For more information, see [Configuring a proxy for Defender for Identity](configure-proxy.md).
-
-<a name=localhost></a><sup>2</sup> By default, localhost to localhost traffic is allowed unless a custom firewall policy blocks it.
-
-<a name=nnr></a><sup>3</sup> To resolve IP addresses to computer names, we recommend opening all ports listed. However, only one port is required.
+|**RDP**         <br><br>Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)   |TCP      |3389 |Defender for Identity sensor|All devices on network|
 
 Additional ports are required to support multiple Active Directory forests. For more information, see [Prerequisites](multi-forest.md#prerequisites).
 
@@ -104,15 +108,23 @@ The following table describes memory requirements on the server used for the Def
 ## Time synchronization
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 
+## Test your prerequisites
+
+We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites.
+
+For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
+
 ## Related content
 
-This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server, or when you're installing a standalone Defender for Identity sensor.
+This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
 
 For more information, see:
 
 - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
+- [Microsoft Defender for Identity multi-forest support](multi-forest.md)
 - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 - [Defender for Identity architecture](../architecture.md)
+
 ## Next step
 
 > [!div class="step-by-step"]
