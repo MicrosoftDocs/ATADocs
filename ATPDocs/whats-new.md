@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/07/2023
+ms.date: 11/14/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -53,6 +53,9 @@ New assessments include:
 The new assessments are now available in Microsoft Secure Score, surfacing security issues and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+### Defender for Identity release 2.219
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Identity timeline includes more than 30 days of data (Preview)
 
