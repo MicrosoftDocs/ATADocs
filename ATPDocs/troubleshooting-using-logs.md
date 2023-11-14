@@ -24,7 +24,7 @@ The Defender for Identity sensor has the following logs:
 > [!NOTE]
 > The log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
 >
->Since only the last two versions of the sensor are stored locally, the maximum size of disk space for the log files will always be at most 1GB.
+>Since only the last two versions of the sensor are stored locally, the maximum size of disk space for the log files will always be at most 1 GB.
 
 ## Defender for Identity Deployment logs
 
