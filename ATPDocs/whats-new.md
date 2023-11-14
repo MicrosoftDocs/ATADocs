@@ -30,6 +30,30 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2023
 
+### Security posture assessments for AD CS sensors
+
+Defender for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations, and now include new security posture assessments specifically for Active Directory Certificate Services (AD CS).
+
+New assessments include:
+
+- **Certificate templates recommended actions**:
+
+   - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](security-assessment-prevent-users-request-certificate.md)
+   - [Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](security-assessment-edit-overly-permissive-template.md)
+   - [Misconfigured enrollment agent certificate template (ESC3)](security-assessment-edit-misconfigured-enrollment-agent.md)
+   - [Edit misconfigured certificate templates ACL (ESC4)](security-assessment-edit-misconfigured-acl.md)
+   - [Edit misconfigured certificate templates owner](security-assessment-edit-misconfigured-owner.md)
+
+- **Certificate authority recommended actions**:
+
+   - [Edit vulnerable Certificate Authority setting](security-assessment-edit-vulnerable-ca-setting.md)
+   - [Edit misconfigured Certificate Authority ACL (ESC7)](security-assessment-edit-misconfigured-ca-acl.md)
+   - [Enforce encryption for RPC certificate enrollment interface (ESC8)](security-assessment-enforce-encryption-rpc.md)
+
+The new assessments are now available in Microsoft Secure Score, surfacing security issues and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
+
+For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
 ### Identity timeline includes more than 30 days of data (Preview)
 
 Defender for Identity is gradually rolling out extended data retentions on identity details to more than 30 days. 
