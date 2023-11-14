@@ -5,7 +5,7 @@ ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit vulnerable Certificate Authority setting
+# Security assessment: Edit vulnerable Certificate Authority setting  (Preview)
 
 ## What are vulnerable Certificate Authority settings?
 

@@ -5,7 +5,7 @@ ms.date: 11/13/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2)
+# Security assessment: Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2)  (Preview)
 
 ## What is an overly permissive certificate template with privileged EKU?
 

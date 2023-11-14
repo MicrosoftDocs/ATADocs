@@ -5,7 +5,7 @@ ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured Certificate Authority ACL (ESC7)
+# Security assessment: Edit misconfigured Certificate Authority ACL (ESC7)  (Preview)
 
 ## What is a misconfigured Certificate Authority ACL?
 

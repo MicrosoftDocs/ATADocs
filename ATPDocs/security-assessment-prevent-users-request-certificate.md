@@ -5,7 +5,7 @@ ms.date: 11/13/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)
+# Security assessment: Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)
 
 ## What are certificate requests for arbitrary users?
 

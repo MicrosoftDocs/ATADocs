@@ -5,7 +5,7 @@ ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Enforce encryption for RPC certificate enrollment interface (ESC8)
+# Security assessment: Enforce encryption for RPC certificate enrollment interface (ESC8)  (Preview)
 
 ## What is encryption with RPC certificate enrollment?
 

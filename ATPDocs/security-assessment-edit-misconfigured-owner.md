@@ -5,7 +5,7 @@ ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured certificate templates owner
+# Security assessment: Edit misconfigured certificate templates owner  (Preview)
 
 ## What is a misconfigured certificate template owner?
 

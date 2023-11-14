@@ -5,7 +5,7 @@ ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured certificate templates ACL (ESC4)
+# Security assessment: Edit misconfigured certificate templates ACL (ESC4)  (Preview)
 
 ## What is a misconfigured certificate template ACL?
 

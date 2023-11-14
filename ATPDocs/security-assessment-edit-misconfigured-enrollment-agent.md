@@ -5,7 +5,7 @@ ms.date: 01/29/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Misconfigured enrollment agent certificate template (ESC3)
+# Security assessment: Misconfigured enrollment agent certificate template (ESC3)  (Preview)
 
 ## What are misconfgured enrollment agent certificate templates?
 

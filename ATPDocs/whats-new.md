@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2023
 
-### Security posture assessments for AD CS sensors
+### Security posture assessments for AD CS sensors (Preview)
 
 Defender for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations, and now include new security posture assessments specifically for Active Directory Certificate Services (AD CS).
 
@@ -51,6 +51,10 @@ New assessments include:
    - [Enforce encryption for RPC certificate enrollment interface (ESC8)](security-assessment-enforce-encryption-rpc.md)
 
 The new assessments are now available in Microsoft Secure Score, surfacing security issues and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
+
+For example:
+
+:::image type="content" source="media/secure-score/adcs-new-reports.png" alt-text="Screenshot of the new AD CS security posture assessments.":::
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
 ### Defender for Identity release 2.219
