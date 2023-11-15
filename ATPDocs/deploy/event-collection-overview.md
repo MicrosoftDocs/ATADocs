@@ -9,11 +9,18 @@ ms.topic: conceptual
 
 The Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs, which the sensor parses from your domain controllers. 
 
-For the correct events to be audited and included in the Windows event log, your domain controllers or AD FS / AD CS servers require accurate, advanced audit policy settings. <!--added ad fs / ad cs here--> For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
-
 This article lists the events required by the Defender for Identity sensor and information about extra collection methods for standalone sensors.
 
-## Supported Active Directory Federation Services (AD FS) events
+## Event collection procedures
+<!--fix heading here-->
+For the correct events to be audited and included in the Windows event log, your domain controllers or AD FS / AD CS servers require accurate, advanced audit policy settings.
+
+For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+
+## Reference of required events
+
+<!--add intro sentence-->
+### Supported Active Directory Federation Services (AD FS) events
 
 The following events are required for Active Directory Federation Services (AD FS) servers:
 
@@ -24,7 +31,7 @@ The following events are required for Active Directory Federation Services (AD F
 
 For more information, see [Enable auditing on an AD FS object](configure-windows-event-collection.md#enable-auditing-on-an-active-directory-federation-services-ad-fs-object).
 
-## Supported Active Directory Certificate Services (AD CS) events
+### Supported Active Directory Certificate Services (AD CS) events
 
 The following events are required for Active Directory Federation Services (AD FS) servers:
 
@@ -38,9 +45,9 @@ The following events are required for Active Directory Federation Services (AD F
 
 For more information, see [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
 
-## Other Windows events
+### Other Windows events
 
-The following general Windows events are required for all Defender for Identity sensors:
+The following general Windows events are required for all Defender for Identity sensors: <!--not all of these are for all sensors - need look into it>
 
 - 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
@@ -65,7 +72,7 @@ The following general Windows events are required for all Defender for Identity 
 > To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings.
 >
 
-## Event collection for standalone sensors
+### Event collection for standalone sensors
 
 If you're working with a standalone Defender for Identity sensor, configure event collection manually using one of the following methods:
 

@@ -7,7 +7,10 @@ ms.topic: how-to
 
 # Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity
 
-Microsoft Defender for Identity mapping for [potential lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Defender for Identity [Directory Service account](directory-service-accounts.md) you configured.
+Microsoft Defender for Identity mapping for [potential lateral movement paths](/defender-for-identity/understand-lateral-movement-paths) relies on queries that identify local admins on specific machines.
+These queries are performed with the SAM-R protocol, using the Defender for Identity [Directory Service account](directory-service-accounts.md) you configured.
+
+<!--put DSA above and mark as optional if you don't do this, this is what you get, if you do this-->
 
 <!--then shouldn't the DSA not be in "extra scenarios"? or should this also be in extra scenarios together with the DSA?-->
 <!--needs new screenshots-->

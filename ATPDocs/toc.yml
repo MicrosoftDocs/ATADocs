@@ -60,8 +60,6 @@ items:
       href: deploy/manage-action-accounts.md
     - name: Deploy for multiple Active Directory forests
       href: deploy/multi-forest.md
-    - name: Migrate from Advanced Threat Analytics (ATA)
-      href: deploy/migrate-from-ata-overview.md
     - name: Configure a standalone sensor
       items:
       - name: Configure port mirroring
@@ -193,6 +191,8 @@ items:
     href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
   - name: What's new archive
     href: whats-new-archive.md
+  - name: Migrate from Advanced Threat Analytics (ATA)
+    href: deploy/migrate-from-ata-overview.md
 - name: Microsoft 365 Defender Docs
   items:
   - name: Microsoft 365 Defender

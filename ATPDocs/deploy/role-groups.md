@@ -13,6 +13,7 @@ Defender for Identity also supports built-in security groups to define user role
 
 This article describes Defender for Identities access management and role authorization, helping you segregate duties within your security team, and granting only the amount of access that users need to do their jobs.
 
+<!--from gershon - we need to tell customers to enable rbac for MDI to use the default roles - import the roles and then change them as needed. use azure ad that we built, or use the groups that they built. work with Gershon and Or on this-->
 <!--do we really need this?>
 [!INCLUDE [gdpr-intro-sentence](../../includes/gdpr-intro-sentence.md)]
 -->

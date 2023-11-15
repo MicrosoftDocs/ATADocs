@@ -8,6 +8,9 @@ ms.topic: how-to
 # Configure audit policies for Windows event logs
 
 <!--in general we need new screenshots here-->
+<!--fix headings all to configure-->
+<!--leadings bookmarks for old headings-->
+<!--add powershell commands when they're ready-->
 Microsoft Defender for Identity detection relies on specific Windows Event log entries to enhance detections and provide extra information on the users who performed specific actions, such as NTLM logons and security group modifications.
 
 For the correct events to be audited and included in the Windows Event Log, your domain controllers require specific Advanced Audit Policy settings. Misconfigured Advanced Audit Policy settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
@@ -16,10 +19,12 @@ This article describes how to configure your Advanced Audit Policy settings as n
 
 For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md).
 
-<!--is this the right order?-->
-## Configure Advanced Audit Policy settings
+## Configure auditing for domain controllers
+<!--you'll need all 3 procedures for DCs-->
 
-This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity. <!--should we also add ad fs ad cs?-->
+### Configure Advanced Audit Policy settings
+
+This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity.
 
 1. Log in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -63,7 +68,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
    auditpol.exe /get /category:*
    ```
 
-## Configure auditing for Event ID 8004
+### Configure NTLM auditing
 
 This section describes the extra configuration steps needed to audit Event ID 8004.
 
@@ -86,9 +91,9 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 :::image type="content" source="../media/advanced-audit-policy-check-step-3.png" alt-text="Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration." border="false":::
 
-## Configure object auditing for Event ID 4662
+### Configure domain object auditing
 
-To collect 4662 events, you must also configure object auditing on the user, group and computer objects. This procedure describes how to enable auditing on all users, groups, and computers in the Active Directory domain.
+To collect events for object changes, such as event 4662, you must also configure object auditing on the user, group, computer, and other objects. This procedure describes how to enable auditing in the Active Directory domain.
 
 > [!IMPORTANT]
 > Make sure to [review and verify your audit policies](#configure-advanced-audit-policy-settings) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events. If configured properly, this auditing should have minimal effect on server performance.
@@ -142,11 +147,7 @@ To collect 4662 events, you must also configure object auditing on the user, gro
 > Assigning the auditing permissions on the **All descendant objects** would work as well, but we only require the object types as detailed above.
 >
 
-<!--what is this?>
-Some detections require auditing specific Active Directory objects. To do so, follow the steps in this procedure, with the changes noted as follows regarding the objects to audit and permissions to include.
--->
-
-## Enable auditing on an Active Directory Federation Services (AD FS) object
+## Configure auditing on an Active Directory Federation Services (AD FS)
 
 1. Go to the **Active Directory Users and Computers** console, and select the domain you want to enable the logs on.
 
@@ -202,7 +203,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
             :::image type="content" source="../media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Properties Auditing tab.":::
 
-### Enable auditing on an Exchange object
+### Configure auditing on the configuration container
 <a name="enable-auditing-on-an-exchange-object"></a>
 
 1. Open ADSI Edit by selecting **Start** > **Run**. Enter `ADSIEdit.msc` and select **OK**.
@@ -237,9 +238,8 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Select **OK**.
 
-## Auditing for event ID 1644
+## Legacy configurations
 
-<!--what does this code indicate? can we remove this section altogether?-->
 > [!IMPORTANT]
 > Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
 
