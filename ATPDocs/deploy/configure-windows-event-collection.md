@@ -8,8 +8,6 @@ ms.topic: how-to
 # Configure audit policies for Windows event logs
 
 <!--in general we need new screenshots here-->
-<!--fix headings all to configure-->
-<!--leadings bookmarks for old headings-->
 <!--add powershell commands when they're ready-->
 Microsoft Defender for Identity detection relies on specific Windows Event log entries to enhance detections and provide extra information on the users who performed specific actions, such as NTLM logons and security group modifications.
 
@@ -20,7 +18,12 @@ This article describes how to configure your Advanced Audit Policy settings as n
 For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md).
 
 ## Configure auditing for domain controllers
-<!--you'll need all 3 procedures for DCs-->
+
+When working with a domain controller, you'll need to update your Advanced Audit Policy settings, as well as extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
+
+- [Advanced Audit Policy settings](#configure-advanced-audit-policy-settings)
+- [NTLM auditing](#configure-ntlm-auditing)
+- [Domain object auditing](#configure-domain-object-auditing)
 
 ### Configure Advanced Audit Policy settings
 
@@ -52,7 +55,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | **Account Management** | Audit User Account Management | 4726 |
         | **DS Access** | Audit Directory Service Changes | 5136  |
         | **System** | Audit Security System Extension | 7045 |
-        | **DS Access** | Audit Directory Service Access | 4662 - For this event, it's also necessary to [configure object auditing](#configure-object-auditing-for-event-id-4662).  |
+        | **DS Access** | Audit Directory Service Access | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events:
 

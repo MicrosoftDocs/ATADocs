@@ -351,7 +351,8 @@ Released April 10, 2022
 
 Released March 27, 2022
 
-- Microsoft Defender for Identity can now monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers. For more information, see [Auditing for event ID 1644](deploy/configure-windows-event-collection.md#auditing-for-event-id-1644).
+- Microsoft Defender for Identity can now monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers. For more information, see 
+[Legacy configurations](deploy/configure-windows-event-collection.md#legacy-configurations).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1021,7 +1022,7 @@ Released September 22, 2019
 - **Enriched NTLM authentication data using Windows Event 8004**  
 Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data as well as enriched failed logon activities including the destination computer which the user attempted but failed to access.
 
-  Learn more about NTLM authentication activities [using Windows Event 8004](deploy/configure-windows-event-collection.md#configure-auditing-for-event-id-8004).
+  Learn more about NTLM authentication activities [using Windows Event 8004](deploy/configure-windows-event-collection.md#configure-ntlm-auditing).
 
 - Version also includes improvements and bug fixes for internal sensor infrastructure.
 

@@ -48,14 +48,14 @@ items:
         href: deploy/configure-windows-event-collection.md
     - name: Roles and permissions
       href: deploy/role-groups.md
+    - name: Configure a Directory Service account
+      href: deploy/directory-service-accounts.md
     - name: Configure remote calls to SAM
       href: deploy/remote-calls-sam.md
   - name: Extra deployment scenarios
     items:
     - name: Install on AD FS / AD CS servers
       href: deploy/active-directory-federation-services.md
-    - name: Configure a Directory Service account
-      href: deploy/directory-service-accounts.md
     - name: Configure action accounts
       href: deploy/manage-action-accounts.md
     - name: Deploy for multiple Active Directory forests

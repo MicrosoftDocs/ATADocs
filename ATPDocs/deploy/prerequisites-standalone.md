@@ -72,7 +72,7 @@ The following table lists the extra ports ports that the Defender for Identity s
 
 Defender for Identity detection relies on specific [Windows Event logs](event-collection-overview.md) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information, see, [Advanced audit policy check](configure-windows-event-collection.md). 
 
-- To make sure [Windows Event 8004 is audited](configure-windows-event-collection.md#configure-auditing-for-event-id-8004) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
+- To make sure that [Windows Event 8004 is audited](configure-windows-event-collection.md#configure-ntlm-auditing) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 
 - For sensors running on AD FS / AD CS servers, configure the auditing level to **Verbose**. For more information, see [Event auditing information for AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016) and [Event auditing information for AD CS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging).
 

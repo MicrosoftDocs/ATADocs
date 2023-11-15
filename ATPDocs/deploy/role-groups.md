@@ -103,4 +103,6 @@ Information included from the [Defender for Cloud Apps activity log](../privacy-
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure remote calls to SAM »](remote-calls-sam.md)
+> [Configure a Directory Service account for Microsoft Defender for Identity »](directory-service-accounts.md)
+
+

@@ -7,20 +7,19 @@ ms.topic: conceptual
 
 # Event collection with Microsoft Defender for Identity
 
-The Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs, which the sensor parses from your domain controllers. 
+The Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs, which the sensor parses from your domain controllers.
 
-This article lists the events required by the Defender for Identity sensor and information about extra collection methods for standalone sensors.
+## Event collection for domain controllers and AD FS / AD CS servers
 
-## Event collection procedures
-<!--fix heading here-->
 For the correct events to be audited and included in the Windows event log, your domain controllers or AD FS / AD CS servers require accurate, advanced audit policy settings.
 
 For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
 ## Reference of required events
 
-<!--add intro sentence-->
-### Supported Active Directory Federation Services (AD FS) events
+This section lists the Windows events required by the Defender for Identity sensor, when installed on AD FS / AD CS servers, or on domain controllers.
+
+### Required Active Directory Federation Services (AD FS) events
 
 The following events are required for Active Directory Federation Services (AD FS) servers:
 
@@ -29,9 +28,9 @@ The following events are required for Active Directory Federation Services (AD F
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
-For more information, see [Enable auditing on an AD FS object](configure-windows-event-collection.md#enable-auditing-on-an-active-directory-federation-services-ad-fs-object).
+For more information, see [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs).
 
-### Supported Active Directory Certificate Services (AD CS) events
+### Required Active Directory Certificate Services (AD CS) events
 
 The following events are required for Active Directory Federation Services (AD FS) servers:
 
@@ -45,7 +44,7 @@ The following events are required for Active Directory Federation Services (AD F
 
 For more information, see [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
 
-### Other Windows events
+### Other required Windows events
 
 The following general Windows events are required for all Defender for Identity sensors: <!--not all of these are for all sensors - need look into it>
 
@@ -68,9 +67,7 @@ The following general Windows events are required for all Defender for Identity 
 - 7045 - New Service Installed
 - 8004 - NTLM Authentication
 
-> [!TIP]
-> To make sure Windows Event 8004 is audited as needed by the service, review your NTLM audit settings.
->
+For more information, see [Configure NTLM auditing](configure-windows-event-collection.md#configure-ntlm-auditing) and [Configure domain object auditing](configure-windows-event-collection.md#configure-domain-object-auditing).
 
 ### Event collection for standalone sensors
 

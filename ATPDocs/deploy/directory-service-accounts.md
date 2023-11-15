@@ -10,7 +10,7 @@ ms.topic: how-to
 <!--do we need new screenshots here?-->
 This article describes how to create and configure a Defender for Identity Directory Service account (DSA).
 
-Defender for Identity's sensor uses a DSA to do the following:
+While this procedure is optional, we recommend that you configure a Directory Service account so that you can do the following and fully secure your environment with Defender for Identity:
 
 - Connect to the domain controller at startup using the configured DSA option
 - Query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities
@@ -305,6 +305,5 @@ For more information, see [Sensor failed to retrieve the gMSA credentials](../tr
 
 ## Next step
 
-<!--what should be the order here? this makes sense but it's not currently what we have in the toc-->
 > [!div class="step-by-step"]
 > [Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity »](remote-calls-sam.md)
