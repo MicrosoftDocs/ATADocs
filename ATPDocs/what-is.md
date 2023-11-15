@@ -8,7 +8,7 @@ ms.topic: overview
 
 # What is Microsoft Defender for Identity?
 
-Microsoft Defender for Identity is a cloud-based security solution that helps secure your identity monitoring across your organization, 
+Microsoft Defender for Identity is a cloud-based security solution that helps secure your identity monitoring across your organization. 
 
 Defender for Identity is fully integrated with Microsoft 365 Defender, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
 
