@@ -13,7 +13,7 @@ Active Directory Certificate Services (AD CS) supports certificate enrollment us
 
 In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy.
 
-If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only accepts connections with the `RPC_C_AUTHN_LEVEL_PKT_PRIVACY` authentication level. This is the highest authentication level, and requires each packet to be signed and encrypted, preventing any kind of relay attack, similar to `SMB Signing` in the SMB protocol.
+If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only accepts connections with the `RPC_C_AUTHN_LEVEL_PKT_PRIVACY` authentication level. This is the highest authentication level, and requires each packet to be signed and encrypted so as to prevent any kind of relay attack. This is similar to `SMB Signing` in the SMB protocol.
 
 If the RPC enrollment interface does not require packet privacy, it becomes vulnerable to relay attacks (ESC8). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that cannot support the required RPC authentication level, such as clients running Windows XP. 
 
