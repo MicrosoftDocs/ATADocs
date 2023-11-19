@@ -12,7 +12,7 @@ ms.topic: how-to
 A certificate template is an Active Directory object with an owner, who controls access to the object and the ability to edit the object.
 
 <!--unsure about this, not in blog-->
-If the owner permissions grant a built-in, unprivileged group, such as *Authenticated users*, *Domain users*, *Everyone*, with permissions that allow for template setting changes, like *Full control* or *Write DACL*, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain.
+If the owner permissions grant a built-in, unprivileged group, such as *Authenticated users*, *Domain users*, or *Everyone*, with permissions that allow for template setting changes, like *Full control* or *Write DACL*, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain.
 
 
 ## How do I use this security assessment to improve my organizational security posture?
