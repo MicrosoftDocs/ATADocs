@@ -15,7 +15,7 @@ If there is a published template with the *Certificate request agent* EKU that i
 
 While an Enrollment Agent certificate cannot enroll certificates for all templates, and some conditions must be met for an attacker to be able to take over the domain. The other template required for this specific abuse is any template that has EKU for authentication. It must be enrollable for any user, without requiring *Manager approval*, and with an appropriate schema version. There are default templates that meet these conditions.
 
-If both required template configurations are found, an attacker with an unprivileged user can enroll an Enrollment Agent certificate and use it afterwards for enrolling certificates permitted for authentication on behalf of arbitrary users. 
+If both required template configurations are found, an attacker with an unprivileged user can enroll an Enrollment Agent certificate and use it afterwards for enrolling certificates permitted for authentication on behalf of any arbitrary user. 
 
 Microsoft Defender for Identity reports about Enrollment Agent certificate templates that endanger your organization only when both template types are found. Defender for Identity shows the Enrollment Agent templates on the **Exposed entities** pane.
 

@@ -14,7 +14,7 @@ Certificate Authorities (CAs) maintain access control lists that outline roles a
 The impact of a misconfigured ACL varies based on the type of permission applied:
 
 - If an unprivileged user holds the *Manage Certificates* right, they can approve pending certificate requests, bypassing the *Manager approval* requirement. 
-- With the *Manage CA* right, the user can modify CA settings, such as adding the *User specifies SAN* flag (`EDITF_ATTRIBUTESUBJECTALTNAME2`), again, creating an artificial misconfiguration that will later lead to a complete domain compromise.
+- With the *Manage CA* right, the user can modify CA settings, such as adding the *User specifies SAN* flag (`EDITF_ATTRIBUTESUBJECTALTNAME2`), creating an artificial misconfiguration that will later lead to a complete domain compromise.
 
 
 ## How do I use this security assessment to improve my organizational security posture?
@@ -24,7 +24,7 @@ The impact of a misconfigured ACL varies based on the type of permission applied
 <!--IMAGE TBD-->
 
 1. Research why the CA ACL is misconfigured.
-1. REmediate the issues by removing all permissions that grant unprivileged built-in groups with *Manage CA* and/or *Manage certificates* permissions.
+1. Remediate the issues by removing all permissions that grant unprivileged built-in groups with *Manage CA* and/or *Manage certificates* permissions.
 
 Make sure to test your settings in a controlled environment before turning them on in production.
 
