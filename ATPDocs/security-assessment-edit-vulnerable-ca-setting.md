@@ -1,11 +1,11 @@
 ---
-title: Edit vulnerable Certificate Authority setting | Microsoft Defender for Identity
+title: Edit vulnerable Certificate Authority setting (ESC6) | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's vulnerable Certificate Authority setting report.
 ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit vulnerable Certificate Authority setting  (Preview)
+# Security assessment: Edit vulnerable Certificate Authority setting (ESC6)  (Preview)
 
 ## What are vulnerable Certificate Authority settings?
 

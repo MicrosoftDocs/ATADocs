@@ -57,6 +57,10 @@ For example:
 :::image type="content" source="media/secure-score/adcs-new-reports.png" alt-text="Screenshot of the new AD CS security posture assessments.":::
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
+> [!NOTE]
+> While *certificate template* assessments are available to all customers, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+
 ### Defender for Identity release 2.219
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.

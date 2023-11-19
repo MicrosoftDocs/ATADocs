@@ -11,7 +11,7 @@ ms.topic: how-to
 
 Certificate templates are Active Directory objects with an ACL controlling the access to the object. Besides determining enrollment permissions, the ACL also determines permissions for editing the object itself.
 
-If, for any reason, there is an entry in the ACL that grants a built-in, unprivileged group, such as *Authenticated users*, *Domain users*, *Everyone*, with permissions that allow for template setting changes, like *Full control* or *Write DACL*, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain.
+If, for any reason, there is an entry in the ACL that grants a built-in, unprivileged group, such as *Authenticated users*, *Domain users*, or *Everyone*, with permissions that allow for template setting changes, like *Full control* or *Write DACL*, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain.
 
 
 ## How do I use this security assessment to improve my organizational security posture?

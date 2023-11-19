@@ -1,18 +1,18 @@
 ---
-title: Edit misconfigured certificate templates owner | Microsoft Defender for Identity
+title: Edit misconfigured certificate templates owner (ESC4) | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's misconfigured certificate template ACL security posture assessment report.
 ms.date: 11/14/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit misconfigured certificate templates owner  (Preview)
+# Security assessment: Edit misconfigured certificate templates owner (ESC4) (Preview)
 
 ## What is a misconfigured certificate template owner?
 
-Certificate templates are Active Directory objects with an owner that controls the access to the object and editing the object.
+A certificate template is an Active Directory object with an owner, who controls access to the object and the ability to edit the object.
 
 <!--unsure about this, not in blog-->
-If the owner permissions grant a built-in, unprivileged group, such as *Authenticated users*, *Domain users*, *Everyone*, with permissions that allow for template setting changes, like *Full control* or *Write DACL*, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain.
+If the owner permissions grant a built-in, unprivileged group, such as *Authenticated users*, *Domain users*, or *Everyone*, with permissions that allow for template setting changes, like *Full control* or *Write DACL*, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain.
 
 
 ## How do I use this security assessment to improve my organizational security posture?
