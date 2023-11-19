@@ -9,15 +9,13 @@ ms.topic: how-to
 
 ## What are misconfgured enrollment agent certificate templates?
 
-Typically, users have an Enrollment Agent that enrolls their certificates for them. An Enrollment Agent certificate is a certificate with the *Certificate request agent* EKU in its EKU list, allowing it to enroll certificates for any eligible user by signing the CSR with the agent certificate.  While the setting is controllable, it defaults to allowing certificates for all eligible user.
-
-If there is a published template with the *Certificate request agent* EKU that is enrollable by any user, without any mitigation enforced, an unprivileged user can enroll an Enrollment Agent certificate and use it afterwards for enrolling certificates.
-
-While an Enrollment Agent certificate cannot enroll certificates for all templates, and some conditions must be met for an attacker to be able to take over the domain. The other template required for this specific abuse is any template that has EKU for authentication. It must be enrollable for any user, without requiring *Manager approval*, and with an appropriate schema version. There are default templates that meet these conditions.
-
-If both required template configurations are found, an attacker with an unprivileged user can enroll an Enrollment Agent certificate and use it afterwards for enrolling certificates permitted for authentication on behalf of any arbitrary user. 
+Typically, users have an Enrollment Agent that enrolls their certificates for them. Under specific circumstances, Enrollment Agent certificates can enroll certificates for any eligible user, posing a risk to your organization.
 
 Microsoft Defender for Identity reports about Enrollment Agent certificate templates that endanger your organization only when both template types are found. Defender for Identity shows the Enrollment Agent templates on the **Exposed entities** pane.
+
+
+
+
 
 ## How do I use this security assessment to improve my organizational security posture?
 
