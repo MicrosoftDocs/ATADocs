@@ -9,6 +9,10 @@ ms.topic: how-to
 
 ## What are vulnerable Certificate Authority settings?
 
+Each certificate is associated with an entity through its subject field. However, a certificate also includes a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities.
+
+The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as Client Authentication, it can be used to authenticate several different accounts.
+
 Unprivileged users that can specify the users in the Subject Alternative Names (SAN) settings can lead to immediate compromise, and post a great risk to your organization.
 
 If the AD CS `editflags` > `EDITF_ATTRIBUTESUBJECTALTNAME2` flag is turned on, each user can specify the SAN settings for their certificate request. This, in turn affects all certificate templates, whether they have the `Supply in the request` option turned on or not.

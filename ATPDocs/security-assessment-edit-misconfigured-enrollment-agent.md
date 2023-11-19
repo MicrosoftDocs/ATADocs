@@ -13,10 +13,6 @@ Typically, users have an Enrollment Agent that enrolls their certificates for th
 
 Microsoft Defender for Identity reports about Enrollment Agent certificate templates that endanger your organization only when both template types are found. Defender for Identity shows the Enrollment Agent templates on the **Exposed entities** pane.
 
-
-
-
-
 ## How do I use this security assessment to improve my organizational security posture?
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfgured enrollment agent certificate templates.
@@ -24,7 +20,7 @@ Microsoft Defender for Identity reports about Enrollment Agent certificate templ
 1. Remediate the issues by performing at least one of the following steps:
 
     - Remove the *Certificate request agent* EKU.
-    - Remove overly permissive enrollment permissions, which allow any user to enroll certificates based on that certificate template. Templates marked as vulnerable by Defender for Identity have at least one access list entry that allows enrollment for a built-in unprivileged group, such as *Authenticated Users* or *Everyone*, making this exploitable by any user.
+    - Remove overly permissive enrollment permissions, which allow any user to enroll certificates based on that certificate template. Templates marked as vulnerable by Defender for Identity have at least one access list entry that allows enrollment for a built-in unprivileged group, making this exploitable by any user. Examples of built-in, unprivileged groups are *Authenticated Users* or *Everyone*.
     - Turn on the *CA certificate Manager approval* requirement.
     - Remove the certificate template from being published by any CA. Templates that aren't published cannot be requested, and therefore cannot be exploited.
     - Use Enrollment Agent restrictions on the Certificate Authority level. For example, you may want to restrict which users are allowed to act as an Enrollment Agent, and which templates can be requested.
