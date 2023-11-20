@@ -16,12 +16,17 @@ The impact of a misconfigured ACL varies based on the type of permission applied
 - If an unprivileged user holds the *Manage Certificates* right, they can approve pending certificate requests, bypassing the *Manager approval* requirement. 
 - With the *Manage CA* right, the user can modify CA settings, such as adding the *User specifies SAN* flag (`EDITF_ATTRIBUTESUBJECTALTNAME2`), creating an artificial misconfiguration that will later lead to a complete domain compromise.
 
+## Prerequisites
+
+This assessment is available only to customers who've installed a sensor on an AD CS server.
+
+For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured Certificate Authority ACL.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured Certificate Authority ACL. For example:
 
-<!--IMAGE TBD-->
+    :::image type="content" source="media/secure-score/misconfigured-certificate-authority.png" alt-text="Screenshot of the Edit misconfigured Certificate Authority ACL (ESC7) recommendation." lightbox="media/secure-score/misconfigured-certificate-authority.png":::
 
 1. Research why the CA ACL is misconfigured.
 1. Remediate the issues by removing all permissions that grant unprivileged built-in groups with *Manage CA* and/or *Manage certificates* permissions.

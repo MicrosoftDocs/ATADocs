@@ -1,7 +1,7 @@
 ---
 title: Edit misconfigured certificate templates ACL (ESC4) | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's misconfigured certificate template ACL security posture assessment report.
-ms.date: 11/14/2023
+ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
@@ -18,9 +18,9 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template ACL.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template ACL. For example:
 
-<!--IMAGE TBD-->
+    :::image type="content" source="media/secure-score/misconfigured-certificate-acl.png" alt-text="Screenshot of the Edit misconfigured certificate templates ACL (ESC4) recommendation." lightbox="media/secure-score/misconfigured-certificate-acl.png":::
 
 1. Research why the template ACL might be misconfigured.
 1. Remediate the issue by removing any entry that grants unprivileged group permissions that allow tampering with the template.

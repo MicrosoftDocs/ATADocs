@@ -23,23 +23,23 @@ If a certificate template has the *Supply in the request* option turned on, the 
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for certificate requests for arbitrary users. For example:
 
-To remediate certificate requests for arbitrary users, perform at least one of the following steps:
+    :::image type="content" source="media/secure-score/prevent-certificate-arbitrary-users.png" alt-text="Screenshot of the Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1) recommendation." lightbox="media/secure-score/prevent-certificate-arbitrary-users.png":::
 
-- Turn off *Supply in the request* configuration.
+1. To remediate certificate requests for arbitrary users, perform at least one of the following steps:
 
-- Remove any EKUs that enable user authentication, such as Client Authentication, Smartcard logon, PKINIT client authentication, or Any purpose.
+    - Turn off *Supply in the request* configuration.
 
-- Remove overly permissive enrollment permissions, which allows any user to enroll certificate based on that certificate template.
+    - Remove any EKUs that enable user authentication, such as Client Authentication, Smartcard logon, PKINIT client authentication, or Any purpose.
 
-    Certificate templates marked as vulnerable by Defender for Identity have at least one access list entry that supports enrollment for a built-in unprivileged group, such as *Authenticated Users* or *Everyone*, making this exploitable by any user.
+    - Remove overly permissive enrollment permissions, which allows any user to enroll certificate based on that certificate template.
 
-- Turn on the CA certificate *Manager approval* requirement.
+        Certificate templates marked as vulnerable by Defender for Identity have at least one access list entry that supports enrollment for a built-in unprivileged group, such as *Authenticated Users* or *Everyone*, making this exploitable by any user.
 
-- Remove the certificate template from being published by any CA. Templates that are not published cannot be requested, and therefore cannot be exploited.
+    - Turn on the CA certificate *Manager approval* requirement.
 
-<!--IMAGE TBD-->
+    - Remove the certificate template from being published by any CA. Templates that are not published cannot be requested, and therefore cannot be exploited.
 
 Make sure to test your settings in a controlled environment before turning them on in production.
 

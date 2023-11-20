@@ -1,7 +1,7 @@
 ---
 title: Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2) | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's overly permissive Certificate Template with privileged EKU security posture assessment report.
-ms.date: 11/13/2023
+ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
@@ -17,9 +17,9 @@ Even though the certificate can’t be used for impersonating user authenticatio
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU.  For example:
 
-<!--image tbd-->
+    :::image type="content" source="media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="media/secure-score/permissive-certificate-template.png":::
 
 1. Research why the templates have a privileged EKU.
 1. Remediate the issue by doing the following:

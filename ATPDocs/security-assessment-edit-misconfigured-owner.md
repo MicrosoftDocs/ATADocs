@@ -18,9 +18,9 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template owner.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for a misconfigured certificate template owner.  For example:
 
-<!--IMAGE TBD-->
+    :::image type="content" source="media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="media/secure-score/misconfigured-owner.png":::
 
 1. Research why the template owner might be misconfigured.
 1. Remediate the issue by changing the owner to a privileged and monitored user.

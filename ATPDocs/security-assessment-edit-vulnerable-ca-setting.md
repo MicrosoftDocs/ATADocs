@@ -1,7 +1,7 @@
 ---
 title: Edit vulnerable Certificate Authority setting (ESC6) | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's vulnerable Certificate Authority setting report.
-ms.date: 11/14/2023
+ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
@@ -19,11 +19,17 @@ If the AD CS `editflags` > `EDITF_ATTRIBUTESUBJECTALTNAME2` flag is turned on, e
 
 If there is a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on, and the template is valid for authentication, an attacker can enroll a certificate that can impersonate any arbitrary account.
 
+## Prerequisites
+
+This assessment is available only to customers who've installed a sensor on an AD CS server.
+
+For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+
 ## How do I use this security assessment to improve my organizational security posture?
 
-1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for editing vulnerable Certificate Authority settings.
+1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for editing vulnerable Certificate Authority settings.  For example:
 
-<!--image tbd-->
+    :::image type="content" source="media/secure-score/vulnerable-certificate-authority-settings.png" alt-text="Screenshot of the Edit vulnerable Certificate Authority setting (ESC6) recommendation." lightbox="media/secure-score/vulnerable-certificate-authority-settings.png":::
 
 1. Research why this setting is turned on.
 
