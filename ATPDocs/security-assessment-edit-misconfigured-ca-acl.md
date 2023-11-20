@@ -36,6 +36,7 @@ Make sure to test your settings in a controlled environment before turning them 
 >
 > The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
 >
+
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
