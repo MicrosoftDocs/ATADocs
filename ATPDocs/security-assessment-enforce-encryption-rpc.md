@@ -9,9 +9,7 @@ ms.topic: how-to
 
 ## What is encryption with RPC certificate enrollment?
 
-Active Directory Certificate Services (AD CS) supports certificate enrollment using the RPC protocol, specifically with the MS-ICPR interface.
-
-In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy.
+Active Directory Certificate Services (AD CS) supports certificate enrollment using the RPC protocol, specifically with the MS-ICPR interface. In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy.
 
 If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only accepts connections with the `RPC_C_AUTHN_LEVEL_PKT_PRIVACY` authentication level. This is the highest authentication level, and requires each packet to be signed and encrypted so as to prevent any kind of relay attack. This is similar to `SMB Signing` in the SMB protocol.
 
@@ -19,9 +17,7 @@ If the RPC enrollment interface does not require packet privacy, it becomes vuln
 
 ## Prerequisites
 
-This assessment is available only to customers who've installed a sensor on an AD CS server.
-
-For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ## How do I use this security assessment to improve my organizational security posture?
 
@@ -32,8 +28,6 @@ For more information, see [New sensor type for Active Directory Certificate Serv
 1. Research why the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned off.
 
 1. Make sure to turn the `IF_ENFORCEENCRYPTICERTREQUEST` flag on to remove the vulnerability.
-
-    Make sure to test the following settings in a controlled environment before enabling them in production, and then make sure to update any affected clients if there are any. 
 
     To turn the flag on, run:
 
@@ -50,8 +44,10 @@ For more information, see [New sensor type for Active Directory Certificate Serv
 Make sure to test your settings in a controlled environment before turning them on in production.
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While this assessment is updated in near real time, scores and statuses are updated every 24 hours.  While the list of affected entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+>
 > The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
+>
 
 ## Next steps
 

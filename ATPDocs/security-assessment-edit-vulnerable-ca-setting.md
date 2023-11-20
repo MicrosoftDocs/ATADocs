@@ -11,9 +11,9 @@ ms.topic: how-to
 
 Each certificate is associated with an entity through its subject field. However, a certificate also includes a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities.
 
-The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as Client Authentication, it can be used to authenticate several different accounts.
+The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as *Client Authentication*, it can be used to authenticate several different accounts.
 
-Unprivileged users that can specify the users in the Subject Alternative Names (SAN) settings can lead to immediate compromise, and post a great risk to your organization.
+Unprivileged users that can specify the users in the SAN settings can lead to immediate compromise, and post a great risk to your organization.
 
 If the AD CS `editflags` > `EDITF_ATTRIBUTESUBJECTALTNAME2` flag is turned on, each user can specify the SAN settings for their certificate request. This, in turn affects all certificate templates, whether they have the `Supply in the request` option turned on or not.
 
@@ -21,9 +21,7 @@ If there is a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is tur
 
 ## Prerequisites
 
-This assessment is available only to customers who've installed a sensor on an AD CS server.
-
-For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ## How do I use this security assessment to improve my organizational security posture?
 
@@ -31,7 +29,7 @@ For more information, see [New sensor type for Active Directory Certificate Serv
 
     :::image type="content" source="media/secure-score/vulnerable-certificate-authority-settings.png" alt-text="Screenshot of the Edit vulnerable Certificate Authority setting (ESC6) recommendation." lightbox="media/secure-score/vulnerable-certificate-authority-settings.png":::
 
-1. Research why this setting is turned on.
+1. Research why the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on.
 
 1. Turn the setting off by running:
 
@@ -48,9 +46,10 @@ For more information, see [New sensor type for Active Directory Certificate Serv
 Make sure to test your settings in a controlled environment before turning them on in production.
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While this assessment is updated in near real time, scores and statuses are updated every 24 hours.  While the list of affected entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+>
 > The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
-
+>
 
 ## Next steps
 

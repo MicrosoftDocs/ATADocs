@@ -32,9 +32,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Security posture assessments for AD CS sensors (Preview)
 
-Defender for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations, and now include new security posture assessments specifically for Active Directory Certificate Services (AD CS).
+Defender for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations. 
 
-New assessments include:
+Recommended actions now include the following new security posture assessments, specifically for certificate templates and certificate authorities.
 
 - **Certificate templates recommended actions**:
 
@@ -50,7 +50,7 @@ New assessments include:
    - [Edit misconfigured Certificate Authority ACL (ESC7)](security-assessment-edit-misconfigured-ca-acl.md)
    - [Enforce encryption for RPC certificate enrollment interface (ESC8)](security-assessment-enforce-encryption-rpc.md)
 
-The new assessments are now available in Microsoft Secure Score, surfacing security issues and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
+The new assessments are available in Microsoft Secure Score, surfacing security issues and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
 
 For example:
 

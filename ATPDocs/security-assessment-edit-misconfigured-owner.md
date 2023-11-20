@@ -22,14 +22,16 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
     :::image type="content" source="media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="media/secure-score/misconfigured-owner.png":::
 
-1. Research why the template owner might be misconfigured.
+1. Research why the template owner may be misconfigured.
 1. Remediate the issue by changing the owner to a privileged and monitored user.
 
 Make sure to test your settings in a controlled environment before turning them on in production.
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While this assessment is updated in near real time, scores and statuses are updated every 24 hours.  While the list of affected entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+>
 > The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
+>
 
 ## Next steps
 

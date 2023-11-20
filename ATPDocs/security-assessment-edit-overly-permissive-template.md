@@ -11,7 +11,7 @@ ms.topic: how-to
 
 Digital certificates play a vital role in establishing trust and preserving integrity throughout an organization. This is true not only in Kerberos domain authentication, but also in other areas, such as code integrity, server integrity, and technologies that rely on certificates like Active Directory Federation Services (AD FS) and IPSec.
 
-When a certificate template has no EKUs or has an Any Purpose EKU, and it's enrollable for any unprivileged user, certificates issued based on that template can be used maliciously by an adversary, compromising trust.
+When a certificate template has no EKUs or has an *Any Purpose* EKU, and it's enrollable for any unprivileged user, certificates issued based on that template can be used maliciously by an adversary, compromising trust.
 
 Even though the certificate can’t be used for impersonating user authentication, it compromises other components that relieve digital certificates for their trust model. Adversaries can craft TLS certificates and impersonate any website.
 
@@ -25,13 +25,15 @@ Even though the certificate can’t be used for impersonating user authenticatio
 1. Remediate the issue by doing the following:
 
     - Restrict the template's overly permissive permissions.
-    - Enforce extra mitigations like adding `Manager approval` and signing requirements if possible.
+    - Enforce extra mitigations like adding *Manager approval* and signing requirements if possible.
 
 Make sure to test your settings in a controlled environment before turning them on in production.
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While this assessment is updated in near real time, scores and statuses are updated every 24 hours.  While the list of affected entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+>
 > The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
+>
 
 ## Next steps
 
