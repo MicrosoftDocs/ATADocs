@@ -23,7 +23,7 @@ If there is a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is tur
 
 This assessment is available only to customers who've installed a sensor on an AD CS server.
 
-For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ## How do I use this security assessment to improve my organizational security posture?
 

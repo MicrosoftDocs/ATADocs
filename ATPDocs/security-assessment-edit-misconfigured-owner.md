@@ -1,6 +1,6 @@
 ---
 title: Edit misconfigured certificate templates owner (ESC4) | Microsoft Defender for Identity
-description: This article provides an overview of Microsoft Defender for Identity's misconfigured certificate template ACL security posture assessment report.
+description: This article provides an overview of Microsoft Defender for Identity's misconfigured certificate templates owner (ESC4) security posture assessment report.
 ms.date: 11/14/2023
 ms.topic: how-to
 ---
