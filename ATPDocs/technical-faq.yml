@@ -142,6 +142,10 @@ sections:
         answer: |
           Yes, you can view the overall deployment health and any specific issues related to configuration, connectivity, and so on. You're alerted as these events occur with Defender for Identity health issues.
 
+      - question: Does Microsoft Defender for Identity require synchronizing users to Microsoft Entra ID?
+        answer: |
+          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Entra ID will also benefit of security value provided by Entra ID (based on license level) and of Investigation Priority Scoring.
+
   - name: WinPcap and Npcap drivers
     questions: 
 
