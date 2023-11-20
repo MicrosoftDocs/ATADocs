@@ -11,7 +11,7 @@ ms.topic: how-to
 
 Certificate templates are Active Directory objects with an ACL controlling the access to the object. Besides determining enrollment permissions, the ACL also determines permissions for editing the object itself.
 
-If, for any reason, there is an entry in the ACL that grants a built-in, unprivileged group with permissions that allow for template setting changes, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain. 
+If for any reason, there's an entry in the ACL that grants a built-in, unprivileged group with permissions that allow for template setting changes, an adversary can introduce a template misconfiguration, escalate privileges, and compromise the entire domain. 
 
 Examples of built-in, unprivileged groups are *Authenticated users*, *Domain users*, or *Everyone*. Examples of permissions that allow for template setting changes are *Full control* or *Write DACL*.
 
@@ -22,7 +22,7 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
     :::image type="content" source="media/secure-score/misconfigured-certificate-acl.png" alt-text="Screenshot of the Edit misconfigured certificate templates ACL (ESC4) recommendation." lightbox="media/secure-score/misconfigured-certificate-acl.png":::
 
-1. Research why the template ACL may be misconfigured.
+1. Research why the template ACL might be misconfigured.
 1. Remediate the issue by removing any entry that grants unprivileged group permissions that allow tampering with the template.
 1. Remove the certificate template from being published by any CA if they're not needed.
 

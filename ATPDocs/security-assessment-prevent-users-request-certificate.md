@@ -13,7 +13,7 @@ Each certificate is associated with an entity through its subject field. However
 
 The SAN field is commonly used for web services hosted on the same server, supporting the use of a single HTTPS certificate instead of separate certificates for each service. When the specific certificate is also valid for authentication, by containing an appropriate EKU, such as *Client Authentication*, it can be used to authenticate several different accounts.
 
-If a certificate template has the *Supply in the request* option turned on, the template is vulnerable, and attackers may be able to enroll a certificate that's valid for arbitrary users.
+If a certificate template has the *Supply in the request* option turned on, the template is vulnerable, and attackers might be able to enroll a certificate that's valid for arbitrary users.
 
 > [!IMPORTANT]
 > If the certificate is also permitted for authentication and there aren't any mitigation measures enforced, such as *Manager approval* or required authorized signatures, the certificate template is dangerous as it allows any unprivileged user to take over any arbitrary user, including a domain admin user.
@@ -39,7 +39,7 @@ If a certificate template has the *Supply in the request* option turned on, the 
 
     - Turn on the CA certificate *Manager approval* requirement.
 
-    - Remove the certificate template from being published by any CA. Templates that are not published cannot be requested, and therefore cannot be exploited.
+    - Remove the certificate template from being published by any CA. Templates that aren't published can't be requested, and therefore can't be exploited.
 
 Make sure to test your settings in a controlled environment before turning them on in production.
 

@@ -1,11 +1,11 @@
 ---
-title: Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2) | Microsoft Defender for Identity
-description: This article provides an overview of Microsoft Defender for Identity's overly permissive Certificate Template with privileged EKU security posture assessment report.
+title: Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) | Microsoft Defender for Identity
+description: This article provides an overview of Microsoft Defender for Identity's overly permissive certificate template with privileged EKU security posture assessment report.
 ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2)  (Preview)
+# Security assessment: Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)  (Preview)
 
 ## What is an overly permissive certificate template with privileged EKU?
 
@@ -19,7 +19,7 @@ Even though the certificate can’t be used for impersonating user authenticatio
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for overly permissive certificate templates with a privileged EKU.  For example:
 
-    :::image type="content" source="media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="media/secure-score/permissive-certificate-template.png":::
+    :::image type="content" source="media/secure-score/permissive-certificate-template.png" alt-text="Screenshot of the Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2) recommendation." lightbox="media/secure-score/permissive-certificate-template.png":::
 
 1. Research why the templates have a privileged EKU.
 1. Remediate the issue by doing the following:

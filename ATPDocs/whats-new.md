@@ -39,14 +39,14 @@ Recommended actions now include the following new security posture assessments, 
 - **Certificate templates recommended actions**:
 
    - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](security-assessment-prevent-users-request-certificate.md)
-   - [Edit overly permissive Certificate Template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](security-assessment-edit-overly-permissive-template.md)
+   - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](security-assessment-edit-overly-permissive-template.md)
    - [Misconfigured enrollment agent certificate template (ESC3)](security-assessment-edit-misconfigured-enrollment-agent.md)
    - [Edit misconfigured certificate templates ACL (ESC4)](security-assessment-edit-misconfigured-acl.md)
-   - [Edit misconfigured certificate templates owner](security-assessment-edit-misconfigured-owner.md)
+   - [Edit misconfigured certificate templates owner (ESC4)](security-assessment-edit-misconfigured-owner.md)
 
 - **Certificate authority recommended actions**:
 
-   - [Edit vulnerable Certificate Authority setting](security-assessment-edit-vulnerable-ca-setting.md)
+   - [Edit vulnerable Certificate Authority setting (ESC6)](security-assessment-edit-vulnerable-ca-setting.md)
    - [Edit misconfigured Certificate Authority ACL (ESC7)](security-assessment-edit-misconfigured-ca-acl.md)
    - [Enforce encryption for RPC certificate enrollment interface (ESC8)](security-assessment-enforce-encryption-rpc.md)
 
@@ -71,7 +71,7 @@ Defender for Identity is gradually rolling out extended data retentions on ident
 
 The identity details page **Timeline** tab, which includes activities from Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint, currently includes a minimum of 150 days and is growing. There might be some variation in data retention rates over the next few weeks.
 
-To view activities and alerts on the identity timeline within a specific time frame, select the default **30 Days** and then select **Custom range**. Filtered data from more than 30 days ago is shown for a maximum of 7 days at a time.
+To view activities and alerts on the identity timeline within a specific time frame, select the default **30 Days** and then select **Custom range**. Filtered data from more than 30 days ago is shown for a maximum of seven days at a time.
 
 For example:
 
@@ -118,7 +118,7 @@ Defender for Identity now provides the following enhancements for the learning p
 
    :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
 
-- After deploying a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days is complete, the **Remove learning period** setting is automatically turned *Off* and alert sensitivity levels are returned to their default functionality.
+- After deploying a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days are complete, the **Remove learning period** setting is automatically turned *Off,* and alert sensitivity levels are returned to their default functionality.
 
    To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
 
@@ -182,9 +182,9 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 Defender for Identity now supports the new **ADCS** sensor type for a dedicated server with Active Directory Certificate Services (AD CS) configured.
 
-You'll see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
+You see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
 
-Together with the new sensor type, Defender for Identity also now provides related AD CS alerts and Secure Score reports. To view the new alerts and Secure Score reports, make sure that the required events are being collected and logged on your server. For more information, see configure event collection [For Active Directory Certificate Services (AD CS) events](configure-windows-event-collection.md#for-active-directory-certificate-services-ad-cs-events).
+Together with the new sensor type, Defender for Identity also now provides related AD CS alerts and Secure Score reports. To view the new alerts and Secure Score reports, make sure that the required events are being collected and logged on your server. For more information, see [Configure event collection for Active Directory Certificate Services (AD CS) events](configure-windows-event-collection.md#for-active-directory-certificate-services-ad-cs-events).
 
 
 AD CS is a Windows Server role that issues and manages public key infrastructure (PKI) certificates in secure communication and authentication protocols. For more information, see [What is Active Directory Certificate Services?](/windows-server/identity/ad-cs/active-directory-certificate-services-overview)
@@ -274,7 +274,7 @@ For more information, see [Microsoft Defender for Identity reports in Microsoft 
 
 ### Advanced hunting with an enhanced IdentityInfo table
 
-- For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, as well as identities detected by the Defender for Identity sensor from your on-premises environment.
+- For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, and identities detected by the Defender for Identity sensor from your on-premises environment.
 
 For more information, see the [Microsoft 365 Defender advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
 

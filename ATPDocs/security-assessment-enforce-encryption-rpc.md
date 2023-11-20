@@ -13,11 +13,11 @@ Active Directory Certificate Services (AD CS) supports certificate enrollment us
 
 If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only accepts connections with the `RPC_C_AUTHN_LEVEL_PKT_PRIVACY` authentication level. This is the highest authentication level, and requires each packet to be signed and encrypted so as to prevent any kind of relay attack. This is similar to `SMB Signing` in the SMB protocol.
 
-If the RPC enrollment interface does not require packet privacy, it becomes vulnerable to relay attacks (ESC8). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that cannot support the required RPC authentication level, such as clients running Windows XP. 
+If the RPC enrollment interface doesn't require packet privacy, it becomes vulnerable to relay attacks (ESC8). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that can't support the required RPC authentication level, such as clients running Windows XP. 
 
 ## Prerequisites
 
-This assessment is available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ## How do I use this security assessment to improve my organizational security posture?
 
@@ -29,7 +29,7 @@ This assessment is available only to customers who've installed a sensor on an A
 
 1. Make sure to turn the `IF_ENFORCEENCRYPTICERTREQUEST` flag on to remove the vulnerability.
 
-    To turn the flag on, run:
+    To turn on the flag, run:
 
     ```cmd
     certutil -setreg CA\InterfaceFlags +IF_ENFORCEENCRYPTICERTREQUEST

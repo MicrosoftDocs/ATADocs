@@ -9,16 +9,16 @@ ms.topic: how-to
 
 ## What is a misconfigured Certificate Authority ACL?
 
-Certificate Authorities (CAs) maintain access control lists (ACLs) that outline roles and permissions for the CA. If access control is not configured correctly, any user may be allowed to interfere with the CA settings, circumventing security measures, and potentially compromise the entire domain.
+Certificate Authorities (CAs) maintain access control lists (ACLs) that outline roles and permissions for the CA. If access control isn't configured correctly, any user might be allowed to interfere with the CA settings, circumventing security measures, and potentially compromise the entire domain.
 
-The impact of a misconfigured ACL varies based on the type of permission applied. For example:
+The effect of a misconfigured ACL varies based on the type of permission applied. For example:
 
 - If an unprivileged user holds the *Manage Certificates* right, they can approve pending certificate requests, bypassing the *Manager approval* requirement. 
-- With the *Manage CA* right, the user can modify CA settings, such as adding the *User specifies SAN* flag (`EDITF_ATTRIBUTESUBJECTALTNAME2`), creating an artificial misconfiguration that may later lead to a complete domain compromise.
+- With the *Manage CA* right, the user can modify CA settings, such as adding the *User specifies SAN* flag (`EDITF_ATTRIBUTESUBJECTALTNAME2`), creating an artificial misconfiguration that might later lead to a complete domain compromise.
 
 ## Prerequisites
 
-This assessment is available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ## How do I use this security assessment to improve my organizational security posture?
 

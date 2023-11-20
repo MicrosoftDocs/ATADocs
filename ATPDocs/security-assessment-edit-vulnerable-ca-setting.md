@@ -17,11 +17,11 @@ Unprivileged users that can specify the users in the SAN settings can lead to im
 
 If the AD CS `editflags` > `EDITF_ATTRIBUTESUBJECTALTNAME2` flag is turned on, each user can specify the SAN settings for their certificate request. This, in turn affects all certificate templates, whether they have the `Supply in the request` option turned on or not.
 
-If there is a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on, and the template is valid for authentication, an attacker can enroll a certificate that can impersonate any arbitrary account.
+If there's a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on, and the template is valid for authentication, an attacker can enroll a certificate that can impersonate any arbitrary account.
 
 ## Prerequisites
 
-This assessment is available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
 ## How do I use this security assessment to improve my organizational security posture?
 
@@ -31,7 +31,7 @@ This assessment is available only to customers who've installed a sensor on an A
 
 1. Research why the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on.
 
-1. Turn the setting off by running:
+1. Turn off the setting by running:
 
     ```cmd
     certutil -setreg policy\EditFlags -EDITF_ATTRIBUTESUBJECTALTNAME2

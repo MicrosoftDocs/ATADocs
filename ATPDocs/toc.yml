@@ -138,6 +138,7 @@ items:
     items:
     - name: Overview
       href: security-assessment.md
+      displayName: security posture, security assessment
     - name: Admin SDHolder permissions
       href: security-assessment-remove-suspicious-access-rights.md
     - name: DCSync permissions
@@ -164,6 +165,8 @@ items:
       href: security-assessment-edit-misconfigured-owner.md
     - name: Misconfigured enrollment agent certificate template
       href: security-assessment-edit-misconfigured-enrollment-agent.md
+    - name: Overly permissive certificate template with privileged EKU
+      href: security-assessment-edit-overly-permissive-template.md
     - name: Passwords older than 180 days
       href: security-assessment-old-passwords.md
     - name: Prevent requests for certificates valid for arbitrary users

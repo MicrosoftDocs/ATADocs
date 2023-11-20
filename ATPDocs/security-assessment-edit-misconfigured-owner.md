@@ -22,7 +22,7 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
     :::image type="content" source="media/secure-score/misconfigured-owner.png" alt-text="Screenshot of the Edit misconfigured certificate templates owner (ESC4) recommendation." lightbox="media/secure-score/misconfigured-owner.png":::
 
-1. Research why the template owner may be misconfigured.
+1. Research why the template owner might be misconfigured.
 1. Remediate the issue by changing the owner to a privileged and monitored user.
 
 Make sure to test your settings in a controlled environment before turning them on in production.
