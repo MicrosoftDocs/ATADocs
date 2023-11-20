@@ -49,7 +49,12 @@ items:
     - name: Roles and permissions
       href: deploy/role-groups.md
     - name: Configure a Directory Service account
-      href: deploy/directory-service-accounts.md
+      items:
+      - name: Overview
+        href: deploy/directory-service-accounts.md
+        displayName: Directory Service Account, DSA
+      - name: Configure a DSA with a gMSA
+        displayName: deploy/create-directory-service-account-gmsa.md
     - name: Configure remote calls to SAM
       href: deploy/remote-calls-sam.md
   - name: Extra deployment scenarios
