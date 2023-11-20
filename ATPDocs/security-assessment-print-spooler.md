@@ -34,7 +34,8 @@ While this security assessment focuses on domain controllers, any server is pote
 1. Take appropriate action on the at-risk domain controllers and actively remove the Print spooler service either manually, through GPO or other types of remote commands.
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 ## Remediation
 

@@ -26,12 +26,15 @@ Cryptography relies on ciphers to encrypt our data. For example, RC4 (Rivest Cip
 
 ## Remediation
 
-> [!NOTE]
-> Make sure to test the following settings in a controlled environment before enabling them in production.
+Make sure to test the following settings in a controlled environment before enabling them in production.
 
 To remediate weak cipher usage, modify the msDS-SupportedEncryptionTypes AD attribute on the applicable devices and accounts, and remove the weak ciphers based on [these bit flags](/openspecs/windows_protocols/ms-kile/6cfc7b50-11ed-4b4d-846d-6f08f0812919).
 
 After ensuring that devices and accounts are no longer using the weak ciphers, then modify the domain controller security policy to drop the weak ciphers from the [Network security: Configure encryption types allowed for Kerberos](/windows/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos) setting.
+
+> [!NOTE]
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 ## Next steps
 

@@ -61,6 +61,8 @@ To access identity security posture assessments:
 
     [![Select the assessment.](media/select-assessment.png)](media/select-assessment.png#lightbox)
 
+[!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
+
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)

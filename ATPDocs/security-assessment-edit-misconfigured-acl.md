@@ -28,11 +28,8 @@ Examples of built-in, unprivileged groups are *Authenticated users*, *Domain use
 
 Make sure to test your settings in a controlled environment before turning them on in production.
 
-> [!NOTE]
-> While this assessment is updated in near real time, scores and statuses are updated every 24 hours.  While the list of affected entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
->
-> The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
->
+[!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
+
 
 ## Next steps
 

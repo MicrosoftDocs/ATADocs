@@ -29,9 +29,7 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 To achieve the maximum score, remediate all exposed entities.
 
-> [!NOTE]
-> This assessment is updated in near real time.
-> The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
+[!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
 
 
 ## Next steps
