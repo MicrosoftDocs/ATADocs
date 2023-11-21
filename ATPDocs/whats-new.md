@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## November 2023
 
-### Defender for Identity release 2.220
+### Defender for Identity release 2.221
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
