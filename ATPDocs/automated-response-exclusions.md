@@ -12,7 +12,7 @@ ms.topic: how-to
 
 This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) automated response exclusions in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
-Microsoft Defender for Identity enables the exclusion of Active Directory accounts from automated response actions, used in [Automatic Attack Disruption](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/what-s-new-in-xdr-at-microsoft-ignite/ba-p/3648872).
+Microsoft Defender for Identity enables the exclusion of Active Directory accounts from automated response actions, used in [Automatic Attack Disruption](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/what-s-new-in-xdr-at-microsoft-ignite/ba-p/3648872). Automated response exclusions do not apply to responses triggered by Custom Detections.
 
 For example, an incident involving Attack Disruption, where response actions are taken automatically, wouldn't disable a specified excluded account. This could be used, for example, to exclude sensitive accounts from automated actions.
 
