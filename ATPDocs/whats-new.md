@@ -95,10 +95,13 @@ Defender for Identity now provides the following enhancements for the learning p
 
    To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
 
+If you'd previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
+
 For more information, see [Advanced settings](advanced-settings.md).
 
 > [!NOTE]
-> If you'd previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
+> The **Advanced Settings** page originally listed the *Account enumeration reconnaissance* alert as configurable for sensitivity settings. This alert was removed from the **Advanced Settings** list in November 2023 and is replaced by the *Security principal reconnaissance (LDAP)* alert.
+>
 
 ### Defender for Identity release 2.215
 
