@@ -35,7 +35,7 @@ For more information, see [Virtual network service tags](/azure/virtual-network/
 
 ## Test connectivity
 
-The Defender for Identity sensor requires network connectivity to the Defender for Identity service running in Azure.<!--running in azure?--> Most organizations control access to the internet via firewall or proxies.  
+The Defender for Identity sensor requires network connectivity to the Defender for Identity service running in Azure. Most organizations control access to the internet via firewall or proxies.  
 
 When using a proxy, you can allow access port 443 via a single URL. For more information, see [Required ports](prerequisites.md#required-ports).
 

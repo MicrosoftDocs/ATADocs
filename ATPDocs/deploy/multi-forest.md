@@ -7,6 +7,8 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity multi-forest support
 
+<!--trim down or disperse into other articles-->
+
 Microsoft Defender for Identity supports organizations with multiple Active Directory forests, giving you the ability to easily monitor activity and profile users across forests.
 
 Enterprise organizations typically have several Active Directory forests - often used for different purposes, including legacy infrastructure from corporate mergers and acquisitions, geographical distribution, and security boundaries (red-forests). <!--does this need a hypen?-->

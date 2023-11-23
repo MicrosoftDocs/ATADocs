@@ -76,7 +76,7 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
 
     - **Microsoft Visual C++ 2013 Redistributable**
 
-<!--should we remove this?
+<!--should we remove this? NO WE SHOULD KEEP 2012 content in.
     - **KB 3047154** (for Windows Server 2012 R2 only)
 
         > [!IMPORTANT]

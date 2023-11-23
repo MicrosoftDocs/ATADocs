@@ -19,7 +19,7 @@ This article describes the steps required when installing Defender for Identity 
 
 Prerequisites for installing Defender for Identity sensors on AD FS or AD CS servers are the same as for installing sensors on domain controllers. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-## Configure Verbose logging for AD FS event logs
+## Configure Verbose logging for AD FS events
 
 Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**:
 
@@ -33,7 +33,73 @@ For more information, see:
 - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
 - [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
 
-## Configure event collection for AD FS and AD CS logs
+## Configure read permissions for the AD FS database
+
+For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (*db_datareader*) permissions for the relevant [Directory Services Account](directory-service-accounts.md) configured.
+
+If you have more than one AD FS server, make sure to grant this permission across all of them since database permissions are not replicated across servers.
+
+Configure the SQL server to allow *Directory service* account with the following permissions to the **AdfsConfiguration** database:
+
+- *connect*
+- *log in*
+- *read*
+- *select*
+
+> [!NOTE]
+> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](directory-service-accounts.md#grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password. 
+
+### Grant access to the AD FS database
+
+Grant access to the database using SQL Server Management Studio, TSQL, or PowerShell.
+
+For example, the commands listed below might be helpful if you're using the Windows Internal Database (WID) or an external SQL server.
+
+In these sample codes:
+
+- **[DOMAIN1\mdiSvc01]** is the directory services user of the workspace
+- **AdfsConfigurationV4** is an example of an AD FS database name, and may vary
+- **server=\.\pipe\MICROSOFT##WID\tsql\query** - is the connection string to the database if you are using WID
+
+> [!TIP]
+> If you don't know your connection string, follow the steps in the [Windows server documentation](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql#to-acquire-the-sql-connection-string).
+>
+
+**To grant the sensor access to the AD FS database using TSQL**:
+
+```tsql
+USE [master]
+CREATE LOGIN [DOMAIN1\mdiSvc01] FROM WINDOWS WITH DEFAULT_DATABASE=[master]
+USE [AdfsConfigurationV4]
+CREATE USER [DOMAIN1\mdiSvc01] FOR LOGIN [DOMAIN1\mdiSvc01]
+ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\mdiSvc01]
+GRANT CONNECT TO [DOMAIN1\mdiSvc01]
+GRANT SELECT TO [DOMAIN1\mdiSvc01]
+GO
+```
+
+**To grant the sensor access to the AD FS database using PowerShell**:
+
+```powershell
+$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\querydatabase=AdfsConfigurationV4;trusted_connection=true;'
+$SQLConnection= New-Object System.Data.SQLClient.SQLConnection($ConnectionString)
+$SQLConnection.Open()
+$SQLCommand = $SQLConnection.CreateCommand()
+$SQLCommand.CommandText = @"
+USE [master]; 
+CREATE LOGIN [DOMAIN1\mdiSvc01] FROM WINDOWS WITH DEFAULT_DATABASE=[master];
+USE [AdfsConfigurationV4]; 
+CREATE USER [DOMAIN1\mdiSvc01] FOR LOGIN [DOMAIN1\mdiSvc01]; 
+ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\mdiSvc01]; 
+GRANT CONNECT TO [DOMAIN1\mdiSvc01]; 
+GRANT SELECT TO [DOMAIN1\mdiSvc01];
+"@
+$SqlDataReader = $SQLCommand.ExecuteReader()
+$SQLConnection.Close()
+```
+
+
+## Configure event collection for AD FS / AD CS servers
 
 If you're working with AD FS / AD CS servers, make sure that you've configured auditing as needed. For more information, see:
 
@@ -47,75 +113,7 @@ If you're working with AD FS / AD CS servers, make sure that you've configured a
     - [Supported Active Directory Certificate Services (AD CS) events](event-collection-overview.md#supported-active-directory-certificate-services-ad-cs-events)
     - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
 
-
-## Configure read permissions for the AD FS database
-
-For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (*db_datareader*) permissions for the relevant [Directory Services Account](directory-service-accounts.md) configured.
-
-If you have more than one AD FS server, make sure to grant this permission across all of them since database permissions are not replicated across servers.
-
-> [!NOTE]
-> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](directory-service-accounts.md#grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password. 
-
-### Grant access to the AD FS database
-
-Grant access to the database using SQL Server Management Studio, TSQL, or PowerShell.
-
-For example, the commands listed below might be helpful if you're using the Windows Internal Database (WID) or an external SQL server.
-
-In these sample codes:
-
-- **[DOMAIN1\triservice]** is the directory services user of the workspace
-- **AdfsConfigurationV4** is an example of an AD FS database name, and may vary
-- **server=\.\pipe\MICROSOFT##WID\tsql\query** - is the connection string to the database if you are using WID
-
-> [!TIP]
-> If you don't know your connection string, follow the steps in the [Windows server documentation](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql#to-acquire-the-sql-connection-string).
->
-
-**To grant the sensor access to the AD FS database using TSQL**:
-
-```tsql
-USE [master]
-CREATE LOGIN [DOMAIN1\triservice] FROM WINDOWS WITH DEFAULT_DATABASE=[master]
-USE [AdfsConfigurationV4]
-CREATE USER [DOMAIN1\triservice] FOR LOGIN [DOMAIN1\triservice]
-ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\triservice]
-GRANT CONNECT TO [DOMAIN1\triservice]
-GRANT SELECT TO [DOMAIN1\triservice]
-GO
-```
-
-**To grant the sensor access to the AD FS database using PowerShell**:
-
-```powershell
-$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\querydatabase=AdfsConfigurationV4;trusted_connection=true;'
-$SQLConnection= New-Object System.Data.SQLClient.SQLConnection($ConnectionString)
-$SQLConnection.Open()
-$SQLCommand = $SQLConnection.CreateCommand()
-$SQLCommand.CommandText = @"
-USE [master]; 
-CREATE LOGIN [DOMAIN1\triservice] FROM WINDOWS WITH DEFAULT_DATABASE=[master];
-USE [AdfsConfigurationV4]; 
-CREATE USER [DOMAIN1\triservice] FOR LOGIN [DOMAIN1\triservice]; 
-ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\triservice]; 
-GRANT CONNECT TO [DOMAIN1\triservice]; 
-GRANT SELECT TO [DOMAIN1\triservice];
-"@
-$SqlDataReader = $SQLCommand.ExecuteReader()
-$SQLConnection.Close()
-```
-
-## SQL server permissions for AD FS servers
-
-For sensor installations on AD FS servers, configure the SQL server to allow *Directory service* account with the following permissions to the **AdfsConfiguration** database:
-
-- *connect*
-- *log in*
-- *read*
-- *select*
-
-## Validate successful deployment on an AD FS / AD CS server
+## Validate successful deployment on AD FS / AD CS servers
 
 To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server:
 

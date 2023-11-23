@@ -61,10 +61,10 @@ items:
     items:
     - name: Install on AD FS / AD CS servers
       href: deploy/active-directory-federation-services.md
-    - name: Configure action accounts
-      href: deploy/manage-action-accounts.md
     - name: Deploy for multiple Active Directory forests
       href: deploy/multi-forest.md
+    - name: Configure action accounts
+      href: deploy/manage-action-accounts.md
     - name: Configure a standalone sensor
       items:
       - name: Configure port mirroring

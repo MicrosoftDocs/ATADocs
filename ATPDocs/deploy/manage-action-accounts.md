@@ -9,9 +9,14 @@ ms.topic: how-to
 
 Defender for Identity allows you to take [remediation actions](../remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
 
-By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the `LocalSystem` account of the domain controller and perform the actions. However, you can change this default behavior by setting up a gMSA account and scope the permissions as you need. For example:
+By default, the Microsoft Defender for Identity sensor impersonates the `LocalSystem` account of the domain controller and performs the actions, including [attack disrupting scenarios from Microsoft 365 Defender](/microsoft-365/security/defender/automatic-attack-disruption?view=o365-worldwide).
+
+If you need to change this behavior, set up a dedicated gMSA and scope the permissions that you need. For example:
 
 :::image type="content" source="../media/management-accounts.png" alt-text="Screenshot of the Manage action accounts tab." lightbox="../media/management-accounts.png":::
+
+> [!NOTE]
+> Using a dedicated gMSA as an action account is optional. We recommend that you use the default settings for the `LocalSystem` account.
 
 <!--do we need new screenshots here?-->
 
@@ -20,6 +25,8 @@ By default, the Microsoft Defender for Identity sensor installed on a domain con
 We recommend that you avoid using the same gMSA account you configured for Defender for Identity managed actions on servers other than domain controllers. If you use the same account and the server is compromised, an attacker could retrieve the password for the account and gain the ability to change passwords and disable accounts.
 
 We also recommend that you avoid using the same account as both the Directory Service account and the Manage Action account. This is because the Directory Service account requires only read-only permissions to Active Directory, and the Manage Action accounts needs write permissions on user accounts.
+
+If you have multiple forests, your gMSA managed action account must be trusted in all of your forests, or create a separate one for each forest. For more information, see [Microsoft Defender for Identity multi-forest support](multi-forest.md).
 
 ## Create and configure a specific action account
 
