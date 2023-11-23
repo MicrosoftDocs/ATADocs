@@ -116,7 +116,6 @@ After the proxy has been configured to allow the sensor access to the Defender f
 1. If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
 
     :::image type="content" source="media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
-    ![Certificate path.](media/certificate-path.png)
 
 ## Next steps
 
