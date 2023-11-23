@@ -100,7 +100,7 @@ If you'd previously updated the **Remove learning period** setting, your setting
 For more information, see [Advanced settings](advanced-settings.md).
 
 > [!NOTE]
-> The **Advanced Settings** page originally listed the *Account enumeration reconnaissance* alert as configurable for sensitivity settings. This alert was removed from the **Advanced Settings** list in November 2023 and is replaced by the *Security principal reconnaissance (LDAP)* alert.
+> The **Advanced Settings** page originally listed the *Account enumeration reconnaissance* alert under the **Remove learning period** options as configurable for sensitivity settings. This alert was removed from the list and is replaced by the *Security principal reconnaissance (LDAP)* alert. This user interface bug was fixed in November 2023.
 >
 
 ### Defender for Identity release 2.215
