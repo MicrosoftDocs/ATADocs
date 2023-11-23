@@ -109,14 +109,14 @@ After the proxy has been configured to allow the sensor access to the Defender f
 
 1. **Result**: You should get an *Ok* message displayed (http status 200), which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result. Note that for some older workspaces, the message returned could be *Error 503 The service is unavailable*, this is a temporary state that still indicates success.
 
-<!-- todo: insert browser or pwsh screenshot -->
+    :::image type="content" source="media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
 
 1. If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
 
 1. If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
 
+    :::image type="content" source="media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
     ![Certificate path.](media/certificate-path.png)
-   <!-- todo: replace or crop the certificate screenshot to include only the certification path -->
 
 ## Next steps
 
