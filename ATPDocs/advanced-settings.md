@@ -45,11 +45,6 @@ If the **Remove learning period** setting is still *On* at the end of 30 days, D
     > We recommend changing alert sensitivity only after careful consideration. For example, if you have NAT or VPN, we recommend that you do not set relevant detections to *High*, including *Suspected DCSync attack (replication of directory services)* and  *Suspected identity theft* detections.
     >
 
-For example:
-
-:::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
-
-
 ## Supported alert types for learning periods
 
 The following table lists the alert types that support learning periods and describes the effects of *Medium* and *High* sensitivities.  We recommend changing alert sensitivity only after careful consideration.
