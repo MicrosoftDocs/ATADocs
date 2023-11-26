@@ -88,5 +88,3 @@ Your action account is listed on the **Manage action accounts** page.
 ## Related content
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
-
-<!--do we have a next steps?-->

@@ -48,8 +48,6 @@ For more information, see [Configure auditing for Active Directory Certificate S
 
 The following general Windows events are required for all Defender for Identity sensors: 
 
-<!--not all of these are for all sensors - need look into it-->
-
 - 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
 - 4728 - Member Added to Global Security Group
