@@ -80,7 +80,6 @@ The following table lists the mapping between alert names, their corresponding u
 
 ## See Also
 
-
 - [Working with security alerts](/defender-for-identity/manage-security-alerts)
 - [Understanding security alerts](understanding-security-alerts.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
