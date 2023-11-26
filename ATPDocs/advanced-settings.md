@@ -1,7 +1,7 @@
 ---
 title: Advanced settings in Microsoft 365 Defender
 description: Learn how to set Microsoft Defender for Identity advanced settings in Microsoft 365 Defender.
-ms.date: 10/22/2023
+ms.date: 11/26/2023
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to know how and when to use an alert learning mode to reduce the number of false positives.
 ---
@@ -45,11 +45,6 @@ If the **Remove learning period** setting is still *On* at the end of 30 days, D
     > We recommend changing alert sensitivity only after careful consideration. For example, if you have NAT or VPN, we recommend that you do not set relevant detections to *High*, including *Suspected DCSync attack (replication of directory services)* and  *Suspected identity theft* detections.
     >
 
-For example:
-
-:::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
-
-
 ## Supported alert types for learning periods
 
 The following table lists the alert types that support learning periods and describes the effects of *Medium* and *High* sensitivities.  We recommend changing alert sensitivity only after careful consideration.
@@ -66,7 +61,6 @@ The following table lists the alert types that support learning periods and desc
 |**[Suspected DCSync attack (replication of directory services)](credential-access-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)**     |   On *Medium* mode, this detection triggers immediately.         | On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.        |
 |**[Suspected Golden Ticket usage (forged authorization data)](credential-access-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013)**     |       *Medium* mode not supported for this detection.      |     On *High* mode, this detection triggers immediately.    |
 |**[Suspected Golden Ticket usage (encryption downgrade)](persistence-privilege-escalation-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)**     |  *Medium* mode not supported for this detection.           |    On *High* mode, this detection triggers an alert based on lower confidence resolution of a device.     |
-|**Suspected identity theft (pass-the-certificate)**     |     On *Medium* mode, this detection triggers immediately.         |  On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.       |
 |**[Suspected identity theft (pass-the-ticket)](lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)**     |  On *Medium* mode, this detection triggers immediately.           |    On *High* mode, this detection triggers immediately and avoids IP filtering like NAT or VPN.      |
 |**[User and Group membership reconnaissance (SAMR)](reconnaissance-discovery-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)**     |     On *Medium* mode, this detection triggers immediately.        |   On *High* mode, this detection triggers immediately and includes a lower alert threshold.  |
 
