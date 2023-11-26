@@ -41,8 +41,6 @@ Defender for Identity supports the following DSA options:
 |**Group Managed Service Account gMSA** (Recommended)     |  Provides a more secure deployment and password management. Active Directory manages the creation and rotation of the account's password, just like a computer account's password, and you can control how often the account's password is changed.       |    For more information, see [Configure a Directory Service Account for Defender for Identity with a gMSA](create-directory-service-account-gmsa.md).     |
 |**Regular user account**     |   Easy to use when getting started, and simpler to configure read permissions between trusted forests, but requires extra overhead for password management. <br><br>A regular user account is less secure, as it requires you to create and manage passwords, and can lead to downtime if the password expires and isn't updated for both the user and the DSA.   |   Create a new account in Active Directory to use as the DSA with read permissions to all the objects, including permissions to the *DeletedObjects* container. For more information, see [Grant required DSA permissions](#grant-required-dsa-permissions).   |
 
-<!--last link here - see if we can reorganize this a bit.-->
-
 ## DSA entry usage
 
 This section describes how DSA entries are used, and how the sensor selects a DSA entry in any given scenario. Sensor attempts differ, depending on the type of DSA entry:

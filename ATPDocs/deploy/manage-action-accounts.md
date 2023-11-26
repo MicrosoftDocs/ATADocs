@@ -18,8 +18,6 @@ If you need to change this behavior, set up a dedicated gMSA and scope the permi
 > [!NOTE]
 > Using a dedicated gMSA as an action account is optional. We recommend that you use the default settings for the `LocalSystem` account.
 
-<!--do we need new screenshots here?-->
-
 ## Best practices for action accounts
 
 We recommend that you avoid using the same gMSA account you configured for Defender for Identity managed actions on servers other than domain controllers. If you use the same account and the server is compromised, an attacker could retrieve the password for the account and gain the ability to change passwords and disable accounts.
@@ -74,7 +72,6 @@ If you have multiple forests, your gMSA managed action account must be trusted i
 
     1. Select **OK**.
 
-<!--do we have an end result?-->
 ## Add the gMSA account in the Microsoft 365 Defender portal
 
 1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com) and select **Settings** -> **Identities** > **Microsoft Defender for Identity** > **Manage action accounts** > **+Create new account**. 
