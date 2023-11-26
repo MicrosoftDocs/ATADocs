@@ -1,7 +1,7 @@
 ---
 title: Configure endpoint proxy and Internet connectivity settings
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 04/16/2023
+ms.date: 11/21/2023
 ms.topic: how-to
 ---
 
@@ -102,20 +102,20 @@ After the proxy has been configured to allow the sensor access to the Defender f
     >[!NOTE]
     >If the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
 
-1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com.` Replace `<your_workspace_name>` with the name of your Defender for Identity workspace.
+1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com/tri/sensor/api/ping.` Replace `<your_workspace_name>` with the name of your Defender for Identity workspace.
 
     >[!IMPORTANT]
     >You must specify HTTPS, not HTTP, to properly test connectivity.
 
-1. **Result**: You should get an *Error 503 The service is unavailable*, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint.  This is the desired result.
+1. **Result**: You should get an *Ok* message displayed (http status 200), which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result. Note that for some older workspaces, the message returned could be *Error 503 The service is unavailable*, this is a temporary state that still indicates success.
 
-    ![Error 503 result.](media/error-503.png)
+    :::image type="content" source="media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
 
-1. If you don't get *Error 503 The service is unavailable*, then you may have a problem with your proxy configuration. Check your network and proxy settings.
+1. If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
 
 1. If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
 
-    ![Certificate path.](media/certificate-path.png)
+    :::image type="content" source="media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
 
 ## Next steps
 
