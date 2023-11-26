@@ -7,8 +7,6 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity multi-forest support
 
-<!--trim down or disperse into other articles-->
-
 Microsoft Defender for Identity supports organizations with multiple Active Directory forests, giving you the ability to easily monitor activity and profile users across forests.
 
 Enterprise organizations typically have several Active Directory forests - often used for different purposes, including legacy infrastructure from corporate mergers and acquisitions, geographical distribution, and security boundaries (red forests).
@@ -19,34 +17,9 @@ Securing your multiple Active Directory forests with Defender for Identity provi
 - **Gain improved detection** and reduce false positives with advanced Active Directory integration and account resolution
 - **Gain greater control and easier deployment**, with an improved set of health issues and reporting for cross-org coverage when your domain controllers are all monitored from a single Defender for Identity server
 
-## Prerequisites
-
-Defender for Identity requires the following to support multiple Active Directory forests:
-
-- **A Directory Service account**:
-
-  - When there is a trust between the forests, the Directory Service account must be trusted in all the other forests.
-
-  - The Directory Service account you configure for each forest must have at least read-only permission to perform LDAP queries on the domain controllers.
-
-  If Defender for Identity standalone sensors are installed on [standalone machines](prerequisites-standalone.md), rather than directly on the domain controllers, the machines must be allowed to communicate with all of remote forest domain controllers using LDAP.
-
-- **Required ports**: In order for Defender for Identity to communicate with the Defender for Identity sensors, including standalone sensors, make sure the following ports are opened on any machine where a Defender for Identity sensor is installed: <!--how are these ports different than the ones in the prereqs?-->
-
-  |Protocol|Transport|Port|To/From|Direction|
-  |----|----|----|----|----|
-  |**Internet ports**||||
-  |**SSL** (*.atp.azure.com)|TCP|443|Defender for Identity cloud service|Outbound|
-  |**Internal ports**||||
-  |**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
-  |**Secure LDAP** (LDAPS)|TCP|636|Domain controllers|Outbound|
-  |**LDAP to Global Catalog**|TCP|3268|Domain controllers|Outbound|
-  |**LDAPS to Global Catalog**|TCP|3269|Domain controllers|Outbound|
-
 > [!NOTE]
 > Each Defender for Identity sensor can only report to a single Defender for Identity workspace.
 >
-
 
 ## Detection activity across multiple forests
 
@@ -82,6 +55,6 @@ You may see ad-hoc traffic when the Defender for Identity sensor detects cross f
 
 ## Related content
 
-- [Microsoft Defender for Identity prerequisites](prerequisites.md)
 - [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+- [Microsoft Defender for Identity prerequisites](prerequisites.md)
 - [Directory Service Accounts for Microsoft Defender for Identity](directory-service-accounts.md)

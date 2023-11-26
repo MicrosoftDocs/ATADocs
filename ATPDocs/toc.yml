@@ -15,6 +15,8 @@ items:
     href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
+  - name: Deploy for multiple Active Directory forests
+    href: deploy/multi-forest.md
 - name: Deploy
   expanded: true
   items:
@@ -61,8 +63,6 @@ items:
     items:
     - name: Install on AD FS / AD CS servers
       href: deploy/active-directory-federation-services.md
-    - name: Deploy for multiple Active Directory forests
-      href: deploy/multi-forest.md
     - name: Configure action accounts
       href: deploy/manage-action-accounts.md
     - name: Configure a standalone sensor

@@ -13,12 +13,6 @@ Defender for Identity also supports built-in security groups to define user role
 
 This article describes Defender for Identities access management and role authorization, helping you segregate duties within your security team, and granting only the amount of access that users need to do their jobs.
 
-<!--from gershon - we need to tell customers to enable rbac for MDI to use the default roles - import the roles and then change them as needed. use azure ad that we built, or use the groups that they built. work with Gershon and Or on this-->
-<!--do we really need this?>
-[!INCLUDE [gdpr-intro-sentence](../../includes/gdpr-intro-sentence.md)]
--->
-
-<!--how do we update this table for least privileged permissions?-->
 ## Permissions required for Defender for Identity in Microsoft 365 Defender
 
 The following table lists the permissions required to access [Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), using either built-in Microsoft Entra ID role groups or Microsoft 365's RBAC.
@@ -40,8 +34,6 @@ Defender for Identity uses Microsoft Entra security groups as a basis for role g
 - Azure ATP *(Workspace name)* Viewers
 
 The following table describes the type of access in Defender for Identity available for each role:
-
-<!--do we need sign in listed here? should be the same as for all m365d-->
 
 |Activity |Azure ATP *(Workspace name)* Administrators|Azure ATP *(Workspace name)* Users|Azure ATP *(Workspace name)* Viewers|
 |----|----|----|----|

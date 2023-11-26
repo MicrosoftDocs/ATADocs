@@ -13,7 +13,6 @@ Defender for Identity sensors can be installed on the following operating system
 
 For all operating systems:
 
-- Both servers with desktop experience and server cores are supported. 
+- Both servers with desktop experience and server cores are supported.
 - Nano servers are not supported.
 - Installations are supported for domain controllers, AD FS, and AD CS servers.
-

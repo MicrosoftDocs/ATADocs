@@ -64,9 +64,10 @@ After you've prepared your system, use the following steps to deploy Defender fo
 
 The following procedures can be done at any point in the deployment process:
 
-1. [Configure Windows Event collection](configure-windows-event-collection.md). For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md).
-1. [Enable and configure unified role-based access control (RBAC)](role-groups.md) for Defender for Identity.
-1. [Configure remote calls to SAM](remote-calls-sam.md) as needed.
+1. **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+1. [**Enable and configure unified role-based access control (RBAC)**](role-groups.md) for Defender for Identity.
+1. [**Configure a Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
+1. [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
 
 ## Extra deployment scenarios
@@ -75,13 +76,8 @@ You may have extra or different steps in your deployment if you're working with 
 
 - [**Configure a sensor for installation on AD FS or AD CS servers**](active-directory-federation-services.md).
 
-- [**Configure Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). For example, use a DSA when connecting to a domain controller at startup, querying the domain controller, requesting member lists for local administrator groups, and accessing the *DeletedObjects* container.
-
 - [**Configure a managed action account**](manage-action-accounts.md) to take actions on behalf of Defender for Identity instead of the default LocalSystem account
 
-- [**Understanding support for multiple Active Directory forests**](multi-forest.md)
-
-- [**Migrate from Advanced Threat Analytics (ATA)**](migrate-from-ata-overview.md)
 
 ## Next step
 

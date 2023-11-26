@@ -19,15 +19,13 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 ## Required permissions
 
-To create your Defender for Identity workspace, you need:
-
-- **A Microsoft Entra ID tenant** with at least one Security administrator.
+- To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with at least one Security administrator.
 
     You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
 
     For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
-- **At least one Directory Service account** with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
+- We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
 ## Connectivity requirements
 
@@ -81,7 +79,18 @@ Sensors running on these operating systems will continue to report to Defender f
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
 |**RDP**         <br><br>Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)   |TCP      |3389 |Defender for Identity sensor|All devices on network|
 
-Additional ports are required to support multiple Active Directory forests. For more information, see [Prerequisites for multiple forests](multi-forest.md#prerequisites).
+If you're working with [multiple forests](multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
+
+|Protocol|Transport|Port|To/From|Direction|
+|----|----|----|----|----|
+|**Internet ports**||||
+|**SSL** (*.atp.azure.com)|TCP|443|Defender for Identity cloud service|Outbound|
+|**Internal ports**||||
+|**LDAP**|TCP and UDP|389|Domain controllers|Outbound|
+|**Secure LDAP** (LDAPS)|TCP|636|Domain controllers|Outbound|
+|**LDAP to Global Catalog**|TCP|3268|Domain controllers|Outbound|
+|**LDAPS to Global Catalog**|TCP|3269|Domain controllers|Outbound|
+
 
 ### Dynamic memory requirements
 

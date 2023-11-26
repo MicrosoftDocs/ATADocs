@@ -1,7 +1,7 @@
 ---
 title: Standalone sensor prerequisites | Microsoft Defender for Identity
 description: This article describes the prerequisites required for a successful Microsoft Defender for Identity deployment using a standalone sensor.
-ms.date: 09/10/2023
+ms.date: 11/26/2023
 ms.topic: conceptual
 #CustomerIntent: As a Defender for Identity admin, I want to understand extra prerequisites for deploying a Defender for Identity standalone sensor so that I can be prepared for a successful deployment.
 ---
@@ -24,6 +24,8 @@ Standalone sensors differ from Defender for Identity sensor [prerequisites](prer
 - Standalone sensors can be also be installed on servers that are in a workgroup.
 
 - Standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
+
+- If you're working with [multiple forests](multi-forest.md), your standalone sensor machines must be allowed to communicate with all remote forest domain controllers using LDAP.
 
 For information on using virtual machines with the Defender for Identity standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 

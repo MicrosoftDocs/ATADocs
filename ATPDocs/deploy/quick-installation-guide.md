@@ -40,28 +40,19 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 ### Required permissions
 
-- **To create your Defender for Identity workspace**, you'll need a Microsoft Entra tenant with at least one [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
+To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with at least one Security administrator.
 
-- **To access the Identity section on the Microsoft 365 Defender portal and be able to create the workspace**, you need to be at least a [Security administrator on the tenant](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles).
+You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
 
-For more information, see [What are Defender for Identity roles and permissions?](role-groups.md).
+For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
-<!--is this correct permissions? doesn't quite make sense-->
 ### Minimum system requirements
 
 This section describes the operating systems supported for Defender for Identity sensor installations. Installing a Defender for Identity sensor requires a minimum of 2 cores, 6 GB of RAM, and 6 GB of disk space installed on your domain controller.
 
 When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times. For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
 
-<!--each row here is identical. can't we turn it into prose?-->
 [!INCLUDE [server-requirements](../includes/server-requirements.md)]
-
-<!--removed part about legacy operating systems, don't need it in a quickstart-->
-<!--
-### Performance recommendations
-
-For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
--->
 
 ### Check network connectivity
 
