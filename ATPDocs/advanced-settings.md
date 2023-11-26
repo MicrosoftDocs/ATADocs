@@ -18,7 +18,7 @@ To access the **Advanced settings** page in Microsoft 365 Defender, you need acc
 
 Some Defender for Identity alerts wait for a *learning period* before alerts are triggered. During this learning period, Defender for Identity builds a profile of patterns to use when distinguishing between legitimate and suspicious activities.
 
-By default, after deploying your first sensor, new Defender for Identity workspaces are configured with a **Remove learning period** set to *On*.
+By default, after deploying your first sensor, new Defender for Identity workspaces are configured with a **Remove learning period** option set to *On*.
 
 Setting the **Remove learning period** option to *On* causes Defender for Identity to trigger affected alerts even while your baseline is still being built. The default setting for new workspaces is designed to help you start evaluating Defender for Identity as soon and as thoroughly as possible.
 
