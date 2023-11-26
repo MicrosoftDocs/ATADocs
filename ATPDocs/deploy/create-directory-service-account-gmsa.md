@@ -7,8 +7,6 @@ ms.topic: how-to
 
 # Configure a Directory Service Account for Defender for Identity with a gMSA
 
-<!--do we need new screenshots here?-->
-
 This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for use as a Defender for Identity DSA entry. 
 
 For more information, see [Directory Service Accounts for Microsoft Defender for Identity](directory-service-accounts.md).

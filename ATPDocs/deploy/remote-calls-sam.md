@@ -15,7 +15,6 @@ This article describes how to configure required permissions for using the SAM-R
 > While this procedure is optional, we recommend that you configure a Directory Service account and configure SAM-R for lateral movement path detection to fully secure your environment with Defender for Identity.
 >
 
-<!--needs new screenshots <!--not doing a detailed review here-->
 ## Configure SAM-R required permissions
 
 To ensure that Windows clients and servers allow your Defender for Identity Directory Service account to perform SAM-R, you must modify the **Group Policy** and add the Defender for Identity Directory Service account, in addition to the configured accounts listed in the **Network access** policy. Make sure to apply group policies to all computers **except domain controllers**.
