@@ -49,7 +49,9 @@ Use the following steps to prepare for deploying Defender for Identity:
 
 1. [Plan your Defender for Identity capacity](capacity-planning.md).
 
-1. We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
+> [!TIP]
+> We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
+>
 
 ## Deploy Defender for Identity
 
@@ -62,12 +64,15 @@ After you've prepared your system, use the following steps to deploy Defender fo
 
 ## Post-deployment configuration
 
-The following procedures can be done at any point in the deployment process:
+The following procedures help you complete the deployment process:
 
-1. **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
-1. [**Enable and configure unified role-based access control (RBAC)**](role-groups.md) for Defender for Identity.
-1. [**Configure a Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
-1. [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
+- **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+
+- [**Enable and configure unified role-based access control (RBAC)**](role-groups.md) for Defender for Identity.
+
+- [**Configure a Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
+
+- [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
 > [!IMPORTANT]
 > Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
