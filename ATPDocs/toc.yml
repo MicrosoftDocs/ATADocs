@@ -54,7 +54,7 @@ items:
         href: deploy/directory-service-accounts.md
         displayName: Directory Service Account, DSA
       - name: Configure a DSA with a gMSA
-        displayName: deploy/create-directory-service-account-gmsa.md
+        href: deploy/create-directory-service-account-gmsa.md
     - name: Configure remote calls to SAM
       href: deploy/remote-calls-sam.md
   - name: Extra deployment scenarios
