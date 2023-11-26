@@ -104,7 +104,7 @@ The logic shown in this example is implemented with the following configuration:
 
 ## Grant required DSA permissions
 
-[!INCLUDE [dsa-permissions](../../includes/dsa-permissions.md)]
+[!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
 ## Next step
 

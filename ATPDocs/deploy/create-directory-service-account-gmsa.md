@@ -65,7 +65,7 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 
 ## Grant required DSA permissions
 
-[!INCLUDE [dsa-permissions](../../includes/dsa-permissions.md)]
+[!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
 ## Install the gMSA account
 
