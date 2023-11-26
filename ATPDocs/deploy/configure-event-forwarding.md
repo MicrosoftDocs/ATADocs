@@ -7,7 +7,6 @@ ms.topic: how-to
 
 # Configure Windows event forwarding to your Defender for Identity standalone sensor
 
-<!--new screenshots?-->
 This article describes an example of how to configure Windows event forwarding to your Microsoft Defender for Identity standalone sensor. Event forwarding is one method for enhancing your detection abilities with extra Windows events that aren't available from the domain controller network. For more information, see [Windows event collection overview](event-collection-overview.md).
 
 > [!IMPORTANT]
@@ -18,7 +17,7 @@ This article describes an example of how to configure Windows event forwarding t
 
 Before you start:
 
-- Make sure that the domain controller is properly configured to capture the required events. <!--which link is this?-->
+- Make sure that the domain controller is properly configured to capture the required events. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md).
 - [Configure port mirroring](configure-port-mirroring.md)
 
 ## Step 1: Add the network service account to the domain
@@ -102,7 +101,7 @@ This procedure describes how to create a subscription for use with Defender for 
 
         1. Enter the name of the domain controller in the **Enter the object name to select** field. 
 
-        1. Select **Check Names** > **OK** > **OK**. <!--how many times OK?-->
+        1. Select **Check Names** > **OK** > **OK**.
 
         1. Select **OK**. For example:
 

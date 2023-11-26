@@ -57,8 +57,6 @@ Common results include:
 |**Missing RAM data**     |    There was an issue reading the RAM data.  Make sure the connection to your server is able to query WMI remotely.       |
 |**Missing core data**     |   There was an issue reading the core data. Make sure the connection to your server is able to query WMI remotely.          |
 
-<!--check last two-->
-
 For example, the following image shows a set of results where the **Maybe** indicates that the **Busy Packets/Second** value is significantly higher at that point than average.  Note that the **Display DC Times as UTC/Local** is set to *Local DC Time*. This setting helps highlight the fact that the values were taken at around 3:30 AM.
 
 :::image type="content" source="../media/capacity-tool-maybe.png" alt-text="Screenshot of a capacity tool results showing Maybe values." lightbox="../media/capacity-tool-maybe.png":::

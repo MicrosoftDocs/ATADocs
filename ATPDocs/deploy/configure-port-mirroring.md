@@ -7,7 +7,6 @@ ms.topic: how-to
 
 # Configure port mirroring
 
-<!--is this the right order?-->
 This article describes port mirroring options for Microsoft Defender for Identity, and is relevant only for standalone sensors. Defender for Identity mainly uses deep packet inspection over network traffic to and from your domain controllers. For Defender for Identity standalone sensors to see network traffic, you must either configure port mirroring, or use a Network TAP. Port mirroring copies the traffic from one port (the source port) to another port (the destination port).
 
 When using port mirroring, configure port mirroring for each domain controller that you're monitoring as the source of your network traffic. We recommend working with your networking or virtualization team to configure port mirroring.
@@ -51,5 +50,8 @@ The following table describes Defender for Identity's support for port mirroring
 
 ## Next step
 
-<!--more relevant next steps or related info?-->
-[Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)
+For more information, see:
+
+- [Event collection with Microsoft Defender for Identity](event-collection-overview.md)
+- [Configure audit policies for Windows event logs](configure-windows-event-collection.md)
+- [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)

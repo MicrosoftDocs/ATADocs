@@ -18,7 +18,6 @@ The following video shows a review of the Defender for Identity sensor settings:
 
 ## View and configure sensor settings
 
-<!--take new screenshots-->
 After the Defender for Identity sensor is installed, do the following to view and configure Defender for Identity sensor settings:
 
 1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**. For example:
