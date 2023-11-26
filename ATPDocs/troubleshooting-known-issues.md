@@ -232,7 +232,7 @@ If the user rights assignment policy **Log on as a service** is configured for t
 
 **Resolution 2**:
 
-Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights).
+Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights](deploy/create-directory-service-account-gmsa.md#verify-that-the-gmsa-account-has-the-required-rights).
 
 ### Cause 3
 
@@ -461,7 +461,7 @@ NT Service\All Services don't have the right to log on as a service.
 
 **Resolution:**
 
-Add Domain Controller Policy with the logon as a service. For more information, see [Verify that the gMSA account has the required rights](deploy/directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights).
+Add Domain Controller Policy with the logon as a service. For more information, see [Verify that the gMSA account has the required rights](deploy/create-directory-service-account-gmsa.md#verify-that-the-gmsa-account-has-the-required-rights).
 
 <a name='your-workspace-wasnt-created-because-a-security-group-with-the-same-name-already-exists-in-azure-active-directory'></a>
 

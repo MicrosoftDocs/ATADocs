@@ -47,7 +47,7 @@ Configure the SQL server to allow *Directory service* account with the following
 - *select*
 
 > [!NOTE]
-> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](directory-service-accounts.md#grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password. 
+> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
 
 ### Grant access to the AD FS database
 
@@ -98,7 +98,6 @@ $SqlDataReader = $SQLCommand.ExecuteReader()
 $SQLConnection.Close()
 ```
 
-
 ## Configure event collection for AD FS / AD CS servers
 
 If you're working with AD FS / AD CS servers, make sure that you've configured auditing as needed. For more information, see:
@@ -108,9 +107,9 @@ If you're working with AD FS / AD CS servers, make sure that you've configured a
     - [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
     - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
 
-- **AD CS**: 
+- **AD CS**:
 
-    - [Supported Active Directory Certificate Services (AD CS) events](event-collection-overview.md#supported-active-directory-certificate-services-ad-cs-events)
+    - [Required Active Directory Certificate Services (AD CS) events](event-collection-overview.md#required-active-directory-certificate-services-ad-cs-events)
     - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
 
 ## Validate successful deployment on AD FS / AD CS servers
@@ -121,18 +120,18 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
 1. If the service doesn't start, review the `Microsoft.Tri.sensor-Errors.log` file, located by default at: `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`
 
-1. Use AD FS or AD CS to authenticate a user to any application, and then verify that the authentication was observed by Defender for Identity. 
+1. Use AD FS or AD CS to authenticate a user to any application, and then verify that the authentication was observed by Defender for Identity.
 
    For example, select **Hunting** > **Advanced Hunting**. In the **Query** pane, enter and run one of the following queries:
 
-   **For AD FS**: 
+   **For AD FS**:
 
    ```query
    IdentityLogonEvents | where Protocol contains 'Adfs'
    ```
 
    The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**
-   
+
    **For AD CS**:
 
    ```query

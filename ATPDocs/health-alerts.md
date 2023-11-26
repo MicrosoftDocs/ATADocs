@@ -75,7 +75,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the Defender for Identity sensors stop running, or will stop running soon, and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md#configure-a-directory-service-account-in-microsoft-365-defender) password.|High|Global health issues tab|
+|The read-only user password, used to get directory data, expired.|All the Defender for Identity sensors stop running, or will stop running soon, and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md) password.|High|Global health issues tab|
 
 ### Sensor outdated
 
