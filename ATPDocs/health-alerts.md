@@ -69,7 +69,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Defender for Identity sensors stop running and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md#configure-a-directory-service-account-in-microsoft-365-defender) password.|Medium|Global health issues tab|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Defender for Identity sensors stop running and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md) password.|Medium|Global health issues tab|
 
 ### Read-only user password expired
 

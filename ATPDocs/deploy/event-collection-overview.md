@@ -1,6 +1,6 @@
 ---
-title: Event collection - Overview | Microsoft Defender for Identity
-description: Learn about options for configuring extra event collection to Microsoft Defender for Identity.
+title: Event collection overview | Microsoft Defender for Identity
+description: Learn about required event collection for the Microsoft Defender for Identity sensor on domain controllers or AD FS / AD CS servers.
 ms.date: 08/10/2023
 ms.topic: conceptual
 ---

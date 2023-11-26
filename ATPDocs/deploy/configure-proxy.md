@@ -60,7 +60,7 @@ For some older workspaces, the message returned could be *Error 503 The service 
 
 - If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
 
-- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
+- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this: 
 
     :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
 

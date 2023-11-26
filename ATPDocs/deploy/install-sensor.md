@@ -1,6 +1,6 @@
 ---
 title: Install the sensor | Microsoft Defender for Identity
-description: Learn how to install the Microsoft Defender for Identity sensors on your domain controllers.
+description: Learn how to install the Microsoft Defender for Identity sensors on your domain controllers or AD FS / AD CS servers.
 ms.date: 06/21/2023
 ms.topic: how-to
 ---

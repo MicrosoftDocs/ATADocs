@@ -29,7 +29,7 @@ Set-AdfsProperties -AuditLevel Verbose
 
 For more information, see:
 
-- [Supported Active Directory Federation Services (AD FS) events](event-collection-overview.md#supported-active-directory-federation-services-ad-fs-events)
+- [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
 - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
 - [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
 
@@ -105,7 +105,7 @@ If you're working with AD FS / AD CS servers, make sure that you've configured a
 
 - **AD FS**:
 
-    - [Supported Active Directory Federation Services (AD FS) events](event-collection-overview.md#supported-active-directory-federation-services-ad-fs-events)
+    - [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
     - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
 
 - **AD CS**: 

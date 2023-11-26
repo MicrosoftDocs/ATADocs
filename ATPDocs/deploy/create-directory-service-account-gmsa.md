@@ -1,5 +1,5 @@
 ---
-title: Configure a Directory Service Account for Defender for Identity with a gMSA
+title: Configure a DSA for Defender for Identity with a gMSA
 description: Learn how to configure a Directory Service Account for Defender for Identity with a group managed service account (gMSA).
 ms.date: 11/20/2023
 ms.topic: how-to
@@ -16,7 +16,7 @@ For more information, see [Directory Service Accounts for Microsoft Defender for
 >[!TIP]
 >In multi-forest, multi-domain environments, we recommend creating the gMSAs with a unique name for each forest or domain. Also, create a universal group in each domain, containing all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
 
-## Prerequisites: grant permissions to retrieve the gMSA account's password
+## Prerequisites: Grant permissions to retrieve the gMSA account's password
 
 Before you create the gMSA account, consider how to assign permissions to retrieve the account's password.
 
