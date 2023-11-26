@@ -43,22 +43,26 @@ Do the following steps to confirm that everything is working as expected. Perfor
 
 **To test your connectivity settings**:
 
-1. Open a browser. If you're using a proxy, make sure that your browser uses the same proxy settings being used by the sensor. 
+1. Open a browser. If you're using a proxy, make sure that your browser uses the same proxy settings being used by the sensor.
 
     For example, if the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
 
-1. Go to `https://<your_workspace_name>sensorapi.atp.azure.com`, where `<your_workspace_name>` is the name of your Defender for Identity workspace.
+1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com/tri/sensor/api/ping.` Replace `<your_workspace_name>` with the name of your Defender for Identity workspace.
 
     > [!IMPORTANT]
     > You *must* specify `HTTPS`, not `HTTP`, to properly test connectivity.
 
-You should get an *Error 503 The service is unavailable* message, which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint.  This is the desired result.
+**Result**: You should get an *Ok* message displayed (HTTP status 200), which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result. 
 
-- If you don't get an *Error 503 The service is unavailable* message, you may have a problem with your connectivity configuration. Check your network and proxy settings.
+For some older workspaces, the message returned could be *Error 503 The service is unavailable*. This is a temporary state that still indicates success. For example:
 
-- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). 
+:::image type="content" source="../media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
 
-    Certificate details should look similar to the following: **DigiCert Global Root G2** > **Microsoft Azure TLS Issuing CA 01** > ***.atp.azure.com**.
+- If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
+
+- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
+
+    :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
 
 ## Related content
 
