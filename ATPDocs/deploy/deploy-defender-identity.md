@@ -69,15 +69,9 @@ The following procedures can be done at any point in the deployment process:
 1. [**Configure a Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
 1. [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
-
-## Extra deployment scenarios
-
-You may have extra or different steps in your deployment if you're working with any of the following scenarios. For more information, see the relevant articles:
-
-- [**Configure a sensor for installation on AD FS or AD CS servers**](active-directory-federation-services.md).
-
-- [**Configure a managed action account**](manage-action-accounts.md) to take actions on behalf of Defender for Identity instead of the default LocalSystem account
-
+> [!IMPORTANT]
+> Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
+> 
 
 ## Next step
 
