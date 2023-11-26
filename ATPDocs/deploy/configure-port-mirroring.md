@@ -49,56 +49,6 @@ The following table describes Defender for Identity's support for port mirroring
 > The time on your domain controllers and the connected Defender for Identity sensor must be synchronized to within 5 minutes of eachother.
 >
 
-<!--remove this altogether>
-
-## Validate port mirroring
-
-To validate that port mirroring is working before installing the Defender for Identity standalone sensor, use your network capture tool of choice. The Defender for Identity standalone sensor must be able to see the traffic to and from the domain controller.
-
-> [!IMPORTANT]
-> This procedure uses Microsoft Network Monitor to validate port mirroring.  If you choose to validate with Wireshark, restart the Defender for Identity standalone sensor service after you finish validating.
->
-
-**To validate port mirroring**:
-
-1. Install [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865) on the Defender for Identity standalone sensor that you want to validate. <!--is there a newer option? Network Monitor 3.4 is the archive versioned tool for network traffic capture and protocol analysis.i can't even install it anymore to validate this procedure.
-
-1. Open Network Monitor and create a new capture tab.
-
-    1. Select only the **Capture** network adapter or the network adapter that is connected to the switch port that is configured as the port mirroring destination.
-
-    1. Ensure that P-Mode is enabled.
-
-    1. Select **New Capture**. For example:
-
-        ![Screenshot of the Microsoft Network Monitor dialog highlighting the New Capture button.](../media/port-mirroring-capture.png)
-
-1. In your new tab's **Display Filter** area, enter the following filter: **KerberosV5 OR LDAP** and then select **Apply**.
-
-1. Select **Start** to start the capture session. If you do not see traffic to and from the domain controller listed in the **Frame summary** area, review your port mirroring configuration.
-
-    Make sure you see traffic to and from the domain controllers.
-
-1. If you only see traffic in one direction, work with your networking or virtualization teams to help troubleshoot your port mirroring configuration.
-
-## Working with virtualization clusters
-
-If you are working with virtualization clusters:
-
-- **Configure affinity between the domain controller and the Defender for Identity standalone sensor**. This step is irrelevant if your environment supports Virtual to Virtual on different hosts (RSPAN).
-
-    Configure affinity for each domain controller running on the virtualization cluster in a virtual machine with the Defender for Identity standalone sensor. When the domain controller moves to another host in the cluster, the Defender for Identity standalone sensor follows it. This works well when there are a few domain controllers.
-
-- **Ensure proper sensor sizing**. Make sure that the Defender for Identity standalone sensor is properly sized to handle monitoring all of the DCs by themselves:
-
-    1. Install a virtual machine on each virtualization host.
-    1. Install a Defender for Identity standalone sensor on each host.
-    1. Configure each Defender for Identity standalone sensor to monitor all of the domain controllers that run on the cluster.
-
-    Any host the domain controllers run on is monitored.
-
--->
-
 ## Next step
 
 <!--more relevant next steps or related info?-->

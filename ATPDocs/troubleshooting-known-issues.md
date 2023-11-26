@@ -164,7 +164,6 @@ When you install the Defender for Identity sensor on a machine configured with a
 
 ## Multi Processor Group mode
 
-<!--how do we handle this now? is it relevant?-->
 For Windows Operating systems 2008R2 and 2012, the Defender for Identity sensor isn't supported in a Multi Processor Group mode.
 
 Suggested possible workarounds:

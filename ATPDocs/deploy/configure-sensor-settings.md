@@ -108,8 +108,6 @@ When using the examples in the following steps, make sure to replace `contosodc.
     - **Events**: DNS queries performed to a specified domain name
     - **Action type** MdiDnsQuery
 
-<!--1. In Microsoft 365 Defender, search for the name of the user you used to run the commands in the previous steps. Select the name in the results, and view the user details page and all related activities and alerts.-->
-
 If the domain controller or AD FS / AD CS that you're testing is the first sensor you've deployed, wait at least 15 minutes before verifying any logical activity for that domain controller, allowing the database backend to complete the initial microservice deployments.
 
 ### Verify latest available sensor version

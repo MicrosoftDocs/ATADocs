@@ -76,7 +76,6 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
 
     - **Microsoft Visual C++ 2013 Redistributable**
 
-<!--should we remove this? NO WE SHOULD KEEP 2012 content in.
     - **KB 3047154** (for Windows Server 2012 R2 only)
 
         > [!IMPORTANT]
@@ -84,7 +83,6 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
         > - Don't install KB 3047154 on a virtualization host, which is the host that is running the virtualization. This may cause port mirroring to stop working properly. It's fine to run KB 3047154 on a virtual machine.
         >
         > - If Wireshark is installed on the Defender for Identity sensor machine, you'll need to restart the Defender for Identity sensor after running Wireshark because they use the same drivers.
--->
 
 ### Viewing sensor versions
 

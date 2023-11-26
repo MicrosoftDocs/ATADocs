@@ -90,56 +90,6 @@ When determining sizing, keep in mind the total number of cores and total amount
 
 For more information, see [Resource limitations](../architecture.md#resource-limitations).
 
-
-<!--
-<a name="manual-sizing"></a>
-
-## Domain controller traffic estimation
-
-If for some reason you can't use the Defender for Identity Sizing Tool, manually gather the packet/sec counter information from each of your domain controllers instead.
-
-Gather the information for 24 hours with a low collection interval, of approximately 5 seconds each. Then, for each domain controller, calculate the total daily average and the average busiest period of 15 minutes.
-
-This section describes how to collect the packets/sec counter from a domain controller.
-
-> [!TIP]
-> There are various tools that you can use to discover the average packets per second of your domain controllers. If you don't have any tools that track this counter, you can use the Windows Performance Monitor to gather the required information.
->
-
-**On each domain controller**:
-
-1. Open Performance Monitor and select **Data Collector Sets**. Then right-click **User Defined > New > Data Collector Set**. For example:
-
-    ![Screenshot of the Performance Monitor with the Data Collector Sets node selected.](../media/traffic-estimation-2.png)
-
-1. Enter a name for the collector set and select **Create Manually (Advanced) > Next**.
-
-1. On the **What type of data do you want to include?** dialog, select  **Create data logs** >  **Performance counter**.
-
-1. On the  **Which performance counters would you like to log** dialog, select **Add** > **Network Adapter** > **Packets/sec**. Select the relevant workspace, and then select **Add > OK**.
-
-    If you aren't sure which workspace to select, select **&lt;All workspace&gt;**.
-
-    > [!NOTE]
-    > To perform this operation in a command line, run `ipconfig /all` to see the name of the adapter it's and configuration.
-
-1. Change the **Sample interval** to **five seconds**, and then define the location where you want the data to be saved.
-
-1. On the **Create the data collector set** dialog,  select **Start this data collector set now**, and then select **Finish**.
-
-    The data collector set you created is now shown with a green triangle, indicating that it's working as expected.
-
-1. After 24 hours, stop the data collector set. Right-click the data collector set and select **Stop**. For example:
-
-    ![Screenshot of the Performance Monitor dialog showing the Stop option.](../media/traffic-estimation-12.png)
-
-1. In the File Explorer, browse to the folder where the **.blg** file was saved. Double-click the **.blg** file to open it in Performance Monitor.
-
-1. Select the **Packets/sec** counter, and record the average and maximum values. For example:
-
-    ![Screenshot of the Performance Monitor dialog with the Packets/sec counter selected.](../media/traffic-estimation-14.png)
-
--->
 ## Next step
 
 

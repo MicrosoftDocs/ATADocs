@@ -27,7 +27,7 @@ To create your Defender for Identity workspace, you need:
 
     For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
-- **At least one Directory Service account** with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md). <!--if we need it now, why is it all the way down there? or is it not always needed?-->
+- **At least one Directory Service account** with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
 ## Connectivity requirements
 
@@ -41,20 +41,11 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 
 For more information, see [Microsoft Defender for Identity architecture](../architecture.md).
 
-<!--
-## Required network adapters
-
-The Defender for Identity sensor monitors local traffic on all of the domain controller's network adapters. After deployment, you'll use the Microsoft 365 Defender portal to modify which network adapters are monitored.
-
-<!-- removing this as per Gershon: If you install the Defender for Identity sensor on a machine configured with a NIC teaming adapter and the Winpcap driver, you'll receive an installation error.
-
-To install the Defender for Identity sensor on a machine configured with NIC teaming, make sure you replace the Winpcap driver with Npcap. For more information, see [How do I download and install or upgrade the Npcap driver?](../technical-faq.yml#how-do-i-download-and-install-or-upgrade-the-npcap-driver)-->
 
 ## Sensor requirements and recommendations
 
 The following table summarizes requirements and recommendations for the domain controller, AD FS, or AD CS server where you'll install the Defender for Identity sensor.
 
-<!--updated here to 2016-->
 | Prerequisite / Recommendation |Description  |
 |---------|---------|
 |**Specifications**     |  Make sure to install Defender for Identity on Windows version 2016 or higher, on a domain controller server with a minimum of:<br><br>- 2 cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |

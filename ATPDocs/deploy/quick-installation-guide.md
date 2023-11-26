@@ -78,7 +78,7 @@ When installing your sensors, consider scheduling a maintenance window for your 
 
 ## Install Defender for Identity
 
-<!--updated to 2016-->
+
 This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minium system requirements](#minimum-system-requirements).
 
 > [!NOTE]

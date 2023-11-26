@@ -79,11 +79,6 @@ When Defender for Identity maps your forests, it uses the following process:
 
 You may see ad-hoc traffic when the Defender for Identity sensor detects cross forest activity. When this occurs, the Defender for Identity sensors will send an LDAP query to the relevant domain controllers to retrieve entity information.
 
-<!--
-> [!NOTE]
-> Interactive sign-ins performed by users in one forest to access resources in another forest aren't displayed in the Defender for Identity dashboard.
->
--->
 
 ## Next step
 
