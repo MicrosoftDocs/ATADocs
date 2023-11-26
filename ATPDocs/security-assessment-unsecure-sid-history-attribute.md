@@ -44,5 +44,6 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 > This assessment is updated in near real time.
 
 ## See Also
+
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
