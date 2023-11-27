@@ -39,7 +39,7 @@ Defender for Identity sensor deployment logs:
 > [!NOTE]
 > In addition to the deployment logs mentioned here, there are other logs that begin with "Azure Advanced Threat Protection" that can also provide additional information on the deployment process.
 
-## See Also
+## Next steps
 
 - [Defender for Identity prerequisites](prerequisites.md)
 - [Defender for Identity capacity planning](capacity-planning.md)
