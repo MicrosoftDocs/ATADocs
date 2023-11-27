@@ -28,6 +28,7 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
     ![Review top impacted entities and create an action plan.](media/cas-isp-unsecure-sid-history-attribute-1.png)
 1. Take appropriate action to remove SID History attribute from the accounts using PowerShell using the following steps:
 
+
     1. Identify the SID in the SIDHistory attribute on the account.
 
         ```powershell
@@ -43,7 +44,7 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
 > [!NOTE]
 > This assessment is updated in near real time.
 
-## See also
+## See Also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
