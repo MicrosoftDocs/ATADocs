@@ -11,7 +11,7 @@ Microsoft Defender for Identity detection relies on specific Windows Event log e
 
 To enhance threat detection capabilities, Defender for Identity needs the following Windows Events to be [configured](#configure-audit-policies) and [collected](#configure-event-collection) by Defender for Identity:
 
-## Generate a report with current configurations
+## Generate a report with current configurations via PowerShell
 
 **Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 

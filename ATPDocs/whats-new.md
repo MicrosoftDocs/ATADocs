@@ -28,6 +28,26 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## December 2023
+
+### Manage Defender for Identity sensor settings via PowerShell
+
+Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which helps you automate configurations for domains, domain controllers, and other sensor servers. Define Defender for Identity sensor settings using the  PowerShell commands to avoid misconfigurations and save time and avoiding unnecessary load on your system.
+
+We've added the following procedures to the Defender for Identity documentation to help you use the new PowerShell commands:
+
+- [Change proxy configuration using PowerShell](configure-proxy.md#change-proxy-configuration-using-powershell)
+- [Configure, get, and test audit policies using PowerShell](configure-windows-event-collection.md#configure-get-and-test-audit-policies-using-powershell)
+- [Generate a report with current configurations via PowerShell](configure-windows-event-collection.md#generate-a-report-with-current-configurations-via-powershell)
+- [Test your DSA permissions and delegations via PowerShell](directory-service-accounts.md#test-your-dsa-permissions-and-delegations-via-powershell)
+- [Test server connectivity using PowerShell](deploy/test-connectivity.md#test-server-connectivity-using-powershell)
+
+For more information, see:
+
+- [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity?view=defenderforidentity-latest)
+
+
 ## November 2023
 
 ### Defender for Identity release 2.220

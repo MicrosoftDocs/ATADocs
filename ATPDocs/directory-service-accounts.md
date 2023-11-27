@@ -290,7 +290,7 @@ To connect your sensors with your Active Directory domains, you'll need to confi
 > [!NOTE]
 > You can use this same procedure to change the password for standard Active Directory user accounts. There is no password set for gMSA accounts.
 
-## Test your DSA permissions and delegations
+## Test your DSA permissions and delegations via PowerShell
 
 Use the following PowerShell command to verify that your DSA doesn't have too many permissions, such as powerful admin permissions:
 
