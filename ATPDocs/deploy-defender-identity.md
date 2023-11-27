@@ -17,7 +17,7 @@ For a quick set of deployment highlights, see [Quick installation guide](quick-i
 
 Before you start, make sure that you have access to Microsoft 365 Defender at least as a Security administrator, and you have one of the following licenses:
 
-[!INCLUDE [licenses](../includes/licenses.md)]
+[!INCLUDE [licenses](includes/licenses.md)]
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy) and [What are Defender for Identity roles and permissions?](role-groups.md)
 

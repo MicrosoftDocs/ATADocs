@@ -13,7 +13,7 @@ This article describes the requirements for a successful Microsoft Defender for 
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
 
-[!INCLUDE [licenses](../includes/licenses.md)]
+[!INCLUDE [licenses](includes/licenses.md)]
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
@@ -52,7 +52,7 @@ The following table summarizes requirements and recommendations for the domain c
 
 ### Minimum operating system requirements
 
-[!INCLUDE [server-requirements](../includes/server-requirements.md)]
+[!INCLUDE [server-requirements](includes/server-requirements.md)]
 
 #### Legacy operating systems
 
