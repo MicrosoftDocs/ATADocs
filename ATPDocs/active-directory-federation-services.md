@@ -152,7 +152,7 @@ Installing the sensor on an AD FS / AD CS server automatically selects the close
 
 1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.   For example:
 
-    ![Defender for Identity configure AD FS sensor resolver](/media/sensor-config-adfs-resolver.png)
+    ![Defender for Identity configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
 
 Initializing the sensor may take a couple of minutes, at which time the AD FS / AD CS sensor service status should change from **stopped** to **running**.
 

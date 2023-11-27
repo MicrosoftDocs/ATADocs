@@ -35,7 +35,7 @@ To ensure accurate results, only run the sizing tool *before* you've installed a
 
     For example:
 
-    :::image type="content" source="./media/capacity-tool.png" alt-text="Screenshot of a sample capacity planning tool." lightbox="/media/capacity-tool.png":::
+    :::image type="content" source="media/capacity-tool.png" alt-text="Screenshot of a sample capacity planning tool." lightbox="media/capacity-tool.png":::
 
     > [!NOTE]
     > The other sheet in the file is used for [Advanced Threat Analytics (ATA)](/advanced-threat-analytics/what-is-ata) planning and isn't needed for Defender for Identity.
