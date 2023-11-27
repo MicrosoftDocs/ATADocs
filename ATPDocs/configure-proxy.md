@@ -1,7 +1,7 @@
 ---
 title: Configure endpoint proxy and Internet connectivity settings
 description: Describes how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors
-ms.date: 04/16/2023
+ms.date: 11/27/2023
 ms.topic: how-to
 ---
 
@@ -125,8 +125,37 @@ If you would like to download the "Azure IP Ranges and Service Tags - Public Clo
 > - To ensure maximal security and data privacy, Defender for Identity uses certificate based mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud backend. SSL inspection and interception are not supported, as they interfere in the authentication process.
 > - Occasionally, the Defender for Identity service IP addresses may change. Therefore, if you manually configure IP addresses or if your proxy automatically resolves DNS names to their IP address and uses them, you should periodically check that the configured IP addresses are still up-to-date.
 
+## Test proxy connectivity
 
-## Next step
+The Defender for Identity sensor requires network connectivity to the Defender for Identity service running in Azure. Most organizations control access to the internet via firewall or proxies.  When using a proxy, you can allow access port 443 via a single URL. For more information about the ports that the Defender for Identity requires, see [Required ports](prerequisites.md#ports).
+
+After the proxy has been configured to allow the sensor access to the Defender for Identity service, follow the steps below to confirm that everything is working as expected. This can be done either before you deploy the sensor, or if the sensor experiences connectivity issues after being installed.
+
+**To test your proxy connectivity**:
+
+1. Open a browser using the same proxy settings being used by the sensor.
+
+    >[!NOTE]
+    >If the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
+
+1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com/tri/sensor/api/ping.` Replace `<your_workspace_name>` with the name of your Defender for Identity workspace.
+
+    >[!IMPORTANT]
+    >You must specify *HTTPS*, not *HTTP*, to properly test connectivity.
+
+**Result**: You should get an *Ok* message displayed (HTTP status *200*), which indicates you were successfully able to route to the Defender for Identity HTTPS endpoint. This is the desired result. Note that for some older workspaces, the message returned could be *Error 503 The service is unavailable*, this is a temporary state that still indicates success.
+
+:::image type="content" source="media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
+
+- If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
+
+- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. The certificate details should look like this:
+
+    :::image type="content" source="media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
+
+    For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). 
+
+## Next steps
 
 > [!div class="step-by-step"]
 > [« Download the Defender for Identity sensor](download-sensor.md)
