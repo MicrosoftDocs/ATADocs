@@ -29,7 +29,7 @@ Set-AdfsProperties -AuditLevel Verbose
 
 For more information, see:
 
-- [Required Active Directory Federation Services (AD FS) events](/deploy/event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
+- [Required Active Directory Federation Services (AD FS) events](deploy/event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
 - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
 - [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
 
@@ -47,7 +47,7 @@ Configure the SQL server to allow *Directory service* account with the following
 - *select*
 
 > [!NOTE]
-> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](/deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
+> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
 
 ### Grant access to the AD FS database
 
@@ -104,12 +104,12 @@ If you're working with AD FS / AD CS servers, make sure that you've configured a
 
 - **AD FS**:
 
-    - [Required Active Directory Federation Services (AD FS) events](/deploy/event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
+    - [Required Active Directory Federation Services (AD FS) events](deploy/event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
     - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
 
 - **AD CS**:
 
-    - [Required Active Directory Certificate Services (AD CS) events](/deploy/event-collection-overview.md#required-active-directory-certificate-services-ad-cs-events)
+    - [Required Active Directory Certificate Services (AD CS) events](deploy/event-collection-overview.md#required-active-directory-certificate-services-ad-cs-events)
     - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
 
 ## Validate successful deployment on AD FS / AD CS servers

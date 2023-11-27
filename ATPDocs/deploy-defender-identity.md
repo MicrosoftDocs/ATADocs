@@ -66,7 +66,7 @@ After you've prepared your system, use the following steps to deploy Defender fo
 
 The following procedures help you complete the deployment process:
 
-- **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](/deploy/event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+- **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](deploy/event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
 - [**Enable and configure unified role-based access control (RBAC)**](role-groups.md) for Defender for Identity.
 

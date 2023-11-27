@@ -13,7 +13,7 @@ For the correct events to be audited and included in the Windows Event Log, your
 
 This article describes how to configure your Advanced Audit Policy settings as needed for a Defender for Identity sensor, and other configurations for specific event types.
 
-For more information, see [What is Windows event collection for Defender for Identity](/deploy/event-collection-overview.md).
+For more information, see [What is Windows event collection for Defender for Identity](deploy/event-collection-overview.md).
 
 ## Configure auditing for domain controllers
 

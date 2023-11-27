@@ -26,7 +26,7 @@ Before you start, make sure that you have:
 
     - [Microsoft Defender for Identity prerequisites](prerequisites.md)
     - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
-    - [Microsoft Defender for Identity standalone sensor prerequisites](/deploy/prerequisites-standalone.md)
+    - [Microsoft Defender for Identity standalone sensor prerequisites](deploy/prerequisites-standalone.md)
 
 ## Install the sensor using the UI
 

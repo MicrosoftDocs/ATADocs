@@ -68,7 +68,7 @@ items:
     - name: Configure a standalone sensor
       items:
       - name: Prerequisites for a standalone sensor
-        href: /deploy/prerequisites-standalone.md
+        href: deploy/prerequisites-standalone.md
       - name: Configure port mirroring
         href: configure-port-mirroring.md
         displayName: standalone
