@@ -33,7 +33,7 @@ Learn more about Zero Trust and how to build an enterprise-scale strategy and ar
 
 For more information, see:
 
-- [Securing identity with Zero Trust](/security/zero-trustdeploy/identity)
+- [Securing identity with Zero Trust](/security/zero-trust/deploy/identity)
 - [Deploy your identity infrastructure for Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview)
 - [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust)
 - [Zero Trust with Microsoft 365 Defender](/microsoft-365/security/defender/zero-trust-with-microsoft-365-defender)
