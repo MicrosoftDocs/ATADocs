@@ -258,6 +258,6 @@ For more information, see the [Microsoft 365 Defender advanced hunting documenta
 
 - [What is Microsoft Defender for Identity?](what-is.md)
 - [Frequently asked questions](technical-faq.yml)
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
-- [Defender for Identity capacity planning](deploy/capacity-planning.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Defender for Identity capacity planning](capacity-planning.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

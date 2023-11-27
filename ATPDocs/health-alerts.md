@@ -51,7 +51,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The credentials for the directory services user account are incorrect.|This issue affects sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Directory Service account recommendations](deploy/directory-service-accounts.md) page.|Medium|Global health issues tab|
+|The credentials for the directory services user account are incorrect.|This issue affects sensors' ability to detect activities using LDAP queries against domain controllers.|- For a **standard** AD accounts: Verify that the username, password, and domain in the **Directory services** configuration page are correct.<br>- For **group Managed Service Accounts:** Verify that the username and domain in the **Directory Services** configuration page are correct. Also check all the other **gMSA account** prerequisites described on the [Directory Service account recommendations](directory-service-accounts.md) page.|Medium|Global health issues tab|
 
 ### Low success rate of active name resolution
 
@@ -63,25 +63,25 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|No traffic was received from the domain controller via this Defender for Identity sensor.|This issue might indicate that port mirroring from the domain controllers to the Defender for Identity sensor isn't configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](deploy/configure-port-mirroring.md).<br></br>On the Defender for Identity sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|Sensors health issues tab and Global health issues tab|
+|No traffic was received from the domain controller via this Defender for Identity sensor.|This issue might indicate that port mirroring from the domain controllers to the Defender for Identity sensor isn't configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the Defender for Identity sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|Sensors health issues tab and Global health issues tab|
 
 ### Read-only user password to expire shortly
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Defender for Identity sensors stop running and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md) password.|Medium|Global health issues tab|
+|The read-only user password, used to perform resolution of entities against Active Directory, is about to expire in less than 30 days.|If the password for this user expires, all the Defender for Identity sensors stop running and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](directory-service-accounts.md) password.|Medium|Global health issues tab|
 
 ### Read-only user password expired
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The read-only user password, used to get directory data, expired.|All the Defender for Identity sensors stop running, or will stop running soon, and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](deploy/directory-service-accounts.md) password.|High|Global health issues tab|
+|The read-only user password, used to get directory data, expired.|All the Defender for Identity sensors stop running, or will stop running soon, and no new data is collected.|Change the domain connectivity password and then [update the Directory Service account](directory-service-accounts.md) password.|High|Global health issues tab|
 
 ### Sensor outdated
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|A Defender for Identity sensor is outdated.|A Defender for Identity sensor is running a version that can't communicate with the Defender for Identity cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this option doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Download the Microsoft Defender for Identity sensor](deploy/download-sensor.md) and [Install the Microsoft Defender for Identity sensor](deploy/install-sensor.md).|Medium|Sensors health issues tab and Global health issues tab|
+|A Defender for Identity sensor is outdated.|A Defender for Identity sensor is running a version that can't communicate with the Defender for Identity cloud infrastructure.|Manually update the sensor and check to see why the sensor isn't automatically updating. If this option doesn't work, download the latest sensor installation package and uninstall and reinstall the sensor. For more information, see [Download the Microsoft Defender for Identity sensor](download-sensor.md) and [Install the Microsoft Defender for Identity sensor](install-sensor.md).|Medium|Sensors health issues tab and Global health issues tab|
 
 ### Sensor reached a memory resource limit
 
@@ -105,7 +105,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more events than it can process.|Some Windows events aren't being analyzed. This can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](deploy/capacity-planning.md) as required. If you're using a standalone Defender for Identity sensor, verify that only the required events are forwarded to the sensor. Or, try forwarding some events to another Defender for Identity sensor.|Medium|Sensors health issues tab and Global health issues tab|
+|The Defender for Identity sensor is receiving more events than it can process.|Some Windows events aren't being analyzed. This can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required. If you're using a standalone Defender for Identity sensor, verify that only the required events are forwarded to the sensor. Or, try forwarding some events to another Defender for Identity sensor.|Medium|Sensors health issues tab and Global health issues tab|
 
 ### Some network traffic could not be analyzed
 
@@ -117,7 +117,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events aren't being analyzed. This can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](deploy/capacity-planning.md) as required.|Medium|Sensors health issues tab and Global health issues tab|
+|The Defender for Identity sensor is receiving more Event Tracing for Windows (ETW) events than it can process.|Some Event Tracing for Windows (ETW) events aren't being analyzed. This can affect the ability to detect suspicious activities originating from domain controllers being monitored by this Defender for Identity sensor.|Consider [adding more processors and memory](capacity-planning.md) as required.|Medium|Sensors health issues tab and Global health issues tab|
 
 ### Sensor running on an operating system that will soon become unsupported
 
@@ -143,37 +143,37 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a week, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](deploy/configure-windows-event-collection.md#configure-ntlm-auditing) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
+|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a week, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#configure-ntlm-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
 
 ### Directory Services Advanced Auditing is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Advanced Auditing configuration doesn't include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events. For more information, see [Configure audit policies for Windows event logs](deploy/configure-windows-event-collection.md).|Medium|Global health issues tab|
+|Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Advanced Auditing configuration doesn't include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).|Medium|Global health issues tab|
 
 ### Directory Services Object Auditing is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Object Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Object Auditing configuration doesn't include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure domain object auditing](deploy/configure-windows-event-collection.md#configure-domain-object-auditing) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Global health issues tab|
+|Directory Services Object Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Object Auditing configuration doesn't include all the object types and permissions as required.|Enable the Directory Services Object Auditing events according to the guidance as described in the [Configure domain object auditing](configure-windows-event-collection.md#configure-domain-object-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Global health issues tab|
 
 ### Auditing on the Configuration container is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Auditing on the Configuration container isn't enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the Domain's Configuration container is not enabled as required.|Enable the Directory Services Auditing on the Domain's Configuration container according to the guidance as described in the [Configure Audit Policies](deploy/configure-windows-event-collection.md#enable-auditing-on-an-exchange-object) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Global health issues tab|
+|Auditing on the Configuration container isn't enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the Domain's Configuration container is not enabled as required.|Enable the Directory Services Auditing on the Domain's Configuration container according to the guidance as described in the [Configure Audit Policies](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Global health issues tab|
 
 ### Auditing on the ADFS container is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Auditing on the ADFS container is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the ADFS container isn't enabled as required.|Enable the Directory Services Auditing on the ADFS container according to the guidance as described in the [Configure auditing on an Active Directory Federation Services (AD FS)](deploy/configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs) section, in the [Configure Windows Event collection](deploy/configure-windows-event-collection.md) page.|Medium|Global health issues tab|
+|Auditing on the ADFS container is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Auditing on the ADFS container isn't enabled as required.|Enable the Directory Services Auditing on the ADFS container according to the guidance as described in the [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Global health issues tab|
 
 ### Power mode is not configured for optimal processor performance
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode isn't configured to the optimal processor performance settings. This issue can affect the server's performance and the sensors' ability to detect suspicious activities.|Do one of the following: <br><br>- Configure the power option of the machine running the Defender for Identity sensor to *High Performance*<br>- Set both the minimum and maximum processor state to *100*<br><br>For more information, see the [Sensor requirements and recommendations](deploy/prerequisites.md#sensor-requirements-and-recommendations) section in the [Defender for Identity prerequisites](deploy/prerequisites.md) page.|Low|Sensors health issues tab|
+|Power mode is not configured for optimal processor performance. (This configuration is validated once a day, per sensor).|The operating system's power mode isn't configured to the optimal processor performance settings. This issue can affect the server's performance and the sensors' ability to detect suspicious activities.|Do one of the following: <br><br>- Configure the power option of the machine running the Defender for Identity sensor to *High Performance*<br>- Set both the minimum and maximum processor state to *100*<br><br>For more information, see the [Sensor requirements and recommendations](prerequisites.md#sensor-requirements-and-recommendations) section in the [Defender for Identity prerequisites](prerequisites.md) page.|Low|Sensors health issues tab|
 
 ### Sensor failed to write to the custom log path
 
@@ -195,8 +195,8 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 ## Next steps
 
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
-- [Defender for Identity capacity planning](deploy/capacity-planning.md)
-- [Configure event collection](deploy/configure-event-collection.md)
-- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Defender for Identity capacity planning](capacity-planning.md)
+- [Configure event collection](configure-event-collection.md)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

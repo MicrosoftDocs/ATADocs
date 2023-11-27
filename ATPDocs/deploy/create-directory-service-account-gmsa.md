@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for use as a Defender for Identity DSA entry. 
 
-For more information, see [Directory Service Accounts for Microsoft Defender for Identity](directory-service-accounts.md).
+For more information, see [Directory Service Accounts for Microsoft Defender for Identity](../directory-service-accounts.md).
  
 >[!TIP]
 >In multi-forest, multi-domain environments, we recommend creating the gMSAs with a unique name for each forest or domain. Also, create a universal group in each domain, containing all sensors' computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
@@ -155,4 +155,4 @@ For more information, see [Sensor failed to retrieve the gMSA credentials](../tr
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity »](remote-calls-sam.md)
+> [Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity »](../remote-calls-sam.md)

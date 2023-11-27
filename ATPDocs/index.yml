@@ -55,7 +55,7 @@ landingContent:
           - text: Set entity tags
             url: entity-tags.md
           - text: Advanced Threat Analytics (ATA) to Defender for Identity migration
-            url: deploy/migrate-from-ata-overview.md
+            url: migrate-from-ata-overview.md
   - title: Investigate threats 
     linkLists:
       - linkListType: tutorial

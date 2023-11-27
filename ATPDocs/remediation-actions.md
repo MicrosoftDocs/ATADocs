@@ -27,7 +27,7 @@ Watch the following video to learn more about remediation actions in Defender fo
 
 To perform any of the [supported actions](#supported-actions), you need to:
 
-- Configure the account that Microsoft Defender for Identity will use to perform them.  For more information, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
+- Configure the account that Microsoft Defender for Identity will use to perform them.  For more information, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
 
 - Be signed into Microsoft 365 Defender to with a **Security Administrator** or **Security Operator** role.
 

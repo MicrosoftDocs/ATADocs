@@ -11,7 +11,7 @@ The Microsoft Defender for Identity GCC High offering uses the same underlying t
 
 ## Get started with US Government offerings
 
-The Defender for Identity GCC, GCC High, and Department of Defense (DoD) offerings are built on the Microsoft Azure Government Cloud and are designed to inter-operate with Microsoft 365 GCC, GCC High, and DoD. Use Defender for Identity public documentation as a [starting point](deploy/deploy-defender-identity.md) for deploying and operating the service.
+The Defender for Identity GCC, GCC High, and Department of Defense (DoD) offerings are built on the Microsoft Azure Government Cloud and are designed to inter-operate with Microsoft 365 GCC, GCC High, and DoD. Use Defender for Identity public documentation as a [starting point](deploy-defender-identity.md) for deploying and operating the service.
 
 ## Licensing requirements
 
@@ -37,7 +37,7 @@ You can also use the IP address ranges in our Azure service tag (**AzureAdvanced
 
 ## Required connectivity settings
 
-Use [this link](deploy/prerequisites.md#required-ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
+Use [this link](prerequisites.md#required-ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
 
 ## How to migrate from commercial to GCC
 
@@ -67,5 +67,5 @@ Unless otherwise specified, new feature releases, including preview features, do
 
 ## Next steps
 
-- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy/deploy-defender-identity.md)
+- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

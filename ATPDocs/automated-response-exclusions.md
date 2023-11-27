@@ -40,5 +40,5 @@ For example, an incident involving Attack Disruption, where response actions are
 
 ## Next steps
 
-- [Configure event collection](deploy/configure-event-collection.md)
+- [Configure event collection](configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

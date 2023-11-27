@@ -64,7 +64,7 @@ sections:
 
           Defender for Identity's frequent updates include the following features and capabilities:
 
-          - **Support for [multi-forest environments](deploy/multi-forest.md)**: Provides organizations visibility across AD forests.
+          - **Support for [multi-forest environments](multi-forest.md)**: Provides organizations visibility across AD forests.
 
           - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components and provides remediation paths to reduce the attack surface.
 
@@ -116,9 +116,9 @@ sections:
 
       - question: How do I monitor a virtual domain controller using Defender for Identity?
         answer: |
-          The Defender for Identity sensor can cover most virtual domain controllers. For more information, see [Defender for Identity Capacity Planning](deploy/capacity-planning.md).
+          The Defender for Identity sensor can cover most virtual domain controllers. For more information, see [Defender for Identity Capacity Planning](capacity-planning.md).
 
-          If the Defender for Identity sensor can't cover a virtual domain controller, use either a virtual or physical Defender for Identity standalone sensor instead. For more information, see [Configure port mirroring](deploy/configure-port-mirroring.md).
+          If the Defender for Identity sensor can't cover a virtual domain controller, use either a virtual or physical Defender for Identity standalone sensor instead. For more information, see [Configure port mirroring](configure-port-mirroring.md).
           The easiest way is to have a virtual Defender for Identity standalone sensor on every host where a virtual domain controller exists.
           If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
@@ -128,7 +128,7 @@ sections:
 
       - question: How do I configure the Defender for Identity sensors to communicate with Defender for Identity cloud service when I have a proxy?
         answer: |
-          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For more information, see [Configure your proxy or firewall to enable communication with Defender for Identity sensors](deploy/configure-proxy.md).
+          For your domain controllers to communicate with the cloud service, you must open: *.atp.azure.com port 443 in your firewall/proxy. For more information, see [Configure your proxy or firewall to enable communication with Defender for Identity sensors](configure-proxy.md).
 
       - question: Can Defender for Identity monitored domain controllers be virtualized on your IaaS solution?
         answer: |
@@ -136,7 +136,7 @@ sections:
 
       - question: Can Defender for Identity support multi-domain and multi-forest?
         answer: |
-          Defender for Identity supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](deploy/multi-forest.md).
+          Defender for Identity supports multi-domain environments and multiple forests. For more information and trust requirements, see [Multi-forest support](multi-forest.md).
 
       - question: Can you see the overall health of the deployment?
         answer: |
@@ -181,7 +181,7 @@ sections:
 
       - question: How do I download and install or upgrade the Npcap driver? 
         answer: |
-          -  You can obtain the Npcap executables by [downloading the latest deployment package of the Defender for Identity sensor](deploy/download-sensor.md).
+          -  You can obtain the Npcap executables by [downloading the latest deployment package of the Defender for Identity sensor](download-sensor.md).
 
             - **If you haven't yet installed the sensor**, install the sensor using version 2.184 or higher.
 
@@ -267,9 +267,9 @@ sections:
 
 additionalContent: |
   ## Next steps
-  - [Defender for Identity prerequisites](deploy/prerequisites.md)
-  - [Defender for Identity capacity planning](deploy/capacity-planning.md)
-  - [Configure event collection](deploy/configure-event-collection.md)
-  - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
+  - [Defender for Identity prerequisites](prerequisites.md)
+  - [Defender for Identity capacity planning](capacity-planning.md)
+  - [Configure event collection](configure-event-collection.md)
+  - [Configuring Windows event forwarding](configure-event-forwarding.md)
   - [Troubleshooting](troubleshooting-known-issues.md)
   - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

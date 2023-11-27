@@ -35,7 +35,7 @@ Defender for Identity's personal user data is derived from the user's object in 
 
 - After a user is deleted from the organization's Active Directory, Defender for Identity automatically deletes the user profile and any related network activity within a year. 
 
-- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the Defender for Identity service, see the Deleted Objects container recommendation in [Grant required DSA permissions](deploy/directory-service-accounts.md#grant-required-dsa-permissions).
+- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the Defender for Identity service, see the Deleted Objects container recommendation in [Grant required DSA permissions](directory-service-accounts.md#grant-required-dsa-permissions).
 
 ## Export personal data
 

@@ -19,25 +19,25 @@ items:
   expanded: true
   items:
   - name: Quick installation guide
-    href: deploy/quick-installation-guide.md
+    href: quick-installation-guide.md
   - name: Deployment overview
-    href: deploy/deploy-defender-identity.md
+    href: deploy-defender-identity.md
   - name: Plan and prepare
     items:
     - name: Defender for Identity prerequisites
-      href: deploy/prerequisites.md
+      href: prerequisites.md
     - name: Plan your Defender for Identity capacity
-      href: deploy/capacity-planning.md
+      href: capacity-planning.md
   - name: Deploy Defender for Identity
     items:
     - name: Verify connectivity
-      href: deploy/configure-proxy.md
+      href: configure-proxy.md
     - name: Download the Defender for Identity sensor
-      href: deploy/download-sensor.md
+      href: download-sensor.md
     - name: Install the Defender for Identity sensor
-      href: deploy/install-sensor.md
+      href: install-sensor.md
     - name: Configure the Defender for Identity sensor
-      href: deploy/configure-sensor-settings.md
+      href: configure-sensor-settings.md
   - name: Post-deployment configuration
     items:
     - name: Configure event collection
@@ -45,36 +45,38 @@ items:
       - name: Event collection overview 
         href: deploy/event-collection-overview.md
       - name: Configure audit policies for Windows event logs
-        href: deploy/configure-windows-event-collection.md
+        href: configure-windows-event-collection.md
     - name: Roles and permissions
-      href: deploy/role-groups.md
+      href: role-groups.md
     - name: Configure a Directory Service account
       items:
       - name: Overview
-        href: deploy/directory-service-accounts.md
+        href: directory-service-accounts.md
         displayName: Directory Service Account, DSA
       - name: Configure a DSA with a gMSA
         href: deploy/create-directory-service-account-gmsa.md
     - name: Configure remote calls to SAM
-      href: deploy/remote-calls-sam.md
+      href: remote-calls-sam.md
   - name: Extra deployment scenarios
     items:
     - name: Install on AD FS / AD CS servers
-      href: deploy/active-directory-federation-services.md
+      href: active-directory-federation-services.md
     - name: Configure action accounts
-      href: deploy/manage-action-accounts.md
+      href: manage-action-accounts.md
     - name: Deploy for multiple Active Directory forests
-      href: deploy/multi-forest.md
+      href: multi-forest.md
     - name: Configure a standalone sensor
       items:
+      - name: Prerequisites for a standalone sensor
+        href: /deploy/prerequisites-standalone.md
       - name: Configure port mirroring
-        href: deploy/configure-port-mirroring.md
+        href: configure-port-mirroring.md
         displayName: standalone
       - name: Configure Windows Event Forwarding
-        href: deploy/configure-event-forwarding.md
+        href: configure-event-forwarding.md
         displayName: standalone
       - name: Listen for SIEM events
-        href: deploy/configure-event-collection.md
+        href: configure-event-collection.md
         displayName: standalone
 - name: Manage
   items:
@@ -197,7 +199,7 @@ items:
   - name: What's new archive
     href: whats-new-archive.md
   - name: Migrate from Advanced Threat Analytics (ATA)
-    href: deploy/migrate-from-ata-overview.md
+    href: migrate-from-ata-overview.md
 - name: Microsoft 365 Defender Docs
   items:
   - name: Microsoft 365 Defender

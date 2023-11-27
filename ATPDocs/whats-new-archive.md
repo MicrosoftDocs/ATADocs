@@ -187,7 +187,7 @@ Released October 30, 2022
 This new technique is linked with the infamous NOBELIUM actor and was dubbed "MagicWeb" – it allows an adversary to implant a backdoor on compromised AD FS servers, which will enable impersonation as any domain user and thus access to external resources.
 To learn more about this attack, read [this blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/protect-your-environment-against-hybrid-identity-attacks/ba-p/3646450).
 
-- Defender for Identity can now use the LocalSystem account on the domain controller to perform remediation actions (enable/disable user, force user reset password), in addition to the gMSA option that was available before. This enables out of the box support for remediation actions. For more information, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
+- Defender for Identity can now use the LocalSystem account on the domain controller to perform remediation actions (enable/disable user, force user reset password), in addition to the gMSA option that was available before. This enables out of the box support for remediation actions. For more information, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -208,7 +208,7 @@ Released September 19, 2022
 - **More activities to trigger honeytoken alerts**  
 Microsoft Defender for Identity offers the ability to define honeytoken accounts, which are used as traps for malicious actors. Any authentication associated with these honeytoken accounts (normally dormant), triggers a honeytoken activity (external ID 2014) alert. New for this version, any LDAP or SAMR query against these honeytoken accounts will trigger an alert. In addition, if event 5136 is audited, an alert will be triggered when one of the attributes of the honeytoken was changed or if the group membership of the honeytoken was changed.
 
- For more information, see [Configure Windows Event collection](deploy/configure-windows-event-collection.md).
+ For more information, see [Configure Windows Event collection](configure-windows-event-collection.md).
 
 ### Defender for Identity release 2.190
 
@@ -312,7 +312,7 @@ Released May 22, 2022
   - **Disable user** – This temporarily prevents a user from logging in to the network. It can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network.
   - **Reset user password** – This prompts the user to change their password at the next sign-in, ensuring that this account can't be used for further impersonation attempts.
 
-  These actions can be performed from several locations in Microsoft 365 Defender: the user page, the user page side panel, advanced hunting, and even custom detections. This requires setting up a privileged gMSA account that Microsoft Defender for Identity will use to perform the actions. For more information about the requirements, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
+  These actions can be performed from several locations in Microsoft 365 Defender: the user page, the user page side panel, advanced hunting, and even custom detections. This requires setting up a privileged gMSA account that Microsoft Defender for Identity will use to perform the actions. For more information about the requirements, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -352,7 +352,7 @@ Released April 10, 2022
 Released March 27, 2022
 
 - Microsoft Defender for Identity can now monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers. For more information, see 
-[Legacy configurations](deploy/configure-windows-event-collection.md#legacy-configurations).
+[Legacy configurations](configure-windows-event-collection.md#legacy-configurations).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -414,7 +414,7 @@ Released January 24, 2022
 
 Released January 17, 2022
 
-- We're happy to release the ability to configure an action account for Microsoft Defender for Identity. This is the first step in the ability to take actions on users directly from the product. As first step, you can define the gMSA account Microsoft Defender for Identity will use to take the actions. We highly recommend you start creating these users to enjoy the Actions feature once it's live. For more information, see [Manage action accounts](deploy/manage-action-accounts.md).
+- We're happy to release the ability to configure an action account for Microsoft Defender for Identity. This is the first step in the ability to take actions on users directly from the product. As first step, you can define the gMSA account Microsoft Defender for Identity will use to take the actions. We highly recommend you start creating these users to enjoy the Actions feature once it's live. For more information, see [Manage action accounts](manage-action-accounts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -501,7 +501,7 @@ Released August 8, 2021
 In this detection, Microsoft Defender for Identity will trigger a security alert whenever an attacker is trying to exploit the EFS-RPC against the domain controller. This attack vector is associated with the recent PetitPotam attack. To learn more about the alert, see [Suspicious network connection over Encrypting File System Remote Protocol (external ID 2416)](lateral-movement-alerts.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol-external-id-2416).
 
 - Version includes a new security alert: Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)  
-In this detection, Microsoft Defender for Identity will trigger a security alert whenever an attacker tries to change the "msExchExternalHostName" attribute on the Exchange object for remote code execution. To learn more about this alert, see [Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)](lateral-movement-alerts.md#exchange-server-remote-code-execution-cve-2021-26855-external-id-2414). This detection relies on Windows event 4662, so it must be enabled beforehand. For information on how to configure and collect this event, see [Configure Windows Event collection](deploy/configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](deploy/configure-windows-event-collection.md#enable-auditing-on-an-exchange-object).
+In this detection, Microsoft Defender for Identity will trigger a security alert whenever an attacker tries to change the "msExchExternalHostName" attribute on the Exchange object for remote code execution. To learn more about this alert, see [Exchange Server Remote Code Execution (CVE-2021-26855) (external ID 2414)](lateral-movement-alerts.md#exchange-server-remote-code-execution-cve-2021-26855-external-id-2414). This detection relies on Windows event 4662, so it must be enabled beforehand. For information on how to configure and collect this event, see [Configure Windows Event collection](configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object).
 
 ### Defender for Identity release 2.157
 
@@ -572,7 +572,7 @@ Released May 31, 2021
 
 Released May 23, 2021
 
-- If you [configure and collect](deploy/configure-windows-event-collection.md) event ID 4662, Defender for Identity will report which user made the [Update Sequence Number (USN)](/powershell/module/activedirectory/get-adreplicationuptodatenessvectortable#description) change to various Active Directory object properties. For example, if an account password is changed, and event 4662 is enabled, the event will record who changed the password.
+- If you [configure and collect](configure-windows-event-collection.md) event ID 4662, Defender for Identity will report which user made the [Update Sequence Number (USN)](/powershell/module/activedirectory/get-adreplicationuptodatenessvectortable#description) change to various Active Directory object properties. For example, if an account password is changed, and event 4662 is enabled, the event will record who changed the password.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Defender for Identity release 2.147
@@ -610,7 +610,7 @@ Released April 12, 2021
 
 Released March 14, 2021
 
-- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](deploy/configure-windows-event-collection.md) to be collected by Defender for Identity. Once configured, collected events will be available to view in the activity log as well as the Microsoft 365 Defender Advanced Hunting.
+- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](configure-windows-event-collection.md) to be collected by Defender for Identity. Once configured, collected events will be available to view in the activity log as well as the Microsoft 365 Defender Advanced Hunting.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Defender for Identity release 2.142
@@ -660,7 +660,7 @@ Released January 17, 2021
 
 Released January 3, 2021
 
-- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](active-directory-federation-services.md) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft Defender for Identity sensor for AD FS server, [download the latest deployment package](deploy/install-sensor.md) from the sensor configuration page.
+- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](active-directory-federation-services.md) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft Defender for Identity sensor for AD FS server, [download the latest deployment package](install-sensor.md) from the sensor configuration page.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## December 2020
@@ -1022,7 +1022,7 @@ Released September 22, 2019
 - **Enriched NTLM authentication data using Windows Event 8004**  
 Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data as well as enriched failed logon activities including the destination computer which the user attempted but failed to access.
 
-  Learn more about NTLM authentication activities [using Windows Event 8004](deploy/configure-windows-event-collection.md#configure-ntlm-auditing).
+  Learn more about NTLM authentication activities [using Windows Event 8004](configure-windows-event-collection.md#configure-ntlm-auditing).
 
 - Version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1109,7 +1109,7 @@ Until now, Azure ATP provided entity device operating system information based o
     The addition of enriched device operating system identification data helps identify unregistered and non-Windows devices, while simultaneously aiding in your investigation process. For learn more about Network Name Resolution in Azure ATP, see [Understanding Network Name Resolution (NNR)](nnr-policy.md).  
 
 - **New feature: Authenticated proxy - preview**  
-Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Configure the proxy](deploy/configure-proxy.md).
+Azure ATP now supports authenticated proxy. Specify the proxy URL using the sensor command line and specify Username/Password to use proxies that require authentication. For more information about how to use authenticated proxy, see [Configure the proxy](configure-proxy.md).
 
 - **Feature enhancement: Automated domain synchronizer process**  
 The process of designating and tagging domain controllers as domain synchronizer candidates during setup and ongoing configuration is now fully automated. The toggle option to manually select domain controllers as domain synchronizer candidates is removed.
@@ -1133,7 +1133,7 @@ Azure ATP instances are now supported in the Azure UK data center. To learn more
 The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **New documentation feature: Guide for moving from Advanced Threat Analytics to Azure ATP**  
-This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](deploy/migrate-from-ata-overview.md).
+This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](migrate-from-ata-overview.md).
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1159,7 +1159,7 @@ Released June 18, 2019
 Azure ATP's identity threat investigation experience is now in **Public Preview**, and available to all Azure ATP protected tenants. See [Azure ATP Microsoft Defender for Cloud Apps investigation experience](/defender-for-identity/deploy-defender-identity) to learn more.
 
 - **General availability**  
-Azure ATP support for untrusted forests is now in general availability. See [Azure ATP multi-forest](deploy/multi-forest.md) to learn more.
+Azure ATP support for untrusted forests is now in general availability. See [Azure ATP multi-forest](multi-forest.md) to learn more.
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1396,7 +1396,7 @@ Released January 27, 2019
 
 - **New feature: Untrusted forest support – (preview)**  
 Azure ATP's support for sensors in untrusted forests is now in public preview.
-From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](deploy/multi-forest.md) to learn more.
+From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](multi-forest.md) to learn more.
 
 - **New feature: Domain controller coverage**  
 Azure ATP now provides coverage information for Azure ATP monitored domain controllers.  
@@ -1411,7 +1411,7 @@ The Azure ATP account enumeration reconnaissance detection now detects and issue
   - See [Remote code execution attempt](domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019) to learn more.  
 
 - **Windows Server 2019 LSASS issue and Azure ATP**  
-In response to customer feedback regarding Azure ATP usage with domain controllers running Windows Server 2019, this update includes additional logic to avoid triggering the reported behavior on Windows Server 2019 machines. Full support for Azure ATP sensor on Windows Server 2019 is planned for a future Azure ATP update, however installing and running Azure ATP on Windows Servers 2019 is **not** currently supported. See [Azure ATP sensor requirements](deploy/prerequisites.md#) to learn more.
+In response to customer feedback regarding Azure ATP usage with domain controllers running Windows Server 2019, this update includes additional logic to avoid triggering the reported behavior on Windows Server 2019 machines. Full support for Azure ATP sensor on Windows Server 2019 is planned for a future Azure ATP update, however installing and running Azure ATP on Windows Servers 2019 is **not** currently supported. See [Azure ATP sensor requirements](prerequisites.md#) to learn more.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 

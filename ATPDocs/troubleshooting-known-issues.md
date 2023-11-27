@@ -22,7 +22,7 @@ connection failed because connected host has failed to respond...
 
 **Resolution:**
 
-Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](deploy/prerequisites.md#required-ports).
+Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](prerequisites.md#required-ports).
 
 ## Deployment log location
 
@@ -53,7 +53,7 @@ In some cases, when communicating via a proxy, during authentication it might re
 
 **Resolution:**
 
-Ensure that the sensor can browse to *.atp.azure.com through the configured proxy without authentication. For more information, see [Configure proxy to enable communication](deploy/configure-proxy.md).
+Ensure that the sensor can browse to *.atp.azure.com through the configured proxy without authentication. For more information, see [Configure proxy to enable communication](configure-proxy.md).
 
 ## Proxy authentication problem presents as a connection error
 
@@ -402,7 +402,7 @@ There are two possible workarounds for this issue:
     psexec -s -i "C:\MDI\Azure ATP Sensor Setup.exe"
     ```
 
-1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](deploy/install-sensor.md#defender-for-identity-sensor-silent-installation).
+1. Install the sensor with a Scheduled Task configured to run as **LocalSystem**. The command-line syntax to use is mentioned in [Defender for Identity sensor silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation).
 
 ## Sensor installation fails due to certificate management client
 
@@ -439,7 +439,7 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 
 `"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
-For more information, see [Run a silent installation with a proxy configuration](deploy/install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
+For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
 
 ## Sensor service could not run and remains in Starting state
 
@@ -482,8 +482,8 @@ The issue can come up when a Defender for Identity workspace license expires and
 
 ## Next steps
 
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
-- [Defender for Identity capacity planning](deploy/capacity-planning.md)
-- [Configure event collection](deploy/configure-event-collection.md)
-- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Defender for Identity capacity planning](capacity-planning.md)
+- [Configure event collection](configure-event-collection.md)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

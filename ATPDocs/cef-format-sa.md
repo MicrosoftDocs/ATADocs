@@ -193,8 +193,8 @@ Priorities:
 
 ## Next steps
 
-- [Defender for Identity prerequisites](deploy/prerequisites.md)
-- [Defender for Identity capacity planning](deploy/capacity-planning.md)
-- [Configure event collection](deploy/configure-event-collection.md)
-- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
+- [Defender for Identity prerequisites](prerequisites.md)
+- [Defender for Identity capacity planning](capacity-planning.md)
+- [Configure event collection](configure-event-collection.md)
+- [Configuring Windows event forwarding](configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

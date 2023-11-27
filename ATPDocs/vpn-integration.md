@@ -75,4 +75,4 @@ When the Defender for Identity sensor receives VPN events and sends them to the 
 
 ## Related content
 
-For more information, see [Configure event collection](deploy/configure-event-collection.md).
+For more information, see [Configure event collection](configure-event-collection.md).

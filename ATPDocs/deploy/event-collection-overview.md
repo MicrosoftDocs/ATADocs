@@ -13,7 +13,7 @@ The Microsoft Defender for Identity sensor is configured to automatically collec
 
 For the correct events to be audited and included in the Windows event log, your domain controllers or AD FS / AD CS servers require accurate, advanced audit policy settings.
 
-For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+For more information, see [Configure audit policies for Windows event logs](../configure-windows-event-collection.md).
 
 ## Reference of required events
 
@@ -28,7 +28,7 @@ The following events are required for Active Directory Federation Services (AD F
 - 4624 - An account was successfully logged on
 - 4625 - An account failed to log on
 
-For more information, see [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs).
+For more information, see [Configure auditing on an Active Directory Federation Services (AD FS)](../configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs).
 
 ### Required Active Directory Certificate Services (AD CS) events
 
@@ -42,7 +42,7 @@ The following events are required for Active Directory Federation Services (AD F
 - 4890: The certificate manager settings for Certificate Services changed.
 - 4896: One or more rows have been deleted from the certificate database
 
-For more information, see [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
+For more information, see [Configure auditing for Active Directory Certificate Services (AD CS)](../configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
 
 ### Other required Windows events
 
@@ -67,14 +67,14 @@ The following general Windows events are required for all Defender for Identity 
 - 7045 - New Service Installed
 - 8004 - NTLM Authentication
 
-For more information, see [Configure NTLM auditing](configure-windows-event-collection.md#configure-ntlm-auditing) and [Configure domain object auditing](configure-windows-event-collection.md#configure-domain-object-auditing).
+For more information, see [Configure NTLM auditing](../configure-windows-event-collection.md#configure-ntlm-auditing) and [Configure domain object auditing](../configure-windows-event-collection.md#configure-domain-object-auditing).
 
 ### Event collection for standalone sensors
 
 If you're working with a standalone Defender for Identity sensor, configure event collection manually using one of the following methods:
 
-- [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). Defender for Identity supports UDP traffic from your SIEM or syslog server.
-- [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
+- [Listen for SIEM events on your Defender for Identity standalone sensor](../configure-event-collection.md). Defender for Identity supports UDP traffic from your SIEM or syslog server.
+- [Configure Windows event forwarding to your Defender for Identity standalone sensor](../configure-event-forwarding.md)
 
 > [!CAUTION]
 > When forwarding syslog data to a standalone sensor, make sure not to forward *all* syslog data to your sensor.
@@ -88,4 +88,4 @@ For more information, see your SIEM or syslog server's product documentation.
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)
+> [Configure audit policies for Windows event logs »](../configure-windows-event-collection.md)
