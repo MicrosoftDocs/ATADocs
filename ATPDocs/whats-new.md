@@ -85,11 +85,7 @@ Some Defender for Identity alerts wait for a *learning period* before alerts are
 
 Defender for Identity now provides the following enhancements for the learning period experience:
 
-- Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. 
-
-   Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert. For example:
-
-   :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
+- Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert. 
 
 - After deploying a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days is complete, the **Remove learning period** setting is automatically turned *Off* and alert sensitivity levels are returned to their default functionality.
 

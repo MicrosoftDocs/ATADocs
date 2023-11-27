@@ -16,9 +16,9 @@ This security assessment supports [legacy Microsoft LAPS](https://www.microsoft.
 
 ## What risk does not implementing LAPS pose to an organization?
 
-LAPS provide a solution to the issue of using a common local account with an identical password on every computer in a domain. LAPS resolve this issue by setting a different, rotated random password for the common local administrator account on every computer in the domain.
+LAPS provides a solution to the issue of using a common local account with an identical password on every computer in a domain. LAPS resolves this issue by setting a different, rotated random password for the common local administrator account on every computer in the domain.
 
-LAPS simplifies password management while helping customers implement additional recommended defenses against cyberattacks. In particular, the solution mitigates the risk of lateral escalation that results when customers use the same administrative local account and password combination on their computers. LAPS stores the password for each computer's local administrator account in AD, secured in a confidential attribute in the computer's corresponding AD object. The computer can update its own password data in AD, and domain administrators can grant read access to authorized users or groups, such as workstation helpdesk administrators.
+LAPS simplifies password management while helping customers implement more recommended defenses against cyberattacks. In particular, the solution mitigates the risk of lateral escalation that results when customers use the same administrative local account and password combination on their computers. LAPS stores the password for each computer's local administrator account in AD, secured in a confidential attribute in the computer's corresponding AD object. The computer can update its own password data in AD, and domain administrators can grant read access to authorized users or groups, such as workstation helpdesk administrators.
 
 ## How do I use this security assessment?
 
@@ -40,7 +40,7 @@ LAPS simplifies password management while helping customers implement additional
 > [!NOTE]
 > This assessment is updated every 24 hours.
 
-## See Also
+## See also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
