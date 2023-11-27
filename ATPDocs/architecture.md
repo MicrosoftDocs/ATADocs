@@ -14,8 +14,6 @@ The following image shows how Defender for Identity is layered over Microsoft 36
 
 :::image type="content" source="media/architecture/architecture.png" alt-text="Diagram of the Defender for Identity architecture." border="false":::
 
-![Diagram of the Defender for Identity system architecture.](media/architecture-topology.png)
-
 Installed directly on your domain controller, Active Directory Federation Services (AD FS), or Active Directory Certificate Services (AD CS) servers, the Defender for Identity sensor accesses the event logs it requires directly from the servers. After the logs and network traffic are parsed by the sensor, Defender for Identity sends only the parsed information to the Defender for Identity cloud service.
 
 ## Defender for Identity components

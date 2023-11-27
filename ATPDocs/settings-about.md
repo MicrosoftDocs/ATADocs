@@ -20,7 +20,7 @@ The About page provides the following details:
 - Workspace version: The software version running the cluster hosting your workspace.
 - Geolocation: The geographic location of the workspace where your data is stored.
 - Workspace ID: The identifier of your workspace.
-- Workspace name: The name of your workspace workspace.
+- Workspace name: The name of your workspace.
 
 This information can be helpful when troubleshooting issues and opening support tickets. Additionally, you can find the name of your workspace, which is necessary for configuring your [proxy or firewall](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
