@@ -32,8 +32,8 @@ For more information, see [Required ports](../prerequisites.md#ports).
 
 1. If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this:
 
-    :::image type="content" source="../media/certificate-path.png" alt-text="Screenshot of a certificate path.":::
-
+    :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of a certificate path.":::
+    
 ### Test server connectivity using PowerShell
 
 **Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
