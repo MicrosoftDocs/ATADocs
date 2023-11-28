@@ -7,6 +7,8 @@ ms.topic: troubleshooting
 
 # Troubleshooting Microsoft Defender for Identity known issues
 
+This article describes how to troubleshoot known issues in Microsoft Defender for Identity. 
+
 ## Sensor failure communication error
 
 If you receive the following sensor failure error:

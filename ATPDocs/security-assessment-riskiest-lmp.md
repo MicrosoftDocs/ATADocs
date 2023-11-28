@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Riskiest lateral movement paths (LMP)
 
+This articled describes the *Riskiest lateral movement paths (LMP)* security posture assessment report, available in Microsoft Secure Score.
+
 ## What are Risky lateral movement paths?
 
 Microsoft Defender for Identity continuously monitors your environment to identify **sensitive** accounts with the riskiest lateral movement paths that expose a security risk, and reports on these accounts to assist you in managing your environment. Paths are considered risky if they have three or more non-sensitive accounts that can expose the **sensitive** account to credential theft by malicious actors.

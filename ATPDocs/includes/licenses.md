@@ -6,7 +6,7 @@ ms.date: 09/26/2023
 ---
 
 - Enterprise Mobility + Security E5 (EMS E5/A5)
-- Microsoft 365 E5 (M365 E5/A5/G5)
+- Microsoft 365 E5 (Microsoft E5/A5/G5)
 - Microsoft 365 E5/A5/G5 Security
 - A standalone Defender for Identity license
 
