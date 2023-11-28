@@ -56,7 +56,7 @@ This procedure is only required if you've previously enabled the [Access this co
 
 1. Add the Defender for Identity Directory Service account to the list of approved accounts. For example:
 
-    ![Screenshot of the Access this computer from the network Properties dialog](media/add-service-account.png)
+    ![Screenshot of the Access this computer from the network Properties dialog.](media/add-service-account.png)
 
 
 ## Next step

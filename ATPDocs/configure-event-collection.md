@@ -14,7 +14,7 @@ For more information, see [Windows event collection overview](deploy/event-colle
 > [!IMPORTANT]
 > Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
-### RSA Security Analytics
+## RSA Security Analytics
 
 Use the following message syntax to configure your standalone sensor to listen for RSA Security Analytics events:
 
@@ -43,7 +43,7 @@ In this syntax:
 > [!IMPORTANT]
 > The order of the fields is important and nothing else should be included in the message.
 
-### MicroFocus ArcSight
+## MicroFocus ArcSight
 
 Use the following message syntax to configure your standalone sensor to listen for MicroFocus ArcSight events:
 
@@ -64,7 +64,7 @@ In this syntax:
     |Key  |Description  |
     |---------|---------|
     |**externalId**     | The Windows event ID        |
-    |**rt**     | The timestamp of the actual event. Make sure that the value isn't the timestamp of the *arrival* to the SIEM, or when it's sent to Defender for Identity. Also make sure sure to use an accuracy of milliseconds.   |
+    |**rt**     | The timestamp of the actual event. Make sure that the value isn't the timestamp of the *arrival* to the SIEM, or when it's sent to Defender for Identity. Also make sure to use an accuracy of milliseconds.   |
     |**cat**     |     The Windows event log name    |
     |**shost**     |   The source host name      |
     |**dhost**     |   The computer receiving the event, such as the domain controller      |
@@ -77,7 +77,7 @@ In this syntax:
     - `EventSource`
     - `Reason or Error Code` = The result code of the NTLM
 
-### Splunk
+## Splunk
 
 Use the following message syntax to configure your standalone sensor to listen for Splunk events:
 
@@ -123,7 +123,7 @@ Error Code: 0x0
 ```
 
 
-### QRadar
+## QRadar
 
 QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data.
 

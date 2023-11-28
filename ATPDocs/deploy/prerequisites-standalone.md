@@ -21,7 +21,7 @@ Standalone sensors differ from Defender for Identity sensor [prerequisites](../p
 
 - Standalone sensors require a minimum of 5 GB of disk space
 
-- Standalone sensors can be also be installed on servers that are in a workgroup.
+- Standalone sensors can also be installed on servers that are in a workgroup.
 
 - Standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
@@ -33,7 +33,7 @@ For information on using virtual machines with the Defender for Identity standal
 
 Standalone sensors require at least one of each of the following network adapters:
 
-- **Management adapters** - used for communications on your corporate network. The sensor will use this adapter to query the DC it's protecting and performing resolution to machine accounts.
+- **Management adapters** - used for communications on your corporate network. The sensor uses this adapter to query the DC it's protecting and performing resolution to machine accounts.
 
     Configure management adapters with static IP addresses, including a default gateway, and preferred and alternate DNS servers.
 
@@ -52,11 +52,11 @@ Standalone sensors require at least one of each of the following network adapter
 >[!NOTE]
 >If you run Wireshark on Defender for Identity standalone sensor, restart the Defender for Identity sensor service after you've stopped the Wireshark capture. If you don't restart the sensor service, the sensor stops capturing traffic.
 
-If you attempt to install the Defender for Identity sensor on a machine configured with a NIC Teaming adapter, you'll receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, see [Defender for Identity sensor NIC teaming issue](../troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
+If you attempt to install the Defender for Identity sensor on a machine configured with a NIC Teaming adapter, you receive an installation error. If you want to install the Defender for Identity sensor on a machine configured with NIC teaming, see [Defender for Identity sensor NIC teaming issue](../troubleshooting-known-issues.md#defender-for-identity-sensor-nic-teaming-issue).
 
 ### Ports for standalone sensors
 
-The following table lists the extra ports ports that the Defender for Identity standalone sensor requires configured on the management adapter, in addition to ports listed for the [Defender for Identity sensor](../prerequisites.md#required-ports).
+The following table lists the extra ports that the Defender for Identity standalone sensor requires configured on the management adapter, in addition to ports listed for the [Defender for Identity sensor](../prerequisites.md#required-ports).
 
 |Protocol|Transport|Port|From|To|
 |------------|-------------|--------|-----------|---|
@@ -72,7 +72,9 @@ The following table lists the extra ports ports that the Defender for Identity s
 
 ## Windows event log requirements
 
-Defender for Identity detection relies on specific [Windows Event logs](event-collection-overview.md) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Advanced Audit Policy settings. For more information, see, [Advanced audit policy check](../configure-windows-event-collection.md). 
+Defender for Identity detection relies on specific [Windows Event logs](event-collection-overview.md) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Windows Advanced Audit Policy settings.
+
+For more information, see, [Advanced audit policy check](../configure-windows-event-collection.md) and [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) in the Windows documentation.
 
 - To make sure that [Windows Event 8004 is audited](../configure-windows-event-collection.md#configure-ntlm-auditing) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7).
 

@@ -16,7 +16,7 @@ Watch the following video for a step-by-step demo and to learn about:
 - Finding potential sensor and configuration health issues
 - Viewing identity-related posture assessments in Microsoft Secure Score
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW16oLB]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RW16oLB]
 
 ## Prerequisites
 

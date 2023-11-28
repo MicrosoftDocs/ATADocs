@@ -20,7 +20,7 @@ Watch the following video to learn more about remediation actions in Defender fo
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4U7Pe]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4U7Pe]
 
 
 ## Prerequisites

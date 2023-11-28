@@ -9,15 +9,15 @@ ms.topic: how-to
 
 Microsoft Defender for Identity detection relies on specific Windows Event log entries to enhance detections and provide extra information on the users who performed specific actions, such as NTLM logons and security group modifications.
 
-For the correct events to be audited and included in the Windows Event Log, your domain controllers require specific Advanced Audit Policy settings. Misconfigured Advanced Audit Policy settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
+For the correct events to be audited and included in the Windows Event Log, your domain controllers require specific Windows server Advanced Audit Policy settings. Misconfigured Advanced Audit Policy settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
 
 This article describes how to configure your Advanced Audit Policy settings as needed for a Defender for Identity sensor, and other configurations for specific event types.
 
-For more information, see [What is Windows event collection for Defender for Identity](deploy/event-collection-overview.md).
+For more information, see [What is Windows event collection for Defender for Identity](deploy/event-collection-overview.md) and [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) in the Windows documentation.
 
 ## Configure auditing for domain controllers
 
-When working with a domain controller, you'll need to update your Advanced Audit Policy settings, as well as extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
+When working with a domain controller, you'll need to update your Advanced Audit Policy settings and extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
 
 - [Advanced Audit Policy settings](#configure-advanced-audit-policy-settings)
 - [NTLM auditing](#configure-ntlm-auditing)
@@ -27,7 +27,7 @@ When working with a domain controller, you'll need to update your Advanced Audit
 
 This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity.
 
-1. Log in to the server as **Domain Administrator**.
+1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
 1. Expand the **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**. For example:
 
@@ -59,9 +59,9 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
         ![Screenshot of the Audit Security Group Management dialog.](media/advanced-audit-policy-check-step-4.png)
 
-1. From an elevated command prompt type `gpupdate`.
+1. From an elevated command prompt, type `gpupdate`.
 
-1. After applying via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
+1. After applying the policy via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
    Alternatively, verify your audit policy via the command line. Run:
 
@@ -136,7 +136,7 @@ To collect events for object changes, such as event 4662, you must also configur
 
         ![Screenshot of selecting permissions.](media/select-permissions.png)
 
-        Now, when triggered, all relevant changes to directory services will appear as 4662 events.
+        Now, when triggered, all relevant changes to directory services appear as `4662` events.
 
 1. Repeat the steps in this procedure, but for **Applies to**, select the following object types:
    - **Descendant Group Objects**
@@ -152,7 +152,7 @@ To collect events for object changes, such as event 4662, you must also configur
 
 1. Go to the **Active Directory Users and Computers** console, and select the domain you want to enable the logs on.
 
-1. Go to to **Program Data** > **Microsoft** > **ADFS**. For example:
+1. Go to **Program Data** > **Microsoft** > **ADFS**. For example:
 
     ![Screenshot of an ADFS container.](media/adfs-container.png)
 
@@ -178,7 +178,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
 
-    1. Go to and double click **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**.
+    1. Go to and double select **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**.
     
     1. Select to configure audit events for **Success** and **Failure**. For example:
 
@@ -257,6 +257,9 @@ Windows Registry Editor Version 5.00
 
 ## Next step
 
-
 > [!div class="step-by-step"]
 > [What are Defender for Identity roles and permissions? »](role-groups.md)
+
+## Related content
+
+[Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
