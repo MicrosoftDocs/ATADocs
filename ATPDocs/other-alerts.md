@@ -125,7 +125,7 @@ An alert is opened when there is a deviation from the user's behavior based on a
 
 **Description**:
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Defender for Identity detects PSexec, Remote WMI, and PowerShell connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS / AD CS  server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Defender for Identity detects PSexec, Remote WMI, and PowerShell connections.
 
 **Learning period**:
 
@@ -156,7 +156,7 @@ None
 
 **Description**:
 
-A suspicious service has been created on a domain controller or AD FS server in your organization. This alert relies on event 7045 to identify this suspicious activity.
+A suspicious service has been created on a domain controller or AD FS  / AD CS server in your organization. This alert relies on event 7045 to identify this suspicious activity.
 
 **Learning period**:
 

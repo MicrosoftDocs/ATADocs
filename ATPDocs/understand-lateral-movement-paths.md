@@ -17,6 +17,13 @@ For example:
 
 Lateral movement attacks are typically accomplished using a number of different techniques. Some of the most popular methods used by attackers are credential theft and Pass the Ticket. In both methods, your non-sensitive accounts are used by attackers for lateral moves by exploiting non-sensitive machines that share stored sign-in credentials in accounts, groups and machines with sensitive accounts.
 
+
+Watch the following video to learn more about reducing lateral movement paths with Defender for Identity:
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWAOfW]
+
 ## Where can I find Defender for Identity LMPs?
 
 Every identity discovered by Defender for Identity to be in an LMP has a **Lateral movement paths** information under the **Observed in organization** tab. For example:
@@ -78,11 +85,7 @@ There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defend
 
 1. Review the graph to see what you can learn about exposure of your sensitive user's credentials. For example, in the path, follow the **Logged into by** arrows to see where Nick logged in with their privileged credentials. In this case, Nick's sensitive credentials were saved on the displayed computer. Now, notice which other users logged into which computers that created the most exposure and vulnerability. In this example, Elizabeth King has the ability to access user credentials from that resource.
 
-## Related videos
-
-- [Reducing lateral movement paths](https://www.microsoft.com/videoplayer/embed/RWAOfW)
-
-## See also
+## Next steps
 
 - [Configure Microsoft Defender for Identity to make remote calls to SAM](remote-calls-sam.md)
 - [Security assessment: Riskiest lateral movement paths (LMP)](security-assessment-riskiest-lmp.md)
