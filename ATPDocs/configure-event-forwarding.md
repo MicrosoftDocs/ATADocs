@@ -126,7 +126,9 @@ This procedure describes how to create a subscription for use with Defender for 
 
 For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11)).
 
-## Next step
+## Related content
 
-> [!div class="step-by-step"]
-> [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)
+For more information, see:
+
+- [Configure port mirroring](configure-port-mirroring.md)
+- [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)

@@ -153,5 +153,5 @@ Make sure that the message includes the original event text from the Windows eve
 
 For more information, see:
 
-- [Event collection with Microsoft Defender for Identity](deploy/event-collection-overview.md)
 - [Configure port mirroring](configure-port-mirroring.md)
+- [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
