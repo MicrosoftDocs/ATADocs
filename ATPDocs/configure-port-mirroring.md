@@ -48,7 +48,7 @@ The following table describes Defender for Identity's support for port mirroring
 > The time on your domain controllers and the connected Defender for Identity sensor must be synchronized to within 5 minutes of eachother.
 >
 
-## Next step
+## Related content
 
 For more information, see:
 

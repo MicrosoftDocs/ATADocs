@@ -149,7 +149,9 @@ Make sure that the message includes the original event text from the Windows eve
 >[!NOTE]
 > Using WinCollect for Windows event collection is not supported.
 
-## Next step
+## Related content
 
-> [!div class="step-by-step"]
-> [Configure audit policies for Windows event logs »](configure-windows-event-collection.md)
+For more information, see:
+
+- [Event collection with Microsoft Defender for Identity](deploy/event-collection-overview.md)
+- [Configure port mirroring](configure-port-mirroring.md)
