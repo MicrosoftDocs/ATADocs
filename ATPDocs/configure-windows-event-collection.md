@@ -255,11 +255,12 @@ Windows Registry Editor Version 5.00
 "Search Time Threshold (msecs)"=dword:00000001
 ```
 
+## Related content
+
+For more information, see [Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview).
+
 ## Next step
 
 > [!div class="step-by-step"]
 > [What are Defender for Identity roles and permissions? »](role-groups.md)
 
-## Related content
-
-[Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
