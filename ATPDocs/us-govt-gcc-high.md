@@ -37,7 +37,7 @@ You can also use the IP address ranges in our Azure service tag (**AzureAdvanced
 
 ## Required connectivity settings
 
-Use [this link](prerequisites.md#ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
+Use [this link](prerequisites.md#required-ports) to configure the minimum internal ports necessary that the Defender for Identity sensor requires.
 
 ## How to migrate from commercial to GCC
 
@@ -53,8 +53,8 @@ Use [this link](prerequisites.md#ports) to configure the minimum internal ports 
 1. Configure a Directory Service account
 1. Download the new sensor agent package and copy the workspace key
 1. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
-1. Uninstall existing sensor agents from the domain controllers, AD FS servers and AD CS servers
-1. [Reinstall sensors with the new workspace key](install-sensor.md#install-the-sensor)
+1. Uninstall existing sensor agents from the domain controllers, AD FS servers, and AD CS servers
+1. [Reinstall sensors with the new workspace key](install-sensor.md)
 1. Migrate any settings after the initial sync (use the https://transition.security.microsoft.com portal in a separate browser session to compare)
 1. Eventually, delete the previous workspace (historical data will be lost)
 
