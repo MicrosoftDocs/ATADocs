@@ -71,8 +71,7 @@ Defender for Identity provides three types of security groups: Azure ATP *(Works
 
 Defender for Identity uses Microsoft Entra security groups as a basis for role groups. The role groups can be managed from the [Groups management page](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups). Only Microsoft Entra users can be added or removed from security groups.
 
-## See also
+## Next step
 
 > [!div class="step-by-step"]
-> [« Directory Service accounts](directory-service-accounts.md)
-> [Configure remote calls to SAM »](remote-calls-sam.md)
+> [Configure a Directory Service account for Microsoft Defender for Identity »](directory-service-accounts.md)

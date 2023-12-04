@@ -12,7 +12,7 @@ This article lists Microsoft Defender for Identity release notes for versions an
 For information about the latest versions and features, see [What's new in Microsoft Defender for Identity](whats-new.md).
 
 > [!NOTE]
-> Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or (AD FS) servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
+> Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or AD FS servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
 
@@ -78,9 +78,9 @@ Released March 27, 2023
 
 - We fixed detection logic issues in the [Directory Services Object Auditing health alert](health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required) for non-English operating systems, and for Windows 2012 with Directory Services schemas earlier than version 87.
 
-- We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md#number-of-dsa-entries).
+- We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
-- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see [Event ID 1644](configure-windows-event-collection.md#event-id-1644).
+- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see  [Event ID 1644](configure-windows-event-collection.md#legacy-configurations).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -351,7 +351,8 @@ Released April 10, 2022
 
 Released March 27, 2022
 
-- Microsoft Defender for Identity can now monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers. To learn how to enable this event, see [Event ID 1644](configure-windows-event-collection.md#event-id-1644).
+- Microsoft Defender for Identity can now monitor additional LDAP queries in your network. These LDAP activities are sent over the Active Directory Web Service protocol and act like normal LDAP queries. To have visibility into these activities, you need to enable event 1644 on your domain controllers. This event covers LDAP activities in your domain and is primarily used to identify expensive, inefficient, or slow Lightweight Directory Access Protocol (LDAP) searches that are serviced by Active Directory domain controllers. For more information, see 
+[Legacy configurations](configure-windows-event-collection.md#legacy-configurations).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -659,7 +660,7 @@ Released January 17, 2021
 
 Released January 3, 2021
 
-- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](active-directory-federation-services.md) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft Defender for Identity sensor for AD FS server, [download the latest deployment package](/defender-for-identity/install-sensor#download-the-setup-package) from the sensor configuration page.
+- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](active-directory-federation-services.md) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft Defender for Identity sensor for AD FS server, [download the latest deployment package](install-sensor.md) from the sensor configuration page.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## December 2020
@@ -1021,7 +1022,7 @@ Released September 22, 2019
 - **Enriched NTLM authentication data using Windows Event 8004**  
 Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data as well as enriched failed logon activities including the destination computer which the user attempted but failed to access.
 
-    Learn more about NTLM authentication activities [using Windows Event 8004](configure-windows-event-collection.md#event-id-8004).
+  Learn more about NTLM authentication activities [using Windows Event 8004](configure-windows-event-collection.md#configure-ntlm-auditing).
 
 - Version also includes improvements and bug fixes for internal sensor infrastructure.
 
