@@ -21,6 +21,8 @@ To ensure maximal security and data privacy, Defender for Identity uses certific
 
 To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
 
+If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](sensor-settings.md#configure-proxy-settings-legacy-methods).
+
 > [!TIP]
 > Occasionally, the Defender for Identity service IP addresses may change.
 >
@@ -67,9 +69,6 @@ For some older workspaces, the message returned could be *Error 503 The service 
 ## Related content
 
 For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
-
-> [!NOTE]
-> If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](sensor-settings.md#configure-proxy-settings-legacy-methods).
 
 ## Next step
 
