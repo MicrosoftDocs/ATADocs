@@ -93,7 +93,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 To better align Defender for Identity and Microsoft Defender for Endpoint alerts, we've updated the detection logic for the Defender for Identity [Remote code execution attempt](other-alerts.md#remote-code-execution-attempt-external-id-2019) detections. 
 
-While this change results in a decreased number of *Remote code execution attempt alerts*, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender-endpoint/manage-security-policies). 
+While this change results in a decreased number of *Remote code execution attempt alerts*, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender-endpoint/manage-security-policies). 
 
 ### Alert sensitivity settings and learning period enhancements
 
