@@ -27,7 +27,7 @@ Defender for Identity for US Government customers requires one of the following 
 
 To access Microsoft Defender for Identity for US Government offerings, use the appropriate addresses in this table:
 
-| US Government offering | Microsoft 365 Defender Portal | Sensor (agent) endpoint                           |
+| US Government offering | Microsoft Defender portal | Sensor (agent) endpoint                           |
 |------------------------|-------------------------------|---------------------------------------------------|
 |DoD                     | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
 |GCC-H                   | `security.microsoft.us`       | `<your-workspace-name>sensorapi.atp.azure.us`      |
@@ -49,7 +49,7 @@ Use [this link](prerequisites.md#required-ports) to configure the minimum intern
    - "Azure ATP _workspaceName_ Administrators" --> "Azure ATP _workspaceName_ Administrators - commercial"
    - "Azure ATP _workspaceName_ Viewers" --> "Azure ATP _workspaceName_ Viewers - commercial"
    - "Azure ATP _workspaceName_ Users" --> "Azure ATP _workspaceName_ Users - commercial"
-1. In the [Microsoft 365 Defender portal](https://security.microsoft.com), go to the Settings -> Identities section to create a new workspace for Defender for Identity
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to the Settings -> Identities section to create a new workspace for Defender for Identity
 1. Configure a Directory Service account
 1. Download the new sensor agent package and copy the workspace key
 1. Make sure sensors have access to *.gcc.atp.azure.com (directly or through proxy)
@@ -67,5 +67,5 @@ Unless otherwise specified, new feature releases, including preview features, do
 
 ## Next steps
 
-- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+- [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

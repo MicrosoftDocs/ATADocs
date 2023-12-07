@@ -10,7 +10,7 @@ ms.topic: conceptual
 Applies to:
 
 - Microsoft Defender for Identity
-- Microsoft 365 Defender
+- Microsoft Defender XDR
 
 Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center.
 
@@ -29,7 +29,7 @@ To perform any of the [supported actions](#supported-actions), you need to:
 
 - Configure the account that Microsoft Defender for Identity will use to perform them.  For more information, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
 
-- Be signed into Microsoft 365 Defender to with a **Security Administrator** or **Security Operator** role.
+- Be signed into Microsoft Defender XDR to with a **Security Administrator** or **Security Operator** role.
 
 ## Supported actions
 
@@ -45,7 +45,7 @@ The following actions can be performed directly on the user account:
 > By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
 
 
-Currently, this feature requires the account signed into Microsoft 365 Defender to possess the **Security Administrator** or **Security Operator** roles.
+Currently, this feature requires the account signed into Microsoft Defender XDR to possess the **Security Administrator** or **Security Operator** roles.
 
 ## Related videos
 

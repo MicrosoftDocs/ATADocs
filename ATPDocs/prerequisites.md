@@ -21,7 +21,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with at least one Security administrator.
 
-    You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
+    You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft Defender XDR **Settings** area and create the workspace.
 
     For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 

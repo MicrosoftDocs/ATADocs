@@ -16,7 +16,7 @@ Role groups enable access management for Defender for Identity. Using role group
 
 ## Unified role-based access control (RBAC)
 
-You can now enable more granular role-based access control from the Microsoft 365 portal instead of using Defender for Identity's Microsoft Entra groups. For more information, see [Custom roles in role-based access control for Microsoft 365 Defender](/microsoft-365/security/defender/custom-roles).
+You can now enable more granular role-based access control from the Microsoft 365 portal instead of using Defender for Identity's Microsoft Entra groups. For more information, see [Custom roles in role-based access control for Microsoft Defender XDR](/microsoft-365/security/defender/custom-roles).
 
 > [!NOTE]
 > Once enabled, you can migrate existing Defender for Identity roles to the new format. However, if you change or add new roles, they must match these permissions to the role table to access the classic Defender for Identity experience.
@@ -32,17 +32,17 @@ You can now enable more granular role-based access control from the Microsoft 36
 > [!NOTE]
 > Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) may still contain Defender for Identity data which adheres to existing Defender for Cloud Apps permissions.
 
-## Required permissions for the Microsoft 365 Defender experience
+## Required permissions for the Microsoft Defender XDR experience
 
-To access the Defender for Identity experience in [in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi), you need the following permissions:
+To access the Defender for Identity experience in [in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi), you need the following permissions:
 
-| Actions in Microsoft 365 Defender                            | Required permissions                                         |
+| Actions in Microsoft Defender XDR                            | Required permissions                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Create MDI Workspace                                         | Member of one of the following Microsoft Entra roles:<li>Global Administrator<li>Security Administrator |
 | MDI Settings                                                 | Member of one of the following Microsoft Entra roles:<li>Global Administrator<li>Security Administrator <br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Authorization and settings/Security settings/Read<br/> <li>Authorization and settings/Security settings/All permissions<br/> <li>Authorization and settings/System settings/Read<br/><li> Authorization and settings/System settings/All permissions |
-| MDI security alerts and activities                           | Member of one of the Microsoft Entra roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Security operations/Security data/Alerts (Manage)<br/><li>Security operations/Security data /Security data basics (Read) |
+| MDI security alerts and activities                           | Member of one of the Microsoft Entra roles as required by [Microsoft Defender XDR](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Security operations/Security data/Alerts (Manage)<br/><li>Security operations/Security data /Security data basics (Read) |
 | MDI security assessments <br> (now part of Microsoft Secure Score) | [Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac): <br><li>Security operations/Security data /Security data basics (Read)|
-|Assets / Identities page|[Permissions](/azure/defender-for-cloud/permissions) to access Defender for Cloud Apps <br> **or** <br> Member of one of the Microsoft Entra roles as required by [Microsoft 365 Defender](/microsoft-365/security/defender/m365d-permissions) |
+|Assets / Identities page|[Permissions](/azure/defender-for-cloud/permissions) to access Defender for Cloud Apps <br> **or** <br> Member of one of the Microsoft Entra roles as required by [Microsoft Defender XDR](/microsoft-365/security/defender/m365d-permissions) |
 
 ## Types of Defender for Identity security groups
 

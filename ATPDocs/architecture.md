@@ -10,7 +10,7 @@ ms.topic: overview
 
 Microsoft Defender for Identity monitors your domain controllers by capturing and parsing network traffic, leveraging Windows events directly from your domain controllers, and then analyzes the data for attacks and threats.
 
-The following image shows how Defender for Identity is layered over Microsoft 365 Defender, and works together with other Microsoft services and third-party identity providers to monitor traffic coming in from domain controllers and Active Directory servers.
+The following image shows how Defender for Identity is layered over Microsoft Defender XDR, and works together with other Microsoft services and third-party identity providers to monitor traffic coming in from domain controllers and Active Directory servers.
 
 :::image type="content" source="media/architecture/architecture.png" alt-text="Diagram of the Defender for Identity architecture." border="false":::
 
@@ -20,8 +20,8 @@ Installed directly on your domain controller, Active Directory Federation Servic
 
 Defender for Identity consists of the following components:
 
-- **Microsoft 365 Defender portal**  
-The Microsoft 365 Defender portal creates your Defender for Identity workspace, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
+- **Microsoft Defender portal**  
+The Microsoft Defender portal creates your Defender for Identity workspace, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
 - **Defender for Identity sensor** 
 Defender for Identity sensors can be directly installed on the following servers:
@@ -30,9 +30,9 @@ Defender for Identity sensors can be directly installed on the following servers
 - **Defender for Identity cloud service**  
 Defender for Identity cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, Australia East, and Asia. Defender for Identity cloud service is connected to Microsoft's intelligent security graph.
 
-## Microsoft 365 Defender portal
+## Microsoft Defender portal
 
-Use the Microsoft 365 Defender portal to:
+Use the Microsoft Defender portal to:
 
 - Create your Defender for Identity workspace.
 - Integrate with other Microsoft security services.
@@ -81,4 +81,4 @@ To ensure that the logs are read, make sure that your Defender for Identity sens
 
 ## Next step
 
-[Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+[Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md)

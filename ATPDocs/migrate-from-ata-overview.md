@@ -48,11 +48,11 @@ Before starting the migration, gather all of the following information:
 
 - **[VPN integration details](vpn-integration.md)**.
 
-- **Alert exclusions**. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](exclusions.md) in Microsoft 365 Defender.
+- **Alert exclusions**. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](exclusions.md) in Microsoft Defender XDR.
 
-- **Account details for entity tags**. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](entity-tags.md).
+- **Account details for entity tags**. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](entity-tags.md).
 
-- **A complete list of all entities, such as computers, groups, or users, that you want to manually tag as *Sensitive* entities**. For more information, see [Defender for Identity entity tags in Microsoft 365 Defender](entity-tags.md).
+- **A complete list of all entities, such as computers, groups, or users, that you want to manually tag as *Sensitive* entities**. For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](entity-tags.md).
 
 - **Report scheduling [details](/defender-for-identity/classic-reports)**, including a list of all reports and scheduled timing.
 
@@ -63,7 +63,7 @@ Before starting the migration, gather all of the following information:
 
 Use the following steps to migrate to Defender for Identity:
 
-1. [Create your new Defender for Identity workspace](deploy-defender-identity.md#start-using-microsoft-365-defender).
+1. [Create your new Defender for Identity workspace](deploy-defender-identity.md#start-using-microsoft-defender-xdr).
 
 1. Uninstall the ATA Lightweight Gateway on all domain controllers.
 
@@ -79,7 +79,7 @@ After the migration is complete, allow two hours for the initial sync to be comp
 
 ## Validate your migration
 
-In Microsoft 365 Defender, check the following areas to validate your migration:
+In Microsoft Defender XDR, check the following areas to validate your migration:
 
 - Review any [health issues](health-alerts.md) for signs of service issues.
 - Review Defender for Identity [sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
@@ -96,7 +96,7 @@ After completing your migration to Defender for Identity, do the following to cl
 
 ## Related information
 
-After migrating to Defender for Identity, learn more about investigating alerts in Microsoft 365 Defender. For more information, see:
+After migrating to Defender for Identity, learn more about investigating alerts in Microsoft Defender XDR. For more information, see:
 
 - [Understanding security alerts](understanding-security-alerts.md)
-- [Investigate Defender for Identity security alerts in Microsoft 365 Defender](manage-security-alerts.md)
+- [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md)
