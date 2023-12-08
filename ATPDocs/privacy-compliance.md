@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 ## Search for and identify personal data
 
-In Defender for Identity, you can view identifiable personal data from the [Microsoft 365 Defender portal](https://security.microsoft.com) using the search bar.
+In Defender for Identity, you can view identifiable personal data from the [Microsoft Defender portal](https://security.microsoft.com) using the search bar.
 
 Search for a specific user or computer, and select the entity to bring you to the user or computer [profile page](/defender-for-identity/investigate-assets). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
 
@@ -21,7 +21,7 @@ Defender for Identity personal data is gathered from Active Directory through th
 
 Defender for Identity shares data, including customer data, among the following Microsoft products also licensed by the customer:
 
-- Microsoft 365 Defender
+- Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Cloud

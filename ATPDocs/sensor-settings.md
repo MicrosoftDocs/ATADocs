@@ -7,11 +7,11 @@ ms.topic: how-to
 
 # Manage and update Microsoft Defender for Identity sensors
 
-This article explains how to configure and manage Microsoft Defender for Identity sensors in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+This article explains how to configure and manage Microsoft Defender for Identity sensors in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
 
 ## View Defender for Identity sensor settings and status
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
     ![Go to Settings, then Identities.](media/settings-identities.png)
 

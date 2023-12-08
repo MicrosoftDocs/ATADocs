@@ -8,13 +8,13 @@ ms.topic: how-to
 # Microsoft Defender for Identity health issues
 
 > [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft Defender XDR.
 
 ## Health issues page
 
 The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health issue. To access the page, follow these steps:
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**.
 
     ![Go to Settings, then Identities.](media/settings-identities.png)
 

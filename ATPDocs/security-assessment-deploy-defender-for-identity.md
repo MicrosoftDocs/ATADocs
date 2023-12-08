@@ -15,7 +15,7 @@ If you've obtained a Defender for Identity license, but haven't yet deployed Def
 
 Defender for Identity uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 
-Defender for Identity is also part of monitoring for Zero Trust. You may also want to use [advanced hunting queries in Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview) to look for threats across identities, devices, and cloud apps.
+Defender for Identity is also part of monitoring for Zero Trust. You may also want to use [advanced hunting queries in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview) to look for threats across identities, devices, and cloud apps.
 
 For more information, see:
 
@@ -26,7 +26,7 @@ For more information, see:
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to be alerted if you have a Defender for Identity license, but don't have Defender for Identity deployed.
 
-1. Take appropriate action by deploying Defender for Identity. For more information, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+1. Take appropriate action by deploying Defender for Identity. For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).
 
 > [!NOTE]
 > This assessment is updated in near real time.
