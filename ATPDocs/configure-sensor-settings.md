@@ -20,7 +20,7 @@ The following video shows a review of the Defender for Identity sensor settings:
 
 After the Defender for Identity sensor is installed, do the following to view and configure Defender for Identity sensor settings:
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**. For example:
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**. For example:
 
    [![Screenshot of the Sensors page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
 
@@ -104,7 +104,7 @@ When using the examples in the following steps, make sure to replace `contosodc.
    
 1. Repeat the previous two steps for each sensor you want to test.
 
-1. From the Microsoft 365 Defender **Devices** page, open the details page for the computer you ran the connectivity test from. Select the **Timeline** tab to view the following activity:
+1. From the Microsoft Defender XDR **Devices** page, open the details page for the computer you ran the connectivity test from. Select the **Timeline** tab to view the following activity:
 
     - **Events**: DNS queries performed to a specified domain name
     - **Action type** MdiDnsQuery
@@ -113,7 +113,7 @@ If the domain controller or AD FS / AD CS that you're testing is the first senso
 
 ### Verify latest available sensor version
 
-The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft 365 Defender **Settings** > **Identities** > **About** page.
+The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft Defender XDR **Settings** > **Identities** > **About** page.
 
 ## Related content
 

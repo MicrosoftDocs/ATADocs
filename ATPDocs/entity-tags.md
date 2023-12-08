@@ -1,12 +1,12 @@
 ---
 title: Entity tags in Microsoft Defender for Identity
-description: Learn about when to use entity tags with Microsoft Defender for Identity and how to apply them in Microsoft 365 Defender.
+description: Learn about when to use entity tags with Microsoft Defender for Identity and how to apply them in Microsoft Defender XDR.
 ms.date: 09/03/2023
 ms.topic: how-to
-#CustomerIntent: As a Defender for Identity customer, I want to learn how to apply entity tags so that I can identify sensitive accounts in Microsoft 365 Defender.
+#CustomerIntent: As a Defender for Identity customer, I want to learn how to apply entity tags so that I can identify sensitive accounts in Microsoft Defender XDR.
 ---
 
-# Defender for Identity entity tags in Microsoft 365 Defender
+# Defender for Identity entity tags in Microsoft Defender XDR
 
 This article describes how to apply Microsoft Defender for Identity entity tags, for sensitive, Exchange server, or honeytoken accounts.
 
@@ -18,7 +18,7 @@ This article describes how to apply Microsoft Defender for Identity entity tags,
 
 ## Prerequisites
 
-To set Defender for Identity entity tags in Microsoft 365 Defender, you'll need Defender for Identity [deployed in your environment](deploy-defender-identity.md), and administrator or user access to Microsoft 365 Defender.
+To set Defender for Identity entity tags in Microsoft Defender XDR, you'll need Defender for Identity [deployed in your environment](deploy-defender-identity.md), and administrator or user access to Microsoft Defender XDR.
 
 For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
@@ -26,7 +26,7 @@ For more information, see [Microsoft Defender for Identity role groups](role-gro
 
 This section describes how to tag an entity manually, such as for a honeytoken account, or if your entity hasn't been automatically tagged as *Sensitive*.
 
-1. Sign into [Microsoft 365 Defender](https://security.microsoft.com) and select **Settings** > **Identities**.
+1. Sign into [Microsoft Defender XDR](https://security.microsoft.com) and select **Settings** > **Identities**.
 
 1. Select the type of tag you want to apply: **Sensitive**, **Honeytoken**, or **Exchange server**.
 
@@ -79,4 +79,4 @@ In addition to these groups, Defender for Identity identifies the following high
 
 ## Related content
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft 365 Defender](manage-security-alerts.md).
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).

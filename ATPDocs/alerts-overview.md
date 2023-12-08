@@ -8,7 +8,7 @@ ms.topic: conceptual
 # Security alerts in Microsoft Defender for Identity
 
 > [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft Defender XDR.
 
 Microsoft Defender for Identity security alerts explain the suspicious activities detected by Defender for Identity sensors on your network, and the actors and computers involved in each threat. Alert evidence lists contain direct links to the involved users and computers, to help make your investigations easy and direct.
 

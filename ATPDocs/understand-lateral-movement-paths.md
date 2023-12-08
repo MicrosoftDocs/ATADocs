@@ -45,7 +45,7 @@ Here's an example of such a query:
 
 [![Advanced hunting query for lateral movement paths.](media/advanced-hunting-lateral-movement-paths.png)](media/advanced-hunting-lateral-movement-paths.png#lightbox)
 
-For instructions on how to run advanced hunting queries, see [Proactively hunt for threats with advanced hunting in Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview).
+For instructions on how to run advanced hunting queries, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
 
 ## LMP related entities
 
@@ -75,7 +75,7 @@ Security insights are never too late to prevent the next attack and remediate da
 
 ## Investigate lateral movement paths
 
-There are multiple ways to use and investigate LMPs. In the Microsoft 365 Defender portal, search by entity and then explore by path or activity.
+There are multiple ways to use and investigate LMPs. In the Microsoft Defender portal, search by entity and then explore by path or activity.
 
 1. From the portal, search for a user. Under **Observed in organization** (in both the **Overview** and **Observed** tabs) you can see if the user is discovered in a potential LMP.
 

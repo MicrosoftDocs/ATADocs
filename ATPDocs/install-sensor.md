@@ -66,7 +66,7 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
     Enter the following details:
 
     - **Installation path**: The location where the Defender for Identity sensor is installed. By default the path is  `%programfiles%\Azure Advanced Threat Protection sensor`. Leave the default value.
-    - **Access key**: Retrieved from the Microsoft 365 Defender portal in a [previous step](download-sensor.md).
+    - **Access key**: Retrieved from the Microsoft Defender portal in a [previous step](download-sensor.md).
 
 
 1. Select **Install**. The following components are installed and configured during the installation of the Defender for Identity sensor:
@@ -89,7 +89,7 @@ Beginning with version 2.176, when installing the sensor from a new package, the
 
 The installed version continues to show even after automatic updates are run from the Defender for Identity cloud services.
 
-View the sensor's real version in the Microsoft 365 Defender [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor), in the executable path or in the file version.
+View the sensor's real version in the Microsoft Defender XDR [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor), in the executable path or in the file version.
 
 ## Defender for Identity sensor silent installation
 

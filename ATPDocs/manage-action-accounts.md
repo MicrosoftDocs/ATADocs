@@ -9,7 +9,7 @@ ms.topic: how-to
 
 Defender for Identity allows you to take [remediation actions](remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
 
-By default, the Microsoft Defender for Identity sensor impersonates the `LocalSystem` account of the domain controller and performs the actions, including [attack disrupting scenarios from Microsoft 365 Defender](/microsoft-365/security/defender/automatic-attack-disruption).
+By default, the Microsoft Defender for Identity sensor impersonates the `LocalSystem` account of the domain controller and performs the actions, including [attack disrupting scenarios from Microsoft Defender XDR](/microsoft-365/security/defender/automatic-attack-disruption).
 
 If you need to change this behavior, set up a dedicated gMSA and scope the permissions that you need. For example:
 
@@ -72,9 +72,9 @@ If you have multiple forests, your gMSA managed action account must be trusted i
 
     1. Select **OK**.
 
-## Add the gMSA account in the Microsoft 365 Defender portal
+## Add the gMSA account in the Microsoft Defender portal
 
-1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com) and select **Settings** -> **Identities** > **Microsoft Defender for Identity** > **Manage action accounts** > **+Create new account**. 
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and select **Settings** -> **Identities** > **Microsoft Defender for Identity** > **Manage action accounts** > **+Create new account**. 
 
     For example:
 
