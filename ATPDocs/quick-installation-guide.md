@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Quick installation guide
 
-This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).
 
 Watch the following video for a step-by-step demo and to learn about:
 
@@ -42,7 +42,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant with at least one Security administrator.
 
-You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft 365 Defender **Settings** area and create the workspace.
+You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft Defender XDR **Settings** area and create the workspace.
 
 For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
@@ -78,14 +78,14 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 
 **To download and install the sensor**:
 
-1. Download the Defender for Identity sensor from the [Microsoft 365 Defender portal](https://security.microsoft.com). Select **Settings** -> **Identities** -> **Sensors** -> **Add sensor** and copy the **Access key** value, which you'll need for the installation.
+1. Download the Defender for Identity sensor from the [Microsoft Defender portal](https://security.microsoft.com). Select **Settings** -> **Identities** -> **Sensors** -> **Add sensor** and copy the **Access key** value, which you'll need for the installation.
 
     > [!TIP]
     > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
 
-1. From the domain controller, run the installer you'd downloaded from Microsoft 365 Defender and follow the instructions on the screen.  
+1. From the domain controller, run the installer you'd downloaded from Microsoft Defender XDR and follow the instructions on the screen.  
 
 
 ## Next step
 
-For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).  For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation) instead.
+For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).  For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#defender-for-identity-sensor-silent-installation) instead.

@@ -1,6 +1,6 @@
 ---
-title: Advanced settings in Microsoft 365 Defender
-description: Learn how to set Microsoft Defender for Identity advanced settings in Microsoft 365 Defender.
+title: Advanced settings in Microsoft Defender XDR
+description: Learn how to set Microsoft Defender for Identity advanced settings in Microsoft Defender XDR.
 ms.date: 11/26/2023
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to know how and when to use an alert learning mode to reduce the number of false positives.
@@ -8,11 +8,11 @@ ms.topic: how-to
 
 # Advanced settings
 
-This article explains how to work with Microsoft Defender for Identity advanced settings in Microsoft 365 Defender.
+This article explains how to work with Microsoft Defender for Identity advanced settings in Microsoft Defender XDR.
 
 ## Prerequisites
 
-To access the **Advanced settings** page in Microsoft 365 Defender, you need access at least as a Security administrator.
+To access the **Advanced settings** page in Microsoft Defender XDR, you need access at least as a Security administrator.
 
 ## Define alert learning period settings
 
@@ -33,7 +33,7 @@ If the **Remove learning period** setting is still *On* at the end of 30 days, D
 
 **To define learning period settings**:
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** > **Identities** > **Advanced settings**. 
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Advanced settings**. 
 
 1. Use the toggle to turn the **Remove learning period** setting *On* or *Off*.
 
@@ -68,5 +68,5 @@ For more information, see [Security alerts in Microsoft Defender for Identity](a
 
 ## Next step
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft 365 Defender](manage-security-alerts.md).
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
  
