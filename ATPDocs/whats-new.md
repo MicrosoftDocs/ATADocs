@@ -30,6 +30,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## December 2023
 
+> [!NOTE]
+> If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
+
 ### Defender for Identity release 2.222
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
@@ -93,7 +96,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 To better align Defender for Identity and Microsoft Defender for Endpoint alerts, we've updated the detection logic for the Defender for Identity [Remote code execution attempt](other-alerts.md#remote-code-execution-attempt-external-id-2019) detections. 
 
-While this change results in a decreased number of *Remote code execution attempt alerts*, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender/custom-detection-rules). 
+While this change results in a decreased number of *Remote code execution attempt* alerts, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender/custom-detection-rules). 
 
 ### Alert sensitivity settings and learning period enhancements
 
