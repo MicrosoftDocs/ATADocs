@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 12/04/2023
+ms.date: 12/05/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -29,6 +29,9 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## December 2023
+
+> [!NOTE]
+> If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
 
 ### Defender for Identity release 2.222
 
@@ -88,6 +91,12 @@ This version also includes bug fixes for cloud services and the Defender for Ide
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ## September 2023
+
+### Decreased number of alerts for Remote Code Execution Attempts
+
+To better align Defender for Identity and Microsoft Defender for Endpoint alerts, we've updated the detection logic for the Defender for Identity [Remote code execution attempt](other-alerts.md#remote-code-execution-attempt-external-id-2019) detections. 
+
+While this change results in a decreased number of *Remote code execution attempt* alerts, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender/custom-detection-rules). 
 
 ### Alert sensitivity settings and learning period enhancements
 
