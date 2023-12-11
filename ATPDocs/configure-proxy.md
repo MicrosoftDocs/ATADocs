@@ -15,8 +15,6 @@ In some organizations, the domain controllers aren't directly connected to the i
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
 >
 
-
-
 ## Enable access to Defender for Identity service URLs in the proxy server
 
 To ensure maximal security and data privacy, Defender for Identity uses certificate-based, mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud back-end. SSL inspection and interception are not supported, as they interfere in the authentication process.
