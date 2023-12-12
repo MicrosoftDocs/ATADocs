@@ -1,137 +1,164 @@
 ---
-title: Active Directory Federation Services (AD FS) 
+title: Configuring sensors for AD FS and AD CS | Microsoft Defender for Identity
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS) 
 ms.date: 01/30/2023
 ms.topic: how-to
 ---
 
-# Microsoft Defender for Identity on Active Directory Federation Services (AD FS)
+# Configuring sensors for AD FS and AD CS
 
-Defender for Identity protects the Active Directory Federation Services (AD FS) in your environment by detecting on-premises attacks against AD FS servers. This article provides you with a quick reference guide for installing Microsoft Defender for Identity on your Active Directory Federation Services servers.
+Install Defender for Identity sensors on Active Directory Federation Services (AD FS) and Active Directory Certificate Services (AD CS) servers to protect them from on-premises attacks.
 
-## Server specifications
+This article describes the steps required when installing Defender for Identity sensors on AD FS or AD CS servers.
 
-The Defender for Identity sensor supports installation on Active Directory Federation Services (AD FS) servers, as shown in the following table:
+> [!NOTE]
+> For AD FS environments, the Defender for Identity sensor is supported only on the federation servers, and isn't required on the Web Application Proxy (WAP) servers. For AD CS environments, you don't need to install the sensor on any AD CS servers that are offline.
+>
 
-| Operating System Version | Server  with Desktop Experience | Server  Core | Nano  Server |
-| ------------------------ | ------------------------------- | ------------ | ------------ |
-| Windows Server 2016      | ✔                               | ✔           | ❌           |
-| Windows Server 2019      | ✔                               | ✔           | ❌           |
-| Windows Server 2022      | ✔                               | ✔           | ❌           |
+## Prerequisites
 
->[!NOTE]
-> The Defender for Identity sensor is supported only on the Federation servers. It is not required on the Web Application Proxy (WAP) servers.
+Prerequisites for installing Defender for Identity sensors on AD FS or AD CS servers are the same as for installing sensors on domain controllers. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-For hardware requirements, see [Defender for Identity server specifications](prerequisites.md#server-specifications).
+## Configure Verbose logging for AD FS events
 
-## Network requirements
-
-For sensors running on AD FS servers to communicate with the Defender for Identity cloud service, you must open port 443 in your firewalls and proxies to `<your-workspace-name>sensorapi.atp.azure.com`, for example *contoso-corpsensorapi.atp.azure.com*. For more information see [Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor](configure-proxy.md)
-
-## AD FS Windows Event logs
-
-For sensors running on AD FS servers, configure the auditing level to **Verbose** using the following command:
+Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**:
 
 ```powershell
 Set-AdfsProperties -AuditLevel Verbose
 ```
 
-For information on how to configure the auditing level, see [Event auditing information for AD FS](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016). The following events should be tracked:
+For more information, see:
 
-- 1202 - The Federation Service validated a new credential
-- 1203 - The Federation Service failed to validate a new credential
-- 4624 - An account was successfully logged on
-- 4625 - An account failed to log on
+- [Required Active Directory Federation Services (AD FS) events](deploy/event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
+- [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
+- [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
 
-## AD FS database permissions
+## Configure read permissions for the AD FS database
 
-For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (db_datareader) permissions on it for the relevant [Directory Services Account](directory-service-accounts.md) configured.
-If you have more than one AD FS server, then this should be performed on all of them as the database permissions are not replicated between them.
+For sensors running on AD FS servers to have access to the AD FS database, you need to grant read (*db_datareader*) permissions for the relevant [Directory Services Account](directory-service-accounts.md) configured.
 
-### How do I grant access to the AD FS database via TSQL or PowerShell?
+If you have more than one AD FS server, make sure to grant this permission across all of them since database permissions are not replicated across servers.
 
-Instead of using SQL Server Management Studio, you can grant access to the AD FS database either through TSQL or through PowerShell. For example, if you're using the Windows Internal Database (WID) or an external SQL server, these commands can be helpful.
+Configure the SQL server to allow *Directory service* account with the following permissions to the **AdfsConfiguration** database:
 
-To grant access for the sensor to the AD FS database using TSQL:
+- *connect*
+- *log in*
+- *read*
+- *select*
 
- ```tsql
+> [!NOTE]
+> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group-managed service account (gMSA) as the [Directory Services Account (DSA)](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
+
+### Grant access to the AD FS database
+
+Grant access to the database using SQL Server Management Studio, TSQL, or PowerShell.
+
+For example, the commands listed below might be helpful if you're using the Windows Internal Database (WID) or an external SQL server.
+
+In these sample codes:
+
+- **[DOMAIN1\mdiSvc01]** is the directory services user of the workspace
+- **AdfsConfigurationV4** is an example of an AD FS database name, and may vary
+- **server=\.\pipe\MICROSOFT##WID\tsql\query** - is the connection string to the database if you are using WID
+
+> [!TIP]
+> If you don't know your connection string, follow the steps in the [Windows server documentation](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql#to-acquire-the-sql-connection-string).
+>
+
+**To grant the sensor access to the AD FS database using TSQL**:
+
+```tsql
 USE [master]
-CREATE LOGIN [DOMAIN1\triservice] FROM WINDOWS WITH DEFAULT_DATABASE=[master]
+CREATE LOGIN [DOMAIN1\mdiSvc01] FROM WINDOWS WITH DEFAULT_DATABASE=[master]
 USE [AdfsConfigurationV4]
-CREATE USER [DOMAIN1\triservice] FOR LOGIN [DOMAIN1\triservice]
-ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\triservice]
-GRANT CONNECT TO [DOMAIN1\triservice]
-GRANT SELECT TO [DOMAIN1\triservice]
+CREATE USER [DOMAIN1\mdiSvc01] FOR LOGIN [DOMAIN1\mdiSvc01]
+ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\mdiSvc01]
+GRANT CONNECT TO [DOMAIN1\mdiSvc01]
+GRANT SELECT TO [DOMAIN1\mdiSvc01]
 GO
 ```
 
-To grant access for the sensor to the AD FS database using PowerShell:
+**To grant the sensor access to the AD FS database using PowerShell**:
 
 ```powershell
-$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\query;database=AdfsConfigurationV4;trusted_connection=true;'
+$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\querydatabase=AdfsConfigurationV4;trusted_connection=true;'
 $SQLConnection= New-Object System.Data.SQLClient.SQLConnection($ConnectionString)
 $SQLConnection.Open()
 $SQLCommand = $SQLConnection.CreateCommand()
 $SQLCommand.CommandText = @"
 USE [master]; 
-CREATE LOGIN [DOMAIN1\triservice] FROM WINDOWS WITH DEFAULT_DATABASE=[master];
+CREATE LOGIN [DOMAIN1\mdiSvc01] FROM WINDOWS WITH DEFAULT_DATABASE=[master];
 USE [AdfsConfigurationV4]; 
-CREATE USER [DOMAIN1\triservice] FOR LOGIN [DOMAIN1\triservice]; 
-ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\triservice]; 
-GRANT CONNECT TO [DOMAIN1\triservice]; 
-GRANT SELECT TO [DOMAIN1\triservice];
+CREATE USER [DOMAIN1\mdiSvc01] FOR LOGIN [DOMAIN1\mdiSvc01]; 
+ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN1\mdiSvc01]; 
+GRANT CONNECT TO [DOMAIN1\mdiSvc01]; 
+GRANT SELECT TO [DOMAIN1\mdiSvc01];
 "@
 $SqlDataReader = $SQLCommand.ExecuteReader()
 $SQLConnection.Close()
 ```
 
->[!NOTE]
->
-> - **[DOMAIN1\triservice]** - the directory services user of the workspace
-> - **AdfsConfigurationV4** - the name of the AD FS database (may vary)
-> - **server=\.\pipe\MICROSOFT##WID\tsql\query** - the connection string to the database if you are using WID
-> - If you don't know your AD FS connection string, see [To acquire the SQL connection string](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql#to-acquire-the-sql-connection-string).
+## Configure event collection for AD FS / AD CS servers
 
-## Installing the sensor
+If you're working with AD FS / AD CS servers, make sure that you've configured auditing as needed. For more information, see:
 
-### Prerequisites
+- **AD FS**:
 
- For sensor installations on Active Directory Federation Services (AD FS) servers, configure the SQL server to allow the *Directory service* account (**Configuration** > **Directory services** > **Username**) *connect*, *log in*, *read*, and *select* permissions to the **AdfsConfiguration** database.
+    - [Required Active Directory Federation Services (AD FS) events](deploy/event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
+    - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
 
-### Installing the Microsoft Defender for Identity sensor on AD FS
+- **AD CS**:
 
-For information on installing the Microsoft Defender for Identity sensor on AD FS sensor, see [Install the Defender for Identity sensor](install-sensor.md).
+    - [Required Active Directory Certificate Services (AD CS) events](deploy/event-collection-overview.md#required-active-directory-certificate-services-ad-cs-events)
+    - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
 
-### Post-installation steps for AD FS servers
+## Validate successful deployment on AD FS / AD CS servers
 
->[!NOTE]
-> During the sensor installation on an AD FS server (sensor version 2.202 or above) the closest domain controller will automatically be selected on installation. This can be checked or configured post-installation using the steps detailed below.
+To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server:
 
-Use the following steps to configure Defender for Identity once you've completed the installation of the sensor on an AD FS server.
+1. Check that the **Azure Advanced Threat Protection sensor** service is running. After you save the Defender for Identity sensor settings, it might take a few seconds for the service to start.
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), go to **Settings** and then **Identities**.
+1. If the service doesn't start, review the `Microsoft.Tri.sensor-Errors.log` file, located by default at: `%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs`
 
-    ![Go to Settings, then Identities.](media/settings-identities.png)
+1. Use AD FS or AD CS to authenticate a user to any application, and then verify that the authentication was observed by Defender for Identity.
 
-1. Select the **Sensors** page, which displays all of your Defender for Identity sensors.
+   For example, select **Hunting** > **Advanced Hunting**. In the **Query** pane, enter and run one of the following queries:
 
-    ![List of Defender for Identity sensors](media/sensor-list-adfs.png)
+   **For AD FS**:
 
-1. Select the sensor you installed on the AD FS server.
-1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers, then select the plus icon **(+)**, and then select **Save**.  
+   ```query
+   IdentityLogonEvents | where Protocol contains 'Adfs'
+   ```
 
-    ![Defender for Identity configure AD FS sensor resolver](media/sensor-config-adfs-resolver.png)
+   The results pane should include a list of events with a **LogonType** of **Logon with ADFS authentication**
 
-    Initializing the sensor may take a couple of minutes, at which time the AD FS sensor service status should change from **stopped** to **running**.
+   **For AD CS**:
 
-## AD FS Frequently asked questions
+   ```query
+   IdentityDirectoryEvents | where Protocol == "Adcs"
+   ```
 
-### Do we need to install both the Defender for Identity sensor and the Defender for Endpoint sensor on domain controllers or Active Directory Federation Services (AD FS) servers?
+   The results pane should include a list of events of failed and successful certificate issuance. Select a specific row to see additional details in the **Inspect Record** left pane. For example:
 
-If you use both products, then to protect both the server and Active Directory, the two sensors must be installed.
+   :::image type="content" source="media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="media/adfs-logon-advanced-hunting.png":::
 
-## See also
+## Post-installation steps for AD FS / AD CS servers (Optional)
 
-- [Directory Service account recommendations](/defender-for-identity/directory-service-accounts)
-- [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md)
+Installing the sensor on an AD FS / AD CS server automatically selects the closest domain controller. Use the following steps to check or modify the selected domain controller.
 
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings**  > **Identities** > **Sensors** to view all of your Defender for Identity sensors.
+
+1. Locate and select the sensor you installed on an AD FS / AD CS server.
+
+1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.   For example:
+
+    ![Screenshot of the Defender for Identity configure AD FS sensor resolver.](media/sensor-config-adfs-resolver.png)
+
+Initializing the sensor may take a couple of minutes, at which time the AD FS / AD CS sensor service status should change from **stopped** to **running**.
+
+## Related content
+
+For more information, see:
+
+- [Microsoft Defender for Identity prerequisites](prerequisites.md)
+- [Install the Microsoft Defender for Identity sensor](install-sensor.md)

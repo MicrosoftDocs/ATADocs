@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 ## Search for and identify personal data
 
-In Defender for Identity, you can view identifiable personal data from the [Microsoft 365 Defender portal](https://security.microsoft.com) using the search bar.
+In Defender for Identity, you can view identifiable personal data from the [Microsoft Defender portal](https://security.microsoft.com) using the search bar.
 
 Search for a specific user or computer, and select the entity to bring you to the user or computer [profile page](/defender-for-identity/investigate-assets). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
 
@@ -21,7 +21,7 @@ Defender for Identity personal data is gathered from Active Directory through th
 
 Defender for Identity shares data, including customer data, among the following Microsoft products also licensed by the customer:
 
-- Microsoft 365 Defender
+- Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Cloud
@@ -35,7 +35,7 @@ Defender for Identity's personal user data is derived from the user's object in 
 
 - After a user is deleted from the organization's Active Directory, Defender for Identity automatically deletes the user profile and any related network activity within a year. 
 
-- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the Defender for Identity service, see the Deleted Objects container recommendation in [Defender for Identity Permissions required for the Directory Service account](directory-service-accounts.md#permissions-required-for-the-dsa).
+- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the Defender for Identity service, see the Deleted Objects container recommendation in [Grant required DSA permissions](directory-service-accounts.md#grant-required-dsa-permissions).
 
 ## Export personal data
 
@@ -52,6 +52,6 @@ Defender for Identity implements the audit of personal data changes, including t
 > [!IMPORTANT]
 > Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East and Asia. Your workspace is created automatically in the data center that is geographically closest to your Microsoft Entra ID. Once created, Defender for Identity workspaces aren't movable.
 
-## See also
+## Next steps
 
 - More information about privacy can be found in the [Defender for Identity FAQ](/defender-for-identity/technical-faq#licensing-and-privacy)

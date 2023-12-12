@@ -3,14 +3,14 @@ title: What is Microsoft Defender for Identity?
 description: This article describes the Microsoft Defender for Identity service and the sorts of suspicious activities Defender for Identity can detect.
 ms.date: 08/27/2023
 ms.topic: overview
-#customer intent: As a Microsoft Defender for Identity customer or potential customer, I want to understand the main use case scenarios for Defender for Identity so that I can best use my Microsoft 365 Defender deployment.
+#customer intent: As a Microsoft Defender for Identity customer or potential customer, I want to understand the main use case scenarios for Defender for Identity so that I can best use my Microsoft Defender XDR deployment.
 ---
 
 # What is Microsoft Defender for Identity?
 
 Microsoft Defender for Identity is a cloud-based security solution that helps secure your identity monitoring across your organization. 
 
-Defender for Identity is fully integrated with Microsoft 365 Defender, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
+Defender for Identity is fully integrated with Microsoft Defender XDR, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
 
 Deploy Defender for Identity to help your SecOp teams deliver a modern identity threat detection (ITDR) solution across hybrid environments, including:
 
@@ -46,7 +46,7 @@ Defender for Identity sensors monitor domain controller traffic by default. For 
 
 For more information, see:
 
-- [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md)
+- [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md)
 - [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md)
 
 
@@ -69,7 +69,7 @@ For more information, see [Security alerts in Microsoft Defender for Identity](a
 
 Defender for Identity is designed to reduce general alert noise, providing you with a prioritized list of relevant, important security alerts in a simple, real-time organizational attack timeline.
 
-Seamless integration with Microsoft 365 Defender provides another layer of enhanced security by correlating data from other domains, for greater visibility and accuracy across users, devices, and network resources.
+Seamless integration with Microsoft Defender XDR provides another layer of enhanced security by correlating data from other domains, for greater visibility and accuracy across users, devices, and network resources.
 
 For more information, see [Investigate assets](investigate-assets.md) and [Investigate security alerts](manage-security-alerts.md).
 
@@ -79,7 +79,7 @@ Use the following table to find more resources about Defender for Identity:
 
 |Resource type  |References |
 |---------|---------|
-|**Learn more**     |   - [Deploy Microsoft Defender for Identity](deploy-defender-identity.md)  <br> - [Licensing and privacy](/defender-for-identity/technical-faq#licensing-and-privacy) <br>- [Defender for Identity frequently asked questions](technical-faq.yml) <br>    - [Working with security alerts](/defender-for-identity/manage-security-alerts)<br>    - [Defender for Identity architecture](architecture.md)  <br>- [Zero Trust with Defender for Identity](zero-trust.md)     |
+|**Learn more**     |   - [Deploy Microsoft Defender for Identity](deploy-defender-identity.md)  <br> - [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy) <br>- [Defender for Identity frequently asked questions](technical-faq.yml) <br>    - [Working with security alerts](/defender-for-identity/manage-security-alerts)<br>    - [Defender for Identity architecture](architecture.md)  <br>- [Zero Trust with Defender for Identity](zero-trust.md)     |	
 |**Join communities**     |     - [Follow Defender for Identity on the Microsoft TechCommunity](https://aka.ms/MDIcommunity "Defender for Identity on Microsoft Tech Community") <br>    - [Join the Defender for Identity Yammer community](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Defender for Identity Yammer community")<br>    - Read the [Defender for Identity blog](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance/label-name/Microsoft%20Defender%20for%20Identity)        |
 | **Roadmap** | [See the upcoming roadmap for Defender for Identity](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity) |
 | **Product page** |[Visit the Defender for Identity product page](https://www.microsoft.com/microsoft-365/security/identity-defender "Defender for Identity product page") |

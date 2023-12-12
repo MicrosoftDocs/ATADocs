@@ -7,14 +7,14 @@ ms.topic: conceptual
 
 # Investigate assets
 
-Microsoft Defender for Identity provides Microsoft 365 Defender users with evidence of when users, computers, and devices have performed suspicious activities or show signs of being compromised.
+Microsoft Defender for Identity provides Microsoft Defender XDR users with evidence of when users, computers, and devices have performed suspicious activities or show signs of being compromised.
 
 This article gives recommendations for how to determine risks to your organization, decide how to remediate, and determine the best way to prevent similar attacks in the future.
 
 ## Investigation steps for suspicious users
 
 > [!NOTE]
-> For information on how to view user profiles in Microsoft 365 Defender, see [Microsoft 365 Defender documentation](/microsoft-365/security/defender/investigate-users).
+> For information on how to view user profiles in Microsoft Defender XDR, see [Microsoft Defender XDR documentation](/microsoft-365/security/defender/investigate-users).
 
 If an alert or incident indicates that a user may be suspicious or compromised, check and investigate the user profile for the following details and activities:
 
@@ -35,7 +35,7 @@ If an alert or incident indicates that a user may be suspicious or compromised, 
 
 Use the answers to these questions to determine if the account appears compromised or if the suspicious activities imply malicious actions.
 
-Find identity information in the following Microsoft 365 Defender areas:
+Find identity information in the following Microsoft Defender XDR areas:
 
 - Individual identity details pages
 - The **Alerts** page
@@ -60,13 +60,13 @@ When you investigate a specific identity, you'll see the following details on an
 |[Active Alerts](/microsoft-365/security/defender/investigate-users#alerts)     | Lists active alerts involving the user from the last 180 days, including details like alert severity and the time the alert was generated. |
 |[Observed in organization](/microsoft-365/security/defender/investigate-users#observed-in-organization)     |   Includes the following sub-areas: <br>- **Devices**: The devices that the identity signed in to, including most and least used in the last 180 days. <br>- **Locations**: The identity's observed locations over the last 30 days. <br>- **Groups**: All observed on-premises groups for the identity. <br> - **Lateral movement paths** - all profiled lateral movement paths from the on-premises environment. |
 |[Identity timeline](/microsoft-365/security/defender/investigate-users#timeline)     |  The timeline represents activities and alerts observed from a user's identity, unifying identity entries across Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint. <br><br>Use the timeline to focus on activities a user performed or were performed on them in specific timeframes. Select the default **30 days** to change the time range to another built-in value, or to a custom range.       |
-|[Remediation actions](/microsoft-365/security/defender/investigate-users#remediation-actions)      |     Respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the Microsoft 365 Defender **Action center.|
+|[Remediation actions](/microsoft-365/security/defender/investigate-users#remediation-actions)      |     Respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the Microsoft Defender XDR **Action center.|
 
-For more information, see [Investigate users](/microsoft-365/security/defender/investigate-users) in the Microsoft 365 Defender documentation.
+For more information, see [Investigate users](/microsoft-365/security/defender/investigate-users) in the Microsoft Defender XDR documentation.
 
 ## Investigation steps for suspicious devices
 
-Microsoft 365 Defender alert lists all devices and users connected to each suspicious activity. Select a device to view the device details page, and then investigate for the following details and activities:
+Microsoft Defender XDR alert lists all devices and users connected to each suspicious activity. Select a device to view the device details page, and then investigate for the following details and activities:
 
 
 - **What happened around the time of the suspicious activity?**  
@@ -87,14 +87,14 @@ For example, the following image shows a device details page:
 
 :::image type="content" source="media/investigate-assets/device-details.png" alt-text="Screenshot of a device details page." lightbox="media/investigate-assets/device-details.png":::
 
-For more information, see [Investigate devices](/microsoft-365/security/defender-endpoint/investigate-machines) in the Microsoft 365 Defender documentation.
+For more information, see [Investigate devices](/microsoft-365/security/defender-endpoint/investigate-machines) in the Microsoft Defender XDR documentation.
 
 
 ## Next steps
 
 - [Investigate Lateral Movement Paths (LMPs)](understand-lateral-movement-paths.md)
-- [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users)
-- [Investigate incidents in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-incidents)
+- [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users)
+- [Investigate incidents in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-incidents)
 
 > [!TIP]
 > Try our interactive guide: [Investigate and respond to attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Investigate%20and%20respond%20to%20attacks%20with%20Microsoft%20Defender%20for%20Identity)

@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 11/14/2023
+ms.date: 12/05/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -22,13 +22,16 @@ Defender for Identity releases are deployed gradually across customer tenants. I
 
 For more information, see also:
 
-- [What's new in Microsoft 365 Defender](/microsoft-365/security/defender/whats-new)
+- [What's new in Microsoft Defender XDR](/microsoft-365/security/defender/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
-## November 2023
+## December 2023
+
+> [!NOTE]
+> If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
 
 ### Security posture assessments for AD CS sensors (Preview)
 
@@ -59,7 +62,21 @@ For example:
 For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
 
 > [!NOTE]
-> While *certificate template* assessments are available to all customers, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+> While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+
+### Defender for Identity release 2.222
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.221
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## November 2023
+
+### Defender for Identity release 2.220
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity release 2.219
 
@@ -77,7 +94,7 @@ For example:
 
 :::image type="content" source="media/whats-new/custom-time-frame.png" alt-text="Screenshot of the custom time frame options." lightbox="media/whats-new/custom-time-frame.png":::
 
-For more information, see [Investigate assets](investigate-assets.md) and [Investigate users in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-users).
+For more information, see [Investigate assets](investigate-assets.md) and [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
 
 ### Defender for Identity release 2.218
 
@@ -94,7 +111,7 @@ This version includes the following improvements:
     -	Details: Additional information on the issue, such as a list of impacted objects or specific sensors on which the issue occurs.
     -	Recommendations: A list of recommended actions that can be taken to resolve the issue, or how to investigate the issue further.
 
-    For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
+    For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
 
 - **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) issue
 
@@ -106,26 +123,31 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ## September 2023
 
+### Decreased number of alerts for Remote Code Execution Attempts
+
+To better align Defender for Identity and Microsoft Defender for Endpoint alerts, we've updated the detection logic for the Defender for Identity [Remote code execution attempt](other-alerts.md#remote-code-execution-attempt-external-id-2019) detections. 
+
+While this change results in a decreased number of *Remote code execution attempt* alerts, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender/custom-detection-rules). 
+
 ### Alert sensitivity settings and learning period enhancements
 
 Some Defender for Identity alerts wait for a *learning period* before alerts are triggered, while building a profile of patterns to use when distinguishing between legitimate and suspicious activities.
 
 Defender for Identity now provides the following enhancements for the learning period experience:
 
-- Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. 
-
-   Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert. For example:
-
-   :::image type="content" source="media/advanced-settings/learning-period.png" alt-text="Screenshot of a learning period turned on." lightbox="media/advanced-settings/learning-period.png":::
+- Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert. 
 
 - After deploying a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days are complete, the **Remove learning period** setting is automatically turned *Off,* and alert sensitivity levels are returned to their default functionality.
 
    To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
 
+If you'd previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
+
 For more information, see [Advanced settings](advanced-settings.md).
 
 > [!NOTE]
-> If you'd previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
+> The **Advanced Settings** page originally listed the *Account enumeration reconnaissance* alert under the **Remove learning period** options as configurable for sensitivity settings. This alert was removed from the list and is replaced by the *Security principal reconnaissance (LDAP)* alert. This user interface bug was fixed in November 2023.
+>
 
 ### Defender for Identity release 2.215
 
@@ -133,15 +155,15 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Defender for Identity reports moved to the main Reports area
 
-Now you can access Defender for Identity reports from Microsoft 365 Defender's main **Reports** area instead of the **Settings** area. For example:
+Now you can access Defender for Identity reports from Microsoft Defender XDR's main **Reports** area instead of the **Settings** area. For example:
 
 :::image type="content" source="media/whats-new/reports-main-area.png" alt-text="Screenshot of the Defender for Identity report access from the main Reports area.":::
 
-For more information, see [Download and schedule Defender for Identity reports in Microsoft 365 Defender (Preview)](reports.md).
+For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
 
-### Go hunt button for groups in Microsoft 365 Defender
+### Go hunt button for groups in Microsoft Defender XDR
 
-Defender for Identity has added the **Go hunt** button for groups in Microsoft 365 Defender. Users can use the **Go hunt** button to query for group-related activities and alerts during an investigation.
+Defender for Identity has added the **Go hunt** button for groups in Microsoft Defender XDR. Users can use the **Go hunt** button to query for group-related activities and alerts during an investigation.
 
 For example:
 
@@ -155,14 +177,14 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Performance enhancements
 
-Defender for Identity has made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft 365 Defender. Customers should expect no delays in Defender for Identity data appearing in Microsoft 365 Defender, such as alerts or activities for advanced hunting.
+Defender for Identity has made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft Defender XDR. Customers should expect no delays in Defender for Identity data appearing in Microsoft Defender XDR, such as alerts or activities for advanced hunting.
 
 
 For more information, see:
 
 - [Security alerts in Microsoft Defender for Identity](alerts-overview.md)
 - [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
-- [Proactively hunt for threats with advanced hunting in Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview)
+- [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview)
 
 ## August 2023
 
@@ -182,10 +204,9 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 Defender for Identity now supports the new **ADCS** sensor type for a dedicated server with Active Directory Certificate Services (AD CS) configured.
 
-You see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft 365 Defender. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
+You see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft Defender XDR. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
 
-Together with the new sensor type, Defender for Identity also now provides related AD CS alerts and Secure Score reports. To view the new alerts and Secure Score reports, make sure that the required events are being collected and logged on your server. For more information, see [Configure event collection for Active Directory Certificate Services (AD CS) events](configure-windows-event-collection.md#for-active-directory-certificate-services-ad-cs-events).
-
+Together with the new sensor type, Defender for Identity also now provides related AD CS alerts and Secure Score reports. To view the new alerts and Secure Score reports, make sure that the required events are being collected and logged on your server. For more information, see [Configure auditing for Active Directory Certificate Services (AD CS) events](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
 
 AD CS is a Windows Server role that issues and manages public key infrastructure (PKI) certificates in secure communication and authentication protocols. For more information, see [What is Active Directory Certificate Services?](/windows-server/identity/ad-cs/active-directory-certificate-services-overview)
 
@@ -199,9 +220,9 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
-### Search for Active Directory groups in Microsoft 365 Defender (Preview)
+### Search for Active Directory groups in Microsoft Defender XDR (Preview)
 
-The Microsoft 365 Defender global search now supports searching by Active Directory group name. Any groups found are shown in the results on a separate **Groups** tab. Select an Active Directory group from your search results to see more details, including:
+The Microsoft Defender XDR global search now supports searching by Active Directory group name. Any groups found are shown in the results on a separate **Groups** tab. Select an Active Directory group from your search results to see more details, including:
 
 :::row:::
    :::column span="":::
@@ -221,9 +242,9 @@ The Microsoft 365 Defender global search now supports searching by Active Direct
 
 For example:
 
-:::image type="content" source="media/whats-new/group-search.png" alt-text="Screenshot of the Groups tab in the Microsoft 365 Defender global search." lightbox="media/whats-new/group-search.png":::
+:::image type="content" source="media/whats-new/group-search.png" alt-text="Screenshot of the Groups tab in the Microsoft Defender XDR global search." lightbox="media/whats-new/group-search.png":::
 
-For more information, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).
+For more information, see [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).
 
 ### New security posture reports
 
@@ -242,19 +263,19 @@ For more information, see [Microsoft Defender for Identity's security posture as
 
 ### Automatic redirection for the classic Defender for Identity portal
 
-The Microsoft Defender for Identity portal experience and functionality have been converged into Microsoft’s extended detection and response (XDR) platform, Microsoft 365 Defender. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft 365 Defender, with no option to revert back to the classic portal.
+The Microsoft Defender for Identity portal experience and functionality have been converged into Microsoft’s extended detection and response (XDR) platform, Microsoft Defender XDR. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
 
-For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
+For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
-### Defender for Identity report downloads and scheduling in Microsoft 365 Defender (Preview)
+### Defender for Identity report downloads and scheduling in Microsoft Defender XDR (Preview)
 
-Now you can download and schedule periodic Defender for Identity reports from the Microsoft 365 Defender portal, creating parity in report functionality with the [classic Defender for Identity portal](classic-reports.md).
+Now you can download and schedule periodic Defender for Identity reports from the Microsoft Defender portal, creating parity in report functionality with the legacy [classic Defender for Identity portal](classic-reports.md).
 
-Download and schedule reports in Microsoft 365 Defender from the **Settings > Identities > Report management** page. For example:
+Download and schedule reports in Microsoft Defender XDR from the **Settings > Identities > Report management** page. For example:
 
 :::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page." lightbox="media/whats-new/report-management.png":::
 
-For more information, see [Microsoft Defender for Identity reports in Microsoft 365 Defender](reports.md).
+For more information, see [Microsoft Defender for Identity reports in Microsoft Defender XDR](reports.md).
 
 ### Defender for Identity release 2.208
 
@@ -276,7 +297,7 @@ For more information, see [Microsoft Defender for Identity reports in Microsoft 
 
 - For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, and identities detected by the Defender for Identity sensor from your on-premises environment.
 
-For more information, see the [Microsoft 365 Defender advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
+For more information, see the [Microsoft Defender XDR advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
 
 ### Defender for Identity release 2.205
 

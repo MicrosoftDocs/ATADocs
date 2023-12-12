@@ -11,7 +11,7 @@ This article describes the **Remove local admins on identity assets** security a
 
 ## Why are local admins on identity assets a risk?
 
-Accounts with indirect control over an identity system, such as AD FS, Active Directory, and so on, have the rights to escalate their privileges within the environment, which can lead to obtaining Domain Admin access or equivalent. 
+Accounts with indirect control over an identity system, such as AD FS, AD CS, Active Directory, and so on, have the rights to escalate their privileges within the environment, which can lead to obtaining Domain Admin access or equivalent. 
 
 Every local admin on a Tier-0 system is an indirect Domain Admin from an attacker's point of view.
 

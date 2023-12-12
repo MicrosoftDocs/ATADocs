@@ -1,16 +1,16 @@
 ---
-title: Detection exclusions in Microsoft 365 Defender
-description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft 365 Defender.
+title: Detection exclusions in Microsoft Defender XDR
+description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft Defender XDR.
 ms.date: 03/23/2023
 ms.topic: how-to
 ---
 
-# Configure Defender for Identity detection exclusions in Microsoft 365 Defender
+# Configure Defender for Identity detection exclusions in Microsoft Defender XDR
 
 > [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft 365 Defender.
+> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft Defender XDR.
 
-This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
 
 Microsoft Defender for Identity enables the exclusion of specific IP addresses, computers, domains, or users from a number of detections.
 
@@ -21,7 +21,7 @@ For example, a **DNS Reconnaissance** alert could be triggered by a security sca
 
 ## How to add detection exclusions
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com/), go to **Settings** and then **Identities**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings** and then **Identities**.
 
     ![Go to Settings, then Identities.](media/settings-identities.png)
 
@@ -91,7 +91,7 @@ You can now also configure exclusions by **Global excluded entities**. Global ex
 
     ![List of global excluded entries.](media/global-excluded-entries-list.png)
 
-## See also
+## Next steps
 
 - [Configure event collection](configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

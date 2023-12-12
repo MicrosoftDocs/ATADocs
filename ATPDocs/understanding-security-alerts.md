@@ -32,7 +32,7 @@ On the alert page you can:
 
   [![Defender for Identity security alert structure](media/security-alert-structure.png)](media/security-alert-structure.png#lightbox)
 
-For more information about alerts, see [Investigate alerts in Microsoft 365 Defender](/microsoft-365/security/defender/investigate-alerts).
+For more information about alerts, see [Investigate alerts in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-alerts).
 
 ## Security alert classifications
 

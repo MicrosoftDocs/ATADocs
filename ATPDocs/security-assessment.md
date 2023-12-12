@@ -23,7 +23,7 @@ Defender for Identity's security posture assessments are available in [Microsoft
 
 - **Accurate assessment reports** of your current organization security posture, for quick responses and effect monitoring in a continuous cycle.
 
-Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at <https://security.microsoft.com/securescore> in the [Microsoft 365 Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
+Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at <https://security.microsoft.com/securescore> in the [Microsoft Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
 
 ## Access Defender for Identity security posture assessments
 
