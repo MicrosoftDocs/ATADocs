@@ -204,7 +204,8 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
             :::image type="content" source="media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Properties Auditing tab.":::
 
-### Configure auditing on the configuration container
+## Configure auditing on the configuration container
+
 <a name="enable-auditing-on-an-exchange-object"></a>
 
 1. Open ADSI Edit by selecting **Start** > **Run**. Enter `ADSIEdit.msc` and select **OK**.
