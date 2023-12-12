@@ -1,7 +1,7 @@
 ---
 title: Configure a DSA for Defender for Identity with a gMSA
 description: Learn how to configure a Directory Service Account for Defender for Identity with a group managed service account (gMSA).
-ms.date: 11/20/2023
+ms.date: 12/11/2023
 ms.topic: how-to
 ---
 
@@ -66,22 +66,6 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 ## Grant required DSA permissions
 
 [!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
-
-## Install the gMSA account
-
->[!NOTE]
->There's no need to install the gMSA for Defender for Identity sensors to be able to use the gMSA.
->Trying to install a gMSA from a root domain on a child domain will fail, as the `Install-ADServiceAccount` cmdlet can only look for the account on the local domain.
-
-To install the gMSA account, run the following commands locally as an administrator:
-
-```powershell
-# Import the required PowerShell module:
-Import-Module ActiveDirectory
-
-# Install the gMSA account
-Install-ADServiceAccount -Identity 'mdiSvc01'
-```
 
 ### Validate that the domain controller can retrieve the gMSA's password
 

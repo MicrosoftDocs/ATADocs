@@ -1,7 +1,7 @@
 ---
 title: Verify connectivity to the Defender for Identity service | Microsoft Defender for Identity
 description: Learn how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors.
-ms.date: 06/13/2023
+ms.date: 12/11/2023
 ms.topic: how-to
 ---
 
@@ -21,13 +21,16 @@ To ensure maximal security and data privacy, Defender for Identity uses certific
 
 To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
 
-If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](sensor-settings.md#configure-proxy-settings-legacy-methods).
+- If your proxy or firewall uses explicit allowlists, we also recommend ensuring that the following URLs are allowed:
 
-> [!TIP]
-> Occasionally, the Defender for Identity service IP addresses may change.
->
-> If you manually configure IP addresses, or if your proxy automatically resolves DNS names to their IP address and uses them, we recommend that you periodically check that the configured IP addresses are still up-to-date.
->
+    - `crl.microsoft.com`
+    - `ctldl.windowsupdate.com` 
+    - `www.microsoft.com/pkiops/\*`
+    - `www.microsoft.com/pki/\*`
+
+- Occasionally, the Defender for Identity service IP addresses may change. If you manually configure IP addresses, or if your proxy automatically resolves DNS names to their IP address and uses them, we recommend that you periodically check that the configured IP addresses are still up-to-date.
+
+- If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](sensor-settings.md#configure-proxy-settings-legacy-methods).
 
 ### Enable access with a service tag
 
