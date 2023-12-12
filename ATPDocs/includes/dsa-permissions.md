@@ -2,14 +2,18 @@
 title: include file
 description: include file
 ms.topic: include
-ms.date: 06/08/2023
+ms.date: 12/11/2023
 ---
 
-The DSA requires read permissions on all objects in Active Directory, including the **Deleted Objects** container.
+The DSA requires read only permissions on **all** the objects in Active Directory, including the **Deleted Objects Container**.
 
 The read-only permissions on the **Deleted Objects** container allows Defender for Identity to detect user deletions from your Active Directory.
 
 Use the following code sample to help you grant the required read permissions on the **Deleted Objects** container, whether or not you're using a gMSA account.
+
+> [!TIP]
+> If the DSA you want to grant the permissions to is a Group Managed Service Account (gMSA), you must first create a security group, add the gMSA as a member, and add the permissions to that group. For more information, see [Configure a Directory Service Account for Defender for Identity with a gMSA](../deploy/create-directory-service-account-gmsa.md).
+>
 
 ```powershell
 # Declare the identity that you want to add read access to the deleted objects container:
