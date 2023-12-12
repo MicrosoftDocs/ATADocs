@@ -46,7 +46,7 @@ This procedure describes how to create a policy on the domain controllers to set
 1. On each domain controller, run:
 
     ```cmd
-    ninrm quick config
+    winrm quickconfig
     ```
 
 1. From a command prompt, enter
