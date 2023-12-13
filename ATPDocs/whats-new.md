@@ -33,6 +33,10 @@ For updates about versions and features released six months ago or earlier, see 
 > [!NOTE]
 > If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
 
+### Defender for Identity release 2.223
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Defender for Identity release 2.222
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
