@@ -15,7 +15,7 @@ This article describes how to configure Defender for Identity notifications so t
 > [!TIP]
 > In addition to email or Syslog notifications, we recommend that SOC admins use Microsoft Sentinel to view all alerts in a single portal.
 > For more information, see [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
-> To integrate other SIEM too, see [Integrate your SIEM tools with Microsoft Defender XDR](/microsoft-365/security/defender/configure-siem-defender).
+> To integrate other SIEM tools, see [Integrate your SIEM tools with Microsoft Defender XDR](/microsoft-365/security/defender/configure-siem-defender).
 ## Configure email notifications
 
 This section describes how to configure email notifications for Defender for Identity health issues or security alerts.
