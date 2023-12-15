@@ -32,7 +32,7 @@ For more information, see [Configure auditing on an Active Directory Federation 
 
 ### Required Active Directory Certificate Services (AD CS) events
 
-The following events are required for Active Directory Federation Services (AD FS) servers:
+The following events are required for Active Directory Certificate Services (AD CS) servers:
 
 - 4870: Certificate Services revoked a certificate
 - 4882: The security permissions for Certificate Services changed
