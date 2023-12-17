@@ -64,6 +64,10 @@ For more information, see [Microsoft Defender for Identity's security posture as
 > [!NOTE]
 > While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
 
+### Defender for Identity release 2.223
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Defender for Identity release 2.222
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.

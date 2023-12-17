@@ -24,9 +24,9 @@ To enable access to Defender for Identity, make sure to allow traffic to the sen
 - If your proxy or firewall uses explicit allowlists, we also recommend ensuring that the following URLs are allowed:
 
     - `crl.microsoft.com`
-    - `ctldl.windowsupdate.com` 
-    - `www.microsoft.com/pkiops/\*`
-    - `www.microsoft.com/pki/\*`
+    - `ctldl.windowsupdate.com`
+    - `www.microsoft.com/pkiops/*`
+    - `www.microsoft.com/pki/*`
 
 - Occasionally, the Defender for Identity service IP addresses may change. If you manually configure IP addresses, or if your proxy automatically resolves DNS names to their IP address and uses them, we recommend that you periodically check that the configured IP addresses are still up-to-date.
 
