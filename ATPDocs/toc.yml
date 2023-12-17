@@ -186,6 +186,8 @@ items:
       href: security-assessment-weak-cipher.md
 - name: Reference
   items:
+  - name: Operations guide
+    href: ops-guide.md
   - name: Frequently asked questions
     href: technical-faq.yml
   - name: SIEM log reference
