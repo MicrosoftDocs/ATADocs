@@ -3,71 +3,83 @@ items:
   href: index.yml
 - name: Overview
   items:
-  - name: What is Microsoft Defender for Identity?
+  - name: Welcome to Defender for Identity
     href: what-is.md
-  - name: What's new in Defender for Identity?
+  - name: What's new?
     href: whats-new.md
-  - name: Defender for Identity architecture
+  - name: Deploy and monitor for Zero Trust
+    href: zero-trust.md
+  - name: System architecture
     href: architecture.md
-  - name: Defender for Identity in Microsoft 365 Defender
+  - name: Defender for Identity in Microsoft Defender XDR
     href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-- name: Get started
+- name: Deploy
+  expanded: true
   items:
   - name: Quick installation guide
     href: quick-installation-guide.md
-  - name: Deploy Defender for Identity with Microsoft 365 Defender
+  - name: Deployment overview
     href: deploy-defender-identity.md
-  - name: Prepare
+  - name: Plan and prepare
     items:
     - name: Defender for Identity prerequisites
       href: prerequisites.md
     - name: Plan your Defender for Identity capacity
       href: capacity-planning.md
-    - name: Configure Windows Event collection
-      href: configure-windows-event-collection.md
-    - name: Directory Service accounts
-      href: directory-service-accounts.md
-    - name: Role groups
-      href: role-groups.md
-    - name: Configure remote calls to SAM
-      href: remote-calls-sam.md
-  - name: Deploy
+  - name: Deploy Defender for Identity
     items:
+    - name: Verify connectivity
+      href: configure-proxy.md
+    - name: Test connectivity
+      href: deploy/test-connectivity.md
     - name: Download the Defender for Identity sensor
       href: download-sensor.md
     - name: Install the Defender for Identity sensor
       href: install-sensor.md
-    - name: Proxy configuration
-      href: configure-proxy.md
-    - name: Test connectivity
-      href: deploy/test-connectivity.md
-    - name: Manage action accounts
-      href: manage-action-accounts.md
     - name: Configure the Defender for Identity sensor
       href: configure-sensor-settings.md
-  - name: Special scenarios
+  - name: Post-deployment configuration
     items:
-    - name: Deploying and monitoring for Zero Trust
-      href: zero-trust.md
-    - name: Installing on Active Directory Federation Services
-      href: active-directory-federation-services.md
-    - name: Multi-forest support
-      href: multi-forest.md
-    - name: Migrate from Advanced Threat Analytics (ATA)
-      href: migrate-from-ata-overview.md
-    - name: Standalone sensor
+    - name: Configure event collection
       items:
+      - name: Event collection overview 
+        href: deploy/event-collection-overview.md
+      - name: Configure audit policies for Windows event logs
+        href: configure-windows-event-collection.md
+    - name: Roles and permissions
+      href: role-groups.md
+    - name: Configure a Directory Service account
+      items:
+      - name: Overview
+        href: directory-service-accounts.md
+        displayName: Directory Service Account, DSA
+      - name: Configure a DSA with a gMSA
+        href: deploy/create-directory-service-account-gmsa.md
+    - name: Configure remote calls to SAM
+      href: remote-calls-sam.md
+  - name: Extra deployment scenarios
+    items:
+    - name: Install on AD FS / AD CS servers
+      href: active-directory-federation-services.md
+    - name: Configure action accounts
+      href: manage-action-accounts.md
+    - name: Deploy for multiple Active Directory forests
+      href: multi-forest.md
+    - name: Configure a standalone sensor
+      items:
+      - name: Prerequisites for a standalone sensor
+        href: deploy/prerequisites-standalone.md
       - name: Configure port mirroring
         href: configure-port-mirroring.md
-      - name: Validate port mirroring
-        href: validate-port-mirroring.md
-      - name: Configure event collection
-        href: configure-event-collection.md
+        displayName: standalone
       - name: Configure Windows Event Forwarding
         href: configure-event-forwarding.md
-  expanded: true
+        displayName: standalone
+      - name: Listen for SIEM events
+        href: configure-event-collection.md
+        displayName: standalone
 - name: Manage
   items:
   - name: Defender for Identity reports
@@ -188,9 +200,11 @@ items:
     href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
   - name: What's new archive
     href: whats-new-archive.md
-- name: Microsoft 365 Defender Docs
+  - name: Migrate from Advanced Threat Analytics (ATA)
+    href: migrate-from-ata-overview.md
+- name: Microsoft Defender XDR Docs
   items:
-  - name: Microsoft 365 Defender
+  - name: Microsoft Defender XDR
     href: /microsoft-365/security/defender/
   - name: Microsoft Defender for Office 365
     href: /microsoft-365/security/office-365-security/

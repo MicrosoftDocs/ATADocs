@@ -1,115 +1,102 @@
 ---
-title: Move from Advanced Threat Analytics 
+title: Migrate from Advanced Threat Analytics | Microsoft Defender for Identity
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
-ms.date: 02/15/2023
+ms.date: 08/10/2023
 ms.topic: how-to
 ---
 
 # Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
-> [!NOTE]
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
-
-Use this guide to move from an existing ATA installation to the (Microsoft Defender for Identity) service. The guide explains Defender for Identity prerequisites and requirements, and details how to plan and then complete your move. Validation steps and tips to take advantage of the latest threat protection and security solutions with Defender for Identity after installation are also included.
-
-To learn more about the differences between ATA and Defender for Identity, see the [Defender for Identity frequently asked questions](technical-faq.yml).
-
-In this guide you will:
+This article describes how to migrate from an existing ATA installation to a Microsoft Defender for Identity sensor, and includes the following steps:
 
 > [!div class="checklist"]
 >
-> - Review and confirm Defender for Identity service prerequisites.
-> - Document your existing ATA configuration.
-> - Plan your move.
-> - Set up and configure your Defender for Identity  service.
-> - Perform post move checks and verification.
-> - Decommission ATA after completing the move.
+> - Review and confirm Defender for Identity service prerequisites
+> - Document your existing ATA configuration
+> - Plan your migration
+> - Set up and configure your Defender for Identity service
+> - Perform post-migration checks and verifications
+> - Decommission ATA
+
+
+> [!IMPORTANT]
+> This migration guide is designed for Defender for Identity sensors only, and not standalone sensors.
+>
+> While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
+>
 
 > [!NOTE]
-> Moving to Defender for Identity from ATA is possible from any ATA version. However, as data cannot be moved from ATA to Defender for Identity, it is recommended to retain your ATA Center data and alerts required for ongoing investigations until all ATA alerts are closed or remediated.
+> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## Prerequisites
 
-- A Microsoft Entra tenant with at least one global/security administrator is required to create a Defender for Identity workspace. Each Defender for Identity workspace supports a multiple Active Directory forest boundary and Forest Functional Level (FFL) of Windows 2003 and above.
+To migrate from ATA to Defender for Identity, you must have an environment and domain controllers that meet Defender for Identity sensor requirements. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-- Defender for Identity requires .Net Framework 4.7 or later and may require a domain controller restart if your current .Net Framework version is not 4.7 or later.
+Make sure that all the domain controllers you plan to use have sufficient internet access to the Defender for Identity service. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
-- Make sure your domain controllers meet all the [Defender for Identity sensor requirements](prerequisites.md#defender-for-identity-sensor-requirements) and your environment meets all [Defender for Identity requirements](prerequisites.md).
+## Plan your migration
 
-- Validate that all domain controllers you plan to use have sufficient internet access to the Defender for Identity service. Check and confirm your domain controllers meet the [Defender for Identity proxy configuration requirements](configure-proxy.md).
+Before starting the migration, gather all of the following information:
 
-> [!NOTE]
-> This migration guide is designed for Defender for Identity sensors only.
+- **Account details for your [Directory Services](directory-service-accounts.md) account**.
 
-## Plan
+- **Syslog notification [settings](/defender-for-identity/notifications)**.
 
-Make sure to gather the following information before starting your move:
+- **Email [notification details](notifications.md)**.
 
-1. Account details for your [Directory Services](directory-service-accounts.md) account.
-1. Syslog notification [settings](/defender-for-identity/notifications)
-1. Email [notification details](notifications.md)
-1. ATA roles group membership
-1. VPN integration
-1. Alert exclusions
-    - Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions in Defender for Identity](/defender-for-identity/exclusions).
-1. Account details for honeytoken accounts.
-    - If you don't already have dedicated honeytoken accounts, learn more about [honeytokens in Defender for Identity](/defender-for-identity/classic-manage-sensitive-honeytoken-accounts) and create new accounts to use for this purpose.
-1. Complete list of all entities (computers, groups, users) you wish to manually tag as Sensitive entities.
-    - Learn more about the importance of [Sensitive entities](/defender-for-identity/entity-tags) in Defender for Identity.
-1. Report scheduling [details](/defender-for-identity/classic-reports) (list of reports and scheduled timing).
+- **All [ATA role group memberships](/advanced-threat-analytics/ata-role-groups)**.
 
-> [!NOTE]
+- **[VPN integration details](vpn-integration.md)**.
+
+- **Alert exclusions**. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](exclusions.md) in Microsoft Defender XDR.
+
+- **Account details for entity tags**. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](entity-tags.md).
+
+- **A complete list of all entities, such as computers, groups, or users, that you want to manually tag as *Sensitive* entities**. For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](entity-tags.md).
+
+- **Report scheduling [details](/defender-for-identity/classic-reports)**, including a list of all reports and scheduled timing.
+
+> [!CAUTION]
 > Do not uninstall the ATA Center until all ATA Gateways are removed. Uninstalling the ATA Center with ATA Gateways still running leaves your organization exposed with no threat protection.
 
-## Move
+## Move to Defender for Identity
 
-Complete your move to Defender for Identity in two easy steps:
+Use the following steps to migrate to Defender for Identity:
 
-### Step 1: Create and install Defender for Identity workspace and sensors
-
-1. [Create your new Defender for Identity workspace](deploy-defender-identity.md#start-using-microsoft-365-defender).
+1. [Create your new Defender for Identity workspace](deploy-defender-identity.md#start-using-microsoft-defender-xdr).
 
 1. Uninstall the ATA Lightweight Gateway on all domain controllers.
 
 1. Install the Defender for Identity Sensor on all domain controllers:
-    - [Download the Defender for Identity sensor files](download-sensor.md) and retrieve the access key.
-    - [Install Defender for Identity sensors on your domain controllers](install-sensor.md).
 
-### Step 2: Configure and validate Defender for Identity workspace
+    1. [Download the Defender for Identity sensor files](download-sensor.md) and retrieve the access key.
 
-- [Configure the Sensor](configure-sensor-settings.md)
+    1. [Install Defender for Identity sensors on your domain controllers](install-sensor.md).
 
-> [!NOTE]
-> Certain tasks in the following list cannot be completed before installing Defender for Identity sensors and then completing an initial sync, such as selecting entities for manual **Sensitive** tagging. Allow up to 2 hours for the initial sync to be completed.
+1. [Configure the your Defender for Identity sensor](configure-sensor-settings.md).
 
-#### Validation
+After the migration is complete, allow two hours for the initial sync to be completed before moving on with validation tasks.
 
-In the Microsoft 365 Defender portal:
+## Validate your migration
 
-- Review any [health issues](/defender-for-identity/health-alerts) for signs of service issues.
-- Review Defender for Identity [Sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
+In Microsoft Defender XDR, check the following areas to validate your migration:
 
-## After the move
+- Review any [health issues](health-alerts.md) for signs of service issues.
+- Review Defender for Identity [sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
 
-This section of the guide explains the actions that can be performed after completing your move.
+## Post-migration activities
 
-> [!NOTE]
-> Import of existing security alerts from ATA to Defender for Identity are not supported. Make sure to record or remediate all existing ATA alerts before decommissioning the ATA Center.
+After completing your migration to Defender for Identity, do the following to clean up your legacy ATA resources:
 
-- **Decommission the ATA Center**  
-  - To reference the ATA Center data after the move, we recommend keeping the center data online for a period of time. After decommissioning the ATA Center, the number of resources can typically be reduced, especially if the resources are a Virtual Machine.
+1. Make sure that you've recorded or remediated all existing ATA alerts. Existing ATA security alerts aren't imported to Defender for Identity with the migration.
+1. Do one or both of the following:
 
-- **Back up Mongo DB**  
-  - If you wish to keep the ATA data indefinitely, [back up Mongo DB](/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
+    - **Decommission the ATA Center**. We recommend keeping ATA data online for a period of time. 
+    - **Back up Mongo DB** if you want to keep the ATA data indefinitely. For more information, see [Backing up the ATA database](/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
 
-## Mission accomplished
+## Related information
 
-Congratulations! Your move from ATA to Defender for Identity is complete.
+After migrating to Defender for Identity, learn more about investigating alerts in Microsoft Defender XDR. For more information, see:
 
-## Next steps
-
-Learn more about [Defender for Identity](what-is.md) features, functionality, and [security alerts](understanding-security-alerts.md).
-
-## Join the Community
-
-Do you have more questions, or an interest in discussing Defender for Identity and related security with others? Join the [Defender for Identity Community](<https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection>) today!
+- [Understanding security alerts](understanding-security-alerts.md)
+- [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md)

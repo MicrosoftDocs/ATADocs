@@ -17,7 +17,7 @@ The information monitored by Defender for Identity is presented in the form of a
 >
 > - This article is relevant for all Defender for Identity sensor types.
 > - Defender for Identity monitored activities appear on both the user and machine profile page.
-> - Defender for Identity monitored activities are also available in Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
+> - Defender for Identity monitored activities are also available in Microsoft Defender XDR's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
 
 ## Monitored user activities: User account AD attribute changes
 
@@ -95,7 +95,7 @@ The information monitored by Defender for Identity is presented in the form of a
 |Computer Operating System Changed|Change to the computer OS.|
 |SID-History changed | Changes to the computer SID history |
 
-## Next steps
+## See Also
 
 - [Managing security alerts](/defender-for-identity/manage-security-alerts)
 - [Security alert guide](/defender-for-identity/alerts-overview)

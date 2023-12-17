@@ -7,20 +7,24 @@ ms.topic: troubleshooting
 
 # Troubleshooting Microsoft Defender for Identity known issues
 
+This article describes how to troubleshoot known issues in Microsoft Defender for Identity. 
+
 ## Sensor failure communication error
 
 If you receive the following sensor failure error:
 
+```cmd
 System.Net.Http.HttpRequestException:
 An error occurred while sending the request. ---> System.Net.WebException:
 Unable to connect to the remote server --->
 System.Net.Sockets.SocketException: A connection attempt failed because the
 connected party did not properly respond after a period of time, or established
 connection failed because connected host has failed to respond...
+```
 
 **Resolution:**
 
-Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](prerequisites.md#ports).
+Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](prerequisites.md#required-ports).
 
 ## Deployment log location
 
@@ -219,7 +223,8 @@ The domain controller hasn't been granted permission to retrieve the password of
 
 **Resolution 1**:
 
-Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Granting the permissions to retrieve the gMSA account's password](directory-service-accounts.md#granting-the-permissions-to-retrieve-the-gmsa-accounts-password).
+Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password).
+
 
 ### Cause 2
 
@@ -229,7 +234,7 @@ If the user rights assignment policy **Log on as a service** is configured for t
 
 **Resolution 2**:
 
-Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+Configure **Log on as a service** for the gMSA accounts, when the user rights assignment policy **Log on as a service** is configured on the affected domain controller. For more information, see [Verify that the gMSA account has the required rights](deploy/create-directory-service-account-gmsa.md#verify-that-the-gmsa-account-has-the-required-rights).
 
 ### Cause 3
 
@@ -258,7 +263,7 @@ The domain controller hasn't been given rights to access the password of the gMS
 
 **Resolution:**
 
-Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS server(s) and standalone sensors computer accounts included. If a Security Group doesn't exist, we recommend that you create one.
+Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS / AD CS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
 
 You can use the following command to check if a computer account or security group has been added to the parameter. Replace *mdiSvc01* with the name you created.
 
@@ -301,7 +306,7 @@ The sensor service fails to start, and the sensor log contains an entry similar 
 
 **Cause:**
 
-The gMSA configured for this domain controller or AD FS server doesn't have permissions to the performance counter's registry keys.
+The gMSA configured for this domain controller or AD FS / AD CS server doesn't have permissions to the performance counter's registry keys.
 
 **Resolution:**
 
@@ -436,7 +441,7 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 
 `"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
-For more information, see [Configure proxy server using the command line](configure-proxy.md#configure-proxy-server-using-the-command-line).
+For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
 
 ## Sensor service could not run and remains in Starting state
 
@@ -458,7 +463,7 @@ NT Service\All Services don't have the right to log on as a service.
 
 **Resolution:**
 
-Add Domain Controller Policy with the logon as a service, as explained in the note under [Verify that the gMSA account has the required rights (if needed)](directory-service-accounts.md#verify-that-the-gmsa-account-has-the-required-rights-if-needed).
+Add Domain Controller Policy with the logon as a service. For more information, see [Verify that the gMSA account has the required rights](deploy/create-directory-service-account-gmsa.md#verify-that-the-gmsa-account-has-the-required-rights).
 
 <a name='your-workspace-wasnt-created-because-a-security-group-with-the-same-name-already-exists-in-azure-active-directory'></a>
 
@@ -475,9 +480,9 @@ The issue can come up when a Defender for Identity workspace license expires and
    - "Azure ATP workspaceName Administrators" -> "Azure ATP workspaceName Administrators - old"
    - "Azure ATP workspaceName Viewers" -> "Azure ATP workspaceName Viewers - old"
    - "Azure ATP workspaceName Users" -> "Azure ATP workspaceName Users - old"
-1. Then you can go back in the [Microsoft 365 Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
+1. Then you can go back in the [Microsoft Defender portal](https://security.microsoft.com), to the [Settings](https://security.microsoft.com/securitysettings) -> [Identities](https://security.microsoft.com/settings/identities) section to create the new workspace for Defender for Identity.
 
-## See also
+## Next steps
 
 - [Defender for Identity prerequisites](prerequisites.md)
 - [Defender for Identity capacity planning](capacity-planning.md)

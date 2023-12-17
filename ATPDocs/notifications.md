@@ -1,12 +1,12 @@
 ---
 title: Microsoft Defender for Identity notifications
-description: Learn how to use and configure Microsoft Defender for Identity notifications in Microsoft 365 Defender.
+description: Learn how to use and configure Microsoft Defender for Identity notifications in Microsoft Defender XDR.
 ms.date: 09/03/2023
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to work with Defender for Identity notifications to make sure I'm up to date about events detected by Defender for Identity.
 ---
 
-# Defender for Identity notifications in Microsoft 365 Defender
+# Defender for Identity notifications in Microsoft Defender XDR
 
 Microsoft Defender for Identity provides notifications for health issues and security alerts, either via email notifications or to a Syslog server.
 
@@ -15,20 +15,20 @@ This article describes how to configure Defender for Identity notifications so t
 > [!TIP]
 > In addition to email or Syslog notifications, we recommend that SOC admins use Microsoft Sentinel to view all alerts in a single portal.
 >
-> For more information, see [Microsoft 365 Defender integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
+> For more information, see [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
 
 
 ## Configure email notifications
 
 This section describes how to configure email notifications for Defender for Identity health issues or security alerts.
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), select **Settings** > **Identities**. 
+1. In [Microsoft Defender XDR](https://security.microsoft.com), select **Settings** > **Identities**. 
 
 1. Under **Notifications**, select **Health issues notifications** or **Alert notifications** as needed.
 
 1. In the **Add recipient email**, enter the email address(es) where you want to receive email notifications, and select **+ Add**.
 
-Whenever Defender for Identity detects a health issue or security alert, configured recipients receive an email notification with the details, with a link to Microsoft 365 Defender for more details.
+Whenever Defender for Identity detects a health issue or security alert, configured recipients receive an email notification with the details, with a link to Microsoft Defender XDR for more details.
 
 ## Configure Syslog notifications
 
@@ -38,7 +38,7 @@ Events aren't sent from the Defender for Identity service to your Syslog server 
 
 **To configure Syslog notifications**:
 
-1. In [Microsoft 365 Defender](https://security.microsoft.com), select **Settings** > **Identities**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), select **Settings** > **Identities**.
 
 1. Under **Notifications**, select **Syslog notifications** and then toggle on the **Syslog service** option.
 

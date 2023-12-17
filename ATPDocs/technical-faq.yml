@@ -72,7 +72,7 @@ sections:
 
           - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Azure AD Identity Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
 
-          - **Contributes to Microsoft 365 Defender**: Contributes alert and threat data to  Microsoft 365 Defender. Microsoft 365 Defender uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. With this breadth and depth of clarity, defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft 365 Defender's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
+          - **Contributes to Microsoft Defender XDR**: Contributes alert and threat data to  Microsoft Defender XDR. Microsoft Defender XDR uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. With this breadth and depth of clarity, defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft Defender XDR's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
 
   - name: Licensing and privacy
     questions:
@@ -266,7 +266,7 @@ sections:
           Look at the most recent error in the current error [log](troubleshooting-using-logs.md) (Where Defender for Identity is installed under the "Logs" folder).
 
 additionalContent: |
-  ## Next steps
+  ## See Also
   - [Defender for Identity prerequisites](prerequisites.md)
   - [Defender for Identity capacity planning](capacity-planning.md)
   - [Configure event collection](configure-event-collection.md)

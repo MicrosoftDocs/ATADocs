@@ -61,7 +61,6 @@ For more information, see the [MDI PowerShell documentation](/powershell/module/
 
 ## Next step
 
-> [!div class="step-by-step"]
-> [« Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor](../configure-proxy.md)
-> [Install the Defender for Identity sensor »](../install-sensor.md)
 
+> [!div class="step-by-step"]
+> [Download the Microsoft Defender for Identity sensor](../download-sensor.md)

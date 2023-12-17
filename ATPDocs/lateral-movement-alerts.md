@@ -274,7 +274,7 @@ Adversaries may create authentication bypass vulnerability results from having t
 
 **Prerequisites**:
 
-Defender for Identity needs Windows Event 4662 to be enabled and collected to monitor for this attack. For information on how to configure and collect this event, see [Configure Windows Event collection](configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object).
+Defender for Identity needs Windows Event 4662 to be enabled and collected to monitor for this attack. For information on how to configure and collect this event, see [Configure Windows Event collection](configure-windows-event-collection.md), and follow the instructions for [Enable auditing on an Exchange object](configure-windows-event-collection.md#enable-auditing-on-an-exchange-object). 
 
 **Learning period**:
 
@@ -368,7 +368,7 @@ None
 
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-## See also
+## Next steps
 
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)
