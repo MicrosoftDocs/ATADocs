@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Edit vulnerable Certificate Authority setting (ESC6)  (Preview)
 
+This article describes Microsoft Defender for Identity's **Vulnerable Certificate Authority setting** report.
+
 ## What are vulnerable Certificate Authority settings?
 
 Each certificate is associated with an entity through its subject field. However, a certificate also includes a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities.

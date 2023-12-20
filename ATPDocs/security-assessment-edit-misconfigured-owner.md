@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Edit misconfigured certificate templates owner (ESC4) (Preview)
 
+This article provides an overview of Microsoft Defender for Identity's **Misconfigured certificate templates owner (ESC4)** security posture assessment report.
+
 ## What is a misconfigured certificate template owner?
 
 A certificate template is an Active Directory object with an owner, who controls access to the object and the ability to edit the object.

@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Edit misconfigured Certificate Authority ACL (ESC7)  (Preview)
 
+This article describes Microsoft Defender for Identity's **Misconfigured certificate authority ACL** security posture assessment report.
+
 ## What is a misconfigured Certificate Authority ACL?
 
 Certificate Authorities (CAs) maintain access control lists (ACLs) that outline roles and permissions for the CA. If access control isn't configured correctly, any user might be allowed to interfere with the CA settings, circumventing security measures, and potentially compromise the entire domain.

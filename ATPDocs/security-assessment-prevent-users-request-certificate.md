@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)  (Preview)
 
+This article provides describes Microsoft Defender for Identity's **Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)** identity security posture assessment report.
+
 ## What are certificate requests for arbitrary users?
 
 Each certificate is associated with an entity through its subject field. However, certificates also include a *Subject Alternative Name* (SAN) field, which allows the certificate to be valid for multiple entities.

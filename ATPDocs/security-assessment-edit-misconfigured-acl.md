@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Edit misconfigured certificate templates ACL (ESC4)  (Preview)
 
+This article describes Microsoft Defender for Identity's **Misconfigured certificate template ACL** security posture assessment report.
+
 ## What is a misconfigured certificate template ACL?
 
 Certificate templates are Active Directory objects with an ACL controlling the access to the object. Besides determining enrollment permissions, the ACL also determines permissions for editing the object itself.

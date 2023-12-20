@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Edit misconfigured enrollment agent certificate template (ESC3)  (Preview)
 
+This article describes Microsoft Defender for Identity's **Misconfigured enrollment agent certificate template** security posture assessment report.
+
 ## What are misconfgured enrollment agent certificate templates?
 
 Typically, users have an Enrollment Agent that enrolls their certificates for them. Under specific circumstances, Enrollment Agent certificates can enroll certificates for any eligible user, posing a risk to your organization. 

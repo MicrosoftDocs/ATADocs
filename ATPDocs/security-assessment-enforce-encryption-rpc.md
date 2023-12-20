@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Enforce encryption for RPC certificate enrollment interface (ESC8)  (Preview)
 
+This article describes Microsoft Defender for Identity's **Enforce encryption for RPC certificate enrollment** security posture assessment report.
+
 ## What is encryption with RPC certificate enrollment?
 
 Active Directory Certificate Services (AD CS) supports certificate enrollment using the RPC protocol, specifically with the MS-ICPR interface. In such cases, the CA settings determine the security settings for the RPC interface, including the requirement for packet privacy.

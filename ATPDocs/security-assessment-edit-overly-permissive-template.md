@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Security assessment: Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)  (Preview)
 
+This article describes Microsoft Defender for Identity's **Overly permissive certificate template with privileged EKU** security posture assessment report.
+
 ## What is an overly permissive certificate template with privileged EKU?
 
 Digital certificates play a vital role in establishing trust and preserving integrity throughout an organization. This is true not only in Kerberos domain authentication, but also in other areas, such as code integrity, server integrity, and technologies that rely on certificates like Active Directory Federation Services (AD FS) and IPSec.
