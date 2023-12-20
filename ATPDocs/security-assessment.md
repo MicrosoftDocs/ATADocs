@@ -29,9 +29,9 @@ Microsoft Secure Score is a measurement of an organization's security posture, w
 
 You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsft Secure Score.
 
-While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
 
-To access identity security posture assessments:
+**To access identity security posture assessments**:
 
 1. Open the [Microsoft Secure Score dashboard](https://security.microsoft.com/securescore).
 1. Select the **Recommended actions** tab. You can search for a particular recommended action, or filter the results (for example, by the category **Identity**).
