@@ -38,7 +38,8 @@ LAPS simplifies password management while helping customers implement more recom
     ![Remediate devices unprotected by LAPS.](media/laps-unprotected-devices.png)
 
 > [!NOTE]
-> This assessment is updated every 24 hours.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 ## See also
 
