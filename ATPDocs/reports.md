@@ -1,7 +1,7 @@
 ---
 title: Manage reports | Microsoft Defender for Identity
 description: Learn how to download and schedule Microsoft Defender for Identity reports from Microsoft Defender XDR.
-ms.date: 08/29/2023
+ms.date: 12/20/2023
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity admin, I want to understand how to generate and schedule reports for activity detected in my environment.
 ---
@@ -33,7 +33,7 @@ To generate a report on demand:
 
 1. In the download report pane that appears on the right, define a time period for your report and then select **Download Report**.
 
-Your report is downloaded by your browser, where you can open or save it. 
+Your report is downloaded by your browser, where you can open or save it. Downloaded reports include a maximum of 100,000 rows.
 
 
 ## Schedule a report by email
