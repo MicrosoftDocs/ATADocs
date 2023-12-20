@@ -35,8 +35,9 @@ For example, the riskiest paths are more readily visible to attackers and, if co
     - Remove the entity from the group as specified in the recommendation.
     - Remove the local administrator permissions for the entity from the device specified in the recommendation.
 
-    > [!NOTE]
-    > This assessment is updated every 24 hours, so wait 24 hours and then check that the recommendation no longer appears in the list.
+> [!NOTE]
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 ## See Also
 
