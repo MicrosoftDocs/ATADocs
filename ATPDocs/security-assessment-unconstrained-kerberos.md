@@ -31,7 +31,9 @@ The following is a description of the risk posed by different delegation types:
 1. Take appropriate action on those at-risk users, such as removing their unconstrained attribute or changing it to a more secure constrained delegation.
 
 > [!NOTE]
-> This assessment is updated every 24 hours.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
+
 
 ## Remediation
 

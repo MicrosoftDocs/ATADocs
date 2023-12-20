@@ -25,7 +25,8 @@ In order to operate at maximum efficiency, all domain controllers must be monito
 1. Take appropriate action on those domain controllers by [installing and configuring monitoring sensors](/defender-for-identity/sensor-settings#domain-controller-status).
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 ## See Also
 

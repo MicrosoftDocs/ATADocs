@@ -33,9 +33,7 @@ Passwords more than 180 days old increase vulnerability to password attacks and 
 
 To achieve the full score, remediate all exposed entities.
 
-> [!NOTE]
-> This assessment is updated in near real time.
-> The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
+[!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
 
 ## Next steps
 
