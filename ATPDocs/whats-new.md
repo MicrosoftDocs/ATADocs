@@ -33,6 +33,11 @@ For updates about versions and features released six months ago or earlier, see 
 > [!NOTE]
 > If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
 
+
+### Defender for Identity release 2.224
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Security posture assessments for AD CS sensors (Preview)
 
 Defender for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations. 
