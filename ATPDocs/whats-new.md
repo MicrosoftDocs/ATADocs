@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 12/20/2023
+ms.date: 12/27/2023
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -33,6 +33,19 @@ For updates about versions and features released six months ago or earlier, see 
 > [!NOTE]
 > If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
 
+### New Identities area and dashboard in Microsoft 365 Defender
+
+Defender for Identity customers now have a new **Identities** area in Microsoft 365 Defender for information about identity security with Defender for Identity.
+
+In Microsoft 365 Defender, select **Identities** to see any of the following new pages:
+
+- **Dashboard**:  Shows graphs and widgets to help you monitor identity threat detection and response activities.  <!-- For example: TBD image-->
+
+    For more information, see [Work with Defender for Identity's ITDR dashboard](dashboard.md).
+
+- **Health issues**: Now moved from the **Settings > Identities** area, and lists any current health issues for your general Defender for Identity deployment and specific sensors. For more information, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
+
+- **Tools**: Shows a list of helpful resources when working with Defender for Identity, such as links to documentation, training, blogs, and communities. You'll also find the *Test-MdiReadiness.ps1* script on the **Tools** page, which can help you understand whether your system has all required prerequisites for installing a Defender for Identity sensor.
 
 ### Defender for Identity release 2.224
 

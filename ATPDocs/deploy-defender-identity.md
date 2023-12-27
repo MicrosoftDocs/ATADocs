@@ -50,8 +50,9 @@ Use the following steps to prepare for deploying Defender for Identity:
 1. [Plan your Defender for Identity capacity](capacity-planning.md).
 
 > [!TIP]
-> We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
->
+> We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites. Download this script from the Microsoft XDR > **Identities** > **Tools** page.
+> 
+> For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
 
 ## Deploy Defender for Identity
 

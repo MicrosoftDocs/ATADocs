@@ -7,14 +7,13 @@ ms.topic: how-to
 
 # Microsoft Defender for Identity health issues
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft Defender XDR.
+The Microsoft Defender for Identity **Health Issues** page lists any current health issues for your Defender for Identity deployment and sensors, alerting you to any problems in your Defender for Identity deployment.
 
 ## Health issues page
 
 The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health issue. To access the page, follow these steps:
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. <!--needs update-->
 
     ![Go to Settings, then Identities.](media/settings-identities.png)
 
@@ -22,9 +21,14 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
     ![Screenshot of the Health issues page.](media/health-alerts/healthissues.png)
 
-1. The **Health issues** page appears, where you can see **Open**, **Closed**, and **Suppressed** health issues.
+1. The **Health issues** page appears, where you can see **Open**, **Closed**, and **Suppressed** health issues, for either your general Defender for Identity deployment, or for specific sensors.
 
-1. Select any issue for more details, and the option to close or suppress the issue.
+    Defender for Identity supports the following types of health alerts:
+
+    - **Domain-related or aggregated health issues**, listed on the **Global health issues** tab
+    - **Sensor-specific health issues**, listed on the **Sensor health issues** tab
+
+1. Select any issue for more details and the option to close or suppress the issue. For example: <!--needs update-->
 
     :::image type="content" source="media/global-health-issues-details.png" alt-text="Health issues details":::
 
