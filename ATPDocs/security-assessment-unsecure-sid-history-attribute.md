@@ -41,7 +41,8 @@ For example, a non-sensitive account in a domain can contain the Enterprise Admi
         ```
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 ## See also
 
