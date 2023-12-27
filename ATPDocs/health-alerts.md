@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 10/22/2023
+ms.date: 12/27/2023
 ms.topic: how-to
 ---
 
@@ -13,13 +13,7 @@ The Microsoft Defender for Identity **Health Issues** page lists any current hea
 
 The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health issue. To access the page, follow these steps:
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. <!--needs update-->
-
-    ![Go to Settings, then Identities.](media/settings-identities.png)
-
-1. Under **General**, select **Health issues**.
-
-    ![Screenshot of the Health issues page.](media/health-alerts/healthissues.png)
+1. In [Microsoft Defender XDR](https://security.microsoft.com), under **Identities**, select **Health issues**.
 
 1. The **Health issues** page appears, where you can see **Open**, **Closed**, and **Suppressed** health issues, for either your general Defender for Identity deployment, or for specific sensors.
 
@@ -28,9 +22,13 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
     - **Domain-related or aggregated health issues**, listed on the **Global health issues** tab
     - **Sensor-specific health issues**, listed on the **Sensor health issues** tab
 
-1. Select any issue for more details and the option to close or suppress the issue. For example: <!--needs update-->
+    For example:
 
-    :::image type="content" source="media/global-health-issues-details.png" alt-text="Health issues details":::
+    :::image type="content" source="media/health-issues/global-health-issues.png" alt-text="Screenshot of the Health Issues page.":::
+
+1. Select any issue for more details and the option to close or suppress the issue. For example:
+
+    :::image type="content" source="media/health-issues/close-suppress.png" alt-text="Health issues details":::
 
 
 ## Health issues

@@ -39,13 +39,15 @@ Defender for Identity customers now have a new **Identities** area in Microsoft 
 
 In Microsoft 365 Defender, select **Identities** to see any of the following new pages:
 
-- **Dashboard**:  Shows graphs and widgets to help you monitor identity threat detection and response activities.  <!-- For example: TBD image-->
+- **Dashboard**:  Shows graphs and widgets to help you monitor identity threat detection and response activities.  For example:
+
+    :::image type="content" source="media/dashboard/dashboard.gif" alt-text="Screenshot of the Identity dashboard.":::
 
     For more information, see [Work with Defender for Identity's ITDR dashboard](dashboard.md).
 
 - **Health issues**: Now moved from the **Settings > Identities** area, and lists any current health issues for your general Defender for Identity deployment and specific sensors. For more information, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
 
-- **Tools**: Shows a list of helpful resources when working with Defender for Identity, such as links to documentation, training, blogs, and communities. You'll also find the *Test-MdiReadiness.ps1* script on the **Tools** page, which can help you understand whether your system has all required prerequisites for installing a Defender for Identity sensor.
+- **Tools**: Links to helpful information and resources when working with Defender for Identity, including links to documentation, specifically on the [capacity planning tool](capacity-planning.md), and the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
 
 ### Defender for Identity release 2.224
 
