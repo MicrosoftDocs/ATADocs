@@ -110,7 +110,9 @@ The servers and domain controllers onto which the sensor is installed must have 
 
 ## Test your prerequisites
 
-We recommend running the *Test-MdiReadiness.ps1* script to test and see if your environment has the necessary prerequisites. For more information, see [the script's page](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) on GitHub.
+We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
+
+The link to the *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
 ## Related content
 
