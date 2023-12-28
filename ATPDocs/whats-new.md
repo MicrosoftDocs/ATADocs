@@ -41,9 +41,9 @@ In Microsoft 365 Defender, select **Identities** to see any of the following new
 
 - **Dashboard**:  Shows graphs and widgets to help you monitor identity threat detection and response activities.  For example:
 
-    :::image type="content" source="media/dashboard/dashboard.gif" alt-text="Screenshot of the Identity dashboard.":::
+   :::image type="content" source="media/dashboard/dashboard.gif" alt-text="An animated GIF showing a sample ITDR Dashboard page.":::
 
-    For more information, see [Work with Defender for Identity's ITDR dashboard](dashboard.md).
+   For more information, see [Work with Defender for Identity's ITDR dashboard](dashboard.md).
 
 - **Health issues**: Now moved from the **Settings > Identities** area, and lists any current health issues for your general Defender for Identity deployment and specific sensors. For more information, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
 
