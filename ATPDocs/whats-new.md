@@ -33,13 +33,13 @@ For updates about versions and features released six months ago or earlier, see 
 > [!NOTE]
 > If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
 
-### New Identities area and dashboard in Microsoft 365 Defender  (Preview)
+### New Identities area and dashboard in Microsoft 365 Defender
 
 Defender for Identity customers now have a new **Identities** area in Microsoft 365 Defender for information about identity security with Defender for Identity.
 
 In Microsoft 365 Defender, select **Identities** to see any of the following new pages:
 
-- **Dashboard**:  Shows graphs and widgets to help you monitor identity threat detection and response activities.  For example:
+- **Dashboard** (Preview):  Shows graphs and widgets to help you monitor identity threat detection and response activities.  For example:
 
    :::image type="content" source="media/dashboard/dashboard.gif" alt-text="An animated GIF showing a sample ITDR Dashboard page.":::
 
