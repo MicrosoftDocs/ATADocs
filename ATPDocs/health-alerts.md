@@ -1,32 +1,36 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 10/22/2023
+ms.date: 12/28/2023
 ms.topic: how-to
 ---
 
 # Microsoft Defender for Identity health issues
 
-> [!NOTE]
-> The experience described in this page can be accessed at <https://security.microsoft.com> as part of Microsoft Defender XDR.
+The Microsoft Defender for Identity **Health Issues** page lists any current health issues for your Defender for Identity deployment and sensors, alerting you to any problems in your Defender for Identity deployment.
 
 ## Health issues page
 
 The Microsoft Defender for Identity **Health issues** page lets you know when there's a problem with your Defender for Identity workspace, by raising a health issue. To access the page, follow these steps:
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), under **Identities**, select **Health issues**.
 
-    ![Go to Settings, then Identities.](media/settings-identities.png)
+1. The **Health issues** page appears, where you can see health issues for both your general Defender for Identity environment and specific sensors.
 
-1. Under **General**, select **Health issues**.
+    Defender for Identity supports the following types of health alerts:
 
-    ![Screenshot of the Health issues page.](media/health-alerts/healthissues.png)
+    - **Domain-related or aggregated health issues**, listed on the **Global health issues** tab
+    - **Sensor-specific health issues**, listed on the **Sensor health issues** tab
 
-1. The **Health issues** page appears, where you can see **Open**, **Closed**, and **Suppressed** health issues.
+    Filter issues by status, issue name, or severity to help you find the issue you're looking for.
 
-1. Select any issue for more details, and the option to close or suppress the issue.
+    For example:
 
-    :::image type="content" source="media/global-health-issues-details.png" alt-text="Health issues details":::
+    :::image type="content" source="media/health-issues/global-health-issues.png" alt-text="Screenshot of the Health Issues page." lightbox="media/health-issues/global-health-issues.png":::
+
+1. Select any issue for more details and the option to close or suppress the issue. For example:
+
+    :::image type="content" source="media/health-issues/close-suppress.png" alt-text="Screenshot of a health issue details pane." lightbox="media/health-issues/close-suppress.png":::
 
 
 ## Health issues
