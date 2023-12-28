@@ -46,7 +46,6 @@ Select links in the cards to just to more details, such as documentation, relate
 |**Domains with unsecured configuration**     |  Lists Active Directory domains that have unsecured configuration settings. <br><br>Active Directory domains hold many security-related configurations, which, when misconfigured, can make organizations more susceptible to cyber-attacks. Make sure to configure your domains in accordance with security best practices to decrease the likelihood of identity compromise.  <br><br>For more information, see [Security assessment: Unsecure domain configurations](security-assessment-unsecure-domain-configurations.md)       |
 | **Entra ID users at risk** | Lists user accounts that may be vulnerable to security threats, unusual activities, or potential compromises. <br><br>Identifying and managing users at risk is a crucial aspect of maintaining a secure IT environment. For more information see [Remediate risks and unblock users in Microsoft Entra ID Protection](/entra/id-protection/howto-identity-protection-remediate-unblock). |
 
-
-### Next steps
+## Next steps
 
 For more information, see [Microsoft Defender for Identity in Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).

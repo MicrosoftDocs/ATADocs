@@ -26,11 +26,11 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
     For example:
 
-    :::image type="content" source="media/health-issues/global-health-issues.png" alt-text="Screenshot of the Health Issues page.":::
+    :::image type="content" source="media/health-issues/global-health-issues.png" alt-text="Screenshot of the Health Issues page." lightbox="media/health-issues/global-health-issues.png":::
 
 1. Select any issue for more details and the option to close or suppress the issue. For example:
 
-    :::image type="content" source="media/health-issues/close-suppress.png" alt-text="Health issues details":::
+    :::image type="content" source="media/health-issues/close-suppress.png" alt-text="Screenshot of a health issue details pane." lightbox="media/health-issues/close-suppress.png":::
 
 
 ## Health issues
