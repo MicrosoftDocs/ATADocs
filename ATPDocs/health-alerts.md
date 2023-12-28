@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 12/27/2023
+ms.date: 12/28/2023
 ms.topic: how-to
 ---
 
@@ -15,12 +15,14 @@ The Microsoft Defender for Identity **Health issues** page lets you know when th
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), under **Identities**, select **Health issues**.
 
-1. The **Health issues** page appears, where you can see **Open**, **Closed**, and **Suppressed** health issues, for either your general Defender for Identity deployment, or for specific sensors.
+1. The **Health issues** page appears, where you can see health issues for both your general Defender for Identity environment and specific sensors.
 
     Defender for Identity supports the following types of health alerts:
 
     - **Domain-related or aggregated health issues**, listed on the **Global health issues** tab
     - **Sensor-specific health issues**, listed on the **Sensor health issues** tab
+
+    Filter issues by status, issue name, or severity to help you find the issue you're looking for.
 
     For example:
 

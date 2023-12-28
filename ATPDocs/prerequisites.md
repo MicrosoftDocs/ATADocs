@@ -112,6 +112,8 @@ The servers and domain controllers onto which the sensor is installed must have 
 
 We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
 
+The link to the *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page.
+
 ## Related content
 
 This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
