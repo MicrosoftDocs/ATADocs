@@ -80,6 +80,10 @@ items:
         displayName: standalone
 - name: Manage
   items:
+  - name: View the ITDR dashboard
+    href: dashboard.md
+  - name: View and manage health issues
+    href: health-alerts.md
   - name: Defender for Identity reports
     href: reports.md
   - name: Settings
@@ -90,8 +94,6 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
-    - name: Health issues
-      href: health-alerts.md
     - name: VPN integration
       href: vpn-integration.md
     - name: Set entity tags
