@@ -25,7 +25,7 @@ Before you start, make sure that you have:
 - Relevant server specifications and network requirements. For more information, see:
 
     - [Microsoft Defender for Identity prerequisites](prerequisites.md)
-    - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](../active-directory-federation-services.md)
+    - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
     - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 
 ## Install the sensor using the UI
@@ -184,13 +184,13 @@ Use the following command to configure your proxy together with a silent install
 
 If you installed the sensor on an AD FS / AD CS server, or if you installed a standalone sensor, following the extra post-installation steps:
 
-- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](../active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
+- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
 
 - **Standalone sensors**:
 
-    - [Listen for SIEM events on your Defender for Identity standalone sensor](../configure-event-collection.md)
-    - [Configure port mirroring](../configure-port-mirroring.md)
-    - [Configure Windows event forwarding to your Defender for Identity standalone sensor](../configure-event-forwarding.md)
+    - [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)
+    - [Configure port mirroring](configure-port-mirroring.md)
+    - [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
 
 ## Next step
 

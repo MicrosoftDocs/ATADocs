@@ -140,7 +140,7 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
    The results pane should include a list of events of failed and successful certificate issuance. Select a specific row to see additional details in the **Inspect Record** left pane. For example:
 
-   :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="media/adfs-logon-advanced-hunting.png":::
+   :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 
 ## Post-installation steps for AD FS / AD CS servers (Optional)
 
@@ -152,7 +152,7 @@ Installing the sensor on an AD FS / AD CS server automatically selects the close
 
 1. In the pane that opens, in the **Domain Controller (FQDN)** field, enter the FQDN of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.   For example:
 
-    ![Screenshot of the Defender for Identity configure AD FS sensor resolver.](media/sensor-config-adfs-resolver.png)
+    ![Screenshot of the Defender for Identity configure AD FS sensor resolver.](../media/sensor-config-adfs-resolver.png)
 
 Initializing the sensor may take a couple of minutes, at which time the AD FS / AD CS sensor service status should change from **stopped** to **running**.
 

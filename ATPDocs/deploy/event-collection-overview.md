@@ -73,8 +73,8 @@ For more information, see [Configure NTLM auditing](../configure-windows-event-c
 
 If you're working with a standalone Defender for Identity sensor, configure event collection manually using one of the following methods:
 
-- [Listen for SIEM events on your Defender for Identity standalone sensor](../configure-event-collection.md). Defender for Identity supports UDP traffic from your SIEM or syslog server.
-- [Configure Windows event forwarding to your Defender for Identity standalone sensor](../configure-event-forwarding.md)
+- [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md). Defender for Identity supports UDP traffic from your SIEM or syslog server.
+- [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
 
 > [!CAUTION]
 > When forwarding syslog data to a standalone sensor, make sure not to forward *all* syslog data to your sensor.
