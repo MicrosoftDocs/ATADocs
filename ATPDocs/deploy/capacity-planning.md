@@ -20,7 +20,7 @@ The sizing tool measures the capacity needed for domain controllers only. There 
 ## Prerequisites
 
 - Download the [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>).
-- Review the [Defender for Identity architecture](architecture.md) article.
+- Review the [Defender for Identity architecture](../architecture.md) article.
 - Review the [Defender for Identity prerequisites](prerequisites.md) article.
 
 To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
@@ -35,7 +35,7 @@ To ensure accurate results, only run the sizing tool *before* you've installed a
 
     For example:
 
-    :::image type="content" source="media/capacity-tool.png" alt-text="Screenshot of a sample capacity planning tool." lightbox="media/capacity-tool.png":::
+    :::image type="content" source="../media/capacity-tool.png" alt-text="Screenshot of a sample capacity planning tool." lightbox="../media/capacity-tool.png":::
 
     > [!NOTE]
     > The other sheet in the file is used for [Advanced Threat Analytics (ATA)](/advanced-threat-analytics/what-is-ata) planning and isn't needed for Defender for Identity.
@@ -59,7 +59,7 @@ Common results include:
 
 For example, the following image shows a set of results where the **Maybe** indicates that the **Busy Packets/Second** value is significantly higher at that point than average.  Note that the **Display DC Times as UTC/Local** is set to *Local DC Time*. This setting helps highlight the fact that the values were taken at around 3:30 AM.
 
-:::image type="content" source="media/capacity-tool-maybe.png" alt-text="Screenshot of a capacity tool results showing Maybe values." lightbox="media/capacity-tool-maybe.png":::
+:::image type="content" source="../media/capacity-tool-maybe.png" alt-text="Screenshot of a capacity tool results showing Maybe values." lightbox="../media/capacity-tool-maybe.png":::
 
 <a name="sizing"></a>
 ## Defender for Identity sensor estimated sizing
@@ -86,7 +86,7 @@ In this table:
 
 When determining sizing, keep in mind the total number of cores and total amount of memory that will be used by the sensor service.
 
-For more information, see [Resource limitations](architecture.md#resource-limitations).
+For more information, see [Resource limitations](../architecture.md#resource-limitations).
 
 ## Next step
 

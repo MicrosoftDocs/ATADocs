@@ -25,8 +25,8 @@ Before you start, make sure that you have:
 - Relevant server specifications and network requirements. For more information, see:
 
     - [Microsoft Defender for Identity prerequisites](prerequisites.md)
-    - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
-    - [Microsoft Defender for Identity standalone sensor prerequisites](deploy/prerequisites-standalone.md)
+    - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](../active-directory-federation-services.md)
+    - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 
 ## Install the sensor using the UI
 
@@ -40,7 +40,7 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
 
 1. On the **Welcome** page, select your language and select **Next**. For example:
 
-    ![Screenshot of the Defender for Identity standalone sensor installation language selection.](media/sensor-install-language.png)
+    ![Screenshot of the Defender for Identity standalone sensor installation language selection.](../media/sensor-install-language.png)
 
     The installation wizard automatically checks if the server is a domain controller, AD FS server, AC CS server, or a dedicated server.
 
@@ -49,7 +49,7 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
 
     For example, for a Defender for Identity sensor, the following screen is displayed to let you know that a Defender for Identity sensor is installed on your dedicated server:
 
-    ![Screenshot of the Defender for Identity sensor installation.](media/sensor-install-deployment-type.png)
+    ![Screenshot of the Defender for Identity sensor installation.](../media/sensor-install-deployment-type.png)
 
 1. Select **Next**.
 
@@ -61,7 +61,7 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
 
 1. On the **Configure the sensor** screen, enter the installation path and the setup package access key. For example:
 
-    ![Screenshot of the Defender for Identity sensor configuration screen.](media/sensor-install-config.png)
+    ![Screenshot of the Defender for Identity sensor configuration screen.](../media/sensor-install-config.png)
 
     Enter the following details:
 
@@ -142,7 +142,7 @@ Use the following commands to perform a fully silent install of the Defender for
 |`InstallationPath`|`InstallationPath=""`|No|Sets the path for the installation of Defender for Identity Sensor binaries. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor` |
 |`AccessKey`|`AccessKey="\*\*"`|Yes|Sets the access key that is used to register the Defender for Identity sensor with the Defender for Identity workspace.|
 |`AccessKeyFile`|`AccessKeyFile=""`|No|Sets the workspace Access Key from the provided text file path.|
-|`DelayedUpdate`|`DelayedUpdate=true`|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. For more information, see [Delayed sensor update](sensor-settings.md#delayed-sensor-update).|
+|`DelayedUpdate`|`DelayedUpdate=true`|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. For more information, see [Delayed sensor update](../sensor-settings.md#delayed-sensor-update).|
 |`LogsPath`|`LogsPath=""`|No|Sets the path for the Defender for Identity Sensor logs. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`|
 
 **Examples**:
@@ -166,7 +166,7 @@ Use the following command to configure your proxy together with a silent install
 ```
 
 > [!NOTE]
-> If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes with the same method you used originally. For more information, see [Configure proxy settings (legacy methods)](sensor-settings.md#configure-proxy-settings-legacy-methods).
+> If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes with the same method you used originally. For more information, see [Configure proxy settings (legacy methods)](../sensor-settings.md#configure-proxy-settings-legacy-methods).
 
 **Installation parameters**:
 
@@ -184,13 +184,13 @@ Use the following command to configure your proxy together with a silent install
 
 If you installed the sensor on an AD FS / AD CS server, or if you installed a standalone sensor, following the extra post-installation steps:
 
-- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
+- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](../active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
 
 - **Standalone sensors**:
 
-    - [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)
-    - [Configure port mirroring](configure-port-mirroring.md)
-    - [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
+    - [Listen for SIEM events on your Defender for Identity standalone sensor](../configure-event-collection.md)
+    - [Configure port mirroring](../configure-port-mirroring.md)
+    - [Configure Windows event forwarding to your Defender for Identity standalone sensor](../configure-event-forwarding.md)
 
 ## Next step
 

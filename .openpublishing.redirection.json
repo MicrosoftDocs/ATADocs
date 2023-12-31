@@ -1,6 +1,56 @@
 {
     "redirections": [
     {
+      "source_path": "ATPDocs/capacity-planning.md",
+      "redirect_url": "deploy/capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/configure-proxy.md",
+        "redirect_url": "deploy/configure-proxy",
+        "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/configure-sensor-settings.md",
+      "redirect_url": "deploy/configure-sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/configure-windows-event-collection.md",
+      "redirect_url": "deploy/configure-windows-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/deploy-defender-identity.md",
+      "redirect_url": "deploy/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/directory-service-accounts.md",
+      "redirect_url": "deploy/directory-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/download-sensor.md",
+      "redirect_url": "deploy/download-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-sensor.md",
+      "redirect_url": "deploy/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/prerequisites.md",
+      "redirect_url": "deploy/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/quick-installation-guide.md",
+      "redirect_url": "deploy/quick-installation-guide",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "ATPDocs/playbooks.md",
       "redirect_url": "manage-security-alerts",
       "redirect_document_id": false

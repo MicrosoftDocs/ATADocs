@@ -13,7 +13,7 @@ This article describes the requirements for a successful Microsoft Defender for 
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:
 
-[!INCLUDE [licenses](includes/licenses.md)]
+[!INCLUDE [licenses](../includes/licenses.md)]
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
@@ -23,7 +23,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
     You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft Defender XDR **Settings** area and create the workspace.
 
-    For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
+    For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
 
 - We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
@@ -37,7 +37,7 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 |**ExpressRoute**     | ExpressRoute can be configured to forward MDI sensor traffic over customer’s express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute      |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
 |**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don’t have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
 
-For more information, see [Microsoft Defender for Identity architecture](architecture.md).
+For more information, see [Microsoft Defender for Identity architecture](../architecture.md).
 
 
 ## Sensor requirements and recommendations
@@ -52,7 +52,7 @@ The following table summarizes requirements and recommendations for the domain c
 
 ### Minimum operating system requirements
 
-[!INCLUDE [server-requirements](includes/server-requirements.md)]
+[!INCLUDE [server-requirements](../includes/server-requirements.md)]
 
 #### Legacy operating systems
 
@@ -79,7 +79,7 @@ Sensors running on these operating systems will continue to report to Defender f
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
 |**RDP**         <br><br>Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)   |TCP      |3389 |Defender for Identity sensor|All devices on network|
 
-If you're working with [multiple forests](multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
+If you're working with [multiple forests](../multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
 
 |Protocol|Transport|Port|To/From|Direction|
 |----|----|----|----|----|
@@ -120,10 +120,10 @@ This article lists prerequisites required for a basic installation. Additional p
 
 For more information, see:
 
-- [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
-- [Microsoft Defender for Identity multi-forest support](multi-forest.md)
-- [Microsoft Defender for Identity standalone sensor prerequisites](deploy/prerequisites-standalone.md)
-- [Defender for Identity architecture](architecture.md)
+- [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](../active-directory-federation-services.md)
+- [Microsoft Defender for Identity multi-forest support](../multi-forest.md)
+- [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
+- [Defender for Identity architecture](../architecture.md)
 
 ## Next step
 

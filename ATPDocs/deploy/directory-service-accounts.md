@@ -15,9 +15,9 @@ For example, when you have a DSA configured, it's used to connect to the domain 
 
 A DSA is required for the following features and functionality:
 
-- When working with a sensor installed on an [AD FS / AD CS server](active-directory-federation-services.md).
+- When working with a sensor installed on an [AD FS / AD CS server](../active-directory-federation-services.md).
 
-- Requesting member lists for local administrator groups from devices seen in network traffic, events and ETW activities via a [SAM-R call](remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
+- Requesting member lists for local administrator groups from devices seen in network traffic, events and ETW activities via a [SAM-R call](../remote-calls-sam.md) made to the device. Collected data is used to calculate potential lateral movement paths.
 
 - Accessing the *DeletedObjects* container to collect information about deleted users and computers. 
 
@@ -38,7 +38,7 @@ Defender for Identity supports the following DSA options:
 
 |Option  |Description  |Configuration  |
 |---------|---------|---------|
-|**Group Managed Service Account gMSA** (Recommended)     |  Provides a more secure deployment and password management. Active Directory manages the creation and rotation of the account's password, just like a computer account's password, and you can control how often the account's password is changed.       |    For more information, see [Configure a Directory Service Account for Defender for Identity with a gMSA](deploy/create-directory-service-account-gmsa.md).     |
+|**Group Managed Service Account gMSA** (Recommended)     |  Provides a more secure deployment and password management. Active Directory manages the creation and rotation of the account's password, just like a computer account's password, and you can control how often the account's password is changed.       |    For more information, see [Configure a Directory Service Account for Defender for Identity with a gMSA](create-directory-service-account-gmsa.md).     |
 |**Regular user account**     |   Easy to use when getting started, and simpler to configure read permissions between trusted forests, but requires extra overhead for password management. <br><br>A regular user account is less secure, as it requires you to create and manage passwords, and can lead to downtime if the password expires and isn't updated for both the user and the DSA.   |   Create a new account in Active Directory to use as the DSA with read permissions to all the objects, including permissions to the *DeletedObjects* container. For more information, see [Grant required DSA permissions](#grant-required-dsa-permissions).   |
 
 ## DSA entry usage
@@ -100,13 +100,13 @@ The logic shown in this example is implemented with the following configuration:
     | `DC04.contoso.local`      | Round robin                      |
 
 >[!IMPORTANT]
->If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health issue is generated. For more information, see [Defender for Identity health issues](health-alerts.md).
+>If a sensor isn't able to successfully authenticate via LDAP to the Active Directory domain at startup, the sensor won't enter a running state and a health issue is generated. For more information, see [Defender for Identity health issues](../health-alerts.md).
 
 ## Grant required DSA permissions
 
-[!INCLUDE [dsa-permissions](includes/dsa-permissions.md)]
+[!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure a Directory Service Account for Defender for Identity with a gMSA »](deploy/create-directory-service-account-gmsa.md)
+> [Configure a Directory Service Account for Defender for Identity with a gMSA »](create-directory-service-account-gmsa.md)

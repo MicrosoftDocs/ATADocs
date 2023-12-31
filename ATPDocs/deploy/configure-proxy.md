@@ -30,13 +30,13 @@ To enable access to Defender for Identity, make sure to allow traffic to the sen
 
 - Occasionally, the Defender for Identity service IP addresses may change. If you manually configure IP addresses, or if your proxy automatically resolves DNS names to their IP address and uses them, we recommend that you periodically check that the configured IP addresses are still up-to-date.
 
-- If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](sensor-settings.md#configure-proxy-settings-legacy-methods).
+- If you've previously configured your proxy using legacy options, including WiniNet or a registry key update, you'll need to make any changes using the method you used originally. For more information, see [Configure proxy settings (legacy methods)](../sensor-settings.md#configure-proxy-settings-legacy-methods).
 
 ### Enable access with a service tag
 
 Instead of manually enabling access to specific endpoints, download the [Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519), and use the IP address ranges in the **AzureAdvancedThreatProtection** Azure service tag to enable access to Defender for Identity.
 
-For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). For US Government offerings, see [Get started with US Government offerings](us-govt-gcc-high.md).
+For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). For US Government offerings, see [Get started with US Government offerings](../us-govt-gcc-high.md).
 
 ## Test connectivity
 
@@ -61,13 +61,13 @@ Do the following steps to confirm that everything is working as expected. Perfor
 
 For some older workspaces, the message returned could be *Error 503 The service is unavailable*. This is a temporary state that still indicates success. For example:
 
-:::image type="content" source="media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
+:::image type="content" source="../media/configure-proxy/test-proxy.png" alt-text="Screenshot of an HTTP 200 status code (OK).":::
 
 - If you don't get *Ok* message, then you may have a problem with your proxy configuration. Check your network and proxy settings.
 
-- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this: 
+- If you get a certificate error, ensure that you have the required trusted root certificates installed before continuing. For more information, see [Proxy authentication problem presents as a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error). The certificate details should look like this: 
 
-    :::image type="content" source="media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
+    :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
 
 ## Related content
 

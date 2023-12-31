@@ -13,7 +13,7 @@ For the correct events to be audited and included in the Windows Event Log, your
 
 This article describes how to configure your Advanced Audit Policy settings as needed for a Defender for Identity sensor, and other configurations for specific event types.
 
-For more information, see [What is Windows event collection for Defender for Identity](deploy/event-collection-overview.md) and [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) in the Windows documentation.
+For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md) and [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) in the Windows documentation.
 
 ## Configure auditing for domain controllers
 
@@ -31,7 +31,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
 1. Expand the **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**. For example:
 
-    ![Screenshot of the Edit domain controller policy dialog.](media/advanced-audit-policy-check-step-1.png)
+    ![Screenshot of the Edit domain controller policy dialog.](../media/advanced-audit-policy-check-step-1.png)
 
     > [!NOTE]
     > Use the Default Domain Controllers Policy or a dedicated GPO to set these policies.
@@ -40,7 +40,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
     1. Go to **Advanced Audit Policy Configuration** > **Audit Policies**. For example:
 
-        ![Screenshot of the Advanced Audit Policy Configuration dialog.](media/advanced-audit-policy-check-step-2.png)
+        ![Screenshot of the Advanced Audit Policy Configuration dialog.](../media/advanced-audit-policy-check-step-2.png)
 
     1. Under **Audit Policies**, edit each of the following policies and select **Configure the following audit events** for both **Success** and **Failure** events.
 
@@ -57,7 +57,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events:
 
-        ![Screenshot of the Audit Security Group Management dialog.](media/advanced-audit-policy-check-step-4.png)
+        ![Screenshot of the Audit Security Group Management dialog.](../media/advanced-audit-policy-check-step-4.png)
 
 1. From an elevated command prompt, type `gpupdate`.
 
@@ -90,7 +90,7 @@ This section describes the extra configuration steps needed to audit Event ID 80
 
 For example, to configure **Outgoing NTLM traffic to remote servers**, under **Security Options**, double-click **Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers**, and then select **Audit all**:
 
-:::image type="content" source="media/advanced-audit-policy-check-step-3.png" alt-text="Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration." border="false":::
+:::image type="content" source="../media/advanced-audit-policy-check-step-3.png" alt-text="Screenshot of the Audit Outgoing NTLM traffic to remote servers configuration." border="false":::
 
 ### Configure domain object auditing
 
@@ -104,23 +104,23 @@ To collect events for object changes, such as event 4662, you must also configur
 1. Select the **View** menu and select **Advanced Features**.
 1. Right-click the domain and select **Properties**. For example:
 
-    ![Screenshot of the container properties option.](media/container-properties.png)
+    ![Screenshot of the container properties option.](../media/container-properties.png)
 
 1. Go to the **Security** tab, and select **Advanced**. For example:
 
-    ![Screenshot of the advanced security properties dialog.](media/security-advanced.png)
+    ![Screenshot of the advanced security properties dialog.](../media/security-advanced.png)
 
 1. In **Advanced Security Settings**, select the **Auditing** tab and then select **Add**. For example:
 
-    ![Screenshot of the Advanced Security Settings Auditing tab.](media/auditing-tab.png)
+    ![Screenshot of the Advanced Security Settings Auditing tab.](../media/auditing-tab.png)
 
 1. Select **Select a principal**. For example:
 
-    ![Screenshot of the Select a principal option.](media/select-a-principal.png)
+    ![Screenshot of the Select a principal option.](../media/select-a-principal.png)
 
 1. Under **Enter the object name to select**, enter **Everyone** and select **Check Names** > **OK**. For example:
 
-    ![Screenshot of the Select everyone settings.](media/select-everyone.png)
+    ![Screenshot of the Select everyone settings.](../media/select-everyone.png)
 
 1. You'll then return to **Auditing Entry**. Make the following selections:
 
@@ -128,13 +128,13 @@ To collect events for object changes, such as event 4662, you must also configur
     1. For **Applies to** select **Descendant User objects.**
     1. Under **Permissions**, scroll down and select the **Clear all** button. For example:
 
-        :::image type="content" source="media/clear-all.png" alt-text="Screenshot of selecting Clear all.":::
+        :::image type="content" source="../media/clear-all.png" alt-text="Screenshot of selecting Clear all.":::
 
     1. Scroll back up and select **Full Control**. All the permissions are selected. 
     
     1. Clear the selection for the **List contents**, **Read all properties**, and **Read permissions** permissions, and select **OK**. This sets all the **Properties** settings to **Write**. For example:
 
-        ![Screenshot of selecting permissions.](media/select-permissions.png)
+        ![Screenshot of selecting permissions.](../media/select-permissions.png)
 
         Now, when triggered, all relevant changes to directory services appear as `4662` events.
 
@@ -154,7 +154,7 @@ To collect events for object changes, such as event 4662, you must also configur
 
 1. Go to **Program Data** > **Microsoft** > **ADFS**. For example:
 
-    ![Screenshot of an ADFS container.](media/adfs-container.png)
+    ![Screenshot of an ADFS container.](../media/adfs-container.png)
 
 1. Right-click **ADFS** and select **Properties**.
 1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings** > **Auditing** tab > **Add** > **Select a principal**.
@@ -168,7 +168,7 @@ To collect events for object changes, such as event 4662, you must also configur
 
     For example:
 
-    ![Screenshot of the auditing settings for ADFS.](media/audit-adfs.png)
+    ![Screenshot of the auditing settings for ADFS.](../media/audit-adfs.png)
 
 1. Select **OK**.
 
@@ -182,7 +182,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
     
     1. Select to configure audit events for **Success** and **Failure**. For example:
 
-        :::image type="content" source="media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the Group Policy Management Editor.":::
+        :::image type="content" source="../media/configure-windows-event-collection/group-policy-management-editor.png" alt-text="Screenshot of the Group Policy Management Editor.":::
 
 1. Configure auditing on the certificate authority (CA) using one of the following methods:
 
@@ -198,11 +198,11 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
         1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
 
-            :::image type="content" source="media/configure-windows-event-collection/certification-authority.png" alt-text="Screenshot of the Certification Authority dialog.":::
+            :::image type="content" source="../media/configure-windows-event-collection/certification-authority.png" alt-text="Screenshot of the Certification Authority dialog.":::
 
         1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
 
-            :::image type="content" source="media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Properties Auditing tab.":::
+            :::image type="content" source="../media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Properties Auditing tab.":::
 
 > [!NOTE]
 > Configuring *Start and Stop Active Directory Certificate Services* event auditing may cause restart delays when dealing with a large AD CS database. Consider removing irrelevant entries from the database, or alternatively, refrain from enabling this specific type of event.
@@ -220,7 +220,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Right-click the **Configuration** node and select **Properties**. For example:
 
-    ![Screenshot of the Configuration node properties.](media/configuration-properties.png)
+    ![Screenshot of the Configuration node properties.](../media/configuration-properties.png)
 
 1. Select the **Security** tab > **Advanced**.
 
@@ -238,7 +238,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
     For example:
 
-    ![Screenshot of the auditing settings for the Configuration container.](media/audit-configuration.png)
+    ![Screenshot of the auditing settings for the Configuration container.](../media/audit-configuration.png)
 
 1. Select **OK**.
 
@@ -265,5 +265,5 @@ For more information, see [Windows security auditing](/windows/security/threat-p
 ## Next step
 
 > [!div class="step-by-step"]
-> [What are Defender for Identity roles and permissions? »](role-groups.md)
+> [What are Defender for Identity roles and permissions? »](../role-groups.md)
 

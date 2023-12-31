@@ -22,7 +22,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**. For example:
 
-   [![Screenshot of the Sensors page.](media/sensor-page.png)](media/sensor-page.png#lightbox)
+   [![Screenshot of the Sensors page.](../media/sensor-page.png)](../media/sensor-page.png#lightbox)
 
    The **Sensors** page displays all of your Defender for Identity sensors, listing the following details per sensor:
 
@@ -31,7 +31,7 @@ After the Defender for Identity sensor is installed, do the following to view an
           - Sensor name
           - Sensor domain membership
           - Sensor version number
-          - Whether updates should be [delayed](sensor-settings.md#delayed-sensor-update)
+          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update)
           - Sensor service status
        :::column-end:::
        :::column:::
@@ -42,42 +42,42 @@ After the Defender for Identity sensor is installed, do the following to view an
        :::column-end:::
    :::row-end:::
 
-   For more information, see [Sensor details](sensor-settings.md#sensor-details).
+   For more information, see [Sensor details](../sensor-settings.md#sensor-details).
 
 1. Select **Filters** to select the filters you want visible. For example:
 
-   [![Screenshot of sensor filters.](media/sensor-filters.png)](media/sensor-filters.png#lightbox)
+   [![Screenshot of sensor filters.](../media/sensor-filters.png)](../media/sensor-filters.png#lightbox)
 
 1. Use the displayed filters to determine which sensors to display. For example:
 
-   :::image type="content" source="media/filtered-sensor.png" alt-text="Screenshot of a filtered list of sensors." lightbox="media/filtered-sensor.png":::
+   :::image type="content" source="../media/filtered-sensor.png" alt-text="Screenshot of a filtered list of sensors." lightbox="../media/filtered-sensor.png":::
 
 1. Select a sensor to show a details pane with more information about the sensor and its health status. For example:
 
-   [![Screenshot of a sensor details pane.](media/sensor-details.png)](media/sensor-details.png#lightbox)
+   [![Screenshot of a sensor details pane.](../media/sensor-details.png)](../media/sensor-details.png#lightbox)
 
 1. Scroll down and select **Manage sensor** to show a pane where you can configure sensor details. For example:
 
-   :::image type="content" source="media/manage-sensor.png" alt-text="Screenshot of the Manage sensor option." lightbox="media/manage-sensor.png":::
+   :::image type="content" source="../media/manage-sensor.png" alt-text="Screenshot of the Manage sensor option." lightbox="../media/manage-sensor.png":::
 
 1. Configure the following sensor details:
 
     |Name  |Description  |
     |---------|---------|
     |**Description**     |  Optional. Enter a description for the Defender for Identity sensor.       |
-    |**Domain Controllers (FQDN)**     |  Required for the Defender for Identity [standalone sensors](deploy/prerequisites-standalone.md) and [sensors installed on AD FS / AD CS servers](active-directory-federation-services.md), and cannot be modified for the Defender for Identity sensor.   <br><br>Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**. <br><br>For any servers you define in the **Domain Controllers** list: <br><br> - All domain controllers whose traffic is being monitored via port mirroring by the Defender for Identity standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected. <br><br> - At least one domain controller in the list should be a global catalog. This enables Defender for Identity to resolve computer and user objects in other domains in the forest. |
+    |**Domain Controllers (FQDN)**     |  Required for the Defender for Identity [standalone sensors](prerequisites-standalone.md) and [sensors installed on AD FS / AD CS servers](../active-directory-federation-services.md), and cannot be modified for the Defender for Identity sensor.   <br><br>Enter the complete FQDN of your domain controller and select the plus sign to add it to the list. For example,  **DC1.domain1.test.local**. <br><br>For any servers you define in the **Domain Controllers** list: <br><br> - All domain controllers whose traffic is being monitored via port mirroring by the Defender for Identity standalone sensor must be listed in the **Domain Controllers** list. If a domain controller isn't listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected. <br><br> - At least one domain controller in the list should be a global catalog. This enables Defender for Identity to resolve computer and user objects in other domains in the forest. |
     |**Capture Network adapters**     | Required.      <br><br>  - For Defender for Identity sensors, all network adapters that are used for communication with other computers in your organization.<br><br>      - For Defender for Identity standalone sensor on a dedicated server, select the network adapters that are configured as the destination mirror port. These network adapters receive the mirrored domain controller traffic.      |
 
 1. On the **Sensors** page, select **Export** to export a list of your sensors to a **.csv** file. For example:
 
-   :::image type="content" source="media/export-sensors.png" alt-text="Screenshot of exporting a list of sensors." lightbox="media/export-sensors.png":::
+   :::image type="content" source="../media/export-sensors.png" alt-text="Screenshot of exporting a list of sensors." lightbox="../media/export-sensors.png":::
 
 ## Validate installations
 
 Use the following procedures to validate your Defender for Identity sensor installation.
 
 > [!NOTE]
-> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on AD FS / AD CS servers](active-directory-federation-services.md#validate-successful-deployment-on-ad-fs--ad-cs-servers).
+> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on AD FS / AD CS servers](../active-directory-federation-services.md#validate-successful-deployment-on-ad-fs--ad-cs-servers).
 >
 
 
@@ -119,11 +119,11 @@ The Defender for Identity version is updated frequently. Check for the latest ve
 
 Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:
 
-- [Set entity tags: sensitive, honeytoken, and Exchange server](entity-tags.md)
-- [Configure detection exclusions](exclusions.md)
-- [Configure notifications: health issues, alerts, and Syslog](notifications.md)
+- [Set entity tags: sensitive, honeytoken, and Exchange server](../entity-tags.md)
+- [Configure detection exclusions](../exclusions.md)
+- [Configure notifications: health issues, alerts, and Syslog](../notifications.md)
 
 ## Next step
 
 > [!div class="step-by-step"]
-> [Event collection with Microsoft Defender for Identity »](deploy/event-collection-overview.md)
+> [Event collection with Microsoft Defender for Identity »](event-collection-overview.md)

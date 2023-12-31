@@ -33,7 +33,7 @@ Each Defender for Identity workspace supports a multiple Active Directory forest
 
 Make sure that you have one of the following licenses:
 
-[!INCLUDE [licenses](includes/licenses.md)]
+[!INCLUDE [licenses](../includes/licenses.md)]
 
 For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
@@ -44,7 +44,7 @@ To create your Defender for Identity workspace, you need a Microsoft Entra ID te
 
 You need at least [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) access on your tenant to access the **Identity** section of the Microsoft Defender XDR **Settings** area and create the workspace.
 
-For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
+For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
 
 ### Minimum system requirements
 
@@ -52,7 +52,7 @@ This section describes the operating systems supported for Defender for Identity
 
 When running as a virtual machine, all memory is required to be allocated to the virtual machine at all times. For more information, see [Plan capacity for Microsoft Defender for Identity deployment](capacity-planning.md).
 
-[!INCLUDE [server-requirements](includes/server-requirements.md)]
+[!INCLUDE [server-requirements](../includes/server-requirements.md)]
 
 ### Check network connectivity
 

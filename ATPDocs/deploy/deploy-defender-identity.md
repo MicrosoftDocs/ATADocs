@@ -17,9 +17,9 @@ For a quick set of deployment highlights, see [Quick installation guide](quick-i
 
 Before you start, make sure that you have access to Microsoft Defender XDR at least as a Security administrator, and you have one of the following licenses:
 
-[!INCLUDE [licenses](includes/licenses.md)]
+[!INCLUDE [licenses](../includes/licenses.md)]
 
-For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy) and [What are Defender for Identity roles and permissions?](role-groups.md)
+For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy) and [What are Defender for Identity roles and permissions?](../role-groups.md)
 
 ## Start using Microsoft Defender XDR
 
@@ -67,16 +67,16 @@ After you've prepared your system, use the following steps to deploy Defender fo
 
 The following procedures help you complete the deployment process:
 
-- **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](deploy/event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
+- **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
-- [**Enable and configure unified role-based access control (RBAC)**](role-groups.md) for Defender for Identity.
+- [**Enable and configure unified role-based access control (RBAC)**](../role-groups.md) for Defender for Identity.
 
 - [**Configure a Directory Service account (DSA) for use with Defender for Identity**](directory-service-accounts.md). While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
 
-- [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
+- [**Configure remote calls to SAM**](../remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
 > [!IMPORTANT]
-> Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
+> Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](../active-directory-federation-services.md).
 > 
 
 ## Next step
