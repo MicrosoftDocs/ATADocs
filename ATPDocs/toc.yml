@@ -19,25 +19,25 @@ items:
   expanded: true
   items:
   - name: Quick installation guide
-    href: quick-installation-guide.md
+    href: deploy/quick-installation-guide.md
   - name: Deployment overview
-    href: deploy-defender-identity.md
+    href: deploy/deploy-defender-identity.md
   - name: Plan and prepare
     items:
     - name: Defender for Identity prerequisites
-      href: prerequisites.md
+      href: deploy/prerequisites.md
     - name: Plan your Defender for Identity capacity
-      href: capacity-planning.md
+      href: deploy/capacity-planning.md
   - name: Deploy Defender for Identity
     items:
     - name: Verify connectivity
-      href: configure-proxy.md
+      href: deploy/configure-proxy.md
     - name: Download the Defender for Identity sensor
-      href: download-sensor.md
+      href: deploy/download-sensor.md
     - name: Install the Defender for Identity sensor
-      href: install-sensor.md
+      href: deploy/install-sensor.md
     - name: Configure the Defender for Identity sensor
-      href: configure-sensor-settings.md
+      href: deploy/configure-sensor-settings.md
   - name: Post-deployment configuration
     items:
     - name: Configure event collection
@@ -45,13 +45,13 @@ items:
       - name: Event collection overview 
         href: deploy/event-collection-overview.md
       - name: Configure audit policies for Windows event logs
-        href: configure-windows-event-collection.md
+        href: deploy/configure-windows-event-collection.md
     - name: Roles and permissions
       href: role-groups.md
     - name: Configure a Directory Service account
       items:
       - name: Overview
-        href: directory-service-accounts.md
+        href: deploy/directory-service-accounts.md
         displayName: Directory Service Account, DSA
       - name: Configure a DSA with a gMSA
         href: deploy/create-directory-service-account-gmsa.md
