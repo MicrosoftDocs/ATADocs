@@ -56,27 +56,27 @@ items:
       - name: Configure a DSA with a gMSA
         href: deploy/create-directory-service-account-gmsa.md
     - name: Configure remote calls to SAM
-      href: remote-calls-sam.md
+      href: deploy/remote-calls-sam.md
   - name: Extra deployment scenarios
     items:
     - name: Install on AD FS / AD CS servers
-      href: active-directory-federation-services.md
+      href: deploy/active-directory-federation-services.md
     - name: Configure action accounts
-      href: manage-action-accounts.md
+      href: deploy/manage-action-accounts.md
     - name: Deploy for multiple Active Directory forests
-      href: multi-forest.md
+      href: deploy/multi-forest.md
     - name: Configure a standalone sensor
       items:
       - name: Prerequisites for a standalone sensor
         href: deploy/prerequisites-standalone.md
       - name: Configure port mirroring
-        href: configure-port-mirroring.md
+        href: deploy/configure-port-mirroring.md
         displayName: standalone
       - name: Configure Windows Event Forwarding
-        href: configure-event-forwarding.md
+        href: deploy/configure-event-forwarding.md
         displayName: standalone
       - name: Listen for SIEM events
-        href: configure-event-collection.md
+        href: deploy/configure-event-collection.md
         displayName: standalone
 - name: Manage
   items:
