@@ -39,7 +39,7 @@ The following actions can be performed directly on the user account:
 
 - **Suspend user in Microsoft Entra ID**: This will temporarily prevent a user from signing in to Microsoft Entra ID. This can help prevent compromised users from attempting to exfiltrate data and minimizes the time between Disable user in Active Directory and the sync of this status to the cloud.
 
-Depending on your Microsoft Entra ID roles, you may see additional Microsoft Entra ID remediations. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
+Depending on your Microsoft Entra ID roles, you may see additional Microsoft Entra ID remediations, such as resetting user passwords and confirming that a user is compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
 > [!NOTE]
 > By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
