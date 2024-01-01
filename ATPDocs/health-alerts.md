@@ -67,7 +67,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|No traffic was received from the domain controller via this Defender for Identity sensor.|This issue might indicate that port mirroring from the domain controllers to the Defender for Identity sensor isn't configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](configure-port-mirroring.md).<br></br>On the Defender for Identity sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|Sensors health issues tab and Global health issues tab|
+|No traffic was received from the domain controller via this Defender for Identity sensor.|This issue might indicate that port mirroring from the domain controllers to the Defender for Identity sensor isn't configured yet or not working.|Verify that [port mirroring is configured properly on your network devices](deploy/configure-port-mirroring.md).<br></br>On the Defender for Identity sensor capture NIC, disable these features in Advanced Settings:<br></br>Receive Segment Coalescing (IPv4)<br></br>Receive Segment Coalescing (IPv6)|Medium|Sensors health issues tab and Global health issues tab|
 
 ### Read-only user password to expire shortly
 
@@ -199,8 +199,8 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 ## Next steps
 
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Defender for Identity capacity planning](capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-forwarding.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Defender for Identity capacity planning](deploy/capacity-planning.md)
+- [Configure event collection](deploy/configure-event-collection.md)
+- [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

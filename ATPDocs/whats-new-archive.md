@@ -187,7 +187,7 @@ Released October 30, 2022
 This new technique is linked with the infamous NOBELIUM actor and was dubbed "MagicWeb" – it allows an adversary to implant a backdoor on compromised AD FS servers, which will enable impersonation as any domain user and thus access to external resources.
 To learn more about this attack, read [this blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/protect-your-environment-against-hybrid-identity-attacks/ba-p/3646450).
 
-- Defender for Identity can now use the LocalSystem account on the domain controller to perform remediation actions (enable/disable user, force user reset password), in addition to the gMSA option that was available before. This enables out of the box support for remediation actions. For more information, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+- Defender for Identity can now use the LocalSystem account on the domain controller to perform remediation actions (enable/disable user, force user reset password), in addition to the gMSA option that was available before. This enables out of the box support for remediation actions. For more information, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -312,7 +312,7 @@ Released May 22, 2022
   - **Disable user** – This temporarily prevents a user from logging in to the network. It can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network.
   - **Reset user password** – This prompts the user to change their password at the next sign-in, ensuring that this account can't be used for further impersonation attempts.
 
-  These actions can be performed from several locations in Microsoft Defender XDR: the user page, the user page side panel, advanced hunting, and even custom detections. This requires setting up a privileged gMSA account that Microsoft Defender for Identity will use to perform the actions. For more information about the requirements, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+  These actions can be performed from several locations in Microsoft Defender XDR: the user page, the user page side panel, advanced hunting, and even custom detections. This requires setting up a privileged gMSA account that Microsoft Defender for Identity will use to perform the actions. For more information about the requirements, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -414,7 +414,7 @@ Released January 24, 2022
 
 Released January 17, 2022
 
-- We're happy to release the ability to configure an action account for Microsoft Defender for Identity. This is the first step in the ability to take actions on users directly from the product. As first step, you can define the gMSA account Microsoft Defender for Identity will use to take the actions. We highly recommend you start creating these users to enjoy the Actions feature once it's live. For more information, see [Manage action accounts](manage-action-accounts.md).
+- We're happy to release the ability to configure an action account for Microsoft Defender for Identity. This is the first step in the ability to take actions on users directly from the product. As first step, you can define the gMSA account Microsoft Defender for Identity will use to take the actions. We highly recommend you start creating these users to enjoy the Actions feature once it's live. For more information, see [Manage action accounts](deploy/manage-action-accounts.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -660,7 +660,7 @@ Released January 17, 2021
 
 Released January 3, 2021
 
-- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](active-directory-federation-services.md) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft Defender for Identity sensor for AD FS server, [download the latest deployment package](install-sensor.md) from the sensor configuration page.
+- Defender for Identity now supports installing sensors on Active Directory Federation Services (AD FS) servers. Installing the sensor on [compatible AD FS Servers](deploy/active-directory-federation-services.md) extends Microsoft Defender for Identity visibility into hybrid environment by monitoring this critical infrastructure component. We also refreshed some of our existing detections ([Suspicious service creation](domain-dominance-alerts.md#suspicious-service-creation-external-id-2026), [Suspected Brute Force attack (LDAP)](compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004), [Account enumeration reconnaissance](reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)) to work on AD FS data as well. To start deployment of the Microsoft Defender for Identity sensor for AD FS server, [download the latest deployment package](install-sensor.md) from the sensor configuration page.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## December 2020
@@ -1159,7 +1159,7 @@ Released June 18, 2019
 Azure ATP's identity threat investigation experience is now in **Public Preview**, and available to all Azure ATP protected tenants. See [Azure ATP Microsoft Defender for Cloud Apps investigation experience](/defender-for-identity/deploy-defender-identity) to learn more.
 
 - **General availability**  
-Azure ATP support for untrusted forests is now in general availability. See [Azure ATP multi-forest](multi-forest.md) to learn more.
+Azure ATP support for untrusted forests is now in general availability. See [Azure ATP multi-forest](deploy/multi-forest.md) to learn more.
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1396,7 +1396,7 @@ Released January 27, 2019
 
 - **New feature: Untrusted forest support – (preview)**  
 Azure ATP's support for sensors in untrusted forests is now in public preview.
-From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](multi-forest.md) to learn more.
+From the Azure ATP portal **Directory services** page, configure additional sets of credentials to enable Azure ATP sensors to connect to different Active Directory forests, and report back to the Azure ATP service. See [Azure ATP multi-forest](deploy/multi-forest.md) to learn more.
 
 - **New feature: Domain controller coverage**  
 Azure ATP now provides coverage information for Azure ATP monitored domain controllers.  
