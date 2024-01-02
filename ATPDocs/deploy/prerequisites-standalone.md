@@ -25,9 +25,9 @@ Standalone sensors differ from Defender for Identity sensor [prerequisites](../p
 
 - Standalone sensors can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
 
-- If you're working with [multiple forests](../multi-forest.md), your standalone sensor machines must be allowed to communicate with all remote forest domain controllers using LDAP.
+- If you're working with [multiple forests](multi-forest.md), your standalone sensor machines must be allowed to communicate with all remote forest domain controllers using LDAP.
 
-For information on using virtual machines with the Defender for Identity standalone sensor, see [Configure port mirroring](../configure-port-mirroring.md).
+For information on using virtual machines with the Defender for Identity standalone sensor, see [Configure port mirroring](configure-port-mirroring.md).
 
 ## Network adapters for standalone sensors
 
@@ -46,7 +46,7 @@ Standalone sensors require at least one of each of the following network adapter
 
     > [!IMPORTANT]
     >
-    > - [Configure port mirroring](../configure-port-mirroring.md) for the capture adapter as the destination of the domain controller network traffic. Typically, you need to work with the networking or virtualization team to configure port mirroring.
+    > - [Configure port mirroring](configure-port-mirroring.md) for the capture adapter as the destination of the domain controller network traffic. Typically, you need to work with the networking or virtualization team to configure port mirroring.
     > - Configure a static non-routable IP address (with /32 mask) for your environment with no default sensor gateway and no DNS server addresses. For example: `10.10.0.10/32. This configuration ensures that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
 
 >[!NOTE]
@@ -83,5 +83,5 @@ For more information, see, [Advanced audit policy check](../configure-windows-ev
 ## Next steps
 
 > [!div class="step-by-step"]
-> [Configure port mirroring](../configure-port-mirroring.md)
+> [Configure port mirroring](configure-port-mirroring.md)
 

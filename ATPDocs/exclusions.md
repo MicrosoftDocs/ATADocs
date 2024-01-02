@@ -93,5 +93,5 @@ You can now also configure exclusions by **Global excluded entities**. Global ex
 
 ## Next steps
 
-- [Configure event collection](configure-event-collection.md)
+- [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
