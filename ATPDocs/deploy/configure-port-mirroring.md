@@ -52,6 +52,6 @@ The following table describes Defender for Identity's support for port mirroring
 
 For more information, see:
 
-- [Event collection with Microsoft Defender for Identity](deploy/event-collection-overview.md)
+- [Event collection with Microsoft Defender for Identity](event-collection-overview.md)
 - [Configure audit policies for Windows event logs](configure-windows-event-collection.md)
 - [Listen for SIEM events on your Defender for Identity standalone sensor](configure-event-collection.md)

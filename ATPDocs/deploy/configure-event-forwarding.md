@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Configure Windows event forwarding to your Defender for Identity standalone sensor
 
-This article describes an example of how to configure Windows event forwarding to your Microsoft Defender for Identity standalone sensor. Event forwarding is one method for enhancing your detection abilities with extra Windows events that aren't available from the domain controller network. For more information, see [Windows event collection overview](deploy/event-collection-overview.md).
+This article describes an example of how to configure Windows event forwarding to your Microsoft Defender for Identity standalone sensor. Event forwarding is one method for enhancing your detection abilities with extra Windows events that aren't available from the domain controller network. For more information, see [Windows event collection overview](event-collection-overview.md).
 
 > [!IMPORTANT]
 >Defender for Identity standalone sensors do not support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
@@ -17,7 +17,7 @@ This article describes an example of how to configure Windows event forwarding t
 
 Before you start:
 
-- Make sure that the domain controller is properly configured to capture the required events. For more information, see [Event collection with Microsoft Defender for Identity](deploy/event-collection-overview.md).
+- Make sure that the domain controller is properly configured to capture the required events. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md).
 - [Configure port mirroring](configure-port-mirroring.md)
 
 ## Step 1: Add the network service account to the domain
@@ -57,7 +57,7 @@ This procedure describes how to create a policy on the domain controllers to set
 
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**. For example:
 
-    ![Screenshot of the Local policy group editor dialog.](media/wef-1-local-group-policy-editor.png)
+    ![Screenshot of the Local policy group editor dialog.](../media/wef-1-local-group-policy-editor.png)
 
 1. Double-click **Configure target Subscription Manager** and then:
 
@@ -69,7 +69,7 @@ This procedure describes how to create a policy on the domain controllers to set
         
         For example, using **Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10**:
 
-        ![Screenshot of the Configure target subscription dialog.](media/wef-2-config-target-sub-manager.png)
+        ![Screenshot of the Configure target subscription dialog.](../media/wef-2-config-target-sub-manager.png)
 
 1. Select **OK**.
 
@@ -105,13 +105,13 @@ This procedure describes how to create a subscription for use with Defender for 
 
         1. Select **OK**. For example:
 
-            :::image type="content" source="media/wef-3-event-viewer.png" alt-text="Screenshot of the Event Viewer dialog." lightbox="media/wef-3-event-viewer.png":::
+            :::image type="content" source="../media/wef-3-event-viewer.png" alt-text="Screenshot of the Event Viewer dialog." lightbox="../media/wef-3-event-viewer.png":::
 
     1. Select **Select Events** > **By log** > **Security**.
 
     1. In the **Includes/Excludes Event ID** field type the event number and select **OK**. For example, enter **4776**:
     
-        ![Screenshot of the Query  dialog.](media/wef-4-query-filter.png)
+        ![Screenshot of the Query  dialog.](../media/wef-4-query-filter.png)
 
     1. Return to the command window opened in the first step. Run the following commands, replacing *SubscriptionName* with the name you created for the subscription.
 

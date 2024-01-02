@@ -261,6 +261,6 @@ To configure your proxy, copy your proxy configuration in user context to the **
 
 ## Next steps
 
-* [Configure event forwarding](configure-event-forwarding.md)
-* [Defender for Identity prerequisites](prerequisites.md)
+* [Configure event forwarding](deploy/configure-event-forwarding.md)
+* [Defender for Identity prerequisites](deploy/prerequisites.md)
 * [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

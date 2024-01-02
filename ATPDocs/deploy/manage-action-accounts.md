@@ -7,13 +7,13 @@ ms.topic: how-to
 
 # Configure Microsoft Defender for Identity action accounts
 
-Defender for Identity allows you to take [remediation actions](remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
+Defender for Identity allows you to take [remediation actions](../remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
 
 By default, the Microsoft Defender for Identity sensor impersonates the `LocalSystem` account of the domain controller and performs the actions, including [attack disrupting scenarios from Microsoft Defender XDR](/microsoft-365/security/defender/automatic-attack-disruption).
 
 If you need to change this behavior, set up a dedicated gMSA and scope the permissions that you need. For example:
 
-:::image type="content" source="media/management-accounts.png" alt-text="Screenshot of the Manage action accounts tab." lightbox="media/management-accounts.png":::
+:::image type="content" source="../media/management-accounts.png" alt-text="Screenshot of the Manage action accounts tab." lightbox="../media/management-accounts.png":::
 
 > [!NOTE]
 > Using a dedicated gMSA as an action account is optional. We recommend that you use the default settings for the `LocalSystem` account.
@@ -38,25 +38,25 @@ If you have multiple forests, your gMSA managed action account must be trusted i
 
     1. Right-click the relevant domain or OU and select **Properties**. For example:
 
-        ![Screenshot of selecting domain or OU properties.](media/domain-properties.png)
+        ![Screenshot of selecting domain or OU properties.](../media/domain-properties.png)
 
     1. Go the **Security** tab and select **Advanced**. For example:
 
-        ![Screenshot of the advanced security settings.](media/advanced-security.png)
+        ![Screenshot of the advanced security settings.](../media/advanced-security.png)
 
     1. Select **Add** > **Select a principal**. For example:
 
-        ![Screenshot of selecting a principal.](media/select-principal.png)
+        ![Screenshot of selecting a principal.](../media/select-principal.png)
 
     1. Make sure **Service accounts** is marked in **Object types**. For example:
 
-        ![Screenshot oof selecting service accounts as object types.](media/object-types.png)
+        ![Screenshot oof selecting service accounts as object types.](../media/object-types.png)
 
     1. In the **Enter the object name to select** box, enter the name of the gMSA account and select **OK**.
 
     1. In the **Applies to** field, select **Descendant User objects**, leave the existing settings, and add the permissions and properties shown in the following example:
 
-        ![Screenshot of setting permissions and properties.](media/permission-entry.png)
+        ![Screenshot of setting permissions and properties.](../media/permission-entry.png)
 
         Required permissions include:
 
@@ -78,7 +78,7 @@ If you have multiple forests, your gMSA managed action account must be trusted i
 
     For example:
 
-    ![Screenshot of the Create new account button.](media/manage-action-accounts.png)
+    ![Screenshot of the Create new account button.](../media/manage-action-accounts.png)
 
 1. Enter the account name and domain and select **Save**.
 
@@ -87,4 +87,4 @@ Your action account is listed on the **Manage action accounts** page.
 
 ## Related content
 
-For more information, see [Remediation actions in Microsoft Defender for Identity](remediation-actions.md).
+For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).

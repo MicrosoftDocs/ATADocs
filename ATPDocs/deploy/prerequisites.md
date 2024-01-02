@@ -79,7 +79,7 @@ Sensors running on these operating systems will continue to report to Defender f
 |**NetBIOS**        |UDP      |137 |Defender for Identity sensor|All devices on network|
 |**RDP**         <br><br>Only the first packet of **Client hello** queries the DNS server using reverse DNS lookup of the IP address (UDP 53)   |TCP      |3389 |Defender for Identity sensor|All devices on network|
 
-If you're working with [multiple forests](../multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
+If you're working with [multiple forests](multi-forest.md), make sure that the following ports are opened on any machine where a Defender for Identity sensor is installed:
 
 |Protocol|Transport|Port|To/From|Direction|
 |----|----|----|----|----|
@@ -120,8 +120,8 @@ This article lists prerequisites required for a basic installation. Additional p
 
 For more information, see:
 
-- [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](../active-directory-federation-services.md)
-- [Microsoft Defender for Identity multi-forest support](../multi-forest.md)
+- [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
+- [Microsoft Defender for Identity multi-forest support](multi-forest.md)
 - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 - [Defender for Identity architecture](../architecture.md)
 
