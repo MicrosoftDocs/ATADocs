@@ -207,7 +207,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 > [!NOTE]
 > Configuring *Start and Stop Active Directory Certificate Services* event auditing may cause restart delays when dealing with a large AD CS database. Consider removing irrelevant entries from the database, or alternatively, refrain from enabling this specific type of event.
 
-### Configure auditing on the configuration container
+## Configure auditing on the configuration container
 <a name="enable-auditing-on-an-exchange-object"></a>
 
 1. Open ADSI Edit by selecting **Start** > **Run**. Enter `ADSIEdit.msc` and select **OK**.
