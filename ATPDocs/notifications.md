@@ -71,4 +71,4 @@ While alert names may occasionally be modified, the **externalId** of each alert
 
 ## Related content
 
-For more information, see [Configure event collection](configure-event-collection.md).
+For more information, see [Configure event collection](deploy/configure-event-collection.md).

@@ -27,7 +27,7 @@ Watch the following video to learn more about remediation actions in Defender fo
 
 To perform any of the [supported actions](#supported-actions), you need to:
 
-- Configure the account that Microsoft Defender for Identity will use to perform them.  For more information, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+- Configure the account that Microsoft Defender for Identity will use to perform them.  For more information, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
 
 - Be signed into Microsoft Defender XDR to with a **Security Administrator** or **Security Operator** role.
 
@@ -42,7 +42,7 @@ The following actions can be performed directly on the user account:
 - **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
 
 > [!NOTE]
-> By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
+> By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](deploy/manage-action-accounts.md) and scope the permissions as you need.
 
 
 Currently, this feature requires the account signed into Microsoft Defender XDR to possess the **Security Administrator** or **Security Operator** roles.
@@ -53,4 +53,4 @@ Currently, this feature requires the account signed into Microsoft Defender XDR 
 
 ## See also
 
-[Microsoft Defender for Identity action accounts](manage-action-accounts.md)
+[Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md)
