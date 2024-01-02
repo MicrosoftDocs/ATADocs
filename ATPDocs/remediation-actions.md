@@ -41,10 +41,11 @@ The following Defender for Identity actions can be performed directly on your on
 
 Depending on your Microsoft Entra ID roles, you may see additional Microsoft Entra ID action, such as requiring users to sign in again and confirming a users as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
+
 ## Related videos
 
 [Remediation actions in Defender for Identity](https://www.microsoft.com/videoplayer/embed/RE4U7Pe)
 
 ## See also
 
-[Microsoft Defender for Identity action accounts](manage-action-accounts.md)
+[Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md)
