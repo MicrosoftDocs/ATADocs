@@ -27,25 +27,19 @@ Watch the following video to learn more about remediation actions in Defender fo
 
 To perform any of the [supported actions](#supported-actions), you need to:
 
-- Configure the account that Microsoft Defender for Identity will use to perform them.  For more information, see [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+- Configure the account that Microsoft Defender for Identity will use to perform them.  By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
 
-- Be signed into Microsoft Defender XDR to with relevant permissions. For Active Directory recommendations, you'll need a **Security Administrator** or **Security Operator** role. For Entra ID recommendations, you'll need a **Global Administrator** role.
+- Be signed into Microsoft Defender XDR to with relevant permissions. For Defender for Identity actions, you'll need a custom role with **Response (manage)** permissions. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles).
 
 ## Supported actions
 
-The following actions can be performed directly on the user account:
+The following Defender for Identity actions can be performed directly on your on-premises identities:
 
 - **Disable user in Active Directory**: This will temporarily prevent a user from signing in to the on-premises network. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network.
 
 - **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
 
-Depending on your Microsoft Entra ID roles, you may see additional Microsoft Entra ID remediations, such as resetting user passwords and confirming that a user is compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
-
-> [!NOTE]
-> By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
-
-
-Currently, this feature requires the account signed into Microsoft Defender XDR to possess the **Security Administrator** or **Security Operator** roles.
+Depending on your Microsoft Entra ID roles, you may see additional Microsoft Entra ID action, such as requiring users to sign in again and confirming a users as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
 ## Related videos
 
