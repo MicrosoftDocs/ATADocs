@@ -29,7 +29,7 @@ Having non-sensitive accounts with **Admin SDHolder** (security descriptor holde
 1. Take appropriate action on those entities by removing their privileged access rights. For example:
 
     1. Use the **ADSI Edit** tool to connect to your domain controller.
-    1. Browse to the **CN=System**> **CN=Admin** container and open the **CN=Admin** container properties.
+    1. Browse to the **CN=System**> **CN=AdminSDHolder** container and open the **CN=AdminSDHolder** container properties.
     1. Select the **Security** tab > **Advanced**, and remove any non-sensitive entities. These are the entities marked as exposed in the security assessment.
 
     For more information, see [Active Directory Service Interfaces](/windows/win32/adsi/active-directory-service-interfaces-adsi) and [ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)) documentation
