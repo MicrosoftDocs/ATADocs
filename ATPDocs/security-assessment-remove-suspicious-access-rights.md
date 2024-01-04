@@ -1,7 +1,7 @@
 ---
 title: Remove access rights on suspicious accounts with the Admin SDHolder permission | Microsoft Defender for Identity
 description: Learn about Microsoft Defender for Identity's `Remove access rights on suspicious accounts with the Admin SDHolder permission` security assessment in Microsoft Secure Score.
-ms.date: 06/08/2023
+ms.date: 01/04/2024
 ms.topic: how-to
 ---
 
@@ -26,8 +26,14 @@ Having non-sensitive accounts with **Admin SDHolder** (security descriptor holde
 
 1. Review the list of exposed entities to discover which of your non-sensitive accounts have the **Admin SDHolder** permission.
 
-1. Take appropriate action on those entities by removing their privileged access rights.
- 
+1. Take appropriate action on those entities by removing their privileged access rights. For example:
+
+    1. Use the **ADSI Edit** tool to connect to your domain controller.
+    1. Browse to the **CN=System**> **CN=Admin** container and open the **CN=Admin** container properties.
+    1. Select the **Security** tab > **Advanced**, and remove any non-sensitive entities. These are the entities marked as exposed in the security assessment.
+
+    For more information, see [Active Directory Service Interfaces](/windows/win32/adsi/active-directory-service-interfaces-adsi) and [ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)) documentation
+
 To achieve the full score, remediate all exposed entities.
 
 [!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
