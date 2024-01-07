@@ -298,8 +298,104 @@ None
 
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
-|MITRE attack technique  | [Unsecured Credentials)](https://attack.mitre.org/techniques/T1552/)        |
-|MITRE attack sub-technique | [Unsecured Credentials: Private Keys (T1552.004)](https://attack.mitre.org/techniques/T1552/004/)        
+|MITRE attack technique  | [Unsecured Credentials (T1552)](https://attack.mitre.org/techniques/T1552/)        |
+|MITRE attack sub-technique | [Unsecured Credentials: Private Keys (T1552.004)](https://attack.mitre.org/techniques/T1552/004/)  |
+
+## Suspected DFSCoerce attack using Distributed File System Protocol (external ID 2416)
+
+**Severity**: High
+
+**Description**:
+
+DFSCoerce attack can be used to force a domain controller to authenticate against a remote machine which is under an attacker’s control using the MS-DFSNM API, which triggers NTLM authentication. This, ultimately, enables a threat actor to launch an NTLM relay attack.  
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Forced Authentication (T1187)](https://attack.mitre.org/techniques/T1187/)        |
+|MITRE attack sub-technique | N/A |
+
+## Suspicious Kerberos delegation attempt using BronzeBit method (CVE-2020-17049 exploitation) (external ID 2048)
+
+**Severity**: Medium
+
+**Description**:
+
+Exploiting a vulnerability (CVE-2020-17049), attackers attempt suspicious Kerberos delegation using the BronzeBit method. This could lead to unauthorized privilege escalation and compromise the security of the Kerberos authentication process. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
+|MITRE attack sub-technique | N/A |
+
+## Abnormal Active Directory Federation Services (AD FS) authentication using a suspicious certificate (external ID 2424)
+
+**Severity**: High
+
+**Description**:
+
+Anomalous authentication attempts using suspicious certificates in Active Directory Federation Services (AD FS) may indicate potential security breaches. Monitoring and validating certificates during AD FS authentication are crucial for preventing unauthorized access. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Forge Web Credentials (T1606)](https://attack.mitre.org/techniques/T1606/)        |
+|MITRE attack sub-technique | N/A |
+
+## Suspected account takeover using shadow credentials (external ID 2431)
+
+**Severity**: High
+
+**Description**:
+
+The use of shadow credentials in an account takeover attempt suggests malicious activity. Attackers may attempt to exploit weak or compromised credentials to gain unauthorized access and control over user accounts. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [OS Credential Dumping (T1003)](https://attack.mitre.org/techniques/T1003/)        |
+|MITRE attack sub-technique | N/A |
+
+## Suspected suspicious Kerberos ticket request (external ID 2418)
+
+**Severity**: High
+
+**Description**:
+
+This attack involves the suspicion of abnormal Kerberos ticket requests. Attackers may attempt to exploit vulnerabilities in the Kerberos authentication process, potentially leading to unauthorized access and compromise of the security infrastructure. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009)      |
+|MITRE attack technique  | [Adversary-in-the-Middle (T1557)](https://attack.mitre.org/techniques/T1557/)        |
+|MITRE attack sub-technique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
 
 ## See also
 
