@@ -301,7 +301,7 @@ None
 |MITRE attack technique  | [Unsecured Credentials (T1552)](https://attack.mitre.org/techniques/T1552/)        |
 |MITRE attack sub-technique | [Unsecured Credentials: Private Keys (T1552.004)](https://attack.mitre.org/techniques/T1552/004/)  |
 
-## Suspected DFSCoerce attack using Distributed File System Protocol (external ID 2416)
+## Suspected DFSCoerce attack using Distributed File System Protocol (external ID 2426)
 
 **Severity**: High
 
