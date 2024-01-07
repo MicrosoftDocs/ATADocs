@@ -19,7 +19,7 @@ To learn more about how to understand the structure, and common components of al
 
 The following security alerts help you identify and remediate **Persistence and privilege escalation** phase suspicious activities detected by Defender for Identity in your network.
 
-After the attacker uses techniques to keep access to different on-premise resources they start the Privilege Escalation phase, which consists of techniques that adversaries use to gain higher-level permissions on a system or network. Adversaries can often enter and explore a network with unprivileged access but require elevated permissions to follow through on their objectives. Common approaches are to take advantage of system weaknesses, misconfigurations, and vulnerabilities.
+After the attacker uses techniques to keep access to different on-premises resources they start the Privilege Escalation phase, which consists of techniques that adversaries use to gain higher-level permissions on a system or network. Adversaries can often enter and explore a network with unprivileged access but require elevated permissions to follow through on their objectives. Common approaches are to take advantage of system weaknesses, misconfigurations, and vulnerabilities.
 
 ## Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)
 
