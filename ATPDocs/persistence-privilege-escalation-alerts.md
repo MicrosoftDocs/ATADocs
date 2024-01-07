@@ -366,25 +366,6 @@ None
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique |  N/A     |
 
-## Suspicious disable of audit filters of AD CS   (external ID 2434)
-
-**Severity**: Medium
-
-**Description**:
-
-Disabling audit filters in AD CS can allow attackers to operate without being detected. This attack aims to evade security monitoring by disabling filters that would otherwise flag suspicious activities. 
-
-**Learning period**:
-
-None
-
-**MITRE**:
-
-|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
-|---------|---------|
-|MITRE attack technique  |   [Impair Defenses (T1562)](https://attack.mitre.org/techniques/T1562/)  |
-|MITRE attack sub-technique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
-
 ## Suspicious modification of the trust relationship of AD FS server  (external ID 2420)
 
 **Severity**: Medium
