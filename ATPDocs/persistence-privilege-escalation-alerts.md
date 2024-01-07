@@ -361,7 +361,7 @@ None
 
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
 |---------|---------|
-|Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003),[Privilege Escalation (TA0004)](https://attack.mitre.org/techniques/TA0004/),[Initial Access (TA0001)](https://attack.mitre.org/techniques/TA0001/)         |
+|Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003),[Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/),[Initial Access (TA0001)](https://attack.mitre.org/tactics/TA0001/)     |
 |MITRE attack technique  |   [Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1078/)  |
 |MITRE attack sub-technique |  N/A     |
 
@@ -381,7 +381,7 @@ None
 
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
 |---------|---------|
-|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/techniques/TA0004/)         |
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique |  N/A     |
 
@@ -420,7 +420,7 @@ None
 
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
 |---------|---------|
-|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/techniques/TA0004/)         |
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique | [Domain Trust Modification (T1484.002)](https://attack.mitre.org/techniques/T1562/002/)     |
 
@@ -440,7 +440,7 @@ None
 
 |Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
 |---------|---------|
-|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/techniques/TA0004/)         |
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique |  N/A   |
 
