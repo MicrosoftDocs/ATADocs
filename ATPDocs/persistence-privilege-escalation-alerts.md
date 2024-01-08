@@ -326,25 +326,6 @@ None
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique |  N/A     |
 
-## Suspicious deletion of the certificate database entries  (external ID 2433)
-
-**Severity**: Medium 
-
-**Description**:
-
-The deletion of certificate database entries is a red flag, indicating potential malicious activity. This attack could disrupt the functioning of Public Key Infrastructure (PKI) systems, impacting authentication and data integrity. 
-
-**Learning period**:
-
-None
-
-**MITRE**:
-
-|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
-|---------|---------|
-|MITRE attack technique  |   [Indicator Removal (T1070)](https://attack.mitre.org/techniques/T1070/)  |
-|MITRE attack sub-technique |  N/A     |
-
 ## Suspicious Domain Controller certificate request (ESC8)  (external ID 2432)
 
 **Severity**: High
@@ -384,25 +365,6 @@ None
 |Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique |  N/A     |
-
-## Suspicious disable of audit filters of AD CS   (external ID 2434)
-
-**Severity**: Medium
-
-**Description**:
-
-Disabling audit filters in AD CS can allow attackers to operate without being detected. This attack aims to evade security monitoring by disabling filters that would otherwise flag suspicious activities. 
-
-**Learning period**:
-
-None
-
-**MITRE**:
-
-|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
-|---------|---------|
-|MITRE attack technique  |   [Impair Defenses (T1562)](https://attack.mitre.org/techniques/T1562/)  |
-|MITRE attack sub-technique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
 
 ## Suspicious modification of the trust relationship of AD FS server  (external ID 2420)
 
