@@ -392,6 +392,9 @@ None
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique | [Domain Trust Modification (T1484.002)](https://attack.mitre.org/techniques/T1562/002/)     |
 
+> [!NOTE]
+> Suspicious modification of the trust relationship of AD FS server alerts are only supported by Defender for Identity sensors on AD FS.
+
 ## Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account  (external ID 2423)
 
 **Severity**: High
