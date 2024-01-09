@@ -387,6 +387,9 @@ None
 |MITRE attack technique  |  [Use Alternate Authentication Material (T1550)](https://attack.mitre.org/techniques/T1550/)      |
 |MITRE attack sub-technique |     N/A     |
 
+> [!NOTE]
+> Suspicious certificate usage over Kerberos protocol (PKINIT) alerts are only supported by Defender for Identity sensors on AD CS.
+
 ## Suspected over-pass-the-hash attack (forced encryption type) (external ID 2008)
 
 **Severity**: Medium
