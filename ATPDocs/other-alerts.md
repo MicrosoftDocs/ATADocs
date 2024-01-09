@@ -236,6 +236,9 @@ None
 |MITRE attack technique  |   [Indicator Removal (T1070)](https://attack.mitre.org/techniques/T1070/)  |
 |MITRE attack sub-technique |  N/A     |
 
+> [!NOTE]
+> Suspicious deletion of the certificate database entries alerts are only supported by Defender for Identity sensors on AD CS.
+
 ## Suspicious disable of audit filters of AD CS   (external ID 2434)
 
 **Severity**: Medium
