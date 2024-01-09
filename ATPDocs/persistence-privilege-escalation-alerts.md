@@ -346,6 +346,9 @@ None
 |MITRE attack technique  |   [Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1078/)  |
 |MITRE attack sub-technique |  N/A     |
 
+> [!NOTE]
+> Suspicious Domain Controller certificate request (ESC8) alerts are only supported by Defender for Identity sensors on AD CS.
+
 ## Suspicious modifications to the AD CS security permissions/settings  (external ID 2435)
 
 **Severity**: Medium
