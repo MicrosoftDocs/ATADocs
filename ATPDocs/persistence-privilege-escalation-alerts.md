@@ -369,6 +369,9 @@ None
 |MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
 |MITRE attack sub-technique |  N/A     |
 
+> [!NOTE]
+> Suspicious modifications to the AD CS security permissions/settings alerts are only supported by Defender for Identity sensors on AD CS.
+
 ## Suspicious modification of the trust relationship of AD FS server  (external ID 2420)
 
 **Severity**: Medium
