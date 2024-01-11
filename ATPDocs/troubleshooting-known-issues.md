@@ -30,14 +30,6 @@ Make sure that communication isn't blocked for localhost, TCP port 444. To learn
 
 The Defender for Identity deployment logs are located in the temp directory of the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above **%temp%**). For more information, see [Troubleshooting Defender for Identity using logs](troubleshooting-using-logs.md).
 
-## "Stop legacy protocols communication" recommended action always marked as "Completed"
-
-The existing "Stop legacy protocols communication" recommended action as part of the Microsoft Secure Score is always marked as completed.  
-Due to an error, NTLM v1 authentication activities aren't profiled correctly. As a result, the recommended action to remediate them is marked as completed.
-
-**Resolution:**  
-We're working to correctly profile the relevant activities as NTLM v1 authentication.
-
 ## Proxy authentication problem presents as a licensing error
 
 If during sensor installation you receive the following error:  **The sensor failed to register due to licensing issues.**
@@ -224,6 +216,7 @@ The domain controller hasn't been granted permission to retrieve the password of
 **Resolution 1**:
 
 Validate that the computer running the sensor has been granted permissions to retrieve the password of the gMSA account. For more information, see [Grant permissions to retrieve the gMSA account's password](deploy/create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password).
+
 
 
 ### Cause 2
