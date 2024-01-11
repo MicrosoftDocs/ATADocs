@@ -27,7 +27,15 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
 ## January 2024
+
+### Timeline tab added for group identities
+
+Now you can view entity activities for groups in Microsoft Defender XDR. On a group identity page, select the **Timeline** tab to view recent activity for the selected group.
+<!--tbd For example:-->
+
+For more information, see [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi) and [Investigate users in Microsoft Defender XDR](microsoft-365/security/defender/investigate-users#timeline).
 
 ### Defender for Identity release 2.225
 
