@@ -77,7 +77,7 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
 
         > [!IMPORTANT]
         >
-        > - Npcap OEM version 1.0 is automatically installed if no other version of Npcap is present. If you already have Npcap installed due to other software requirements or for any other reason, it's important to ensure that it's version 1.0 or later and that it has been installed with the [required settings for Defender for Identity](technical-faq.md#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
+        > - Npcap OEM version 1.0 is automatically installed if no other version of Npcap is present. If you already have Npcap installed due to other software requirements or for any other reason, it's important to ensure that it's version 1.0 or later and that it has been installed with the [required settings for Defender for Identity](../technical-faq.yml#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
 ### Viewing sensor versions
 
