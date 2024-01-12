@@ -73,15 +73,11 @@ Perform the following steps on the domain controller or AD FS / AD CS server.
 
     - **Defender for Identity sensor service** and **Defender for Identity sensor updater service**
 
-    - **Microsoft Visual C++ 2013 Redistributable**
-
-    - **KB 3047154** (for Windows Server 2012 R2 only)
+    - **Npcap OEM version 1.0**
 
         > [!IMPORTANT]
         >
-        > - Don't install KB 3047154 on a virtualization host, which is the host that is running the virtualization. This may cause port mirroring to stop working properly. It's fine to run KB 3047154 on a virtual machine.
-        >
-        > - If Wireshark is installed on the Defender for Identity sensor machine, you'll need to restart the Defender for Identity sensor after running Wireshark because they use the same drivers.
+        > - Npcap OEM version 1.0 is automatically installed if no other version of Npcap is present. If you already have Npcap installed due to other software requirements or for any other reason, it's important to ensure that it's version 1.0 or later and that it has been installed with the [required settings for Defender for Identity](technical-faq.md#how-do-i-download-and-install-or-upgrade-the-npcap-driver).
 
 ### Viewing sensor versions
 
