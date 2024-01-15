@@ -48,7 +48,7 @@ We've added the following procedures to the Defender for Identity documentation 
 For more information, see:
 
 - [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
-- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity?view=defenderforidentity-latest)
+- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
 
 ### Defender for Identity release 2.223
 
