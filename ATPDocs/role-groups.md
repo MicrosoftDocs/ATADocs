@@ -1,7 +1,7 @@
 ---
 title: Role groups 
 description: Walks you through working with Microsoft Defender for Identity role groups.
-ms.date: 01/29/2023
+ms.date: 01/15/2024
 ms.topic: conceptual
 ---
 
@@ -43,6 +43,9 @@ To access the Defender for Identity experience in [in Microsoft Defender XDR](/m
 | MDI security alerts and activities                           | Member of one of the Microsoft Entra roles as required by [Microsoft Defender XDR](/microsoft-365/security/defender/m365d-permissions)<br> **Or** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac):<br /><li>Security operations/Security data/Alerts (Manage)<br/><li>Security operations/Security data /Security data basics (Read) |
 | MDI security assessments <br> (now part of Microsoft Secure Score) | [Permissions](/microsoft-365/security/defender/microsoft-secure-score#required-permissions) to access Microsoft Secure Score <br> **And** <br> [Unified RBAC permissions](#unified-role-based-access-control-rbac): <br><li>Security operations/Security data /Security data basics (Read)|
 |Assets / Identities page|[Permissions](/azure/defender-for-cloud/permissions) to access Defender for Cloud Apps <br> **or** <br> Member of one of the Microsoft Entra roles as required by [Microsoft Defender XDR](/microsoft-365/security/defender/m365d-permissions) |
+|Defender for Identity response actions |A custom role defined with permissions for **Response (manage)**. For more information, see [Create custom RBAC roles](/microsoft-365/security/defender/create-custom-rbac-roles). |
+
+
 
 ## Types of Defender for Identity security groups
 
