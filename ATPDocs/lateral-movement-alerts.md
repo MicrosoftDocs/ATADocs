@@ -368,6 +368,48 @@ None
 
 1. [Disable SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+## Suspicious certificate usage over Kerberos protocol (PKINIT) (external ID 2425)
+
+**Severity**: High
+
+**Description**:
+
+Attackers exploit vulnerabilities in the PKINIT extension of the Kerberos protocol by using suspicious certificates. This can lead to identity theft and unauthorized access. Possible attacks include the use of invalid or compromised certificates, man-in-the-middle attacks, and poor certificate management. Regular security audits and adherence to PKI best practices are crucial to mitigate these risks.
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008)  |
+|---------|---------|
+|MITRE attack technique  |  [Use Alternate Authentication Material (T1550)](https://attack.mitre.org/techniques/T1550/)      |
+|MITRE attack sub-technique |     N/A     |
+
+> [!NOTE]
+> Suspicious certificate usage over Kerberos protocol (PKINIT) alerts are only supported by Defender for Identity sensors on AD CS.
+
+## Suspected over-pass-the-hash attack (forced encryption type) (external ID 2008)
+
+**Severity**: Medium
+
+**Description**:
+
+Over-pass-the-hash attacks involving forced encryption types can exploit vulnerabilities in protocols like Kerberos. Attackers attempt to manipulate network traffic, bypassing security measures and gaining unauthorized access. Defending against such attacks requires robust encryption configurations and monitoring.
+
+**Learning period**:
+
+1 month
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
+|---------|---------|
+|Secondary MITRE tactic    | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005) |
+|MITRE attack technique  |  [Use Alternate Authentication Material (T1550)](https://attack.mitre.org/techniques/T1550/)       |
+|MITRE attack sub-technique |  [Pass the Hash (T1550.002)](https://attack.mitre.org/techniques/T1550/002/), [Pass the Ticket (T1550.003)](https://attack.mitre.org/techniques/T1550/003/)   |
+
 ## Next steps
 
 - [Investigate assets](investigate-assets.md)

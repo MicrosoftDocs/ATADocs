@@ -46,8 +46,8 @@ Defender for Identity sensors monitor domain controller traffic by default. For 
 
 For more information, see:
 
-- [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md)
-- [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](active-directory-federation-services.md)
+- [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy/deploy-defender-identity.md)
+- [Microsoft Defender for Identity on Active Directory Federation Services (AD FS)](deploy/active-directory-federation-services.md)
 
 
 ## Identify suspicious activities across the cyber-attack kill-chain

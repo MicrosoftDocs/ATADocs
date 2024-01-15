@@ -1,7 +1,7 @@
 ---
 title: Manage reports | Microsoft Defender for Identity
 description: Learn how to download and schedule Microsoft Defender for Identity reports from Microsoft Defender XDR.
-ms.date: 08/29/2023
+ms.date: 12/20/2023
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity admin, I want to understand how to generate and schedule reports for activity detected in my environment.
 ---
@@ -19,7 +19,7 @@ Available reports include:
 |Report name  |Description  |
 |---------|---------|
 |**Summary**| Presents a dashboard of your system status, including: <br><br>- **Summary**: A summary of detected network activity <br>- **Open health issues**: Lists Defender for Identity health issues you should take care of. <br><br> Suspicious activities and health issues are listed by type. |
-|**Modification to sensitive groups**     |    Lists every time a modification is made to sensitive groups, such as admins, or manually tagged accounts or groups. <br><br>If you're using Defender for Identity standalone sensors, make sure that [events are forwarded from your domain controllers to the standalone sensors](configure-event-forwarding.md) in order to receive a full report about your sensitive groups.     |
+|**Modification to sensitive groups**     |    Lists every time a modification is made to sensitive groups, such as admins, or manually tagged accounts or groups. <br><br>If you're using Defender for Identity standalone sensors, make sure that [events are forwarded from your domain controllers to the standalone sensors](deploy/configure-event-forwarding.md) in order to receive a full report about your sensitive groups.     |
 |**Passwords exposed in cleartext**     | Lists all source computer and account passwords detected by Defender for Identity being sent in clear text. <br><br>**Note**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes.     |
 | **Lateral movement paths to sensitive accounts** | Lists the sensitive accounts that are exposed via lateral movement paths, for the selected report period. <br><br>For more information, see [Lateral movement paths](understand-lateral-movement-paths.md). |
 
@@ -33,7 +33,7 @@ To generate a report on demand:
 
 1. In the download report pane that appears on the right, define a time period for your report and then select **Download Report**.
 
-Your report is downloaded by your browser, where you can open or save it. 
+Your report is downloaded by your browser, where you can open or save it. Downloaded reports include a maximum of 100,000 rows.
 
 
 ## Schedule a report by email
