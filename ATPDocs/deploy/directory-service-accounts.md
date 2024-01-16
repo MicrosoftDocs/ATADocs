@@ -1,7 +1,7 @@
 ---
 title: Directory Service Accounts for Microsoft Defender for Identity
 description: Learn about how Microsoft Defender for Identity uses Directory Service accounts (DSAs).
-ms.date: 11/20/2023
+ms.date: 01/16/2024
 ms.topic: conceptual
 ---
 
@@ -11,7 +11,7 @@ This article describes how Microsoft Defender for Identity uses Directory Servic
 
 While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
 
-For example, when you have a DSA configured, it's used to connect to the domain controller at startup. A DSA can also be used to query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities
+For example, when you have a DSA configured, the DSA is used to connect to the domain controller at startup. A DSA can also be used to query the domain controller for data on entities seen in network traffic, monitored events, and monitored ETW activities
 
 A DSA is required for the following features and functionality:
 
@@ -25,9 +25,9 @@ A DSA is required for the following features and functionality:
 
 - Querying another domain via LDAP for details, when detecting activities from entities in those other domains.
 
-When using a single DSA, the DSA must have read permissions to all the domains in the forests. In an untrusted, multi-forest environment, a DSA account is required for each forest.
+When you're using a single DSA, the DSA must have *Read* permissions to all the domains in the forests. In an untrusted, multi-forest environment, a DSA account is required for each forest.
 
-One sensor in each domain is defined as the *domain synchronizer*, and is responsible for tracking changes to the entities in the domain, like objects created, entity attributes tracked by Defender for Identity and so on. 
+One sensor in each domain is defined as the *domain synchronizer*, and is responsible for tracking changes to the entities in the domain. For examples, changes might include objects created, entity attributes tracked by Defender for Identity, and so on.
 
 >[!NOTE]
 >By default, Defender for Identity supports up to 30 credentials. To add more credentials, contact Defender for Identity support.
@@ -39,7 +39,7 @@ Defender for Identity supports the following DSA options:
 |Option  |Description  |Configuration  |
 |---------|---------|---------|
 |**Group Managed Service Account gMSA** (Recommended)     |  Provides a more secure deployment and password management. Active Directory manages the creation and rotation of the account's password, just like a computer account's password, and you can control how often the account's password is changed.       |    For more information, see [Configure a Directory Service Account for Defender for Identity with a gMSA](create-directory-service-account-gmsa.md).     |
-|**Regular user account**     |   Easy to use when getting started, and simpler to configure read permissions between trusted forests, but requires extra overhead for password management. <br><br>A regular user account is less secure, as it requires you to create and manage passwords, and can lead to downtime if the password expires and isn't updated for both the user and the DSA.   |   Create a new account in Active Directory to use as the DSA with read permissions to all the objects, including permissions to the *DeletedObjects* container. For more information, see [Grant required DSA permissions](#grant-required-dsa-permissions).   |
+|**Regular user account**     |   Easy to use when getting started, and simpler to configure *Read* permissions between trusted forests, but requires extra overhead for password management. <br><br>A regular user account is less secure, as it requires you to create and manage passwords, and can lead to downtime if the password expires and isn't updated for both the user and the DSA.   |   Create a new account in Active Directory to use as the DSA with *Read* permissions to all the objects, including permissions to the *DeletedObjects* container. For more information, see [Grant required DSA permissions](#grant-required-dsa-permissions).   |
 
 ## DSA entry usage
 
@@ -47,7 +47,7 @@ This section describes how DSA entries are used, and how the sensor selects a DS
 
 |Type  |Description  |
 |---------|---------|
-|**gMSA account**     | The sensor attempts to retrieve the gMSA account password from Active Directory, and then sign into the domain.   |
+|**gMSA account**     | The sensor attempts to retrieve the gMSA account password from Active Directory, and then signs into the domain.   |
 |**Regular user account**     |   The sensor attempts to sign into the domain using the configured username and password.      |
 
 The following logic is applied:
@@ -56,7 +56,7 @@ The following logic is applied:
 
 1. If there isn't an exact match, or if the authentication failed, the sensor searches the list for an entry to the parent domain using DNS FQDN, and attempts to authenticate using the credentials in the parent entry instead.
 
-1. If there isn't an entry for the parent domain, or if the authentication failed, the sensor searches the list for an sibling domain entry, using the DNS FQDN, and attempts to authenticate using the credentials in the sibling entry instead.
+1. If there isn't an entry for the parent domain, or if the authentication failed, the sensor searches the list for a sibling domain entry, using the DNS FQDN, and attempts to authenticate using the credentials in the sibling entry instead.
 
 1. If there isn't an entry for the sibling domain, or if the authentication failed, the sensor reviews the list again and tries to authenticate again with each entry until it succeeds. DSA gMSA entries have higher priority than regular DSA entries.
 

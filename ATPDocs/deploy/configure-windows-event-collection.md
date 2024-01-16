@@ -17,9 +17,9 @@ For more information, see [What is Windows event collection for Defender for Ide
 
 ## Generate a report with current configurations via PowerShell
 
-**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 
-Before you start creating new event and audit polices, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
+Before you start creating new event and audit policies, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
 
 ```powershell
 New-MDIConfigurationReport [-Path] [-Mode ] [-OpenHtmlReport]
@@ -27,7 +27,7 @@ New-MDIConfigurationReport [-Path] [-Mode ] [-OpenHtmlReport]
 
 Where: 
 
-- **OpenHtmlReport** opens the HTML report after it's generated
+- **OpenHtmlReport** opens the HTML report after the report is generated
 - **Path** specifies the path to save the reports to
 
 For example, to generate a report and open it in your default browser, run the following command:
@@ -44,7 +44,7 @@ For more information, see the [DefenderforIdentity PowerShell reference](/powers
 
 ## Configure auditing for domain controllers
 
-When working with a domain controller, you'll need to update your Advanced Audit Policy settings and extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
+When working with a domain controller, you need to update your Advanced Audit Policy settings and extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
 
 - [Advanced Audit Policy settings](#configure-advanced-audit-policy-settings)
 - [NTLM auditing](#configure-ntlm-auditing)
@@ -88,7 +88,7 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
 1. From an elevated command prompt, type `gpupdate`.
 
-1. After applying the policy via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
+1. After you apply the policy via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
 ### Test audit policies from the command line
 
@@ -121,7 +121,7 @@ Where:
 
 - **Force** specifies that the configuration is set or GPOs are created without validating the current state.
 
-To view or test your audit policies using PowerShell, run the following commands as needed. Use the **Get-MDIConfiguration** command to show the current values. Use the **Test-MDIConfiguration** command to get a yes or no response as to whether the values are configured correctly.
+To view or test your audit policies using PowerShell, run the following commands as needed. Use the **Get-MDIConfiguration** command to show the current values. Use the **Test-MDIConfiguration** command to get a `yes` or `no` response as to whether the values are configured correctly.
 
 ```powershell
 Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
@@ -203,7 +203,7 @@ To collect events for object changes, such as event 4662, you must also configur
 
     ![Screenshot of the Select everyone settings.](../media/select-everyone.png)
 
-1. You'll then return to **Auditing Entry**. Make the following selections:
+1. You then return to **Auditing Entry**. Make the following selections:
 
     1. For **Type** select **Success**.
     1. For **Applies to** select **Descendant User objects.**
@@ -226,7 +226,7 @@ To collect events for object changes, such as event 4662, you must also configur
    - **Descendant msDS-ManagedServiceAccount Objects**
 
 > [!NOTE]
-> Assigning the auditing permissions on the **All descendant objects** would work as well, but we only require the object types as detailed above.
+> Assigning the auditing permissions on the **All descendant objects** would work as well, but we only require the object types as detailed in the last step.
 >
 
 ## Configure auditing on an Active Directory Federation Services (AD FS)
@@ -241,7 +241,7 @@ To collect events for object changes, such as event 4662, you must also configur
 1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings** > **Auditing** tab > **Add** > **Select a principal**.
 1. Under **Enter the object name to select**, enter **Everyone**. 
 1. Select **Check Names** > **OK**.
-1. You'll then return to **Auditing Entry**. Make the following selections:
+1. You then return to **Auditing Entry**. Make the following selections:
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.
@@ -311,7 +311,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Under **Enter the object name to select**, enter **Everyone** and select **Check Names** > **OK**.
 
-1. You'll then return to **Auditing Entry**. Make the following selections:
+1. You then return to **Auditing Entry**. Make the following selections:
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.

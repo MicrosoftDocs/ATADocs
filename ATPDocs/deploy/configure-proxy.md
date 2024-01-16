@@ -107,7 +107,7 @@ For some older workspaces, the message returned could be *Error 503 The service 
 For more information, see:
 
 - [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration)
-- [Test Microsoft Defender for Identity connectivity](deploy/test-connectivity.md)
+- [Test Microsoft Defender for Identity connectivity](test-connectivity.md)
 
 ## Next step
 
