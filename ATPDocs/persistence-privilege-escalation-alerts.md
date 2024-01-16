@@ -19,7 +19,7 @@ To learn more about how to understand the structure, and common components of al
 
 The following security alerts help you identify and remediate **Persistence and privilege escalation** phase suspicious activities detected by Defender for Identity in your network.
 
-After the attacker uses techniques to keep access to different on-premise resources they start the Privilege Escalation phase, which consists of techniques that adversaries use to gain higher-level permissions on a system or network. Adversaries can often enter and explore a network with unprivileged access but require elevated permissions to follow through on their objectives. Common approaches are to take advantage of system weaknesses, misconfigurations, and vulnerabilities.
+After the attacker uses techniques to keep access to different on-premises resources they start the Privilege Escalation phase, which consists of techniques that adversaries use to gain higher-level permissions on a system or network. Adversaries can often enter and explore a network with unprivileged access but require elevated permissions to follow through on their objectives. Common approaches are to take advantage of system weaknesses, misconfigurations, and vulnerabilities.
 
 ## Suspected Golden Ticket usage (encryption downgrade) (external ID 2009)
 
@@ -265,6 +265,156 @@ None
 |---------|---------|
 |MITRE attack technique  |[Account Manipulation (T1134)](https://attack.mitre.org/techniques/T1134/)     |
 |MITRE attack sub-technique |[SID-History Injection(T1134.005)](https://attack.mitre.org/techniques/T1134/005/)       |
+
+## Suspicious modification of a dNSHostName attribute (CVE-2022-26923)  (external ID 2421)
+
+**Severity**: High
+
+**Description**:
+
+This attack involves the unauthorized modification of the dNSHostName attribute, potentially exploiting a known vulnerability (CVE-2022-26923). Attackers may manipulate this attribute to compromise the integrity of the Domain Name System (DNS) resolution process, leading to various security risks, including man-in-the-middle attacks or unauthorized access to network resources. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004) |
+|---------|---------|
+|Secondary MITRE tactic    |  [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)       |
+|MITRE attack technique  |   [Exploitation for Privilege Escalation (T1068)](https://attack.mitre.org/techniques/T1068/),[Access Token Manipulation (T1134)](https://attack.mitre.org/techniques/T1134/)      |
+|MITRE attack sub-technique |  [Token Impersonation/Theft (T1134.001)](https://attack.mitre.org/techniques/T1134/001/)       |
+
+## Suspicious modification of domain AdminSdHolder  (external ID 2430)
+
+**Severity**: High
+
+**Description**:
+
+Attackers may target the Domain AdminSdHolder, making unauthorized modifications. This can lead to security vulnerabilities by altering the security descriptors of privileged accounts. Regular monitoring and securing of critical Active Directory objects are essential to prevent unauthorized changes.
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003 ) |
+|---------|---------|
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)        |
+|MITRE attack technique  |   [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)  |
+|MITRE attack sub-technique |  N/A     |
+
+## Suspicious Kerberos delegation attempt by a newly created computer  (external ID 2422)
+
+**Severity**: High
+
+**Description**:
+
+This attack involves a suspicious Kerberos ticket request by a newly created computer. Unauthorized Kerberos ticket requests can indicate potential security threats. Monitoring abnormal ticket requests, validating computer accounts, and promptly addressing suspicious activity are essential for preventing unauthorized access and potential compromise. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
+|---------|---------|
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004)        |
+|MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
+|MITRE attack sub-technique |  N/A     |
+
+## Suspicious Domain Controller certificate request (ESC8)  (external ID 2432)
+
+**Severity**: High
+
+**Description**:
+
+An abnormal request for a Domain Controller certificate (ESC8) raises concerns about potential security threats. This could be an attempt to compromise the integrity of the certificate infrastructure, leading to unauthorized access and data breaches. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
+|---------|---------|
+|Secondary MITRE tactic    | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003),[Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/),[Initial Access (TA0001)](https://attack.mitre.org/tactics/TA0001/)     |
+|MITRE attack technique  |   [Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1078/)  |
+|MITRE attack sub-technique |  N/A     |
+
+> [!NOTE]
+> Suspicious Domain Controller certificate request (ESC8) alerts are only supported by Defender for Identity sensors on AD CS.
+
+## Suspicious modifications to the AD CS security permissions/settings  (external ID 2435)
+
+**Severity**: Medium
+
+**Description**:
+
+Attackers may target the security permissions and settings of the Active Directory Certificate Services (AD CS) to manipulate the issuance and management of certificates. Unauthorized modifications can introduce vulnerabilities, compromise certificate integrity, and impact the overall security of the PKI infrastructure. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
+|---------|---------|
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
+|MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
+|MITRE attack sub-technique |  N/A     |
+
+> [!NOTE]
+> Suspicious modifications to the AD CS security permissions/settings alerts are only supported by Defender for Identity sensors on AD CS.
+
+## Suspicious modification of the trust relationship of AD FS server  (external ID 2420)
+
+**Severity**: Medium
+
+**Description**:
+
+Unauthorized changes to the trust relationship of AD FS servers can compromise the security of federated identity systems. Monitoring and securing trust configurations are critical for preventing unauthorized access.
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
+|---------|---------|
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
+|MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
+|MITRE attack sub-technique | [Domain Trust Modification (T1484.002)](https://attack.mitre.org/techniques/T1562/002/)     |
+
+> [!NOTE]
+> Suspicious modification of the trust relationship of AD FS server alerts are only supported by Defender for Identity sensors on AD FS.
+
+## Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account  (external ID 2423)
+
+**Severity**: High
+
+**Description**:
+
+Unauthorized changes to the Resource-Based Constrained Delegation attribute by a machine account can lead to security breaches, allowing attackers to impersonate users and access resources. Monitoring and securing delegation configurations are essential for preventing misuse. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
+|---------|---------|
+|Secondary MITRE tactic    | [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)         |
+|MITRE attack technique  |   [Domain Policy Modification (T1484)](https://attack.mitre.org/techniques/T1484/)  |
+|MITRE attack sub-technique |  N/A   |
+
 
 ## Next steps
 

@@ -1,7 +1,7 @@
 ---
 title: Print spooler assessment
 description: This article provides an overview of Microsoft Defender for Identity's Print spooler identity security posture assessment reports.
-ms.date: 01/29/2023
+ms.date: 12/20/2023
 ms.topic: how-to
 ---
 
@@ -15,7 +15,7 @@ Print spooler is a software service that manages printing processes. The spooler
 
 ## What risks does the **Print spooler** service on domain controllers introduce?
 
-While seemingly harmless, any authenticated user can remotely connect to a domain controllers print spooler service, and request an update on new print jobs. Also, users can tell the domain controller to send the notification to the system with [unconstrained delegation](/defender-for-identity/security-assessment-unconstrained-kerberos). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM).
+While seemingly harmless, any authenticated user can remotely connect to a domain controller's print spooler service, and request an update on new print jobs. Also, users can tell the domain controller to send the notification to the system with [unconstrained delegation](/defender-for-identity/security-assessment-unconstrained-kerberos). These actions test the connection and expose the domain controller computer account credential (**Print spooler** is owned by SYSTEM).
 
 Due to the possibility for exposure, domain controllers and Active Directory admin systems need to have the **Print spooler** service disabled. The recommended way to do this is using a Group Policy Object (GPO).
 
@@ -34,7 +34,8 @@ While this security assessment focuses on domain controllers, any server is pote
 1. Take appropriate action on the at-risk domain controllers and actively remove the Print spooler service either manually, through GPO or other types of remote commands.
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
 
 ## Remediation
 
