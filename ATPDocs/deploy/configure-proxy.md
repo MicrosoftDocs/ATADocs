@@ -67,9 +67,9 @@ Clear-MDISensorProxyConfiguration
 
 For more information, see the [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
 
-- [Get-MDISensorProxyConfiguration]](/powershell/module/defenderforidentity/get-mdisensorproxyconfiguration).
-- [Set-MDISensorProxyConfiguration]](/powershell/module/defenderforidentity/set-mdisensorproxyconfiguration).
-- [Clear-MDISensorProxyConfiguration]](/powershell/module/defenderforidentity/clear-mdisensorproxyconfiguration).
+- [Get-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/get-mdisensorproxyconfiguration)
+- [Set-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/set-mdisensorproxyconfiguration)
+- [Clear-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/clear-mdisensorproxyconfiguration)
 
 ## Test connectivity
 
