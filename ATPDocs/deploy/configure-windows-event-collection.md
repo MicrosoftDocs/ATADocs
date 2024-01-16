@@ -1,7 +1,7 @@
 ---
 title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
 description: Describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
-ms.date: 08/27/2023
+ms.date: 01/16/2024
 ms.topic: how-to
 ---
 
@@ -22,24 +22,25 @@ For more information, see [What is Windows event collection for Defender for Ide
 Before you start creating new event and audit policies, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
 
 ```powershell
-New-MDIConfigurationReport [-Path] [-Mode ] [-OpenHtmlReport]
+New-MDIConfigurationReport [-Path] <String> [-Mode] <String> [-OpenHtmlReport]
 ```
 
 Where: 
 
-- **OpenHtmlReport** opens the HTML report after the report is generated
 - **Path** specifies the path to save the reports to
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+- **OpenHtmlReport** opens the HTML report after the report is generated
 
 For example, to generate a report and open it in your default browser, run the following command:
 
 ```powershell
-New-MDIConfigurationReport -Path "C:\Reports" -OpenHtmlReport
+New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -OpenHtmlReport
 ```
 
 For more information, see the [DefenderforIdentity PowerShell reference](/powershell/module/defenderforidentity/new-mdiconfigurationreport).
 
 > [!TIP]
-> The report includes only configurations set as group policies on the domain. If you have settings defined locally, we recommend that you also run the [Test-MdiReadiness.ps1](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
+> The `Domain` mode report includes only configurations set as group policies on the domain. If you have settings defined locally on your Domain Controllers, we recommend that you also run the [Test-MdiReadiness.ps1](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
 >
 
 ## Configure auditing for domain controllers
@@ -121,7 +122,7 @@ Where:
 
 - **Force** specifies that the configuration is set or GPOs are created without validating the current state.
 
-To view or test your audit policies using PowerShell, run the following commands as needed. Use the **Get-MDIConfiguration** command to show the current values. Use the **Test-MDIConfiguration** command to get a `yes` or `no` response as to whether the values are configured correctly.
+To view or test your audit policies using PowerShell, run the following commands as needed. Use the **Get-MDIConfiguration** command to show the current values. Use the **Test-MDIConfiguration** command to get a `true` or `false` response as to whether the values are configured correctly.
 
 ```powershell
 Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>

@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2024
 
-### Manage Defender for Identity sensor settings via PowerShell
+### Configure and validate your Defender for Identity environment via PowerShell
 
 Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which is designed to help you configure and validate your environment for working with Microsoft Defender for Identity.
 
