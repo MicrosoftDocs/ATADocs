@@ -112,4 +112,4 @@ For more information, see:
 ## Next step
 
 > [!div class="step-by-step"]
-> [Download the Microsoft Defender for Identity sensor »](download-sensor.md)
+> [Test Microsoft Defender for Identity connectivity »](test-connectivity.md)

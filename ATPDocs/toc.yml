@@ -30,8 +30,10 @@ items:
       href: deploy/capacity-planning.md
   - name: Deploy Defender for Identity
     items:
-    - name: Verify connectivity
+    - name: Configure connectivity settings
       href: deploy/configure-proxy.md
+    - name: Test connectivity settings
+      href: deploy/test-connectivity.md
     - name: Download the Defender for Identity sensor
       href: deploy/download-sensor.md
     - name: Install the Defender for Identity sensor
